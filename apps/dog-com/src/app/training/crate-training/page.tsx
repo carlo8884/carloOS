@@ -56,23 +56,18 @@ export default function CrateTrainingPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the crate plan
+            Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Crate-training protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the day-by-day crate introduction, duration limits by age, and
-            night-training notes — plus the crate kit (wire crate with divider,
-            pad, cover, training pads) — so you can run the protocol without
-            scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Crate-training protocol"
-            subtitle="Email the crate introduction protocol, duration limits, night notes, and crate kit. No spam."
-            ctaText="Email my crate-training protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-crate-under-hero"
           />
         </div>
@@ -92,8 +87,7 @@ export default function CrateTrainingPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a crate kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A wire crate with a divider panel is the right starting point for
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A wire crate with a divider panel is the right starting point for
             most puppies — same crate / pad / cover / training-pad hops used on
             the{' '}
             <Link
@@ -111,9 +105,7 @@ export default function CrateTrainingPage() {
             </Link>
             . Size the crate before you order. They are not a ranked product
             list and they do not replace the introduction protocol. Dog.com
-            earns a commission on qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+            earns a commission on qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"

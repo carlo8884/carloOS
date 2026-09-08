@@ -38,7 +38,7 @@ export default function DobermanPage() {
           { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-doberman" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-doberman" />
       </>}
     >
       <div className="carloOS-article">
@@ -46,39 +46,16 @@ export default function DobermanPage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the doberman-pinscher checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Doberman Pinscher checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-doberman-58pct-dcm-chart,
-            dog-fridge-doberman-holter-echo-card, and
-            canine-first-owner-doberman-handbook notes that
-            match the 40–58% DCM-by-age-7 rate, the annual
-            Holter-plus-echo-from-age-3 protocol, and
-            first-time-owner notes on this page — a laminated
-            dog Doberman 58% DCM chart so the occult-phase
-            sudden-death odds are posted on the fridge (not a
-            Chukchi 100-mile chart, not a Rottweiler
-            osteosarcoma chart), a fridge Doberman Holter
-            echo card so the age-3 screening notes are
-            labeled in the kitchen (not a Boxer Holter-ARVC
-            card, not a 6-foot coyote-roller card), and a
-            first-owner Doberman handbook so the NO-typically
-            / vWD-before-surgery / 10–13-year grounding is a
-            physical kitchen book (not a first-owner Siberian
-            Husky handbook). Educational kitchen checklist,
-            not a ranked product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Doberman Pinscher checklist"
-            subtitle="Email the 58% DCM chart, Holter-plus-echo card, and first-owner handbook notes. No spam."
-            ctaText="Email my doberman-pinscher checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-doberman-pinscher-under-hero"
           />
         </div>
@@ -114,35 +91,14 @@ export default function DobermanPage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Doberman Pinscher home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            40–58% DCM-by-age-7 rate, the annual Holter-plus-
-            echo-from-age-3 protocol, and first-time-owner
-            notes — a laminated dog Doberman 58% DCM chart, a
-            fridge Doberman Holter echo card, and a first-
-            owner Doberman handbook. Educational kitchen
-            searches only. They are not a ranked product
-            list, they are not a crate hop, they are not a
-            pimobendan hop, and they do not replace a
-            veterinarian. Dog.com does not sell insurance.
-            Dog.com earns a commission on qualifying purchases
-            at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+doberman+58pct+dcm+chart?s=breed-doberman"
-              amazonLabel="Browse laminated dog Doberman 58% DCM charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+doberman+holter+echo+card?s=breed-doberman"
-              amazonLabel="Browse fridge Doberman Holter echo cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+doberman+handbook?s=breed-doberman"
-              amazonLabel="Browse first-owner Doberman handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-doberman"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

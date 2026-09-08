@@ -188,44 +188,16 @@ export default function BestFerretKibblePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret kibble-panel checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret kibble-panel checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-kibble-panel-chart,
-              fridge-carb-by-difference-card, and
-              mustelid-kibble-panel-reference-handbook notes
-              that match the animal-first-panel-map,
-              carb-by-difference-log, and
-              afa-kibble-grounding copy on this page —
-              a laminated ferret kibble-panel chart so the
-              named-meat / meal-is-fine / plant-protein-red-flag
-              map is posted on the fridge (not a diet-hub
-              feeding chart, not a training-map chart, not a
-              play-vs-fight chart), a ferret fridge
-              carb-by-difference card so protein-fat-moisture-ash-fiber
-              subtract notes are labeled on the fridge
-              (not a diet-label card, not a
-              harness-vs-collar card, not an over-arousal
-              card), and a mustelid kibble-panel reference
-              handbook so the AFA nutrition grounding is a
-              physical kitchen book (not a diet handbook,
-              not a training-bonding handbook, not a
-              play-aggression handbook). Educational
-              kitchen checklist, not a ranked kibble list,
-              not a sleep-sack hop, and not a substitute
-              for an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Aging pages stay
-              held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret kibble-panel checklist"
-              subtitle="Email the kibble-panel-chart, fridge carb-by-difference card, and kibble-panel-handbook notes. No spam."
-              ctaText="Email my ferret kibble-panel checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-best-ferret-kibble-under-hero"
             />
           </div>
@@ -289,48 +261,20 @@ export default function BestFerretKibblePage() {
               only; no Rx / vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs diet-hub /
-              training / play-aggression kitchen kits.
-              Directory import left untouched. Ferret
+              training / play-aggression kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret kibble-panel kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page animal-first-panel-map,
-              carb-by-difference-log, and
-              afa-kibble-grounding copy — a laminated
-              ferret kibble-panel chart, a ferret fridge
-              carb-by-difference card, and a mustelid
-              kibble-panel reference handbook. Educational
-              kitchen searches only. They are not a ranked
-              kibble list, they are not a diet-hub /
-              training / play-aggression hop, they are not
-              a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden. Existing Wysong /
-              Marshall / Carniwhole review hops stay in
-              the pick cards below.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+kibble+panel+chart?s=best-ferret-kibble"
-                amazonLabel="Browse laminated ferret kibble-panel charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=best-ferret-kibble"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+carb+by+difference+card?s=best-ferret-kibble"
-                amazonLabel="Browse ferret fridge carb-by-difference cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+kibble+panel+reference+handbook?s=best-ferret-kibble"
-                amazonLabel="Browse mustelid kibble-panel reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Kibbles That Fit the Profile</h2>

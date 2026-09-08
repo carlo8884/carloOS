@@ -85,34 +85,16 @@ export default function PufferFishPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the puffer-fish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Puffer-fish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Tetraodon / Carinotetraodon
-                notes that match the care copy on this
-                page — dwarf (pea) puffers at 1 inch in
-                a 10-gallon planted species tank (1
-                male to 2–3 females), hard-shelled
-                snails to wear the beak, figure 8 at
-                30+ gallons in brackish, and fahaka at
-                18 inches in 200+ gallons,
-                species-only. Educational
-                puffer-fish-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing puffer-fish tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Puffer-fish-setup checklist"
-                subtitle="Email the dwarf 10-gallon, snail-beak, and fahaka notes. No spam."
-                ctaText="Email my puffer-fish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-puffer-fish-under-hero"
               />
             </div>

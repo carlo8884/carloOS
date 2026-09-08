@@ -42,36 +42,23 @@ export default function DogDiabetesPage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diabetes" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-diabetes" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-diabetes glucose-monitor checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-diabetes glucose-monitor checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-monitor notes — a pet glucometer for
-              ear-margin or inner-lip checks between clinic
-              curves, plus light corn syrup kept at the door
-              for the first-sign hypoglycemia rub (honey is the
-              same-category stand-in when corn syrup is not on
-              the shelf). Educational checklist, not a
-              diagnosis and not a dosing schedule. Insulin,
-              syringes, FreeStyle Libre / Dexcom brand CGMs,
-              Vetsulin, and prescription diabetic diets stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-diabetes glucose-monitor checklist"
-              subtitle="Email the pet-glucometer and corn-syrup notes. No spam."
-              ctaText="Email my dog-diabetes glucose-monitor checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-diabetes-under-hero"
             />
           </div>
@@ -119,21 +106,9 @@ export default function DogDiabetesPage() {
               diets are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-diabetes glucose-monitor kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              home-monitor copy — a pet glucometer and light
-              corn syrup. Everyday physical gear only. They
-              are not a ranked product list, they are not
-              medications, they are not insulin or syringe
-              ASINs, they are not FreeStyle Libre / Dexcom
-              brand CGMs, they are not prescription diabetic
-              diets, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+glucometer?s=health-dog-diabetes"
@@ -143,7 +118,7 @@ export default function DogDiabetesPage() {
                 amazonHref="/go/amazon-brand/light+corn+syrup?s=health-dog-diabetes"
                 amazonLabel="Browse light corn syrup on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

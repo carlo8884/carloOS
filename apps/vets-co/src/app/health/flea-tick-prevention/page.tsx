@@ -43,7 +43,7 @@ export default function FleaTickPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases' }, { label: 'Intestinal Parasites', href: '/health/intestinal-parasites' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-flea-tick" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-flea-tick" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -51,45 +51,16 @@ export default function FleaTickPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the flea-and-tick yard-and-bedding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Flea-and-tick yard-and-bedding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the yard, bedding, and after-walk
-              notes that match the environmental-measures
-              copy on this page — a 14-inch manual reel
-              lawn mower so grass stays short enough
-              that a tick questing at the blade tip has
-              less cover, a zippered waterproof dog
-              duvet cover so the bedding you wash
-              regularly comes off the insert instead of
-              going in as a soaked foam pad, and a
-              handheld LED magnifying glass so ears,
-              armpits, and groin get a look after a
-              walk in grass or woods without hopping
-              the tick-removal hook, flea comb, or
-              laminated ID card that already live on
-              tick-borne-diseases. Educational
-              checklist, not a ranked product list, not
-              a substitute for a veterinarian-chosen
-              preventive, and not a Frontline /
-              Advantage / Bravecto / NexGard / Seresto
-              hop. Tick-removal hooks, fine-tooth flea
-              combs, and laminated tick identification
-              cards already live on
-              tick-borne-diseases. Handheld AA LED
-              flashlights already live on
-              emergency-signs. Washable dog bed covers
-              already live on dog.com mange. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Flea-and-tick yard-and-bedding checklist"
-              subtitle="Email the reel-mower, duvet-cover, and magnifier notes. No spam."
-              ctaText="Email my flea-and-tick yard-and-bedding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-flea-tick-prevention-under-hero"
             />
           </div>
@@ -113,7 +84,7 @@ export default function FleaTickPage() {
           <p>Effectiveness and safety vary considerably among products, and crucially, some products safe for dogs are toxic to cats. Because dosing must match the individual animal and the best choice depends on regional risks and your pet&apos;s health, select a product on your veterinarian&apos;s recommendation rather than by guesswork. Use products exactly as directed, and never apply a dog product to a cat. If you are unsure whether a product is working or appropriate, ask your veterinary team. Household yard, bedding, and after-walk gear is not a ranked product list and is not a substitute for that conversation.</p>
 
           <h2>Environmental and Lifestyle Measures</h2>
-          <p>Prevention products are most effective alongside good habits. Check your pet for ticks after walks in grassy or wooded areas and remove any promptly and correctly. Keep grass trimmed and reduce wildlife access to your yard where feasible. Wash pet bedding regularly. For multi-pet homes, treat all pets, since untreated animals can sustain an infestation. Combining consistent preventives with these measures gives the most reliable protection against fleas, ticks, and the diseases they carry. A 14-inch manual reel lawn mower is how that &quot;keep grass trimmed&quot; line becomes a short blade instead of a tick-friendly tall edge — it is not a cordless string trimmer, not a riding mower, and not a wildlife-exclusion fence. It does not kill fleas or ticks and it does not replace a preventive. A zippered waterproof dog duvet cover is how the bedding you wash regularly comes off the insert — it is not a washable dog bed cover (that lives on dog.com mange), not a quilted disposable underpad (that lives on emergency-signs), and not a heated pet mat. A handheld LED magnifying glass is how ears, armpits, groin, and the collar line get a look after a walk — it is not a tick-removal hook, not a fine-tooth flea comb, not a laminated tick identification card (those three live on tick-borne-diseases), and not a handheld AA LED flashlight (that lives on emergency-signs). Finding a tick is a reason to remove it correctly and tell the veterinarian; the magnifier does not diagnose Lyme, Anaplasmosis, Ehrlichiosis, or RMSF.</p>
+          <p>Prevention products are most effective alongside good habits. Check your pet for ticks after walks in grassy or wooded areas and remove any promptly and correctly. Keep grass trimmed and reduce wildlife access to your yard where feasible. Wash pet bedding regularly. For multi-pet homes, treat all pets, since untreated animals can sustain an infestation. Combining consistent preventives with these measures gives the most reliable protection against fleas, ticks, and the diseases they carry. It does not kill fleas or ticks and it does not replace a preventive. A zippered waterproof dog duvet cover is how the bedding you wash regularly comes off the insert — it is not a washable dog bed cover (that lives on dog.com mange), not a quilted disposable underpad (that lives on emergency-signs), and not a heated pet mat. Finding a tick is a reason to remove it correctly and tell the veterinarian; the magnifier does not diagnose Lyme, Anaplasmosis, Ehrlichiosis, or RMSF.</p>
 
           <h2 id="kit">Yard, bedding, and after-walk kit</h2>
           <p>
@@ -132,18 +103,10 @@ export default function FleaTickPage() {
             treatments. They do not prevent fleas or
             ticks, they do not replace a
             veterinarian-recommended preventive, and
-            they are not a ranked product list.
-            Tick-removal hooks, fine-tooth flea combs,
-            and laminated tick identification cards
-            already live on tick-borne-diseases.
-            Handheld AA LED flashlights already live
-            on emergency-signs. Washable dog bed
-            covers already live on dog.com mange.
-            Frontline, Advantage, Bravecto, NexGard,
+            they are not a ranked product list. Handheld AA LED flashlights already live
+            on emergency-signs. Frontline, Advantage, Bravecto, NexGard,
             Seresto, isoxazoline preventives, and
-            other Rx ASINs are not shoppable hops.
-            This page does not claim hands-on testing.
-          </p>
+            other Rx ASINs are not shoppable hops. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -205,32 +168,9 @@ export default function FleaTickPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the yard, bedding, and after-walk kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page keep-grass-trimmed,
-              wash-bedding-regularly, and
-              check-after-walk copy — a 14-inch manual
-              reel lawn mower, a zippered waterproof
-              dog duvet cover, and a handheld LED
-              magnifying glass. Everyday yard, bedding,
-              and inspection supplies only. They are
-              not a ranked product list, they are not a
-              substitute for a veterinarian-chosen
-              preventive, they are not a #1082 scale /
-              winter-coat / pill-alarm hop, they are
-              not a #1072 tick-hook / flea-comb /
-              ID-card hop, they are not a #1074
-              flashlight hop, they are not a dog.com
-              mange washable-bed-cover hop, they are
-              not a Frontline / Advantage / Bravecto /
-              NexGard / Seresto hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/14+inch+manual+reel+lawn+mower?s=health-flea-tick-prevention"
@@ -244,7 +184,7 @@ export default function FleaTickPage() {
                 amazonHref="/go/amazon-brand/handheld+led+magnifying+glass?s=health-flea-tick-prevention"
                 amazonLabel="Browse handheld LED magnifying glasses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

@@ -152,21 +152,16 @@ export default function ReadinessQuizPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret readiness checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the day-one kit — cage, litter, food, hammock, dig box, and carrier —
-            so you can shop the setup without re-running the quiz. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret readiness checklist"
-            subtitle="Email the day-one kit — cage, litter, food, hammock, dig box, carrier. No spam."
-            ctaText="Email my ferret readiness checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-readiness-quiz-under-hero"
           />
         </div>
@@ -258,12 +253,10 @@ export default function ReadinessQuizPage() {
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
                 amazonLabel="Browse ferret carriers on Amazon →"
               />
-            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission. Empty Chewy buttons stay hidden.
-          </p>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Fold the kit into year-one cost with the{' '}
             <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">

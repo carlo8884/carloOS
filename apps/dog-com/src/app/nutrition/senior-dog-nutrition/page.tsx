@@ -27,7 +27,7 @@ export default function SeniorDogNutritionPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-senior" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="nutrition-senior" />
         </>}
       >
         <div className="carloOS-article">
@@ -35,37 +35,16 @@ export default function SeniorDogNutritionPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the senior-dog-nutrition checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Senior-dog-nutrition checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the aging-dog feeding notes that
-                match the care copy on this page —
-                AAFCO has no separate senior standard,
-                protein at or above adult maintenance
-                (25% dry-matter minimum, ideally
-                28–35%) unless kidney disease is
-                diagnosed, switch on activity drop /
-                weight gain / renal or joint or
-                cognitive change rather than calendar
-                age, and EPA/DHA plus a 4–6 week
-                glucosamine trial when joints stiffen.
-                Educational senior-dog-nutrition
-                checklist, not a new product hop, not
-                a prescription renal diet, and not a
-                substitute for a veterinarian. The
-                existing WSAVA senior Amazon and
-                Purina Pro Plan Chewy searches stay
-                below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Senior-dog-nutrition checklist"
-                subtitle="Email the protein, switch-trigger, and supplement notes. No spam."
-                ctaText="Email my senior-dog-nutrition checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="nutrition-senior-under-hero"
               />
             </div>

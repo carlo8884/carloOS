@@ -28,7 +28,7 @@ export default function SeniorBloodworkPage() {
         ]}
         sidebar={<>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-bloodwork" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-bloodwork" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -36,38 +36,16 @@ export default function SeniorBloodworkPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the senior-dog bloodwork-visit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Senior-dog bloodwork-visit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the visit-prep notes — a letter-size
-              expanding file organizer so serial CBC,
-              chemistry, and SDMA printouts stay in date
-              order, a sterile urine specimen cup so a
-              first-morning free-catch sample can travel
-              with the dog when the clinic asks for a
-              home urinalysis, and a 12-hour mechanical
-              kitchen timer so the pre-chemistry food
-              hold is a set window instead of a guessed
-              overnight skip. Educational checklist, not
-              a diagnosis, not a lab interpretation, and
-              not a substitute for the veterinarian who
-              ordered the panel. Medical-records binders,
-              vaccination record books, weight-log books,
-              field notebooks, fecal-sample kits,
-              leak-proof specimen bags, one-minute
-              kitchen timers, handheld stopwatches,
-              glucometers, and Rx stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Senior-dog bloodwork-visit checklist"
-              subtitle="Email the expanding-file, urine-cup, and 12-hour-timer notes. No spam."
-              ctaText="Email my senior-dog bloodwork-visit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-senior-bloodwork-guide-under-hero"
             />
           </div>
@@ -109,30 +87,12 @@ export default function SeniorBloodworkPage() {
             free-catch sample can travel with the dog
             when the clinic asks for a home urinalysis,
             and a 12-hour mechanical kitchen timer so
-            the pre-chemistry food hold is a set window.
-            These are household visit-prep tools, not
+            the pre-chemistry food hold is a set window. These are household visit-prep tools, not
             treatments. They do not interpret labs, they
             do not diagnose CKD or diabetes, they do not
             replace a veterinarian, and they are not a
-            ranked product list. Pet medical-records
-            binders, vaccination record books, dog
-            weight-log books, waterproof field
-            notebooks, resting-respiratory-rate
-            notebooks, dry-erase monthly calendars,
-            fecal-sample collection kits, leak-proof
-            specimen bags, equine fecal-sample
-            containers, one-minute kitchen timers,
-            digital handheld stopwatches, analog
-            bathroom scales, digital pet scales,
-            kitchen gram scales, senior dog food, joint
-            support treats, portion-control food scales,
-            and pet glucometers already live on other
-            pages. This page does not hop levothyroxine,
-            Soloxine, Thyro-Tabs, Hill&apos;s, Royal
-            Canin, or other Rx ASINs. This page does
-            not hop diagnosis kits that imply treatment.
-            This page does not claim hands-on testing.
-          </p>
+            ranked product list. This page does
+            not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -180,33 +140,9 @@ export default function SeniorBloodworkPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the senior-dog bloodwork-visit kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page serial-panel, urinalysis, and
-              fasting-glucose copy — a letter-size
-              expanding file organizer, a sterile urine
-              specimen cup, and a 12-hour mechanical
-              kitchen timer. Everyday physical supplies
-              only. They are not a ranked product list,
-              they are not a lab-interpretation or
-              medication hop, they are not a #1069
-              single-story-cage / bathtub-mat /
-              stainless-crock hop, they are not a #1059
-              scoop / portion-cups / weight-log-book
-              hop, they are not a #1058 stopwatch /
-              field-notebook / table-bumper hop, they
-              are not a medical-records-binder /
-              vaccination-record-book hop, they are not
-              a fecal-sample-kit / leak-proof-bag hop,
-              they are not a one-minute-timer /
-              glucometer hop, and they do not replace
-              a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide"
@@ -220,7 +156,7 @@ export default function SeniorBloodworkPage() {
                 amazonHref="/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"
                 amazonLabel="Browse 12-hour mechanical kitchen timers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

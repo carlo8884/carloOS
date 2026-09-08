@@ -188,43 +188,16 @@ export default function FerretVetVisitPrepPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret vet-visit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret vet-visit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-bring-list-chart,
-              fridge-carrier-prep-card, and
-              mustelid-clinic-choice-handbook notes
-              that match the bring-list-map,
-              carrier-travel-log, and
-              quesenberry-afa-clinic-grounding copy on this
-              page — a laminated ferret bring-list chart so
-              the carrier / notes / weight / records map is
-              posted on the fridge (not a checkup-map chart,
-              not a cover-exclude chart, not a health-hub
-              triage chart), a ferret fridge carrier-prep
-              card so familiar-liner / towel-over / cool-cabin
-              notes are labeled on the fridge (not an
-              exam-prep card, not a heat-limit card, not a
-              waiting-period card), and a mustelid clinic-
-              choice handbook so the Quesenberry / AEMV /
-              ABVP clinic-filter grounding is a physical
-              kitchen book (not an annual-exam handbook, not
-              a vet-fund handbook, not a health-reference
-              handbook). Educational kitchen checklist, not
-              a ranked clinic list, not a sleep-sack hop, and
-              not a substitute for an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret vet-visit checklist"
-              subtitle="Email the bring-list-chart, fridge carrier-prep card, and clinic-choice-handbook notes. No spam."
-              ctaText="Email my ferret vet-visit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-vet-visit-prep-under-hero"
             />
           </div>
@@ -575,46 +548,20 @@ export default function FerretVetVisitPrepPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
               checkup / insurance / travel-and-carriers
-              product hops.
-              Directory import left untouched. Ferret
+              product hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret vet-visit kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page bring-list-map,
-              carrier-travel-log, and
-              quesenberry-afa-clinic-grounding copy — a
-              laminated ferret bring-list chart, a
-              ferret fridge carrier-prep card, and a
-              mustelid clinic-choice handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a health-hub / checkup / insurance hop, they
-              are not a sleep-sack hop, they are not a
-              child toothbrush hop, and they do not replace
-              an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Ferret.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+bring+list+chart?s=vet-visit-prep"
-                amazonLabel="Browse laminated ferret bring-list charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=vet-visit-prep"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+carrier+prep+card?s=vet-visit-prep"
-                amazonLabel="Browse ferret fridge carrier-prep cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+clinic+choice+handbook?s=vet-visit-prep"
-                amazonLabel="Browse mustelid clinic-choice handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

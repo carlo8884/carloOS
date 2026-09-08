@@ -54,39 +54,16 @@ export default function GermanShepherdBreedPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the german-shepherd checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            German Shepherd checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-stephanitz-1899-herding-chart,
-            dog-fridge-schutzhund-herding-track-card, and
-            canine-first-owner-german-shepherd-handbook notes
-            that match the late-1800s Max von Stephanitz
-            working-dog standardization, the Schutzhund /
-            herding / tracking outlets, and first-time-owner
-            notes on this page — a laminated dog Stephanitz
-            1899 herding chart so the Germany working-line
-            notes are posted on the fridge (not a POMC 2016
-            satiety chart, not a Tweedmouth Highland retrieve
-            chart), a fridge Schutzhund herding-track card so
-            the 1–2+ hour work list is labeled in the kitchen
-            (not an English-American Lab card), and a
-            first-owner German Shepherd handbook so the
-            NO-typically / DM / GDV / EPI grounding is a
-            physical kitchen book (not a first-owner Labrador
-            handbook, not a first-owner Golden handbook).
-            Educational kitchen checklist, not a ranked
-            product list, not a substitute for a veterinarian.
-            Dog.com does not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="German Shepherd checklist"
-            subtitle="Email the Stephanitz 1899 herding chart, Schutzhund herding-track card, and first-owner handbook notes. No spam."
-            ctaText="Email my german-shepherd checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-german-shepherd-under-hero"
           />
         </div>
@@ -111,38 +88,16 @@ export default function GermanShepherdBreedPage() {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the German Shepherd home kit
+                Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the on-page
-                late-1800s Max von Stephanitz working-dog
-                standardization, the Schutzhund / herding /
-                tracking outlets, and first-time-owner notes —
-                a laminated dog Stephanitz 1899 herding chart, a
-                fridge Schutzhund herding-track card, and a
-                first-owner German Shepherd handbook. Educational
-                kitchen searches only. They are not a ranked
-                product list, they are not a crate hop, they are
-                not a first-aid-kit hop, and they do not replace
-                a veterinarian. Dog.com does not sell insurance.
-                Dog.com earns a commission on qualifying purchases
-                at no extra cost to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+stephanitz+1899+herding+chart?s=breed-german-shepherd"
-                  amazonLabel="Browse laminated dog Stephanitz 1899 herding charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-german-shepherd"
+                  amazonLabel="Shop on Amazon"
                 />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+fridge+schutzhund+herding+track+card?s=breed-german-shepherd"
-                  amazonLabel="Browse fridge Schutzhund herding-track cards on Amazon →"
-                />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+first+owner+german+shepherd+handbook?s=breed-german-shepherd"
-                  amazonLabel="Browse first-owner German Shepherd handbooks on Amazon →"
-                />
-              </div>
+          </div>
             </div>
 
             <h2>Frequently Asked Questions</h2>

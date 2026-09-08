@@ -103,45 +103,16 @@ export default function FerretInsuranceBasicsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret insurance-planning checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret insurance-planning checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-cover-exclude-chart,
-              fridge-waiting-period-card, and
-              mustelid-vet-fund-handbook notes
-              that match the cover-exclude-map,
-              waiting-period-log, and
-              quesenberry-afa-insurance-grounding copy on
-              this page — a laminated ferret cover-exclude
-              chart so the accident-illness / pre-existing /
-              wellness-add-on map is posted on the fridge
-              (not a trip-decide chart, not a prey-compat
-              chart, not an ownership-hub section map), a
-              ferret fridge waiting-period card so buy-
-              before-signs / deductible / reimbursement
-              notes are labeled on the fridge (not a heat-
-              limit card, not an intro-barrier card, not a
-              supervise-rule card), and a mustelid vet-fund
-              handbook so the Quesenberry / AFA senior-cost
-              and self-insure grounding is a physical
-              kitchen book (not a trip-plan handbook, not a
-              cross-species handbook, not an
-              ownership-reference handbook). Educational
-              kitchen checklist, not a ranked insurer list,
-              not a sleep-sack hop, and not a substitute
-              for an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Aging pages stay
-              held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret insurance-planning checklist"
-              subtitle="Email the cover-exclude-chart, fridge waiting-period card, and vet-fund-handbook notes. No spam."
-              ctaText="Email my ferret insurance-planning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-ferret-insurance-basics-under-hero"
             />
           </div>
@@ -262,46 +233,20 @@ export default function FerretInsuranceBasicsPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs ownership-hub /
               travel / other-pets / kids kitchen kits.
-              Ferret.com does not sell insurance.
-              Directory import left untouched. Ferret
+              Ferret.com does not sell insurance. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret insurance-planning kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page cover-exclude-map,
-              waiting-period-log, and
-              quesenberry-afa-insurance-grounding copy — a
-              laminated ferret cover-exclude chart, a
-              ferret fridge waiting-period card, and a
-              mustelid vet-fund handbook.
-              Educational kitchen searches only. They are
-              not a ranked insurer list, they are not
-              an ownership-hub / travel / other-pets hop,
-              they are not a child toothbrush hop, and
-              they do not replace an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+cover+exclude+chart?s=ferret-insurance-basics"
-                amazonLabel="Browse laminated ferret cover-exclude charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=ferret-insurance-basics"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+waiting+period+card?s=ferret-insurance-basics"
-                amazonLabel="Browse ferret fridge waiting-period cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+vet+fund+handbook?s=ferret-insurance-basics"
-                amazonLabel="Browse mustelid vet-fund handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

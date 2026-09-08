@@ -76,33 +76,16 @@ export default function BestDogFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dry-dog-food checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dry-dog-food checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the WSAVA dry-food notes that
-                match the ranking copy on this page —
-                Royal Canin as the feeding-trial top
-                pick, Purina Pro Plan as the same
-                scientific standard at a better price,
-                Hill&apos;s when a prescription formula
-                is the job, and the FDA grain-free /
-                high-legume DCM flag as the skip list.
-                Educational dry-food checklist, not a
-                new product hop, not a first-aid-kit
-                hop, and not a substitute for a
-                veterinarian. The existing Royal Canin,
-                Purina Pro Plan, Hill&apos;s, and Orijen
-                Chewy searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dry-dog-food checklist"
-                subtitle="Email the WSAVA, Royal Canin, and grain-free DCM notes. No spam."
-                ctaText="Email my dry-dog-food checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dry-dog-food-under-hero"
               />
             </div>

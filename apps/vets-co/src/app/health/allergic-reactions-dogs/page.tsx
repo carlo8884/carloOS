@@ -39,7 +39,7 @@ export default function AllergicReactionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs Guide', href: '/health/emergency-signs' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-allergic-rxn" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-allergic-rxn" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -47,31 +47,16 @@ export default function AllergicReactionsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog allergy flare checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog allergy flare checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-support notes — oatmeal dog
-              shampoo to rinse a contact allergen after a
-              mild hive flare, dog paw cleaner wipes for
-              the investigating paw after a sting or
-              outdoor allergen, and a soft recovery collar
-              so the dog cannot scratch swollen skin while
-              you wait for the veterinarian. Educational
-              checklist, not a diagnosis and not a
-              substitute for epinephrine or emergency
-              care. Apoquel, Cytopoint, and Benadryl stay
-              off this list — dose guidance stays
-              editorial only. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog allergy flare checklist"
-              subtitle="Email the oatmeal-shampoo, paw-wipe, and recovery-collar notes. No spam."
-              ctaText="Email my dog allergy flare checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-allergic-reactions-dogs-under-hero"
             />
           </div>
@@ -134,23 +119,9 @@ export default function AllergicReactionsPage() {
               and Benadryl ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog allergy flare kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              mild-flare rinse-and-rest copy — oatmeal dog
-              shampoo, dog paw cleaner wipes, and a soft
-              recovery collar. Everyday physical supplies only.
-              They are not a ranked product list, they are not
-              Apoquel or Cytopoint, they are not Benadryl
-              ASINs, they are not the ear-infection or UTI
-              hops already pinned on Vets.co, they are not the
-              Dog.com paw-wipe or chlorhexidine-shampoo hops,
-              and they do not replace a veterinarian. Vets.co
-              earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs"
@@ -164,7 +135,7 @@ export default function AllergicReactionsPage() {
                 amazonHref="/go/amazon-brand/soft+recovery+collar+dog?s=health-allergic-reactions-dogs"
                 amazonLabel="Browse soft recovery collars for dogs on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

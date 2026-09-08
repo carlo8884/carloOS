@@ -131,19 +131,13 @@ export default function BeddingAndLitterTypesPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Ferret bedding &amp; litter shopping list
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the starter order — a fleece sleep sack or cube bed, a
-              hammock, washable fleece liners, recycled paper-pellet litter,
-              and a high-back corner pan — so you shop enclosed fabric and
-              safe pellets instead of loose shavings or clumping clay.
-              Educational checklist, not a diagnosis. No spam.
-            </p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
               title="Ferret bedding & litter shopping list"
-              subtitle="Email the sleep-sack, hammock, fleece-liner, paper-pellet, and corner-pan order. No spam."
-              ctaText="Email my ferret bedding & litter list"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-bedding-and-litter-types-under-hero"
             />
           </div>
@@ -201,39 +195,7 @@ export default function BeddingAndLitterTypesPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop bedding and litter
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page material
-              copy — enclosed fleece sleep sacks and cube beds, elevated
-              hammocks, machine-washable fleece liners for each cage level,
-              recycled paper-pellet litter, and a high-back corner pan.
-              Same sleep-sack hop used on the{' '}
-              <Link
-                href="/tools/cage-size-calculator"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                cage-size calculator
-              </Link>
-              , the same hammock hop used on the{' '}
-              <Link
-                href="/tools/ferret-body-condition-score"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                ferret body-condition score
-              </Link>
-              {' '}tool, and the same corner-pan hop used on the{' '}
-              <Link
-                href="/tools/litter-planner"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                litter planner
-              </Link>
-              . They are not a ranked product list, they are not
-              medications, and they do not diagnose or replace an exotic-pet
-              veterinarian. Cedar, untreated pine shavings, and clumping
-              clay stay off this list on purpose. Ferret.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types"
@@ -255,7 +217,7 @@ export default function BeddingAndLitterTypesPage() {
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"
                 amazonLabel="Browse high-back corner litter pans on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/care/cage-setup" className="text-brand-primary hover:underline">

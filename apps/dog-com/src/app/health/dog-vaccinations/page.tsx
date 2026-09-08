@@ -43,7 +43,7 @@ export default function DogVaccinationsPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Heartworm Prevention', href: '/health/heartworm-prevention' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
           <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vaccinations" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vaccinations" />
         </>}
       >
         <div className="carloOS-article">
@@ -52,34 +52,16 @@ export default function DogVaccinationsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the puppy-series vaccine-record checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Puppy-series vaccine-record checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the puppy-series, titer, and lifestyle-vaccine
-              notes — a pet vaccination record book so the
-              6–16 week series, adult boosters, and titer
-              printouts stay in one documented history, a
-              dog seat-belt tether for the repeated clinic
-              trips, and a foldable waterproof puppy mat for
-              the 30–60 minute post-vaccine observation
-              wait. Educational checklist, not a Nobivac,
-              DA2PP, or Bordetella product list, and not a
-              prescription. Core and lifestyle vaccines
-              still belong with a veterinarian. Mosquito
-              dunks, monthly pill organizers, soft-sided
-              vet-visit carriers, first-aid kits, and
-              high-value vet-visit treats stay on other
-              pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Puppy-series vaccine-record checklist"
-              subtitle="Email the record-book, seat-belt-tether, and wait-mat notes. No spam."
-              ctaText="Email my puppy-series vaccine-record checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-vaccinations-under-hero"
             />
           </div>
@@ -144,19 +126,14 @@ export default function DogVaccinationsPage() {
             that series requires, and a foldable waterproof
             puppy mat for waiting after vaccines while
             watching for a reaction. These are household
-            record-and-logistics tools, not treatments.
-            They do not vaccinate a dog, they do not
+            record-and-logistics tools, not treatments. They do not vaccinate a dog, they do not
             replace a veterinarian-administered core or
             lifestyle vaccine, they do not replace a titer
             blood test, and they are not Nobivac, DA2PP,
             Bordetella, rabies, Lyme, or influenza
-            products. Mosquito dunks, a monthly pill
-            organizer, a soft-sided vet-visit carrier,
-            a first-aid kit, and high-value vet-visit
-            treats already live on other pages. This page
+            products. This page
             does not hop vaccines or medications. This
-            page does not claim hands-on testing.
-          </p>
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -179,27 +156,9 @@ export default function DogVaccinationsPage() {
               Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the vaccine-record-and-clinic-trip kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page puppy-series, titer, and
-              observation-wait copy — a pet vaccination
-              record book, a dog seat-belt tether, and a
-              foldable waterproof puppy mat. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not vaccine
-              or vaccine-brand hops, they are not the
-              #1043 mosquito-dunk / pill-organizer /
-              clinic-carrier hops, they are not the
-              #1030 high-value vet-visit-treat hops,
-              they are not first-aid-kit hops, they are
-              not flea-and-tick medication hops, and
-              they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations"
@@ -213,7 +172,7 @@ export default function DogVaccinationsPage() {
                 amazonHref="/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"
                 amazonLabel="Browse foldable waterproof puppy mats on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

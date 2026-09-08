@@ -150,23 +150,16 @@ export default function DogAgeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog-age checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the dog-age checklist — life-stage notes and the shoppable kit
-            (puppy food / teething toys, adult dental chews, senior joint support,
-            ID tag, leash) — so you can come back to the right stage without
-            re-running the estimate. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog-age checklist"
-            subtitle="Email the dog-age checklist — life-stage notes and the shoppable kit. No spam."
-            ctaText="Email my dog-age checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-age-under-hero"
           />
         </div>
@@ -189,16 +182,7 @@ export default function DogAgeCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop by life stage
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that match the
-              life-stage label above — puppy food and teething toys, adult dental
-              chews, senior joint-support treats, an ID tag / collar, and a leash.
-              They are not a ranked product list, not invented inventory, and they
-              do not diagnose a health problem or set a care plan. Ask your
-              veterinarian which stage-appropriate products fit your dog. Dog.com
-              earns a commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-dog-age"
@@ -224,7 +208,7 @@ export default function DogAgeCalculatorPage() {
                 amazonHref="/go/amazon-brand/dog+leash?s=tools-dog-age"
                 amazonLabel="Browse dog leashes on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

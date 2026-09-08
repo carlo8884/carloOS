@@ -128,34 +128,16 @@ export default function OsteoarthritisPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the osteoarthritis keep-moving checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse osteoarthritis keep-moving checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the tow-behind-arena-drag-harrow,
-              cotton-horse-polo-exercise-wraps, and
-              portable-horse-paddock-panels notes that
-              match the choose-footing, long-warm-up, and
-              keep-moving copy on this page — a drag so
-              the working surface stays even after rain,
-              cotton polo wraps so a long warm-up is even
-              and protected, and portable paddock panels
-              so a stiff horse still has a small turnout
-              loop when a huge field is too deep or icy.
-              Educational keep-moving checklist, not a
-              treatment, not Adequan or an NSAID, not a
-              substitute for calling the veterinarian,
-              and not a joint-supplement, heart-bar, or
-              hanging-scale hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse osteoarthritis keep-moving checklist"
-              subtitle="Email the arena-drag, polo-wrap, and paddock-panel notes. No spam."
-              ctaText="Email my horse osteoarthritis keep-moving checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-osteoarthritis-under-hero"
             />
           </div>
@@ -205,17 +187,11 @@ export default function OsteoarthritisPage() {
             product list, not a substitute for veterinary
             care, and not Adequan, Legend, NSAIDs, or a
             diagnosis. Joint supplements already live on
-            the joint-supplement guide. Heart-bar, wedge,
-            and rocker shoes already live on navicular.
-            Farrier stands and log books already live on
-            the farrier-schedule page. Hanging hay-bale
-            scales already live on EMS. Shipping wraps
-            already live on trailering. Stall guards
-            already live on turnout-vs-stabling. This
+            the joint-supplement guide. Farrier stands and log books already live on
+            the farrier-schedule page. This
             page does not hop medications, vaccines, or
             injectable joint products. This page does
-            not claim hands-on testing.
-          </p>
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -272,45 +248,9 @@ export default function OsteoarthritisPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the osteoarthritis keep-moving kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page choose-footing, long-warm-up, and
-              keep-moving copy — a tow-behind arena drag
-              or harrow, cotton polo exercise wraps, and
-              portable paddock panels. Educational
-              keep-moving tools only. Hopping Adequan,
-              NSAIDs, or joint supplements is not the
-              job of this kit. They are not a ranked
-              product list, they are not a substitute
-              for veterinary care, they are not a #1105
-              hay-bale-scale / NSC-hay-test-kit /
-              strip-grazing-posts hop, they are not a
-              #1104 run-in-shelter / grooming-caddy /
-              blanket-wash-bag hop, they are not a
-              #1103 mud-grid / turnout-boot / leg-towel
-              hop, they are not a #1102 Irish-knit-
-              cooler / quarter-sheet / loose-salt hop,
-              they are not a #1101 heart-bar /
-              wedge-pad / rocker-toe hop, they are not
-              a #1100 stock-tank-brush / barn-mosquito-
-              netting / mosquito-sheet hop, they are
-              not a #1099 lunge-line / lead-shank /
-              traffic-cone hop, they are not a #1098
-              clipboard / feed-pan / paper-pellet-
-              bedding hop, they are not a #1097
-              color-coded-bucket / coverall / boot-dip-
-              tub hop, they are not a #1094 soaking-
-              pail / feed-tub-rock / apple-wedger hop,
-              they are not a trailering shipping-wrap
-              hop, they are not a turnout stall-guard
-              hop, they are not a joint-supplement hop,
-              and they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/tow+behind+arena+drag+harrow?s=health-osteoarthritis"
@@ -324,7 +264,7 @@ export default function OsteoarthritisPage() {
                 amazonHref="/go/amazon-brand/portable+horse+paddock+panels?s=health-osteoarthritis"
                 amazonLabel="Browse portable paddock panels on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

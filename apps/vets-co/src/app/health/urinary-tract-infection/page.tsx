@@ -34,7 +34,7 @@ export default function UTIPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing\'s Disease', href: '/health/cushing-disease-dogs' }, { label: 'Diabetes in Dogs and Cats', href: '/health/diabetes-in-dogs-cats' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-uti" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-uti" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -42,29 +42,16 @@ export default function UTIPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog UTI hydration checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog UTI hydration checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-support notes — a stainless-steel
-              dog fountain so running water invites more
-              drinking, washable pee pads for house accidents
-              in a previously reliable dog, and a weighted
-              ceramic water bowl that stays put when a dog
-              with urgency drinks often. Educational
-              checklist, not a diagnosis and not a substitute
-              for culture-guided antibiotics. Prescription
-              urinary diets, cranberry products, and clinic
-              culture kits stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog UTI hydration checklist"
-              subtitle="Email the fountain, washable-pad, and ceramic-bowl notes. No spam."
-              ctaText="Email my dog UTI hydration checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-urinary-tract-infection-under-hero"
             />
           </div>
@@ -118,22 +105,9 @@ export default function UTIPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog UTI hydration kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              hydration and house-accident copy — a stainless-steel
-              dog fountain, washable pee pads for accidents, and a
-              weighted ceramic water bowl that stays put. Everyday
-              physical supplies only. They are not a ranked product
-              list, they are not antibiotics, they are not
-              prescription urinary diets, they are not the dog water
-              fountain or ceramic pet water bowl already hopped
-              elsewhere, they are not the FLUTD cat hops, and they
-              do not replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection"
@@ -147,7 +121,7 @@ export default function UTIPage() {
                 amazonHref="/go/amazon-brand/weighted+ceramic+dog+water+bowl?s=health-urinary-tract-infection"
                 amazonLabel="Browse weighted ceramic dog water bowls on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

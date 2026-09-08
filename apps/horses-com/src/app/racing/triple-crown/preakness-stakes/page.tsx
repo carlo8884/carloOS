@@ -168,40 +168,16 @@ export default function PreaknessStakesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the preakness-stakes checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Preakness-stakes checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-black-eyed-susan-chart,
-              stall-door-pimlico-two-week-card, and
-              equine-woodlawn-vase-handbook notes
-              that match the black-eyed-Susan tradition,
-              two-week-turnaround / Pimlico, and Woodlawn
-              Vase copy on this page — a laminated horse
-              black-eyed-Susan chart so the Maryland-flower /
-              middle-jewel notes are posted on the stall door
-              (not a Run-for-the-Roses chart, not a Derby-
-              Preakness-Belmont chart), a horse stall-door
-              Pimlico-two-week card so the shortest-leg /
-              recovery notes are labeled at the barn (not a
-              Churchill-ten-furlong card, not a Belmont-test
-              card), and an equine Woodlawn-Vase handbook so
-              the weathervane / trophy grounding is a physical
-              barn book (not a Derby-points-prep handbook, not
-              a thirteen-winner handbook). Educational barn
-              checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for a
-              veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Preakness-stakes checklist"
-              subtitle="Email the black-eyed-Susan chart, Pimlico-two-week card, and Woodlawn-Vase handbook notes. No spam."
-              ctaText="Email my triple-crown-preakness-stakes checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="triple-crown-preakness-stakes-under-hero"
             />
           </div>
@@ -260,42 +236,18 @@ export default function PreaknessStakesPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs kentucky-derby /
               triple-crown hub hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the preakness-stakes barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page black-eyed-Susan, two-week-turnaround /
-              Pimlico, and Woodlawn-Vase copy — a laminated
-              horse black-eyed-Susan chart, a horse stall-door
-              Pimlico-two-week card, and an equine Woodlawn-
-              Vase handbook. Educational barn searches only.
-              They are not a ranked race list, they are not a
-              kentucky-derby / triple-crown-hub hop, they are
-              not a first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+black+eyed+susan+chart?s=triple-crown-preakness-stakes"
-                amazonLabel="Browse laminated horse black-eyed-Susan charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=triple-crown-preakness-stakes"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+pimlico+two+week+card?s=triple-crown-preakness-stakes"
-                amazonLabel="Browse horse stall-door Pimlico-two-week cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+woodlawn+vase+handbook?s=triple-crown-preakness-stakes"
-                amazonLabel="Browse equine Woodlawn-Vase handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

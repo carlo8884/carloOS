@@ -27,42 +27,23 @@ export default function HowPetInsuranceWorksPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }, { label: 'When to Enroll', href: '/insurance/when-to-enroll' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-how-works" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-how-works" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the how-pet-insurance-works checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              How-pet-insurance-works checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              reimbursement-model, four-levers, and
-              pay-then-claim copy on this page — a
-              four-column accounting pad so premium,
-              deductible, reimbursement rate, and
-              annual limit stay four written columns
-              for the worked example, a letter-size
-              poly envelope so the itemized invoice
-              and records stay one claim packet, and
-              a desktop receipt organizer so paid
-              invoices stay filed until reimbursement
-              lands. Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a reporter-
-              notebook, two-pocket-folder, or
-              cash-envelope hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="How-pet-insurance-works checklist"
-              subtitle="Email the four-column, poly-envelope, and receipt-organizer notes. No spam."
-              ctaText="Email my how-pet-insurance-works checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-how-pet-insurance-works-under-hero"
             />
           </div>
@@ -74,7 +55,7 @@ export default function HowPetInsuranceWorksPage() {
           </CalloutBox>
 
           <h2>The Reimbursement Model</h2>
-          <p>Unlike most human health insurance, pet insurance almost always works by reimbursement. You take your pet to any licensed veterinarian, pay the bill yourself, then submit a claim — usually by app or online — with the itemized invoice and records. A letter-size poly envelope is how that invoice and the records stay one claim packet instead of loose papers in the car — it is not letter-size sheet protectors (that live on questions-to-ask-your-vet), not a kraft two-pocket folder (that lives on choosing-a-veterinarian), and not letter-size hanging file folders (that live on how-to-afford-vet-care). The insurer reviews the claim and reimburses you for the covered portion. This means you need to be able to cover the bill upfront, which is an important practical consideration when choosing coverage.</p>
+          <p>Unlike most human health insurance, pet insurance almost always works by reimbursement. You take your pet to any licensed veterinarian, pay the bill yourself, then submit a claim — usually by app or online — with the itemized invoice and records. The insurer reviews the claim and reimburses you for the covered portion. This means you need to be able to cover the bill upfront, which is an important practical consideration when choosing coverage.</p>
 
           <h2>The Four Levers</h2>
           <p>Every policy is defined by four interacting numbers. The <strong>premium</strong> is what you pay monthly to keep coverage active. The <strong>deductible</strong> is the amount you pay out of pocket before reimbursement kicks in, set either per year or per condition. The <strong>reimbursement rate</strong> is the percentage of covered costs the insurer pays after the deductible — often 70%, 80%, or 90%. The <strong>annual limit</strong> caps how much the insurer will reimburse in a policy year. A four-column accounting pad is how those four levers stay written columns instead of a remembered quote — it is not a household budget workbook (that lives on cost-of-veterinary-care), not a checkbook register (that lives on cost-of-veterinary-care), and not a basic desktop calculator (that lives on emergency-vet-costs). Raising your reimbursement rate or annual limit, or lowering your deductible, increases your premium; the levers trade off against each other.</p>
@@ -166,32 +147,9 @@ export default function HowPetInsuranceWorksPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the how-pet-insurance-works kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page reimbursement-model, four-levers,
-              and pay-then-claim copy — a four-column
-              accounting pad, a letter-size poly
-              envelope, and a desktop receipt
-              organizer. Educational
-              insurance-education / paperwork tools
-              only. They are not a ranked product
-              list, they are not a substitute for
-              veterinary care, they are not a #1167
-              reporter-notebook / two-pocket-folder /
-              address-book hop, they are not a #1166
-              index-card / sticky-note /
-              sheet-protector hop, they are not a
-              #1165 spiral-notebook / cooler-bag /
-              clipboard hop, they are not a
-              financing-brand or insurance-brand hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/four+column+accounting+pad?s=insurance-how-pet-insurance-works"
@@ -205,7 +163,7 @@ export default function HowPetInsuranceWorksPage() {
                 amazonHref="/go/amazon-brand/desktop+receipt+organizer?s=insurance-how-pet-insurance-works"
                 amazonLabel="Browse desktop receipt organizers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Compare a Couple of Insurers</h2>

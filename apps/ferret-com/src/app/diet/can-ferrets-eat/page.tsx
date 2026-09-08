@@ -63,43 +63,16 @@ export default function CanFerretsEatHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ferret food-safety checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret food-safety checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-ferret-meat-egg-chart,
-            fridge-plant-sugar-card, and
-            mustelid-food-safety-handbook notes
-            that match the meat-egg-safe-map,
-            plant-sugar-avoid-log, and
-            aspca-toxic-grounding copy on this
-            page — a laminated ferret meat-egg chart
-            so the meat / egg / meat-treat map is posted
-            on the fridge (not a diet-feeding chart, not a
-            tarry-stool chart, not a jill-heat chart), a
-            ferret fridge plant-sugar card so fruit /
-            grain / plant-fiber notes are labeled on the
-            fridge (not a diet-label card, not a
-            bruxism-watch card, not a musk-vs-gland
-            card), and a mustelid food-safety handbook
-            so the ASPCA hotline and toxic-list grounding
-            is a physical kitchen book (not a diet
-            reference handbook, not a helicobacter-ulcer
-            handbook, not a spay-timing handbook).
-            Educational kitchen checklist, not a ranked
-            clinic list, not a first-aid-kit hop, and not
-            a substitute for an exotic-mammal
-            veterinarian. Ferret.com does not sell
-            insurance. Aging pages stay held. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret food-safety checklist"
-            subtitle="Email the meat-egg-chart, fridge plant-sugar card, and food-safety-handbook notes. No spam."
-            ctaText="Email my ferret food-safety checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="can-ferrets-eat-under-hero"
           />
         </div>
@@ -174,47 +147,20 @@ export default function CanFerretsEatHubPage() {
               vaccine / flea / heartworm / nsaid / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs diet-hub /
-              ulcers / spay-neuter hops.
-              Directory import left untouched. Ferret
+              ulcers / spay-neuter hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret food-safety kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page meat-egg-safe-map,
-              plant-sugar-avoid-log, and
-              aspca-toxic-grounding copy — a
-              laminated ferret meat-egg chart, a
-              ferret fridge plant-sugar card, and a
-              mustelid food-safety handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a diet-hub / ulcers / spay-neuter hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+meat+egg+chart?s=can-ferrets-eat"
-                amazonLabel="Browse laminated ferret meat-egg charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=can-ferrets-eat"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+plant+sugar+card?s=can-ferrets-eat"
-                amazonLabel="Browse ferret fridge plant-sugar cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+food+safety+handbook?s=can-ferrets-eat"
-                amazonLabel="Browse mustelid food-safety handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </div>

@@ -42,7 +42,7 @@ export default function FLUTDPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }, { label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-flutd" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-flutd" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -52,26 +52,16 @@ export default function FLUTDPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the cat FLUTD hydration checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Cat FLUTD hydration checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prevention notes — a cat water fountain plus
-              extra water stations so the cat drinks more, extra litter
-              boxes (one per cat plus one extra), and canned wet cat
-              food for water intake. Educational checklist, not a
-              diagnosis and not a substitute for the emergency vet.
-              Prescription urinary diets, antibiotics, and pain
-              medications stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Cat FLUTD hydration checklist"
-              subtitle="Email the fountain, extra-litter-box, and wet-food notes. No spam."
-              ctaText="Email my cat FLUTD hydration checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-feline-lower-urinary-tract-disease-under-hero"
             />
           </div>
@@ -113,20 +103,9 @@ export default function FLUTDPage() {
               Prescription urinary diets and medications are not hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the FLUTD hydration kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              prevention copy — a cat water fountain, extra litter
-              boxes (one per cat plus one extra), and canned wet cat
-              food for water intake. Everyday physical supplies only.
-              They are not a ranked product list, they are not
-              prescription urinary diets, they are not the dog water
-              fountain already hopped elsewhere, they are not
-              medications, and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease"
@@ -140,7 +119,7 @@ export default function FLUTDPage() {
                 amazonHref="/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"
                 amazonLabel="Browse canned wet cat food on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

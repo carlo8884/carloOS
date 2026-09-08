@@ -156,53 +156,16 @@ export default function SpecialistsHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the vets specialists-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Vets specialists-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-pet-specialty-discipline-chart,
-            fridge-referral-consult-card, and
-            veterinary-specialty-reference-handbook notes that
-            match the specialty-discipline-map,
-            referral-consult-log, and
-            avma-college-directory-grounding copy on this hub —
-            a laminated pet specialty discipline chart so the
-            cardiology / oncology / dermatology / ophthalmology /
-            neurology / dentistry / internal-medicine /
-            orthopedic-surgery / ECC map is posted on the fridge
-            (not a tools-hub calculator chart, not an insurance
-            policy-map chart, not a reviews buyer-guide chart,
-            not a health triage chart, not a guides section-map
-            chart, not a breeds screening chart, not a
-            diagnostics test-map chart, not a symptoms triage
-            chart, not a therapeutic category chart), a pet
-            fridge referral consult card so each referral-and-
-            consult spoke is labeled on the fridge (not a cat
-            measurement card, not an insurance levers card, not
-            a reviews comparison card, not a health library
-            card, not a guides prep card, not a breeds library
-            card, not a diagnostics library card, not a
-            symptoms library card, not a monitoring recheck
-            card), and a veterinary specialty reference
-            handbook so the AVMA college-directory grounding is
-            a physical kitchen book (not a feline calculator
-            handbook, not an insurance handbook, not a reviews
-            handbook, not a health handbook, not a guides
-            handbook, not a breeds handbook, not a diagnostics
-            handbook, not a symptoms handbook, not a Plumb&apos;s
-            handbook). Educational kitchen checklist, not a
-            ranked clinic list, not a child spiral-notebook hop,
-            and not a substitute for a veterinarian. Vets.co
-            does not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Vets specialists-hub checklist"
-            subtitle="Email the specialty-discipline-chart, fridge referral-card, and specialty-handbook notes. No spam."
-            ctaText="Email my vets specialists-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="specialists-hub-under-hero"
           />
         </div>
@@ -499,31 +462,8 @@ export default function SpecialistsHubPage() {
       </main>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Specialists-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          specialty-discipline-map, referral-consult-log, and
-          avma-college-directory-grounding copy on this hub — a
-          laminated pet specialty discipline chart so the
-          cardiology / oncology / dermatology / ophthalmology /
-          neurology / dentistry / internal-medicine /
-          orthopedic-surgery / ECC map is posted on the fridge,
-          a pet fridge referral consult card so each
-          referral-and-consult spoke is labeled on the fridge,
-          and a veterinary specialty reference handbook so the
-          AVMA college-directory grounding is a physical kitchen
-          book. These are educational kitchen searches, not a
-          ranked clinic list, not a substitute for a
-          veterinarian, not a tools-hub / insurance-hub /
-          reviews-hub / health-hub / guides-hub / breeds-hub /
-          diagnostics-hub / symptoms-hub / medications-hub hop,
-          and not a child spiral-notebook hop (those live on
-          guides children). This page does not hop medications
-          or vaccines. This page does not sell insurance. This
-          page does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
@@ -540,43 +480,16 @@ export default function SpecialistsHubPage() {
             reviews / health / guides / breeds /
             diagnostics / symptoms / medications kitchen
             kits and child spiral+notebook hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the specialists-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page specialty-discipline-map,
-            referral-consult-log, and
-            avma-college-directory-grounding copy — a
-            laminated pet specialty discipline chart, a pet
-            fridge referral consult card, and a veterinary
-            specialty reference handbook. Educational
-            kitchen searches only. They are not a ranked
-            clinic list, they are not a tools-hub /
-            insurance-hub / reviews-hub / health-hub /
-            guides-hub / breeds-hub / diagnostics-hub /
-            symptoms-hub / medications-hub hop, they are
-            not a child spiral-notebook hop, and they do
-            not replace a veterinarian. Vets.co does not
-            sell insurance. Vets.co earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+pet+specialty+discipline+chart?s=specialists-hub"
-              amazonLabel="Browse laminated pet specialty discipline charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+fridge+referral+consult+card?s=specialists-hub"
-              amazonLabel="Browse pet fridge referral consult cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/veterinary+specialty+reference+handbook?s=specialists-hub"
-              amazonLabel="Browse veterinary specialty reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/pet+supplies?s=specialists-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

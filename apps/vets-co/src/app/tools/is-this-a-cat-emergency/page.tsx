@@ -181,24 +181,18 @@ export default function IsThisACatEmergencyPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fridge sheet
+            Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cat emergency-signs triage cheat sheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the fridge cat-triage cheat sheet — the go-now / same-day / monitor
-            recap plus a shoppable emergency-prep kit (first-aid, thermometer,
-            soft carrier, styptic powder, wound-care gauze) — so you can re-check
-            signs later without re-reading the list. A triage aid, not a
-            diagnosis. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Cat emergency-signs triage cheat sheet"
-            subtitle="Email the fridge cat-triage cheat sheet and emergency-signs recap. No spam."
-            ctaText="Email my cat triage cheat sheet"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-is-this-a-cat-emergency-under-hero"
           />
         </div>
@@ -253,17 +247,7 @@ export default function IsThisACatEmergencyPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a cat emergency-prep kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are cabinet and car items for
-              feline emergency prep — a pet first-aid kit, a digital pet thermometer,
-              a soft cat carrier, styptic powder, and wound-care gauze. They are not
-              a ranked product list, not invented inventory, and they do not
-              diagnose, treat, or replace emergency care. If a sign looks
-              life-threatening, go to an emergency vet now; this kit is for
-              planning ahead, not for waiting on a crisis. Vets.co earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency"
@@ -285,7 +269,7 @@ export default function IsThisACatEmergencyPage() {
                 amazonHref="/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-cat-emergency"
                 amazonLabel="Browse wound-care gauze on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -338,8 +322,7 @@ export default function IsThisACatEmergencyPage() {
             two specific signs, and it still tells you to call your vet if anything persists, worsens, or you
             are unsure). There is deliberately no &quot;all clear&quot; result.
           </p>
-          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            This is a cat-specific sign-list triage, not a setting chooser. For where to go — emergency
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">This is a cat-specific sign-list triage, not a setting chooser. For where to go — emergency
             hospital, clinic, or a licensed vet on a screen — use{' '}
             <Link
               href="/tools/er-vs-clinic"
@@ -365,8 +348,7 @@ export default function IsThisACatEmergencyPage() {
             <Link href="/find-a-vet" className="text-brand-primary underline-offset-2 hover:underline">
               find a vet
             </Link>
-            .
-          </p>
+            .</p>
 
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">
             Common questions

@@ -129,40 +129,16 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
           {spoke.slug === 'how-to-read-a-race-card' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the how-to-read-a-race-card checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                How-to-read-a-race-card checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-race-card-field-chart,
-                stall-door-form-line-card, and
-                equine-program-literacy-handbook notes
-                that match the field-by-field program,
-                form-line / connections, and spectator-
-                literacy copy on this page — a laminated
-                horse race-card-field chart so the distance /
-                class / weights notes are posted on the stall
-                door (not a barn-newcomer-race-card chart, not
-                a yearling-sale-catalog chart), a horse
-                stall-door form-line card so the past-performance
-                / box-score notes are labeled at the barn (not
-                a paddock-parade card, not an RNA-clearance
-                card), and an equine program-literacy handbook
-                so the spectator / non-wagering grounding is a
-                physical barn book (not a silks-literacy
-                handbook, not a bloodstock-agent handbook).
-                Educational barn checklist, not a ranked race
-                list, not a first-aid-kit hop, and not a
-                substitute for a veterinarian. Horses.com does
-                not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="How-to-read-a-race-card checklist"
-                subtitle="Email the race-card-field chart, form-line card, and program-literacy handbook notes. No spam."
-                ctaText="Email my how-to-read-a-race-card checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="racing-for-newcomers-how-to-read-a-race-card-under-hero"
               />
             </div>
@@ -171,39 +147,16 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
           {spoke.slug === 'a-day-at-the-races' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the a-day-at-the-races checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                A-day-at-the-races checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-raceday-paddock-ring-chart,
-                stall-door-call-to-post-card, and
-                equine-raceday-etiquette-handbook notes
-                that match the paddock / parade-ring, call-to-post
-                / bugle, and etiquette / first-visit copy on this
-                page — a laminated horse raceday-paddock-ring
-                chart so the walking-ring / rail notes are posted
-                on the stall door (not a race-card-field chart,
-                not a barn-newcomer-race-card chart), a horse
-                stall-door call-to-post card so the bugle /
-                starting-gate notes are labeled at the barn (not
-                a form-line card, not a paddock-parade card),
-                and an equine raceday-etiquette handbook so the
-                dress / family-friendly grounding is a physical
-                barn book (not a program-literacy handbook, not
-                a silks-literacy handbook). Educational barn
-                checklist, not a ranked race list, not a
-                first-aid-kit hop, and not a substitute for a
-                veterinarian. Horses.com does not sell insurance.
-                No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="A-day-at-the-races checklist"
-                subtitle="Email the raceday-paddock-ring chart, call-to-post card, and raceday-etiquette handbook notes. No spam."
-                ctaText="Email my a-day-at-the-races checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="racing-for-newcomers-a-day-at-the-races-under-hero"
               />
             </div>
@@ -212,39 +165,16 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
           {spoke.slug === 'understanding-racing-silks' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the understanding-racing-silks checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Understanding-racing-silks checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-owner-silks-pattern-chart,
-                stall-door-saddlecloth-number-card, and
-                equine-racing-colours-register-handbook notes
-                that match the owner-registered-colours / pattern,
-                saddlecloth-number, and Jockey-Club-registration
-                copy on this page — a laminated horse owner-silks
-                pattern chart so the hooped / striped / chevroned
-                notes are posted on the stall door (not a
-                raceday-paddock-ring chart, not a race-card-field
-                chart), a horse stall-door saddlecloth-number
-                card so the follow-the-field notes are labeled
-                at the barn (not a call-to-post card, not a
-                form-line card), and an equine racing-colours
-                register handbook so the owner-livery grounding
-                is a physical barn book (not a raceday-etiquette
-                handbook, not a silks-literacy handbook).
-                Educational barn checklist, not a ranked race
-                list, not a first-aid-kit hop, and not a
-                substitute for a veterinarian. Horses.com does
-                not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Understanding-racing-silks checklist"
-                subtitle="Email the owner-silks-pattern chart, saddlecloth-number card, and racing-colours-register handbook notes. No spam."
-                ctaText="Email my understanding-racing-silks checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="racing-for-newcomers-understanding-racing-silks-under-hero"
               />
             </div>
@@ -307,43 +237,18 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs racing-for-newcomers
                   hub / racing-bloodstock hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the how-to-read-a-race-card barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page field-by-field program, form-line /
-                  connections, and spectator-literacy copy — a
-                  laminated horse race-card-field chart, a
-                  horse stall-door form-line card, and an
-                  equine program-literacy handbook. Educational
-                  barn searches only. They are not a ranked
-                  race list, they are not a racing-for-newcomers
-                  hub / racing-bloodstock hop, they are not a
-                  first-aid-kit hop, they are not a child
-                  toothbrush hop, and they do not replace a
-                  veterinarian. Horses.com does not sell
-                  insurance. Horses.com earns a commission on
-                  qualifying purchases at no extra cost to you.
-                  Empty Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+race+card+field+chart?s=racing-for-newcomers-how-to-read-a-race-card"
-                    amazonLabel="Browse laminated horse race-card-field charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+form+line+card?s=racing-for-newcomers-how-to-read-a-race-card"
-                    amazonLabel="Browse horse stall-door form-line cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+program+literacy+handbook?s=racing-for-newcomers-how-to-read-a-race-card"
-                    amazonLabel="Browse equine program-literacy handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -362,43 +267,18 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs how-to-read-a-race-card
                   / racing-for-newcomers hub hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the a-day-at-the-races barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page paddock / parade-ring, call-to-post /
-                  bugle, and etiquette / first-visit copy — a
-                  laminated horse raceday-paddock-ring chart, a
-                  horse stall-door call-to-post card, and an
-                  equine raceday-etiquette handbook. Educational
-                  barn searches only. They are not a ranked
-                  race list, they are not a how-to-read-a-race-card
-                  / racing-for-newcomers-hub hop, they are not a
-                  first-aid-kit hop, they are not a child
-                  toothbrush hop, and they do not replace a
-                  veterinarian. Horses.com does not sell
-                  insurance. Horses.com earns a commission on
-                  qualifying purchases at no extra cost to you.
-                  Empty Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+raceday+paddock+ring+chart?s=racing-for-newcomers-a-day-at-the-races"
-                    amazonLabel="Browse laminated horse raceday-paddock-ring charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+call+to+post+card?s=racing-for-newcomers-a-day-at-the-races"
-                    amazonLabel="Browse horse stall-door call-to-post cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+raceday+etiquette+handbook?s=racing-for-newcomers-a-day-at-the-races"
-                    amazonLabel="Browse equine raceday-etiquette handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -417,44 +297,18 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs a-day-at-the-races
                   / how-to-read-a-race-card / newcomers-hub hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the understanding-racing-silks barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page owner-registered-colours / pattern,
-                  saddlecloth-number, and Jockey-Club-
-                  registration copy — a laminated horse
-                  owner-silks-pattern chart, a horse stall-door
-                  saddlecloth-number card, and an equine
-                  racing-colours-register handbook. Educational
-                  barn searches only. They are not a ranked
-                  race list, they are not an a-day-at-the-races
-                  / how-to-read-a-race-card hop, they are not a
-                  first-aid-kit hop, they are not a child
-                  toothbrush hop, and they do not replace a
-                  veterinarian. Horses.com does not sell
-                  insurance. Horses.com earns a commission on
-                  qualifying purchases at no extra cost to you.
-                  Empty Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+owner+silks+pattern+chart?s=racing-for-newcomers-understanding-racing-silks"
-                    amazonLabel="Browse laminated horse owner-silks-pattern charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+saddlecloth+number+card?s=racing-for-newcomers-understanding-racing-silks"
-                    amazonLabel="Browse horse stall-door saddlecloth-number cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+racing+colours+register+handbook?s=racing-for-newcomers-understanding-racing-silks"
-                    amazonLabel="Browse equine racing-colours-register handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}

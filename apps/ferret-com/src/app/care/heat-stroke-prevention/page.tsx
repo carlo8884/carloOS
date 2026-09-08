@@ -157,24 +157,16 @@ export default function HeatStrokePreventionPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the heat-safety checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret heat-safety checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the summer cage-setup order — a digital indoor thermometer
-              at the cage (not the hallway thermostat), a sealed frozen water
-              bottle wrapped in thin cloth, a chilled ceramic tile, a backup
-              ferret water bottle, and a clip-on fan only to move already-cooled
-              air. Educational checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret heat-safety checklist"
-              subtitle="Email the cage-temperature, frozen-bottle, tile, and backup-water order. No spam."
-              ctaText="Email my ferret heat-safety checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-heat-stroke-prevention-under-hero"
             />
           </div>
@@ -233,27 +225,7 @@ export default function HeatStrokePreventionPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop heat-safety setup
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page prevention
-              copy — a digital indoor thermometer so you can read the
-              temperature at the cage, reusable plastic bottles you can freeze
-              and wrap in thin cloth, a ceramic tile to chill as a cool
-              surface, a spare ferret water bottle as the backup water source,
-              and a small clip-on fan only to circulate already-cooled air.
-              Same ferret-water-bottle hop used on the{' '}
-              <Link
-                href="/care/toxic-foods"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                toxic-foods
-              </Link>
-              {' '}guide. They are not a ranked product list, they are not
-              medications, and they do not diagnose, treat, or replace an
-              exotic-pet veterinarian. Air conditioning remains the gold
-              standard; this gear is the inexpensive cage-level layer. Ferret.com
-              earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+indoor+thermometer?s=care-heat-stroke-prevention"
@@ -275,7 +247,7 @@ export default function HeatStrokePreventionPage() {
                 amazonHref="/go/amazon-brand/clip+on+fan?s=care-heat-stroke-prevention"
                 amazonLabel="Browse clip-on fans on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/care/cage-setup" className="text-brand-primary hover:underline">

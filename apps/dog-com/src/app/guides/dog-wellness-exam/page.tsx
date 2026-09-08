@@ -148,31 +148,16 @@ export default function DogWellnessExamPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the wellness-visit kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Wellness-visit kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the appointment-prep notes — a
-              fecal-sample collection kit so a fresh
-              stool sample is ready if the clinic asks,
-              leak-proof specimen bags so it does not
-              leak in the car, and high-value vet-visit
-              treats for low-stress handling in the
-              exam room. Educational checklist, not a
-              diagnosis and not a first-aid wound kit.
-              Gauze, Vetrap, saline flush, muzzles, and
-              carriers stay on the first-aid-kit guide.
-              Thermometers stay on the home-vitals
-              guide. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Wellness-visit kit checklist"
-              subtitle="Email the fecal-sample-kit, specimen-bag, and vet-visit-treat notes. No spam."
-              ctaText="Email my wellness-visit kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-dog-wellness-exam-under-hero"
             />
           </div>
@@ -275,8 +260,7 @@ export default function DogWellnessExamPage() {
 
           <h2 id="kit">A Simple Wellness-Visit Kit</h2>
           <p>
-            Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Gauze, Vetrap cohesive bandage, saline wound flush, a soft muzzle, and a soft carrier already live on the <a href="/guides/dog-first-aid-kit" className="text-brand-primary hover:underline">dog first-aid kit</a> guide. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not hop medications. This page does not claim hands-on testing.
-          </p>
+            Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -288,21 +272,9 @@ export default function DogWellnessExamPage() {
               house-training poop bags, or puppy-training treats. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the wellness-visit kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              appointment-prep copy — a fecal-sample collection
-              kit, leak-proof specimen bags, and high-value
-              vet-visit treats. Everyday physical prep tools
-              only. They are not a ranked product list, they
-              are not a first-aid wound kit, they are not the
-              house-training poop-bag hop, they are not puppy
-              training treats, and they do not replace a
-              veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam"
@@ -316,7 +288,7 @@ export default function DogWellnessExamPage() {
                 amazonHref="/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"
                 amazonLabel="Browse high-value vet-visit treats on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

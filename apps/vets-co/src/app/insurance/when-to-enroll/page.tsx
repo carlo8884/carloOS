@@ -27,41 +27,23 @@ export default function WhenToEnrollPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Breed-Specific Risk', href: '/insurance/breed-specific-risk' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-when-enroll" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-when-enroll" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the when-to-enroll checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              When-to-enroll checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              enroll-while-healthy, puppy-or-kitten,
-              and adopted-pet-exam copy on this page
-              — a monthly desk pad calendar so the
-              enroll-this-month and waiting-period
-              window stay a written date, a self-inking
-              date stamp so the enrollment day and
-              new-pet exam day stay stamped facts,
-              and a letter-size file jacket so
-              adoption and exam paperwork stay one
-              sleeve until coverage starts.
-              Educational checklist, not a diagnosis,
-              not a substitute for veterinary care,
-              and not a four-column-pad, poly-envelope,
-              or weekly-planner hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="When-to-enroll checklist"
-              subtitle="Email the desk-calendar, date-stamp, and file-jacket notes. No spam."
-              ctaText="Email my when-to-enroll checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-when-to-enroll-under-hero"
             />
           </div>
@@ -154,30 +136,9 @@ export default function WhenToEnrollPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the when-to-enroll kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page enroll-while-healthy,
-              puppy-or-kitten, and adopted-pet-exam
-              copy — a monthly desk pad calendar, a
-              self-inking date stamp, and a
-              letter-size file jacket. Educational
-              enrollment-timing / paperwork tools
-              only. They are not a ranked product
-              list, they are not a substitute for
-              veterinary care, they are not a #1168
-              four-column-pad / poly-envelope /
-              receipt-organizer hop, they are not a
-              #1167 reporter-notebook /
-              two-pocket-folder / address-book hop,
-              they are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll"
@@ -191,7 +152,7 @@ export default function WhenToEnrollPage() {
                 amazonHref="/go/amazon-brand/letter+size+file+jacket?s=insurance-when-to-enroll"
                 amazonLabel="Browse letter-size file jackets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Carriers to Quote Early</h2>

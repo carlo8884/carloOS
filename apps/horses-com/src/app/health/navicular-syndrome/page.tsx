@@ -129,35 +129,16 @@ export default function NavicularPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the navicular farriery-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse navicular farriery-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the steel-heart-bar-horseshoe,
-              3-degree-leather-wedge-pad, and
-              rocker-toe-steel-horseshoe notes that match
-              the bar-shoes-or-heart-bar-shoes, wedge-pads,
-              and rolled-or-rocker-toes copy on this page —
-              a steel heart-bar horseshoe so heel support
-              is a physical bar instead of a guessed pad
-              stack, a 3-degree leather wedge pad so the
-              pastern axis is lifted instead of left
-              broken-back, and a rocker-toe steel horseshoe
-              so breakover shortens without a riding hoof
-              boot. Educational farriery-kit checklist,
-              not a treatment, not a shoeing prescription,
-              not a substitute for calling the veterinarian
-              and farrier, and not a foam-sole-support,
-              soaking-boot, or snow-pad hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse navicular farriery-kit checklist"
-              subtitle="Email the heart-bar, wedge-pad, and rocker-toe notes. No spam."
-              ctaText="Email my horse navicular farriery-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-navicular-under-hero"
             />
           </div>
@@ -199,13 +180,10 @@ export default function NavicularPage() {
             wedge pad so a broken-back pastern axis is
             lifted, and a rocker-toe steel horseshoe so
             breakover shortens instead of levering the
-            deep digital flexor tendon over a long toe.
-            These are educational farriery tools, not a
+            deep digital flexor tendon over a long toe. These are educational farriery tools, not a
             ranked product list, not a substitute for
             veterinary or farrier care, and not a shoeing
-            prescription. Foam sole-support pads and deep-
-            sand stall bedding already live on laminitis.
-            Riding hoof boots already live on
+            prescription. Riding hoof boots already live on
             hoof-care-basics. Soaking boots already live
             on abscess. Snow pads and shoe studs already
             live on winter-care. Farrier log books, hoof
@@ -214,8 +192,7 @@ export default function NavicularPage() {
             hop anti-inflammatory medication,
             bisphosphonates, nerve-block kits, MRI, or
             neurectomy gear. This page does not claim
-            hands-on testing.
-          </p>
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -268,41 +245,9 @@ export default function NavicularPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the navicular farriery kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page bar-shoes-or-heart-bar-shoes,
-              wedge-pads, and rolled-or-rocker-toes copy —
-              a steel heart-bar horseshoe, a 3-degree
-              leather wedge pad, and a rocker-toe steel
-              horseshoe. Educational farriery tools only.
-              They are not a ranked product list, they are
-              not a substitute for veterinary or farrier
-              care, they are not a #1100 stock-tank-brush /
-              barn-mosquito-netting / mosquito-sheet hop,
-              they are not a #1099 lunge-line /
-              lead-shank / traffic-cone hop, they
-              are not a #1098 clipboard / feed-pan /
-              paper-pellet-bedding hop, they
-              are not a #1097 color-coded-bucket /
-              coverall / boot-dip-tub hop, they
-              are not a #1096 composition-notebook /
-              receiving-blanket / charcoal hop, they
-              are not a #1095 sponge-filter /
-              nano-heater / water-jug hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a laminitis foam-pad hop, they
-              are not a hoof-care riding-boot hop, they
-              are not an abscess soaking-boot hop, they
-              are not a winter-care snow-pad hop, they
-              are not a farrier-schedule hoof-stand hop,
-              and they do not replace a veterinarian or
-              farrier. Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/steel+heart+bar+horseshoe?s=health-navicular"
@@ -316,7 +261,7 @@ export default function NavicularPage() {
                 amazonHref="/go/amazon-brand/rocker+toe+steel+horseshoe?s=health-navicular"
                 amazonLabel="Browse rocker-toe steel horseshoes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

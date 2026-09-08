@@ -42,7 +42,7 @@ export default function EarInfectionsDogsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Allergic Reactions in Dogs', href: '/health/allergic-reactions-dogs' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-ear-infections" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -52,30 +52,16 @@ export default function EarInfectionsDogsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog ear-infection care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog ear-infection care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes — a dog ear-cleaner
-              solution a veterinarian has recommended for
-              wax-prone ears, cotton balls for dog ears to
-              wipe the visible canal and flap after the dog
-              shakes, and dog ear-drying powder after a swim
-              or bath so trapped moisture does not sit in the
-              L-shaped canal. Educational checklist, not a
-              diagnosis and not a substitute for otoscopy or
-              cytology. Prescription ear drops, leftover
-              medication, and cotton swabs stay off this
-              list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog ear-infection care checklist"
-              subtitle="Email the cleaner, cotton-ball, and drying-powder notes. No spam."
-              ctaText="Email my dog ear-infection care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-ear-infections-dogs-under-hero"
             />
           </div>
@@ -134,23 +120,9 @@ export default function EarInfectionsDogsPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog ear-infection care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              ear-cleaning and drying copy — a dog ear-cleaner
-              solution, cotton balls for dog ears, and dog
-              ear-drying powder after a swim or bath. Everyday
-              physical supplies only. They are not a ranked product
-              list, they are not prescription ear drops, they are
-              not the pet ear-cleaner or cotton-ball hops already
-              used on Dog.com, they are not the Labrador
-              ear-drying-solution hop, they are not the UTI
-              fountain / pads / bowl hops, and they do not replace
-              a veterinarian. Vets.co earns a commission on
-              qualifying purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs"
@@ -164,7 +136,7 @@ export default function EarInfectionsDogsPage() {
                 amazonHref="/go/amazon-brand/dog+ear+drying+powder?s=health-ear-infections-dogs"
                 amazonLabel="Browse dog ear-drying powder on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

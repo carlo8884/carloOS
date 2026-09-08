@@ -43,44 +43,23 @@ export default function SpayNeuterGuidePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever Health', href: '/health/golden-retriever-health' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-spay-neuter" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the spay-neuter timing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Spay-neuter timing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the delayed-timing and surgery-day
-              notes — disposable female dog diapers so
-              the bloody phase of a heat cycle stays off
-              furniture while a large-breed owner waits
-              12–24 months, an inflatable dog collar so
-              a midline spay or neuter incision stays
-              out of reach after the procedure, and a
-              hard-sided airline dog crate so drop-off
-              and same-day pickup have a rigid carrier
-              the clinic can load. Educational
-              checklist, not a diagnosis, not a
-              pyometra treatment, and not a substitute
-              for the veterinary timing conversation.
-              Washable heat pants, male belly bands,
-              heavy-duty exercise pens, surgical
-              recovery suits, soft recovery collars,
-              soft recovery cones, and GPS collars stay
-              on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Spay-neuter timing checklist"
-              subtitle="Email the diaper, inflatable-collar, and airline-crate notes. No spam."
-              ctaText="Email my spay-neuter timing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-spay-neuter-guide-under-hero"
             />
           </div>
@@ -125,23 +104,9 @@ export default function SpayNeuterGuidePage() {
             conversation about breed, expected adult
             weight, or prophylactic gastropexy, they do
             not replace the cone the surgeon sends home,
-            and they are not a ranked product list.
-            Washable dog heat pants, male dog belly
-            bands, heavy-duty dog exercise pens, dog
-            surgical recovery suits, non-slip dog socks,
-            adjustable-height dog bowls, locking kitchen
-            trash cans, walk-through pet gates, airtight
-            dog-food storage containers, dog pill
-            pockets, dry-erase monthly calendars, dog
-            medical-alert collar tags, soft recovery
-            collars, soft recovery cones, soft e-collars,
-            pet recovery cones, GPS collars, Fi collars,
-            wire crates with divider panels, soft-sided
-            vet-visit carriers, and dog long-line
-            leashes already live on other pages. This
+            and they are not a ranked product list. This
             page does not hop medications. This page
-            does not claim hands-on testing.
-          </p>
+            does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -167,34 +132,9 @@ export default function SpayNeuterGuidePage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the spay-neuter timing kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page delayed-timing and surgery-day
-              copy — disposable female dog diapers, an
-              inflatable dog collar, and a hard-sided
-              airline dog crate. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a pyometra or
-              hormone hop, they are not the #1055
-              recovery-suit / non-slip-sock /
-              adjustable-bowl hops, they are not the
-              #1054 locking-trash / kitchen-gate /
-              airtight-storage hops, they are not the
-              #1053 pill-pocket / dry-erase-calendar /
-              medical-alert-tag hops, they are not the
-              #1041 heat-pants / belly-band /
-              exercise-pen hops, they are not
-              soft-recovery-collar, soft-recovery-cone,
-              soft-e-collar, pet-recovery-cone, GPS,
-              Fi-collar, wire-crate, soft-sided-carrier,
-              or long-line hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/disposable+female+dog+diapers?s=health-spay-neuter-guide"
@@ -208,7 +148,7 @@ export default function SpayNeuterGuidePage() {
                 amazonHref="/go/amazon-brand/hard+sided+airline+dog+crate?s=health-spay-neuter-guide"
                 amazonLabel="Browse hard-sided airline dog crates on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

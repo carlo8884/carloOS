@@ -115,42 +115,16 @@ export default function RanchRidingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ranch-riding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ranch-riding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-ranch-riding-pattern-chart,
-              stall-door-aqha-vrh-card, and
-              equine-extended-lope-handbook notes
-              that match the walk-trot-lope-pattern,
-              aqha-versatility-ranch-horse, and
-              natural-head / extended-lope copy on this
-              page — a laminated horse ranch-riding pattern
-              chart so the extended-trot / both-ways /
-              log-obstacle notes are posted on the stall
-              door (not a hunter under-saddle gait chart,
-              not an equitation position chart), a horse
-              stall-door AQHA VRH card so the AQHA /
-              Versatility Ranch Horse / APHA notes are
-              labeled at the barn (not a USHJA hunter card,
-              not a USEF medal card), and an equine
-              extended-lope handbook so the forward /
-              natural-head / peanut-rolling contrast is a
-              physical barn book (not a hunter-bascule
-              handbook, not a hunter-seat handbook).
-              Educational barn checklist, not a ranked
-              clinic list, not a first-aid-kit hop, and
-              not a substitute for a veterinarian.
-              Horses.com does not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Ranch-riding checklist"
-              subtitle="Email the ranch-riding pattern chart, AQHA VRH card, and extended-lope handbook notes. No spam."
-              ctaText="Email my ranch-riding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="disciplines-ranch-riding-under-hero"
             />
           </div>
@@ -192,45 +166,18 @@ export default function RanchRidingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs hunter-under-saddle /
               equitation hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ranch-riding barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page walk-trot-lope-pattern,
-              aqha-versatility-ranch-horse, and
-              natural-head / extended-lope copy — a
-              laminated horse ranch-riding pattern chart, a
-              horse stall-door AQHA VRH card, and an
-              equine extended-lope handbook. Educational
-              barn searches only. They are not a ranked
-              clinic list, they are not a
-              hunter-under-saddle / equitation hop, they
-              are not a first-aid-kit hop, they are not a
-              child toothbrush hop, and they do not
-              replace a veterinarian. Horses.com does not
-              sell insurance. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+ranch+riding+pattern+chart?s=discipline-ranch-riding"
-                amazonLabel="Browse laminated horse ranch-riding pattern charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=discipline-ranch-riding"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+aqha+vrh+card?s=discipline-ranch-riding"
-                amazonLabel="Browse horse stall-door AQHA VRH cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+extended+lope+handbook?s=discipline-ranch-riding"
-                amazonLabel="Browse equine extended-lope handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

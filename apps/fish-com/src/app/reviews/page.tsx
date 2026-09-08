@@ -152,27 +152,7 @@ export default function FishReviewsPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
           Reviews-hub stand kit
         </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          reviews-section-map, per-category-comparison-log,
-          and editorial-criteria-and-specs-grounding copy
-          on this hub — a laminated aquarium reviews
-          buyer-guide chart so the filters / heaters /
-          lighting / test-kits / nano-tanks / fertilizers
-          map is posted on the stand, an aquarium rim
-          reviews comparison card so each category&apos;s
-          editorial criteria and shortlist is labeled on
-          the rim, and an aquarist reviews reference
-          handbook so the published-spec / editorial-
-          criteria grounding is a physical stand book.
-          These are educational stand searches, not a
-          ranked product list, not a substitute for a
-          water test, not a tools-hub calculator-tools
-          hop, and not a child AquaClear / Fluval /
-          Eheim / Hygger hop (those live on the child
-          reviews). This page does not hop medications.
-          This page does not claim hands-on testing.
-        </p>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -190,41 +170,16 @@ export default function FishReviewsPage() {
             aquarium+rim+measurement+card /
             aquarist+calculator+reference+handbook
             and child aquaclear+70 / fluval+307 /
-            eheim+jager / hygger+957 hops.
-            Directory import left untouched. */}
+            eheim+jager / hygger+957 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the reviews-hub stand kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page reviews-section-map,
-            per-category-comparison-log, and
-            editorial-criteria-and-specs-grounding copy
-            — a laminated aquarium reviews buyer-guide
-            chart, an aquarium rim reviews comparison
-            card, and an aquarist reviews reference
-            handbook. Educational stand searches only.
-            They are not a ranked product list, they
-            are not a tools-hub calculator-tools hop,
-            they are not an AquaClear / Fluval / Eheim /
-            Hygger hop, and they do not replace a water
-            test. Fish.com earns a commission on
-            qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+aquarium+reviews+buyer+guide+chart?s=reviews-hub"
-              amazonLabel="Browse laminated aquarium reviews buyer-guide charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarium+rim+reviews+comparison+card?s=reviews-hub"
-              amazonLabel="Browse aquarium rim reviews comparison cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarist+reviews+reference+handbook?s=reviews-hub"
-              amazonLabel="Browse aquarist reviews reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/aquarium+supplies?s=reviews-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

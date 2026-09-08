@@ -116,22 +116,16 @@ export default function BodyClippingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the body-clipping checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse body-clipping checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the clipper, blade, clipper-oil, and cooler notes so the
-              kit is ready before the winter coat comes in. Educational
-              checklist, not a diagnosis and not a sedation order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse body-clipping checklist"
-              subtitle="Email the clipper, blade, clipper-oil, and cooler notes. No spam."
-              ctaText="Email my horse body-clipping checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-body-clipping-under-hero"
             />
           </div>
@@ -169,18 +163,9 @@ export default function BodyClippingPage() {
               (blanketing page), medication, or sedation hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the clipping kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page technique and
-              aftercare copy — horse clippers, clipper blades, clipper oil,
-              and a fleece cooler that wicks moisture. Everyday physical
-              supplies only. They are not a ranked product list, they are not
-              rugs or blanket weights, they are not sedation or a medication,
-              and they do not replace a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+clippers?s=care-body-clipping"
@@ -198,7 +183,7 @@ export default function BodyClippingPage() {
                 amazonHref="/go/amazon-brand/horse+fleece+cooler?s=care-body-clipping"
                 amazonLabel="Browse horse fleece coolers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

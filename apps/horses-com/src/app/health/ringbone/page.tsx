@@ -127,36 +127,16 @@ export default function RingbonePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ringbone balance-and-exercise checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse ringbone balance-and-exercise checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine-hoof-angle-gauge,
-              leather-horse-lunge-cavesson, and
-              neoprene-horse-overreach-bell-boots notes
-              that match the balance-the-foot, controlled-
-              exercise, and hard-ground copy on this page
-              — a hoof-angle gauge so the farrier visit
-              has a recorded pastern-to-hoof angle instead
-              of a guessed one, a leather lunge cavesson
-              so controlled exercise is a circle instead
-              of a concussive gallop, and neoprene
-              overreach bell boots so the pastern and
-              coffin are not struck on hard ground.
-              Educational balance-and-exercise checklist,
-              not a treatment, not Adequan or an NSAID,
-              not a substitute for calling the
-              veterinarian, and not a heart-bar, rocker-
-              toe, or polo-wrap hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse ringbone balance-and-exercise checklist"
-              subtitle="Email the hoof-gauge, lunge-cavesson, and overreach-boot notes. No spam."
-              ctaText="Email my horse ringbone balance-and-exercise checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-ringbone-under-hero"
             />
           </div>
@@ -204,15 +184,11 @@ export default function RingbonePage() {
             for veterinary care, and not Adequan,
             Legend, NSAIDs, or a diagnosis. Heart-bar,
             wedge, and rocker shoes already live on
-            navicular. Farrier stands and log books
-            already live on the farrier-schedule page.
-            Polo wraps and arena drags already live on
-            osteoarthritis. Lunge lines and cones
-            already live on lameness-basics. This page
+            navicular. Polo wraps and arena drags already live on
+            osteoarthritis. This page
             does not hop medications, vaccines, or
             injectable joint products. This page does
-            not claim hands-on testing.
-          </p>
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -276,40 +252,9 @@ export default function RingbonePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ringbone balance-and-exercise kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page balance-the-foot, controlled-
-              exercise, and hard-ground copy — an equine
-              hoof-angle gauge, a leather lunge cavesson,
-              and neoprene overreach bell boots.
-              Educational barn tools only. Hopping
-              Adequan, NSAIDs, or shoes is not the job
-              of this kit. They are not a ranked
-              product list, they are not a substitute
-              for veterinary care, they are not a #1106
-              arena-drag / polo-wrap / paddock-panel
-              hop, they are not a #1105 hay-bale-scale /
-              NSC-hay-test-kit / strip-grazing-posts
-              hop, they are not a #1104 run-in-shelter /
-              grooming-caddy / blanket-wash-bag hop,
-              they are not a #1103 mud-grid / turnout-
-              boot / leg-towel hop, they are not a
-              #1102 Irish-knit-cooler / quarter-sheet /
-              loose-salt hop, they are not a #1101
-              heart-bar / wedge-pad / rocker-toe hop,
-              they are not a #1100 stock-tank-brush /
-              barn-mosquito-netting / mosquito-sheet
-              hop, they are not a #1099 lunge-line /
-              lead-shank / traffic-cone hop, they are
-              not a farrier-schedule log / stand hop,
-              they are not a joint-supplement hop, and
-              they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+hoof+angle+gauge?s=health-ringbone"
@@ -323,7 +268,7 @@ export default function RingbonePage() {
                 amazonHref="/go/amazon-brand/neoprene+horse+overreach+bell+boots?s=health-ringbone"
                 amazonLabel="Browse neoprene overreach bell boots on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

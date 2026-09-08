@@ -135,33 +135,16 @@ export default function VetsYorkshireTerrierHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Yorkshire Terrier health checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Yorkshire Terrier health checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              PSS, dental, and hypoglycemia copy on
-              this page — a two-column ledger pad
-              so the fasting and post-prandial
-              bile-acids pair stays one written
-              row, a 30-day habit-tracker pad so
-              daily brushing stays a dated streak,
-              and an hourly desk pad so the four
-              small meals until four months stay
-              timed blocks. Educational checklist,
-              not a diagnosis, not a substitute for
-              veterinary care, and not a stopwatch,
-              index-card, or recipe-box hop. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Yorkshire Terrier health checklist"
-              subtitle="Email the ledger, habit-tracker, and hourly-desk-pad notes. No spam."
-              ctaText="Email my Yorkshire Terrier health checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="breeds-yorkshire-terrier-health-under-hero"
             />
           </div>
@@ -386,27 +369,9 @@ export default function VetsYorkshireTerrierHealthPage() {
               weekly+checklist+notepad. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the Yorkshire-terrier-health kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page PSS, dental, and hypoglycemia
-              copy — a two-column ledger pad, a
-              30-day habit-tracker pad, and an
-              hourly desk pad. Educational
-              Yorkshire-terrier-health / paperwork
-              tools only. They are not a ranked
-              product list, they are not a
-              substitute for veterinary care, they
-              are not a #1179 stopwatch / index-
-              card / recipe-box hop, they are not a
-              financing-brand or insurance-brand
-              hop, and they do not replace a
-              veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health"
@@ -420,7 +385,7 @@ export default function VetsYorkshireTerrierHealthPage() {
                 amazonHref="/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"
                 amazonLabel="Browse hourly desk pads on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

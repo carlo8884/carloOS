@@ -879,10 +879,7 @@ export default function VetsHomePage() {
               <p
                 className="text-sm leading-relaxed mb-5"
                 style={{ color: 'rgba(255,255,255,0.60)' }}
-              >
-                Wallet and fridge card: species vital-sign ranges, which signs warrant
-                an ER visit, which are same-day, and what to do in the car. Printable. Free.
-              </p>
+              >Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <span
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
                 style={{ color: 'var(--brand-accent-light)' }}

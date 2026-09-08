@@ -142,19 +142,15 @@ export default function StartupKit() {
                 </span>
               </label>
               <div className="mt-3 ml-7">
-                <ShopCtas amazonHref={item.amazonHref} amazonLabel={item.amazonLabel} />
               </div>
             </li>
           )
         })}
       </ul>
 
-      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">
-        Assumption: this is a planning checklist for a first horse already vetted and
+      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">Assumption: this is a planning checklist for a first horse already vetted and
         boarded or kept at home. It does not include a saddle, bridle, or the
-        pre-purchase exam — those sit on the calculator&rsquo;s startup line separately.
-        Empty Chewy buttons stay hidden.
-      </p>
+        pre-purchase exam — those sit on the calculator&rsquo;s startup line separately.</p>
     </div>
   )
 }

@@ -158,24 +158,16 @@ export default function NailTrimmingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the nail-trim checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret nail-trim checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the trim-day order — small cat, kitten, or small-dog
-              clippers, a bright light for the quick, styptic powder (or
-              cornstarch), and a ferret-safe lickable meat paste for the
-              belly-distraction trick — so you are not hunting tools mid-trim.
-              Educational checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret nail-trim checklist"
-              subtitle="Email the clippers, lighting, styptic, and distraction-treat order. No spam."
-              ctaText="Email my ferret nail-trim checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-nail-trimming-under-hero"
             />
           </div>
@@ -212,24 +204,7 @@ export default function NailTrimmingPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop nail-trim tools
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page tools copy —
-              clippers made for cats, kittens, or small dogs; styptic powder
-              for a nicked quick; a ferret-safe lickable treat or meat paste
-              for the belly-distraction trick; and a small LED desk lamp so
-              you can see the quick. Same styptic-powder hop used on the{' '}
-              <Link
-                href="/tools/is-this-a-ferret-emergency"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                ferret emergency triage
-              </Link>
-              {' '}tool. They are not a ranked product list, they are not
-              medications, and they do not diagnose or replace an exotic-pet
-              veterinarian. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/cat+kitten+nail+clippers?s=care-nail-trimming"
@@ -247,7 +222,7 @@ export default function NailTrimmingPage() {
                 amazonHref="/go/amazon-brand/LED+desk+lamp?s=care-nail-trimming"
                 amazonLabel="Browse LED desk lamps on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/care/bathing-and-grooming" className="text-brand-primary hover:underline">

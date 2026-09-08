@@ -42,7 +42,7 @@ export default function DentalCleaningGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dental-cleaning" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-dental-cleaning" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -52,23 +52,16 @@ export default function DentalCleaningGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dental-home-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pet dental-home-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the after-cleaning home-care notes — a soft toothbrush and
-              enzymatic toothpaste, then VOHC-accepted dental chews and a VOHC
-              water additive as adjuncts. Educational checklist, not a
-              diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Pet dental-home-care checklist"
-              subtitle="Email the after-cleaning brushing and VOHC-adjunct notes. No spam."
-              ctaText="Email my dental-cleaning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dental-cleaning-guide-under-hero"
             />
           </div>
@@ -105,19 +98,9 @@ export default function DentalCleaningGuidePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dental home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page after-cleaning
-              home-care copy — a soft toothbrush, enzymatic toothpaste,
-              VOHC-accepted dental chews, and a VOHC water additive.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not a professional cleaning or anesthesia-free
-              substitute, they are not medications, and they do not replace
-              a veterinarian. Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide"
@@ -135,7 +118,7 @@ export default function DentalCleaningGuidePage() {
                 amazonHref="/go/amazon-brand/pet+dental+water+additive?s=health-dental-cleaning-guide"
                 amazonLabel="Browse pet dental water additives on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

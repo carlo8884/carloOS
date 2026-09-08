@@ -44,23 +44,14 @@ export default function SwimBladderPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the fasting-and-pea plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Swim-bladder fasting-and-pea checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the fasting-and-pea / water-quality / shallow-hospital order
-            — 24–48 hours with no food, then a small skinned cooked pea if
-            constipation is the likely cause, hold excellent water quality,
-            and use a spare shallow hospital tank (4–6 inches) when the fish
-            cannot hold neutral buoyancy. Educational husbandry, not a
-            diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Swim-bladder fasting-and-pea checklist"
-            subtitle="Email the fasting-and-pea, water-quality, and shallow-hospital order. No spam."
-            ctaText="Email my swim-bladder fasting-and-pea checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-swim-bladder-under-hero"
           />
         </div>
@@ -86,8 +77,7 @@ export default function SwimBladderPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop fasting-and-pea husbandry gear
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Fasting-and-pea husbandry still depends on excellent water
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fasting-and-pea husbandry still depends on excellent water
             quality — a liquid master kit is how you see ammonia, nitrite,
             and nitrate while the GI tract clears. A spare hospital /
             quarantine tank is how you run the 4–6 inch shallow-water setup
@@ -129,9 +119,7 @@ export default function SwimBladderPage() {
             copy does not call a heat method. The hops below are not a
             ranked product list, they are not medications, and they do not
             treat, reverse, or cure swim bladder disease. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+            commission on qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-swim-bladder"

@@ -66,33 +66,16 @@ export default function VetsLabradorHealthPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the Labrador health checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Labrador health checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the prep notes that match the
-            hip-dysplasia, obesity, and OFA-screening
-            copy on this page — a flexible sewing
-            tape measure so the visible waist and
-            abdominal tuck stay a written BCS
-            check, a bound composition book so the
-            monthly weigh stays the same-scale
-            same-time log, and a letter-size
-            document frame so the OFA hip and elbow
-            result stays one posted certificate.
-            Educational checklist, not a diagnosis,
-            not a substitute for veterinary care,
-            and not a pedigree-chart, color-label,
-            or letter-sorter hop. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Labrador health checklist"
-            subtitle="Email the tape-measure, composition-book, and document-frame notes. No spam."
-            ctaText="Email my Labrador health checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breeds-labrador-health-under-hero"
           />
         </div>
@@ -115,7 +98,7 @@ export default function VetsLabradorHealthPage() {
         <CalloutBox variant="evidence" title="The POMC deletion is genuine — and prevalent">
           A 2016 Cell Metabolism study identified a POMC gene deletion that impairs satiety in Labradors; roughly 23% of pet Labs and a higher proportion of assistance dogs carry the mutation. The implication is that a hungry Lab is often biologically driven, not behaviorally manipulative. Measured meals and no free-feeding are management essentials, not preferences.
         </CalloutBox>
-        <p>The practical approach: weigh the dog monthly (same time, same scale). A bound composition book is how that monthly weigh stays the same-scale same-time log — it is not a spiral notebook (that lives on what-to-expect-at-the-vet), not a reporter notebook (that lives on choosing-a-veterinarian), and not a quad-ruled graph pad (that lives on deductibles-reimbursement). Adjust portions based on BCS, not appetite. A flexible sewing tape measure is how the visible waist and abdominal tuck stay a written BCS check — it is not a handheld tally counter (that lives on deductibles-reimbursement), not a basic desktop calculator (that lives on emergency-vet-costs), and not a digital pet scale hop. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
+        <p>The practical approach: weigh the dog monthly (same time, same scale). Adjust portions based on BCS, not appetite. A flexible sewing tape measure is how the visible waist and abdominal tuck stay a written BCS check — it is not a handheld tally counter (that lives on deductibles-reimbursement), not a basic desktop calculator (that lives on emergency-vet-costs), and not a digital pet scale hop. The dog will always ask for more. The dog&apos;s actual needs are what the scale and BCS tell you, not what the dog communicates.</p>
 
         <h2>Recommended Screening</h2>
         <ul>
@@ -143,19 +126,13 @@ export default function VetsLabradorHealthPage() {
           certificate. These are educational
           Labrador-health / paperwork tools, not a
           ranked product list, not a substitute for
-          veterinary care, and not a treatment.
-          Blank pedigree charts, round color-coding
-          labels, and 5-compartment letter sorters
-          already live on breed-specific-risk.
-          Pressboard classification folders,
+          veterinary care, and not a treatment. Pressboard classification folders,
           letter-size clasp envelopes, and
           red-and-blue checking pencils already
           live on pre-existing-conditions. This
           page does not hop medications, diets, or
-          insurance brands as Amazon searches.
-          This page does not claim hands-on
-          testing.
-        </p>
+          insurance brands as Amazon searches. This page does not claim hands-on
+          testing. </p>
 
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -186,28 +163,9 @@ export default function VetsLabradorHealthPage() {
             wall+mounted+magnetic+monthly+planner. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Labrador-health kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page hip-dysplasia, obesity, and
-            OFA-screening copy — a flexible sewing
-            tape measure, a bound composition book,
-            and a letter-size document frame.
-            Educational Labrador-health / paperwork
-            tools only. They are not a ranked
-            product list, they are not a substitute
-            for veterinary care, they are not a
-            #1174 pedigree-chart / color-label /
-            letter-sorter hop, they are not a
-            dog-com Labrador swim-ear hop, they are
-            not a financing-brand or insurance-brand
-            hop, and they do not replace a
-            veterinarian. Vets.co earns a
-            commission on qualifying purchases at
-            no extra cost to you. Empty Chewy
-            buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health"

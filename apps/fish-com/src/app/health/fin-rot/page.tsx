@@ -47,23 +47,14 @@ export default function FinRotPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the water-first isolate plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Fin-rot water-first isolate checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the water-first isolate order — test ammonia, nitrite, and
-            nitrate with a liquid kit before you treat, move the affected
-            fish to a spare hospital tank so the display biofilter stays
-            protected, and gravel-vacuum the substrate during water changes
-            so the ammonia spike does not recur. Educational husbandry, not
-            a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Fin-rot water-first isolate checklist"
-            subtitle="Email the test-water-first, hospital-tank isolation, and gravel-vacuum order. No spam."
-            ctaText="Email my fin-rot water-first isolate checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-fin-rot-under-hero"
           />
         </div>
@@ -99,8 +90,7 @@ export default function FinRotPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a water-first isolate kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Fin rot is almost always a water-quality problem. A liquid master
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fin rot is almost always a water-quality problem. A liquid master
             kit is how you see ammonia, nitrite, and nitrate before you treat
             — strips are not accurate enough for Step 1. Isolate the affected
             fish in a spare hospital tank with a seeded sponge filter so
@@ -154,9 +144,7 @@ export default function FinRotPage() {
             has no heat method. The hops below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
             or cure fin rot. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+            purchases at no extra cost to you. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-fin-rot"

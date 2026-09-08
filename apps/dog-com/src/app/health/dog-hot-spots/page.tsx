@@ -43,32 +43,23 @@ export default function DogHotSpotsPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }]} />
           <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hot-spots" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-hot-spots" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the hot-spot e-collar checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog hot-spot e-collar checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the e-collar and soft-cone notes — a recovery cone so
-              the dog cannot lick or scratch the lesion, plus a soft cone
-              alternative for dogs that tolerate it. Educational
-              checklist, not a diagnosis and not a medicated spray.
-              Chlorhexidine, Vetericyn-style sprays, and prescription
-              meds stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog hot-spot e-collar checklist"
-              subtitle="Email the e-collar and soft-cone notes. No spam."
-              ctaText="Email my dog hot-spot e-collar checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-hot-spots-under-hero"
             />
           </div>
@@ -103,19 +94,9 @@ export default function DogHotSpotsPage() {
               Vetericyn-style sprays, and Rx meds are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the hot-spot e-collar kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page hot-spot
-              copy — an e-collar (recovery cone) and a soft cone
-              alternative so the dog cannot keep licking or scratching
-              the lesion. Everyday physical gear only. They are not a
-              ranked product list, they are not medicated sprays, they
-              are not medications, and they do not replace a
-              veterinarian. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots"
@@ -125,7 +106,7 @@ export default function DogHotSpotsPage() {
                 amazonHref="/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"
                 amazonLabel="Browse soft recovery cones on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

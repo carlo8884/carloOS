@@ -45,7 +45,7 @@ export default function DogDentalCarePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-dental" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-dental" />
         </>}
       >
         <div className="carloOS-article">
@@ -54,23 +54,16 @@ export default function DogDentalCarePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the daily-brushing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog dental-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the daily-brushing and VOHC-adjunct notes — a soft-bristled
-              toothbrush and enzymatic toothpaste, then VOHC-accepted dental
-              chews as a brushing adjunct. Educational checklist, not a
-              diagnosis and not a prescription dental diet. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog dental-care checklist"
-              subtitle="Email the daily-brushing and VOHC-adjunct notes. No spam."
-              ctaText="Email my dog dental-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-dental-care-under-hero"
             />
           </div>
@@ -115,19 +108,9 @@ export default function DogDentalCarePage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the daily dental-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page dental-care
-              copy — a soft toothbrush, enzymatic toothpaste, and
-              VOHC-accepted dental chews as a brushing adjunct. Everyday
-              physical supplies only. They are not a ranked product list,
-              they are not a prescription dental diet, they are not
-              medications, and they do not replace a veterinarian or a
-              professional cleaning. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+pet+toothbrush?s=health-dog-dental-care"
@@ -141,7 +124,7 @@ export default function DogDentalCarePage() {
                 amazonHref="/go/amazon-brand/dental+chews+dog?s=health-dog-dental-care"
                 amazonLabel="Browse dental chews on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

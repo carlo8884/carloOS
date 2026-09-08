@@ -39,33 +39,16 @@ export default function BestDogBedsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dog-bed checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dog-bed checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the orthopedic dog-bed notes that
-                match the ranking copy on this page —
-                12–14 hours of sleep, Big Barker 7-inch
-                foam with the published AJVR arthritis
-                trial and 10-year no-flatten warranty
-                for large/giant breeds, Casper when you
-                need a machine-washable cover at a
-                mid-price, and Furhaven when budget is
-                the constraint. Educational dog-bed
-                checklist, not a new product hop, not
-                a first-aid-kit hop, and not a
-                substitute for a veterinarian. The
-                existing Big Barker and Casper Chewy
-                searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dog-bed checklist"
-                subtitle="Email the Big Barker, Casper, and foam-depth notes. No spam."
-                ctaText="Email my dog-bed checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-beds-under-hero"
               />
             </div>
@@ -105,7 +88,7 @@ export default function BestDogBedsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-dog-beds" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-dog-beds" />
           </aside>
         </div>
       </div>

@@ -84,32 +84,16 @@ export default function OtocinclsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the otocinclus-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Otocinclus-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Otocinclus vittatus
-                notes that match the care copy on this
-                page — a group of 6+ (8–10 in a
-                planted tank), a 2–3 month tank with
-                visible soft algae, 72–82°F and pH
-                6.0–7.5, and zucchini after lights
-                out. Educational otocinclus-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                otocinclus tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Otocinclus-setup checklist"
-                subtitle="Email the group-size, established-algae, and zucchini notes. No spam."
-                ctaText="Email my otocinclus-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-otocinclus-under-hero"
               />
             </div>

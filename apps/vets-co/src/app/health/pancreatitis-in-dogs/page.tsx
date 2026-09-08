@@ -42,7 +42,7 @@ export default function PancreatitisPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Diabetes in Dogs and Cats', href: '/health/diabetes-in-dogs-cats' }, { label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pancreatitis" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pancreatitis" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,30 +50,16 @@ export default function PancreatitisPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog pancreatitis recovery-diet checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog pancreatitis recovery-diet checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the recovery-diet notes — a low-fat
-              digestive-care dog food for the consistent
-              recovery diet, lean low-fat dog treats so
-              fatty table scraps stay off the plate, and
-              a digital pet-food portion scale for
-              weight-control portions. Educational
-              checklist, not a diagnosis and not a
-              substitute for veterinary care. Prescription
-              GI diets, Hill&rsquo;s i/d, Royal Canin
-              Gastrointestinal Low Fat, and medicated
-              hops stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog pancreatitis recovery-diet checklist"
-              subtitle="Email the low-fat food, lean-treat, and portion-scale notes. No spam."
-              ctaText="Email my dog pancreatitis recovery-diet checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-pancreatitis-in-dogs-under-hero"
             />
           </div>
@@ -151,28 +137,9 @@ export default function PancreatitisPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog pancreatitis recovery-diet kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page low-fat recovery, no-table-scraps,
-              and weight-control copy — a low-fat
-              digestive-care dog food, lean low-fat dog
-              treats, and a digital pet-food portion
-              scale. Everyday physical supplies only.
-              They are not a ranked product list, they
-              are not Hill&rsquo;s i/d or Royal Canin
-              Gastrointestinal Low Fat ASINs, they are
-              not the dog-obesity scale / slow-feeder
-              hops, they are not the calorie / BCS
-              kitchen-gram or portion-control scale hops,
-              they are not the dehydration electrolyte /
-              pitcher / saucer hops, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/low+fat+digestive+care+dog+food?s=health-pancreatitis-in-dogs"
@@ -186,7 +153,7 @@ export default function PancreatitisPage() {
                 amazonHref="/go/amazon-brand/digital+pet+food+portion+scale?s=health-pancreatitis-in-dogs"
                 amazonLabel="Browse digital pet-food portion scales on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

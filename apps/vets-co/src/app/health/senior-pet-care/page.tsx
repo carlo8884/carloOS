@@ -37,7 +37,7 @@ export default function SeniorPetCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Specialist', href: '/find-a-vet' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-senior-care" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-senior-care" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -45,45 +45,16 @@ export default function SeniorPetCarePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the senior dog screening checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Senior dog screening checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              biannual-exam, bloodwork-record, blood-pressure,
-              cognitive-observation, and quality-of-life
-              copy on this page — a letter-size plastic
-              file box so CBC, chemistry, SDMA, and blood-
-              pressure printouts stack in date order for
-              the next twice-yearly visit, a plug-in
-              heated pet mat so rest at home stays a
-              comfort surface you can watch for QoL
-              changes, and a battery motion-sensor night
-              light so night wandering and vocalizing
-              become dated DISHAA observations for the
-              veterinarian. Educational checklist, not
-              a ranked product list, not a substitute
-              for veterinary care, and not an Anipryl /
-              selegiline / Bright Mind / Neutricks hop.
-              Letter-size expanding file organizers,
-              sterile urine specimen cups, and 12-hour
-              mechanical kitchen timers already live on
-              senior-bloodwork-guide. Plug-in night
-              lights, sniff boxes, and senior food-puzzle
-              toys already live on cognitive-dysfunction.
-              Elevated mesh dog cots, extra-large bolster
-              lounges, orthopedic beds, and pet steps
-              already live on other pain / arthritis
-              pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Senior dog screening checklist"
-              subtitle="Email the file-box, heated-mat, and night-light notes. No spam."
-              ctaText="Email my senior dog screening checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-senior-pet-care-under-hero"
             />
           </div>
@@ -136,28 +107,17 @@ export default function SeniorPetCarePage() {
             home-care and monitoring tools, not a
             ranked product list, not a substitute for
             veterinary care, and not a treatment for
-            CDS, CKD, hypertension, or arthritis.
-            Anipryl, selegiline, Bright Mind, Neutricks,
-            and human medicines are not shoppable hops.
-            Letter-size expanding file organizers,
+            CDS, CKD, hypertension, or arthritis. Anipryl, selegiline, Bright Mind, Neutricks,
+            and human medicines are not shoppable hops. Letter-size expanding file organizers,
             sterile urine specimen cups, and 12-hour
             mechanical kitchen timers already live on
-            senior-bloodwork-guide. Plug-in night
-            lights, sniff boxes, and senior food-puzzle
-            toys already live on cognitive-dysfunction.
-            Elevated mesh dog cots, clear adhesive
+            senior-bloodwork-guide. Elevated mesh dog cots, clear adhesive
             non-slip stair treads, and hardcover weekly
             appointment planners already live on
-            pain-management-dogs. Extra-large bolster
-            lounges and A5 hardcover dot-grid notebooks
-            already live on cushing-disease-dogs.
-            Egg-crate kennel pads, carpeted wooden pet
+            pain-management-dogs. Egg-crate kennel pads, carpeted wooden pet
             steps, and veterinary floor scales already
-            live on pain-signs-dogs. Traction rugs, dog
-            ramps, raised bowls, and orthopedic beds
-            already live on arthritis-in-dogs. This
-            page does not claim hands-on testing.
-          </p>
+            live on pain-signs-dogs. This
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -211,30 +171,9 @@ export default function SeniorPetCarePage() {
               and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page biannual-exam, screening-record,
-              cognitive-observation, and quality-of-life
-              copy — a letter-size plastic file box, a
-              plug-in heated pet mat, and a battery
-              motion-sensor night light. Educational
-              home-care and monitoring tools only.
-              They are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1079 cot / stair-
-              tread / planner hop, they are not a #1071
-              expanding-file / urine-cup / 12-hour-timer
-              hop, they are not a cognitive-dysfunction
-              plug-in-night-light / sniff-box / food-
-              puzzle hop, they are not an arthritis
-              traction-rug / ramp / orthopedic-bed hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/letter+size+plastic+file+box?s=health-senior-pet-care"
@@ -248,7 +187,7 @@ export default function SeniorPetCarePage() {
                 amazonHref="/go/amazon-brand/battery+motion+sensor+night+light?s=health-senior-pet-care"
                 amazonLabel="Browse battery motion-sensor night lights on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

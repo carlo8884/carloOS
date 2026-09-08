@@ -159,20 +159,14 @@ export default function HeaterWattageCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the heater plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Heater wattage checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the 3 W/gal rule, dual-heater split, controller notes, and the
-            shoppable heater kit (Eheim Jager, Aqueon Pro) so you can size
-            without re-running the calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Heater wattage checklist"
-            subtitle="Email the heater wattage checklist, dual-heater split, and shoppable heater kit. No spam."
-            ctaText="Email my heater wattage checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-heater-wattage-calculator-under-hero"
           />
         </div>
@@ -188,22 +182,7 @@ export default function HeaterWattageCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a heater kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches match the wattage you just calculated
-            — an Eheim Jager (best overall) or Aqueon Pro (budget), the same
-            queries as the{' '}
-            <Link
-              href="/reviews/best-aquarium-heaters"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              aquarium heater reviews
-            </Link>
-            . Buy the next size up from the chart, and on tanks 40 gallons and
-            up split into two smaller heaters. They are not a ranked product
-            list and not invented inventory. Fish.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty Chewy buttons
-            stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"

@@ -48,25 +48,16 @@ export default function AquascapingGuidePage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the aquascape hardscape checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Aquascape hardscape checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the hardscape notes — aquarium Seiryu stone for the
-            textured rock skeleton, plus aquarium spiderwood driftwood
-            for the wood lines — so the layout is decided before any
-            plant goes in. Educational checklist, not a ranked product
-            list and not a first-tank filter / heater / test-kit order.
-            Those stay on the setup hub. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Aquascape hardscape checklist"
-            subtitle="Email the Seiryu-stone and spiderwood notes. No spam."
-            ctaText="Email my aquascape hardscape checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-aquascaping-guide-under-hero"
           />
         </div>
@@ -86,7 +77,7 @@ export default function AquascapingGuidePage() {
 
         <h2 id="hardscape">Choosing Hardscape</h2>
         <p>Rock and wood are the most important visual elements. Popular aquascaping stones include Seiryu and Ohko (dragon stone) for their textured, rugged faces, and Seiryu in particular raises water hardness and pH, which matters for soft-water species. Driftwood types such as spiderwood, manzanita, and mopani each have characteristic forms; most need soaking or boiling to sink and to leach tannins. Choose materials of a consistent type and color so the scape reads as one place rather than an assortment, and select pieces in proportion to the tank — a few well-chosen large pieces almost always beat many small ones.</p>
-        <p>Everyday physical hardscape — not a first-tank equipment list — starts with aquarium Seiryu stone for the textured rock skeleton and aquarium spiderwood driftwood for the wood lines. Soak or boil new wood so it sinks and sheds tannins before it goes in. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, and pressurized CO2 already live on the <a href="/setup">setup hub</a>, the <a href="/setup/planted-tank-setup">planted tank setup guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop Ohko as a second stone SKU, manzanita or mopani as extra wood SKUs, aquascaping tweezers, or any fertilizer. Ask whether a Seiryu-plus-spiderwood pair fits the tank&apos;s water chemistry — Seiryu raises GH and pH — before you buy a crate of mixed rock.</p>
+        <p>Everyday physical hardscape — not a first-tank equipment list — starts with aquarium Seiryu stone for the textured rock skeleton and aquarium spiderwood driftwood for the wood lines. Soak or boil new wood so it sinks and sheds tannins before it goes in. Ask whether a Seiryu-plus-spiderwood pair fits the tank&apos;s water chemistry — Seiryu raises GH and pH — before you buy a crate of mixed rock.</p>
 
         <h2>Planting for Structure</h2>
         <p>Once hardscape is set, plant in zones: low carpeting and foreground plants at the front, midground species filling the spaces around hardscape, and tall stem or background plants at the rear to build height and hide equipment. Use leaf size and color to reinforce depth — fine textures and muted greens recede, while bold leaves and reds advance and draw the eye to focal points. A planted scape is never truly finished; regular trimming shapes the growth and is part of the ongoing craft. For the equipment and substrate side of building a planted scape, see our <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
@@ -103,19 +94,9 @@ export default function AquascapingGuidePage() {
             filter / heater / test-kit / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the aquascape hardscape kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page hardscape
-            copy — aquarium Seiryu stone and aquarium spiderwood
-            driftwood. Everyday physical layout materials only. They are
-            not a ranked product list, they are not a first-tank filter
-            or heater, they are not a test kit or a gravel vacuum, they
-            are not aquasoil or pressurized CO2, and they do not replace
-            cycling before fish. Fish.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty Chewy
-            buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"

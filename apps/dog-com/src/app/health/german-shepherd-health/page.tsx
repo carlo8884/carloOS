@@ -97,46 +97,16 @@ export default function GermanShepherdHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the German Shepherd mobility-watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              German Shepherd mobility-watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the DM assisted-walking, worn-nail, and
-              hip-support notes — a dog assisted-walking
-              sling so range-of-motion work and assisted
-              walking can continue while hindlimb weakness
-              and wobbling show up from age 7+, dog hind-paw
-              booties so worn nails on the rear paws (the
-              classic early DM clue from dragging of the
-              rear feet) stay visible and protected between
-              exams, and a dog hip brace so hip-dysplasia
-              stiffness after rest and hindlimb lameness
-              have everyday support alongside lean body
-              weight. Educational checklist, not a
-              pancreatic-enzyme product list, not a
-              cyclosporine hop, and not a prescription.
-              DM DNA testing, TLI, OFA films, and
-              gastropexy still belong with a veterinarian.
-              Silicone grooming gloves, analog bathroom
-              scales, dog dental finger brushes, resting
-              respiratory rate notebooks, one-minute kitchen
-              timers, step-in padded harnesses,
-              medical-records binders, AM/PM weekly pill
-              organizers, hanging luggage scales, penlights,
-              emergency contact cards, stretchers,
-              vaccination record books, seat-belt tethers,
-              puppy mats, mosquito dunks, monthly pill
-              organizers, and clinic-visit carriers stay on
-              other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="German Shepherd mobility-watch checklist"
-              subtitle="Email the walking-sling, hind-paw-bootie, and hip-brace notes. No spam."
-              ctaText="Email my German Shepherd mobility-watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-german-shepherd-health-under-hero"
             />
           </div>
@@ -225,8 +195,7 @@ export default function GermanShepherdHealthPage() {
             not replace OFA hip films, they do not treat
             EPI with powdered pancreatic enzymes, they do
             not prevent GDV, and they are not cyclosporine,
-            tacrolimus, or a ranked clinical product list.
-            Silicone dog grooming gloves, analog bathroom
+            tacrolimus, or a ranked clinical product list. Silicone dog grooming gloves, analog bathroom
             scales, dog dental finger brushes, resting
             respiratory rate notebooks, one-minute kitchen
             timers, step-in padded dog harnesses, pet
@@ -243,10 +212,8 @@ export default function GermanShepherdHealthPage() {
             belly-support harnesses, knee braces,
             waterproof dog booties, orthopedic dog beds,
             dog ramps, and joint-support treats already
-            live on other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            live on other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -290,35 +257,9 @@ export default function GermanShepherdHealthPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the German Shepherd mobility-watch kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page DM assisted-walking, worn-nail, and
-              hip-support copy — a dog assisted-walking
-              sling, dog hind-paw booties, and a dog hip
-              brace. Everyday physical supplies only. They
-              are not a ranked product list, they are not
-              a pancreatic-enzyme / cyclosporine hop, they
-              are not the #1048 grooming-glove / analog-scale
-              / finger-brush hops, they are not the #1047
-              notebook / timer / harness hops, they are
-              not the #1046 binder / AM-PM
-              pill-organizer / luggage-scale hops, they
-              are not the #1045 penlight / contact-card
-              / stretcher hops, they are not the #1044
-              vaccine-record / seat-belt-tether /
-              puppy-mat hops, they are not the #1043
-              mosquito-dunk / monthly-pill-organizer /
-              clinic-carrier hops, they are not the
-              #1042 anemia gum-chart / recovery-food /
-              syringe hops, they are not digital-pet-scale
-              or first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+assisted+walking+sling?s=health-german-shepherd-health"
@@ -332,7 +273,7 @@ export default function GermanShepherdHealthPage() {
                 amazonHref="/go/amazon-brand/dog+hip+brace?s=health-german-shepherd-health"
                 amazonLabel="Browse dog hip braces on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
         <h2 id="faq">FAQ</h2>

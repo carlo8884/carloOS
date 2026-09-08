@@ -190,17 +190,13 @@ export default function PuppyWeightPredictorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Puppy growth planning notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the adult-size range recap, crate and food sizing notes, and the
-            shoppable growth kit (scale, puppy food, crate with divider, slow feeder)
-            so you can re-weigh next month without re-running the estimate. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Puppy growth planning notes"
-            subtitle="Email the adult-size range recap, crate and food sizing notes, and the shoppable growth kit. No spam."
-            ctaText="Email my puppy growth notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-puppy-weight-under-hero"
           />
         </div>
@@ -254,18 +250,7 @@ export default function PuppyWeightPredictorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a puppy growth kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make an
-              adult-weight estimate repeatable — a digital kitchen / pet scale,
-              puppy food (including large-breed formulas when the adult dog
-              will be big), an adult-size wire crate with a divider, a slow
-              feeder, and a measuring tape / body-condition chart. They are
-              not a ranked product list, not invented inventory, and they do
-              not diagnose a growth problem or set a feeding plan. Ask your
-              veterinarian to plot weight on a growth chart. Dog.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor"
@@ -291,7 +276,7 @@ export default function PuppyWeightPredictorPage() {
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"
                 amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

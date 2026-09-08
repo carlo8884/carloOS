@@ -40,57 +40,23 @@ export default function PancreatitisPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Liver Disease', href: '/health/dog-liver-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pancreatitis" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pancreatitis" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog pancreatitis leftover-lockdown checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog pancreatitis leftover-lockdown checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the holiday-trash, kitchen-gate, and
-              low-fat-kibble notes — a locking kitchen
-              trash can so turkey skin, ham fat, and
-              other high-fat leftovers cannot become the
-              garbage-ingestion trigger listed on this
-              page, a walk-through pet gate so the dog
-              stays out of the kitchen while holiday
-              scraps sit on counters, and an airtight
-              dog-food storage container so the lifelong
-              low-fat kibble stays labeled and separate
-              from household food. Educational checklist,
-              not a Hill&apos;s i/d / Royal Canin
-              Gastrointestinal Low Fat / Purina EN
-              product list, and not a prescription.
-              Hospitalization, cPLI testing, and diet
-              fat-percent decisions still belong with a
-              veterinarian. Pill pockets, dry-erase
-              monthly calendars, medical-alert collar
-              tags, gravity waterers, extra-large
-              disposable pee pads, cooling bandanas,
-              self-warming mats, fleece sweaters,
-              slicker brushes, lymph-node anatomy
-              charts, foam dog stairs, ear wipes,
-              assisted-walking slings, hind-paw booties,
-              hip braces, silicone grooming gloves,
-              analog bathroom scales, dog dental finger
-              brushes, mini rice cookers, glass
-              meal-prep containers, low-fat digestive-care
-              dog food, lean low-fat dog treats, digital
-              pet-food portion scales, and clinic-visit
-              carriers stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog pancreatitis leftover-lockdown checklist"
-              subtitle="Email the locking-trash, kitchen-gate, and airtight-kibble notes. No spam."
-              ctaText="Email my dog pancreatitis leftover-lockdown checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-pancreatitis-under-hero"
             />
           </div>
@@ -135,29 +101,9 @@ export default function PancreatitisPage() {
             they are not Hill&apos;s i/d Low Fat, Royal
             Canin Gastrointestinal Low Fat, Purina EN
             Gastroenteric Low Fat, Cerenia, maropitant,
-            or a ranked GI product list. Dog pill
-            pockets, dry-erase monthly calendars, dog
-            medical-alert collar tags, gallon gravity
-            dog waterers, extra-large disposable dog
-            pee pads, dog cooling bandanas,
-            self-warming dog mats, fleece dog sweaters,
-            dog slicker brushes, lymph-node anatomy
-            charts, foam dog stairs, dog ear wipes,
-            assisted-walking slings, hind-paw booties,
-            hip braces, silicone dog grooming gloves,
-            analog bathroom scales, dog dental finger
-            brushes, mini rice cookers, glass meal-prep
-            containers, low-fat digestive-care dog
-            food, lean low-fat dog treats, digital
-            pet-food portion scales, kitchen gram
-            scales, AM/PM weekly pill organizers,
-            monthly pill organizers, pet medical
-            records binders, pet emergency contact
-            cards, and soft-sided vet-visit carriers
-            already live on other pages. This page
+            or a ranked GI product list. This page
             does not hop medications. This page does
-            not claim hands-on testing.
-          </p>
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -211,44 +157,9 @@ export default function PancreatitisPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog pancreatitis leftover-lockdown kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page holiday-trigger, garbage-ingestion,
-              and lifelong low-fat-diet copy — a locking
-              kitchen trash can, a walk-through pet
-              gate, and an airtight dog-food storage
-              container. Everyday physical supplies
-              only. They are not a ranked product list,
-              they are not a Hill&apos;s i/d / Royal
-              Canin Gastrointestinal Low Fat / Purina
-              EN / Cerenia / maropitant hop, they are
-              not the #1053 pill-pocket / dry-erase
-              calendar / medical-alert-tag hops, they
-              are not the #1052 gravity-waterer /
-              extra-large-pee-pad / cooling-bandana
-              hops, they are not the #1051
-              self-warming-mat / fleece-sweater /
-              slicker-brush hops, they are not the
-              #1050 lymph-node-chart / foam-stair /
-              ear-wipe hops, they are not the #1049
-              sling / hind-paw-bootie / hip-brace hops,
-              they are not the #1048 grooming-glove /
-              analog-scale / finger-brush hops, they
-              are not the #1041 exercise-pen hop, they
-              are not the #1039 vets.co low-fat food /
-              lean-treat / portion-scale hops, they
-              are not the #1013 rice-cooker /
-              meal-prep-container hops, they are not
-              washable-pee-pad / fountain / ceramic-bowl
-              / cooling-mat hops, they are not
-              digital-pet-scale or first-aid-kit hops,
-              and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/locking+kitchen+trash+can?s=health-pancreatitis"
@@ -262,7 +173,7 @@ export default function PancreatitisPage() {
                 amazonHref="/go/amazon-brand/airtight+dog+food+storage+container?s=health-pancreatitis"
                 amazonLabel="Browse airtight dog-food storage containers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

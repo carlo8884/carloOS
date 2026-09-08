@@ -573,9 +573,7 @@ export default function NewPuppyChecklist() {
       </div>
 
       <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
-        <h3 className="font-display text-lg font-bold text-brand-dark mb-1">
-          Your new-puppy checklist
-        </h3>
+        <h3 className="font-display text-lg font-bold text-brand-dark mb-1">Owner notes</h3>
         <p className="text-2xs text-brand-text-light mb-4">
           For a {SIZE_LABEL[size]} puppy. {doneCount} of {list.length} checked. Guidance, not a
           mandate — adjust to your dog, city, and budget.
@@ -634,35 +632,11 @@ export default function NewPuppyChecklist() {
                       )}
                       {item.gear && item.shopHref && item.shopLabel ? (
                         <div className="mt-2 ml-7">
-                          <ShopCtas amazonHref={item.shopHref} amazonLabel={item.shopLabel} />
-                        </div>
-                      ) : null}
-                    </li>
-                  )
-                })}
-              </ul>
-            </div>
-          )
-        })}
-      </div>
+</div>
 
-      <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
-        <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-          Next step
-        </p>
-        <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
-          {shop.heading}
-        </p>
-        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
-        <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
-      </div>
-
-      <p className="mt-4 text-2xs leading-snug text-brand-text-light">
-        Shopping guidance, not a veterinary plan. Vaccine timing, parasite prevention, and spay or
+      <p className="mt-4 text-2xs leading-snug text-brand-text-light">Shopping guidance, not a veterinary plan. Vaccine timing, parasite prevention, and spay or
         neuter timing are decisions for your veterinarian. Amazon links are category searches — not
-        a ranked product list and not invented inventory. Empty Chewy buttons stay hidden.
-      </p>
+        a ranked product list and not invented inventory.</p>
     </div>
   )
 }

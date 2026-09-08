@@ -107,45 +107,16 @@ export default function FerretSuppliesChecklistPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret supplies checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret supplies checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-buy-first-checklist-chart,
-              fridge-housing-litter-card, and
-              mustelid-supplies-checklist-handbook notes
-              that match the buy-first-vs-later-map,
-              housing-litter-food-log, and
-              quesenberry-afa-supply-grounding copy on this
-              page — a laminated ferret buy-first checklist
-              chart so the cage / bedding / litter / food /
-              carrier-before-homecoming map is posted on the
-              fridge (not an ownership-hub section map, not
-              a first-year-schedule chart, not a diet-hub
-              feeding chart), a ferret fridge housing-litter
-              card so solid-floor / paper-pellet / corner-pan
-              notes are labeled on the fridge (not a
-              soak-soften card, not a coat-oil card, not a
-              bedding-hub sleep-sack hop), and a mustelid
-              supplies-checklist handbook so the Quesenberry /
-              AFA category-level grounding is a physical
-              kitchen book (not an ownership-reference
-              handbook, not a supplement-reference handbook,
-              not a care-reference handbook). Educational
-              kitchen checklist, not a ranked SKU list, not
-              a sleep-sack hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Aging pages stay held.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret supplies checklist"
-              subtitle="Email the buy-first-checklist-chart, fridge housing-litter card, and supplies-handbook notes. No spam."
-              ctaText="Email my ferret supplies checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-ferret-supplies-checklist-under-hero"
             />
           </div>
@@ -242,46 +213,20 @@ export default function FerretSuppliesChecklistPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs ownership-hub /
-              first-year / supplements kitchen kits.
-              Directory import left untouched. Ferret
+              first-year / supplements kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret supplies kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page buy-first-vs-later-map,
-              housing-litter-food-log, and
-              quesenberry-afa-supply-grounding copy — a
-              laminated ferret buy-first checklist chart, a
-              ferret fridge housing-litter card, and a
-              mustelid supplies-checklist handbook.
-              Educational kitchen searches only. They are
-              not a ranked SKU list, they are not an
-              ownership-hub / first-year / supplements hop,
-              they are not a child toothbrush hop, and
-              they do not replace an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+buy+first+checklist+chart?s=ferret-supplies-checklist"
-                amazonLabel="Browse laminated ferret buy-first checklist charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=ferret-supplies-checklist"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+housing+litter+card?s=ferret-supplies-checklist"
-                amazonLabel="Browse ferret fridge housing-litter cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+supplies+checklist+handbook?s=ferret-supplies-checklist"
-                amazonLabel="Browse mustelid supplies-checklist handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

@@ -165,41 +165,16 @@ export default function PeopleOfRacingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the people-of-racing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              People-of-racing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-owner-trainer-jockey-chart,
-              stall-door-steward-official-card, and
-              equine-backstretch-role-handbook notes
-              that match the connections-owner-trainer,
-              steward-raceday-officials, and
-              backstretch-groom-exercise-rider copy on this
-              page — a laminated horse owner-trainer-jockey
-              chart so the connections / silks notes are
-              posted on the stall door (not a workout-breeze
-              chart, not a TAA aftercare-directory chart), a
-              horse stall-door steward-official card so the
-              objections / clerk-of-scales notes are labeled
-              at the barn (not a gate-school card, not an
-              OTTB letdown card), and an equine backstretch
-              role handbook so the groom / hot-walker /
-              valet grounding is a physical barn book (not a
-              HISA welfare handbook, not a Thoroughbred
-              Makeover handbook). Educational barn
-              checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="People-of-racing checklist"
-              subtitle="Email the owner-trainer-jockey chart, steward-official card, and backstretch-role handbook notes. No spam."
-              ctaText="Email my people-of-racing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-the-people-of-racing-under-hero"
             />
           </div>
@@ -276,43 +251,18 @@ export default function PeopleOfRacingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs training /
               aftercare hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the people-of-racing barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page connections-owner-trainer,
-              steward-raceday-officials, and
-              backstretch-groom-exercise-rider copy — a
-              laminated horse owner-trainer-jockey chart,
-              a horse stall-door steward-official card,
-              and an equine backstretch role handbook.
-              Educational barn searches only. They are not
-              a ranked race list, they are not a training /
-              aftercare hop, they are not a first-aid-kit
-              hop, they are not a child toothbrush hop, and
-              they do not replace a veterinarian. Horses.com
-              does not sell insurance. Horses.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+owner+trainer+jockey+chart?s=racing-people"
-                amazonLabel="Browse laminated horse owner-trainer-jockey charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-people"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+steward+official+card?s=racing-people"
-                amazonLabel="Browse horse stall-door steward-official cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+backstretch+role+handbook?s=racing-people"
-                amazonLabel="Browse equine backstretch-role handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

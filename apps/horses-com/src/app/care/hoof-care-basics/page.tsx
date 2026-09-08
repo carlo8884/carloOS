@@ -117,24 +117,16 @@ export default function HoofCareBasicsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the daily hoof-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse hoof-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit — a simple hoof pick, ideally one with
-              a stiff brush to clear packed debris, plus hoof boots when the
-              farrier conversation lands on boots instead of shoes — so you
-              are not hunting tools mid-pick. Educational checklist, not a
-              diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse hoof-care checklist"
-              subtitle="Email the hoof-pick, stiff-brush, and hoof-boot order. No spam."
-              ctaText="Email my hoof-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-hoof-care-basics-under-hero"
             />
           </div>
@@ -169,20 +161,9 @@ export default function HoofCareBasicsPage() {
               on-page daily-care / shoeing copy, not thrush / abscess / laminitis treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the daily hoof-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page daily-care and
-              shoeing copy — a simple hoof pick, a hoof pick with a stiff
-              brush to clear packed debris, and hoof boots when boots rather
-              than shoes are the farrier call for hard or abrasive work.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not treatments for thrush, abscess, laminitis,
-              or any medical condition, and they do not replace a veterinarian
-              or farrier. Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=care-hoof-care-basics"
@@ -196,7 +177,7 @@ export default function HoofCareBasicsPage() {
                 amazonHref="/go/amazon-brand/horse+hoof+boots?s=care-hoof-care-basics"
                 amazonLabel="Browse horse hoof boots on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="healthy">Signs of a Healthy Hoof</h2>

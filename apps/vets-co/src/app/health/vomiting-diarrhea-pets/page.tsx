@@ -42,7 +42,7 @@ export default function VomitingDiarrheaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-vomiting-diarrhea" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vomiting-diarrhea" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,39 +50,16 @@ export default function VomitingDiarrheaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the vomiting-and-diarrhea vet-call checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Vomiting &amp; diarrhea vet-call checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              hydration-watch, bland-diet, and recovery
-              copy on this page — a narrow-neck glass
-              water carafe so you can see whether a
-              vomiting or diarrheic pet is still
-              drinking, a 2-quart stainless saucepan
-              with lid for a short bland-diet batch if
-              your veterinarian advises one, and a
-              pocket spiral memo pad so each episode
-              stays a timed observation instead of a
-              guessed "maybe worse." Educational
-              checklist, not a ranked product list, not
-              a substitute for veterinary care, and not
-              an Rx or anti-nausea hop. Unflavored
-              pediatric electrolyte, kitchen liquid
-              measuring pitchers, shallow lipped dog
-              saucers, mini rice cookers, and glass
-              meal-prep containers already live on the
-              dehydration and dog-vomiting pages. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Vomiting & diarrhea vet-call checklist"
-              subtitle="Email the carafe, saucepan, and memo-pad notes. No spam."
-              ctaText="Email my vomiting-diarrhea vet-call checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-vomiting-diarrhea-pets-under-hero"
             />
           </div>
@@ -123,24 +100,15 @@ export default function VomitingDiarrheaPage() {
             not a ranked product list, not a substitute
             for veterinary care, and not a treatment
             for vomiting, diarrhea, dehydration,
-            obstruction, pancreatitis, or parvovirus.
-            Blood, a painful or swollen abdomen,
+            obstruction, pancreatitis, or parvovirus. Blood, a painful or swollen abdomen,
             unproductive retching, lethargy, or
             refusal to eat or drink belongs with a
-            veterinarian, not a saucepan. Unflavored
-            pediatric electrolyte, kitchen liquid
-            measuring pitchers, and shallow lipped dog
-            saucers already live on the dehydration
-            page. Mini rice cookers and glass meal-prep
-            containers already live on dog.com
-            dog-vomiting. Quilted disposable underpads
-            already live on emergency-signs. This page
+            veterinarian, not a saucepan. This page
             does not hop Cerenia, maropitant,
             ondansetron, Pepto, Imodium, famotidine,
             prescription GI diets, probiotics, pumpkin,
             or other Rx ASINs. This page does not claim
-            hands-on testing.
-          </p>
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -186,31 +154,9 @@ export default function VomitingDiarrheaPage() {
               diets, and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home monitoring kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page hydration-watch, bland-diet, and
-              recovery-monitoring copy — a narrow-neck
-              glass water carafe, a 2-quart stainless
-              saucepan with lid, and a pocket spiral
-              memo pad. Educational home-care and
-              monitoring tools only. They are not a
-              ranked product list, they are not a
-              substitute for veterinary care, they are
-              not a #1076 toothbrush-kit / VOHC-chew /
-              water-additive hop, they are not a #1075
-              egg-crate-pad / pet-steps / floor-scale
-              hop, they are not a #1074 muzzle /
-              underpad / flashlight hop, they are not a
-              dehydration electrolyte / pitcher /
-              saucer hop, they are not a dog-vomiting
-              rice-cooker / meal-prep hop, and they do
-              not replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/narrow+neck+glass+water+carafe?s=health-vomiting-diarrhea-pets"
@@ -224,7 +170,7 @@ export default function VomitingDiarrheaPage() {
                 amazonHref="/go/amazon-brand/pocket+spiral+memo+pad?s=health-vomiting-diarrhea-pets"
                 amazonLabel="Browse pocket spiral memo pads on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

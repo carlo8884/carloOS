@@ -115,20 +115,16 @@ export default function MartingalesBreastplatesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the martingales checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Martingales checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the standing-vs-running martingale checklist, breastplate-vs-breastgirth fit question card, and martingale-misuse head-carriage log that match the martingales, standing-vs-running, breastplates-and-breastgirths, fit, and use-and-misuse copy on this page — a laminated horse standing-vs-running martingale checklist so standing-martingale-runs-girth-to-noseband-and-sets-a-fixed-upper-limit / running-martingale-divides-into-rings-the-reins-pass-through-and-acts-through-the-reins / one-fixes-a-limit-the-other-acts-through-the-reins stay visible before anyone buckles an auxiliary strap (not a laminated horse turnout-vs-stable rug checklist, not a laminated horse turnout-halter breakaway checklist, not a laminated horse-leg bandage-bow technique checklist, not a laminated saddle-pad cannot-fix-fit checklist), a horse breastplate-vs-breastgirth fit question card so breastplate-or-breastgirth-stops-the-saddle-sliding-back / breastgirths-are-a-simpler-chest-strap / snug-enough-to-stop-slip-not-so-tight-it-restricts-shoulders-or-presses-the-windpipe stays posted (not a horse denier-vs-fill question card, not a horse rope-vs-flat-halter task question card, not a horse-boot impact-not-tendon-support question card, not a saddle-pad sweat-pattern dry-spot question card), and a horse martingale-misuse head-carriage log notebook so a-martingale-does-not-teach-correct-head-carriage / too-tight-or-wrongly-fitted-restricts-and-can-be-dangerous / head-carriage-problems-usually-stem-from-training-pain-fit-or-hands stay written down (not a horse over-rugging sweat-shiver watch log, not a horse quick-release wither-height tie log, not a horse-boot grit-rub clean-dry log, not a saddle-pad clean-dry rotation log). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a qualified instructor or a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Martingales checklist"
-              subtitle="Email the standing-vs-running card, breastplate-fit check, and misuse log. No spam."
-              ctaText="Email my martingales checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-martingales-under-hero"
             />
           </div>
@@ -138,9 +134,7 @@ export default function MartingalesBreastplatesPage() {
 
           <h2 id="standing-running">Standing vs Running</h2>
           <p>The two main types act differently. A standing martingale runs from the girth to the noseband and sets a fixed upper limit on head height regardless of the reins; it is common in hunting and some jumping. A running martingale runs from the girth and divides into two straps ending in rings through which the reins pass, applying downward pressure on the reins only when the horse raises its head beyond a certain point -- it acts through the reins rather than fixing the head. Each must be fitted to the correct length for its type.</p>
-          <p>
-            A laminated horse standing-vs-running martingale checklist is how standing-martingale-runs-girth-to-noseband-and-sets-a-fixed-upper-limit, running-martingale-divides-into-rings-the-reins-pass-through-and-acts-through-the-reins, and one-fixes-a-limit-the-other-acts-through-the-reins stay visible before anyone buckles an auxiliary strap — it is not a laminated horse turnout-vs-stable rug checklist (that lives on blanket-weights), not a laminated horse turnout-halter breakaway checklist (that lives on halters-and-lead-ropes), not a laminated horse-leg bandage-bow technique checklist (that lives on boots-and-wraps), and not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads). This page does not hop horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims / horse+girth+cinch (those live on saddle-fit-basics), ASTM+SEI+horse+riding+helmet (that lives on horse-size-for-rider), or horse+halter+lead+rope (that lives on the cost calculator). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
+          
 
           <h2 id="breastplates">Breastplates and Breastgirths</h2>
           <p>A breastplate (or breastgirth) attaches to the saddle and passes around the front of the chest to stop the saddle sliding backward, which matters on steep terrain, when jumping, and on horses whose conformation lets a saddle slip. Breastgirths are a simpler strap across the chest; hunting and jumping breastplates are more elaborate, sometimes with attachment points for a martingale. They are a security and safety aid, keeping the saddle in place, not a training device.</p>
@@ -153,14 +147,12 @@ export default function MartingalesBreastplatesPage() {
             <li><strong>Breastplate fit</strong> -- snug enough to stop the saddle slipping but not so tight it restricts the shoulders or presses the windpipe.</li>
           </ul>
           <p>
-            A horse breastplate-vs-breastgirth fit question card is how &quot;a breastplate or breastgirth stops the saddle sliding back, breastgirths are a simpler chest strap, and fit is snug enough to stop slip but not so tight it restricts the shoulders or presses the windpipe&quot; stays posted — it is not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A horse breastplate-vs-breastgirth fit question card is how &quot;a breastplate or breastgirth stops the saddle sliding back, breastgirths are a simpler chest strap, and fit is snug enough to stop slip but not so tight it restricts the shoulders or presses the windpipe&quot; stays posted — it is not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="misuse">Use and Misuse</h2>
           <p>Martingales are sometimes reached for to force a horse&apos;s head down or to mask resistance, which is misuse -- a too-tight or wrongly fitted martingale restricts the horse, causes discomfort and tension, and can be dangerous if it limits the head when the horse needs to balance (for example over a fence or on landing). Head-carriage problems usually stem from training, pain, fit, or the rider&apos;s hands, and addressing those is the real fix. Used correctly and at the right length, a martingale is a safety limit, and a breastplate a security aid -- not substitutes for schooling.</p>
           <p>
-            A horse martingale-misuse head-carriage log notebook is how a-martingale-does-not-teach-correct-head-carriage, too-tight-or-wrongly-fitted-restricts-and-can-be-dangerous, and head-carriage-problems-usually-stem-from-training-pain-fit-or-hands stay written down — it is not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops. This page does not hop winter+horse+blanket / horse+turnout+sheet / horse+stable+blanket / horse+fleece+cooler (those live on the blanket-size calculator).
-          </p>
+            A horse martingale-misuse head-carriage log notebook is how a-martingale-does-not-teach-correct-head-carriage, too-tight-or-wrongly-fitted-restricts-and-can-be-dangerous, and head-carriage-problems-usually-stem-from-training-pain-fit-or-hands stay written down — it is not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -258,15 +250,13 @@ export default function MartingalesBreastplatesPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the martingales leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page martingales, standing-vs-running, breastplates-and-breastgirths, fit, and use-and-misuse copy — a laminated horse standing-vs-running martingale checklist, a horse breastplate-vs-breastgirth fit question card, and a horse martingale-misuse head-carriage log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a #1144 laminated-turnout-vs-stable / denier-vs-fill / over-rugging-sweat-shiver hop, they are not a #1143 turnout-halter breakaway / rope-vs-flat / wither-height-tie hop, they are not a #1142 horse-leg bandage-bow / impact-not-tendon-support / grit-rub hop, they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a saddle-fit-basics pad / half-pad / shim / girth hop, they are not a BCS-chart hop, and they do not replace a qualified instructor or a veterinarian. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+standing+vs+running+martingale+checklist?s=martingales"
-                amazonLabel="Browse laminated horse standing-vs-running martingale checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=martingales"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+breastplate+vs+breastgirth+fit+question+card?s=martingales"
@@ -276,7 +266,7 @@ export default function MartingalesBreastplatesPage() {
                 amazonHref="/go/amazon-brand/horse+martingale+misuse+head+carriage+log+notebook?s=martingales"
                 amazonLabel="Browse horse martingale-misuse head-carriage log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

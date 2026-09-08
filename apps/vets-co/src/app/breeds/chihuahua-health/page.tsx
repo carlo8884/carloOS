@@ -135,33 +135,16 @@ export default function VetsChihuahuaHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Chihuahua health checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Chihuahua health checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              molera, MMVD, and hypoglycemia copy on
-              this page — a 13-column analysis pad
-              so murmur grade, echo date, Stage A–D,
-              and resting respiratory rate stay one
-              written row, a desk blotter pad so the
-              molera-protection household rules stay
-              where kids see them, and a numbered
-              log book so each tremor-versus-hypo
-              episode stays one dated entry.
-              Educational checklist, not a diagnosis,
-              not a substitute for veterinary care,
-              and not a ledger, habit-tracker, or
-              hourly-desk-pad hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Chihuahua health checklist"
-              subtitle="Email the analysis-pad, blotter, and numbered-log notes. No spam."
-              ctaText="Email my Chihuahua health checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="breeds-chihuahua-health-under-hero"
             />
           </div>
@@ -361,12 +344,8 @@ export default function VetsChihuahuaHealthPage() {
             yorkshire-terrier-health. Analog
             stopwatches, blank index cards, and
             recipe-card boxes already live on
-            beagle-health. This page does not hop
-            harnesses, toothpaste, medications, or
-            insurance brands as Amazon searches.
-            This page does not claim hands-on
-            testing.
-          </p>
+            beagle-health. This page does not claim hands-on
+            testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -392,26 +371,9 @@ export default function VetsChihuahuaHealthPage() {
               recipe+card+box. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the Chihuahua-health kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page molera, MMVD, and hypoglycemia
-              copy — a 13-column analysis pad, a
-              desk blotter pad, and a numbered log
-              book. Educational Chihuahua-health /
-              paperwork tools only. They are not a
-              ranked product list, they are not a
-              substitute for veterinary care, they
-              are not a #1180 ledger / habit-
-              tracker / hourly-desk-pad hop, they
-              are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/13+column+analysis+pad?s=breeds-chihuahua-health"
@@ -425,7 +387,7 @@ export default function VetsChihuahuaHealthPage() {
                 amazonHref="/go/amazon-brand/numbered+log+book?s=breeds-chihuahua-health"
                 amazonLabel="Browse numbered log books on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

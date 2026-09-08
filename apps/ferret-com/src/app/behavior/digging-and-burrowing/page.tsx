@@ -160,45 +160,16 @@ export default function FerretDiggingBurrowingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret dig-box checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret dig-box checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-dig-box-chart,
-              fridge-dig-filler-card, and
-              mustelid-dig-burrow-reference-handbook notes
-              that match the polecat-dig-instinct-map,
-              dig-box-filler-log, and
-              afa-enrichment-grounding copy on this page —
-              a laminated ferret dig-box chart so the
-              carpet-corner / plant-soil / litter-fling
-              map is posted on the fridge (not a
-              behavior-hub cue chart, not a dead-sleep
-              chart, not a bonding-week chart), a ferret
-              fridge dig-filler card so rice / river-rock /
-              ball-pit notes are labeled on the fridge
-              (not a behavior card, not a wake-safely
-              card, not a scent-trust card), and a
-              mustelid dig-burrow reference handbook so
-              the AFA enrichment grounding is a physical
-              kitchen book (not a behavior handbook, not
-              a dead-sleep handbook, not a bonding
-              handbook). Educational kitchen checklist,
-              not a ranked toy list, not a sleep-sack hop,
-              and not a substitute for an exotic-mammal
-              veterinarian. The existing Marshall tunnel
-              hop and Chewy ball-pit hop stay below.
-              Ferret.com does not sell insurance. Aging
-              pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret dig-box checklist"
-              subtitle="Email the dig-box-chart, fridge dig-filler card, and dig-burrow-handbook notes. No spam."
-              ctaText="Email my ferret dig-box checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-digging-burrowing-under-hero"
             />
           </div>
@@ -213,15 +184,12 @@ export default function FerretDiggingBurrowingPage() {
           </DropCap>
 
           <h2 id="instinct">The Polecat Instinct Behind the Mess</h2>
-          <p>
-            Ferrets were domesticated from the European polecat, a small
-            mustelid that hunts rabbits and rodents in their own burrows. To do
+          To do
             that for a living, an animal needs to be a confident tunneler:
             squeezing into tight underground spaces, digging out blocked
             passages, and following prey through the dark. That entire toolkit —
             the digging, the burrowing, the love of tunnels and tubes — came
-            along for the ride into domestication.
-          </p>
+            along for the ride into domestication.</p>
           <p>
             This is why your ferret tunnels into the laundry basket, burrows
             under the couch cushions, and digs at the carpet. None of it is
@@ -360,40 +328,15 @@ export default function FerretDiggingBurrowingPage() {
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret dig-box kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page polecat-dig-instinct-map,
-              dig-box-filler-log, and
-              afa-enrichment-grounding copy — a laminated
-              ferret dig-box chart, a ferret fridge
-              dig-filler card, and a mustelid dig-burrow
-              reference handbook. Educational kitchen
-              searches only. They are not a ranked toy
-              list, they are not a behavior-hub /
-              dead-sleep / bonding hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. The
-              Marshall tunnel and Chewy ball-pit hops
-              stay below.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+dig+box+chart?s=digging-and-burrowing"
-                amazonLabel="Browse laminated ferret dig-box charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+dig+filler+card?s=digging-and-burrowing"
-                amazonLabel="Browse ferret fridge dig-filler cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+dig+burrow+reference+handbook?s=digging-and-burrowing"
-                amazonLabel="Browse mustelid dig-burrow reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Dig Box and Tunnel Picks</h2>

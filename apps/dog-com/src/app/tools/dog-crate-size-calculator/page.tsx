@@ -145,35 +145,28 @@ export default function DogCrateSizeCalculatorPage() {
         <span className="text-brand-text-mid font-medium">Crate Size Calculator</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the crate plan
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Crate-size &amp; crate-training checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the measurement steps, standard size chart, puppy-divider notes,
-            and the shoppable crate kit (wire crate with divider, pad, cover,
-            training pads) so you can measure once and buy without re-running
-            the calculator. No spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Crate-size & crate-training checklist"
-            subtitle="Email the crate-size checklist, puppy-divider notes, and shoppable crate kit. No spam."
-            ctaText="Email my crate-size checklist"
-            source="tools-dog-crate-size-under-hero"
-          />
-        </div>
-      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Owner notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
+            source="tools-dog-crate-size-under-hero"
+          />
         </div>
       </section>
 
@@ -187,28 +180,7 @@ export default function DogCrateSizeCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a crate kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that match
-              the size you just calculated — a wire crate with a divider
-              panel (same query as the{' '}
-              <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
-                new-puppy checklist
-              </Link>
-              {' '}and the{' '}
-              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
-                puppy weight predictor
-              </Link>
-              ), a crate pad, a crate cover, and puppy training pads for
-              house-training. They are not a ranked product list, not invented
-              inventory, and they do not replace measuring your dog. Check the
-              crate&apos;s internal length and height against the minimums
-              above before you buy — see the{' '}
-              <Link href="/reviews/best-dog-crates" className="text-brand-primary underline-offset-2 hover:underline">
-                crate reviews
-              </Link>
-              . Dog.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
@@ -226,7 +198,7 @@ export default function DogCrateSizeCalculatorPage() {
                 amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-dog-crate-size"
                 amazonLabel="Browse puppy training pads on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

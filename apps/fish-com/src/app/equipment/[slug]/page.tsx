@@ -200,39 +200,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-filters' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-filters checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-filters checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-hob-media-volume-chart,
-              aquarium-rim-canister-interval-card, and
-              aquarist-sponge-fry-filter-handbook notes that
-              match the hang-on-back media-volume, canister
-              3–6-month cleaning, and sponge / fry copy on
-              this page — a laminated aquarium HOB media-volume
-              chart so the bioload / cartridge notes are posted
-              on the stand (not an AquaClear-70-filter hop, not
-              an equipment-hub gravel-vacuum hop), an aquarium
-              rim canister-interval card so the 50-gallon /
-              hose-disconnect notes are labeled on the rim (not
-              a Fluval-307 hop, not an API-test-kit hop), and
-              an aquarist sponge-fry-filter handbook so the
-              air-driven / shrimp / quarantine grounding is a
-              physical stand book (not a Hikari-Bacto-Surge hop,
-              not a Seachem-Prime hop). Educational stand
-              checklist, not a ranked filter list, not a
-              first-aid-kit hop, and not a substitute for a
-              water test. Fish.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-filters checklist"
-              subtitle="Email the HOB media-volume chart, canister-interval card, and sponge-fry-filter handbook notes. No spam."
-              ctaText="Email my aquarium-filters checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-filters-under-hero"
             />
           </div>
@@ -241,40 +218,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-heaters' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-heaters checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-heaters checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-heater-wattage-redundancy-chart,
-              aquarium-rim-independent-thermometer-card, and
-              aquarist-heater-controller-handbook notes that
-              match the 3–5 watts-per-gallon, two-heater
-              redundancy, and independent-thermometer copy on
-              this page — a laminated aquarium heater wattage-
-              redundancy chart so the 40-gallon / two-smaller-
-              heaters notes are posted on the stand (not an
-              Eheim-Jager hop, not an equipment-hub heater hop),
-              an aquarium rim independent-thermometer card so
-              the dial-is-approximate / 2–4°F-off notes are
-              labeled on the rim (not an Aqueon-Pro hop, not a
-              preset-25-watt nano hop), and an aquarist heater-
-              controller handbook so the titanium / Inkbird /
-              high-value-livestock grounding is a physical
-              stand book (not a Hydor-inline hop, not a
-              Cobalt-Neo-Therm hop). Educational stand
-              checklist, not a ranked heater list, not a
-              first-aid-kit hop, and not a substitute for a
-              water test. Fish.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-heaters checklist"
-              subtitle="Email the heater wattage-redundancy chart, independent-thermometer card, and heater-controller handbook notes. No spam."
-              ctaText="Email my aquarium-heaters checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-heaters-under-hero"
             />
           </div>
@@ -283,39 +236,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-lighting' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-lighting checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-lighting checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-photoperiod-par-chart,
-              aquarium-rim-programmable-led-dimmer-card, and
-              aquarist-light-mount-height-handbook notes that
-              match the 6–8-hour planted photoperiod, PAR-not-
-              watts, and mount-height copy on this page — a
-              laminated aquarium photoperiod-PAR chart so the
-              6–8-hour / algae-trigger notes are posted on the
-              stand (not a Hygger-957 hop, not an
-              equipment-hub lighting hop), an aquarium rim
-              programmable-LED-dimmer card so the ramp /
-              intensity notes are labeled on the rim (not a
-              Nicrew-Classic hop, not an aquarium-light-timer
-              setup hop), and an aquarist light-mount-height
-              handbook so the 12-inch hang / rim-sit PAR
-              grounding is a physical stand book (not a
-              Kessil-A360X hop, not a Finnex hop). Educational
-              stand checklist, not a ranked lighting list, not
-              a first-aid-kit hop, and not a substitute for a
-              water test. Fish.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-lighting checklist"
-              subtitle="Email the photoperiod-PAR chart, programmable-LED-dimmer card, and light-mount-height handbook notes. No spam."
-              ctaText="Email my aquarium-lighting checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-lighting-under-hero"
             />
           </div>
@@ -324,40 +254,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-substrates' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-substrates checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-substrates checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-substrate-depth-chart,
-              aquarium-rim-species-substrate-card, and
-              aquarist-vinegar-carbonate-handbook notes that
-              match the 1.5–2.5-inch bed, species-first sand /
-              aragonite / aquasoil, and vinegar-test copy on
-              this page — a laminated aquarium substrate-depth
-              chart so the anaerobic-pocket / 3-inch-sand notes
-              are posted on the stand (not an aquarium-gravel
-              hop, not a substrate-calculator bag hop), an
-              aquarium rim species-substrate card so the cory-
-              sand / cichlid-aragonite / planted-aquasoil notes
-              are labeled on the rim (not an aquarium-sand hop,
-              not an aqua-soil planted hop), and an aquarist
-              vinegar-carbonate handbook so the pH-buffer /
-              inert-vs-crushed-coral grounding is a physical
-              stand book (not a crushed-coral GH hop, not a
-              substrate-vacuum hop). Educational stand
-              checklist, not a ranked substrate list, not a
-              first-aid-kit hop, and not a substitute for a
-              water test. Fish.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-substrates checklist"
-              subtitle="Email the substrate-depth chart, species-substrate card, and vinegar-carbonate handbook notes. No spam."
-              ctaText="Email my aquarium-substrates checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-substrates-under-hero"
             />
           </div>
@@ -366,38 +272,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-test-kits' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-test-kits checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-test-kits checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-reagent-expiry-chart,
-              aquarium-rim-nitrate-shake-card, and
-              aquarist-daylight-color-match-handbook notes that
-              match the 18–24-month reagent life, 30-second
-              nitrate bottle-2 shake, and daylight color-match
-              copy on this page — a laminated aquarium reagent-
-              expiry chart so the 18–24-month / opened-bottle
-              notes are posted on the stand (not an API-master
-              hop, not a best-water-test-kits review hop), an
-              aquarium rim nitrate-shake card so the 30-second /
-              underreport-by-half notes are labeled on the rim
-              (not a Seachem-Prime hop, not a test-strip hop),
-              and an aquarist daylight-color-match handbook so
-              the warm-bulb / printed-chart grounding is a
-              physical stand book (not a Hanna-checker hop, not
-              a Salifert hop). Educational stand checklist,
-              not a ranked test-kit list, not a first-aid-kit
-              hop, and not a substitute for a water test.
-              Fish.com does not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-test-kits checklist"
-              subtitle="Email the reagent-expiry chart, nitrate-shake card, and daylight-color-match handbook notes. No spam."
-              ctaText="Email my aquarium-test-kits checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-test-kits-under-hero"
             />
           </div>
@@ -406,40 +290,16 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-co2-systems' ? (
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium-co2-systems checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium-CO2-systems checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-aquarium-photoperiod-solenoid-chart,
-              aquarium-rim-four-dkh-drop-card, and
-              aquarist-cylinder-duration-handbook notes that
-              match the solenoid-timed photoperiod, 4 dKH drop
-              checker, and 5-pound / paintball duration copy on
-              this page — a laminated aquarium photoperiod-
-              solenoid chart so the 30-minutes-before-lights /
-              overnight-off notes are posted on the stand (not
-              a CO2-regulator-solenoid calculator hop, not a
-              24/7 injection hop), an aquarium rim four-dKH-
-              drop card so the green / yellow / fish-gasping
-              notes are labeled on the rim (not a
-              co2-drop-checker calculator hop, not a Flourish-
-              Excel hop), and an aquarist cylinder-duration
-              handbook so the 5-pound / 6–9-month / paintball
-              grounding is a physical stand book (not a
-              diffuser hop, not a yeast-DIY hop). Educational
-              stand checklist, not a ranked CO2 list, not a
-              first-aid-kit hop, and not a substitute for a
-              water test. Fish.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium-CO2-systems checklist"
-              subtitle="Email the photoperiod-solenoid chart, four-dKH-drop card, and cylinder-duration handbook notes. No spam."
-              ctaText="Email my aquarium-CO2-systems checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="equipment-aquarium-co2-systems-under-hero"
             />
           </div>
@@ -631,55 +491,21 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         </p>
         <div style={{ margin: '8px 0 24px' }}>
           <ShopCtas
-            amazonHref={`/go/amazon-brand/${encodeURIComponent(category.categoryName)}?s=equipment-${category.slug}`}
-            chewyHref={`/go/chewy-brand/${encodeURIComponent(category.categoryName)}?s=equipment-${category.slug}`}
-            amazonLabel={`Shop ${category.categoryName} on Amazon →`}
-            chewyLabel={`Shop ${category.categoryName} on Chewy →`}
-          />
-        </div>
-
-        {category.slug === 'aquarium-filters' ? (
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-filters stand kit
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              hang-on-back media-volume, canister 3–6-month
-              cleaning, and sponge / fry copy — a laminated
-              aquarium HOB media-volume chart, an aquarium rim
-              canister-interval card, and an aquarist sponge-
-              fry-filter handbook. Educational stand searches
-              only. They are not a ranked filter list, they
-              are not an equipment-hub / best-aquarium-filters
-              review hop, they are not a first-aid-kit hop,
-              and they do not replace a water test. Fish.com
-              does not sell insurance. Fish.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Existing Chewy category buttons
-              stay in place.
-            </p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+hob+media+volume+chart?s=equipment-aquarium-filters"
-                amazonLabel="Browse laminated aquarium HOB media-volume charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-filters"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
+          <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+rim+canister+interval+card?s=equipment-aquarium-filters"
                 amazonLabel="Browse aquarium rim canister-interval cards on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+sponge+fry+filter+handbook?s=equipment-aquarium-filters"
-                amazonLabel="Browse aquarist sponge-fry-filter handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-heaters' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-heaters stand kit
+              Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
               These Amazon category searches match the on-page
@@ -699,63 +525,47 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+heater+wattage+redundancy+chart?s=equipment-aquarium-heaters"
-                amazonLabel="Browse laminated aquarium heater wattage-redundancy charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-heaters"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+rim+independent+thermometer+card?s=equipment-aquarium-heaters"
                 amazonLabel="Browse aquarium rim independent-thermometer cards on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+heater+controller+handbook?s=equipment-aquarium-heaters"
-                amazonLabel="Browse aquarist heater-controller handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-lighting' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-lighting stand kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              6–8-hour planted photoperiod, PAR-not-watts, and
-              mount-height copy — a laminated aquarium
-              photoperiod-PAR chart, an aquarium rim
-              programmable-LED-dimmer card, and an aquarist
-              light-mount-height handbook. Educational stand
+            Educational stand
               searches only. They are not a ranked lighting
               list, they are not an equipment-hub /
               best-aquarium-lighting review hop, they are not
               a first-aid-kit hop, and they do not replace a
-              water test. Fish.com does not sell insurance.
-              Fish.com earns a commission on qualifying
+              water test. Fish.com does not sell insurance. Fish.com earns a commission on qualifying
               purchases at no extra cost to you. Existing
-              Chewy category buttons stay in place.
-            </p>
+              Chewy category buttons stay in place. </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+photoperiod+par+chart?s=equipment-aquarium-lighting"
-                amazonLabel="Browse laminated aquarium photoperiod-PAR charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-lighting"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+rim+programmable+led+dimmer+card?s=equipment-aquarium-lighting"
                 amazonLabel="Browse aquarium rim programmable-LED-dimmer cards on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+light+mount+height+handbook?s=equipment-aquarium-lighting"
-                amazonLabel="Browse aquarist light-mount-height handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-substrates' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-substrates stand kit
+              Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
               These Amazon category searches match the on-page
@@ -774,93 +584,48 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+substrate+depth+chart?s=equipment-aquarium-substrates"
-                amazonLabel="Browse laminated aquarium substrate-depth charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-substrates"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+species+substrate+card?s=equipment-aquarium-substrates"
-                amazonLabel="Browse aquarium rim species-substrate cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+vinegar+carbonate+handbook?s=equipment-aquarium-substrates"
-                amazonLabel="Browse aquarist vinegar-carbonate handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-test-kits' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-test-kits stand kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              18–24-month reagent life, 30-second nitrate
-              bottle-2 shake, and daylight color-match copy —
-              a laminated aquarium reagent-expiry chart, an
-              aquarium rim nitrate-shake card, and an aquarist
-              daylight-color-match handbook. Educational stand
-              searches only. They are not a ranked test-kit
-              list, they are not an equipment-hub /
-              best-water-test-kits review hop, they are not a
-              first-aid-kit hop, and they do not replace a
-              water test. Fish.com does not sell insurance.
-              Fish.com earns a commission on qualifying
-              purchases at no extra cost to you. Existing
-              Chewy category buttons stay in place.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+reagent+expiry+chart?s=equipment-aquarium-test-kits"
-                amazonLabel="Browse laminated aquarium reagent-expiry charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-test-kits"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+rim+nitrate+shake+card?s=equipment-aquarium-test-kits"
                 amazonLabel="Browse aquarium rim nitrate-shake cards on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+daylight+color+match+handbook?s=equipment-aquarium-test-kits"
-                amazonLabel="Browse aquarist daylight-color-match handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-co2-systems' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-CO2-systems stand kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              solenoid-timed photoperiod, 4 dKH drop checker,
-              and 5-pound / paintball duration copy — a
-              laminated aquarium photoperiod-solenoid chart, an
-              aquarium rim four-dKH-drop card, and an aquarist
-              cylinder-duration handbook. Educational stand
-              searches only. They are not a ranked CO2 list,
-              they are not a tools-co2-calculator hop, they
-              are not a first-aid-kit hop, and they do not
-              replace a water test. Fish.com does not sell
-              insurance. Fish.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Existing Chewy category buttons stay in place.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+aquarium+photoperiod+solenoid+chart?s=equipment-aquarium-co2-systems"
-                amazonLabel="Browse laminated aquarium photoperiod-solenoid charts on Amazon →"
+                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-co2-systems"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+rim+four+dkh+drop+card?s=equipment-aquarium-co2-systems"
                 amazonLabel="Browse aquarium rim four-dKH-drop cards on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarist+cylinder+duration+handbook?s=equipment-aquarium-co2-systems"
-                amazonLabel="Browse aquarist cylinder-duration handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         ) : null}
 

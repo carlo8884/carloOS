@@ -89,33 +89,16 @@ export default function ClownfishPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the clownfish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Clownfish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the clownfish notes that match the
-                care copy on this page — a 20-gallon
-                marine pair tank so salinity stays at
-                1.023–1.026 SG, captive-bred ocellaris
-                so a beginner saltwater tank keeps a
-                hardy pair, and no anemone requirement
-                so a reef-free setup still hosts a
-                pair. Educational clownfish-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                clownfish tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Clownfish-setup checklist"
-                subtitle="Email the 20-gallon, salinity, and captive-bred notes. No spam."
-                ctaText="Email my clownfish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-clownfish-under-hero"
               />
             </div>

@@ -130,35 +130,16 @@ export default function PPIDPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the PPID coat-and-cooling checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse PPID coat-and-cooling checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the stainless-horse-shedding-blade,
-              wicking-horse-anti-sweat-sheet, and
-              automatic-horse-waterer notes that match
-              the failed-shed coat, heavy-coat-impairs-
-              cooling, and increased-drinking copy on
-              this page — a shedding blade so the long
-              curly coat is lifted between clips, a
-              wicking anti-sweat sheet so a clipped or
-              still-coated horse can cool, and an
-              automatic waterer so extra thirst is not
-              a dry bucket. Educational coat-and-cooling
-              checklist, not a treatment, not pergolide
-              or an ACTH kit, not a substitute for
-              calling the veterinarian, and not a
-              clipper, hay-bale-scale, or grazing-muzzle
-              hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse PPID coat-and-cooling checklist"
-              subtitle="Email the shedding-blade, anti-sweat-sheet, and waterer notes. No spam."
-              ctaText="Email my horse PPID coat-and-cooling checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-ppid-under-hero"
             />
           </div>
@@ -190,7 +171,7 @@ export default function PPIDPage() {
           <p>The most dangerous consequence of PPID is laminitis, mediated largely through insulin dysregulation. Any older horse with unexplained or recurrent laminitis should be tested for PPID. Conversely, a PPID diagnosis prompts a laminitis-prevention plan: diet control, weight management, and prompt treatment of the endocrine disease.</p>
 
           <h2 id="management">Management</h2>
-          <p>Beyond medication, PPID horses benefit from body clipping in summer (the heavy coat impairs cooling), excellent dental and hoof care, attentive deworming, prompt treatment of infections, and a diet matched to their metabolic status. With pergolide and good husbandry, many PPID horses live comfortably for years after diagnosis. Pergolide dosing stays with the veterinarian — this page does not hop pergolide, ACTH kits, or TRH stimulation supplies.</p>
+          <p>Beyond medication, PPID horses benefit from body clipping in summer (the heavy coat impairs cooling), excellent dental and hoof care, attentive deworming, prompt treatment of infections, and a diet matched to their metabolic status. With pergolide and good husbandry, many PPID horses live comfortably for years after diagnosis.
           <ul>
             <li><strong>Manage the failed-shed coat.</strong> Hypertrichosis is the most specific sign; the long curly coat stays after spring. A stainless shedding blade is how that coat is lifted between clips — it is not a curry comb or dandy brush (those live on grooming) and not horse clippers (those live on body-clipping).</li>
             <li><strong>Help the horse cool.</strong> The heavy coat impairs cooling, and some PPID horses sweat abnormally. A wicking anti-sweat sheet is how a clipped or still-coated horse sheds heat after work — it is not an Irish-knit cooler or a wool quarter sheet (those live on tying-up), not a fleece cooler (that lives on body-clipping), and not a sweat scraper (that lives on summer-heat-care).</li>
@@ -211,16 +192,12 @@ export default function PPIDPage() {
             a dry bucket. These are educational barn
             tools, not a ranked product list, not a
             substitute for veterinary care, and not
-            pergolide, an ACTH kit, or a diagnosis.
-            Clippers already live on body-clipping.
-            Hay-bale scales and NSC kits already live
+            pergolide, an ACTH kit, or a diagnosis. Hay-bale scales and NSC kits already live
             on EMS. Grazing muzzles already live on
-            laminitis. Coolers and quarter sheets
-            already live on tying-up. This page does
+            laminitis. This page does
             not hop medications, vaccines, or endocrine
             test kits. This page does not claim
-            hands-on testing.
-          </p>
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -275,39 +252,9 @@ export default function PPIDPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the PPID coat-and-cooling kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page failed-shed coat, heavy-coat-
-              impairs-cooling, and increased-drinking
-              copy — a stainless shedding blade, a
-              wicking anti-sweat sheet, and an automatic
-              waterer. Educational barn tools only.
-              Hopping pergolide, ACTH kits, or clippers
-              is not the job of this kit. They are not
-              a ranked product list, they are not a
-              substitute for veterinary care, they are
-              not a #1107 hoof-angle-gauge / lunge-
-              cavesson / overreach-bell-boots hop, they
-              are not a #1106 arena-drag / polo-wrap /
-              paddock-panel hop, they are not a #1105
-              hay-bale-scale / NSC-hay-test-kit /
-              strip-grazing-posts hop, they are not a
-              #1104 run-in-shelter / grooming-caddy /
-              blanket-wash-bag hop, they are not a
-              #1103 mud-grid / turnout-boot / leg-towel
-              hop, they are not a #1102 Irish-knit-
-              cooler / quarter-sheet / loose-salt hop,
-              they are not a body-clipping clipper hop,
-              they are not an EMS diet-management hop,
-              they are not a laminitis grazing-muzzle
-              hop, and they do not replace a
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/stainless+horse+shedding+blade?s=health-ppid"
@@ -321,7 +268,7 @@ export default function PPIDPage() {
                 amazonHref="/go/amazon-brand/automatic+horse+waterer?s=health-ppid"
                 amazonLabel="Browse automatic horse waterers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

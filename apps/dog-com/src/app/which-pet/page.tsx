@@ -209,17 +209,13 @@ export default function WhichPetPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             First-week starter list
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the first-week starter list — crate, food, harness, ID tag, carrier, and
-            first-aid — so you can kit a dog-leaning result without re-running the wizard.
-            The quiz itself stays ungated. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="First-week starter list"
-            subtitle="Email the first-week starter list — crate, food, harness, ID tag, carrier, first-aid. No spam."
-            ctaText="Email my first-week starter list"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="which-pet-under-hero"
           />
         </div>
@@ -278,8 +274,7 @@ export default function WhichPetPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-week starter kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              If the wizard leans dog, these Amazon category searches are day-one
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">If the wizard leans dog, these Amazon category searches are day-one
               husbandry items — a wire crate with a divider, puppy food, a harness,
               an ID tag / collar, a soft carrier, and a pet first-aid kit. Same hops
               used on the{' '}
@@ -299,9 +294,7 @@ export default function WhichPetPage() {
               . They are not a ranked product list, not invented inventory, and they
               do not replace meeting a shelter, breeder, or veterinarian. Size the
               crate and harness before you order. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+              qualifying purchases at no extra cost to you. </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
@@ -327,7 +320,7 @@ export default function WhichPetPage() {
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=which-pet"
                 amazonLabel="Browse pet first-aid kits on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </section>
 

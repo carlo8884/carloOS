@@ -28,7 +28,7 @@ export default function EliminationDietPage() {
           <TableOfContents items={[{ label: 'Choosing the Diet', href: '#diet-choice' }, { label: 'What to Eliminate', href: '#eliminate' }, { label: 'Duration', href: '#duration' }, { label: 'Food Challenge', href: '#challenge' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies Guide', href: '/health/dog-allergies' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="nutrition-elimination" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="nutrition-elimination" />
         </>}
       >
         <div className="carloOS-article">
@@ -37,45 +37,16 @@ export default function EliminationDietPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog elimination-diet checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog elimination-diet checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-dog-eight-week-trial-chart,
-              fridge-itch-score-card, and
-              canine-food-challenge-handbook notes
-              that match the eight-week-trial-map,
-              itch-score-log, and
-              food-challenge-grounding copy on this
-              page — a laminated dog eight-week-trial
-              chart so the 8–12 week clock is posted
-              on the fridge (not a NASC-seal chart, not
-              a raw-salmonella chart, not an FDA-DCM
-              chart), a dog fridge itch-score card so
-              weekly itching / ear / GI notes are
-              labeled on the fridge (not an EPA-DHA
-              card, not a zoonotic-risk card, not a
-              high-legume card), and a canine
-              food-challenge handbook so the
-              reintroduce-original-food / two-week
-              return grounding is a physical kitchen
-              book (not a fish-oil handbook, not an
-              HPP-raw handbook, not a taurine-switch
-              handbook). Educational kitchen checklist,
-              not a ranked clinic list, not a
-              prescription hydrolyzed-diet hop, not a
-              first-aid-kit hop, and not a substitute
-              for a veterinarian. Dog.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog elimination-diet checklist"
-              subtitle="Email the eight-week-trial chart, fridge itch-score card, and food-challenge-handbook notes. No spam."
-              ctaText="Email my dog elimination-diet checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-elimination-under-hero"
             />
           </div>
@@ -118,47 +89,18 @@ export default function EliminationDietPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs dog-supplements /
               raw-diet-risks / grain-free-dcm hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog elimination-diet kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page eight-week-trial-map,
-              itch-score-log, and
-              food-challenge-grounding copy — a
-              laminated dog eight-week-trial chart, a
-              dog fridge itch-score card, and a
-              canine food-challenge handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a dog-supplements / raw-diet-risks /
-              grain-free-dcm hop, they are not a
-              prescription hydrolyzed-diet hop, they
-              are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do
-              not replace a veterinarian. Dog.com does
-              not sell insurance. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+eight+week+trial+chart?s=nutrition-elimination"
-                amazonLabel="Browse laminated dog eight-week-trial charts on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-elimination"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+fridge+itch+score+card?s=nutrition-elimination"
-                amazonLabel="Browse dog fridge itch-score cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/canine+food+challenge+handbook?s=nutrition-elimination"
-                amazonLabel="Browse canine food-challenge handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

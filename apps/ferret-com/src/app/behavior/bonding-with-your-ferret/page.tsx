@@ -162,44 +162,16 @@ export default function FerretBondingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret bonding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret bonding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-bonding-week-chart,
-              fridge-scent-trust-card, and
-              mustelid-bonding-reference-handbook notes
-              that match the week-by-week-bond-map,
-              scent-hand-feed-log, and
-              afa-avsab-trust-grounding copy on this page —
-              a laminated ferret bonding-week chart so
-              the week-1-familiarity / week-2-floor-time /
-              month-2-partnership map is posted on the
-              fridge (not a behavior-hub cue chart, not a
-              bite-inhibition chart, not a hob-jill size
-              chart), a ferret fridge scent-trust card so
-              scent-transfer / hand-feeding notes are
-              labeled on the fridge (not a behavior card,
-              not a bite-type card, not a hob-vs-jill
-              card), and a mustelid bonding reference
-              handbook so the AFA / AVSAB trust grounding
-              is a physical kitchen book (not a behavior
-              handbook, not a bite-inhibition handbook,
-              not a hob-jill handbook). Educational
-              kitchen checklist, not a ranked toy list,
-              not a sleep-sack hop, not a snuffle-mat hop,
-              and not a substitute for an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret bonding checklist"
-              subtitle="Email the bonding-week-chart, fridge scent-trust card, and bonding-handbook notes. No spam."
-              ctaText="Email my ferret bonding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-bonding-under-hero"
             />
           </div>
@@ -354,26 +326,7 @@ export default function FerretBondingPage() {
             a medical contributor and warrants an exotic-pet vet evaluation.
           </p>
 
-          <p className="text-sm leading-relaxed text-brand-text-mid">
-            Keep a physical ferret bonding kitchen kit next
-            to this page — a laminated ferret bonding-week
-            chart so the week-1-familiarity /
-            week-2-floor-time / month-2-partnership map is
-            posted on the fridge, a ferret fridge
-            scent-trust card so scent-transfer /
-            hand-feeding notes are labeled on the fridge,
-            and a mustelid bonding reference handbook so
-            the AFA / AVSAB trust grounding is a physical
-            kitchen book. These are educational kitchen
-            searches, not a ranked toy list, not a
-            substitute for an exotic-mammal veterinarian,
-            not a behavior-hub / biting-and-nipping /
-            male-vs-female hop, and not a child toothbrush
-            / dosing hop. This page does not hop
-            medications or vaccines. This page does not
-            sell insurance. This page does not claim
-            hands-on testing. Ferret aging stays held.
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -387,46 +340,20 @@ export default function FerretBondingPage() {
               or PLACEHOLDER. Unused vs behavior-hub /
               biting-and-nipping / male-vs-female kitchen
               kits and child sleep-sack / snuffle-mat /
-              finger+toothbrush hops.
-              Directory import left untouched. Ferret
+              finger+toothbrush hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret bonding kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page week-by-week-bond-map,
-              scent-hand-feed-log, and
-              afa-avsab-trust-grounding copy — a laminated
-              ferret bonding-week chart, a ferret fridge
-              scent-trust card, and a mustelid bonding
-              reference handbook. Educational kitchen
-              searches only. They are not a ranked toy
-              list, they are not a behavior-hub /
-              biting-and-nipping / male-vs-female hop,
-              they are not a child toothbrush hop, and
-              they do not replace an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+bonding+week+chart?s=bonding-with-your-ferret"
-                amazonLabel="Browse laminated ferret bonding-week charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=bonding-with-your-ferret"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+scent+trust+card?s=bonding-with-your-ferret"
-                amazonLabel="Browse ferret fridge scent-trust cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+bonding+reference+handbook?s=bonding-with-your-ferret"
-                amazonLabel="Browse mustelid bonding reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

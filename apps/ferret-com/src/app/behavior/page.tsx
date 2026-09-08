@@ -163,44 +163,16 @@ export default function BehaviorHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ferret behavior-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret behavior-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-ferret-behavior-cue-chart,
-            fridge-behavior-card, and
-            mustelid-behavior-reference-handbook notes that
-            match the behavior-section-map,
-            training-and-bonding-log, and
-            AFA-and-welfare-grounding copy on this hub —
-            a laminated ferret behavior cue chart so the
-            section map (training, biting, play, stress,
-            harness, introductions) is posted on the
-            fridge (not a tools-hub calculator chart, not
-            a reviews buyer-guide chart, not a diet
-            feeding chart, not a care routine chart), a
-            ferret fridge behavior card so
-            training-and-bonding notes are labeled on the
-            fridge (not a measurement card, not a reviews
-            comparison card, not a diet label card, not a
-            care card), and a mustelid behavior reference
-            handbook so the AFA / welfare grounding is a
-            physical kitchen book (not a calculator
-            handbook, not a reviews handbook, not a diet
-            handbook, not a care handbook). Educational
-            kitchen checklist, not a ranked harness list,
-            not a vest-harness / snuffle-mat hop, and not
-            a substitute for a veterinarian. Aging pages
-            stay held. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret behavior-hub checklist"
-            subtitle="Email the behavior-cue-chart, fridge behavior-card, and behavior-handbook notes. No spam."
-            ctaText="Email my ferret behavior-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="behavior-hub-under-hero"
           />
         </div>
@@ -417,30 +389,8 @@ export default function BehaviorHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Behavior-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          behavior-section-map, training-and-bonding-log,
-          and AFA-and-welfare-grounding copy on this hub
-          — a laminated ferret behavior cue chart so the
-          training / biting / play / stress / harness /
-          introductions map is posted on the fridge, a
-          ferret fridge behavior card so
-          training-and-bonding notes are labeled on the
-          fridge, and a mustelid behavior reference
-          handbook so the AFA / welfare grounding is a
-          physical kitchen book. These are educational
-          kitchen searches, not a ranked harness list,
-          not a substitute for a veterinarian, not a
-          tools-hub / reviews-hub / diet-hub / care-hub
-          hop, and not a child vest-harness / snuffle-mat
-          / sleep-sack hop (those live on the behavior
-          children). This page does not hop medications
-          or vaccines. This page does not claim hands-on
-          testing. Ferret aging stays held.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
@@ -460,37 +410,13 @@ export default function BehaviorHubPage() {
             source=behavior-hub (not under-hero). */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the behavior-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page behavior-section-map,
-            training-and-bonding-log, and
-            AFA-and-welfare-grounding copy — a laminated
-            ferret behavior cue chart, a ferret fridge
-            behavior card, and a mustelid behavior
-            reference handbook. Educational kitchen
-            searches only. They are not a ranked harness
-            list, they are not a tools-hub / reviews-hub
-            / diet-hub / care-hub hop, they are not a
-            vest-harness / snuffle-mat hop, and they do
-            not replace a veterinarian. Ferret.com earns
-            a commission on qualifying purchases at no
-            extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+ferret+behavior+cue+chart?s=behavior-hub"
-              amazonLabel="Browse laminated ferret behavior cue charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+fridge+behavior+card?s=behavior-hub"
-              amazonLabel="Browse ferret fridge behavior cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/mustelid+behavior+reference+handbook?s=behavior-hub"
-              amazonLabel="Browse mustelid behavior reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/ferret+supplies?s=behavior-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

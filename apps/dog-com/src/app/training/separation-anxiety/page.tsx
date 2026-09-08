@@ -99,18 +99,13 @@ export default function SeparationAnxietyPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Separation-anxiety protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the camera check, boredom vs true-SA protocol, and the
-            alone-time kit (stuffable Kong, snuffle mat, crate with divider,
-            long-lasting chews) so you can run the steps without scrolling
-            back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Separation-anxiety protocol"
-            subtitle="Email the camera check, boredom vs true-SA protocol, and alone-time kit. No spam."
-            ctaText="Email my separation-anxiety protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-sep-anxiety-under-hero"
           />
         </div>
@@ -153,8 +148,7 @@ export default function SeparationAnxietyPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop an alone-time kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A stuffed frozen Kong plus a snuffle mat occupy most dogs for the
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A stuffed frozen Kong plus a snuffle mat occupy most dogs for the
             first 15–30 minutes after you leave — the window where boredom
             destruction usually starts. Pair them with a wire crate and
             divider for unsupervised time, and rotate long-lasting chews so
@@ -182,8 +176,7 @@ export default function SeparationAnxietyPage() {
             . They are not a ranked product list and they do not replace the
             camera check or the sub-threshold protocol. Size the crate before
             you order. Dog.com earns a commission on qualifying purchases at
-            no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety"

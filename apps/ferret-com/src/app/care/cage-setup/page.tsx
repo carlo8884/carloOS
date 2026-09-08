@@ -158,33 +158,16 @@ export default function FerretCageSetupPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret cage-setup checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret cage-setup checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the cage-setup notes that match
-              the copy on this page — bar spacing at
-              one inch or less for adults and half an
-              inch for kits, solid floors instead of
-              wire, a MidWest Critter Nation double
-              unit when you need kit-safe stacked
-              space, a Marshall starter cage only
-              until a pair outgrows it, and a Kaytee
-              corner litter pan on each level. Educational
-              housing checklist, not a new product hop
-              and not a substitute for an exotic-animal
-              veterinarian. The existing Critter Nation
-              Amazon and Kaytee Chewy searches stay
-              below. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret cage-setup checklist"
-              subtitle="Email the bar-spacing, Critter Nation, and corner-pan notes. No spam."
-              ctaText="Email my ferret cage-setup checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-cage-setup-under-hero"
             />
           </div>

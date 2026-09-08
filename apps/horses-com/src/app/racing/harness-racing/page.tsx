@@ -153,41 +153,16 @@ export default function HarnessRacingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the harness-racing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Harness-racing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-harness-trot-pace-chart,
-              stall-door-usta-standardbred-card, and
-              equine-sulky-harness-handbook notes
-              that match the trot-vs-pace,
-              usta-standardbred, and sulky-race-bike
-              copy on this page — a laminated horse
-              harness trot-pace chart so the diagonal /
-              lateral / hobble notes are posted on the stall
-              door (not a Thoroughbred flat-surface chart,
-              not a racing-hub section-map chart), a horse
-              stall-door USTA Standardbred card so the
-              USTA / Standardbred-registry notes are
-              labeled at the barn (not an American Stud
-              Book card, not a racing-prep card), and an
-              equine sulky-harness handbook so the race-bike /
-              jog-cart / traces grounding is a physical
-              barn book (not a furlong-distance handbook,
-              not a racing reference handbook). Educational
-              barn checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Harness-racing checklist"
-              subtitle="Email the harness trot-pace chart, USTA Standardbred card, and sulky-harness handbook notes. No spam."
-              ctaText="Email my harness-racing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-harness-racing-under-hero"
             />
           </div>
@@ -248,43 +223,18 @@ export default function HarnessRacingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs thoroughbred-flat-racing /
               racing-hub hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the harness-racing barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page trot-vs-pace,
-              usta-standardbred, and sulky-race-bike
-              copy — a laminated horse harness trot-pace
-              chart, a horse stall-door USTA Standardbred
-              card, and an equine sulky-harness handbook.
-              Educational barn searches only. They are not
-              a ranked race list, they are not a
-              Thoroughbred-flat-racing / racing-hub hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace a veterinarian. Horses.com does not
-              sell insurance. Horses.com earns a commission
-              on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+harness+trot+pace+chart?s=racing-harness-racing"
-                amazonLabel="Browse laminated horse harness trot-pace charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-harness-racing"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+usta+standardbred+card?s=racing-harness-racing"
-                amazonLabel="Browse horse stall-door USTA Standardbred cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+sulky+harness+handbook?s=racing-harness-racing"
-                amazonLabel="Browse equine sulky-harness handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

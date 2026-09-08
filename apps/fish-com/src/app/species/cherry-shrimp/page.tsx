@@ -85,32 +85,16 @@ export default function CherryShrimpPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the cherry-shrimp-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Cherry-shrimp-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Neocaridina davidi notes that
-                match the care copy on this page — a
-                10–15 shrimp starter colony in a
-                10-gallon established tank, pH 6.5–8.0
-                and GH 6–8 so molts succeed, 65–80°F,
-                nitrate under 20 ppm, and no copper.
-                Educational cherry-shrimp-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                cherry-shrimp tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Cherry-shrimp-setup checklist"
-                subtitle="Email the GH, no-copper, and colony notes. No spam."
-                ctaText="Email my cherry-shrimp-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-cherry-shrimp-under-hero"
               />
             </div>

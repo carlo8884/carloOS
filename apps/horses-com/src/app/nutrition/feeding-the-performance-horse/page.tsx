@@ -117,47 +117,22 @@ export default function PerformanceFeedingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the performance-horse fueling checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Performance-horse fueling checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the nylon-horse-hay-bag,
-              horse-feed-grade-vegetable-oil, and
-              marked-horse-grain-scoop notes that match
-              the forage-before-work, fat-and-fiber
-              fuel, and rest-day concentrate-cut copy
-              on this page — a nylon horse hay bag so
-              a small forage portion hangs before work
-              and buffers stomach acid (not a hay
-              soaking bag, not a slow-feeder hay net,
-              not a wall-mounted hay rack), horse
-              feed-grade vegetable oil so cool fat
-              calories are added without a starch spike
-              (not the stabilized-rice-bran ReviewCard,
-              not a high-fat performance-feed
-              ReviewCard), and a marked horse grain
-              scoop so concentrate is cut on rest days
-              to the work the horse is actually doing
-              (not a tabletop digital grain scale, not
-              a feed-scoop scale). Educational barn
-              checklist, not a treatment, and not a
-              substitute for calling the veterinarian.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Performance-horse fueling checklist"
-              subtitle="Email the hay-bag, feed-oil, and grain-scoop notes. No spam."
-              ctaText="Email my performance-horse fueling checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-feeding-the-performance-horse-under-hero"
             />
           </div>
 
           <h2 id="energy">Match Energy to Work</h2>
-          <p>The starting point is honest workload assessment. The energy needs of a horse in light schooling are far below those of an upper-level eventer, endurance horse, or racehorse, and overfeeding energy to a horse not doing the work makes it fat and hot, while underfeeding a hard-working horse erodes condition and performance. Feed the work the horse is actually doing, adjusting as the training load rises and falls through the season. A marked horse grain scoop is how that rest-day and light-work concentrate cut is measured in the barn — it is not a tabletop digital horse grain scale (that lives on the grain page) and not a horse feed-scoop scale (those live on the feed calculators).</p>
+          <p>The starting point is honest workload assessment. The energy needs of a horse in light schooling are far below those of an upper-level eventer, endurance horse, or racehorse, and overfeeding energy to a horse not doing the work makes it fat and hot, while underfeeding a hard-working horse erodes condition and performance. Feed the work the horse is actually doing, adjusting as the training load rises and falls through the season.
 
           <h2 id="sources">Energy Sources</h2>
           <p>Energy can come from fiber, fat, or starch and sugar, and the mix matters. Fiber (forage and super-fibers) provides slow-release energy and gut health and should remain the base. Fat (oil, rice bran) gives dense, cool, slow-burning energy ideal for endurance and for adding calories without fizz. Horse feed-grade vegetable oil is that cool fat top-dress — it is not the stabilized rice-bran fat-supplement ReviewCard below and not a high-fat performance-feed ReviewCard. Starch and sugar from grain provide rapid, readily available energy useful for short, intense efforts, but carry the gut and behavioral risks of high-grain feeding -- so they are used judiciously, not as the default fuel.</p>
@@ -188,8 +163,7 @@ export default function PerformanceFeedingPage() {
             oil so cool fat calories are added without
             a starch spike, and a marked horse grain
             scoop so concentrate is cut on rest days
-            to the work the horse is actually doing.
-            These are educational barn searches, not a
+            to the work the horse is actually doing. These are educational barn searches, not a
             ranked product list, not a substitute for
             veterinary care, and not a hay-soaking-bag
             hop (that lives on heaves), a slow-feeder
@@ -199,10 +173,8 @@ export default function PerformanceFeedingPage() {
             lives on feeding-senior-horses), a digital
             grain-scale hop (that lives on grain), or
             the rice-bran / high-fat-feed ReviewCards
-            below. This page does not hop medications
-            or vaccines. This page does not claim
-            hands-on testing.
-          </p>
+            below. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -273,25 +245,9 @@ export default function PerformanceFeedingPage() {
               (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the performance fueling barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page forage-before-work, fat-and-fiber
-              fuel, and rest-day concentrate-cut copy —
-              a nylon horse hay bag, horse feed-grade
-              vegetable oil, and a marked horse grain
-              scoop. Educational barn searches only.
-              They are not a ranked product list, they
-              are not a hay-soaking-bag or slow-feeder
-              hay-net hop, they are not a chopped-forage
-              hop, they are not the rice-bran or
-              high-fat-feed ReviewCards, and they do
-              not replace a veterinarian. Horses.com
-              earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/nylon+horse+hay+bag?s=nutrition-feeding-the-performance-horse"
@@ -305,7 +261,7 @@ export default function PerformanceFeedingPage() {
                 amazonHref="/go/amazon-brand/marked+horse+grain+scoop?s=nutrition-feeding-the-performance-horse"
                 amazonLabel="Browse marked horse grain scoops on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Performance Horses</h2>

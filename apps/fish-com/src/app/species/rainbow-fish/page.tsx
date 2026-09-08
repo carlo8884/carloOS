@@ -76,32 +76,16 @@ export default function RainbowFishPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the rainbow-fish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Rainbow-fish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Melanotaeniidae
-                notes that match the care copy on this
-                page — a group of 6+ with a 2:1 or 3:1
-                female-to-male ratio, pH 7.0–8.0 and
-                GH 8–15 hard alkaline water, nitrate
-                under 20 ppm, and 9–18 months plus
-                quality food before full color. Educational
-                rainbow-fish-setup checklist, not a
-                new product hop, not livestock, and not
-                a substitute for a fish veterinarian. The
-                existing rainbow-fish tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Rainbow-fish-setup checklist"
-                subtitle="Email the 6+ group, hard-alkaline, and color-development notes. No spam."
-                ctaText="Email my rainbow-fish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-rainbow-fish-under-hero"
               />
             </div>

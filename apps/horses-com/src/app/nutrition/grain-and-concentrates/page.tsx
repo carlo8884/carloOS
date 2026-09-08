@@ -117,33 +117,16 @@ export default function GrainConcentratesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the grain-and-concentrate checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse grain-and-concentrate checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the tabletop-digital-horse-grain-scale,
-              stackable-rubber-horse-feed-tubs, and
-              rodent-proof-metal-horse-feed-bin notes that
-              match the weigh-not-scoop, split-small-meals,
-              and keep-grain-consistent copy on this page —
-              a tabletop grain scale so concentrates are
-              weighed (not scooped), stackable rubber feed
-              tubs so a daily ration is split into several
-              small meals, and a rodent-proof metal feed
-              bin so grain stays clean and the ration does
-              not drift. Educational barn checklist, not
-              a treatment, not a feed-scoop-scale hop, and
-              not a substitute for calling the veterinarian
-              or equine nutritionist. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse grain-and-concentrate checklist"
-              subtitle="Email the grain-scale, feed-tub, and feed-bin notes. No spam."
-              ctaText="Email my horse grain-and-concentrate checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-grain-under-hero"
             />
           </div>
@@ -180,17 +163,14 @@ export default function GrainConcentratesPage() {
             stackable rubber horse feed tubs so a daily
             ration is split into several small meals, and
             a rodent-proof metal horse feed bin so grain
-            stays clean and the ration does not drift.
-            These are educational barn tools, not a ranked
+            stays clean and the ration does not drift. These are educational barn tools, not a ranked
             product list, not a substitute for veterinary
             or nutritionist care, and not a feed-scoop-scale
             (that lives on the feed calculator), a hanging
             hay-bale scale (that lives on EMS), or a
             livestock barn scale (that lives on the weight
-            calculator). This page does not hop medications
-            or vaccines. This page does not claim hands-on
-            testing.
-          </p>
+            calculator). This page does not claim hands-on
+            testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -222,23 +202,9 @@ export default function GrainConcentratesPage() {
               (choke). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the barn grain-weighing kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page weigh-not-scoop, split-small-meals,
-              and keep-grain-consistent copy — a tabletop
-              grain scale, stackable rubber feed tubs, and
-              a rodent-proof metal feed bin. Educational
-              barn tools only. They are not a ranked
-              product list, they are not a feed-scoop-scale
-              hop, they are not an EMS hay-bale-scale hop,
-              and they do not replace a veterinarian or
-              equine nutritionist. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/tabletop+digital+horse+grain+scale?s=nutrition-grain"
@@ -252,7 +218,7 @@ export default function GrainConcentratesPage() {
                 amazonHref="/go/amazon-brand/rodent+proof+metal+horse+feed+bin?s=nutrition-grain"
                 amazonLabel="Browse rodent-proof metal horse feed bins on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Feed Picks — Safe Concentrates for Working Horses</h2>

@@ -163,21 +163,14 @@ export default function FishDiseaseGuidePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the hospital-tank plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Hospital-tank checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the disease-prevention order — test water first, 4-week
-            quarantine of new fish, and a ready 10-gallon hospital tank with a
-            seeded sponge filter and heater — so you can isolate without
-            scrambling. Educational husbandry, not a diagnosis. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Hospital-tank checklist"
-            subtitle="Email the test-water-first, 4-week quarantine, and 10-gallon hospital-tank order. No spam."
-            ctaText="Email my hospital-tank checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-disease-guide-under-hero"
           />
         </div>
@@ -245,8 +238,7 @@ export default function FishDiseaseGuidePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a hospital-tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Test water before you medicate — a liquid master kit is how you
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Test water before you medicate — a liquid master kit is how you
             see ammonia, nitrite, and nitrate. Then isolate in a spare
             10-gallon hospital tank with a seeded sponge filter, a heater
             rated for the tank, and a separate digital thermometer so the
@@ -279,8 +271,7 @@ export default function FishDiseaseGuidePage() {
             . They are not a ranked product list, they are not medications,
             and they do not replace diagnosis or an aquatic veterinarian.
             Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-disease-guide"

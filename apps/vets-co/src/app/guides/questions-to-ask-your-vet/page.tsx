@@ -27,41 +27,23 @@ export default function QuestionsToAskPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { label: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-questions" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-questions" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the questions-to-ask-your-vet checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Questions-to-ask-your-vet checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              diagnosis, options, cost, and
-              follow-up-question copy on this page —
-              ruled index cards so each question is
-              one card you can flip through a rushed
-              visit, 3x3 sticky notes so the next
-              options or cost question stays flagged
-              on the stack, and letter-size sheet
-              protectors so the written instructions
-              and visit summary stay readable after
-              you leave. Educational checklist, not
-              a diagnosis, not a substitute for
-              veterinary care, and not a spiral-
-              notebook, legal-pad, or clipboard hop.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Questions-to-ask-your-vet checklist"
-              subtitle="Email the index-card, sticky-note, and sheet-protector notes. No spam."
-              ctaText="Email my questions-to-ask-your-vet checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-questions-to-ask-your-vet-under-hero"
             />
           </div>
@@ -79,13 +61,13 @@ export default function QuestionsToAskPage() {
           <p>Rarely is there only one path. Ask what the treatment options are, including the option of monitoring or doing nothing, and the benefits, risks, and likely outcomes of each. Ask what you would do if this were your own pet, and what the consequences of delaying treatment might be. 3x3 sticky notes flag the next options question on the index-card stack so it is asked instead of remembered in the parking lot — they are not a small magnetic dry-erase board (that lives on ER-vs-urgent-care) and they are not a hardcover weekly appointment planner (that lives on pain-management-dogs). Understanding the range of options — not just the first recommendation — lets you choose a plan that fits your pet, your circumstances, and your values.</p>
 
           <h2>Questions About Medications</h2>
-          <p>If a medication is prescribed, confirm the essentials: what it is for, how and when to give it, whether with food, common side effects to watch for, what to do about a missed dose, and how long the course runs. Ask about interactions with other medications or supplements, and whether monitoring bloodwork or a recheck is needed. Write those confirmations on the remaining index cards; this page does not hop a pill organizer, a prescription bottle, or any medication ASIN. Getting these details right improves the odds the treatment succeeds and that problems are caught early.</p>
+          <p>If a medication is prescribed, confirm the essentials: what it is for, how and when to give it, whether with food, common side effects to watch for, what to do about a missed dose, and how long the course runs. Ask about interactions with other medications or supplements, and whether monitoring bloodwork or a recheck is needed. Getting these details right improves the odds the treatment succeeds and that problems are caught early.</p>
 
           <h2>Questions About Cost</h2>
-          <p>Cost questions are entirely appropriate. Ask for an estimate before procedures, what is essential versus optional, whether tests or treatments can be staged over time, and if lower-cost alternatives exist that still address the problem. The same 3x3 sticky notes can flag the estimate and essential-versus-optional questions so they are spoken before you agree to a plan. Veterinary teams routinely build plans around real budgets when they know the constraint. An open cost conversation prevents surprise bills and helps you and the team find the best care within your means. This page does not hop a cash envelope, a budget workbook, or a financing brand.</p>
+          <p>Cost questions are entirely appropriate. Ask for an estimate before procedures, what is essential versus optional, whether tests or treatments can be staged over time, and if lower-cost alternatives exist that still address the problem. The same 3x3 sticky notes can flag the estimate and essential-versus-optional questions so they are spoken before you agree to a plan. Veterinary teams routinely build plans around real budgets when they know the constraint. An open cost conversation prevents surprise bills and helps you and the team find the best care within your means.
 
           <h2>Questions About Follow-Up</h2>
-          <p>Before you leave, clarify the follow-up plan. Ask when a recheck is needed, what improvement to expect and by when, and which signs at home should prompt you to call back urgently. Request written instructions or a summary so you do not have to rely on memory. Letter-size sheet protectors are how that written summary stays readable in the glove box instead of a crumpled printout — they are not letter-size thermal laminating pouches (that live on dog-vaccinations-guide), not credit-card-size laminating pouches (that live on ER-vs-urgent-care), and not a clipboard with storage (that lives on what-to-expect-at-the-vet for findings and dosing). Knowing exactly what to watch for and when to return closes the loop on the visit and keeps your pet&apos;s care on track between appointments.</p>
+          <p>Before you leave, clarify the follow-up plan. Ask when a recheck is needed, what improvement to expect and by when, and which signs at home should prompt you to call back urgently. Request written instructions or a summary so you do not have to rely on memory. Knowing exactly what to watch for and when to return closes the loop on the visit and keeps your pet&apos;s care on track between appointments.</p>
 
           <h2 id="kit">Questions-to-ask-your-vet kit</h2>
           <p>
@@ -163,35 +145,9 @@ export default function QuestionsToAskPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the questions-to-ask-your-vet kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page diagnosis, options, cost, and
-              follow-up-question copy — ruled index
-              cards, 3x3 sticky notes, and letter-size
-              sheet protectors. Educational questions /
-              notes / follow-up tools only. They are
-              not a ranked product list, they are not
-              a substitute for veterinary care, they
-              are not a #1165 spiral-notebook /
-              cooler-bag / clipboard hop, they are
-              not a #1164 cash-envelope / legal-pad /
-              hanging-file hop, they are not a #1163
-              budget-workbook / checkbook-register /
-              accordion-file hop, they are not a
-              #1162 cash-box / calculator /
-              manila-folder hop, they are not a #1161
-              laminating-pouch / dry-erase-board /
-              visor-holder hop, they are not a
-              first-aid-kit, thermometer, or carrier
-              hop, they are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ruled+index+cards?s=guides-questions-to-ask-your-vet"
@@ -205,7 +161,7 @@ export default function QuestionsToAskPage() {
                 amazonHref="/go/amazon-brand/letter+size+sheet+protectors?s=guides-questions-to-ask-your-vet"
                 amazonLabel="Browse letter-size sheet protectors on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

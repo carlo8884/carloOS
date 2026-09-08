@@ -125,9 +125,7 @@ export default function NewPuppyChecklistPage() {
           <h1
             className="font-display font-bold text-white tracking-tight leading-none mb-5"
             style={{ fontSize: 'clamp(34px, 5vw, 56px)' }}
-          >
-            New Puppy Checklist
-          </h1>
+          >Owner notes</h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             What do you actually need before a puppy comes home? Pick adult size, age at pickup,
             indoor or outdoor, crate training, and budget — then check off a staged first-week list
@@ -144,34 +142,28 @@ export default function NewPuppyChecklistPage() {
         <span className="text-brand-text-mid font-medium">New Puppy Checklist</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Printable new-puppy checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the printable new-puppy checklist plus a week-1 schedule —
-            crate, food, first vet, house-training, and the shoppable kit —
-            so you can pack before pickup without re-running the builder. No spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Printable new-puppy checklist"
-            subtitle="Email the printable new-puppy checklist plus a week-1 schedule. No spam."
-            ctaText="Email my new-puppy checklist"
-            source="tools-new-puppy-checklist-under-hero"
-          />
-        </div>
-      </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+        </div>
+      </section>
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Owner notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
+            source="tools-new-puppy-checklist-under-hero"
+          />
         </div>
       </section>
 
@@ -185,16 +177,7 @@ export default function NewPuppyChecklistPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-week puppy kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items on the
-              checklist above — a wire crate with a divider, puppy food, a
-              slow-feeder bowl, a harness, an ID tag / collar, teething toys,
-              and an enzymatic cleaner. They are not a ranked product list,
-              not invented inventory, and they do not replace the first vet
-              visit. Size the crate and harness before you order. Dog.com
-              earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
@@ -224,7 +207,7 @@ export default function NewPuppyChecklistPage() {
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"
                 amazonLabel="Browse enzymatic pet cleaners on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

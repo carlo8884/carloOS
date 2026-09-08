@@ -327,47 +327,16 @@ export default function SymptomsHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog symptoms-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog symptoms-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-symptoms-triage-chart,
-            fridge-symptoms-library-card, and
-            canine-symptoms-reference-handbook notes that
-            match the urgency-tier-map, presenting-sign-log,
-            and owner-action-triage-grounding copy on this
-            hub — a laminated dog symptoms triage chart so
-            the emergency / urgent / monitor map is posted
-            on the fridge (not a tools-hub calculator chart,
-            not a reviews buyer-guide chart, not a nutrition
-            feeding chart, not a training session chart,
-            not a guides section-map chart, not a breeds
-            profile chart, not a conditions body-system
-            chart), a dog fridge symptoms library card so
-            each presenting-sign spoke is labeled on the
-            fridge (not a measurement card, not a reviews
-            comparison card, not a WSAVA label card, not a
-            training cue card, not a guides prep card, not
-            a breeds library card, not a conditions library
-            card), and a canine symptoms reference handbook
-            so the owner-action-triage grounding is a
-            physical kitchen book (not a calculator
-            handbook, not a reviews handbook, not a
-            nutrition handbook, not a training handbook,
-            not a guides handbook, not a breeds handbook,
-            not a conditions handbook). Educational kitchen
-            checklist, not a ranked medication list, not a
-            child gauze / thermometer hop, and not a
-            substitute for a veterinarian. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog symptoms-hub checklist"
-            subtitle="Email the symptoms-triage-chart, fridge library-card, and symptoms-handbook notes. No spam."
-            ctaText="Email my dog symptoms-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="symptoms-hub-under-hero"
           />
         </div>
@@ -476,29 +445,8 @@ export default function SymptomsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Symptoms-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          urgency-tier-map, presenting-sign-log, and
-          owner-action-triage-grounding copy on this hub — a
-          laminated dog symptoms triage chart so the
-          emergency / urgent / monitor map is posted on the
-          fridge, a dog fridge symptoms library card so each
-          presenting-sign spoke is labeled on the fridge,
-          and a canine symptoms reference handbook so the
-          owner-action-triage grounding is a physical
-          kitchen book. These are educational kitchen
-          searches, not a ranked medication list, not a
-          substitute for a veterinarian, not a tools-hub /
-          reviews-hub / nutrition-hub / training-hub /
-          guides-hub / breeds-hub / conditions-hub hop, and
-          not a child gauze / thermometer hop (those live on
-          guides children). This page does not hop
-          medications or vaccines. This page does not claim
-          hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -515,40 +463,17 @@ export default function SymptomsHubPage() {
             nutrition / training / guides / breeds /
             conditions kitchen kits and child
             wound+care+gauze / digital+pet+thermometer
-            hops. Directory import left untouched.
+            hops.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the symptoms-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page urgency-tier-map, presenting-sign-log,
-            and owner-action-triage-grounding copy — a
-            laminated dog symptoms triage chart, a dog
-            fridge symptoms library card, and a canine
-            symptoms reference handbook. Educational
-            kitchen searches only. They are not a ranked
-            medication list, they are not a tools-hub /
-            reviews-hub / nutrition-hub / training-hub /
-            guides-hub / breeds-hub / conditions-hub hop,
-            they are not a child gauze hop, and they do
-            not replace a veterinarian. Dog.com earns a
-            commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+symptoms+triage+chart?s=symptoms-hub"
-              amazonLabel="Browse laminated dog symptoms triage charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+symptoms+library+card?s=symptoms-hub"
-              amazonLabel="Browse dog fridge symptoms library cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+symptoms+reference+handbook?s=symptoms-hub"
-              amazonLabel="Browse canine symptoms reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=symptoms-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

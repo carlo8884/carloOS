@@ -27,42 +27,23 @@ export default function BreedRiskPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'When to Enroll', href: '/insurance/when-to-enroll' }, { label: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }, { label: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-breed-risk" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-breed-risk" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the breed-risk checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Breed-risk checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              large-breed, brachycephalic, and
-              hereditary-condition copy on this
-              page — a blank pedigree chart so
-              hereditary and congenital lines stay
-              a written family tree, round color-
-              coding labels so large, brachy,
-              purebred, and mixed risk patterns
-              stay marked, and a 5-compartment
-              letter sorter so those four breed
-              types stay separate stacks.
-              Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a
-              classification-folder, clasp-envelope,
-              or checking-pencil hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Breed-risk checklist"
-              subtitle="Email the pedigree-chart, color-label, and letter-sorter notes. No spam."
-              ctaText="Email my breed-risk checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-breed-specific-risk-under-hero"
             />
           </div>
@@ -153,29 +134,9 @@ export default function BreedRiskPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the breed-specific-risk kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page large-breed, brachycephalic,
-              and hereditary-condition copy — a
-              blank pedigree chart, round color-
-              coding labels, and a 5-compartment
-              letter sorter. Educational breed-risk
-              / paperwork tools only. They are not
-              a ranked product list, they are not a
-              substitute for veterinary care, they
-              are not a #1173 classification-folder
-              / clasp-envelope / checking-pencil
-              hop, they are not a #1172 magnifier /
-              copyholder / line-reader hop, they
-              are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk"
@@ -189,7 +150,7 @@ export default function BreedRiskPage() {
                 amazonHref="/go/amazon-brand/5+compartment+letter+sorter?s=insurance-breed-specific-risk"
                 amazonLabel="Browse 5-compartment letter sorters on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Carriers for High-Risk Breeds</h2>

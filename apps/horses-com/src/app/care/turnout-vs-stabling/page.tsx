@@ -116,29 +116,16 @@ export default function TurnoutStablingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the stall-offset kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse stall-offset kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine slow-feeder hay-box,
-              nylon equine stall-guard, and hemp equine
-              stall-bedding notes so necessary stabling
-              still has near-continuous forage, a head-out
-              view of other horses, and a low-dust bed.
-              Educational stall-offset checklist, not a
-              turnout schedule and not a substitute for a
-              veterinarian. Hay nets, pine shavings, stall
-              fans, turnout sheets, and grazing muzzles
-              stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse stall-offset kit checklist"
-              subtitle="Email the hay-box, stall-guard, and hemp-bedding notes. No spam."
-              ctaText="Email my horse stall-offset kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-turnout-vs-stabling-under-hero"
             />
           </div>
@@ -168,10 +155,10 @@ export default function TurnoutStablingPage() {
           </ul>
 
           <h2 id="balance">Finding the Balance</h2>
-          <p>For most horses, maximizing turnout and minimizing unnecessary stabling is the healthiest default, with stabling used deliberately for genuine needs. When a horse must be stabled, the downsides are softened by providing near-continuous forage (slow feeders), companionship and a view of other horses, good ventilation and low-dust bedding, and as much daily movement as possible. An equine slow-feeder hay box is how that near-continuous-forage copy stays a stall-corner box that meters hay instead of an emptied flake -- it is not a hay net and not a soaking bag. A nylon equine stall guard is how that see-and-touch-other-horses copy stays a door-opening web the horse can hang a head through -- it is not a stall screen and not a stall fan. Hemp equine stall bedding is how that low-dust-bedding copy stays a bagged hemp bed instead of a dusty flake of pine -- it is not pine shavings, not wood pellets, not deep-sand stall bedding, and not stall sweet lime. The right balance is individual -- shaped by the horse, the climate, the facilities, and the horse&apos;s job -- but the bias of the evidence is toward more turnout, not less.</p>
+          <p>For most horses, maximizing turnout and minimizing unnecessary stabling is the healthiest default, with stabling used deliberately for genuine needs. When a horse must be stabled, the downsides are softened by providing near-continuous forage (slow feeders), companionship and a view of other horses, good ventilation and low-dust bedding, and as much daily movement as possible. The right balance is individual -- shaped by the horse, the climate, the facilities, and the horse&apos;s job -- but the bias of the evidence is toward more turnout, not less.</p>
 
           <h2 id="kit">Stall-offset kit</h2>
-          <p>Everyday physical supplies that match the near-continuous-forage, companionship, and low-dust-bedding copy on this page — an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list. Hay nets, hay steamers, hay-soaking bags, pine shavings, wood pellets, stall rubber mats, deep-sand stall bedding, stall sweet lime, stall fans, stall screens, turnout sheets, turnout blankets, grazing muzzles, manure rakes, and muck carts already live on other pages. This page does not hop Banamine, flunixin, bute, NSAIDs, copper sulfate, iodine, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the near-continuous-forage, companionship, and low-dust-bedding copy on this page — an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -197,29 +184,9 @@ export default function TurnoutStablingPage() {
               Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse stall-offset kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page forage, companionship, and low-dust
-              bedding copy — an equine slow-feeder hay
-              box, a nylon equine stall guard, and hemp
-              equine stall bedding. Everyday physical
-              supplies only. They are not a ranked product
-              list, they are not a medication hop, they
-              are not a #1064 thrush-antiseptic /
-              folding-hoof-pick / stall-sweet-lime hop,
-              they are not a #1063 foam-pad / sand-bedding
-              / easy-keeper-muzzle hop, they are not a
-              #1062 thermometer / stethoscope /
-              fleece-cooler hop, they are not a hay-net /
-              pine-shavings / stall-fan hop, they are not
-              a turnout-sheet / grazing-muzzle hop, and
-              they do not replace a veterinarian. Horses.com
-              earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+slow+feeder+hay+box?s=care-turnout-vs-stabling"
@@ -233,7 +200,7 @@ export default function TurnoutStablingPage() {
                 amazonHref="/go/amazon-brand/hemp+equine+stall+bedding?s=care-turnout-vs-stabling"
                 amazonLabel="Browse hemp equine stall bedding on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -85,35 +85,16 @@ export default function NeonTetraPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the neon-tetra-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Neon-tetra-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the neon-tetra notes that match the
-                care copy on this page — a 4-week
-                quarantine so store-farmed neons stay
-                out of the display until ammonia and
-                nitrite read 0, a school of 10 or more
-                so the blue-red stripe shows as a
-                coordinated school, and a dark substrate
-                with tannins so a blackwater tank keeps
-                the slightly acidic conditions that
-                intensify color. Educational
-                neon-tetra-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing neon tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Neon-tetra-setup checklist"
-                subtitle="Email the quarantine, school-size, and blackwater notes. No spam."
-                ctaText="Email my neon-tetra-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-neon-tetra-under-hero"
               />
             </div>

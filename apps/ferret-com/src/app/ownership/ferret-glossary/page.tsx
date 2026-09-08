@@ -105,9 +105,7 @@ export default function FerretGlossaryPage() {
             <li><strong>Kit</strong> — a baby ferret, from birth through the early months.</li>
             <li><strong>Hoblet</strong> — a male ferret that has been vasectomized but not fully neutered (a less common term).</li>
           </ul>
-          <p>
-            The hob/jill terminology is shared with several other mustelids and with rabbits, which can cause confusion in mixed-pet communities — context usually makes the meaning clear.
-          </p>
+          <p>The hob/jill terminology is shared with several other mustelids and with rabbits, which can cause confusion in mixed-pet communities — context usually makes the meaning clear.</p>
 
           <h2 id="groups">Groups & Collective Terms</h2>
           <ul>

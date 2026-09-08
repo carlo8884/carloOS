@@ -141,64 +141,16 @@ export default function CinnamonFerretsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret cinnamon-ferrets checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret cinnamon-ferrets checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-cinnamon-brick-coat-chart,
-              fridge-cinnamon-vs-brown-card, and
-              mustelid-cinnamon-reference-handbook notes
-              that match the brick-rust-look-map,
-              cinnamon-vs-warm-brown-log, and
-              afa-rare-cinnamon-grounding copy on this page
-              — a laminated ferret cinnamon brick-coat
-              chart so the reddish guard / golden undercoat
-              / brick-nose map is posted on the fridge (not
-              a tools-hub calculator chart, not a reviews
-              buyer-guide chart, not a diet feeding chart,
-              not a care routine chart, not a behavior cue
-              chart, not a health triage chart, not an
-              ownership section-map chart, not a colors-hub
-              palette chart, not a first-year schedule
-              chart, not a color-pattern axis chart, not a
-              sable bandit-mask chart, not an albino
-              red-eye chart, not a DEW dark-eye chart), a
-              ferret fridge cinnamon-vs-brown card so
-              cinnamon vs chocolate vs champagne notes are
-              labeled on the fridge (not a measurement
-              card, not a reviews comparison card, not a
-              diet label card, not a care card, not a
-              behavior card, not a health library card,
-              not an ownership prep card, not a colors-hub
-              color id card, not a first-year milestone
-              card, not a color-vs-pattern card, not a
-              sable-vs-black-sable card, not an
-              albino-vs-dew card, not a DEW hearing-check
-              card), and a mustelid cinnamon reference
-              handbook so the AFA / rare-cinnamon grounding
-              is a physical kitchen book (not a calculator
-              handbook, not a reviews handbook, not a diet
-              handbook, not a care handbook, not a
-              behavior handbook, not a health handbook,
-              not an ownership handbook, not a colors-hub
-              handbook, not a first-year handbook, not a
-              color-pattern handbook, not a sable handbook,
-              not an albino handbook, not a DEW handbook).
-              Educational kitchen checklist, not a ranked
-              color list, not a child toothbrush / dosing
-              hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Aging pages stay held. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret cinnamon-ferrets checklist"
-              subtitle="Email the cinnamon-brick-coat-chart, fridge cinnamon-vs-brown card, and cinnamon-handbook notes. No spam."
-              ctaText="Email my ferret cinnamon-ferrets checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="colors-cinnamon-ferrets-under-hero"
             />
           </div>
@@ -322,32 +274,8 @@ export default function CinnamonFerretsPage() {
             exotic-mammal vet visit.
           </p>
 
-          <h2 id="kit">Cinnamon-ferrets kitchen kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            brick-rust-look-map, cinnamon-vs-warm-brown-log,
-            and afa-rare-cinnamon-grounding copy on this
-            page — a laminated ferret cinnamon brick-coat
-            chart so the reddish guard / golden undercoat /
-            brick-nose map is posted on the fridge, a
-            ferret fridge cinnamon-vs-brown card so
-            cinnamon vs chocolate vs champagne notes are
-            labeled on the fridge, and a mustelid cinnamon
-            reference handbook so the AFA / rare-cinnamon
-            grounding is a physical kitchen book. These are
-            educational kitchen searches, not a ranked
-            color list, not a substitute for an
-            exotic-mammal veterinarian, not a tools-hub /
-            reviews-hub / diet-hub / care-hub / behavior-hub
-            / health-hub / ownership-hub / colors-hub /
-            first-year-schedule / colors-and-patterns /
-            sable-ferrets / albino-ferrets / dew-ferrets
-            hop, and not a child toothbrush / dosing hop
-            (those live on health children). This page does
-            not hop medications or vaccines. This page does
-            not sell insurance. This page does not claim
-            hands-on testing. Ferret aging stays held.
-          </p>
+          <h2 id="kit">Related supplies</h2>
+          <p>Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -365,48 +293,19 @@ export default function CinnamonFerretsPage() {
               albino-ferrets / dew-ferrets kitchen kits
               and child finger+toothbrush /
               carnivore+care hops. Directory import left
-              untouched. Ferret aging stays held.
+              untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the cinnamon-ferrets kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page brick-rust-look-map,
-              cinnamon-vs-warm-brown-log, and
-              afa-rare-cinnamon-grounding copy — a
-              laminated ferret cinnamon brick-coat chart, a
-              ferret fridge cinnamon-vs-brown card, and a
-              mustelid cinnamon reference handbook.
-              Educational kitchen searches only. They are
-              not a ranked color list, they are not a
-              tools-hub / reviews-hub / diet-hub / care-hub
-              / behavior-hub / health-hub / ownership-hub /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+cinnamon+brick+coat+chart?s=cinnamon-ferrets"
-                amazonLabel="Browse laminated ferret cinnamon brick-coat charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=cinnamon-ferrets"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+cinnamon+vs+brown+card?s=cinnamon-ferrets"
-                amazonLabel="Browse ferret fridge cinnamon-vs-brown cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+cinnamon+reference+handbook?s=cinnamon-ferrets"
-                amazonLabel="Browse mustelid cinnamon reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

@@ -47,7 +47,7 @@ export default function HeartwormPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Health Hub', href: '/health' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-heartworm" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-heartworm" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -55,44 +55,16 @@ export default function HeartwormPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog heartworm rest-and-test checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog heartworm rest-and-test checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              crate-rest, leash-restriction, and
-              standing-water copy on this page — a
-              heavy-gauge 48-inch dog crate so an
-              8-week treatment rest is a crate, not
-              a guessed hallway, a 2-foot nylon
-              traffic lead so outdoor potty stays
-              leash-restricted instead of a run, and
-              an adjustable aluminum downspout
-              extender so roof runoff does not pool
-              into a mosquito breeding puddle by the
-              foundation. Educational checklist, not
-              a ranked product list, not a substitute
-              for veterinary care, and not a Heartgard
-              / Interceptor / Sentinel / Revolution /
-              ProHeart / melarsomine / ivermectin hop.
-              Mosquito dunks, monthly pill organizers,
-              and soft-sided vet-visit carriers
-              already live on dog.com heartworm
-              prevention. Double-door wire crates
-              already live on canine-influenza. Wide-rim
-              stainless cat water bowls, electric
-              pet-food warming plates, and high-sided
-              jumbo cat litter boxes already live on
-              kidney-disease-cats. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog heartworm rest-and-test checklist"
-              subtitle="Email the crate-rest, traffic-lead, and downspout notes. No spam."
-              ctaText="Email my dog heartworm rest-and-test checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-heartworm-in-dogs-under-hero"
             />
           </div>
@@ -149,18 +121,11 @@ export default function HeartwormPage() {
             Interceptor, Sentinel, Revolution,
             ProHeart, ivermectin, milbemycin,
             moxidectin, and melarsomine are clinic
-            prescriptions, not shoppable hops.
-            Mosquito dunks, monthly pill organizers,
+            prescriptions, not shoppable hops. Mosquito dunks, monthly pill organizers,
             and soft-sided vet-visit carriers already
-            live on dog.com heartworm prevention.
-            Double-door wire crates already live on
-            canine-influenza. Wide-rim stainless cat
-            water bowls, electric pet-food warming
-            plates, and high-sided jumbo cat litter
-            boxes already live on kidney-disease-cats.
-            This page does not claim hands-on
-            testing.
-          </p>
+            live on dog.com heartworm prevention. Double-door wire crates already live on
+            canine-influenza. This page does not claim hands-on
+            testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -224,31 +189,9 @@ export default function HeartwormPage() {
               melarsomine are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page crate-rest, leash-restriction,
-              and standing-water copy — a heavy-gauge
-              48-inch dog crate, a 2-foot nylon
-              traffic lead, and an adjustable aluminum
-              downspout extender. Educational
-              home-care and monitoring tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1086 water-bowl /
-              warming-plate / litter-box hop, they are
-              not a #1085 glucose-log / insulated
-              water-bowl / food-bin hop, they are not
-              a dog.com heartworm dunk / pill-organizer
-              / carrier hop, they are not a
-              Heartgard / Interceptor / ProHeart /
-              melarsomine hop, and they do not replace
-              a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs"
@@ -262,7 +205,7 @@ export default function HeartwormPage() {
                 amazonHref="/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"
                 amazonLabel="Browse adjustable aluminum downspout extenders on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

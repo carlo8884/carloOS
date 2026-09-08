@@ -85,37 +85,16 @@ export default function BristlenosePlecoPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the bristlenose-pleco-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Bristlenose-pleco-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Ancistrus notes that match
-                the care copy on this page — a 25–30
-                gallon tank so a 4–5 inch bristlenose
-                stays a true dwarf instead of a common
-                pleco, driftwood (bogwood, mopani, or
-                spiderwood) so wood fiber is there to
-                rasp, sinking wafers plus blanched
-                vegetables because tank algae is not
-                enough, 73–80°F and pH 6.5–7.5, and a
-                cave or hollow wood so the nocturnal
-                grazer has cover. Educational
-                bristlenose-pleco-setup checklist, not
-                a new product hop, not livestock, and
-                not a substitute for a fish
-                veterinarian. The existing
-                bristlenose-pleco tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Bristlenose-pleco-setup checklist"
-                subtitle="Email the driftwood, 25–30 gallon, and algae-wafer notes. No spam."
-                ctaText="Email my bristlenose-pleco-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-bristlenose-pleco-under-hero"
               />
             </div>

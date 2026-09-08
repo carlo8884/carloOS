@@ -179,16 +179,13 @@ export default function StallBeddingCalculatorPage() {
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Stall bedding shopping list
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the cubic-foot volume and bag count — initial bed plus the weekly restock — so
-            you can order shavings, pellets, or mats without re-running the math. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
             title="Stall bedding shopping list"
-            subtitle="Email the bag count — cubic feet, initial bed, and weekly restock so you can order without re-running the math. No spam."
-            ctaText="Email the bag count"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-stall-bedding-calculator-under-hero"
           />
         </div>

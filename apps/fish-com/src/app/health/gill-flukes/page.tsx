@@ -47,22 +47,14 @@ export default function FlukesPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the quarantine / water-first plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Gill-flukes quarantine checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the quarantine / water-first / hospital-tank order — hold
-            every new fish in a spare quarantine tank so flukes are treated
-            prophylactically before they reach the display, and test ammonia,
-            nitrite, and nitrate first if an established tank starts flashing.
-            Educational husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Gill-flukes quarantine checklist"
-            subtitle="Email the quarantine, water-first, and hospital-tank order. No spam."
-            ctaText="Email my gill-flukes quarantine checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-gill-flukes-under-hero"
           />
         </div>
@@ -91,8 +83,7 @@ export default function FlukesPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a quarantine / water-first kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Prevention on this page is prophylactic treatment during
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is prophylactic treatment during
             quarantine of every new fish — flukes are microscopic and often
             invisible before signs develop — plus testing water first if an
             established tank starts flashing. A liquid master kit is how you
@@ -136,9 +127,7 @@ export default function FlukesPage() {
             copy has no heat method. The hops below are not a ranked product
             list, they are not medications, and they do not treat, reverse,
             or cure Gyrodactylus or Dactylogyrus. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+            commission on qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-gill-flukes"

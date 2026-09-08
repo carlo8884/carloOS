@@ -135,33 +135,16 @@ export default function VetsBeagleHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Beagle health checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Beagle health checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              epilepsy, obesity, and screening copy
-              on this page — an analog stopwatch so
-              seizure duration stays a written
-              count against the five-minute
-              emergency line, blank index cards
-              so each seizure stays one dated card,
-              and a recipe-card box so measured
-              meals stay one card per ration.
-              Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a divider,
-              outdoor-thermometer, or checklist-
-              notepad hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Beagle health checklist"
-              subtitle="Email the stopwatch, index-card, and recipe-box notes. No spam."
-              ctaText="Email my Beagle health checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="breeds-beagle-health-under-hero"
             />
           </div>
@@ -394,26 +377,9 @@ export default function VetsBeagleHealthPage() {
               self+adhesive+file+folder+labels. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the Beagle-health kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page epilepsy, obesity, and
-              screening copy — an analog stopwatch,
-              blank index cards, and a recipe-card
-              box. Educational Beagle-health /
-              paperwork tools only. They are not a
-              ranked product list, they are not a
-              substitute for veterinary care, they
-              are not a #1178 divider / outdoor-
-              thermometer / checklist-notepad hop,
-              they are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/analog+stopwatch?s=breeds-beagle-health"
@@ -427,7 +393,7 @@ export default function VetsBeagleHealthPage() {
                 amazonHref="/go/amazon-brand/recipe+card+box?s=breeds-beagle-health"
                 amazonLabel="Browse recipe-card boxes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

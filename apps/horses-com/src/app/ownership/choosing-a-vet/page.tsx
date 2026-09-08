@@ -119,45 +119,16 @@ export default function ChoosingVetPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the equine-vet interview checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Equine-vet interview checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine-vet-interview,
-              after-hours-emergency-cover, and
-              VCPR-records-readiness notes that match
-              the what-to-look-for, emergency-cover,
-              and keep-good-records copy on this
-              page — a laminated equine-vet interview
-              checklist so the equine-focus,
-              coverage-area, reputation, referral,
-              and communication questions are posted
-              before the first call (not a first-horse
-              tryout walkthrough, not a boarding-facility
-              walkthrough, not a daily-care chart), a
-              horse after-hours emergency-cover question
-              card so 24-hour cover, who answers, response
-              time, and surgical-referral questions stay
-              visible (not an emergency-triage chart, not
-              a vital-signs card, not a first-aid saline
-              hop), and a horse veterinary history /
-              VCPR records folder so the exam history
-              that establishes the relationship stays
-              with the horse (not a pre-purchase exam
-              records binder, not a boarding-contract
-              binder, not a farrier log). Educational
-              owner checklist, not a ranked product
-              list, and not a substitute for a
-              veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Equine-vet interview checklist"
-              subtitle="Email the interview, emergency-cover, and VCPR-records notes. No spam."
-              ctaText="Email my equine-vet interview checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-choosing-a-vet-under-hero"
             />
           </div>
@@ -173,42 +144,11 @@ export default function ChoosingVetPage() {
             <li><strong>Facilities and referral</strong> -- access to diagnostics, and clear arrangements for referring surgical or specialist cases.</li>
             <li><strong>Communication style</strong> that suits you -- a vet who explains clearly and whom you trust and can talk to honestly.</li>
           </ul>
-          <p>
-            A laminated equine-vet interview checklist is how
-            the equine-focus, coverage-area, reputation,
-            referral, and communication questions stay
-            posted before the first call instead of being
-            forgotten mid-conversation — it is not a
-            laminated first-horse tryout walkthrough
-            checklist (that lives on
-            buying-your-first-horse), not a laminated
-            horse boarding facility walkthrough checklist
-            (that lives on boarding-options), and not a
-            laminated horse barn daily-care chart (that
-            lives on the care hub). This page does not hop
-            owner-guides charts, calculator-tools charts,
-            or forage-first charts already pinned on those
-            hubs.
-          </p>
+          
 
           <h2 id="emergency">Emergency Cover</h2>
           <p>Confirm how emergencies are handled before you commit, because this is when a vet matters most. Ask whether the practice provides 24-hour emergency cover, who answers after hours, the typical response time to your location, and what referral options exist for cases needing hospital care or surgery. A practice with reliable, prompt emergency cover and a clear referral pathway to a surgical hospital is invaluable, and worth prioritizing in the choice.</p>
-          <p>
-            A horse after-hours emergency-cover question
-            card is how the 24-hour-cover, who-answers,
-            response-time, and surgical-referral questions
-            stay visible when you interview a practice —
-            it is not a laminated horse barn
-            emergency-triage chart (that lives on the
-            health hub), not a horse stall-door vital-signs
-            card (that lives on the health hub), and not a
-            first-aid saline / pads / scissors hop (those
-            live on first-aid-kit). This page does not hop
-            equine first-aid kits, digital veterinary
-            thermometers, vet-wrap, or poultice searches
-            already pinned on grimace-scale and emergency
-            tools.
-          </p>
+          
 
           <h2 id="vcpr">The Vet-Client-Patient Relationship</h2>
           <p>A formal concept underpins veterinary care: the vet-client-patient relationship, or VCPR. It means a veterinarian has examined and become familiar with your horse and can therefore make informed decisions and legally prescribe medication for it. Many treatments and prescriptions require an established VCPR, which is one more reason to register with a vet and have them see your horse for routine care -- so that when something goes wrong, they already know the patient and can act.</p>
@@ -242,44 +182,7 @@ export default function ChoosingVetPage() {
           </p>
 
           <h2 id="kit">Equine-vet leftover interview kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            what-to-look-for, emergency-cover, and
-            keep-good-records copy on this page — a
-            laminated equine-vet interview checklist so
-            the equine-focus, coverage-area, reputation,
-            referral, and communication questions are
-            posted before the first call, a horse
-            after-hours emergency-cover question card so
-            24-hour cover, who answers, response time,
-            and surgical-referral questions stay visible,
-            and a horse veterinary history / VCPR records
-            folder so the exam history that establishes
-            the relationship stays with the horse. These
-            are educational owner searches, not a ranked
-            product list, not a substitute for a
-            veterinarian, not a first-horse tryout
-            walkthrough / buyer-visit-notebook /
-            pre-purchase-exam-records-binder hop (those
-            live on buying-your-first-horse), not a
-            boarding-facility walkthrough /
-            boarding-contract-binder / hay-bale-tarp hop
-            (those live on boarding-options), not a
-            first-aid saline / pads / scissors hop, not a
-            daily-care-chart / stall-door-care-card /
-            husbandry-handbook hop (those live on the
-            care hub), not an emergency-triage-chart /
-            vital-signs-card / health-handbook hop, not a
-            forage-first-chart / ration-card /
-            nutrition-handbook hop, not an
-            owner-guides-chart hop, not a
-            calculator-tools-chart hop, not a
-            farrier-log / flood-light hop, and not a
-            weatherproof-clipboard hop. This page does
-            not hop medications or vaccines. This page
-            does not claim hands-on testing. This page
-            does not invent clinic listings.
-          </p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -340,35 +243,13 @@ export default function ChoosingVetPage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the equine-vet leftover interview kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page what-to-look-for,
-              emergency-cover, and
-              keep-good-records copy — a laminated
-              equine-vet interview checklist, a horse
-              after-hours emergency-cover question
-              card, and a horse veterinary history /
-              VCPR records folder. Educational owner
-              searches only. They are not a ranked
-              product list, they are not a first-horse
-              tryout / buyer-notebook / PPE-records
-              hop, they are not a boarding walkthrough
-              / contract-binder / hay-tarp hop, they
-              are not a first-aid saline / pads /
-              scissors hop, they are not a daily-care
-              / emergency-triage / owner-guides /
-              calculator-tools chart hop, and they do
-              not replace a veterinarian. Horses.com
-              earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+equine+vet+interview+checklist?s=ownership-choosing-a-vet"
-                amazonLabel="Browse laminated equine-vet interview checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=ownership-choosing-a-vet"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+after+hours+emergency+cover+question+card?s=ownership-choosing-a-vet"
@@ -378,7 +259,7 @@ export default function ChoosingVetPage() {
                 amazonHref="/go/amazon-brand/horse+veterinary+history+vcpr+records+folder?s=ownership-choosing-a-vet"
                 amazonLabel="Browse horse veterinary history / VCPR records folders on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

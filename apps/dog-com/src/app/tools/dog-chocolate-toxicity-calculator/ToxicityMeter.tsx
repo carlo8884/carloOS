@@ -377,7 +377,6 @@ export default function ChocolateToxicityMeter() {
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
-          <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
         </div>
       )}
 

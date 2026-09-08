@@ -37,7 +37,7 @@ export default function CognitiveDysfunctionPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cds" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cds" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -45,28 +45,16 @@ export default function CognitiveDysfunctionPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog CDS home-support checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog CDS home-support checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-support notes — a plug-in night
-              light for the hall the dog walks at night, a
-              sniff box with new objects for short scent
-              sessions, and a senior food-puzzle toy for
-              brief enrichment. Educational checklist, not
-              a diagnosis and not a substitute for a
-              veterinary CDS workup. Bright Mind, Anipryl
-              (selegiline), melatonin, and fish-oil
-              supplements stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog CDS home-support checklist"
-              subtitle="Email the night-light, sniff-box, and food-puzzle notes. No spam."
-              ctaText="Email my dog CDS home-support checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-cognitive-dysfunction-under-hero"
             />
           </div>
@@ -132,25 +120,9 @@ export default function CognitiveDysfunctionPage() {
               supplements are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog CDS home-support kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page enrichment and nighttime-management
-              copy — a plug-in night light, a sniff box,
-              and a senior food-puzzle toy. Everyday
-              physical supplies only. They are not a ranked
-              product list, they are not Bright Mind,
-              Anipryl, melatonin, or fish oil, they are not
-              the Dog.com senior-food / joint-treat /
-              portion-scale hops, they are not the
-              anxiety-in-dogs vest / diffuser / heartbeat
-              hops, they are not a puzzle-feeder or
-              snuffle-mat hop, and they do not replace a
-              veterinarian. Vets.co earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/plug+in+night+light?s=health-cognitive-dysfunction"
@@ -164,7 +136,7 @@ export default function CognitiveDysfunctionPage() {
                 amazonHref="/go/amazon-brand/senior+dog+food+puzzle?s=health-cognitive-dysfunction"
                 amazonLabel="Browse senior dog food-puzzle toys on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

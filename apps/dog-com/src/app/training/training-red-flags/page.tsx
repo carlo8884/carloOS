@@ -123,41 +123,16 @@ export default function TrainingRedFlagsPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the red-flags force-free trainer checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Red-flags force-free trainer checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the training-red-flags force-free trainer checklist, force-free trainer interview
-            question card, and Easy Walk / Front Range watch log that match the avsab-position,
-            prong-collar-alternative, and what-to-look-for-instead copy on this page — a laminated
-            dog training red-flags checklist so
-            avsab-recommends-veterinarians-not-refer-to-punishment-trainers /
-            dominance-theory-derives-from-discredited-captive-wolf-research /
-            e-collar-use-is-associated-with-higher-aggression-fear-stress stay visible before anyone
-            hires a pack-leader trainer (not a laminated dog aggression warning-signal sequence
-            checklist, not a laminated dog resource-guarding trade-game checklist, not a laminated
-            dog off-leash recall-proofing checklist, not a laminated horse snaffle-vs-curb bit
-            checklist), a dog force-free trainer interview question card so what-tools-do-you-use /
-            what-do-you-do-when-a-dog-doesnt-respond /
-            cpdt-ka-cpdt-ksa-cbcc-ka-or-caab stay posted (not a dog aggression type-and-function
-            question card, not a dog food-bowl safety question card, not a dog 20-to-30-foot
-            long-line question card, not a horse bit width-and-wrinkle fit question card), and a
-            dog Easy Walk / Ruffwear Front Range watch log notebook so
-            front-clip-harnesses-petsafe-easy-walk-ruffwear-front-range /
-            reduce-pulling-without-this-mechanism / force-free-methods stay written down (not a dog
-            aggression never-alpha-roll watch log, not a dog resource-guarding never-punish-growl
-            watch log, not a dog recall-cue never-punish watch log, not a horse bit hand-severity
-            watch log). Educational training tools only, not a ranked product list, not a clinic
-            listing, and not a substitute for a CPDT-KA or CAAB. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Red-flags force-free trainer checklist"
-            subtitle="Email the red-flags checklist, force-free interview card, and Easy Walk / Front Range log. No spam."
-            ctaText="Email my red-flags force-free trainer checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-red-flags-under-hero"
           />
         </div>
@@ -170,21 +145,7 @@ export default function TrainingRedFlagsPage() {
           aversive methods).&quot; This is not a fringe position — it is the consensus of the
           professional veterinary behavior community.
         </p>
-        <p>
-          A laminated dog training red-flags checklist is how
-          avsab-recommends-veterinarians-not-refer-to-punishment-trainers,
-          dominance-theory-derives-from-discredited-captive-wolf-research, and
-          e-collar-use-is-associated-with-higher-aggression-fear-stress stay visible before anyone
-          hires a pack-leader trainer — it is not a laminated dog aggression warning-signal sequence
-          checklist (that lives on dog-aggression), not a laminated dog resource-guarding trade-game
-          checklist (that lives on resource-guarding), not a laminated dog off-leash recall-proofing
-          checklist (that lives on off-leash-training), and not a laminated horse snaffle-vs-curb
-          bit checklist (that lives on bits-guide). This page does not hop
-          laminated+dog+aggression+warning+signal+sequence+checklist,
-          laminated+dog+resource+guarding+trade+game+checklist,
-          laminated+dog+off+leash+recall+proofing+checklist, or puppy+training+treats searches
-          already pinned on other training pages.
-        </p>
+        
         {RED_FLAGS.map((r, i) => (
           <div
             key={r.flag}
@@ -228,9 +189,7 @@ export default function TrainingRedFlagsPage() {
           dog-aggression), not a dog food-bowl safety question card (that lives on
           resource-guarding), not a dog 20-to-30-foot long-line question card (that lives on
           off-leash-training), and not a horse bit width-and-wrinkle fit question card (that lives
-          on bits-guide). This page does not hop shock collars, e-collars, prong collars, choke
-          chains, or alpha-roll gear, and it does not hop invented ASINs.
-        </p>
+          on bits-guide). </p>
         <p>
           Force-free alternatives already named on this page replace the aversive tools above: a
           front-clip harness (PetSafe Easy Walk, Ruffwear Front Range) reduces pulling without neck
@@ -242,10 +201,7 @@ export default function TrainingRedFlagsPage() {
           not a dog resource-guarding never-punish-growl watch log notebook (that lives on
           resource-guarding), not a dog recall-cue never-punish watch log notebook (that lives on
           off-leash-training), and not a horse bit hand-severity watch log notebook (that lives on
-          bits-guide). This page does not hop front+clip+no+pull+dog+harness,
-          dog+training+treat+pouch+belt+clip, or dog+training+clicker searches already pinned on
-          leash-reactivity, loose-leash-walking, marker-training, and positive-reinforcement.
-        </p>
+          bits-guide). </p>
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -266,28 +222,13 @@ export default function TrainingRedFlagsPage() {
             marker-training dog+training+treat+pouch+belt+clip / dog+training+clicker. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop the training-red-flags leftover kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page avsab-position, prong-collar-alternative,
-            and what-to-look-for-instead copy — a laminated dog training red-flags checklist, a dog
-            force-free trainer interview question card, and a dog Easy Walk / Ruffwear Front Range
-            watch log notebook. Educational training searches only. They are not a ranked product
-            list, they are not a clinic listing, they are not a #1152 laminated aggression
-            warning-signal / type-and-function / never-alpha-roll hop, they are not a #1151
-            laminated resource-guarding trade-game / food-bowl safety / never-punish-growl hop,
-            they are not a #1150 laminated off-leash recall-proofing / 20-to-30-foot long-line /
-            recall-cue never-punish hop, they are not a #1149 laminated snaffle-vs-curb /
-            width-and-wrinkle / hand-severity hop, they are not a leash-reactivity /
-            loose-leash front-clip no-pull hop, they are not a marker-training treat-pouch /
-            clicker hop, they do not hop shock, e-collar, prong, choke, or alpha-roll gear, and
-            they do not replace a CPDT-KA or CAAB. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+training+red+flags+checklist?s=training-red-flags"
-              amazonLabel="Browse laminated dog training red-flags checklists on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=training-red-flags"
+              amazonLabel="Shop on Amazon"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+force+free+trainer+interview+question+card?s=training-red-flags"

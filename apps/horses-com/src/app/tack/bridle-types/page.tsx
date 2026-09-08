@@ -116,20 +116,16 @@ export default function BridleTypesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the bridle types checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Bridle types checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the snaffle-vs-double bridle checklist, cheekpiece-length fit question card, and noseband two-finger welfare log that match the parts, English, western, bitless, nosebands, and fit copy on this page — a laminated horse snaffle-vs-double bridle checklist so snaffle-bridle-carries-a-single-bit-and-one-pair-of-reins / double-bridle-carries-a-bradoon-and-a-curb-on-two-pairs-of-reins / lower-levels-use-a-single-snaffle-bridle stay visible before anyone chooses a headpiece (not a laminated horse standing-vs-running martingale checklist, not a laminated horse turnout-vs-stable rug checklist, not a laminated horse turnout-halter breakaway checklist, not a laminated horse-leg bandage-bow technique checklist, not a laminated saddle-pad cannot-fix-fit checklist), a horse bridle cheekpiece-length fit question card so cheekpieces-run-down-each-side-to-attach-the-bit / the-bit-sits-at-the-correct-height / the-browband-does-not-pull-the-headpiece-into-the-ears stays posted (not a horse breastplate-vs-breastgirth fit question card, not a horse denier-vs-fill question card, not a horse rope-vs-flat-halter task question card, not a horse-boot impact-not-tendon-support question card, not a saddle-pad sweat-pattern dry-spot question card), and a horse noseband two-finger welfare log notebook so a-couple-of-fingers-under-the-band / over-tightened-nosebands-are-a-welfare-concern / the-horse-must-still-chew-and-move-its-jaw stay written down (not a horse martingale-misuse head-carriage log, not a horse over-rugging sweat-shiver watch log, not a horse quick-release wither-height tie log, not a horse-boot grit-rub clean-dry log, not a saddle-pad clean-dry rotation log). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a qualified instructor or a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Bridle types checklist"
-              subtitle="Email the snaffle-vs-double card, cheekpiece-length check, and noseband welfare log. No spam."
-              ctaText="Email my bridle types checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-bridle-types-under-hero"
             />
           </div>
@@ -146,9 +142,7 @@ export default function BridleTypesPage() {
 
           <h2 id="english">English Bridles</h2>
           <p>The standard English bridle is the snaffle bridle, carrying a single bit and one pair of reins, used across most English disciplines and lower-level dressage. The double bridle carries two bits -- a small snaffle (bradoon) and a curb -- on two pairs of reins, used in upper-level dressage and showing to refine communication; it demands an educated, independent hand. Bridles vary in leather weight and styling, from heavy hunting bridles to fine, elegant show bridles.</p>
-          <p>
-            A laminated horse snaffle-vs-double bridle checklist is how snaffle-bridle-carries-a-single-bit-and-one-pair-of-reins, double-bridle-carries-a-bradoon-and-a-curb-on-two-pairs-of-reins, and lower-levels-use-a-single-snaffle-bridle stay visible before anyone chooses a headpiece — it is not a laminated horse standing-vs-running martingale checklist (that lives on martingales-and-breastplates), not a laminated horse turnout-vs-stable rug checklist (that lives on blanket-weights), not a laminated horse turnout-halter breakaway checklist (that lives on halters-and-lead-ropes), not a laminated horse-leg bandage-bow technique checklist (that lives on boots-and-wraps), and not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads). This page does not hop horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims / horse+girth+cinch (those live on saddle-fit-basics), ASTM+SEI+horse+riding+helmet (that lives on horse-size-for-rider), or horse+halter+lead+rope (that lives on the cost calculator). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
+          
 
           <h2 id="western">Western Headstalls</h2>
           <p>Western bridles, called headstalls, are typically simpler in appearance and often have no noseband. Common styles include the browband headstall and the one-ear or split-ear headstall (a loop around one ear in place of a browband). Western riding traditionally uses a curb bit ridden on a loose rein with neck-reining, so western headstalls are built around that style. Decorative tooling, silver, and rawhide reflect the western tradition.</p>
@@ -164,14 +158,12 @@ export default function BridleTypesPage() {
             <li><strong>Welfare note</strong> -- nosebands must not be over-tightened; research and many rules now require room for at least a couple of fingers under the band.</li>
           </ul>
           <p>
-            A horse noseband two-finger welfare log notebook is how a-couple-of-fingers-under-the-band, over-tightened-nosebands-are-a-welfare-concern, and the-horse-must-still-chew-and-move-its-jaw stay written down — it is not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops. This page does not hop winter+horse+blanket / horse+turnout+sheet / horse+stable+blanket / horse+fleece+cooler (those live on the blanket-size calculator).
-          </p>
+            A horse noseband two-finger welfare log notebook is how a-couple-of-fingers-under-the-band, over-tightened-nosebands-are-a-welfare-concern, and the-horse-must-still-chew-and-move-its-jaw stay written down — it is not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <h2 id="fit">Fit</h2>
           <p>A well-fitted bridle sits without pinching or rubbing: the browband does not pull the headpiece into the ears, the throatlatch is loose enough to allow flexion (roughly a hand&apos;s width), the bit sits at the correct height, and the noseband is positioned correctly and fitted loosely enough to allow chewing and comfort. Check for rubs behind the ears and at the corners of the mouth. Like all tack, a bridle that fits poorly causes pain and resistance no matter how good the riding.</p>
           <p>
-            A horse bridle cheekpiece-length fit question card is how &quot;cheekpieces run down each side to attach the bit, the bit sits at the correct height, and the browband does not pull the headpiece into the ears&quot; stays posted — it is not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A horse bridle cheekpiece-length fit question card is how &quot;cheekpieces run down each side to attach the bit, the bit sits at the correct height, and the browband does not pull the headpiece into the ears&quot; stays posted — it is not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -272,15 +264,13 @@ export default function BridleTypesPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the bridle-types leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page parts, English, western, bitless, nosebands, and fit copy — a laminated horse snaffle-vs-double bridle checklist, a horse bridle cheekpiece-length fit question card, and a horse noseband two-finger welfare log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a #1145 laminated standing-vs-running / breastplate-vs-breastgirth / martingale-misuse-head-carriage hop, they are not a #1144 laminated-turnout-vs-stable / denier-vs-fill / over-rugging-sweat-shiver hop, they are not a #1143 turnout-halter breakaway / rope-vs-flat / wither-height-tie hop, they are not a #1142 horse-leg bandage-bow / impact-not-tendon-support / grit-rub hop, they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a saddle-fit-basics pad / half-pad / shim / girth hop, they are not a BCS-chart hop, and they do not replace a qualified instructor or a veterinarian. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+snaffle+vs+double+bridle+checklist?s=bridle-types"
-                amazonLabel="Browse laminated horse snaffle-vs-double bridle checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=bridle-types"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+bridle+cheekpiece+length+fit+question+card?s=bridle-types"
@@ -290,7 +280,7 @@ export default function BridleTypesPage() {
                 amazonHref="/go/amazon-brand/horse+noseband+two+finger+welfare+log+notebook?s=bridle-types"
                 amazonLabel="Browse horse noseband two-finger welfare log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

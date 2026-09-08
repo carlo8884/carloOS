@@ -72,29 +72,16 @@ export default function PlantedTankSetupPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the low-tech vs high-tech planted-setup checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Low-tech vs high-tech planted-setup checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the low-tech vs high-tech planted-setup checklist that matches the
-            easy-plant, PAR, substrate, CO2-vs-no-CO2, and algae-lighting copy on this
-            page — start low-tech with Java fern, Anubias, crypts, and hornwort at
-            15–30 PAR and no injected CO2, or step up to high-tech with pressurized
-            CO2, 50–80+ PAR at the substrate, and a nutrient-rich planted substrate
-            (ADA Aqua Soil, Fluval Stratum, or CaribSea Eco-Complete). The single
-            most common algae mistake is more light without more CO2. Educational
-            setup notes only, not a ranked product list, not livestock, and not a
-            substitute for a fish veterinarian. The existing planted-aquarium-setup-CO2
-            Amazon search stays below. Empty Chewy buttons stay hidden. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Low-tech vs high-tech planted-setup checklist"
-            subtitle="Email the easy-plant, PAR, substrate, and CO2-vs-no-CO2 notes. No spam."
-            ctaText="Email my planted-setup checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-planted-tank-setup-under-hero"
           />
         </div>
@@ -121,7 +108,7 @@ export default function PlantedTankSetupPage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Planted Tank Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
           </div>

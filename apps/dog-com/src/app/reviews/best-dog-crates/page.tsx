@@ -65,35 +65,16 @@ export default function BestDogCratesPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dog-crate checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dog-crate checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the crate notes that match the
-                ranking copy on this page — size so
-                the dog can stand, turn, and lie
-                fully stretched and no larger, a
-                divider on a MidWest iCrate for house
-                training, an Impact aluminum crate
-                for escape artists or high anxiety,
-                a Petmate Sky Kennel for IATA cargo
-                travel, and furniture-style Frisco
-                only for calm crate-trained dogs.
-                Educational crate-type checklist,
-                not a new product hop and not a
-                substitute for a veterinarian. The
-                existing MidWest / Impact / Petmate
-                Amazon and Frisco Chewy searches
-                stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dog-crate checklist"
-                subtitle="Email the size, divider, and crate-type notes. No spam."
-                ctaText="Email my dog-crate checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-crates-under-hero"
               />
             </div>

@@ -104,45 +104,16 @@ export default function AdoptionVsBuyingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret source-choice checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret source-choice checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-source-compare-chart,
-              fridge-rescue-vs-store-card, and
-              mustelid-source-choice-handbook notes
-              that match the three-source-compare-map,
-              altering-descenting-log, and
-              quesenberry-afa-source-grounding copy on this
-              page — a laminated ferret source-compare chart
-              so the rescue / breeder / pet-store map is
-              posted on the fridge (not an ownership-hub
-              section map, not a first-week-map chart, not a
-              startup-budget chart), a ferret fridge
-              rescue-vs-store card so adult-vs-kit /
-              history / early-alter notes are labeled on
-              the fridge (not an adoption-red-flag card,
-              not a monthly-cost card, not an arrival-day
-              card), and a mustelid source-choice handbook
-              so the Quesenberry / AFA altering and
-              estrogen-toxicity grounding is a physical
-              kitchen book (not a cost-planning handbook,
-              not a first-week handbook, not an
-              ownership-reference handbook). Educational
-              kitchen checklist, not a ranked breeder list,
-              not a sleep-sack hop, and not a substitute
-              for an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Aging pages stay
-              held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret source-choice checklist"
-              subtitle="Email the source-compare-chart, fridge rescue-vs-store card, and source-choice-handbook notes. No spam."
-              ctaText="Email my ferret source-choice checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-adoption-vs-buying-under-hero"
             />
           </div>
@@ -193,46 +164,20 @@ export default function AdoptionVsBuyingPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs ownership-hub /
-              first-week / cost / supplies kitchen kits.
-              Directory import left untouched. Ferret
+              first-week / cost / supplies kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret source-choice kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page three-source-compare-map,
-              altering-descenting-log, and
-              quesenberry-afa-source-grounding copy — a
-              laminated ferret source-compare chart, a
-              ferret fridge rescue-vs-store card, and a
-              mustelid source-choice handbook.
-              Educational kitchen searches only. They are
-              not a ranked breeder list, they are not an
-              ownership-hub / first-week / cost hop, they
-              are not a child toothbrush hop, and they do
-              not replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance. Ferret.com
-              earns a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+source+compare+chart?s=adoption-vs-buying"
-                amazonLabel="Browse laminated ferret source-compare charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=adoption-vs-buying"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+rescue+vs+store+card?s=adoption-vs-buying"
-                amazonLabel="Browse ferret fridge rescue-vs-store cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+source+choice+handbook?s=adoption-vs-buying"
-                amazonLabel="Browse mustelid source-choice handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

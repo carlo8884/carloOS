@@ -41,37 +41,23 @@ export default function DogVomitingPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'GDV / Bloat', href: '/health/dog-bloat-gvd' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Pancreatitis', href: '/health/dog-symptoms-guide' }]} />
           <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-vomiting" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vomiting" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-vomiting bland-diet checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-vomiting bland-diet checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-monitor notes — a mini rice
-              cooker so you can make a small batch of plain
-              white rice after the 6–12 hour withhold, plus
-              glass meal-prep containers for leftover
-              bland-diet portions and the small bedtime
-              snack used for bilious vomiting. Educational
-              checklist, not a diagnosis and not a
-              treatment list. Anti-nausea medication,
-              prescription GI diets, probiotics, pumpkin,
-              slow-feeders, elevated bowls, and Bailey
-              chairs stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-vomiting bland-diet checklist"
-              subtitle="Email the rice-cooker and meal-prep-container notes. No spam."
-              ctaText="Email my dog-vomiting bland-diet checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-vomiting-under-hero"
             />
           </div>
@@ -108,21 +94,9 @@ export default function DogVomitingPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-vomiting bland-diet prep kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              home-monitor copy — a mini rice cooker and glass
-              meal-prep containers. Everyday physical gear only.
-              They are not a ranked product list, they are not
-              medications, they are not prescription GI-diet
-              ASINs, they are not probiotics or pumpkin, they
-              are not slow-feeders, elevated bowls, or Bailey
-              chairs, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/mini+rice+cooker?s=health-dog-vomiting"
@@ -132,7 +106,7 @@ export default function DogVomitingPage() {
                 amazonHref="/go/amazon-brand/glass+meal+prep+containers?s=health-dog-vomiting"
                 amazonLabel="Browse glass meal-prep containers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

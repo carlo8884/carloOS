@@ -44,38 +44,23 @@ export default function DogSeizuresPage() {
           <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'Home Safety Kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-seizures" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-seizure safety-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-seizure safety-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-safety notes — a soft throw
-              blanket to slide the dog away from stairs or
-              water without handling, crate bumper pads so
-              the usual rest crate is already padded, and
-              interlocking foam floor tiles for the quiet
-              dim recovery space after the event.
-              Educational checklist, not a diagnosis and
-              not an anticonvulsant list. Phenobarbital,
-              potassium bromide, levetiracetam, rescue
-              diazepam, first-aid kits, thermometers, and
-              IVDD recovery crates stay off this list. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-seizure safety-kit checklist"
-              subtitle="Email the throw-blanket, crate-bumper, and foam-tile notes. No spam."
-              ctaText="Email my dog-seizure safety-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-seizures-under-hero"
             />
           </div>
@@ -194,22 +179,9 @@ export default function DogSeizuresPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-seizure safety kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              home-safety copy — a soft throw blanket to slide
-              the dog, crate bumper pads for the usual rest
-              crate, and interlocking foam floor tiles for the
-              padded recovery space. Everyday physical gear
-              only. They are not a ranked product list, they
-              are not medications, they are not first-aid-kit
-              or thermometer ASINs, they are not IVDD recovery
-              crates or crate covers, and they do not replace a
-              veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+throw+blanket?s=health-dog-seizures"
@@ -223,7 +195,7 @@ export default function DogSeizuresPage() {
                 amazonHref="/go/amazon-brand/interlocking+foam+floor+tiles?s=health-dog-seizures"
                 amazonLabel="Browse interlocking foam floor tiles on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

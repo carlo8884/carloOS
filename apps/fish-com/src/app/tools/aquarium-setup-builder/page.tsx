@@ -122,7 +122,7 @@ export default function AquariumSetupBuilderPage() {
           <TableOfContents
             items={[
               { label: 'The builder', href: '#builder' },
-              { label: 'Shop the starter kit', href: '#shop' },
+              { label: 'Shop related supplies', href: '#shop' },
               { label: 'The order to do it in', href: '#order' },
               { label: 'FAQ', href: '#faq' },
             ]}
@@ -149,21 +149,18 @@ export default function AquariumSetupBuilderPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Starter-kit shopping list
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the sized starter-kit list — filter GPH, heater watts, light, test kit,
-            conditioner, and substrate — so you can shop without re-running the builder. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
             title="Starter-kit shopping list"
-            subtitle="Email the sized starter-kit list — filter, heater, light, test kit, conditioner, substrate. No spam."
-            ctaText="Email the setup checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-aquarium-setup-builder-under-hero"
           />
         </div>
@@ -180,7 +177,7 @@ export default function AquariumSetupBuilderPage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop the starter kit
+            Shop related supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
             The checklist is a filter, heater, light, liquid master kit, water conditioner, and

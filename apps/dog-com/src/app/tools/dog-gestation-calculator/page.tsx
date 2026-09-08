@@ -184,21 +184,18 @@ export default function DogGestationCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Whelping kit packing list
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the whelping-kit list — box, pads, puppy scale, thermometer, bulb syringe, and
-            towels — so you can pack before week 7 without re-opening the calendar. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Whelping kit packing list"
-            subtitle="Email the whelping-kit list — box, pads, scale, thermometer, bulb syringe, towels. No spam."
-            ctaText="Email the whelping kit checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-gestation-calculator-under-hero"
           />
         </div>
@@ -253,12 +250,7 @@ export default function DogGestationCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The six-item list above is a husbandry starting point — box, pads, scale, thermometer,
-              bulb syringe, towels — not a ranked product list. Same Amazon search hops as the
-              checklist rows. Dog.com earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+whelping+box?s=tools-dog-gestation-calculator"
@@ -272,7 +264,7 @@ export default function DogGestationCalculatorPage() {
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-dog-gestation-calculator"
                 amazonLabel="Browse pet thermometers on Amazon →"
               />
-            </div>
+          </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Once the puppies arrive, the{' '}

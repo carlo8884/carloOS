@@ -57,45 +57,16 @@ export default function VetsGuidesHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the vets guides-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Vets guides-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-pet-guides-section-map-chart,
-            fridge-guides-prep-card, and
-            veterinary-guides-reference-handbook notes that
-            match the cost-visit-urgency-map,
-            appointment-prep-log, and
-            owner-guides-grounding copy on this hub — a
-            laminated pet guides section-map chart so the
-            cost / visit / urgency tracks are posted on
-            the fridge (not a tools-hub calculator chart,
-            not an insurance policy-map chart, not a
-            reviews buyer-guide chart, not a health
-            triage chart), a pet fridge guides prep card
-            so appointment-prep notes are labeled on the
-            fridge (not a cat measurement card, not an
-            insurance levers card, not a reviews
-            comparison card, not a health library card),
-            and a veterinary guides reference handbook so
-            the owner-guides grounding is a physical
-            kitchen book (not a feline calculator
-            handbook, not an insurance handbook, not a
-            reviews handbook, not a health handbook).
-            Educational kitchen checklist, not a ranked
-            clinic list, not a child spiral-notebook /
-            budget-workbook hop, and not a substitute for
-            a veterinarian. Vets.co does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Vets guides-hub checklist"
-            subtitle="Email the guides-section-map-chart, fridge prep-card, and guides-handbook notes. No spam."
-            ctaText="Email my vets guides-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="guides-hub-under-hero"
           />
         </div>
@@ -132,29 +103,8 @@ export default function VetsGuidesHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Guides-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          cost-visit-urgency-map, appointment-prep-log,
-          and owner-guides-grounding copy on this hub — a
-          laminated pet guides section-map chart so the
-          cost / visit / urgency tracks are posted on the
-          fridge, a pet fridge guides prep card so
-          appointment-prep notes are labeled on the
-          fridge, and a veterinary guides reference
-          handbook so the owner-guides grounding is a
-          physical kitchen book. These are educational
-          kitchen searches, not a ranked clinic list, not
-          a substitute for a veterinarian, not a
-          tools-hub / insurance-hub / reviews-hub /
-          health-hub hop, and not a child spiral-notebook
-          / budget-workbook hop (those live on guides
-          children). This page does not hop medications
-          or vaccines. This page does not sell insurance.
-          This page does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
@@ -170,41 +120,17 @@ export default function VetsGuidesHubPage() {
             or PLACEHOLDER. Unused vs tools / insurance /
             reviews / health kitchen kits and child
             spiral+notebook / household+budget+workbook
-            hops. Directory import left untouched.
+            hops.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the guides-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page cost-visit-urgency-map,
-            appointment-prep-log, and
-            owner-guides-grounding copy — a laminated pet
-            guides section-map chart, a pet fridge guides
-            prep card, and a veterinary guides reference
-            handbook. Educational kitchen searches only.
-            They are not a ranked clinic list, they are
-            not a tools-hub / insurance-hub / reviews-hub
-            / health-hub hop, they are not a child
-            spiral-notebook hop, and they do not replace
-            a veterinarian. Vets.co does not sell
-            insurance. Vets.co earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+pet+guides+section+map+chart?s=guides-hub"
-              amazonLabel="Browse laminated pet guides section-map charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+fridge+guides+prep+card?s=guides-hub"
-              amazonLabel="Browse pet fridge guides prep cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/veterinary+guides+reference+handbook?s=guides-hub"
-              amazonLabel="Browse veterinary guides reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/pet+supplies?s=guides-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

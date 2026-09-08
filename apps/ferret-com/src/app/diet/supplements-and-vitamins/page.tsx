@@ -104,46 +104,16 @@ export default function SupplementsAndVitaminsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret supplements checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret supplements checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-supplement-caution-chart,
-              fridge-coat-oil-card, and
-              mustelid-supplement-reference-handbook notes
-              that match the complete-diet-default-map,
-              coat-oil-hairball-log, and
-              quesenberry-supplement-grounding copy on this
-              page — a laminated ferret supplement-caution
-              chart so the complete-diet-first / fat-soluble
-              vitamin-A-D-E-K / no-daily-insurance map is
-              posted on the fridge (not a diet-hub feeding
-              chart, not a senior-protein chart, not a
-              protein-fat chart), a ferret fridge coat-oil
-              card so modest-calorie fatty-acid / seasonal
-              coat-change / hairball-paste-is-not-management
-              notes are labeled on the fridge (not a
-              soak-soften card, not a no-sugar-treat card,
-              not a hydration card), and a mustelid
-              supplement-reference handbook so the
-              Quesenberry / Carpenter fat-soluble-vitamin
-              grounding is a physical kitchen book (not a
-              senior-nutrition handbook, not a raw-feeding
-              handbook, not a treat-safety handbook).
-              Educational kitchen checklist, not a ranked
-              supplement list, not a sleep-sack hop, and
-              not a substitute for an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret supplements checklist"
-              subtitle="Email the supplement-caution-chart, fridge coat-oil card, and supplement-handbook notes. No spam."
-              ctaText="Email my ferret supplements checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-supplements-and-vitamins-under-hero"
             />
           </div>
@@ -192,46 +162,20 @@ export default function SupplementsAndVitaminsPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs diet-hub /
-              senior-nutrition / protein-fat kitchen kits.
-              Directory import left untouched. Ferret
+              senior-nutrition / protein-fat kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret supplements kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page complete-diet-default-map,
-              coat-oil-hairball-log, and
-              quesenberry-supplement-grounding copy — a
-              laminated ferret supplement-caution chart, a
-              ferret fridge coat-oil card, and a
-              mustelid supplement-reference handbook.
-              Educational kitchen searches only. They are
-              not a ranked supplement list, they are not a
-              diet-hub / senior-nutrition / protein-fat hop,
-              they are not a child toothbrush hop, and
-              they do not replace an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+supplement+caution+chart?s=supplements-and-vitamins"
-                amazonLabel="Browse laminated ferret supplement-caution charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=supplements-and-vitamins"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+coat+oil+card?s=supplements-and-vitamins"
-                amazonLabel="Browse ferret fridge coat-oil cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+supplement+reference+handbook?s=supplements-and-vitamins"
-                amazonLabel="Browse mustelid supplement-reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

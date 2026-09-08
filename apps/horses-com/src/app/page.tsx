@@ -147,7 +147,7 @@ const CATEGORIES: {
   {
     icon: 'roadmap',
     title: 'First-Horse Roadmap',
-    desc: 'A free 90-day plan and 8-email course for the first-time owner.',
+    desc: 'A free 90-day plan for the first-time owner — on the page, no email signup.',
     href: '/first-horse-roadmap',
     manifestKey: 'horses-com:featured-quarter-horse',
     imageAlt: 'A horse — the start of the first-horse journey',

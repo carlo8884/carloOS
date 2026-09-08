@@ -85,35 +85,16 @@ export default function BestHeatersPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the aquarium-heater checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Aquarium-heater checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the heater notes that match the
-                Eheim Jager, Cobalt Neo-Therm, Hydor
-                Inline, and Aqueon Pro copy on this
-                page — an Eheim Jager so a tropical
-                tank keeps a recalibration dial
-                against drift, a Cobalt Neo-Therm so
-                a slim tank keeps a flat-profile
-                heater, and a Hydor Inline so a
-                canister setup keeps the heater out
-                of the display. Educational heater-
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                Eheim / Cobalt / Hydor / Aqueon
-                Amazon searches stay below. Empty
-                Chewy buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Aquarium-heater checklist"
-                subtitle="Email the Jager, Neo-Therm, inline, and Aqueon notes. No spam."
-                ctaText="Email my aquarium-heater checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-aquarium-heaters-under-hero"
               />
             </div>

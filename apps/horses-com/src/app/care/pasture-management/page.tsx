@@ -117,23 +117,16 @@ export default function PastureManagementPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the pasture-management checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse pasture-management checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the grazing-muzzle and soil-test-kit notes so the
-              restricted-grazing kit is ready before the spring flush.
-              Educational checklist, not a diagnosis and not a medication
-              or fertilizer order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse pasture-management checklist"
-              subtitle="Email the grazing-muzzle and soil-test-kit notes. No spam."
-              ctaText="Email my pasture-management checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-pasture-management-under-hero"
             />
           </div>
@@ -175,18 +168,9 @@ export default function PastureManagementPage() {
               medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the pasture kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page restricted-grazing
-              and soil-testing copy — a horse grazing muzzle for at-risk horses
-              and ponies, and a soil test kit before you lime or fertilize.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not fertilizer or herbicide, they are not a
-              medication, and they do not replace a veterinarian. Horses.com
-              earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+grazing+muzzle?s=care-pasture-management"
@@ -196,7 +180,7 @@ export default function PastureManagementPage() {
                 amazonHref="/go/amazon-brand/soil+test+kit?s=care-pasture-management"
                 amazonLabel="Browse soil test kits on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

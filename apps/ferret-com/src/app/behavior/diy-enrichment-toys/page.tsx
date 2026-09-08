@@ -159,31 +159,16 @@ export default function FerretDIYEnrichmentPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret enrichment checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret enrichment checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the enrichment notes that match
-              the copy on this page — tunnels first,
-              dig boxes and foraging games, skip
-              rubber and foam that can be swallowed,
-              supervise cardboard chewing, and
-              rotate toys so a cheap box stays
-              interesting. Educational checklist,
-              not a new product hop and not a
-              substitute for an exotic-animal
-              veterinarian. The existing Marshall
-              tunnel hop and snuffle-mat Amazon
-              search stay below. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret enrichment checklist"
-              subtitle="Email the tunnel, forage, and no-rubber safety notes. No spam."
-              ctaText="Email my ferret enrichment checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-diy-enrichment-under-hero"
             />
           </div>

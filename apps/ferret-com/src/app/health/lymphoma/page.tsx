@@ -210,43 +210,16 @@ export default function FerretLymphomaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret lymphoma checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret lymphoma checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-lump-weight-chart,
-              fridge-senior-cbc-card, and
-              mustelid-lymphoma-workup-handbook notes
-              that match the lump-weight-map,
-              senior-cbc-log, and
-              quesenberry-aemv-oncology-grounding copy on this
-              page — a laminated ferret lump-weight chart
-              so the lump / weight-drop / wrong-bloodwork
-              map is posted on the fridge (not a short-fast
-              chart, not a bruxism-map chart, not a
-              coffee-grounds chart), a ferret fridge senior-cbc
-              card so CBC / chemistry / six-month-cadence notes
-              are labeled on the fridge (not a glucose-temp
-              card, not a baseline-log card, not a
-              household-treat card), and a mustelid
-              lymphoma-workup handbook so the Quesenberry /
-              AEMV cytology-then-biopsy grounding is a
-              physical kitchen book (not an anesthesia-clinic
-              handbook, not a pain-sign handbook, not an
-              otodectes-swab handbook). Educational kitchen
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does not
-              sell insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret lymphoma checklist"
-              subtitle="Email the lump-weight-chart, fridge senior-cbc card, and lymphoma-workup-handbook notes. No spam."
-              ctaText="Email my ferret lymphoma checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-lymphoma-under-hero"
             />
           </div>
@@ -621,47 +594,20 @@ export default function FerretLymphomaPage() {
               vaccine / flea / heartworm / nsaid / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
-              anesthesia / signs-of-pain / ear-mites hops.
-              Directory import left untouched. Ferret
+              anesthesia / signs-of-pain / ear-mites hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret lymphoma kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page lump-weight-map,
-              senior-cbc-log, and
-              quesenberry-aemv-oncology-grounding copy — a
-              laminated ferret lump-weight chart, a
-              ferret fridge senior-cbc card, and a
-              mustelid lymphoma-workup handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a health-hub / anesthesia / signs-of-pain hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+lump+weight+chart?s=lymphoma"
-                amazonLabel="Browse laminated ferret lump-weight charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=lymphoma"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+senior+cbc+card?s=lymphoma"
-                amazonLabel="Browse ferret fridge senior-cbc cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+lymphoma+workup+handbook?s=lymphoma"
-                amazonLabel="Browse mustelid lymphoma-workup handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

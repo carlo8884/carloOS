@@ -105,45 +105,16 @@ export default function ReadingFoodLabelsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret food-label checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret food-label checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-label-split-chart,
-              fridge-dry-matter-card, and
-              mustelid-food-label-reference-handbook notes
-              that match the ingredient-split-map,
-              dry-matter-conversion-log, and
-              aafco-label-grounding copy on this page —
-              a laminated ferret label-split chart so the
-              named-meat-lead / corn-split / plant-protein
-              map is posted on the fridge (not a diet-hub
-              feeding chart, not a kibble-panel chart, not
-              a training-map chart), a ferret fridge
-              dry-matter card so moisture-subtract /
-              nutrient-divide / times-100 notes are labeled
-              on the fridge (not a diet-label card, not a
-              carb-by-difference card, not a
-              harness-vs-collar card), and a mustelid
-              food-label reference handbook so the AAFCO /
-              Quesenberry label grounding is a physical
-              kitchen book (not a diet handbook, not a
-              kibble-panel handbook, not a training-bonding
-              handbook). Educational kitchen checklist,
-              not a ranked kibble list, not a sleep-sack
-              hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Aging pages stay held.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret food-label checklist"
-              subtitle="Email the label-split-chart, fridge dry-matter card, and food-label-handbook notes. No spam."
-              ctaText="Email my ferret food-label checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-reading-labels-under-hero"
             />
           </div>
@@ -262,47 +233,20 @@ export default function ReadingFoodLabelsPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs diet-hub /
-              kibble / training kitchen kits.
-              Directory import left untouched. Ferret
+              kibble / training kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret food-label kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page ingredient-split-map,
-              dry-matter-conversion-log, and
-              aafco-label-grounding copy — a laminated
-              ferret label-split chart, a ferret fridge
-              dry-matter card, and a mustelid food-label
-              reference handbook. Educational kitchen
-              searches only. They are not a ranked kibble
-              list, they are not a diet-hub / kibble /
-              training hop, they are not a child
-              toothbrush hop, and they do not replace an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Ferret.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden. Existing Wysong review hop stays in
-              the clean-panel example below.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+label+split+chart?s=reading-food-labels"
-                amazonLabel="Browse laminated ferret label-split charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=reading-food-labels"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+dry+matter+card?s=reading-food-labels"
-                amazonLabel="Browse ferret fridge dry-matter cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+food+label+reference+handbook?s=reading-food-labels"
-                amazonLabel="Browse mustelid food-label reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">A Clean-Panel Example</h2>

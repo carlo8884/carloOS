@@ -149,22 +149,16 @@ export default function DogBodyConditionScorePage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog BCS checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the BCS checklist — rib feel, waist, belly tuck, and the shoppable
-            weight-management kit (measuring tape, portion scale, slow feeder) — so you
-            can re-score next month without re-reading the descriptors. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog BCS checklist"
-            subtitle="Email the BCS checklist — rib feel, waist, tuck, and the weight-management kit. No spam."
-            ctaText="Email my dog BCS checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-bcs-under-hero"
           />
         </div>
@@ -186,16 +180,7 @@ export default function DogBodyConditionScorePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a BCS / weight-management kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make a body-condition
-              score repeatable — a measuring tape or BCS chart, an elevated slow-feeder
-              bowl, a portion-control food scale, a puzzle feeder, joint-support treats,
-              and weight-management dog food. They are not a ranked product list, not
-              invented inventory, and they do not diagnose a weight problem or set a
-              target weight. Ask your veterinarian for a target and a safe rate of change
-              before cutting or adding calories. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs"
@@ -221,7 +206,7 @@ export default function DogBodyConditionScorePage() {
                 amazonHref="/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"
                 amazonLabel="Browse weight-management dog food on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

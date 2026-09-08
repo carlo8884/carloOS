@@ -47,7 +47,7 @@ interface EmailCaptureProps {
 export function EmailCapture({
   variant = 'sidebar',
   siteId,
-  title = 'Free Newsletter',
+  title = 'Owner notes',
   subtitle,
   ctaText,
   buttonText,
@@ -217,7 +217,7 @@ export function EmailCapture({
         btnClass="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
       />
       <p className="text-xs text-brand-text-light mt-3">
-        🔒 No spam. Unsubscribe anytime.
+        Inbox notes only. No confirmation email and no downloadable kit.
       </p>
     </div>
   )

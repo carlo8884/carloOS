@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Free 90-Day First-Horse Roadmap | Horses.com',
   description:
-    "Week-by-week 90-day roadmap for first-time horse owners — boarding, vet, farrier, feed, ground manners, first-aid. Free 8-email course.",
+    'Week-by-week 90-day roadmap for first-time horse owners — boarding, vet, farrier, feed, ground manners, first-aid. On this page — no email signup required.',
   path: '/first-horse-roadmap',
   type: 'article',
 })
@@ -33,9 +33,9 @@ const articleSchema = buildArticleSchema({
 
 const FAQS = [
   {
-    question: 'What exactly do I get when I sign up?',
+    question: 'Where is the roadmap?',
     answer:
-      'A structured 90-day roadmap for the first 12 weeks of horse ownership, plus an 8-email course delivered over those 90 days. Each email is timed to where you are in the transition — pre-purchase, settling in, building routine, deepening partnership, and confident ownership at 90 days.',
+      'On this page. The categories below cover the first 12 weeks of horse ownership — pre-purchase, settling in, building routine, deepening partnership, and confident ownership at 90 days. You can read or print them from your browser. There is no email course or PDF delivery.',
   },
   {
     question: 'Why 90 days?',
@@ -45,12 +45,12 @@ const FAQS = [
   {
     question: 'I have not bought a horse yet. Is this still for me?',
     answer:
-      'Yes — the roadmap is built to be useful from the moment you start seriously shopping. The first email covers the pre-purchase vet exam (PPE), which is the single highest-leverage decision you make before any money changes hands.',
+      'Yes — the roadmap is built to be useful from the moment you start seriously shopping. The pre-purchase section covers the vet exam (PPE), which is the single highest-leverage decision you make before any money changes hands.',
   },
   {
     question: 'My horse has been home for a few weeks already. Can I still start?',
     answer:
-      'Absolutely. The emails are calibrated to your signup date, not the horse\'s arrival date. Skim the early emails for what you may have skipped, then run the rest in real time.',
+      'Absolutely. Skim the early sections for what you may have skipped, then use the rest in real time.',
   },
   {
     question: 'Will the roadmap tell me which feed or barn to choose?',
@@ -63,9 +63,9 @@ const FAQS = [
       'Reading is free. We do link to product reviews and to retailers like SmartPak and Dover where we earn a small affiliate commission if you buy through our link — that funds the editorial work. Affiliate revenue does not influence our rankings. See our affiliate disclosure for the full policy.',
   },
   {
-    question: 'How often will you email me?',
+    question: 'Do I need to leave an email?',
     answer:
-      'Eight emails over 90 days, with delays of roughly 3, 7, 14, 21, 35, 56, and 90 days after signup. After day 90 we send at most one email per week, often less. One-click unsubscribe is in every email.',
+      'No. The roadmap is on this page. An optional inbox-notes field sits after the categories if you want occasional owner notes later. That does not send a course, PDF, or confirmation email.',
   },
   {
     question: 'Who writes this?',
@@ -207,7 +207,7 @@ export default function FirstHorseRoadmapPage() {
             <div className="flex items-center gap-2.5 mb-5">
               <span className="w-6 h-0.5 bg-brand-primary" />
               <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-                Free Download · First-Time Horse Owners
+                On this page · First-Time Horse Owners
               </span>
             </div>
             <h1
@@ -221,7 +221,7 @@ export default function FirstHorseRoadmapPage() {
             <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
               The first 90 days lock in your barn, your vet, your farrier, your feed program, and your
               horse&apos;s baseline. This is the roadmap you wish a horsey friend had handed you the
-              day you signed the bill of sale — eight emails over twelve weeks, paced to your real life.
+              day you signed the bill of sale. The categories on this page cover those first twelve weeks. No email signup required.
             </p>
             <ul className="text-sm text-white/70 space-y-2 mb-10 max-w-md">
               <li className="flex items-start gap-3">
@@ -230,7 +230,7 @@ export default function FirstHorseRoadmapPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-brand-primary">✓</span>
-                <span>8 emails covering vet, farrier, feed, manners, tack, first aid</span>
+                <span>Boarding, vet, farrier, feed, manners, tack, first aid</span>
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-brand-primary">✓</span>
@@ -238,7 +238,7 @@ export default function FirstHorseRoadmapPage() {
               </li>
               <li className="flex items-start gap-3">
                 <span className="text-brand-primary">✓</span>
-                <span>Free. One-click unsubscribe in every email.</span>
+                <span>Print from your browser — no PDF email</span>
               </li>
             </ul>
           </div>
@@ -247,23 +247,20 @@ export default function FirstHorseRoadmapPage() {
             <div className="bg-white rounded-xl p-7 shadow-card-hover">
               <div className="mb-5">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-                  Step 1 of 1
+                  Read it now
                 </div>
                 <div className="font-display font-bold text-brand-dark text-xl leading-tight">
-                  Get the 90-day roadmap + 8-email course
+                  The 90-day map is below
                 </div>
               </div>
-              <EmailCapture
-                variant="inline"
-                siteId="horses-com"
-                title=""
-                ctaText="Send me the roadmap →"
-                placeholder="your@email.com"
-                source="first-horse-roadmap"
-              />
+              <a
+                href="#first-horse-roadmap"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-brand-primary text-brand-white text-sm font-bold rounded no-underline hover:bg-brand-primary-light"
+              >
+                Jump to the roadmap
+              </a>
               <p className="text-2xs text-brand-text-light mt-4 leading-relaxed">
-                We&apos;ll email the roadmap immediately and pace the eight-email course over the next
-                90 days. See our{' '}
+                No email gate. See our{' '}
                 <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">
                   Privacy Policy
                 </Link>
@@ -274,45 +271,8 @@ export default function FirstHorseRoadmapPage() {
         </div>
       </section>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-white border-b border-brand-border px-container-sm sm:px-container py-10">
-        <div className="max-w-content mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the 90-day first-horse checklist
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            90-day first-horse checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid max-w-2xl">
-            Email the week-by-week card, ground-manners cue list, and tack-room
-            emergency-plan notes that match the boarding, vet, farrier, feed,
-            ground-manners, tack-fit, and first-aid copy on this page — a laminated
-            first-horse 90-day week-by-week checklist so pre-purchase through the
-            day-90 checkpoint stay visible (not a first-horse tryout walkthrough,
-            not a boarding-facility walkthrough, not a senior age-related-change
-            checklist), a first-horse ground-manners cue card so whoa / walk on /
-            back / over / stand stay posted in the aisle (not an ear-eye-tail
-            signal checklist), and a first-horse tack-room emergency-plan card so
-            the written plan lives on the wall (not a health-hub emergency-triage
-            chart, not an after-hours-cover question card). Educational owner
-            roadmap tools only, not a ranked product list, not a clinic listing,
-            and not a substitute for a veterinarian. No spam.
-          </p>
-          <div className="max-w-md">
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="90-day first-horse checklist"
-              subtitle="Email the week-by-week card, ground-manners cues, and tack-room emergency-plan notes. No spam."
-              ctaText="Email my 90-day first-horse checklist"
-              source="first-horse-roadmap-under-hero"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* TIMELINE PREVIEW */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      {/* TIMELINE PREVIEW — on-page, no email gate */}
+      <section id="first-horse-roadmap" className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -324,13 +284,9 @@ export default function FirstHorseRoadmapPage() {
             From pre-purchase to confident owner at day 90
           </h2>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
-            Twelve weeks broken into five stages. The email course follows the same stages, with each
-            email timed to the decisions and questions you&apos;re likely to be working through that
-            week. A laminated first-horse 90-day week-by-week checklist is how those five stages stay
-            posted at the barn — it is not a laminated first-horse tryout walkthrough checklist
-            (that lives on buying-your-first-horse), not a laminated horse boarding facility
-            walkthrough checklist (that lives on boarding-options), and not a laminated senior horse
-            age-related change checklist (that lives on senior-horse-care).
+            Twelve weeks broken into five stages. Use the sections below for the decisions and
+            questions you&apos;re likely to be working through that week. Print from your browser if
+            you want a copy. There is no email course.
           </p>
 
           <div className="bg-white border border-brand-border rounded-lg overflow-hidden">
@@ -467,8 +423,7 @@ export default function FirstHorseRoadmapPage() {
             not a PPE-stage-walkthrough / findings-worksheet / buyer-vet-briefing hop,
             not a lease / insurance / monthly-budget hop, not a daily-care /
             emergency-triage / owner-guides / calculator-tools chart hop, not a
-            saddle-pad / half-pad / shim / girth hop, and not a farrier-log hop.
-            This page does not hop medications or vaccines. This page does not
+            saddle-pad / half-pad / shim / girth hop, and not a farrier-log hop. This page does not
             claim hands-on testing. This page does not invent clinic listings.
           </p>
 
@@ -532,30 +487,13 @@ export default function FirstHorseRoadmapPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the 90-day first-horse leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page week-by-week
-              timeline, ground-manners five-cue, and tack-room emergency-plan
-              copy — a laminated first-horse 90-day week-by-week checklist, a
-              first-horse ground-manners cue card, and a first-horse tack-room
-              emergency-plan card. Educational owner searches only. They are not
-              a ranked product list, they are not a clinic listing, they are not
-              a first-horse tryout / buyer-notebook / PPE-records hop, they are
-              not a boarding walkthrough / contract-binder / hay-tarp hop, they
-              are not a choosing-a-vet interview / after-hours-cover hop, they
-              are not a first-aid saline / pads / scissors hop, they are not a
-              senior-horse-care hop, they are not a reading-body-language hop,
-              they are not a saddle-fit-basics pad / shim / girth hop, they are
-              not a daily-care / emergency-triage / owner-guides /
-              calculator-tools chart hop, and they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+first+horse+90+day+week+by+week+checklist?s=first-horse-roadmap"
-                amazonLabel="Browse laminated first-horse 90-day week-by-week checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=first-horse-roadmap"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/first+horse+ground+manners+cue+card?s=first-horse-roadmap"
@@ -565,28 +503,28 @@ export default function FirstHorseRoadmapPage() {
                 amazonHref="/go/amazon-brand/first+horse+tack+room+emergency+plan+card?s=first-horse-roadmap"
                 amazonLabel="Browse first-horse tack-room emergency-plan cards on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>
 
-      {/* SECOND CAPTURE */}
+      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            Get the 90-day roadmap + the email course
+            Owner notes
           </h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
-            One signup. Roadmap in your inbox immediately. Eight emails paced over the first 90 days,
-            then roughly weekly. Unsubscribe any time.
+            Optional. We&apos;ll use this address for occasional notes. No roadmap email, PDF, or course.
           </p>
           <div className="max-w-md mx-auto">
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title=""
-              ctaText="Send me the roadmap →"
-              source="first-horse-roadmap"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
+              source="first-horse-roadmap-under-hero"
             />
           </div>
         </div>

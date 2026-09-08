@@ -13,13 +13,13 @@ const TOOLS = [
   {
     href: '/tools/is-this-a-ferret-emergency',
     title: 'Is This a Ferret Emergency?',
-    desc: 'Check ferret signs — labored breathing, pale gums, collapse, seizures, toxin (chocolate/xylitol/ibuprofen), trauma, a hard belly, inability to urinate, protracted vomiting with lethargy, sudden hind weakness — for a conservative go-now / same-day / monitor read, then shop a ferret emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A sign-list triage aid, not a diagnosis.',
+    desc: 'Check ferret signs — labored breathing, pale gums, collapse, seizures, toxin (chocolate/xylitol/ibuprofen), trauma, a hard belly, inability to urinate, protracted vomiting with lethargy, sudden hind weakness — for a conservative go-now / same-day / monitor read. A sign-list triage aid, not a diagnosis.',
     tag: 'Triage',
   },
   {
     href: '/tools/ferret-grimace-scale',
     title: 'Ferret Grimace Scale',
-    desc: 'Is your ferret in pain? Score five facial signs — ears, eyes, nose, cheeks, whiskers — on this owner Ferret Grimace checklist, then shop an observation / comfort kit (ferret first-aid kit, digital pet thermometer, vet wrap, low-setting heating pad, ferret electrolytes / recovery food). Planning / observation reference, not a diagnosis. High-pain faces go to emergency triage first, not a shopping list.',
+    desc: 'Is your ferret in pain? Score five facial signs — ears, eyes, nose, cheeks, whiskers — on this owner Ferret Grimace checklist. Planning / observation reference, not a diagnosis. High-pain faces go to emergency triage first, not a shopping list.',
     tag: 'Health',
   },
   {
@@ -127,41 +127,16 @@ export default function ToolsHub() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ferret tools-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret tools-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-ferret-calculator-tools-chart,
-            fridge-measurement-card, and
-            mustelid-calculator-reference-handbook notes that
-            match the calculator-section-map,
-            per-ferret-measurement-log, and
-            AFA-GA-and-grimace copy on this hub — a laminated
-            ferret calculator-tools chart so the section map
-            (emergency, grimace, age, BCS, food evaluator,
-            cost, readiness, litter, cage size) is posted on
-            the fridge (not a first-aid chart, not a cage-size
-            chart, not a litter-planner chart), a ferret fridge
-            measurement card so each ferret&apos;s age label,
-            BCS, food verdict, and cage minimums is labeled
-            on the fridge (not a hammock card, not a litter
-            card, not a first-aid card), and a mustelid
-            calculator reference handbook so the AFA cage
-            floor / guaranteed-analysis / grimace grounding
-            is a physical kitchen book (not a first-aid
-            handbook, not a diet handbook, not a cage
-            handbook). Educational kitchen checklist, not a
-            treatment, not a ranked product list, and not a
-            substitute for a veterinarian. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret tools-hub checklist"
-            subtitle="Email the calculator-tools-chart, fridge measurement-card, and calculator-handbook notes. No spam."
-            ctaText="Email my ferret tools-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-hub-under-hero"
           />
         </div>
@@ -173,9 +148,7 @@ export default function ToolsHub() {
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             Ferrets are obligate carnivores with a punishingly short digestive tract, which makes them far less forgiving of the wrong diet than a dog or cat. The marketing on a bag rarely tells you what matters. What matters is the guaranteed analysis &mdash; the small panel of protein, fat, fiber, and ash percentages every label is required to print &mdash; and the first few ingredients. The trouble is that reading those numbers against published ferret nutrient targets is fiddly, and most owners have nothing to check them against in the pet-store aisle. That gap is exactly what this hub is built to close.
           </p>
-          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            The <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">ferret emergency sign-list</Link> answers how urgently to seek care — go now, same-day, or monitor — from ferret-specific signs. It is a triage aid, not a diagnosis. The <Link href="/tools/ferret-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">ferret grimace scale</Link> is a facial pain-watch — five mustelid action units on a 0–10 planning checklist, not a diagnosis. The <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">ferret age calculator</Link> converts calendar age to a human-year estimate and a kit / young adult / mature / senior label — a planning reference, not a diagnosis. The <Link href="/tools/ferret-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">ferret body condition score</Link> walks rib feel, waist, and belly into a 1–9 planning score, including the seasonal weight swing — also a planning reference, not a diagnosis. The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat. The <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">readiness quiz</Link> scores whether a ferret fits your household, then packs a day-one kit.
-          </p>
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">The <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">ferret emergency sign-list</Link> answers how urgently to seek care — go now, same-day, or monitor — from ferret-specific signs. It is a triage aid, not a diagnosis. The <Link href="/tools/ferret-age-calculator" className="text-brand-primary underline-offset-2 hover:underline">ferret age calculator</Link> converts calendar age to a human-year estimate and a kit / young adult / mature / senior label — a planning reference, not a diagnosis. The <Link href="/tools/ferret-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">ferret body condition score</Link> walks rib feel, waist, and belly into a 1–9 planning score, including the seasonal weight swing — also a planning reference, not a diagnosis. The <Link href="/tools/food-evaluator" className="text-brand-primary underline-offset-2 hover:underline">Ferret Food Evaluator</Link> takes the guaranteed analysis off any kibble bag, scores it against the protein, fat, fiber, and ash ranges cited in our references, checks whether the first ingredient is a named animal protein, and returns a plain &ldquo;appropriate / marginal / avoid&rdquo; verdict with per-nutrient notes. It is meant to be used standing in the store with a bag in hand, not as a substitute for reading the longer write-ups. The <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">cage size calculator</Link> turns ferret count, levels, and playtime into a minimum L × W × H before you buy the habitat. The <Link href="/tools/readiness-quiz" className="text-brand-primary underline-offset-2 hover:underline">readiness quiz</Link> scores whether a ferret fits your household, then packs a day-one kit.</p>
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Where it fits with the rest of the site</h2>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             A verdict is only as useful as the reasoning behind it. If the evaluator flags a food, the next question is usually why those numbers matter, and that is covered in depth in our <Link href="/diet" className="text-brand-primary underline-offset-2 hover:underline">ferret diet</Link> reference. If a food scores poorly because of a chronic condition you are managing, the <Link href="/health" className="text-brand-primary underline-offset-2 hover:underline">ferret health</Link> section explains how diet intersects with the issues ferrets are prone to. The tool is the fast answer; the editorial sections are the explanation. Everything here is source-cited and written by the Ferret.com editorial team from published references, with more keeper calculators planned as the reference set grows.
@@ -216,27 +189,8 @@ export default function ToolsHub() {
           </Link>
         </div>
 
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
-          Tools-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          calculator-section-map, per-ferret-measurement-log,
-          and AFA-GA-and-grimace copy on this hub — a
-          laminated ferret calculator-tools chart so the
-          section map is posted on the fridge, a ferret fridge
-          measurement card so each ferret&apos;s age label,
-          BCS, food verdict, and cage minimums is labeled on
-          the fridge, and a mustelid calculator reference
-          handbook so the AFA cage floor / guaranteed-analysis
-          / grimace grounding is a physical kitchen book.
-          These are educational kitchen searches, not a ranked
-          product list, not a substitute for a veterinarian,
-          not a first-aid-kit / thermometer / hammock /
-          Critter-Nation / wood-pellet hop (those live on the
-          child tools). This page does not hop medications or
-          vaccines. This page does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
@@ -255,36 +209,13 @@ export default function ToolsHub() {
             compressed+wood+pellet+litter. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the tools-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page calculator-section-map,
-            per-ferret-measurement-log, and
-            AFA-GA-and-grimace copy — a laminated ferret
-            calculator-tools chart, a ferret fridge
-            measurement card, and a mustelid calculator
-            reference handbook. Educational kitchen
-            searches only. They are not a ranked product
-            list, they are not a first-aid-kit /
-            thermometer / hammock / Critter-Nation hop, and
-            they do not replace a veterinarian. Ferret.com
-            earns a commission on qualifying purchases at
-            no extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+ferret+calculator+tools+chart?s=tools-hub"
-              amazonLabel="Browse laminated ferret calculator-tools charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+fridge+measurement+card?s=tools-hub"
-              amazonLabel="Browse ferret fridge measurement cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/mustelid+calculator+reference+handbook?s=tools-hub"
-              amazonLabel="Browse mustelid calculator reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/ferret+supplies?s=tools-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

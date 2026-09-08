@@ -164,23 +164,16 @@ export default function EquineDentalCarePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dental-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse dental-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the owner-side recovery notes — soaked hay cubes or a
-              mash for the first day after significant dental work, plus the
-              annual-exam cadence. Educational checklist, not a diagnosis.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse dental-care checklist"
-              subtitle="Email the post-float soft-feed notes and annual-exam cadence. No spam."
-              ctaText="Email my equine dental-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guide-dental-under-hero"
             />
           </div>
@@ -346,18 +339,9 @@ export default function EquineDentalCarePage() {
               not named as shoppable owner supplies on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dental-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page post-float
-              soft-feed copy — soaked hay cubes and mashes for the first day
-              after significant dental work. Everyday physical supplies only.
-              They are not a ranked product list, they are not treatments for
-              dental disease, EOTRH, or wolf teeth, they are not a floating
-              or sedation kit, and they do not replace a dental veterinarian.
-              Horses.com earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hay+cubes?s=guides-equine-dental-care"
@@ -367,7 +351,7 @@ export default function EquineDentalCarePage() {
                 amazonHref="/go/amazon-brand/horse+mash?s=guides-equine-dental-care"
                 amazonLabel="Browse horse mashes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -127,34 +127,16 @@ export default function RainRotPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the rain-rot keep-dry-and-unshared checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse rain-rot keep-dry-and-unshared checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the portable-3-sided-horse-run-in-shelter,
-              labeled-stackable-horse-grooming-caddy, and
-              large-mesh-horse-blanket-wash-bag notes that
-              match the provide-shelter, do-not-share-grooming-
-              tools, and do-not-share-blankets copy on this
-              page — a 3-sided run-in so prolonged rain has a
-              dry wall to stand behind, a labeled grooming
-              caddy so each horse&apos;s brushes stay in one
-              box instead of a shared tote, and a mesh blanket
-              wash bag so an affected horse&apos;s sheet is
-              washed apart from the rest of the barn. Educational
-              keep-dry-and-unshared checklist, not a treatment,
-              not an antimicrobial shampoo, not a substitute
-              for calling the veterinarian, and not a waterproof-
-              sheet, mud-grid, or fly-sheet hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse rain-rot keep-dry-and-unshared checklist"
-              subtitle="Email the run-in-shelter, grooming-caddy, and blanket-wash-bag notes. No spam."
-              ctaText="Email my horse rain-rot keep-dry-and-unshared checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-rain-rot-under-hero"
             />
           </div>
@@ -174,7 +156,7 @@ export default function RainRotPage() {
           </ul>
 
           <h2 id="treatment">Treatment</h2>
-          <p>The cornerstone of treatment is getting the horse dry and removing the scabs gently, since the organism needs moisture and the scabs harbor it. Bathe with an appropriate antimicrobial shampoo as directed, lather and let it sit, then gently lift the loosened scabs (which can be uncomfortable, so be patient and kind). This page does not hop antimicrobial shampoo, iodine wash, or systemic drugs — those stay with the veterinarian. Keep the horse out of the rain and dry until healed. Widespread, severe, or non-resolving cases, or any horse that seems systemically unwell, should be seen by a veterinarian, who may prescribe additional treatment.</p>
+          <p>The cornerstone of treatment is getting the horse dry and removing the scabs gently, since the organism needs moisture and the scabs harbor it. Bathe with an appropriate antimicrobial shampoo as directed, lather and let it sit, then gently lift the loosened scabs (which can be uncomfortable, so be patient and kind). Keep the horse out of the rain and dry until healed. Widespread, severe, or non-resolving cases, or any horse that seems systemically unwell, should be seen by a veterinarian, who may prescribe additional treatment.</p>
 
           <h2 id="prevention">Prevention</h2>
           <ul>
@@ -199,19 +181,13 @@ export default function RainRotPage() {
             keep-dry-and-unshared tools, not a ranked
             product list, not a substitute for veterinary
             care, and not an antimicrobial shampoo or a
-            diagnosis. Waterproof sheets and turnout
-            blankets already live on blanketing. Paddock
+            diagnosis. Paddock
             mud grids and turnout boots already live on
-            mud-fever. Curry combs and dandy brushes
-            already live on grooming. Color-coded buckets
-            already live on strangles. Fly sheets already
+            mud-fever. Fly sheets already
             live on fly-control. Sweet-itch rugs already
             live on sweet-itch. Irish-knit coolers already
-            live on tying-up. This page does not hop
-            antimicrobial shampoo, iodine wash, mite
-            treatments, or systemic drugs. This page does
-            not claim hands-on testing.
-          </p>
+            live on tying-up. This page does
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -261,43 +237,9 @@ export default function RainRotPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the rain-rot keep-dry-and-unshared kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page provide-shelter, do-not-share-
-              grooming-tools, and do-not-share-blankets
-              copy — a portable 3-sided horse run-in
-              shelter, a labeled stackable horse grooming
-              caddy, and a large mesh horse blanket wash
-              bag. Educational keep-dry-and-unshared tools
-              only. Sharing a wet brush, leaving a wet
-              horse blanketed, or guessing an antimicrobial
-              shampoo is not the job of this kit. They
-              are not a ranked product list, they are
-              not a substitute for veterinary care, they
-              are not a #1103 mud-grid / turnout-boot /
-              leg-towel hop, they are not a #1102
-              Irish-knit-cooler / quarter-sheet /
-              loose-salt hop, they are not a #1101
-              heart-bar / wedge-pad / rocker-toe hop,
-              they are not a #1100 stock-tank-brush /
-              barn-mosquito-netting / mosquito-sheet hop,
-              they are not a #1099 lunge-line /
-              lead-shank / traffic-cone hop, they are
-              not a #1098 clipboard / feed-pan /
-              paper-pellet-bedding hop, they are not a
-              #1097 color-coded-bucket / coverall /
-              boot-dip-tub hop, they are not a #1094
-              soaking-pail / feed-tub-rock / apple-wedger
-              hop, they are not a blanketing waterproof-
-              sheet hop, they are not a grooming curry-
-              comb hop, they are not a fly-control
-              fly-sheet hop, and they do not replace a
-              veterinarian. Horses.com earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/portable+3+sided+horse+run+in+shelter?s=health-rain-rot"
@@ -311,7 +253,7 @@ export default function RainRotPage() {
                 amazonHref="/go/amazon-brand/large+mesh+horse+blanket+wash+bag?s=health-rain-rot"
                 amazonLabel="Browse large mesh horse blanket wash bags on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -57,37 +57,23 @@ export default function DogMangePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-mange" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-mange" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-mange bedding-wash checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-mange bedding-wash checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the household-wash notes — a washable dog
-              bed cover so bedding can go in the laundry after
-              a sarcoptic-mange diagnosis, plus pet-safe
-              laundry detergent for that wash cycle
-              (fragrance-free residue matters on already
-              irritated skin). Educational checklist, not a
-              diagnosis and not a mite treatment.
-              Isoxazoline products (Bravecto, NexGard,
-              Simparica, Credelio), ivermectin, amitraz dips,
-              medicated shampoo, and recovery cones stay off
-              this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-mange bedding-wash checklist"
-              subtitle="Email the washable-cover and laundry-detergent notes. No spam."
-              ctaText="Email my dog-mange bedding-wash checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-mange-under-hero"
             />
           </div>
@@ -118,21 +104,9 @@ export default function DogMangePage() {
               recovery cones are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-mange bedding-wash kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              household-wash copy — a washable dog bed cover
-              and pet-safe laundry detergent. Everyday physical
-              gear only. They are not a ranked product list,
-              they are not medications, they are not
-              parasiticide brand ASINs (Bravecto / NexGard /
-              Simparica / Credelio), they are not medicated
-              shampoo, they are not recovery cones, and they
-              do not replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange"
@@ -142,7 +116,7 @@ export default function DogMangePage() {
                 amazonHref="/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"
                 amazonLabel="Browse pet-safe laundry detergent on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

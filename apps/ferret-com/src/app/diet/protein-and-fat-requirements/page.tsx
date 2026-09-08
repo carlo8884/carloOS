@@ -139,45 +139,16 @@ export default function ProteinAndFatRequirementsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret protein-fat checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret protein-fat checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-protein-fat-chart,
-              fridge-macro-window-card, and
-              mustelid-macro-target-reference-handbook notes
-              that match the protein-32-40-map,
-              fat-18-22-window-log, and
-              quesenberry-macro-grounding copy on this page —
-              a laminated ferret protein-fat chart so the
-              32–40% protein / 18–22% fat / carb-under-3
-              map is posted on the fridge (not a diet-hub
-              feeding chart, not a kibble-panel chart, not
-              a label-split chart), a ferret fridge
-              macro-window card so dry-matter-vs-as-fed /
-              moisture-subtract / carb-by-difference notes
-              are labeled on the fridge (not a diet-label
-              card, not a dry-matter card, not a
-              carb-by-difference card), and a mustelid
-              macro-target reference handbook so the
-              Quesenberry / Carpenter macro grounding is a
-              physical kitchen book (not a diet handbook,
-              not a food-label handbook, not a
-              kibble-panel handbook). Educational kitchen
-              checklist, not a ranked kibble list, not a
-              sleep-sack hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Aging pages stay held.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret protein-fat checklist"
-              subtitle="Email the protein-fat-chart, fridge macro-window card, and macro-target-handbook notes. No spam."
-              ctaText="Email my ferret protein-fat checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-protein-and-fat-requirements-under-hero"
             />
           </div>
@@ -228,47 +199,20 @@ export default function ProteinAndFatRequirementsPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs diet-hub /
-              kibble / label / training kitchen kits.
-              Directory import left untouched. Ferret
+              kibble / label / training kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret protein-fat kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page protein-32-40-map,
-              fat-18-22-window-log, and
-              quesenberry-macro-grounding copy — a laminated
-              ferret protein-fat chart, a ferret fridge
-              macro-window card, and a mustelid macro-target
-              reference handbook. Educational kitchen
-              searches only. They are not a ranked kibble
-              list, they are not a diet-hub / kibble /
-              label / training hop, they are not a child
-              toothbrush hop, and they do not replace an
-              exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Ferret.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden. Existing Wysong review hop stays in
-              the window example below.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+protein+fat+chart?s=protein-and-fat-requirements"
-                amazonLabel="Browse laminated ferret protein-fat charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=protein-and-fat-requirements"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+macro+window+card?s=protein-and-fat-requirements"
-                amazonLabel="Browse ferret fridge macro-window cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+macro+target+reference+handbook?s=protein-and-fat-requirements"
-                amazonLabel="Browse mustelid macro-target reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">A Diet That Hits the Window</h2>

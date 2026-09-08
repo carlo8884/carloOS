@@ -104,29 +104,16 @@ export default function LabradorHealthPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the Labrador swim-ear checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Labrador swim-ear checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the post-swim drying notes — an absorbent
-            microfiber dog towel to dry the coat so water does
-            not drip back into the canal, plus a veterinary
-            ear drying solution for the ears after every swim
-            or bath. Educational checklist, not a diagnosis
-            and not a treatment list. Veterinary ear cleaners
-            and cotton balls stay on the sister ear-infections
-            page. Measuring cups, pet scales, slow-feeders,
-            chlorhexidine shampoo, washcloths, and nightlights
-            stay off this list. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Labrador swim-ear checklist"
-            subtitle="Email the towel and ear-drying-solution notes. No spam."
-            ctaText="Email my Labrador swim-ear checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-labrador-health-under-hero"
           />
         </div>
@@ -236,20 +223,9 @@ export default function LabradorHealthPage() {
             washcloths, and nightlights are not shoppable hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Labrador swim-ear kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            swim-ear copy — a microfiber dog towel and a
-            veterinary ear drying solution. Everyday physical
-            gear only. They are not a ranked product list,
-            they are not medications, they are not ear-cleaner
-            or cotton-ball ASINs, they are not measuring cups
-            or slow-feeders, and they do not replace a
-            veterinarian. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/microfiber+dog+towel?s=health-labrador-health"

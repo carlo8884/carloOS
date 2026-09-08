@@ -40,34 +40,23 @@ export default function CherryEyePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Health', href: '/breeds/bulldog' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cherry-eye" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cherry-eye" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog cherry-eye recovery-collar checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog cherry-eye recovery-collar checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the recovery-collar notes — a soft e-collar
-              so the dog cannot paw the prolapsed gland while
-              waiting for surgery or during post-op recovery, plus
-              dog eye wipes to keep the exposed gland from drying
-              out as a short moisture bridge. Educational
-              checklist, not a diagnosis and not a treatment list.
-              Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs,
-              and supplements stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog cherry-eye recovery-collar checklist"
-              subtitle="Email the soft e-collar and dog-eye-wipe notes. No spam."
-              ctaText="Email my dog cherry-eye recovery-collar checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-cherry-eye-under-hero"
             />
           </div>
@@ -101,19 +90,9 @@ export default function CherryEyePage() {
               luxating-patella braces are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog cherry-eye recovery-collar kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              pawing-and-moisture copy — a soft e-collar and dog
-              eye wipes. Everyday physical gear only. They are
-              not a ranked product list, they are not medications,
-              they are not Rx eye-drop ASINs, they are not
-              supplements, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+e+collar+dog?s=health-cherry-eye"
@@ -123,7 +102,7 @@ export default function CherryEyePage() {
                 amazonHref="/go/amazon-brand/dog+eye+wipes?s=health-cherry-eye"
                 amazonLabel="Browse dog eye wipes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

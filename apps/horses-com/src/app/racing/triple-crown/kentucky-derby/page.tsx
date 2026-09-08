@@ -168,41 +168,16 @@ export default function KentuckyDerbyPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the kentucky-derby checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Kentucky-derby checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-run-for-the-roses-chart,
-              stall-door-churchill-ten-furlong-card, and
-              equine-derby-points-prep-handbook notes
-              that match the Run-for-the-Roses tradition,
-              Churchill Downs / mile-and-a-quarter, and
-              points-based-prep-series copy on this page — a
-              laminated horse Run-for-the-Roses chart so the
-              garland / first-Saturday-in-May notes are
-              posted on the stall door (not a Derby-Preakness-
-              Belmont chart, not an OTTB trail-confidence
-              chart), a horse stall-door Churchill-ten-furlong
-              card so the mile-and-a-quarter / crowded-field
-              notes are labeled at the barn (not a Belmont-test
-              card, not a graduated-exposure card), and an
-              equine Derby-points-prep handbook so the
-              qualifying-series / road-to-the-Derby grounding
-              is a physical barn book (not a thirteen-winner
-              handbook, not an OTTB calm-pleasure handbook).
-              Educational barn checklist, not a ranked race
-              list, not a first-aid-kit hop, and not a
-              substitute for a veterinarian. Horses.com does
-              not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Kentucky-derby checklist"
-              subtitle="Email the Run-for-the-Roses chart, Churchill-ten-furlong card, and Derby-points-prep handbook notes. No spam."
-              ctaText="Email my triple-crown-kentucky-derby checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="triple-crown-kentucky-derby-under-hero"
             />
           </div>
@@ -261,43 +236,18 @@ export default function KentuckyDerbyPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs triple-crown hub /
               ottb-in-trail-and-pleasure hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the kentucky-derby barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page Run-for-the-Roses, Churchill Downs /
-              mile-and-a-quarter, and points-based-prep
-              copy — a laminated horse Run-for-the-Roses
-              chart, a horse stall-door Churchill-ten-furlong
-              card, and an equine Derby-points-prep handbook.
-              Educational barn searches only. They are not a
-              ranked race list, they are not a triple-crown
-              hub / ottb-in-trail-and-pleasure hop, they are
-              not a first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+run+for+the+roses+chart?s=triple-crown-kentucky-derby"
-                amazonLabel="Browse laminated horse Run-for-the-Roses charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=triple-crown-kentucky-derby"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+churchill+ten+furlong+card?s=triple-crown-kentucky-derby"
-                amazonLabel="Browse horse stall-door Churchill-ten-furlong cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+derby+points+prep+handbook?s=triple-crown-kentucky-derby"
-                amazonLabel="Browse equine Derby-points-prep handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

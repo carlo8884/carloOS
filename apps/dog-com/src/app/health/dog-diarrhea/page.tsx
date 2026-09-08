@@ -41,35 +41,23 @@ export default function DogDiarrheaPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vomiting', href: '/health/dog-vomiting' }, { label: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
           <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-diarrhea" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-diarrhea" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-diarrhea home-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-diarrhea home-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes — a canine-specific OTC
-              probiotic for digestive support, plus optional
-              plain canned pumpkin (100% pumpkin, not pie
-              filling) when a veterinarian agrees it fits a
-              mild large-intestinal episode. Educational
-              checklist, not a diagnosis and not a treatment
-              list. Antibiotics, metronidazole, Imodium,
-              Pepto-Bismol, and prescription GI diets stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-diarrhea home-care checklist"
-              subtitle="Email the OTC probiotic and plain-pumpkin notes. No spam."
-              ctaText="Email my dog-diarrhea home-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-diarrhea-under-hero"
             />
           </div>
@@ -112,19 +100,9 @@ export default function DogDiarrheaPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-diarrhea home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              home-care copy — a dog probiotic and plain canned
-              pumpkin. Everyday OTC physical products only. They
-              are not a ranked product list, they are not
-              medications, they are not prescription GI-diet
-              ASINs, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+probiotic?s=health-dog-diarrhea"
@@ -134,7 +112,7 @@ export default function DogDiarrheaPage() {
                 amazonHref="/go/amazon-brand/plain+canned+pumpkin+dog?s=health-dog-diarrhea"
                 amazonLabel="Browse plain canned pumpkin for dogs on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

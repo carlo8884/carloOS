@@ -116,57 +116,16 @@ export default function LeasingHorsePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the horse-lease agreement checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse-lease agreement checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the horse-lease-agreement-binder,
-              lease-walkthrough-checklist, and
-              full-versus-partial cost-share
-              notes that match the what-a-lease-is,
-              full-versus-partial, on-site-versus-
-              off-site, and written-agreement copy
-              on this page — a horse lease
-              agreement document binder so the
-              term, fee, cost split, permitted use,
-              veterinary decisions, insurance, and
-              early-end conditions stay in writing
-              (not a boarding-contract binder, not
-              an insurance-policy binder, not a
-              pre-purchase exam records binder, not
-              a keep-feed-farrier cost-log binder),
-              a laminated horse lease walkthrough
-              checklist so term, fee, riding days,
-              activity limits, who-pays-vet, and
-              early-end steps stay visible before
-              anyone signs (not a vet-interview
-              checklist, not a first-horse tryout
-              walkthrough, not a boarding-facility
-              walkthrough, not an insurance-claims
-              checklist), and a horse full vs
-              partial lease cost-share worksheet so
-              full-lease versus half-lease riding
-              days and who pays board, farrier, and
-              routine vet stay on one page (not a
-              monthly-budget worksheet, not a
-              mortality-versus-major-medical
-              worksheet, not an emergency-fund
-              expense tracker). Educational owner
-              lease-readiness tools only, not a
-              ranked product list, not a legal form
-              for a specific state, and not a
-              substitute for a written agreement
-              reviewed with an equine attorney.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse-lease agreement checklist"
-              subtitle="Email the lease-agreement-binder, walkthrough-checklist, and full-versus-partial notes. No spam."
-              ctaText="Email my horse-lease agreement checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-leasing-a-horse-under-hero"
             />
           </div>
@@ -187,14 +146,7 @@ export default function LeasingHorsePage() {
             document binder (that lives on
             horse-insurance), and not a horse
             pre-purchase exam records binder
-            (that lives on buying-your-first-horse).
-            This page does not hop owner-guides
-            charts, calculator-tools charts, or
-            forage-first charts already pinned on
-            those hubs. This page does not hop
-            legal-form marketplaces or re-rank
-            lease templates.
-          </p>
+            (that lives on buying-your-first-horse). </p>
 
           <h2 id="types">Full vs Partial Lease</h2>
           <p>The two broad types differ by how much of the horse the lessee gets. In a full lease, the lessee has the horse essentially to themselves and typically covers all or most of its costs -- board, farrier, routine vet, and so on -- almost like temporary ownership. In a partial or share lease (often a half lease), the lessee rides on certain days and shares the costs proportionally with the owner or other sharers. Partial leases suit riders wanting regular riding at a fraction of full cost.</p>
@@ -217,32 +169,11 @@ export default function LeasingHorsePage() {
             does not hop keep-feed-farrier cost
             logs, farrier log books, or VCPR
             records folders already pinned
-            elsewhere. This page does not hop
-            medications or vaccines.
-          </p>
+            elsewhere. </p>
 
           <h2 id="location">On-Site vs Off-Site</h2>
           <p>Leases also differ by where the horse stays. In an on-site lease the horse remains at its current barn, which is common for partial leases and keeps the owner close and the routine stable. In an off-site lease the lessee moves the horse to their own yard, more typical of a full lease and giving more independence but also more responsibility. The location affects cost, oversight, and how much the owner stays involved in the horse&apos;s daily life.</p>
-          <p>
-            The same laminated horse lease
-            walkthrough checklist is how
-            on-site-versus-off-site, who keeps
-            the daily routine, and who pays
-            haul-in or home-yard costs stay
-            visible before the horse moves —
-            it is not a laminated horse boarding
-            facility walkthrough checklist
-            (that lives on boarding-options and
-            scores a yard visit, not a lease
-            of the horse), not a waterproof
-            horse hay-bale storage tarp (that
-            lives on boarding-options), and not
-            a horse shipping-boots hop (that
-            lives on trailering). This page
-            does not hop hay racks, feed bins,
-            or stall-bedding already pinned on
-            boarding and nutrition pages.
-          </p>
+          
 
           <h2 id="agreement">The Lease Agreement</h2>
           <ul>
@@ -265,106 +196,16 @@ export default function LeasingHorsePage() {
             records folder (that lives on
             choosing-a-vet), and not a horse
             insurance policy document binder
-            (that lives on horse-insurance).
-            This page does not hop
-            insurance-carrier deep links,
-            after-hours emergency-cover
-            question cards, or first-aid
-            saline / pads / scissors already
-            pinned on first-aid-kit. This
+            (that lives on horse-insurance). This
             page does not invent clinic
-            listings.
-          </p>
+            listings. </p>
 
           <h2 id="proscons">Pros and Cons</h2>
           <p>Leasing lets a rider gain experience, ride regularly, and try the responsibilities of ownership at lower cost and risk, with the flexibility to walk away at the end of the term -- ideal for testing whether you are ready to buy. The downsides are that you do not own the horse and may have to give it up, you ride within the owner&apos;s rules, and a poorly defined arrangement can lead to disputes over costs, care decisions, and an injured horse. A good lease rests on a fair, specific, written agreement and a trustworthy owner.</p>
-          <p>
-            A laminated horse lease walkthrough
-            checklist is how term, fee, riding
-            days, activity limits, who-pays-vet,
-            and early-end steps stay visible
-            when a dispute is forming — it is
-            not a laminated equine-vet interview
-            checklist (that lives on
-            choosing-a-vet), not a laminated
-            first-horse tryout walkthrough
-            checklist (that lives on
-            buying-your-first-horse), and not a
-            laminated horse insurance claims
-            checklist (that lives on
-            horse-insurance). This page does
-            not hop emergency-triage charts,
-            vital-signs cards, or daily-care
-            charts already pinned on the health
-            and care hubs. This page does not
-            hop medications. This page does
-            not claim hands-on testing.
-          </p>
+          
 
           <h2 id="kit">Horse-lease leftover agreement kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            what-a-lease-is, full-versus-partial,
-            on-site-versus-off-site, and
-            written-agreement copy on this page —
-            a horse lease agreement document
-            binder so the term, fee, cost split,
-            permitted use, veterinary decisions,
-            insurance, and early-end conditions
-            stay in writing, a laminated horse
-            lease walkthrough checklist so term,
-            fee, riding days, activity limits,
-            who-pays-vet, and early-end steps
-            stay visible before anyone signs,
-            and a horse full vs partial lease
-            cost-share worksheet so full-lease
-            versus half-lease riding days and
-            who pays board, farrier, and routine
-            vet stay on one page. These are
-            educational owner searches, not a
-            ranked product list, not a legal
-            form for a specific state, not a
-            substitute for a written agreement
-            reviewed with an equine attorney,
-            not a monthly-budget-worksheet /
-            emergency-fund-tracker /
-            keep-feed-farrier-cost-log hop
-            (those live on cost-of-owning-a-horse),
-            not a laminated equine-vet interview
-            checklist / after-hours emergency-cover
-            question card / VCPR records folder
-            hop (those live on choosing-a-vet),
-            not a first-horse tryout walkthrough /
-            buyer-visit-notebook /
-            pre-purchase-exam-records-binder hop
-            (those live on buying-your-first-horse),
-            not a boarding-facility walkthrough /
-            boarding-contract-binder / hay-bale-tarp
-            hop (those live on boarding-options),
-            not a horse-insurance-policy-binder /
-            insurance-claims-checklist /
-            mortality-versus-major-medical
-            worksheet hop (those live on
-            horse-insurance), not a first-aid
-            saline / pads / scissors hop, not a
-            daily-care-chart / stall-door-care-card
-            / husbandry-handbook hop (those live
-            on the care hub), not an
-            emergency-triage-chart /
-            vital-signs-card / health-handbook
-            hop, not a forage-first-chart /
-            ration-card / nutrition-handbook hop,
-            not an owner-guides-chart hop, not a
-            calculator-tools-chart hop, not a
-            farrier-log / flood-light hop, and
-            not a weatherproof-clipboard hop.
-            This page does not hop medications
-            or vaccines. This page does not
-            claim hands-on testing. This page
-            does not invent clinic listings.
-            This page does not hop
-            insurance-carrier deep links.
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -430,57 +271,23 @@ export default function LeasingHorsePage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse-lease leftover agreement kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page what-a-lease-is, full-versus-
-              partial, on-site-versus-off-site, and
-              written-agreement copy — a horse lease
-              agreement document binder, a laminated
-              horse lease walkthrough checklist, and
-              a horse full vs partial lease
-              cost-share worksheet. Educational
-              owner searches only. They are not a
-              ranked product list, they are not a
-              legal form for a specific state, they
-              are not a monthly-budget /
-              emergency-fund / keep-feed-farrier
-              hop, they are not a choosing-a-vet
-              interview / after-hours-cover /
-              VCPR-folder hop, they are not a
-              first-horse tryout / buyer-notebook /
-              PPE-records hop, they are not a
-              boarding walkthrough / contract-binder
-              / hay-tarp hop, they are not a
-              horse-insurance policy-binder /
-              claims-checklist / mortality-versus-
-              medical hop, they are not a first-aid
-              saline / pads / scissors hop, they
-              are not a daily-care / emergency-triage
-              / owner-guides / calculator-tools
-              chart hop, they are not a farrier-log
-              hop, and they do not replace a written
-              agreement reviewed with an equine
-              attorney. Horses.com earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+lease+agreement+document+binder?s=ownership-leasing-a-horse"
                 amazonLabel="Browse horse lease agreement document binders on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+lease+walkthrough+checklist?s=ownership-leasing-a-horse"
-                amazonLabel="Browse laminated horse lease walkthrough checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=ownership-leasing-a-horse"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+full+vs+partial+lease+cost+share+worksheet?s=ownership-leasing-a-horse"
                 amazonLabel="Browse horse full vs partial lease cost-share worksheets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

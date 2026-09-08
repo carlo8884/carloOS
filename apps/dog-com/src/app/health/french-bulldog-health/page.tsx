@@ -98,28 +98,16 @@ export default function FrenchBulldogHealthPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the Frenchie heat-care checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Frenchie heat-care checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the heat-care notes — a cooling mat the dog can
-            lie on indoors, plus a cooling vest for short outdoor
-            trips when a cool environment is not already available.
-            Educational checklist, not a diagnosis and not a
-            treatment list. Cool-water towels and digital
-            thermometers stay on the sister heat-stroke first-aid
-            page. Ice packs, ramps, fold wipes, Rx eye drops, and
-            BOAS / IVDD clinical treatments stay off this list.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Frenchie heat-care checklist"
-            subtitle="Email the cooling-mat and cooling-vest notes. No spam."
-            ctaText="Email my Frenchie heat-care checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-french-bulldog-health-under-hero"
           />
         </div>
@@ -205,18 +193,9 @@ export default function FrenchBulldogHealthPage() {
             shoppable hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Frenchie heat-care kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            heat-care copy — a cooling mat and a cooling vest.
-            Everyday physical gear only. They are not a ranked
-            product list, they are not medications, they are not
-            heatstroke first-aid ASINs, and they do not replace
-            a veterinarian. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health"

@@ -115,23 +115,16 @@ export default function MultiLevelHousingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the multi-level housing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret multi-level housing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the ramp-cover, PVC-sheet, cable-tie, and carabiner notes
-              so the vertical cage is safer before you add another level.
-              Educational checklist, not a diagnosis and not a medication
-              order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret multi-level housing checklist"
-              subtitle="Email the ramp-cover, PVC-sheet, cable-tie, and carabiner notes. No spam."
-              ctaText="Email my ferret multi-level housing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-multi-level-housing-under-hero"
             />
           </div>
@@ -209,13 +202,9 @@ export default function MultiLevelHousingPage() {
             Everyday physical supplies that match the ramp-safety and door-security
             copy above — fleece ramp covers for traction, PVC sheet as a hard
             ramp liner, cable ties to pin both ends of a ramp, and locking
-            carabiners so a ferret cannot work a cam-latch. Critter Nation
-            cages, sleep sacks, hammocks, corner pans, connecting tunnels, and
-            ceramic crocks stay off this kit — those hops already live on the
-            cage-size, bedding, travel, and proofing pages. These are not a
+            carabiners so a ferret cannot work a cam-latch. These are not a
             treatment for a fracture and not a diagnosis. This page does not
-            claim hands-on testing.
-          </p>
+            claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -227,18 +216,9 @@ export default function MultiLevelHousingPage() {
               medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the vertical-housing kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page ramp-design and
-              door-security copy — fleece ramp covers, PVC sheet for a hard
-              liner, cable ties to anchor both ends, and locking carabiners
-              for every door. Everyday physical supplies only. They are not a
-              ranked product list, they are not a cage or a medication, and
-              they do not replace an exotic-pet veterinarian. Ferret.com
-              earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing"
@@ -256,7 +236,7 @@ export default function MultiLevelHousingPage() {
                 amazonHref="/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"
                 amazonLabel="Browse locking carabiners on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

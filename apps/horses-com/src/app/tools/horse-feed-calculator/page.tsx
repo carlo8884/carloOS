@@ -186,20 +186,14 @@ export default function HorseFeedCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the hay notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Daily hay checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the forage-first daily hay checklist — bodyweight %, as-fed
-            conversion, and the weigh-the-flake habit — so you can set a ration
-            without re-running the calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Daily hay checklist"
-            subtitle="Email the daily hay checklist and forage-first feeding notes. No spam."
-            ctaText="Email my daily hay checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-feed-calculator-under-hero"
           />
         </div>
@@ -231,19 +225,7 @@ export default function HorseFeedCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a barn feed kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches match the forage-first ration you just
-            calculated — timothy hay, a ration balancer for the vitamin/mineral
-            gap forage leaves, a feed scoop (or bucket) so you weigh what goes in
-            the net, a slow-feeder hay net (same query as{' '}
-            <Link href="/nutrition/forage-basics" className="text-brand-primary no-underline hover:underline">
-              forage basics
-            </Link>
-            ), and an equine salt lick / mineral block. They are not a ranked
-            product list and not invented inventory. Horses.com earns a
-            commission on qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"

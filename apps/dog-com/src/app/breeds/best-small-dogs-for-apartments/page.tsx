@@ -67,41 +67,16 @@ export default function BestSmallDogsForApartmentsPage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the apartment-dog checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Apartment-dog checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-apt-shared-wall-chart,
-            dog-fridge-apt-pee-pad-card, dog-apt-puzzle-feeder,
-            dog-apt-quiet-chew, and
-            canine-first-owner-apartment-handbook notes that
-            match the shared-wall noise floor, the third-floor
-            potty logistics, and indoor-exercise notes on this
-            page — a laminated dog apt shared-wall chart so
-            the barking / neighbor notes are posted on the
-            fridge (not a Weim Weimar-court chart, not a
-            Vizsla Magyar-point chart), a fridge apt pee-pad
-            card so the small-bladder / downstairs-trip notes
-            are labeled in the kitchen (not a gray-ghost card,
-            not a finger-toothbrush hop), a puzzle feeder so
-            indoor mental work is on the counter (not a crate
-            hop), a quiet chew so shared-wall chewing stays
-            low-noise, and a first-owner apartment handbook
-            so the temperament-over-size / no-yard grounding
-            is a physical kitchen book (not a first-owner
-            Weimaraner handbook). Educational kitchen
-            checklist, not a ranked product list, not a
-            substitute for a veterinarian. Dog.com does not
-            sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Apartment-dog checklist"
-            subtitle="Email the shared-wall chart, pee-pad card, puzzle feeder, quiet chew, and first-owner handbook notes. No spam."
-            ctaText="Email my apartment-dog checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breeds-apartment-dogs-under-hero"
           />
         </div>
@@ -157,31 +132,14 @@ export default function BestSmallDogsForApartmentsPage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the apartment-dog home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            shared-wall noise floor, the third-floor potty
-            logistics, and indoor-exercise notes — a laminated
-            dog apt shared-wall chart, a fridge apt pee-pad
-            card, a puzzle feeder, a quiet chew, and a first-
-            owner apartment handbook. Educational kitchen
-            searches only. They are not a ranked product
-            list, they are not a crate hop, they are not a
-            finger-toothbrush hop, and they do not replace a
-            veterinarian. Dog.com does not sell insurance.
-            Dog.com earns a commission on qualifying
-            purchases at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+apt+shared+wall+chart?s=breeds-apartment-dogs"
-              amazonLabel="Browse laminated dog apt shared-wall charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+apt+pee+pad+card?s=breeds-apartment-dogs"
-              amazonLabel="Browse fridge apt pee-pad cards on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breeds-apartment-dogs"
+              amazonLabel="Shop on Amazon"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+apt+puzzle+feeder?s=breeds-apartment-dogs"
@@ -190,10 +148,6 @@ export default function BestSmallDogsForApartmentsPage() {
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+apt+quiet+chew?s=breeds-apartment-dogs"
               amazonLabel="Browse apartment-dog quiet chews on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+apartment+handbook?s=breeds-apartment-dogs"
-              amazonLabel="Browse first-owner apartment-dog handbooks on Amazon →"
             />
           </div>
         </div>

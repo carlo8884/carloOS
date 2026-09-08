@@ -104,45 +104,16 @@ export default function CostOfOwningAFerretPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret cost-planning checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret cost-planning checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-startup-budget-chart,
-              fridge-monthly-cost-card, and
-              mustelid-cost-planning-handbook notes
-              that match the startup-vs-recurring-map,
-              surgery-line-item-log, and
-              quesenberry-afa-cost-grounding copy on this
-              page — a laminated ferret startup-budget chart
-              so the cage / supplies / ferret-is-smallest-line
-              map is posted on the fridge (not an
-              ownership-hub section map, not a
-              buy-first-checklist chart, not a
-              first-week-map chart), a ferret fridge
-              monthly-cost card so food / litter /
-              replacement notes are labeled on the fridge
-              (not an ownership-prep card, not a
-              housing-litter card, not an arrival-day
-              card), and a mustelid cost-planning handbook
-              so the Quesenberry / AFA illness-vs-upkeep
-              grounding is a physical kitchen book (not an
-              ownership-reference handbook, not a
-              supplies-checklist handbook, not a first-week
-              handbook). Educational kitchen checklist,
-              not a ranked insurance list, not a sleep-sack
-              hop, and not a substitute for an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret cost-planning checklist"
-              subtitle="Email the startup-budget-chart, fridge monthly-cost card, and cost-planning-handbook notes. No spam."
-              ctaText="Email my ferret cost-planning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-cost-of-owning-a-ferret-under-hero"
             />
           </div>
@@ -231,44 +202,19 @@ export default function CostOfOwningAFerretPage() {
               or PLACEHOLDER. Unused vs ownership-hub /
               first-week / supplies / cost-calculator
               kitchen kits. Directory import left
-              untouched. Ferret aging stays held.
+              untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret cost-planning kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page startup-vs-recurring-map,
-              surgery-line-item-log, and
-              quesenberry-afa-cost-grounding copy — a
-              laminated ferret startup-budget chart, a
-              ferret fridge monthly-cost card, and a
-              mustelid cost-planning handbook.
-              Educational kitchen searches only. They are
-              not a ranked insurance list, they are not an
-              ownership-hub / first-week / supplies hop,
-              they are not a child toothbrush hop, and they
-              do not replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance. Ferret.com
-              earns a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+startup+budget+chart?s=cost-of-owning-a-ferret"
-                amazonLabel="Browse laminated ferret startup-budget charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=cost-of-owning-a-ferret"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+monthly+cost+card?s=cost-of-owning-a-ferret"
-                amazonLabel="Browse ferret fridge monthly-cost cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+cost+planning+handbook?s=cost-of-owning-a-ferret"
-                amazonLabel="Browse mustelid cost-planning handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

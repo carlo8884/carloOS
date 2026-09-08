@@ -149,43 +149,16 @@ export default function DogTreatsGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog treats checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog treats checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-dog-treat-kcal-chart,
-              fridge-vohc-seal-card, and
-              canine-jerky-fda-handbook notes
-              that match the treat-kcal-budget-map,
-              vohc-seal-log, and
-              jerky-fda-grounding copy on this
-              page — a laminated dog treat-kcal chart so
-              the 10% / write-max-count-on-the-bag map is
-              posted on the fridge (not a rib-waist chart,
-              not a twice-daily chart, not a
-              ten-percent-treat chart), a dog fridge
-              VOHC-seal card so dental-chew / Seal-of-Acceptance
-              notes are labeled on the fridge (not a
-              kcal-scale card, not a life-stage-meal
-              card, not an ideal-weight card), and a canine
-              jerky-FDA handbook so the 2007–2017 CVM
-              investigation grounding is a physical
-              kitchen book (not a low-impact-walk handbook,
-              not a GDV-timing handbook, not an
-              RER-portion handbook). Educational kitchen
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for a
-              veterinarian. Dog.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog treats checklist"
-              subtitle="Email the treat-kcal chart, fridge VOHC-seal card, and jerky-FDA-handbook notes. No spam."
-              ctaText="Email my dog treats checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-treats-under-hero"
             />
           </div>
@@ -407,45 +380,18 @@ export default function DogTreatsGuidePage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs weight-management /
               feeding-frequency / how-much-to-feed hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog treats kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page treat-kcal-budget-map,
-              vohc-seal-log, and
-              jerky-fda-grounding copy — a
-              laminated dog treat-kcal chart, a
-              dog fridge VOHC-seal card, and a
-              canine jerky-FDA handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a weight-management / feeding-frequency /
-              how-much-to-feed hop, they are not a
-              first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Dog.com does not sell
-              insurance. Dog.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+treat+kcal+chart?s=nutrition-treats"
-                amazonLabel="Browse laminated dog treat-kcal charts on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-treats"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+fridge+vohc+seal+card?s=nutrition-treats"
-                amazonLabel="Browse dog fridge VOHC-seal cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/canine+jerky+fda+handbook?s=nutrition-treats"
-                amazonLabel="Browse canine jerky-FDA handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

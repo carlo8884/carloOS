@@ -209,39 +209,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'dressage' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dressage-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dressage-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-plain-flap-dressage-saddle-chart,
-                stall-door-white-square-pad-card, and
-                equine-snaffle-eggbutt-bridle-handbook notes
-                that match the plain-flap saddle, white-square
-                pad, and snaffle / eggbutt copy on this page —
-                a laminated horse plain-flap dressage-saddle
-                chart so the long-leg / deep-seat notes are
-                posted on the stall door (not a training-pyramid
-                chart, not a breeze-up-gallop chart), a horse
-                stall-door white-square-pad card so the USDF /
-                competition-presentation notes are labeled at
-                the barn (not a USDF-level card, not a
-                bid-spotter card), and an equine snaffle-
-                eggbutt-bridle handbook so the DR121 bit-list
-                grounding is a physical barn book (not a
-                double-bridle handbook, not a pinhook-sale-
-                topper handbook). Educational barn checklist,
-                not a ranked tack list, not a first-aid-kit
-                hop, and not a substitute for a veterinarian.
-                Horses.com does not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Dressage-equipment checklist"
-                subtitle="Email the plain-flap-saddle chart, white-square-pad card, and snaffle-eggbutt-bridle handbook notes. No spam."
-                ctaText="Email my dressage-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-dressage-under-hero"
               />
             </div>
@@ -250,39 +227,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'show-jumping' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the show-jumping-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Show-jumping-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-close-contact-forward-flap-chart,
-                stall-door-shaped-jump-pad-card, and
-                equine-figure-eight-grackle-bridle-handbook notes
-                that match the close-contact / forward-cut-flap saddle,
-                square-or-shaped jump pad, and flash / figure-eight
-                (grackle) copy on this page — a laminated horse
-                close-contact forward-flap chart so the flatter-seat /
-                knee-block notes are posted on the stall door (not a
-                jumper-course chart, not a plain-flap dressage-saddle
-                chart), a horse stall-door shaped-jump-pad card so the
-                schooling / competition-pad notes are labeled at the
-                barn (not a USEF-jumper-level card, not a
-                white-square-pad card), and an equine figure-eight-
-                grackle-bridle handbook so the USEF JP / flash-noseband
-                grounding is a physical barn book (not an
-                open-front-boot handbook, not a snaffle-eggbutt-bridle
-                handbook). Educational barn checklist, not a ranked
-                tack list, not a first-aid-kit hop, and not a
-                substitute for a veterinarian. Horses.com does not
-                sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Show-jumping-equipment checklist"
-                subtitle="Email the close-contact-forward-flap chart, shaped-jump-pad card, and figure-eight-grackle-bridle handbook notes. No spam."
-                ctaText="Email my show-jumping-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-show-jumping-under-hero"
               />
             </div>
@@ -291,40 +245,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'eventing' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the eventing-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Eventing-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-beta-level-three-protector-chart,
-                stall-door-medical-armband-card, and
-                equine-stud-kit-xc-handbook notes that match the
-                BETA Level 3 body protector, medical armband, and
-                stud-kit copy on this page — a laminated horse
-                BETA-level-three-protector chart so the USEF EV114
-                / body-protector notes are posted on the stall
-                door (not a USEA-eventing-level chart, not a
-                close-contact-forward-flap chart), a horse
-                stall-door medical-armband card so the
-                wristband / current-medical-info notes are
-                labeled at the barn (not a CCI5-event card, not
-                a shaped-jump-pad card), and an equine stud-kit-
-                xc handbook so the screw-in-stud / grass-grip
-                grounding is a physical barn book (not a
-                frangible-pin handbook, not a
-                figure-eight-grackle-bridle handbook).
-                Educational barn checklist, not a ranked tack
-                list, not a first-aid-kit hop, and not a
-                substitute for a veterinarian. Horses.com does
-                not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Eventing-equipment checklist"
-                subtitle="Email the BETA-level-three-protector chart, medical-armband card, and stud-kit-xc handbook notes. No spam."
-                ctaText="Email my eventing-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-eventing-under-hero"
               />
             </div>
@@ -333,40 +263,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'western-pleasure' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the western-pleasure-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Western-pleasure-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-silver-mounted-show-saddle-chart,
-                stall-door-wool-felt-show-blanket-card, and
-                equine-curb-shank-eight-five-handbook notes that
-                match the silver-mounted show saddle, wool/felt
-                show blanket, and 8.5-inch curb-shank copy on
-                this page — a laminated horse silver-mounted
-                show-saddle chart so the flatter-seat / hand-
-                tooled notes are posted on the stall door (not
-                an AQHA-pleasure-gait chart, not a BETA-level-
-                three-protector chart), a horse stall-door
-                wool-felt-show-blanket card so the Navajo /
-                friction-pad notes are labeled at the barn
-                (not an AQHA-world-show card, not a medical-
-                armband card), and an equine curb-shank-eight-
-                five handbook so the AQHA Rule 444 / shank-
-                length grounding is a physical barn book (not
-                a SHW340-lope handbook, not a stud-kit-xc
-                handbook). Educational barn checklist, not a
-                ranked tack list, not a first-aid-kit hop, and
-                not a substitute for a veterinarian.
-                Horses.com does not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Western-pleasure-equipment checklist"
-                subtitle="Email the silver-mounted-show-saddle chart, wool-felt-show-blanket card, and curb-shank-eight-five handbook notes. No spam."
-                ctaText="Email my western-pleasure-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-western-pleasure-under-hero"
               />
             </div>
@@ -375,40 +281,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'reining' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the reining-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Reining-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-undercut-pommel-reining-saddle-chart,
-                stall-door-sliding-plate-card, and
-                equine-skid-boot-nrha-handbook notes that match
-                the undercut-pommel reining saddle, sliding
-                plates, and skid-boot copy on this page — a
-                laminated horse undercut-pommel reining-saddle
-                chart so the close-contact-skirt / deep-slick-
-                seat notes are posted on the stall door (not
-                an NRHA-maneuver chart, not a silver-mounted
-                show-saddle chart), a horse stall-door
-                sliding-plate card so the hind-shoe / farrier
-                notes are labeled at the barn (not an NRHA-
-                level card, not a wool-felt-show-blanket
-                card), and an equine skid-boot-nrha handbook
-                so the Section 9 / hind-fetlock grounding is
-                a physical barn book (not a sliding-stop
-                handbook, not a curb-shank-eight-five
-                handbook). Educational barn checklist, not a
-                ranked tack list, not a first-aid-kit hop, and
-                not a substitute for a veterinarian.
-                Horses.com does not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Reining-equipment checklist"
-                subtitle="Email the undercut-pommel-reining-saddle chart, sliding-plate card, and skid-boot-nrha handbook notes. No spam."
-                ctaText="Email my reining-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-reining-under-hero"
               />
             </div>
@@ -417,41 +299,16 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {data.slug === 'trail-riding' ? (
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the trail-riding-equipment checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Trail-riding-equipment checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-horse-flex-tree-trail-saddle-chart,
-                stall-door-halter-bridle-combo-card, and
-                equine-pommel-cantle-bag-handbook notes that
-                match the flex-tree trail/endurance saddle,
-                halter-bridle combination, and pommel/cantle
-                bag copy on this page — a laminated horse
-                flex-tree trail-saddle chart so the D-ring /
-                long-mileage notes are posted on the stall
-                door (not a trail-etiquette chart, not an
-                undercut-pommel reining-saddle chart), a
-                horse stall-door halter-bridle-combo card so
-                the snap-off-bit / vet-check notes are
-                labeled at the barn (not a NATRC-pace card,
-                not a sliding-plate card), and an equine
-                pommel-cantle-bag handbook so the cordura /
-                snack-and-tool grounding is a physical barn
-                book (not an AERC-endurance handbook, not a
-                skid-boot-nrha handbook). Educational barn
-                checklist, not a ranked tack list, not a
-                first-aid-kit hop, and not a substitute for
-                a veterinarian. Horses.com does not sell
-                insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Trail-riding-equipment checklist"
-                subtitle="Email the flex-tree-trail-saddle chart, halter-bridle-combo card, and pommel-cantle-bag handbook notes. No spam."
-                ctaText="Email my trail-riding-equipment checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="discipline-equipment-trail-riding-under-hero"
               />
             </div>
@@ -685,44 +542,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/dressage
                   overview / how-thoroughbred-sales-work hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the dressage-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page plain-flap saddle, white-square pad,
-                  and snaffle / eggbutt copy — a laminated
-                  horse plain-flap dressage-saddle chart, a
-                  horse stall-door white-square-pad card, and
-                  an equine snaffle-eggbutt-bridle handbook.
-                  Educational barn searches only. They are not
-                  a ranked tack list, they are not a
-                  dressage-overview / how-thoroughbred-sales-
-                  work hop, they are not a first-aid-kit hop,
-                  they are not a child toothbrush hop, and they
-                  do not replace a veterinarian. Horses.com
-                  does not sell insurance. Horses.com earns a
-                  commission on qualifying purchases at no
-                  extra cost to you. Empty Chewy buttons stay
-                  hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+plain+flap+dressage+saddle+chart?s=discipline-equipment-dressage"
-                    amazonLabel="Browse laminated horse plain-flap dressage-saddle charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-dressage"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+white+square+pad+card?s=discipline-equipment-dressage"
-                    amazonLabel="Browse horse stall-door white-square-pad cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+snaffle+eggbutt+bridle+handbook?s=discipline-equipment-dressage"
-                    amazonLabel="Browse equine snaffle-eggbutt-bridle handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -741,45 +572,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/show-jumping
                   overview / dressage-equipment hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the show-jumping-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page close-contact / forward-cut-flap
-                  saddle, square-or-shaped jump pad, and flash /
-                  figure-eight (grackle) copy — a laminated
-                  horse close-contact forward-flap chart, a
-                  horse stall-door shaped-jump-pad card, and
-                  an equine figure-eight-grackle-bridle
-                  handbook. Educational barn searches only.
-                  They are not a ranked tack list, they are
-                  not a show-jumping-overview /
-                  dressage-equipment hop, they are not a
-                  first-aid-kit hop, they are not a child
-                  toothbrush hop, and they do not replace a
-                  veterinarian. Horses.com does not sell
-                  insurance. Horses.com earns a commission on
-                  qualifying purchases at no extra cost to
-                  you. Empty Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+close+contact+forward+flap+chart?s=discipline-equipment-show-jumping"
-                    amazonLabel="Browse laminated horse close-contact forward-flap charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-show-jumping"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+shaped+jump+pad+card?s=discipline-equipment-show-jumping"
-                    amazonLabel="Browse horse stall-door shaped-jump-pad cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+figure+eight+grackle+bridle+handbook?s=discipline-equipment-show-jumping"
-                    amazonLabel="Browse equine figure-eight-grackle-bridle handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -798,44 +602,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/eventing
                   overview / show-jumping-equipment hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the eventing-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page BETA Level 3 body protector, medical
-                  armband, and stud-kit copy — a laminated
-                  horse BETA-level-three-protector chart, a
-                  horse stall-door medical-armband card, and
-                  an equine stud-kit-xc handbook. Educational
-                  barn searches only. They are not a ranked
-                  tack list, they are not an
-                  eventing-overview / show-jumping-equipment
-                  hop, they are not a first-aid-kit hop, they
-                  are not a child toothbrush hop, and they do
-                  not replace a veterinarian. Horses.com does
-                  not sell insurance. Horses.com earns a
-                  commission on qualifying purchases at no
-                  extra cost to you. Empty Chewy buttons stay
-                  hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+beta+level+three+protector+chart?s=discipline-equipment-eventing"
-                    amazonLabel="Browse laminated horse BETA-level-three-protector charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-eventing"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+medical+armband+card?s=discipline-equipment-eventing"
-                    amazonLabel="Browse horse stall-door medical-armband cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+stud+kit+xc+handbook?s=discipline-equipment-eventing"
-                    amazonLabel="Browse equine stud-kit-xc handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -854,44 +632,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/western-pleasure
                   overview / eventing-equipment hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the western-pleasure-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page silver-mounted show saddle, wool/felt
-                  show blanket, and 8.5-inch curb-shank copy —
-                  a laminated horse silver-mounted show-saddle
-                  chart, a horse stall-door wool-felt-show-
-                  blanket card, and an equine curb-shank-eight-
-                  five handbook. Educational barn searches
-                  only. They are not a ranked tack list, they
-                  are not a western-pleasure-overview /
-                  eventing-equipment hop, they are not a
-                  first-aid-kit hop, they are not a child
-                  toothbrush hop, and they do not replace a
-                  veterinarian. Horses.com does not sell
-                  insurance. Horses.com earns a commission on
-                  qualifying purchases at no extra cost to
-                  you. Empty Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+silver+mounted+show+saddle+chart?s=discipline-equipment-western-pleasure"
-                    amazonLabel="Browse laminated horse silver-mounted show-saddle charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-western-pleasure"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+wool+felt+show+blanket+card?s=discipline-equipment-western-pleasure"
-                    amazonLabel="Browse horse stall-door wool-felt-show-blanket cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+curb+shank+eight+five+handbook?s=discipline-equipment-western-pleasure"
-                    amazonLabel="Browse equine curb-shank-eight-five handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -910,44 +662,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/reining
                   overview / western-pleasure-equipment hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the reining-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page undercut-pommel reining saddle,
-                  sliding plates, and skid-boot copy — a
-                  laminated horse undercut-pommel reining-
-                  saddle chart, a horse stall-door sliding-
-                  plate card, and an equine skid-boot-nrha
-                  handbook. Educational barn searches only.
-                  They are not a ranked tack list, they are
-                  not a reining-overview / western-pleasure-
-                  equipment hop, they are not a first-aid-kit
-                  hop, they are not a child toothbrush hop,
-                  and they do not replace a veterinarian.
-                  Horses.com does not sell insurance.
-                  Horses.com earns a commission on qualifying
-                  purchases at no extra cost to you. Empty
-                  Chewy buttons stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+undercut+pommel+reining+saddle+chart?s=discipline-equipment-reining"
-                    amazonLabel="Browse laminated horse undercut-pommel reining-saddle charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-reining"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+sliding+plate+card?s=discipline-equipment-reining"
-                    amazonLabel="Browse horse stall-door sliding-plate cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+skid+boot+nrha+handbook?s=discipline-equipment-reining"
-                    amazonLabel="Browse equine skid-boot-nrha handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}
@@ -966,45 +692,18 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/trail-riding
                   overview / reining-equipment hops.
-                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop the trail-riding-equipment barn kit
+                  Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                  These Amazon category searches match the
-                  on-page flex-tree trail/endurance saddle,
-                  halter-bridle combination, and pommel/cantle
-                  bag copy — a laminated horse flex-tree
-                  trail-saddle chart, a horse stall-door
-                  halter-bridle-combo card, and an equine
-                  pommel-cantle-bag handbook. Educational
-                  barn searches only. They are not a ranked
-                  tack list, they are not a trail-riding-
-                  overview / reining-equipment hop, they are
-                  not a first-aid-kit hop, they are not a
-                  child toothbrush hop, and they do not
-                  replace a veterinarian. Horses.com does
-                  not sell insurance. Horses.com earns a
-                  commission on qualifying purchases at no
-                  extra cost to you. Empty Chewy buttons
-                  stay hidden.
-                </p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/laminated+horse+flex+tree+trail+saddle+chart?s=discipline-equipment-trail-riding"
-                    amazonLabel="Browse laminated horse flex-tree trail-saddle charts on Amazon →"
+                    amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-trail-riding"
+                    amazonLabel="Shop on Amazon"
                   />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+stall+door+halter+bridle+combo+card?s=discipline-equipment-trail-riding"
-                    amazonLabel="Browse horse stall-door halter-bridle-combo cards on Amazon →"
-                  />
-                  <ShopCtas
-                    amazonHref="/go/amazon-brand/equine+pommel+cantle+bag+handbook?s=discipline-equipment-trail-riding"
-                    amazonLabel="Browse equine pommel-cantle-bag handbooks on Amazon →"
-                  />
-                </div>
+          </div>
               </div>
             </>
           ) : null}

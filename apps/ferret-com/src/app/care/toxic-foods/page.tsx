@@ -187,19 +187,13 @@ export default function FerretToxicFoodsPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Ferret toxic-foods cheat sheet
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the fridge-door list — chocolate, xylitol, onions, grapes,
-              and the avoid-as-treats swap (meat treats, not raisins or yogurt
-              drops) — so you are not scrolling mid-crisis. Educational
-              checklist, not a diagnosis or a substitute for poison control.
-              No spam.
-            </p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret toxic-foods cheat sheet"
-              subtitle="Email the toxic list and the safe-treats swap. No spam."
-              ctaText="Email my ferret toxic-foods cheat sheet"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-toxic-foods-under-hero"
             />
           </div>
@@ -371,30 +365,7 @@ export default function FerretToxicFoodsPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop safe-treat and feeding gear
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page toxic-foods
-              and safe-treats copy — ferret-safe treats, freeze-dried meat
-              treats, a heavy ceramic food bowl, a backup water bottle, and
-              ferret-safe chew toys. Same freeze-dried-treat hop used on the{' '}
-              <Link
-                href="/tools/food-evaluator"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                food evaluator
-              </Link>
-              {' '}and the complementary{' '}
-              <Link
-                href="/diet/safe-treats"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                safe treats
-              </Link>
-              {' '}guide. They are not a ranked product list, they are not
-              medications, and they do not diagnose, treat, or replace
-              poison control. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+safe+treats?s=care-toxic-foods"
@@ -416,7 +387,7 @@ export default function FerretToxicFoodsPage() {
                 amazonHref="/go/amazon-brand/ferret+chew+toys?s=care-toxic-foods"
                 amazonLabel="Browse ferret-safe chew toys on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/diet/safe-treats" className="text-brand-primary hover:underline">

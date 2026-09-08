@@ -116,58 +116,16 @@ export default function HelmetGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the riding-helmet-fit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Riding-helmet-fit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the fit-and-replace
-              checklist, certification-label
-              question card, and impact-
-              retirement log that match the
-              why-helmets-matter, safety-
-              standards, correct-fit, when-to-
-              replace, and care-and-mistakes
-              copy on this page — a laminated
-              riding helmet fit-and-replace
-              checklist so measure-the-head /
-              sit-level / chinstrap / no-rocking
-              and replace-after-impact stay
-              visible before anyone mounts (not
-              an ASTM+SEI+horse+riding+helmet
-              hop, not a first-horse 90-day
-              week-by-week checklist, not a
-              senior age-related-change
-              checklist), a riding helmet
-              certification-label question card
-              so ASTM/SEI, PAS 015, VG1, and
-              Snell stay posted as the inside-
-              label check (not a buyer-vet-
-              briefing card, not a kick-zone
-              safety card, not a tack-room
-              emergency-plan card), and a
-              riding helmet impact-retirement
-              log notebook so a spent foam
-              after a fall and the
-              manufacturer-advised interval
-              stay written down (not a pain-
-              demeanor change-log, not a
-              weight-and-joint watch notebook,
-              not a first-horse buyer visit
-              notebook). Educational rider
-              safety tools only, not a ranked
-              product list, not a clinic
-              listing, and not a substitute for
-              a certified fitter or a
-              veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Riding-helmet-fit checklist"
-              subtitle="Email the fit-and-replace card, certification-label check, and impact-retirement log. No spam."
-              ctaText="Email my riding-helmet-fit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-helmet-guide-under-hero"
             />
           </div>
@@ -213,30 +171,7 @@ export default function HelmetGuidePage() {
             <li><strong>No rocking or sliding</strong> forward, back, or side to side when the head moves or the harness is done up.</li>
             <li><strong>Replace as children grow</strong> rather than buying big to last, since a loose helmet does not protect.</li>
           </ul>
-          <p>
-            A laminated riding helmet
-            fit-and-replace checklist is how
-            measure-the-head, sit-level, snug-
-            all-around, chinstrap, and no-
-            rocking stay visible before anyone
-            mounts — it is not a laminated
-            first-horse 90-day week-by-week
-            checklist (that lives on the
-            first-horse-roadmap), not a
-            laminated senior horse age-related
-            change checklist (that lives on
-            senior-horse-care), not a
-            laminated horse ear-eye-tail
-            signal checklist (that lives on
-            reading-body-language), and not a
-            laminated first-horse tryout
-            walkthrough checklist (that lives
-            on buying-your-first-horse). This
-            page does not hop boarding
-            walkthroughs, lease walkthroughs,
-            or daily-care charts already
-            pinned on those pages.
-          </p>
+          
 
           <h2 id="replace">When to Replace</h2>
           <p>A helmet must be replaced after any significant impact, even if it looks undamaged, because the protective foam crushes to absorb energy and cannot do so again -- the protection may be spent invisibly. Helmets should also be replaced periodically as materials age (manufacturers commonly advise every few years, often around five, even without a fall), and immediately if cracked, deformed, or damaged. A helmet that has done its job in a fall has earned retirement.</p>
@@ -412,51 +347,13 @@ export default function HelmetGuidePage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the riding-helmet leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page why-helmets-matter, safety-
-              standards, correct-fit, when-to-
-              replace, and care-and-mistakes copy —
-              a laminated riding helmet fit-and-
-              replace checklist, a riding helmet
-              certification-label question card, and
-              a riding helmet impact-retirement log
-              notebook. Educational rider searches
-              only. They are not a ranked product
-              list, they are not a clinic listing,
-              they are not an ASTM+SEI+horse+riding+helmet
-              hop, they are not a first-horse-
-              roadmap 90-day / ground-manners /
-              tack-room-emergency hop, they are
-              not a senior-horse-care hop, they
-              are not a reading-body-language
-              ear-eye-tail / kick-zone /
-              pain-demeanor hop, they are not a
-              pre-purchase-exam stage-walkthrough /
-              findings-worksheet / buyer-vet-
-              briefing hop, they are not a
-              lease / insurance / monthly-budget /
-              choosing-a-vet / first-horse /
-              boarding hop, they are not a
-              first-aid saline / pads / scissors
-              hop, they are not a grimace-scale
-              first-aid-kit / poultice / ice-boot
-              hop, they are not a daily-care /
-              emergency-triage / owner-guides /
-              calculator-tools chart hop, they are
-              not a BCS-chart hop, and they do
-              not replace a certified fitter or a
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases
-              at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+riding+helmet+fit+and+replace+checklist?s=helmet-guide"
-                amazonLabel="Browse laminated riding helmet fit-and-replace checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=helmet-guide"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/riding+helmet+certification+label+question+card?s=helmet-guide"
@@ -466,7 +363,7 @@ export default function HelmetGuidePage() {
                 amazonHref="/go/amazon-brand/riding+helmet+impact+retirement+log+notebook?s=helmet-guide"
                 amazonLabel="Browse riding helmet impact-retirement log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

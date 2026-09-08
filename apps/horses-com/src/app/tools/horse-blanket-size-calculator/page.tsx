@@ -152,20 +152,14 @@ export default function HorseBlanketSizeCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the fit notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horse blanket fit checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the chest-to-tail measuring steps, the round-up-if-between-sizes
-            rule, and winter blanketing tips so you can fit without re-running the
-            calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horse blanket fit checklist"
-            subtitle="Email the blanket fit checklist and winter blanketing tips. No spam."
-            ctaText="Email my blanket fit checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-blanket-size-calculator-under-hero"
           />
         </div>
@@ -192,26 +186,7 @@ export default function HorseBlanketSizeCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a blanket-fit kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches match the size you just calculated — a
-            winter horse blanket, a turnout sheet, a stable blanket, a soft
-            measuring tape for the chest-to-tail check (same query as the{' '}
-            <a href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">
-              horse weight calculator
-            </a>
-            ), and a fleece cooler for after work. Pair the size with fill weight
-            on the{' '}
-            <a href="/tack/blanket-weights" className="text-brand-primary no-underline hover:underline">
-              blanket weights guide
-            </a>{' '}
-            and the{' '}
-            <a href="/reviews/best-winter-horse-blankets" className="text-brand-primary no-underline hover:underline">
-              winter blanket reviews
-            </a>
-            . They are not a ranked product list and not invented inventory.
-            Horses.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"

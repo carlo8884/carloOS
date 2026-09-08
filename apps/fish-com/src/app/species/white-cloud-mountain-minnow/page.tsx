@@ -82,32 +82,16 @@ export default function WhiteCloudPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the white-cloud-mountain-minnow-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                White-cloud-mountain-minnow-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Tanichthys albonubes notes
-                that match the care copy on this page
-                — 60–72°F unheated tanks, a school of
-                8+, pH 6.0–8.0, and 75°F as a maximum
-                for these 1.5-inch cool-water
-                minnows. Educational
-                white-cloud-mountain-minnow-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                white-cloud-mountain-minnow tank-setup
-                Amazon search stays below. Empty
-                Chewy buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="White-cloud-mountain-minnow-setup checklist"
-                subtitle="Email the 60–72°F unheated and 8+ school notes. No spam."
-                ctaText="Email my white-cloud-mountain-minnow-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-white-cloud-mountain-minnow-under-hero"
               />
             </div>

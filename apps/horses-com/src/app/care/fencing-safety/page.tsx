@@ -116,23 +116,16 @@ export default function FencingSafetyPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the fencing-safety checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse fencing-safety checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the electric-tape, horse-mesh, electric-rope, and fence-tester
-              notes so the paddock kit is ready before you walk the line.
-              Educational checklist, not a diagnosis and not a medication
-              order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse fencing-safety checklist"
-              subtitle="Email the electric-tape, horse-mesh, electric-rope, and fence-tester notes. No spam."
-              ctaText="Email my horse fencing-safety checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-fencing-safety-under-hero"
             />
           </div>
@@ -176,18 +169,9 @@ export default function FencingSafetyPage() {
               contractor lumber hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the fencing kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page safe-fence
-              and routine-check copy — horse electric tape, horse-safe mesh,
-              electric rope, and an electric fence tester. Everyday physical
-              supplies only. They are not a ranked product list, they are not
-              barbed wire or sheep mesh, they are not a medication, and they
-              do not replace a veterinarian. Horses.com earns a commission
-              on qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+electric+tape?s=care-fencing-safety"
@@ -205,7 +189,7 @@ export default function FencingSafetyPage() {
                 amazonHref="/go/amazon-brand/electric+fence+tester?s=care-fencing-safety"
                 amazonLabel="Browse electric fence testers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

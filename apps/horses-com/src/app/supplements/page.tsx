@@ -71,44 +71,16 @@ export default function SupplementsHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-3xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the horses supplements-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horses supplements-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-horse-barn-supplements-category-chart,
-            stall-door-supplements-label-card, and
-            equine-supplements-reference-handbook notes that
-            match the supplements-section-map,
-            nasc-vs-efficacy-log, and
-            AAEP-and-peer-reviewed-grounding copy on this
-            hub — a laminated horse barn supplements
-            category chart so the section map (joint,
-            hoof, gastric) is posted at the barn (not a
-            tools-hub calculator chart, not a reviews
-            buyer-guide chart, not a forage-first
-            chart), a horse stall-door supplements
-            label card so NASC listing vs proof-of-
-            efficacy notes are labeled on the stall
-            door (not a measurement card, not a reviews
-            comparison card, not a ration card), and an
-            equine supplements reference handbook so
-            the AAEP / peer-reviewed equine-medicine
-            grounding is a physical barn book (not a
-            calculator handbook, not a reviews
-            handbook, not a nutrition handbook).
-            Educational barn checklist, not a ranked
-            product list, not a Platinum CJ hop, and
-            not a substitute for a veterinarian. No
-            spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horses supplements-hub checklist"
-            subtitle="Email the supplements-category-chart, stall-door label-card, and supplements-handbook notes. No spam."
-            ctaText="Email my horses supplements-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="supplements-hub-under-hero"
           />
         </div>
@@ -156,26 +128,7 @@ export default function SupplementsHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
           Supplements-hub barn kit
         </h2>
-        <p className="max-w-3xl text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          supplements-section-map, nasc-vs-efficacy-log,
-          and AAEP-and-peer-reviewed-grounding copy on
-          this hub — a laminated horse barn supplements
-          category chart so the joint / hoof / gastric
-          map is posted at the barn, a horse stall-door
-          supplements label card so NASC listing vs
-          proof-of-efficacy notes are labeled on the
-          stall door, and an equine supplements
-          reference handbook so the AAEP / peer-reviewed
-          equine-medicine grounding is a physical barn
-          book. These are educational barn searches, not
-          a ranked product list, not a substitute for a
-          veterinarian, not a tools-hub / reviews-hub /
-          nutrition-hub hop, and not a child Platinum
-          CJ hop (that lives on joint-supplements). This
-          page does not hop medications or vaccines.
-          This page does not claim hands-on testing.
-        </p>
+        <p className="max-w-3xl text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-3xl mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -190,42 +143,16 @@ export default function SupplementsHubPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs tools / reviews /
             nutrition kitchen kits and child
-            platinum+performance+CJ hop.
-            Directory import left untouched. */}
+            platinum+performance+CJ hop. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the supplements-hub barn kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page supplements-section-map,
-            nasc-vs-efficacy-log, and
-            AAEP-and-peer-reviewed-grounding copy — a
-            laminated horse barn supplements category
-            chart, a horse stall-door supplements
-            label card, and an equine supplements
-            reference handbook. Educational barn
-            searches only. They are not a ranked
-            product list, they are not a tools-hub /
-            reviews-hub / nutrition-hub hop, they are
-            not a Platinum CJ hop, and they do not
-            replace a veterinarian. Horses.com earns a
-            commission on qualifying purchases at no
-            extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+horse+barn+supplements+category+chart?s=supplements-hub"
-              amazonLabel="Browse laminated horse barn supplements category charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+stall+door+supplements+label+card?s=supplements-hub"
-              amazonLabel="Browse horse stall-door supplements label cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/equine+supplements+reference+handbook?s=supplements-hub"
-              amazonLabel="Browse equine supplements reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/horse+supplies?s=supplements-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

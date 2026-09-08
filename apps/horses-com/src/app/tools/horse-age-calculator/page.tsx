@@ -166,19 +166,13 @@ export default function HorseAgeCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Horse life-stage notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the foal / young / adult / senior recap and the shoppable
-            husbandry kit (horse feed, senior horse feed, weight tape, fly mask,
-            hoof pick) so you can come back to the right stage without
-            re-running the estimate. Planning reference only — not a diagnosis.
-            No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
             title="Horse life-stage notes"
-            subtitle="Email the horse life-stage recap and husbandry kit. No spam."
-            ctaText="Email my horse life-stage notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-age-calculator-under-hero"
           />
         </div>
@@ -201,16 +195,7 @@ export default function HorseAgeCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a life-stage kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that match the
-              life-stage label above — horse feed, senior horse feed, a weight
-              tape, a fly mask, and a hoof pick. They are not a ranked
-              product list, not invented inventory, and they do not diagnose a
-              health problem or set a care plan. Ask your equine
-              veterinarian which stage-appropriate products fit your horse.
-              Horses.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+feed?s=tools-horse-age-calculator"
@@ -232,7 +217,7 @@ export default function HorseAgeCalculatorPage() {
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-horse-age-calculator"
                 amazonLabel="Browse horse hoof picks on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

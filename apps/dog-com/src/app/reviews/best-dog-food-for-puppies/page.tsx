@@ -64,38 +64,16 @@ export default function BestPuppyFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the puppy-food checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Puppy-food checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the WSAVA puppy-food notes that
-                match the ranking copy on this page —
-                large-breed puppy formula when adult
-                weight is over 50 lbs, controlled
-                calcium-to-phosphorus for skeletal
-                development, AAFCO feeding-trial
-                brands with veterinary nutritionists
-                on staff, Hill&apos;s Small Paws when
-                adult weight is under 25 lbs, and
-                adult-food switch at 9–12 months
-                (small), 12 months (medium), 12–18
-                months (large), or 18–24 months
-                (giant). Educational puppy-food
-                checklist, not a new product hop, not
-                a prescription diet, and not a
-                substitute for a veterinarian. The
-                existing Royal Canin Amazon and
-                Purina / Hill&apos;s / Iams Chewy
-                searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Puppy-food checklist"
-                subtitle="Email the large-breed calcium and switch-age notes. No spam."
-                ctaText="Email my puppy-food checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-food-for-puppies-under-hero"
               />
             </div>

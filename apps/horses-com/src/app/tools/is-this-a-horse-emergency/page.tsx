@@ -177,32 +177,6 @@ export default function IsThisAHorseEmergencyPage() {
         <span className="text-brand-text-mid font-medium">Is This a Horse Emergency?</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fridge sheet
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horse emergency-signs triage cheat sheet
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the fridge horse-triage cheat sheet — the go-now / same-day / monitor
-            recap plus a shoppable emergency-prep kit (equine first-aid, digital
-            veterinary thermometer, vet wrap, poultice, horse electrolytes) — so you can re-check
-            signs later without re-reading the list. A triage aid, not a
-            diagnosis. No spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Horse emergency-signs triage cheat sheet"
-            subtitle="Email the fridge horse-triage cheat sheet and emergency-signs recap. No spam."
-            ctaText="Email my horse triage cheat sheet"
-            source="tools-is-this-a-horse-emergency-under-hero"
-          />
-        </div>
-      </section>
 
       {/* PERSISTENT TOP BANNER — renders above the checklist on every state */}
       <section className="px-container-sm sm:px-container pt-section">
@@ -241,6 +215,24 @@ export default function IsThisAHorseEmergencyPage() {
           <TriageHelper />
         </div>
       </section>
+      {/* Under-hero capture — source must end in under-hero so it always renders. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
+        <div className="max-w-2xl">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Owner notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
+            source="tools-is-this-a-horse-emergency-under-hero"
+          />
+        </div>
+      </section>
 
       {/* Money path — live amazon-brand search hops (equine emergency-prep / first-aid kit).
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -252,17 +244,7 @@ export default function IsThisAHorseEmergencyPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop an equine emergency-prep kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are barn and trailer items for
-              equine emergency prep — an equine first-aid kit, a digital veterinary thermometer,
-              vet wrap bandage, poultice, and horse electrolytes. They are not
-              a ranked product list, not invented inventory, and they do not
-              diagnose, treat, or replace emergency care. If a sign looks
-              life-threatening, call your equine veterinarian now; this kit is for
-              planning ahead, not for waiting on a crisis. Horses.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency"
@@ -284,7 +266,7 @@ export default function IsThisAHorseEmergencyPage() {
                 amazonHref="/go/amazon-brand/horse+electrolytes?s=tools-is-this-a-horse-emergency"
                 amazonLabel="Browse horse electrolytes on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

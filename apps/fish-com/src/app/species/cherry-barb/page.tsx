@@ -84,33 +84,16 @@ export default function CherryBarbPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the cherry-barb-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Cherry-barb-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Puntius titteya notes that
-                match the care copy on this page — a
-                school of 8+ (10–12 is better) in a
-                20-gallon planted tank so males stay
-                confident and red, pH 6.0–7.5 and
-                73–81°F, and dense planting plus open
-                mid-water so this peaceful barb does
-                not nip. Educational
-                cherry-barb-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing cherry-barb tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Cherry-barb-setup checklist"
-                subtitle="Email the school-of-8, 20-gallon, and planted-tank notes. No spam."
-                ctaText="Email my cherry-barb-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-cherry-barb-under-hero"
               />
             </div>

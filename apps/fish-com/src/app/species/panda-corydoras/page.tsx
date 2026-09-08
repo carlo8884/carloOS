@@ -82,31 +82,16 @@ export default function PandaCorydorasPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the panda-corydoras-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Panda-corydoras-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Corydoras panda
-                notes that match the care copy on this
-                page — a group of 6+ (8 better) in a
-                20-gallon, 68–77°F cooler water, pH
-                6.0–7.4, and soft sand for barbels.
-                Educational panda-corydoras-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                panda-corydoras tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Panda-corydoras-setup checklist"
-                subtitle="Email the 6+ group, cooler-water, and soft-sand notes. No spam."
-                ctaText="Email my panda-corydoras-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-panda-corydoras-under-hero"
               />
             </div>

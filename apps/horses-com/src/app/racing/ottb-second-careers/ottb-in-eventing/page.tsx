@@ -164,41 +164,16 @@ export default function OttbInEventingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ottb-in-eventing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              OTTB-in-eventing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-ottb-cross-country-chart,
-              stall-door-three-phase-card, and
-              equine-eventing-gallop-handbook notes
-              that match the cross-country / stamina / boldness,
-              three-phase retraining, and natural-gallop copy
-              on this page — a laminated horse OTTB
-              cross-country chart so the solid-obstacles /
-              distance notes are posted on the stall door
-              (not an OTTB discipline-ladder chart, not a
-              TAA aftercare-directory chart), a horse
-              stall-door three-phase card so the dressage /
-              cross-country / show-jumping notes are labeled
-              at the barn (not a foundation-flatwork card,
-              not an OTTB letdown card), and an equine
-              eventing-gallop handbook so the cardiovascular
-              / upper-level-blood grounding is a physical
-              barn book (not a letdown-to-restart handbook,
-              not a Thoroughbred-Makeover handbook).
-              Educational barn checklist, not a ranked race
-              list, not a first-aid-kit hop, and not a
-              substitute for a veterinarian. Horses.com does
-              not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="OTTB-in-eventing checklist"
-              subtitle="Email the OTTB cross-country chart, three-phase card, and eventing-gallop handbook notes. No spam."
-              ctaText="Email my ottb-in-eventing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ottb-in-eventing-under-hero"
             />
           </div>
@@ -241,43 +216,18 @@ export default function OttbInEventingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs ottb-second-careers
               hub / aftercare hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ottb-in-eventing barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page cross-country / stamina / boldness,
-              three-phase retraining, and natural-gallop
-              copy — a laminated horse OTTB cross-country
-              chart, a horse stall-door three-phase card,
-              and an equine eventing-gallop handbook.
-              Educational barn searches only. They are not
-              a ranked race list, they are not an
-              ottb-second-careers-hub / aftercare hop, they
-              are not a first-aid-kit hop, they are not a
-              child toothbrush hop, and they do not replace
-              a veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+ottb+cross+country+chart?s=ottb-in-eventing"
-                amazonLabel="Browse laminated horse OTTB cross-country charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=ottb-in-eventing"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+three+phase+card?s=ottb-in-eventing"
-                amazonLabel="Browse horse stall-door three-phase cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+eventing+gallop+handbook?s=ottb-in-eventing"
-                amazonLabel="Browse equine eventing-gallop handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

@@ -116,23 +116,16 @@ export default function GroomingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the grooming-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse grooming-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit order — curry comb, dandy brush, body
-              brush, mane and tail brush, hoof pick, plus sponges and towels —
-              so you are not hunting tools mid-groom. Educational checklist,
-              not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse grooming-kit checklist"
-              subtitle="Email the curry, dandy, body brush, mane/tail brush, and hoof-pick order. No spam."
-              ctaText="Email my horse grooming-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-grooming-under-hero"
             />
           </div>
@@ -172,18 +165,9 @@ export default function GroomingPage() {
               on-page kit copy, not rain-rot / sweet-itch treatments. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the grooming kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page kit copy — a
-              rubber curry comb, a stiff dandy brush, a soft body brush, a mane
-              and tail brush, and a hoof pick. Everyday physical supplies only.
-              They are not a ranked product list, they are not treatments for
-              rain rot, sweet itch, or any medical condition, and they do not
-              replace a veterinarian. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+curry+comb?s=care-grooming"
@@ -205,7 +189,7 @@ export default function GroomingPage() {
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=care-grooming"
                 amazonLabel="Browse horse hoof picks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ScoreMethodology />

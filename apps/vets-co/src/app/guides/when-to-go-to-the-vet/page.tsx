@@ -27,67 +27,47 @@ export default function WhenToGoPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-when-to-go" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-when-to-go" />
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the when-to-go-to-the-vet decision checklist
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              When-to-go-to-the-vet decision checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              watchful-waiting, same-day, and
-              when-unsure-call copy on this page — a
-              48-hour digital kitchen timer so a mild
-              isolated sign is a counted day-or-two
-              window instead of a guessed morning, a
-              lined telephone message pad so the clinic
-              call records the sign, when it started,
-              and how the pet is otherwise doing, and
-              a medium hard-sided plastic pet carrier
-              so a same-day visit is a ready crate
-              instead of a scramble. Educational
-              checklist, not a diagnosis, not a
-              substitute for emergency care, and not
-              a 72-hour countdown, 12-hour mechanical
-              timer, pocket spiral memo pad, or
-              soft-sided carrier hop. No spam.
-            </p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="When-to-go-to-the-vet decision checklist"
-              subtitle="Email the 48-hour-timer, message-pad, and hard-sided-carrier notes. No spam."
-              ctaText="Email my when-to-go-to-the-vet decision checklist"
-              source="guides-when-to-go-to-the-vet-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="warning" title="Trust your instinct on serious signs">
             You know your pet better than anyone. If your gut says something is seriously wrong — even if you cannot name the sign — it is reasonable to seek care. Owners are often the first to detect that something is off, and acting on that instinct saves lives.
           </CalloutBox>
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Owner notes
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
+              source="guides-when-to-go-to-the-vet-under-hero"
+            />
+          </div>
 
           <h2>The Three Buckets</h2>
           <p>Most situations sort into three categories. <strong>Watchful waiting</strong> suits mild, isolated signs in a pet that is otherwise bright, eating, drinking, and acting normally. <strong>Same-day or urgent care</strong> is for problems that are not immediately life-threatening but should not wait days. <strong>Emergency care</strong> is for time-critical, life-threatening situations. Sorting a sign into the right bucket — and erring toward caution when unsure — is the core skill of responsible pet ownership.</p>
 
           <h2>Signs You Can Often Watch Briefly</h2>
-          <p>For a pet that remains alert, eating, and behaving normally, mild and isolated signs can sometimes be monitored for a short, defined period: a single soft stool, one episode of mild vomiting, brief minor stiffness that resolves, or a small superficial scrape. Watch closely, and seek care if the sign persists beyond a day or two, worsens, or is joined by other symptoms. A 48-hour digital kitchen timer is how that day-or-two window stays a counted interval instead of a guessed morning — it is not a 72-hour digital countdown timer (that lives on dog-vaccinations-guide), not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide), not a 30-minute sand hourglass timer (that lives on dog.com dog-bloat-gvd), and not an analog wall clock with a second hand (that lives on canine-influenza). The timer does not diagnose a sign and it does not replace a veterinarian. This watchful approach is never appropriate for very young or very old pets, or those with serious underlying conditions.</p>
+          <p>For a pet that remains alert, eating, and behaving normally, mild and isolated signs can sometimes be monitored for a short, defined period: a single soft stool, one episode of mild vomiting, brief minor stiffness that resolves, or a small superficial scrape. Watch closely, and seek care if the sign persists beyond a day or two, worsens, or is joined by other symptoms. This watchful approach is never appropriate for very young or very old pets, or those with serious underlying conditions.</p>
 
           <h2>Signs That Warrant Same-Day Care</h2>
-          <p>Some problems need prompt but not emergency attention: persistent vomiting or diarrhea without collapse, a limp that does not improve, an eye that is red or squinting, a wound that may need cleaning or closing, ear pain, a urinary issue in a pet still able to urinate, or a noticeable change in appetite, thirst, or energy. These warrant a call to your veterinarian or a visit to urgent care the same day, before they escalate. A medium hard-sided plastic pet carrier is how that same-day trip is a ready crate instead of a scramble at the door — it is not a soft-sided vet-visit carrier (that lives on dog.com heartworm prevention), not a soft cat carrier (that lives on cat-grimace-scale), not a hard-sided airline dog crate (that lives elsewhere), and not a folding four-wheel dog stroller (that lives on preventive-care-schedule). A carrier does not treat a limp, an eye, or a wound, and it does not replace the clinic.</p>
+          <p>Some problems need prompt but not emergency attention: persistent vomiting or diarrhea without collapse, a limp that does not improve, an eye that is red or squinting, a wound that may need cleaning or closing, ear pain, a urinary issue in a pet still able to urinate, or a noticeable change in appetite, thirst, or energy. These warrant a call to your veterinarian or a visit to urgent care the same day, before they escalate.</p>
 
           <h2>Signs That Are Emergencies</h2>
-          <p>Certain signs are always emergencies requiring immediate care: difficulty breathing; severe or uncontrolled bleeding; collapse or inability to stand; seizures that repeat or will not stop; a swollen abdomen with unproductive retching (suspected bloat); a male cat straining unable to urinate; suspected poisoning; major trauma; and pale, white, or blue gums. Do not wait or watch these — go to an emergency hospital. For a fuller list, see our emergency signs guide. The same hard-sided carrier can ride along so a collapsed or painful pet is contained on the drive; it is not a wire basket dog muzzle, not quilted disposable underpads, and not a handheld AA LED flashlight (those live on emergency-signs). Do not delay the drive to hunt for gear.</p>
+          <p>Certain signs are always emergencies requiring immediate care: difficulty breathing; severe or uncontrolled bleeding; collapse or inability to stand; seizures that repeat or will not stop; a swollen abdomen with unproductive retching (suspected bloat); a male cat straining unable to urinate; suspected poisoning; major trauma; and pale, white, or blue gums. Do not wait or watch these — go to an emergency hospital. For a fuller list, see our emergency signs guide. If you have a carrier, use it so a collapsed or painful pet is contained on the drive — do not delay the drive to hunt for gear.</p>
 
           <h2>When You Are Not Sure</h2>
-          <p>Uncertainty is common, and there is a simple rule: when in doubt, call. Your veterinary clinic, or an emergency hospital after hours, can help you decide whether to watch, come in, or treat the situation as an emergency, often with a few questions over the phone. Describing the sign, when it started, and how your pet is otherwise doing helps them advise you. A lined telephone message pad is how that call stays a written record of the sign, the start time, and the clinic&apos;s advice — it is not a pocket spiral memo pad (that lives on vomiting-diarrhea-pets), not an A5 hardcover dot-grid notebook (that lives on cushing-disease-dogs), not a waterproof field notebook (that lives on seizures-in-dogs), and not a dog weight log book (that lives on spay-neuter-benefits). A pad does not diagnose a sign and it does not replace the veterinarian on the other end of the line. It is always better to ask and be reassured than to wait on something serious.</p>
+          <p>Uncertainty is common, and there is a simple rule: when in doubt, call. Your veterinary clinic, or an emergency hospital after hours, can help you decide whether to watch, come in, or treat the situation as an emergency, often with a few questions over the phone. Describing the sign, when it started, and how your pet is otherwise doing helps them advise you. It is always better to ask and be reassured than to wait on something serious.</p>
 
           <h2 id="kit">Home-care kit</h2>
           <p>
@@ -117,10 +97,8 @@ export default function WhenToGoPage() {
             basket dog muzzles, quilted disposable
             underpads, and handheld AA LED
             flashlights already live on
-            emergency-signs. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            emergency-signs. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -178,31 +156,9 @@ export default function WhenToGoPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page watchful-waiting, same-day, and
-              when-unsure-call copy — a 48-hour
-              digital kitchen timer, a lined telephone
-              message pad, and a medium hard-sided
-              plastic pet carrier. Educational
-              home-care / monitoring / transport
-              tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1092 floor-bowl /
-              wobble-dispenser / hourglass hop, they
-              are not a #1091 laminating-pouch /
-              72-hour-timer / travel-bowl hop, they
-              are not an emergency-signs muzzle /
-              underpad / flashlight hop, they are not
-              a first-aid-kit / thermometer hop, and
-              they do not replace a veterinarian.
-              Vets.co earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/48+hour+digital+kitchen+timer?s=guides-when-to-go-to-the-vet"
@@ -216,7 +172,7 @@ export default function WhenToGoPage() {
                 amazonHref="/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"
                 amazonLabel="Browse medium hard-sided plastic pet carriers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

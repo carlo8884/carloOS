@@ -180,44 +180,16 @@ export default function FerretHeartDiseasePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret heart-disease checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret heart-disease checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-stamina-map-chart,
-              fridge-breathing-rate-card, and
-              mustelid-cardio-echo-handbook notes
-              that match the stamina-map,
-              breathing-rate-log, and
-              quesenberry-afa-cardio-grounding copy on this
-              page — a laminated ferret stamina-map chart
-              so the naps-longer / plays-less / stairs-tire
-              map is posted on the fridge (not a flu-share
-              chart, not a CDV-risk chart, not a GI-proof
-              chart), a ferret fridge breathing-rate card
-              so rest-breath / cough / pale-gums notes are
-              labeled on the fridge (not a two-way card,
-              not an indoor-carry card, not a crash-list
-              card), and a mustelid cardio-echo handbook
-              so the Quesenberry / AEMV echo-first and
-              managed-not-cured grounding is a physical
-              kitchen book (not an influenza-hygiene
-              handbook, not a distemper-risk handbook, not
-              an er-ready handbook). Educational kitchen
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for
-              an exotic-mammal veterinarian. Ferret.com does
-              not sell insurance. Aging pages stay held. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret heart-disease checklist"
-              subtitle="Email the stamina-map-chart, fridge breathing-rate card, and cardio-echo-handbook notes. No spam."
-              ctaText="Email my ferret heart-disease checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-heart-disease-under-hero"
             />
           </div>
@@ -396,47 +368,20 @@ export default function FerretHeartDiseasePage() {
               vaccine / heartworm / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
-              influenza / distemper / GI hops.
-              Directory import left untouched. Ferret
+              influenza / distemper / GI hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret heart-disease kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page stamina-map,
-              breathing-rate-log, and
-              quesenberry-afa-cardio-grounding copy — a
-              laminated ferret stamina-map chart, a
-              ferret fridge breathing-rate card, and a
-              mustelid cardio-echo handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a health-hub / influenza / distemper hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+stamina+map+chart?s=heart-disease"
-                amazonLabel="Browse laminated ferret stamina-map charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=heart-disease"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+breathing+rate+card?s=heart-disease"
-                amazonLabel="Browse ferret fridge breathing-rate cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+cardio+echo+handbook?s=heart-disease"
-                amazonLabel="Browse mustelid cardio-echo handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

@@ -58,42 +58,16 @@ export default function SafeHumanFoodsPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog safe-foods checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog safe-foods checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-ten-percent-treat-chart,
-            fridge-plain-prep-card, and
-            canine-safe-share-handbook notes
-            that match the ten-percent-treat-map,
-            plain-prep-avoid-log, and
-            always-check-label-grounding copy on this
-            page — a laminated dog ten-percent-treat chart
-            so the 10% / 40-kcal extras map is posted on
-            the fridge (not a xylitol-critical chart, not a
-            chocolate-grape chart, not a nutrition-feeding
-            chart), a dog fridge plain-prep card so no
-            seasoning / no oil / no xylitol notes are
-            labeled on the fridge (not a grape-kidney card,
-            not a xylitol-onion card, not a WSAVA label
-            card), and a canine safe-share handbook so the
-            whole-food share list and always-check-label
-            grounding is a physical kitchen book (not a
-            poison-protocol handbook, not a food-safety
-            handbook, not a nutrition reference handbook).
-            Educational kitchen checklist, not a ranked
-            clinic list, not a first-aid-kit hop, and not a
-            substitute for a veterinarian. Dog.com does not
-            sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog safe-foods checklist"
-            subtitle="Email the ten-percent-treat chart, fridge plain-prep card, and safe-share-handbook notes. No spam."
-            ctaText="Email my dog safe-foods checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="nutrition-safe-foods-under-hero"
           />
         </div>
@@ -141,42 +115,16 @@ export default function SafeHumanFoodsPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs toxic-foods /
             can-dogs-eat / nutrition-hub hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the dog safe-foods kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page ten-percent-treat-map,
-            plain-prep-avoid-log, and
-            always-check-label-grounding copy — a
-            laminated dog ten-percent-treat chart, a
-            dog fridge plain-prep card, and a
-            canine safe-share handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            a toxic-foods / can-dogs-eat / nutrition-hub
-            hop, they are not a first-aid-kit hop, they
-            are not a child toothbrush hop, and they do
-            not replace a veterinarian. Dog.com does not
-            sell insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+ten+percent+treat+chart?s=nutrition-safe-foods"
-              amazonLabel="Browse laminated dog ten-percent-treat charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+plain+prep+card?s=nutrition-safe-foods"
-              amazonLabel="Browse dog fridge plain-prep cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+safe+share+handbook?s=nutrition-safe-foods"
-              amazonLabel="Browse canine safe-share handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-safe-foods"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

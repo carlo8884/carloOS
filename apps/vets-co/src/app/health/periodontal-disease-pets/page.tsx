@@ -42,7 +42,7 @@ export default function PeriodontalDiseasePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dental Cleaning Guide', href: '/health/dental-cleaning-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-periodontal" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-periodontal" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,35 +50,16 @@ export default function PeriodontalDiseasePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the pet periodontal home dental-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pet periodontal home dental-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              brushing, VOHC, and plaque-prevention copy
-              on this page — a pet toothbrush and
-              enzymatic toothpaste kit for daily
-              brushing, VOHC dental chews for dogs as
-              secondary plaque support, and a
-              VOHC-accepted dental water additive when
-              brushing is not possible every day.
-              Educational checklist, not a ranked
-              product list, not a substitute for
-              professional veterinary dental cleaning
-              under anesthesia, and not an Rx hop. Soft
-              pet toothbrushes, standalone enzymatic
-              toothpaste, generic dental chews, and
-              pet+dental+water+additive already live on
-              the dental-cleaning-guide page. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Pet periodontal home dental-care checklist"
-              subtitle="Email the toothbrush-kit, VOHC-chew, and water-additive notes. No spam."
-              ctaText="Email my pet dental-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-periodontal-disease-pets-under-hero"
             />
           </div>
@@ -119,18 +100,10 @@ export default function PeriodontalDiseasePage() {
             cleaning or anesthesia dentistry, and not a
             treatment for periodontal disease. Bad
             breath, tartar, red gums, or eating changes
-            belong with a veterinarian, not a chew.
-            Soft pet toothbrushes, standalone enzymatic
+            belong with a veterinarian, not a chew. Soft pet toothbrushes, standalone enzymatic
             toothpaste, generic dental chews, and
             pet dental water additives already live on
-            the dental-cleaning-guide page. Finger
-            toothbrushes, infant toothbrushes, and pet
-            dental wipes already live on ferret.com
-            dental-disease. This page does not hop
-            CET, Vetradent, Greenies, Whimzees, clindamycin,
-            anesthesia, dental-scaler, or other Rx ASINs.
-            This page does not claim hands-on testing.
-          </p>
+            the dental-cleaning-guide page. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -174,30 +147,9 @@ export default function PeriodontalDiseasePage() {
               and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home dental-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page brushing, VOHC home-care, and
-              plaque-prevention copy — a pet toothbrush
-              and enzymatic toothpaste kit, VOHC dental
-              chews for dogs, and a VOHC-accepted dental
-              water additive. Educational home-care
-              tools only. They are not a ranked product
-              list, they are not a substitute for
-              professional veterinary dental cleaning
-              or anesthesia dentistry, they are not a
-              #1075 egg-crate-pad / pet-steps /
-              floor-scale hop, they are not a #1074
-              muzzle / underpad / flashlight hop, they
-              are not a dental-cleaning-guide
-              soft-toothbrush / enzymatic-toothpaste /
-              dental-chews-dog / pet-dental-water-additive
-              hop, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+toothbrush+and+enzymatic+toothpaste+kit?s=health-periodontal-disease-pets"
@@ -211,7 +163,7 @@ export default function PeriodontalDiseasePage() {
                 amazonHref="/go/amazon-brand/vohc+accepted+dental+water+additive?s=health-periodontal-disease-pets"
                 amazonLabel="Browse VOHC-accepted dental water additives on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

@@ -92,31 +92,16 @@ export default function PlecoPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the pleco-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Pleco-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Ancistrus / Hypostomus
-                notes that match the care copy on this
-                page — bristlenose at 20 gallons with
-                driftwood, 73–82°F and pH 6.5–7.5, and
-                125+ gallons if the fish is a common
-                pleco. Educational pleco-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing pleco
-                tank-setup Amazon search stays below.
-                Empty Chewy buttons stay hidden. No
-                spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Pleco-setup checklist"
-                subtitle="Email the bristlenose-vs-common and driftwood notes. No spam."
-                ctaText="Email my pleco-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-pleco-under-hero"
               />
             </div>

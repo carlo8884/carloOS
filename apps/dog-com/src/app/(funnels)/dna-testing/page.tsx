@@ -156,7 +156,7 @@ export default function DnaTestingHub() {
           siteId="dog-com"
           source="dog-com:dna-test-comparison"
           title="Get our pet DNA test buyer's guide"
-          subtitle="Side-by-side spreadsheet · which tests are best for which breeds · downloadable PDF."
+          subtitle="Owner notes"
           ctaText="Send the buyer's guide"
         />
 

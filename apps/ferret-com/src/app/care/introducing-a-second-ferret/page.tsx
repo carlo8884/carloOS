@@ -145,29 +145,16 @@ export default function IntroducingSecondFerretPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret quarantine-and-bonding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret quarantine-and-bonding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the introduction-kit notes — an extra small-animal
-              travel kennel so the newcomer rides to the quarantine
-              check-up separately from the resident, a scent-swap fleece
-              sleep pouch so bedding can move between cages before any
-              face-to-face meeting, and a portable small-animal playpen
-              so the first sessions happen on unfamiliar neutral ground.
-              Educational bonding-kit checklist, not a pairing guarantee
-              and not a substitute for an exotic-mammal veterinarian.
-              Vaccines, Rx, and diagnosis kits stay off this list. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret quarantine-and-bonding checklist"
-              subtitle="Email the extra-travel-kennel, scent-swap-sleep-pouch, and portable-playpen notes. No spam."
-              ctaText="Email my ferret quarantine-and-bonding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-introducing-a-second-ferret-under-hero"
             />
           </div>
@@ -252,11 +239,7 @@ export default function IntroducingSecondFerretPage() {
             carriers, top-loading small-animal carriers, ferret sleep
             sacks, fleece small-animal bonding pouches, ferret hammocks,
             Critter Nation cages, and puppy playpens already live on
-            other pages. This page does not hop vaccines, Nobivac, IMRAB,
-            diphenhydramine, insulin syringes, compounded meds, or Rx
-            ASINs. This page does not hop diagnosis kits that imply
-            treatment. This page does not claim hands-on testing.
-          </p>
+            other pages. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -290,26 +273,9 @@ export default function IntroducingSecondFerretPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret quarantine-and-bonding kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page quarantine, scent-swap, and
-              neutral-ground copy — an extra small-animal
-              travel kennel, a scent-swap fleece sleep
-              pouch, and a portable small-animal playpen.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              vaccine hop, they are not a #1067
-              rabies-certificate-holder / top-loading-
-              carrier / bonding-pouch hop, they are not a
-              #1066 carnivore-care / baby-food /
-              silicone-dosing-syringe hop, and they do
-              not replace an exotic-mammal veterinarian.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret"
@@ -323,7 +289,7 @@ export default function IntroducingSecondFerretPage() {
                 amazonHref="/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"
                 amazonLabel="Browse portable small-animal playpens on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

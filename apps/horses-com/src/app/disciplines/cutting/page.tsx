@@ -115,40 +115,16 @@ export default function CuttingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the cutting checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Cutting checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-cutting-cow-work-chart,
-              stall-door-ncha-cutting-card, and
-              equine-cutting-cow-sense-handbook notes
-              that match the two-and-a-half-minute-run,
-              ncha-futurity, and cow-sense / loose-rein
-              copy on this page — a laminated horse
-              cutting cow-work chart so the herd-hold /
-              turnback / two-or-three-cow notes are posted
-              on the stall door (not an ADS driving-phase
-              chart, not a cloverleaf barrel chart), a horse
-              stall-door NCHA cutting card so the futurity /
-              NCHA / Doc Bar notes are labeled at the barn
-              (not a four-in-hand card, not an NBHA jackpot
-              card), and an equine cutting cow-sense
-              handbook so the loose-rein / horse-on-its-own
-              grounding is a physical barn book (not a
-              cones-driving handbook, not a barrel-rate
-              handbook). Educational barn checklist, not a
-              ranked clinic list, not a first-aid-kit hop,
-              and not a substitute for a veterinarian.
-              Horses.com does not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Cutting checklist"
-              subtitle="Email the cutting cow-work chart, NCHA cutting card, and cow-sense handbook notes. No spam."
-              ctaText="Email my cutting checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="disciplines-cutting-under-hero"
             />
           </div>
@@ -190,44 +166,18 @@ export default function CuttingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs combined-driving /
               barrel-racing hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the cutting barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page two-and-a-half-minute-run,
-              ncha-futurity, and cow-sense / loose-rein
-              copy — a laminated horse cutting cow-work
-              chart, a horse stall-door NCHA cutting card,
-              and an equine cutting cow-sense handbook.
-              Educational barn searches only. They are not
-              a ranked clinic list, they are not a
-              combined-driving / barrel-racing hop, they
-              are not a first-aid-kit hop, they are not a
-              child toothbrush hop, and they do not
-              replace a veterinarian. Horses.com does not
-              sell insurance. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+cutting+cow+work+chart?s=discipline-cutting"
-                amazonLabel="Browse laminated horse cutting cow-work charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=discipline-cutting"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+ncha+cutting+card?s=discipline-cutting"
-                amazonLabel="Browse horse stall-door NCHA cutting cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+cutting+cow+sense+handbook?s=discipline-cutting"
-                amazonLabel="Browse equine cutting cow-sense handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

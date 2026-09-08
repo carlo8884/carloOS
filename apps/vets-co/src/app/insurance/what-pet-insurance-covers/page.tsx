@@ -27,43 +27,23 @@ export default function WhatCoversPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }, { label: 'Wellness Plans vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-what-covers" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-what-covers" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the coverage checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Coverage checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              accident-only, accident-and-illness,
-              and exam-fee copy on this page — a
-              3-tab divider set so accident-only,
-              accident-and-illness, and wellness
-              add-on stay three labeled categories,
-              an assorted highlighter set so typical
-              coverage and usual exclusions stay
-              marked on the sample policy, and
-              removable page flags so exam-fee,
-              hereditary, dental, and waiting-period
-              clauses stay flagged where plans
-              diverge. Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a
-              monthly-desk-pad, date-stamp, or
-              file-jacket hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Coverage checklist"
-              subtitle="Email the divider, highlighter, and page-flag notes. No spam."
-              ctaText="Email my coverage checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-what-pet-insurance-covers-under-hero"
             />
           </div>
@@ -160,29 +140,9 @@ export default function WhatCoversPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the what-pet-insurance-covers kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page accident-only,
-              accident-and-illness, and exam-fee
-              copy — a 3-tab divider set, an
-              assorted highlighter set, and
-              removable page flags. Educational
-              coverage / paperwork tools only. They
-              are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1169
-              monthly-desk-pad / date-stamp /
-              file-jacket hop, they are not a #1168
-              four-column-pad / poly-envelope /
-              receipt-organizer hop, they are not a
-              financing-brand or insurance-brand hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/3+tab+dividers?s=insurance-what-pet-insurance-covers"
@@ -196,7 +156,7 @@ export default function WhatCoversPage() {
                 amazonHref="/go/amazon-brand/removable+page+flags?s=insurance-what-pet-insurance-covers"
                 amazonLabel="Browse removable page flags on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Insurers With Different Coverage Models</h2>

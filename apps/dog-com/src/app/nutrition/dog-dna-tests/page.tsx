@@ -68,45 +68,16 @@ export default function DogDnaTestsPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog DNA-test checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog DNA-test checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-cheek-swab-chart,
-            fridge-breed-estimate-card, and
-            canine-mdr1-vet-handbook notes
-            that match the cheek-swab-map,
-            breed-estimate-log, and
-            mdr1-vet-grounding copy on this
-            page — a laminated dog cheek-swab chart so
-            the at-home mail-in steps are posted on
-            the fridge (not an eight-week-trial chart,
-            not a NASC-seal chart, not a
-            raw-salmonella chart), a dog fridge
-            breed-estimate card so major-ancestry /
-            soft-percentage notes are labeled on the
-            fridge (not an itch-score card, not an
-            EPA-DHA card, not a zoonotic-risk card),
-            and a canine MDR1-vet handbook so the
-            drug-sensitivity / bring-the-report
-            grounding is a physical kitchen book (not
-            a food-challenge handbook, not a fish-oil
-            handbook, not an HPP-raw handbook).
-            Educational kitchen checklist, not a
-            ranked clinic list, not an Embark /
-            Wisdom Panel kit hop, not a first-aid-kit
-            hop, and not a substitute for a
-            veterinarian. Dog.com does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog DNA-test checklist"
-            subtitle="Email the cheek-swab chart, fridge breed-estimate card, and MDR1-vet-handbook notes. No spam."
-            ctaText="Email my dog DNA-test checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="nutrition-dna-tests-under-hero"
           />
         </div>
@@ -182,44 +153,16 @@ export default function DogDnaTestsPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs elimination-diet /
             dog-supplements / raw-diet-risks hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the dog DNA-test kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page cheek-swab-map,
-            breed-estimate-log, and
-            mdr1-vet-grounding copy — a
-            laminated dog cheek-swab chart, a
-            dog fridge breed-estimate card, and a
-            canine MDR1-vet handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            an elimination-diet / dog-supplements /
-            raw-diet-risks hop, they are not an
-            Embark / Wisdom Panel kit hop, they are
-            not a first-aid-kit hop, they are not a
-            child toothbrush hop, and they do not
-            replace a veterinarian. Dog.com does not
-            sell insurance. Dog.com earns a commission
-            on qualifying purchases at no extra cost
-            to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+cheek+swab+chart?s=nutrition-dna-tests"
-              amazonLabel="Browse laminated dog cheek-swab charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+breed+estimate+card?s=nutrition-dna-tests"
-              amazonLabel="Browse dog fridge breed-estimate cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+mdr1+vet+handbook?s=nutrition-dna-tests"
-              amazonLabel="Browse canine MDR1-vet handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-dna-tests"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

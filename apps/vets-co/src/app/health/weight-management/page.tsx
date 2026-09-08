@@ -40,7 +40,7 @@ export default function WeightManagementPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-weight-mgmt" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-weight-mgmt" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,20 +50,14 @@ export default function WeightManagementPage() {
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the kitchen-scale portioning notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Kitchen-scale portioning checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the gram-scale portioning notes — weigh every meal in
-              grams and skip the measuring cup. Educational checklist, not
-              a diet plan and not a prescription. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Kitchen-scale portioning checklist"
-              subtitle="Email the gram-scale meal-weighing notes. No spam."
-              ctaText="Email my kitchen-scale portioning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-weight-management-under-hero"
             />
           </div>
@@ -111,18 +105,9 @@ export default function WeightManagementPage() {
               diets, and medication are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the kitchen-scale portioning kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page portioning
-              copy — a kitchen scale that measures in grams, and a
-              portion-control food scale for weighing every meal. Everyday
-              physical supplies only. They are not a ranked product list,
-              they are not a prescription weight-management diet, they are
-              not medications, and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/kitchen+gram+scale?s=health-weight-management"
@@ -132,7 +117,7 @@ export default function WeightManagementPage() {
                 amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"
                 amazonLabel="Browse portion-control food scales on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

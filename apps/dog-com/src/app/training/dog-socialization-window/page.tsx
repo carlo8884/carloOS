@@ -181,21 +181,14 @@ export default function DogSocializationWindowPage() {
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the window plan
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Socialization-window checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the 3–14 week exposure list, the AVSAB vaccination-versus-socialization
-              notes, and the first-week kit (treats for pairing, crate for alone-time,
-              soft carrier for carry-and-expose, puppy grooming kit for handling) so you
-              can run the window without scrolling back. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Socialization-window checklist"
-              subtitle="Email the 3–14 week exposure list, AVSAB notes, and first-week kit. No spam."
-              ctaText="Email my socialization-window checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="training-socialization-window-under-hero"
             />
           </div>
@@ -262,8 +255,7 @@ export default function DogSocializationWindowPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a socialization-window kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              High-value, pea-sized treats pair every new person, surface, and
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats pair every new person, surface, and
               handling session with a positive outcome. A wire crate with a
               divider is the alone-time den on the checklist. A soft carrier
               (or sling) is the carry-and-expose tool for high-traffic places
@@ -306,8 +298,7 @@ export default function DogSocializationWindowPage() {
               </Link>
               . They are not a ranked product list and they do not replace
               staying under threshold. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+              purchases at no extra cost to you.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-socialization-window"
@@ -325,7 +316,7 @@ export default function DogSocializationWindowPage() {
                 amazonHref="/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"
                 amazonLabel="Browse puppy grooming kits on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/training/puppy-schedule" className="text-brand-primary hover:underline">

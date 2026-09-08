@@ -42,7 +42,7 @@ export default function HypothyroidismDogsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cushing Disease in Dogs', href: '/health/cushing-disease-dogs' }, { label: 'Weight Management', href: '/health/weight-management' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-hypothyroid-dogs" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-hypothyroid-dogs" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,45 +50,16 @@ export default function HypothyroidismDogsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog thyroid weight-and-coat watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog thyroid weight-and-coat watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              weight-gain, cold-intolerance, and daily
-              thyroid-medication copy on this page — a
-              large platform digital bathroom scale so
-              weight gain despite normal eating becomes
-              a dated number you can hand the
-              veterinarian at the next T4 recheck, a
-              quilted dog winter coat so cold
-              intolerance is a walk layer instead of
-              camping on a heating vent, and a weekly
-              pill organizer with alarms so lifelong
-              daily hormone replacement stays a
-              remembered morning or evening dose.
-              Educational checklist, not a ranked
-              product list, not a substitute for
-              veterinary care, and not a Soloxine /
-              Thyro-Tabs / Synthroid / levothyroxine
-              hop. Self-warming dog mats, fleece dog
-              sweaters, and slicker brushes already
-              live on dog.com hypothyroidism. Analog
-              bathroom scales, digital pet scales,
-              veterinary floor scales, monthly pill
-              organizers, and AM/PM weekly pill
-              organizers already live on other floors.
-              Plug-in heated pet mats already live on
-              senior-pet-care. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog thyroid weight-and-coat watch checklist"
-              subtitle="Email the scale, winter-coat, and pill-alarm notes. No spam."
-              ctaText="Email my dog thyroid weight-and-coat watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-hypothyroidism-dogs-under-hero"
             />
           </div>
@@ -103,13 +74,13 @@ export default function HypothyroidismDogsPage() {
           <p>The thyroid gland in the neck produces hormones that regulate the body&apos;s metabolic rate — essentially how fast cells burn energy. When the gland becomes underactive, metabolism slows across the board, affecting weight, energy, skin, coat, and even mood. In dogs, the cause is usually progressive immune-mediated destruction or atrophy of the gland. It is most common in middle-aged dogs of medium to large breeds.</p>
 
           <h2>Recognizing the Signs</h2>
-          <p>Classic signs are weight gain without overeating, lethargy and reduced activity, and skin and coat changes — thinning fur, a dull coat, symmetric hair loss over the trunk, darkened or thickened skin, and recurrent ear or skin infections. Some dogs seek out warm spots because they tolerate cold poorly. Occasionally hypothyroidism affects the nerves or causes a &quot;tragic&quot; facial expression from thickened skin. These signs accumulate gradually, which is why owners often attribute them to age. A large platform digital bathroom scale is how that weight-gain-despite-normal-eating story becomes a dated home number for the next visit — it is not an analog bathroom scale (that lives on dog-cancer-signs), not a digital pet scale (that lives on dog-obesity), not a wide-platform veterinary floor scale (that lives on pain-signs-dogs), and not a kitchen gram scale. It does not diagnose thyroid disease. A quilted dog winter coat is how cold intolerance becomes a short outdoor layer instead of skipping the walk — it is not a fleece dog sweater (that lives on dog.com hypothyroidism), not a self-warming dog mat, not a plug-in heated pet mat (that lives on senior-pet-care), and not washable heat pants. It does not treat an underactive thyroid.</p>
+          <p>Classic signs are weight gain without overeating, lethargy and reduced activity, and skin and coat changes — thinning fur, a dull coat, symmetric hair loss over the trunk, darkened or thickened skin, and recurrent ear or skin infections. Some dogs seek out warm spots because they tolerate cold poorly. Occasionally hypothyroidism affects the nerves or causes a &quot;tragic&quot; facial expression from thickened skin. These signs accumulate gradually, which is why owners often attribute them to age. It does not diagnose thyroid disease. A quilted dog winter coat is how cold intolerance becomes a short outdoor layer instead of skipping the walk — it is not a fleece dog sweater (that lives on dog.com hypothyroidism), not a self-warming dog mat, not a plug-in heated pet mat (that lives on senior-pet-care), and not washable heat pants. It does not treat an underactive thyroid.</p>
 
           <h2>How It Is Diagnosed</h2>
           <p>Diagnosis relies on bloodwork, but interpretation requires care. A low total T4 supports the diagnosis but is not enough alone, because many unrelated illnesses and some medications lower T4 without true thyroid disease. Veterinarians therefore confirm with a fuller panel — free T4 and TSH — and avoid testing while a dog is acutely ill. Routine bloodwork in hypothyroid dogs often also shows elevated cholesterol, a supportive clue. Household scales, coats, and pill boxes do not replace that panel.</p>
 
           <h2>Treatment</h2>
-          <p>Treatment is daily oral thyroid hormone replacement, given for life. The starting dose and any adjustments are determined by your veterinarian, who rechecks thyroid levels after starting and periodically thereafter to fine-tune. Owners typically see energy return within weeks, with skin and coat improvements following over one to several months. The medication is inexpensive and well tolerated, and the response to treatment also helps confirm the diagnosis was correct. A weekly pill organizer with alarms is how that daily dose stays a remembered slot — it is not a monthly pill organizer (that lives on heartworm-prevention), not an AM/PM weekly pill organizer (that lives on dog-liver-disease), and not dog pill pockets (those live on Addison&apos;s). It does not set or adjust a levothyroxine dose. Soloxine, Thyro-Tabs, Synthroid, and any other thyroid brand are clinic prescriptions, not shoppable hops.</p>
+          <p>Treatment is daily oral thyroid hormone replacement, given for life. The starting dose and any adjustments are determined by your veterinarian, who rechecks thyroid levels after starting and periodically thereafter to fine-tune. Owners typically see energy return within weeks, with skin and coat improvements following over one to several months. The medication is inexpensive and well tolerated, and the response to treatment also helps confirm the diagnosis was correct. It does not set or adjust a levothyroxine dose. Soloxine, Thyro-Tabs, Synthroid, and any other thyroid brand are clinic prescriptions, not shoppable hops.</p>
 
           <h2>Long-Term Management</h2>
           <p>Once stabilized, hypothyroid dogs need only their daily medication and periodic monitoring bloodwork to confirm the dose remains appropriate as they age or change weight. The prognosis is excellent. Because the disease is lifelong but easily controlled, the main job for owners is consistency — giving the medication reliably and keeping up with recheck testing. A large platform digital bathroom scale is how a weight change between rechecks stays a number, not a guess. A quilted dog winter coat is still comfort for leftover cold intolerance while the coat fills back in. A weekly pill organizer with alarms is still the reminder that the daily tablet was given. None of those replace the veterinarian who reads the next T4.</p>
@@ -133,20 +104,12 @@ export default function HypothyroidismDogsPage() {
             care, and not a treatment for
             hypothyroidism. Soloxine, Thyro-Tabs,
             Synthroid, and levothyroxine are not
-            shoppable hops. Self-warming dog mats,
-            fleece dog sweaters, and slicker brushes
-            already live on dog.com hypothyroidism.
-            Analog bathroom scales already live on
-            dog-cancer-signs. Digital pet scales
-            already live on dog-obesity. Wide-platform
+            shoppable hops. Analog bathroom scales already live on
+            dog-cancer-signs. Wide-platform
             veterinary floor scales already live on
-            pain-signs-dogs. Monthly pill organizers
-            already live on heartworm-prevention.
-            AM/PM weekly pill organizers already live
-            on dog-liver-disease. Plug-in heated pet
-            mats already live on senior-pet-care. This
-            page does not claim hands-on testing.
-          </p>
+            pain-signs-dogs. AM/PM weekly pill organizers already live
+            on dog-liver-disease. This
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -213,35 +176,9 @@ export default function HypothyroidismDogsPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page weight-gain, cold-intolerance,
-              and daily thyroid-medication copy — a
-              large platform digital bathroom scale, a
-              quilted dog winter coat, and a weekly
-              pill organizer with alarms. Educational
-              home-care and monitoring tools only.
-              They are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1081 saline-wash /
-              padded-collar / halo-harness hop, they
-              are not a #1080 file-box / heated-mat /
-              motion-night-light hop, they are not a
-              #1079 cot / stair-tread / planner hop,
-              they are not a dog.com hypothyroidism
-              self-warming-mat / fleece-sweater /
-              slicker-brush hop, they are not an
-              analog-bathroom-scale / digital-pet-scale
-              / veterinary-floor-scale hop, they are
-              not a monthly-pill-organizer / AM-PM
-              weekly-pill-organizer hop, and they do
-              not replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/large+platform+digital+bathroom+scale?s=health-hypothyroidism-dogs"
@@ -255,7 +192,7 @@ export default function HypothyroidismDogsPage() {
                 amazonHref="/go/amazon-brand/weekly+pill+organizer+with+alarms?s=health-hypothyroidism-dogs"
                 amazonLabel="Browse weekly pill organizers with alarms on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

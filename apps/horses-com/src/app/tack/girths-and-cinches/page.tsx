@@ -116,20 +116,16 @@ export default function GirthsCinchesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the girths-and-cinches checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Girths-and-cinches checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the anatomical-vs-straight girth checklist, buckle-elbow-clearance fit question card, and girth-gall skin-wrinkle log that match the what-the-girth-does, English, western, fit, and galls copy on this page — a laminated horse anatomical-vs-straight girth checklist so straight-girths-are-the-basic-form / anatomical-or-shaped-girths-curve-to-free-the-elbow / a-shape-that-suits-the-horse stay visible before anyone buckles a strap (not a laminated horse snaffle-vs-double bridle checklist, not a laminated horse standing-vs-running martingale checklist, not a laminated horse turnout-vs-stable rug checklist, not a laminated horse turnout-halter breakaway checklist, not a laminated horse-leg bandage-bow technique checklist, not a laminated saddle-pad cannot-fix-fit checklist), a horse girth buckle-elbow-clearance question card so the-right-length-keeps-buckles-or-rings-clear-of-the-elbow / positioned-in-the-natural-girth-groove / not-dragged-forward-against-the-elbow stays posted (not a horse bridle cheekpiece-length fit question card, not a horse breastplate-vs-breastgirth fit question card, not a horse denier-vs-fill question card, not a horse rope-vs-flat-halter task question card, not a horse-boot impact-not-tendon-support question card, not a saddle-pad sweat-pattern dry-spot question card), and a horse girth-gall skin-wrinkle log notebook so gradual-tightening / smooth-the-skin-under-the-girth / pull-the-forelegs-forward-to-remove-wrinkles stay written down (not a horse noseband two-finger welfare log, not a horse martingale-misuse head-carriage log, not a horse over-rugging sweat-shiver watch log, not a horse quick-release wither-height tie log, not a horse-boot grit-rub clean-dry log, not a saddle-pad clean-dry rotation log). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a saddle fitter, a qualified instructor, or a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Girths-and-cinches checklist"
-              subtitle="Email the anatomical-vs-straight card, buckle-elbow check, and gall skin-wrinkle log. No spam."
-              ctaText="Email my girths-and-cinches checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-girths-and-cinches-under-hero"
             />
           </div>
@@ -144,9 +140,7 @@ export default function GirthsCinchesPage() {
             <li><strong>Stud-guard and short dressage girths</strong> for jumping (protecting the belly) and dressage (used with long billets and a monoflap saddle).</li>
             <li><strong>Materials</strong> -- leather, neoprene, fleece-lined, string, and breathable synthetics, varying in grip, comfort, and ease of cleaning.</li>
           </ul>
-          <p>
-            A laminated horse anatomical-vs-straight girth checklist is how straight-girths-are-the-basic-form, anatomical-or-shaped-girths-curve-to-free-the-elbow, and a-shape-that-suits-the-horse stay visible before anyone buckles a strap — it is not a laminated horse snaffle-vs-double bridle checklist (that lives on bridle-types), not a laminated horse standing-vs-running martingale checklist (that lives on martingales-and-breastplates), not a laminated horse turnout-vs-stable rug checklist (that lives on blanket-weights), not a laminated horse turnout-halter breakaway checklist (that lives on halters-and-lead-ropes), not a laminated horse-leg bandage-bow technique checklist (that lives on boots-and-wraps), and not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads). This page does not hop horse+girth+cinch / horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims (those live on saddle-fit-basics), ASTM+SEI+horse+riding+helmet (that lives on horse-size-for-rider), or horse+halter+lead+rope (that lives on the cost calculator). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
+          
 
           <h2 id="western">Western Cinches</h2>
           <p>The western cinch attaches to the saddle by long latigo straps and a cinch ring. Cinches are commonly made of woven mohair, felt, fleece, or neoprene, with mohair prized for breathability and comfort. A western saddle may use a single front cinch or, for harder stopping and roping work, an additional rear cinch (the back cinch must be snugged so a hind foot cannot get caught, and connected to the front cinch). Material and width are chosen for the horse&apos;s comfort over long miles.</p>
@@ -154,14 +148,12 @@ export default function GirthsCinchesPage() {
           <h2 id="fit">Fit and Tightening</h2>
           <p>A girth should be the right length so the buckles or rings sit clear of the elbow and skin, of a width and shape that suits the horse, and positioned in the natural girth groove rather than dragged forward against the elbow. Tighten gradually -- snug enough at the mounting block to keep the saddle stable, then check and adjust after walking on and warming up, rather than yanking it tight all at once. Always smooth the skin under the girth (or pull the forelegs forward) to remove wrinkles that cause rubs.</p>
           <p>
-            A horse girth buckle-elbow-clearance question card is how &quot;the right length keeps buckles or rings clear of the elbow, the girth sits in the natural girth groove, and it is not dragged forward against the elbow&quot; stays posted — it is not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A horse girth buckle-elbow-clearance question card is how &quot;the right length keeps buckles or rings clear of the elbow, the girth sits in the natural girth groove, and it is not dragged forward against the elbow&quot; stays posted — it is not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="galls">Girth Galls and Girthiness</h2>
           <p>Girth galls are painful sores or rubs in the girth area, caused by friction, dirt, a poorly fitting girth, or skin pinched in wrinkles. Prevent them with a clean girth and coat, correct fit, gradual tightening, and a girth shape suited to the horse. Girthiness -- the horse pinning its ears, biting, or tensing when girthed -- can be learned discomfort from past galls or rough girthing, but can also signal pain such as gastric ulcers, so persistent girthiness warrants checking fit and, if it continues, a veterinary look rather than just discipline.</p>
           <p>
-            A horse girth-gall skin-wrinkle log notebook is how gradual-tightening, smooth-the-skin-under-the-girth, and pull-the-forelegs-forward-to-remove-wrinkles stay written down — it is not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops. This page does not hop winter+horse+blanket / horse+turnout+sheet / horse+stable+blanket / horse+fleece+cooler (those live on the blanket-size calculator).
-          </p>
+            A horse girth-gall skin-wrinkle log notebook is how gradual-tightening, smooth-the-skin-under-the-girth, and pull-the-forelegs-forward-to-remove-wrinkles stay written down — it is not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <h2 id="picks">Girth Picks</h2>
           <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -343,15 +335,13 @@ export default function GirthsCinchesPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the girths-and-cinches leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page what-the-girth-does, English, western, fit, and galls copy — a laminated horse anatomical-vs-straight girth checklist, a horse girth buckle-elbow-clearance question card, and a horse girth-gall skin-wrinkle log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a #1146 laminated snaffle-vs-double / cheekpiece-length / noseband-two-finger hop, they are not a #1145 laminated standing-vs-running / breastplate-vs-breastgirth / martingale-misuse-head-carriage hop, they are not a #1144 laminated-turnout-vs-stable / denier-vs-fill / over-rugging-sweat-shiver hop, they are not a #1143 turnout-halter breakaway / rope-vs-flat / wither-height-tie hop, they are not a #1142 horse-leg bandage-bow / impact-not-tendon-support / grit-rub hop, they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a saddle-fit-basics pad / half-pad / shim / girth-cinch hop, they are not a BCS-chart hop, and they do not replace a saddle fitter, a qualified instructor, or a veterinarian. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+anatomical+vs+straight+girth+checklist?s=girths-and-cinches"
-                amazonLabel="Browse laminated horse anatomical-vs-straight girth checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=girths-and-cinches"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+girth+buckle+elbow+clearance+question+card?s=girths-and-cinches"
@@ -361,7 +351,7 @@ export default function GirthsCinchesPage() {
                 amazonHref="/go/amazon-brand/horse+girth+gall+skin+wrinkle+log+notebook?s=girths-and-cinches"
                 amazonLabel="Browse horse girth-gall skin-wrinkle log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

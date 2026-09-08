@@ -68,45 +68,16 @@ export default function FreshDogFoodWorthItPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fresh-dog-food checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Fresh-dog-food checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-fresh-vs-kibble-chart,
-            fridge-fresh-thaw-card, and
-            canine-gently-cooked-handbook notes
-            that match the format-comparison,
-            fridge-or-freezer-thaw, and
-            aafco-wsava-kcal copy on this
-            page — a laminated dog fresh-vs-kibble chart so
-            the cooked-vs-kibble-vs-raw axes are posted on
-            the fridge (not a cheek-swab chart,
-            not an eight-week-trial chart, not a
-            NASC-seal chart), a dog fridge
-            fresh-thaw card so refrigerated /
-            frozen thaw and portion notes are labeled on the
-            fridge (not a breed-estimate card, not an
-            itch-score card, not an EPA-DHA card),
-            and a canine gently-cooked handbook so the
-            AAFCO complete-and-balanced / WSAVA /
-            kcal-density grounding is a physical kitchen book (not
-            an MDR1-vet handbook, not a food-challenge
-            handbook, not a fish-oil handbook).
-            Educational kitchen checklist, not a
-            ranked clinic list, not a Farmer&apos;s Dog /
-            Ollie subscription hop, not a first-aid-kit
-            hop, and not a substitute for a
-            veterinarian. Dog.com does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Fresh-dog-food checklist"
-            subtitle="Email the fresh-vs-kibble chart, fridge thaw card, and gently-cooked-handbook notes. No spam."
-            ctaText="Email my fresh-dog-food checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="reviews-fresh-dog-food-worth-it-under-hero"
           />
         </div>
@@ -176,44 +147,16 @@ export default function FreshDogFoodWorthItPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs dog-dna-tests /
             elimination-diet / dog-supplements hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the fresh-dog-food kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page format-comparison,
-            fridge-or-freezer-thaw, and
-            aafco-wsava-kcal copy — a
-            laminated dog fresh-vs-kibble chart, a
-            dog fridge fresh-thaw card, and a
-            canine gently-cooked handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            a dog-dna-tests / elimination-diet /
-            dog-supplements hop, they are not a
-            Farmer&apos;s Dog / Ollie kit hop, they are
-            not a first-aid-kit hop, they are not a
-            child toothbrush hop, and they do not
-            replace a veterinarian. Dog.com does not
-            sell insurance. Dog.com earns a commission
-            on qualifying purchases at no extra cost
-            to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+fresh+vs+kibble+chart?s=reviews-fresh-food"
-              amazonLabel="Browse laminated dog fresh-vs-kibble charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+fresh+thaw+card?s=reviews-fresh-food"
-              amazonLabel="Browse dog fridge fresh-thaw cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+gently+cooked+handbook?s=reviews-fresh-food"
-              amazonLabel="Browse canine gently-cooked handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=reviews-fresh-food"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

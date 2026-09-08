@@ -44,22 +44,14 @@ export default function IchTreatmentPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the heat-method plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ich heat-method checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the quarantine / heat-method / aeration order — isolate new
-            or spotted fish, hold 82–86°F for 10+ days after the last spot if
-            the species tolerates it, and add air-driven aeration because
-            warmer water holds less oxygen. Educational husbandry, not a
-            diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Ich heat-method checklist"
-            subtitle="Email the quarantine, heat-method, and aeration order. No spam."
-            ctaText="Email my ich heat-method checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-ich-under-hero"
           />
         </div>
@@ -87,48 +79,7 @@ export default function IchTreatmentPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop heat-method husbandry gear
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            The heat method depends on holding 82–86°F for 10+ days after the
-            last visible spot (species-permitting) and adding aeration because
-            warmer water holds less oxygen. A heater rated for the tank, a
-            separate digital thermometer (heater thermostats drift), and an
-            air-driven sponge filter cover that husbandry set. A spare
-            hospital / quarantine tank is how you isolate spotted fish or run
-            a fish-out fallow period without medicating the display. Same
-            heater and thermometer hops used on the{' '}
-            <Link href="/setup" className="text-brand-primary no-underline hover:underline">
-              aquarium setup guide
-            </Link>
-            {' '}and the{' '}
-            <Link href="/equipment" className="text-brand-primary no-underline hover:underline">
-              equipment hub
-            </Link>
-            . Same sponge-filter hop used on the{' '}
-            <Link
-              href="/tools/aquarium-cycling-estimator"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              cycling estimator
-            </Link>
-            {' '}and the{' '}
-            <Link
-              href="/health/fish-disease-guide"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              fish disease guide
-            </Link>
-            . Same hospital-tank hop used on the{' '}
-            <Link
-              href="/tools/fish-disease-symptom-checker"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              disease symptom checker
-            </Link>
-            . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure ich. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"

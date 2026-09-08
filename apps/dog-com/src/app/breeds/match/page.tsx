@@ -156,49 +156,6 @@ export default function BreedMatchPage() {
       >
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-07T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8 not-prose">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the breed-match checklist
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Breed-match checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-match-tier-fit-chart,
-            fridge-match-persona-card, and
-            canine-match-akc-aspca-handbook notes that
-            match this /breeds/match wizard — the
-            seven-question home / time / experience /
-            activity / household / grooming / noise
-            copy, the may-fit / worth-a-closer-look
-            honest-tier map, and the AKC / ASPCA
-            grounding — a laminated dog match-tier-fit
-            chart so the two-tier map is posted on the
-            fridge (not a breeds-hub profile chart, not
-            an insurance-hub breed chart), a fridge
-            match-persona card so the first-time /
-            apartment / active-household / quiet-home
-            notes are labeled in the kitchen (not a
-            breeds library card, not an insurance-hub
-            timing card), and a match handbook so the
-            AKC / ASPCA row is a physical kitchen book
-            (not a breeds-reference handbook, not an
-            insurance-hub handbook). Educational kitchen
-            checklist, not a ranked product list, not an
-            email gate on the quiz, not a substitute for
-            meeting a breeder or rescue. Dog.com does
-            not sell insurance. No spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Breed-match checklist"
-            subtitle="Email the tier-fit chart, persona card, and match handbook notes. No spam."
-            ctaText="Email my breed-match checklist"
-            source="breed-match-under-hero"
-          />
-        </div>
 
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
@@ -216,6 +173,22 @@ export default function BreedMatchPage() {
         {/* The wizard */}
         <div className="mb-12 not-prose">
           <BreedMatchWizard />
+        </div>
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8 not-prose">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Owner notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="dog-com"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
+            source="breed-match-under-hero"
+          />
         </div>
 
         {/* Result next-step — once a breed is matched, the practical questions
@@ -258,41 +231,14 @@ export default function BreedMatchPage() {
             hop, never an email gate. */}
         <div className="not-prose mb-12 rounded-xl border border-brand-border bg-brand-surface p-6">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the breed-match kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page seven-question home / time /
-            experience / activity / household / grooming
-            / noise copy, the may-fit /
-            worth-a-closer-look honest-tier map, and the
-            AKC / ASPCA grounding — a laminated dog
-            match-tier-fit chart, a fridge match-persona
-            card, and a canine match AKC-ASPCA handbook.
-            Educational kitchen searches only. They are
-            not a ranked product list, they are not a
-            breeds-hub hop, they are not a
-            breed-insurance-hub hop, they are not a
-            crate hop, they are not a first-aid-kit hop,
-            they are not a flea / heartworm / vaccine
-            hop, and they do not replace meeting a
-            breeder or rescue. Dog.com does not sell
-            insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+match+tier+fit+chart?s=breed-match"
-              amazonLabel="Browse laminated dog match-tier-fit charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+match+persona+card?s=breed-match"
-              amazonLabel="Browse fridge dog match-persona cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+match+akc+aspca+handbook?s=breed-match"
-              amazonLabel="Browse canine match AKC-ASPCA handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-match"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

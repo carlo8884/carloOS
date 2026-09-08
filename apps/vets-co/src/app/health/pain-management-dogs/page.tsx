@@ -36,7 +36,7 @@ export default function PainManagementPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-mgmt" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pain-mgmt" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -44,45 +44,16 @@ export default function PainManagementPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog pain-management home-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog pain-management home-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              rest, mobility-support, and pain-score
-              copy on this page — an elevated mesh dog
-              cot so a dog that sleeps more and
-              hesitates before rising has a low rest
-              surface they can get off without climbing
-              out of a deep bed, clear adhesive
-              non-slip stair treads so the dog that
-              used to bound upstairs and now takes them
-              slowly has grip on the existing staircase,
-              and a hardcover weekly appointment
-              planner so rest, stairs, and daily pain
-              scores stay dated observations for the
-              veterinarian. Educational checklist, not
-              a ranked product list, not a substitute
-              for veterinary care, and not an NSAID /
-              gabapentin / tramadol / Librela / CBD hop.
-              Extra-large bolster dog lounges, A5
-              hardcover dot-grid notebooks, and 2-liter
-              plastic graduated pitchers already live
-              on cushing-disease-dogs. Egg-crate kennel
-              pads, carpeted wooden pet steps, and
-              veterinary floor scales already live on
-              pain-signs-dogs. Traction rugs, dog
-              ramps, and orthopedic beds already live
-              on arthritis-in-dogs. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog pain-management home-care checklist"
-              subtitle="Email the cot, stair-tread, and planner notes. No spam."
-              ctaText="Email my dog pain-management home-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-pain-management-dogs-under-hero"
             />
           </div>
@@ -102,10 +73,10 @@ export default function PainManagementPage() {
           <p>Librela is a monoclonal antibody targeting nerve growth factor (NGF) — a key pain signaling molecule in osteoarthritis. Given as a monthly subcutaneous injection by a veterinarian, it provides 4 weeks of pain control per injection with a different mechanism than NSAIDs, making it appropriate for dogs that cannot tolerate NSAIDs (kidney disease, GI disease) or as an add-on for inadequate NSAID response. Clinical trial data showed significant improvement in mobility and pain scores in dogs with osteoarthritis. It works particularly well in dogs whose arthritis pain has not been adequately controlled by NSAIDs alone. It is not a replacement for all pain management — it targets one pain pathway in a complex pain condition.</p>
 
           <h2>Multimodal Pain Management</h2>
-          <p>Chronic pain (osteoarthritis, cancer, spinal disease) is best managed with multiple simultaneous approaches targeting different pain pathways — multimodal analgesia. A multimodal protocol for a dog with osteoarthritis might include: an NSAID (anti-inflammatory), gabapentin (neuropathic/central sensitization), Librela monthly (NGF pathway), fish oil at therapeutic doses (anti-inflammatory), environmental modification (ramps, orthopedic bed, non-slip flooring), weight management (reduces joint loading), and physiotherapy or hydrotherapy (maintains muscle mass, reduces joint pain through movement). Each element addresses a different aspect of the pain experience — combined, they provide far better control than any single agent. Ramps, orthopedic beds, and traction rugs already live on the arthritis home-setup page. The household hops on this page are the unused rest / stair-grip / pain-score pieces: an elevated mesh dog cot so sleeping-more-than-usual rest does not require climbing out of a deep bed, clear adhesive non-slip stair treads so the existing staircase matches the non-slip-flooring idea without hopping a rug or a ramp, and a hardcover weekly appointment planner so daily pain scores stay a dated log for the next veterinary visit. Fish oil, NSAIDs, gabapentin, tramadol, Librela, and CBD are not shoppable hops.</p>
+          <p>Chronic pain (osteoarthritis, cancer, spinal disease) is best managed with multiple simultaneous approaches targeting different pain pathways — multimodal analgesia. A multimodal protocol for a dog with osteoarthritis might include: an NSAID (anti-inflammatory), gabapentin (neuropathic/central sensitization), Librela monthly (NGF pathway), fish oil at therapeutic doses (anti-inflammatory), environmental modification (ramps, orthopedic bed, non-slip flooring), weight management (reduces joint loading), and physiotherapy or hydrotherapy (maintains muscle mass, reduces joint pain through movement). Each element addresses a different aspect of the pain experience — combined, they provide far better control than any single agent. The household hops on this page are the unused rest / stair-grip / pain-score pieces: an elevated mesh dog cot so sleeping-more-than-usual rest does not require climbing out of a deep bed, clear adhesive non-slip stair treads so the existing staircase matches the non-slip-flooring idea without hopping a rug or a ramp, and a hardcover weekly appointment planner so daily pain scores stay a dated log for the next veterinary visit. Fish oil, NSAIDs, gabapentin, tramadol, Librela, and CBD are not shoppable hops.</p>
 
           <h2>Weight Management as Pain Treatment</h2>
-          <p>For osteoarthritic dogs, weight loss to ideal BCS is a pain management intervention, not just a wellness recommendation. Every pound of excess weight adds approximately 3-4 pounds of force on the joints with each step. A study in Labrador Retrievers showed that dogs at ideal body weight developed osteoarthritis significantly later and with lower severity than littermates maintained at slightly over ideal weight. For a dog already arthritic, losing 10% of body weight may produce pain reduction equivalent to starting an NSAID — without the medication cost or monitoring requirements. Wide-platform veterinary floor scales already live on pain-signs-dogs; this page does not hop a scale. A hardcover weekly appointment planner can carry the weekly weight the veterinarian already asked for next to the daily pain score — it is not a diet hop and it is not a treatment.</p>
+          <p>For osteoarthritic dogs, weight loss to ideal BCS is a pain management intervention, not just a wellness recommendation. Every pound of excess weight adds approximately 3-4 pounds of force on the joints with each step. A study in Labrador Retrievers showed that dogs at ideal body weight developed osteoarthritis significantly later and with lower severity than littermates maintained at slightly over ideal weight. For a dog already arthritic, losing 10% of body weight may produce pain reduction equivalent to starting an NSAID — without the medication cost or monitoring requirements. A hardcover weekly appointment planner can carry the weekly weight the veterinarian already asked for next to the daily pain score — it is not a diet hop and it is not a treatment.</p>
 
           <h2 id="kit">Home-care kit</h2>
           <p>
@@ -119,25 +90,16 @@ export default function PainManagementPage() {
             slowly has grip on the existing staircase,
             and a hardcover weekly appointment planner
             so rest, stairs, and daily pain scores stay
-            dated observations for the veterinarian.
-            These are educational home-care and
+            dated observations for the veterinarian. These are educational home-care and
             monitoring tools, not a ranked product
             list, not a substitute for veterinary
             care, and not a treatment for pain,
             arthritis, or nerve disease. NSAIDs,
             gabapentin, tramadol, Librela, CBD, fish
             oil, and human pain medicines are not
-            shoppable hops. Extra-large bolster dog
-            lounges, A5 hardcover dot-grid notebooks,
-            and 2-liter plastic graduated pitchers
-            already live on cushing-disease-dogs.
-            Egg-crate kennel pads, carpeted wooden pet
+            shoppable hops. Egg-crate kennel pads, carpeted wooden pet
             steps, and veterinary floor scales already
-            live on pain-signs-dogs. Traction rugs,
-            dog ramps, raised bowls, and orthopedic
-            beds already live on arthritis-in-dogs.
-            This page does not claim hands-on testing.
-          </p>
+            live on pain-signs-dogs. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -185,30 +147,9 @@ export default function PainManagementPage() {
               CBD, and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page rest, mobility-support, and
-              pain-score copy — an elevated mesh dog
-              cot, clear adhesive non-slip stair
-              treads, and a hardcover weekly
-              appointment planner. Educational
-              home-care and monitoring tools only.
-              They are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1078 pitcher /
-              bolster-lounge / A5-notebook hop, they
-              are not a #1077 carafe / saucepan /
-              memo-pad hop, they are not a #1075
-              egg-crate-pad / pet-steps / floor-scale
-              hop, they are not an arthritis traction-rug
-              / ramp / orthopedic-bed hop, and they do
-              not replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs"
@@ -222,7 +163,7 @@ export default function PainManagementPage() {
                 amazonHref="/go/amazon-brand/hardcover+weekly+appointment+planner?s=health-pain-management-dogs"
                 amazonLabel="Browse hardcover weekly appointment planners on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

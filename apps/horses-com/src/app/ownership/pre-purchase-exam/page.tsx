@@ -117,57 +117,16 @@ export default function PrePurchaseExamPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the pre-purchase exam checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pre-purchase exam checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the pre-purchase-exam-stage
-              walkthrough, findings-decision
-              worksheet, and buyer-vet-briefing
-              notes that match the what-the-exam-
-              is-for, basic-versus-five-stage,
-              radiographs-and-extras, who-the-vet-
-              works-for, and using-findings copy
-              on this page — a laminated pre-
-              purchase exam stage walkthrough
-              checklist so two-stage rest-plus-
-              walk-trot versus five-stage exercise,
-              rest, and final trot-up stay visible
-              before anyone books the vet (not a
-              first-horse tryout walkthrough, not a
-              lease walkthrough, not a boarding-
-              facility walkthrough, not an
-              insurance-claims checklist), a horse
-              pre-purchase exam findings decision
-              worksheet so findings versus intended
-              use stay on one page instead of a
-              pass-or-fail stamp (not a mortality-
-              versus-major-medical worksheet, not
-              a full-versus-partial lease cost-
-              share worksheet, not a monthly-
-              budget worksheet), and a horse buyer
-              vet briefing question card so
-              intended use, budget, and “this vet
-              works for the buyer” stay posted
-              before the exam (not an after-hours
-              emergency-cover question card, not
-              a vet-interview checklist, not a
-              first-horse buyer visit notebook).
-              Educational owner exam-readiness
-              tools only, not a ranked product
-              list, not a clinic listing, and not
-              a substitute for an independent
-              veterinarian acting for the buyer.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Pre-purchase exam checklist"
-              subtitle="Email the stage-walkthrough, findings-worksheet, and buyer-vet-briefing notes. No spam."
-              ctaText="Email my pre-purchase exam checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-pre-purchase-exam-under-hero"
             />
           </div>
@@ -201,52 +160,11 @@ export default function PrePurchaseExamPage() {
 
           <h2 id="covers">What It Covers</h2>
           <p>A standard exam includes a thorough physical examination at rest -- eyes, heart, lungs, teeth, skin, conformation, and a hands-on check of the limbs and back -- followed by an evaluation of the horse in motion, in hand and often on the lunge, including flexion tests that stress the joints to reveal hidden lameness. The veterinarian assesses the horse&apos;s wind (breathing), demeanor, and overall condition. The aim is a rounded picture of how the horse is functioning now.</p>
-          <p>
-            The same laminated pre-purchase
-            exam stage walkthrough checklist
-            is how rest, in-hand, lunge, and
-            flexion-test stages stay visible
-            so the buyer knows what was
-            actually seen — it is not a
-            laminated first-horse tryout
-            walkthrough checklist (that lives
-            on buying-your-first-horse and
-            scores handle / ridden / load,
-            not vetting stages), not a
-            laminated horse lease walkthrough
-            checklist (that lives on
-            leasing-a-horse), and not a
-            laminated horse boarding facility
-            walkthrough checklist (that lives
-            on boarding-options). This page
-            does not hop first-aid saline,
-            dressing pads, or bandage scissors
-            already pinned on first-aid-kit.
-          </p>
+          
 
           <h2 id="levels">Basic vs Extensive</h2>
           <p>Pre-purchase exams come in tiers. A basic (sometimes called two-stage) exam covers the resting examination and seeing the horse walk and trot, suitable for a low-value or low-demand purchase. A more extensive (five-stage) exam adds strenuous exercise to stress the heart, lungs, and limbs, a period of rest and re-examination, and a final trot-up to catch lameness that only shows after work. The level should match the horse&apos;s value and intended job, decided with your veterinarian.</p>
-          <p>
-            A laminated pre-purchase exam
-            stage walkthrough checklist is how
-            two-stage rest-plus-walk-trot
-            versus five-stage exercise, rest,
-            and final trot-up stay visible
-            before anyone books the vet — it
-            is not a laminated equine-vet
-            interview checklist (that lives
-            on choosing-a-vet), not a
-            laminated horse insurance claims
-            checklist (that lives on
-            horse-insurance), and not a
-            laminated first-horse tryout
-            walkthrough checklist (that lives
-            on buying-your-first-horse). This
-            page does not hop emergency-triage
-            charts, vital-signs cards, or
-            daily-care charts already pinned
-            on the health and care hubs.
-          </p>
+          
 
           <h2 id="radiographs">Radiographs and Extras</h2>
           <p>Beyond the clinical exam, buyers can request additional diagnostics: radiographs of the feet, hocks, and other areas to look for bony change; ultrasound of soft tissues; blood tests (including, by agreement, storing a sample to test later for medication that might mask problems); endoscopy of the airway; and tests appropriate to the discipline. These add cost and are chosen based on the horse&apos;s value, age, intended use, and any findings from the clinical exam.</p>
@@ -270,39 +188,11 @@ export default function PrePurchaseExamPage() {
             binder (that lives on
             cost-of-owning-a-horse). This page
             does not hop medications or
-            vaccines. This page does not hop
-            hay tarps, hay racks, or feed
-            bins already pinned on boarding
-            and nutrition pages.
-          </p>
+            vaccines. </p>
 
           <h2 id="whofor">Who the Vet Works For</h2>
           <p>A crucial principle is independence: the examining veterinarian should be acting for the buyer, not the seller, and ideally is not the horse&apos;s regular vet, to avoid any conflict of interest. The buyer should brief the vet on the intended use and budget. The vet&apos;s job is to report findings honestly and advise on their significance for that buyer&apos;s plans, not to talk the buyer into or out of the purchase.</p>
-          <p>
-            A horse buyer vet briefing
-            question card is how intended use,
-            budget, and “this vet works for
-            the buyer, not the seller” stay
-            posted before the exam — it is
-            not a horse after-hours emergency-
-            cover question card (that lives
-            on choosing-a-vet and asks who
-            answers a midnight colic, not who
-            the PPE vet reports to), not a
-            laminated equine-vet interview
-            checklist (that lives on
-            choosing-a-vet), and not a first-
-            horse buyer visit field notebook
-            (that lives on
-            buying-your-first-horse). This
-            page does not hop insurance-
-            carrier deep links, after-hours
-            emergency-cover question cards as
-            the hop itself, or first-aid
-            saline / pads / scissors. This
-            page does not invent clinic
-            listings.
-          </p>
+          
 
           <h2 id="results">Using the Results</h2>
           <p>The exam produces findings, not a simple yes or no. Few horses are entirely without blemish, and the question is whether the findings matter for the intended use -- a minor issue may be irrelevant for light hacking but disqualifying for upper-level competition. The veterinarian explains the significance of each finding and the associated risk, and the buyer decides, possibly renegotiating the price, requesting further tests, or walking away. The exam is a tool for an informed decision, not a guarantee against all future problems.</p>
@@ -319,85 +209,11 @@ export default function PrePurchaseExamPage() {
             document binder (that lives on
             horse-insurance), and not a horse
             boarding contract document binder
-            (that lives on boarding-options).
-            This page does not hop
-            emergency-triage charts,
-            vital-signs cards, or daily-care
-            charts. This page does not hop
-            medications. This page does not
-            claim hands-on testing.
-          </p>
+            (that lives on boarding-options). This page does not
+            claim hands-on testing. </p>
 
           <h2 id="kit">Pre-purchase exam leftover findings kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            what-the-exam-is-for, basic-versus-
-            five-stage, radiographs-and-extras,
-            who-the-vet-works-for, and
-            using-findings copy on this page —
-            a laminated pre-purchase exam stage
-            walkthrough checklist so two-stage
-            rest-plus-walk-trot versus
-            five-stage exercise, rest, and
-            final trot-up stay visible before
-            anyone books the vet, a horse
-            pre-purchase exam findings decision
-            worksheet so findings versus
-            intended use stay on one page
-            instead of a pass-or-fail stamp,
-            and a horse buyer vet briefing
-            question card so intended use,
-            budget, and “this vet works for
-            the buyer” stay posted before the
-            exam. These are educational owner
-            searches, not a ranked product
-            list, not a clinic listing, not a
-            substitute for an independent
-            veterinarian acting for the buyer,
-            not a monthly-budget-worksheet /
-            emergency-fund-tracker /
-            keep-feed-farrier-cost-log hop
-            (those live on cost-of-owning-a-horse),
-            not a laminated equine-vet interview
-            checklist / after-hours emergency-cover
-            question card / VCPR records folder
-            hop (those live on choosing-a-vet),
-            not a first-horse tryout walkthrough /
-            buyer-visit-notebook /
-            pre-purchase-exam-records-binder hop
-            (those live on buying-your-first-horse),
-            not a boarding-facility walkthrough /
-            boarding-contract-binder / hay-bale-tarp
-            hop (those live on boarding-options),
-            not a horse-insurance-policy-binder /
-            insurance-claims-checklist /
-            mortality-versus-major-medical
-            worksheet hop (those live on
-            horse-insurance), not a
-            lease-agreement-binder /
-            lease-walkthrough-checklist /
-            full-versus-partial cost-share
-            worksheet hop (those live on
-            leasing-a-horse), not a first-aid
-            saline / pads / scissors hop, not a
-            daily-care-chart / stall-door-care-card
-            / husbandry-handbook hop (those live
-            on the care hub), not an
-            emergency-triage-chart /
-            vital-signs-card / health-handbook
-            hop, not a forage-first-chart /
-            ration-card / nutrition-handbook hop,
-            not an owner-guides-chart hop, not a
-            calculator-tools-chart hop, not a
-            farrier-log / flood-light hop, and
-            not a weatherproof-clipboard hop.
-            This page does not hop medications
-            or vaccines. This page does not
-            claim hands-on testing. This page
-            does not invent clinic listings.
-            This page does not hop
-            insurance-carrier deep links.
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -468,51 +284,13 @@ export default function PrePurchaseExamPage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the pre-purchase exam leftover findings kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page what-the-exam-is-for, basic-
-              versus-five-stage, radiographs-and-
-              extras, who-the-vet-works-for, and
-              using-findings copy — a laminated
-              pre-purchase exam stage walkthrough
-              checklist, a horse pre-purchase exam
-              findings decision worksheet, and a
-              horse buyer vet briefing question
-              card. Educational owner searches
-              only. They are not a ranked product
-              list, they are not a clinic listing,
-              they are not a monthly-budget /
-              emergency-fund / keep-feed-farrier
-              hop, they are not a choosing-a-vet
-              interview / after-hours-cover /
-              VCPR-folder hop, they are not a
-              first-horse tryout / buyer-notebook /
-              PPE-records hop, they are not a
-              boarding walkthrough / contract-binder
-              / hay-tarp hop, they are not a
-              horse-insurance policy-binder /
-              claims-checklist / mortality-versus-
-              medical hop, they are not a
-              lease-agreement-binder /
-              lease-walkthrough / cost-share hop,
-              they are not a first-aid saline /
-              pads / scissors hop, they
-              are not a daily-care / emergency-triage
-              / owner-guides / calculator-tools
-              chart hop, they are not a farrier-log
-              hop, and they do not replace an
-              independent veterinarian acting for
-              the buyer. Horses.com earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+pre+purchase+exam+stage+walkthrough+checklist?s=ownership-pre-purchase-exam"
-                amazonLabel="Browse laminated pre-purchase exam stage walkthrough checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=ownership-pre-purchase-exam"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+pre+purchase+exam+findings+decision+worksheet?s=ownership-pre-purchase-exam"
@@ -522,7 +300,7 @@ export default function PrePurchaseExamPage() {
                 amazonHref="/go/amazon-brand/horse+buyer+vet+briefing+question+card?s=ownership-pre-purchase-exam"
                 amazonLabel="Browse horse buyer vet briefing question cards on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

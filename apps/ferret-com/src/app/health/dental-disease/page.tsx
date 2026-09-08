@@ -194,26 +194,16 @@ export default function FerretDentalDiseasePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret brushing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret brushing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes — a fingertip rubber brush for
-              kits, a soft infant toothbrush for outside-surface brushing,
-              and pet dental wipes (gauze on a fingertip with enzymatic
-              paste) for days a ferret will not tolerate a brush.
-              Educational checklist, not a diagnosis and not a substitute
-              for the exotic-pet vet. Human toothpaste, fluoride, xylitol,
-              antibiotics, and anesthesia stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret brushing checklist"
-              subtitle="Email the fingertip-brush, infant-toothbrush, and dental-wipe notes. No spam."
-              ctaText="Email my ferret brushing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dental-disease-under-hero"
             />
           </div>
@@ -465,21 +455,9 @@ export default function FerretDentalDiseasePage() {
               Human toothpaste, brand ASINs, and medications are not hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret dental-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              brushing-protocol copy — a fingertip rubber brush, a soft
-              infant toothbrush for outside-surface brushing, and pet
-              dental wipes for gauze-on-a-fingertip days. Everyday
-              physical supplies only. They are not a ranked product list,
-              they are not the dog/vets toothbrush or enzymatic-paste hops
-              already used elsewhere, they are not human toothpaste, they
-              are not medications, and they do not replace an exotic-pet
-              veterinarian. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/finger+toothbrush+pet?s=health-dental-disease"
@@ -493,7 +471,7 @@ export default function FerretDentalDiseasePage() {
                 amazonHref="/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"
                 amazonLabel="Browse pet dental wipes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="scaling">Anesthetized Professional Cleanings</h2>

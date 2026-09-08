@@ -37,7 +37,7 @@ export default function DehydrationPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Vomiting and Diarrhea', href: '/health/vomiting-diarrhea-pets' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-dehydration" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-dehydration" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -45,29 +45,16 @@ export default function DehydrationPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog dehydration home-sip checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog dehydration home-sip checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-sip notes — an unflavored
-              pediatric electrolyte to dilute 50/50 with
-              water, a kitchen liquid-measuring pitcher
-              for that mix, and a shallow lipped dog
-              saucer so a mildly dehydrated dog can take
-              frequent small sips. Educational checklist,
-              not a diagnosis and not a substitute for
-              veterinary fluid therapy. IV bags, SQ fluids,
-              Lactated Ringer&rsquo;s, and fountain / ceramic
-              bowl hops stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog dehydration home-sip checklist"
-              subtitle="Email the electrolyte, pitcher, and saucer notes. No spam."
-              ctaText="Email my dog dehydration home-sip checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dehydration-in-dogs-under-hero"
             />
           </div>
@@ -134,26 +121,9 @@ export default function DehydrationPage() {
               brand ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog dehydration home-sip kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page mild-case oral-fluid copy — an
-              unflavored pediatric electrolyte, a kitchen
-              liquid-measuring pitcher, and a shallow
-              lipped dog saucer. Everyday physical
-              supplies only. They are not a ranked product
-              list, they are not Pedialyte brand ASINs,
-              they are not IV or SQ fluid bags, they are
-              not the UTI fountain / pee-pad / ceramic-bowl
-              hops, they are not the water-intake fountain
-              / ceramic-bowl / travel-bottle hops, they
-              are not horse or ferret electrolyte hops,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs"
@@ -167,7 +137,7 @@ export default function DehydrationPage() {
                 amazonHref="/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"
                 amazonLabel="Browse shallow lipped dog saucers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

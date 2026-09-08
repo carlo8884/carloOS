@@ -127,31 +127,16 @@ export default function ThrushPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the thrush hygiene-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse thrush hygiene-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the topical equine thrush-antiseptic,
-              folding-pocket equine hoof-pick, and stall
-              sweet-lime notes so the grooves can be
-              cleaned daily, the cleaned sulci can take
-              the barn-shelf prep the label directs, and
-              wet stalls can dry instead of staying packed
-              with manure. Educational hygiene checklist,
-              not a treatment plan and not a substitute
-              for a veterinarian or farrier. Hoof-pick
-              brushes, riding hoof boots, soaking boots,
-              pine shavings, and generic horse hoof picks
-              stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse thrush hygiene-kit checklist"
-              subtitle="Email the antiseptic, folding hoof-pick, and stall-lime notes. No spam."
-              ctaText="Email my horse thrush hygiene-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-thrush-under-hero"
             />
           </div>
@@ -172,7 +157,7 @@ export default function ThrushPage() {
           </ul>
 
           <h2 id="treatment">Treatment</h2>
-          <p>Treatment starts with mechanical cleaning: pick out the foot thoroughly, then have the frog trimmed of loose, infected horn by a farrier so air can reach the grooves. A folding pocket equine hoof pick is how that daily-cleaning copy stays a pocket tool that lives on a belt or in a grooming tote — it is not the generic horse hoof pick and not a hoof-pick brush. The grooves are then treated with a topical antiseptic thrush product as directed; many commercial preparations and dilute antiseptic solutions are used. A topical equine thrush antiseptic is how that barn-shelf prep stays a labeled groove product rather than a guessed splash of iodine or copper sulfate — it is not a prescription, not an abscess soak, and not a diagnosis kit. Move the horse to clean, dry footing -- this single change does more than any topical. Persistent or deep thrush that has reached sensitive tissue, or that causes lameness, warrants veterinary attention.</p>
+          <p>Treatment starts with mechanical cleaning: pick out the foot thoroughly, then have the frog trimmed of loose, infected horn by a farrier so air can reach the grooves. The grooves are then treated with a topical antiseptic thrush product as directed; many commercial preparations and dilute antiseptic solutions are used. Move the horse to clean, dry footing -- this single change does more than any topical. Persistent or deep thrush that has reached sensitive tissue, or that causes lameness, warrants veterinary attention.</p>
 
           <h2 id="prevention">Prevention</h2>
           <ul>
@@ -183,7 +168,7 @@ export default function ThrushPage() {
           </ul>
 
           <h2 id="kit">Hygiene kit</h2>
-          <p>Everyday physical supplies that match the daily-picking, groove-prep, and dry-stall copy on this page — a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list. Generic horse hoof picks, hoof-pick brushes, riding hoof boots, soaking boots, pine shavings, wood pellets, stall rubber mats, deep-sand stall bedding, foam sole-support pads, and farrier log books already live on other pages. This page does not hop copper sulfate, iodine, Banamine, flunixin, bute, NSAIDs, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the daily-picking, groove-prep, and dry-stall copy on this page — a folding pocket equine hoof pick so packed manure comes out of the sulci before it seals them from air, a topical equine thrush antiseptic so the cleaned grooves get the barn-shelf prep the label directs, and equine stall sweet lime so wet stalls dry instead of staying urine-soaked. These are household barn tools, not treatments. They do not diagnose or treat thrush, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -208,31 +193,9 @@ export default function ThrushPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse thrush hygiene kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page daily-picking, groove-prep, and
-              dry-stall copy — a folding pocket equine
-              hoof pick, a topical equine thrush
-              antiseptic, and equine stall sweet lime.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              medication hop, they are not a diagnosis-
-              kit hop, they are not a #1063 foam-pad /
-              sand-bedding / easy-keeper-muzzle hop, they
-              are not a #1062 thermometer / stethoscope /
-              fleece-cooler hop, they are not a #1061
-              farrier-log / hoof-stand hop, they are not
-              a generic horse-hoof-pick / hoof-pick-brush
-              hop, they are not a pine-shavings / wood-
-              pellet hop, they are not a copper-sulfate /
-              iodine hop, and they do not replace a
-              veterinarian or farrier. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/topical+equine+thrush+antiseptic?s=health-thrush"
@@ -246,7 +209,7 @@ export default function ThrushPage() {
                 amazonHref="/go/amazon-brand/equine+stall+sweet+lime?s=health-thrush"
                 amazonLabel="Browse equine stall sweet lime on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

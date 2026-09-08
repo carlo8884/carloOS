@@ -181,22 +181,14 @@ export default function HorseGrimaceScalePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the pain-check chart
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horse pain-check checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the five-sign Equine Grimace checklist (ears, eyes, brow,
-            chewing muscles / mouth, nostrils) and the observation recap so you
-            can re-score later without re-reading the descriptors. Planning /
-            observation reference only — not a diagnosis or emergency-triage
-            substitute. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horse pain-check checklist"
-            subtitle="Email the five-sign horse pain-face checklist and observation recap. No spam."
-            ctaText="Email my horse pain-check checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-grimace-scale-under-hero"
           />
         </div>
@@ -246,22 +238,7 @@ export default function HorseGrimaceScalePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are comfort and observation items
-              for an equine pain-watch — an equine first-aid kit, a poultice,
-              an ice boot / cold therapy wrap, a digital veterinary
-              thermometer, vet wrap / cohesive bandage, and horse electrolytes.
-              They are not a ranked product list, not invented inventory, not
-              Rx pain medicine, and they do not diagnose pain or replace
-              emergency triage. If the face looks like high pain, skip this kit
-              and use{' '}
-              <Link href="/tools/is-this-a-horse-emergency" className="text-brand-primary underline-offset-2 hover:underline">
-                Is this a horse emergency?
-              </Link>
-              . For a stable, non-emergency question, start at telehealth.
-              Horses.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+first+aid+kit?s=tools-horse-grimace-scale"
@@ -287,7 +264,7 @@ export default function HorseGrimaceScalePage() {
                 amazonHref="/go/amazon-brand/horse+electrolytes?s=tools-horse-grimace-scale"
                 amazonLabel="Browse horse electrolytes on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

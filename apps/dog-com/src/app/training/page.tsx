@@ -167,45 +167,16 @@ export default function TrainingHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-container-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog training-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog training-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-training-session-chart,
-            fridge-training-cue-card, and
-            canine-training-reference-handbook notes that
-            match the training-section-map,
-            cue-order-and-session-log, and
-            AVSAB-CCPDT-reward-based-grounding copy on this
-            hub — a laminated dog training session chart so
-            the section map (fundamentals, puppy schedule,
-            crate / house training, behavior problems,
-            trainer credentials) is posted on the fridge
-            (not a tools-hub calculator chart, not a
-            reviews-hub buyer-guide chart, not a
-            nutrition feeding chart), a dog fridge
-            training cue card so sit / down / stay / come
-            / leave-it order and short-session notes are
-            labeled on the fridge (not a measurement card,
-            not a WSAVA label card, not a crate-pad card),
-            and a canine training reference handbook so
-            the AVSAB / CCPDT / reward-based grounding is
-            a physical kitchen book (not a calculator
-            handbook, not a reviews handbook, not a
-            nutrition handbook). Educational kitchen
-            checklist, not a ranked product list, not a
-            shock / prong / e-collar hop, and not a
-            substitute for a veterinarian or a certified
-            behavior professional. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog training-hub checklist"
-            subtitle="Email the training-session-chart, fridge cue-card, and training-handbook notes. No spam."
-            ctaText="Email my dog training-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-hub-under-hero"
           />
         </div>
@@ -381,30 +352,8 @@ export default function TrainingHubPage() {
       </section>
       {/* agent1-browse-all-end */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-container-wide">
-          Training-hub kitchen kit
-        </h2>
-        <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          training-section-map, cue-order-and-session-log,
-          and AVSAB-CCPDT-reward-based-grounding copy on
-          this hub — a laminated dog training session
-          chart so the section map is posted on the
-          fridge, a dog fridge training cue card so sit /
-          down / stay / come / leave-it order is labeled
-          on the fridge, and a canine training reference
-          handbook so the AVSAB / CCPDT / reward-based
-          grounding is a physical kitchen book. These are
-          educational kitchen searches, not a ranked
-          product list, not a substitute for a
-          veterinarian, not a tools-hub calculator-tools
-          hop, not a reviews-hub or nutrition-hub hop,
-          and not a child crate / clicker / treat /
-          harness hop (those live on the child training
-          pages). This page does not hop medications,
-          vaccines, or shock / prong / e-collars. This
-          page does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-container-wide">Related supplies</h2>
+        <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-container-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -423,38 +372,13 @@ export default function TrainingHubPage() {
             / harness hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the training-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page training-section-map,
-            cue-order-and-session-log, and
-            AVSAB-CCPDT-reward-based-grounding copy — a
-            laminated dog training session chart, a dog
-            fridge training cue card, and a canine
-            training reference handbook. Educational
-            kitchen searches only. They are not a ranked
-            product list, they are not a tools-hub /
-            reviews-hub / nutrition-hub hop, they are
-            not a crate / clicker / treat / harness hop,
-            and they do not replace a veterinarian or a
-            certified behavior professional. Dog.com
-            earns a commission on qualifying purchases
-            at no extra cost to you. Empty Chewy buttons
-            stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+training+session+chart?s=training-hub"
-              amazonLabel="Browse laminated dog training session charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+training+cue+card?s=training-hub"
-              amazonLabel="Browse dog fridge training cue cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+training+reference+handbook?s=training-hub"
-              amazonLabel="Browse canine training reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=training-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -142,30 +142,16 @@ export default function DogSpayNeuterTimingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the intact-dog management checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Intact-dog management checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the delayed-timing notes — washable
-              dog heat pants for the bloody phase of a
-              heat cycle, a male dog belly band for
-              indoor marking while you keep working the
-              outdoor toilet plan, and a heavy-duty dog
-              exercise pen when the yard is not fully
-              fenced. Educational checklist, not a
-              diagnosis and not a substitute for the
-              veterinary timing conversation. Recovery
-              cones, crates, and GPS collars stay on
-              other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Intact-dog management checklist"
-              subtitle="Email the heat-pants, belly-band, and exercise-pen notes. No spam."
-              ctaText="Email my intact-dog management checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-dog-spay-neuter-timing-under-hero"
             />
           </div>
@@ -395,23 +381,9 @@ export default function DogSpayNeuterTimingPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the intact-dog management kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page delayed-timing lifestyle copy —
-              washable dog heat pants, a male dog belly
-              band, and a heavy-duty dog exercise pen.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not
-              recovery-cone / e-collar hops, they are
-              not crate or baby-gate hops, they are not
-              the #1040 BCS tape / chart / treat hops,
-              and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing"
@@ -425,7 +397,7 @@ export default function DogSpayNeuterTimingPage() {
                 amazonHref="/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"
                 amazonLabel="Browse heavy-duty dog exercise pens on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

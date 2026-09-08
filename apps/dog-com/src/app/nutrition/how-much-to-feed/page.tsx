@@ -35,42 +35,16 @@ export default function HowMuchToFeedPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog portion checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog portion checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-bcs-score-chart,
-            fridge-ideal-weight-card, and
-            canine-rer-portion-handbook notes
-            that match the bcs-ideal-map,
-            ideal-weight-guideline-log, and
-            rer-formula-grounding copy on this
-            page — a laminated dog BCS-score chart so
-            the 9-point / ribs-felt / waist-visible map
-            is posted on the fridge (not a ten-percent-treat
-            chart, not a xylitol-critical chart, not a
-            nutrition-feeding chart), a dog fridge
-            ideal-weight card so feed-the-ideal-not-current
-            notes are labeled on the fridge (not a
-            plain-prep card, not a grape-kidney card,
-            not a WSAVA label card), and a canine
-            RER-portion handbook so the 70 × kg^0.75
-            life-stage-factor grounding is a physical
-            kitchen book (not a safe-share handbook, not
-            a poison-protocol handbook, not a food-safety
-            handbook). Educational kitchen checklist, not
-            a ranked clinic list, not a first-aid-kit hop,
-            and not a substitute for a veterinarian.
-            Dog.com does not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog portion checklist"
-            subtitle="Email the BCS-score chart, fridge ideal-weight card, and RER-portion-handbook notes. No spam."
-            ctaText="Email my dog portion checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="nutrition-how-much-under-hero"
           />
         </div>
@@ -130,43 +104,16 @@ export default function HowMuchToFeedPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs safe-human-foods /
             toxic-foods / can-dogs-eat hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the dog portion kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page bcs-ideal-map,
-            ideal-weight-guideline-log, and
-            rer-formula-grounding copy — a
-            laminated dog BCS-score chart, a
-            dog fridge ideal-weight card, and a
-            canine RER-portion handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            a safe-human-foods / toxic-foods /
-            can-dogs-eat hop, they are not a
-            first-aid-kit hop, they are not a child
-            toothbrush hop, and they do not replace a
-            veterinarian. Dog.com does not sell
-            insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+bcs+score+chart?s=nutrition-how-much"
-              amazonLabel="Browse laminated dog BCS-score charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+ideal+weight+card?s=nutrition-how-much"
-              amazonLabel="Browse dog fridge ideal-weight cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+rer+portion+handbook?s=nutrition-how-much"
-              amazonLabel="Browse canine RER-portion handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-how-much"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

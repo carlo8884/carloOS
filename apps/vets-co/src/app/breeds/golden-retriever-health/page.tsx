@@ -109,36 +109,16 @@ export default function VetsGoldenRetrieverHealthPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the Golden Retriever health checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Golden Retriever health checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the prep notes that match the
-            lymphoma, hemangiosarcoma, and
-            life-stage-monitoring copy on this
-            page — a dot-grid notebook so the
-            monthly jaw, shoulder, groin, and
-            behind-the-knee node check stays a
-            four-site map, paint-chip sample
-            cards so the gum-color baseline stays
-            a pink-versus-pale comparison, and an
-            18-month wall calendar so the age-6
-            ultrasound and age-8 every-6-month
-            visits stay written on one longer
-            horizon. Educational checklist, not a
-            diagnosis, not a substitute for
-            veterinary care, and not a tape-
-            measure, composition-book, or
-            document-frame hop. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Golden Retriever health checklist"
-            subtitle="Email the notebook, paint-chip, and calendar notes. No spam."
-            ctaText="Email my Golden Retriever health checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breeds-golden-retriever-health-under-hero"
           />
         </div>
@@ -206,18 +186,8 @@ export default function VetsGoldenRetrieverHealthPage() {
           educational Golden-retriever-health /
           paperwork tools, not a ranked product
           list, not a substitute for veterinary
-          care, and not a treatment. Flexible
-          sewing tape measures, bound composition
-          books, and letter-size document frames
-          already live on labrador-health. Blank
-          pedigree charts, round color-coding
-          labels, and 5-compartment letter
-          sorters already live on breed-specific-
-          risk. This page does not hop
-          medications, diets, or insurance brands
-          as Amazon searches. This page does not
-          claim hands-on testing.
-        </p>
+          care, and not a treatment. This page does not
+          claim hands-on testing. </p>
 
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -250,28 +220,9 @@ export default function VetsGoldenRetrieverHealthPage() {
             wall+mounted+magnetic+monthly+planner. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Golden-retriever-health kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page lymphoma, hemangiosarcoma, and
-            life-stage-monitoring copy — a
-            dot-grid notebook, paint-chip sample
-            cards, and an 18-month wall calendar.
-            Educational Golden-retriever-health /
-            paperwork tools only. They are not a
-            ranked product list, they are not a
-            substitute for veterinary care, they
-            are not a #1175 tape-measure /
-            composition-book / document-frame hop,
-            they are not a dog-com Golden cancer-
-            watch hop, they are not a financing-
-            brand or insurance-brand hop, and they
-            do not replace a veterinarian. Vets.co
-            earns a commission on qualifying
-            purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dot+grid+notebook?s=breeds-golden-retriever-health"

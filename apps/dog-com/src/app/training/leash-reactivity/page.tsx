@@ -100,18 +100,13 @@ export default function LeashReactivityPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Leash-reactivity protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the look-at-that / counter-conditioning protocol, the
-            threshold-distance rule, and the walk kit (front-clip no-pull
-            harness, 6-ft leash, treat pouch, high-value treats) so you can
-            run sessions without scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Leash-reactivity protocol"
-            subtitle="Email the LAT / counter-conditioning protocol, threshold rule, and walk kit. No spam."
-            ctaText="Email my leash-reactivity protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-leash-reactivity-under-hero"
           />
         </div>
@@ -155,37 +150,7 @@ export default function LeashReactivityPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a leash-reactivity kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A front-clip no-pull harness gives steering control during
-            counter-conditioning without adding aversive pressure. Pair it
-            with a 6-ft leash (not a retractable), a belt-clip treat pouch,
-            and high-value treats so food lands the instant the trigger
-            appears. Same harness hop used on the{' '}
-            <Link
-              href="/training/loose-leash-walking"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              loose-leash walking guide
-            </Link>
-            {' '}and the{' '}
-            <Link
-              href="/tools/harness-collar-size"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              harness and collar size calculator
-            </Link>
-            . Same treat-pouch hop used on the{' '}
-            <Link
-              href="/training/basic-commands"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              basic-commands guide
-            </Link>
-            . They are not a ranked product list and they do not replace the
-            protocol. Size the harness before you order. Dog.com earns a
-            commission on qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"

@@ -107,32 +107,16 @@ export default function WeightManagementPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret weight-tracking checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret weight-tracking checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the weight notes that match the
-              copy on this page — seasonal autumn
-              fat is expected, not obesity; hands-on
-              body-condition scoring beats judging
-              by coat; treat discipline and play
-              before dramatic restriction; and a
-              digital gram scale with tare so weekly
-              grams show a trend a hand cannot.
-              Educational tracking checklist, not a
-              new product hop and not a substitute
-              for an exotic-animal veterinarian. The
-              existing gram-scale Amazon search stays
-              below. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret weight-tracking checklist"
-              subtitle="Email the seasonal-swing, BCS, and gram-scale notes. No spam."
-              ctaText="Email my ferret weight-tracking checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-weight-management-under-hero"
             />
           </div>

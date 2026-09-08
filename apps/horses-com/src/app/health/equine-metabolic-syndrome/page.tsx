@@ -135,35 +135,16 @@ export default function EMSPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the EMS diet-management checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse EMS diet-management checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the digital-hanging-hay-bale-scale,
-              equine-forage-NSC-hay-test-kit, and
-              portable-strip-grazing-step-in-posts notes
-              that match the feed-by-weight, test-hay, and
-              strip-grazing copy on this page — a hanging
-              hay-bale scale so the ration is weighed
-              instead of scooped by eye, an NSC hay-test
-              kit so forage sugar is measured instead of
-              guessed, and step-in strip-grazing posts so
-              pasture access is a movable strip instead of
-              a full-field binge. Educational diet-
-              management checklist, not a treatment, not
-              metformin or pergolide, not a substitute
-              for calling the veterinarian, and not a
-              grazing-muzzle, hay-soaking-bag, or ration-
-              balancer hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse EMS diet-management checklist"
-              subtitle="Email the hay-scale, NSC-test-kit, and strip-grazing-post notes. No spam."
-              ctaText="Email my horse EMS diet-management checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-ems-under-hero"
             />
           </div>
@@ -205,23 +186,16 @@ export default function EMSPage() {
             scooped by eye, an equine forage NSC hay-test
             kit so forage sugar is measured instead of
             guessed, and portable strip-grazing step-in
-            posts so pasture access is a movable strip.
-            These are educational diet-management tools,
+            posts so pasture access is a movable strip. These are educational diet-management tools,
             not a ranked product list, not a substitute
             for veterinary care, and not metformin,
-            pergolide, or a diagnosis. Grazing muzzles
-            already live on laminitis and pasture-
-            management. Hay-soaking bags already live on
-            heaves. Soaking pails already live on choke.
-            Ration balancers already live on the nutrition
-            pages. Slow-feeder hay nets already live on
+            pergolide, or a diagnosis. Hay-soaking bags already live on
+            heaves. Slow-feeder hay nets already live on
             the feed calculator. Weight tapes already live
-            on the weight and age calculators. Foam sole-
-            support pads already live on laminitis. This
+            on the weight and age calculators. This
             page does not hop medications, vaccines, or
             insulin-test kits sold as treatments. This
-            page does not claim hands-on testing.
-          </p>
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -279,45 +253,9 @@ export default function EMSPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the EMS diet-management kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page feed-by-weight, test-hay, and
-              strip-grazing copy — a digital hanging
-              hay-bale scale, an equine forage NSC
-              hay-test kit, and portable strip-grazing
-              step-in posts. Educational diet-management
-              tools only. Guessing hay sugar, scooping
-              by eye, or hopping metformin is not the
-              job of this kit. They are not a ranked
-              product list, they are not a substitute
-              for veterinary care, they are not a #1104
-              run-in-shelter / grooming-caddy /
-              blanket-wash-bag hop, they are not a
-              #1103 mud-grid / turnout-boot / leg-towel
-              hop, they are not a #1102 Irish-knit-
-              cooler / quarter-sheet / loose-salt hop,
-              they are not a #1101 heart-bar /
-              wedge-pad / rocker-toe hop, they are not
-              a #1100 stock-tank-brush / barn-mosquito-
-              netting / mosquito-sheet hop, they are
-              not a #1099 lunge-line / lead-shank /
-              traffic-cone hop, they are not a #1098
-              clipboard / feed-pan / paper-pellet-
-              bedding hop, they are not a #1097
-              color-coded-bucket / coverall / boot-dip-
-              tub hop, they are not a #1094 soaking-
-              pail / feed-tub-rock / apple-wedger hop,
-              they are not a heaves hay-soaking-bag
-              hop, they are not a laminitis grazing-
-              muzzle hop, they are not a nutrition
-              ration-balancer hop, and they do not
-              replace a veterinarian. Horses.com earns
-              a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+hanging+hay+bale+scale?s=health-ems"
@@ -331,7 +269,7 @@ export default function EMSPage() {
                 amazonHref="/go/amazon-brand/portable+strip+grazing+step+in+posts?s=health-ems"
                 amazonLabel="Browse portable strip-grazing step-in posts on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="exercise">Exercise</h2>

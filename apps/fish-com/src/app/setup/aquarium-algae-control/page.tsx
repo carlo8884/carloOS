@@ -48,27 +48,16 @@ export default function AlgaeControlPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the algae-control scraper checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Algae-control scraper checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the glass-cleaning notes — an aquarium magnetic
-            scraper for the viewing panes, plus a handheld aquarium
-            algae scraper for plant leaves and hardscape the magnet
-            cannot reach — so manual removal is ready while the
-            light / nutrient / CO2 imbalance is fixed. Educational
-            checklist, not a ranked product list and not a first-tank
-            filter / heater / test-kit order. Those stay on the setup
-            hub. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Algae-control scraper checklist"
-            subtitle="Email the magnetic-scraper and handheld-scraper notes. No spam."
-            ctaText="Email my algae-control scraper checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-aquarium-algae-control-under-hero"
           />
         </div>
@@ -85,7 +74,7 @@ export default function AlgaeControlPage() {
 
         <h2>The Treatment Playbook</h2>
         <p>Start with the universal fixes that help every algae type: cut the photoperiod to 6 to 8 hours on a timer, keep light off direct sunlight, increase water-change frequency to export excess nutrients, improve flow so no dead spots accumulate detritus, and feed less. For black beard algae and persistent spot algae, dosing liquid carbon (such as glutaraldehyde-based products) directly onto the affected areas with the filter briefly off can spot-treat it, but use caution as some plants and invertebrates are sensitive. For diatoms and green dust in a new tank, patience plus regular maintenance is usually all that is required.</p>
-        <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, Seiryu stone, spiderwood, light timers, root tabs, pressurized CO2, and Flourish Excel already live on the <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop algaecides, erythromycin, or any medication.</p>
+        <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit.
 
         <h2>Algae-Eating Animals — Help, Not Magic</h2>
         <p>The right cleanup crew suppresses algae but cannot fix an imbalance on its own. Otocinclus catfish and nerite snails are exceptional grazers of diatoms and green film and are safe for community tanks. Amano shrimp consume hair and thread algae more effectively than almost any fish. Bristlenose plecos rasp algae from broad surfaces and driftwood. Siamese algae eaters are one of the few animals that reliably eat black beard algae. Match the animal to the tank size and the algae present, never overstock for the purpose, and remember that a hungry algae crew in a clean tank still needs supplemental feeding.</p>
@@ -105,21 +94,9 @@ export default function AlgaeControlPage() {
             first-tank filter / heater / test-kit / hardscape / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the algae-control scraper kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            glass-cleaning copy — an aquarium magnetic scraper and a
-            handheld aquarium algae scraper. Everyday physical
-            maintenance tools only. They are not a ranked product
-            list, they are not a first-tank filter or heater, they
-            are not a test kit or a gravel vacuum, they are not
-            aquasoil, Seiryu stone, spiderwood, a light timer, root
-            tabs, or pressurized CO2, and they do not replace fixing
-            the light / nutrient / CO2 imbalance. Fish.com earns a
-            commission on qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control"

@@ -156,54 +156,24 @@ export default function CareHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the horse care-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horse care-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-barn-daily-care-chart,
-            stall-door-care-card, and
-            equine-husbandry-reference-handbook notes that
-            match the daily-and-seasonal-routines,
-            per-horse-husbandry, and AAEP-and-extension
-            copy on this hub — a laminated horse barn
-            daily-care chart so the section map (hooves,
-            grooming, seasonal, land, parasites, transport)
-            is posted at the barn (not an emergency-triage
-            chart, not a forage-first chart, not a
-            treat-safety chart), a horse stall-door care
-            card so each horse&apos;s farrier interval,
-            blanket weight, and daily hoof-pick routine is
-            labeled on the door (not a vital-signs card,
-            not a ration card, not a farrier log), and an
-            equine husbandry reference handbook so the
-            AAEP / extension grounding is a physical barn
-            book (not a health handbook, not a nutrition
-            handbook). Educational barn checklist, not a
-            treatment, not a ranked product list, and not
-            a substitute for a veterinarian, farrier, or
-            qualified barn manager. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horse care-hub checklist"
-            subtitle="Email the daily-care-chart, stall-door care-card, and husbandry-handbook notes. No spam."
-            ctaText="Email my horse care-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="care-hub-under-hero"
           />
         </div>
       </section>
 
       <div className="px-container-sm sm:px-container py-12">
-        <p className="text-sm text-brand-text-light mb-10 max-w-2xl">
-          Husbandry references covering the routines that keep a horse healthy and safe. Each guide cites AAEP guidance, extension resources, and the equine veterinary literature.
-          New to equestrian terminology? The <Link href="/glossary" className="text-brand-primary hover:underline">Equestrian Glossary</Link> defines key care, anatomy, and horsemanship terms.
-          A laminated horse barn daily-care chart is how the hub map stays posted at the barn — it is not a laminated emergency-triage chart (that lives on the health hub), not a laminated forage-first chart (that lives on the nutrition hub), and not a laminated treat-safety chart (that lives on the can-horses-eat hub).
-          A horse stall-door care card is how each horse&apos;s farrier interval, blanket weight, and daily hoof-pick routine is labeled on the door — it is not a stall-door vital-signs card (that lives on the health hub), not a stall-door ration card (that lives on the nutrition hub), and not an equine farrier log book (that lives on the farrier schedule).
-          An equine husbandry reference handbook is how the AAEP / extension grounding sits in the barn — it is not an equine health reference handbook or an equine nutrition reference handbook (those live on the health and nutrition hubs).
-        </p>
+        <p className="text-sm text-brand-text-light mb-10 max-w-2xl">Husbandry references covering the routines that keep a horse healthy and safe. Each guide cites AAEP guidance, extension resources, and the equine veterinary literature.
+          New to equestrian terminology? The <Link href="/glossary" className="text-brand-primary hover:underline">Equestrian Glossary</Link> defines key care, anatomy, and horsemanship terms</p>
 
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
           {ENTRIES.map((entry) => (
@@ -229,32 +199,7 @@ export default function CareHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
           Care-hub barn kit
         </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          daily-and-seasonal-routines, per-horse-husbandry,
-          and AAEP-and-extension copy on this hub — a
-          laminated horse barn daily-care chart so the
-          section map (hooves, grooming, seasonal, land,
-          parasites, transport) is posted at the barn, a
-          horse stall-door care card so each horse&apos;s
-          farrier interval, blanket weight, and daily
-          hoof-pick routine is labeled on the door, and
-          an equine husbandry reference handbook so the
-          AAEP / extension grounding is a physical barn
-          book. These are educational barn searches, not
-          a ranked product list, not a substitute for
-          veterinary or farrier care, not an
-          emergency-triage-chart / stall-door-vital-signs
-          / health-handbook hop (those live on the health
-          hub), not a forage-first-chart / ration-card /
-          nutrition-handbook hop, not a treat-safety-chart
-          hop, and not a curry-comb / hoof-pick /
-          clippers / fly-mask / turnout-blanket /
-          farrier-log hop (those live on the care
-          children). This page does not hop medications
-          or vaccines. This page does not claim hands-on
-          testing.
-        </p>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -283,39 +228,13 @@ export default function CareHubPage() {
             equine+farrier+log+book. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the care-hub barn kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page daily-and-seasonal-routines,
-            per-horse-husbandry, and AAEP-and-extension
-            copy — a laminated horse barn daily-care
-            chart, a horse stall-door care card, and an
-            equine husbandry reference handbook.
-            Educational barn searches only. They are not
-            a ranked product list, they are not an
-            emergency-triage chart / vital-signs card /
-            health-handbook hop, they are not a
-            forage-first chart / ration-card /
-            nutrition-handbook hop, they are not a
-            curry-comb / hoof-pick / clippers hop, and
-            they do not replace a veterinarian or
-            farrier. Horses.com earns a commission on
-            qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+horse+barn+daily+care+chart?s=care-hub"
-              amazonLabel="Browse laminated horse barn daily-care charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+stall+door+care+card?s=care-hub"
-              amazonLabel="Browse horse stall-door care cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/equine+husbandry+reference+handbook?s=care-hub"
-              amazonLabel="Browse equine husbandry reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/horse+supplies?s=care-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

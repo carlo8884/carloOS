@@ -86,23 +86,14 @@ export default function FishHealthPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the test-first health order
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Aquarium health checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the water-chemistry, disease-identification, and nitrogen-cycle
-            order — liquid-test ammonia, nitrite, and nitrate first, isolate a
-            sick fish in a spare hospital tank with a seeded sponge filter, and
-            hold a stable temperature with a heater plus a separate digital
-            thermometer — so you can diagnose without scrolling back. Educational
-            husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Aquarium health checklist"
-            subtitle="Email the test-first, isolate, hold-temp order. No spam."
-            ctaText="Email my aquarium health checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-hub-under-hero"
           />
         </div>
@@ -127,8 +118,7 @@ export default function FishHealthPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop aquarium health gear
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Water chemistry is how you diagnose before you treat. A liquid
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Water chemistry is how you diagnose before you treat. A liquid
             master kit is how you see ammonia, nitrite, and nitrate — the
             nitrogen-cycle numbers that look like disease — before you isolate
             a sick fish. Pair it with a spare hospital tank and a seeded sponge
@@ -183,8 +173,7 @@ export default function FishHealthPage() {
             . The hops below are not a ranked product list, they are not
             medications, and they do not treat, reverse, or cure disease.
             Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub"

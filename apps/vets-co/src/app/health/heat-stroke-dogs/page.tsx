@@ -38,7 +38,7 @@ export default function HeatStrokePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Dehydration', href: '/health/dehydration-in-dogs' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-heat-stroke" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-heat-stroke" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -46,25 +46,16 @@ export default function HeatStrokePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the heat-stroke cooling checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog heat-stroke cooling checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the first-aid cooling notes — cool-water towels on
-              the neck, armpits, and groin, plus a digital thermometer
-              so you can stop active cooling at 103.5°F. Educational
-              checklist, not a diagnosis and not a substitute for the
-              emergency vet. Ice packs, IV fluids, and medications stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog heat-stroke cooling checklist"
-              subtitle="Email the cool-water towel and digital-thermometer notes. No spam."
-              ctaText="Email my dog heat-stroke cooling checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-heat-stroke-dogs-under-hero"
             />
           </div>
@@ -103,19 +94,9 @@ export default function HeatStrokePage() {
               IV fluids, and medication are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the cool-water first-aid kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page first-aid
-              cooling copy — cool-water towels to wet and apply while
-              driving to the vet, and a digital thermometer to monitor
-              rectal temperature. Everyday physical supplies only. They
-              are not a ranked product list, they are not ice packs,
-              they are not medications, they are not IV fluids, and they
-              do not replace an emergency veterinarian. Vets.co earns a
-              commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/cool+water+towels?s=health-heat-stroke-dogs"
@@ -125,7 +106,7 @@ export default function HeatStrokePage() {
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=health-heat-stroke-dogs"
                 amazonLabel="Browse digital pet thermometers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

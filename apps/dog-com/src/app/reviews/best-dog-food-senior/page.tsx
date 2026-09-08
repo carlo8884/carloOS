@@ -33,34 +33,16 @@ export default function BestSeniorDogFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the senior-dog-food checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Senior-dog-food checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the senior-food notes that match
-                the ranking copy on this page — dogs
-                are senior at 7+ (5–6 for giant
-                breeds), senior food is not a
-                low-protein category, Purina Pro Plan
-                Bright Mind 7+ for the published
-                cognitive trial, and Hill&apos;s Science
-                Diet 7+ when antioxidant support and
-                easy digestion are the job.
-                Educational senior-food checklist, not
-                a new product hop, not a prescription
-                renal-diet hop, and not a substitute
-                for a veterinarian. The existing
-                Bright Mind and Hill&apos;s Chewy
-                searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Senior-dog-food checklist"
-                subtitle="Email the Bright Mind, Hill's 7+, and protein notes. No spam."
-                ctaText="Email my senior-dog-food checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-food-senior-under-hero"
               />
             </div>
@@ -105,7 +87,7 @@ export default function BestSeniorDogFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Senior Dog Nutrition', href: '/nutrition/senior-dog-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-senior-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-senior-food" />
           </aside>
         </div>
       </div>

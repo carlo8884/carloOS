@@ -34,45 +34,23 @@ export default function DogLiverDiseasePage() {
           <TableOfContents items={[{ label: 'Enzyme Interpretation', href: '#enzymes' }, { label: 'Hepatitis', href: '#hepatitis' }, { label: 'Portosystemic Shunts', href: '#shunts' }, { label: 'Cirrhosis', href: '#cirrhosis' }, { label: 'Dietary Management', href: '#diet' }, { label: 'Home-watch kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Pancreatitis', href: '/health/pancreatitis' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-liver" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-liver" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog liver-enzyme watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog liver-enzyme watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the enzyme-trend, hepatoprotective-routine,
-              and cachexia-weight notes — a pet medical
-              records binder so ALT and ALP printouts stay
-              in one place (the trend over time matters more
-              than a single value), an AM/PM weekly pill
-              organizer for the SAMe / silymarin timing the
-              veterinarian sets, and a digital hanging
-              luggage scale for cachexia weight tracking
-              between rechecks. Educational checklist, not
-              a Denamarin product list, not a Hill&apos;s l/d
-              or Royal Canin Hepatic hop, and not a
-              prescription. Liver-disease workups still
-              belong with a veterinarian. Penlights,
-              emergency contact cards, stretchers,
-              vaccination record books, seat-belt tethers,
-              puppy mats, mosquito dunks, monthly pill
-              organizers, clinic-visit carriers, gum-color
-              charts, recovery food, and feeding syringes
-              stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog liver-enzyme watch checklist"
-              subtitle="Email the binder, AM/PM pill-box, and luggage-scale notes. No spam."
-              ctaText="Email my dog liver-enzyme watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-liver-disease-under-hero"
             />
           </div>
@@ -130,10 +108,8 @@ export default function DogLiverDiseasePage() {
             a gum-color assessment chart, recovery food,
             a feeding syringe, digital pet scales, and
             high-value vet-visit treats already live
-            on other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            on other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -163,32 +139,9 @@ export default function DogLiverDiseasePage() {
               hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the liver-enzyme watch kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page enzyme-trend, hepatoprotective-routine,
-              and cachexia-weight copy — a pet medical
-              records binder, an AM/PM weekly pill
-              organizer, and a digital hanging luggage
-              scale. Everyday physical supplies only.
-              They are not a ranked product list, they
-              are not a Denamarin / Hill&apos;s l/d /
-              Royal Canin Hepatic hop, they are not the
-              #1045 penlight / contact-card / stretcher
-              hops, they are not the #1044 vaccine-record
-              / seat-belt-tether / puppy-mat hops, they
-              are not the #1043 mosquito-dunk /
-              monthly-pill-organizer / clinic-carrier
-              hops, they are not the #1042 anemia
-              gum-chart / recovery-food / syringe hops,
-              they are not digital-pet-scale or
-              first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+medical+records+binder?s=health-dog-liver-disease"
@@ -202,7 +155,7 @@ export default function DogLiverDiseasePage() {
                 amazonHref="/go/amazon-brand/digital+hanging+luggage+scale?s=health-dog-liver-disease"
                 amazonLabel="Browse digital hanging luggage scales on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

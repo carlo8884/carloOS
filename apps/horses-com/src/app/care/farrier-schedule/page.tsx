@@ -116,27 +116,16 @@ export default function FarrierSchedulePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the farrier-visit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse farrier-visit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine farrier-log book, portable
-              farrier hoof-stand, and cordless barn
-              flood-light notes so the next trim is booked
-              before the wall flares and the work area is
-              ready. Educational checklist, not a shoeing
-              order and not a substitute for the farrier.
-              Hoof picks, hoof boots, snow pads, and shoe
-              studs stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse farrier-visit checklist"
-              subtitle="Email the log-book, hoof-stand, and barn-light notes. No spam."
-              ctaText="Email my horse farrier-visit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-farrier-schedule-under-hero"
             />
           </div>
@@ -163,7 +152,7 @@ export default function FarrierSchedulePage() {
           </ul>
 
           <h2 id="kit">Farrier-visit kit</h2>
-          <p>Everyday physical supplies that match the booking and work-area copy on this page — an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list. Hoof picks, hoof-pick brushes, riding hoof boots, snow pads, shoe studs, soaking boots, stall rubber mats, fecal-sample containers, manure rakes, and muck carts already live on other pages. This page does not hop dewormers, bute, Banamine, copper sulfate, iodine, or any medication. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the booking and work-area copy on this page — an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -183,24 +172,9 @@ export default function FarrierSchedulePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse farrier-visit kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page booking and work-area copy — an
-              equine farrier log book, a portable farrier
-              hoof stand, and a cordless barn flood light.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              medication hop, they are not a hoof-pick /
-              hoof-boot hop, they are not a #1060
-              fecal-sample-container / manure-rake /
-              muck-cart hop, they are not a snow-pad or
-              shoe-stud hop, and they do not replace a
-              farrier. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+farrier+log+book?s=care-farrier-schedule"
@@ -214,7 +188,7 @@ export default function FarrierSchedulePage() {
                 amazonHref="/go/amazon-brand/cordless+barn+flood+light?s=care-farrier-schedule"
                 amazonLabel="Browse cordless barn flood lights on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

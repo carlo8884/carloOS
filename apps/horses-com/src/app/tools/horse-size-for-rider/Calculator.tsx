@@ -339,22 +339,6 @@ export default function Calculator() {
             )}
           </p>
           <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
-          <ShopCtas
-            amazonHref={
-              discipline === 'western'
-                ? '/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider'
-                : discipline === 'english'
-                  ? '/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider'
-                  : '/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider'
-            }
-            amazonLabel={
-              discipline === 'western'
-                ? 'Browse Western saddles on Amazon →'
-                : discipline === 'english'
-                  ? 'Browse English saddles on Amazon →'
-                  : 'Browse ASTM/SEI riding helmets on Amazon →'
-            }
-          />
         </div>
       )}
 

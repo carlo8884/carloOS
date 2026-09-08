@@ -50,7 +50,7 @@ export default function EmergencySignsPage() {
             <Link href="/find-a-vet" className="block w-full text-center bg-brand-danger text-white text-xs font-bold py-2.5 rounded-lg no-underline hover:opacity-90">Find Emergency Vet →</Link>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' }, { label: 'Bloat (GDV) in Dogs', href: '/health/bloat-gdv-dogs' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Best Pet Insurance', href: '/reviews/best-pet-insurance' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-emergency" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-emergency" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -58,34 +58,16 @@ export default function EmergencySignsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the 14-sign emergency-prep checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              14-sign emergency-prep checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the household prep notes that match
-              the 14 signs on this page — a wire
-              basket dog muzzle so a collapsed,
-              fractured, or post-seizure dog can be
-              moved without a bite, quilted disposable
-              underpads so blood, vomit, or wound
-              fluid stays off the car seat, and a
-              handheld AA LED flashlight so gum color
-              gets a look at night. Educational
-              checklist, not a diagnosis, not a GDV
-              treatment, and not a substitute for the
-              emergency clinic you call on the way.
-              Soft dog carriers, first-aid kits,
-              medical penlights, folding stretchers,
-              and Rx stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="14-sign emergency-prep checklist"
-              subtitle="Email the muzzle, underpad, and flashlight notes. No spam."
-              ctaText="Email my 14-sign emergency-prep checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-emergency-signs-under-hero"
             />
           </div>
@@ -123,10 +105,7 @@ export default function EmergencySignsPage() {
             charts, puppy training pads, washable pee
             pads, extra-large disposable dog pee pads,
             and pet emergency toxin kits already live
-            on other pages. This page does not hop
-            vaccine, antibiotic, or other Rx ASINs.
-            This page does not claim hands-on testing.
-          </p>
+            on other pages. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -192,27 +171,9 @@ export default function EmergencySignsPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the 14-sign emergency-prep kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page 14-sign prep, transport, cleanup,
-              and night gum-color copy — a wire basket
-              dog muzzle, quilted disposable underpads,
-              and a handheld AA LED flashlight.
-              Everyday household / travel / monitoring
-              gear only. They are not a ranked product
-              list, they are not a GDV treatment hop,
-              they are not a #1073 crate / kennel-spray
-              / second-hand-clock hop, they are not a
-              #1072 tick-hook / flea-comb / ID-card
-              hop, they are not a first-aid-kit /
-              penlight / soft-carrier hop, and they do
-              not replace an emergency veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+basket+dog+muzzle?s=health-emergency-signs"
@@ -226,7 +187,7 @@ export default function EmergencySignsPage() {
                 amazonHref="/go/amazon-brand/handheld+aa+led+flashlight?s=health-emergency-signs"
                 amazonLabel="Browse handheld AA LED flashlights on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

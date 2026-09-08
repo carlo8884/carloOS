@@ -135,34 +135,16 @@ export default function VetsPomeranianHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Pomeranian health checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pomeranian health checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              trachea, PDA, and alopecia X copy on
-              this page — an analog indoor
-              hygrometer so heat-and-humidity cough
-              triggers stay a written reading, a
-              6-column columnar pad so patellar
-              grade, murmur, dental score, and body
-              condition stay one well-visit row, and
-              an undated daily planner so thyroid /
-              ACTH / LDDS dates stay written before
-              anyone accepts alopecia X. Educational
-              checklist, not a diagnosis, not a
-              substitute for veterinary care, and
-              not a planner, columnar-pad, or
-              sketch-pad hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Pomeranian health checklist"
-              subtitle="Email the hygrometer, columnar-pad, and planner notes. No spam."
-              ctaText="Email my Pomeranian health checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="breeds-pomeranian-health-under-hero"
             />
           </div>
@@ -362,14 +344,8 @@ export default function VetsPomeranianHealthPage() {
             treatment. Academic-year planners,
             8-column columnar pads, and newsprint
             sketch pads already live on
-            husky-health. 13-column analysis pads,
-            desk blotter pads, and numbered log
-            books already live on chihuahua-health.
-            This page does not hop harnesses,
-            toothpaste, melatonin, or insurance
-            brands as Amazon searches. This page
-            does not claim hands-on testing.
-          </p>
+            husky-health. This page
+            does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -395,26 +371,9 @@ export default function VetsPomeranianHealthPage() {
               numbered+log+book. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the Pomeranian-health kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page trachea, PDA, and alopecia X
-              copy — an analog indoor hygrometer, a
-              6-column columnar pad, and an undated
-              daily planner. Educational Pomeranian-
-              health / paperwork tools only. They
-              are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1182 planner /
-              columnar-pad / sketch-pad hop, they
-              are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/analog+indoor+hygrometer?s=breeds-pomeranian-health"
@@ -428,7 +387,7 @@ export default function VetsPomeranianHealthPage() {
                 amazonHref="/go/amazon-brand/undated+daily+planner?s=breeds-pomeranian-health"
                 amazonLabel="Browse undated daily planners on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

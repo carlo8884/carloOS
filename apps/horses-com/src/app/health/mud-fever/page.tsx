@@ -127,34 +127,16 @@ export default function MudFeverPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the mud-fever dry-leg checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse mud-fever dry-leg checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the heavy-duty-paddock-mud-grid,
-              full-length-horse-turnout-boots, and
-              waffle-weave-horse-leg-towel notes that
-              match the dry-standing, keep-legs-dry, and
-              dry-thoroughly copy on this page — a paddock
-              mud grid so gate and water standing is a
-              drained pad instead of a wet bowl, full-length
-              turnout boots so the pastern stays out of
-              mud instead of soaking in it, and a waffle-
-              weave leg towel so a necessary wash is dried
-              instead of left wet. Educational dry-leg
-              checklist, not a treatment, not an
-              antimicrobial cream, not a substitute for
-              calling the veterinarian, and not a fly-boot,
-              shipping-boot, or soaking-boot hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse mud-fever dry-leg checklist"
-              subtitle="Email the mud-grid, turnout-boot, and leg-towel notes. No spam."
-              ctaText="Email my horse mud-fever dry-leg checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-mud-fever-under-hero"
             />
           </div>
@@ -175,7 +157,7 @@ export default function MudFeverPage() {
           </ul>
 
           <h2 id="treatment">Treatment</h2>
-          <p>Get the leg clean and dry, which usually means moving the horse off wet, muddy ground. Gently clip the hair around the lesions if needed, clean with an appropriate antimicrobial wash, soften and remove scabs gently, then dry thoroughly. A waffle-weave horse leg towel is how that wash is dried instead of left wet on the pastern — it is not a clean-cotton foaling towel (that lives on the gestation calculator), not a sweat scraper (that lives on summer-heat-care), and not a dandy brush (that lives on grooming). Topical barrier and antimicrobial creams are applied as directed. This page does not hop antimicrobial wash, barrier cream, or systemic drugs — those stay with the veterinarian. A swollen, hot, painful leg, spreading infection, or a case that will not resolve needs a veterinarian, who may prescribe systemic treatment. Do not pick scabs roughly, which damages skin and worsens the problem.</p>
+          <p>Get the leg clean and dry, which usually means moving the horse off wet, muddy ground. Gently clip the hair around the lesions if needed, clean with an appropriate antimicrobial wash, soften and remove scabs gently, then dry thoroughly. Topical barrier and antimicrobial creams are applied as directed. A swollen, hot, painful leg, spreading infection, or a case that will not resolve needs a veterinarian, who may prescribe systemic treatment. Do not pick scabs roughly, which damages skin and worsens the problem.</p>
 
           <h2 id="prevention">Prevention</h2>
           <ul>
@@ -259,39 +241,9 @@ export default function MudFeverPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the mud-fever dry-leg kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page dry-standing, keep-legs-dry, and
-              dry-thoroughly copy — a heavy-duty paddock
-              mud grid, full-length horse turnout boots,
-              and a waffle-weave horse leg towel.
-              Educational dry-leg tools only. Washing
-              legs every day, picking scabs, or guessing
-              a cream is not the job of this kit. They
-              are not a ranked product list, they are
-              not a substitute for veterinary care, they
-              are not a #1102 Irish-knit-cooler /
-              quarter-sheet / loose-salt hop, they are
-              not a #1101 heart-bar / wedge-pad /
-              rocker-toe hop, they are not a #1100
-              stock-tank-brush / barn-mosquito-netting /
-              mosquito-sheet hop, they are not a #1099
-              lunge-line / lead-shank / traffic-cone hop,
-              they are not a #1098 clipboard / feed-pan /
-              paper-pellet-bedding hop, they are not a
-              #1097 color-coded-bucket / coverall /
-              boot-dip-tub hop, they are not a #1094
-              soaking-pail / feed-tub-rock / apple-wedger
-              hop, they are not a fly-control fly-boot
-              hop, they are not a trailering shipping-boot
-              hop, they are not an abscess soaking-boot
-              hop, and they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+duty+paddock+mud+grid?s=health-mud-fever"
@@ -305,7 +257,7 @@ export default function MudFeverPage() {
                 amazonHref="/go/amazon-brand/waffle+weave+horse+leg+towel?s=health-mud-fever"
                 amazonLabel="Browse waffle-weave horse leg towels on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

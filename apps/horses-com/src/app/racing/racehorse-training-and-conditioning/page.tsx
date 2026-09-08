@@ -158,39 +158,16 @@ export default function RacehorseTrainingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the racehorse-training checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Racehorse-training checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-workout-breeze-chart,
-              stall-door-gate-school-card, and
-              equine-hisa-welfare-handbook notes
-              that match the timed-work-breeze, gate-training,
-              and hisa-aaep-welfare copy on this page — a
-              laminated horse workout-breeze chart so the
-              Equibase / clocker notes are posted on the stall
-              door (not a TAA aftercare-directory chart, not a
-              breeders-cup division chart), a horse stall-door
-              gate-school card so the starter-approval / break
-              notes are labeled at the barn (not an OTTB
-              letdown card, not a Classic dirt card), and an
-              equine HISA welfare handbook so the ADMC /
-              racetrack-safety grounding is a physical barn
-              book (not a Thoroughbred Makeover handbook, not a
-              Win-and-You-re-In handbook). Educational barn
-              checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Racehorse-training checklist"
-              subtitle="Email the workout-breeze chart, gate-school card, and HISA welfare handbook notes. No spam."
-              ctaText="Email my racehorse-training checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-racehorse-training-and-conditioning-under-hero"
             />
           </div>
@@ -264,42 +241,18 @@ export default function RacehorseTrainingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs aftercare /
               breeders-cup hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the racehorse-training barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page timed-work-breeze, gate-training,
-              and hisa-aaep-welfare copy — a laminated horse
-              workout-breeze chart, a horse stall-door
-              gate-school card, and an equine HISA welfare
-              handbook. Educational barn searches only.
-              They are not a ranked race list, they are not
-              an aftercare / breeders-cup hop, they are not
-              a first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+workout+breeze+chart?s=racing-training"
-                amazonLabel="Browse laminated horse workout-breeze charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-training"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+gate+school+card?s=racing-training"
-                amazonLabel="Browse horse stall-door gate-school cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+hisa+welfare+handbook?s=racing-training"
-                amazonLabel="Browse equine HISA welfare handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

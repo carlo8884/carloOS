@@ -35,7 +35,7 @@ export default function LeptospirosisPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Tick-Borne Diseases', href: '/health/tick-borne-diseases' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-lepto" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-lepto" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -43,45 +43,16 @@ export default function LeptospirosisPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the lepto outdoor-risk home-watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Lepto outdoor-risk home-watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              puddle-drinking, urine-cleanup, and suburban
-              wildlife-attractant copy on this page — a
-              24-ounce stainless hiking dog bottle so a
-              trail or yard walk is a carried sip instead
-              of a puddle gulp, powder-free nitrile exam
-              gloves so cleaning infected urine is a
-              gloved wipe instead of a bare-hand scoop,
-              and a 32-gallon locking animal-proof trash
-              can so raccoon and rodent traffic is not
-              invited to overnight at the curb.
-              Educational checklist, not a ranked
-              product list, not a substitute for
-              veterinary care, and not a vaccine /
-              doxycycline / Nobivac hop. Heavy-gauge
-              48-inch dog crates, 2-foot nylon traffic
-              leads, and adjustable aluminum downspout
-              extenders already live on
-              heartworm-in-dogs. Small digital kitchen
-              food scales, silicone cat grooming gloves,
-              and 8-ounce glass liquid measuring cups
-              already live on hyperthyroidism-cats.
-              Disposable nitrile gloves already live on
-              ferret cage-cleaning. Locking kitchen
-              trash cans already live on dog.com
-              pancreatitis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Lepto outdoor-risk home-watch checklist"
-              subtitle="Email the hiking-bottle, nitrile-glove, and animal-proof trash-can notes. No spam."
-              ctaText="Email my lepto outdoor-risk home-watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-leptospirosis-under-hero"
             />
           </div>
@@ -127,16 +98,11 @@ export default function LeptospirosisPage() {
             substitute for veterinary care, and not a
             treatment for leptospirosis. Nobivac, L4,
             doxycycline, and ampicillin are clinic
-            prescriptions, not shoppable hops.
-            Heavy-gauge 48-inch dog crates already live
+            prescriptions, not shoppable hops. Heavy-gauge 48-inch dog crates already live
             on heartworm-in-dogs. Small digital kitchen
             food scales already live on
-            hyperthyroidism-cats. Disposable nitrile
-            gloves already live on ferret
-            cage-cleaning. Locking kitchen trash cans
-            already live on dog.com pancreatitis. This
-            page does not claim hands-on testing.
-          </p>
+            hyperthyroidism-cats. This
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -212,30 +178,9 @@ export default function LeptospirosisPage() {
               ampicillin are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page puddle-drinking, urine-cleanup,
-              and suburban wildlife-attractant copy — a
-              24-ounce stainless hiking dog bottle,
-              powder-free nitrile exam gloves, and a
-              32-gallon locking animal-proof trash can.
-              Educational outdoor / water /
-              wildlife-exposure tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1088 kitchen-scale /
-              cat-grooming-glove / measuring-cup hop,
-              they are not a #1087 crate /
-              traffic-lead / downspout hop, they are
-              not a vaccine / Nobivac / doxycycline
-              hop, and they do not replace
-              a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis"
@@ -249,7 +194,7 @@ export default function LeptospirosisPage() {
                 amazonHref="/go/amazon-brand/32+gallon+locking+animal+proof+trash+can?s=health-leptospirosis"
                 amazonLabel="Browse 32-gallon locking animal-proof trash cans on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

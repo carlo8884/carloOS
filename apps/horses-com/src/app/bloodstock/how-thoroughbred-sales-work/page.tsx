@@ -150,40 +150,16 @@ export default function HowSalesWorkPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the how-thoroughbred-sales-work checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              How-thoroughbred-sales-work checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-breeze-up-gallop-chart,
-              stall-door-bid-spotter-card, and
-              equine-pinhook-sale-topper-handbook notes
-              that match the breeze-up / timed-gallop, bidding /
-              bid-spotter, and pinhook / sale-topper copy on
-              this page — a laminated horse breeze-up-gallop
-              chart so the two-year-old / athleticism notes
-              are posted on the stall door (not a breeding-
-              trading-asset chart, not a yearling-sale-catalog
-              chart), a horse stall-door bid-spotter card so
-              the reserve / clearance-rate notes are labeled
-              at the barn (not an agent-shortlist card, not
-              an RNA-clearance card), and an equine pinhook-
-              sale-topper handbook so the market-sentiment /
-              seven-figure grounding is a physical barn book
-              (not a shuttle-stallion handbook, not a
-              bloodstock-agent handbook). Educational barn
-              checklist, not a ranked auction list, not a
-              first-aid-kit hop, and not a substitute for a
-              veterinarian. Horses.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="How-thoroughbred-sales-work checklist"
-              subtitle="Email the breeze-up-gallop chart, bid-spotter card, and pinhook-sale-topper handbook notes. No spam."
-              ctaText="Email my how-thoroughbred-sales-work checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="bloodstock-sales-under-hero"
             />
           </div>
@@ -222,43 +198,18 @@ export default function HowSalesWorkPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs what-is-bloodstock
               / reading-a-pedigree / racing-bloodstock hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the how-thoroughbred-sales-work barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page breeze-up / timed-gallop, bidding /
-              bid-spotter, and pinhook / sale-topper copy —
-              a laminated horse breeze-up-gallop chart, a
-              horse stall-door bid-spotter card, and an
-              equine pinhook-sale-topper handbook.
-              Educational barn searches only. They are not
-              a ranked auction list, they are not a
-              what-is-bloodstock / reading-a-pedigree hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace a veterinarian. Horses.com does not
-              sell insurance. Horses.com earns a commission
-              on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+breeze+up+gallop+chart?s=bloodstock-how-thoroughbred-sales-work"
-                amazonLabel="Browse laminated horse breeze-up-gallop charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=bloodstock-how-thoroughbred-sales-work"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+bid+spotter+card?s=bloodstock-how-thoroughbred-sales-work"
-                amazonLabel="Browse horse stall-door bid-spotter cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+pinhook+sale+topper+handbook?s=bloodstock-how-thoroughbred-sales-work"
-                amazonLabel="Browse equine pinhook-sale-topper handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

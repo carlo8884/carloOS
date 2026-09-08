@@ -174,32 +174,16 @@ export default function SwordtailPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the swordtail-fish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Swordtail-fish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Xiphophorus hellerii
-                notes that match the care copy on this
-                page — 30 gallons for a one-male trio
-                (55+ if extra males), 70–78°F and pH
-                7.2–8.4 hard alkaline water, and
-                population control because a trio can
-                fill a tank in a year. Educational
-                swordtail-fish-setup checklist, not a
-                new product hop, not livestock, and not
-                a substitute for a fish veterinarian. The
-                existing swordtail-fish tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Swordtail-fish-setup checklist"
-                subtitle="Email the 30-gallon, hard-alkaline, and one-male notes. No spam."
-                ctaText="Email my swordtail-fish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-swordtail-fish-under-hero"
               />
             </div>

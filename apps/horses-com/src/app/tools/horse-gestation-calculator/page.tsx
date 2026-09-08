@@ -186,22 +186,18 @@ export default function HorseGestationCalculatorPage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Foaling kit packing list
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the foaling-kit list — thermometer, navel dip, towels, headlamp, gloves, and a
-            foaling alarm — so you can pack before the early window without re-opening the
-            calendar. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
             title="Foaling kit packing list"
-            subtitle="Email the foaling-kit list — thermometer, navel dip, towels, headlamp, gloves, alarm. No spam."
-            ctaText="Email the foaling kit checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-gestation-calculator-under-hero"
           />
         </div>
@@ -226,7 +222,7 @@ export default function HorseGestationCalculatorPage() {
         </p>
         <Calculator />
 
-        <h2 id="foaling-kit">Foaling kit checklist</h2>
+        <h2 id="foaling-kit">Owner notes</h2>
         <p>
           Once you have a window, pack before the early date. The six-item list
           below is a husbandry starting point — thermometer, navel dip, towels,
@@ -241,12 +237,7 @@ export default function HorseGestationCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop the kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            The six-item list above is a husbandry starting point — thermometer, navel dip,
-            towels, headlamp, gloves, alarm — not a ranked product list. Same Amazon search
-            hops as the checklist rows. Horses.com earns a commission on qualifying purchases
-            at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator"

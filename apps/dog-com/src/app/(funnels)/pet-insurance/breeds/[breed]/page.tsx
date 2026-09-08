@@ -395,7 +395,7 @@ export default async function BreedInsurancePage({
           source="dog-com:insurance-comparison"
           title="Get the full 9-carrier comparison spreadsheet"
           subtitle={`The complete spec sheet for every carrier we considered for ${b.breedName}s. Free.`}
-          ctaText="Email the spreadsheet"
+          ctaText="Send the notes"
         />
       </div>
     </>

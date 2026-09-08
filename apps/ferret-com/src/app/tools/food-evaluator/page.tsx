@@ -153,9 +153,9 @@ export default function FerretFoodEvaluatorPage() {
           <EmailCapture
             variant="sidebar"
             siteId="ferret-com"
-            title="Ferret kibble panel checklist"
-            subtitle="Email the protein / fat / fiber / ash targets so you can score a bag in the aisle."
-            ctaText="Email my ferret food checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-food-evaluator-sidebar"
           />
           <CrossPortfolioCard currentSite="ferret-com" contentType="tool" variant="sidebar" />
@@ -189,20 +189,14 @@ export default function FerretFoodEvaluatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the panel
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret kibble panel checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the protein / fat / fiber / ash targets and the first-ingredient
-            rule so you can score a bag in the aisle without re-opening this page.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret kibble panel checklist"
-            subtitle="Email the protein / fat / fiber / ash targets and the first-ingredient rule so you can score a bag in the aisle. No spam."
-            ctaText="Email my ferret food checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-food-evaluator-under-hero"
           />
         </section>
@@ -222,28 +216,7 @@ export default function FerretFoodEvaluatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a bag that fits the panel
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are a shopping starting point after
-              you score a bag — high-protein ferret kibble, freeze-dried raw
-              meat treats, and salmon oil as a topper / nail-trim aid. They are
-              not a ranked product list and not invented inventory. Confirm the
-              guaranteed analysis on the exact bag; the evaluator does not
-              endorse a brand. Same kibble hop used on the{' '}
-              <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
-                kibble guide
-              </Link>
-              {' '}and the{' '}
-              <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
-                cost calculator
-              </Link>
-              . Treats belong on top of a meat-first staple, not in place of
-              it — see{' '}
-              <Link href="/diet/safe-treats" className="text-brand-primary underline-offset-2 hover:underline">
-                safe treats
-              </Link>
-              . Ferret.com earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-food-evaluator"
@@ -257,12 +230,10 @@ export default function FerretFoodEvaluatorPage() {
                 amazonHref="/go/amazon-brand/salmon+oil+ferret?s=tools-food-evaluator"
                 amazonLabel="Browse ferret salmon oil on Amazon →"
               />
-            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission. Empty Chewy buttons stay hidden.
-          </p>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission.</p>
         </section>
 
         <h2 id="targets">Ferret nutrient targets</h2>

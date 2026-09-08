@@ -179,43 +179,16 @@ export default function FerretSpayNeuterPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret spay-neuter checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret spay-neuter checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-jill-heat-chart,
-              fridge-musk-vs-gland-card, and
-              mustelid-spay-timing-handbook notes
-              that match the jill-heat-map,
-              musk-vs-gland-log, and
-              quesenberry-aemv-spay-grounding copy on this
-              page — a laminated ferret jill-heat chart
-              so the induced-ovulator / stay-in-heat /
-              estrogen-toxicity map is posted on the fridge
-              (not a stool-clue chart, not a lump-weight
-              chart, not a short-fast chart), a ferret fridge
-              musk-vs-gland card so descenting-vs-skin-musk
-              notes are labeled on the fridge (not a
-              dehydrate-watch card, not a senior-cbc card,
-              not a glucose-temp card), and a mustelid
-              spay-timing handbook so the Quesenberry / AEMV
-              jill-must-be-managed grounding is a physical
-              kitchen book (not an enteritis-clue handbook,
-              not a lymphoma-workup handbook, not an
-              anesthesia-clinic handbook). Educational kitchen
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does not
-              sell insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret spay-neuter checklist"
-              subtitle="Email the jill-heat-chart, fridge musk-vs-gland card, and spay-timing-handbook notes. No spam."
-              ctaText="Email my ferret spay-neuter checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-spay-neuter-under-hero"
             />
           </div>
@@ -341,47 +314,20 @@ export default function FerretSpayNeuterPage() {
               vaccine / flea / heartworm / nsaid / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
-              diarrhea / lymphoma / anesthesia hops.
-              Directory import left untouched. Ferret
+              diarrhea / lymphoma / anesthesia hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret spay-neuter kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page jill-heat-map,
-              musk-vs-gland-log, and
-              quesenberry-aemv-spay-grounding copy — a
-              laminated ferret jill-heat chart, a
-              ferret fridge musk-vs-gland card, and a
-              mustelid spay-timing handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a health-hub / diarrhea / lymphoma hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+jill+heat+chart?s=spaying-and-neutering"
-                amazonLabel="Browse laminated ferret jill-heat charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=spaying-and-neutering"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+musk+vs+gland+card?s=spaying-and-neutering"
-                amazonLabel="Browse ferret fridge musk-vs-gland cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+spay+timing+handbook?s=spaying-and-neutering"
-                amazonLabel="Browse mustelid spay-timing handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

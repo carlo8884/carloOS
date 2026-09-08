@@ -115,41 +115,16 @@ export default function HunterUnderSaddlePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the hunter-under-saddle checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Hunter-under-saddle checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-hunter-under-saddle-gait-chart,
-              stall-door-ushja-hunter-card, and
-              equine-hunter-bascule-handbook notes
-              that match the walk-trot-canter-flat,
-              ushja-usef-hunter, and bascule / field-hunter
-              copy on this page — a laminated horse hunter
-              under-saddle gait chart so the ground-covering
-              / level-topline / both-reins notes are posted
-              on the stall door (not an equitation position
-              chart, not a cutting cow-work chart), a horse
-              stall-door USHJA hunter card so the USHJA /
-              USEF hunter / rated-show notes are labeled at
-              the barn (not a USEF medal card, not an NCHA
-              cutting card), and an equine hunter-bascule
-              handbook so the over-fences / foxhunting /
-              effortless-style grounding is a physical barn
-              book (not a hunter-seat handbook, not a
-              cutting cow-sense handbook). Educational barn
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Hunter-under-saddle checklist"
-              subtitle="Email the hunter under-saddle gait chart, USHJA hunter card, and hunter-bascule handbook notes. No spam."
-              ctaText="Email my hunter-under-saddle checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="disciplines-hunter-under-saddle-under-hero"
             />
           </div>
@@ -191,44 +166,18 @@ export default function HunterUnderSaddlePage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs equitation /
               cutting hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the hunter-under-saddle barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page walk-trot-canter-flat,
-              ushja-usef-hunter, and bascule /
-              field-hunter copy — a laminated horse hunter
-              under-saddle gait chart, a horse stall-door
-              USHJA hunter card, and an equine
-              hunter-bascule handbook. Educational barn
-              searches only. They are not a ranked clinic
-              list, they are not an equitation / cutting
-              hop, they are not a first-aid-kit hop, they
-              are not a child toothbrush hop, and they do
-              not replace a veterinarian. Horses.com does
-              not sell insurance. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+hunter+under+saddle+gait+chart?s=discipline-hunter-under-saddle"
-                amazonLabel="Browse laminated horse hunter under-saddle gait charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=discipline-hunter-under-saddle"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+ushja+hunter+card?s=discipline-hunter-under-saddle"
-                amazonLabel="Browse horse stall-door USHJA hunter cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+hunter+bascule+handbook?s=discipline-hunter-under-saddle"
-                amazonLabel="Browse equine hunter-bascule handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

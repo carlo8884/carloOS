@@ -117,42 +117,16 @@ export default function RationBalancersPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ration-balancer shopping checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ration-balancer shopping checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the compact-digital-gram-scale,
-              molasses-free-chaff, and
-              small-rubber-mixing-pan notes that match
-              the weigh-the-few-hundred-grams, mix-with-a-handful-of-chaff,
-              and slow-the-tiny-serving copy on this
-              page — a compact digital gram scale so
-              the manufacturer&apos;s few-hundred-gram
-              serving is weighed instead of guessed
-              (not a tabletop grain scale, not a hay
-              flake scale, not a marked grain scoop),
-              molasses-free chaff so the tiny serving
-              is mixed with a handful of low-sugar
-              chop to make it palatable (not chopped
-              forage as a hay replacer, not
-              molasses-free beet pulp shreds), and a
-              small rubber horse mixing pan so
-              balancer and chaff are stirred in a
-              shallow pan the horse can finish (not a
-              round rubber feed pan, not stackable
-              feed tubs, not an over-door feed
-              bucket). Educational barn checklist,
-              not a treatment, and not a substitute
-              for calling the veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Ration-balancer shopping checklist"
-              subtitle="Email the gram-scale, molasses-free-chaff, and mixing-pan notes. No spam."
-              ctaText="Email my ration-balancer shopping checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-ration-balancers-under-hero"
             />
           </div>
@@ -176,7 +150,7 @@ export default function RationBalancersPage() {
           <p>The crucial difference is calories and serving size. A regular fortified feed delivers its full vitamins and minerals only when you feed the larger recommended amount, which also delivers significant calories -- a problem for an easy keeper. Feed far less than the recommended rate, and you starve the horse of the very nutrients the feed was meant to provide. A balancer breaks that trade-off: full fortification in a tiny, low-calorie serving, so you can keep calories low and the diet complete.</p>
 
           <h2 id="using">Using a Balancer</h2>
-          <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. A compact digital gram scale for horse feed is how that few-hundred-gram serving is weighed — it is not a tabletop digital horse grain scale (that lives on grain), not a portable horse hay flake scale (that lives on feeding-the-easy-keeper), and not a marked horse grain scoop (that lives on feeding-the-performance-horse). Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer (that lives on feeding-senior-horses) and not molasses-free beet pulp shreds (that lives on the beet-pulp leftover). Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan (that lives on flu), not stackable rubber feed tubs (those live on grain), and not an over-door horse feed bucket (that lives on feeding-the-hard-keeper). Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
+          <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer (that lives on feeding-senior-horses) and not molasses-free beet pulp shreds (that lives on the beet-pulp leftover). Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan (that lives on flu), not stackable rubber feed tubs (those live on grain), and not an over-door horse feed bucket (that lives on feeding-the-hard-keeper). Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
 
           <h2 id="kit">Ration-balancer barn kit</h2>
           <p>
@@ -294,27 +268,9 @@ export default function RationBalancersPage() {
               (kept on the ReviewCards below). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ration-balancer barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page weigh-the-few-hundred-grams,
-              mix-with-a-handful-of-chaff, and
-              slow-the-tiny-serving copy — a compact
-              digital gram scale, molasses-free chaff,
-              and a small rubber horse mixing pan.
-              Educational barn searches only. They
-              are not a ranked product list, they are
-              not a grain-scale or hay-flake-scale
-              hop, they are not a chopped-forage or
-              beet-pulp hop, they are not the Enrich
-              Plus / Triple Crown 30 / Empower Topline
-              ReviewCards, and they do not replace a
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/compact+digital+gram+scale+horse+feed?s=nutrition-ration-balancers"
@@ -328,7 +284,7 @@ export default function RationBalancersPage() {
                 amazonHref="/go/amazon-brand/small+rubber+horse+mixing+pan?s=nutrition-ration-balancers"
                 amazonLabel="Browse small rubber horse mixing pans on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Ration Balancer Picks</h2>

@@ -105,33 +105,16 @@ export default function HydrationAndWaterPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret-hydration checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret-hydration checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the hydration notes that match
-              the copy on this page — a heavy ceramic
-              bowl as the primary source so a ferret
-              can lap in volume, a sipper bottle only
-              as a spill-free backup that is checked
-              daily for a clogged valve, kibble-fed
-              ferrets needing especially reliable
-              water, and heat-stress risk above the
-              high 70s. Educational hydration
-              checklist, not a new product hop and
-              not a substitute for an exotic-animal
-              veterinarian. The existing ceramic-bowl
-              and sipper-bottle Amazon searches stay
-              below. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret-hydration checklist"
-              subtitle="Email the bowl-first and backup-bottle notes. No spam."
-              ctaText="Email my ferret-hydration checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="diet-hydration-and-water-under-hero"
             />
           </div>

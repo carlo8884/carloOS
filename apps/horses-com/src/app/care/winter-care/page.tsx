@@ -116,23 +116,16 @@ export default function WinterCarePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the winter-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse winter-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit — a tank heater so water stays unfrozen,
-              grit or sand for ice around gates and troughs, plus snow pads
-              or studs when the farrier conversation is about working horses
-              in winter. Educational checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse winter-care checklist"
-              subtitle="Email the tank-heater, ice-grit, snow-pad, and stud order. No spam."
-              ctaText="Email my winter-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-winter-care-under-hero"
             />
           </div>
@@ -169,17 +162,9 @@ export default function WinterCarePage() {
               or mud-fever diagnosis hops. Blankets stay on /care/blanketing. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the winter-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page water and
-              footing copy — a tank heater, ice grit, snow pads, and horse
-              shoe studs. Everyday physical supplies only. They are not a
-              ranked product list, they are not treatments for colic, mud
-              fever, or weight loss, and they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+tank+heater?s=care-winter-care"
@@ -197,7 +182,7 @@ export default function WinterCarePage() {
                 amazonHref="/go/amazon-brand/horse+shoe+studs?s=care-winter-care"
                 amazonLabel="Browse horse shoe studs on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

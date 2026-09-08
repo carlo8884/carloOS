@@ -85,33 +85,16 @@ export default function AngelfishPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the angelfish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Angelfish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the angelfish notes that match the
-                care copy on this page — an 18–24 inch
-                tall tank so an adult keeps 6-inch
-                vertical fin span, a 75-gallon footprint
-                so a bonded pair keeps a retreat zone
-                for tankmates, and warm slightly acidic
-                water so a scalare stays near 76–82°F
-                and pH 6.0–7.5. Educational
-                angelfish-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing angelfish tank-setup Amazon
-                search stays below. Empty Chewy buttons
-                stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Angelfish-setup checklist"
-                subtitle="Email the tall-tank, pair-bond, and water-parameter notes. No spam."
-                ctaText="Email my angelfish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-angelfish-under-hero"
               />
             </div>

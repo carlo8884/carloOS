@@ -197,9 +197,9 @@ export default function PetInsuranceWorthItPage() {
           <EmailCapture
             variant="sidebar"
             siteId="vets-co"
-            title="Insurance decision checklist"
-            subtitle="Email the breakeven notes and enrollment checklist. No spam."
-            ctaText="Email the insurance checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="insurance-worth-it"
           />
         </>
@@ -223,17 +223,13 @@ export default function PetInsuranceWorthItPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Insurance breakeven notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the breakeven line — premium vs. reimbursement and the eligible-cost level
-            where a policy pays for itself — so you can compare quotes without re-running the
-            math. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
             title="Insurance breakeven notes"
-            subtitle="Email the breakeven line — premium vs. reimbursement and the eligible-cost threshold. No spam."
-            ctaText="Email the insurance checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-pet-insurance-worth-it-calculator-under-hero"
           />
         </div>
@@ -319,8 +315,7 @@ export default function PetInsuranceWorthItPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a home-care prep kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              A first-aid kit, a digital thermometer, a pet scale, a recovery
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
               on hand while they decide whether a policy is worth it — and
               after a claim, while a pet recovers. These are Amazon category
@@ -341,8 +336,7 @@ export default function PetInsuranceWorthItPage() {
                 telehealth
               </Link>
               . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+              cost to you.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator"
@@ -364,7 +358,7 @@ export default function PetInsuranceWorthItPage() {
                 amazonHref="/go/amazon-brand/pet+calming+aid?s=tools-pet-insurance-worth-it-calculator"
                 amazonLabel="Browse pet calming aids on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
 

@@ -46,36 +46,16 @@ export default function BestWaterTestKitsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the water-test-kit checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Water-test-kit checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the test-kit notes that match the
-                API Freshwater Master Kit, Salifert,
-                and digital-meter copy on this page —
-                an API Master Kit so a freshwater tank
-                keeps weekly pH, ammonia, nitrite, and
-                nitrate readings, Salifert individual
-                tests so a reef tank keeps alkalinity,
-                calcium, and magnesium, and a digital
-                pH or TDS meter so a CO2 planted or
-                shrimp tank keeps a calibrated reading.
-                Educational test-kit checklist, not a
-                new product hop, not livestock, and
-                not a substitute for a fish
-                veterinarian. The existing API Master
-                Test Kit Amazon search stays below.
-                Empty Chewy buttons stay hidden. No
-                spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Water-test-kit checklist"
-                subtitle="Email the API, Salifert, and digital-meter notes. No spam."
-                ctaText="Email my water-test-kit checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-water-test-kits-under-hero"
               />
             </div>

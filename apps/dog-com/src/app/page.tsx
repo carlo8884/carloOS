@@ -468,11 +468,11 @@ export default function HomePage() {
                 The Puppy First-Year Schedule
               </h2>
               <p className="text-sm sm:text-base text-white/65 leading-relaxed mb-5 max-w-2xl">
-                A printable week-by-week plan for weeks 8&ndash;16, plus a free 8-week email course &mdash;
-                vaccines, feeding, crate training, and the socialization windows that matter most.
+                A week-by-week plan for weeks 8&ndash;16 on the page itself &mdash;
+                vaccines, feeding, crate training, and the socialization windows that matter most. No email signup required.
               </p>
               <span className="inline-flex items-center gap-1.5 bg-brand-primary text-brand-white text-sm font-bold px-5 py-2.5 rounded-md group-hover:bg-brand-primary-dark transition-colors">
-                Get the free schedule
+                Read the schedule
                 <IconArrowRight className="w-3.5 h-3.5" />
               </span>
             </div>

@@ -34,7 +34,7 @@ export default function CanineInfluenzaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Kennel Cough', href: '/health/kennel-cough' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-influenza" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-influenza" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -42,44 +42,23 @@ export default function CanineInfluenzaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-flu isolation checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-flu isolation checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the post-boarding notes — a
-              double-door wire dog crate so the
-              returning dog spends the 7-day isolation
-              in a separate room instead of sharing
-              air with household dogs, a pet-safe
-              kennel disinfectant spray so bowls and
-              kennel surfaces get a pass after
-              boarding or daycare, and an analog wall
-              clock with a second hand so rapid or
-              labored breathing gets a one-minute
-              count during rest. Educational
-              checklist, not a diagnosis, not a
-              vaccine decision, and not a substitute
-              for the veterinarian who evaluates
-              fever or pneumonia. Recovery crates,
-              soft-sided crates, digital pet
-              thermometers, cool-mist humidifiers,
-              and Rx stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog-flu isolation checklist"
-              subtitle="Email the crate, kennel-disinfectant, and second-hand-clock notes. No spam."
-              ctaText="Email my dog-flu isolation checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-canine-influenza-under-hero"
             />
           </div>
 
           <h2>How Canine Influenza Spreads</h2>
           <p>Canine influenza is transmitted through respiratory secretions — direct dog-to-dog contact, airborne droplets (sneezing, coughing), and contact with contaminated surfaces (water bowls, kennel surfaces, human hands that have touched infected dogs). Virtually all dogs exposed to the virus develop infection — canine influenza viruses are novel to the dog immune system, meaning there is minimal pre-existing immunity in unvaccinated populations. This is different from kennel cough (Bordetella), where healthy adults with prior exposure may resist infection — essentially all naïve dogs exposed to influenza become infected.</p>
-          <p>The incubation period is 2–4 days — dogs can shed virus before showing signs. A dog returning from a boarding facility may have been exposed and be shedding virus before coughing begins. This is why isolation of any dog returning from high-exposure environments (boarding, dog shows, dog parks during outbreak periods) for 7 days before returning to contact with other dogs is the responsible protocol during active outbreaks. A double-door wire dog crate in a separate room is how that 7-day isolation becomes a physical setup instead of a hope the dogs stay apart — it is not a recovery crate, not a soft-sided crate, not a wire crate with a divider panel, and not an airline crate. It does not prevent infection and it does not replace a veterinarian. A pet-safe kennel disinfectant spray is how bowls and kennel surfaces get a pass after a boarding or daycare return — it is not accelerated hydrogen peroxide labeled for parvovirus, not an enzymatic stain cleaner, and not a small-animal cage cleaner. Hands that touched the returning dog should be washed before they touch the household dogs. These are household isolation tools, not treatments.</p>
+          <p>The incubation period is 2–4 days — dogs can shed virus before showing signs. A dog returning from a boarding facility may have been exposed and be shedding virus before coughing begins. This is why isolation of any dog returning from high-exposure environments (boarding, dog shows, dog parks during outbreak periods) for 7 days before returning to contact with other dogs is the responsible protocol during active outbreaks. It does not prevent infection and it does not replace a veterinarian. A pet-safe kennel disinfectant spray is how bowls and kennel surfaces get a pass after a boarding or daycare return — it is not accelerated hydrogen peroxide labeled for parvovirus, not an enzymatic stain cleaner, and not a small-animal cage cleaner. Hands that touched the returning dog should be washed before they touch the household dogs. These are household isolation tools, not treatments.</p>
 
           <h2>H3N8 vs H3N2</h2>
           <p>H3N8 (equine-origin, adapted to dogs circa 2004): emerged in US racing greyhounds, spread to pet population. Currently less prevalent than H3N2 in most US regions. H3N2 (avian-origin, introduced from Asia circa 2015): more recently introduced, associated with several major regional outbreaks including the large 2015 Chicago outbreak. H3N2 appears more contagious in the dog population. Both strains cause similar clinical illness; both are covered by the bivalent canine influenza vaccine.</p>
@@ -88,7 +67,7 @@ export default function CanineInfluenzaPage() {
           <p>No specific antiviral treatment exists for canine influenza in dogs (canine-labeled antivirals are not available). Treatment is supportive: rest, fluid support for dehydrated or anorectic dogs, anti-inflammatory medication for fever, and antibiotics if secondary bacterial pneumonia develops (the most serious complication). Most dogs with mild illness recover in 2–4 weeks without veterinary intervention beyond rest and monitoring. Dogs with fever, complete anorexia, difficulty breathing, or signs of pneumonia (productive cough, rapid/labored breathing) require veterinary evaluation and possibly hospitalization. An analog wall clock with a second hand is how rapid or labored breathing gets a one-minute count during isolation rest — it is not a digital pet thermometer, not a cool-mist humidifier, and not a handheld stopwatch. A rising count or labored effort is a reason to call the veterinarian, not a diagnosis of pneumonia, and not a substitute for the clinic that decides whether supportive care or hospitalization is indicated.</p>
 
           <h2>Vaccination — Who Should Be Vaccinated</h2>
-          <p>The canine influenza vaccine (bivalent, covering both H3N8 and H3N2) is a non-core vaccine recommended based on lifestyle risk. Dogs that should receive it: any dog that attends boarding facilities, doggy daycare, dog parks, dog shows, or group training classes — essentially any dog with regular close contact with other dogs outside the household. The vaccine reduces severity and duration of illness in vaccinated dogs that are exposed; it does not fully prevent infection. Initial vaccination requires a booster 2–4 weeks after the first dose; thereafter, annual or semi-annual boosting depending on exposure risk. This page does not hop vaccine products, Tamiflu, or other antivirals — those decisions stay with the veterinarian.</p>
+          <p>The canine influenza vaccine (bivalent, covering both H3N8 and H3N2) is a non-core vaccine recommended based on lifestyle risk. Dogs that should receive it: any dog that attends boarding facilities, doggy daycare, dog parks, dog shows, or group training classes — essentially any dog with regular close contact with other dogs outside the household. The vaccine reduces severity and duration of illness in vaccinated dogs that are exposed; it does not fully prevent infection. Initial vaccination requires a booster 2–4 weeks after the first dose; thereafter, annual or semi-annual boosting depending on exposure risk.
 
           <h2 id="kit">Dog-flu isolation kit</h2>
           <p>
@@ -176,29 +155,9 @@ export default function CanineInfluenzaPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-flu isolation kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page post-boarding isolation,
-              surface-cleanup, and
-              respiratory-monitoring copy — a
-              double-door wire dog crate, a pet-safe
-              kennel disinfectant spray, and an analog
-              wall clock with a second hand. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not a
-              vaccine or antiviral hop, they are not a
-              #1072 tick-hook / flea-comb / ID-card
-              hop, they are not a #1071 expanding-file
-              / urine-cup / 12-hour-timer hop, they
-              are not a recovery-crate / soft-sided
-              crate / humidifier / thermometer hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza"
@@ -212,7 +171,7 @@ export default function CanineInfluenzaPage() {
                 amazonHref="/go/amazon-brand/analog+wall+clock+with+second+hand?s=health-canine-influenza"
                 amazonLabel="Browse analog wall clocks with a second hand on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

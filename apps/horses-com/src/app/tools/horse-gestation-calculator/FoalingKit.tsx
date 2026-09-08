@@ -140,19 +140,15 @@ export default function FoalingKit() {
                 </span>
               </label>
               <div className="mt-3 ml-7">
-                <ShopCtas amazonHref={item.amazonHref} amazonLabel={item.amazonLabel} />
               </div>
             </li>
           )
         })}
       </ul>
 
-      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">
-        Assumption: this is a planning checklist for a typical unassisted foaling at home under
+      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">Assumption: this is a planning checklist for a typical unassisted foaling at home under
         veterinary guidance. Maiden mares, twins, and any mare with a history of dystocia often
-        need a different plan — confirm that with your veterinarian, not this list. Empty Chewy
-        buttons stay hidden.
-      </p>
+        need a different plan — confirm that with your veterinarian, not this list. </p>
     </div>
   )
 }

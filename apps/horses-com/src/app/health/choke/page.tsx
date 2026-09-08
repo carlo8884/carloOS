@@ -136,31 +136,16 @@ export default function ChokePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the choke soak-and-slow-feed checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse choke soak-and-slow-feed checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the lidded 5-gallon feed-soaking-pail,
-              large smooth feed-tub-rock, and apple-wedger
-              slicer notes that match the soak-feeds-that-swell,
-              slow-down-greedy-eaters, and cut-treats-small
-              copy on this page — a pail so beet pulp and dry
-              pellets soak fully before they hit the tub, rocks
-              so a bolting eater works around obstacles instead
-              of packing a dry mouthful, and a wedger so apples
-              and carrots go in as sticks, not coins. Educational
-              checklist, not a treatment, not a substitute for
-              calling the veterinarian, and not a hay-soaking-bag,
-              hay-net, mash, or hay-cube hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse choke soak-and-slow-feed checklist"
-              subtitle="Email the soaking-pail, feed-tub-rock, and apple-wedger notes. No spam."
-              ctaText="Email my horse choke soak-and-slow-feed checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-choke-under-hero"
             />
           </div>
@@ -205,21 +190,12 @@ export default function ChokePage() {
             tub, large smooth feed-tub rocks so a bolting
             eater works around obstacles instead of packing
             a dry mouthful, and an apple wedger slicer so
-            apples and carrots go in as sticks, not coins.
-            These are educational feeding-management tools,
+            apples and carrots go in as sticks, not coins. These are educational feeding-management tools,
             not a ranked product list, not a substitute for
-            veterinary care, and not a treatment. Hay-soaking
-            bags already live on heaves. Slow-feeder hay nets
-            already live on the feed calculator and
-            forage-basics. Small-hole hay nets already live
-            on the easy-keeper page. Equine slow-feeder hay
-            boxes already live on turnout-vs-stabling. Hay
-            cubes and mashes already live on equine dental
-            care. Beet-pulp shreds and pellets already live
-            on the beet-pulp page. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            veterinary care, and not a treatment. Small-hole hay nets already live
+            on the easy-keeper page. Beet-pulp shreds and pellets already live
+            on the beet-pulp page. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -259,31 +235,9 @@ export default function ChokePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the soak-and-slow-feed kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page soak-feeds-that-swell, slow-down-greedy-eaters,
-              and cut-treats-small copy — a lidded 5-gallon
-              feed-soaking pail, large smooth feed-tub rocks,
-              and an apple wedger slicer. Educational
-              feeding-management tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1093 kitchen-timer /
-              message-pad / pet-carrier hop, they
-              are not a #1092 floor-bowl /
-              wobble-dispenser / hourglass hop, they
-              are not a #1091 laminating-pouch /
-              72-hour-timer / travel-bowl hop, they
-              are not a heaves hay-soaking-bag hop, they
-              are not a feed-calculator hay-net hop, they
-              are not a dental mash / hay-cube hop, and
-              they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke"
@@ -297,7 +251,7 @@ export default function ChokePage() {
                 amazonHref="/go/amazon-brand/apple+wedger+slicer?s=health-choke"
                 amazonLabel="Browse apple wedger slicers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

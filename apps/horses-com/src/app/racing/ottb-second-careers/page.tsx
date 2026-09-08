@@ -132,40 +132,16 @@ export default function OttbSecondCareersHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ottb-second-careers checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            OTTB-second-careers checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-horse-ottb-discipline-ladder-chart,
-            stall-door-foundation-flatwork-card, and
-            equine-letdown-to-restart-handbook notes
-            that match the eventing / jumping / dressage /
-            trail, foundation-flatwork, and letdown-to-restart
-            copy on this hub — a laminated horse OTTB
-            discipline-ladder chart so the four second-career
-            spokes are posted on the stall door (not a TAA
-            aftercare-directory chart, not a handicap-weight
-            chart), a horse stall-door foundation-flatwork
-            card so the new vocabulary of leg / seat / rein
-            notes are labeled at the barn (not an OTTB
-            letdown card, not a lead-pad card), and an equine
-            letdown-to-restart handbook so the decompression /
-            discipline-specific-work grounding is a physical
-            barn book (not a Thoroughbred-Makeover handbook,
-            not a theoretical-dead-heat handbook). Educational
-            barn checklist, not a ranked race list, not a
-            first-aid-kit hop, and not a substitute for a
-            veterinarian. Horses.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="OTTB-second-careers checklist"
-            subtitle="Email the OTTB discipline-ladder chart, foundation-flatwork card, and letdown-to-restart handbook notes. No spam."
-            ctaText="Email my ottb-second-careers checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="ottb-second-careers-hub-under-hero"
           />
         </div>
@@ -268,41 +244,17 @@ export default function OttbSecondCareersHubPage() {
             Educational barn searches only; no Rx hops.
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs ottb-aftercare /
-            handicap hops.
-            Directory import left untouched. Do not
+            handicap hops. Do not
             re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the ottb-second-careers barn kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page eventing / jumping / dressage / trail,
-            foundation-flatwork, and letdown-to-restart
-            copy — a laminated horse OTTB discipline-ladder
-            chart, a horse stall-door foundation-flatwork
-            card, and an equine letdown-to-restart handbook.
-            Educational barn searches only. They are not a
-            ranked race list, they are not an ottb-aftercare
-            / handicap hop, they are not a first-aid-kit
-            hop, and they do not replace a veterinarian.
-            Horses.com does not sell insurance. Horses.com
-            earns a commission on qualifying purchases at
-            no extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+horse+ottb+discipline+ladder+chart?s=ottb-second-careers-hub"
-              amazonLabel="Browse laminated horse OTTB discipline-ladder charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+stall+door+foundation+flatwork+card?s=ottb-second-careers-hub"
-              amazonLabel="Browse horse stall-door foundation-flatwork cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/equine+letdown+to+restart+handbook?s=ottb-second-careers-hub"
-              amazonLabel="Browse equine letdown-to-restart handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/horse+supplies?s=ottb-second-careers-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

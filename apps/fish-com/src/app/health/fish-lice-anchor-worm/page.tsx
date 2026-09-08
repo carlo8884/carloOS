@@ -47,22 +47,14 @@ export default function FishLicePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the 4-to-6-week quarantine plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Lice-and-anchor-worm quarantine checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the 4-to-6-week quarantine order — hold every new fish in
-            a spare quarantine tank so Argulus and Lernaea are visible
-            before they reach the display, and treat the holding water so
-            eggs and free-swimming larvae do not re-seed the tank.
-            Educational husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Lice-and-anchor-worm quarantine checklist"
-            subtitle="Email the 4-to-6-week quarantine and treat-the-holding-water order. No spam."
-            ctaText="Email my fish-lice quarantine checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-fish-lice-under-hero"
           />
         </div>
@@ -90,8 +82,7 @@ export default function FishLicePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a quarantine-tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Prevention on this page is a 4–6 week quarantine of every new
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Prevention on this page is a 4–6 week quarantine of every new
             fish — both parasites would be visible well within that window
             — plus treating the holding water so eggs and larvae do not
             re-seed the tank. A spare quarantine / hospital tank is how you
@@ -120,9 +111,7 @@ export default function FishLicePage() {
             heat method. The hops below are not a ranked product list, they
             are not medications, and they do not treat, reverse, or cure
             Argulus or Lernaea. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay
-            hidden.
-          </p>
+            purchases at no extra cost to you. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-fish-lice"

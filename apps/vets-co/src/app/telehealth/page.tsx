@@ -49,22 +49,16 @@ export default function TelehealthPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Telehealth prep checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the consult checklist — what to photograph, what vitals you can take at home,
-            and when to skip the screen and go to an ER — so you can prep without re-reading the
-            comparison. Planning reference only. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Telehealth prep checklist"
-            subtitle="Email the consult checklist — photos, at-home vitals, and when to go to an ER. No spam."
-            ctaText="Email my telehealth checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="telehealth-under-hero"
           />
         </div>
@@ -112,14 +106,7 @@ export default function TelehealthPage() {
                 <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
                   Shop a telehealth prep kit
                 </div>
-                <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-                  A first-aid kit, a digital thermometer, a pet scale, a calming aid, and a
-                  recovery cone are the home-care items owners often have on hand before a
-                  video consult — or while waiting for an in-person visit. These are Amazon
-                  category searches, not a ranked product list and not a treatment plan. Ask
-                  your veterinarian which items fit your pet. Vets.co earns a commission on
-                  qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-                </p>
+                <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/pet+first+aid+kit?s=telehealth"
@@ -141,7 +128,7 @@ export default function TelehealthPage() {
                     amazonHref="/go/amazon-brand/pet+recovery+cone?s=telehealth"
                     amazonLabel="Browse pet recovery cones on Amazon →"
                   />
-                </div>
+          </div>
               </div>
             </div>
 

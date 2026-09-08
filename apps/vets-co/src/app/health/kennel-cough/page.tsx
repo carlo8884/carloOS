@@ -42,7 +42,7 @@ export default function KennelCoughPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Canine Influenza', href: '/health/canine-influenza' }, { label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-kennel-cough" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-kennel-cough" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -52,28 +52,16 @@ export default function KennelCoughPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the kennel-cough isolation checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Kennel-cough isolation checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-isolation notes — a Y-shaped
-              front-clip harness so a collar does not press
-              the trachea, a cool-mist humidifier for the
-              recovery room, and a soft-sided crate so the
-              dog can rest away from other dogs after
-              boarding or daycare. Educational checklist,
-              not a diagnosis and not a treatment list.
-              Antibiotics, Bordetella vaccines, and cough
-              suppressants stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Kennel-cough isolation checklist"
-              subtitle="Email the harness, humidifier, and isolation-crate notes. No spam."
-              ctaText="Email my kennel-cough isolation checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-kennel-cough-under-hero"
             />
           </div>
@@ -113,23 +101,9 @@ export default function KennelCoughPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the kennel-cough isolation kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              isolation copy — a Y-shaped front-clip harness
-              so a collar does not press the trachea, a
-              cool-mist humidifier for the recovery room, and
-              a soft-sided crate for rest away from other
-              dogs. Everyday physical gear only. They are not
-              a ranked product list, they are not antibiotics,
-              they are not Bordetella vaccines, they are not
-              the no-pull harness already hopped on training
-              pages, and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough"
@@ -143,7 +117,7 @@ export default function KennelCoughPage() {
                 amazonHref="/go/amazon-brand/soft+sided+dog+crate?s=health-kennel-cough"
                 amazonLabel="Browse soft-sided dog crates on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

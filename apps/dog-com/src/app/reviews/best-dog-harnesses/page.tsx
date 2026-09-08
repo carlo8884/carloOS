@@ -37,35 +37,16 @@ export default function BestDogHarnessesPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dog-harness checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dog-harness checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the harness notes that match
-                the ranking copy on this page —
-                front-clip only for pullers so the
-                leash redirects at the chest, a
-                PetSafe Easy Walk martingale for
-                immediate no-pull walks, a Ruffwear
-                Front Range two-clip for hiking
-                days, and a Julius-K9 IDC
-                Powerharness for escape-prone dogs
-                (back-clip only, not a no-pull
-                tool). Educational harness-type
-                checklist, not a new product hop and
-                not a substitute for a veterinarian
-                or trainer. The existing Julius-K9
-                Amazon and PetSafe / Ruffwear Chewy
-                searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dog-harness checklist"
-                subtitle="Email the front-clip, hiking, and escape-proof notes. No spam."
-                ctaText="Email my dog-harness checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-harnesses-under-hero"
               />
             </div>
@@ -120,7 +101,7 @@ export default function BestDogHarnessesPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-harnesses" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-harnesses" />
           </aside>
         </div>
       </div>

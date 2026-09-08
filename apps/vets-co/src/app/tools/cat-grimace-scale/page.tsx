@@ -175,18 +175,13 @@ export default function CatGrimaceScalePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cat grimace-score cheat sheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the five-action-unit grimace cheat sheet (ears, eyes, muzzle,
-            whiskers, head) and the pain-watch recap so you can re-score later
-            without re-reading the descriptors. Planning / observation reference
-            only — not a diagnosis or emergency-triage substitute. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Cat grimace-score cheat sheet"
-            subtitle="Email the five-sign grimace cheat sheet and pain-watch recap. No spam."
-            ctaText="Email my grimace cheat sheet"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-cat-grimace-scale-under-hero"
           />
         </div>
@@ -219,17 +214,7 @@ export default function CatGrimaceScalePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are soft recovery, comfort, and
-              observation items for a feline acute-pain watch — a soft carrier,
-              a pet first-aid kit, a calming pheromone diffuser, a digital pet
-              thermometer, and a cozy recovery bed. They are not a ranked
-              product list, not invented inventory, and they do not diagnose
-              pain or replace emergency triage. If your cat may be in pain,
-              contact a veterinarian; for a stable, non-emergency question,
-              start at telehealth. Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale"
@@ -251,7 +236,7 @@ export default function CatGrimaceScalePage() {
                 amazonHref="/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"
                 amazonLabel="Browse cozy recovery beds on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
 

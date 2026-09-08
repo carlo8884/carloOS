@@ -77,27 +77,16 @@ export default function GhKhPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the aquarium hardness-adjust checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Aquarium hardness-adjust checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the GH/KH notes — crushed coral in the filter to raise
-              both hardness readings together, a GH remineralizer when you
-              only need calcium and magnesium, and Indian almond leaves
-              when a blackwater tank needs KH and pH to drift down slowly.
-              Educational checklist, not a water-test-kit restock and not
-              a substitute for matching hardness to the species you keep.
-              API master kits, Prime, Flourish Excel, and medications stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Aquarium hardness-adjust checklist"
-              subtitle="Email the crushed-coral, GH-remineralizer, and almond-leaf notes. No spam."
-              ctaText="Email my aquarium hardness-adjust checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="setup-gh-kh-water-hardness-under-hero"
             />
           </div>
@@ -249,21 +238,9 @@ export default function GhKhPage() {
               Test kits and medications are not hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium hardness-adjust kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page hardness
-              copy — crushed coral for the filter when both GH and KH
-              should rise, a GH remineralizer when only calcium and
-              magnesium are low, and Indian almond leaves for a slow KH
-              and pH drop in blackwater setups. Everyday physical supplies
-              only. They are not a ranked product list, they are not an
-              API master test-kit restock, they are not Prime or Flourish
-              Excel, they are not medications, and they do not replace
-              matching hardness to the species you keep. Fish.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness"
@@ -277,7 +254,7 @@ export default function GhKhPage() {
                 amazonHref="/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"
                 amazonLabel="Browse Indian almond leaves on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
         <h2>Frequently Asked Questions</h2>

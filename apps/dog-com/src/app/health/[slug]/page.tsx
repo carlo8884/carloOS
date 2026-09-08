@@ -364,48 +364,16 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8 not-prose">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the condition-spoke checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Condition-spoke checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-dog-health-spoke-urgency-chart,
-                fridge-health-er-flag-card, and
-                canine-health-spoke-handbook notes
-                that match the on-page urgency /
-                category / prevalence / age-onset
-                quick-reference, the ER-vs-primary-care
-                trigger list, and the ACVIM / AAHA /
-                OFA grounding for this remaining
-                {` ${disease.name} `}
-                spoke — a laminated dog health-spoke
-                urgency chart so this remaining-condition
-                map is posted on the fridge (not a
-                conditions-hub body-system chart, not a
-                symptoms-hub triage chart, not a
-                breed-glance-OFA chart), a fridge
-                health ER-flag card so the when-to-ER
-                notes are labeled in the kitchen (not
-                a conditions library card, not a
-                breed energy-size card), and a
-                health-spoke handbook so the
-                diagnostic-ladder / treatment-tier
-                / ACVIM-AAHA row is a physical kitchen
-                book (not a conditions-reference
-                handbook, not a breed-profile
-                handbook). Educational kitchen
-                checklist, not a ranked product list,
-                not a substitute for a veterinarian,
-                not a treatment hop. Dog.com does not
-                sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Condition-spoke checklist"
-                subtitle="Email the urgency chart, ER-flag card, and health-spoke handbook notes. No spam."
-                ctaText="Email my condition-spoke checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source={`health-${disease.slug}-under-hero`}
               />
             </div>
@@ -523,46 +491,16 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the condition-spoke kitchen kit
+                Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the
-                on-page urgency / ER-trigger /
-                diagnostic-ladder / ACVIM-AAHA-OFA
-                copy — a laminated dog health-spoke
-                urgency chart, a fridge health ER-flag
-                card, and a canine health-spoke
-                handbook. Educational kitchen searches
-                only. They are not a ranked product
-                list, they are not a treatment hop,
-                they are not a breed-profile hop, they
-                are not a conditions-hub hop, they are
-                not a crate hop, they are not a
-                finger-toothbrush hop, they are not a
-                flea / heartworm / vaccine hop, and
-                they do not replace a veterinarian.
-                Existing insurance and supportive-care
-                review CTAs stay in the sidebar.
-                Dog.com does not sell insurance.
-                Dog.com earns a commission on
-                qualifying purchases at no extra cost
-                to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+health+spoke+urgency+chart?s=health-spoke"
-                  amazonLabel="Browse laminated dog health-spoke urgency charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=health-spoke"
+                  amazonLabel="Shop on Amazon"
                 />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+fridge+health+er+flag+card?s=health-spoke"
-                  amazonLabel="Browse fridge health ER-flag cards on Amazon →"
-                />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+health+spoke+handbook?s=health-spoke"
-                  amazonLabel="Browse canine health-spoke handbooks on Amazon →"
-                />
-              </div>
+          </div>
             </div>
 
             {/* Related Dog.com pages */}
@@ -714,7 +652,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               variant="sidebar"
               siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="Practical guidance weekly."
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
               source={`health-${disease.slug}`}
             />
           </aside>

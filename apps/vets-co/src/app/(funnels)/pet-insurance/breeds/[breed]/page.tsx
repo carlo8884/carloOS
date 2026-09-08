@@ -183,7 +183,7 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
           source={`insurance-breed-${breed}`}
           title="Free: Pet Insurance Comparison Spreadsheet"
           subtitle="9 major carriers side-by-side — premiums, deductibles, waiting periods."
-          ctaText="Email me the spreadsheet"
+          ctaText="Send the notes"
         />
       </section>
     </article>

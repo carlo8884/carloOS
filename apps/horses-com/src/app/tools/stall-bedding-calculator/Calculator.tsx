@@ -260,22 +260,6 @@ export default function Calculator() {
             , then about {result.unitsWeekly} {weeklyWord} a week to replace what you pick out.
           </p>
           <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
-          <ShopCtas
-            amazonHref={
-              type === 'pellets'
-                ? '/go/amazon-brand/wood+pellet+horse+stall+bedding?s=tools-stall-bedding-calculator'
-                : type === 'straw'
-                  ? '/go/amazon-brand/straw+horse+stall+bedding?s=tools-stall-bedding-calculator'
-                  : '/go/amazon-brand/pine+shavings+horse+stall+bedding?s=tools-stall-bedding-calculator'
-            }
-            amazonLabel={
-              type === 'pellets'
-                ? 'Browse wood pellet bedding on Amazon →'
-                : type === 'straw'
-                  ? 'Browse straw stall bedding on Amazon →'
-                  : 'Browse pine shavings on Amazon →'
-            }
-          />
         </div>
       )}
 

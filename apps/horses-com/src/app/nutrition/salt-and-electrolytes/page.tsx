@@ -117,33 +117,16 @@ export default function SaltElectrolytesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the salt-and-electrolyte checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse salt-and-electrolyte checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the plain-white-horse-salt-block,
-              salt-first-horse-electrolyte-powder, and
-              wide-mouth-horse-water-bucket notes that
-              match the year-round-baseline-salt, sweat-
-              replacement, and always-provide-water copy
-              on this page — a white salt block so every
-              horse has a free-choice source, a salt-first
-              electrolyte powder so heavy sweat is not
-              replaced with sugar, and a wide-mouth water
-              bucket so electrolytes are never given
-              without water. Educational barn checklist,
-              not a treatment, not a tying-up loose-salt
-              hop, and not a substitute for calling the
-              veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse salt-and-electrolyte checklist"
-              subtitle="Email the salt-block, salt-first-powder, and water-bucket notes. No spam."
-              ctaText="Email my horse salt-and-electrolyte checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-salt-under-hero"
             />
           </div>
@@ -192,10 +175,8 @@ export default function SaltElectrolytesPage() {
             tying-up), a generic horse-electrolytes hop
             (that lives on the emergency tools), or an
             equine salt lick (that lives on the feed
-            calculator). This page does not hop
-            medications or vaccines. This page does not
-            claim hands-on testing.
-          </p>
+            calculator). This page does not
+            claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -229,24 +210,9 @@ export default function SaltElectrolytesPage() {
               (strangles). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the barn salt-and-water kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page baseline-salt, sweat-replacement,
-              and always-provide-water copy — a plain
-              white horse salt block, a salt-first
-              electrolyte powder, and a wide-mouth water
-              bucket. Educational barn tools only. They
-              are not a ranked product list, they are
-              not a tying-up loose-salt hop, they are
-              not a generic horse-electrolytes hop, they
-              are not a PPID automatic-waterer hop, and
-              they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt"
@@ -260,7 +226,7 @@ export default function SaltElectrolytesPage() {
                 amazonHref="/go/amazon-brand/wide+mouth+horse+water+bucket?s=nutrition-salt"
                 amazonLabel="Browse wide-mouth horse water buckets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Salt and Electrolyte Picks</h2>

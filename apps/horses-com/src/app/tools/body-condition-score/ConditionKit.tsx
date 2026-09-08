@@ -105,7 +105,7 @@ export default function ConditionKit() {
         Condition kit
       </div>
       <h3 className="font-display text-xl font-bold text-brand-dark mb-2">
-        Shop the BCS tracking kit
+        Shop related supplies
       </h3>
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
         A useful condition kit is a weight tape, a curry and body brush, a measuring
@@ -141,18 +141,15 @@ export default function ConditionKit() {
                 </span>
               </label>
               <div className="mt-3 ml-7">
-                <ShopCtas amazonHref={item.amazonHref} amazonLabel={item.amazonLabel} />
               </div>
             </li>
           )
         })}
       </ul>
 
-      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">
-        Assumption: this is a planning checklist for tracking condition on a healthy
+      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">Assumption: this is a planning checklist for tracking condition on a healthy
         adult horse. It does not diagnose EMS, PPID, or laminitis, and it does not
-        replace a livestock scale for medication dosing. Empty Chewy buttons stay hidden.
-      </p>
+        replace a livestock scale for medication dosing.</p>
     </div>
   )
 }

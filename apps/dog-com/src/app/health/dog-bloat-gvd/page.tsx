@@ -53,46 +53,23 @@ export default function GdvPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-gdv" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-gdv" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog bloat / GDV emergency checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog bloat / GDV emergency checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes — a single
-              stainless floor dog bowl so a deep-chested
-              dog eats at floor level instead of from a
-              raised feeder (the Glickman 2000 cohort
-              associated elevated bowls with higher GDV
-              risk), a wobble dog food dispenser so a
-              fast eater works for kibble instead of
-              gulping a bowl in seconds, and a
-              30-minute sand hourglass timer so fetch
-              and yard sprints stay off the half-hour
-              after a meal. Educational checklist, not
-              a diagnosis, not a gastropexy, and not a
-              substitute for emergency care if the dog
-              is retching without producing anything.
-              Maze slow-feed bowls, slow-feeder bowls,
-              raised bowls, adjustable-height bowls,
-              timed automatic feeders, puzzle feeders,
-              Northmate hoppers, indoor house-lines,
-              and first-aid kits stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog bloat / GDV emergency checklist"
-              subtitle="Email the floor-bowl, wobble-dispenser, and hourglass notes. No spam."
-              ctaText="Email my dog bloat / GDV emergency checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-bloat-gvd-under-hero"
             />
           </div>
@@ -142,8 +119,7 @@ export default function GdvPage() {
             seconds, and a 30-minute sand hourglass
             timer so fetch and yard sprints stay off
             the half-hour after a meal. These are
-            household home-care tools, not treatments.
-            They do not diagnose GDV, they do not
+            household home-care tools, not treatments. They do not diagnose GDV, they do not
             replace prophylactic gastropexy, they do
             not replace the emergency vet, and they
             are not a ranked product list. Maze
@@ -155,10 +131,8 @@ export default function GdvPage() {
             snuffle mats, indoor dog house-lines, 6-ft
             dog leashes, dog long-line leashes, first-aid
             kits, and emergency-contact cards already
-            live on other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            live on other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -194,34 +168,9 @@ export default function GdvPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog bloat / GDV home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page elevated-feeder-debate,
-              slow-feeding, and post-meal-rest copy — a
-              single stainless floor dog bowl, a wobble
-              dog food dispenser, and a 30-minute sand
-              hourglass timer. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a gastropexy
-              or medication hop, they are not the #1091
-              laminating-pouch / countdown-timer /
-              travel-bowl hops, they are not the #1090
-              sandbox-cover / waste-scooper / yard
-              hand-wash hops, they are not the #1089
-              hiking-bottle / nitrile-glove /
-              animal-proof-trash hops, they are not the
-              #1057 timed-feeder / maze-bowl /
-              house-line hops, they are not
-              slow-feeder, elevated-slow-feeder, raised
-              bowl, puzzle-feeder, interactive-feeder,
-              or first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/single+stainless+floor+dog+bowl?s=health-dog-bloat-gvd"
@@ -235,7 +184,7 @@ export default function GdvPage() {
                 amazonHref="/go/amazon-brand/30+minute+sand+hourglass+timer?s=health-dog-bloat-gvd"
                 amazonLabel="Browse 30-minute sand hourglass timers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

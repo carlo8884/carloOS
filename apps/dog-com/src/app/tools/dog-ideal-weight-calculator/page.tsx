@@ -177,22 +177,16 @@ export default function DogIdealWeightCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Weight-check checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the weight-check checklist — BCS recap, portion notes, and the
-            shoppable kit (digital scale, measuring tape, slow feeder) — so you
-            can re-weigh next month without re-running the estimate. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Weight-check checklist"
-            subtitle="Email the weight-check checklist — BCS recap, portion notes, and the shoppable kit. No spam."
-            ctaText="Email my weight-check checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-ideal-weight-under-hero"
           />
         </div>
@@ -244,18 +238,7 @@ export default function DogIdealWeightCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a weight-check kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make an
-              ideal-weight estimate repeatable — a digital kitchen / pet scale,
-              a portion-control food scale, a measuring tape or BCS chart, an
-              elevated slow-feeder bowl, a puzzle feeder, and weight-management
-              dog food. They are not a ranked product list, not invented
-              inventory, and they do not set a target weight or diagnose a
-              weight problem. Ask your veterinarian for a target and a safe
-              rate of change before cutting or adding calories. Dog.com earns
-              a commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight"
@@ -281,7 +264,7 @@ export default function DogIdealWeightCalculatorPage() {
                 amazonHref="/go/amazon-brand/weight+management+dog+food?s=tools-dog-ideal-weight"
                 amazonLabel="Browse weight-management dog food on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

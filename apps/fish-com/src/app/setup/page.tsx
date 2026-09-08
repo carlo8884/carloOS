@@ -106,20 +106,14 @@ export default function AquariumSetupPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the first-tank plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            First-tank setup checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the first-tank order — tank size, hang-on-back or canister filter,
-            heater, dechlorinator, API Master Test Kit, and the 4–8 week cycling
-            steps — so you can set up without scrolling back. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="First-tank setup checklist"
+            title="Owner notes"
             subtitle="Email tank size, filter/heater, dechlorinator, API Master Test Kit, and cycling steps. No spam."
-            ctaText="Email my first-tank setup checklist"
+            ctaText="Send the notes"
             source="setup-aquarium-under-hero"
           />
         </div>
@@ -160,8 +154,7 @@ export default function AquariumSetupPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a first-tank setup kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A hang-on-back or canister filter is where the cycle lives. Pair it
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A hang-on-back or canister filter is where the cycle lives. Pair it
             with a heater rated for the tank, a separate digital thermometer to
             verify the dial, Seachem Prime (or another dechlorinator) at every
             fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
@@ -203,8 +196,7 @@ export default function AquariumSetupPage() {
             </Link>
             . They are not a ranked product list and they do not replace
             cycling before fish. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium"

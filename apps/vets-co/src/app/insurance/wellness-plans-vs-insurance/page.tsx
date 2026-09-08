@@ -28,7 +28,7 @@ export default function WellnessVsInsurancePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Wellness vs insurance notes" subtitle="Email the wellness-vs-insurance checklist. No spam." ctaText="Email wellness tips" source="insurance-wellness-vs" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Wellness vs insurance notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." ctaText="Send the notes" source="insurance-wellness-vs" />
         </>}
       >
         <div className="carloOS-article">
@@ -42,17 +42,13 @@ export default function WellnessVsInsurancePage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Wellness vs insurance notes
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the wellness-vs-insurance checklist — what a clinic plan budgets vs. what
-              accident-and-illness coverage actually pays — so you can decide without re-reading
-              the page. No spam.
-            </p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
               title="Wellness vs insurance notes"
-              subtitle="Email the wellness-vs-insurance checklist — routine budget vs. catastrophe cover. No spam."
-              ctaText="Email wellness tips"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-wellness-plans-vs-insurance-under-hero"
             />
           </div>

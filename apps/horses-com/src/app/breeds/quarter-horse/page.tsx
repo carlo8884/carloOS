@@ -122,39 +122,16 @@ export default function QuarterHorseBreedPage() {
 
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the quarter-horse checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Quarter-horse checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-aqha-five-panel-chart,
-              horse-stall-door-fqhb-saddle-card, and
-              equine-first-owner-quarter-handbook notes that
-              match the AQHA 5-panel, full-quarter-horse-bar
-              saddle, and first-time-owner copy on this page —
-              a laminated horse AQHA five-panel chart so the
-              HYPP / HERDA / PSSM1 notes are posted on the
-              stall door (not a quarter-horse-racing sprint-
-              yard hop, not an AQHA-racing-card hop), a horse
-              stall-door FQHB-saddle card so the wide-tree /
-              low-wither / short-back notes are labeled at the
-              barn (not a flex-tree trail-saddle hop, not a
-              dressage-plain-flap hop), and an equine first-
-              owner quarter handbook so the 5-panel-before-
-              purchase / boarding-cost grounding is a physical
-              barn book (not a quarter-horse-sprint handbook,
-              not a first-aid-kit hop). Educational barn
-              checklist, not a ranked tack list, not a
-              substitute for a veterinarian. Horses.com does
-              not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Quarter-horse checklist"
-              subtitle="Email the AQHA five-panel chart, FQHB-saddle card, and first-owner handbook notes. No spam."
-              ctaText="Email my quarter-horse checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="breed-quarter-horse-under-hero"
             />
           </div>
@@ -249,37 +226,16 @@ export default function QuarterHorseBreedPage() {
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the quarter-horse barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              AQHA 5-panel, full-quarter-horse-bar saddle, and
-              first-time-owner copy — a laminated horse AQHA
-              five-panel chart, a horse stall-door FQHB-saddle
-              card, and an equine first-owner quarter handbook.
-              Educational barn searches only. They are not a
-              ranked tack list, they are not a quarter-horse-
-              racing hop, they are not a first-aid-kit hop,
-              and they do not replace a veterinarian.
-              Horses.com does not sell insurance. Horses.com
-              earns a commission on qualifying purchases at no
-              extra cost to you.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <AffiliateDisclosure variant="inline" siteId="horses-com" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+aqha+five+panel+chart?s=breed-quarter-horse"
-                amazonLabel="Browse laminated horse AQHA five-panel charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=breed-quarter-horse"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+fqhb+saddle+card?s=breed-quarter-horse"
-                amazonLabel="Browse horse stall-door FQHB-saddle cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+first+owner+quarter+handbook?s=breed-quarter-horse"
-                amazonLabel="Browse equine first-owner quarter handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="references">References</h2>
