@@ -7135,6 +7135,9 @@ const CALCULATORS = [
     id: 'fish · equipment-hub hops',
     file: 'apps/fish-com/src/app/equipment/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the six-category grid' },
+      { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter GPH, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquaclear\+70\+filter\?s=equipment-hub"/, label: 'journey hop reuses the existing HOB search' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=equipment-hub/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph / setup-aquarium)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=equipment-hub/, label: 'Fluval canister search hop (same query as stocking / filter-gph / setup-aquarium)' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=equipment-hub/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium)' },
@@ -7148,8 +7151,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the equipment list/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete aquarium-equipment-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the six-category buyer grid, next step is filter GPH + the existing AquaClear HOB hop. Empty Keep-the-equipment husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · water-parameters hops',

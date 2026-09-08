@@ -4,6 +4,7 @@ import {
   buildMetadata,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
@@ -84,15 +85,6 @@ export default function EquipmentHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid">Equipment</span>
       </nav>
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the equipment list
-          </p>
-
-        </div>
-      </div>
-
       {/* CATEGORY GRID */}
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
@@ -135,6 +127,15 @@ export default function EquipmentHubPage() {
             Read our editorial standards →
           </Link>
         </div>
+
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/filter-gph-calculator"
+          nextLabel="Size the filter for your gallons"
+          nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The hop below is the same AquaClear HOB search already on this page."
+          resourceHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
+          resourceLabel="Browse hang-on-back filters on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (equipment kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
