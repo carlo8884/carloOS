@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -46,6 +46,14 @@ export default function BestNanoTanksPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bigger Is More Forgiving</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Smaller tanks are less stable — ammonia spikes faster, temperature swings are larger, and mistakes have less margin. A 10-gallon is significantly easier to maintain than a 5-gallon. A 20-gallon long is the ideal beginner tank size. If budget allows, go bigger.</p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/setup/aquarium-cycling-guide"
+              nextLabel="Cycle the nano before you add livestock"
+              nextBlurb="The callout is the size rule — a 20-long is more forgiving than a 5-gallon. The cycling guide is the next step so ammonia and nitrite both read zero before anything goes in. The hop below is the same Aqueon 20-long search already on this page."
+              resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
+              resourceLabel="Browse Aqueon 20-gallon long aquariums on Amazon →"
+            />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" score={9.2} winner

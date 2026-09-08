@@ -11882,6 +11882,9 @@ const CALCULATORS = [
     id: 'fish · best-nano-tanks hops',
     file: 'apps/fish-com/src/app/reviews/best-nano-tanks/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the bigger-is-more-forgiving size rule' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is the cycling guide, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks"/, label: 'journey hop reuses the existing Aqueon 20-long search' },
       { re: /amazon-brand\/fluval\+spec\+v\+5\+gallon\?s=reviews-best-nano-tanks/, label: 'existing Fluval-Spec-V amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+10\+gallon\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-10 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-20-Long amazon-brand hop kept (do not re-ship a new query)' },
@@ -11892,8 +11895,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1188: keep the existing sidebar capture and the already-hopped Fluval Spec V / Aqueon 10 / Aqueon 20 Long amazon-brand searches; add under-hero capture with a concrete nano-tank-checklist offer matching on-page 5-gallon / 10-gallon / 20-long copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the bigger-is-more-forgiving size rule, next step is the cycling guide + the existing Aqueon 20-long hop. Review cards stay below. No invented kitchen hops. No new Amazon query. No species headcount.',
   },
   {
     id: 'fish · best-planted-tank-fertilizers hops',
