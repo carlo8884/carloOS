@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog spay-neuter JourneyNext after #1611)
+**Last updated:** 2026-09-08 (COO — fish lighting JourneyNext after #1612)
 
-> **COO dog spay-neuter journey (2026-09-08):** After #1611. Size-timing rule → `/tools/puppy-weight-predictor` + existing heavy-duty exercise-pen `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-spay-neuter-journey.md`.
+> **COO fish lighting journey (2026-09-08):** After #1612. PAR-band rule → `/tools/co2-calculator` + existing Hygger 957 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-lighting-journey.md`.
+
+> **COO dog spay-neuter journey (2026-09-08):** After #1611. Size-timing rule → `/tools/puppy-weight-predictor` + existing heavy-duty exercise-pen `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-spay-neuter-journey.md`. #1612 merged.
 
 > **COO fish heaters journey (2026-09-08):** After #1610. Right-size wattage rule → `/tools/heater-wattage-calculator` + existing Eheim Jager `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-heaters-journey.md`. #1611 merged.
 
