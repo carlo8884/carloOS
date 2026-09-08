@@ -11,6 +11,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -179,6 +180,14 @@ export default function PondVolumeCalculatorPage() {
           depth, and get US gallons plus liters. Use average depth, not the deepest point.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/pond-guide"
+          nextLabel="Size the pond for adult koi before you buy the liner"
+          nextBlurb="Gallons are not a kit. The pond guide is the next step: 250+ gallons per adult koi, 45-mil EPDM, and one turnover per hour — then pick liner and pump from that number. The hop below is the same EPDM liner search already on this page."
+          resourceHref="/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume"
+          resourceLabel="Browse EPDM pond liners on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (liner / pump / filter-skimmer / conditioner).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}

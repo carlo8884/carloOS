@@ -124,6 +124,9 @@ const CALCULATORS = [
     id: 'fish · pond-volume-calculator hops',
     file: 'apps/fish-com/src/app/tools/pond-volume-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the pond gallons result' },
+      { re: /nextHref="\/setup\/pond-guide"/, label: 'next step is pond-guide, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/epdm\+pond\+liner\?s=tools-pond-volume"/, label: 'journey hop reuses the existing EPDM liner search' },
       { re: /amazon-brand\/epdm\+pond\+liner\?s=tools-pond-volume/, label: 'EPDM pond liner search hop' },
       { re: /amazon-brand\/submersible\+pond\+pump\?s=tools-pond-volume/, label: 'submersible pond pump search hop' },
       { re: /amazon-brand\/pond\+filter\+skimmer\+kit\?s=tools-pond-volume/, label: 'pond filter / skimmer kit search hop' },
@@ -134,8 +137,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete pond-setup-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the pond gallons result, next step is pond-guide + the existing EPDM liner hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · heater-wattage-calculator',
