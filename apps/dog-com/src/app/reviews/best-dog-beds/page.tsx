@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -36,6 +36,18 @@ export default function BestDogBedsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
+            <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Orthopedic vs Everyday — Then Size the Sleep Space</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large and giant dogs with arthritis need 7-inch orthopedic foam. Medium and large dogs without severe joint disease do fine with washable everyday foam. Budget foam is the everyday pick when cost is the constraint. A crate pad that is too small bunches; one that is too large leaves extra floor a puppy can potty on. Size the crate first — stand, turn, lie down, no extra floor — then pick the bed that fits that footprint.</p>
+            </div>
+            <JourneyNext
+              siteId="dog-com"
+              nextHref="/tools/dog-crate-size-calculator"
+              nextLabel="Size the crate before you pick the foam"
+              nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, washable everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The hop below is the same Big Barker search already on this page."
+              resourceHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
+              resourceLabel="Browse Big Barker orthopedic dog beds →"
+            />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="big-barker" badge="Best Orthopedic" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
