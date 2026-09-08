@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -86,6 +86,14 @@ export default function BestAquariumFiltersPage() {
                 <strong>Sponge:</strong> Best for nano tanks, breeding setups, and shrimp tanks. Excellent biological surface area. Safe for fry and invertebrates. Low flow.
               </p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/tools/filter-gph-calculator"
+              nextLabel="Size the filter GPH before you pick a model"
+              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The hop below is the same AquaClear 70 search already on this page."
+              resourceHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
+              resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
+            />
 
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
