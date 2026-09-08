@@ -183,6 +183,9 @@ const CALCULATORS = [
     id: 'dog · dog-calorie-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-calorie-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the kcal estimate' },
+      { re: /nextHref="\/tools\/dog-body-condition-score"/, label: 'next step is BCS, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/kitchen\+gram\+scale\?s=tools-dog-calorie-calculator"/, label: 'journey hop reuses the existing kitchen-scale search' },
       { re: /amazon-brand\/measured\+dog\+food\?s=tools-dog-calorie-calculator/, label: 'measured dog food search hop' },
       { re: /amazon-brand\/kitchen\+gram\+scale\?s=tools-dog-calorie-calculator/, label: 'kitchen gram scale search hop' },
       { re: /amazon-brand\/slow\+feeder\+dog\+bowl\?s=tools-dog-calorie-calculator/, label: 'slow-feeder dog bowl search hop' },
@@ -197,8 +200,10 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /Keep the target/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete dog-kcal offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the kcal estimate, next step is the BCS tool + the existing kitchen-scale hop. Empty Keep-the-target husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'petfood · portion-calculator',
