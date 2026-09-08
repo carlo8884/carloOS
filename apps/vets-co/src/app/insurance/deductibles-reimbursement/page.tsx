@@ -64,7 +64,7 @@ export default function DeductiblesPage() {
           <p>The annual limit is the maximum the insurer will reimburse in a policy year, ranging from modest caps to unlimited. This number defines your catastrophe protection. A serious illness or major surgery can run into five figures, and a low annual limit can be exhausted in a single event, leaving you fully exposed thereafter. A handheld tally counter is how remaining annual-limit headroom stays a counted number instead of a remembered quote — it is not a basic desktop calculator (that lives on emergency-vet-costs), not a locking cash box with a key (that lives on emergency-vet-costs), and not a cash envelope budget system (that lives on how-to-afford-vet-care). Because protecting against exactly these rare, ruinous bills is the core reason to insure, the annual limit deserves close attention.</p>
 
           <h2>How They Interact</h2>
-          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical $5,000 bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances.
+          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical $5,000 bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances. A quad-ruled graph pad is how that $5,000 bill, the deductible, the reimbursement rate, and the leftover limit stay plotted combinations — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a yellow legal pad (that lives on how-to-afford-vet-care), and not ruled index cards (that live on questions-to-ask-your-vet).</p>
 
           <h2>Choosing Your Settings</h2>
           <p>Start from your cash reality. If you keep an emergency fund and want catastrophe protection, choose a high annual limit, a moderate reimbursement rate, and a higher deductible to keep the premium down. If even moderate bills strain your budget, lean toward a lower deductible and higher reimbursement rate, accepting a higher premium for smoother costs. Either way, avoid sacrificing the annual limit, since that is the protection you are really buying.</p>
@@ -85,10 +85,18 @@ export default function DeductiblesPage() {
             are educational deductible /
             reimbursement tools, not a ranked
             product list, not a substitute for
-            veterinary care, and not a treatment. 3-tab dividers, assorted highlighter
+            veterinary care, and not a treatment.
+            3-tab dividers, assorted highlighter
             sets, and removable page flags already
-            live on what-pet-insurance-covers. This page does not claim hands-on
-            testing. </p>
+            live on what-pet-insurance-covers.
+            Monthly desk pad calendars, self-inking
+            date stamps, and letter-size file
+            jackets already live on when-to-enroll.
+            This page does not hop medications or
+            insurance brands as Amazon searches.
+            This page does not claim hands-on
+            testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -123,9 +131,27 @@ export default function DeductiblesPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the deductibles-reimbursement kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page deductible, reimbursement-rate,
+              and annual-limit copy — a quad-ruled
+              graph pad, a paid rubber stamp, and a
+              handheld tally counter. Educational
+              deductible / reimbursement tools only.
+              They are not a ranked product list,
+              they are not a substitute for
+              veterinary care, they are not a #1170
+              3-tab-divider / highlighter /
+              page-flag hop, they are not a #1169
+              monthly-desk-pad / date-stamp /
+              file-jacket hop, they are not a
+              financing-brand or insurance-brand hop,
+              and they do not replace a veterinarian.
+              Vets.co earns a commission on qualifying
+              purchases at no extra cost to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/quad+ruled+graph+pad?s=insurance-deductibles-reimbursement"
@@ -139,7 +165,7 @@ export default function DeductiblesPage() {
                 amazonHref="/go/amazon-brand/handheld+tally+counter?s=insurance-deductibles-reimbursement"
                 amazonLabel="Browse handheld tally counters on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="quote">Model the Levers on Real Quotes</h2>

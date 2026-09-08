@@ -55,10 +55,10 @@ export default function AffordVetCarePage() {
           </CalloutBox>
 
           <h2>Prepare Before You Need To</h2>
-          <p>The most effective affordability strategy starts long before a crisis. Pet insurance, purchased while a pet is young and healthy, converts unpredictable catastrophic bills into a manageable monthly premium. A dedicated emergency fund, built gradually with automatic monthly transfers, covers deductibles, the non-reimbursed share of claims, and smaller surprises. Together these two tools handle most financial scenarios a pet owner will face, and preparing in advance removes the pressure of making care decisions under financial stress.</p>
+          <p>The most effective affordability strategy starts long before a crisis. Pet insurance, purchased while a pet is young and healthy, converts unpredictable catastrophic bills into a manageable monthly premium. A dedicated emergency fund, built gradually with automatic monthly transfers, covers deductibles, the non-reimbursed share of claims, and smaller surprises. A cash envelope budget system is how that monthly set-aside stays a counted transfer instead of a leftover intention — it is not a locking cash box with a key (that lives on emergency-vet-costs for the already-saved deductible and deposit) and it is not a household budget workbook (that lives on cost-of-veterinary-care for the annual wellness line). Together these two tools handle most financial scenarios a pet owner will face, and preparing in advance removes the pressure of making care decisions under financial stress.</p>
 
           <h2>When the Bill Is Already Here</h2>
-          <p>If you are facing a large bill without preparation, several avenues can help. Many clinics accept third-party veterinary financing or offer in-house payment plans that spread the cost over time. Some emergency hospitals have their own financing arrangements. These do not reduce the total cost, but they can make an urgent bill payable rather than impossible, allowing care to proceed.
+          <p>If you are facing a large bill without preparation, several avenues can help. Many clinics accept third-party veterinary financing or offer in-house payment plans that spread the cost over time. Some emergency hospitals have their own financing arrangements. These do not reduce the total cost, but they can make an urgent bill payable rather than impossible, allowing care to proceed. Letter-size hanging file folders keep the signed payment-plan agreement and due dates a file instead of a pile — they are not letter-size manila file folders (that live on emergency-vet-costs for a single written estimate) and they are not a letter-size accordion file folder (that lives on cost-of-veterinary-care for the last 12 months of invoices).</p>
 
           <h2>Assistance Programs</h2>
           <p>A range of charitable and nonprofit funds help owners in financial hardship, some general and some tied to specific conditions, breeds, or circumstances. Eligibility and availability vary, and funds are often limited, so applying early matters. Local humane societies and veterinary social workers can sometimes point you to regional resources. While not a guaranteed solution, these programs help meaningfully in qualifying cases and are worth investigating when costs exceed your means. The same letter-size hanging file folders hold those assistance applications next to the payment-plan copy so a missing form does not stall a deadline.</p>
@@ -143,9 +143,33 @@ export default function AffordVetCarePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the how-to-afford-vet-care kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page automatic-monthly-transfer,
+              tiered-plan conversation, and
+              payment-plan / assistance-application
+              copy — a cash envelope budget system,
+              a yellow legal pad, and letter-size
+              hanging file folders. Educational
+              affordability / paperwork tools only.
+              They are not a ranked product list,
+              they are not a substitute for veterinary
+              care, they are not a #1163
+              budget-workbook / checkbook-register /
+              accordion-file hop, they are not a
+              #1162 cash-box / calculator /
+              manila-folder hop, they are not a #1161
+              laminating-pouch / dry-erase-board /
+              visor-holder hop, they are not an
+              expanding-file or plastic file-box hop,
+              they are not a financing-brand or
+              insurance-brand hop, and they do not
+              replace a veterinarian. Vets.co earns
+              a commission on qualifying purchases
+              at no extra cost to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care"
@@ -159,7 +183,7 @@ export default function AffordVetCarePage() {
                 amazonHref="/go/amazon-brand/hanging+file+folders+letter+size?s=guides-how-to-afford-vet-care"
                 amazonLabel="Browse letter-size hanging file folders on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2>FAQ</h2>

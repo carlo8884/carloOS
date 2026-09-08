@@ -163,7 +163,7 @@ export default function AbscessPage() {
           </ul>
 
           <h2 id="treatment">Treatment</h2>
-          <p>The aim is to establish drainage. A veterinarian or farrier locates the abscess with hoof testers and hoof-knife exploration and opens a small drainage tract -- this often brings dramatic, immediate relief. The foot is then soaked in warm water with Epsom salts to soften horn and encourage drainage, then poulticed and kept clean and bandaged to draw the infection out and protect the opening. A soaking boot holds that Epsom soak around the hoof so the horse does not have to stand in a bucket it can kick over. Most abscesses resolve within days once they drain. An abscess that will not localize, recurs, or is accompanied by significant swelling or systemic signs warrants veterinary follow-up. Pain relief, if any, is prescribed by the veterinarian.
+          <p>The aim is to establish drainage. A veterinarian or farrier locates the abscess with hoof testers and hoof-knife exploration and opens a small drainage tract -- this often brings dramatic, immediate relief. The foot is then soaked in warm water with Epsom salts to soften horn and encourage drainage, then poulticed and kept clean and bandaged to draw the infection out and protect the opening. A soaking boot holds that Epsom soak around the hoof so the horse does not have to stand in a bucket it can kick over. Poultice paste, cohesive bandage, and equine first-aid kits already live on the grimace-scale and emergency-kit pages and stay off this kit. Most abscesses resolve within days once they drain. An abscess that will not localize, recurs, or is accompanied by significant swelling or systemic signs warrants veterinary follow-up. Pain relief, if any, is prescribed by the veterinarian. This page does not hop poultice, bandage, hoof picks, riding hoof boots, or any medication.</p>
 
           <h2 id="prevention">Prevention</h2>
           <ul>
@@ -185,7 +185,7 @@ export default function AbscessPage() {
               bandage, hoof picks, riding hoof boots, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the abscess soak kit
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -197,7 +197,7 @@ export default function AbscessPage() {
                 amazonHref="/go/amazon-brand/horse+hoof+soaking+boot?s=health-abscess"
                 amazonLabel="Browse horse hoof soaking boots on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

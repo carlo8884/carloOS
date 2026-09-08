@@ -138,7 +138,7 @@ export default function MaleVsFemaleFerretsPage() {
               Owner notes
             </p>
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
@@ -272,21 +272,7 @@ export default function MaleVsFemaleFerretsPage() {
             veterinarian.
           </p>
 
-          These are educational kitchen
-            searches, not a ranked color list, not a
-            substitute for an exotic-mammal veterinarian,
-            not a tools-hub / reviews-hub / diet-hub /
-            care-hub / behavior-hub / health-hub /
-            ownership-hub / colors-hub / first-year-schedule
-            / colors-and-patterns / sable-ferrets /
-            albino-ferrets / dew-ferrets / cinnamon-ferrets
-            / champagne-ferrets / chocolate-ferrets /
-            black-ferrets / silver-ferrets / panda-ferrets
-            / blaze-and-roan / choosing-healthy /
-            ferret-lifespan hop, and not a child toothbrush
-            / dosing hop (those live on health children). This page does not sell insurance. This page
-            does not claim hands-on testing. Ferret aging
-            stays held.</p>
+          <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -307,12 +293,13 @@ export default function MaleVsFemaleFerretsPage() {
               silver-ferrets / panda-ferrets /
               blaze-and-roan / choosing-healthy /
               ferret-lifespan kitchen kits and child
-              finger+toothbrush / carnivore+care hops. Ferret
+              finger+toothbrush / carnivore+care hops.
+              Directory import left untouched. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -320,7 +307,15 @@ export default function MaleVsFemaleFerretsPage() {
                 amazonHref="/go/amazon-brand/ferret+supplies?s=male-vs-female"
                 amazonLabel="Shop on Amazon"
               />
-          </div>
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=male-vs-female"
+                amazonLabel="Shop on Amazon"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=male-vs-female"
+                amazonLabel="Shop on Amazon"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>

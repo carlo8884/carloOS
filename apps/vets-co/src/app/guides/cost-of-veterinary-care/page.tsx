@@ -58,7 +58,7 @@ export default function CostOfCarePage() {
           <p>Routine care is the predictable backbone of pet ownership: annual or twice-yearly wellness exams, vaccinations, parasite prevention (heartworm, flea, and tick), routine bloodwork, and periodic dental care. These costs recur on a known schedule and are straightforward to budget. A household budget workbook is how those wellness lines stay a written annual plan instead of a guessed monthly leftover — it is not a hardcover weekly appointment planner (that lives on pain-management) and it is not a wall-mounted magnetic monthly planner (that lives on preventive-care). They are also among the highest-value spending you will do, because catching problems early and preventing disease averts far larger costs down the road.</p>
 
           <h2>Common Procedures</h2>
-          <p>Beyond routine care, most pets need certain planned procedures over a lifetime: spay or neuter surgery, professional dental cleanings (which often reveal teeth needing treatment), and management of the occasional infection or minor injury. These are generally estimable in advance, and reputable clinics will provide a written estimate before non-emergency procedures so you can plan and ask questions about what is included.
+          <p>Beyond routine care, most pets need certain planned procedures over a lifetime: spay or neuter surgery, professional dental cleanings (which often reveal teeth needing treatment), and management of the occasional infection or minor injury. These are generally estimable in advance, and reputable clinics will provide a written estimate before non-emergency procedures so you can plan and ask questions about what is included. Letter-size manila file folders already live on the emergency-vet-costs guide for a single written treatment plan; this page keeps the last 12 months of those estimates and invoices in a letter-size accordion file folder instead.</p>
 
           <h2>Chronic Conditions</h2>
           <p>As pets age, chronic conditions become a major cost category. Diseases such as diabetes, kidney disease, arthritis, allergies, and cancer require ongoing medication, monitoring bloodwork, and recheck visits, sometimes for years. These recurring costs can quietly exceed the price of a single emergency over time. A checkbook register is how those medication and recheck lines stay a running total instead of a surprise at year-end — it is not a basic desktop calculator (that lives on emergency-vet-costs for estimate-range math) and it does not diagnose or treat. Anticipating that most pets will face at least one chronic condition in later life is an important part of long-term planning.</p>
@@ -101,8 +101,10 @@ export default function CostOfCarePage() {
             file organizers already live on
             senior-bloodwork-guide. Letter-size
             plastic file boxes already live on
-            senior-pet-care. This
-            page does not claim hands-on testing. </p>
+            senior-pet-care. This page does not hop
+            medications or insurance brands. This
+            page does not claim hands-on testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -147,9 +149,30 @@ export default function CostOfCarePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the veterinary-care cost-category kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page routine-budget,
+              recurring-chronic-line, and
+              last-12-months-of-invoices copy — a
+              household budget workbook, a checkbook
+              register, and a letter-size accordion
+              file folder. Educational cost-planning
+              / paperwork tools only. They are not a
+              ranked product list, they are not a
+              substitute for veterinary care, they
+              are not a #1162 cash-box / calculator /
+              manila-folder hop, they are not a #1161
+              laminating-pouch / dry-erase-board /
+              visor-holder hop, they are not an
+              expanding-file or plastic file-box hop,
+              they are not an insurance-brand hop,
+              and they do not replace a veterinarian.
+              Vets.co earns a commission on
+              qualifying purchases at no extra cost
+              to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care"
@@ -163,7 +186,7 @@ export default function CostOfCarePage() {
                 amazonHref="/go/amazon-brand/accordion+file+folder+letter+size?s=guides-cost-of-veterinary-care"
                 amazonLabel="Browse letter-size accordion file folders on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2>FAQ</h2>

@@ -405,27 +405,7 @@ export default function FirstHorseRoadmapPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Week-by-week card, ground-manners cues, tack-room plan
           </h2>
-          <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">
-            Everyday owner tools that match the boarding, vet, farrier, feed,
-            ground-manners, tack-fit, and first-aid copy on this page — a laminated
-            first-horse 90-day week-by-week checklist so pre-purchase, settle-in,
-            build-routine, partnership, and the day-90 checkpoint stay visible, a
-            first-horse ground-manners cue card so whoa / walk on / back / over /
-            stand stay posted before anyone leads out, and a first-horse tack-room
-            emergency-plan card so the written plan lives on the wall. These are
-            educational owner searches, not a ranked product list, not a clinic
-            listing, not a substitute for a veterinarian, not a first-horse tryout /
-            buyer-notebook / PPE-records hop, not a boarding walkthrough /
-            contract-binder / hay-tarp hop, not a choosing-a-vet interview /
-            after-hours-cover / VCPR-folder hop, not a first-aid saline / pads /
-            scissors hop, not a senior age-related-change / weight-and-joint /
-            quality-of-life hop, not an ear-eye-tail / kick-zone / pain-demeanor hop,
-            not a PPE-stage-walkthrough / findings-worksheet / buyer-vet-briefing hop,
-            not a lease / insurance / monthly-budget hop, not a daily-care /
-            emergency-triage / owner-guides / calculator-tools chart hop, not a
-            saddle-pad / half-pad / shim / girth hop, and not a farrier-log hop. This page does not
-            claim hands-on testing. This page does not invent clinic listings.
-          </p>
+          <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -503,7 +483,7 @@ export default function FirstHorseRoadmapPage() {
                 amazonHref="/go/amazon-brand/first+horse+tack+room+emergency+plan+card?s=first-horse-roadmap"
                 amazonLabel="Browse first-horse tack-room emergency-plan cards on Amazon →"
               />
-          </div>
+</div>
           </div>
         </div>
       </section>

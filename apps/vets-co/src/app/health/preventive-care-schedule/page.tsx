@@ -91,7 +91,7 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>The same magnetic monthly planner is how the annual wellness slot and the every-6-months dental / weight / BCS check stay dated. A waterproof rear seat hammock is still the clinic-ride layer for the annual heartworm test and fecal exam. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, and Simparica are clinic or pharmacy preventives, not shoppable hops.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Senior Dog Schedule (7+ Years)</h2>
           <div className="overflow-x-auto mb-6">
@@ -112,12 +112,12 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>A folding four-wheel dog stroller is how a senior who now has a pain and mobility assessment every six months still reaches the lobby — it is not carpeted wooden pet steps, not a dog ramp, and not an elevated mesh dog cot. It does not treat arthritis and it does not replace the veterinarian who reads that mobility exam. The magnetic planner still holds the six-month slot. The rear seat hammock still covers the ride when the dog can climb in.
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Year-Round Parasite Prevention</h2>
           <p><strong>Heartworm:</strong> Monthly oral preventives (Heartgard, Sentinel, Interceptor Plus) or 6-month injectable ProHeart 6/12. Annual heartworm antigen test required for all dogs on prevention — to detect infection before starting prevention and to verify ongoing efficacy. A dog that misses doses or has a lapse in coverage should be tested before restarting prevention.</p>
-          <p><strong>Flea and tick:</strong> Year-round in most of the US — fleas are active in temperatures above 45°F, which occurs year-round in most climates. Oral isoxazoline products (Bravecto 12-week, NexGard monthly, Simparica monthly) provide the most reliable efficacy. Tick-borne disease (Lyme, Anaplasmosis, Ehrlichiosis, Rocky Mountain Spotted Fever) warrants tick prevention everywhere ticks are found — not only in endemic Lyme regions.
-          <p><strong>Intestinal parasites:</strong> Annual or biannual fecal examination detects roundworms, hookworms, whipworms, Giardia, and Coccidia — some of which are zoonotic (transmissible to humans, including children). Monthly heartworm preventives (Heartgard, Interceptor) also prevent and control common intestinal parasites. Giardia requires specific antigen testing separate from standard fecal flotation.
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Visit-cadence kit</h2>
           <p>
@@ -130,16 +130,25 @@ export default function PreventiveCareSchedulePage() {
             clinic ride does not soak the back seat,
             and a folding four-wheel dog stroller so a
             senior with a six-month mobility
-            assessment can still make the lobby. These are household cadence and clinic-trip
+            assessment can still make the lobby.
+            These are household cadence and clinic-trip
             tools, not treatments. They do not replace
             a vaccine, a heartworm test, a fecal exam,
             or a veterinarian-chosen preventive, and
-            they are not a ranked product list. Dry-erase monthly calendars already live
-            on dog.com Addison&apos;s. Heartgard,
+            they are not a ranked product list.
+            Hardcover weekly appointment planners
+            already live on pain-management-dogs.
+            Dry-erase monthly calendars already live
+            on dog.com Addison&apos;s. Dog seat-belt
+            tethers already live on dog.com
+            vaccinations. Soft-sided vet-visit
+            carriers already live on dog.com
+            heartworm-prevention. Heartgard,
             Sentinel, Interceptor, ProHeart, Bravecto,
             NexGard, Simparica, and other Rx ASINs
             are not shoppable hops. This page does
-            not claim hands-on testing. </p>
+            not claim hands-on testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -207,9 +216,31 @@ export default function PreventiveCareSchedulePage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the visit-cadence kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page puppy-series, adult-annual, and
+              senior every-6-months copy — a
+              wall-mounted magnetic monthly planner, a
+              waterproof rear seat hammock, and a
+              folding four-wheel dog stroller.
+              Everyday cadence and clinic-trip
+              supplies only. They are not a ranked
+              product list, they are not a substitute
+              for a veterinarian-chosen vaccine or
+              preventive, they are not a #1083 reel-
+              mower / duvet-cover / magnifier hop,
+              they are not a #1079 hardcover-planner
+              hop, they are not a dry-erase monthly
+              calendar hop, they are not a seat-belt
+              tether / soft-sided-carrier hop, they
+              are not a Heartgard / Bravecto / NexGard
+              hop, and they do not replace a
+              veterinarian. Vets.co earns a commission
+              on qualifying purchases at no extra cost
+              to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule"
@@ -223,7 +254,7 @@ export default function PreventiveCareSchedulePage() {
                 amazonHref="/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"
                 amazonLabel="Browse folding four-wheel dog strollers on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

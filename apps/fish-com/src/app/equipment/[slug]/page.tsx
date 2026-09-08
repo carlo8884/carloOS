@@ -239,7 +239,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               Owner notes
             </p>
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
@@ -275,7 +275,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               Owner notes
             </p>
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
@@ -490,111 +490,72 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           to you. Commission does not influence editorial picks.
         </p>
         <div style={{ margin: '8px 0 24px' }}>
-          <ShopCtas
+        </div>
+
+        {category.slug === 'aquarium-filters' ? (
+          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Shop the aquarium-filters stand kit
+            </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <div className="flex flex-col gap-3">
+              <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-filters"
                 amazonLabel="Shop on Amazon"
               />
-          <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+canister+interval+card?s=equipment-aquarium-filters"
-                amazonLabel="Browse aquarium rim canister-interval cards on Amazon →"
-              />
-          </div>
+</div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-heaters' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the aquarium-heaters stand kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              3–5 watts-per-gallon, two-heater redundancy, and
-              independent-thermometer copy — a laminated
-              aquarium heater wattage-redundancy chart, an
-              aquarium rim independent-thermometer card, and
-              an aquarist heater-controller handbook.
-              Educational stand searches only. They are not a
-              ranked heater list, they are not an
-              equipment-hub / best-aquarium-heaters review hop,
-              they are not a first-aid-kit hop, and they do
-              not replace a water test. Fish.com does not sell
-              insurance. Fish.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Existing Chewy category buttons stay in place.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-heaters"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+independent+thermometer+card?s=equipment-aquarium-heaters"
-                amazonLabel="Browse aquarium rim independent-thermometer cards on Amazon →"
-              />
-          </div>
+</div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-lighting' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the aquarium-lighting stand kit
             </div>
-            Educational stand
-              searches only. They are not a ranked lighting
-              list, they are not an equipment-hub /
-              best-aquarium-lighting review hop, they are not
-              a first-aid-kit hop, and they do not replace a
-              water test. Fish.com does not sell insurance. Fish.com earns a commission on qualifying
-              purchases at no extra cost to you. Existing
-              Chewy category buttons stay in place. </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-lighting"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+programmable+led+dimmer+card?s=equipment-aquarium-lighting"
-                amazonLabel="Browse aquarium rim programmable-LED-dimmer cards on Amazon →"
-              />
-          </div>
+</div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-substrates' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the aquarium-substrates stand kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              1.5–2.5-inch bed, species-first sand / aragonite /
-              aquasoil, and vinegar-test copy — a laminated
-              aquarium substrate-depth chart, an aquarium rim
-              species-substrate card, and an aquarist vinegar-
-              carbonate handbook. Educational stand searches
-              only. They are not a ranked substrate list, they
-              are not an equipment-hub / substrate-calculator
-              hop, they are not a first-aid-kit hop, and they
-              do not replace a water test. Fish.com does not
-              sell insurance. Fish.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Existing Chewy category buttons stay in place.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-substrates"
                 amazonLabel="Shop on Amazon"
               />
-          </div>
+</div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-test-kits' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the aquarium-test-kits stand kit
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -602,18 +563,14 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-test-kits"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+nitrate+shake+card?s=equipment-aquarium-test-kits"
-                amazonLabel="Browse aquarium rim nitrate-shake cards on Amazon →"
-              />
-          </div>
+</div>
           </div>
         ) : null}
 
         {category.slug === 'aquarium-co2-systems' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the aquarium-CO2-systems stand kit
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -621,11 +578,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
                 amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-co2-systems"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+rim+four+dkh+drop+card?s=equipment-aquarium-co2-systems"
-                amazonLabel="Browse aquarium rim four-dKH-drop cards on Amazon →"
-              />
-          </div>
+</div>
           </div>
         ) : null}
 

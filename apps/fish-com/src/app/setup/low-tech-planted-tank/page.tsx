@@ -77,7 +77,7 @@ export default function LowTechPlantedTankPage() {
 
         <h2>Substrate and Fertilization</h2>
         <p>An active aquasoil works well but is not required for low-tech: many successful low-tech tanks use inert gravel or sand with aquarium plant root tabs placed near heavy root-feeders such as swords and crypts. Because growth is slow, fertilization is light. A modest dose of an all-in-one liquid fertilizer once or twice a week, or aquarium plant root tabs replenished every few months, covers the needs of most easy plants. Watch the plants for deficiency signs — yellowing or holed leaves — and dose to correct rather than dosing heavily by default, which only feeds algae in the absence of CO2.</p>
-        <p>Everyday physical supplies for that rhythm — not a first-tank equipment list — start with an aquarium light timer so the six-to-eight-hour photoperiod is automatic, plus aquarium plant root tabs for the swords and crypts that feed from the substrate.
+        <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <h2>Maintenance Rhythm</h2>
         <p>The low-tech tank is defined by its easy upkeep: a weekly or biweekly water change, occasional trimming of the faster growers, glass cleaning as needed, and light feeding of any fish. The slow growth means the scape holds its shape for long stretches without intervention. This forgiving rhythm is what makes the low-tech approach ideal for beginners and busy keepers alike, and it pairs naturally with the gentle conditions favored by nano fish and shrimp. For the broader setup mechanics shared with high-tech tanks, see the <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
@@ -94,9 +94,21 @@ export default function LowTechPlantedTankPage() {
             first-tank filter / heater / test-kit / hardscape / scraper / CO2 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
+            Shop the low-tech planted kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            These Amazon category searches match the on-page
+            no-CO2 copy — an aquarium light timer and aquarium
+            plant root tabs. Everyday physical low-tech tools
+            only. They are not a ranked product list, they are not
+            a first-tank filter or heater, they are not a test kit
+            or a gravel vacuum, they are not aquasoil, Seiryu
+            stone, spiderwood, a magnetic scraper, a handheld
+            algae scraper, or pressurized CO2, and they do not
+            replace choosing easy plants. Fish.com earns a
+            commission on qualifying purchases at no extra cost to
+            you.
+          </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank"

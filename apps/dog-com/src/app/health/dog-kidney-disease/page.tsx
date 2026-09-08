@@ -124,7 +124,7 @@ export default function DogKidneyPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the CKD hydration kit
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -136,7 +136,7 @@ export default function DogKidneyPage() {
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"
                 amazonLabel="Browse ceramic pet water bowls on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

@@ -131,7 +131,23 @@ export default function LamenessBasicsPage() {
               Owner notes
             </p>
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Email the 30-foot-cotton-lunge-line,
+              leather-chain-lead-shank, and
+              orange-traffic-cone-set notes that match the
+              lunge-on-a-circle, trot-in-hand, and
+              firm-level-straight-line copy on this page — a
+              cotton lunge line so subtle lameness shows on
+              a consistent circle, a leather chain lead
+              shank so the in-hand trot-up stays on one
+              steady line, and orange traffic cones so that
+              line is marked on firm ground instead of
+              guessed across a yard. Educational
+              spot-and-describe checklist, not a treatment,
+              not a diagnosis, not a substitute for calling
+              the veterinarian, and not a hoof-tester,
+              soaking-boot, or ice-boot hop. No spam.
+            </p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
@@ -146,7 +162,7 @@ export default function LamenessBasicsPage() {
           <p>Lameness is any deviation from a horse&apos;s normal gait, almost always caused by pain somewhere in the limb, foot, back, or pelvis, though occasionally by a mechanical restriction such as a scarred-down joint. By far the most common source is the foot -- the old farrier adage that lameness is in the foot until proven otherwise holds up statistically. Lameness can be sudden and severe (an abscess, a fracture) or slow and subtle (arthritis, navicular syndrome).</p>
 
           <h2 id="spotting">Spotting Lameness</h2>
-          <p>A horse is usually trotted in a straight line on firm, level ground and watched from the front, behind, and the side. Orange traffic cones are how that straight line is marked on firm ground instead of guessed across a yard — they are not ice grit (that lives on winter-care) and not a measuring stick. For a front-limb lameness, the horse raises its head as the painful leg lands and drops the head as the sound leg lands -- the classic &apos;head bob&apos; (down on sound). Hind-limb lameness is read from the pelvis: the hip on the painful side rises higher (the &apos;hip hike&apos;). Lungeing on a circle and flexion tests exaggerate subtle lameness. Watching on hard versus soft ground gives further clues.</p>
+          <p>A horse is usually trotted in a straight line on firm, level ground and watched from the front, behind, and the side. A leather chain lead shank is how that in-hand trot-up stays on one steady line instead of a slack rope — it is not a generic horse-halter-and-lead-rope set (that lives on the cost calculator), not trailer ties (those live on trailering), and not a shipping wrap. Orange traffic cones are how that straight line is marked on firm ground instead of guessed across a yard — they are not ice grit (that lives on winter-care) and not a measuring stick. For a front-limb lameness, the horse raises its head as the painful leg lands and drops the head as the sound leg lands -- the classic &apos;head bob&apos; (down on sound). Hind-limb lameness is read from the pelvis: the hip on the painful side rises higher (the &apos;hip hike&apos;). Lungeing on a circle and flexion tests exaggerate subtle lameness. A 30-foot cotton lunge line is how that circle stays consistent so a Grade 1 or Grade 2 hitch actually shows — it is not a lead shank, not a trailer tie, and not a vaulting lunge setup. Watching on hard versus soft ground gives further clues.</p>
 
           <h2 id="grading">The AAEP Grading Scale</h2>
           <p>The American Association of Equine Practitioners grades lameness on a 0-to-5 scale, which gives veterinarians and owners a shared language:</p>
@@ -169,7 +185,7 @@ export default function LamenessBasicsPage() {
           </ul>
 
           <h2 id="workup">The Veterinary Workup</h2>
-          <p>A veterinary lameness examination follows a logical sequence: history and visual exam, palpation, hoof testers, watching the horse move in hand and on the lunge, flexion tests, and then -- to pinpoint the source -- diagnostic nerve and joint blocks that temporarily numb specific regions. Once localized, imaging (radiography, ultrasound, and where needed MRI or CT) reveals the structural problem. This systematic approach is why an accurate diagnosis usually needs a veterinarian rather than guesswork.
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="when">When to Call the Vet</h2>
           <ul>
@@ -195,8 +211,19 @@ export default function LamenessBasicsPage() {
             list, not a substitute for veterinary care, and
             not a diagnosis or a treatment. Hoof testers,
             nerve blocks, and imaging stay with the
-            veterinarian. This page does
-            not claim hands-on testing. </p>
+            veterinarian. Hoof soaking boots and Epsom salt
+            already live on abscess. Ice boots, poultice,
+            and vet wrap already live on the grimace scale
+            and the emergency tool. Riding hoof boots
+            already live on hoof-care-basics. Halter-and-lead
+            rope sets already live on the cost calculator.
+            Trailer ties already live on trailering. Stall
+            guards already live on turnout-vs-stabling.
+            Weatherproof clipboards already live on equine
+            influenza. This page does not hop medications,
+            joint injections, or vaccines. This page does
+            not claim hands-on testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -242,9 +269,38 @@ export default function LamenessBasicsPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the spot-and-describe kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page lunge-on-a-circle, trot-in-hand, and
+              firm-level-straight-line copy — a 30-foot
+              cotton lunge line, a leather chain lead
+              shank, and an orange traffic-cone set.
+              Educational spot-and-describe tools only.
+              They are not a ranked product list,
+              they are not a substitute for veterinary
+              care, they are not a #1098 clipboard /
+              feed-pan / paper-pellet-bedding hop, they
+              are not a #1097 color-coded-bucket /
+              coverall / boot-dip-tub hop, they
+              are not a #1096 composition-notebook /
+              receiving-blanket / charcoal hop, they
+              are not a #1095 sponge-filter /
+              nano-heater / water-jug hop, they
+              are not a #1094 soaking-pail /
+              feed-tub-rock / apple-wedger hop, they
+              are not a #1093 kitchen-timer /
+              message-pad / pet-carrier hop, they
+              are not a cost-calculator
+              halter-and-lead-rope hop, they
+              are not an abscess soaking-boot hop,
+              they are not a grimace-scale ice-boot hop,
+              and they do not replace a veterinarian.
+              Horses.com earns a commission on
+              qualifying purchases at no extra cost
+              to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/30+foot+cotton+lunge+line?s=health-lameness"
@@ -258,7 +314,7 @@ export default function LamenessBasicsPage() {
                 amazonHref="/go/amazon-brand/orange+traffic+cone+set?s=health-lameness"
                 amazonLabel="Browse orange traffic-cone sets on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

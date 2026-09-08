@@ -166,7 +166,7 @@ export default function SweetItchPage() {
           </ul>
 
           <h2 id="medical">Veterinary Management</h2>
-          <p>When midge control alone is not enough, a veterinarian can help manage the allergic reaction and the damaged skin -- soothing topical treatments, medication to control itching and inflammation during flares, and treatment of any secondary skin infection, all under veterinary direction. Because sweet itch is a lifelong sensitivity, the goal is year-on-year control through prevention rather than a one-time fix, and starting the midge-control program before the season begins works far better than reacting once the horse is already raw.
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Sweet-Itch Kit</h2>
           <p>Everyday physical supplies that match the fitted-barrier copy above — a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
@@ -180,9 +180,19 @@ export default function SweetItchPage() {
               masks, fly spray, fans, blankets, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the sweet-itch kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the on-page fitted-barrier
+              copy — a horse sweet-itch rug for covering the body, belly,
+              and tail dock, and a sweet-itch hood so the mane, poll, and
+              ears stay closed to midges. Everyday physical supplies only.
+              They are not a ranked product list, they are not a fly sheet
+              or fly mask, they are not fly spray or fly traps, they are
+              not a steroid or a spot-on, they are not a medication, and
+              they do not replace a veterinarian. Horses.com earns a
+              commission on qualifying purchases at no extra cost to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+sweet+itch+rug?s=health-sweet-itch"
@@ -192,7 +202,7 @@ export default function SweetItchPage() {
                 amazonHref="/go/amazon-brand/horse+sweet+itch+hood?s=health-sweet-itch"
                 amazonLabel="Browse horse sweet-itch hoods on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

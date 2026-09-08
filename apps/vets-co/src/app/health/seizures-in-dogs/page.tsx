@@ -85,7 +85,7 @@ export default function SeizuresPage() {
 
           <h2>Managing Epilepsy</h2>
           <p>When seizures are frequent or severe enough to warrant treatment, the aim is control rather than cure. Anti-seizure medication, with the specific drug and dose determined and monitored by your veterinarian, reduces the frequency and severity of seizures to an acceptable level. Owners help by giving medication consistently, keeping a seizure diary of dates, durations, and possible triggers, and reporting changes. Many dogs with well-managed epilepsy enjoy a normal quality of life. Sudden discontinuation of seizure medication can be dangerous, so changes are always made under veterinary guidance.</p>
-          It is not a medical-records binder, not a vaccination record book, and not a resting-respiratory-rate notebook. It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
+          <p>A waterproof field notebook is how that seizure diary stays in one place — dates, stopwatch durations, and possible triggers — so the next clinic visit has a written log instead of a remembered guess. It is not a medical-records binder, not a vaccination record book, and not a resting-respiratory-rate notebook. It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
@@ -114,8 +114,10 @@ export default function SeizuresPage() {
             emergency-contact cards, folding
             stretchers, LED penlights, and
             medical-alert collar tags already live on
-            other pages. This page does not claim
-            hands-on testing. </p>
+            other pages. This page does not hop
+            medications. This page does not claim
+            hands-on testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -145,9 +147,28 @@ export default function SeizuresPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the dog seizure observation kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page first-minutes and diary copy — a
+              digital handheld stopwatch, a waterproof
+              field notebook, and a foam table-edge
+              bumper. Everyday physical supplies only.
+              They are not a ranked product list, they
+              are not an anticonvulsant or medication
+              hop, they are not the #1028 throw-blanket
+              / crate-bumper / foam-tile hops, they are
+              not the #1057 timed-feeder / maze-bowl /
+              house-line hops, they are not the #1047
+              respiratory-notebook / kitchen-timer /
+              harness hops, they are not first-aid-kit,
+              thermometer, penlight, stretcher, or
+              medical-alert-tag hops, and they do not
+              replace a veterinarian. Vets.co earns a
+              commission on qualifying purchases at no
+              extra cost to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs"
@@ -161,7 +182,7 @@ export default function SeizuresPage() {
                 amazonHref="/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"
                 amazonLabel="Browse foam table-edge bumpers on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

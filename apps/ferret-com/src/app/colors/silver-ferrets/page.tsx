@@ -285,19 +285,7 @@ export default function SilverFerretsPage() {
             hearing loss, warrants an exotic-mammal vet visit.
           </p>
 
-          These are educational kitchen
-            searches, not a ranked color list, not a
-            substitute for an exotic-mammal veterinarian,
-            not a tools-hub / reviews-hub / diet-hub /
-            care-hub / behavior-hub / health-hub /
-            ownership-hub / colors-hub / first-year-schedule
-            / colors-and-patterns / sable-ferrets /
-            albino-ferrets / dew-ferrets / cinnamon-ferrets
-            / champagne-ferrets / chocolate-ferrets /
-            black-ferrets hop, and not a child toothbrush /
-            dosing hop (those live on health children). This page does not sell insurance. This page
-            does not claim hands-on testing. Ferret aging
-            stays held.</p>
+          <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -321,7 +309,7 @@ export default function SilverFerretsPage() {
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -329,7 +317,15 @@ export default function SilverFerretsPage() {
                 amazonHref="/go/amazon-brand/ferret+supplies?s=silver-ferrets"
                 amazonLabel="Shop on Amazon"
               />
-          </div>
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=silver-ferrets"
+                amazonLabel="Shop on Amazon"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=silver-ferrets"
+                amazonLabel="Shop on Amazon"
+              />
+            </div>
           </div>
         </div>
       </ArticleLayout>

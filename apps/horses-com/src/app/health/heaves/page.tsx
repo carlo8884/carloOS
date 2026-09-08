@@ -171,7 +171,7 @@ export default function HeavesPage() {
           </ul>
 
           <h2 id="medical">Medical Treatment</h2>
-          <p>When environmental change alone is not enough, veterinarians prescribe medication -- inhaled or systemic corticosteroids to reduce airway inflammation and bronchodilators to relieve constriction during flares. Inhaled therapy via an equine spacer device targets the lungs while limiting systemic effects. All medication selection, dosing, and tapering is determined by the veterinarian. Crucially, medication works best layered on top of good environmental control, not instead of it.
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Heaves Kit</h2>
           <p>Everyday physical supplies that match the soak-or-steam hay copy above — a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
@@ -185,7 +185,7 @@ export default function HeavesPage() {
               inhalers, steroids, or medication hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the heaves kit
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -197,7 +197,7 @@ export default function HeavesPage() {
                 amazonHref="/go/amazon-brand/horse+hay+soaking+bag?s=health-heaves"
                 amazonLabel="Browse horse hay soaking bags on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

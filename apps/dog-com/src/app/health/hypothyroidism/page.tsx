@@ -99,7 +99,30 @@ export default function HypothyroidismPage() {
             not set or adjust a levothyroxine dose, they
             do not replace post-pill T4 monitoring, and
             they are not Soloxine, Thyro-Tabs, Synthroid,
-            or a ranked endocrine product list. This page does not claim hands-on testing. </p>
+            or a ranked endocrine product list.
+            Lymph-node anatomy charts, foam dog stairs,
+            dog ear wipes, assisted-walking slings,
+            hind-paw booties, hip braces, silicone dog
+            grooming gloves, analog bathroom scales, dog
+            dental finger brushes, resting respiratory
+            rate notebooks, one-minute kitchen timers,
+            step-in padded dog harnesses, pet medical
+            records binders, AM/PM weekly pill
+            organizers, digital hanging luggage scales,
+            LED medical penlights, pet emergency contact
+            cards, folding pet stretchers, vaccination
+            record books, seat-belt tethers, foldable
+            waterproof puppy mats, mosquito dunks, a
+            monthly pill organizer, a soft-sided
+            vet-visit carrier, a gum-color assessment
+            chart, recovery food, a feeding syringe,
+            digital pet scales, cooling mats, cooling
+            vests, heat pants, throw blankets, ferret
+            small-animal slicker brushes, and high-value
+            vet-visit treats already live on other
+            pages. This page does not hop medications.
+            This page does not claim hands-on testing.
+          </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -151,9 +174,37 @@ export default function HypothyroidismPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop the dog hypothyroidism cold-and-coat kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+              These Amazon category searches match the
+              on-page cold-intolerance, cold-weather-walk,
+              and dull-coat copy — a self-warming dog mat,
+              a fleece dog sweater, and a dog slicker
+              brush. Everyday physical supplies only. They
+              are not a ranked product list, they are not
+              a Soloxine / Thyro-Tabs / Synthroid hop,
+              they are not the #1050 lymph-node-chart /
+              foam-stair / ear-wipe hops, they are not the
+              #1049 sling / hind-paw-bootie / hip-brace
+              hops, they are not the #1048 grooming-glove
+              / analog-scale / finger-brush hops, they are
+              not the #1047 notebook / timer / harness
+              hops, they are not the #1046 binder / AM-PM
+              pill-organizer / luggage-scale hops, they
+              are not the #1045 penlight / contact-card
+              / stretcher hops, they are not the #1044
+              vaccine-record / seat-belt-tether /
+              puppy-mat hops, they are not the #1043
+              mosquito-dunk / monthly-pill-organizer /
+              clinic-carrier hops, they are not the
+              #1042 anemia gum-chart / recovery-food /
+              syringe hops, they are not digital-pet-scale
+              or first-aid-kit hops, and they do not
+              replace a veterinarian. Dog.com earns a
+              commission on qualifying purchases at no
+              extra cost to you.
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/self+warming+dog+mat?s=health-hypothyroidism"
@@ -167,7 +218,7 @@ export default function HypothyroidismPage() {
                 amazonHref="/go/amazon-brand/dog+slicker+brush?s=health-hypothyroidism"
                 amazonLabel="Browse dog slicker brushes on Amazon →"
               />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

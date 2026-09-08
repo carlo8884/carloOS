@@ -212,7 +212,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 Owner notes
               </p>
               <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
@@ -284,7 +284,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 Owner notes
               </p>
               <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
@@ -542,10 +542,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/dressage
                   overview / how-thoroughbred-sales-work hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the dressage-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -553,7 +554,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-dressage"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}
@@ -572,10 +573,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/show-jumping
                   overview / dressage-equipment hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the show-jumping-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -583,7 +585,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-show-jumping"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}
@@ -602,10 +604,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/eventing
                   overview / show-jumping-equipment hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the eventing-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -613,7 +616,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-eventing"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}
@@ -632,10 +635,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/western-pleasure
                   overview / eventing-equipment hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the western-pleasure-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -643,7 +647,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-western-pleasure"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}
@@ -662,10 +666,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/reining
                   overview / western-pleasure-equipment hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the reining-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -673,7 +678,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-reining"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}
@@ -692,10 +697,11 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                   ShopCtas hides empty Chewy; never href="#"
                   or PLACEHOLDER. Unused vs /disciplines/trail-riding
                   overview / reining-equipment hops.
+                  Directory import left untouched.
                   Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                  Shop related supplies
+                  Shop the trail-riding-equipment barn kit
                 </div>
                 <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
@@ -703,7 +709,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                     amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equipment-trail-riding"
                     amazonLabel="Shop on Amazon"
                   />
-          </div>
+</div>
               </div>
             </>
           ) : null}

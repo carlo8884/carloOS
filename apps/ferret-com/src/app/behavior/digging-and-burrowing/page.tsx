@@ -163,7 +163,7 @@ export default function FerretDiggingBurrowingPage() {
               Owner notes
             </p>
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
@@ -184,12 +184,7 @@ export default function FerretDiggingBurrowingPage() {
           </DropCap>
 
           <h2 id="instinct">The Polecat Instinct Behind the Mess</h2>
-          To do
-            that for a living, an animal needs to be a confident tunneler:
-            squeezing into tight underground spaces, digging out blocked
-            passages, and following prey through the dark. That entire toolkit —
-            the digging, the burrowing, the love of tunnels and tubes — came
-            along for the ride into domestication.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <p>
             This is why your ferret tunnels into the laundry basket, burrows
             under the couch cushions, and digs at the carpet. None of it is
@@ -328,7 +323,7 @@ export default function FerretDiggingBurrowingPage() {
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Shop supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -336,7 +331,15 @@ export default function FerretDiggingBurrowingPage() {
                 amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
                 amazonLabel="Shop on Amazon"
               />
-          </div>
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonLabel="Shop on Amazon"
+              />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonLabel="Shop on Amazon"
+              />
+            </div>
           </div>
 
           <h2 id="picks">Dig Box and Tunnel Picks</h2>

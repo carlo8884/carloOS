@@ -114,7 +114,7 @@ export default function GoldenRetrieverBreedPage() {
             Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
@@ -203,14 +203,9 @@ export default function GoldenRetrieverBreedPage() {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop related supplies
+                Shop the Golden Retriever home kit
               </div>
-              Educational
-                kitchen searches only. They are not a ranked product
-                list, they are not a crate hop, they are not a
-                first-aid-kit hop, and they do not replace a
-                veterinarian. Dog.com does not sell insurance. Dog.com earns a commission on qualifying purchases
-                at no extra cost to you. </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
@@ -221,7 +216,11 @@ export default function GoldenRetrieverBreedPage() {
                   amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
                   amazonLabel="Browse slickers for the Golden double coat on Amazon →"
                 />
-          </div>
+                <ShopCtas
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-golden-retriever"
+                  amazonLabel="Shop on Amazon"
+                />
+              </div>
             </div>
 
             <h2>Frequently Asked Questions</h2>
