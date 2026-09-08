@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -146,15 +147,16 @@ export default function HeaterWattageCalculatorPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the heater plan
-          </p>
-
-        </div>
-
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/substrate-calculator"
+          nextLabel="Size the substrate bed for the same gallons"
+          nextBlurb="Wattage is sized against water volume. Substrate displaces that volume — convert footprint × depth into bag weight before you buy the heater. The hop below is the same Eheim Jager search already on this page."
+          resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
+          resourceLabel="Shop Eheim Jager heaters on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (Eheim Jager / Aqueon Pro).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. Queries
