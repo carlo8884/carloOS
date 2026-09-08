@@ -11803,6 +11803,9 @@ const CALCULATORS = [
     id: 'fish · best-canister-filters hops',
     file: 'apps/fish-com/src/app/reviews/best-canister-filters/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 40–70 gallon canister size band' },
+      { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter-GPH, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters"/, label: 'journey hop reuses the existing Fluval 307 search' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/eheim\+classic\+350\+2215\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -11812,8 +11815,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1184: keep the existing sidebar capture and the already-hopped Fluval 307 / Eheim Classic amazon-brand searches; add under-hero capture with a concrete canister-filter-checklist offer matching on-page AquaStop / 40–70 gallon / decades-of-track-record copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the 40–70 gallon canister size band, next step is filter-GPH + the existing Fluval 307 hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · best-aquarium-heaters hops',
