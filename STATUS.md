@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog puppy-biting JourneyNext after #1576)
+**Last updated:** 2026-09-08 (COO — fish filter-GPH JourneyNext after #1577)
 
-> **COO dog puppy-biting journey (2026-09-08):** After #1576. Bite-inhibition protocol → `/training/puppy-schedule` + existing Kong `/go`. Empty “Keep the nipping plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-biting-journey.md`.
+> **COO fish filter-GPH journey (2026-09-08):** After #1577. Filter GPH range → `/tools/heater-wattage-calculator` + existing AquaClear HOB `/go`. Empty “Keep the filter plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-filter-gph-journey.md`.
+
+> **COO dog puppy-biting journey (2026-09-08):** After #1576. Bite-inhibition protocol → `/training/puppy-schedule` + existing Kong `/go`. Empty “Keep the nipping plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-biting-journey.md`. #1577 merged.
 
 > **COO fish water-change journey (2026-09-08):** After #1575. Water-change gallons-to-remove → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the change plan” / “Keep the math” husks removed. Shop dump stays after JourneyNext. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-water-change-journey.md`. #1576 merged.
 

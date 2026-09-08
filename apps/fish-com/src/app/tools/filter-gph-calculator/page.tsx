@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -173,15 +174,16 @@ export default function FilterGphCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the filter plan
-          </p>
-
-        </div>
-
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/heater-wattage-calculator"
+          nextLabel="Size the heater for the same gallons"
+          nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The hop below is the same AquaClear HOB search already on this page."
+          resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
+          resourceLabel="Shop AquaClear HOB filters on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (HOB / canister / media /
             sponge / powerhead). ShopCtas hides empty Chewy; never href="#"
