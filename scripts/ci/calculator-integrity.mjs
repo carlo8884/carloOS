@@ -11200,6 +11200,9 @@ const CALCULATORS = [
     id: 'fish · saltwater-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/saltwater-tank-setup/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the quarantine answer' },
+      { re: /nextHref="\/setup\/quarantine-tank-guide"/, label: 'next step is quarantine, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup"/, label: 'journey hop reuses the existing saltwater starter-kit search' },
       { re: /amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup/, label: 'existing saltwater-reef-tank-starter-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11208,8 +11211,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1156: keep the existing sidebar capture and the already-hopped saltwater-reef-tank-starter-kit amazon-brand search; add under-hero capture with a concrete FOWLR-saltwater-setup-checklist offer matching on-page FOWLR / salinity / live-rock / skimmer / quarantine copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the quarantine answer, next step is the quarantine guide + the existing saltwater starter-kit hop. Shop dump stays below. No invented kitchen hops. No species headcounts.',
   },
 
   {

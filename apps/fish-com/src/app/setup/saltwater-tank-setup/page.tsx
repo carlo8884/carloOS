@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
@@ -85,6 +85,14 @@ export default function SaltwaterTankSetupPage() {
 
           <h2>Quarantine — Non-Negotiable in Saltwater</h2>
           <p>Marine fish diseases (marine ich/Cryptocaryon, velvet/Amyloodinium) are significantly harder to treat in a reef or established display tank than in a bare quarantine tank. Copper-based treatments kill corals and invertebrates. The standard of care: quarantine all new saltwater fish in a bare-bottom QT tank for 4–6 weeks, observe for disease, treat if necessary, then move to the display tank. Skipping quarantine is the single most common mistake that causes disease outbreaks in established reef tanks.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/quarantine-tank-guide"
+          nextLabel="Set the quarantine tank before the first marine fish"
+          nextBlurb="FOWLR or reef, new saltwater fish go through a bare-bottom QT first — 4–6 weeks, not a display drop. Use the quarantine guide next. The hop below is the same saltwater starter-kit search already on this page."
+          resourceHref="/go/amazon-brand/saltwater%20reef%20tank%20starter%20kit?s=setup-saltwater-tank-setup"
+          resourceLabel="Browse saltwater reef starter kits on Amazon →"
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Saltwater Reef Setup — Where to Shop</div>

@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog first-aid-kit JourneyNext after #1594)
+**Last updated:** 2026-09-08 (COO — fish saltwater-setup JourneyNext after #1595)
 
-> **COO dog first-aid-kit journey (2026-09-08):** After #1594. Core kit list → `/guides/how-to-take-dogs-temperature` + existing digital thermometer `/go`. Empty “Keep the first-aid kit list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-first-aid-journey.md`.
+> **COO fish saltwater-setup journey (2026-09-08):** After #1595. Quarantine answer → `/setup/quarantine-tank-guide` + existing saltwater starter-kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-saltwater-setup-journey.md`.
+
+> **COO dog first-aid-kit journey (2026-09-08):** After #1594. Core kit list → `/guides/how-to-take-dogs-temperature` + existing digital thermometer `/go`. Empty “Keep the first-aid kit list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-first-aid-journey.md`. #1595 merged.
 
 > **COO fish planted-tank journey (2026-09-08):** After #1593. Algae / photoperiod answer → `/setup/aquarium-cycling-guide` + existing planted-setup CO2 `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-planted-tank-journey.md`. #1594 merged.
 
