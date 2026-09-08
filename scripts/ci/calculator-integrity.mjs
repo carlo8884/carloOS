@@ -284,6 +284,27 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: one next-step strip after a useful calculator answer. Anchor stays on the component; pages pass nextHref + resourceHref.',
   },
   {
+    id: 'shared · ShopCtas affiliate_click',
+    file: 'packages/ui/src/components/ShopCtas.tsx',
+    mustInclude: [
+      { re: /trackEvent\('affiliate_click'/, label: 'GA4 affiliate_click on shop hops when gtag exists' },
+      { re: /visibleShopHref/, label: 'still hide empty / invented hops' },
+    ],
+    mustExclude: [
+      { re: /laminated\+/, label: 'no invented kitchen hops' },
+    ],
+    why: '2026-09-08 verify: journey /go hops already tag + 302. Fire a client event so dog/fish GA4 can see the click. No-op when measurement ID is unset.',
+  },
+  {
+    id: 'shared · OnPageMagnet resource_save',
+    file: 'packages/ui/src/components/EmailCapture.tsx',
+    mustInclude: [
+      { re: /trackEvent\('resource_save'/, label: 'GA4 resource_save when the visitor downloads real text' },
+      { re: /if \(!hasText && !hasHref\) \{\s*return null/, label: 'no hollow magnet when no resource' },
+    ],
+    why: '2026-09-08 verify: Save-a-copy already writes a real .txt. Count the save when gtag exists.',
+  },
+  {
     id: 'dog · tools hub',
     file: 'apps/dog-com/src/app/tools/page.tsx',
     mustInclude: [

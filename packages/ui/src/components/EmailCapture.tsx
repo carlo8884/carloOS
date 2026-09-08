@@ -12,6 +12,7 @@
  */
 
 import { useState, useCallback, useId, useMemo } from 'react'
+import { trackEvent } from '../lib/track-event'
 
 type EmailCaptureVariant = 'inline' | 'sidebar' | 'section'
 
@@ -308,6 +309,7 @@ function OnPageMagnet({
     a.click()
     a.remove()
     URL.revokeObjectURL(url)
+    trackEvent('resource_save', { resource_label: heading, bytes: fileText.length })
   }, [fileText, heading])
 
   const actionLabel = resourceLabel
@@ -316,6 +318,7 @@ function OnPageMagnet({
   const action = hasHref ? (
     <a
       href={href}
+      onClick={() => trackEvent('resource_open', { resource_href: href, resource_label: actionLabel })}
       className={
         variant === 'sidebar'
           ? 'block w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded text-center no-underline'

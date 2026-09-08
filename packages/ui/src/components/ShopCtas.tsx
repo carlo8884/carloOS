@@ -1,9 +1,13 @@
+'use client'
+
 /**
  * Amazon + optional Chewy shop pair. Hides empty Chewy hops — never href="#".
  * Chewy-brand search queries fall back to amazon-brand until a Chewy tag is live.
+ * Clicks fire a GA4 affiliate_click when gtag is present (dog/fish/horses).
  */
 import type { CSSProperties } from 'react'
 import { visibleChewyHref, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { trackEvent } from '../lib/track-event'
 
 const amazonStyle: CSSProperties = {
   display: 'inline-block',
@@ -38,12 +42,26 @@ export function ShopCtas({
   return (
     <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
       {amazon ? (
-        <a href={amazon} rel="sponsored noopener" style={amazonStyle}>
+        <a
+          href={amazon}
+          rel="sponsored noopener"
+          style={amazonStyle}
+          onClick={() =>
+            trackEvent('affiliate_click', { vendor: 'amazon', link_url: amazon, link_text: amazonLabel })
+          }
+        >
           {amazonLabel}
         </a>
       ) : null}
       {chewy ? (
-        <a href={chewy} rel="sponsored noopener" style={chewyStyle}>
+        <a
+          href={chewy}
+          rel="sponsored noopener"
+          style={chewyStyle}
+          onClick={() =>
+            trackEvent('affiliate_click', { vendor: 'chewy', link_url: chewy, link_text: chewyLabel })
+          }
+        >
           {chewyLabel}
         </a>
       ) : null}
