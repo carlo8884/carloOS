@@ -5611,6 +5611,9 @@ const CALCULATORS = [
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the slim-inch estimate' },
+      { re: /nextHref="\/tools\/tank-mate-compatibility-checker"/, label: 'next step is tank-mates, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=tools-stocking-calculator"/, label: 'journey hop reuses the existing heater search (fresh and salt shop lists)' },
       { re: /source="tools-stocking-calculator-under-hero"/, label: 'under-hero email capture source tag' },
       { re: /resourceLabel="Save the planning rules"/, label: 'real stocking-rules resource magnet, not inbox notes' },
       { re: /StockingWaterProvider/, label: 'shop and calculator share water-type state' },
@@ -5626,8 +5629,9 @@ const CALCULATORS = [
       { re: /How Many Fish Can I Keep/, label: 'title no longer implies a precise headcount' },
       { re: /1 betta \+ 5 ember/, label: 'no leftover species-mix table rows' },
       { re: /15 cardinal tetras/, label: 'no leftover species-mix table rows' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture stays honest. Shop hops moved into StockingShop so freshwater/saltwater selection can swap the kit. 2026-09-08: page copy explains the numerical model and drops species-mix rows.',
+    why: '2026-09-08 journeys: after the slim-inch ceiling, next step is tank-mates + the existing heater hop (present on both fresh and salt shop lists). EmailCapture props and StockingShop water-type switch stay. No invented kitchen hops.',
   },
   {
     id: 'fish · stocking-calculator shop',

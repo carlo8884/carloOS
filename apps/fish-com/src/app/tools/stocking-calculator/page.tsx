@@ -9,6 +9,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 import StockingShop from './StockingShop'
@@ -156,6 +157,14 @@ export default function StockingCalculatorPage() {
         <StockingWaterProvider>
           <h2 id="calculator">The Calculator</h2>
           <Calculator />
+          <JourneyNext
+            siteId="fish-com"
+            nextHref="/tools/tank-mate-compatibility-checker"
+            nextLabel="Check tank-mates before you buy livestock"
+            nextBlurb="The calculator is a slim-inch bioload ceiling, not a species headcount. The tank-mate checker is temperament pairing. Shop a heater sized to the same gallons — the shop block below still follows freshwater vs saltwater."
+            resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-stocking-calculator"
+            resourceLabel="Browse aquarium heaters on Amazon →"
+          />
           <div className="mb-8">
             <EmailCapture
               variant="inline"
