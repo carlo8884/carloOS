@@ -7,6 +7,7 @@ import {
   TableOfContents,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -217,6 +218,14 @@ export default function DogSpayNeuterTimingPage() {
               <strong>Managing an intact dog through adolescence</strong> takes work: secure containment (a heavy-duty dog exercise pen is one indoor/outdoor option when the yard is not fully fenced), leash management around dogs in heat, and dealing with heat cycles in females (typically every 6–8 months, lasting about 3 weeks each, with bleeding for part of that time — washable dog heat pants keep furniture and floors cleaner during that phase). For owners who cannot reliably manage intact-dog containment, the trade-off may still favor earlier surgery despite the increased orthopedic risk; an accidental litter or a roaming-related injury is also a meaningful harm.
             </li>
           </ul>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/puppy-weight-predictor"
+            nextLabel="Estimate adult size before you lock the timing"
+            nextBlurb="The callout is the size-timing rule — 6–9 months for most small breeds, wait until growth-plate closure (about 12–24 months) for many large and giant breeds. The puppy-weight predictor is the adult-size estimate that sorts this dog into that band. The hop below is the same heavy-duty exercise-pen search already on this page."
+            resourceHref="/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"
+            resourceLabel="Browse heavy-duty dog exercise pens on Amazon →"
+          />
 
           <h2 id="benefits">Health Benefits of Spay/Neuter — The Other Side</h2>
           <p>
