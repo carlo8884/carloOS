@@ -6995,6 +6995,9 @@ const CALCULATORS = [
     id: 'dog · training-separation-anxiety hops',
     file: 'apps/dog-com/src/app/training/separation-anxiety/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the boredom protocol' },
+      { re: /nextHref="\/training\/crate-training"/, label: 'next step is crate-training, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-sep-anxiety"/, label: 'journey hop reuses the existing divider-crate search' },
       { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-sep-anxiety/, label: 'stuffable Kong search hop (same query as exercise calculator / new-puppy checklist)' },
       { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-sep-anxiety/, label: 'snuffle mat search hop (amazon-brand replacement for the empty Chewy snuffle mat)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-sep-anxiety/, label: 'wire crate with divider search hop (same query as crate-training)' },
@@ -7005,8 +7008,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the alone-time plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete separation-anxiety-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy snuffle-mat button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the boredom protocol, next step is crate-training + the existing divider-crate hop. Empty Keep-the-alone-time husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-puppy-biting hops',

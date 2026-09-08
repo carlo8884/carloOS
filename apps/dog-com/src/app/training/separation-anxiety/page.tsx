@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -89,15 +90,6 @@ export default function SeparationAnxietyPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the alone-time plan
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Separation-anxiety protocol
-          </h2>
-
-        </div>
 
         <h2 id="distinguish">True Separation Anxiety vs Boredom — How to Tell</h2>
         <p>This distinction matters enormously because the protocols are completely different. Applying the boredom protocol to a dog with true SA makes things worse; applying the SA protocol to a bored dog is unnecessary and slow.</p>
@@ -128,6 +120,14 @@ export default function SeparationAnxietyPage() {
           <li><strong>Rotate enrichment</strong> — novelty matters. The same Kong every day becomes less interesting. Rotate chews, food types, and enrichment toys.</li>
           <li><strong>Gradually increase unsupervised freedom</strong> as the habit of calm behavior is established — start with one low-risk room, expand over weeks as reliability increases.</li>
         </ul>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/crate-training"
+          nextLabel="Set the crate as the alone-time room"
+          nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The hop below is the same divider-crate search already on this page."
+          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
+          resourceLabel="Browse crates on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (alone-time kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
