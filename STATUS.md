@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish algae JourneyNext after #1602)
+**Last updated:** 2026-09-08 (COO — dog harnesses JourneyNext after #1603)
 
-> **COO fish algae journey (2026-09-08):** After #1602. Treatment playbook → `/tools/water-change-calculator` + existing magnetic-scraper `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-algae-journey.md`.
+> **COO dog harnesses journey (2026-09-08):** After #1603. Front-clip vs back-clip rule → `/tools/harness-collar-size` + existing Julius-K9 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-harnesses-journey.md`.
+
+> **COO fish algae journey (2026-09-08):** After #1602. Treatment playbook → `/tools/water-change-calculator` + existing magnetic-scraper `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-algae-journey.md`. #1603 merged.
 
 > **COO dog puppy-food journey (2026-09-08):** After #1601. Large-breed formula rule → `/nutrition/puppy-nutrition` + existing Royal Canin `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-food-journey.md`. #1602 merged.
 

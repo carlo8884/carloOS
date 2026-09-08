@@ -12615,6 +12615,9 @@ const CALCULATORS = [
     id: 'dog · best-dog-harnesses hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-harnesses/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the front-clip vs back-clip rule' },
+      { re: /nextHref="\/tools\/harness-collar-size"/, label: 'next step is harness-size, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/julius\+k9\+idc\+powerharness\?s=reviews-best-dog-harnesses"/, label: 'journey hop reuses the existing Julius-K9 search' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=reviews-best-dog-harnesses/, label: 'existing Julius-K9 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/petsafe\+easy\+walk\+harness\?s=reviews-best-dog-harnesses/, label: 'existing PetSafe Easy Walk Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/ruffwear\+front\+range\+harness\?s=reviews-best-dog-harnesses/, label: 'existing Ruffwear Front Range Chewy hop kept (not an empty leftover button)' },
@@ -12624,8 +12627,9 @@ const CALCULATORS = [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1238: GPS-tracker review under-hero is on main. Keep the existing sidebar capture and the already-hopped Julius-K9 Amazon + PetSafe / Ruffwear Chewy searches; add under-hero capture with a concrete dog-harness-checklist offer matching on-page front-clip-for-pullers / Easy Walk martingale / Ruffwear two-clip hiking / Julius escape-proof back-clip copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the front-clip vs back-clip rule, next step is harness-size + the existing Julius-K9 hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · best-slow-feeder-bowls hops',
