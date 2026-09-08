@@ -89,3 +89,33 @@ h1, h2, h3, h4, h5, h6, .font-display {
   border-top-color: var(--brand-amber) !important;
   box-shadow: 0 2px 12px rgba(201, 157, 95, 0.08);
 }
+
+/* Homepage hero — keep the albino ferret (lower-left of ferret-com:hero)
+   in frame on tall/wide crops, and park the H1/CTA on the black field. */
+.ferret-home-hero img {
+  object-position: 12% 70%;
+}
+.ferret-home-hero__copy {
+  width: 100%;
+  max-width: 40rem;
+  padding: 16px 14px 4px 4px;
+  border-radius: 14px;
+  /* Local contrast well so cream type stays WCAG-readable if a crop
+     still puts the white ferret under the stack. */
+  background: linear-gradient(
+    180deg,
+    rgba(30, 20, 10, 0.28) 0%,
+    rgba(30, 20, 10, 0.58) 100%
+  );
+}
+@media (min-width: 768px) {
+  .ferret-home-hero__copy {
+    margin-left: auto;
+    padding: 8px 4px 0;
+    background: linear-gradient(
+      180deg,
+      rgba(30, 20, 10, 0.12) 0%,
+      rgba(30, 20, 10, 0.36) 100%
+    );
+  }
+}
