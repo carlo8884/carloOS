@@ -12615,6 +12615,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the stand-turn-lie sizing rule, next step is crate-size + the existing MidWest iCrate hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'dog · best-dog-beds hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the orthopedic vs everyday foam rule' },
+      { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate-size, not a shop dump' },
+      { re: /resourceHref="\/go\/chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds"/, label: 'journey hop reuses the existing Big Barker Chewy search' },
+      { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the orthopedic vs everyday foam rule, next step is crate-size + the existing Big Barker hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'dog · best-joint-supplements hops',
     file: 'apps/dog-com/src/app/reviews/best-joint-supplements/page.tsx',
     mustInclude: [
