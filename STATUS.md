@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog positive-reinforcement JourneyNext after #1584)
+**Last updated:** 2026-09-08 (COO — fish health JourneyNext after #1585)
 
-> **COO dog positive-reinforcement journey (2026-09-08):** After #1584. Marker-charging protocol → `/training/marker-training` + existing clicker `/go`. Empty “Keep the reward-based protocol” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-positive-reinforcement-journey.md`.
+> **COO fish health journey (2026-09-08):** After #1585. Health guide grid → `/water-parameters` + existing test-kit `/go`. Empty “Keep the test-first health order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-health-journey.md`.
+
+> **COO dog positive-reinforcement journey (2026-09-08):** After #1584. Marker-charging protocol → `/training/marker-training` + existing clicker `/go`. Empty “Keep the reward-based protocol” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-positive-reinforcement-journey.md`. #1585 merged.
 
 > **COO fish equipment journey (2026-09-08):** After #1583. Equipment six-category grid → `/tools/filter-gph-calculator` + existing AquaClear HOB `/go`. Empty “Keep the equipment list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-equipment-journey.md`. #1584 merged.
 

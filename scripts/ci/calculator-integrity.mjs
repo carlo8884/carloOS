@@ -7188,6 +7188,9 @@ const CALCULATORS = [
     id: 'fish · health-hub hops',
     file: 'apps/fish-com/src/app/health/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the guide grid' },
+      { re: /nextHref="\/water-parameters"/, label: 'next step is water-parameters, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-hub"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-hub/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-hub/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / medicating-fish)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-hub/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / ich)' },
@@ -7200,8 +7203,10 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazonHref=["'][^"']*(ich-x|kanaplex|pimafix|super\+ick|fish\+medication|fish\+medicine)/, label: 'never hop medications — this hub is water-chemistry / isolation / temperature, not a drug list' },
+      { re: /Keep the test-first health order/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete aquarium-health-checklist offer; every gear CTA is an amazon-brand category search matching on-page water-chemistry / disease-identification / nitrogen-cycle copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the guide grid, next step is water-parameters + the existing test-kit hop. Empty Keep-the-test-first husk removed. Shop dump stays below. No invented kitchen hops. No medication hops.',
   },
   {
     id: 'fish · health-disease-guide hops',
