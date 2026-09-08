@@ -7042,6 +7042,9 @@ const CALCULATORS = [
     id: 'dog · training-socialization-window hops',
     file: 'apps/dog-com/src/app/training/dog-socialization-window/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the exposure list' },
+      { re: /nextHref="\/training\/puppy-schedule"/, label: 'next step is the puppy schedule, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-socialization-window"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-socialization-window/, label: 'puppy training treats search hop (same query as puppy-schedule / house-training / positive-reinforcement)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-socialization-window/, label: 'wire crate with divider search hop (same query as crate-training / new-puppy / crate-size)' },
       { re: /amazon-brand\/soft\+dog\+carrier\?s=training-socialization-window/, label: 'soft dog carrier search hop (same query as which-pet / is-this-a-dog-emergency — carry-and-expose)' },
@@ -7052,8 +7055,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the window plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete socialization-window-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the 100+ exposure list, next step is the puppy schedule + the existing divider-crate hop. Empty Keep-the-window husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · setup-aquarium hops',

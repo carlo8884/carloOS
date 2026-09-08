@@ -12,6 +12,7 @@ import {
   CalloutBox,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -168,12 +169,6 @@ export default function DogSocializationWindowPage() {
             updatedAt="2026-09-04T00:00:00Z"
             reviewedBy="Editorial team"
           />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the window plan
-            </p>
-
-          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — The science in one box">
             <p>
@@ -228,6 +223,14 @@ export default function DogSocializationWindowPage() {
               <strong>Alone time.</strong> Short, calm intervals of being alone (5, 10, 30 minutes) starting young, to prevent separation distress later.
             </li>
           </ul>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/training/puppy-schedule"
+            nextLabel="Put the 100+ exposures on a daily schedule"
+            nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The hop below is the same wire-crate-with-divider search already on this page."
+            resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
+            resourceLabel="Browse crates on Amazon →"
+          />
 
           {/* Money path — live amazon-brand search hops (socialization-window kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
