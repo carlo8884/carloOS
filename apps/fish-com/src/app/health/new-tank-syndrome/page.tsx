@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -39,12 +39,6 @@ export default function NewTankSyndromePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fish-in emergency plan
-          </p>
-
-        </div>
 
         <h2>Why Ammonia Kills</h2>
         <p>Ammonia (NH₃) is produced continuously by fish as a metabolic waste product — excreted through the gills and in urine. In a cycled tank, beneficial bacteria convert ammonia to nitrite (still toxic) and then to nitrate (much less toxic) rapidly enough that ammonia never accumulates to harmful levels. In a new, uncycled tank, these bacteria colonies do not yet exist. Ammonia builds up to concentrations that burn gill tissue, damage internal organs, suppress immune function, and kill fish — sometimes within days of the tank being set up.</p>
@@ -75,6 +69,14 @@ export default function NewTankSyndromePage() {
 
         <h2>When the Cycle Is Complete</h2>
         <p>The cycle is complete — not "almost done," not "getting there" — when both ammonia and nitrite read 0 ppm on a test kit (not strips) 24 hours after dosing the tank with ammonia. A tank that shows 0 ammonia but 0.25 ppm nitrite is not cycled — the nitrite bacteria are still establishing. Introducing fish to a partially cycled tank restarts the stress cycle. Patience at this stage prevents weeks of emergency water changes later.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/aquarium-cycling-guide"
+          nextLabel="Run the fishless cycle to 0/0"
+          nextBlurb="The emergency protocol buys time. The cycling guide is the measurable next step — dose ammonia, test daily, and do not add more fish until both ammonia and nitrite stay at 0 ppm 24 hours after a 2 ppm dose. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (fishless-cycle + fish-in kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
