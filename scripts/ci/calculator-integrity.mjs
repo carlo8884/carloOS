@@ -7334,6 +7334,9 @@ const CALCULATORS = [
     id: 'fish · health-nitrogen-cycle hops',
     file: 'apps/fish-com/src/app/health/nitrogen-cycle-explained/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 0/0 confirmation answer' },
+      { re: /nextHref="\/tools\/aquarium-cycling-estimator"/, label: 'next step is the cycling estimator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-nitrogen-cycle"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-nitrogen-cycle/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / gill-flukes)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=health-nitrogen-cycle/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium / equipment-hub / water-parameters)' },
       { re: /amazon-brand\/dr\+tims\+ammonium\+chloride\?s=health-nitrogen-cycle/, label: 'Dr. Tims ammonium chloride search hop (same query as cycling estimator)' },
@@ -7347,8 +7350,10 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /eheim\+jager\+heater/, label: 'omit heater hop — nitrogen-cycle copy uses warmth as a timeline factor, not a heat method' },
       { re: /aquarium\+quarantine\+hospital\+tank\+net/, label: 'omit hospital-tank hop — nitrogen-cycle copy is fishless cycling, not quarantine treatment' },
+      { re: /Keep the 0\/0 confirmation plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete fishless-cycling checklist offer; every gear CTA is an amazon-brand category search matching on-page dechlorinate / ammonia-dose / test / seeded-media copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the 0/0 confirmation answer, next step is the cycling estimator + the existing test-kit hop. Empty Keep-the-0/0 husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · health-new-tank-syndrome hops',

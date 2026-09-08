@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, JourneyNext, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -74,12 +74,6 @@ export default function NitrogenCyclePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the 0/0 confirmation plan
-          </p>
-
-        </div>
 
         <div id="tldr">
           <CalloutBox variant="info" title="The short answer">
@@ -166,6 +160,14 @@ export default function NitrogenCyclePage() {
         <h2 id="done">How to Know Cycling Is Complete</h2>
         <p>The definitive test: add ammonia to 2 ppm on day 1. Test again at 24 hours. If both ammonia AND nitrite read 0, and nitrate has risen — the cycle is complete. The bacteria are present in sufficient numbers to process the ammonia load within 24 hours.</p>
         <p>Do not add fish based on ammonia reading 0 alone — wait for the 24-hour confirmation test. One 0 reading could be a temporary dip rather than established colony population.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/aquarium-cycling-estimator"
+          nextLabel="Estimate weeks until the 0/0 test"
+          nextBlurb="The tank is safe only after a 2 ppm ammonia dose reads 0 ammonia and 0 nitrite 24 hours later. The cycling estimator turns temperature and seeding method into a week range so you know when to run that test. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
 
         <h2 id="mini-cycles">Mini-Cycles — What Disrupts an Established Cycle</h2>
         <p>Bacterial colonies live primarily in filter media. Things that kill them and cause a mini-cycle:</p>

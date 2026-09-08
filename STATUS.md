@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog puppy-weight JourneyNext after #1568)
+**Last updated:** 2026-09-08 (COO — fish nitrogen-cycle JourneyNext after #1569)
 
-> **COO dog puppy-weight journey (2026-09-08):** After #1568. Puppy-weight predictor → `/tools/dog-crate-size-calculator` + existing divider-crate `/go`. Empty “Keep the growth notes” husk removed. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-weight-journey.md`.
+> **COO fish nitrogen-cycle journey (2026-09-08):** After #1569. Nitrogen-cycle 0/0 answer → `/tools/aquarium-cycling-estimator` + existing test-kit `/go`. Empty “Keep the 0/0 confirmation plan” husk removed. Shop dump stays after FAQ. Details: `ops/handoffs/2026-09-08-coo-fish-nitrogen-cycle-journey.md`.
+
+> **COO dog puppy-weight journey (2026-09-08):** After #1568. Puppy-weight predictor → `/tools/dog-crate-size-calculator` + existing divider-crate `/go`. Empty “Keep the growth notes” husk removed. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-weight-journey.md`. #1569 merged.
 
 > **COO fish new-tank-syndrome journey (2026-09-08):** After #1567. New-tank-syndrome cycle-complete answer → `/setup/aquarium-cycling-guide` + existing test-kit `/go`. Empty “Keep the fish-in emergency plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-new-tank-syndrome-journey.md`. #1568 merged.
 
