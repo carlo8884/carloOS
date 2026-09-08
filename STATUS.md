@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish test-kits JourneyNext after #1606)
+**Last updated:** 2026-09-08 (COO — dog microchip JourneyNext after #1607)
 
-> **COO fish test-kits journey (2026-09-08):** After #1606. API Master kit pick → `/water-parameters` + existing API Master `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-test-kits-journey.md`.
+> **COO dog microchip journey (2026-09-08):** After #1607. Registration rule → `/tools/new-puppy-checklist` + existing engraved collar-ID `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-microchip-journey.md`.
+
+> **COO fish test-kits journey (2026-09-08):** After #1606. API Master kit pick → `/water-parameters` + existing API Master `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-test-kits-journey.md`. #1607 merged.
 
 > **COO dog gestation journey (2026-09-08):** After #1605. 63-day due-date answer → `/tools/new-puppy-checklist` + existing puppy-scale `/go`. Empty packing-list husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-gestation-journey.md`. #1606 merged.
 
