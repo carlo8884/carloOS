@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog socialization-window JourneyNext after #1572)
+**Last updated:** 2026-09-08 (COO — fish water-parameters JourneyNext after #1573)
 
-> **COO dog socialization-window journey (2026-09-08):** After #1572. Socialization 100+ exposure list → `/training/puppy-schedule` + existing divider-crate `/go`. Empty “Keep the window plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-socialization-window-journey.md`.
+> **COO fish water-parameters journey (2026-09-08):** After #1573. Water-parameters 8-row table → `/tools/water-change-calculator` + existing test-kit `/go`. Empty “Keep the weekly test order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-parameters-journey.md`.
+
+> **COO dog socialization-window journey (2026-09-08):** After #1572. Socialization 100+ exposure list → `/training/puppy-schedule` + existing divider-crate `/go`. Empty “Keep the window plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-socialization-window-journey.md`. #1573 merged.
 
 > **COO fish cycling-estimator journey (2026-09-08):** After #1571. Cycling estimator week range → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the timeline” husk removed. Shop dump stays after the estimate. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-cycling-estimator-journey.md`. #1572 merged.
 

@@ -27,6 +27,7 @@ import {
   CalloutBox,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
@@ -187,15 +188,6 @@ export default function WaterParametersHubPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Water Parameters</span>
       </nav>
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the weekly test order
-          </p>
-
-        </div>
-      </div>
-
       {/* Intro / overview */}
       <div className="px-container-sm sm:px-container py-12 max-w-content-wide mx-auto">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-4">
@@ -275,6 +267,14 @@ export default function WaterParametersHubPage() {
           Ranges are hobby-literature bands; individual species edge cases listed on each deep-dive
           page.
         </p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/water-change-calculator"
+          nextLabel="Turn this week's nitrate into gallons to remove"
+          nextBlurb="The table is the weekly test order. When nitrate is high, the water-change calculator turns tank gallons and percent into a measurable pull. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (test + water-change kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
