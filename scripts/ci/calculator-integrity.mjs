@@ -12283,6 +12283,9 @@ const CALCULATORS = [
     id: 'dog · puppy-nutrition hops',
     file: 'apps/dog-com/src/app/nutrition/puppy-nutrition/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the large-breed calcium rule' },
+      { re: /nextHref="\/nutrition\/how-much-to-feed"/, label: 'next step is portioning, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/large\+breed\+puppy\+dry\+dog\+food\+aafco\?s=nutrition-puppy"/, label: 'journey hop reuses the existing large-breed AAFCO search' },
       { re: /amazon-brand\/large\+breed\+puppy\+dry\+dog\+food\+aafco\?s=nutrition-puppy/, label: 'existing large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\+dry\+dog\+food\?s=nutrition-puppy/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -12291,8 +12294,9 @@ const CALCULATORS = [
       { re: /href=["']#["']/, label: 'never href="#"' },
       { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1232: fish /species/* leftover hop pattern is exhausted. Keep the existing sidebar capture and the already-hopped large-breed puppy Amazon + Purina Pro Plan Chewy searches; add under-hero capture with a concrete puppy-nutrition-checklist offer matching on-page AAFCO growth / >50 lb large-breed / 4-then-3-then-2 meal schedule copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the large-breed calcium rule, next step is how-much-to-feed + the existing large-breed AAFCO hop. Shop dump (Amazon + existing Chewy) moves below the rule. No invented kitchen hops. Do not re-ship a new Amazon query.',
   },
   {
     id: 'dog · senior-dog-nutrition hops',
