@@ -11141,6 +11141,28 @@ const CALCULATORS = [
   },
 
   {
+    id: 'fish · aquarium-cycling-estimator hops',
+    file: 'apps/fish-com/src/app/tools/aquarium-cycling-estimator/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the week-range estimate' },
+      { re: /nextHref="\/tools\/stocking-calculator"/, label: 'next step is slim-inch stocking, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-aquarium-cycling-estimator"/, label: 'journey hop reuses the existing test-kit search' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-aquarium-cycling-estimator/, label: 'API master test kit search hop (same query as nitrogen-cycle / new-tank-syndrome / setup-aquarium)' },
+      { re: /amazon-brand\/tetra\+safestart\+plus\?s=tools-aquarium-cycling-estimator/, label: 'bottled bacteria starter search hop' },
+      { re: /amazon-brand\/dr\+tims\+ammonium\+chloride\?s=tools-aquarium-cycling-estimator/, label: 'Dr. Tims ammonium chloride search hop' },
+      { re: /amazon-brand\/aquarium\+sponge\+filter\?s=tools-aquarium-cycling-estimator/, label: 'sponge filter search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the timeline/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the week-range estimate, next step is the stocking calculator + the existing test-kit hop. Empty Keep-the-timeline husk removed. Shop dump stays below. No invented kitchen hops. Slim-inch ceiling, not a species headcount.',
+  },
+  {
     id: 'fish · aquarium-cycling-guide hops',
     file: 'apps/fish-com/src/app/setup/aquarium-cycling-guide/page.tsx',
     mustInclude: [
