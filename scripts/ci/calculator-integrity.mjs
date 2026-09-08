@@ -6833,6 +6833,9 @@ const CALCULATORS = [
     id: 'dog · which-pet hops',
     file: 'apps/dog-com/src/app/which-pet/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the dog-leaning answer' },
+      { re: /nextHref="\/tools\/new-puppy-checklist"/, label: 'next step is the new-puppy checklist, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=which-pet"/, label: 'journey hop reuses the existing divider-crate search' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=which-pet/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/puppy\+food\?s=which-pet/, label: 'puppy food search hop (same query as new-puppy)' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=which-pet/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
@@ -6845,8 +6848,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the starter list/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete first-week-starter-list offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. The wizard itself stays ungated.',
+    why: '2026-09-08 journeys: after the dog-leaning answer, next step is the new-puppy checklist + the existing divider-crate hop. Empty Keep-the-starter-list husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-puppy-schedule hops',
