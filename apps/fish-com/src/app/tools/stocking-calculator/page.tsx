@@ -9,10 +9,11 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
-  ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import StockingShop from './StockingShop'
+import { StockingWaterProvider } from './StockingWaterContext'
+import { EXAMPLE_FOOTPRINTS, estimateStocking, formatSlimBand } from './model'
 
 const URL = 'https://fish.com/tools/stocking-calculator'
 
@@ -89,7 +90,8 @@ const FAQS = [
   },
   {
     question: 'Why is saltwater stocking so much lower?',
-    answer: 'Saltwater holds about 20% less dissolved oxygen than freshwater at the same temperature, reef fish have higher metabolic demands, and corals add their own bioload while being intolerant of nutrient swings. A 75-gallon freshwater community might house 60+ inches of fish; a 75-gallon reef typically tops out at 25–30 inches of mixed reef fish.',
+    answer:
+      'This tool uses a tighter saltwater ceiling on purpose: about 24 sq in of surface per slim inch (vs 12 in freshwater) and a 0.6 slim-in/gal volume cap (vs 1.1). Those factors are planning heuristics — marine tanks typically run leaner because saltwater holds less dissolved oxygen, many reef fish have higher metabolic demand, and corals add nutrient sensitivity. On a standard 75-gallon 48×18 footprint with a rated filter, the same function returns a freshwater-community ceiling of 72 slim inches (43–58 in the 60–80% band) and a saltwater-community ceiling of 36 (22–29). A reef-style factor (×0.55) drops that marine ceiling to about 20 slim inches (12–16). Those are this model’s numbers for that footprint, not a species list and not a published marine-stocking standard.',
   },
 ]
 
@@ -119,8 +121,9 @@ export default function StockingCalculatorPage() {
               { label: 'The calculator', href: '#calculator' },
               { label: 'Shop a stocking kit', href: '#shop' },
               { label: 'Why not inch-per-gallon?', href: '#inch-rule' },
+              { label: 'How the model works', href: '#model' },
               { label: 'Reading the result', href: '#reading' },
-              { label: 'Stocking by tank size', href: '#by-size' },
+              { label: 'Planning bands by tank size', href: '#by-size' },
               { label: 'FAQ', href: '#faq' },
             ]}
           />
@@ -156,64 +159,30 @@ export default function StockingCalculatorPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-08T00:00:00Z" reviewedBy="Editorial team" />
 
 
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-stocking-calculator-under-hero"
-          />
-        </div>
+        <StockingWaterProvider>
+          <h2 id="calculator">The Calculator</h2>
+          <Calculator />
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Owner notes
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+            <EmailCapture
+              variant="inline"
+              siteId="fish-com"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
+              source="tools-stocking-calculator-under-hero"
+            />
+          </div>
 
-        {/* Money path — live amazon-brand search hops (HOB / canister / heater / sand / test kit / net).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
-          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a stocking kit
-          </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-stocking-calculator"
-              amazonLabel="Shop AquaClear HOB filters on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=tools-stocking-calculator"
-              amazonLabel="Shop Fluval canister filters on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/fluval+spec+v+5+gallon?s=tools-stocking-calculator"
-              amazonLabel="Shop Fluval Spec nano tanks on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-stocking-calculator"
-              amazonLabel="Shop aquarium heaters on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarium+sand?s=tools-stocking-calculator"
-              amazonLabel="Shop aquarium sand on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-stocking-calculator"
-              amazonLabel="Shop aquarium test kits on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-stocking-calculator"
-              amazonLabel="Shop nets and acclimation kits on Amazon →"
-            />
-          </div>
-        </div>
+          {/* Money path — hops follow the calculator water-type selection.
+              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
+          <StockingShop />
+        </StockingWaterProvider>
 
         <h2 id="inch-rule">Why &quot;1 Inch Per Gallon&quot; Is Wrong</h2>
         <p>
@@ -229,44 +198,95 @@ export default function StockingCalculatorPage() {
           <li><strong>Swimming style</strong> — active swimmers (danios, barbs) need 2–3× the space of slow fish (gouramis, bettas).</li>
         </ul>
 
+        <h2 id="model">How the Model Works</h2>
+        <p>
+          The calculator and the table below call the same function. The number is a <strong>slim-inch bioload ceiling</strong> for a thin community body type (tetra / rasbora shape). It is not a published stocking standard, not a lab calibration, and not a species model — this repo does not carry adult-size, schooling, or mass-conversion data that would be required to output a headcount.
+        </p>
+        <p>Each result is the tighter of two bounds, then scaled by filtration and aquascape:</p>
+        <ul>
+          <li>
+            <strong>Surface bound</strong> — length × width, then 12 sq in of surface per slim-community inch in freshwater, or 24 sq in per slim inch in saltwater. The 2× saltwater factor is a planning tightening (lower dissolved oxygen + typically leaner marine stocking), not a measured O₂ table.
+          </li>
+          <li>
+            <strong>Volume bound</strong> — 1.1 slim inches per US gallon in freshwater, 0.6 in saltwater. This is a sanity cap so a wide, shallow footprint cannot invent unlimited capacity.
+          </li>
+          <li>
+            <strong>Filtration factor</strong> — underrated 0.75, manufacturer-rated 1.0, oversized 1.3, heavy (sump / dual canister) 1.6. These are ordinal multipliers, not measured bio-media capacity.
+          </li>
+          <li>
+            <strong>Style factor</strong> — community 1.0, heavily planted 1.15, territorial cichlid 0.7, reef 0.55. Planted and reef options are limited to the matching water type so a saltwater selection cannot keep a freshwater planted multiplier.
+          </li>
+          <li>
+            <strong>60–80% planning band</strong> — editorial conservatism on top of the ceiling, not a measured stability threshold. The default 40-gallon breeder (36 × 18, freshwater community, rated filter) is bound by volume at 44 slim inches, with a 26–35 planning band.
+          </li>
+        </ul>
+        <p>
+          Because the coefficients are heuristics, a disclaimer does not make a species list valid. The tool therefore does not convert slim inches into “how many angels / tetras / tangs.” Species pairing lives on care guides and the tank-mate checker.
+        </p>
+
         <h2 id="reading">Reading the Result</h2>
         <p>
-          The calculator outputs a <strong>slim-inch bioload ceiling</strong> — a rough planning unit for thin community fish (tetra / rasbora body type). It is <strong>not</strong> a species count and not a shopping list. Volume and surface area set two bounds; the tool reports the tighter one, then a 60–80% planning band.
+          Volume and surface area set two bounds; the tool reports the tighter one, then the 60–80% planning band. What the model does <em>not</em> decide:
         </p>
-        <p>What the model does <em>not</em> decide:</p>
         <ul>
           <li><strong>Schooling minimums</strong> — many tetras and rasboras need a group of 6+ even when the inch math would &quot;fit&quot; fewer.</li>
           <li><strong>Territory and adult size</strong> — angelfish, cichlids, and many marine fish need far more space than a length-to-inches split implies.</li>
-          <li><strong>Heavy-bodied fish</strong> — goldfish, oscars, and similar fish consume this ceiling much faster than slim community fish.</li>
+          <li><strong>Heavy-bodied fish</strong> — goldfish, oscars, and similar fish consume this ceiling much faster than slim community fish. The model does not convert length into mass.</li>
           <li><strong>Compatibility</strong> — temperament, water chemistry, and tank height live on species pages and the tank-mate checker, not in this number.</li>
         </ul>
         <p>
           Treat the result as a <strong>ceiling</strong>. Plan around 60–80% of it so parameters stay stable when something goes wrong. Confirm the load with a water test as you add fish.
         </p>
 
-        <h2 id="by-size">Illustrative Community Mixes by Tank Size</h2>
+        <h2 id="by-size">Planning Bands by Tank Size</h2>
+        <p>
+          The table applies the same function used by the calculator — rated filter, standard community style — to typical US glass footprints. It is not a species mix and not a guarantee that every 10-gallon or 75-gallon tank has these exact dimensions.
+        </p>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
-                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Tank Size</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Illustrative community mix (not calculator output)</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Typical footprint</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Freshwater community (slim in)</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Saltwater community (slim in)</th>
               </tr>
             </thead>
             <tbody className="text-brand-text-mid">
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">10 gal</td><td className="py-2">1 betta + 5 ember tetras + cleanup snails, or 8–10 small schooling fish</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">20 gal long</td><td className="py-2">10–12 small tetras + 4 corydoras + centerpiece (gourami or honey gourami)</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">40 gal breeder</td><td className="py-2">15 cardinal tetras + 8 harlequin rasboras + 6 corydoras + small centerpiece + cleanup crew</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">75 gal</td><td className="py-2">2 angelfish + large schools (20+ tetras, 10+ rasboras) + 8 corydoras + bristlenose pleco</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">125 gal</td><td className="py-2">Large schools, multiple centerpieces, or 4–6 medium SA cichlids (severums, geophagus)</td></tr>
+              {EXAMPLE_FOOTPRINTS.map((tank) => {
+                const fresh = estimateStocking({
+                  gal: tank.gal,
+                  lengthIn: tank.lengthIn,
+                  widthIn: tank.widthIn,
+                  waterType: 'fresh',
+                  filtration: 'rated',
+                  style: 'community',
+                })
+                const salt = estimateStocking({
+                  gal: tank.gal,
+                  lengthIn: tank.lengthIn,
+                  widthIn: tank.widthIn,
+                  waterType: 'salt',
+                  filtration: 'rated',
+                  style: 'community',
+                })
+                return (
+                  <tr key={tank.id} className="border-b border-brand-border/50">
+                    <td className="py-2 pr-4">
+                      {tank.label}
+                      <span className="block text-2xs text-brand-text-light">{tank.footprint}</span>
+                    </td>
+                    <td className="py-2 pr-4">{fresh ? formatSlimBand(fresh) : '—'}</td>
+                    <td className="py-2">{salt ? formatSlimBand(salt) : '—'}</td>
+                  </tr>
+                )
+              })}
             </tbody>
           </table>
         </div>
         <p>
-          Those mixes are editorial examples for a typical community footprint — they are not produced by the calculator and are not a guarantee. For specific species pairings, run our{' '}
-          <Link href="/tools/tank-mate-compatibility-checker">tank mate compatibility checker</Link>, or see our{' '}
-          <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
-          <Link href="/species/neon-tetra">neon tetra</Link> profile, and <Link href="/species/angelfish">angelfish</Link> profile.
+          Reef style multiplies the saltwater result by 0.55 (same function, different style factor). For species pairing — not headcounts from this table — use the{' '}
+          <Link href="/tools/tank-mate-compatibility-checker">tank mate compatibility checker</Link> and the{' '}
+          <Link href="/species">species hub</Link>.
         </p>
         <p>
           Once you know your stocking ceiling, filtration becomes the lever. Oversizing your filter is the single cheapest way to raise it.

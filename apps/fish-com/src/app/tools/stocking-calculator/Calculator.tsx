@@ -3,30 +3,26 @@
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
+import {
+  STYLES_FOR_WATER,
+  estimateStocking,
+  type Filtration,
+  type Style,
+} from './model'
+import { useStockingWater } from './StockingWaterContext'
 
-type Filtration = 'under' | 'rated' | 'over' | 'heavy'
-type WaterType = 'fresh' | 'salt'
-type Style = 'community' | 'cichlid' | 'planted' | 'reef'
-
-const FILTRATION_FACTOR: Record<Filtration, number> = {
-  under: 0.75,
-  rated: 1.0,
-  over: 1.3,
-  heavy: 1.6,
-}
-
-const STYLE_FACTOR: Record<Style, number> = {
-  community: 1.0,
-  planted: 1.15,
-  cichlid: 0.7,
-  reef: 0.55,
+const STYLE_OPTIONS: Record<Style, { value: Style; label: string }> = {
+  community: { value: 'community', label: 'Standard community' },
+  planted: { value: 'planted', label: 'Heavily planted' },
+  cichlid: { value: 'cichlid', label: 'Cichlids / aggressive (territory)' },
+  reef: { value: 'reef', label: 'Reef tank with corals' },
 }
 
 export default function StockingCalculator() {
   const [tankGal, setTankGal] = useState('40')
   const [tankL, setTankL] = useState('36')
   const [tankW, setTankW] = useState('18')
-  const [waterType, setWaterType] = useState<WaterType>('fresh')
+  const { waterType, setWaterType } = useStockingWater()
   const [filtration, setFiltration] = useState<Filtration>('rated')
   const [style, setStyle] = useState<Style>('community')
 
@@ -34,35 +30,17 @@ export default function StockingCalculator() {
     const gal = parseFloat(tankGal) || 0
     const l = parseFloat(tankL) || 0
     const w = parseFloat(tankW) || 0
-    if (gal <= 0) return null
-
-    const surfaceIn2 = l * w
-    // Rough planning model only: ~12 sq in surface per slim-community inch (freshwater).
-    // Saltwater uses ~2× surface per inch. This is a bioload ceiling heuristic, not
-    // species advice — it does not encode schooling, adult size, or territory.
-    const baseInPerSqIn = waterType === 'salt' ? 1 / 24 : 1 / 12
-    const filtrationAdj = FILTRATION_FACTOR[filtration]
-    const styleAdj = STYLE_FACTOR[style]
-
-    const slimInchesSurface = surfaceIn2 * baseInPerSqIn * filtrationAdj * styleAdj
-    // Volume sanity cap — even infinite surface can't override absolute water volume
-    const slimInchesVolume = gal * (waterType === 'salt' ? 0.6 : 1.1) * filtrationAdj * styleAdj
-    const slimInches = Math.min(slimInchesSurface, slimInchesVolume)
-    // Default 40g / 36×18 community / rated: volume 44, surface 54, ceiling 44, 60–80% band 26–35
-    const planningLow = slimInches * 0.6
-    const planningHigh = slimInches * 0.8
-    const boundBy = slimInchesVolume <= slimInchesSurface ? 'volume' : 'surface area'
-
-    return {
-      slimInches,
-      slimInchesSurface,
-      slimInchesVolume,
-      surfaceIn2,
-      planningLow,
-      planningHigh,
-      boundBy,
-    }
+    return estimateStocking({
+      gal,
+      lengthIn: l,
+      widthIn: w,
+      waterType,
+      filtration,
+      style,
+    })
   }, [tankGal, tankL, tankW, waterType, filtration, style])
+
+  const styleOptions = STYLES_FOR_WATER[waterType].map((id) => STYLE_OPTIONS[id])
 
   return (
     <div>
@@ -79,7 +57,13 @@ export default function StockingCalculator() {
           <FieldSelect
             label="Water Type"
             value={waterType}
-            onChange={(v) => setWaterType(v as WaterType)}
+            onChange={(v) => {
+              const next = v as typeof waterType
+              setWaterType(next)
+              if (!STYLES_FOR_WATER[next].includes(style)) {
+                setStyle('community')
+              }
+            }}
             options={[
               { value: 'fresh', label: 'Freshwater' },
               { value: 'salt', label: 'Saltwater / Marine' },
@@ -115,12 +99,7 @@ export default function StockingCalculator() {
             label="Aquascape Style"
             value={style}
             onChange={(v) => setStyle(v as Style)}
-            options={[
-              { value: 'community', label: 'Standard community' },
-              { value: 'planted', label: 'Heavily planted' },
-              { value: 'cichlid', label: 'Cichlids / aggressive (territory)' },
-              { value: 'reef', label: 'Reef tank with corals' },
-            ]}
+            options={styleOptions}
           />
         </div>
       </CalcCard>
