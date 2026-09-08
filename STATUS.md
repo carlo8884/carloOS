@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog grimace-scale JourneyNext after #1592)
+**Last updated:** 2026-09-08 (COO — fish planted-tank JourneyNext after #1593)
 
-> **COO dog grimace-scale journey (2026-09-08):** After #1592. Grimace total → `/tools/is-this-a-dog-emergency` + existing first-aid kit `/go`. Empty “Keep the pain-check chart” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-grimace-journey.md`.
+> **COO fish planted-tank journey (2026-09-08):** After #1593. Algae / photoperiod answer → `/setup/aquarium-cycling-guide` + existing planted-setup CO2 `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-planted-tank-journey.md`.
+
+> **COO dog grimace-scale journey (2026-09-08):** After #1592. Grimace total → `/tools/is-this-a-dog-emergency` + existing first-aid kit `/go`. Empty “Keep the pain-check chart” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-grimace-journey.md`. #1593 merged.
 
 > **COO fish water-chemistry journey (2026-09-08):** After #1591. pH / GH / KH / TDS answer → `/water-parameters` + existing API test-kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-chemistry-journey.md`. #1592 merged.
 

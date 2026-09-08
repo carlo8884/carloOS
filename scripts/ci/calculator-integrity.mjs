@@ -11211,6 +11211,9 @@ const CALCULATORS = [
     id: 'fish · planted-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/planted-tank-setup/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the algae / photoperiod answer' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup"/, label: 'journey hop reuses the existing planted-setup CO2 search' },
       { re: /amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup/, label: 'existing planted-aquarium-setup-CO2 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11219,8 +11222,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1157: keep the existing sidebar capture and the already-hopped planted-aquarium-setup-CO2 amazon-brand search; add under-hero capture with a concrete low-tech-vs-high-tech planted-setup-checklist offer matching on-page easy-plant / PAR / substrate / CO2-vs-no-CO2 / algae-lighting copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the algae / photoperiod answer, next step is cycling + the existing planted-setup CO2 hop. Shop dump stays below. No invented kitchen hops. No species headcounts.',
   },
 
   {
