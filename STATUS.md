@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish water-change JourneyNext after #1575)
+**Last updated:** 2026-09-08 (COO — dog puppy-biting JourneyNext after #1576)
 
-> **COO fish water-change journey (2026-09-08):** After #1575. Water-change gallons-to-remove → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the change plan” / “Keep the math” husks removed. Shop dump stays after JourneyNext. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-water-change-journey.md`.
+> **COO dog puppy-biting journey (2026-09-08):** After #1576. Bite-inhibition protocol → `/training/puppy-schedule` + existing Kong `/go`. Empty “Keep the nipping plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-biting-journey.md`.
+
+> **COO fish water-change journey (2026-09-08):** After #1575. Water-change gallons-to-remove → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the change plan” / “Keep the math” husks removed. Shop dump stays after JourneyNext. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-water-change-journey.md`. #1576 merged.
 
 > **COO dog loose-leash journey (2026-09-08):** After #1574. Loose-leash equipment answer → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the loose-leash plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-loose-leash-journey.md`. #1575 merged.
 

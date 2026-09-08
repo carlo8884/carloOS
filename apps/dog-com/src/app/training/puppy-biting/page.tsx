@@ -8,6 +8,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -48,16 +49,6 @@ export default function PuppyBitingPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the nipping plan
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Puppy-biting protocol
-          </h2>
-
-        </div>
-
         <h2>Bite Inhibition — Why It Matters More Than Stopping Biting</h2>
         <p>Bite inhibition is a dog&apos;s learned ability to control the pressure of its bite. A dog with good bite inhibition that bites during excitement will cause bruising, not puncture wounds. A dog without bite inhibition that bites will cause serious injury. Bite inhibition is learned during puppyhood through play — primarily with other puppies and with humans who teach it correctly. It cannot be effectively taught to adult dogs.</p>
         <p>This is why the goal is not to immediately stop all biting — it is to first teach the puppy to bite softly (inhibition), then progressively teach the puppy not to put teeth on skin at all. Skipping the inhibition phase and going straight to suppression produces a dog that has simply been punished into not biting until something changes — and then bites hard, without inhibition, because it was never taught otherwise.</p>
@@ -72,6 +63,14 @@ export default function PuppyBitingPage() {
           <li><strong>Always provide alternatives:</strong> When the puppy tries to bite, redirect to an appropriate chew toy. Have toys in every room. The puppy needs to bite — give it something appropriate to bite.</li>
           <li><strong>Overtired puppies bite harder:</strong> If your puppy&apos;s biting escalates to unmanageable levels, check the clock. If they&apos;ve been awake for more than 90 minutes, they&apos;re overtired — crate for a nap. Overtired puppies cannot regulate themselves.</li>
         </ol>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/puppy-schedule"
+          nextLabel="Put the 90-minute awake window on the puppy schedule"
+          nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The hop below is the same stuffable Kong search already on this page."
+          resourceHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
+          resourceLabel="Browse stuffable Kong toys on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (nipping / teething kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
