@@ -255,46 +255,16 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Subject-clear overlay. The photo is a white ferret on black, lower-left;
-            a full-bleed mid scrim (~0.66) + left-bottom amber wash hid the subject.
-            Hold contrast only under the copy (bottom-right) and a short seam into
-            the trust bar. Left/upper of the frame stays open. */}
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'linear-gradient(to bottom right, transparent 0%, transparent 38%, rgba(30,20,10,0.22) 68%, rgba(30,20,10,0.62) 100%), linear-gradient(to top, rgba(30,20,10,0.72) 0%, rgba(30,20,10,0.18) 18%, transparent 36%)',
-          }}
-        />
-        {/* Warm amber wash — copy corner only, not over the ferret. */}
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            inset: 0,
-            opacity: 0.16,
-            backgroundImage:
-              'radial-gradient(ellipse at 88% 86%, rgba(201,157,95,0.38) 0%, transparent 52%)',
-          }}
-        />
+        {/* Subject-clear overlay (globals). The photo is a white ferret on
+            black, lower-left; a full-bleed mid scrim (~0.66) + left-bottom
+            amber wash hid the subject. Contrast now lives with the copy —
+            top on small screens, bottom-right from md — plus a short seam
+            into the trust bar. The ferret stays open. */}
+        <div aria-hidden className="ferret-home-hero__scrim" />
+        <div aria-hidden className="ferret-home-hero__wash" />
 
-        {/* Overlaid copy + primary action — bottom of the photo; md+ parks the
-            stack on the black negative space (right) so it does not sit on the ferret. */}
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 10,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            minHeight: 'clamp(62vh, 70vh, 78vh)',
-            maxWidth: '1180px',
-            margin: '0 auto',
-            padding: 'clamp(64px, 9vw, 88px) clamp(20px, 5vw, 40px) clamp(36px, 5vw, 56px)',
-          }}
-        >
+        {/* Copy on the native black field so it does not sit on the ferret. */}
+        <div className="ferret-home-hero__stage">
           <div className="ferret-home-hero__copy">
           <div style={{ marginBottom: '18px' }}>
             <span
