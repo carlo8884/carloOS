@@ -11,6 +11,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -172,6 +173,14 @@ export default function NewPuppyChecklistPage() {
         <div className="max-w-5xl">
           <Calculator />
         </div>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/tools/dog-crate-size-calculator"
+          nextLabel="Size the crate before you buy"
+          nextBlurb="The checklist is the day-one list. The crate-size calculator turns nose-to-tail and height into a standard crate length so you buy the adult size once — then use a divider while the puppy is small."
+          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
+          resourceLabel="Browse crates on Amazon →"
+        />
         <div className="max-w-2xl mt-8">
           <EmailCapture
             variant="inline"
