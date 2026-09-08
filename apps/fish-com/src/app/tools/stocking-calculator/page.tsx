@@ -18,22 +18,24 @@ const URL = 'https://fish.com/tools/stocking-calculator'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'Aquarium Stocking Calculator — How Many Fish Can I Keep? | Fish.com',
-  description: 'Modern aquarium stocking calculator using surface area, filtration, and aquascape style — not the broken inch-per-gallon rule. Freshwater and saltwater.',
+  title: 'Aquarium Stocking Calculator — Rough Bioload Estimate | Fish.com',
+  description:
+    'Rough aquarium stocking estimate from surface area, volume, and filtration — a slim-inch bioload ceiling, not a species count. Freshwater and saltwater.',
   path: '/tools/stocking-calculator',
 })
 
 const schema = buildHowToSchema({
-  name: 'How to figure out how many fish can fit in an aquarium',
-  description: 'Use tank volume, surface area, filtration capacity, and species behavior to estimate honest stocking limits rather than the outdated inch-per-gallon rule.',
+  name: 'How to sketch a rough aquarium stocking ceiling',
+  description:
+    'Use tank volume, surface area, and filtration to sketch a slim-inch bioload ceiling. This is a planning estimate, not a species-by-species stocking list.',
   url: URL,
   totalTime: 'PT3M',
   steps: [
     { name: 'Find net water volume', text: 'Calculate the real water volume of your tank (not the box label) using length × width × height and a 90% fill factor.' },
-    { name: 'Measure surface area', text: 'Multiply tank length by width (front-to-back). Surface area drives oxygen exchange and is the real ceiling on fish stocking.' },
-    { name: 'Account for filtration', text: 'Filter flow and bio-media volume can raise capacity 30–60% over a barely-rated filter. Oversize on purpose for stocking flexibility.' },
-    { name: 'Adjust for aquascape', text: 'Heavily planted tanks support more stocking; territorial cichlids and reef tanks support significantly less per gallon.' },
-    { name: 'Stock to 60–80%', text: 'Use the calculator output as a ceiling and stock to 60–80% of it. This gives parameter stability, room to grow, and forgiveness when something goes wrong.' },
+    { name: 'Measure surface area', text: 'Multiply tank length by width (front-to-back). Surface area drives oxygen exchange and is one bound on this planning estimate.' },
+    { name: 'Account for filtration', text: 'Filter flow and bio-media volume can raise the planning ceiling versus a barely-rated filter. Oversize on purpose for headroom.' },
+    { name: 'Adjust for aquascape', text: 'Heavily planted tanks support a higher planning ceiling; territorial cichlids and reef tanks support less per gallon.' },
+    { name: 'Treat the number as a ceiling', text: 'Use the slim-inch output as a rough bioload ceiling and plan around 60–80% of it. It is not a species headcount.' },
   ],
 })
 
@@ -46,7 +48,7 @@ const softwareApplicationSchema = {
   applicationSubCategory: 'AquariumCalculator',
   operatingSystem: 'Web Browser (any HTML5-capable device)',
   description:
-    'Free interactive aquarium stocking calculator that estimates how many fish a tank can house using net water volume, surface area, filtration capacity, and aquascape style — a modern replacement for the outdated inch-per-gallon rule.',
+    'Free interactive planner that sketches a slim-inch bioload ceiling from net water volume, surface area, filtration, and aquascape style. It is a rough estimate, not a species count.',
   inLanguage: 'en-US',
   isAccessibleForFree: true,
   offers: {
@@ -55,11 +57,11 @@ const softwareApplicationSchema = {
     priceCurrency: 'USD',
   },
   featureList: [
-    'Surface-area-based stocking model (oxygen exchange) rather than inch-per-gallon',
-    'Adjusts for filtration class (HOB, canister, sump) and aquascape style',
+    'Slim-inch / bioload ceiling from surface area vs volume — not inch-per-gallon',
+    'Adjusts for filtration class and aquascape style',
     'Separate freshwater and saltwater modes',
-    'Outputs slim-inch equivalents with body-mass conversion factors',
-    'Recommends a 60–80% target band for parameter stability',
+    'Labels the result as a rough planning estimate, not species advice',
+    'Shows a 60–80% planning band for parameter stability',
   ],
   publisher: {
     '@type': 'Organization',
@@ -71,7 +73,7 @@ const softwareApplicationSchema = {
 const FAQS = [
   {
     question: 'Is the "1 inch of fish per gallon" rule accurate?',
-    answer: 'No. The inch-per-gallon rule was published in beginner aquarium books in the 1970s and has been disproven for decades. It ignores body mass (a 6-inch goldfish has 30× the bioload of six 1-inch tetras), surface area (where gas exchange happens), schooling needs, swimming style, and temperament. Modern stocking uses surface area, filtration, and species behavior.',
+    answer: 'No. The inch-per-gallon rule was published in beginner aquarium books in the 1970s and oversimplifies stocking. It ignores body mass (a 6-inch goldfish has far more bioload than six 1-inch tetras), surface area (where gas exchange happens), schooling needs, swimming style, and temperament. This tool uses a slim-inch / surface-area ceiling as a rough planning estimate — it still cannot replace species-specific care.',
   },
   {
     question: 'Why does tank surface area matter more than volume?',
@@ -79,11 +81,11 @@ const FAQS = [
   },
   {
     question: 'How does filtration change stocking capacity?',
-    answer: 'Filters do two things that matter for stocking: physical waste removal (mechanical) and ammonia/nitrite conversion (biological). A filter rated barely for your tank handles a sparse stocking. An oversized filter — or a canister + HOB combo — adds 30–60% capacity by giving you redundancy and a larger bacterial colony. Sumps roughly double effective capacity.',
+    answer: 'Filters do two things that matter for stocking: physical waste removal (mechanical) and ammonia/nitrite conversion (biological). A filter rated barely for your tank handles a light load. An oversized filter — or a canister + HOB combo — can raise this tool’s planning ceiling by giving you redundancy and more bio-media. That is still a planning adjustment, not a license to add a specific species count.',
   },
   {
     question: 'Should I stock to 100% of what the calculator says?',
-    answer: 'No. Stock to 60–80%. Parameter stability is the #1 predictor of fish survival. Fully stocked tanks are less forgiving — a missed water change, a filter failure, or a sick fish can cascade quickly. Headroom is insurance. Plan for adult sizes, not the small juveniles you buy.',
+    answer: 'No. Treat the slim-inch number as a ceiling and plan around 60–80% of it. The tool does not output a species list. Fully loaded tanks are less forgiving — a missed water change, a filter failure, or a sick fish can cascade quickly. Headroom is insurance. Choose species from adult-size care guides, not from this estimate.',
   },
   {
     question: 'Why is saltwater stocking so much lower?',
@@ -97,7 +99,7 @@ export default function StockingCalculatorPage() {
       siteId="fish-com"
       hero={{
         title: 'Aquarium Stocking Calculator',
-        subtitle: 'How many fish can your tank actually hold? Modern surface-area model adjusted for filtration and aquascape style — not the broken inch-per-gallon rule.',
+        subtitle: 'A rough slim-inch / bioload ceiling from tank volume, surface area, filtration, and aquascape style — not a species count, and not the inch-per-gallon rule.',
         category: 'Calculators',
         categoryHref: '/tools',
         publishedAt: 'May 2026',
@@ -151,7 +153,7 @@ export default function StockingCalculatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
+        <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-08T00:00:00Z" reviewedBy="Editorial team" />
 
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
@@ -279,25 +281,26 @@ export default function StockingCalculatorPage() {
 
         <h2 id="reading">Reading the Result</h2>
         <p>
-          Our calculator outputs <strong>slim inches</strong> — equivalent inches of a thin community fish like a tetra or rasbora. To convert to other species:
+          The calculator outputs a <strong>slim-inch bioload ceiling</strong> — a rough planning unit for thin community fish (tetra / rasbora body type). It is <strong>not</strong> a species count and not a shopping list. Volume and surface area set two bounds; the tool reports the tighter one, then a 60–80% planning band.
         </p>
+        <p>What the model does <em>not</em> decide:</p>
         <ul>
-          <li><strong>Goldfish, oscars, large cichlids:</strong> count 3× their length in slim inches (a 6-inch oscar = 18 slim inches).</li>
-          <li><strong>Plecos, catfish:</strong> count 1.5× their length.</li>
-          <li><strong>Standard community fish (tetras, rasboras, livebearers):</strong> 1× length.</li>
-          <li><strong>Shrimp, snails:</strong> negligible bioload — don&apos;t count them.</li>
+          <li><strong>Schooling minimums</strong> — many tetras and rasboras need a group of 6+ even when the inch math would &quot;fit&quot; fewer.</li>
+          <li><strong>Territory and adult size</strong> — angelfish, cichlids, and many marine fish need far more space than a length-to-inches split implies.</li>
+          <li><strong>Heavy-bodied fish</strong> — goldfish, oscars, and similar fish consume this ceiling much faster than slim community fish.</li>
+          <li><strong>Compatibility</strong> — temperament, water chemistry, and tank height live on species pages and the tank-mate checker, not in this number.</li>
         </ul>
         <p>
-          And remember: the calculator gives a <strong>ceiling</strong>. Stock to 60–80% for parameter stability, room to grow, and survivability during equipment failures.
+          Treat the result as a <strong>ceiling</strong>. Plan around 60–80% of it so parameters stay stable when something goes wrong. Confirm the load with a water test as you add fish.
         </p>
 
-        <h2 id="by-size">Realistic Stocking by Tank Size</h2>
+        <h2 id="by-size">Illustrative Community Mixes by Tank Size</h2>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
               <tr className="border-b border-brand-border">
                 <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Tank Size</th>
-                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Realistic Community Stocking</th>
+                <th className="text-left py-2 pr-4 font-semibold text-brand-dark">Illustrative community mix (not calculator output)</th>
               </tr>
             </thead>
             <tbody className="text-brand-text-mid">
@@ -310,7 +313,7 @@ export default function StockingCalculatorPage() {
           </table>
         </div>
         <p>
-          For specific species pairings, run our{' '}
+          Those mixes are editorial examples for a typical community footprint — they are not produced by the calculator and are not a guarantee. For specific species pairings, run our{' '}
           <Link href="/tools/tank-mate-compatibility-checker">tank mate compatibility checker</Link>, or see our{' '}
           <Link href="/species/betta-fish-tank-mates">betta tank mates</Link> guide,{' '}
           <Link href="/species/neon-tetra">neon tetra</Link> profile, and <Link href="/species/angelfish">angelfish</Link> profile.
