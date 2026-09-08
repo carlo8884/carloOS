@@ -11222,6 +11222,9 @@ const CALCULATORS = [
     id: 'fish · water-chemistry-guide hops',
     file: 'apps/fish-com/src/app/setup/water-chemistry-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the pH / GH / KH / TDS answer' },
+      { re: /nextHref="\/water-parameters"/, label: 'next step is the weekly test-order table, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api%20freshwater%20master%20test%20kit\?s=setup-water-chemistry-guide"/, label: 'journey hop reuses the existing API test-kit search' },
       { re: /amazon-brand\/api%20freshwater%20master%20test%20kit\?s=setup-water-chemistry-guide/, label: 'existing API-freshwater-master-test-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11230,8 +11233,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1158: keep the existing sidebar capture and the already-hopped API-freshwater-master-test-kit amazon-brand search; add under-hero capture with a concrete water-chemistry-checklist offer matching on-page API-freshwater-master-test-kit / ammonia-nitrite-nitrate / pH-GH-KH / nitrogen-cycle copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the pH / GH / KH / TDS answer, next step is the water-parameters table + the existing API test-kit hop. Shop dump stays below. No invented kitchen hops.',
   },
 
   {

@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog leash-reactivity JourneyNext after #1590)
+**Last updated:** 2026-09-08 (COO — fish water-chemistry JourneyNext after #1591)
 
-> **COO dog leash-reactivity journey (2026-09-08):** After #1590. CC/DS management protocol → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the leash-reactivity plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-leash-reactivity-journey.md`.
+> **COO fish water-chemistry journey (2026-09-08):** After #1591. pH / GH / KH / TDS answer → `/water-parameters` + existing API test-kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-chemistry-journey.md`.
+
+> **COO dog leash-reactivity journey (2026-09-08):** After #1590. CC/DS management protocol → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the leash-reactivity plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-leash-reactivity-journey.md`. #1591 merged.
 
 > **COO fish nano-tank journey (2026-09-08):** After #1589. Nano stability kit → `/setup/aquarium-cycling-guide` + existing air-driven sponge-filter `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-nano-tank-journey.md`. #1590 merged.
 
