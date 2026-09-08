@@ -12,6 +12,7 @@ import {
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Predictor from './Predictor'
 
@@ -179,18 +180,6 @@ export default function PuppyWeightPredictorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Puppy Weight Predictor</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the growth notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Puppy growth planning notes
-          </h2>
-
-        </div>
-      </section>
-
       {/* GEO: extractable answer + worked example, ABOVE the tool */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
@@ -226,6 +215,14 @@ export default function PuppyWeightPredictorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Predictor />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-crate-size-calculator"
+            nextLabel="Size the crate once for adult length"
+            nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The hop below is the same wire-crate-with-divider search already on this page."
+            resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
+            resourceLabel="Browse crates on Amazon →"
+          />
         </div>
       </section>
 

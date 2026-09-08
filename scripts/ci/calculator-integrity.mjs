@@ -6686,12 +6686,19 @@ const CALCULATORS = [
     id: 'dog · puppy-weight-predictor hops',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the growth estimate' },
+      { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate size, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-weight-predictor"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-weight-predictor/, label: 'scale search hop (same query as ideal-weight tool)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-puppy-weight-predictor/, label: 'puppy food search hop' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-weight-predictor/, label: 'crate search hop (same query as crate-size tool)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
-    why: 'Money path: under-hero capture with a concrete growth offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    mustExclude: [
+      { re: /Keep the growth notes/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the growth estimate, next step is the crate-size calculator + the existing divider-crate hop. Empty Keep-the-growth husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · new-puppy-checklist',
