@@ -11837,6 +11837,9 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-lighting hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the PAR-band rule' },
+      { re: /nextHref="\/tools\/co2-calculator"/, label: 'next step is the CO2 calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting"/, label: 'journey hop reuses the existing Hygger 957 search' },
       { re: /amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting/, label: 'existing Hygger-957 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/fluval\+plant\+3\.0\?s=reviews-best-aquarium-lighting/, label: 'existing Fluval-Plant-3.0 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kessil\+a360x\?s=reviews-best-aquarium-lighting/, label: 'existing Kessil-A360X amazon-brand hop kept (do not re-ship a new query)' },
@@ -11848,8 +11851,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1186: keep the existing sidebar capture and the already-hopped Hygger 957 / Fluval Plant 3.0 / Kessil A360X / Nicrew Classic amazon-brand searches; add under-hero capture with a concrete aquarium-lighting-checklist offer matching on-page PAR / planted / reef / FOWLR copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the PAR-band rule, next step is the CO2 calculator + the existing Hygger 957 hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · best-water-test-kits hops',
