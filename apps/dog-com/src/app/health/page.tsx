@@ -12,6 +12,7 @@ import {
   DirectoryPlacesCta,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
   type FAQItem,
 } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
@@ -245,15 +246,6 @@ export default function DogHealthHubPage() {
           </p>
         </div>
       </section>
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the health-library order
-          </p>
-
-        </div>
-      </div>
-
       {/* Extractable direct-answer block + urgency triage reference table.
           Sits high on the page so AI answer surfaces and SERP snippets can lift
           a self-contained summary. The triage tiers mirror the urgencyBadge()
@@ -317,6 +309,16 @@ export default function DogHealthHubPage() {
               </tr>
             </tbody>
           </table>
+        </div>
+        <div className="max-w-3xl">
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/is-this-a-dog-emergency"
+            nextLabel="If a sign is happening now, run the emergency sign-list"
+            nextBlurb="The table is the library order — ER now, same-day, vet visit, or monitor. If a worrying sign is in front of you, skip the browse and use the emergency sign-list. The hop below is the same first-aid kit search already on this page, for packing on a calm day."
+            resourceHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"
+            resourceLabel="Browse pet first-aid kits on Amazon →"
+          />
         </div>
       </section>
 

@@ -7690,6 +7690,9 @@ const CALCULATORS = [
     id: 'dog · health-hub hops',
     file: 'apps/dog-com/src/app/health/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the urgency-tier table' },
+      { re: /nextHref="\/tools\/is-this-a-dog-emergency"/, label: 'next step is emergency triage, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/pet\+first\+aid\+kit\?s=health-hub"/, label: 'journey hop reuses the existing first-aid kit search' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=health-hub/, label: 'pet first-aid kit search hop (same query as emergency triage / which-pet)' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-hub/, label: 'digital pet thermometer search hop (same query as emergency triage)' },
       { re: /amazon-brand\/soft\+dog\+carrier\?s=health-hub/, label: 'soft dog carrier search hop (same query as emergency triage)' },
@@ -7702,8 +7705,10 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazonHref=["'][^"']*(heartworm|flea\+tick|nsaid|ibuprofen|medication|medicine|prescription)/, label: 'never hop medications — this hub is first-aid / emergency-prep / dental / senior-care gear, not a drug list' },
+      { re: /Keep the health-library order/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete dog-health-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid / emergency-prep / dental / senior-care copy, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the urgency-tier table, next step is emergency triage + the existing first-aid kit hop. Empty Keep-the-health-library-order husk removed. Shop dump stays below. No invented kitchen hops. No named Rx.',
   },
   {
     id: 'dog · first-aid-kit hops',
