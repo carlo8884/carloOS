@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog loose-leash JourneyNext after #1574)
+**Last updated:** 2026-09-08 (COO — fish water-change JourneyNext after #1575)
 
-> **COO dog loose-leash journey (2026-09-08):** After #1574. Loose-leash equipment answer → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the loose-leash plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-loose-leash-journey.md`.
+> **COO fish water-change journey (2026-09-08):** After #1575. Water-change gallons-to-remove → `/tools/stocking-calculator` + existing test-kit `/go`. Empty “Keep the change plan” / “Keep the math” husks removed. Shop dump stays after JourneyNext. Slim-inch ceiling, not a species headcount. Details: `ops/handoffs/2026-09-08-coo-fish-water-change-journey.md`.
+
+> **COO dog loose-leash journey (2026-09-08):** After #1574. Loose-leash equipment answer → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the loose-leash plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-loose-leash-journey.md`. #1575 merged.
 
 > **COO fish water-parameters journey (2026-09-08):** After #1573. Water-parameters 8-row table → `/tools/water-change-calculator` + existing test-kit `/go`. Empty “Keep the weekly test order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-parameters-journey.md`. #1574 merged.
 

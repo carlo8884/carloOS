@@ -5996,6 +5996,9 @@ const CALCULATORS = [
     id: 'fish · water-change-calculator hops',
     file: 'apps/fish-com/src/app/tools/water-change-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the gallons-to-remove answer' },
+      { re: /nextHref="\/tools\/stocking-calculator"/, label: 'next step is stocking (slim-inch), not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-water-change-calculator"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/python\+water\+changer\?s=tools-water-change-calculator/, label: 'Python water changer search hop (same query as this tool ResultCTA)' },
       { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=tools-water-change-calculator/, label: 'gravel-vacuum siphon search hop (same query as this tool ResultCTA)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=tools-water-change-calculator/, label: 'Seachem Prime dechlorinator search hop (same query as disease-checker)' },
@@ -6006,8 +6009,11 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the change plan/, label: 'empty husk heading removed' },
+      { re: /Keep the math/, label: 'empty math-notes husk removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete water-change-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the gallons-to-remove answer, next step is the stocking calculator (slim-inch ceiling) + the existing test-kit hop. Empty Keep-the-change-plan / Keep-the-math husks removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'horses · horse-height-converter',

@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -181,15 +182,16 @@ export default function WaterChangeCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the change plan
-          </p>
-
-        </div>
-
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/stocking-calculator"
+          nextLabel="Check the slim-inch ceiling before you raise the change percent"
+          nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
+          resourceLabel="Shop API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (Python changer / gravel
             vacuum / Seachem Prime / API test kit). ShopCtas hides empty Chewy;
@@ -220,19 +222,6 @@ export default function WaterChangeCalculatorPage() {
               amazonLabel="Shop API Master Test Kit on Amazon →"
             />
           </div>
-        </div>
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the math
-          </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Water-change schedule notes
-          </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Send the change math — weekly percent and gallons for your tank type. No spam.
-          </p>
-
         </div>
 
         <h2 id="volume-math">How the volume math works</h2>
