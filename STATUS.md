@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish aquascape JourneyNext after #1604)
+**Last updated:** 2026-09-08 (COO — dog gestation JourneyNext after #1605)
 
-> **COO fish aquascape journey (2026-09-08):** After #1604. Hardscape and planting answer → `/setup/planted-tank-setup` + existing Seiryu-stone `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-aquascape-journey.md`.
+> **COO dog gestation journey (2026-09-08):** After #1605. 63-day due-date answer → `/tools/new-puppy-checklist` + existing puppy-scale `/go`. Empty packing-list husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-gestation-journey.md`.
+
+> **COO fish aquascape journey (2026-09-08):** After #1604. Hardscape and planting answer → `/setup/planted-tank-setup` + existing Seiryu-stone `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-aquascape-journey.md`. #1605 merged.
 
 > **COO dog harnesses journey (2026-09-08):** After #1603. Front-clip vs back-clip rule → `/tools/harness-collar-size` + existing Julius-K9 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-harnesses-journey.md`. #1604 merged.
 
