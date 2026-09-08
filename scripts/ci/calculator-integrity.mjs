@@ -7051,6 +7051,9 @@ const CALCULATORS = [
     id: 'dog · training-marker-training hops',
     file: 'apps/dog-com/src/app/training/marker-training/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 10-rule protocol' },
+      { re: /nextHref="\/training\/basic-commands"/, label: 'next step is the five commands, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/dog\+training\+clicker\?s=training-marker-training"/, label: 'journey hop reuses the existing clicker search' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-marker-training/, label: 'dog training clicker search hop (same query as basic-commands)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-marker-training/, label: 'puppy training treats search hop (same query as basic-commands / house-training / puppy-schedule)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-marker-training/, label: 'treat pouch search hop (same query as basic-commands / loose-leash / leash-reactivity)' },
@@ -7060,8 +7063,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the marker protocol/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete marker-training-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the 10-rule protocol, next step is the five-command guide + the existing clicker hop. Empty Keep-the-marker-protocol husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-positive-reinforcement hops',

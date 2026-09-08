@@ -8,6 +8,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Marker Training for Dogs — How to Start | Dog.com', description: 'Marker training uses a precise signal (click or verbal "yes") to mark the exact moment of correct behavior.', path: '/training/marker-training', type: 'article' })
@@ -45,16 +46,6 @@ export default function MarkerTrainingPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the marker protocol
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Marker-training protocol
-            </h2>
-
-          </div>
-
           <h2>Why Timing Is Everything</h2>
           <p>Dogs learn through contiguity — the events that occur close together in time become associated. When you say &quot;good dog&quot; 3 seconds after a correct behavior, the dog is not learning what you think — it is associating &quot;good dog&quot; with whatever it was doing 3 seconds after the behavior (probably looking at you after sitting, not the sit itself). The window for effective reinforcement is approximately 1.3 seconds in dogs — behaviors that are reinforced more than 1.3 seconds after they occur are not effectively marked.</p>
           <p>The marker solves this: a click or &quot;yes&quot; delivered in the exact moment of correct behavior bridges the time gap between the behavior and the treat. The dog hears the click while its haunches are touching the floor — not 2 seconds later while you reach for the treat. The mark is the information; the treat is the reinforcement that maintains the mark&apos;s value. This is why marker training produces faster, more precise behavior than treat-luring alone.</p>
@@ -71,6 +62,14 @@ export default function MarkerTrainingPage() {
             <li><strong>Rate of reinforcement matters</strong> — in early training, 8-10 reinforcements per minute is a good benchmark. If you are clicking less than this, the dog may be failing too often. Make the exercise easier.</li>
             <li><strong>Jackpots are real</strong> — occasionally delivering 3-5 treats at once (a jackpot) for an exceptional behavior creates enthusiasm and motivation. Used sparingly for genuinely outstanding performances.</li>
           </ol>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/training/basic-commands"
+            nextLabel="Use the charged marker on sit, down, stay, come, and leave-it"
+            nextBlurb="The click is only useful if it lands on a real behavior. Charge the marker, then run the five-command protocol in 3–5 minute sessions. The hop below is the same clicker search already on this page."
+            resourceHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"
+            resourceLabel="Browse dog training clickers on Amazon →"
+          />
 
           {/* Money path — live amazon-brand search hops (marker / clicker kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
