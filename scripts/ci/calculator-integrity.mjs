@@ -5634,6 +5634,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the slim-inch ceiling, next step is tank-mates + the existing heater hop (present on both fresh and salt shop lists). EmailCapture props and StockingShop water-type switch stay. No invented kitchen hops.',
   },
   {
+    id: 'fish · tank-mate-compatibility hops',
+    file: 'apps/fish-com/src/app/tools/tank-mate-compatibility-checker/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the compatibility checker' },
+      { re: /nextHref="\/setup\/quarantine-tank-guide"/, label: 'next step is quarantine, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+quarantine\+hospital\+tank\?s=tools-tank-mate-compatibility"/, label: 'journey hop reuses the existing quarantine/hospital search' },
+      { re: /amazon-brand\/aquarium\+tank\+divider\?s=tools-tank-mate-compatibility/, label: 'tank divider hop kept' },
+      { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\?s=tools-tank-mate-compatibility/, label: 'quarantine/hospital hop kept' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the checker verdict, next step is the quarantine guide + the existing quarantine/hospital hop. Shop dump stays below. No invented kitchen hops. Do not re-ship a new Amazon query.',
+  },
+  {
     id: 'fish · stocking-calculator shop',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/StockingShop.tsx',
     mustInclude: [
