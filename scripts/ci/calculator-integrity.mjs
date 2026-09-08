@@ -12695,6 +12695,9 @@ const CALCULATORS = [
     id: 'dog · best-slow-feeder-bowls hops',
     file: 'apps/dog-com/src/app/reviews/best-slow-feeder-bowls/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the twice-daily plus slow-feeder bloat rule' },
+      { re: /nextHref="\/nutrition\/how-much-to-feed"/, label: 'next step is how-much-to-feed, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/northmate\+green\+interactive\+feeder\?s=reviews-best-slow-feeder-bowls"/, label: 'journey hop reuses the existing Northmate Green search' },
       { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Northmate Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/outward\+hound\+fun\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Outward Hound Fun Feeder Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/lickimat\+splash\?s=reviews-best-slow-feeder-bowls/, label: 'existing LickiMat Splash Chewy hop kept (not an empty leftover button)' },
@@ -12704,8 +12707,9 @@ const CALCULATORS = [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1239: harness review under-hero is on main. Keep the existing sidebar capture and the already-hopped Northmate Amazon + Outward Hound / LickiMat Chewy searches; add under-hero capture with a concrete slow-feeder-checklist offer matching on-page twice-daily / 10x Fun Feeder / Northmate forage / LickiMat lick-to-calm copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the twice-daily plus slow-feeder bloat rule, next step is how-much-to-feed + the existing Northmate hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'horses · best-equine-supplements hops',
