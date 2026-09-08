@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — leftover fish hub honesty: homepage / tools / setup / substrate no longer sell a species headcount)
+**Last updated:** 2026-09-08 (COO — Horses blanket + cost JourneyNext; #1548 fish hub honesty merged)
 
-> **COO fish hub honesty leftover (2026-09-08):** After #1544 the stocking calculator is a slim-inch ceiling (`Species headcount: Not calculated`). Homepage HomeGuides, `/tools` hub, `/setup`, and substrate still sold “how many fish” / “numbers by species.” Copy aligned; calculator/model/shop untouched. Details: `ops/handoffs/2026-09-08-coo-fish-hub-honesty.md`.
+> **COO horses journeys (2026-09-08):** After #1548. Blanket-size calculator → `/tack/blanket-weights` + existing winter-blanket `/go`. Cost calculator → `/first-horse-roadmap` + existing halter `/go`. Empty fit-notes / owner-notes husks removed. No kitchen-kit hops. Details: `ops/handoffs/2026-09-08-coo-horses-journeys.md`.
+
+> **COO fish hub honesty leftover (2026-09-08):** After #1544 the stocking calculator is a slim-inch ceiling (`Species headcount: Not calculated`). Homepage HomeGuides, `/tools` hub, `/setup`, and substrate still sold “how many fish” / “numbers by species.” Copy aligned; calculator/model/shop untouched. Details: `ops/handoffs/2026-09-08-coo-fish-hub-honesty.md`. #1548 merged.
 
 > **COO verify #6 (2026-09-08):** Live after #1546. #1547 merged. Puppy/crate/setup journeys + five-site Save-a-copy magnets deliver real .txt. Journey `/go` hops 302 to Amazon with `tag=boltonpets20-20ls`. Code-side: ShopCtas + OnPageMagnet fire `affiliate_click` / `resource_save` when gtag exists. Inquire FormSubmit 502 (dog/fish/horses) and missing `INQUIRE_EMAIL` (vets/ferret) + missing GA on vets/ferret are Carlo-only. Details: `ops/handoffs/2026-09-08-coo-cx-verify-delivery.md`.
 

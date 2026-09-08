@@ -10,6 +10,7 @@ import {
   CrossPortfolioCard,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -139,13 +140,6 @@ export default function HorseBlanketSizeCalculatorPage() {
       <div className="carloOS-article">
         <ArticleByline siteName="Horses.com Editorial" publishedAt="2026-06-14" updatedAt="2026-09-03" reviewedBy="Editorial team" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fit notes
-          </p>
-
-        </div>
-
         <p>
           <strong>The quick answer:</strong> US horse-blanket sizing <em>is</em> the body measurement. Measure in a
           straight line from the centre of the chest, along the side, to the point of the buttock (the edge of the
@@ -159,6 +153,14 @@ export default function HorseBlanketSizeCalculatorPage() {
           US/UK size and gives the approximate EU/cm equivalent and the size category.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="horses-com"
+          nextHref="/tack/blanket-weights"
+          nextLabel="Pick fill weight after you have the size"
+          nextBlurb="The calculator is the chest-to-tail size. Fill weight is a second decision — sheet, light, medium, or heavy — from climate, clip, and shelter. Shop the size you just measured; do not guess from a stall-door card."
+          resourceHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"
+          resourceLabel="Browse winter horse blankets on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (winter blanket / turnout /
             stable / tape / cooler). ShopCtas hides empty Chewy; never href="#"

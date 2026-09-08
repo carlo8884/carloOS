@@ -14,6 +14,7 @@ import {
   CrossPortfolioCard,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 import StartupKit from './StartupKit'
@@ -193,14 +194,6 @@ export default function HorseCostCalculatorPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the worksheet
-          </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h3>
-
-        </div>
-
         <p>
           <strong>The quick answer:</strong> for most US owners, keeping one horse costs roughly{' '}
           <strong>$300&ndash;1,000+ per month</strong>, or about{' '}
@@ -220,6 +213,14 @@ export default function HorseCostCalculatorPage() {
           local quotes for the most accurate result.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="horses-com"
+          nextHref="/first-horse-roadmap"
+          nextLabel="Walk the first 90 days before you buy"
+          nextBlurb="The calculator is the monthly number. The first-horse roadmap is the sequence — tryout, PPE, first farrier, first week of handling — so the budget is attached to a plan. The day-one kit below is the husbandry starter, not a ranked list."
+          resourceHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
+          resourceLabel="Browse horse halters and leads on Amazon →"
+        />
         <p>
           Once you have a monthly number, pack the day-one kit that fills the one-time
           tack line. The six-item list below is a husbandry starting point — halter and
