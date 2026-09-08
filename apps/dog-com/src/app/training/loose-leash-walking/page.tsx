@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -43,15 +44,6 @@ export default function LooseLeashPage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the loose-leash plan
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Loose-leash protocol
-            </h2>
-
-          </div>
 
           <h2 id="why">Why Dogs Pull</h2>
           <p>Dogs pull on leash because pulling works. When the dog pulls forward and the human follows (even reluctantly), the dog gets to where it wants to go. Every walk where pulling produces forward movement reinforces the pulling behavior. The solution is not correction — it is making pulling ineffective. When pulling never produces forward motion, and a loose leash always does, dogs learn to walk loosely.</p>
@@ -68,6 +60,14 @@ export default function LooseLeashPage() {
           <p><strong>Front-clip harness (PetSafe Easy Walk):</strong> The leash attaches at the chest — when the dog pulls, they are redirected sideways rather than forward. Does not cause pain. Significantly reduces pulling in most dogs from day one while training is ongoing.</p>
           <p><strong>Head halter (Gentle Leader, Halti):</strong> Controls the head, which controls direction. Very effective at stopping pulling. Requires careful introduction (dogs often resist at first) and should not be used with a sudden jerk — only gentle guidance.</p>
           <p>Avoid: choke chains, prong collars, shock collars. These apply pain to stop pulling but do not teach the dog what to do instead, and are associated with increased anxiety and reactivity on leash.</p>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/harness-collar-size"
+            nextLabel="Size the front-clip harness before the next walk"
+            nextBlurb="Stop-and-wait only works if the leash is loose when the dog is beside you. Size the harness first, then use a front-clip so a pull turns the dog sideways instead of dragging you forward. The hop below is the same front-clip harness search already on this page."
+            resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
+            resourceLabel="Browse no-pull harnesses on Amazon →"
+          />
 
           {/* Money path — live amazon-brand search hops (loose-leash kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
