@@ -12,6 +12,7 @@ import {
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -205,6 +206,14 @@ export default function DogIdealWeightCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-calorie-calculator"
+            nextLabel="Turn the target into a daily scoop"
+            nextBlurb="Ideal weight is the number to aim for. The calorie calculator turns that target into a starting daily kcal — then the vet confirms the plan. Weigh the bowl; the hop below is the same portion-control scale search already on this page."
+            resourceHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
+            resourceLabel="Browse portion-control food scales on Amazon →"
+          />
         </div>
       </section>
 

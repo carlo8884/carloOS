@@ -5963,6 +5963,9 @@ const CALCULATORS = [
     id: 'dog · dog-ideal-weight-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the ideal-weight estimate' },
+      { re: /nextHref="\/tools\/dog-calorie-calculator"/, label: 'next step is daily kcal, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-ideal-weight"/, label: 'journey hop reuses the existing portion-scale search' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-dog-ideal-weight/, label: 'digital kitchen / pet scale search hop' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-ideal-weight/, label: 'portion-control food scale search hop' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-ideal-weight/, label: 'dog measuring tape / BCS chart search hop' },
@@ -5975,8 +5978,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete weight-check-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the ideal-weight estimate, next step is the calorie calculator + the existing portion-control scale hop. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · water-change-calculator',
