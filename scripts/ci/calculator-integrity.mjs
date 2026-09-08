@@ -7908,6 +7908,9 @@ const CALCULATORS = [
     id: 'dog · dog-grimace-scale hops',
     file: 'apps/dog-com/src/app/tools/dog-grimace-scale/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the grimace total' },
+      { re: /nextHref="\/tools\/is-this-a-dog-emergency"/, label: 'next step is emergency triage, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/dog\+first\+aid\+kit\?s=tools-dog-grimace-scale"/, label: 'journey hop reuses the existing first-aid kit search' },
       { re: /amazon-brand\/dog\+first\+aid\+kit\?s=tools-dog-grimace-scale/, label: 'dog first-aid kit search hop' },
       { re: /amazon-brand\/soft\+recovery\+cone\+dog\?s=tools-dog-grimace-scale/, label: 'soft recovery cone search hop' },
       { re: /amazon-brand\/orthopedic\+dog\+bed\?s=tools-dog-grimace-scale/, label: 'orthopedic dog bed search hop' },
@@ -7923,8 +7926,10 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /Trupanion|Healthy Paws|Embrace/, label: 'do not re-rank insurance carriers' },
+      { re: /Keep the pain-check chart/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete pain-check offer; every gear CTA is an amazon-brand category search (comfort / observation, not Rx); high-pain points at ER triage.',
+    why: '2026-09-08 journeys: after the grimace total, next step is emergency triage + the existing first-aid kit hop. Empty Keep-the-pain-check husk removed. Shop dump stays below. No invented kitchen hops. No named Rx.',
   },
   {
     id: 'horses · horse-grimace-scale',

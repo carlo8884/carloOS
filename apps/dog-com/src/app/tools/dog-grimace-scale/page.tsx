@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import DogGrimaceScale from './Calculator'
 
@@ -173,14 +174,6 @@ export default function DogGrimaceScalePage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Dog Grimace Scale</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the pain-check chart
-          </p>
-
-        </div>
-      </section>
 
       {/* Calculator */}
       <section id="assessor" className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -212,6 +205,14 @@ export default function DogGrimaceScalePage() {
             .
           </p>
           <DogGrimaceScale />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/is-this-a-dog-emergency"
+            nextLabel="If the face looks sudden or high-pain, run the emergency sign-list"
+            nextBlurb="The grimace total is a planning score, not a diagnosis. Around 4/10 or a sudden change is a reason to call the vet — skip the comfort kit and use the emergency sign-list first. The hop below is the same first-aid kit search already on this page, for packing on a calm day."
+            resourceHref="/go/amazon-brand/dog+first+aid+kit?s=tools-dog-grimace-scale"
+            resourceLabel="Browse dog first-aid kits on Amazon →"
+          />
         </div>
       </section>
 
