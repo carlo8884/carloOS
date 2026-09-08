@@ -7709,6 +7709,9 @@ const CALCULATORS = [
     id: 'dog · first-aid-kit hops',
     file: 'apps/dog-com/src/app/guides/dog-first-aid-kit/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the core kit list' },
+      { re: /nextHref="\/guides\/how-to-take-dogs-temperature"/, label: 'next step is a calm-day temperature reading, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/digital\+pet\+thermometer\?s=guides-first-aid-kit"/, label: 'journey hop reuses the existing digital thermometer search' },
       { re: /amazon-brand\/wound\+care\+gauze\?s=guides-first-aid-kit/, label: 'wound-care gauze search hop (same query as vets cat-emergency / complementary hops)' },
       { re: /amazon-brand\/vetrap\+cohesive\+bandage\?s=guides-first-aid-kit/, label: 'cohesive bandage wrap search hop (same query as vets emergency-triage-card)' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=guides-first-aid-kit/, label: 'digital pet thermometer search hop (same query as emergency triage / health hub)' },
@@ -7722,8 +7725,10 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazonHref=["'][^"']*(heartworm|flea\+tick|nsaid|ibuprofen|acetaminophen|medication|medicine|prescription)/, label: 'never hop medications — this guide is educational kit supplies, not a drug list' },
+      { re: /Keep the first-aid kit list/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete first-aid-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page first-aid / emergency-prep copy (gauze, bandage wrap, thermometer, saline flush, soft muzzle, carrier), never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the core kit list, next step is a calm-day temperature reading + the existing digital thermometer hop. Empty Keep-the-first-aid-kit-list husk removed. Shop dump stays below. No invented kitchen hops. No named Rx.',
   },
   {
     id: 'vets · is-this-a-cat-emergency',
