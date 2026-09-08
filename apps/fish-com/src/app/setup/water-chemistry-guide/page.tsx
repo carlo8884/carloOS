@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -57,6 +57,14 @@ export default function WaterChemistryGuidePage() {
 
         <h2>TDS — Total Dissolved Solids</h2>
         <p>TDS is measured with a simple meter and reflects the total concentration of dissolved substances in parts per million. It includes GH minerals, KH ions, nitrate, sodium, chloride, and everything else dissolved. TDS is useful as a quick check of overall water quality and RO membrane effectiveness (RO/DI water should read 0–10 TDS; tap water reads 100–400+ depending on your water supply). It does not distinguish between beneficial minerals and waste products — two waters with the same TDS can have very different chemistries. TDS is most useful as a consistency check and RO quality indicator rather than as a specific parameter to target.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/water-parameters"
+          nextLabel="Turn pH / GH / KH into this week's test order"
+          nextBlurb="The chemistry guide is the definitions. The water-parameters table is the weekly order — ammonia, nitrite, nitrate, pH, GH, and KH in one pass. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api%20freshwater%20master%20test%20kit?s=setup-water-chemistry-guide"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Water Test & Chemistry Tools — Where to Shop</div>
