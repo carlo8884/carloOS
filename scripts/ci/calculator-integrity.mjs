@@ -6178,6 +6178,9 @@ const CALCULATORS = [
     id: 'ferret · cage-size-calculator hops',
     file: 'apps/ferret-com/src/app/tools/cage-size-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the calculator' },
+      { re: /nextHref="\/care\/cage-setup"/, label: 'next step is cage setup, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator"/, label: 'journey hop reuses the existing multi-level cage search' },
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=tools-cage-size-calculator/, label: 'hammock / sleep-sack search hop' },
       { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-cage-size-calculator/, label: 'corner litter pan search hop' },
@@ -6188,8 +6191,11 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the footprint/, label: 'empty husk heading removed' },
+      { re: /Cage size shopping list/, label: 'empty shopping-list husk removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete cage-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the footprint, next step is cage setup + the existing multi-level cage hop. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'ferret · food-evaluator hops',

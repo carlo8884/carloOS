@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import CageSizeCalculator from './Calculator'
 
@@ -159,22 +160,18 @@ export default function CageSizeCalculatorPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Cage Size Calculator</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the footprint
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Cage size shopping list
-          </h2>
-
-        </div>
-      </section>
-
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-5xl">
           <CageSizeCalculator />
         </div>
+        <JourneyNext
+          siteId="ferret-com"
+          nextHref="/care/cage-setup"
+          nextLabel="Set the cage up before you buy extras"
+          nextBlurb="The calculator is the L×W×H footprint. Cage setup covers bar spacing, hammocks, and the four-hour out-of-cage rule. Shop the multi-level cage that matches the size — not a hamster habitat."
+          resourceHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator"
+          resourceLabel="Browse multi-level cages on Amazon →"
+        />
       </section>
 
       {/* Money path — live amazon-brand search hops (cage / hammock / pan / bedding).
