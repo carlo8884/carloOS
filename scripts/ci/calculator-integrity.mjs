@@ -12648,6 +12648,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the VOHC seal / calorie-count rule, next step is calorie calculator + the existing Greenies hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'dog · best-dog-food-small-breed hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-food-small-breed/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the small-breed calorie-density rule' },
+      { re: /nextHref="\/tools\/dog-calorie-calculator"/, label: 'next step is calorie calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed"/, label: 'journey hop reuses the existing Royal Canin Small Adult Chewy search' },
+      { re: /chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed/, label: 'existing Royal Canin Small Adult Chewy hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+small\+toy\+breed\?s=reviews-best-dog-food-small-breed/, label: 'existing Purina Pro Plan Small & Toy Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the small-breed calorie-density / kibble-size rule, next step is calorie calculator + the existing Royal Canin Small Adult hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [

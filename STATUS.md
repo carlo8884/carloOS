@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish canister-filters JourneyNext after #1620)
+**Last updated:** 2026-09-08 (COO — dog small-breed food JourneyNext after #1621)
 
-> **COO fish canister-filters journey (2026-09-08):** After #1620. 40–70 gallon canister size band → `/tools/filter-gph-calculator` + existing Fluval 307 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-canister-filters-journey.md`.
+> **COO dog small-breed food journey (2026-09-08):** After #1621. Calorie-density / small-mouth kibble rule → `/tools/dog-calorie-calculator` + existing Royal Canin Small Adult `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-small-breed-food-journey.md`.
+
+> **COO fish canister-filters journey (2026-09-08):** After #1620. 40–70 gallon canister size band → `/tools/filter-gph-calculator` + existing Fluval 307 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-canister-filters-journey.md`. #1621 merged.
 
 > **COO dog dental-chews journey (2026-09-08):** After #1619. VOHC seal / calorie-count rule → `/tools/dog-calorie-calculator` + existing Greenies `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-dental-chews-journey.md`. #1620 merged.
 
