@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -50,6 +50,14 @@ export default function BestPlantedFertilizersPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Macro vs Micro Nutrients</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth. Micros (iron, manganese, zinc, boron, etc.) drive color, health, and enzyme function. Most all-in-one fertilizers cover both. High-tech CO2 setups often need additional macro dosing as plants consume nutrients faster. Low-tech tanks with fish waste often have adequate macros — micros are what's missing.</p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/tools/co2-calculator"
+              nextLabel="Size CO2 before you pick a high-tech dose"
+              nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The hop below is the same Easy Green search already on this page."
+              resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
+              resourceLabel="Browse Easy Green planted-tank fertilizer on Amazon →"
+            />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" score={9.4} winner
