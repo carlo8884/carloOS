@@ -8006,6 +8006,9 @@ const CALCULATORS = [
     id: 'dog · harness-collar-size hops',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the size result' },
+      { re: /nextHref="\/tools\/new-puppy-checklist"/, label: 'next step is the new-puppy checklist, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-harness-collar-size"/, label: 'journey hop reuses the existing harness search' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-harness-collar-size/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
       { re: /amazon-brand\/flat\+buckle\+nylon\+dog\+collar\?s=tools-harness-collar-size/, label: 'flat buckle collar search hop (already on this page)' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-harness-collar-size/, label: 'measuring tape search hop (same query as BCS / puppy-weight)' },
@@ -8017,8 +8020,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the size chart/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete harness-size-chart offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the size result, next step is the new-puppy checklist + the existing Julius-K9 harness hop. Empty Keep-the-size-chart husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'vets · telehealth hops',

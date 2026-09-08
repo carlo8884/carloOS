@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -147,21 +148,17 @@ export default function HarnessCollarSizePage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Harness &amp; Collar Size</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the size chart
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Harness &amp; collar size chart
-          </h2>
-
-        </div>
-      </section>
-
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/new-puppy-checklist"
+            nextLabel="Pack the day-one kit with the sized harness"
+            nextBlurb="The calculator is a size band, not a brand. Add the harness to the new-puppy checklist, then size the crate for adult length. The hop below is the same Julius-K9 harness search already on this page."
+            resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
+            resourceLabel="Browse harnesses on Amazon →"
+          />
         </div>
       </section>
 
