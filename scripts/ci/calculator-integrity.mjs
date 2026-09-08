@@ -9095,6 +9095,9 @@ const CALCULATORS = [
     id: 'dog · dog-spay-neuter-timing hops',
     file: 'apps/dog-com/src/app/guides/dog-spay-neuter-timing/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the size-timing rule' },
+      { re: /nextHref="\/tools\/puppy-weight-predictor"/, label: 'next step is the puppy-weight predictor, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/heavy\+duty\+dog\+exercise\+pen\?s=guides-dog-spay-neuter-timing"/, label: 'journey hop reuses the existing heavy-duty exercise-pen search' },
       { re: /amazon-brand\/washable\+dog\+heat\+pants\?s=guides-dog-spay-neuter-timing/, label: 'washable dog heat-pants search hop (matches on-page bloody-phase / heat-cycle copy; unused vs #848–#1040 washable+dog+pee+pads / washable+dog+bed+cover)' },
       { re: /amazon-brand\/male\+dog\+belly\+band\?s=guides-dog-spay-neuter-timing/, label: 'male dog belly-band search hop (matches on-page indoor-marking copy; unused vs #848–#1040 dog+anxiety+wrap / vet+wrap hops)' },
       { re: /amazon-brand\/heavy\+duty\+dog\+exercise\+pen\?s=guides-dog-spay-neuter-timing/, label: 'heavy-duty dog exercise-pen search hop (matches on-page yard-not-fully-fenced containment copy; unused vs #848–#1040 crate / baby-gate hops)' },
@@ -9106,8 +9109,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete intact-dog-management-checklist offer; every gear CTA is an amazon-brand category search matching on-page delayed-timing lifestyle copy (washable dog heat pants for the bloody phase of a heat cycle, a male dog belly band for indoor marking, a heavy-duty dog exercise pen when the yard is not fully fenced), never a placeholder ASIN, a washable-pee-pad / bed-cover hop, a recovery-cone / e-collar hop, a crate / baby-gate hop, a #1040 BCS tape / chart / treat hop, a GPS-collar hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the size-timing rule, next step is the puppy-weight predictor + the existing heavy-duty exercise-pen hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · anemia-in-dogs hops',
