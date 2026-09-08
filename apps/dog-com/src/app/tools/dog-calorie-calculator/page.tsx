@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -149,22 +150,18 @@ export default function DogCalorieCalculatorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Dog Calorie Calculator</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the target
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Daily kcal worksheet
-          </h2>
-
-        </div>
-      </section>
-
       {/* Calculator */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-4xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-body-condition-score"
+            nextLabel="Check the number against body condition"
+            nextBlurb="The calculator is a starting scoop. BCS is whether that scoop is right — ribs felt, waist seen. Weigh the meal; the hop below is the same kitchen-scale search already on this page."
+            resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-dog-calorie-calculator"
+            resourceLabel="Browse kitchen gram scales on Amazon →"
+          />
         </div>
       </section>
 
