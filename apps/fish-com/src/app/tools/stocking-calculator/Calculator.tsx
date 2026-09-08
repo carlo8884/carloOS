@@ -37,8 +37,9 @@ export default function StockingCalculator() {
     if (gal <= 0) return null
 
     const surfaceIn2 = l * w
-    // Modern surface-area model: ~12 sq inches of surface per inch of slim community fish (freshwater)
-    // Saltwater fish need ~2x the surface area per inch due to oxygen demand and territorial behavior
+    // Rough planning model only: ~12 sq in surface per slim-community inch (freshwater).
+    // Saltwater uses ~2× surface per inch. This is a bioload ceiling heuristic, not
+    // species advice — it does not encode schooling, adult size, or territory.
     const baseInPerSqIn = waterType === 'salt' ? 1 / 24 : 1 / 12
     const filtrationAdj = FILTRATION_FACTOR[filtration]
     const styleAdj = STYLE_FACTOR[style]
@@ -47,25 +48,19 @@ export default function StockingCalculator() {
     // Volume sanity cap — even infinite surface can't override absolute water volume
     const slimInchesVolume = gal * (waterType === 'salt' ? 0.6 : 1.1) * filtrationAdj * styleAdj
     const slimInches = Math.min(slimInchesSurface, slimInchesVolume)
-
-    // Convenience: convert "slim inches" into approximate counts for common community fish
-    const examples = waterType === 'salt'
-      ? [
-          { name: 'Clownfish (3 in)', count: Math.floor(slimInches / 4) },
-          { name: 'Royal Gramma (3 in)', count: Math.floor(slimInches / 4) },
-          { name: 'Yellow Tang (6 in)', count: Math.floor(slimInches / 9) },
-        ]
-      : [
-          { name: 'Neon Tetra (1.5 in)', count: Math.floor(slimInches / 1.5) },
-          { name: 'Harlequin Rasbora (2 in)', count: Math.floor(slimInches / 2) },
-          { name: 'Corydoras (2.5 in)', count: Math.floor(slimInches / 3) },
-          { name: 'Angelfish (5 in)', count: Math.floor(slimInches / 7) },
-        ]
+    // Default 40g / 36×18 community / rated: volume 44, surface 54, ceiling 44, 60–80% band 26–35
+    const planningLow = slimInches * 0.6
+    const planningHigh = slimInches * 0.8
+    const boundBy = slimInchesVolume <= slimInchesSurface ? 'volume' : 'surface area'
 
     return {
       slimInches,
+      slimInchesSurface,
+      slimInchesVolume,
       surfaceIn2,
-      examples,
+      planningLow,
+      planningHigh,
+      boundBy,
     }
   }, [tankGal, tankL, tankW, waterType, filtration, style])
 
@@ -133,20 +128,27 @@ export default function StockingCalculator() {
       {result && result.slimInches > 0 && (
         <ResultPanel
           primary={{
-            label: 'Estimated stocking capacity',
-            value: `${result.slimInches.toFixed(0)} inches of slim fish`,
-            sub: `~${result.surfaceIn2.toFixed(0)} sq in surface area · filtration- and style-adjusted`,
+            label: 'Rough planning estimate — not a species count',
+            value: `${result.slimInches.toFixed(0)} slim inches`,
+            sub: `Slim-inch bioload ceiling · bound by ${result.boundBy} · ~${result.surfaceIn2.toFixed(0)} sq in surface`,
           }}
-          secondary={result.examples.map((e) => ({
-            label: e.name,
-            value: e.count > 0 ? `~${e.count} fish` : '— too small',
-          }))}
+          secondary={[
+            { label: 'Volume bound', value: `${result.slimInchesVolume.toFixed(0)} slim in` },
+            { label: 'Surface bound', value: `${result.slimInchesSurface.toFixed(0)} slim in` },
+            {
+              label: '60–80% planning band',
+              value: `${result.planningLow.toFixed(0)}–${result.planningHigh.toFixed(0)} slim in`,
+            },
+            { label: 'Species headcount', value: 'Not calculated' },
+          ]}
           note={
             <>
-              <strong className="text-white/90">This is a starting point, not a hard limit.</strong>{' '}
-              Honest stocking depends on the actual species — body mass, swimming style, schooling needs, and temperament matter more than length.
-              Schooling fish need groups of 6+, territorial fish need <em>much</em> more space than their size suggests, and a heavy bioload (goldfish, oscars)
-              effectively halves capacity even with great filtration. Use this number as a ceiling and stock to 60–80% for stability.
+              <strong className="text-white/90">This is a rough planning ceiling, not stocking advice.</strong>{' '}
+              The math is a slim-inch / bioload estimate (surface area vs volume, then filtration and aquascape
+              factors). It does not encode schooling minimums, adult size, territory, or temperament — so it
+              cannot tell you how many angels, tetras, or tangs to buy. Use the 60–80% band as a conservative
+              starting point, then choose species from care guides and a compatibility check. Heavy-bodied fish
+              (goldfish, oscars) consume this ceiling much faster than slim community fish.
             </>
           }
         />

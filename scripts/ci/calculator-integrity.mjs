@@ -6806,6 +6806,23 @@ const CALCULATORS = [
     why: 'Money path leftover after #1538: dog.com /breeds/match wizard is on main. This existing dog.com /breeds/<slug>/health shared renderer (static breed folders + /breeds/[slug]/health) had sidebar EmailCapture only (source breed-health-${slug}, not under-hero), insurance CTAs, and no AffiliateDisclosure / amazon-brand kitchen hops. Keep the existing sidebar capture and existing insurance CTAs; add under-hero capture; add amazon-brand kitchen hops matching on-page common / occasional / rare issue map / OFA-CHIC screening table / AVMA-breed-club copy (a laminated dog breed-health-spoke issue chart so this remaining-breed map is posted on the fridge, a fridge breed-health-spoke screen card so the OFA / CHIC notes are labeled in the kitchen, a canine breed-health-spoke handbook so the OFA / CHIC / AVMA row is a physical kitchen book), never a placeholder ASIN, a sibling health-spoke hop, a breeds-hub hop, a crate hop, a first-aid-kit hop, a flea / heartworm / nsaid / vaccine hop, or an Rx / dose product hop. Educational kitchen searches only — not a ranked product list, not a substitute for a veterinarian. Dog.com does not sell insurance. Directory import left untouched. Do not re-open #1165 / #1251–#1538 / crate-size / stocking / horses-breeds.',
   },
   {
+    id: 'fish · stocking-calculator',
+    file: 'apps/fish-com/src/app/tools/stocking-calculator/Calculator.tsx',
+    mustInclude: [
+      { re: /waterType === 'salt' \? 1 \/ 24 : 1 \/ 12/, label: 'surface model 1/12 fresh / 1/24 salt' },
+      { re: /gal \* \(waterType === 'salt' \? 0\.6 : 1\.1\)/, label: 'volume slim-inch cap 1.1 fresh / 0.6 salt' },
+      { re: /Default 40g \/ 36×18 community \/ rated: volume 44, surface 54, ceiling 44, 60–80% band 26–35/, label: 'default 40g smoke: ceiling 44 slim in, not a species count' },
+      { re: /Rough planning estimate — not a species count/, label: 'output labeled as rough estimate, not species advice' },
+      { re: /Species headcount/, label: 'species headcount explicitly not calculated' },
+    ],
+    mustExclude: [
+      { re: /Angelfish/, label: 'no angelfish species-count tiles' },
+      { re: /Neon Tetra/, label: 'no neon-tetra species-count tiles' },
+      { re: /Math\.floor\(slimInches \//, label: 'no slim-inch ÷ length species counts' },
+    ],
+    why: '2026-09-07 trust pivot: the model is a slim-inch / bioload ceiling (volume ≈ 1.1 in/gal fresh), not species-specific stocking. Species tiles overstated (default 40g → ~6 angels). Lock the estimate label and forbid count tiles.',
+  },
+  {
     id: 'fish · stocking-calculator hops',
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
@@ -6819,13 +6836,16 @@ const CALCULATORS = [
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-stocking-calculator/, label: 'API master test kit search hop (same query as cycling / water-change tools)' },
       { re: /amazon-brand\/aquarium\+fish\+net\+acclimation\+kit\?s=tools-stocking-calculator/, label: 'net / acclimation kit search hop (same query as tank-mate tool)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /slim-inch bioload ceiling, not a species count/, label: 'page marketing does not overclaim a species count' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /body-mass conversion factors/, label: 'no fake species-conversion marketing' },
+      { re: /How Many Fish Can I Keep/, label: 'title no longer implies a precise headcount' },
     ],
-    why: 'Money path: under-hero capture with a concrete stocking-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: 'Money path: under-hero capture with a concrete stocking-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. 2026-09-07 trust pivot: page copy must keep the slim-inch ceiling framed as a rough estimate, not a species count.',
   },
   {
     id: 'horses · horse-blanket-size-calculator',
