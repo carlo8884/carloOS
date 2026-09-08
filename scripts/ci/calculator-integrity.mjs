@@ -11769,6 +11769,9 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-filters hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-filters/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the HOB / canister / sponge type rule' },
+      { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter-GPH, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquaclear\+70\+filter\?s=reviews-best-aquarium-filters"/, label: 'journey hop reuses the existing AquaClear 70 search' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=reviews-best-aquarium-filters/, label: 'existing AquaClear-70 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hikari\+bacto\+surge\+sponge\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Hikari-Bacto-Surge amazon-brand hop kept (do not re-ship a new query)' },
@@ -11780,8 +11783,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1183: keep the existing sidebar capture and the already-hopped AquaClear / Fluval / Hikari / Aqueon amazon-brand searches; add under-hero capture with a concrete aquarium-filter-checklist offer matching on-page HOB / canister / sponge / fry-safe copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the HOB / canister / sponge type rule, next step is filter-GPH + the existing AquaClear 70 hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · best-canister-filters hops',
