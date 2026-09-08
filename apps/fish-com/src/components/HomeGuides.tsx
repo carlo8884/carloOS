@@ -63,7 +63,7 @@ export function HomeGuides() {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
           <ToolCard href="/tools/aquarium-volume-calculator" eyebrow="Calculator" title="Aquarium Volume Calculator" desc="Enter length, width, and height in any unit — get exact gallons and liters, plus bioload math for the fish you’re planning to keep." cta="Calculate tank volume" />
-          <ToolCard href="/tools/stocking-calculator" eyebrow="Calculator" title="Stocking Calculator" desc="How many fish can your tank safely hold? Bioload-based numbers by species, filter type, and tank footprint — not inch-per-gallon." cta="Check your stocking" />
+          <ToolCard href="/tools/stocking-calculator" eyebrow="Calculator" title="Stocking Calculator" desc="A slim-inch bioload ceiling from footprint, volume, and filter class — not a species headcount, and not inch-per-gallon." cta="Check your stocking" />
           <ToolCard href="/tools/water-change-calculator" eyebrow="Calculator" title="Water-Change Calculator" desc="Enter current nitrate level and your target — get the exact percentage and gallon volume to change." cta="Plan your water change" />
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">

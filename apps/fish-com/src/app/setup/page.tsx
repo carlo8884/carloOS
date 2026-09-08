@@ -117,7 +117,7 @@ export default function AquariumSetupPage() {
           <li><strong>40+ gallons</strong> — easiest to maintain, widest species selection, most stable parameters. If space allows, start here.</li>
         </ul>
         <p className="text-sm text-brand-text-mid">
-          Sizing a specific tank? Use the <Link href="/tools/aquarium-volume-calculator" className="text-brand-primary no-underline hover:underline">aquarium volume calculator</Link> to convert dimensions to gallons, and the <Link href="/tools/stocking-calculator" className="text-brand-primary no-underline hover:underline">stocking calculator</Link> to plan how many fish a given tank supports.
+          Sizing a specific tank? Use the <Link href="/tools/aquarium-volume-calculator" className="text-brand-primary no-underline hover:underline">aquarium volume calculator</Link> to convert dimensions to gallons, and the <Link href="/tools/stocking-calculator" className="text-brand-primary no-underline hover:underline">stocking calculator</Link> to sketch a slim-inch bioload ceiling — not a species headcount.
         </p>
 
         <h2 id="equipment">Step 2 — Equipment You Actually Need</h2>

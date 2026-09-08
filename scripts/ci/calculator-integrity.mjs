@@ -5657,6 +5657,52 @@ const CALCULATORS = [
     why: '2026-09-08 saltwater shop bug: the lower kit was a static freshwater list. Fresh hops stay; salt hops must render when waterType is salt.',
   },
   {
+    id: 'fish · stocking hub honesty · HomeGuides',
+    file: 'apps/fish-com/src/components/HomeGuides.tsx',
+    mustInclude: [
+      { re: /slim-inch bioload ceiling/, label: 'homepage stocking card matches calculator honesty' },
+    ],
+    mustExclude: [
+      { re: /numbers by species/, label: 'no leftover species-count marketing' },
+      { re: /How many fish can your tank safely hold/, label: 'no leftover headcount question' },
+    ],
+    why: '2026-09-08 leftover after #1544: the stocking calculator no longer outputs a species headcount, but the homepage still sold “bioload-based numbers by species.” Hub copy must match the tool.',
+  },
+  {
+    id: 'fish · stocking hub honesty · tools hub',
+    file: 'apps/fish-com/src/app/tools/page.tsx',
+    mustInclude: [
+      { re: /slim-inch bioload ceiling/, label: 'tools hub stocking card matches calculator honesty' },
+    ],
+    mustExclude: [
+      { re: /how many fish can I stock/, label: 'hero no longer promises a headcount' },
+      { re: /How many fish can your tank hold/, label: 'card no longer promises a headcount' },
+    ],
+    why: '2026-09-08 leftover after #1544: tools hub hero + stocking card still sold a species headcount the calculator does not compute.',
+  },
+  {
+    id: 'fish · stocking hub honesty · setup',
+    file: 'apps/fish-com/src/app/setup/page.tsx',
+    mustInclude: [
+      { re: /slim-inch bioload ceiling/, label: 'setup hub links stocking as a ceiling, not a headcount' },
+    ],
+    mustExclude: [
+      { re: /how many fish a given tank supports/, label: 'no leftover headcount marketing' },
+    ],
+    why: '2026-09-08 leftover after #1544: /setup still pointed at the stocking calculator as a species planner.',
+  },
+  {
+    id: 'fish · stocking hub honesty · substrate',
+    file: 'apps/fish-com/src/app/tools/substrate-calculator/page.tsx',
+    mustInclude: [
+      { re: /slim-inch bioload ceiling/, label: 'substrate cross-link matches stocking honesty' },
+    ],
+    mustExclude: [
+      { re: /how many fish the net volume/, label: 'no leftover headcount marketing' },
+    ],
+    why: '2026-09-08 leftover after #1544: substrate calculator still described stocking as a fish headcount on net volume.',
+  },
+  {
     id: 'fish · aquarium-setup-builder hops',
     file: 'apps/fish-com/src/app/tools/aquarium-setup-builder/page.tsx',
     mustInclude: [

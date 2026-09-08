@@ -273,8 +273,8 @@ export default function SubstrateCalculatorPage() {
         <p>
           Once you know your substrate volume, size everything else around the same tank:{' '}
           <Link href="/tools/aquarium-volume-calculator">calculate water volume</Link> for dosing, the{' '}
-          <Link href="/tools/stocking-calculator">stocking calculator</Link> for how many fish the net volume
-          can hold, the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> for a slim-inch bioload ceiling
+          on the net volume — not a species headcount, the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the
           same gallons, and the <Link href="/tools/water-change-calculator">water change calculator</Link> for
           the weekly siphon. Building the whole kit? Start with the{' '}
           <Link href="/tools/aquarium-setup-builder">aquarium setup builder</Link>.
