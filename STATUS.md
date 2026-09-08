@@ -3,7 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-06-15 (COO — "Big Ten" programmatic-engine wave: PRs #798–#803)
+**Last updated:** 2026-09-08 (COO — CX batch 1: email honesty + real magnets + value-first on five earning sites; GROK.md queue replaced “reconfirm and hold”)
+
+> **COO CX batch 1 (2026-09-08):** Carlo queue — finish CX and prove commercial journeys on dog / fish / horses / vets / ferret. No DNS / spend. Shared `OnPageMagnet` now requires a real resource (or the offer is removed). Under-hero strips link puppy/crate, new-tank/stocking, first-horse, triage card, first-year schedule. Dog `/symptoms` puts Rule #1 + ER list before the decorative image. Empty Owner notes / contradictory inbox copy stripped. Details: `ops/handoffs/2026-09-08-coo-cx-email-magnet-batch1.md`.
+
+**Previous update:** 2026-06-15 (COO — "Big Ten" programmatic-engine wave: PRs #798–#803)
 
 > **COO "Big Ten" programmatic-engine wave (2026-06-15 — PRs #798–#803 + capstone):**
 > Owner-directed ("go for the next Big Ten"). Parallel isolated-worktree agents on non-overlapping apps + COO-built marquee, every health verdict COO-reviewed against veterinary references before merge.

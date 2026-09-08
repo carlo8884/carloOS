@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food.', path: '/nutrition/puppy-nutrition', type: 'article' })
@@ -19,27 +19,11 @@ export default function PuppyNutritionPage() {
         <RelatedLinks title="Related" links={[{ label: 'How Much to Feed Your Dog', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }]} />
         <RelatedLinks title="Planning Ahead for a New Puppy" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }, { label: 'New Puppy Checklist', href: '/tools/new-puppy-checklist' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-puppy" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="nutrition-puppy-under-hero"
-              />
-            </div>
         <h2 id="formulas">Puppy Formula vs Adult Food</h2>
         <p>Puppy formulas are nutritionally distinct from adult formulas in ways that matter. Puppies require more protein, more fat, more calories per pound of body weight, and a different calcium-to-phosphorus ratio than adults. Feeding adult food to a growing puppy is not ideal and can result in nutrient deficiencies that affect development. Conversely, feeding adult food with appropriate supplementation is not a substitute — the ratio adjustments in puppy-specific formulas are designed for the requirements of growth.</p>
         <p>Choose a puppy food with an <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>

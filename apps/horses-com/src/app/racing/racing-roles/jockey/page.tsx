@@ -18,7 +18,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -145,13 +144,7 @@ export default function JockeyRolePage() {
                 { label: 'Horse Racing Glossary', href: '/racing/glossary' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-roles-jockey"
-            />
+
           </>
         }
       >
@@ -162,23 +155,6 @@ export default function JockeyRolePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-roles-jockey-under-hero"
-            />
-          </div>
 
           <p>The jockey is the licensed professional who rides the horse in a race. Far more than a passenger, a top jockey is a finely conditioned athlete and a split-second tactician, judging pace, saving ground, and timing a run -- often at 35+ mph in a tight pack. The partnership between horse and rider is one of the sport&apos;s defining elements, and on the closest of finishes it is frequently the rider&apos;s judgment that separates the winner from the rest.</p>
 

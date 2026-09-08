@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Where is the triage card?',
-    answer: 'On this page. The categories and vital-sign table below list species-specific normal ranges for dogs, cats, ferrets, and rabbits, plus three triage buckets: ER NOW, same-day vet, monitor-at-home. You can read or print them from your browser. Email delivery is not live, and no signup is required.',
+    answer: 'On this page. The categories and vital-sign table below list species-specific normal ranges for dogs, cats, ferrets, and rabbits, plus three triage buckets: ER NOW, same-day vet, monitor-at-home. You can read, print, or save a copy from this page.',
   },
   {
     question: 'Is this a substitute for calling my vet?',
@@ -56,7 +56,7 @@ const FAQS = [
   },
   {
     question: 'Can I get this card by email?',
-    answer: 'Not right now. Email delivery is not live. The wallet and fridge card stay on this page — print or save a copy. No signup is required.',
+    answer: 'The wallet and fridge card stay on this page. Print from your browser or save a copy below. No signup is required.',
   },
   {
     question: 'Are there affiliate links?',
@@ -421,27 +421,45 @@ export default function EmergencyTriageCardPage() {
           </div>
         </div>
       </section>
-
-      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
-          <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            The triage card + first-aid kit list
-          </h2>
-          <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
-            On this page — not emailed. Scroll up for the card. Email delivery is not live.
-            A triage aid, not a substitute for veterinary care.
-          </p>
-          <div className="max-w-md mx-auto">
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="emergency-triage-card-under-hero"
-            />
-          </div>
+          <EmailCapture
+            variant="section"
+            siteId="vets-co"
+            title="Save the triage card"
+            subtitle="ER-now, same-day, and monitor-at-home signs from this page. A triage aid, not a substitute for veterinary care."
+            source="emergency-triage-card-under-hero"
+            resourceText={`Pet emergency triage card
+
+ER NOW — drive to the nearest 24-hour ER
+• Unresponsive, collapsed, or seizing > 2 minutes
+• Difficulty breathing; pale or blue gums; open-mouth breathing in a cat
+• Bloated, hard abdomen with unproductive retching (suspect GDV)
+• Toxin ingestion: antifreeze, rodenticide, xylitol, lily (cats), toxic-dose chocolate, grapes
+• Trauma: hit by car, fall from height, large-dog attack puncture
+• Male cat straining to urinate with nothing coming out
+• Heat stroke: heavy panting, brick-red gums, temp > 104.5 °F
+• Bleeding that does not slow with 5 min of firm pressure
+• Venomous-snake bite, facial swelling, anaphylaxis
+
+Same-day vet
+• Vomiting or diarrhea > 3 times in a day, no other red flags
+• Limping overnight that has not resolved (non-weight-bearing is ER NOW)
+• A new lump that is hot, painful, or growing rapidly
+• Not eating for 24 h (cats: faster red flag — lipidosis risk)
+• Single seizure, fully recovered in 5 min, no prior history
+
+Monitor at home
+• One episode of vomiting or one loose stool, normal behaviour
+• Skipping one meal in a dog that has done so before
+• Mild morning stiffness that resolves with movement
+• Small superficial scrape, stopped bleeding, clean
+
+Poison control: ASPCA 888-426-4435 · Pet Poison Helpline 855-764-7661 (both fee-based)
+This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest ER.
+`}
+            resourceLabel="Save the triage card"
+          />
         </div>
       </section>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Doberman Pinscher Breed Guide — DCM Screening, vWD | Dog.com', description: 'Dobermans have the highest DCM rate of any breed (up to 58% by age 7). Annual Holter + echo is required.', path: '/breeds/doberman-pinscher', type: 'article' })
@@ -38,27 +38,11 @@ export default function DobermanPage() {
           { label: 'Doberman Pinscher vs Rottweiler', href: '/compare/doberman-pinscher-vs-rottweiler' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-doberman" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-doberman-pinscher-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 1860s Apolda: Louis Dobermann needed a tax-collector / night-watch dog, and that power / loyalty history is why a household Doberman still needs annual Holter-plus-echo from age 3, not a crate-only afternoon. Doberman Pinschers are typically first-time-owner unfriendly — NO-typically — unless the household already commits to the age-3 cardiac protocol, a vWD DNA test before any surgery, and the 40–58% DCM load.</p>
 

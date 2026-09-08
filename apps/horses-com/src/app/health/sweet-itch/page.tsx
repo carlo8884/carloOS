@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,13 +107,7 @@ export default function SweetItchPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="health-sweet-itch"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -123,23 +117,6 @@ export default function SweetItchPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-sweet-itch-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Is Sweet Itch</h2>
           <p>Sweet itch -- known clinically as Culicoides hypersensitivity or summer seasonal recurrent dermatitis -- is an allergic skin disease. It is one of the most common allergic conditions in horses worldwide and is strongly seasonal, flaring when the biting insects that trigger it are active and subsiding in cold weather. The hallmark is relentless itching that drives the horse to rub and damage its own skin.</p>
@@ -166,7 +143,6 @@ export default function SweetItchPage() {
           </ul>
 
           <h2 id="medical">Veterinary Management</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Sweet-Itch Kit</h2>
           <p>Everyday physical supplies that match the fitted-barrier copy above — a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>

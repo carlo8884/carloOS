@@ -8,7 +8,6 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
-  EmailCapture,
 } from '@carloOS/ui'
 import { breedsForSpecies } from '../../../../../data/insurance-breeds-all'
 import { States } from '../../../../../data/states'
@@ -182,16 +181,6 @@ export default async function StateInsuranceHub({ params }: PageParams) {
       </section>
 
       {/* ─── Lead magnet ──────────────────────────────────────────────────── */}
-      <section className="mt-12">
-        <EmailCapture
-          variant="section"
-          siteId="vets-co"
-          source={`insurance-state-${state}`}
-          title="Free: Pet Insurance Comparison Spreadsheet"
-          subtitle="9 major carriers side-by-side — premiums, deductibles, waiting periods."
-          ctaText="Send the notes"
-        />
-      </section>
     </article>
   )
 }

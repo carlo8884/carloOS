@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Border Collie Guide — Intelligence, MDR1 Gene | Dog.com', description: 'Border Collies are the most intelligent dog breed — and the most demanding. MDR1 drug sensitivity affects the breed.', path: '/breeds/border-collie', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Border Collie Breed Guide', description: 'Intelligence requirements, MDR1 gene, Collie Eye Anomaly, and exercise for Border Collies.', url: 'https://dog.com/breeds/border-collie', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -37,27 +37,11 @@ export default function BorderColliePage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-border-collie" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-border-collie-under-hero"
-          />
-        </div>
 
         <p>The working story starts on the Anglo-Scottish border: sheepdogs selected to move livestock with a fixed stare rather than a bark. That &quot;eye&quot; / 1,000-object intelligence history is why a household Border Collie still needs a daily job plus two hours of vigorous work, not a crate-only afternoon. Border Collies are typically first-time-owner unfriendly — NO-typically — unless the household already commits to a structured sport, MDR1 testing before any listed drug, and redirecting the eye-stalk away from children and cars.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 const SOURCES = [
@@ -186,13 +186,7 @@ export default function FerretInsulinomaPage() {
               </a>
             </div>
             <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Health Notes"
-              subtitle="Evidence-based ferret health, monthly."
-              source="health-insulinoma"
-            />
+
           </>
         }
       
@@ -217,23 +211,6 @@ export default function FerretInsulinomaPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-insulinoma-under-hero"
-            />
-          </div>
 
           <DropCap>
             Insulinoma is the disease most ferret owners eventually learn the

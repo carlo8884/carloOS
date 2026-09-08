@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,13 +97,7 @@ export default function ForageBasicsPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="nutrition-forage"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -113,23 +107,6 @@ export default function ForageBasicsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-forage-under-hero"
-            />
-          </div>
 
           <h2 id="fiber">Why Fiber First</h2>
           <p>The horse evolved grazing fibrous grasses for 16 or more hours a day. Its teeth, its small stomach that secretes acid continuously, and its enormous fermenting hindgut are all built for a constant flow of fiber. Feeding a forage-based diet keeps that system working as designed: it buffers stomach acid, keeps the gut moving, generates body heat, and occupies the horse mentally. Diets short on forage and heavy in grain are behind much of the colic, ulceration, and behavioral trouble seen in domestic horses.</p>

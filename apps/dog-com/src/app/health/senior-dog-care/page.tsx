@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -110,29 +110,10 @@ export default function SeniorDogCarePage() {
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com"
-          title="Free Dog Health Tips"
-          subtitle="Practical guidance every Tuesday."
-          source="health-senior-dog" />
+
       </>}
     >
       <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-senior-dog-care-under-hero"
-            />
-          </div>
 
         <h2 id="when">When Is a Dog Senior?</h2>
         <p>The answer depends on size. Small breeds (under 20 lbs) age slowly — a 10-year-old Chihuahua is early senior. Giant breeds age rapidly — a 6-year-old Great Dane is already entering senior territory. Large breeds like Golden Retrievers and German Shepherds are considered senior at 7–8 years. This matters because it determines when to shift to twice-yearly vet exams, when to begin cancer screening, and when to start senior nutritional adjustments.</p>

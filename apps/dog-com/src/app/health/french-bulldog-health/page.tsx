@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -88,29 +88,10 @@ export default function FrenchBulldogHealthPage() {
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com"
-          title="Free Dog Health Tips"
-          subtitle="Practical guidance every Tuesday."
-          source="health-french-bulldog" />
+
       </>}
     >
       <div className="carloOS-article">
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="health-french-bulldog-health-under-hero"
-          />
-        </div>
 
         <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog in natural light" aspect="16:9" priority />
         <p>French Bulldogs have become one of the most registered breeds globally — a reflection of their genuine charm as companion dogs. They are adaptable, affectionate, low-exercise, and endlessly entertaining. They are also a breed whose extreme anatomy creates near-inevitable health problems that every owner must understand, budget for, and actively manage throughout the dog&apos;s life.</p>

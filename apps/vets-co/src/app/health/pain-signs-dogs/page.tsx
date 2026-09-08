@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Signs Your Dog Is in Pain — Subtle | Vets.co', description: 'Dogs hide pain well. 14 signs — from obvious limping to subtle changes in posture, appetite, and behavior — that indicate a dog is experiencing pain.', path: '/health/pain-signs-dogs', type: 'article' })
@@ -51,27 +51,11 @@ export default function PainSignsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pain-signs" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-pain-signs-dogs-under-hero"
-            />
-          </div>
 
           <p className="text-base text-brand-text-mid leading-relaxed mb-8">A stoic dog in chronic pain may show none of the classic &quot;pain&quot; behaviors — no whimpering, no limping, no obvious distress. They adapt. They stop doing things that hurt, move differently, interact less. The change from baseline is what matters. Know your dog&apos;s normal. Household observation gear — an egg-crate foam dog kennel pad, carpeted wooden pet steps, a wide-platform veterinary floor scale — is how posture, stair reluctance, restlessness, and weight change stay visible. It does not treat pain, it does not hop an NSAID, and it is not a reason to delay a veterinary exam.</p>
           {SIGNS.map((item, i) => (

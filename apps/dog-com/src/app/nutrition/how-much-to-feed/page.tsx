@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -26,28 +26,11 @@ export default function HowMuchToFeedPage() {
         <TableOfContents items={[{ label: 'Body Condition Scoring', href: '#bcs' }, { label: 'Using Package Guidelines', href: '#guidelines' }, { label: 'Calorie Calculator', href: '#calculator' }, { label: 'Adjusting for Activity', href: '#activity' }, { label: 'Puppies', href: '#puppies' }, { label: 'Senior Dogs', href: '#seniors' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-how-much" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-how-much-under-hero"
-          />
-        </div>
 
         <h2 id="bcs">Body Condition Score — The Most Important Tool</h2>
         <p>Calorie tables and package guidelines are starting points. The definitive measure of whether you are feeding the right amount is your dog&apos;s body condition score (BCS) — a standardized 9-point scale that assesses body fat relative to muscle and frame. No formula accounts for every individual variation; BCS is how you interpret the result.</p>

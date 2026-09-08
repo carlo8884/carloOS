@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,13 +95,7 @@ export default function EnduranceRidingPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="discipline-endurance"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -111,23 +105,6 @@ export default function EnduranceRidingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="disciplines-endurance-riding-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Endurance Riding Is</h2>
           <p>Endurance riding tests a horse and rider over long distances of natural trail against the clock, but with a crucial twist: the horse must pass veterinary inspections throughout, and any horse judged unfit to continue is eliminated. The ethos -- captured in the motto to finish is to win -- places the horse&apos;s soundness and metabolic health above raw speed. It is one of the few equestrian sports where finishing a tough ride is itself a celebrated achievement.</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -36,22 +36,6 @@ export default function BestDogBedsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-dog-beds-under-hero"
-              />
-            </div>
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard id="big-barker" badge="Best Orthopedic" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" score={9.5} winner
@@ -88,7 +72,7 @@ export default function BestDogBedsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-dog-beds" />
+
           </aside>
         </div>
       </div>

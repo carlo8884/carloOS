@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -78,14 +78,7 @@ export default function FerretSuppliesChecklistPage() {
                 { label: 'Ownership Hub', href: '/ownership' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="The first-year supply list"
-              subtitle="One note when the buyer guides add a new cage, litter, harness, or food comparison. No invented product list."
-              source="ownership-ferret-supplies-checklist-under-hero"
-              ctaText="Send the supply notes"
-            />
+
           </>
         }
       
@@ -103,23 +96,6 @@ export default function FerretSuppliesChecklistPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ownership-ferret-supplies-checklist-under-hero"
-            />
-          </div>
 
           <h2 id="priority">Buy First vs Later</h2>
           <p>

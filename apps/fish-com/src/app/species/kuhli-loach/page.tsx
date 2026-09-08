@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -76,27 +76,11 @@ export default function KuhliLoachPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Corydoras Care', href: '/species/corydoras' }, { label: 'Otocinclus Care', href: '/species/otocinclus' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-kuhli-loach" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-kuhli-loach-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-kuhli-loach" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A kuhli loach in a home aquarium." priority />
         <h2>Sand Substrate — Non-Negotiable</h2>
         <p>Kuhli loaches burrow into substrate. Their soft, scaleless skin is easily damaged by coarse gravel or sharp substrates. Fine sand (pool filter sand, Caribsea Super Naturals, or play sand) is required. In gravel substrates, kuhli loaches attempt to burrow and injure themselves, become stressed, and develop skin abrasions that lead to infection. This is not optional — sand is a welfare requirement for kuhli loaches, not a preference.</p>

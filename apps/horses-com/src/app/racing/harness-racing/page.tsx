@@ -16,7 +16,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -132,13 +131,7 @@ export default function HarnessRacingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-harness"
-            />
+
           </>
         }
       >
@@ -149,23 +142,6 @@ export default function HarnessRacingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-harness-racing-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Harness Racing Is</h2>
           <p>Harness racing is a racing discipline in which the horse is not ridden but driven, pulling a lightweight two-wheeled vehicle called a sulky. The driver sits on the sulky behind the horse and guides it through the reins. Unlike flat racing, where the primary objective is simply to run as fast as possible, harness racing adds a gait constraint: the competing horse must maintain either a trot or a pace throughout the race. A horse that breaks from its prescribed gait must be taken to the outside of the track and slowed until it resumes the correct gait, a significant competitive penalty.</p>

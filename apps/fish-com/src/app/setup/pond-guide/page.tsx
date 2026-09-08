@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
@@ -62,28 +62,11 @@ export default function PondGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Koi Care Guide', href: '/species/koi' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }]} />
-          <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Pond and fishkeeping guides." source="setup-pond" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-pond-guide-under-hero"
-          />
-        </div>
 
           <h2>The Most Common Pond Failure — Undersizing</h2>
           <p>The overwhelming majority of failed backyard ponds fail for the same reason: the pond was built too small for the number of fish eventually added. The cognitive sequence that leads to failure: a 500-gallon pond is built "for just a few koi." The koi are purchased at 6 inches — they fit easily. They grow. They produce more waste. Water quality degrades. Fish get sick. More fish are added. The pond spirals into chronic water quality problems and fish illness. The pond is eventually either drained or the fish given away.</p>

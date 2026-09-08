@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -86,13 +85,11 @@ export default function LeashReactivityPage() {
           { label: 'Training Hub', href: '/training' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-leash-reactivity" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the leash-reactivity plan
@@ -100,15 +97,7 @@ export default function LeashReactivityPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Leash-reactivity protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Leash-reactivity protocol"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="training-leash-reactivity-under-hero"
-          />
+
         </div>
 
         <h2 id="why">Why Leash Reactivity Happens</h2>

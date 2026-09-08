@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,13 +108,7 @@ export default function HeavesPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="health-heaves"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -124,23 +118,6 @@ export default function HeavesPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-heaves-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Is Equine Asthma</h2>
           <p>Equine asthma is a spectrum of chronic, non-infectious airway inflammation. Mild to moderate equine asthma (formerly inflammatory airway disease) causes poor performance and intermittent cough in younger horses, while severe equine asthma -- the classic &apos;heaves&apos; -- causes overt difficulty breathing in older horses. In susceptible horses, inhaled allergens provoke airway inflammation, excess mucus, and bronchoconstriction, narrowing the airways and making it hard to push air out.</p>
@@ -171,7 +148,6 @@ export default function HeavesPage() {
           </ul>
 
           <h2 id="medical">Medical Treatment</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Heaves Kit</h2>
           <p>Everyday physical supplies that match the soak-or-steam hay copy above — a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>

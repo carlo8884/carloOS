@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup, groupBreedsBySize, type SizeCategory } from '../../data/breeds'
 
@@ -206,25 +206,6 @@ export default async function BreedsPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Breed Guide</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breeds-hub-under-hero"
-          />
-        </div>
-      </section>
 
       {/* Breed-match wizard — prominent on-brand entry CTA. Surfaces the
           /breeds/match decision wizard at the top of the hub (previously

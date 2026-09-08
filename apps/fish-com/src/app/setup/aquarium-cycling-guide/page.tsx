@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   FAQAccordion,
   SchemaScript,
@@ -222,35 +221,12 @@ export default function CyclingGuidePage() {
                 { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="fish-com"
-              title="The Weekly Tank"
-              subtitle="Fishkeeping guides every Thursday."
-              source="setup-cycling"
-            />
+
           </>
         }
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="setup-aquarium-cycling-guide-under-hero"
-            />
-          </div>
 
           <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
             <strong className="not-italic">TL;DR.</strong> Cycling a fish tank means growing two bacterial colonies (Nitrosomonas and Nitrospira) that convert ammonia to nitrite to nitrate. Fishless cycling with pure ammonium chloride dosed to 2 ppm takes 4–6 weeks alone, 1–3 weeks with a real bottled bacteria starter, or 24–72 hours with seeded media. The cycle is complete when 2 ppm of ammonia drops to 0/0 within 24 hours. Plan the calendar with the{' '}

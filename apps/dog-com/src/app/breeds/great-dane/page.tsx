@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Dane Breed Guide — Bloat Prevention, DCM | Dog.com', description: 'Great Danes live 7-10 years and face serious risks from GDV/bloat and DCM cardiac disease. Gastropexy at spay/neuter is strongly recommended.', path: '/breeds/great-dane', type: 'article' })
@@ -38,27 +38,11 @@ export default function GreatDanePage() {
           { label: 'Great Dane vs Mastiff', href: '/compare/great-dane-vs-mastiff' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-great-dane" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-great-dane-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 1800s Germany: mastiff-greyhound types refined to hunt wild boar and guard estates. That boar-hunt / deep-chest history is why a household Dane still needs a gastropexy conversation at spay/neuter and a 7–10 year lifespan check, not a crate-only afternoon. Great Danes are typically first-time-owner friendly — YES-typically — when the household accepts the giant-puppy diet until 18–24 months, the prophylactic gastropexy recommendation, and the short lifespan.</p>
 

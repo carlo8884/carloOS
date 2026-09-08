@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -87,29 +87,10 @@ export default function GermanShepherdHealthPage() {
           { label: 'Find a Neurologist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com"
-          title="Free Dog Health Tips"
-          subtitle="Practical guidance every Tuesday."
-          source="health-german-shepherd" />
+
       </>}
     >
       <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-german-shepherd-health-under-hero"
-            />
-          </div>
 
         <StockImage manifestKey="dog-com:breed-german-shepherd" alt="A German Shepherd Dog in natural light" aspect="16:9" priority />
         <p>The German Shepherd Dog is among the world&apos;s most versatile working breeds — police dogs, military dogs, search and rescue, guide dogs, competitive sport. Their intelligence, drive, and loyalty are unmatched. They are also, structurally and genetically, one of the breeds most prone to serious degenerative conditions that owners must understand and actively manage.</p>

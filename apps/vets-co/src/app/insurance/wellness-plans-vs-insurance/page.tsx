@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -28,13 +28,11 @@ export default function WellnessVsInsurancePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Wellness vs insurance notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." ctaText="Send the notes" source="insurance-wellness-vs" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the distinction
@@ -42,15 +40,7 @@ export default function WellnessVsInsurancePage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Wellness vs insurance notes
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Wellness vs insurance notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="insurance-wellness-plans-vs-insurance-under-hero"
-            />
+
           </div>
 
           <CalloutBox variant="info" title="Different tools for different jobs">

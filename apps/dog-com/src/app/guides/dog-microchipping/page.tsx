@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
   AffiliateDisclosure,
@@ -126,13 +125,7 @@ export default function DogMicrochippingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="dog-com"
-              title="Free Dog Care Tips"
-              subtitle="Evidence-based guidance every week."
-              source="guide-microchip"
-            />
+
           </>
         }
       >
@@ -143,23 +136,6 @@ export default function DogMicrochippingPage() {
             updatedAt="2026-09-05T00:00:00Z"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-dog-microchipping-under-hero"
-            />
-          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — What you need to know">
             <p>
@@ -277,8 +253,6 @@ export default function DogMicrochippingPage() {
           <p>
             The main limitations are not safety issues but practical ones: a chip provides no location, only works when a found dog is scanned, and is worthless if the registry record is wrong. None of these are reasons not to chip — they are reasons to pair the chip with current registration and a collar tag, and optionally a GPS device.
           </p>
-
-          <h2 id="checklist">Owner notes</h2>
           <ul>
             <li>Confirm whether your dog is already chipped (vet or shelter can scan).</li>
             <li>Locate the chip number and identify its registry.</li>

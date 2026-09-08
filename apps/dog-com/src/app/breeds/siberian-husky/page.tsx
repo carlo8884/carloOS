@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Siberian Husky Guide — Exercise, Escape Prevention | Dog.com', description: 'Siberian Huskies are escape artists with very high exercise needs. Eye conditions (cataracts, PRA, corneal dystrophy), zinc deficiency.', path: '/breeds/siberian-husky', type: 'article' })
@@ -52,27 +52,11 @@ export default function SiberianHuskyPage() {
           { label: 'Siberian Husky vs Australian Shepherd', href: '/compare/siberian-husky-vs-australian-shepherd' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-husky" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-siberian-husky-under-hero"
-          />
-        </div>
 
         <p>The working story starts with the Chukchi of Siberia: sled dogs selected to run 100+ miles a day. That endurance / independent-decision history is why a household Husky still needs two hours of vigorous work and a 6-foot coyote-roller fence, not a crate-only afternoon. Siberian Huskies are typically first-time-owner unfriendly — NO-typically — unless the household already commits to the 2-hour run floor, 70°F heat cap, and never-off-leash-near-a-road rule.</p>
 

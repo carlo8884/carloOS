@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -154,13 +153,7 @@ export default function FerretEmergencySignsPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Health Notes"
-              subtitle="Evidence-based ferret health, monthly."
-              source="health-emergency-signs"
-            />
+
           </>
         }
       
@@ -185,23 +178,6 @@ export default function FerretEmergencySignsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-emergency-warning-signs-under-hero"
-            />
-          </div>
 
           <DropCap>
             Ferrets are stoic, small, and quick to decline — a combination that
@@ -349,8 +325,6 @@ export default function FerretEmergencySignsPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-</div>
           </div>
 
           <h2 id="faq">FAQ</h2>

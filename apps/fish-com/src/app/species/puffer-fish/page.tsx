@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -77,27 +77,11 @@ export default function PufferFishPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Oscar Fish', href: '/species/oscar' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }, { label: 'Quarantine Tank', href: '/setup/quarantine-tank-guide' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-puffer" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-puffer-fish-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-puffer-fish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A pufferfish in a home aquarium." priority />
         <h2>The Beak — Why It Matters</h2>
         <p>Puffer fish have fused beak-like teeth (technically a beak of dental plates) that grow continuously throughout their lives. In the wild, they grind snails, crustaceans, and other hard-shelled prey that naturally wear the beak to an appropriate length. In captivity, a puffer fed only soft foods (bloodworms, soft pellets) develops an overgrown beak — the upper and lower plates grow to the point where the fish cannot close its mouth or eat normally. This is painful and eventually fatal without intervention.</p>

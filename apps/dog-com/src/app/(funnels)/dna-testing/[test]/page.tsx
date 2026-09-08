@@ -9,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
-  EmailCapture,
   FAQAccordion
 } from '@carloOS/ui'
 import {
@@ -315,14 +314,7 @@ export default async function DnaTestPage({
           ))}
         </div>
 
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          source="dog-com:dna-test-comparison"
-          title="Get the full DNA test buyer's guide"
-          subtitle="Owner notes"
-          ctaText="Send the guide"
-        />
+
       </div>
     </>
   )

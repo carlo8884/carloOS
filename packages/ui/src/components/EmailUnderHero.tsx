@@ -28,7 +28,9 @@ export function EmailUnderHero({
     if (!show) return
     const main =
       document.getElementById('main-content') || document.querySelector('main')
+    const afterValue = main?.querySelector('[data-email-after]')
     const hero =
+      afterValue ||
       main?.querySelector('section') ||
       main?.querySelector('h1')?.closest('div, section, header') ||
       main?.firstElementChild

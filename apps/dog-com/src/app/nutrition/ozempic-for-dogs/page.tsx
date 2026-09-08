@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,7 +59,7 @@ export default function OzempicForDogsPage() {
         <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'What\'s Actually in Development', href: '#development' }, { label: 'Why Not Human Ozempic', href: '#offlabel' }, { label: 'The Poisoning Risk', href: '#poison' }, { label: 'What Works Today', href: '#works' }, { label: 'What To Do Now', href: '#now' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Weight Management Protocol', href: '/nutrition/weight-management' }, { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-ozempic" />
+
       </>}
     >
       <div className="carloOS-article">

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu) — H3N8, H3N2 | Vets.co', description: 'Canine influenza is caused by H3N8 and H3N2 strains. Highly contagious among dogs. Vaccine recommended for dogs that attend boarding, doggy daycare.', path: '/health/canine-influenza', type: 'article' })
@@ -34,27 +34,11 @@ export default function CanineInfluenzaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Kennel Cough', href: '/health/kennel-cough' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-influenza" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-canine-influenza-under-hero"
-            />
-          </div>
 
           <h2>How Canine Influenza Spreads</h2>
           <p>Canine influenza is transmitted through respiratory secretions — direct dog-to-dog contact, airborne droplets (sneezing, coughing), and contact with contaminated surfaces (water bowls, kennel surfaces, human hands that have touched infected dogs). Virtually all dogs exposed to the virus develop infection — canine influenza viruses are novel to the dog immune system, meaning there is minimal pre-existing immunity in unvaccinated populations. This is different from kennel cough (Bordetella), where healthy adults with prior exposure may resist infection — essentially all naïve dogs exposed to influenza become infected.</p>
@@ -67,7 +51,6 @@ export default function CanineInfluenzaPage() {
           <p>No specific antiviral treatment exists for canine influenza in dogs (canine-labeled antivirals are not available). Treatment is supportive: rest, fluid support for dehydrated or anorectic dogs, anti-inflammatory medication for fever, and antibiotics if secondary bacterial pneumonia develops (the most serious complication). Most dogs with mild illness recover in 2–4 weeks without veterinary intervention beyond rest and monitoring. Dogs with fever, complete anorexia, difficulty breathing, or signs of pneumonia (productive cough, rapid/labored breathing) require veterinary evaluation and possibly hospitalization. An analog wall clock with a second hand is how rapid or labored breathing gets a one-minute count during isolation rest — it is not a digital pet thermometer, not a cool-mist humidifier, and not a handheld stopwatch. A rising count or labored effort is a reason to call the veterinarian, not a diagnosis of pneumonia, and not a substitute for the clinic that decides whether supportive care or hospitalization is indicated.</p>
 
           <h2>Vaccination — Who Should Be Vaccinated</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Dog-flu isolation kit</h2>
           <p>

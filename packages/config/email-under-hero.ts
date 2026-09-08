@@ -18,7 +18,6 @@ export const EMAIL_UNDER_HERO_PATHS = [
   '/ownership',
   '/species',
   '/training',
-  '/symptoms',
   '/medications',
   '/directory',
   '/setup',

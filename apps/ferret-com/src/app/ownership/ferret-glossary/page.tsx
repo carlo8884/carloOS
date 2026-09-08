@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -65,13 +65,7 @@ export default function FerretGlossaryPage() {
                 { label: 'Ownership Hub', href: '/ownership' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Owner Notes"
-              subtitle="Evidence-based ferret ownership, monthly."
-              source="ownership-ferret-glossary"
-            />
+
           </>
         }
       

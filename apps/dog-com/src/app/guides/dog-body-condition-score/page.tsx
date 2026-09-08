@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
   AffiliateDisclosure,
@@ -126,33 +125,11 @@ export default function DogBodyConditionScorePage() {
               ]}
             />
             <CrossPortfolioCard currentSite="dog-com" contentType="guide" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="dog-com"
-              title="Free Dog Health Tips"
-              subtitle="Evidence-based guidance every week."
-              source="guide-bcs"
-            />
+
           </>
         }
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-dog-body-condition-score-under-hero"
-            />
-          </div>
 
           <ArticleByline
             siteName="Dog.com Editorial"

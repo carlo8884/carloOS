@@ -34,7 +34,6 @@ import {
   ArticleLayout,
   CalloutBox,
   CrossPortfolioCard,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
   RelatedLinks,
@@ -232,32 +231,10 @@ export default function SpecialistPage({ params }: PageProps) {
               Verify a specialist →
             </a>
           </SidebarCard>
-          <EmailCapture
-            variant="sidebar"
-            siteId="vets-co"
-            title="Free Pet Health Tips"
-            subtitle="Practical, sourced guidance weekly."
-            source={`specialist-${s.slug}`}
-          />
+
         </>
       }
     >
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <div className="mb-8">
-        <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-          Owner notes
-        </p>
-        <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-        
-        <EmailCapture
-          variant="inline"
-          siteId="vets-co"
-          title="Owner notes"
-          subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-          ctaText="Send the notes"
-          source={`specialist-${s.slug}-under-hero`}
-        />
-      </div>
 
       {/* MANDATORY top callout — educational framing + primary-vet referral path */}
       <CalloutBox variant="note" title="Educational — follow your vet's referral guidance">

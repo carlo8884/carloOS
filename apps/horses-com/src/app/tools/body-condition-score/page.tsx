@@ -6,7 +6,6 @@ import {
   ArticleLayout,
   ArticleByline,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -203,15 +202,7 @@ export default function BodyConditionScorePage() {
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Horse BCS worksheet
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Horse BCS worksheet"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-body-condition-score-under-hero"
-          />
+
         </div>
 
         <h2 id="calculator">The calculator</h2>

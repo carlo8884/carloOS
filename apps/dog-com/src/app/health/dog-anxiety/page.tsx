@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -35,26 +35,10 @@ export default function DogAnxietyPage() {
           <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }, { label: 'Safe-space kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-anxiety" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dog-anxiety-under-hero"
-            />
-          </div>
 
           <h2 id="signs">Recognizing Anxiety — Beyond Obvious Distress</h2>
           <p>Obvious anxiety signs (destruction, vocalization, house soiling) are recognized. Subtle chronic anxiety signs are frequently missed: yawning when not tired, lip-licking without food present, excessive panting at rest, inability to settle, hypervigilance (scanning constantly, ears up), avoidance of eye contact, whale eye (showing whites of eyes), weight loss, reduced play, and decreased interest in food. A dog that is "always on alert" or "never truly relaxes" may be experiencing chronic anxiety rather than having a high-energy personality.</p>

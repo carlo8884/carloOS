@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   StockImage,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -157,13 +156,7 @@ export default function FerretBathingGroomingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Care Notes"
-              subtitle="Practical ferret husbandry, monthly."
-              source="care-bathing-grooming"
-            />
+
           </>
         }
       
@@ -186,22 +179,9 @@ export default function FerretBathingGroomingPage() {
             updatedAt="2026-05-29"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="care-bathing-grooming-under-hero"
-            />
+
           </div>
 
           <DropCap>

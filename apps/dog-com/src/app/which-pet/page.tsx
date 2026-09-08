@@ -5,7 +5,6 @@ import {
   ArticleLayout,
   ArticleByline,
   AffiliateDisclosure,
-  EmailCapture,
   FAQAccordion,
   SchemaScript,
   ShopCtas,
@@ -200,8 +199,6 @@ export default function WhichPetPage() {
         }}
       >
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the starter list
@@ -209,15 +206,7 @@ export default function WhichPetPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             First-week starter list
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="First-week starter list"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="which-pet-under-hero"
-          />
+
         </div>
 
         {/* Intro */}

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -31,28 +31,11 @@ export default function NanoTankSetupPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Endlers Livebearer', href: '/species/endlers-livebearer' }]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-nano-tank" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-nano-tank-under-hero"
-          />
-        </div>
 
         <h2>Why Small Tanks Are Harder, Not Easier</h2>
         <DropCap>The biggest misconception in the hobby is that a smaller tank is a beginner tank. In reality, the opposite is closer to the truth. A five-gallon nano holds a fraction of the water of a standard tank, which means any change — a dead fish, an overfeeding, a heater failure, a missed water change — produces a far more dramatic and rapid swing in temperature, pH, ammonia, and nitrate than the same event would in a buffered fifty-gallon tank. Large volumes of water are forgiving precisely because they dilute mistakes. Nano tanks demand consistency: small, frequent water changes, light stocking, careful feeding, and reliable equipment. Once those habits are in place, a nano is no harder to keep than anything else, and its compact footprint and detail make it deeply rewarding.</DropCap>

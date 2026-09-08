@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols.', path: '/nutrition/weight-management', type: 'article' })
@@ -18,28 +18,11 @@ export default function WeightManagementPage() {
         <TableOfContents items={[{ label: 'Is My Dog Overweight?', href: '#assess' }, { label: 'Why Weight Matters', href: '#why' }, { label: 'Safe Caloric Reduction', href: '#reduction' }, { label: 'Weight Management Diets', href: '#diets' }, { label: 'Exercise Protocol', href: '#exercise' }, { label: 'Tracking Progress', href: '#tracking' }]} />
         <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-weight" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-weight-under-hero"
-          />
-        </div>
 
         <h2 id="assess">Is My Dog Overweight? The Body Condition Score</h2>
         <p>Scale weight is misleading without body condition context. A large-framed dog may be 80 lbs and lean; a small-framed dog may be 60 lbs and obese. Body condition scoring (BCS) is the correct tool.</p>

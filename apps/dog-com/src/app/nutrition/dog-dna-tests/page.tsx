@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,28 +59,11 @@ export default function DogDnaTestsPage() {
         <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'How the Tests Work', href: '#how' }, { label: 'Breed-ID Accuracy', href: '#accuracy' }, { label: 'Health Panels & Their Limits', href: '#health' }, { label: 'Embark vs Wisdom Panel', href: '#compare' }, { label: 'What to Do With Results', href: '#now' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Dog Breed Guide', href: '/breeds' }, { label: 'DNA Testing Overview', href: '/dna-testing' }, { label: 'Is Fresh Dog Food Worth It?', href: '/reviews/fresh-dog-food-worth-it' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-dna-tests" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-dna-tests-under-hero"
-          />
-        </div>
 
         <h2 id="short">The Short Answer</h2>
         <p>Dog DNA tests are genuinely useful for one thing — estimating a mixed-breed dog&apos;s ancestry — and partially useful for another: flagging known genetic variants. <strong>What they are not is a crystal ball.</strong> A breed result is a strong estimate, not a certificate; a health panel detects specific known mutations, not your dog&apos;s entire future health. Used with that framing, the tests are a fun and occasionally clinically helpful tool. Used as a diagnosis, they can mislead.</p>

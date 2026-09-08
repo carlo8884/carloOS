@@ -16,7 +16,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -136,13 +135,7 @@ export default function HandicapRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-handicap"
-            />
+
           </>
         }
       >
@@ -153,23 +146,6 @@ export default function HandicapRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-handicap-under-hero"
-            />
-          </div>
 
           <h2 id="method">A Method, Not a Class</h2>
           <p>The <strong>handicap</strong> is different in kind from the other categories in this cluster. <a href="/racing/race-types/maiden-races">Maiden</a>, <a href="/racing/race-types/claiming-races">claiming</a>, <a href="/racing/race-types/allowance-races">allowance</a>, and <a href="/racing/race-types/stakes-races">stakes</a> races describe <em>levels</em> on the class ladder. A handicap describes a <em>way of assigning weight</em> that can cut across those levels &mdash; you can have a modest handicap or a major handicap stakes worth a fortune. What unifies them is the principle, not the prize.</p>

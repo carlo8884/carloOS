@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -34,22 +34,6 @@ export default function BestDogHarnessesPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-dog-harnesses-under-hero"
-              />
-            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Front-Clip vs Back-Clip</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Front-clip harnesses attach the leash at the dog's chest — when the dog pulls forward, the leash redirects them to the side, interrupting the pulling motion without pain. Back-clip harnesses attach at the back — they allow full forward movement and are appropriate for dogs that already walk well on leash. For pullers: front-clip only.</p>
@@ -101,7 +85,7 @@ export default function BestDogHarnessesPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' }, { label: 'Leash Reactivity', href: '/training/leash-reactivity' }, { label: 'Best Dog Crates', href: '/reviews/best-dog-crates' }, { label: 'Training Red Flags', href: '/training/training-red-flags' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-harnesses" />
+
           </aside>
         </div>
       </div>

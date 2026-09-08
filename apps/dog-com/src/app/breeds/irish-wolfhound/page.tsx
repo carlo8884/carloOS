@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Wolfhound Breed Guide — Lifespan, Osteosarcoma | Dog.com', description: 'Irish Wolfhounds have the shortest lifespan of any dog breed — 6-8 years. Osteosarcoma, dilated cardiomyopathy, and GDV are the primary health concerns.', path: '/breeds/irish-wolfhound', type: 'article' })
@@ -49,27 +49,11 @@ export default function IrishWolfhoundPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Cancer Signs', href: '/health/dog-cancer-signs' }, { label: 'Dog Heart Disease', href: '/health/dog-heart-disease' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-irish-wolfhound" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-irish-wolfhound-under-hero"
-          />
-        </div>
 
         <p>The working story starts in ancient Ireland: a coursing hound used against wolves and Irish elk, nearly extinct by the 1800s and revived by Captain George Augustus Graham. That coursing / giant-sighthound history is why a household Wolfhound still needs a 6–8 year lifespan check and an osteosarcoma lameness watch, not a crate-only afternoon. Irish Wolfhounds are typically first-time-owner friendly — YES-typically — when the household accepts the shortest lifespan of any breed, the tallest-dog logistics, and that they are not guard dogs.</p>
 

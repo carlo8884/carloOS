@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -147,13 +147,7 @@ export default function ColicPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Evidence-led equine health articles."
-            source="health-colic"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -163,23 +157,6 @@ export default function ColicPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-colic-under-hero"
-            />
-          </div>
 
           <h2 id="what-is-colic">What Is Colic</h2>
           <p>Colic is a clinical sign — abdominal pain — and not a diagnosis. The horse&apos;s gastrointestinal anatomy is uniquely vulnerable to problems that cause pain: roughly 100 feet of intestine arranged in a long, mobile, sharply-folded path that includes the large colon (a 12-foot-long fermentation chamber that doubles back on itself at the pelvic flexure) and a relatively narrow attachment to the body wall that allows substantial movement of the gut. The same anatomy that makes horses efficient fiber fermenters also makes them prone to displacements, torsions, impactions, and gas accumulation that do not occur in carnivores or in ruminants.</p>

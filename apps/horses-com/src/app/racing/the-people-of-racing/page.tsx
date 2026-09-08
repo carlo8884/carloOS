@@ -16,7 +16,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -144,13 +143,7 @@ export default function PeopleOfRacingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-people"
-            />
+
           </>
         }
       >
@@ -161,23 +154,6 @@ export default function PeopleOfRacingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-the-people-of-racing-under-hero"
-            />
-          </div>
 
           <p>It is useful to picture the people of racing as three overlapping circles. The <em>connections</em> -- owner, breeder, and trainer -- hold the commercial and competitive responsibility for a horse. The <em>riders</em> -- the jockey in the afternoon and the exercise rider in the morning -- are the athletes who partner the horse at speed. And the <em>backstretch and raceday staff</em> -- grooms, hot walkers, farriers, veterinarians, and the officials who govern the meet -- form the surrounding infrastructure without which no horse reaches the gate. The sections below walk through each circle in turn; the celebrated runners profiled in the <a href="/racing/great-racehorses">great racehorses</a> collection were every one of them the product of teams like these.</p>
 

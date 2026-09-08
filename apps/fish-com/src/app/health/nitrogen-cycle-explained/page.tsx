@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, ArticleSourcesList, CalloutBox, FAQAccordion, ShopCtas, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -69,27 +69,16 @@ export default function NitrogenCyclePage() {
         <TableOfContents items={[{ label: 'Quick Answer', href: '#tldr' }, { label: 'What the Cycle Is', href: '#what' }, { label: 'The Three Stages', href: '#stages' }, { label: 'Fishless Cycling Protocol', href: '#cycling' }, { label: 'How Long It Takes', href: '#duration' }, { label: 'How to Know It\'s Done', href: '#done' }, { label: 'Mini-Cycles', href: '#mini-cycles' }, { label: 'FAQ', href: '#faq' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Water Chemistry Guide', href: '/water-parameters' }, { label: 'Water Change Calculator', href: '/tools/water-change-calculator' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }]} />
         <CrossPortfolioCard currentSite="fish-com" contentType="health" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="nitrogen-cycle" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the 0/0 confirmation plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="health-nitrogen-cycle-under-hero"
-          />
+
         </div>
 
         <div id="tldr">

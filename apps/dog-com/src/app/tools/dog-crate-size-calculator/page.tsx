@@ -105,6 +105,17 @@ const howToSchema = buildHowToSchema({
 
 const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
+const CRATE_SIZE_TEXT = `Dog crate size — how to measure
+
+1. Measure body length from the tip of the nose to the base of the tail (not the tail tip).
+2. Measure standing height from the floor to the top of the head (sitting or standing, whichever is taller).
+3. Add about 2 inches to each measurement so the dog can stand, turn, and lie flat.
+4. Pick the smallest standard crate (18, 22, 24, 30, 36, 42, or 48 inches) that meets both minimums.
+5. For puppies, buy the adult size and use a divider.
+
+Use the calculator on this page for the exact minimums. Brand internals vary — check the crate's internal measurements before buying.
+`
+
 export default function DogCrateSizeCalculatorPage() {
   return (
     <>
@@ -150,22 +161,15 @@ export default function DogCrateSizeCalculatorPage() {
         <div className="max-w-5xl">
           <Calculator />
         </div>
-      </section>
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+        <div className="max-w-2xl mt-8">
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
+            title="Save the crate-sizing steps"
+            subtitle="The measurement rules from this page — then shop if you want."
             source="tools-dog-crate-size-under-hero"
+            resourceText={CRATE_SIZE_TEXT}
+            resourceLabel="Save the sizing steps"
           />
         </div>
       </section>

@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -135,13 +134,7 @@ export default function OptionalClaimingRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-optional-claiming"
-            />
+
           </>
         }
       >
@@ -152,23 +145,6 @@ export default function OptionalClaimingRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-optional-claiming-under-hero"
-            />
-          </div>
 
           <h2 id="hybrid">A Hybrid of Two Classes</h2>
           <p>An <strong>optional claiming race</strong> is exactly what its name suggests: a race that blends the two mid-level classes, <a href="/racing/race-types/allowance-races">allowance</a> and <a href="/racing/race-types/claiming-races">claiming</a>, into a single event. Rather than forcing every runner into one set of conditions, the format lets each horse&apos;s connections pick which set applies to them. The race therefore mixes protected, not-for-sale horses with claimable ones in the same field.</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, EmailCapture, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -94,18 +94,6 @@ export default function FishReviewsPage() {
         secondaryCta={{ href: '/tools/stocking-calculator', label: 'Size your tank first' }}
       />
 
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-8">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Equipment picks, species spotlights, and fishkeeping tips every Thursday."
-          source="reviews-under-hero"
-          ctaText="Send the tank notes"
-          perks={['Editor equipment picks', 'Species guides', 'Water chemistry tips', 'No spam']}
-        />
-      </div>
-
       {/* REVIEWS GRID */}
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
@@ -152,7 +140,6 @@ export default function FishReviewsPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
           Reviews-hub stand kit
         </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="fish-com" />

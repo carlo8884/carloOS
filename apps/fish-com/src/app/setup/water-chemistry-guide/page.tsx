@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -31,28 +31,11 @@ export default function WaterChemistryGuidePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Cycling Guide', href: '/setup/aquarium-cycling-guide' }, { label: 'Water Change Calculator', href: '/tools/water-change-calculator' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping guides every Thursday." source="setup-water-chemistry" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-water-chemistry-guide-under-hero"
-          />
-        </div>
 
         <h2>pH — The Scale and What It Means</h2>
         <p>pH is a logarithmic measure of hydrogen ion concentration — pH 7 is neutral, below 7 is acidic, above 7 is alkaline. Because the scale is logarithmic, pH 6 is 10× more acidic than pH 7, and pH 5 is 100× more acidic. Small numerical differences represent large actual differences in water chemistry. A stable pH within the appropriate range for your fish is more important than hitting a precise target number — fish handle a consistent pH that is slightly off-ideal better than they handle pH swings.</p>

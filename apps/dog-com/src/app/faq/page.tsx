@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, EmailCapture, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -174,14 +174,6 @@ export default function FAQPage() {
       </div>
 
       {/* Email */}
-      <div className="bg-brand-surface border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture variant="section" siteId="dog-com"
-          title="Weekly Dog Health Tips"
-          subtitle="Answers, breed spotlights, and health alerts — every Tuesday."
-          source="faq-page" ctaText="Send the weekly notes"
-          perks={['✓ Research-based', '📬 Every Tuesday', '🚫 No spam']}
-        />
-      </div>
     </>
   )
 }

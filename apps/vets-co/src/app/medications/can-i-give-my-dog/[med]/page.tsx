@@ -8,7 +8,6 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
@@ -124,27 +123,11 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
             ]}
           />
           <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Vets.co reference letter" subtitle="Veterinary references for pet owners." source="can-i-give-my-dog" />
+
         </>
       }
     >
       <div className="carloOS-article">
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source={`can-i-give-my-dog-${entry.slug}-under-hero`}
-          />
-        </div>
 
         <div className="rounded-lg border p-5 my-4" style={{ borderColor: meta.color, background: meta.tone === 'good' ? '#f0fdf4' : meta.tone === 'warn' ? '#fffbeb' : '#fef2f2' }}>
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Verdict</span>

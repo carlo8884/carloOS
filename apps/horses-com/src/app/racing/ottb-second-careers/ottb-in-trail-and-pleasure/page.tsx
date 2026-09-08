@@ -21,7 +21,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -143,13 +142,7 @@ export default function OttbInTrailAndPleasurePage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="ottb-in-trail-and-pleasure"
-            />
+
           </>
         }
       >
@@ -160,23 +153,6 @@ export default function OttbInTrailAndPleasurePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ottb-in-trail-and-pleasure-under-hero"
-            />
-          </div>
 
           <h2 id="why">A Valued Second Career</h2>
           <p>Competition is only one outcome for an off-track Thoroughbred, and for many horses it is not the right one. A quiet life as a trail and pleasure mount is a genuine and valued second career, not a consolation. The aftercare ecosystem&apos;s goal is to match each horse to an appropriate outcome, and for a great many OTTBs that outcome is a confident, willing partner for hacking out, recreational riding, and easy everyday work. For what trail and pleasure riding involve as activities in their own right, see the general <Link href="/disciplines/trail-riding">trail-riding reference</Link> and the <Link href="/disciplines/western-pleasure">western pleasure reference</Link>; this page covers only what the Thoroughbred coming off the track brings to that work.</p>

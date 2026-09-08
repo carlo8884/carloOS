@@ -11,7 +11,6 @@ import {
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
-  EmailCapture,
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
@@ -176,25 +175,12 @@ export default function IsThisACatEmergencyPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Is This a Cat Emergency?</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cat emergency-signs triage cheat sheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-is-this-a-cat-emergency-under-hero"
-          />
+
         </div>
       </section>
 

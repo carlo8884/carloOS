@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide — Bloat, Hip Dysplasia | Dog.com', description: 'Saint Bernards are gentle giants with serious GDV/bloat and hip dysplasia predisposition. Gastropexy at spay/neuter strongly recommended.', path: '/breeds/saint-bernard', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Saint Bernard Breed Guide', description: 'GDV risk, hip dysplasia, and care for Saint Bernard dogs.', url: 'https://dog.com/breeds/saint-bernard', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -50,27 +50,11 @@ export default function SaintBernardPage() {
           { label: 'Saint Bernard vs Newfoundland', href: '/compare/saint-bernard-vs-newfoundland' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-saint-bernard" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-saint-bernard-under-hero"
-          />
-        </div>
 
         <p>The working story starts in the 1600s at the Great St. Bernard Hospice: Alpine rescue dogs bred to find travelers caught in Swiss-pass storms. That hospice / deep-chest history is why a household Saint Bernard still needs a gastropexy conversation at spay/neuter and a dedicated slobber-rag plan, not a crate-only afternoon. Saint Bernards are typically first-time-owner friendly — YES-typically — when the household accepts continuous drool, poor heat tolerance above 75°F, and giant-puppy nutrition until 18–24 months.</p>
 

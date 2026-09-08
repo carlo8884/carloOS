@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   StockImage,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -109,13 +108,7 @@ export default function ChocolateFerretsPage() {
                 { label: 'Cinnamon Ferrets', href: '/colors/cinnamon-ferrets' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret.com Field Notes"
-              subtitle="Color guides and care references, monthly."
-              source="colors-chocolate"
-            />
+
           </>
         }
       
@@ -137,23 +130,6 @@ export default function ChocolateFerretsPage() {
             publishedAt="2026-05-30"
             updatedAt="2026-05-30"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="colors-chocolate-ferrets-under-hero"
-            />
-          </div>
 
           <DropCap>
             Chocolate is the friendliest color name in the ferret palette, and the coat lives up to

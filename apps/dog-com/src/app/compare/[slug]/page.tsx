@@ -27,7 +27,6 @@ import {
   SchemaScript,
   AffiliateDisclosure,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   ShopCtas,
   StockImage,
@@ -508,21 +507,6 @@ export default async function ComparePage({ params }: PageProps) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
-            <div className="mb-8 not-prose">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source={`compare-${slug}-under-hero`}
-              />
-            </div>
             <p className="text-sm text-brand-text-mid leading-relaxed mb-8">
               The working story starts with the side-by-side
               table: energy, size, lifespan, grooming,
@@ -778,13 +762,7 @@ export default async function ComparePage({ params }: PageProps) {
               variant="sidebar"
             />
 
-            <EmailCapture
-              variant="sidebar"
-              siteId="dog-com"
-              title="Free Dog Health Tips"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              source={`compare-${slug}`}
-            />
+
           </aside>
         </div>
       </div>

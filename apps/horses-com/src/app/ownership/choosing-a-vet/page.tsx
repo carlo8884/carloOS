@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -99,13 +99,7 @@ export default function ChoosingVetPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="ownership-vet"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -115,23 +109,6 @@ export default function ChoosingVetPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ownership-choosing-a-vet-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why the Relationship Matters</h2>
           <p>An equine veterinarian does far more than treat illness: they guide vaccination and parasite control, perform dental and routine care, conduct pre-purchase exams, advise on nutrition and management, and are the first call in any emergency. A vet who knows your horse and its history makes faster, better decisions in a crisis. Because emergencies do not wait, the relationship must be established before you need it -- the worst time to be searching for a vet is during a colic at midnight. For a conservative sign-list urgency read while you are lining up that relationship, use the <a href="/tools/is-this-a-horse-emergency">Is This a Horse Emergency? triage tool</a> — it does not diagnose.</p>
@@ -182,7 +159,6 @@ export default function ChoosingVetPage() {
           </p>
 
           <h2 id="kit">Equine-vet leftover interview kit</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 

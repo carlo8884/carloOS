@@ -17,7 +17,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -144,13 +143,7 @@ export default function RacingOfficialRolePage() {
                 { label: 'Horse Racing Glossary', href: '/racing/glossary' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-roles-official"
-            />
+
           </>
         }
       >
@@ -161,23 +154,6 @@ export default function RacingOfficialRolePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-roles-official-under-hero"
-            />
-          </div>
 
           <p>A race is overseen by a team of officials. Stewards are the senior officials who enforce the rules of racing, review the running for interference or infractions, and can adjust the result through an inquiry or objection. Around them work the starter, the placing judges, the clerk of scales, and others who keep racing fair and orderly. Together they uphold the integrity that the whole sport -- and its breeding economy -- depends on.</p>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -43,22 +43,6 @@ export default function BestWaterTestKitsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-water-test-kits-under-hero"
-              />
-            </div>
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
@@ -102,7 +86,7 @@ export default function BestWaterTestKitsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
-            <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="review-test-kits" />
+
           </aside>
         </div>
       </div>

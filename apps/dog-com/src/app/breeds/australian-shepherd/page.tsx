@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Australian Shepherd Guide — MDR1 Gene, Herding Drive | Dog.com', description: 'Australian Shepherds have the MDR1 mutation (drug sensitivity) in 50% of the breed. High exercise needs, herding instincts.', path: '/breeds/australian-shepherd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Australian Shepherd Breed Guide', description: 'MDR1 drug sensitivity, exercise requirements, and health for Australian Shepherds.', url: 'https://dog.com/breeds/australian-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -38,27 +38,11 @@ export default function AustralianShepherdPage() {
           { label: 'Australian Shepherd vs Australian Cattle Dog', href: '/compare/australian-shepherd-vs-australian-cattle-dog' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-aussie" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-australian-shepherd-under-hero"
-          />
-        </div>
 
         <p>The working story starts in the American West: Basque herding dogs that arrived via Australia were reshaped into today&apos;s Aussie — that 10-hour mountain-herd history is why a household Australian Shepherd still needs 1.5–2+ hours of vigorous work, not a crate-only afternoon. Australian Shepherds are typically first-time-owner friendly — YES-typically — when the household accepts the MDR1 DNA test before any listed drug, the 2-hour work floor, and heel-nipping management around children.</p>
 

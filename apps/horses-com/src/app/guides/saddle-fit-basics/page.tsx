@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -98,13 +98,7 @@ export default function SaddleFitBasicsPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Discipline-aware buyer guides and reference articles."
-            source="guide-saddle-fit"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -114,23 +108,6 @@ export default function SaddleFitBasicsPage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guide-saddle-fit-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why Saddle Fit Changes</h2>
           <p>Owners are often told to have a saddle fitted to a horse and treat the result as permanent. The horse's back does not cooperate with this view. A working horse's topline gains and loses muscle on a timescale of weeks; the topline of a horse coming back into work after winter turnout looks measurably different from the same horse at the end of a competition season. A saddle that fit at the start of the season often fits poorly six months later, and a saddle that fits a fit horse in July fits poorly the same horse in February.</p>

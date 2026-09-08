@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import {
   buildMetadata,
-  ArticleLayout,
-  EmailCapture, CrossPortfolioCard,
+  ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
   AffiliateDisclosure,
@@ -120,34 +119,12 @@ export default function VetsPomeranianHealthPage() {
                 { label: 'Chihuahua Health', href: '/breeds/chihuahua-health' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="vets-co"
-              title="Free Pet Health Tips"
-              subtitle="Practical guidance every Tuesday."
-              source="breeds-pomeranian"
-            />
+
             <CrossPortfolioCard currentSite="vets-co" contentType="breed" variant="sidebar" />
           </>
         }
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="breeds-pomeranian-health-under-hero"
-            />
-          </div>
 
           <ArticleByline
             siteName="Vets.co Editorial"

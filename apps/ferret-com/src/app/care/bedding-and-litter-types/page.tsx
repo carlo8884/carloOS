@@ -4,7 +4,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -97,13 +96,7 @@ export default function BeddingAndLitterTypesPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="care" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Care Notes"
-              subtitle="Evidence-based ferret husbandry, monthly."
-              source="care-bedding-and-litter-types"
-            />
+
           </>
         }
       
@@ -122,8 +115,6 @@ export default function BeddingAndLitterTypesPage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the bedding and litter list
@@ -131,15 +122,7 @@ export default function BeddingAndLitterTypesPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Ferret bedding &amp; litter shopping list
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Ferret bedding & litter shopping list"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="care-bedding-and-litter-types-under-hero"
-            />
+
           </div>
 
           <h2 id="instincts">The Two Instincts That Decide Everything</h2>

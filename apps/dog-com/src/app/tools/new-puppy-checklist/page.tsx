@@ -104,6 +104,29 @@ const howToSchema = buildHowToSchema({
 
 const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
 
+const PUPPY_CHECKLIST_TEXT = `New-puppy day-one checklist
+
+Before pickup
+• Adult-size crate with a divider
+• Complete puppy food and stainless or ceramic bowls
+• Washable bed
+• Flat collar with ID tag, plus harness and leash
+• Poop bags and enzymatic cleaner
+• First vet appointment booked
+
+First 48 hours
+• House-training routine
+• Teething chew
+• Quiet sleep area
+
+First month
+• Vaccines and parasite prevention started
+• Microchip registration
+• Decide on pet insurance while the puppy is healthy
+
+Use the builder on this page to tailor the list to adult size, pickup age, indoor or outdoor, crate training, and budget. This is shopping and planning guidance, not a diagnosis.
+`
+
 export default function NewPuppyChecklistPage() {
   return (
     <>
@@ -125,7 +148,9 @@ export default function NewPuppyChecklistPage() {
           <h1
             className="font-display font-bold text-white tracking-tight leading-none mb-5"
             style={{ fontSize: 'clamp(34px, 5vw, 56px)' }}
-          >Owner notes</h1>
+          >
+            New Puppy Checklist
+          </h1>
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             What do you actually need before a puppy comes home? Pick adult size, age at pickup,
             indoor or outdoor, crate training, and budget — then check off a staged first-week list
@@ -147,22 +172,15 @@ export default function NewPuppyChecklistPage() {
         <div className="max-w-5xl">
           <Calculator />
         </div>
-      </section>
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+        <div className="max-w-2xl mt-8">
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
+            title="Save the day-one checklist"
+            subtitle="The staged list from this page — crate, bowls, ID tag, first vet visit."
             source="tools-new-puppy-checklist-under-hero"
+            resourceText={PUPPY_CHECKLIST_TEXT}
+            resourceLabel="Save the checklist"
           />
         </div>
       </section>

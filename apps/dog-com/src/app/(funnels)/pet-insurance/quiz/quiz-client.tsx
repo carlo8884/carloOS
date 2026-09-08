@@ -5,9 +5,7 @@ import {
   useState } from 'react'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
-  EmailCapture
-} from '@carloOS/ui'
+  AffiliateDisclosure} from '@carloOS/ui'
 import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config/affiliate-hop'
 import { CARRIERS, type CarrierProfile } from '../../../../data/insurance-carriers'
 
@@ -286,14 +284,7 @@ export default function QuizClient() {
               Take the quiz again
             </button>
 
-            <EmailCapture
-              variant="section"
-              siteId="dog-com"
-              source="dog-com:insurance-comparison"
-              title="Want the full carrier comparison?"
-              subtitle="Side-by-side spreadsheet of all 9 carriers. We'll email it instantly."
-              ctaText="Send the spreadsheet"
-            />
+
           </div>
         )}
       </div>

@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   StockImage,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -109,13 +108,7 @@ export default function SableFerretsPage() {
                 { label: 'Choosing a Healthy Ferret', href: '/colors/choosing-a-healthy-ferret' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Care Notes"
-              subtitle="Evidence-based ferret facts, monthly."
-              source="colors-sable"
-            />
+
           </>
         }
       
@@ -137,23 +130,6 @@ export default function SableFerretsPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="colors-sable-ferrets-under-hero"
-            />
-          </div>
 
           <DropCap>
             Sable is the ferret of the imagination — the warm-brown, masked,

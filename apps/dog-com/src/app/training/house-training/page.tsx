@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -47,13 +46,11 @@ export default function HouseTrainingPage() {
         <TableOfContents items={[{ label: 'The Core Principle', href: '#principle' }, { label: 'The Schedule Method', href: '#schedule' }, { label: 'Accident Protocol', href: '#accidents' }, { label: 'Reinforcing Outside Elimination', href: '#reinforce' }, { label: 'Common Mistakes', href: '#mistakes' }, { label: 'Realistic Timeline', href: '#timeline' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Dog Crates 2026', href: '/reviews/best-dog-crates' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-house" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the schedule method
@@ -61,15 +58,7 @@ export default function HouseTrainingPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             House-training schedule
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="House-training schedule"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="training-house-under-hero"
-          />
+
         </div>
 
         <h2 id="principle">The Core Principle</h2>

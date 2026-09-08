@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,13 +95,7 @@ export default function BarrelRacingPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="discipline-barrel-racing"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -111,23 +105,6 @@ export default function BarrelRacingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="disciplines-barrel-racing-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Barrel Racing Is</h2>
           <p>Barrel racing is a timed speed event most associated with rodeo and traditionally a women&apos;s event at the professional level. The horse and rider enter the arena at a gallop, run a set pattern around three barrels, and sprint back across the timer line, with the fastest clean run winning. It is one of the most popular grassroots horse sports in North America, with classes from local jackpots to professional rodeo finals, and an electronic timer to hundredths or thousandths of a second.</p>

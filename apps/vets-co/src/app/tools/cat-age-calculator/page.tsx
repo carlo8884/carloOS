@@ -7,7 +7,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
@@ -164,8 +163,6 @@ export default function CatAgeCalculatorPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the stage notes
@@ -173,15 +170,7 @@ export default function CatAgeCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Life-stage care notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Life-stage care notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-cat-age-calculator-under-hero"
-          />
+
         </div>
 
         <h2 id="calculator">The calculator</h2>

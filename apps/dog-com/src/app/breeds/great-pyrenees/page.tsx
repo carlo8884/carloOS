@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Great Pyrenees Guide — Livestock Guardian Instincts | Dog.com', description: 'Great Pyrenees were bred to work alone guarding livestock. Independent decision-making, nighttime barking, and escape behavior are bred-in traits.', path: '/breeds/great-pyrenees', type: 'article' })
@@ -37,27 +37,11 @@ export default function GreatPyreneesPage() {
           { label: 'Great Pyrenees vs Newfoundland', href: '/compare/great-pyrenees-vs-newfoundland' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-great-pyrenees" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-great-pyrenees-under-hero"
-          />
-        </div>
 
         <p>The working story starts in the Pyrenees Mountains: livestock guardian dogs selected for millennia to patrol flocks against wolves and bears without a handler nearby. That LGD / night-patrol history is why a household Pyr still needs a 6-foot fence and a nocturnal-bark plan, not a crate-only afternoon. Great Pyrenees are not typically first-time-owner friendly — NO-typically — when the household expects off-leash recall, a quiet suburban night, or a dog that looks to humans before deciding.</p>
 

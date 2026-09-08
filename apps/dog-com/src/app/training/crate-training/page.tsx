@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -47,29 +46,16 @@ export default function CrateTrainingPage() {
         <TableOfContents items={[{ label: 'Why Crate Train', href: '#why' }, { label: 'Right Crate Size', href: '#size' }, { label: 'Introduction Protocol', href: '#intro' }, { label: 'Duration Guidelines', href: '#duration' }, { label: 'Night Training', href: '#night' }, { label: 'Common Problems', href: '#problems' }]} />
         <RelatedLinks title="Related Guides" links={[{ label: 'House Training Guide', href: '/training/house-training' }, { label: 'Best Dog Crates 2026', href: '/reviews/best-dog-crates' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-crate" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Crate-training protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Crate-training protocol"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="training-crate-under-hero"
-          />
+
         </div>
 
         <h2 id="why">Why Crate Training Is Worth It</h2>

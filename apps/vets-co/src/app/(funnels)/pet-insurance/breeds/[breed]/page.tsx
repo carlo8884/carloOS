@@ -8,7 +8,6 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
-  EmailCapture,
 } from '@carloOS/ui'
 import {
   ALL_INSURANCE_BREEDS,
@@ -176,16 +175,6 @@ export default async function BreedInsuranceHub({ params }: PageParams) {
       </section>
 
       {/* ─── Lead magnet ──────────────────────────────────────────────────── */}
-      <section className="mt-12">
-        <EmailCapture
-          variant="section"
-          siteId="vets-co"
-          source={`insurance-breed-${breed}`}
-          title="Free: Pet Insurance Comparison Spreadsheet"
-          subtitle="9 major carriers side-by-side — premiums, deductibles, waiting periods."
-          ctaText="Send the notes"
-        />
-      </section>
     </article>
   )
 }

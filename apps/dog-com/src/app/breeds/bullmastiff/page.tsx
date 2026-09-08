@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bullmastiff Breed Guide — Hip Dysplasia, Bloat Risk | Dog.com', description: 'Bullmastiffs are quiet, loyal giant breed dogs. GDV/bloat risk, hip and elbow dysplasia, and cardiac screening are the primary health priorities.', path: '/breeds/bullmastiff', type: 'article' })
@@ -37,27 +37,11 @@ export default function BullmastiffPage() {
           { label: 'Boxer vs Bullmastiff', href: '/compare/boxer-vs-bullmastiff' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-bullmastiff" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-bullmastiff-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 19th-century England: the Gamekeeper&apos;s Night Dog, a Mastiff–Bulldog cross bred to pin poachers and still take a handler&apos;s cue. That estate-guard / giant-frame history is why a household Bullmastiff still needs an 18-month no-forced-run rule and a slobber-cloth pocket, not a crate-only afternoon. Bullmastiffs are not typically first-time-owner friendly — NO-typically — when the household cannot commit to early positive-reinforcement training, the 45–60 minute daily walk floor, and anatomy-level drool.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -34,26 +34,10 @@ export default function DogLiverDiseasePage() {
           <TableOfContents items={[{ label: 'Enzyme Interpretation', href: '#enzymes' }, { label: 'Hepatitis', href: '#hepatitis' }, { label: 'Portosystemic Shunts', href: '#shunts' }, { label: 'Cirrhosis', href: '#cirrhosis' }, { label: 'Dietary Management', href: '#diet' }, { label: 'Home-watch kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Pancreatitis', href: '/health/pancreatitis' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-liver" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dog-liver-disease-under-hero"
-            />
-          </div>
 
           <h2 id="enzymes">Understanding Liver Enzyme Elevations</h2>
           <p><strong>ALT (Alanine Aminotransferase):</strong> A liver-specific enzyme released when hepatocytes are damaged or dying. Elevated ALT indicates hepatocellular injury — the degree of elevation correlates roughly (not precisely) with the extent of damage. Mildly elevated ALT (1–3× upper normal) can result from muscle damage, certain medications, and transient hepatocellular stress — not all ALT elevations indicate significant liver disease. Markedly elevated ALT (10× or more upper normal) indicates significant hepatocyte damage requiring investigation. The trend over time matters more than a single value.</p>

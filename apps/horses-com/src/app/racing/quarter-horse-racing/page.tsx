@@ -16,7 +16,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -133,13 +132,7 @@ export default function QuarterHorseRacingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-quarter-horse"
-            />
+
           </>
         }
       >
@@ -150,23 +143,6 @@ export default function QuarterHorseRacingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-quarter-horse-racing-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Quarter Horse Racing Is</h2>
           <p>Quarter Horse racing is a form of flat racing conducted at short sprint distances, with the American Quarter Horse as the primary breed. Races are run in a straight line or around a tight oval, depending on the track, and are completed in a matter of seconds. The discipline emphasizes raw acceleration out of the gate over the ability to sustain speed across longer distances. This is the defining difference between Quarter Horse racing and Thoroughbred racing: the Quarter Horse is an explosive sprinter; the Thoroughbred is also built for sustained speed across furlongs and miles.</p>

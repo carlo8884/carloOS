@@ -6,9 +6,7 @@ import {
   buildItemListSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
-  EmailCapture
-} from '@carloOS/ui'
+  AffiliateDisclosure} from '@carloOS/ui'
 
 /**
  * Vets-co pet insurance hub.
@@ -188,14 +186,7 @@ export default function VetsCoInsuranceHub() {
           </Link>
         </div>
 
-        <EmailCapture
-          variant="section"
-          siteId="vets-co"
-          source="vets-co:insurance-comparison"
-          title="Save the comparison for later"
-          subtitle="We'll send you the 9-carrier comparison spreadsheet by email."
-          ctaText="Send the notes"
-        />
+
       </div>
     </>
   )

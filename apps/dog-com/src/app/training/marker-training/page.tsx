@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
@@ -41,13 +40,11 @@ export default function MarkerTrainingPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Positive Reinforcement', href: '/training/positive-reinforcement' }, { label: 'Basic Commands', href: '/training/basic-commands' }, { label: 'Off-Leash Training', href: '/training/off-leash-training' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Training Tips" subtitle="Science-based guidance weekly." source="training-marker" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the marker protocol
@@ -55,15 +52,7 @@ export default function MarkerTrainingPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Marker-training protocol
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Marker-training protocol"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="training-marker-training-under-hero"
-            />
+
           </div>
 
           <h2>Why Timing Is Everything</h2>

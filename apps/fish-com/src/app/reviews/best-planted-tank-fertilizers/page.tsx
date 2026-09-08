@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -41,22 +41,6 @@ export default function BestPlantedFertilizersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-planted-tank-fertilizers-under-hero"
-              />
-            </div>
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
@@ -113,7 +97,7 @@ export default function BestPlantedFertilizersPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Tank Setup Guide', href: '/setup' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
-            <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Planted tank tips every Thursday." source="review-fertilizers" />
+
           </aside>
         </div>
       </div>

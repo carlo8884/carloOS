@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Goldendoodle Guide — F1 vs F1B, Coat Types | Dog.com', description: 'Goldendoodles: F1 (50% Golden/Poodle) vs F1B (75% Poodle) coat and shedding differences explained.', path: '/breeds/golden-doodle', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Goldendoodle Breed Guide', description: 'F1 vs F1B generations, coat types, health testing, and realistic expectations for Goldendoodles.', url: 'https://dog.com/breeds/golden-doodle', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -39,27 +39,11 @@ export default function GoldendoodlePage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Expert guidance weekly." source="breed-goldendoodle" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-golden-doodle-under-hero"
-          />
-        </div>
 
         <p>The working story starts in the 1990s: a Golden Retriever × Poodle companion cross sold as a low-shedding household dog. That designer-cross / coat-lottery history is why a household Goldendoodle still needs an F1-vs-F1B generation check and a 6–8 week groom clock, not a crate-only afternoon. Goldendoodles are typically first-time-owner friendly — YES-typically — when the household accepts that no dog is truly hypoallergenic, that F1 coats are unpredictable, and that curlier F1B coats mat without 6–8 week professional grooming.</p>
 

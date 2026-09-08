@@ -5,7 +5,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   ArticleByline,
@@ -230,14 +229,7 @@ export default function SubstrateCalculatorPage() {
             Send the pounds, kilograms, and liters for your footprint — plus the 10% buffer — so you
             are not one bag short on setup day. No spam.
           </p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Substrate shopping list"
-            subtitle="Send the bag sizes — pounds, kilograms, and liters for your tank footprint. No spam."
-            ctaText="Send the notes"
-            source="tools-substrate-calculator-under-hero"
-          />
+
         </div>
 
         <h2 id="formula">The Formula</h2>

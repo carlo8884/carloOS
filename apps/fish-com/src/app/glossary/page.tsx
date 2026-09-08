@@ -5,7 +5,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  EmailCapture,
 } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -145,17 +144,6 @@ export default function AquariumGlossaryPage() {
             </dl>
           </section>
         ))}
-      </div>
-
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="fish-com"
-          title="The Weekly Tank"
-          subtitle="Fishkeeping references and tool updates. No spam."
-          source="glossary"
-          ctaText="Send the tank notes"
-        />
       </div>
     </>
   )

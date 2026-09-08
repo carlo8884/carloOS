@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -135,13 +134,7 @@ export default function MaidenRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-maiden"
-            />
+
           </>
         }
       >
@@ -152,23 +145,6 @@ export default function MaidenRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-maiden-under-hero"
-            />
-          </div>
 
           <h2 id="meaning">What &ldquo;Maiden&rdquo; Actually Means</h2>
           <p>In racing, a <strong>maiden</strong> is simply a horse that has never won a race. The label is about win record and nothing else: it has no connection to a horse&apos;s age, sex, or breeding. A beautifully bred, expensively purchased colt and a modest gelding are both &ldquo;maidens&rdquo; until the day each first crosses the line in front. That first win is called <strong>breaking your maiden</strong>, and from that moment the horse can no longer be entered under maiden conditions.</p>

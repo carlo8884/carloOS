@@ -19,7 +19,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -147,13 +146,7 @@ export default function KentuckyDerbyPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="triple-crown-kentucky-derby"
-            />
+
           </>
         }
       >
@@ -164,23 +157,6 @@ export default function KentuckyDerbyPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="triple-crown-kentucky-derby-under-hero"
-            />
-          </div>
 
           <h2 id="first-leg">The First Leg</h2>
           <p>The <strong>Kentucky Derby</strong> is the opening leg of the American <a href="/racing/triple-crown">Triple Crown</a> and the most widely watched horse race in the United States. First run in 1875, it is restricted to three-year-old Thoroughbreds, run once a year on the first Saturday in May, and watched by an audience that includes millions of people who follow no other racing all year. Because it comes first, the Derby sets the narrative for the entire Triple Crown season: every spring, the story of who might sweep all three legs begins here.</p>

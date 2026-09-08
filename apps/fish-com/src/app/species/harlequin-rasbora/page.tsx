@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -76,27 +76,11 @@ export default function HarlequinPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-harlequin" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-harlequin-rasbora-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-harlequin-rasbora" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A harlequin rasbora in a home aquarium." priority />
         <h2>Why Harlequins Are the Benchmark Community Schooler</h2>
         <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras consistently rank as one of the most recommended because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>

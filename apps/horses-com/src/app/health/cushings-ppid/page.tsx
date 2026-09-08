@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -110,13 +110,7 @@ export default function PPIDPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="health-ppid"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -126,13 +120,7 @@ export default function PPIDPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Email the stainless-horse-shedding-blade,
               wicking-horse-anti-sweat-sheet, and
@@ -151,14 +139,7 @@ export default function PPIDPage() {
               clipper, hay-bale-scale, or grazing-muzzle
               hop. No spam.
             </p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-ppid-under-hero"
-            />
+
           </div>
 
           <h2 id="what">What Is PPID</h2>
@@ -188,7 +169,6 @@ export default function PPIDPage() {
           <p>The most dangerous consequence of PPID is laminitis, mediated largely through insulin dysregulation. Any older horse with unexplained or recurrent laminitis should be tested for PPID. Conversely, a PPID diagnosis prompts a laminitis-prevention plan: diet control, weight management, and prompt treatment of the endocrine disease.</p>
 
           <h2 id="management">Management</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <ul>
             <li><strong>Manage the failed-shed coat.</strong> Hypertrichosis is the most specific sign; the long curly coat stays after spring. A stainless shedding blade is how that coat is lifted between clips — it is not a curry comb or dandy brush (those live on grooming) and not horse clippers (those live on body-clipping).</li>
             <li><strong>Help the horse cool.</strong> The heavy coat impairs cooling, and some PPID horses sweat abnormally. A wicking anti-sweat sheet is how a clipped or still-coated horse sheds heat after work — it is not an Irish-knit cooler or a wool quarter sheet (those live on tying-up), not a fleece cooler (that lives on body-clipping), and not a sweat scraper (that lives on summer-heat-care).</li>

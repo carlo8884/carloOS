@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -51,23 +51,6 @@ export default function FrenchBulldogBreedPage() {
         <Link href="/breeds" className="hover:text-brand-primary no-underline">Breeds</Link><span>›</span>
         <span className="text-brand-text-mid font-medium">French Bulldog</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-french-bulldog-under-hero"
-          />
-        </div>
-      </section>
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_290px] gap-14">
           <article className="carloOS-article min-w-0">
@@ -117,7 +100,7 @@ export default function FrenchBulldogBreedPage() {
               { label: 'French Bulldog vs Boston Terrier', href: '/compare/french-bulldog-vs-boston-terrier' },
             ]} />
             <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breed-french-bulldog" />
+
           </aside>
         </div>
       </div>

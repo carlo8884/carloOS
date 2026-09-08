@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   StockImage,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -109,13 +108,7 @@ export default function BlackFerretsPage() {
                 { label: 'Colors & Patterns Overview', href: '/colors/ferret-colors-and-patterns' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret.com Field Notes"
-              subtitle="Color guides and care references, monthly."
-              source="colors-black"
-            />
+
           </>
         }
       
@@ -137,23 +130,6 @@ export default function BlackFerretsPage() {
             publishedAt="2026-05-30"
             updatedAt="2026-05-30"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="colors-black-ferrets-under-hero"
-            />
-          </div>
 
           <DropCap>
             A true black ferret is a showstopper. Against the white or pale-gold undercoat that

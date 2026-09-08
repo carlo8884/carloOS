@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  EmailCapture,
   buildBreadcrumbSchema,
   buildHowToSchema,
   combineSchemas,
@@ -146,23 +145,12 @@ export default function PuppyFirstYearBudgetPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Puppy First-Year Budget</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the budget plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-puppy-first-year-budget-under-hero"
-          />
+
         </div>
       </section>
 
@@ -251,18 +239,6 @@ export default function PuppyFirstYearBudgetPage() {
         <div className="max-w-2xl">
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-dark">Frequently asked questions</h2>
           <FAQAccordion items={FAQS} />
-        </div>
-      </section>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="dog-com"
-            variant="inline"
-            title="Dog.com owner’s letter"
-            subtitle="Practical first-year references and tool updates. No spam."
-            source="tools-puppy-first-year-budget"
-          />
         </div>
       </section>
 

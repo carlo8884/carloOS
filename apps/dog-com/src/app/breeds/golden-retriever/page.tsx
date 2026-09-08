@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, EmailCapture, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -110,19 +110,8 @@ export default function GoldenRetrieverBreedPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
           <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-golden-retriever-under-hero"
-          />
+
         </div>
       </section>
 
@@ -248,10 +237,7 @@ export default function GoldenRetrieverBreedPage() {
               { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
             ]} />
             <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-            <EmailCapture variant="sidebar" siteId="dog-com"
-              title="Free Dog Health Tips"
-              subtitle="Practical guidance every Tuesday."
-              source="breed-golden-retriever" />
+
           </aside>
         </div>
       </div>

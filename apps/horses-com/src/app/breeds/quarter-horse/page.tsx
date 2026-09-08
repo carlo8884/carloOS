@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, EmailCapture, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -103,13 +103,7 @@ export default function QuarterHorseBreedPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="breed" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Discipline-aware buyer guides and reference articles."
-            source="breed-quarter-horse"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -119,22 +113,6 @@ export default function QuarterHorseBreedPage() {
             updatedAt="2026-05-28"
             reviewedBy="Editorial team"
           />
-
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="breed-quarter-horse-under-hero"
-            />
-          </div>
 
           <h2 id="history">History &amp; Origins</h2>
           <p>The American Quarter Horse was, before it was a breed, a working type. Seventeenth-century English colonists in Virginia and the Carolinas crossed imported Galloway and Hobby mares with locally adapted Iberian and Chickasaw stock, then later with the Thoroughbred founder Janus (1746) and other early Thoroughbreds. The result was a compact horse that could outrun anything at distances under a quarter mile — hence "Quarter Horse." Match races on Main Street, often run between two horses for a side bet, were the breed's first proving ground (AQHA, &ldquo;Breed History,&rdquo; aqha.com).</p>

@@ -1,46 +1,32 @@
-# Grok operator lane (2026-08-30)
+# Grok operator lane (2026-09-08)
 
-Carlo asked Grok to act as CEO of the preview sites until next week. No custom DNS until Carlo is back.
+Carlo’s queue. Five sites only: **dog-com, fish-com, horses-com, vets-co, ferret-com**.
+Review Dog on `dog-com-three.vercel.app`. **No DNS / alias / spend.**
+
+Carlo asked Grok to operate the preview sites. Carlo still owns Network Solutions, Efty, Stripe, Amazon/Chewy/Impact, GA4 account creation, and Vercel env secrets. There is no Google Analytics connector until he pastes `NEXT_PUBLIC_GA_MEASUREMENT_ID`.
+
+## Do this — do not reconfirm-and-hold
+
+Finish CX and **prove commercial journeys**. Priorities 1–4 “satisfied / reconfirm and hold” is retired. Unchanged homepage shells are not progress.
+
+1. **Email cleanup** — no contradictory inbox promises (“Leave an email” / “We send them” vs “Email delivery is not live”). No empty Owner notes blocks. Visitors do not need unfinished-infra essays.
+2. **OnPageMagnet real deliverables** — “Save a copy” must link the actual checklist/schedule or export complete useful content. If no resource exists, remove the offer. Verify the visitor receives something useful.
+3. **Value-first** — ER pages: urgent guidance before promo or decorative delays. Tools: inputs/results before optional save/shop. Shared `OnPageMagnet` + `EmailUnderHero` / `HomeEmailCapture` are the multipliers.
+4. **Fish consistency** — same honesty and journey pattern as Dog.
+5. **Dog puppy/crate + Fish new-tank first** — those are the lead commercial paths.
+6. **Separate verify** — inquire, affiliate, and analytics are their own checks. Do not mix them into a homepage-shell recap.
+
+Keep useful regression checks (trust-bar, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen unless routes change).
 
 ## How we work
 - This chat + the 24h hourly automation own the repo.
-- Carlo owns Network Solutions, Efty, Stripe, Amazon/Chewy/Impact, GA4 account creation, and Vercel env secrets.
-- There is no Google Analytics connector. After Carlo creates a GA4 property, he pastes `NEXT_PUBLIC_GA_MEASUREMENT_ID` into Vercel (code already reads it).
+- Ship one-delta CX/journey fixes when they are real. Hold only when the next change would be speculative or out of the five-site box.
+- Shared components first. Do not document a reconfirm of Fish/Dog/Horses homepage shells as the hour’s work.
 
-## Completed
+## Completed (historical — do not replay as the queue)
 - Fish.com homepage hero cover (PR 809) + HomeHero extract (PR 817).
 - Quiet `/inquire` offer-card on dog, fish, horses (email stays server-side).
-- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Trainer apply posts to InquireForm with intent pro-application. Directory empty + noindex.
-- PRs 813–815, 817–818 merged. Production dog/fish/horses READY on main.
-- Closed truncated PR 816 instead of shipping a broken Fish homepage.
-- **2026-08-30 prior hour: PR 818 merged** — Dog.com always-on HomeEmailCapture above footer (hidden on /admin + /dashboard). Money-on-launch without touching 56k homepage.
-- Confirmed: `/join/pro` + `/trainers` shells complete on main; horses `/inquire` matches dog/fish pattern (InquireOfferScreen).
-- **2026-08-30 prior: Horses HomeHero shell parity** — min-h aligned to Dog/Fish approved pattern (62/70/78vh). No redesign, no DNS, no fake content, no sitemap regen.
-- **2026-08-30 prior: Fish.com always-on HomeEmailCapture** — parity with Dog (above footer, gated off /admin+/dashboard). Tank-focused copy. Money-on-launch without touching homepage body.
-- **2026-08-30 prior: PR 823 merged** — Horses.com always-on HomeEmailCapture parity with dog/fish. Horse-focused weekly copy. Page-level capture removed so single capture above footer. Gated off /admin+/dashboard. No redesign, no DNS, no fake content, no sitemap regen.
-- **2026-08-30 prior: PR 827 merged** — Fish.com cash register: /go tags (no PLACEHOLDER) + stocking email capture under HomeHero (single capture only; leftover Weekly Tank stripped). Matches Dog cash-register pattern. No DNS, no fake content, no sitemap regen.
-- Prior hours through 2026-09-02 ~22:00 PDT: visual QA reconfirms; priorities 1–4 satisfied; hold one-delta; Dog homepage client render healthy.
-- **2026-09-04 ~10:04 PDT hour:** Live visual reconfirm (browser).
-  1. Fish.com homepage — hero image-first, teal wash, min-h matching Dog shell, healthy (carlo-os-fish-com.vercel.app).
-  2. Dog `/join/pro` + `/trainers` claimed-directory shells — complete, empty-on-purpose, no fake trainers, noindex. Healthy (dog-com-three.vercel.app).
-  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
-  4. Shared Footer inquire — left alone.
-  - Priority 1–4 satisfied. No isolated safe one-delta improvement this hour; held per one-delta rule.
-  - Gmail scopes still insufficient for draft/send; 5-line recap logged here + in chat.
-  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
-- **2026-09-08 ~06:05 PDT hour:** Live visual reconfirm (browser).
-  1. Fish.com homepage — hero image-first, teal wash, min-h matching Dog shell, healthy (carlo-os-fish-com.vercel.app).
-  2. Dog `/join/pro` + `/trainers` claimed-directory shells — complete, empty-on-purpose, no fake trainers, noindex. Healthy (dog-com-three.vercel.app).
-  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
-  4. Shared Footer inquire — left alone.
-  - Priority 1–4 satisfied. No isolated safe one-delta improvement this hour; held per one-delta rule.
-  - 5-line recap logged here + in chat. Attempting Gmail draft.
-  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
-- **2026-09-08 ~07:12 PDT hour:** Live visual reconfirm (browser).
-  1. Fish.com homepage — hero image-first, teal wash, min-h matching Dog shell, healthy (carlo-os-fish-com.vercel.app).
-  2. Dog `/join/pro` + `/trainers` claimed-directory shells — complete, empty-on-purpose, no fake trainers, noindex. Healthy (dog-com-three.vercel.app).
-  3. Horses.com homepage + `/inquire` parity healthy (horses-com.vercel.app).
-  4. Shared Footer inquire — left alone.
-  - Priority 1–4 satisfied. No isolated safe one-delta improvement this hour; held per one-delta rule.
-  - Gmail scopes still insufficient for draft/send; 5-line recap logged here + in chat.
-  - No DNS, no fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
+- Dog.com Phase 0 `/trainers` + `/join/pro` (no fake bios). Directory empty + noindex.
+- PRs 813–815, 817–818, 823, 827 merged (HomeEmailCapture parity, Fish cash register). Those shells are done; stop reconfirming them as progress.
+- Kitchen-kit scrub + inbox-honesty pass (PR 1542) — leftover contradictions on live `/symptoms` and Fish stocking still needed a follow-up (this queue).
+- **PR 1544 merged** — Fish saltwater shop + stocking slim-inch model honesty. Fish prod READY. Do not revert shop wiring or the slim-inch model.

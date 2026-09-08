@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -135,13 +134,7 @@ export default function ClaimingRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-claiming"
-            />
+
           </>
         }
       >
@@ -152,23 +145,6 @@ export default function ClaimingRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-claiming-under-hero"
-            />
-          </div>
 
           <h2 id="claim">How the Claim Works</h2>
           <p>A claiming race is defined by one feature: <strong>every horse in the field is for sale</strong> at the same fixed price, the <strong>claiming price</strong>, which is published in the race&apos;s conditions. Before the race is run, a licensed owner &mdash; usually acting through a trainer &mdash; can submit a <strong>claim</strong> for any horse entered, putting up that price.</p>

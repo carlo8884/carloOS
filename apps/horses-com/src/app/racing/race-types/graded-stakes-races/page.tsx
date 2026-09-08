@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -135,13 +134,7 @@ export default function GradedStakesRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-graded-stakes"
-            />
+
           </>
         }
       >
@@ -152,23 +145,6 @@ export default function GradedStakesRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-graded-stakes-under-hero"
-            />
-          </div>
 
           <h2 id="elite">The Elite Subset of Stakes</h2>
           <p><strong>Graded stakes</strong> are the very best <a href="/racing/race-types/stakes-races">stakes races</a> &mdash; the elite layer at the top of the entire class structure. Not every stakes race is graded: below the graded ranks sit numerous ungraded or &ldquo;listed&rdquo; stakes that are still important regional events. The graded designation marks out the small number of races that consistently attract the strongest fields in the sport.</p>

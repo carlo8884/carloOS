@@ -38,7 +38,6 @@ import {
   combineSchemas,
   SchemaScript,
   StockImage,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
@@ -361,22 +360,6 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8 not-prose">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source={`health-${disease.slug}-under-hero`}
-              />
-            </div>
 
             {/* TL;DR */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">
@@ -648,13 +631,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               </div>
             )}
 
-            <EmailCapture
-              variant="sidebar"
-              siteId="dog-com"
-              title="Free Dog Health Tips"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              source={`health-${disease.slug}`}
-            />
+
           </aside>
         </div>
       </div>

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -132,13 +131,7 @@ export default function LeashAndHarnessTrainingPage() {
                 { label: 'Behavior Hub', href: '/behavior' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Care Notes"
-              subtitle="Evidence-based ferret behavior, monthly."
-              source="behavior-leash-harness"
-            />
+
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
@@ -156,23 +149,6 @@ export default function LeashAndHarnessTrainingPage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="behavior-leash-harness-under-hero"
-            />
-          </div>
 
           <DropCap>
             A ferret on a leash draws a crowd, but the appeal hides a

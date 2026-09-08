@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
@@ -39,27 +39,11 @@ export default function TickBornePage() {
             <div className="text-2xs text-brand-text-light mt-2">Note: RMSF not detected by 4Dx — requires separate testing</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm in Dogs', href: '/health/heartworm-in-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-tick-borne" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-tick-borne-diseases-under-hero"
-            />
-          </div>
 
           <h2>Lyme Disease (Borrelia burgdorferi)</h2>
           <p><strong>Tick vector:</strong> Ixodes scapularis (black-legged tick / deer tick) primarily; Ixodes pacificus on the West Coast. Requires 24–48 hours of tick attachment for transmission — emphasizing prompt tick removal. A tick-removal hook is how an attached tick comes off as a whole instead of a squeezed body — it is not a generic tick remover and not a first-aid tick-removal tool. A fine-tooth flea comb is how ears, armpits, groin, and the collar line get a pass after a walk in grass or woods, before that 24–48 hour window closes. These are household check tools, not treatments. They do not prevent Lyme, they do not replace a veterinarian-recommended preventive, and they do not interpret a 4Dx result. <strong>Geographic distribution:</strong> Northeast, Upper Midwest, and Pacific Northwest — highest prevalence in these regions, but expanding range. <strong>Signs in dogs:</strong> Fever, lethargy, shifting-leg lameness (the joint pain can move from leg to leg), reduced appetite. Lyme nephritis — a serious kidney complication — occurs in a subset of affected dogs, particularly Labrador Retrievers and Golden Retrievers, causing protein-losing nephropathy that can lead to kidney failure. <strong>Testing:</strong> The 4Dx SNAP test detects Lyme antibodies as part of the annual heartworm test. A positive Lyme antibody test means the dog has been exposed — many seropositive dogs never develop clinical disease. <strong>Treatment:</strong> Veterinarians may prescribe doxycycline, typically for about 30 days; the dose must be determined by a veterinarian. <strong>Prevention:</strong> Tick prevention (isoxazoline class products most effective) + Lyme vaccination in tick-endemic regions.</p>

@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -85,13 +84,11 @@ export default function SeparationAnxietyPage() {
           { label: 'Training Hub', href: '/training' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-sep-anxiety" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the alone-time plan
@@ -99,15 +96,7 @@ export default function SeparationAnxietyPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Separation-anxiety protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Separation-anxiety protocol"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="training-sep-anxiety-under-hero"
-          />
+
         </div>
 
         <h2 id="distinguish">True Separation Anxiety vs Boredom — How to Tell</h2>

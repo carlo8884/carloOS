@@ -5,7 +5,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -149,14 +148,7 @@ export default function InsuranceFinderPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="vets-co"
-            title="Coverage shortlist"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="insurance-finder"
-          />
+
         </>
       }
     >
@@ -165,8 +157,6 @@ export default function InsuranceFinderPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the shortlist
@@ -174,15 +164,7 @@ export default function InsuranceFinderPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Coverage-priority notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Coverage-priority notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-insurance-finder-under-hero"
-          />
+
         </div>
 
         <h2 id="finder">The finder</h2>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
 import { HubHero } from '../../components/HubHero'
 
 export const metadata: Metadata = buildMetadata({
@@ -175,25 +175,6 @@ export default function ColorsHubPage() {
         <span style={{ color: 'var(--brand-text-mid)', fontWeight: 500 }}>Colors &amp; Patterns</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="colors-hub-under-hero"
-          />
-        </div>
-      </section>
-
       {/* Intro */}
       <div
         style={{
@@ -347,28 +328,6 @@ export default function ColorsHubPage() {
       </section>
 
       {/* Email Capture */}
-      <section
-        style={{
-          background: 'var(--brand-primary-pale)',
-          borderTop: '1px solid var(--brand-border)',
-          padding: 'clamp(40px, 6vw, 72px) clamp(20px, 5vw, 80px)',
-        }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          title="The Ferret.com Field Notes"
-          subtitle="New color guides, care references, and health explainers. Cited. No product pushes."
-          ctaText="Send the first-year schedule"
-          source="colors-hub"
-          perks={[
-            'Plain-English field guides',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
     </>
   )
 }

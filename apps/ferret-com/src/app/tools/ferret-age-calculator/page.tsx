@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  EmailCapture,
   buildBreadcrumbSchema,
   buildHowToSchema,
   combineSchemas,
@@ -156,8 +155,6 @@ export default function FerretAgeCalculatorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Ferret Age Calculator</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
@@ -166,15 +163,7 @@ export default function FerretAgeCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Ferret life-stage notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Ferret life-stage notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-ferret-age-calculator-under-hero"
-          />
+
         </div>
       </section>
 

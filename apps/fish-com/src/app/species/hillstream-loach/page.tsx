@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -75,27 +75,11 @@ export default function HillstreamLoachPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Otocinclus Care', href: '/species/otocinclus' }, { label: 'Amano Shrimp', href: '/species/amano-shrimp' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-hillstream" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-hillstream-loach-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-hillstream-loach" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A hillstream loach in a home aquarium." priority />
         <h2>Water Flow — The Non-Negotiable</h2>
         <p>Hillstream loaches come from fast-flowing streams and rivers in Southeast and East Asia where water rushes over rocky substrates. Their body shape is evolutionary adaptation to high-flow environments — the flattened profile, enlarged paired fins, and mouth structure all allow them to cling to smooth rocks in strong current while grazing biofilm. In a standard low-to-moderate flow community tank, hillstream loaches stress, refuse food, and die within weeks. The flow requirement is not an enrichment preference — it is a physiological necessity.</p>

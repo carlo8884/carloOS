@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { DOG_FOODS, DOG_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -57,25 +57,6 @@ export default function CanDogsEatHubPage() {
           A vet-referenced, plain-English safety check for the human foods dogs reach for most. Each food is rated <strong className="text-white/80">safe</strong>, <strong className="text-white/80">caution</strong>, or <strong className="text-white/80">toxic</strong> — tap any for the full reason, serving guidance, and what to do.
         </p>
       </div>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="can-dogs-eat-under-hero"
-          />
-        </div>
-      </section>
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
@@ -165,9 +146,6 @@ export default function CanDogsEatHubPage() {
       <section className="px-container-sm sm:px-container py-12" style={{ background: 'var(--brand-primary-pale)' }}>
         <div className="max-w-content-wide">
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="inline" />
-          <div className="mt-6">
-            <EmailCapture variant="section" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical, vet-aware guidance every Tuesday." source="can-dogs-eat-hub" />
-          </div>
         </div>
       </section>
     </>

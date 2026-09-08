@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co", description: "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.", path: '/guides/er-vs-urgent-care', type: 'article' })
@@ -27,7 +27,7 @@ export default function ERvsUrgentPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-er-vs-urgent" />
+
         </>}
       >
         <div className="carloOS-article">
@@ -37,22 +37,6 @@ export default function ERvsUrgentPage() {
           <CalloutBox variant="warning" title="When in doubt about an emergency, go">
             If your pet shows a potentially life-threatening sign — trouble breathing, collapse, severe bleeding, suspected bloat, inability to urinate, repeated seizures — do not wait or try to decide on the cheapest option. Go to the emergency hospital. The cost of a precautionary visit is far smaller than the cost of waiting too long.
           </CalloutBox>
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-er-vs-urgent-care-under-hero"
-            />
-          </div>
 
           <h2>The Three Levels of Care</h2>
           <p>Pet healthcare, like human healthcare, has tiers. Your <strong>regular veterinarian</strong> handles routine wellness, preventive care, chronic disease management, and many acute but stable problems during business hours. <strong>Urgent care</strong> clinics address same-day problems that are not life-threatening but should not wait days. The <strong>emergency hospital</strong> handles critical, time-sensitive situations around the clock with intensive-care capability. Matching the problem to the right tier gets your pet appropriate care efficiently.</p>
@@ -143,8 +127,6 @@ export default function ERvsUrgentPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-</div>
           </div>
 
           <h2>FAQ</h2>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
@@ -61,28 +61,11 @@ export default function QuarantineGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }]} />
-          <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-quarantine" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-quarantine-tank-guide-under-hero"
-          />
-        </div>
 
           <h2>Why Most Aquarists Skip It — And Why They Regret It</h2>
           <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $2,000 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
