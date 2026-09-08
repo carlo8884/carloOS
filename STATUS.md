@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — vets ER journey after #1549; /inquire stays quiet buyer path)
+**Last updated:** 2026-09-08 (COO — ferret cage journey after #1550; all five earning sites now have one JourneyNext)
 
-> **COO vets ER journey (2026-09-08):** After #1549. ER vs clinic tool → `/guides/when-to-go-to-the-vet` + existing soft-carrier `/go`. Empty cheat-sheet husk removed. Owners are not sent to `/inquire`. Details: `ops/handoffs/2026-09-08-coo-vets-er-journey.md`.
+> **COO ferret cage journey (2026-09-08):** After #1550. Cage-size calculator → `/care/cage-setup` + existing multi-level cage `/go`. Empty footprint / shopping-list husk removed. Details: `ops/handoffs/2026-09-08-coo-ferret-cage-journey.md`.
+
+> **COO vets ER journey (2026-09-08):** After #1549. ER vs clinic tool → `/guides/when-to-go-to-the-vet` + existing soft-carrier `/go`. Empty cheat-sheet husk removed. Owners are not sent to `/inquire`. Details: `ops/handoffs/2026-09-08-coo-vets-er-journey.md`. #1550 merged.
 
 > **COO horses journeys (2026-09-08):** After #1548. Blanket-size calculator → `/tack/blanket-weights` + existing winter-blanket `/go`. Cost calculator → `/first-horse-roadmap` + existing halter `/go`. Empty fit-notes / owner-notes husks removed. No kitchen-kit hops. Details: `ops/handoffs/2026-09-08-coo-horses-journeys.md`. #1549 merged.
 
