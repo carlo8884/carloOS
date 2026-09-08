@@ -6794,6 +6794,9 @@ const CALCULATORS = [
     id: 'dog · training-puppy-schedule hops',
     file: 'apps/dog-com/src/app/training/puppy-schedule/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the sample daily schedule' },
+      { re: /nextHref="\/nutrition\/puppy-nutrition"/, label: 'next step is puppy nutrition, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/puppy\+food\?s=training-puppy-schedule"/, label: 'journey hop reuses the existing puppy-food search' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-puppy-schedule/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/puppy\+food\?s=training-puppy-schedule/, label: 'puppy food search hop (same query as new-puppy)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-puppy-schedule/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
@@ -6804,8 +6807,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the schedule/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete week-by-week-schedule offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy treat button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the sample daily schedule, next step is puppy nutrition + the existing puppy-food hop. Empty Keep-the-schedule husk removed. Shop dump stays below the table. No invented kitchen hops.',
   },
   {
     id: 'dog · training-crate hops',

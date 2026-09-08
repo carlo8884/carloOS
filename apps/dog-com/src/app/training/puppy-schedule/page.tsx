@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -70,15 +71,6 @@ export default function PuppySchedulePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the schedule
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Week-by-week puppy schedule
-          </h2>
-
-        </div>
 
         <h2 id="why">Why a Schedule Is Your Best Training Tool</h2>
         <p>A consistent schedule accomplishes what training alone cannot: it makes accidents nearly impossible by creating predictable patterns of eating, eliminating, playing, and sleeping. A puppy on a schedule eliminates at predictable times — you can be there to reward outdoor elimination before indoor accidents become a habit. A puppy without a schedule eliminates unpredictably — owners miss opportunities to reinforce correct behavior and the habit of going outside develops more slowly.</p>
@@ -106,6 +98,14 @@ export default function PuppySchedulePage() {
           </table>
         </div>
         <p style={{ fontSize: '13px', color: 'var(--brand-text-light)', fontStyle: 'italic' }}>Adjust timing to your actual schedule. The pattern matters more than exact times.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/nutrition/puppy-nutrition"
+          nextLabel="Match meals on this schedule to a puppy formula"
+          nextBlurb="The sample day tells you when to feed. Puppy nutrition is what goes in the bowl — especially large-breed calcium limits. The food hop below is the same search already in the shop list, not a new query."
+          resourceHref="/go/amazon-brand/puppy+food?s=training-puppy-schedule"
+          resourceLabel="Browse puppy food on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (schedule essentials).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
