@@ -12690,6 +12690,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the small-breed calorie-density / kibble-size rule, next step is calorie calculator + the existing Royal Canin Small Adult hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'dog · best-dog-food-senior hops',
+    file: 'apps/dog-com/src/app/reviews/best-dog-food-senior/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the senior protein rule' },
+      { re: /nextHref="\/nutrition\/senior-dog-nutrition"/, label: 'next step is senior-nutrition, not a shop dump' },
+      { re: /resourceHref="\/go\/chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior"/, label: 'journey hop reuses the existing Bright Mind Chewy search' },
+      { re: /chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior/, label: 'existing Purina Bright Mind Chewy hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/hills\+science\+diet\+senior\+7\?s=reviews-best-dog-food-senior/, label: 'existing Hill\'s Senior 7+ Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the senior protein rule, next step is senior-nutrition + the existing Bright Mind hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [
