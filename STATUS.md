@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog sep-anxiety JourneyNext after #1586)
+**Last updated:** 2026-09-08 (COO — fish volume JourneyNext after #1587)
 
-> **COO dog sep-anxiety journey (2026-09-08):** After #1586. Boredom protocol → `/training/crate-training` + existing divider-crate `/go`. Empty “Keep the alone-time plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-sep-anxiety-journey.md`.
+> **COO fish volume journey (2026-09-08):** After #1587. Volume gallons result → `/tools/filter-gph-calculator` + existing filter-by-gallon `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-volume-journey.md`.
+
+> **COO dog sep-anxiety journey (2026-09-08):** After #1586. Boredom protocol → `/training/crate-training` + existing divider-crate `/go`. Empty “Keep the alone-time plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-sep-anxiety-journey.md`. #1587 merged.
 
 > **COO fish health journey (2026-09-08):** After #1585. Health guide grid → `/water-parameters` + existing test-kit `/go`. Empty “Keep the test-first health order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-health-journey.md`. #1586 merged.
 

@@ -83,6 +83,9 @@ const CALCULATORS = [
     id: 'fish · aquarium-volume-calculator hops',
     file: 'apps/fish-com/src/app/tools/aquarium-volume-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the gallons result' },
+      { re: /nextHref="\/tools\/filter-gph-calculator"/, label: 'next step is filter GPH, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+filter\+gallon\?s=tools-aquarium-volume"/, label: 'journey hop reuses the existing filter-by-gallon search' },
       { re: /amazon-brand\/glass\+aquarium\+tank\+gallon\?s=tools-aquarium-volume/, label: 'glass tank by gallon search hop' },
       { re: /amazon-brand\/acrylic\+aquarium\+tank\?s=tools-aquarium-volume/, label: 'acrylic tank search hop' },
       { re: /amazon-brand\/aquarium\+stand\?s=tools-aquarium-volume/, label: 'aquarium stand search hop' },
@@ -95,8 +98,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete tank-size-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the gallons result, next step is filter GPH + the existing filter-by-gallon hop. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · pond-volume-calculator',
