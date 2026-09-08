@@ -7,6 +7,7 @@ import {
   TableOfContents,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -165,6 +166,14 @@ export default function DogWellnessExamPage() {
             <li><strong>Senior:</strong> twice-yearly exams are recommended, because a year is a large fraction of a senior dog&rsquo;s remaining life and disease progresses faster — twice-yearly checks catch trends sooner. See our <a href="/health/senior-dog-care" className="text-brand-primary hover:underline">senior dog care</a> guide.</li>
             <li><strong>Any dog with a chronic condition:</strong> a schedule set individually by the veterinarian.</li>
           </ul>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/training/puppy-schedule"
+            nextLabel="Set the daily puppy schedule around those visits"
+            nextBlurb="The list is the visit-frequency rule — a puppy series every few weeks, annual for healthy adults, twice yearly for seniors. The puppy-schedule tool is the day-to-day plan between those appointments. The hop below is the same fecal-sample collection-kit search already on this page."
+            resourceHref="/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam"
+            resourceLabel="Browse fecal-sample collection kits on Amazon →"
+          />
 
           <h2 id="exam">The Head-to-Tail Physical Exam</h2>
           <p>

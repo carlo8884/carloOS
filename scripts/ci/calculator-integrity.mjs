@@ -8887,6 +8887,9 @@ const CALCULATORS = [
     id: 'dog · dog-wellness-exam hops',
     file: 'apps/dog-com/src/app/guides/dog-wellness-exam/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the AAHA visit-frequency rule' },
+      { re: /nextHref="\/training\/puppy-schedule"/, label: 'next step is the puppy schedule, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/fecal\+sample\+collection\+kit\?s=guides-dog-wellness-exam"/, label: 'journey hop reuses the existing fecal-sample collection-kit search' },
       { re: /amazon-brand\/fecal\+sample\+collection\+kit\?s=guides-dog-wellness-exam/, label: 'fecal-sample collection-kit search hop (matches on-page clinic-asks-for-a-fresh-sample copy; unused vs #993–#1029)' },
       { re: /amazon-brand\/leak\+proof\+specimen\+bags\?s=guides-dog-wellness-exam/, label: 'leak-proof specimen-bags search hop (matches on-page do-not-leak-in-the-car copy; unique vs house-training dog+poop+bags)' },
       { re: /amazon-brand\/high\+value\+vet\+visit\+treats\?s=guides-dog-wellness-exam/, label: 'high-value vet-visit-treats search hop (matches on-page low-stress exam-room copy; unique vs puppy-training / low-calorie / joint-support treat hops)' },
@@ -8898,8 +8901,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete wellness-visit-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page appointment-prep copy (fecal-sample collection kit so a fresh sample is ready if the clinic asks, leak-proof specimen bags so it does not leak in the car, high-value vet-visit treats reserved for the exam room), never a placeholder ASIN, a house-training poop-bag hop, a puppy-training / low-calorie / joint-support treat hop, a first-aid-kit / thermometer hop, a #1028 seizure-safety hop, a #1029 parvo-cleanup hop, or a medication / vaccine hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the AAHA visit-frequency rule, next step is the puppy schedule + the existing fecal-sample collection-kit hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · dog-microchipping hops',
