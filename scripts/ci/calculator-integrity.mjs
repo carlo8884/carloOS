@@ -7109,6 +7109,9 @@ const CALCULATORS = [
     id: 'fish · water-parameters hops',
     file: 'apps/fish-com/src/app/water-parameters/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 8-parameter table' },
+      { re: /nextHref="\/tools\/water-change-calculator"/, label: 'next step is the water-change calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=water-parameters"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=water-parameters/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / equipment-hub)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=water-parameters/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium / equipment-hub)' },
       { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=water-parameters/, label: 'gravel vacuum search hop (same query as water-change / setup-aquarium / equipment-hub)' },
@@ -7120,8 +7123,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the weekly test order/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete water-parameter-testing-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the 8-parameter table, next step is the water-change calculator + the existing test-kit hop. Empty Keep-the-weekly-test-order husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · health-hub hops',
