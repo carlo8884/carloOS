@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com', description: 'How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.', path: '/setup/planted-tank-setup', type: 'article' })
@@ -88,6 +88,14 @@ export default function PlantedTankSetupPage() {
 
           <h2>Algae — The Planted Tank's Primary Challenge</h2>
           <p>Algae and plants compete for the same resources. Healthy, fast-growing plants outcompete algae. The recipe for algae is: too much light, not enough CO2/nutrients, or unstable dosing that leaves nutrients available for algae while plants are not growing efficiently. Most algae problems in planted tanks are lighting problems — reduce photoperiod to 6 hours and see if algae slows before adjusting fertilizer.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/aquarium-cycling-guide"
+          nextLabel="Cycle the planted tank before you stock it"
+          nextBlurb="Plants take up nutrients and can shorten a cycle, but ammonia and nitrite still have to read zero before fish go in. Use the cycling guide next. The hop below is the same planted-setup CO2 search already on this page."
+          resourceHref="/go/amazon-brand/planted%20aquarium%20setup%20co2?s=setup-planted-tank-setup"
+          resourceLabel="Browse planted-tank CO2 setup gear on Amazon →"
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Planted Tank Setup — Where to Shop</div>
