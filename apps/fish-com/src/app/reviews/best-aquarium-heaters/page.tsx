@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -95,6 +95,14 @@ export default function BestHeatersPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Critical: Always Verify with a Separate Thermometer</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Every heater dial is an approximation. Even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer (Govee H5053 recommended). Set your heater, verify with the thermometer, adjust if needed. Check temperature daily for the first week, then weekly.</p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/tools/heater-wattage-calculator"
+              nextLabel="Size the heater wattage before you pick a model"
+              nextBlurb="The callout is the wattage rule — buy slightly above the tank minimum, and split two heaters on large tanks. The heater-wattage calculator is the watt band for this volume and target. The hop below is the same Eheim Jager search already on this page."
+              resourceHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
+              resourceLabel="Browse Eheim Jager aquarium heaters on Amazon →"
+            />
 
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />

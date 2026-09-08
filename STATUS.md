@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog wellness JourneyNext after #1609)
+**Last updated:** 2026-09-08 (COO — fish heaters JourneyNext after #1610)
 
-> **COO dog wellness journey (2026-09-08):** After #1609. AAHA visit-frequency rule → `/training/puppy-schedule` + existing fecal-sample kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-wellness-journey.md`.
+> **COO fish heaters journey (2026-09-08):** After #1610. Right-size wattage rule → `/tools/heater-wattage-calculator` + existing Eheim Jager `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-heaters-journey.md`.
+
+> **COO dog wellness journey (2026-09-08):** After #1609. AAHA visit-frequency rule → `/training/puppy-schedule` + existing fecal-sample kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-wellness-journey.md`. #1610 merged.
 
 > **COO fish filters journey (2026-09-08):** After #1608. HOB / canister / sponge type rule → `/tools/filter-gph-calculator` + existing AquaClear 70 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-filters-journey.md`. #1609 merged.
 
