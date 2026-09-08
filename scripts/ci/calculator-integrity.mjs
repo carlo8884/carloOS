@@ -10007,6 +10007,9 @@ const CALCULATORS = [
     id: 'fish · nano-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/nano-tank-setup/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the nano stability kit' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/air\+driven\+corner\+sponge\+filter\?s=setup-nano-tank"/, label: 'journey hop reuses the existing sponge-filter search' },
       { re: /amazon-brand\/air\+driven\+corner\+sponge\+filter\?s=setup-nano-tank/, label: 'air-driven corner sponge-filter search hop (matches on-page sponge-or-gentle-filter / too-much-HOB-current copy; unique vs aquarium+sponge+filter / hikari+bacto+surge+sponge+filter / aquaclear+70+filter / fluval+307+canister+filter / aquarium+filter+gallon)' },
       { re: /amazon-brand\/preset\+25\+watt\+nano\+aquarium\+heater\?s=setup-nano-tank/, label: 'preset 25-watt nano aquarium-heater search hop (matches on-page small-accurate-heater / room-temperature-swing copy; unique vs eheim+jager+heater / aqueon+pro+heater / aquarium+heater+tank+size / aquarium+digital+thermometer)' },
       { re: /amazon-brand\/food\+grade\+1\+gallon\+water\+jug\?s=setup-nano-tank/, label: 'food-grade 1-gallon water-jug search hop (matches on-page dechlorinated-water / keep-a-jug-on-hand copy; unique vs seachem+prime+water+conditioner / python+water+changer / pond+dechlorinator+water+conditioner / lidded+5+gallon+feed+soaking+pail / aquarium+gravel+vacuum+siphon)' },
@@ -10018,8 +10021,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete nano-tank stability-checklist offer; every gear CTA is an amazon-brand category search matching on-page sponge-or-gentle-filter / reliable-heater / dechlorinated-water-change copy (an air-driven corner sponge filter so a five-gallon keeps gentle current for small inhabitants, a preset 25-watt nano aquarium heater so a small volume does not swing overnight, a food-grade 1-gallon water jug so dechlorinated top-off water is already mixed), never a placeholder ASIN, a #1094 soaking-pail / feed-tub-rock / apple-wedger hop, a #1093 kitchen-timer / message-pad / pet-carrier hop, a #1092 floor-bowl / wobble-dispenser / hourglass hop, a #1091 laminating-pouch / countdown-timer / travel-bowl hop, an aquarium+sponge+filter health hop, an Eheim Jager / AquaClear / Prime / light-timer hop, livestock, or a prescription hop. Educational setup gear only — not a ranked product list, not livestock, not medications. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the nano stability kit, next step is the cycling guide + the existing air-driven sponge-filter hop. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'ferret · adrenal-disease hops',
