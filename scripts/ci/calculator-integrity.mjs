@@ -7147,6 +7147,9 @@ const CALCULATORS = [
     id: 'fish · health-ich hops',
     file: 'apps/fish-com/src/app/health/ich-treatment/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the heat method' },
+      { re: /nextHref="\/health\/velvet-disease"/, label: 'next step is velvet lookalike, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=health-ich"/, label: 'journey hop reuses the existing heater search' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=health-ich/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy)' },
       { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-ich/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-ich/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy; no live aquarium+air+pump key on sister pages)' },
@@ -7157,8 +7160,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the heat-method plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete ich heat-method checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the heat method, next step is velvet (lookalike) + the existing heater hop. Empty Keep-the-heat-method husk removed. Shop dump stays below. No invented kitchen hops. No medication hops.',
   },
   {
     id: 'fish · health-velvet hops',
