@@ -139,6 +139,9 @@ const CALCULATORS = [
     id: 'fish · heater-wattage-calculator hops',
     file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the wattage answer' },
+      { re: /nextHref="\/tools\/substrate-calculator"/, label: 'next step is substrate, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=tools-heater-wattage-calculator"/, label: 'journey hop reuses the existing Eheim Jager search' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=tools-heater-wattage-calculator/, label: 'Eheim Jager heater search hop (same query as heater reviews / stocking)' },
       { re: /amazon-brand\/aqueon\+pro\+heater\?s=tools-heater-wattage-calculator/, label: 'Aqueon Pro heater search hop (same query as heater reviews)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -147,8 +150,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the heater plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete heater-wattage offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the wattage answer, next step is the substrate calculator + the existing Eheim Jager hop. Empty Keep-the-heater-plan husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · substrate-calculator',
