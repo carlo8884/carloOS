@@ -8812,6 +8812,9 @@ const CALCULATORS = [
     id: 'fish · gh-kh-water-hardness hops',
     file: 'apps/fish-com/src/app/setup/gh-kh-water-hardness/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the hardness-band table' },
+      { re: /nextHref="\/water-parameters"/, label: 'next step is the weekly test-order table, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/crushed\+coral\+aquarium\?s=setup-gh-kh-water-hardness"/, label: 'journey hop reuses the existing crushed-coral search' },
       { re: /amazon-brand\/crushed\+coral\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'crushed-coral aquarium search hop (matches on-page raise-both-GH-and-KH filter-media copy; unique vs #993–#1026 setup-hub gravel / aquasoil / Seiryu)' },
       { re: /amazon-brand\/aquarium\+gh\+remineralizer\?s=setup-gh-kh-water-hardness/, label: 'aquarium GH-remineralizer search hop (matches on-page raise-GH-only calcium/magnesium-salts copy; unused vs #993–#1026)' },
       { re: /amazon-brand\/indian\+almond\+leaves\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'Indian almond-leaf search hop (matches on-page lower-KH blackwater tannin copy; unused vs #993–#1026 spiderwood / driftwood)' },
@@ -8823,8 +8826,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquarium hardness-adjust-checklist offer; every gear CTA is an amazon-brand category search matching on-page raise-and-lower copy (crushed coral in the filter to raise GH and KH together, a GH remineralizer for calcium/magnesium only, Indian almond leaves for a slow blackwater KH/pH drop), never a placeholder ASIN, an API freshwater master / GH-KH test-kit hop (the #1026 hold reason), a Prime / Flourish Excel / Equilibrium brand hop, a #1020 Seiryu / spiderwood hop, a #1021 scraper hop, a #1022 light-timer / root-tab hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the hardness-band table, next step is the water-parameters table + the existing crushed-coral hop. Shop dump stays below. No invented kitchen hops. No new Amazon query. No named Rx.',
   },
   {
     id: 'dog · dog-seizures hops',

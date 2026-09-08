@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, FAQAccordion } from '@carloOS/ui'
 
@@ -128,6 +128,14 @@ export default function GhKhPage() {
             </tr>
           </tbody>
         </table>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/water-parameters"
+          nextLabel="Test GH and KH against this week's parameter table"
+          nextBlurb="The table is the hardness bands — soft vs hard, and what KH does to pH. The water-parameters hub is the weekly order so you measure both, not a single strip number. The hop below is the same crushed-coral search already on this page, for raising GH and KH slowly when the reading is low."
+          resourceHref="/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness"
+          resourceLabel="Browse crushed coral for aquariums on Amazon →"
+        />
 
         <h2>Why KH Controls pH Stability</h2>
         <p>KH is arguably the more critical of the two for day-to-day stability because it buffers the tank against pH swings. The carbonates that KH measures neutralize the acids that continuously accumulate in an aquarium from fish waste, nitrification, and CO2. When KH is adequate, those acids are absorbed and pH holds steady. When KH is depleted — which happens gradually as the buffer is consumed and between water changes — there is nothing left to absorb the acid, and pH can crash suddenly and severely, stressing or killing fish overnight. A low or zero KH reading is the classic cause of the dreaded "old tank syndrome" pH crash. Maintaining a measurable KH is therefore central to a stable aquarium.</p>
