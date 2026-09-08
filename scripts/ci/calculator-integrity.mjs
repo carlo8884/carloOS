@@ -6142,6 +6142,9 @@ const CALCULATORS = [
     id: 'fish · filter-gph-calculator hops',
     file: 'apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the GPH range' },
+      { re: /nextHref="\/tools\/heater-wattage-calculator"/, label: 'next step is heater wattage, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquaclear\+70\+filter\?s=tools-filter-gph-calculator"/, label: 'journey hop reuses the existing AquaClear HOB search' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=tools-filter-gph-calculator/, label: 'AquaClear HOB filter search hop (same query as filter reviews / stocking)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=tools-filter-gph-calculator/, label: 'Fluval canister search hop (same query as canister reviews / stocking)' },
       { re: /amazon-brand\/aquarium\+filter\+media\?s=tools-filter-gph-calculator/, label: 'filter media search hop' },
@@ -6153,8 +6156,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the filter plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete filter-GPH offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the GPH range, next step is the heater-wattage calculator + the existing AquaClear HOB hop. Empty Keep-the-filter-plan husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'ferret · cost-calculator',
