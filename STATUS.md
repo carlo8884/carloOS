@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish water-parameters JourneyNext after #1573)
+**Last updated:** 2026-09-08 (COO — dog loose-leash JourneyNext after #1574)
 
-> **COO fish water-parameters journey (2026-09-08):** After #1573. Water-parameters 8-row table → `/tools/water-change-calculator` + existing test-kit `/go`. Empty “Keep the weekly test order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-parameters-journey.md`.
+> **COO dog loose-leash journey (2026-09-08):** After #1574. Loose-leash equipment answer → `/tools/harness-collar-size` + existing front-clip harness `/go`. Empty “Keep the loose-leash plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-loose-leash-journey.md`.
+
+> **COO fish water-parameters journey (2026-09-08):** After #1573. Water-parameters 8-row table → `/tools/water-change-calculator` + existing test-kit `/go`. Empty “Keep the weekly test order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-water-parameters-journey.md`. #1574 merged.
 
 > **COO dog socialization-window journey (2026-09-08):** After #1572. Socialization 100+ exposure list → `/training/puppy-schedule` + existing divider-crate `/go`. Empty “Keep the window plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-socialization-window-journey.md`. #1573 merged.
 
