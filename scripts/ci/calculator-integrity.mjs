@@ -11811,6 +11811,9 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-heaters hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-heaters/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the right-size wattage rule' },
+      { re: /nextHref="\/tools\/heater-wattage-calculator"/, label: 'next step is heater-wattage, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters"/, label: 'journey hop reuses the existing Eheim Jager search' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'existing Cobalt-Neo-Therm amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
@@ -11822,8 +11825,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1185: keep the existing sidebar capture and the already-hopped Eheim Jager / Cobalt Neo-Therm / Hydor Inline / Aqueon Pro amazon-brand searches; add under-hero capture with a concrete aquarium-heater-checklist offer matching on-page recalibration-dial / slim-profile / canister-inline copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the right-size wattage rule, next step is heater-wattage + the existing Eheim Jager hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · best-aquarium-lighting hops',
