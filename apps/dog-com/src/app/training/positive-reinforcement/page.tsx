@@ -12,6 +12,7 @@ import {
   CalloutBox,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 
@@ -98,15 +99,6 @@ export default function PositiveReinforcementPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the reward-based protocol
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Reward-based training protocol
-          </h2>
-
-        </div>
 
         <h2 id="principle">The Core Principle</h2>
         <DropCap>Positive reinforcement is the delivery of something the learner values immediately following a behavior, which increases the probability of that behavior occurring again in the future. That is the complete definition. &quot;Positive&quot; means adding something — not that training is gentle or easy. &quot;Reinforcement&quot; means the behavior increases — if it doesn&apos;t increase, whatever you&apos;re using is not a reinforcer for that individual.</DropCap>
@@ -131,6 +123,14 @@ export default function PositiveReinforcementPage() {
         <p>A marker is a conditioned reinforcer — a sound (click from a clicker, or a word like &quot;yes&quot;) that has been paired with food until it predicts food delivery. The marker solves the timing problem: you can mark the exact moment of the behavior, then take up to 3–4 seconds to deliver the food. The click or &quot;yes&quot; bridges the gap.</p>
         <p><strong>How to charge the marker:</strong> Click (or say &quot;yes&quot;), immediately deliver a treat. Repeat 20–30 times in rapid succession. The dog does not need to do anything — this is classical conditioning, not operant. After charging, test: click once and watch whether the dog looks for the treat. If yes, the marker is charged.</p>
         <p><strong>Clicker vs verbal marker:</strong> Clickers are more precise and consistent (always the same sound) but require a hand. A verbal marker (&quot;yes,&quot; &quot;good,&quot; &quot;mark&quot;) is always available. Choose based on preference — both work.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/marker-training"
+          nextLabel="Run the 10-rule marker protocol"
+          nextBlurb="Charging the marker is the start, not the session plan. Use the marker-training guide next so click-then-treat stays inside the 2-second window on real behaviors. The hop below is the same clicker search already on this page."
+          resourceHref="/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement"
+          resourceLabel="Browse dog training clickers on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (reward / marker kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

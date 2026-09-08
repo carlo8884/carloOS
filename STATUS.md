@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish equipment JourneyNext after #1583)
+**Last updated:** 2026-09-08 (COO — dog positive-reinforcement JourneyNext after #1584)
 
-> **COO fish equipment journey (2026-09-08):** After #1583. Equipment six-category grid → `/tools/filter-gph-calculator` + existing AquaClear HOB `/go`. Empty “Keep the equipment list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-equipment-journey.md`.
+> **COO dog positive-reinforcement journey (2026-09-08):** After #1584. Marker-charging protocol → `/training/marker-training` + existing clicker `/go`. Empty “Keep the reward-based protocol” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-positive-reinforcement-journey.md`.
+
+> **COO fish equipment journey (2026-09-08):** After #1583. Equipment six-category grid → `/tools/filter-gph-calculator` + existing AquaClear HOB `/go`. Empty “Keep the equipment list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-equipment-journey.md`. #1584 merged.
 
 > **COO dog marker-training journey (2026-09-08):** After #1582. Marker 10-rule protocol → `/training/basic-commands` + existing clicker `/go`. Empty “Keep the marker protocol” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-marker-training-journey.md`. #1583 merged.
 
