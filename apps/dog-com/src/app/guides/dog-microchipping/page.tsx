@@ -7,6 +7,7 @@ import {
   TableOfContents,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -194,6 +195,14 @@ export default function DogMicrochippingPage() {
               Surveys of shelters consistently find that a meaningful share of chipped stray dogs cannot be reunited because the registry information is missing or out of date. The lesson is blunt: implanting the chip is the easy 10%; keeping the registration current is the 90% that actually brings a lost dog home. Check your registration today if you are not certain it is current.
             </p>
           </CalloutBox>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/new-puppy-checklist"
+            nextLabel="Add the collar tag and chip to the puppy checklist"
+            nextBlurb="The callout is the registration rule — a chip with no current phone number does nothing. The new-puppy checklist is the day-one pack list, including the ID tag and the first-visit chip. The hop below is the same engraved collar-ID search already on this page."
+            resourceHref="/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping"
+            resourceLabel="Browse engraved dog collar ID tags on Amazon →"
+          />
 
           <h2 id="vs-gps">Microchip vs GPS Tracker — Different Tools</h2>
           <p>

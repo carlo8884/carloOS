@@ -8905,6 +8905,9 @@ const CALCULATORS = [
     id: 'dog · dog-microchipping hops',
     file: 'apps/dog-com/src/app/guides/dog-microchipping/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the registration rule' },
+      { re: /nextHref="\/tools\/new-puppy-checklist"/, label: 'next step is the new-puppy checklist, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/engraved\+dog\+collar\+id\+tags\?s=guides-dog-microchipping"/, label: 'journey hop reuses the existing engraved collar-ID search' },
       { re: /amazon-brand\/iso\+pet\+microchip\+scanner\?s=guides-dog-microchipping/, label: 'ISO pet microchip-scanner search hop (matches on-page home-verification / ISO 11784/11785 copy; unused vs #993–#1030)' },
       { re: /amazon-brand\/engraved\+dog\+collar\+id\+tags\?s=guides-dog-microchipping/, label: 'engraved dog collar-ID-tags search hop (matches on-page fastest-reunion-route copy; unique vs generic dog+id+tag+collar / pet+id+tag+collar hops)' },
       { re: /amazon-brand\/pet\+id\+tag\+slide\+on\?s=guides-dog-microchipping/, label: 'slide-on pet ID-tag search hop (matches on-page stays-on-the-collar-if-a-hanging-tag-comes-off copy; unique vs engraved hanging tags and GPS gear)' },
@@ -8916,8 +8919,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete microchip-registration-checklist offer; every gear CTA is an amazon-brand category search matching on-page registration and reunion copy (ISO pet microchip scanner for home verification of an ISO 11784/11785 chip, engraved dog collar ID tags as the fastest reunion route when a neighbor finds the dog, a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off), never a placeholder ASIN, a GPS-tracker hop, a clinic implant-kit hop, a generic dog+id+tag+collar hop, a #1030 wellness-exam hop, or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the registration rule, next step is the new-puppy checklist + the existing engraved collar-ID hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'vets · kennel-cough hops',
