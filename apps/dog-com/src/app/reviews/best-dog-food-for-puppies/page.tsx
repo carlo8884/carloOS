@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -67,6 +67,14 @@ export default function BestPuppyFoodPage() {
                 Any puppy expected to weigh more than 50 lbs as an adult must eat a formula labeled <strong>&quot;large breed puppy&quot;</strong>. Large breed puppy formulas have controlled calcium-to-phosphorus ratios that allow appropriate skeletal development. Standard puppy formulas (higher calcium) cause large breed puppies to grow their skeletons faster than their joint structures can accommodate — directly contributing to hip dysplasia, OCD, and elbow dysplasia. This is not a preference. It is clinically meaningful.
               </p>
             </div>
+            <JourneyNext
+              siteId="dog-com"
+              nextHref="/nutrition/puppy-nutrition"
+              nextLabel="Read the large-breed puppy formula rule in full"
+              nextBlurb="The callout is the bag rule — expected adult weight over 50 lb needs a large-breed puppy formula, not extra calcium. The puppy-nutrition guide is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin large-breed puppy search already on this page."
+              resourceHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"
+              resourceLabel="Browse Royal Canin large-breed puppy food on Amazon →"
+            />
 
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />

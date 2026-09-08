@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish low-tech JourneyNext after #1600)
+**Last updated:** 2026-09-08 (COO — dog puppy-food JourneyNext after #1601)
 
-> **COO fish low-tech journey (2026-09-08):** After #1600. Light-trap / 6–8 hour timer → `/setup/aquarium-cycling-guide` + existing light-timer `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-low-tech-journey.md`.
+> **COO dog puppy-food journey (2026-09-08):** After #1601. Large-breed formula rule → `/nutrition/puppy-nutrition` + existing Royal Canin `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-food-journey.md`.
+
+> **COO fish low-tech journey (2026-09-08):** After #1600. Light-trap / 6–8 hour timer → `/setup/aquarium-cycling-guide` + existing light-timer `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-low-tech-journey.md`. #1601 merged.
 
 > **COO dog crates journey (2026-09-08):** After #1599. Stand-turn-lie sizing rule → `/tools/dog-crate-size-calculator` + existing MidWest iCrate `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-crates-journey.md`. #1600 merged.
 

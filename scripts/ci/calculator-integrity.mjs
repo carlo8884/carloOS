@@ -12535,6 +12535,9 @@ const CALCULATORS = [
     id: 'dog · best-dog-food-for-puppies hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-food-for-puppies/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the large-breed formula rule' },
+      { re: /nextHref="\/nutrition\/puppy-nutrition"/, label: 'next step is the puppy-nutrition guide, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/royal\+canin\+large\+breed\+puppy\?s=reviews-best-dog-food-for-puppies"/, label: 'journey hop reuses the existing Royal Canin large-breed puppy search' },
       { re: /amazon-brand\/royal\+canin\+large\+breed\+puppy\?s=reviews-best-dog-food-for-puppies/, label: 'existing Royal Canin large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+puppy\+small\+paws\?s=reviews-best-dog-food-for-puppies/, label: 'existing Hill\'s Small Paws Chewy hop kept (not an empty leftover button)' },
@@ -12545,8 +12548,9 @@ const CALCULATORS = [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1234: senior-dog-nutrition under-hero is on main. Dog nutrition leftover hops are exhausted. Keep the existing sidebar capture and the already-hopped Royal Canin Amazon + Purina / Hill\'s / Iams Chewy searches; add under-hero capture with a concrete puppy-food-checklist offer matching on-page >50 lb large-breed / controlled calcium / WSAVA + AAFCO feeding-trial / switch-age copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the large-breed formula rule, next step is puppy-nutrition + the existing Royal Canin hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · best-dog-crates hops',
