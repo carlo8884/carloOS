@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -157,12 +157,6 @@ export default function FishDiseaseGuidePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the hospital-tank plan
-          </p>
-
-        </div>
 
         <DropCap>The most important thing to understand about fish disease: 90% of aquarium disease is caused by stress, and the most common stressor is poor water quality. Before reaching for medication, test your water. Before adding fish to a display tank, quarantine for 4 weeks. Before treating disease, fix the environment that allowed disease to develop.</DropCap>
 
@@ -218,6 +212,14 @@ export default function FishDiseaseGuidePage() {
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
           <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
         </div>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/quarantine-tank-guide"
+          nextLabel="Set up the hospital tank before you dose"
+          nextBlurb="Test water first. Then isolate. The next useful page is the quarantine / hospital-tank setup — so copper and antibiotics stay out of the display. The hop below is the same hospital-tank search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-disease-guide"
+          resourceLabel="Browse quarantine / hospital tanks on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (hospital-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

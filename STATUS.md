@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog BCS JourneyNext after #1562)
+**Last updated:** 2026-09-08 (COO — fish disease-guide JourneyNext after #1563)
 
-> **COO dog BCS journey (2026-09-08):** After #1562. BCS tool → `/tools/dog-ideal-weight-calculator` + existing portion-control scale `/go`. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-bcs-journey.md`.
+> **COO fish disease-guide journey (2026-09-08):** After #1563. Disease guide hospital-tank answer → `/setup/quarantine-tank-guide` + existing hospital-tank `/go`. Empty “Keep the hospital-tank plan” husk removed. Shop dump stays after. Details: `ops/handoffs/2026-09-08-coo-fish-disease-guide-journey.md`.
+
+> **COO dog BCS journey (2026-09-08):** After #1562. BCS tool → `/tools/dog-ideal-weight-calculator` + existing portion-control scale `/go`. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-bcs-journey.md`. #1563 merged.
 
 > **COO fish velvet journey (2026-09-08):** After #1561. Velvet flashlight test → `/health/fish-disease-guide` + existing hospital-tank `/go`. Empty “Keep the temp-and-blackout plan” husk removed. Shop dump stays after saltwater. Details: `ops/handoffs/2026-09-08-coo-fish-velvet-journey.md`. #1562 merged.
 
