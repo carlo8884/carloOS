@@ -26,6 +26,8 @@
  *   - Prime visual areas (hero + image-backed tiles) pass `subtleCredit` so
  *     attribution stays present + clickable but unobtrusive.
  *   - Every text-over-image surface has a gradient scrim so copy stays legible.
+ *     The homepage hero uses a subject-clear overlay (bottom-right veil, not a
+ *     full-bleed 0.66 mid scrim) so the albino ferret stays visible.
  *   - PROMINENT imagery uses only REAL synced ferret keys (verified to carry a
  *     url in packages/ui/src/data/image-manifest.json):
  *       hero, health-hero, care-hero, behavior-hero, colors-hero, diet-hero,
@@ -225,15 +227,20 @@ export default function HomePage() {
       {/* ════════════════════════════════════════════════════════════════
           HERO — full-bleed IMAGE-FIRST masthead (Dog reference #487)
           A REAL ferret photo (ferret-com:hero) is the first + dominant thing
-          after the nav on EVERY breakpoint. H1 + one primary CTA overlaid on a
-          dark gradient scrim so copy stays legible over the real photo. The
-          hero carries subtleCredit (attribution present + clickable, QC §1).
+          after the nav on EVERY breakpoint. H1 + CTA sit on a subject-clear
+          overlay (bottom-right veil, not a full-bleed mid scrim) so the ferret
+          stays visible and the type stays readable. The hero carries
+          subtleCredit (attribution present + clickable, QC §1).
           ════════════════════════════════════════════════════════════════ */}
-      <section style={{ position: 'relative', background: 'var(--brand-dark)', minHeight: 'clamp(62vh, 70vh, 78vh)' }}>
+      <section
+        className="ferret-home-hero"
+        style={{ position: 'relative', background: 'var(--brand-dark)', minHeight: 'clamp(62vh, 70vh, 78vh)' }}
+      >
         {/* Full-bleed hero photo — fills this absolute, full-height wrapper.
             Uses the inline variant with FILL_IMAGE overrides so the photo
             simply fills the parent (the 'full-bleed' variant's transform
-            fights an absolute parent). */}
+            fights an absolute parent). object-position (globals) pins the
+            albino ferret — lower-left of ferret-com:hero — in frame. */}
         <div
           className={`${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto] [&_figure>div]:h-full [&_figure>div]:!rounded-none [&>div]:h-full`}
           style={{ position: 'absolute', inset: 0 }}
@@ -248,42 +255,17 @@ export default function HomePage() {
           />
         </div>
 
-        {/* Dark gradient scrim — bottom-up so the overlaid H1 + CTA stay legible. */}
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            inset: 0,
-            background:
-              'linear-gradient(to top, var(--brand-dark) 0%, rgba(30,20,10,0.66) 45%, rgba(30,20,10,0.22) 100%)',
-          }}
-        />
-        {/* Warm amber wash for depth */}
-        <div
-          aria-hidden
-          style={{
-            position: 'absolute',
-            inset: 0,
-            opacity: 0.28,
-            backgroundImage:
-              'radial-gradient(ellipse at 22% 78%, rgba(201,157,95,0.4) 0%, transparent 60%)',
-          }}
-        />
+        {/* Subject-clear overlay (globals). The photo is a white ferret on
+            black, lower-left; a full-bleed mid scrim (~0.66) + left-bottom
+            amber wash hid the subject. Contrast now lives with the copy —
+            top on small screens, bottom-right from md — plus a short seam
+            into the trust bar. The ferret stays open. */}
+        <div aria-hidden className="ferret-home-hero__scrim" />
+        <div aria-hidden className="ferret-home-hero__wash" />
 
-        {/* Overlaid copy + primary action — pinned to the bottom of the photo */}
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 10,
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'flex-end',
-            minHeight: 'clamp(62vh, 70vh, 78vh)',
-            maxWidth: '1180px',
-            margin: '0 auto',
-            padding: 'clamp(64px, 9vw, 88px) clamp(20px, 5vw, 40px) clamp(36px, 5vw, 56px)',
-          }}
-        >
+        {/* Copy on the native black field so it does not sit on the ferret. */}
+        <div className="ferret-home-hero__stage">
+          <div className="ferret-home-hero__copy">
           <div style={{ marginBottom: '18px' }}>
             <span
               style={{
@@ -295,6 +277,7 @@ export default function HomePage() {
                 letterSpacing: '0.14em',
                 textTransform: 'uppercase',
                 color: 'var(--brand-amber)',
+                textShadow: '0 1px 10px rgba(0,0,0,0.7)',
               }}
             >
               <span
@@ -315,7 +298,7 @@ export default function HomePage() {
               color: 'rgba(251, 245, 232, 0.98)',
               maxWidth: '20ch',
               margin: '0 0 18px',
-              textShadow: '0 2px 18px rgba(0,0,0,0.45)',
+              textShadow: '0 2px 18px rgba(0,0,0,0.72), 0 0 28px rgba(0,0,0,0.45)',
             }}
           >
             Everything a ferret needs you to know.
@@ -328,10 +311,10 @@ export default function HomePage() {
               fontWeight: 400,
               fontStyle: 'italic',
               lineHeight: 1.4,
-              color: 'rgba(251, 245, 232, 0.86)',
+              color: 'rgba(251, 245, 232, 0.92)',
               maxWidth: '34ch',
               margin: '0 0 28px',
-              textShadow: '0 1px 10px rgba(0,0,0,0.5)',
+              textShadow: '0 1px 12px rgba(0,0,0,0.75), 0 0 22px rgba(0,0,0,0.4)',
             }}
           >
             Diet, health, housing, and the conditions that surface in years three
@@ -365,19 +348,20 @@ export default function HomePage() {
                 display: 'inline-flex',
                 alignItems: 'center',
                 gap: '8px',
-                background: 'rgba(251, 245, 232, 0.1)',
+                background: 'rgba(30, 20, 10, 0.55)',
                 color: 'rgba(251, 245, 232, 0.97)',
                 padding: '15px 26px',
                 borderRadius: '8px',
                 fontWeight: 700,
                 fontSize: '1rem',
                 textDecoration: 'none',
-                border: '1px solid rgba(251, 245, 232, 0.28)',
-                backdropFilter: 'blur(4px)',
+                border: '1px solid rgba(251, 245, 232, 0.42)',
+                backdropFilter: 'blur(6px)',
               }}
             >
               Read the diet guide
             </Link>
+          </div>
           </div>
         </div>
       </section>
