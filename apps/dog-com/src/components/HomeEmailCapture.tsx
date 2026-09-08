@@ -7,11 +7,11 @@ export function HomeEmailCapture() {
         <EmailCapture
           variant="section"
           siteId="dog-com"
-          title="Weekly breed-care notes"
-          subtitle="One short Tuesday email: what to do this week for your breed, one risk to watch, one thing that is not worth the money."
+          title="Breed-care notes"
+          subtitle="What to do this week for your breed, one risk to watch, one thing that is not worth the money. On this site — not emailed."
           source="homepage-under-hero"
           ctaText="Send the weekly notes"
-          perks={['Breed-specific care', 'Sourced — no paid placements', 'Unsubscribe anytime']}
+          perks={['Breed-specific care', 'Sourced — no paid placements']}
         />
       </div>
     </section>

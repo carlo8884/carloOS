@@ -15,4 +15,20 @@ describe('EmailCapture never says Subscribe', () => {
     assert.equal(src.includes('Send the notes'), true)
     assert.equal(src.includes('Sending…'), true)
   })
+
+  it('pauses email-magnet delivery on the five earning sites', () => {
+    const src = readFileSync(
+      join(dirname(fileURLToPath(import.meta.url)), 'EmailCapture.tsx'),
+      'utf8',
+    )
+    assert.equal(src.includes("'dog-com'"), true)
+    assert.equal(src.includes("'fish-com'"), true)
+    assert.equal(src.includes("'horses-com'"), true)
+    assert.equal(src.includes("'vets-co'"), true)
+    assert.equal(src.includes("'ferret-com'"), true)
+    assert.equal(src.includes('On this page — not emailed'), true)
+    assert.equal(src.includes('Email delivery is not live'), true)
+    assert.equal(src.includes('Save a copy'), true)
+    assert.equal(src.includes("data-magnet=\"on-page\""), true)
+  })
 })
