@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish pond-volume JourneyNext after #1622)
+**Last updated:** 2026-09-08 (COO — dog GPS-tracker JourneyNext after #1623)
 
-> **COO fish pond-volume journey (2026-09-08):** After #1622. Pond gallons result → `/setup/pond-guide` + existing EPDM liner `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-pond-volume-journey.md`.
+> **COO dog GPS-tracker journey (2026-09-08):** After #1623. GPS-vs-microchip ID rule → `/guides/dog-microchipping` + existing Fi Series 3 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-gps-tracker-journey.md`.
+
+> **COO fish pond-volume journey (2026-09-08):** After #1622. Pond gallons result → `/setup/pond-guide` + existing EPDM liner `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-pond-volume-journey.md`. #1623 merged.
 
 > **COO dog small-breed food journey (2026-09-08):** After #1621. Calorie-density / small-mouth kibble rule → `/tools/dog-calorie-calculator` + existing Royal Canin Small Adult `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-small-breed-food-journey.md`. #1622 merged.
 

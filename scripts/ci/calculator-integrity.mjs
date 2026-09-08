@@ -12731,6 +12731,9 @@ const CALCULATORS = [
     id: 'dog · best-dog-gps-tracker hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-gps-tracker/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the GPS-vs-microchip ID rule' },
+      { re: /nextHref="\/guides\/dog-microchipping"/, label: 'next step is microchipping, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/fi\+series\+3\+dog\+collar\?s=reviews-best-dog-gps-tracker"/, label: 'journey hop reuses the existing Fi Series 3 search' },
       { re: /amazon-brand\/fi\+series\+3\+dog\+collar\?s=reviews-best-dog-gps-tracker/, label: 'existing Fi Series 3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/whistle\+go\+explore\?s=reviews-best-dog-gps-tracker/, label: 'existing Whistle Go Explore amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/tractive\+gps\+dog\+tracker\?s=reviews-best-dog-gps-tracker/, label: 'existing Tractive GPS amazon-brand hop kept (do not re-ship a new query)' },
@@ -12741,8 +12744,9 @@ const CALCULATORS = [
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1237: joint-supplement review under-hero is on main. Keep the existing sidebar capture and the already-hopped Fi / Whistle / Tractive amazon-brand searches; add under-hero capture with a concrete dog-GPS-tracker-checklist offer matching on-page monthly-subscription / 3-month Fi battery / LTE-M geofence / Whistle 20-day health / Tractive $5 175-country copy. Do not re-ship new queries. Empty Chewy buttons stay hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the GPS-vs-microchip ID rule, next step is microchipping + the existing Fi Series 3 hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · best-dog-harnesses hops',
