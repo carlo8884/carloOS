@@ -6807,6 +6807,9 @@ const CALCULATORS = [
     id: 'dog · training-crate hops',
     file: 'apps/dog-com/src/app/training/crate-training/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the introduction protocol' },
+      { re: /nextHref="\/training\/house-training"/, label: 'next step is house training, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-crate"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-crate/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/dog\+crate\+pad\?s=training-crate/, label: 'crate pad search hop (same query as crate-size)' },
       { re: /amazon-brand\/dog\+crate\+cover\?s=training-crate/, label: 'crate cover search hop (same query as crate-size)' },
@@ -6817,8 +6820,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Crate-training protocol/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete crate-training-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy crate button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the introduction protocol, next step is house training + the existing crate hop. Shop dump moves below the protocol. No invented kitchen hops.',
   },
   {
     id: 'dog · training-house hops',
@@ -11038,6 +11043,9 @@ const CALCULATORS = [
     id: 'fish · aquarium-cycling-guide hops',
     file: 'apps/fish-com/src/app/setup/aquarium-cycling-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the cycle-complete rules' },
+      { re: /nextHref="\/tools\/stocking-calculator"/, label: 'next step is slim-inch stocking, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide/, label: 'existing ammonia-nitrite-nitrate-test-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11046,8 +11054,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1159: keep the existing sidebar capture and the already-hopped ammonia-nitrite-nitrate-test-kit amazon-brand search; add under-hero capture with a concrete aquarium-cycling-checklist offer matching on-page nitrogen-cycle / fishless-vs-fish-in / ammonia-nitrite-nitrate / bottled-bacteria / test-schedule copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the cycle-complete rules, next step is the stocking calculator + the existing test-kit hop. Do not re-ship a new Amazon query. Shop box stays below. No invented kitchen hops.',
   },
 
   {

@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — ferret cage journey after #1550; all five earning sites now have one JourneyNext)
+**Last updated:** 2026-09-08 (COO — deepen Dog crate-training + Fish cycling destinations after #1551)
 
-> **COO ferret cage journey (2026-09-08):** After #1550. Cage-size calculator → `/care/cage-setup` + existing multi-level cage `/go`. Empty footprint / shopping-list husk removed. Details: `ops/handoffs/2026-09-08-coo-ferret-cage-journey.md`.
+> **COO Dog/Fish journey deepen (2026-09-08):** After #1551. Crate-training → house-training + existing crate `/go` (shop dump after the protocol). Cycling guide → stocking calculator + existing test-kit `/go`. Empty crate-training husk removed. Details: `ops/handoffs/2026-09-08-coo-dog-fish-journey-deepen.md`.
+
+> **COO ferret cage journey (2026-09-08):** After #1550. Cage-size calculator → `/care/cage-setup` + existing multi-level cage `/go`. Empty footprint / shopping-list husk removed. Details: `ops/handoffs/2026-09-08-coo-ferret-cage-journey.md`. #1551 merged.
 
 > **COO vets ER journey (2026-09-08):** After #1549. ER vs clinic tool → `/guides/when-to-go-to-the-vet` + existing soft-carrier `/go`. Empty cheat-sheet husk removed. Owners are not sent to `/inquire`. Details: `ops/handoffs/2026-09-08-coo-vets-er-journey.md`. #1550 merged.
 

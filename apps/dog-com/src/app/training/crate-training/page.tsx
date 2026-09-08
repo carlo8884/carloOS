@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -51,19 +52,31 @@ export default function CrateTrainingPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Crate-training protocol
-          </h2>
-
-        </div>
 
         <h2 id="why">Why Crate Training Is Worth It</h2>
         <p>A crate serves multiple functions: it prevents destructive behavior and accidents when unsupervised, provides a den-like retreat that most dogs come to value, makes traveling and vet visits less stressful (a dog comfortable in a crate is dramatically calmer in any confined space), and is an essential housetraining tool (dogs typically avoid soiling their sleeping area).</p>
         <p>The crate should never be used as punishment. Sending a dog to their crate in anger changes the association from safe space to negative consequence. Instead, the crate should always be associated with good things — meals fed in the crate, high-value treats, rest after exercise.</p>
 
         <h2 id="size">Correct Crate Size</h2>
-        <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows. To turn your dog's measurements into an exact size, use the <a href="/tools/dog-crate-size-calculator">dog crate size calculator →</a>, then see our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
+        <p>The crate should be large enough for the dog to stand, turn around, and lie fully stretched — no larger. A crate that is too large allows a puppy to eliminate in one end and sleep in the other, eliminating the housetraining benefit. Use a divider panel (included with most wire crates) to section off a puppy-appropriate portion of an adult-sized crate and expand as the puppy grows.             To turn your dog's measurements into an exact size, use the <a href="/tools/dog-crate-size-calculator">dog crate size calculator →</a>, then see our <a href="/reviews/best-dog-crates">crate recommendations →</a></p>
+
+        <h2 id="intro">Introduction Protocol</h2>
+        <p>Rushing crate introduction creates anxiety. A slow, positive introduction builds a dog that chooses to go in the crate voluntarily.</p>
+        <ol>
+          <li><strong>Day 1–2:</strong> Place the crate in a family area with the door open. Toss treats near and inside. Let the dog investigate at their own pace. Do not push them in.</li>
+          <li><strong>Day 3–4:</strong> Begin feeding meals inside the crate (bowl as far in as comfortable). Continue tossing treats in. Praise calm behavior near the crate.</li>
+          <li><strong>Day 5–7:</strong> Feed meals inside with the door closed while eating. Open immediately when done. The dog should be comfortable eating with door closed before any duration training begins.</li>
+          <li><strong>Week 2:</strong> Begin closing the door for 5–10 minutes after meals when the dog is calm and full. Stay nearby. Gradually extend duration in very small increments over days.</li>
+          <li><strong>Week 3+:</strong> Begin leaving the room while the dog is in the crate. Build to leaving the house for short periods. Never leave a puppy crated longer than they can physically hold their bladder.</li>
+        </ol>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/house-training"
+          nextLabel="Pair the crate with house training"
+          nextBlurb="The protocol is the den. House training is why the crate is sized tight — dogs avoid soiling the sleeping end. Size first if you have not, then keep the divider on while the puppy grows."
+          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"
+          resourceLabel="Browse crates on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (crate kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -118,16 +131,6 @@ export default function CrateTrainingPage() {
             {' '}guide for side-by-side comparisons.
           </p>
         </div>
-
-        <h2 id="intro">Introduction Protocol</h2>
-        <p>Rushing crate introduction creates anxiety. A slow, positive introduction builds a dog that chooses to go in the crate voluntarily.</p>
-        <ol>
-          <li><strong>Day 1–2:</strong> Place the crate in a family area with the door open. Toss treats near and inside. Let the dog investigate at their own pace. Do not push them in.</li>
-          <li><strong>Day 3–4:</strong> Begin feeding meals inside the crate (bowl as far in as comfortable). Continue tossing treats in. Praise calm behavior near the crate.</li>
-          <li><strong>Day 5–7:</strong> Feed meals inside with the door closed while eating. Open immediately when done. The dog should be comfortable eating with door closed before any duration training begins.</li>
-          <li><strong>Week 2:</strong> Begin closing the door for 5–10 minutes after meals when the dog is calm and full. Stay nearby. Gradually extend duration in very small increments over days.</li>
-          <li><strong>Week 3+:</strong> Begin leaving the room while the dog is in the crate. Build to leaving the house for short periods. Never leave a puppy crated longer than they can physically hold their bladder.</li>
-        </ol>
 
         <h2 id="duration">Duration Guidelines — How Long Is Too Long</h2>
         <ul>
