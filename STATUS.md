@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — deepen Dog crate-training + Fish cycling destinations after #1551)
+**Last updated:** 2026-09-08 (COO — house-training JourneyNext after live #1552 verify)
 
-> **COO Dog/Fish journey deepen (2026-09-08):** After #1551. Crate-training → house-training + existing crate `/go` (shop dump after the protocol). Cycling guide → stocking calculator + existing test-kit `/go`. Empty crate-training husk removed. Details: `ops/handoffs/2026-09-08-coo-dog-fish-journey-deepen.md`.
+> **COO house-training journey (2026-09-08):** Live #1552 verify was clean. House-training → `/training/puppy-schedule` + existing enzymatic-cleaner `/go`. Empty schedule husk removed. Details: `ops/handoffs/2026-09-08-coo-house-training-journey.md`.
+
+> **COO Dog/Fish journey deepen (2026-09-08):** After #1551. Crate-training → house-training + existing crate `/go` (shop dump after the protocol). Cycling guide → stocking calculator + existing test-kit `/go`. Empty crate-training husk removed. Details: `ops/handoffs/2026-09-08-coo-dog-fish-journey-deepen.md`. #1552 merged.
 
 > **COO ferret cage journey (2026-09-08):** After #1550. Cage-size calculator → `/care/cage-setup` + existing multi-level cage `/go`. Empty footprint / shopping-list husk removed. Details: `ops/handoffs/2026-09-08-coo-ferret-cage-journey.md`. #1551 merged.
 
