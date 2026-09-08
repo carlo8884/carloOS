@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish substrate JourneyNext after #1581)
+**Last updated:** 2026-09-08 (COO — dog marker-training JourneyNext after #1582)
 
-> **COO fish substrate journey (2026-09-08):** After #1581. Substrate bag weight → `/tools/aquarium-setup-builder` + existing gravel `/go`. Empty “Keep the bag sizes” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-substrate-journey.md`.
+> **COO dog marker-training journey (2026-09-08):** After #1582. Marker 10-rule protocol → `/training/basic-commands` + existing clicker `/go`. Empty “Keep the marker protocol” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-marker-training-journey.md`.
+
+> **COO fish substrate journey (2026-09-08):** After #1581. Substrate bag weight → `/tools/aquarium-setup-builder` + existing gravel `/go`. Empty “Keep the bag sizes” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-substrate-journey.md`. #1582 merged.
 
 > **COO dog basic-commands journey (2026-09-08):** After #1580. Five-command protocol → `/training/puppy-schedule` + existing puppy-treats `/go`. Empty “Keep the five commands” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-basic-commands-journey.md`. #1581 merged.
 
