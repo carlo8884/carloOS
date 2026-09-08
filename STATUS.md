@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish heater-wattage JourneyNext after #1579)
+**Last updated:** 2026-09-08 (COO — dog basic-commands JourneyNext after #1580)
 
-> **COO fish heater-wattage journey (2026-09-08):** After #1579. Heater wattage → `/tools/substrate-calculator` + existing Eheim Jager `/go`. Empty “Keep the heater plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-heater-wattage-journey.md`.
+> **COO dog basic-commands journey (2026-09-08):** After #1580. Five-command protocol → `/training/puppy-schedule` + existing puppy-treats `/go`. Empty “Keep the five commands” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-basic-commands-journey.md`.
+
+> **COO fish heater-wattage journey (2026-09-08):** After #1579. Heater wattage → `/tools/substrate-calculator` + existing Eheim Jager `/go`. Empty “Keep the heater plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-heater-wattage-journey.md`. #1580 merged.
 
 > **COO dog which-pet journey (2026-09-08):** After #1578. Which-pet dog-leaning answer → `/tools/new-puppy-checklist` + existing divider-crate `/go`. Empty “Keep the starter list” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-which-pet-journey.md`. #1579 merged.
 

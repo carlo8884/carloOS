@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -152,20 +153,43 @@ export default function BasicCommandsPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the five commands
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Five-command protocol
-          </h2>
-
-        </div>
-
         <div style={{ background: 'var(--brand-primary-pale)', borderLeft: '4px solid var(--brand-primary)', borderRadius: '0 10px 10px 0', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-primary)', marginBottom: '8px' }}>Session Length</div>
           <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>Keep sessions short: 3–5 minutes for puppies, 5–10 minutes for adult dogs. Multiple short sessions daily produce faster results than one long session. Always end on success — finish with something the dog does well, reward generously, and stop before either of you loses focus.</p>
         </div>
+
+        {COMMANDS.map(cmd => (
+          <div key={cmd.name} id={cmd.name.toLowerCase().replace(' ', '-')} style={{ marginBottom: '40px' }}>
+            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--brand-dark)', borderBottom: '1px solid var(--brand-border)', paddingBottom: '10px', marginBottom: '14px' }}>{cmd.name}</h2>
+            <p style={{ fontSize: '15px', color: 'var(--brand-text-mid)', lineHeight: 1.75, marginBottom: '14px' }}><strong style={{ color: 'var(--brand-dark)' }}>Why it matters:</strong> {cmd.why}</p>
+            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--brand-dark)', marginBottom: '10px' }}>Teaching Protocol</h3>
+            <ol style={{ paddingLeft: '22px', marginBottom: '16px' }}>
+              {cmd.steps.map((step, i) => (
+                <li key={i} style={{ fontSize: '14px', color: 'var(--brand-text-mid)', lineHeight: 1.8, marginBottom: '8px' }}>{step}</li>
+              ))}
+            </ol>
+            <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.15)', borderRadius: '8px', padding: '14px 18px', marginBottom: '14px' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '6px' }}>Common Mistake</div>
+              <p style={{ fontSize: '13px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>{cmd.common_mistakes}</p>
+            </div>
+            <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '8px', padding: '14px 18px' }}>
+              <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '6px' }}>Proofing Notes</div>
+              <p style={{ fontSize: '13px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>{cmd.proofing}</p>
+            </div>
+          </div>
+        ))}
+
+        <h2>What Comes After These Five</h2>
+        <p>Once all five commands are reliable in low-distraction environments, the next priorities are: proofing each in multiple locations and with increasing distraction levels, adding distance to stays and recalls, and teaching a name response that is reliable enough to interrupt behavior at a distance. From there: loose-leash walking, which deserves its own dedicated guide.</p>
+        <p>Many behavior problems that are brought to professional trainers — leash reactivity, resource guarding, jumping — are more tractable in dogs that already have solid basic obedience. The communication foundation built in basic training makes everything else easier.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/puppy-schedule"
+          nextLabel="Put the 3–5 minute sessions on the puppy schedule"
+          nextBlurb="Sit through leave-it only stick if they happen every day in a short window. Put those sessions on the puppy schedule before the next walk. The hop below is the same puppy-training-treats search already on this page."
+          resourceHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"
+          resourceLabel="Browse puppy training treats on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (five-command kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -224,31 +248,6 @@ export default function BasicCommandsPage() {
             </Link>
           </p>
         </div>
-
-        {COMMANDS.map(cmd => (
-          <div key={cmd.name} id={cmd.name.toLowerCase().replace(' ', '-')} style={{ marginBottom: '40px' }}>
-            <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.6rem', fontWeight: 700, color: 'var(--brand-dark)', borderBottom: '1px solid var(--brand-border)', paddingBottom: '10px', marginBottom: '14px' }}>{cmd.name}</h2>
-            <p style={{ fontSize: '15px', color: 'var(--brand-text-mid)', lineHeight: 1.75, marginBottom: '14px' }}><strong style={{ color: 'var(--brand-dark)' }}>Why it matters:</strong> {cmd.why}</p>
-            <h3 style={{ fontFamily: 'var(--font-display)', fontSize: '1.05rem', fontWeight: 700, color: 'var(--brand-dark)', marginBottom: '10px' }}>Teaching Protocol</h3>
-            <ol style={{ paddingLeft: '22px', marginBottom: '16px' }}>
-              {cmd.steps.map((step, i) => (
-                <li key={i} style={{ fontSize: '14px', color: 'var(--brand-text-mid)', lineHeight: 1.8, marginBottom: '8px' }}>{step}</li>
-              ))}
-            </ol>
-            <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.15)', borderRadius: '8px', padding: '14px 18px', marginBottom: '14px' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '6px' }}>Common Mistake</div>
-              <p style={{ fontSize: '13px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>{cmd.common_mistakes}</p>
-            </div>
-            <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '8px', padding: '14px 18px' }}>
-              <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '6px' }}>Proofing Notes</div>
-              <p style={{ fontSize: '13px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>{cmd.proofing}</p>
-            </div>
-          </div>
-        ))}
-
-        <h2>What Comes After These Five</h2>
-        <p>Once all five commands are reliable in low-distraction environments, the next priorities are: proofing each in multiple locations and with increasing distraction levels, adding distance to stays and recalls, and teaching a name response that is reliable enough to interrupt behavior at a distance. From there: loose-leash walking, which deserves its own dedicated guide.</p>
-        <p>Many behavior problems that are brought to professional trainers — leash reactivity, resource guarding, jumping — are more tractable in dogs that already have solid basic obedience. The communication foundation built in basic training makes everything else easier.</p>
       </div>
     </ArticleLayout>
     </>
