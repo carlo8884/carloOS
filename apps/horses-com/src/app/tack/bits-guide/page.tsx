@@ -115,20 +115,16 @@ export default function BitsGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the bits-guide checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Bits-guide checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the snaffle-vs-curb bit checklist, width-and-wrinkle fit question card, and hand-severity watch log that match the how-a-bit-works, snaffle-vs-curb, mouthpieces, fit, and choosing-humanely copy on this page — a laminated horse snaffle-vs-curb bit checklist so a-snaffle-applies-direct-pressure-with-no-leverage / a-curb-is-a-leverage-bit-with-shanks-and-usually-a-curb-chain / longer-shanks-increase-leverage stay visible before anyone picks a mouthpiece (not a laminated horse peacock-vs-breakaway stirrup checklist, not a laminated horse anatomical-vs-straight girth checklist, not a laminated horse snaffle-vs-double bridle checklist, not a laminated horse standing-vs-running martingale checklist, not a laminated horse turnout-vs-stable rug checklist, not a laminated horse turnout-halter breakaway checklist, not a laminated horse-leg bandage-bow technique checklist, not a laminated saddle-pad cannot-fix-fit checklist, not a laminated riding-helmet fit-and-replace checklist), a horse bit width-and-wrinkle fit question card so the-right-width-sits-snugly-without-pinching-the-lips-or-sliding-through / a-slight-wrinkle-or-two-at-the-corners-of-the-lips / not-so-high-it-bangs-the-molars-or-so-low-it-hits-the-teeth stays posted (not a horse stirrup width-inch-clearance question card, not a horse girth buckle-elbow-clearance question card, not a horse bridle cheekpiece-length fit question card, not a horse breastplate-vs-breastgirth fit question card, not a horse denier-vs-fill question card, not a horse rope-vs-flat-halter task question card, not a horse-boot impact-not-tendon-support question card, not a saddle-pad sweat-pattern dry-spot question card), and a horse bit hand-severity watch log notebook so severity-lives-in-the-hand-not-only-the-bit / a-mild-snaffle-can-be-cruel-in-rough-hands / reaching-for-a-stronger-bit-masks-the-root-cause stay written down (not a horse stirrup drag-entrapment watch log, not a horse girth-gall skin-wrinkle log, not a horse noseband two-finger welfare log, not a horse martingale-misuse head-carriage log, not a horse over-rugging sweat-shiver watch log, not a horse quick-release wither-height tie log, not a horse-boot grit-rub clean-dry log, not a saddle-pad clean-dry rotation log). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a qualified instructor or a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Bits-guide checklist"
-              subtitle="Email the snaffle-vs-curb card, width-and-wrinkle check, and hand-severity log. No spam."
-              ctaText="Email my bits-guide checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-bits-guide-under-hero"
             />
           </div>
@@ -136,16 +132,13 @@ export default function BitsGuidePage() {
           <h2 id="how">How a Bit Works</h2>
           <p>A bit communicates through pressure on sensitive structures of the head: the bars (the toothless gum between incisors and molars where the mouthpiece rests), the tongue, the lips and corners of the mouth, and -- with leverage bits -- the poll and chin groove. Rein pressure is transmitted through the bit to these points, and the horse learns to respond by yielding to and seeking relief from that pressure. Because these structures are sensitive, the bit must be matched to the horse and used with educated hands.</p>
           <p>
-            A horse bit hand-severity watch log notebook is also how educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove stay written down when someone is tempted to &quot;fix&quot; a feel with a harsher mouthpiece — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops.
-          </p>
+            A horse bit hand-severity watch log notebook is also how educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove stay written down when someone is tempted to &quot;fix&quot; a feel with a harsher mouthpiece — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety). </p>
 
           <StockImage manifestKey="horses-com:tack-bits" fallbackKey="horses-com:category-tack" aspect="16:9" />
 
           <h2 id="families">Snaffle vs Curb</h2>
           <p>All bits fall broadly into two action families. A snaffle applies direct pressure -- the rein pressure equals the pressure on the mouth, acting mainly on the corners of the lips, tongue, and bars, with no leverage. A curb is a leverage bit: it has shanks (cheekpieces) and usually a curb chain, so rein pressure is multiplied and acts on the bars, tongue, poll, and chin groove. Longer shanks increase leverage. A double bridle carries both a small snaffle (bradoon) and a curb together for refined communication in advanced dressage.</p>
-          <p>
-            A laminated horse snaffle-vs-curb bit checklist is how a-snaffle-applies-direct-pressure-with-no-leverage, a-curb-is-a-leverage-bit-with-shanks-and-usually-a-curb-chain, and longer-shanks-increase-leverage stay visible before anyone picks a mouthpiece — it is not a laminated horse peacock-vs-breakaway stirrup checklist (that lives on stirrups-and-safety), not a laminated horse anatomical-vs-straight girth checklist (that lives on girths-and-cinches), not a laminated horse snaffle-vs-double bridle checklist (that lives on bridle-types), not a laminated horse standing-vs-running martingale checklist (that lives on martingales-and-breastplates), not a laminated horse turnout-vs-stable rug checklist (that lives on blanket-weights), not a laminated horse turnout-halter breakaway checklist (that lives on halters-and-lead-ropes), not a laminated horse-leg bandage-bow technique checklist (that lives on boots-and-wraps), not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads), and not a laminated riding-helmet fit-and-replace checklist (that lives on helmet-guide). This page does not hop horse+girth+cinch / horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims (those live on saddle-fit-basics), ASTM+SEI+horse+riding+helmet (that lives on horse-size-for-rider), or horse+halter+lead+rope (that lives on the cost calculator). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
+          
 
           <h2 id="mouthpieces">Mouthpieces</h2>
           <ul>
@@ -155,21 +148,17 @@ export default function BitsGuidePage() {
             <li><strong>Ported mouthpieces</strong> -- a raised central arch giving tongue relief, common on curbs.</li>
             <li><strong>Materials</strong> -- metals, rubber, and synthetics that vary in warmth, taste, and how much they encourage mouthing and salivation.</li>
           </ul>
-          <p>
-            The same laminated horse snaffle-vs-curb bit checklist is how single-jointed-nutcracker-action, double-jointed-french-link-or-lozenge, mullen-mouth-spreading-pressure-evenly, and ported-mouthpieces-giving-tongue-relief stay visible next to the two action families — it is not a laminated horse snaffle-vs-double bridle checklist (that lives on bridle-types and is about one bit versus a bradoon-plus-curb, not mouthpiece joints). This page does not invent ASINs, brands, or a ranked mouthpiece list.
-          </p>
+          
 
           <h2 id="fit">Fit</h2>
           <p>A bit must be the right width -- sitting snugly without pinching the lips or sliding through the mouth -- and at the right height, so it rests on the bars and creates a slight wrinkle or two at the corners of the lips without being so high it bangs the molars or so low it hits the teeth. The mouthpiece thickness and shape must suit the individual horse&apos;s mouth conformation (tongue size, palate height, bar shape). A poorly fitted bit causes pain, rubs, and resistance regardless of how mild the design.</p>
           <p>
-            A horse bit width-and-wrinkle fit question card is how &quot;the right width sits snugly without pinching the lips or sliding through, a slight wrinkle or two at the corners of the lips, and not so high it bangs the molars or so low it hits the teeth&quot; stays posted — it is not a horse stirrup width-inch-clearance question card (that lives on stirrups-and-safety), not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A horse bit width-and-wrinkle fit question card is how &quot;the right width sits snugly without pinching the lips or sliding through, a slight wrinkle or two at the corners of the lips, and not so high it bangs the molars or so low it hits the teeth&quot; stays posted — it is not a horse stirrup width-inch-clearance question card (that lives on stirrups-and-safety), not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="choosing">Choosing Humanely</h2>
           <p>The guiding principle is that severity lives in the hand, not only the bit -- a mild snaffle can be cruel in rough hands and a curb kind in educated ones. Many competition rules require or restrict particular bits by discipline and level (snaffles for lower-level dressage, for example), so check the rulebook. Reaching for a stronger bit to fix a problem is usually a mistake: training, fit, dental health, and rider hands address the root cause, whereas a harsher bit masks it and risks the horse&apos;s trust and comfort.</p>
           <p>
-            A horse bit hand-severity watch log notebook is how severity-lives-in-the-hand-not-only-the-bit, a-mild-snaffle-can-be-cruel-in-rough-hands, and reaching-for-a-stronger-bit-masks-the-root-cause stay written down — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety), not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops. This page does not hop winter+horse+blanket / horse+turnout+sheet / horse+stable+blanket / horse+fleece+cooler (those live on the blanket-size calculator).
-          </p>
+            A horse bit hand-severity watch log notebook is how severity-lives-in-the-hand-not-only-the-bit, a-mild-snaffle-can-be-cruel-in-rough-hands, and reaching-for-a-stronger-bit-masks-the-root-cause stay written down — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety), not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -279,15 +268,13 @@ export default function BitsGuidePage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the bits-guide leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page how-a-bit-works, snaffle-vs-curb, mouthpieces, fit, and choosing-humanely copy — a laminated horse snaffle-vs-curb bit checklist, a horse bit width-and-wrinkle fit question card, and a horse bit hand-severity watch log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a #1148 laminated peacock-vs-breakaway / width-inch-clearance / drag-entrapment hop, they are not a #1147 laminated anatomical-vs-straight / buckle-elbow-clearance / girth-gall-skin-wrinkle hop, they are not a #1146 laminated snaffle-vs-double / cheekpiece-length / noseband-two-finger hop, they are not a #1145 laminated standing-vs-running / breastplate-vs-breastgirth / martingale-misuse-head-carriage hop, they are not a #1144 laminated-turnout-vs-stable / denier-vs-fill / over-rugging-sweat-shiver hop, they are not a #1143 turnout-halter breakaway / rope-vs-flat / wither-height-tie hop, they are not a #1142 horse-leg bandage-bow / impact-not-tendon-support / grit-rub hop, they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a saddle-fit-basics pad / half-pad / shim / girth hop, they are not a BCS-chart hop, and they do not replace a qualified instructor. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+snaffle+vs+curb+bit+checklist?s=bits-guide"
-                amazonLabel="Browse laminated horse snaffle-vs-curb bit checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=bits-guide"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+bit+width+and+wrinkle+fit+question+card?s=bits-guide"
@@ -297,7 +284,7 @@ export default function BitsGuidePage() {
                 amazonHref="/go/amazon-brand/horse+bit+hand+severity+watch+log+notebook?s=bits-guide"
                 amazonLabel="Browse horse bit hand-severity watch log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

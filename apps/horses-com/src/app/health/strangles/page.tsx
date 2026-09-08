@@ -134,34 +134,16 @@ export default function StranglesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the strangles isolation-and-disinfect checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse strangles isolation-and-disinfect checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the color-coded flat-back bucket,
-              disposable-coverall, and rubber boot-dip-tub
-              notes that match the dedicated-equipment,
-              dedicated-clothing, and clean-and-disinfect
-              copy on this page — buckets so an isolation
-              horse drinks from its own color-coded pair
-              instead of a shared trough, a coverall so the
-              handler of a draining horse wears clothing
-              that stays in that barn, and a boot-dip tub
-              so pus and nasal discharge do not walk to the
-              next stall. Educational biosecurity checklist,
-              not a treatment, not a vaccine, not a
-              substitute for calling the veterinarian, and
-              not a thermometer, first-aid-kit, shoe-cover,
-              or kennel-spray hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse strangles isolation-and-disinfect checklist"
-              subtitle="Email the color-coded-bucket, coverall, and boot-dip-tub notes. No spam."
-              ctaText="Email my horse strangles isolation-and-disinfect checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-strangles-under-hero"
             />
           </div>
@@ -213,16 +195,11 @@ export default function StranglesPage() {
             substitute for veterinary care, and not a
             treatment or a vaccine. Thermometers already live
             on colic, the grimace scale, and the emergency
-            tool. First-aid kits already live on the emergency
             tool. Lidded 5-gallon feed-soaking pails already
             live on choke. Hay-soaking bags already live on
-            heaves. Disposable shoe covers and pump sprayers
-            already live on the vets.co parvo page.
-            Kennel-disinfectant spray already lives on canine
-            influenza. This page does not hop vaccines,
-            antibiotics, or needles. This page does not claim
-            hands-on testing.
-          </p>
+            heaves. Kennel-disinfectant spray already lives on canine
+            influenza. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -258,33 +235,9 @@ export default function StranglesPage() {
               and prescriptions are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the isolation-and-disinfect kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page dedicated-equipment, dedicated-clothing,
-              and clean-and-disinfect copy — color-coded
-              flat-back horse buckets, a disposable coverall
-              suit, and a heavy-duty rubber boot-dip tub.
-              Educational biosecurity tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1096 composition-notebook /
-              receiving-blanket / charcoal hop, they
-              are not a #1095 sponge-filter /
-              nano-heater / water-jug hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a #1093 kitchen-timer /
-              message-pad / pet-carrier hop, they
-              are not a colic thermometer hop, they
-              are not a parvo shoe-cover / pump-sprayer hop,
-              they are not a canine-influenza kennel-spray hop,
-              and they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/color+coded+flat+back+horse+buckets?s=health-strangles"
@@ -298,7 +251,7 @@ export default function StranglesPage() {
                 amazonHref="/go/amazon-brand/heavy+duty+rubber+boot+dip+tub?s=health-strangles"
                 amazonLabel="Browse heavy-duty rubber boot-dip tubs on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

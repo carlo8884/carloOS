@@ -33,44 +33,23 @@ export default function DogHeartDiseasePage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-heart-disease" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-heart-disease" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog heart-disease breathing-rate checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog heart-disease breathing-rate checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the resting-respiratory-rate, one-minute count,
-              and exercise-intolerance walk notes — a resting
-              respiratory rate notebook so weekly sleeping-breath
-              counts stay in one log (a sustained rise above the
-              dog&apos;s usual baseline is an early warning of
-              decompensation), a one-minute kitchen timer so the
-              count is a full minute while the dog is sleeping, and
-              a step-in padded dog harness for short, controlled
-              walks when exercise intolerance shows up. Educational
-              checklist, not a Vetmedin product list, not a
-              Hill&apos;s h/d or Royal Canin Cardiac hop, and not a
-              prescription. Heart-disease workups still belong with
-              a veterinarian. Medical-records binders, AM/PM weekly
-              pill organizers, hanging luggage scales, penlights,
-              emergency contact cards, stretchers, vaccination
-              record books, seat-belt tethers, puppy mats, mosquito
-              dunks, monthly pill organizers, and clinic-visit
-              carriers stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog heart-disease breathing-rate checklist"
-              subtitle="Email the RRR-notebook, one-minute-timer, and step-in-harness notes. No spam."
-              ctaText="Email my dog heart-disease breathing-rate checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-heart-disease-under-hero"
             />
           </div>
@@ -142,28 +121,14 @@ export default function DogHeartDiseasePage() {
             the chest is one breath; over 30 breaths per minute at
             rest is abnormal), and a step-in padded dog harness for
             short, controlled walks when exercise intolerance
-            shows up, so a collar does not press a coughing chest.
-            These are household log-and-walk tools, not treatments.
-            They do not diagnose a murmur, they do not replace
+            shows up, so a collar does not press a coughing chest. These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace
             echocardiography, they do not start pimobendan, they
             do not replace a veterinarian-directed cardiac diet
             (Hill&apos;s h/d, Royal Canin Cardiac), they do not
             treat left-sided or right-sided CHF, and they are not
-            Vetmedin, furosemide, enalapril, or spironolactone.
-            Pet medical records binders, AM/PM weekly pill
-            organizers, digital hanging luggage scales, LED
-            medical penlights, pet emergency contact cards,
-            folding pet stretchers, vaccination record books,
-            seat-belt tethers, foldable waterproof puppy mats,
-            mosquito dunks, a monthly pill organizer, a
-            soft-sided vet-visit carrier, a gum-color assessment
-            chart, recovery food, a feeding syringe, digital pet
-            scales, Julius-K9 / front-clip no-pull / rear-support
-            / belly-support harnesses, and high-value vet-visit
-            treats already live on other pages. This page does
+            Vetmedin, furosemide, enalapril, or spironolactone. This page does
             not hop medications. This page does not claim
-            hands-on testing.
-          </p>
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -192,31 +157,9 @@ export default function DogHeartDiseasePage() {
               and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the heart-disease home-watch kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page resting-respiratory-rate, one-minute
-              count, and exercise-intolerance walk copy — a
-              resting respiratory rate notebook, a one-minute
-              kitchen timer, and a step-in padded dog harness.
-              Everyday physical supplies only. They are not a
-              ranked product list, they are not a Vetmedin /
-              Hill&apos;s h/d / Royal Canin Cardiac hop, they
-              are not the #1046 binder / AM-PM pill-organizer /
-              luggage-scale hops, they are not the #1045
-              penlight / contact-card / stretcher hops, they
-              are not the #1044 vaccine-record / seat-belt-tether
-              / puppy-mat hops, they are not the #1043
-              mosquito-dunk / monthly-pill-organizer /
-              clinic-carrier hops, they are not the #1042
-              anemia gum-chart / recovery-food / syringe hops,
-              they are not digital-pet-scale or first-aid-kit
-              hops, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/resting+respiratory+rate+notebook?s=health-dog-heart-disease"
@@ -230,7 +173,7 @@ export default function DogHeartDiseasePage() {
                 amazonHref="/go/amazon-brand/step+in+padded+dog+harness?s=health-dog-heart-disease"
                 amazonLabel="Browse step-in padded dog harnesses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

@@ -50,18 +50,13 @@ export default function ExcessiveBarkingPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Quiet-barking plan
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the six bark-type diagnoses, the camera check, and the
-            enrichment kit (puzzle feeder, lick mat, snuffle mat, calming
-            chews) so you can match the protocol to the bark you actually
-            have. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Quiet-barking plan"
-            subtitle="Email the six bark-type diagnoses, camera check, and enrichment kit. No spam."
-            ctaText="Email my quiet-barking plan"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-excessive-barking-under-hero"
           />
         </div>
@@ -86,8 +81,7 @@ export default function ExcessiveBarkingPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a quiet-barking kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Boredom and frustration barking are enrichment problems — a
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Boredom and frustration barking are enrichment problems — a
             puzzle feeder, lick mat, or snuffle mat occupies the mouth
             instead of the bark. Calming chews are a category search for
             anxiety-adjacent barking, not a ranked SKU and not a substitute
@@ -114,8 +108,7 @@ export default function ExcessiveBarkingPage() {
             </Link>
             . They are not a ranked product list and they do not replace
             the camera check. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puzzle+feeder+dog?s=training-excessive-barking"

@@ -68,42 +68,16 @@ export default function DogReviewsPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog reviews-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog reviews-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-reviews-buyer-guide-chart,
-            fridge-reviews-comparison-card, and
-            canine-reviews-reference-handbook notes that
-            match the reviews-section-map,
-            per-category-comparison-log, and
-            WSAVA-VOHC-and-editorial-criteria copy on this
-            hub — a laminated dog reviews buyer-guide chart
-            so the section map (food, crates, harnesses,
-            beds, GPS, slow feeders, dental, joints) is
-            posted on the fridge (not a tools-hub chart,
-            not a crate-size chart, not a first-aid chart),
-            a dog fridge reviews comparison card so each
-            category&apos;s editorial criteria and shortlist
-            is labeled on the fridge (not a measurement
-            card, not a crate-pad card, not a harness-fit
-            card), and a canine reviews reference handbook
-            so the WSAVA / VOHC / editorial-criteria
-            grounding is a physical kitchen book (not a
-            calculator handbook, not a first-aid handbook,
-            not a crate-training handbook). Educational
-            kitchen checklist, not a ranked product list,
-            and not a substitute for a veterinarian. No
-            spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog reviews-hub checklist"
-            subtitle="Email the reviews-buyer-guide-chart, fridge comparison-card, and reviews-handbook notes. No spam."
-            ctaText="Email my dog reviews-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="reviews-hub-under-hero"
           />
         </div>
@@ -150,29 +124,8 @@ export default function DogReviewsPage() {
       {/* agent1-browse-all-end */}
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Reviews-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          reviews-section-map, per-category-comparison-log,
-          and WSAVA-VOHC-and-editorial-criteria copy on this
-          hub — a laminated dog reviews buyer-guide chart so
-          the section map is posted on the fridge, a dog
-          fridge reviews comparison card so each
-          category&apos;s editorial criteria and shortlist is
-          labeled on the fridge, and a canine reviews
-          reference handbook so the WSAVA / VOHC /
-          editorial-criteria grounding is a physical kitchen
-          book. These are educational kitchen searches, not
-          a ranked product list, not a substitute for a
-          veterinarian, not a tools-hub calculator-tools
-          chart hop, and not a crate / harness / GPS /
-          flea / heartworm hop (those live on the child
-          reviews). This page does not hop medications or
-          vaccines. This page does not claim hands-on
-          testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -193,36 +146,13 @@ export default function DogReviewsPage() {
             dog+harness / dog+gps. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the reviews-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page reviews-section-map,
-            per-category-comparison-log, and
-            WSAVA-VOHC-and-editorial-criteria copy — a
-            laminated dog reviews buyer-guide chart, a dog
-            fridge reviews comparison card, and a canine
-            reviews reference handbook. Educational
-            kitchen searches only. They are not a ranked
-            product list, they are not a tools-hub
-            calculator-tools hop, they are not a crate /
-            harness / GPS hop, and they do not replace a
-            veterinarian. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+reviews+buyer+guide+chart?s=reviews-hub"
-              amazonLabel="Browse laminated dog reviews buyer-guide charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+reviews+comparison+card?s=reviews-hub"
-              amazonLabel="Browse dog fridge reviews comparison cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+reviews+reference+handbook?s=reviews-hub"
-              amazonLabel="Browse canine reviews reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=reviews-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -221,22 +221,16 @@ export default function DogChocolateToxicityCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Chocolate-safety checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the chocolate-safety checklist — poison-control numbers, what to tell the
-            vet, and a shoppable safety kit (first-aid, emergency kit, crate for quiet rest).
-            Nothing on the list treats chocolate poisoning. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Chocolate-safety checklist"
-            subtitle="Email the chocolate-safety checklist — poison-control numbers, what to tell the vet, and the safety kit. No spam."
-            ctaText="Email my chocolate-safety checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-chocolate-toxicity-under-hero"
           />
         </div>
@@ -327,16 +321,7 @@ export default function DogChocolateToxicityCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a chocolate-safety kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              After you have called your veterinarian or a poison-control hotline, these
-              Amazon category searches are cabinet and car items — a pet first-aid kit, a
-              pet emergency kit, a crate for quiet rest, and (vet-directed only) activated
-              charcoal or 3% hydrogen peroxide. They are not a ranked product list, not
-              invented inventory, and they do not treat or reverse chocolate poisoning.
-              Give charcoal or peroxide only if a veterinarian or poison-control specialist
-              tells you to. Dog.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/activated+charcoal+pet?s=tools-chocolate-toxicity"
@@ -358,7 +343,7 @@ export default function DogChocolateToxicityCalculatorPage() {
                 amazonHref="/go/amazon-brand/dog+crate+for+recovery?s=tools-chocolate-toxicity"
                 amazonLabel="Browse recovery crates on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

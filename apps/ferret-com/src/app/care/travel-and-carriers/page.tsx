@@ -125,24 +125,16 @@ export default function TravelAndCarriersPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the travel-carrier checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret travel-carrier checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the vet-trip and road-trip order — a hard-sided plastic
-              carrier (or a zipper-secure soft-sided one), a familiar sleep
-              sack or fleece liner, a spill-resistant clip-on water bottle,
-              and a small low-sided litter pan for longer rides. Educational
-              checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret travel-carrier checklist"
-              subtitle="Email the carrier, liner, clip-on water, and travel-litter-pan order. No spam."
-              ctaText="Email my ferret travel-carrier checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-travel-and-carriers-under-hero"
             />
           </div>
@@ -197,32 +189,7 @@ export default function TravelAndCarriersPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop travel-carrier gear
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page carrier and
-              supplies copy — a hard-sided plastic carrier of the type sold
-              for cats and small dogs, a zipper-secure soft-sided carrier, a
-              familiar sleep sack or fleece liner, a spill-resistant clip-on
-              water bottle for rest stops, and a small corner litter pan for
-              a larger carrier. Same hard-sided-carrier hop used on the{' '}
-              <Link
-                href="/tools/readiness-quiz"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                ferret readiness quiz
-              </Link>
-              {' '}and the same sleep-sack hop used on the{' '}
-              <Link
-                href="/tools/cage-size-calculator"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                cage-size calculator
-              </Link>
-              . They are not a ranked product list, they are not
-              medications, and they do not diagnose or replace an exotic-pet
-              veterinarian. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=care-travel-and-carriers"
@@ -244,7 +211,7 @@ export default function TravelAndCarriersPage() {
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-travel-and-carriers"
                 amazonLabel="Browse ferret corner litter pans on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/care/heat-stroke-prevention" className="text-brand-primary hover:underline">

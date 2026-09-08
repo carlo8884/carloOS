@@ -195,21 +195,14 @@ export default function WaterParametersHubPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the weekly test order
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Water-parameter testing checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the weekly test order — ammonia, nitrite, nitrate, and pH on
-            community freshwater, plus KH on planted and reef tanks — and the
-            liquid-kit vs strip note so you can read a crash without scrolling
-            back. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Water-parameter testing checklist"
-            subtitle="Email the weekly ammonia / nitrite / nitrate / pH order and when to add KH. No spam."
-            ctaText="Email my water-parameter testing checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="water-parameters-under-hero"
           />
         </div>
@@ -303,8 +296,7 @@ export default function WaterParametersHubPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop water-parameter testing gear
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A liquid master test kit is how you see ammonia, nitrite, nitrate,
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master test kit is how you see ammonia, nitrite, nitrate,
             and pH at the low end where husbandry decisions happen. Pair it with
             Seachem Prime (or another dechlorinator) at every fill, a gravel
             vacuum or Python-style changer for the weekly water change that
@@ -346,8 +338,7 @@ export default function WaterParametersHubPage() {
               water-test kit reviews
             </Link>
             . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"

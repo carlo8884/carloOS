@@ -27,42 +27,23 @@ export default function DeductiblesPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-deductibles" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-deductibles" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the deductibles checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Deductibles checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              deductible, reimbursement-rate, and
-              annual-limit copy on this page — a
-              quad-ruled graph pad so the $5,000
-              bill, deductible, reimbursement rate,
-              and leftover limit stay plotted
-              combinations, a paid rubber stamp so
-              reimbursed invoices stay marked after
-              the pay-then-claim lands, and a
-              handheld tally counter so remaining
-              annual-limit headroom stays a counted
-              number instead of a guess. Educational
-              checklist, not a diagnosis, not a
-              substitute for veterinary care, and
-              not a 3-tab-divider, highlighter, or
-              page-flag hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Deductibles checklist"
-              subtitle="Email the graph-pad, paid-stamp, and tally-counter notes. No spam."
-              ctaText="Email my deductibles checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-deductibles-reimbursement-under-hero"
             />
           </div>
@@ -170,7 +151,6 @@ export default function DeductiblesPage() {
               and they do not replace a veterinarian.
               Vets.co earns a commission on qualifying
               purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

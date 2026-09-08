@@ -40,35 +40,16 @@ export default function BestNanoTanksPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the nano-tank checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Nano-tank checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the nano-tank notes that match the
-                Fluval Spec V, Aqueon 10 Standard, and
-                Aqueon 20 Long copy on this page — a
-                Fluval Spec V so a 5-gallon betta or
-                shrimp tank keeps a rimless all-in-one,
-                an Aqueon 10 so a first tank keeps a
-                versatile 20×10×12 footprint, and an
-                Aqueon 20 Long so a community starter
-                keeps the more forgiving 30×12×12
-                long tank. Educational nano-tank
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing Fluval
-                / Aqueon Amazon searches stay below.
-                Empty Chewy buttons stay hidden. No
-                spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Nano-tank checklist"
-                subtitle="Email the Spec V, Aqueon 10, and 20 Long notes. No spam."
-                ctaText="Email my nano-tank checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-nano-tanks-under-hero"
               />
             </div>

@@ -27,42 +27,23 @@ export default function ChoosingVetPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Find a Vet', href: '/find-a-vet' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-choosing" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-choosing" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the choosing-a-veterinarian checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Choosing-a-veterinarian checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              accreditation, communication, services,
-              location, and emergency-arrangement copy
-              on this page — a reporter notebook so
-              tour impressions stay written during
-              the wellness visit, a kraft two-pocket
-              folder so clinic notes and the
-              after-hours hospital card stay separate
-              pockets, and a pocket-size address book
-              so the 24-hour emergency facility stays
-              a named number instead of a remembered
-              search. Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a spiral-
-              notebook, index-card, or emergency-
-              contact-card hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Choosing-a-veterinarian checklist"
-              subtitle="Email the reporter-notebook, two-pocket-folder, and address-book notes. No spam."
-              ctaText="Email my choosing-a-veterinarian checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-choosing-a-veterinarian-under-hero"
             />
           </div>
@@ -86,7 +67,7 @@ export default function ChoosingVetPage() {
           <p>Practical factors carry real weight. A conveniently located clinic makes routine visits easier and is valuable in an emergency, particularly for pets that find travel stressful. Consider hours, appointment availability, communication channels, and payment options, including whether they accept pet insurance reimbursement workflows and offer estimates. These logistics shape how easy it is to actually get care when you need it. The same kraft two-pocket folder holds hours and payment-option notes with the services list so a second clinic tour is compared on paper, not from memory.</p>
 
           <h2>Emergency Arrangements</h2>
-          <p>Find out how the practice handles after-hours emergencies before you ever face one. Some clinics offer extended or emergency hours; others refer to a dedicated emergency hospital overnight and on weekends. Either way, identify your nearest 24-hour emergency facility in advance and keep its details handy. A pocket-size address book is how that after-hours hospital name, address, and phone stay a written entry instead of a remembered search — it is not a pet emergency contact card (that lives elsewhere), not a car visor document holder (that lives on ER-vs-urgent-care), and not a lined telephone message pad (that lives on when-to-go-to-the-vet). Pairing a trusted general practice for routine care with a known emergency option gives you coverage across every scenario. Our find-a-vet directory can help you locate options in your area.</p>
+          <p>Find out how the practice handles after-hours emergencies before you ever face one. Some clinics offer extended or emergency hours; others refer to a dedicated emergency hospital overnight and on weekends. Either way, identify your nearest 24-hour emergency facility in advance and keep its details handy. Pairing a trusted general practice for routine care with a known emergency option gives you coverage across every scenario. Our find-a-vet directory can help you locate options in your area.</p>
 
           <h2 id="kit">Choosing-a-veterinarian kit</h2>
           <p>
@@ -163,39 +144,9 @@ export default function ChoosingVetPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the choosing-a-veterinarian kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page accreditation, communication,
-              services, location, and
-              emergency-arrangement copy — a reporter
-              notebook, a kraft two-pocket folder, and
-              a pocket-size address book. Educational
-              clinic-comparison / paperwork tools
-              only. They are not a ranked product
-              list, they are not a substitute for
-              veterinary care, they are not a #1166
-              index-card / sticky-note /
-              sheet-protector hop, they are not a
-              #1165 spiral-notebook / cooler-bag /
-              clipboard hop, they are not a #1164
-              cash-envelope / legal-pad /
-              hanging-file hop, they are not a #1163
-              budget-workbook / checkbook-register /
-              accordion-file hop, they are not a
-              #1162 cash-box / calculator /
-              manila-folder hop, they are not a #1161
-              laminating-pouch / dry-erase-board /
-              visor-holder hop, they are not a
-              first-aid-kit, thermometer, or carrier
-              hop, they are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/reporter+notebook?s=guides-choosing-a-veterinarian"
@@ -209,7 +160,7 @@ export default function ChoosingVetPage() {
                 amazonHref="/go/amazon-brand/pocket+size+address+book?s=guides-choosing-a-veterinarian"
                 amazonLabel="Browse pocket-size address books on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

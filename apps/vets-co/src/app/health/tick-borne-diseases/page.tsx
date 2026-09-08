@@ -39,7 +39,7 @@ export default function TickBornePage() {
             <div className="text-2xs text-brand-text-light mt-2">Note: RMSF not detected by 4Dx — requires separate testing</div>
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm in Dogs', href: '/health/heartworm-in-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-tick-borne" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-tick-borne" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -47,36 +47,16 @@ export default function TickBornePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog tick-check checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog tick-check checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the after-walk notes — a tick-removal
-              hook so an attached tick comes off as a
-              whole instead of a squeezed body, a
-              fine-tooth flea comb so ears, armpits, and
-              groin get a pass before the 24–48 hour
-              Lyme window, and a laminated tick
-              identification card so Ixodes, Dermacentor,
-              Amblyomma, and Rhipicephalus can be
-              compared to the tick that came off. Educational
-              checklist, not a diagnosis, not a 4Dx
-              interpretation, and not a substitute for
-              the veterinarian who decides whether
-              doxycycline or a preventive is indicated.
-              Generic tick removers, tick-removal tools,
-              lint rollers, metal grooming combs,
-              specimen cups, and Rx stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog tick-check checklist"
-              subtitle="Email the tick-hook, flea-comb, and ID-card notes. No spam."
-              ctaText="Email my dog tick-check checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-tick-borne-diseases-under-hero"
             />
           </div>
@@ -95,36 +75,10 @@ export default function TickBornePage() {
 
           <h2>Annual 4Dx Testing — Why It Matters</h2>
           <p>The annual heartworm test (4Dx SNAP) also detects antibodies for Lyme, Anaplasma, and Ehrlichia — three tick-borne diseases in a single test with the heartworm antigen test. This is one of the primary reasons the 4Dx is standard of care rather than a simple heartworm test — it provides meaningful surveillance for tick-borne disease simultaneously. A positive result on the 4Dx does not automatically mean treatment is needed — many seropositive dogs have been exposed but not clinically affected. A positive 4Dx in a dog with clinical signs is a significant finding warranting treatment. A positive 4Dx in a completely healthy dog warrants a urine protein:creatinine ratio (to screen for Lyme nephritis) and a full workup conversation with your veterinarian about whether treatment is indicated.</p>
-          <p>A laminated tick identification card is how the tick that came off the dog can be compared to Ixodes (Lyme / Anaplasma), Dermacentor (RMSF), Amblyomma (E. ewingii), and Rhipicephalus (E. canis) before the clinic visit — it is not a 4Dx test, not a medical-records binder, and not a diagnosis. Bring the card notes and, if the veterinarian asks, the tick itself. The card does not decide whether doxycycline is indicated.</p>
+          
 
           <h2 id="kit">Dog tick-check kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            prompt-removal, after-walk, and species-ID
-            copy on this page — a tick-removal hook so
-            an attached tick comes off as a whole, a
-            fine-tooth flea comb so ears, armpits, and
-            groin get a pass before the Lyme and RMSF
-            attachment windows, and a laminated tick
-            identification card so the four US vectors
-            on this page can be compared to the tick
-            that came off. These are household check
-            tools, not treatments. They do not prevent
-            Lyme, Anaplasmosis, Ehrlichiosis, or RMSF,
-            they do not replace a veterinarian-recommended
-            preventive or a 4Dx test, and they are not
-            a ranked product list. Generic tick removers,
-            tick-removal tools, reusable lint rollers,
-            fine-tooth metal grooming combs, sterile
-            urine specimen cups, fecal-sample collection
-            kits, first-aid kits, LED penlights, and
-            pet medical-records binders already live on
-            other pages. This page does not hop
-            doxycycline, isoxazoline preventives, Lyme
-            vaccine, Frontline, NexGard, Bravecto,
-            Simparica, or other Rx ASINs. This page
-            does not claim hands-on testing.
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -169,26 +123,9 @@ export default function TickBornePage() {
               and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog tick-check kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page prompt-removal, after-walk, and
-              species-ID copy — a tick-removal hook, a
-              fine-tooth flea comb, and a laminated tick
-              identification card. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a preventive or
-              doxycycline hop, they are not a #1071
-              expanding-file / urine-cup / 12-hour-timer
-              hop, they are not a generic tick-remover /
-              tick-removal-tool hop, they are not a
-              lint-roller / metal-comb hop, and they do
-              not replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases"
@@ -199,10 +136,10 @@ export default function TickBornePage() {
                 amazonLabel="Browse fine-tooth flea combs on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+tick+identification+card?s=health-tick-borne-diseases"
-                amazonLabel="Browse laminated tick identification cards on Amazon →"
+                amazonHref="/go/amazon-brand/pet+supplies?s=health-tick-borne-diseases"
+                amazonLabel="Shop on Amazon"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

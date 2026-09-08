@@ -55,50 +55,23 @@ export default function DogCancerSignsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Boxer Breed', href: '/breeds/boxer' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-signs" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cancer-signs" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog cancer-signs early-detection checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog cancer-signs early-detection checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the lymph-node, weight-tracking, and
-              oral-exam notes — a silicone dog grooming glove
-              so a weekly coat-and-node check covers the
-              submandibular, prescapular, inguinal, and
-              popliteal nodes plus any new lump or bump, an
-              analog bathroom scale so unexplained weight
-              loss can be logged at home (hold-to-weigh:
-              owner plus dog minus owner; more than 10% of
-              body weight warrants investigation), and a dog
-              dental finger brush so a weekly lip-lift oral
-              exam can catch offensive mouth odor, difficulty
-              eating, or a visible oral mass. Educational
-              checklist, not a chemotherapy product list,
-              not an oncology hop, and not a prescription.
-              Fine needle aspiration and cancer workups still
-              belong with a veterinarian. Resting respiratory
-              rate notebooks, one-minute kitchen timers,
-              step-in padded harnesses, medical-records
-              binders, AM/PM weekly pill organizers, hanging
-              luggage scales, penlights, emergency contact
-              cards, stretchers, vaccination record books,
-              seat-belt tethers, puppy mats, mosquito dunks,
-              monthly pill organizers, and clinic-visit
-              carriers stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog cancer-signs early-detection checklist"
-              subtitle="Email the grooming-glove, analog-scale, and finger-brush notes. No spam."
-              ctaText="Email my dog cancer-signs early-detection checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-cancer-signs-under-hero"
             />
           </div>
@@ -164,10 +137,8 @@ export default function DogCancerSignsPage() {
             scales, kitchen gram scales, portion-control
             food scales, hanging luggage scales, and
             high-value vet-visit treats already live on
-            other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -204,34 +175,9 @@ export default function DogCancerSignsPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the cancer-signs early-detection kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page lymph-node, weight-tracking, and
-              oral-exam copy — a silicone dog grooming
-              glove, an analog bathroom scale, and a dog
-              dental finger brush. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a chemotherapy
-              / Tanovea hop, they are not the #1047
-              notebook / timer / harness hops, they are
-              not the #1046 binder / AM-PM
-              pill-organizer / luggage-scale hops, they
-              are not the #1045 penlight / contact-card
-              / stretcher hops, they are not the #1044
-              vaccine-record / seat-belt-tether /
-              puppy-mat hops, they are not the #1043
-              mosquito-dunk / monthly-pill-organizer /
-              clinic-carrier hops, they are not the
-              #1042 anemia gum-chart / recovery-food /
-              syringe hops, they are not digital-pet-scale
-              or first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs"
@@ -245,7 +191,7 @@ export default function DogCancerSignsPage() {
                 amazonHref="/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"
                 amazonLabel="Browse dog dental finger brushes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

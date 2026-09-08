@@ -169,42 +169,16 @@ export default function TripleCrownPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the triple-crown checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Triple-crown checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-derby-preakness-belmont-chart,
-              stall-door-belmont-test-card, and
-              equine-thirteen-winner-handbook notes
-              that match the three-legs-derby-preakness-belmont,
-              test-of-the-champion, and thirteen-winners
-              copy on this page — a laminated horse
-              derby-preakness-belmont chart so the 1.25 /
-              1 3/16 / 1.5-mile notes are posted on the
-              stall door (not a race-class maiden-claiming
-              chart, not a newcomer race-card chart), a
-              horse stall-door Belmont test card so the
-              Test of the Champion / five-week compression
-              notes are labeled at the barn (not a graded-stakes
-              card, not a paddock parade card), and an
-              equine thirteen-winner handbook so the Sir
-              Barton / Secretariat / American Pharoah
-              grounding is a physical barn book (not a
-              condition-book handbook, not a racing-silks
-              literacy handbook). Educational barn
-              checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Triple-crown checklist"
-              subtitle="Email the derby-preakness-belmont chart, Belmont test card, and thirteen-winner handbook notes. No spam."
-              ctaText="Email my triple-crown checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-triple-crown-under-hero"
             />
           </div>
@@ -304,43 +278,18 @@ export default function TripleCrownPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs race-types /
               racing-for-newcomers hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the triple-crown barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page three-legs-derby-preakness-belmont,
-              test-of-the-champion, and thirteen-winners
-              copy — a laminated horse derby-preakness-belmont
-              chart, a horse stall-door Belmont test card,
-              and an equine thirteen-winner handbook.
-              Educational barn searches only. They are not
-              a ranked race list, they are not a race-types /
-              racing-for-newcomers hop, they are not a
-              first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+derby+preakness+belmont+chart?s=racing-triple-crown"
-                amazonLabel="Browse laminated horse derby-preakness-belmont charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-triple-crown"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+belmont+test+card?s=racing-triple-crown"
-                amazonLabel="Browse horse stall-door Belmont test cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+thirteen+winner+handbook?s=racing-triple-crown"
-                amazonLabel="Browse equine thirteen-winner handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

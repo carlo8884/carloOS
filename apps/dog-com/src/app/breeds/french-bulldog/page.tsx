@@ -54,39 +54,16 @@ export default function FrenchBulldogBreedPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the french-bulldog checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            French Bulldog checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-paris-1800s-lace-chart,
-            dog-fridge-frenchie-skin-fold-card, and
-            canine-first-owner-french-bulldog-handbook notes
-            that match the 1800s Paris / Nottingham lace
-            companion story, the daily facial-fold / tail-
-            pocket cleaning, and first-time-owner notes on
-            this page — a laminated dog Paris 1800s lace
-            chart so the companion-breed notes are posted
-            on the fridge (not a Stephanitz 1899 herding
-            chart, not a POMC 2016 satiety chart), a fridge
-            Frenchie skin-fold card so daily fold cleaning
-            is labeled in the kitchen (not a cooling-mat
-            hop, not a cooling-vest hop), and a first-owner
-            French Bulldog handbook so the YES-typically /
-            BOAS / IVDD / heat grounding is a physical
-            kitchen book (not a first-owner German Shepherd
-            handbook). Educational kitchen checklist, not a
-            ranked product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="French Bulldog checklist"
-            subtitle="Email the Paris 1800s lace chart, Frenchie skin-fold card, and first-owner handbook notes. No spam."
-            ctaText="Email my french-bulldog checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-french-bulldog-under-hero"
           />
         </div>
@@ -115,38 +92,16 @@ export default function FrenchBulldogBreedPage() {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the French Bulldog home kit
+                Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the on-page
-                1800s Paris / Nottingham lace companion story,
-                the daily facial-fold / tail-pocket cleaning,
-                and first-time-owner notes — a laminated dog
-                Paris 1800s lace chart, a fridge Frenchie
-                skin-fold card, and a first-owner French
-                Bulldog handbook. Educational kitchen searches
-                only. They are not a ranked product list, they
-                are not a crate hop, they are not a cooling-mat
-                hop, and they do not replace a veterinarian.
-                Dog.com does not sell insurance. Dog.com earns
-                a commission on qualifying purchases at no extra
-                cost to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+paris+1800s+lace+chart?s=breed-french-bulldog"
-                  amazonLabel="Browse laminated dog Paris 1800s lace charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-french-bulldog"
+                  amazonLabel="Shop on Amazon"
                 />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+fridge+frenchie+skin+fold+card?s=breed-french-bulldog"
-                  amazonLabel="Browse fridge Frenchie skin-fold cards on Amazon →"
-                />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+first+owner+french+bulldog+handbook?s=breed-french-bulldog"
-                  amazonLabel="Browse first-owner French Bulldog handbooks on Amazon →"
-                />
-              </div>
+          </div>
             </div>
 
             <h2>Frequently Asked Questions</h2>

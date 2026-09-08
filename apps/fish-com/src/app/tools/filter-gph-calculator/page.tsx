@@ -186,20 +186,14 @@ export default function FilterGphCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the filter plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Filter GPH checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the turnover bands, rated-for vs real GPH notes, and the
-            shoppable filter kit (HOB, canister, media, sponge, powerhead)
-            so you can size without re-running the calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Filter GPH checklist"
-            subtitle="Email the filter GPH checklist, turnover bands, and shoppable filter kit. No spam."
-            ctaText="Email my filter GPH checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-filter-gph-calculator-under-hero"
           />
         </div>
@@ -216,36 +210,7 @@ export default function FilterGphCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a filter kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches match the GPH range you just
-            calculated — an AquaClear HOB or Fluval canister (same queries as
-            the{' '}
-            <Link
-              href="/reviews/best-aquarium-filters"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              aquarium filter reviews
-            </Link>
-            {' '}and the{' '}
-            <Link
-              href="/reviews/best-canister-filters"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              canister filter reviews
-            </Link>
-            ), replacement filter media, a sponge filter that doubles as a
-            prefilter (same query as the{' '}
-            <Link
-              href="/tools/aquarium-cycling-estimator"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              cycling estimator
-            </Link>
-            ), and a powerhead for reef or high-flow tanks. Buy one size up
-            from the box rating. They are not a ranked product list and not
-            invented inventory. Fish.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"

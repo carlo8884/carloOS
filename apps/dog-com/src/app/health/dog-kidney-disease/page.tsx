@@ -39,32 +39,23 @@ export default function DogKidneyPage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance &rarr;</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-kidney" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-kidney" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the CKD hydration checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog kidney-disease hydration checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the hydration notes — a pet water fountain and extra
-              water bowls around the house so a CKD dog can drink more
-              often. Educational checklist, not a diagnosis and not a
-              prescription renal diet. Hill&apos;s k/d, Royal Canin Renal,
-              Purina NF, phosphate binders, and subcutaneous fluids stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog kidney-disease hydration checklist"
-              subtitle="Email the fountain and extra-bowl notes. No spam."
-              ctaText="Email my dog kidney hydration checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-kidney-disease-under-hero"
             />
           </div>
@@ -135,16 +126,7 @@ export default function DogKidneyPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop the CKD hydration kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page hydration
-              copy — a pet water fountain and extra water bowls so a CKD
-              dog can drink more often. Everyday physical gear only. They
-              are not a ranked product list, they are not prescription
-              renal diets, they are not medications, and they do not
-              replace a veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+water+fountain?s=health-dog-kidney-disease"

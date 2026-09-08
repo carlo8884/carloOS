@@ -243,45 +243,16 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8 not-prose">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the breed-insurance checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Breed-insurance checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-dog-ins-spoke-risk-chart,
-                fridge-ins-spoke-enroll-card, and
-                canine-ins-spoke-handbook notes that
-                match this remaining {breed.name} insurance
-                spoke — the hereditary cost-driver /
-                risk-tier table, the enrollment-timing /
-                pre-existing-exclusion copy, and the
-                OFA / CHIC / AKC parent-club grounding —
-                a laminated dog insurance-spoke risk
-                chart so this remaining-breed cost map
-                is posted on the fridge (not a breeds-hub
-                profile chart, not a vets insurance-hub
-                policy-map chart), a fridge
-                insurance-spoke enroll card so the
-                enroll-before-the-first-note reminder is
-                labeled in the kitchen (not a breeds
-                library card, not a vets insurance
-                levers card), and an insurance-spoke
-                handbook so the OFA / CHIC / quote-check
-                row is a physical kitchen book (not a
-                breeds-reference handbook, not a
-                veterinary insurance handbook).
-                Educational kitchen checklist, not a
-                ranked product list, not a substitute
-                for a veterinarian or an insurer.
-                Dog.com does not sell insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Breed-insurance checklist"
-                subtitle="Email the risk chart, enroll card, and insurance-spoke handbook notes. No spam."
-                ctaText="Email my breed-insurance checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source={`breed-insurance-${breed.slug}-under-hero`}
               />
             </div>
@@ -433,43 +404,16 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
                 product hop, never an Rx hop. */}
             <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the breed-insurance kitchen kit
+                Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the
-                on-page hereditary cost-driver / risk-tier
-                table, the enrollment-timing /
-                pre-existing-exclusion copy, and the
-                OFA / CHIC / AKC parent-club grounding —
-                a laminated dog insurance-spoke risk
-                chart, a fridge insurance-spoke enroll
-                card, and a canine insurance-spoke
-                handbook. Educational kitchen searches
-                only. They are not a ranked product list,
-                they are not a breeds-hub hop, they are
-                not a vets insurance-hub hop, they are
-                not a crate hop, they are not a flea /
-                heartworm / vaccine hop, and they do not
-                replace a veterinarian or an insurer.
-                Dog.com does not sell insurance. Dog.com
-                earns a commission on qualifying
-                purchases at no extra cost to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+ins+spoke+risk+chart?s=breed-insurance-spoke"
-                  amazonLabel="Browse laminated dog insurance-spoke risk charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-insurance-spoke"
+                  amazonLabel="Shop on Amazon"
                 />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+fridge+ins+spoke+enroll+card?s=breed-insurance-spoke"
-                  amazonLabel="Browse fridge dog insurance-spoke enroll cards on Amazon →"
-                />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+ins+spoke+handbook?s=breed-insurance-spoke"
-                  amazonLabel="Browse canine insurance-spoke handbooks on Amazon →"
-                />
-              </div>
+          </div>
             </div>
 
             {/* FAQ — FAQAccordion emits FAQPage schema */}

@@ -122,36 +122,16 @@ export default function ToxicPlantsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the pasture toxic-plant checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pasture toxic-plant checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine-toxic-plant-identification-field-guide,
-              horse-pasture-walk-weed-identification-handbook, and
-              horse-paddock-tree-guard-fencing notes that match
-              the walk-and-identify, inspect-the-sward, and
-              fence-out-ornamentals copy on this page — an
-              equine toxic-plant identification field guide so
-              the dangerous plants in the region can be named
-              on the walk (not a soil-test kit), a horse
-              pasture-walk weed-identification handbook so
-              the regular inspection has a pocket reference
-              (not a grazing-muzzle hop), and horse paddock
-              tree-guard fencing so ornamental hedges and
-              toxic trees stay out of reach (not electric
-              tape, fence mesh, electric rope, or paddock
-              panels). Educational pasture-safety checklist,
-              not a treatment, and not a substitute for
-              calling the veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Pasture toxic-plant checklist"
-              subtitle="Email the field-guide, pasture-walk, and tree-guard notes. No spam."
-              ctaText="Email my pasture toxic-plant checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-toxic-plants-under-hero"
             />
           </div>
@@ -202,8 +182,7 @@ export default function ToxicPlantsPage() {
             weed-identification handbook so the regular
             inspection has a pocket reference, and horse
             paddock tree-guard fencing so ornamental
-            hedges and toxic trees stay out of reach.
-            These are educational pasture-safety
+            hedges and toxic trees stay out of reach. These are educational pasture-safety
             searches, not a ranked product list, not a
             substitute for veterinary care, and not a
             soil-test-kit hop (that lives on the
@@ -212,11 +191,8 @@ export default function ToxicPlantsPage() {
             laminitis), an electric-tape / fence-mesh /
             electric-rope hop (those live on
             fencing-safety), or a paddock-panel hop
-            (that lives on the osteoarthritis page).
-            This page does not hop medications or
-            vaccines. This page does not claim
-            hands-on testing.
-          </p>
+            (that lives on the osteoarthritis page). This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -262,39 +238,23 @@ export default function ToxicPlantsPage() {
               (osteoarthritis). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the pasture toxic-plant kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page walk-and-identify, inspect-the-sward,
-              and fence-out-ornamentals copy — an equine
-              toxic-plant identification field guide, a
-              horse pasture-walk weed-identification
-              handbook, and horse paddock tree-guard
-              fencing. Educational pasture-safety
-              searches only. They are not a ranked
-              product list, they are not a soil-test-kit
-              hop, they are not a grazing-muzzle hop,
-              they are not an electric-tape or paddock-panel
-              hop, and they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+toxic+plant+identification+field+guide?s=nutrition-toxic-plants"
                 amazonLabel="Browse equine toxic-plant identification field guides on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+pasture+walk+weed+identification+handbook?s=nutrition-toxic-plants"
-                amazonLabel="Browse horse pasture-walk weed-identification handbooks on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=nutrition-toxic-plants"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"
                 amazonLabel="Browse horse paddock tree-guard fencing on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

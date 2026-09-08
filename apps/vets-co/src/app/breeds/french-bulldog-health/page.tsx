@@ -66,32 +66,16 @@ export default function VetsFrenchBulldogHealthPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the French Bulldog health checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            French Bulldog health checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the prep notes that match the
-            BOAS, IVDD, and heat-risk copy on this
-            page — four-tab dividers so BOAS
-            grades 0–III stay four labeled stacks,
-            an analog outdoor thermometer so the
-            70°F outdoor limit stays a written
-            cutoff, and a weekly checklist notepad
-            so fold-cleaning two-to-three times a
-            week stays a dated list. Educational
-            checklist, not a diagnosis, not a
-            substitute for veterinary care, and
-            not a steno-pad, kitchen-timer, or
-            file-label hop. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="French Bulldog health checklist"
-            subtitle="Email the divider, thermometer, and checklist-notepad notes. No spam."
-            ctaText="Email my French Bulldog health checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breeds-french-bulldog-health-under-hero"
           />
         </div>
@@ -196,8 +180,7 @@ export default function VetsFrenchBulldogHealthPage() {
             brand hop, and they do not replace a
             veterinarian. Vets.co earns a
             commission on qualifying purchases at
-            no extra cost to you. Empty Chewy
-            buttons stay hidden.
+            no extra cost to you.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

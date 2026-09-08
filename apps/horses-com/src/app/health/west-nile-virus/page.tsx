@@ -128,36 +128,16 @@ export default function WestNilePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the West Nile mosquito-control checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse West Nile mosquito-control checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the long-handle stock-tank-brush,
-              20-foot barn-mosquito-netting, and fine-mesh
-              horse-mosquito-sheet notes that match the
-              empty-and-scrub-troughs, dawn-and-dusk
-              stabling, and mosquito-sheets copy on this
-              page — a long-handle stock-tank brush so
-              standing water is dumped and the trough is
-              scrubbed instead of left as a breeding bowl, 20-foot
-              barn mosquito netting so dusk stabling is a
-              mesh wall instead of an open doorway, and a
-              fine-mesh horse mosquito sheet so overnight
-              turnout is covered without a fly-control
-              fly-sheet hop. Educational mosquito-control
-              checklist, not a treatment, not a vaccine,
-              not a substitute for calling the veterinarian,
-              and not a stall-fan, fly-spray, or mosquito-dunk
-              hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse West Nile mosquito-control checklist"
-              subtitle="Email the trough-brush, barn-netting, and mosquito-sheet notes. No spam."
-              ctaText="Email my horse West Nile mosquito-control checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-wnv-under-hero"
             />
           </div>
@@ -206,16 +186,9 @@ export default function WestNilePage() {
             ranked product list, not a substitute for
             veterinary care, and not a treatment or a
             vaccine. Stall fans and stall screens already
-            live on the vaccination-schedule guide. Fly
-            masks, fly sheets, fly boots, fly spray, and
-            fly traps already live on fly-control. Sweet-itch
-            rugs and hoods already live on sweet-itch.
-            Mosquito dunks already live on dog heartworm
-            prevention. Color-coded flat-back buckets
-            already live on strangles. This page does not
+            live on the vaccination-schedule guide. This page does not
             hop vaccines, antibiotics, or needles. This
-            page does not claim hands-on testing.
-          </p>
+            page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -260,37 +233,9 @@ export default function WestNilePage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the mosquito-control kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page empty-and-scrub-troughs, dawn-and-dusk
-              stabling, and mosquito-sheets copy — a
-              long-handle stock-tank brush, 20-foot barn
-              mosquito netting, and a fine-mesh horse
-              mosquito sheet. Educational mosquito-control
-              tools only. They are not a ranked product
-              list, they are not a substitute for veterinary
-              care, they are not a #1099 lunge-line /
-              lead-shank / traffic-cone hop, they
-              are not a #1098 clipboard / feed-pan /
-              paper-pellet-bedding hop, they
-              are not a #1097 color-coded-bucket /
-              coverall / boot-dip-tub hop, they
-              are not a #1096 composition-notebook /
-              receiving-blanket / charcoal hop, they
-              are not a #1095 sponge-filter /
-              nano-heater / water-jug hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a heartworm mosquito-dunk hop, they
-              are not a fly-control fly-sheet hop, they
-              are not a vaccination-schedule stall-fan hop,
-              and they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/long+handle+stock+tank+brush?s=health-wnv"
@@ -304,7 +249,7 @@ export default function WestNilePage() {
                 amazonHref="/go/amazon-brand/fine+mesh+horse+mosquito+sheet?s=health-wnv"
                 amazonLabel="Browse fine-mesh horse mosquito sheets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

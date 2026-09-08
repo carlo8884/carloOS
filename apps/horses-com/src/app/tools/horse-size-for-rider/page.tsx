@@ -186,20 +186,14 @@ export default function HorseSizeForRiderPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the worksheet
           </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Rider-fit checklist
-          </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the rider-fit checklist — suggested horse weight range, height band, and
-            the shoppable tack set (saddle, pad, girth, stirrups, ASTM/SEI helmet, weight
-            tape) — so you can shop without re-running the math. No spam.
-          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Rider-fit checklist"
-            subtitle="Email the rider-fit checklist — suggested horse weight and height band plus the tack set. No spam."
-            ctaText="Email my rider-fit checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-size-for-rider-under-hero"
           />
         </div>
@@ -228,15 +222,7 @@ export default function HorseSizeForRiderPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop rider-fit tack
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            Once you have a horse weight and height band, the next fit questions are
-            saddle, pad, girth or cinch, stirrups, and an ASTM/SEI riding helmet. A
-            weight tape is how you confirm the horse you are looking at actually sits
-            in that range. These are Amazon category searches — not a ranked product
-            list, not invented inventory, and not a substitute for a saddle fitter or
-            a riding instructor. Horses.com earns a commission on qualifying purchases
-            at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider"

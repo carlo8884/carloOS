@@ -47,7 +47,7 @@ const TOOLS = [
   {
     href: '/tools/stocking-calculator',
     title: 'Stocking Calculator',
-    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule, then shop a stocking kit (AquaClear HOB, Fluval canister, heater, sand, test kit, net).',
+    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',
     tag: 'Beginner essential',
   },
   {
@@ -136,42 +136,16 @@ export default function ToolsHub() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fish tools-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Fish tools-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-aquarium-calculator-tools-chart,
-            rim-measurement-card, and
-            aquarist-calculator-reference-handbook notes that
-            match the calculator-section-map,
-            per-tank-measurement-log, and
-            surface-area-bioload-and-KH-pH copy on this hub — a
-            laminated aquarium calculator-tools chart so the
-            section map (volume, stocking, heater, filter GPH,
-            substrate, water change, CO2, cycling, tank-mates,
-            disease, setup builder, pond) is posted on the stand
-            (not an equipment-hub chart, not a setup-aquarium
-            chart, not a stocking-calculator chart), an aquarium
-            rim measurement card so each tank&apos;s gallons,
-            stocking load, heater watts, and filter GPH is
-            labeled on the rim (not a thermometer card, not a
-            test-kit card, not a gravel-vacuum card), and an
-            aquarist calculator reference handbook so the
-            surface-area / bioload / KH-pH grounding is a
-            physical stand book (not an equipment handbook,
-            not a setup handbook, not a stocking handbook).
-            Educational stand checklist, not a treatment, not
-            a ranked product list, and not a substitute for a
-            water test. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Fish tools-hub checklist"
-            subtitle="Email the calculator-tools-chart, rim measurement-card, and calculator-handbook notes. No spam."
-            ctaText="Email my fish tools-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-hub-under-hero"
           />
         </div>
@@ -215,13 +189,8 @@ export default function ToolsHub() {
             Every calculator is built by people who keep tanks. If you spot a bad answer,{' '}
             <Link href="/editorial-standards" className="text-brand-primary font-semibold">tell us</Link> — we fix it.
           </p>
-          <p className="text-base text-brand-text-mid leading-relaxed mt-3">
-            New to the terms these tools use? The <Link href="/glossary" className="text-brand-primary font-semibold">aquarium glossary</Link> defines
-            the nitrogen cycle, pH, GH/KH, bioload, and the rest in plain English.
-            A laminated aquarium calculator-tools chart is how the hub map (volume, stocking, heater, filter GPH, substrate, water change, CO2, cycling, tank-mates, disease, setup builder, pond) stays posted on the stand — it is not a laminated equipment-hub chart (that lives on the equipment hub), not a laminated setup-aquarium chart (that lives on the setup hub), and not a laminated stocking-calculator chart (that lives on the stocking tool).
-            An aquarium rim measurement card is how each tank&apos;s gallons, stocking load, heater watts, and filter GPH is labeled on the rim — it is not a thermometer card, not a test-kit card, and not a gravel-vacuum card (those live on the equipment and setup hubs).
-            An aquarist calculator reference handbook is how the surface-area / bioload / KH-pH grounding sits at the stand — it is not an aquarist equipment handbook and not an aquarist setup handbook (those live on the equipment and setup hubs).
-          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed mt-3">New to the terms these tools use? The <Link href="/glossary" className="text-brand-primary font-semibold">aquarium glossary</Link> defines
+            the nitrogen cycle, pH, GH/KH, bioload, and the rest in plain English</p>
         </div>
       </section>
 
@@ -229,24 +198,7 @@ export default function ToolsHub() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
           Tools-hub stand kit
         </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          calculator-section-map, per-tank-measurement-log,
-          and surface-area-bioload-and-KH-pH copy on this hub — a
-          laminated aquarium calculator-tools chart so the
-          section map is posted on the stand, an aquarium rim
-          measurement card so each tank&apos;s gallons, stocking
-          load, heater watts, and filter GPH is labeled on the
-          rim, and an aquarist calculator reference handbook so
-          the surface-area / bioload / KH-pH grounding is a
-          physical stand book. These are educational stand
-          searches, not a ranked product list, not a substitute
-          for a water test, not an AquaClear / Fluval / Eheim /
-          API-test-kit / Seachem-Prime hop (those live on the
-          equipment and setup hubs and the tool children). This
-          page does not hop medications. This page does not
-          claim hands-on testing.
-        </p>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -266,35 +218,13 @@ export default function ToolsHub() {
             aquarium+sand, volume aquarium+stand. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the tools-hub stand kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page calculator-section-map,
-            per-tank-measurement-log, and
-            surface-area-bioload-and-KH-pH copy — a laminated
-            aquarium calculator-tools chart, an aquarium rim
-            measurement card, and an aquarist calculator
-            reference handbook. Educational stand searches
-            only. They are not a ranked product list, they
-            are not an AquaClear / Fluval / Eheim / API-test-kit
-            hop, they are not a stocking sand hop, and they
-            do not replace a water test. Fish.com earns a
-            commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+aquarium+calculator+tools+chart?s=tools-hub"
-              amazonLabel="Browse laminated aquarium calculator-tools charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarium+rim+measurement+card?s=tools-hub"
-              amazonLabel="Browse aquarium rim measurement cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarist+calculator+reference+handbook?s=tools-hub"
-              amazonLabel="Browse aquarist calculator reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/aquarium+supplies?s=tools-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

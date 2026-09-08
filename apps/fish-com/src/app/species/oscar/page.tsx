@@ -85,32 +85,16 @@ export default function OscarPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the oscar-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Oscar-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the oscar notes that match the
-                care copy on this page — a 75-gallon
-                tank so one adult keeps 12–18 inches
-                of room, a canister rated 3–4× volume
-                plus weekly 25–30% changes so nitrate
-                stays under 20 ppm, and a pellet-first
-                diet so HITH stays preventable.
-                Educational oscar-setup checklist, not
-                a new product hop, not livestock, and
-                not a substitute for a fish veterinarian.
-                The existing oscar tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Oscar-setup checklist"
-                subtitle="Email the 75-gallon, heavy-filter, and HITH-prevention notes. No spam."
-                ctaText="Email my oscar-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-oscar-under-hero"
               />
             </div>

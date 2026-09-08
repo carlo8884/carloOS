@@ -40,32 +40,16 @@ export default function NanoTankSetupPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the nano-tank stability checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Nano-tank stability checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the air-driven corner sponge-filter, preset
-            25-watt nano-heater, and food-grade 1-gallon
-            water-jug notes that match the sponge-or-gentle-filter,
-            reliable-heater, and dechlorinated-water-change copy
-            on this page — a corner sponge so a five-gallon
-            keeps gentle current, a 25-watt preset heater so a
-            small volume does not swing overnight, and a 1-gallon
-            jug so dechlorinated top-off water is already mixed.
-            Educational checklist, not a ranked product list,
-            not livestock, and not a hang-on-back / canister /
-            Eheim-Jager / Prime / light-timer hop. Those stay
-            on the setup hub, heater-wattage tool, and low-tech
-            planted guide. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Nano-tank stability checklist"
-            subtitle="Email the sponge-filter, 25-watt heater, and water-jug notes. No spam."
-            ctaText="Email my nano-tank stability checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-nano-tank-under-hero"
           />
         </div>
@@ -172,7 +156,7 @@ export default function NanoTankSetupPage() {
             light-timer hop, and they do not replace
             cycling before fish. Fish.com earns a
             commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
+            cost to you.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

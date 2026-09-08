@@ -39,39 +39,23 @@ export default function DogPyodermaPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Hot Spots', href: '/health/dog-hot-spots' }, { label: 'Dog Mange', href: '/health/dog-mange' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-pyoderma" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pyoderma" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-pyoderma chlorhexidine-bath checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-pyoderma chlorhexidine-bath checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the topical-bath notes — a chlorhexidine
-              dog shampoo (2–4%, or chlorhexidine plus
-              miconazole) for the 10-minute contact-time
-              baths used 2–3 times weekly, plus dedicated
-              hypoallergenic washcloths so you can apply
-              that lather to folds and lesions without
-              reusing the household bath cloth. Educational
-              checklist, not a diagnosis and not an
-              antibiotic list. Systemic antibiotics,
-              isoxazoline parasiticide brands, steroids,
-              recovery cones, paw wipes, HEPA filters, and
-              washable-bed laundry gear stay off this list.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-pyoderma chlorhexidine-bath checklist"
-              subtitle="Email the chlorhexidine-shampoo and washcloth notes. No spam."
-              ctaText="Email my dog-pyoderma chlorhexidine-bath checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-pyoderma-under-hero"
             />
           </div>
@@ -106,21 +90,9 @@ export default function DogPyodermaPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-pyoderma chlorhexidine-bath kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              topical-bath copy — a chlorhexidine dog shampoo
-              and hypoallergenic washcloths. Everyday physical
-              gear only. They are not a ranked product list,
-              they are not medications, they are not antibiotic
-              or parasiticide brand ASINs, they are not
-              recovery cones, they are not paw wipes or HEPA
-              filters, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/chlorhexidine+dog+shampoo?s=health-dog-pyoderma"
@@ -130,7 +102,7 @@ export default function DogPyodermaPage() {
                 amazonHref="/go/amazon-brand/hypoallergenic+washcloths?s=health-dog-pyoderma"
                 amazonLabel="Browse hypoallergenic washcloths on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

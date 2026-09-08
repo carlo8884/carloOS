@@ -118,41 +118,16 @@ export default function EasyKeeperPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the easy-keeper feeding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Easy-keeper feeding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the portable-horse-hay-flake-scale,
-              horse-hay-soaking-tub, and
-              low-sugar-horse-treats notes that match
-              the weigh-the-hay, soak-to-leach-sugar,
-              and skip-the-treats copy on this page —
-              a portable horse hay flake scale so a
-              restricted ration is weighed flake by
-              flake instead of scooped by eye (not a
-              hanging hay-bale scale, not a tabletop
-              digital grain scale, not a feed-scoop
-              scale), a horse hay soaking tub so a
-              flake sits in water 30 to 60 minutes
-              and drains so water-soluble carbohydrate
-              leaches out (not a hay soaking bag, not
-              a feed soaking tub, not a lidded
-              5-gallon soaking pail), and low-sugar
-              horse treats so the occasional reward
-              is not a starch spike (not a grain hop,
-              not a ration-balancer ReviewCard).
-              Educational barn checklist, not a
-              treatment, and not a substitute for
-              calling the veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Easy-keeper feeding checklist"
-              subtitle="Email the hay-flake-scale, hay-soaking-tub, and low-sugar-treat notes. No spam."
-              ctaText="Email my easy-keeper feeding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-feeding-the-easy-keeper-under-hero"
             />
           </div>
@@ -193,8 +168,7 @@ export default function EasyKeeperPage() {
             30 to 60 minutes and drains so
             water-soluble carbohydrate leaches out,
             and low-sugar horse treats so the
-            occasional reward is not a starch spike.
-            These are educational barn searches, not a
+            occasional reward is not a starch spike. These are educational barn searches, not a
             ranked product list, not a substitute for
             veterinary care, and not a hanging
             hay-bale-scale hop (that lives on EMS), a
@@ -206,10 +180,8 @@ export default function EasyKeeperPage() {
             pasture-management), a nylon-hay-bag hop
             (that lives on feeding-the-performance-horse),
             or the small-hole-net / low-NSC-balancer
-            ReviewCards below. This page does not hop
-            medications or vaccines. This page does
-            not claim hands-on testing.
-          </p>
+            ReviewCards below. This page does
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -281,25 +253,9 @@ export default function EasyKeeperPage() {
               (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the easy-keeper feeding barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page weigh-the-hay, soak-to-leach-sugar,
-              and skip-the-treats copy — a portable
-              horse hay flake scale, a horse hay
-              soaking tub, and low-sugar horse treats.
-              Educational barn searches only. They are
-              not a ranked product list, they are not
-              a hanging hay-bale-scale or hay-soaking-bag
-              hop, they are not a feed-soaking-tub hop,
-              they are not the small-hole-net or
-              low-NSC-balancer ReviewCards, and they
-              do not replace a veterinarian. Horses.com
-              earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper"
@@ -313,7 +269,7 @@ export default function EasyKeeperPage() {
                 amazonHref="/go/amazon-brand/low+sugar+horse+treats?s=nutrition-feeding-the-easy-keeper"
                 amazonLabel="Browse low-sugar horse treats on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Product Picks — Slow-Feed and Weight-Management Supports</h2>

@@ -118,42 +118,16 @@ export default function HardKeeperPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the hard-keeper feeding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Hard-keeper feeding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the horse-alfalfa-cubes,
-              soy-hull-pellets, and
-              over-door-horse-feed-bucket notes that match
-              the maximize-forage, add-calories-safely
-              with fat-and-fiber, and
-              feed-separately-plus-split-meals copy on
-              this page — horse alfalfa cubes so
-              free-choice forage calories rise through
-              a higher-energy cube the horse can eat
-              when long-stem hay is not enough (not
-              alfalfa hay bales, not chopped forage,
-              not generic hay cubes), soy hull pellets
-              so fermentable-fiber calories are added
-              without a starch spike (not vegetable
-              oil, not the rice-bran ReviewCard, not
-              beet pulp), and an over-door horse feed
-              bucket so a timid horse eats each small
-              meal in its stall away from herdmates
-              (not a corner feeder, not stackable feed
-              tubs, not a marked grain scoop).
-              Educational barn checklist, not a
-              treatment, and not a substitute for
-              calling the veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Hard-keeper feeding checklist"
-              subtitle="Email the alfalfa-cubes, soy-hull-pellets, and over-door feed-bucket notes. No spam."
-              ctaText="Email my hard-keeper feeding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-feeding-the-hard-keeper-under-hero"
             />
           </div>
@@ -212,10 +186,8 @@ export default function HardKeeperPage() {
             corner-feeder hop (that lives on
             feeding-senior-horses), or the rice-bran /
             high-fat-low-starch-feed ReviewCards
-            below. This page does not hop medications
-            or vaccines. This page does not claim
-            hands-on testing.
-          </p>
+            below. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -296,27 +268,9 @@ export default function HardKeeperPage() {
               (kept on the ReviewCards below). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the hard-keeper feeding barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page maximize-forage,
-              add-calories-safely with fat-and-fiber,
-              and feed-separately-plus-split-meals
-              copy — horse alfalfa cubes, soy hull
-              pellets, and an over-door horse feed
-              bucket. Educational barn searches only.
-              They are not a ranked product list, they
-              are not an alfalfa-hay-bales or
-              chopped-forage hop, they are not a
-              vegetable-oil or beet-pulp hop, they
-              are not the rice-bran or
-              high-fat-low-starch-feed ReviewCards,
-              and they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+alfalfa+cubes?s=nutrition-feeding-the-hard-keeper"
@@ -330,7 +284,7 @@ export default function HardKeeperPage() {
                 amazonHref="/go/amazon-brand/over+door+horse+feed+bucket?s=nutrition-feeding-the-hard-keeper"
                 amazonLabel="Browse over-door horse feed buckets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Product Picks — Calorie Supports for Hard Keepers</h2>

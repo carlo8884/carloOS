@@ -76,31 +76,16 @@ export default function BestWinterBlanketsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the winter-blanket checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Winter-blanket checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the winter-blanket notes that match
-                the ranking copy on this page — most horses
-                do not need a blanket, turnout vs stable vs
-                liner, 1000D ballistic vs 1200D ripstop,
-                Horseware Rambo Original for multi-season
-                1000D durability, and Schneiders StormShield
-                for 1680D harsh-winter fill. Educational
-                winter-blanket checklist, not a new product
-                hop, not a first-aid-kit hop, and not a
-                substitute for a veterinarian. The existing
-                SmartPak and Schneider hops stay below.
-                No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Winter-blanket checklist"
-                subtitle="Email the turnout, denier, Rambo, and StormShield notes. No spam."
-                ctaText="Email my winter-blanket checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-winter-horse-blankets-under-hero"
               />
             </div>

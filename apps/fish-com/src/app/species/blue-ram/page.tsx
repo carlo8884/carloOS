@@ -82,32 +82,16 @@ export default function BlueRamPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the blue-ram-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Blue-ram-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the ram notes that match the care
-                copy on this page — pH 5.5–7.0 and GH
-                under 8 so a Mikrogeophagus stays in
-                soft acidic water, 80–86°F so warmth
-                matches the Llanos, and a 20-gallon
-                planted tank so a bonded pair keeps
-                visual barriers. Educational
-                blue-ram-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing blue-ram tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Blue-ram-setup checklist"
-                subtitle="Email the soft-acidic, warm-water, and pair-tank notes. No spam."
-                ctaText="Email my blue-ram-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-blue-ram-under-hero"
               />
             </div>

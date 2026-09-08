@@ -75,35 +75,16 @@ export default function BestAquariumFiltersPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the aquarium-filter checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Aquarium-filter checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the filter notes that match the
-                HOB, canister, and sponge copy on
-                this page — an AquaClear 70 hang-on-
-                back so a 10–75 gallon tank keeps a
-                refillable media basket, a Fluval 307
-                canister so a 40–70 gallon tank keeps
-                longer cleaning intervals, and a
-                Hikari Bacto-Surge sponge so shrimp,
-                fry, and nano tanks keep a fry-safe
-                intake. Educational filter-type
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                AquaClear / Fluval / Hikari / Aqueon
-                Amazon searches stay below. Empty
-                Chewy buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Aquarium-filter checklist"
-                subtitle="Email the HOB, canister, and sponge-filter notes. No spam."
-                ctaText="Email my aquarium-filter checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-aquarium-filters-under-hero"
               />
             </div>

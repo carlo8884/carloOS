@@ -192,17 +192,13 @@ export default function HorseHeightConverterPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Height conversion chart
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the hands / inches / cm chart — including the 14.2hh pony
-            cutoff and official withers-measurement notes — so you can convert
-            without re-running the tool. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
             title="Height conversion chart"
-            subtitle="Email the hands / inches / cm chart and withers-measurement notes. No spam."
-            ctaText="Email my height conversion chart"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-height-converter-under-hero"
           />
         </div>
@@ -236,8 +232,7 @@ export default function HorseHeightConverterPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop height and sizing tools
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            A measuring stick with a level is the official withers tool (same
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A measuring stick with a level is the official withers tool (same
             query as the{' '}
             <Link href="/tools/body-condition-score" className="text-brand-primary no-underline hover:underline">
               Henneke BCS
@@ -252,8 +247,7 @@ export default function HorseHeightConverterPage() {
             not a ranked product list, not invented inventory, and not a
             substitute for a formal measurement or a qualified saddle fitter.
             Horses.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"

@@ -35,32 +35,23 @@ export default function DogArthritisPage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-arthritis" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-arthritis" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-arthritis mobility checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-arthritis mobility checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-mobility notes — an orthopedic dog bed
-              for dogs that struggle to rise from rest, and a dog ramp
-              when stairs or furniture jumps have become hard. Educational
-              checklist, not a diagnosis and not a medication list.
-              NSAIDs, joint supplements, Adequan, Librela, and
-              prescription weight diets stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-arthritis mobility checklist"
-              subtitle="Email the orthopedic-bed and dog-ramp notes. No spam."
-              ctaText="Email my dog-arthritis mobility checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-arthritis-under-hero"
             />
           </div>
@@ -123,17 +114,7 @@ export default function DogArthritisPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop the dog-arthritis mobility kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              mobility-and-comfort copy — an orthopedic dog bed and a
-              dog ramp. Everyday physical gear only. They are not a
-              ranked product list, they are not medications, they are
-              not joint-supplement ASINs, they are not prescription
-              diets, they are not brand food ASINs, and they do not
-              replace a veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-dog-arthritis"

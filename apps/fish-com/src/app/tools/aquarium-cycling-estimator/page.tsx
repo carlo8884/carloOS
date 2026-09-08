@@ -176,19 +176,14 @@ export default function AquariumCyclingEstimatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the timeline
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Aquarium cycling checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the fishless-cycle checklist — test-kit reads, ammonia dosing, and the 0/0
-            confirmation test — so you can track phases without re-running the estimator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Aquarium cycling checklist"
-            subtitle="Email the fishless-cycle checklist — test-kit reads, ammonia dosing, and the 0/0 confirmation test. No spam."
-            ctaText="Email my aquarium cycling checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-aquarium-cycling-estimator-under-hero"
           />
         </div>

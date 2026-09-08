@@ -60,43 +60,16 @@ export default function GrainFreeDCMPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog grain-free checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog grain-free checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-fda-dcm-chart,
-            fridge-high-legume-card, and
-            canine-taurine-switch-handbook notes
-            that match the fda-dcm-report-map,
-            high-legume-log, and
-            taurine-switch-grounding copy on this
-            page — a laminated dog FDA-DCM chart so
-            the 500+ grain-free report map is posted
-            on the fridge (not a WSAVA-six chart, not
-            an AAFCO-trial chart, not a
-            nutrition-feeding chart), a dog fridge
-            high-legume card so peas / lentils /
-            chickpeas / potatoes notes are labeled on
-            the fridge (not a manufacturer-first card,
-            not a dry-matter card, not a WSAVA label
-            card), and a canine taurine-switch handbook
-            so the switch-to-WSAVA / cardiac-eval
-            grounding is a physical kitchen book (not a
-            DACVN-staff handbook, not a kcal-cup
-            handbook, not a nutrition-reference
-            handbook). Educational kitchen checklist,
-            not a ranked clinic list, not a first-aid-kit
-            hop, and not a substitute for a veterinarian.
-            Dog.com does not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog grain-free checklist"
-            subtitle="Email the FDA-DCM chart, fridge high-legume card, and taurine-switch-handbook notes. No spam."
-            ctaText="Email my dog grain-free checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="nutrition-grain-free-under-hero"
           />
         </div>
@@ -159,43 +132,16 @@ export default function GrainFreeDCMPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs wsava-explained /
             reading-food-labels / dog-treats-guide hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the dog grain-free kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page fda-dcm-report-map,
-            high-legume-log, and
-            taurine-switch-grounding copy — a
-            laminated dog FDA-DCM chart, a
-            dog fridge high-legume card, and a
-            canine taurine-switch handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            a wsava-explained / reading-food-labels /
-            dog-treats-guide hop, they are not a
-            first-aid-kit hop, they are not a child
-            toothbrush hop, and they do not replace a
-            veterinarian. Dog.com does not sell
-            insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+fda+dcm+chart?s=nutrition-grain-free"
-              amazonLabel="Browse laminated dog FDA-DCM charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+high+legume+card?s=nutrition-grain-free"
-              amazonLabel="Browse dog fridge high-legume cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+taurine+switch+handbook?s=nutrition-grain-free"
-              amazonLabel="Browse canine taurine-switch handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-grain-free"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -31,55 +31,23 @@ export default function HypothyroidismPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Health Hub', href: '/health' }, { label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-hypothyroidism" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-hypothyroidism" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog hypothyroidism cold-and-coat checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog hypothyroidism cold-and-coat checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the warm-spot, cold-weather, and coat
-              notes — a self-warming dog mat so cold
-              intolerance (seeking warm spots) has a
-              mapped rest place, a fleece dog sweater so
-              a dog reluctant to go outside in cold
-              weather can still take a short walk, and a
-              dog slicker brush so a dull or brittle coat
-              and bilaterally symmetrical hair loss stay
-              visible while coat improvement is watched
-              over 6–8 weeks. Educational checklist, not
-              a levothyroxine product list, not a
-              Soloxine or Thyro-Tabs hop, and not a
-              prescription. Thyroid testing and dose
-              decisions still belong with a veterinarian.
-              Lymph-node anatomy charts, foam dog stairs,
-              ear wipes, assisted-walking slings,
-              hind-paw booties, hip braces, silicone
-              grooming gloves, analog bathroom scales,
-              dog dental finger brushes, resting
-              respiratory rate notebooks, one-minute
-              kitchen timers, step-in padded harnesses,
-              medical-records binders, AM/PM weekly pill
-              organizers, hanging luggage scales,
-              penlights, emergency contact cards,
-              stretchers, vaccination record books,
-              seat-belt tethers, puppy mats, mosquito
-              dunks, monthly pill organizers, and
-              clinic-visit carriers stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog hypothyroidism cold-and-coat checklist"
-              subtitle="Email the warm-mat, fleece-sweater, and slicker-brush notes. No spam."
-              ctaText="Email my dog hypothyroidism cold-and-coat checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-hypothyroidism-under-hero"
             />
           </div>
@@ -235,8 +203,7 @@ export default function HypothyroidismPage() {
               or first-aid-kit hops, and they do not
               replace a veterinarian. Dog.com earns a
               commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
+              extra cost to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

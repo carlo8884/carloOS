@@ -53,18 +53,13 @@ export default function LooseLeashPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Loose-leash protocol
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the stop-and-wait method, the 180-degree turn, and the
-              walk kit (front-clip no-pull harness, 6-ft leash, treat pouch,
-              high-value treats) so you can run the protocol without scrolling
-              back. No spam.
-            </p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
               title="Loose-leash protocol"
-              subtitle="Email the stop-and-wait protocol, 180-degree turn, and walk kit. No spam."
-              ctaText="Email my loose-leash protocol"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="training-loose-leash-walking-under-hero"
             />
           </div>
@@ -93,36 +88,7 @@ export default function LooseLeashPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a loose-leash kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              A front-clip no-pull harness reduces pulling mechanics while you
-              run stop-and-wait. Pair it with a 6-ft leash (not a retractable),
-              a belt-clip treat pouch, and high-value treats so rewards land in
-              the 1–2 second window. Same harness hop used on the{' '}
-              <Link
-                href="/tools/harness-collar-size"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                harness and collar size calculator
-              </Link>
-              {' '}and the{' '}
-              <Link
-                href="/tools/dog-exercise-calculator"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                exercise calculator
-              </Link>
-              . Same treat-pouch hop used on the{' '}
-              <Link
-                href="/training/basic-commands"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                basic-commands guide
-              </Link>
-              . They are not a ranked product list and they do not replace the
-              protocol. Size the harness before you order. Dog.com earns a
-              commission on qualifying purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
@@ -140,7 +106,7 @@ export default function LooseLeashPage() {
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-loose-leash-walking"
                 amazonLabel="Browse high-value training treats on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               Size the harness first with the{' '}
               <Link href="/tools/harness-collar-size" className="text-brand-primary hover:underline">

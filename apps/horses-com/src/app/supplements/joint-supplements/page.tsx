@@ -76,36 +76,16 @@ export default function JointSupplementsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the equine joint-supplement checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Equine joint-supplement checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the joint-supplement notes that
-                match the evidence-ladder copy on this
-                page — diagnose first so a lame horse
-                gets a lameness exam rather than a
-                supplement decision, ASU at
-                clinically-relevant doses (Cosequin
-                ASU Plus) as the strongest equine
-                oral ingredient, Platinum Performance
-                CJ when one comprehensive formula is
-                preferred to a stack, marine DHA/EPA
-                rather than flax, and devil&apos;s claw
-                off any FEI/USEF competition horse.
-                Educational buyer checklist, not a
-                new product hop and not a substitute
-                for a veterinarian. The existing
-                Platinum CJ Amazon search stays
-                below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="horses-com"
-                title="Equine joint-supplement checklist"
-                subtitle="Email the ASU, marine-omega-3, and FEI notes. No spam."
-                ctaText="Email my equine joint-supplement checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="supplements-joint-supplements-under-hero"
               />
             </div>

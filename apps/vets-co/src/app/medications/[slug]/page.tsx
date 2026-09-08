@@ -164,42 +164,16 @@ export default function MedicationPage({ params }: PageProps) {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the medications-spoke checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Medications-spoke checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-pet-label-spoke-safety-chart,
-            fridge-label-spoke-recheck-card, and
-            veterinary-label-spoke-handbook notes that
-            match this remaining {m.name} spoke — the
-            uses / side-effects / when-to-call-the-vet
-            copy, the no-dose owner log, and the FDA CVM
-            / Plumb&apos;s grounding — a laminated pet
-            medications-spoke safety chart so this
-            remaining-label map is posted on the fridge
-            (not a hub therapeutic-category map, not a
-            specialists-spoke referral chart), a fridge
-            medications-spoke recheck card so the
-            monitoring notes are labeled in the kitchen
-            (not a hub monitoring-recheck card, not a
-            specialists cost card), and a medications-spoke
-            handbook so the FDA CVM / Plumb&apos;s row is a
-            physical kitchen book (not a hub Plumb&apos;s
-            handbook, not a specialists handbook).
-            Educational kitchen checklist, not a ranked
-            drug list, not a published dose, not a
-            substitute for a veterinarian. This page does
-            not publish doses. Vets.co does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Medications-spoke checklist"
-            subtitle="Email the safety chart, recheck card, and medications-spoke handbook notes. No spam."
-            ctaText="Email my medications-spoke checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source={`medications-${m.slug}-under-hero`}
           />
         </div>
@@ -449,40 +423,14 @@ export default function MedicationPage({ params }: PageProps) {
             only — never a dose, never an Rx product. */}
         <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the medications-spoke kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page uses / side-effects / when-to-call
-            copy, the no-dose owner log, and the FDA CVM
-            / Plumb&apos;s grounding — a laminated pet
-            medications-spoke safety chart, a fridge
-            medications-spoke recheck card, and a
-            veterinary medications-spoke handbook.
-            Educational kitchen searches only. They are
-            not a ranked drug list, they are not a
-            medications-hub hop, they are not a
-            specialists-spoke hop, they are not a
-            published dose, they are not a flea /
-            heartworm / vaccine hop, and they do not
-            replace a veterinarian. This page does not
-            publish doses. Vets.co does not sell
-            insurance. Vets.co earns a commission on
-            qualifying purchases at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+pet+label+spoke+safety+chart?s=medications-spoke"
-              amazonLabel="Browse laminated pet medications-spoke safety charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+fridge+label+spoke+recheck+card?s=medications-spoke"
-              amazonLabel="Browse fridge pet medications-spoke recheck cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/veterinary+label+spoke+handbook?s=medications-spoke"
-              amazonLabel="Browse veterinary medications-spoke handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/pet+supplies?s=medications-spoke"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -41,34 +41,23 @@ export default function LuxatingPatellaPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-luxating-patella" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-luxating-patella" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-luxating-patella walk-support checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-luxating-patella walk-support checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the walk-support notes — a dog knee brace
-              for leash walks when the kneecap is slipping, and a
-              rear-support harness to keep those walks controlled
-              during Grade 1 flares or the 6–8 week post-op
-              restriction window. Educational checklist, not a
-              diagnosis and not a treatment list. Joint
-              supplements, fish oil, NSAIDs, and prescription
-              weight diets stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-luxating-patella walk-support checklist"
-              subtitle="Email the dog-knee-brace and rear-support-harness notes. No spam."
-              ctaText="Email my dog-luxating-patella walk-support checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-luxating-patella-under-hero"
             />
           </div>
@@ -115,20 +104,9 @@ export default function LuxatingPatellaPage() {
               rugs, raised bowls, and booties are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-luxating-patella walk-support kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              walk-support copy — a dog knee brace and a
-              rear-support harness. Everyday physical gear only.
-              They are not a ranked product list, they are not
-              medications, they are not joint-supplement ASINs,
-              they are not prescription diets, they are not brand
-              food ASINs, and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+knee+brace?s=health-dog-luxating-patella"
@@ -138,7 +116,7 @@ export default function LuxatingPatellaPage() {
                 amazonHref="/go/amazon-brand/dog+rear+support+harness?s=health-dog-luxating-patella"
                 amazonLabel="Browse rear-support harnesses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

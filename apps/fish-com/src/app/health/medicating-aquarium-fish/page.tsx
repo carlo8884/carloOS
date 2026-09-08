@@ -42,25 +42,14 @@ export default function MedicatingFishPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the hospital-tank dosing plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Hospital-tank dosing checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the isolate, real-volume, carbon-off, aeration order —
-            test and correct water quality with a liquid kit before any
-            dose, move the patient to a spare hospital tank so the display
-            biofilter stays protected, calculate the actual gallons after
-            decor displacement, pull carbon before you dose, and add
-            air-driven aeration because several medications drop dissolved
-            oxygen. Educational husbandry, not a diagnosis or a cure. No
-            spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Hospital-tank dosing checklist"
-            subtitle="Email the isolate, real-volume, carbon-off, aeration order. No spam."
-            ctaText="Email my hospital-tank dosing checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-medicating-fish-under-hero"
           />
         </div>
@@ -92,8 +81,7 @@ export default function MedicatingFishPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a hospital-tank dosing kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Medication is last, not first. A liquid master kit is how you
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Medication is last, not first. A liquid master kit is how you
             see ammonia, nitrite, and nitrate before any dose — strips are
             not accurate enough for the water-quality problems that look
             like a pathogen. Isolate the patient in a spare hospital tank
@@ -149,9 +137,7 @@ export default function MedicatingFishPage() {
             as ich and velvet. The hops below are not a ranked product
             list, they are not medications, and they do not treat,
             reverse, or cure disease. Fish.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty Chewy
-            buttons stay hidden.
-          </p>
+            qualifying purchases at no extra cost to you. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-medicating-fish"

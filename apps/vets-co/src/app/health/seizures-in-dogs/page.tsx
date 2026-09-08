@@ -42,7 +42,7 @@ export default function SeizuresPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-seizures" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-seizures" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,36 +50,16 @@ export default function SeizuresPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog seizure observation-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog seizure observation-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the first-minutes notes — a
-              digital handheld stopwatch so start and
-              length are timed instead of guessed, a
-              waterproof field notebook so dates,
-              durations, and possible triggers stay in
-              one seizure diary, and a foam table-edge
-              bumper so hard or sharp furniture is
-              padded before the next event. Educational
-              checklist, not a diagnosis, not an
-              anticonvulsant list, and not a substitute
-              for emergency care if a seizure lasts
-              longer than about five minutes or they
-              cluster. Soft throw blankets, crate
-              bumper pads, interlocking foam floor
-              tiles, first-aid kits, thermometers, and
-              kitchen timers stay on other pages. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog seizure observation-kit checklist"
-              subtitle="Email the stopwatch, field-notebook, and table-edge-bumper notes. No spam."
-              ctaText="Email my dog seizure observation-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-seizures-in-dogs-under-hero"
             />
           </div>
@@ -187,8 +167,7 @@ export default function SeizuresPage() {
               medical-alert-tag hops, and they do not
               replace a veterinarian. Vets.co earns a
               commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
+              extra cost to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

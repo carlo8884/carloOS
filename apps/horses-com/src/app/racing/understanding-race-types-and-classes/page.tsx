@@ -166,40 +166,16 @@ export default function RaceTypesAndClassesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the race-types-and-classes checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Race-types-and-classes checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-race-class-maiden-claiming-chart,
-              stall-door-graded-stakes-card, and
-              equine-condition-book-handbook notes
-              that match the maiden-claiming-allowance,
-              graded-stakes-committee, and condition-book
-              copy on this page — a laminated horse race-class
-              maiden-claiming chart so the NW1X / maiden-special-weight
-              notes are posted on the stall door (not a
-              newcomer race-card chart, not a hurdle-steeplechase
-              chart), a horse stall-door graded-stakes card
-              so the Grade I / II / III notes are labeled
-              at the barn (not a paddock parade card, not
-              an NSA jump-racing card), and an equine
-              condition-book handbook so the racing-secretary /
-              weight-for-age grounding is a physical barn
-              book (not a racing-silks literacy handbook,
-              not a timber-fence handbook). Educational
-              barn checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Race-types-and-classes checklist"
-              subtitle="Email the race-class maiden-claiming chart, graded-stakes card, and condition-book handbook notes. No spam."
-              ctaText="Email my race-types-and-classes checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-understanding-race-types-and-classes-under-hero"
             />
           </div>
@@ -302,43 +278,18 @@ export default function RaceTypesAndClassesPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs racing-for-newcomers /
               jump-racing hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the race-types-and-classes barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page maiden-claiming-allowance,
-              graded-stakes-committee, and condition-book
-              copy — a laminated horse race-class
-              maiden-claiming chart, a horse stall-door
-              graded-stakes card, and an equine
-              condition-book handbook. Educational barn
-              searches only. They are not a ranked race
-              list, they are not a racing-for-newcomers /
-              jump-racing hop, they are not a first-aid-kit
-              hop, they are not a child toothbrush hop, and
-              they do not replace a veterinarian. Horses.com
-              does not sell insurance. Horses.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+race+class+maiden+claiming+chart?s=racing-understanding-race-types"
-                amazonLabel="Browse laminated horse race-class maiden-claiming charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-understanding-race-types"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+graded+stakes+card?s=racing-understanding-race-types"
-                amazonLabel="Browse horse stall-door graded-stakes cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+condition+book+handbook?s=racing-understanding-race-types"
-                amazonLabel="Browse equine condition-book handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

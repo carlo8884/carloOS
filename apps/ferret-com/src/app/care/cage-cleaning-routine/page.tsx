@@ -169,25 +169,16 @@ export default function FerretCageCleaningRoutinePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the cage-cleaning checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret cage-cleaning supply checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the daily-to-monthly order — an enzymatic pet cleaner for
-              accidents, a ferret-safe cage cleaner for trays and high-traffic
-              surfaces, a litter scoop for the once-or-twice-daily box, disposable
-              gloves for the weekly pan scrub, and a fragrance-free detergent for
-              hammocks and fleece liners — so you are not hunting supplies mid-
-              clean. Educational checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret cage-cleaning supply checklist"
-              subtitle="Email the enzyme cleaner, cage cleaner, scoop, gloves, and detergent order. No spam."
-              ctaText="Email my ferret cage-cleaning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-cage-cleaning-routine-under-hero"
             />
           </div>
@@ -348,34 +339,7 @@ export default function FerretCageCleaningRoutinePage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop cage-cleaning supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page routine copy —
-              an enzymatic pet cleaner that breaks down accident odor instead
-              of masking it, a small-animal / pet-safe cage cleaner for trays
-              and high-traffic surfaces, a litter scoop for the daily box, disposable
-              nitrile gloves for the weekly pan scrub, and a fragrance-free
-              laundry detergent for hammocks and fleece liners. Same
-              paper-pellet / corner-pan context as the{' '}
-              <Link
-                href="/care/bedding-and-litter-types"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                bedding and litter
-              </Link>
-              {' '}guide and the{' '}
-              <Link
-                href="/tools/litter-planner"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                litter planner
-              </Link>
-              . They are not a ranked product list, they are not
-              medications, and they do not diagnose or replace an exotic-pet
-              veterinarian. Phenol-based and pine-scented cleaners, ammonia,
-              and undiluted bleach stay off this list on purpose. Ferret.com
-              earns a commission on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine"
@@ -397,7 +361,7 @@ export default function FerretCageCleaningRoutinePage() {
                 amazonHref="/go/amazon-brand/fragrance+free+laundry+detergent?s=care-cage-cleaning-routine"
                 amazonLabel="Browse fragrance-free laundry detergent on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/care/bedding-and-litter-types" className="text-brand-primary hover:underline">

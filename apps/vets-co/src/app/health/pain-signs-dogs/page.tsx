@@ -51,7 +51,7 @@ export default function PainSignsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-pain-signs" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-pain-signs" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -59,38 +59,16 @@ export default function PainSignsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog pain-signs observation checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog pain-signs observation checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the household observation notes that
-              match the 14 signs on this page — an
-              egg-crate foam dog kennel pad so a dog
-              that left the bed for the floor has a
-              surface you can watch for hunched posture,
-              a tucked abdomen, and night restlessness,
-              carpeted wooden pet steps so reluctance to
-              climb stairs to the bed stays a specific
-              observation, and a wide-platform
-              veterinary floor scale so quieter activity
-              and a smaller appetite get a weekly
-              weight. Educational checklist, not a
-              diagnosis, not an NSAID hop, and not a
-              substitute for the veterinarian who
-              evaluates pain. Orthopedic dog beds, dog
-              ramps, foam dog stairs, rear-support
-              harnesses, digital pet scales, grimace
-              printables, and Rx stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog pain-signs observation checklist"
-              subtitle="Email the foam-pad, pet-steps, and floor-scale notes. No spam."
-              ctaText="Email my dog pain-signs observation checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-pain-signs-dogs-under-hero"
             />
           </div>
@@ -119,25 +97,13 @@ export default function PainSignsPage() {
             specific observation instead of a vague
             slowdown, and a wide-platform veterinary
             floor scale so quieter activity and a
-            reduced appetite get a weekly weight.
-            These are educational observation tools,
+            reduced appetite get a weekly weight. These are educational observation tools,
             not treatments. They do not treat pain,
             they do not replace a veterinarian, and
-            they are not a ranked product list.
-            Orthopedic dog beds, dog ramps, raised
-            bowls, traction rugs, foam dog stairs,
-            rear-support harnesses, belly-support
-            harnesses, assisted-walking slings,
-            digital pet scales, analog bathroom
-            scales, hanging luggage scales, grimace
-            printables, first-aid kits, calming
-            chews, lick mats, and joint-support
-            treats already live on other pages. This
+            they are not a ranked product list. This
             page does not hop NSAID, opioid,
-            gabapentin, vaccine, or other Rx ASINs.
-            This page does not claim hands-on
-            testing.
-          </p>
+            gabapentin, vaccine, or other Rx ASINs. This page does not claim hands-on
+            testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -173,29 +139,9 @@ export default function PainSignsPage() {
               Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the 14-sign pain-observation kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page posture, stair-reluctance,
-              restlessness, and weight-change copy —
-              an egg-crate foam dog kennel pad,
-              carpeted wooden pet steps, and a
-              wide-platform veterinary floor scale.
-              Everyday household monitoring / comfort
-              gear only. They are not a ranked product
-              list, they are not an NSAID or pain-med
-              hop, they are not a #1074 muzzle /
-              underpad / flashlight hop, they are not
-              a #1073 crate / kennel-spray /
-              second-hand-clock hop, they are not an
-              orthopedic-bed / ramp / foam-stairs /
-              rear-harness / digital-pet-scale hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/egg+crate+foam+dog+kennel+pad?s=health-pain-signs-dogs"
@@ -209,7 +155,7 @@ export default function PainSignsPage() {
                 amazonHref="/go/amazon-brand/wide+platform+veterinary+floor+scale?s=health-pain-signs-dogs"
                 amazonLabel="Browse wide-platform veterinary floor scales on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

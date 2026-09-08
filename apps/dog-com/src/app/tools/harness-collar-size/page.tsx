@@ -158,17 +158,13 @@ export default function HarnessCollarSizePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Harness &amp; collar size chart
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the neck and chest bands, two-finger fit check, and the shoppable
-            walk kit (harness, collar, measuring tape, leash) so you can measure
-            once and buy without re-running the calculator. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Harness & collar size chart"
-            subtitle="Email the size bands, fit check, and shoppable walk kit. No spam."
-            ctaText="Email my harness size chart"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-harness-collar-size-under-hero"
           />
         </div>
@@ -190,36 +186,7 @@ export default function HarnessCollarSizePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a walk kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches match the neck and chest bands you
-              just calculated — a Julius-K9-style harness and a flat buckle
-              collar (same queries this tool already used), a measuring tape
-              (same query as the{' '}
-              <Link href="/tools/dog-body-condition-score" className="text-brand-primary underline-offset-2 hover:underline">
-                body condition score
-              </Link>
-              {' '}tool and the{' '}
-              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
-                puppy weight predictor
-              </Link>
-              ), a leash (same query as the{' '}
-              <Link href="/tools/dog-exercise-calculator" className="text-brand-primary underline-offset-2 hover:underline">
-                exercise calculator
-              </Link>
-              ), and a front-clip no-pull harness for dogs that pull (same
-              query as the{' '}
-              <Link href="/training/loose-leash-walking" className="text-brand-primary underline-offset-2 hover:underline">
-                loose-leash walking
-              </Link>
-              {' '}guide). They are not a ranked product list, not invented
-              inventory, and they are not a brand size guarantee. Match the
-              tape to the product chart before you buy — see the{' '}
-              <Link href="/reviews/best-dog-harnesses" className="text-brand-primary underline-offset-2 hover:underline">
-                harness buyer&apos;s guide
-              </Link>
-              . Dog.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
@@ -241,7 +208,7 @@ export default function HarnessCollarSizePage() {
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"
                 amazonLabel="Browse front-clip harnesses on Amazon →"
               />
-            </div>
+          </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Compare styles on the{' '}

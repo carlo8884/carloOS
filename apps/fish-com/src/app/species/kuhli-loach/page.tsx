@@ -84,31 +84,16 @@ export default function KuhliLoachPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the kuhli-loach-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Kuhli-loach-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Pangio kuhlii
-                notes that match the care copy on this
-                page — a group of 6+, 2 inches of fine
-                sand, 75–82°F and pH 6.0–7.0, dense
-                hides, and a pre-filter sponge on every
-                intake. Educational
-                kuhli-loach-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing kuhli-loach tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Kuhli-loach-setup checklist"
-                subtitle="Email the 6+ group, fine-sand, and intake-sponge notes. No spam."
-                ctaText="Email my kuhli-loach-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-kuhli-loach-under-hero"
               />
             </div>

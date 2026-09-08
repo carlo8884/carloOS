@@ -38,7 +38,7 @@ export default function AustralianShepherdPage() {
           { label: 'Australian Shepherd vs Australian Cattle Dog', href: '/compare/australian-shepherd-vs-australian-cattle-dog' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-aussie" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-aussie" />
       </>}
     >
       <div className="carloOS-article">
@@ -46,39 +46,16 @@ export default function AustralianShepherdPage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the australian-shepherd checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Australian Shepherd checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-aussie-50pct-mdr1-chart,
-            dog-fridge-aussie-10hr-herd-card, and
-            canine-first-owner-australian-shepherd-handbook
-            notes that match the ~50% MDR1 mutation, the
-            10-hour mountain-herd / 1.5–2+ hour vigorous
-            work floor, and first-time-owner notes on this
-            page — a laminated dog Aussie 50% MDR1 chart so
-            the ivermectin / loperamide warning is posted on
-            the fridge (not a Doberman 58% DCM chart, not a
-            Chukchi 100-mile chart), a fridge Aussie 10-hour
-            herd card so the 2-hour vigorous-work notes are
-            labeled in the kitchen (not a Holter echo card,
-            not an Imodium hop), and a first-owner Australian
-            Shepherd handbook so the YES-typically / heel-
-            nipping / MDR1-before-meds grounding is a
-            physical kitchen book (not a first-owner Doberman
-            handbook). Educational kitchen checklist, not a
-            ranked product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Australian Shepherd checklist"
-            subtitle="Email the 50% MDR1 chart, 10-hour herd card, and first-owner handbook notes. No spam."
-            ctaText="Email my australian-shepherd checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-australian-shepherd-under-hero"
           />
         </div>
@@ -104,35 +81,14 @@ export default function AustralianShepherdPage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Australian Shepherd home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            ~50% MDR1 mutation, the 10-hour mountain-herd /
-            1.5–2+ hour vigorous work floor, and first-time-
-            owner notes — a laminated dog Aussie 50% MDR1
-            chart, a fridge Aussie 10-hour herd card, and a
-            first-owner Australian Shepherd handbook.
-            Educational kitchen searches only. They are not a
-            ranked product list, they are not a crate hop,
-            they are not an Imodium hop, and they do not
-            replace a veterinarian. Dog.com does not sell
-            insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+aussie+50pct+mdr1+chart?s=breed-aussie"
-              amazonLabel="Browse laminated dog Aussie 50% MDR1 charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+aussie+10hr+herd+card?s=breed-aussie"
-              amazonLabel="Browse fridge Aussie 10-hour herd cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+australian+shepherd+handbook?s=breed-aussie"
-              amazonLabel="Browse first-owner Australian Shepherd handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-aussie"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

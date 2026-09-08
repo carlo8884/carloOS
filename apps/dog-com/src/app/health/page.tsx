@@ -253,23 +253,14 @@ export default function DogHealthHubPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the health-library order
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog health checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the first-aid, emergency-prep, dental, and senior-care order —
-            a pet first-aid kit and digital thermometer for the cabinet, a soft
-            carrier for the car, VOHC-style dental chews as a brushing adjunct,
-            and an orthopedic bed for senior rest — so you can act without
-            scrolling back. Educational kit list, not a diagnosis or a cure.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog health checklist"
-            subtitle="Email the first-aid, emergency-prep, dental, and senior-care order. No spam."
-            ctaText="Email my dog health checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-hub-under-hero"
           />
         </div>
@@ -369,8 +360,7 @@ export default function DogHealthHubPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop dog health gear
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Emergency prep is how you act before a crisis. A pet first-aid kit
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Emergency prep is how you act before a crisis. A pet first-aid kit
             and a digital thermometer belong in the cabinet; a soft carrier
             belongs in the car so you can leave without hunting for one. Pair
             that with VOHC-style dental chews as a brushing adjunct — not a
@@ -420,8 +410,7 @@ export default function DogHealthHubPage() {
             . The hops below are not a ranked product list, they are not
             medications, and they do not treat, reverse, or cure disease.
             Dog.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"

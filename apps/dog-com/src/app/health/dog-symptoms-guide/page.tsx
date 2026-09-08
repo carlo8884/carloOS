@@ -103,38 +103,16 @@ export default function DogSymptomsGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog emergency-sign watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog emergency-sign watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the gum-check, poison-control, and
-              collapse-transport notes — an LED medical
-              penlight so pale, white, blue, or grey gums
-              and sudden pupil or eye changes can be
-              checked in low light against the baseline
-              this page tells owners to learn, a pet
-              emergency contact card so the ASPCA
-              888-426-4435 line and the nearest emergency
-              clinic stay on the fridge, and a folding
-              pet stretcher for a dog that collapses or
-              cannot stand. Educational checklist, not a
-              first-aid kit, not a diagnosis, and not a
-              prescription. Emergency care still belongs
-              with a veterinarian. Vaccination record
-              books, seat-belt tethers, puppy mats,
-              mosquito dunks, pill organizers,
-              clinic-visit carriers, gum-color charts,
-              recovery food, and feeding syringes stay
-              on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog emergency-sign watch checklist"
-              subtitle="Email the penlight, contact-card, and stretcher notes. No spam."
-              ctaText="Email my dog emergency-sign watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-symptoms-guide-under-hero"
             />
           </div>
@@ -233,10 +211,8 @@ export default function DogSymptomsGuidePage() {
             assessment chart, recovery food, a feeding
             syringe, digital pet thermometers, and
             high-value vet-visit treats already live
-            on other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            on other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -263,30 +239,9 @@ export default function DogSymptomsGuidePage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the emergency-sign watch kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page gum-check, poison-control, and
-              collapse-transport copy — an LED medical
-              penlight, a pet emergency contact card,
-              and a folding pet stretcher. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not a
-              first-aid-kit hop, they are not the
-              #1044 vaccine-record / seat-belt-tether /
-              puppy-mat hops, they are not the #1043
-              mosquito-dunk / pill-organizer /
-              clinic-carrier hops, they are not the
-              #1042 anemia gum-chart / recovery-food /
-              syringe hops, they are not the #1030
-              high-value vet-visit-treat hops, they
-              are not thermometer or soft-carrier hops,
-              and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide"
@@ -300,7 +255,7 @@ export default function DogSymptomsGuidePage() {
                 amazonHref="/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"
                 amazonLabel="Browse folding pet stretchers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
         <h2 id="faq">FAQ</h2>

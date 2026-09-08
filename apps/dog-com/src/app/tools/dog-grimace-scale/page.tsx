@@ -181,21 +181,14 @@ export default function DogGrimaceScalePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the pain-check chart
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog pain-check checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the five-sign pain-face checklist (ears, eyes, muzzle, brow,
-            head) and the observation recap so you can re-score later without
-            re-reading the descriptors. Planning / observation reference only
-            — not a diagnosis or emergency-triage substitute. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog pain-check checklist"
-            subtitle="Email the five-sign dog pain-face checklist and observation recap. No spam."
-            ctaText="Email my dog pain-check checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-grimace-scale-under-hero"
           />
         </div>
@@ -245,21 +238,7 @@ export default function DogGrimaceScalePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are comfort and observation items
-              for a canine pain-watch — a dog first-aid kit, a soft recovery
-              cone, an orthopedic dog bed, a dog ice pack wrap, and calming
-              dog chews (OTC comfort only). They are not a ranked product
-              list, not invented inventory, not Rx pain medicine, and they do
-              not diagnose pain or replace emergency triage. If the face looks
-              like high pain, skip this kit and use{' '}
-              <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary underline-offset-2 hover:underline">
-                Is this a dog emergency?
-              </Link>
-              . For a stable, non-emergency question, start at telehealth.
-              Dog.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+first+aid+kit?s=tools-dog-grimace-scale"
@@ -281,7 +260,7 @@ export default function DogGrimaceScalePage() {
                 amazonHref="/go/amazon-brand/calming+dog+chews?s=tools-dog-grimace-scale"
                 amazonLabel="Browse calming dog chews on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

@@ -111,35 +111,16 @@ export default function DogAggressionPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog-aggression warning-signal checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog-aggression warning-signal checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the dog-aggression warning-signal sequence checklist, type-and-function question card,
-            and never-alpha-roll watch log that match the warning-signals, types-of-aggression, dominance-theory,
-            and professional-help copy on this page — a laminated dog aggression warning-signal sequence
-            checklist so growling-is-communication / punishing-a-growl-compresses-this-sequence /
-            dogs-that-bite-without-warning stay visible before anyone punishes a growl or stares a dog down
-            (not a laminated dog resource-guarding trade-game checklist, not a laminated dog off-leash
-            recall-proofing checklist, not a laminated horse snaffle-vs-curb bit checklist), a dog
-            aggression type-and-function question card so fear-based-aggression-is-the-most-common /
-            redirected-aggression / rule-out-pain-first-in-any-new-onset-aggression stay posted (not a
-            dog food-bowl safety question card, not a dog 20-to-30-foot long-line question card, not a
-            horse bit width-and-wrinkle fit question card), and a dog aggression never-alpha-roll watch
-            log notebook so dominance-theory-has-been-thoroughly-refuted / alpha-rolls /
-            physical-corrections-consistently-make-aggression-more-dangerous stay written down (not a dog
-            resource-guarding never-punish-growl watch log, not a dog recall-cue never-punish watch log,
-            not a horse bit hand-severity watch log). Educational training tools only, not a ranked
-            product list, not a clinic listing, and not a substitute for a CAAB or DACVB. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog-aggression warning-signal checklist"
-            subtitle="Email the warning-signal checklist, type-and-function card, and never-alpha-roll log. No spam."
-            ctaText="Email my dog-aggression warning-signal checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-dog-aggression-under-hero"
           />
         </div>
@@ -154,17 +135,7 @@ export default function DogAggressionPage() {
           sequence and creates dogs that bite without warning. Growling is communication. It should be
           respected, not punished.
         </p>
-        <p>
-          A laminated dog aggression warning-signal sequence checklist is how
-          growling-is-communication, punishing-a-growl-compresses-this-sequence, and
-          dogs-that-bite-without-warning stay visible before anyone punishes a growl or stares a dog
-          down — it is not a laminated dog resource-guarding trade-game checklist (that lives on
-          resource-guarding), not a laminated dog off-leash recall-proofing checklist (that lives on
-          off-leash-training), and not a laminated horse snaffle-vs-curb bit checklist (that lives on
-          bits-guide). This page does not hop laminated+dog+resource+guarding+trade+game+checklist,
-          laminated+dog+off+leash+recall+proofing+checklist, or puppy+training+treats searches already
-          pinned on other training pages.
-        </p>
+        
 
         <h2>Types of Aggression</h2>
         <p>
@@ -206,9 +177,7 @@ export default function DogAggressionPage() {
           rule-out-pain-first-in-any-new-onset-aggression stay posted — it is not a dog food-bowl
           safety question card (that lives on resource-guarding), not a dog 20-to-30-foot long-line
           question card (that lives on off-leash-training), and not a horse bit width-and-wrinkle fit
-          question card (that lives on bits-guide). This page does not hop shock collars, prong
-          collars, or invented ASINs.
-        </p>
+          question card (that lives on bits-guide). </p>
 
         <h2>What Dominance Theory Gets Wrong</h2>
         <p>
@@ -259,25 +228,13 @@ export default function DogAggressionPage() {
             basic-commands puppy+training+treats / dog+training+clicker / dog+long+line+leash. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-            Shop the dog-aggression leftover kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page warning-signals, types-of-aggression,
-            dominance-theory, and professional-help copy — a laminated dog aggression warning-signal
-            sequence checklist, a dog aggression type-and-function question card, and a dog
-            aggression never-alpha-roll watch log notebook. Educational training searches only. They
-            are not a ranked product list, they are not a clinic listing, they are not a #1151
-            laminated resource-guarding trade-game / food-bowl safety / never-punish-growl hop, they
-            are not a #1150 laminated off-leash recall-proofing / 20-to-30-foot long-line / recall-cue
-            never-punish hop, they are not a #1149 laminated snaffle-vs-curb / width-and-wrinkle /
-            hand-severity hop, they are not a basic-commands puppy-treats / clicker / long-line hop,
-            and they do not replace a CAAB or DACVB. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+aggression+warning+signal+sequence+checklist?s=training-dog-aggression"
-              amazonLabel="Browse laminated dog aggression warning-signal sequence checklists on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=training-dog-aggression"
+              amazonLabel="Shop on Amazon"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+aggression+type+and+function+question+card?s=training-dog-aggression"

@@ -115,41 +115,16 @@ export default function CombinedDrivingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the combined-driving checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Combined-driving checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-ads-driving-phase-chart,
-              stall-door-four-in-hand-card, and
-              equine-cones-driving-handbook notes
-              that match the dressage-marathon-cones,
-              singles-pairs-four-in-hand, and ball-topped
-              cones copy on this page — a laminated horse
-              ADS driving-phase chart so the driven-dressage
-              / marathon / cones notes are posted on the
-              stall door (not a cloverleaf barrel chart,
-              not an NRHA maneuver chart), a horse
-              stall-door four-in-hand card so the singles /
-              pairs / team notes are labeled at the barn
-              (not an NBHA jackpot card, not an NRHA level
-              card), and an equine cones-driving handbook
-              so the ball-topped-cone / carriage-track
-              grounding is a physical barn book (not a
-              barrel-rate handbook, not a sliding-stop
-              handbook). Educational barn checklist, not a
-              ranked clinic list, not a carriage-kit hop,
-              not a first-aid-kit hop, and not a substitute
-              for a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Combined-driving checklist"
-              subtitle="Email the driving-phase chart, four-in-hand card, and cones-driving handbook notes. No spam."
-              ctaText="Email my combined-driving checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="disciplines-combined-driving-under-hero"
             />
           </div>
@@ -197,45 +172,18 @@ export default function CombinedDrivingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs barrel-racing /
               reining hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the combined-driving barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page dressage-marathon-cones,
-              singles-pairs-four-in-hand, and
-              ball-topped-cones copy — a laminated horse
-              ADS driving-phase chart, a horse stall-door
-              four-in-hand card, and an equine
-              cones-driving handbook. Educational barn
-              searches only. They are not a ranked clinic
-              list, they are not a barrel-racing / reining
-              hop, they are not a carriage-kit hop, they
-              are not a first-aid-kit hop, they are not a
-              child toothbrush hop, and they do not
-              replace a veterinarian. Horses.com does not
-              sell insurance. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+ads+driving+phase+chart?s=discipline-combined-driving"
-                amazonLabel="Browse laminated horse ADS driving-phase charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=discipline-combined-driving"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+four+in+hand+card?s=discipline-combined-driving"
-                amazonLabel="Browse horse stall-door four-in-hand cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+cones+driving+handbook?s=discipline-combined-driving"
-                amazonLabel="Browse equine cones-driving handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

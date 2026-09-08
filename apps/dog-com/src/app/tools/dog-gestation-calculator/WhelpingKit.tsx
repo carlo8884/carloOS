@@ -139,18 +139,15 @@ export default function WhelpingKit() {
                 </span>
               </label>
               <div className="mt-3 ml-7">
-                <ShopCtas amazonHref={item.amazonHref} amazonLabel={item.amazonLabel} />
               </div>
             </li>
           )
         })}
       </ul>
 
-      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">
-        Assumption: this is a planning checklist for a typical vaginal whelping at home under
+      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">Assumption: this is a planning checklist for a typical vaginal whelping at home under
         veterinary guidance. Brachycephalic and some giant breeds often need a planned cesarean —
-        confirm the plan with your veterinarian, not this list. Empty Chewy buttons stay hidden.
-      </p>
+        confirm the plan with your veterinarian, not this list.</p>
     </div>
   )
 }

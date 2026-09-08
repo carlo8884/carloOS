@@ -83,32 +83,16 @@ export default function HillstreamLoachPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the hillstream-loach-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Hillstream-loach-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Sewellia / Gastromyzon
-                notes that match the care copy on this
-                page — 10–15× hourly flow from more
-                than one pump, 65–75°F so oxygen
-                stays high, and a mature biofilm tank
-                with surface-attached algae food.
-                Educational hillstream-loach-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                hillstream-loach tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Hillstream-loach-setup checklist"
-                subtitle="Email the high-flow, cool-water, and biofilm notes. No spam."
-                ctaText="Email my hillstream-loach-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-hillstream-loach-under-hero"
               />
             </div>

@@ -188,44 +188,16 @@ export default function FerretGIBlockagePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret GI-blockage checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret GI-blockage checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-gi-proof-chart,
-              fridge-rubber-foam-card, and
-              mustelid-gi-blockage-handbook notes
-              that match the gi-proof-map,
-              rubber-foam-log, and
-              quesenberry-afa-gi-grounding copy on this
-              page — a laminated ferret GI-proof chart
-              so the earplug / foam / supervise-roam map is
-              posted on the fridge (not a can&apos;t-wait
-              chart, not a bring-list chart, not a
-              checkup-map chart), a ferret fridge rubber-foam
-              card so squishy-bite-size / toy-inspect /
-              shedding-groom notes are labeled on the fridge
-              (not a crash-list card, not a carrier-prep
-              card, not an exam-prep card), and a mustelid
-              GI-blockage handbook so the Quesenberry / AEMV
-              foreign-body and time-sensitive-surgery
-              grounding is a physical kitchen book (not an
-              er-ready handbook, not a clinic-choice
-              handbook, not an annual-exam handbook).
-              Educational kitchen checklist, not a ranked
-              surgery list, not a first-aid-kit hop, and not
-              a substitute for an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance. Aging
-              pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret GI-blockage checklist"
-              subtitle="Email the gi-proof-chart, fridge rubber-foam card, and gi-blockage-handbook notes. No spam."
-              ctaText="Email my ferret GI-blockage checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-gastrointestinal-blockage-under-hero"
             />
           </div>
@@ -412,47 +384,20 @@ export default function FerretGIBlockagePage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
-              emergency / vet-visit / checkup hops.
-              Directory import left untouched. Ferret
+              emergency / vet-visit / checkup hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret GI-blockage kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page gi-proof-map,
-              rubber-foam-log, and
-              quesenberry-afa-gi-grounding copy — a
-              laminated ferret GI-proof chart, a
-              ferret fridge rubber-foam card, and a
-              mustelid GI-blockage handbook.
-              Educational kitchen searches only. They are
-              not a ranked surgery list, they are not
-              a health-hub / emergency / vet-visit hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+gi+proof+chart?s=gastrointestinal-blockage"
-                amazonLabel="Browse laminated ferret GI-proof charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=gastrointestinal-blockage"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+rubber+foam+card?s=gastrointestinal-blockage"
-                amazonLabel="Browse ferret fridge rubber-foam cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+gi+blockage+handbook?s=gastrointestinal-blockage"
-                amazonLabel="Browse mustelid GI-blockage handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

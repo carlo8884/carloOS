@@ -84,31 +84,16 @@ export default function ZebraDanioPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the zebra-danio-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Zebra-danio-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Danio rerio notes that match
-                the care copy on this page — a school
-                of 6+ (8–10 better), 64–77°F cooler
-                water, 10 gallons minimum with a
-                20-long ideal, pH 6.5–7.5, and a
-                tight-fitting lid. Educational
-                zebra-danio-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing zebra-danio tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Zebra-danio-setup checklist"
-                subtitle="Email the 6+ school, cooler-water, and lid notes. No spam."
-                ctaText="Email my zebra-danio-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-zebra-danio-under-hero"
               />
             </div>

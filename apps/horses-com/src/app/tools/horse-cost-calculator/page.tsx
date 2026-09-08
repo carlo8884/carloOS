@@ -198,20 +198,14 @@ export default function HorseCostCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the worksheet
           </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horse ownership cost checklist
-          </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the horse budget worksheet — board, feed, farrier, vet, and the six-item
-            startup kit — so you can shop the first-horse basics without re-running the math.
-            No spam.
-          </p>
+          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h3>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horse ownership cost checklist"
-            subtitle="Email the horse budget worksheet — board, feed, farrier, vet, and the startup kit. No spam."
-            ctaText="Email my horse budget worksheet"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-horse-cost-calculator-under-hero"
           />
         </div>
@@ -236,7 +230,7 @@ export default function HorseCostCalculatorPage() {
         </p>
         <Calculator />
 
-        <h2 id="startup-kit">Startup kit checklist</h2>
+        <h2 id="startup-kit">Owner notes</h2>
         <p>
           Once you have a monthly number, pack the day-one kit that fills the one-time
           tack line. The six-item list below is a husbandry starting point — halter and
@@ -249,15 +243,12 @@ export default function HorseCostCalculatorPage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop the startup kit
+            Shop related supplies
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            The six-item list above is a husbandry starting point — halter and lead,
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">The six-item list above is a husbandry starting point — halter and lead,
             grooming kit, hoof pick, feed scoop, barn first-aid, fly mask — not a ranked
             product list. Same Amazon search hops as the checklist rows. Horses.com earns
-            a commission on qualifying purchases at no extra cost to you. Empty Chewy
-            buttons stay hidden.
-          </p>
+            a commission on qualifying purchases at no extra cost to you. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"

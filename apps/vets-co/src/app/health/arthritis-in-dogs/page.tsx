@@ -43,7 +43,7 @@ export default function ArthritisDogsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Pain Management in Dogs', href: '/health/pain-management-dogs' }, { label: 'Weight Management', href: '/health/weight-management' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-arthritis" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-arthritis" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -53,22 +53,16 @@ export default function ArthritisDogsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the arthritis home-setup checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog arthritis home-setup checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-modification notes — rugs for traction, ramps,
-              raised bowls, and orthopedic bedding. Educational checklist,
-              not a diagnosis and not a pain-medication order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog arthritis home-setup checklist"
-              subtitle="Email the traction-rug, ramp, raised-bowl, and orthopedic-bedding notes. No spam."
-              ctaText="Email my dog arthritis home-setup checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-arthritis-in-dogs-under-hero"
             />
           </div>
@@ -110,18 +104,9 @@ export default function ArthritisDogsPage() {
               supplements are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the arthritis home-setup kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              home-modification copy — rugs for traction, ramps, raised
-              bowls, and orthopedic bedding. Everyday physical supplies
-              only. They are not a ranked product list, they are not
-              medications or joint supplements, they are not a treatment
-              for osteoarthritis, and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs"
@@ -139,7 +124,7 @@ export default function ArthritisDogsPage() {
                 amazonHref="/go/amazon-brand/orthopedic+dog+bed?s=health-arthritis-in-dogs"
                 amazonLabel="Browse orthopedic dog beds on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

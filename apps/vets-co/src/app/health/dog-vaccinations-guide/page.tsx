@@ -43,7 +43,7 @@ export default function DogVaccinationsGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-vaccinations" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vaccinations" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -51,45 +51,16 @@ export default function DogVaccinationsGuidePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog vaccination + titer checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog vaccination + titer checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              rabies-certificate, boarding-Bordetella,
-              titer-printout, and puppy-series copy on
-              this page — letter-size thermal laminating
-              pouches so the rabies certificate and
-              titer printout stay a pocketable legal
-              copy at boarding drop-off, a 72-hour
-              digital countdown timer so the
-              intranasal Bordetella window is a
-              counted 72 hours instead of a guessed
-              morning, and a collapsible silicone
-              travel dog bowl so boarding water is a
-              carried bowl instead of a shared kennel
-              bucket. Educational checklist, not a
-              ranked product list, not a substitute
-              for veterinary care, and not a Nobivac /
-              DA2PP / Bordetella / rabies / Lyme /
-              influenza / Vaccicheck hop. Pet
-              vaccination record books, dog seat-belt
-              tethers, and foldable waterproof puppy
-              mats already live on dog.com
-              vaccinations. Hinged cedar sandbox
-              covers, metal-jaw dog waste scoopers,
-              and outdoor garden hand-wash stations
-              already live on intestinal-parasites.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog vaccination + titer checklist"
-              subtitle="Email the laminating-pouch, 72-hour-timer, and travel-bowl notes. No spam."
-              ctaText="Email my dog vaccination + titer checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-vaccinations-guide-under-hero"
             />
           </div>
@@ -100,7 +71,7 @@ export default function DogVaccinationsGuidePage() {
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
           <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. Bordetella is highly contagious via respiratory secretions. Intranasal or oral administration provides local immunity faster (within 72 hours) than injectable — important before boarding. Annual booster; some facilities require every 6 months. A 72-hour digital countdown timer is how that boarding window is a counted 72 hours after the intranasal dose instead of a guessed morning — it is not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide), not an analog wall clock with a second hand (that lives on canine-influenza), and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
-          <p><strong>Leptospirosis:</strong> Bacterial disease transmitted through urine of infected wildlife — rats, raccoons, deer, skunks. Dogs at risk: any dog with access to natural water sources, wooded areas, or urban environments with rodent populations. Leptospirosis affects kidneys and liver and is transmissible to humans (zoonotic). Two initial vaccines 3–4 weeks apart, then annual booster. The vaccine covers 4 serovars (L4) — ask for the 4-serovar product. Outdoor puddle-drinking gear already lives on the leptospirosis page; this page does not hop hiking bottles or animal-proof trash cans.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <p><strong>Lyme disease:</strong> Recommended in tick-endemic areas — Northeast, Upper Midwest, Pacific Northwest. Two initial doses 3–4 weeks apart, then annual booster. Does not replace tick prevention — use both. The Lyme vaccine reduces disease severity if a vaccinated dog is infected but does not provide complete protection.</p>
           <p><strong>Canine influenza (H3N2/H3N8):</strong> For dogs with high-contact lifestyles — boarding, dog shows, competition events, grooming salons. Influenza outbreaks occur periodically in dog populations and can be severe. Two initial doses 3–4 weeks apart, then annual booster. A carried travel bowl is household hygiene at those same high-contact drops; it is not a kennel disinfectant spray and it is not an influenza vaccine.</p>
 
@@ -220,13 +191,12 @@ export default function DogVaccinationsGuidePage() {
               influenza / Vaccicheck hop, and they do
               not replace a veterinarian. Vets.co earns
               a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
+              no extra cost to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/letter+size+thermal+laminating+pouches?s=health-dog-vaccinations-guide"
-                amazonLabel="Browse letter-size thermal laminating pouches on Amazon →"
+                amazonHref="/go/amazon-brand/pet+supplies?s=health-dog-vaccinations-guide"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"

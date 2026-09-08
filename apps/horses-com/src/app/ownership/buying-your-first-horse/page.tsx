@@ -119,45 +119,16 @@ export default function BuyingFirstHorsePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the first-horse buyer checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              First-horse buyer checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the first-horse-buyer-visit,
-              tryout-walkthrough, and
-              pre-purchase-exam-records notes that match
-              the visit-more-than-once, trying-a-horse,
-              and never-skip-the-vetting copy on this
-              page — a first-horse buyer visit field
-              notebook so each viewing records the
-              seller, the horse, and what changed
-              between visits (not a boarding-facility
-              walkthrough, not a daily-care chart, not
-              an owner-guides chart), a laminated
-              first-horse tryout walkthrough checklist
-              so the handle-on-the-ground, see-it-ridden,
-              and load-and-hack protocol is posted
-              before anyone mounts (not an
-              emergency-triage chart, not a
-              calculator-tools chart, not a
-              forage-first chart), and a horse
-              pre-purchase exam records binder so the
-              independent vet report stays with the
-              purchase file (not a boarding-contract
-              binder, not a farrier log, not a
-              weatherproof clipboard). Educational
-              buyer checklist, not a ranked product
-              list, and not a substitute for a trainer
-              or veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="First-horse buyer checklist"
-              subtitle="Email the visit-notebook, tryout-walkthrough, and PPE-records notes. No spam."
-              ctaText="Email my first-horse buyer checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-buying-your-first-horse-under-hero"
             />
           </div>
@@ -170,21 +141,7 @@ export default function BuyingFirstHorsePage() {
 
           <h2 id="where">Where to Look</h2>
           <p>Good first horses are found through trainers and instructors who know their students and the local market, through reputable sellers and lesson barns, and by word of mouth in the riding community. Online classifieds are full of horses but also of misrepresentation, so they are best used with experienced help and healthy skepticism. Be wary of sellers who pressure for a quick sale, will not let you visit more than once, or are evasive about the horse&apos;s history.</p>
-          <p>
-            A first-horse buyer visit field notebook is how
-            each viewing records the seller, the horse, and
-            what changed between visits instead of relying
-            on memory after a string of classifieds — it is
-            not a laminated horse boarding facility
-            walkthrough checklist (that lives on
-            boarding-options), not a laminated horse barn
-            daily-care chart (that lives on the care hub),
-            and not an owner-guides chart (that lives on
-            the guides hub). This page does not hop
-            weatherproof clipboards or farrier log books
-            already pinned on flu pages and
-            farrier-schedule.
-          </p>
+          
 
           <h2 id="trying">Trying a Horse</h2>
           <ul>
@@ -194,22 +151,7 @@ export default function BuyingFirstHorsePage() {
             <li><strong>Test the real-world tasks</strong> such as hacking out alone, standing still, and behaving in traffic or away from other horses if relevant.</li>
             <li><strong>Watch for evasion</strong> such as a horse that is always already tacked up, or that you are not allowed to try properly.</li>
           </ul>
-          <p>
-            A laminated first-horse tryout walkthrough
-            checklist is how the handle-on-the-ground,
-            see-it-ridden-first, and load-and-hack
-            protocol is posted before anyone mounts —
-            it is not a laminated horse barn
-            emergency-triage chart (that lives on the
-            health hub), not a calculator-tools chart
-            (that lives on the tools hub), and not a
-            forage-first chart (that lives on the
-            nutrition hub). This page does not hop
-            halter-and-lead-rope, hoof-pick, shipping-boot,
-            or ASTM helmet searches already pinned on the
-            cost calculator, grooming, trailering, and
-            helmet guide.
-          </p>
+          
 
           <h2 id="vetting">The Pre-Purchase Exam</h2>
           <p>Never skip the pre-purchase (vetting) examination. An independent veterinarian -- ideally not the seller&apos;s vet -- examines the horse for soundness and health, identifying problems that affect its suitability and value. The exam does not guarantee a perfect horse, but it surfaces issues an inexperienced buyer would miss and informs the decision. Spending on a vet check before buying is far cheaper than discovering a serious problem afterward. See the dedicated pre-purchase exam guide.</p>
@@ -222,49 +164,13 @@ export default function BuyingFirstHorsePage() {
             boarding-options), not a farrier log book
             (that lives on farrier-schedule), and not a
             weatherproof storage clipboard (that lives
-            on flu pages). This page does not hop
-            first-aid saline, dressing pads, or bandage
-            scissors already pinned on the first-aid-kit
-            page, and it does not hop medications or
-            vaccines.
-          </p>
+            on flu pages). </p>
 
           <h2 id="help">Bring Experienced Help</h2>
           <p>Take a knowledgeable, trusted, and ideally independent horseperson -- your instructor or an experienced friend with no stake in the sale -- to view and try any horse. They will see things a first-timer cannot, ask the right questions, ride the horse, and provide a sober second opinion against the emotional pull of falling for a horse. Combined with an honest self-assessment, a temperament-first priority, and a proper vetting, experienced help is the best protection against a costly first-horse mistake.</p>
 
           <h2 id="kit">First-horse leftover buyer kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            visit-more-than-once, trying-a-horse, and
-            never-skip-the-vetting copy on this page —
-            a first-horse buyer visit field notebook so
-            each viewing records the seller, the horse,
-            and what changed between visits, a laminated
-            first-horse tryout walkthrough checklist so
-            the handle-on-the-ground, see-it-ridden, and
-            load-and-hack protocol is posted before
-            anyone mounts, and a horse pre-purchase exam
-            records binder so the independent vet report
-            stays with the purchase file. These are
-            educational buyer searches, not a ranked
-            product list, not a substitute for a trainer
-            or veterinarian, not a boarding-facility
-            walkthrough / boarding-contract-binder /
-            hay-bale-tarp hop (those live on
-            boarding-options), not a first-aid saline /
-            pads / scissors hop, not a daily-care-chart /
-            stall-door-care-card / husbandry-handbook hop
-            (those live on the care hub), not an
-            emergency-triage-chart / vital-signs-card /
-            health-handbook hop, not a forage-first-chart
-            / ration-card / nutrition-handbook hop, not
-            an owner-guides-chart hop, not a
-            calculator-tools-chart hop, not a
-            farrier-log / flood-light hop, and not a
-            weatherproof-clipboard hop. This page does
-            not hop medications or vaccines. This page
-            does not claim hands-on testing.
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -321,44 +227,23 @@ export default function BuyingFirstHorsePage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the first-horse leftover buyer kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page visit-more-than-once,
-              trying-a-horse, and
-              never-skip-the-vetting copy — a
-              first-horse buyer visit field notebook, a
-              laminated first-horse tryout walkthrough
-              checklist, and a horse pre-purchase exam
-              records binder. Educational buyer
-              searches only. They are not a ranked
-              product list, they are not a boarding
-              walkthrough / contract-binder / hay-tarp
-              hop, they are not a first-aid saline /
-              pads / scissors hop, they are not a
-              daily-care / emergency-triage /
-              owner-guides / calculator-tools chart
-              hop, and they do not replace a trainer or
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/first+horse+buyer+visit+field+notebook?s=ownership-buying-your-first-horse"
                 amazonLabel="Browse first-horse buyer visit field notebooks on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+first+horse+tryout+walkthrough+checklist?s=ownership-buying-your-first-horse"
-                amazonLabel="Browse laminated first-horse tryout walkthrough checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=ownership-buying-your-first-horse"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+pre+purchase+exam+records+binder?s=ownership-buying-your-first-horse"
                 amazonLabel="Browse horse pre-purchase exam records binders on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

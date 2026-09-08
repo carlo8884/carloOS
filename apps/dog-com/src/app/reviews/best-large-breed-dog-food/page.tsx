@@ -33,32 +33,16 @@ export default function BestLargeBreedFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the large-breed-food checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Large-breed-food checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the large-breed notes that match
-                the ranking copy on this page — 50+ lb
-                dogs, controlled calorie density during
-                growth, Royal Canin Large Adult for
-                glucosamine plus chondroitin, and
-                Purina Pro Plan Large Breed for 26%
-                protein plus EPA. Educational
-                large-breed checklist, not a new
-                product hop, not a first-aid-kit hop,
-                and not a substitute for a
-                veterinarian. The existing Royal Canin
-                and Purina Chewy searches stay below.
-                No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Large-breed-food checklist"
-                subtitle="Email the 50+ lb, Royal Canin, and 26% protein notes. No spam."
-                ctaText="Email my large-breed-food checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-large-breed-dog-food-under-hero"
               />
             </div>
@@ -102,7 +86,7 @@ export default function BestLargeBreedFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Labrador Retriever', href: '/breeds/labrador-retriever' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-large-breed-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-large-breed-food" />
           </aside>
         </div>
       </div>

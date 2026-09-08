@@ -115,41 +115,16 @@ export default function EquitationPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the equitation checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Equitation checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-equitation-position-chart,
-              stall-door-usef-medal-card, and
-              equine-hunter-seat-handbook notes
-              that match the ear-hip-heel, usef-medal /
-              aspc-maclay, and hunter-seat copy on this
-              page — a laminated horse equitation position
-              chart so the heels-down / ear-to-hip-to-heel
-              / independent-seat notes are posted on the
-              stall door (not a cutting cow-work chart,
-              not an ADS driving-phase chart), a horse
-              stall-door USEF medal card so the USEF Medal
-              / ASPCA Maclay / WIHS notes are labeled at
-              the barn (not an NCHA cutting card, not a
-              four-in-hand card), and an equine hunter-seat
-              handbook so the rider-not-horse / George
-              Morris grounding is a physical barn book
-              (not a cutting cow-sense handbook, not a
-              cones-driving handbook). Educational barn
-              checklist, not a ranked clinic list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Equitation checklist"
-              subtitle="Email the equitation position chart, USEF medal card, and hunter-seat handbook notes. No spam."
-              ctaText="Email my equitation checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="disciplines-equitation-under-hero"
             />
           </div>
@@ -197,43 +172,18 @@ export default function EquitationPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs cutting /
               combined-driving hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the equitation barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page ear-hip-heel, usef-medal /
-              aspc-maclay, and hunter-seat copy — a
-              laminated horse equitation position chart, a
-              horse stall-door USEF medal card, and an
-              equine hunter-seat handbook. Educational
-              barn searches only. They are not a ranked
-              clinic list, they are not a cutting /
-              combined-driving hop, they are not a
-              first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Horses.com does not sell
-              insurance. Horses.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+equitation+position+chart?s=discipline-equitation"
-                amazonLabel="Browse laminated horse equitation position charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=discipline-equitation"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+usef+medal+card?s=discipline-equitation"
-                amazonLabel="Browse horse stall-door USEF medal cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+hunter+seat+handbook?s=discipline-equitation"
-                amazonLabel="Browse equine hunter-seat handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

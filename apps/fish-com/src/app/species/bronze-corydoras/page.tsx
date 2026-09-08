@@ -82,35 +82,16 @@ export default function BronzeCorydorasPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the bronze-corydoras-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Bronze-corydoras-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Corydoras aeneus notes that
-                match the care copy on this page — a
-                group of 6+ so the school forages in
-                daylight instead of hiding, smooth sand
-                so barbels stay intact while they sift,
-                sinking pellets and wafers because they
-                are not scavengers, 72–79°F and pH
-                6.0–7.8, and 2.5–3 inch adults that
-                still need their own food. Educational
-                bronze-corydoras-setup checklist, not a
-                new product hop, not livestock, and
-                not a substitute for a fish
-                veterinarian. The existing corydoras
-                tank-setup Amazon search stays below.
-                Empty Chewy buttons stay hidden. No
-                spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Bronze-corydoras-setup checklist"
-                subtitle="Email the sand, group-of-6, and sinking-food notes. No spam."
-                ctaText="Email my bronze-corydoras-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-bronze-corydoras-under-hero"
               />
             </div>

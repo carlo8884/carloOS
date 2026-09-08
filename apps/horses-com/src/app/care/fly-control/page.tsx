@@ -116,24 +116,16 @@ export default function FlyControlPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the fly-control checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse fly-control checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit — a well-fitted fly mask, a breathable
-              fly sheet, fly boots for the legs, a topical fly spray rated
-              for horses, and fly traps placed away from the horses — so
-              you are not hunting gear mid-season. Educational checklist,
-              not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse fly-control checklist"
-              subtitle="Email the fly-mask, fly-sheet, fly-boot, spray, and trap order. No spam."
-              ctaText="Email my fly-control checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-fly-control-under-hero"
             />
           </div>
@@ -173,20 +165,9 @@ export default function FlyControlPage() {
               or medical treatment hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the fly-control kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page barrier,
-              repellent, and environmental-management copy — a fly mask, a
-              fly sheet, fly boots, a topical fly spray / repellent rated
-              for horses, and fly traps placed away from the horses.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not treatments for sweet itch, summer sores,
-              eye infections, bots, or any medical condition, and they do
-              not replace a veterinarian. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+fly+mask?s=care-fly-control"
@@ -208,7 +189,7 @@ export default function FlyControlPage() {
                 amazonHref="/go/amazon-brand/horse+fly+trap?s=care-fly-control"
                 amazonLabel="Browse horse fly traps on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="disease">Fly-Borne Problems</h2>

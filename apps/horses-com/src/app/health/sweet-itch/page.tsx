@@ -127,23 +127,16 @@ export default function SweetItchPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the sweet-itch rug checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse sweet-itch rug checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the sweet-itch rug and hood notes so the fine-weave
-              barrier is on before the first Culicoides bites of the
-              season. Educational checklist, not a diagnosis and not a
-              steroid, antihistamine, or medication order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse sweet-itch rug checklist"
-              subtitle="Email the sweet-itch rug and hood notes. No spam."
-              ctaText="Email my horse sweet-itch rug checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-sweet-itch-under-hero"
             />
           </div>
@@ -173,7 +166,7 @@ export default function SweetItchPage() {
           </ul>
 
           <h2 id="medical">Veterinary Management</h2>
-          <p>When midge control alone is not enough, a veterinarian can help manage the allergic reaction and the damaged skin -- soothing topical treatments, medication to control itching and inflammation during flares, and treatment of any secondary skin infection, all under veterinary direction. Because sweet itch is a lifelong sensitivity, the goal is year-on-year control through prevention rather than a one-time fix, and starting the midge-control program before the season begins works far better than reacting once the horse is already raw. This page does not hop steroids, antihistamines, spot-ons, or any other medication.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Sweet-Itch Kit</h2>
           <p>Everyday physical supplies that match the fitted-barrier copy above — a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
@@ -199,7 +192,6 @@ export default function SweetItchPage() {
               not a steroid or a spot-on, they are not a medication, and
               they do not replace a veterinarian. Horses.com earns a
               commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

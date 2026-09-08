@@ -32,35 +32,16 @@ export default function SensitiveStomachFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the sensitive-stomach checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Sensitive-stomach checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the sensitive-stomach notes that
-                match the ranking copy on this page —
-                a sensitive stomach is a description
-                not a diagnosis, Purina Pro Plan
-                Sensitive Skin &amp; Stomach (salmon
-                and rice, no corn/wheat/soy, live
-                probiotics) as the standard vet pick,
-                and the 8–12 week dietary trial before
-                you call a food switch a success.
-                Educational sensitive-stomach
-                checklist, not a new product hop, not
-                a prescription hydrolyzed-diet hop,
-                and not a substitute for a
-                veterinarian. The existing Purina Pro
-                Plan Chewy search stays below. No
-                spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Sensitive-stomach checklist"
-                subtitle="Email the Purina salmon-and-rice and 8–12 week trial notes. No spam."
-                ctaText="Email my sensitive-stomach checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-food-sensitive-stomach-under-hero"
               />
             </div>
@@ -93,7 +74,7 @@ export default function SensitiveStomachFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Elimination Diet', href: '/nutrition/elimination-diet' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-sensitive-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-sensitive-food" />
           </aside>
         </div>
       </div>

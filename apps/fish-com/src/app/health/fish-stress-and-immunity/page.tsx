@@ -42,24 +42,14 @@ export default function FishStressPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the low-stress tank plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Low-stress tank checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the water-first, temperature-stable, quarantine order —
-            test ammonia, nitrite, and nitrate with a liquid kit (not
-            strips), hold temperature with a rated heater and a separate
-            digital thermometer so swings do not suppress immunity, and
-            quarantine every new arrival so shipping stress stays out of
-            the display. Educational husbandry, not a diagnosis or a cure.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Low-stress tank checklist"
-            subtitle="Email the water-first, temperature-stable, quarantine order. No spam."
-            ctaText="Email my low-stress tank checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-stress-immunity-under-hero"
           />
         </div>
@@ -91,8 +81,7 @@ export default function FishStressPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a low-stress tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Water quality and temperature stability are the two most
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Water quality and temperature stability are the two most
             controllable stressors in any aquarium. A liquid master kit is
             how you see ammonia, nitrite, and nitrate — strips are not
             accurate enough for the stress load that suppresses immunity.
@@ -136,8 +125,7 @@ export default function FishStressPage() {
             . The hops below are not a ranked product list, they are not
             medications, and they do not treat, reverse, or cure disease.
             Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-stress-immunity"

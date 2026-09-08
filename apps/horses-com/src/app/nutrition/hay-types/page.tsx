@@ -116,32 +116,16 @@ export default function HayTypesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the hay-types checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse hay-types checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the orchard-grass-hay-horse,
-              alfalfa-hay-bales-horse, and
-              timothy-alfalfa-mixed-hay-horse notes that
-              match the grass, legume, and mixed-hay copy
-              on this page — orchard-grass hay as the
-              everyday leafy grass base (not a timothy hop),
-              alfalfa hay bales as the richer legume option
-              for horses that need condition, and a
-              timothy-alfalfa mixed hay as the middle
-              ground. Educational barn checklist, not a
-              treatment, not an EMS hay-test hop, and not
-              a substitute for calling the veterinarian or
-              equine nutritionist. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse hay-types checklist"
-              subtitle="Email the orchard-grass, alfalfa-bale, and mixed-hay notes. No spam."
-              ctaText="Email my horse hay-types checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-hay-under-hero"
             />
           </div>
@@ -218,21 +202,9 @@ export default function HayTypesPage() {
               (dental). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the barn hay-types kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page grass, legume, and mixed-hay copy —
-              orchard-grass hay, alfalfa hay bales, and a
-              timothy-alfalfa mixed hay. Educational barn
-              searches only. They are not a ranked product
-              list, they are not a timothy-hay hop, they
-              are not an EMS hay-test hop, and they do not
-              replace a veterinarian or equine nutritionist.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/orchard+grass+hay+horse?s=nutrition-hay"
@@ -246,7 +218,7 @@ export default function HayTypesPage() {
                 amazonHref="/go/amazon-brand/timothy+alfalfa+mixed+hay+horse?s=nutrition-hay"
                 amazonLabel="Browse timothy-alfalfa mixed hay for horses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

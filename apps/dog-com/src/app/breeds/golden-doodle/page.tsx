@@ -47,39 +47,16 @@ export default function GoldendoodlePage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the golden-doodle checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Goldendoodle checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-doodle-f1b-75pct-chart,
-            dog-fridge-doodle-canf1-allergy-card, and
-            canine-first-owner-goldendoodle-handbook notes
-            that match the F1B 75% Poodle coat floor, the
-            Can f 1 allergy notes, and first-time-owner notes
-            on this page — a laminated dog Doodle F1B 75%
-            chart so the 50/50 F1 vs 75% F1B notes are
-            posted on the fridge (not a Cocker woodcock-flush
-            chart, not a Bullmastiff night-dog chart), a
-            fridge Doodle Can-f-1 allergy card so the not-
-            truly-hypoallergenic notes are labeled in the
-            kitchen (not a monthly-ear card, not a finger-
-            toothbrush hop), and a first-owner Goldendoodle
-            handbook so the YES-typically / 6–8-week groom /
-            hybrid-vigor-myth grounding is a physical kitchen
-            book (not a first-owner Cocker Spaniel handbook).
-            Educational kitchen checklist, not a ranked
-            product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Goldendoodle checklist"
-            subtitle="Email the F1B 75% chart, Can f 1 allergy card, and first-owner handbook notes. No spam."
-            ctaText="Email my golden-doodle checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-golden-doodle-under-hero"
           />
         </div>
@@ -107,35 +84,14 @@ export default function GoldendoodlePage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Goldendoodle home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            F1B 75% Poodle coat floor, the Can f 1 allergy
-            notes, and first-time-owner notes — a laminated
-            dog Doodle F1B 75% chart, a fridge Doodle Can-f-1
-            allergy card, and a first-owner Goldendoodle
-            handbook. Educational kitchen searches only.
-            They are not a ranked product list, they are not
-            a crate hop, they are not a finger-toothbrush
-            hop, and they do not replace a veterinarian.
-            Dog.com does not sell insurance. Dog.com earns a
-            commission on qualifying purchases at no extra
-            cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+doodle+f1b+75pct+chart?s=breed-goldendoodle"
-              amazonLabel="Browse laminated dog Doodle F1B 75% charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+doodle+canf1+allergy+card?s=breed-goldendoodle"
-              amazonLabel="Browse fridge Doodle Can f 1 allergy cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+goldendoodle+handbook?s=breed-goldendoodle"
-              amazonLabel="Browse first-owner Goldendoodle handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-goldendoodle"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -121,22 +121,16 @@ export default function VetsPetInsurancePage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Pet insurance decision checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the enrollment checklist — waiting periods, pre-existing exclusions, deductible
-            type, and wellness add-on — so you can compare quotes without re-reading the fine print.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Pet insurance decision checklist"
-            subtitle="Email the enrollment checklist — waiting periods, exclusions, deductible, wellness add-on. No spam."
-            ctaText="Email the insurance checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="reviews-best-pet-insurance-under-hero"
           />
         </div>
@@ -231,9 +225,9 @@ export default function VetsPetInsurancePage() {
               { label: 'Emergency Signs', href: '/health/emergency-signs' },
             ]} />
             <EmailCapture variant="sidebar" siteId="vets-co"
-              title="Insurance decision checklist"
+              title="Owner notes"
               subtitle="Waiting periods, exclusions, and wellness add-on — emailed so you can compare quotes."
-              ctaText="Email the insurance checklist"
+              ctaText="Send the notes"
               source="review-pet-insurance" />
           </aside>
         </div>

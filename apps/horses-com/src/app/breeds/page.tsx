@@ -99,53 +99,16 @@ export default function BreedsIndexPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the horses breeds-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horses breeds-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-horse-barn-breeds-profile-chart,
-            stall-door-breeds-library-card, and
-            equine-breeds-reference-handbook notes that
-            match the working-type-map, height-energy-log,
-            and aaep-vgl-breed-club-grounding copy on this
-            hub — a laminated horse barn breeds profile
-            chart so the stock / sport / warmblood / gaited
-            / draft / pony map is posted on the stall door
-            (not a tools-hub calculator chart, not a
-            reviews buyer-guide chart, not a supplements
-            category chart, not a tack section-map chart,
-            not an ownership section-map chart, not a
-            forage-first chart, not a daily-care chart,
-            not an emergency-triage chart, not an
-            owner-guides chart), a horse stall-door breeds
-            library card so each working-type spoke is
-            labeled on the stall door (not a measurement
-            card, not a reviews comparison card, not a
-            supplements label card, not a tack-fit card,
-            not an ownership prep card, not a ration card,
-            not a care card, not a vital-signs card, not
-            an owner-guides card), and an equine breeds
-            reference handbook so the AAEP / UC Davis VGL
-            / breed-club grounding is a physical barn book
-            (not a calculator handbook, not a reviews
-            handbook, not a supplements handbook, not a
-            tack handbook, not an ownership handbook, not
-            a nutrition handbook, not a husbandry
-            handbook, not a health handbook, not an
-            owner-guides handbook). Educational kitchen
-            checklist, not a ranked breed list, not a
-            child curry-comb / hoof-pick hop, and not a
-            substitute for a veterinarian. Horses.com does
-            not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horses breeds-hub checklist"
-            subtitle="Email the breeds-profile-chart, stall-door library-card, and breeds-handbook notes. No spam."
-            ctaText="Email my horses breeds-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breeds-hub-under-hero"
           />
         </div>
@@ -199,30 +162,8 @@ export default function BreedsIndexPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Breeds-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          working-type-map, height-energy-log, and
-          aaep-vgl-breed-club-grounding copy on this hub —
-          a laminated horse barn breeds profile chart so
-          the stock / sport / warmblood / gaited / draft /
-          pony map is posted on the stall door, a horse
-          stall-door breeds library card so each
-          working-type spoke is labeled on the stall door,
-          and an equine breeds reference handbook so the
-          AAEP / UC Davis VGL / breed-club grounding is a
-          physical barn book. These are educational
-          kitchen searches, not a ranked breed list, not a
-          substitute for a veterinarian, not a tools-hub /
-          reviews-hub / supplements-hub / tack-hub /
-          ownership-hub hop, and not a child curry-comb /
-          hoof-pick hop (those live on care children).
-          This page does not hop medications or vaccines.
-          This page does not sell insurance. This page
-          does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -238,41 +179,17 @@ export default function BreedsIndexPage() {
             or PLACEHOLDER. Unused vs tools / reviews /
             supplements / tack / ownership kitchen kits
             and child horse+curry+comb / horse+hoof+pick
-            hops. Directory import left untouched.
+            hops.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the breeds-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page working-type-map, height-energy-log,
-            and aaep-vgl-breed-club-grounding copy — a
-            laminated horse barn breeds profile chart, a
-            horse stall-door breeds library card, and an
-            equine breeds reference handbook. Educational
-            kitchen searches only. They are not a ranked
-            breed list, they are not a tools-hub /
-            reviews-hub / supplements-hub / tack-hub /
-            ownership-hub hop, they are not a child
-            curry-comb hop, and they do not replace a
-            veterinarian. Horses.com does not sell
-            insurance. Horses.com earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+horse+barn+breeds+profile+chart?s=breeds-hub"
-              amazonLabel="Browse laminated horse barn breeds profile charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+stall+door+breeds+library+card?s=breeds-hub"
-              amazonLabel="Browse horse stall-door breeds library cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/equine+breeds+reference+handbook?s=breeds-hub"
-              amazonLabel="Browse equine breeds reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/horse+supplies?s=breeds-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

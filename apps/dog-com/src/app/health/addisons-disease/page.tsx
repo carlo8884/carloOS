@@ -42,54 +42,23 @@ export default function AddisonsDiseaseePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: "Cushing's Disease", href: '/health/cushing-disease' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Megaesophagus', href: '/health/megaesophagus' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-addisons" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-addisons" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog Addison&apos;s daily-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog Addison&apos;s daily-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the daily-tablet, injection-date, and
-              crisis-ID notes — dog pill pockets so a
-              daily oral tablet (fludrocortisone in many
-              dogs) has a mapped way to meet daily dosing
-              compliance, a dry-erase monthly calendar so
-              the DOCP injection window (every 25–28 days)
-              and electrolyte-recheck dates stay visible,
-              and a dog medical-alert collar tag so an
-              emergency clinic can see Addisonian crisis
-              risk before an electrolyte panel comes back.
-              Educational checklist, not a Percorten /
-              Zycortal / Florinef / fludrocortisone /
-              DOCP / prednisone product list, and not a
-              prescription. Hormone replacement and
-              stress-dosing still belong with a
-              veterinarian. Gallon gravity waterers,
-              extra-large disposable pee pads, cooling
-              bandanas, self-warming mats, fleece
-              sweaters, slicker brushes, lymph-node
-              anatomy charts, foam dog stairs, ear wipes,
-              assisted-walking slings, hind-paw booties,
-              hip braces, silicone grooming gloves,
-              analog bathroom scales, dog dental finger
-              brushes, AM/PM weekly pill organizers,
-              monthly pill organizers, medical-records
-              binders, emergency contact cards, and
-              clinic-visit carriers stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
               title="Dog Addison's daily-care checklist"
-              subtitle="Email the pill-pocket, monthly-calendar, and medical-alert-tag notes. No spam."
-              ctaText="Email my dog Addison's daily-care checklist"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-addisons-disease-under-hero"
             />
           </div>
@@ -127,8 +96,7 @@ export default function AddisonsDiseaseePage() {
             so an emergency clinic can see Addisonian
             crisis risk — collapse, profound weakness,
             and dangerous potassium-driven arrhythmias —
-            before the electrolyte panel comes back.
-            These are household daily-care and
+            before the electrolyte panel comes back. These are household daily-care and
             monitoring tools, not treatments. They do
             not diagnose Addison&apos;s, they do not
             replace an ACTH stimulation test, they do
@@ -137,8 +105,7 @@ export default function AddisonsDiseaseePage() {
             monitoring, and they are not Percorten-V,
             Zycortal, Florinef, fludrocortisone, DOCP,
             prednisone, trilostane, Vetoryl, insulin,
-            or a ranked endocrine product list.
-            Gallon gravity dog waterers, extra-large
+            or a ranked endocrine product list. Gallon gravity dog waterers, extra-large
             disposable dog pee pads, dog cooling
             bandanas, self-warming dog mats, fleece dog
             sweaters, dog slicker brushes, lymph-node
@@ -154,10 +121,8 @@ export default function AddisonsDiseaseePage() {
             pet-food portion scales, kitchen gram
             scales, cooling mats, cooling vests, and
             high-value vet-visit treats already live on
-            other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -203,52 +168,23 @@ export default function AddisonsDiseaseePage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog Addison&apos;s daily-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page daily-tablet, injection-window, and
-              crisis-ID copy — dog pill pockets, a
-              dry-erase monthly calendar, and a dog
-              medical-alert collar tag. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a Percorten /
-              Zycortal / Florinef / fludrocortisone /
-              DOCP / prednisone / trilostane / Vetoryl /
-              insulin hop, they are not the #1052
-              gravity-waterer / extra-large-pee-pad /
-              cooling-bandana hops, they are not the
-              #1051 self-warming-mat / fleece-sweater /
-              slicker-brush hops, they are not the #1050
-              lymph-node-chart / foam-stair / ear-wipe
-              hops, they are not the #1049 sling /
-              hind-paw-bootie / hip-brace hops, they are
-              not the #1048 grooming-glove / analog-scale
-              / finger-brush hops, they are not AM/PM or
-              monthly pill-organizer hops, they are not
-              engraved-collar-ID or slide-on-tag hops,
-              they are not washable-pee-pad / fountain /
-              ceramic-bowl / cooling-mat hops, they are
-              not digital-pet-scale or first-aid-kit
-              hops, and they do not replace a
-              veterinarian. Dog.com earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+pill+pockets?s=health-addisons-disease"
                 amazonLabel="Browse dog pill pockets on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/dry+erase+monthly+calendar?s=health-addisons-disease"
-                amazonLabel="Browse dry-erase monthly calendars on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=health-addisons-disease"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+medical+alert+collar+tag?s=health-addisons-disease"
                 amazonLabel="Browse dog medical-alert collar tags on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

@@ -111,37 +111,16 @@ export default function GoldenRetrieverBreedPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the golden-retriever checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Golden Retriever checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-tweedmouth-highland-retrieve-chart,
-            dog-slicker-brush-golden-double-coat, and
-            canine-first-owner-golden-retriever-handbook notes that
-            match the mid-1800s Lord Tweedmouth / Scottish Highland
-            waterfowl retrieve story, the dense double coat that sheds
-            year-round and wants 2–3× weekly brushing, and first-time-
-            owner notes on this page — a laminated dog Tweedmouth
-            Highland retrieve chart so the Guisachan / waterfowl notes
-            are posted on the fridge (not a breeds-hub profile chart,
-            not a lymph-node anatomy chart), a slicker for the Golden
-            double coat so spring-and-fall blowouts stay off the sofa
-            (not a generic slicker-brush-dog-grooming hop, not a
-            crate hop), and a first-owner Golden Retriever handbook
-            so the YES-typically family-retriever grounding is a
-            physical kitchen book (not a canine-breeds-reference
-            handbook). Educational kitchen checklist, not a ranked
-            product list, not a substitute for a veterinarian.
-            Dog.com does not sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Golden Retriever checklist"
-            subtitle="Email the Tweedmouth Highland retrieve chart, Golden double-coat slicker, and first-owner handbook notes. No spam."
-            ctaText="Email my golden-retriever checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-golden-retriever-under-hero"
           />
         </div>
@@ -226,34 +205,20 @@ export default function GoldenRetrieverBreedPage() {
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                 Shop the Golden Retriever home kit
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the on-page
-                mid-1800s Lord Tweedmouth / Scottish Highland
-                waterfowl retrieve story, the dense Golden double
-                coat that sheds year-round, and first-time-owner
-                notes — a laminated dog Tweedmouth Highland retrieve
-                chart, a slicker for the Golden double coat, and a
-                first-owner Golden Retriever handbook. Educational
-                kitchen searches only. They are not a ranked product
-                list, they are not a crate hop, they are not a
-                first-aid-kit hop, and they do not replace a
-                veterinarian. Dog.com does not sell insurance.
-                Dog.com earns a commission on qualifying purchases
-                at no extra cost to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+tweedmouth+highland+retrieve+chart?s=breed-golden-retriever"
-                  amazonLabel="Browse laminated dog Tweedmouth Highland retrieve charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-golden-retriever"
+                  amazonLabel="Shop on Amazon"
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
                   amazonLabel="Browse slickers for the Golden double coat on Amazon →"
                 />
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+first+owner+golden+retriever+handbook?s=breed-golden-retriever"
-                  amazonLabel="Browse first-owner Golden Retriever handbooks on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-golden-retriever"
+                  amazonLabel="Shop on Amazon"
                 />
               </div>
             </div>

@@ -167,9 +167,9 @@ export default function FerretStarterKitPage() {
           variant="section"
           siteId="ferret-com"
           source="ferret-starter-kit"
-          title="Free: First-Year Ferret Care Checklist"
+          title="Owner notes"
           subtitle="Vaccines, vet visits, dietary milestones, and warning signs to watch for — the first 12 months by week."
-          ctaText="Email me the checklist"
+          ctaText="Send the notes"
         />
       </section>
     </article>

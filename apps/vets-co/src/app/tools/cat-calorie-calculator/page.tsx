@@ -186,17 +186,13 @@ export default function CatCalorieCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Daily cat kcal worksheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the daily kcal target — RER, DER, and cups-per-day from your food label — so you
-            can portion tomorrow without re-running the math. Planning / wellness reference only —
-            not a diagnosis. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
             title="Daily cat kcal worksheet"
-            subtitle="Email the daily kcal target — RER, DER, and cups-per-day so you can portion tomorrow. No spam."
-            ctaText="Email my cat kcal target"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-cat-calorie-calculator-under-hero"
           />
         </div>
@@ -218,15 +214,7 @@ export default function CatCalorieCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              Foods vary widely in calorie density, so the label kcal/cup figure is what turns DER
-              into a bowl amount. A kitchen gram scale beats a measuring cup. A slow-feeder bowl or
-              interactive feeder stretches a measured ration without adding calories. Low-calorie
-              treats belong in the 10% treat budget. These are Amazon category searches — not a
-              ranked product list and not a diet plan. Ask your veterinarian which foods and
-              portions fit your cat. Vets.co earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator"
@@ -248,7 +236,7 @@ export default function CatCalorieCalculatorPage() {
                 amazonHref="/go/amazon-brand/low+calorie+cat+treats?s=tools-cat-calorie-calculator"
                 amazonLabel="Browse low-calorie cat treats on Amazon →"
               />
-            </div>
+          </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Calibrate the target with the{' '}

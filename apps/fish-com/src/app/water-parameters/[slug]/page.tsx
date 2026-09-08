@@ -300,42 +300,16 @@ export default async function ParameterPage({ params }: PageProps) {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the param-spoke checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Param-spoke checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-fish-param-spoke-range-chart,
-            fridge-param-spoke-crash-card, and
-            aquarium-param-spoke-handbook notes that
-            match this remaining {param.name} spoke —
-            the at-a-glance symbol / unit / common-problem
-            row, the setup-target ranges, and the
-            how-to-test / raise / lower copy — a
-            laminated fish param-spoke range chart so
-            this remaining-parameter map is posted on
-            the fridge (not a hub weekly-test-order
-            chart, not a health-spoke urgency chart),
-            a fridge param-spoke crash card so the
-            common-problem / out-of-range notes are
-            labeled in the kitchen (not a hub
-            nitrate-export card, not a health ER-flag
-            card), and a param-spoke handbook so the
-            how-to-test / raise / lower row is a
-            physical kitchen book (not a hub
-            water-parameter handbook, not a
-            health-spoke handbook). Educational kitchen
-            checklist, not a ranked product list, not a
-            medication hop, not a substitute for an
-            aquatic veterinarian. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Param-spoke checklist"
-            subtitle="Email the range chart, crash card, and param-spoke handbook notes. No spam."
-            ctaText="Email my param-spoke checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source={`water-parameters-${param.slug}-under-hero`}
           />
         </div>
@@ -572,39 +546,14 @@ export default async function ParameterPage({ params }: PageProps) {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the param-spoke kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page at-a-glance symbol / unit /
-            common-problem row, setup-target ranges,
-            and how-to-test / raise / lower copy — a
-            laminated fish param-spoke range chart, a
-            fridge param-spoke crash card, and an
-            aquarium param-spoke handbook. Educational
-            kitchen searches only. They are not a
-            ranked product list, they are not a
-            water-parameters-hub test-kit hop, they are
-            not a health-spoke hop, they are not a
-            medication hop, they are not a flea /
-            heartworm / vaccine hop, and they do not
-            replace an aquatic veterinarian. Fish.com
-            earns a commission on qualifying purchases
-            at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+fish+param+spoke+range+chart?s=water-param-spoke"
-              amazonLabel="Browse laminated fish param-spoke range charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/fish+fridge+param+spoke+crash+card?s=water-param-spoke"
-              amazonLabel="Browse fridge fish param-spoke crash cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aquarium+param+spoke+handbook?s=water-param-spoke"
-              amazonLabel="Browse aquarium param-spoke handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/aquarium+supplies?s=water-param-spoke"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

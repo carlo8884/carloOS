@@ -165,43 +165,16 @@ export default function BreedersCupPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the breeders-cup checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Breeders-cup checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-breeders-cup-division-chart,
-              stall-door-classic-dirt-card, and
-              equine-win-and-youre-in-handbook notes
-              that match the two-day-divisional-championships,
-              classic-dirt-mile-and-a-quarter, and
-              win-and-youre-in copy on this page — a
-              laminated horse breeders-cup division chart
-              so the Classic / Distaff / Juvenile notes
-              are posted on the stall door (not a
-              derby-preakness-belmont chart, not a
-              race-class maiden-claiming chart), a horse
-              stall-door Classic dirt card so the 1.25-mile
-              / Horse of the Year notes are labeled at the
-              barn (not a Belmont test card, not a
-              graded-stakes card), and an equine Win and
-              You&apos;re In handbook so the Challenge
-              Series / foal-stallion nomination grounding
-              is a physical barn book (not a
-              thirteen-winner handbook, not a
-              condition-book handbook). Educational barn
-              checklist, not a ranked race list, not a
-              first-aid-kit hop, and not a substitute for
-              a veterinarian. Horses.com does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Breeders-cup checklist"
-              subtitle="Email the breeders-cup division chart, Classic dirt card, and Win-and-You-re-In handbook notes. No spam."
-              ctaText="Email my breeders-cup checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-breeders-cup-under-hero"
             />
           </div>
@@ -262,44 +235,18 @@ export default function BreedersCupPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs triple-crown /
               race-types hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the breeders-cup barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page two-day-divisional-championships,
-              classic-dirt-mile-and-a-quarter, and
-              win-and-youre-in copy — a laminated horse
-              breeders-cup division chart, a horse
-              stall-door Classic dirt card, and an equine
-              Win and You&apos;re In handbook. Educational
-              barn searches only. They are not a ranked
-              race list, they are not a triple-crown /
-              race-types hop, they are not a first-aid-kit
-              hop, they are not a child toothbrush hop,
-              and they do not replace a veterinarian.
-              Horses.com does not sell insurance.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+breeders+cup+division+chart?s=racing-breeders-cup"
-                amazonLabel="Browse laminated horse breeders-cup division charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-breeders-cup"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+classic+dirt+card?s=racing-breeders-cup"
-                amazonLabel="Browse horse stall-door Classic dirt cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+win+and+youre+in+handbook?s=racing-breeders-cup"
-                amazonLabel="Browse equine Win-and-You-re-In handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

@@ -218,33 +218,16 @@ export default function FerretAdrenalDiseasePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret adrenal comfort-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret adrenal comfort-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes — a ruled marble
-              composition notebook so the first hair-thinning
-              date, vulvar-swelling start, and each deslorelin
-              implant date stay written down, a soft cotton
-              receiving blanket so an alopecic ferret has an
-              extra warm layer that is not a fleece sleep
-              sack, and an activated-charcoal odor absorber
-              so the intensified musky odor has a cage-side
-              filter instead of a fragrance spray. Educational
-              comfort-kit checklist, not a diagnosis and not
-              a substitute for an exotic-mammal veterinarian.
-              Deslorelin, Suprelorin, melatonin implants,
-              mitotane, ketoconazole, and compounded meds stay
-              off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret adrenal comfort-kit checklist"
-              subtitle="Email the notebook, receiving-blanket, and charcoal-absorber notes. No spam."
-              ctaText="Email my ferret adrenal comfort-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-adrenal-disease-under-hero"
             />
           </div>
@@ -697,15 +680,7 @@ export default function FerretAdrenalDiseasePage() {
             not treatments. They do not diagnose or treat adrenal
             disease, they do not replace a deslorelin implant or
             adrenalectomy, they do not set a hormone-panel number,
-            and they are not a ranked product list. Fleece sleep
-            sacks, hammocks, bonding pouches, small-animal slickers,
-            metal combs, lint rollers, enzymatic cleaners, digital
-            pet scales, and pet heating pads already live on other
-            pages. This page does not hop deslorelin, Suprelorin,
-            melatonin implants, mitotane, ketoconazole, or Rx
-            ASINs. This page does not hop diagnosis kits that imply
-            treatment. This page does not claim hands-on testing.
-          </p>
+            and they are not a ranked product list. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -745,32 +720,9 @@ export default function FerretAdrenalDiseasePage() {
               not an empty hop button. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret adrenal comfort kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page hair-loss-timeline, alopecia-warmth,
-              and intensified-odor copy — a ruled marble
-              composition notebook, a soft cotton receiving
-              blanket, and an activated-charcoal odor
-              absorber. Everyday physical supplies only.
-              They are not a ranked product list, they are
-              not a deslorelin / Suprelorin hop, they are
-              not a #1095 sponge-filter / nano-heater /
-              water-jug hop, they are not a #1094
-              soaking-pail / feed-tub-rock / apple-wedger
-              hop, they are not a #1093 kitchen-timer /
-              message-pad / pet-carrier hop, they are not
-              a #1092 floor-bowl / wobble-dispenser /
-              hourglass hop, they are not a #1091
-              laminating-pouch / 72-hour-timer / travel-bowl
-              hop, they are not a sleep-sack / slicker /
-              enzymatic-cleaner hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ruled+marble+composition+notebook?s=health-adrenal-disease"
@@ -784,7 +736,7 @@ export default function FerretAdrenalDiseasePage() {
                 amazonHref="/go/amazon-brand/activated+charcoal+odor+absorber?s=health-adrenal-disease"
                 amazonLabel="Browse activated-charcoal odor absorbers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ReviewCard

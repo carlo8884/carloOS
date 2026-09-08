@@ -117,43 +117,16 @@ export default function BeetPulpPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the beet-pulp soaking checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Beet-pulp soaking checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the fine-mesh-feed-colander,
-              long-handled-feed-mixing-paddle, and
-              silicone-feed-tub-scraper notes that match
-              the soak-with-plenty-of-water,
-              stir-into-a-mash, and
-              soak-fresh-each-feed copy on this
-              page — a fine-mesh horse feed colander so
-              soaked shreds drain after about 30 minutes
-              instead of being served as soup (not a
-              hay-soaking tub, not a feed-soaking tub,
-              not a lidded 5-gallon soaking pail, not a
-              hay-soaking bag), a long-handled horse
-              feed mixing paddle so dry pulp is stirred
-              into plenty of water and supplements are
-              mixed through the mash (not a small rubber
-              mixing pan, not a marked grain scoop, not
-              a dental mash hop), and a silicone horse
-              feed-tub scraper so leftover mash is
-              scraped out before the next soak ferments
-              in heat (not stackable feed tubs, not
-              feed-tub rocks). Educational barn
-              checklist, not a treatment, and not a
-              substitute for calling the veterinarian.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Beet-pulp soaking checklist"
-              subtitle="Email the colander, mixing-paddle, and tub-scraper notes. No spam."
-              ctaText="Email my beet-pulp soaking checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-beet-pulp-under-hero"
             />
           </div>
@@ -203,10 +176,8 @@ export default function BeetPulpPage() {
             (that lives on heaves), a mixing-pan hop
             (that lives on ration-balancers), or the
             molasses-free-shreds / beet-pulp-pellets
-            ReviewCards below. This page does not hop
-            medications or vaccines. This page does
-            not claim hands-on testing.
-          </p>
+            ReviewCards below. This page does
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -294,27 +265,9 @@ export default function BeetPulpPage() {
               (kept on the ReviewCards below). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the beet-pulp soaking barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page soak-with-plenty-of-water,
-              stir-into-a-mash, and
-              soak-fresh-each-feed copy — a fine-mesh
-              horse feed colander, a long-handled horse
-              feed mixing paddle, and a silicone horse
-              feed-tub scraper. Educational barn
-              searches only. They are not a ranked
-              product list, they are not a
-              hay-soaking-tub or feed-soaking-tub hop,
-              they are not a mixing-pan or dental-mash
-              hop, they are not the molasses-free-shreds
-              / beet-pulp-pellets ReviewCards, and they
-              do not replace a veterinarian. Horses.com
-              earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/fine+mesh+horse+feed+colander?s=nutrition-beet-pulp"
@@ -328,7 +281,7 @@ export default function BeetPulpPage() {
                 amazonHref="/go/amazon-brand/silicone+horse+feed+tub+scraper?s=nutrition-beet-pulp"
                 amazonLabel="Browse silicone horse feed-tub scrapers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Beet Pulp Picks</h2>

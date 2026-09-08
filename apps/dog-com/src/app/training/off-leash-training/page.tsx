@@ -145,33 +145,16 @@ export default function OffLeashTrainingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the off-leash recall checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Off-leash recall checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the off-leash recall-proofing checklist, 20-to-30-foot long-line question card,
-              and recall-cue-poisoning watch log that match the why-recalls-fail, long-line, breed-reality,
-              and maintaining-recall copy on this page — a laminated dog off-leash recall-proofing checklist
-              so systematically-practicing-recall-against-increasing-distractions / reliability-is-high-but-never-absolute
-              / ninety-five-percent-plus-in-high-distraction-environments stay visible before anyone drops the leash
-              (not a laminated horse snaffle-vs-curb bit checklist, not a laminated horse peacock-vs-breakaway
-              stirrup checklist, not a loose-leash stop-and-wait protocol card), a dog 20-to-30-foot long-line
-              question card so a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness /
-              gather-the-line-hand-over-hand-no-jerking / long-line-first-in-every-new-environment stays posted
-              (not a dog+long+line+leash hop from basic-commands, not a 6-ft walk leash, not an indoor house-line),
-              and a dog recall-cue never-punish watch log notebook so never-use-the-recall-cue-for-anything-unpleasant /
-              never-punish-a-dog-that-comes / the-recall-must-always-be-positive stay written down (not a horse bit
-              hand-severity watch log, not a leash-reactivity protocol). Educational training tools only, not a
-              ranked product list, not a clinic listing, and not a substitute for a qualified trainer. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Off-leash recall checklist"
-              subtitle="Email the proofing checklist, long-line card, and never-punish recall log. No spam."
-              ctaText="Email my off-leash recall checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="training-off-leash-training-under-hero"
             />
           </div>
@@ -190,20 +173,7 @@ export default function OffLeashTrainingPage() {
             absolute rule of recall training is: never call your dog to you for anything they perceive as
             unpleasant, and never punish a dog for coming to you, regardless of how long it took.
           </p>
-          <p>
-            A laminated dog off-leash recall-proofing checklist is how
-            systematically-practicing-recall-against-increasing-distractions,
-            reliability-is-high-but-never-absolute, and
-            ninety-five-percent-plus-in-high-distraction-environments stay visible before anyone drops the
-            leash — it is not a laminated horse snaffle-vs-curb bit checklist (that lives on bits-guide), not
-            a laminated horse peacock-vs-breakaway stirrup checklist (that lives on stirrups-and-safety), and
-            not a loose-leash stop-and-wait protocol (that lives on loose-leash-walking). A dog
-            recall-cue never-punish watch log notebook is how never-use-the-recall-cue-for-anything-unpleasant,
-            never-punish-a-dog-that-comes, and the-recall-must-always-be-positive stay written down — it is
-            not a horse bit hand-severity watch log notebook (that lives on bits-guide). This page does not
-            hop puppy+training+treats, dog+training+clicker, or front-clip no-pull harness searches already
-            pinned on other training pages.
-          </p>
+          
 
           <h2>The Long Line — The Training Tool</h2>
           <p>
@@ -226,9 +196,7 @@ export default function OffLeashTrainingPage() {
             gather-the-line-hand-over-hand-no-jerking, and long-line-first-in-every-new-environment stay
             posted — it is not a dog+long+line+leash hop (that lives on basic-commands), not a 6-ft dog leash
             (that lives on loose-leash-walking), not an indoor dog house-line (that lives on dog-bloat-gvd),
-            and not a 2-foot nylon traffic lead (that lives on heartworm). This page does not hop
-            retractable leashes, shock collars, or invented ASINs.
-          </p>
+            and not a 2-foot nylon traffic lead (that lives on heartworm). </p>
 
           <h2>Breed Reality — Not All Dogs Can Be Off-Leash</h2>
           <p>
@@ -257,12 +225,7 @@ export default function OffLeashTrainingPage() {
             repetition to maintain the expectation that recall sometimes produces a jackpot. Keep the recall
             a game the dog actively wants to play.
           </p>
-          <p>
-            The same laminated dog off-leash recall-proofing checklist is how
-            practice-recall-multiple-times-per-walk and reward-every-third-to-fifth-repetition stay visible
-            after the first 95%+ proofed session — it is not a socialization-window card (that lives on
-            dog-socialization-window) and not a puppy-schedule card (that lives on training/puppy-schedule).
-          </p>
+          
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -280,24 +243,13 @@ export default function OffLeashTrainingPage() {
               heartworm 2+foot+nylon+traffic+lead. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop the off-leash leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page why-recalls-fail, long-line, breed-reality,
-              and maintaining-recall copy — a laminated dog off-leash recall-proofing checklist, a dog
-              20-to-30-foot long-line question card, and a dog recall-cue never-punish watch log notebook.
-              Educational training searches only. They are not a ranked product list, they are not a clinic
-              listing, they are not a #1149 laminated snaffle-vs-curb / width-and-wrinkle / hand-severity hop,
-              they are not a #1148 laminated peacock-vs-breakaway / width-inch-clearance / drag-entrapment hop,
-              they are not a basic-commands dog+long+line+leash hop, they are not a loose-leash 6-ft leash or
-              front-clip no-pull harness hop, they are not an indoor house-line hop, they are not a 2-foot
-              traffic-lead hop, and they do not replace a qualified trainer. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+off+leash+recall+proofing+checklist?s=training-off-leash-training"
-                amazonLabel="Browse laminated dog off-leash recall-proofing checklists on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=training-off-leash-training"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+20+to+30+foot+long+line+question+card?s=training-off-leash-training"
@@ -307,7 +259,7 @@ export default function OffLeashTrainingPage() {
                 amazonHref="/go/amazon-brand/dog+recall+cue+never+punish+watch+log+notebook?s=training-off-leash-training"
                 amazonLabel="Browse dog recall-cue never-punish watch log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

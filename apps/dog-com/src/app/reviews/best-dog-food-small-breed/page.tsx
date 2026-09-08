@@ -36,32 +36,16 @@ export default function BestSmallBreedFoodPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the small-breed-food checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Small-breed-food checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the small-breed notes that match
-                the ranking copy on this page — higher
-                calorie density per pound, kibble sized
-                for small mouths, Royal Canin Small
-                Adult for the dental-engineered kibble,
-                and Purina Pro Plan Small &amp; Toy for
-                30% protein plus live probiotics.
-                Educational small-breed checklist, not
-                a new product hop, not a first-aid-kit
-                hop, and not a substitute for a
-                veterinarian. The existing Royal Canin
-                and Purina Chewy searches stay below.
-                No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Small-breed-food checklist"
-                subtitle="Email the kibble-size, Royal Canin, and 30% protein notes. No spam."
-                ctaText="Email my small-breed-food checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-food-small-breed-under-hero"
               />
             </div>
@@ -105,7 +89,7 @@ export default function BestSmallBreedFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Dental Chews', href: '/reviews/best-dental-chews' }, { label: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }, { label: 'Yorkshire Terrier', href: '/breeds/yorkshire-terrier' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-small-breed-food" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-small-breed-food" />
           </aside>
         </div>
       </div>

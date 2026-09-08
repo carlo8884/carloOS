@@ -37,34 +37,16 @@ export default function BettaTankMatesPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the betta-fish-tank-mates-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Betta-fish-tank-mates-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Betta splendens tank-mate
-                notes that match the care copy on this
-                page — 10-gallon minimum (20 gallons
-                more reliable), add the betta last,
-                dense planting, observe 72 hours, and
-                Corydoras in 6+ or Otocinclus in 4–6
-                as typically ignored bottom dwellers.
-                Educational
-                betta-fish-tank-mates-setup checklist,
-                not a new product hop, not livestock,
-                and not a substitute for a fish
-                veterinarian. The existing betta-fish
-                tank-mates tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Betta-fish-tank-mates-setup checklist"
-                subtitle="Email the 10-gallon, add-betta-last, and 72-hour notes. No spam."
-                ctaText="Email my betta-fish-tank-mates-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-betta-fish-tank-mates-under-hero"
               />
             </div>

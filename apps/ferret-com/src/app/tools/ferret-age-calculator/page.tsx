@@ -166,19 +166,13 @@ export default function FerretAgeCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Ferret life-stage notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the kit / young adult / mature / senior recap and the shoppable
-            husbandry kit (ferret food, senior ferret food, digital pet scale,
-            hammock, carrier) so you can come back to the right stage without
-            re-running the estimate. Planning reference only — not a diagnosis.
-            No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
             title="Ferret life-stage notes"
-            subtitle="Email the ferret life-stage recap and husbandry kit. No spam."
-            ctaText="Email my ferret life-stage notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-ferret-age-calculator-under-hero"
           />
         </div>
@@ -201,16 +195,7 @@ export default function FerretAgeCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a life-stage kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that match the
-              life-stage label above — ferret food, senior ferret food, a digital
-              pet scale, a ferret hammock, and a carrier. They are not a ranked
-              product list, not invented inventory, and they do not diagnose a
-              health problem or set a care plan. Ask your exotic-mammal
-              veterinarian which stage-appropriate products fit your ferret.
-              Ferret.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+food?s=tools-ferret-age-calculator"
@@ -232,7 +217,7 @@ export default function FerretAgeCalculatorPage() {
                 amazonHref="/go/amazon-brand/ferret+carrier?s=tools-ferret-age-calculator"
                 amazonLabel="Browse ferret carriers on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

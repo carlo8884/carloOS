@@ -71,29 +71,16 @@ export default function PondGuidePage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the backyard-pond setup checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Backyard-pond setup checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the backyard-pond setup checklist that matches the 250-plus-gallons-per-koi,
-            45-mil-EPDM-liner, and one-pond-volume-per-hour filtration copy on this page —
-            plan adult size before digging (250+ gallons per koi, 100+ gallons per goldfish,
-            1,000+ gallons for four koi), excavate a 12–18 inch plant shelf plus a 3+ foot
-            center for temperature stability and heron refuge, lay fish-safe 45 mil EPDM over
-            underlayment, and size the pump for one pond volume per hour through a settlement
-            chamber, biofilter, and UV sterilizer. Educational setup notes only, not a ranked
-            product list, not livestock, and not a substitute for a fish veterinarian. The
-            existing pond-pump-filter-liner-kit Amazon search stays below. Empty Chewy
-            buttons stay hidden. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Backyard-pond setup checklist"
-            subtitle="Email the adult-size, 45-mil EPDM, and 1×-volume filtration notes. No spam."
-            ctaText="Email my backyard-pond setup checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-pond-guide-under-hero"
           />
         </div>
@@ -117,7 +104,7 @@ export default function PondGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Backyard Pond Setup — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
           </div>

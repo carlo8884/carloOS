@@ -150,29 +150,16 @@ export default function LaminitisPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the laminitis support-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse laminitis support-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine foam sole-support-pad, deep
-              sand stall-bedding, and easy-keeper grazing-
-              muzzle notes so the foot can rest on soft
-              footing, the sole can share load, and lush
-              grass stays limited while you wait for the
-              veterinarian. Educational support checklist,
-              not a treatment plan and not a substitute
-              for the veterinarian. Hoof boots, pine
-              shavings, and generic grazing muzzles stay
-              on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse laminitis support-kit checklist"
-              subtitle="Email the foam-pad, sand-bedding, and muzzle notes. No spam."
-              ctaText="Email my horse laminitis support-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-laminitis-under-hero"
             />
           </div>
@@ -253,7 +240,7 @@ export default function LaminitisPage() {
           <p>Tracking body condition is the single most reliable early-warning lever for at-risk horses; score yours with the <a href="/tools/body-condition-score">equine body-condition score tool</a>.</p>
 
           <h2 id="kit">Support kit</h2>
-          <p>Everyday physical supplies that match the soft-footing, sole-support, and metabolic-management copy on this page — an equine foam sole-support pad so the sole can share load away from the failing dorsal laminae, equine deep-sand stall bedding so box rest happens on a thick soft bed instead of hard ground, and an easy-keeper grazing muzzle so lush spring grass stays limited for the at-risk easy keeper. These are household barn tools, not treatments. They do not diagnose or treat laminitis, they do not replace a veterinarian or a farrier, and they are not a ranked product list. Hoof boots, hoof-pick brushes, snow pads, pine shavings, wood pellets, stall rubber mats, and the generic pasture-management grazing muzzle already live on other pages. This page does not hop Banamine, flunixin, bute, pergolide, NSAIDs, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the soft-footing, sole-support, and metabolic-management copy on this page — an equine foam sole-support pad so the sole can share load away from the failing dorsal laminae, equine deep-sand stall bedding so box rest happens on a thick soft bed instead of hard ground, and an easy-keeper grazing muzzle so lush spring grass stays limited for the at-risk easy keeper. These are household barn tools, not treatments. They do not diagnose or treat laminitis, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -277,28 +264,9 @@ export default function LaminitisPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse laminitis support kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page soft-footing, sole-support, and
-              metabolic-management copy — equine foam
-              sole-support pads, equine deep-sand stall
-              bedding, and an easy-keeper grazing muzzle.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              medication hop, they are not a diagnosis-
-              kit hop, they are not a #1062 thermometer /
-              stethoscope / fleece-cooler hop, they are
-              not a #1061 farrier-log / hoof-stand hop,
-              they are not a hoof-boot / snow-pad hop,
-              they are not a pine-shavings / wood-pellet
-              hop, they are not a generic horse-grazing-
-              muzzle hop, and they do not replace a
-              veterinarian. Horses.com earns a commission
-              on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis"
@@ -312,7 +280,7 @@ export default function LaminitisPage() {
                 amazonHref="/go/amazon-brand/easy+keeper+grazing+muzzle?s=health-laminitis"
                 amazonLabel="Browse easy-keeper grazing muzzles on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

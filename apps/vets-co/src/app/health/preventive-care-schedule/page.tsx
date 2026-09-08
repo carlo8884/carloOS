@@ -29,7 +29,7 @@ export default function PreventiveCareSchedulePage() {
         ]}
         sidebar={<>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-preventive-care" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-preventive-care" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -37,47 +37,16 @@ export default function PreventiveCareSchedulePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog preventive-care visit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog preventive-care visit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the cadence, clinic-ride, and
-              senior-visit notes that match the puppy
-              6–16 week, adult annual, and senior
-              every-6-months copy on this page — a
-              wall-mounted magnetic monthly planner so
-              the 6–8 / 10–12 / 14–16 week puppy
-              series and the adult annual / senior
-              six-month slots stay on the fridge
-              instead of a guess, a waterproof rear
-              seat hammock so the ride to the wellness
-              exam does not soak the back seat, and a
-              folding four-wheel dog stroller so a
-              senior who now gets a pain and mobility
-              assessment every six months can still
-              make the lobby. Educational checklist,
-              not a ranked product list, not a
-              substitute for the veterinarian who
-              chooses the vaccines and preventives,
-              and not a Heartgard / Bravecto / NexGard
-              / Simparica / ProHeart hop. Hardcover
-              weekly appointment planners already live
-              on pain-management-dogs. Dry-erase
-              monthly calendars already live on
-              dog.com Addison&apos;s. Dog seat-belt
-              tethers already live on dog.com
-              vaccinations. Soft-sided vet-visit
-              carriers already live on dog.com
-              heartworm-prevention. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog preventive-care visit checklist"
-              subtitle="Email the planner, seat-hammock, and stroller notes. No spam."
-              ctaText="Email my dog preventive-care visit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-preventive-care-schedule-under-hero"
             />
           </div>
@@ -122,7 +91,7 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>The same magnetic monthly planner is how the annual wellness slot and the every-6-months dental / weight / BCS check stay dated. Wide-platform veterinary floor scales and kitchen gram scales already live on other pages — this page does not hop a scale. A waterproof rear seat hammock is still the clinic-ride layer for the annual heartworm test and fecal exam. Heartgard, Sentinel, Interceptor, ProHeart, Bravecto, NexGard, and Simparica are clinic or pharmacy preventives, not shoppable hops.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Senior Dog Schedule (7+ Years)</h2>
           <div className="overflow-x-auto mb-6">
@@ -143,12 +112,12 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>A folding four-wheel dog stroller is how a senior who now has a pain and mobility assessment every six months still reaches the lobby — it is not carpeted wooden pet steps, not a dog ramp, and not an elevated mesh dog cot. It does not treat arthritis and it does not replace the veterinarian who reads that mobility exam. The magnetic planner still holds the six-month slot. The rear seat hammock still covers the ride when the dog can climb in. Letter-size plastic file boxes already live on senior-pet-care; this page does not hop a records box.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Year-Round Parasite Prevention</h2>
           <p><strong>Heartworm:</strong> Monthly oral preventives (Heartgard, Sentinel, Interceptor Plus) or 6-month injectable ProHeart 6/12. Annual heartworm antigen test required for all dogs on prevention — to detect infection before starting prevention and to verify ongoing efficacy. A dog that misses doses or has a lapse in coverage should be tested before restarting prevention.</p>
-          <p><strong>Flea and tick:</strong> Year-round in most of the US — fleas are active in temperatures above 45°F, which occurs year-round in most climates. Oral isoxazoline products (Bravecto 12-week, NexGard monthly, Simparica monthly) provide the most reliable efficacy. Tick-borne disease (Lyme, Anaplasmosis, Ehrlichiosis, Rocky Mountain Spotted Fever) warrants tick prevention everywhere ticks are found — not only in endemic Lyme regions. Tick-removal hooks, flea combs, reel lawn mowers, and waterproof dog duvet covers already live on other pages. This page does not hop those, and it does not rank Bravecto, NexGard, Simparica, Frontline, Advantage, or Seresto.</p>
-          <p><strong>Intestinal parasites:</strong> Annual or biannual fecal examination detects roundworms, hookworms, whipworms, Giardia, and Coccidia — some of which are zoonotic (transmissible to humans, including children). Monthly heartworm preventives (Heartgard, Interceptor) also prevent and control common intestinal parasites. Giardia requires specific antigen testing separate from standard fecal flotation. Fecal-sample collection kits already live on dog.com wellness-exam; this page does not hop a sample kit.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Visit-cadence kit</h2>
           <p>
@@ -270,7 +239,7 @@ export default function PreventiveCareSchedulePage() {
               hop, and they do not replace a
               veterinarian. Vets.co earns a commission
               on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
+              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

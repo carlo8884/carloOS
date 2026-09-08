@@ -49,49 +49,23 @@ export default function CushingDiseasePage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cushings" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog Cushing&apos;s thirst-and-comfort checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog Cushing&apos;s thirst-and-comfort checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the PU/PD water, nighttime-pad, and
-              panting-cool notes — a gallon gravity dog
-              waterer so a dog drinking dramatically more
-              (sometimes needing water overnight) has a
-              refill that lasts, extra-large disposable
-              dog pee pads so nighttime urination has a
-              mapped indoor backup, and a dog cooling
-              bandana so excessive panting has a physical
-              cool-down layer. Educational checklist, not
-              a trilostane product list, not a Vetoryl /
-              Lysodren / mitotane hop, and not a
-              prescription. Endocrine testing and dose
-              decisions still belong with a veterinarian.
-              Self-warming mats, fleece sweaters, slicker
-              brushes, lymph-node anatomy charts, foam
-              dog stairs, ear wipes, assisted-walking
-              slings, hind-paw booties, hip braces,
-              silicone grooming gloves, analog bathroom
-              scales, dog dental finger brushes, cooling
-              mats, cooling vests, washable pee pads,
-              water fountains, ceramic bowls, digital
-              pet-food portion scales, and clinic-visit
-              carriers stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
               title="Dog Cushing's thirst-and-comfort checklist"
-              subtitle="Email the gravity-waterer, extra-large pee-pad, and cooling-bandana notes. No spam."
-              ctaText="Email my dog Cushing's thirst-and-comfort checklist"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-cushing-disease-under-hero"
             />
           </div>
@@ -132,8 +106,7 @@ export default function CushingDiseasePage() {
             cannot open fast enough, and a dog cooling
             bandana so excessive panting has a physical
             cool-down layer instead of a cooling mat or
-            cooling vest already used on other pages.
-            These are household comfort and monitoring
+            cooling vest already used on other pages. These are household comfort and monitoring
             tools, not treatments. They do not diagnose
             Cushing&apos;s, they do not replace UCCR / LDDS
             / ACTH stimulation testing, they do not set
@@ -141,22 +114,9 @@ export default function CushingDiseasePage() {
             replace 10–14-day and every-3-month ACTH
             monitoring, and they are not Vetoryl,
             Lysodren, mitotane, prednisone, insulin, or
-            a ranked endocrine product list.
-            Self-warming dog mats, fleece dog sweaters,
-            dog slicker brushes, lymph-node anatomy
-            charts, foam dog stairs, dog ear wipes,
-            assisted-walking slings, hind-paw booties,
-            hip braces, silicone dog grooming gloves,
-            analog bathroom scales, dog dental finger
-            brushes, washable dog pee pads, puppy
-            training pads, dog water fountains, ceramic
-            water bowls, digital pet-food portion
-            scales, kitchen gram scales, cooling mats,
-            cooling vests, and high-value vet-visit
-            treats already live on other pages. This
+            a ranked endocrine product list. This
             page does not hop medications. This page
-            does not claim hands-on testing.
-          </p>
+            does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -190,33 +150,9 @@ export default function CushingDiseasePage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog Cushing&apos;s thirst-and-comfort kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page thirst, nighttime-urination, and
-              panting copy — a gallon gravity dog
-              waterer, extra-large disposable dog pee
-              pads, and a dog cooling bandana. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not a
-              Vetoryl / Lysodren / trilostane / mitotane
-              / prednisone / insulin hop, they are not
-              the #1051 self-warming-mat / fleece-sweater
-              / slicker-brush hops, they are not the
-              #1050 lymph-node-chart / foam-stair /
-              ear-wipe hops, they are not the #1049
-              sling / hind-paw-bootie / hip-brace hops,
-              they are not the #1048 grooming-glove /
-              analog-scale / finger-brush hops, they are
-              not washable-pee-pad / fountain / ceramic-bowl
-              / cooling-mat hops, they are not
-              digital-pet-scale or first-aid-kit hops,
-              and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/gallon+gravity+dog+waterer?s=health-cushing-disease"
@@ -230,7 +166,7 @@ export default function CushingDiseasePage() {
                 amazonHref="/go/amazon-brand/dog+cooling+bandana?s=health-cushing-disease"
                 amazonLabel="Browse dog cooling bandanas on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

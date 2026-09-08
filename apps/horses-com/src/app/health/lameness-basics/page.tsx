@@ -128,11 +128,9 @@ export default function LamenessBasicsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the lameness spot-and-describe checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse lameness spot-and-describe checklist
-            </h2>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Email the 30-foot-cotton-lunge-line,
               leather-chain-lead-shank, and
@@ -153,9 +151,9 @@ export default function LamenessBasicsPage() {
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse lameness spot-and-describe checklist"
-              subtitle="Email the lunge-line, lead-shank, and traffic-cone notes. No spam."
-              ctaText="Email my horse lameness spot-and-describe checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-lameness-under-hero"
             />
           </div>
@@ -187,7 +185,7 @@ export default function LamenessBasicsPage() {
           </ul>
 
           <h2 id="workup">The Veterinary Workup</h2>
-          <p>A veterinary lameness examination follows a logical sequence: history and visual exam, palpation, hoof testers, watching the horse move in hand and on the lunge, flexion tests, and then -- to pinpoint the source -- diagnostic nerve and joint blocks that temporarily numb specific regions. Once localized, imaging (radiography, ultrasound, and where needed MRI or CT) reveals the structural problem. This systematic approach is why an accurate diagnosis usually needs a veterinarian rather than guesswork. This page does not hop hoof testers, nerve-block supplies, or imaging equipment — those stay in the veterinary workup, not the owner spot-and-describe kit.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="when">When to Call the Vet</h2>
           <ul>
@@ -301,7 +299,7 @@ export default function LamenessBasicsPage() {
               and they do not replace a veterinarian.
               Horses.com earns a commission on
               qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
+              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

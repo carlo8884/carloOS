@@ -109,48 +109,16 @@ export default function GoldenRetrieverHealthPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Golden Retriever cancer-watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Golden Retriever cancer-watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the lymph-node, stair, and ear-cleaning
-              notes — a dog lymph-node anatomy chart so the
-              monthly lymphoma check (under the jaw, in
-              front of the shoulders, in the groin, and
-              behind the knees) stays a mapped habit from
-              middle age, foam dog stairs so hip- and
-              elbow-dysplasia reluctance to climb stairs
-              and stiffness after exercise have a low-impact
-              indoor step instead of jumping, and dog ear
-              wipes so regular ear cleaning can catch
-              recurrent ear infections that come with
-              atopic dermatitis. Educational checklist, not
-              a chemotherapy product list, not an Apoquel
-              or Cytopoint hop, and not a prescription.
-              Abdominal ultrasound, echocardiogram, T4
-              bloodwork, and oncology referral still belong
-              with a veterinarian. Assisted-walking slings,
-              hind-paw booties, hip braces, silicone
-              grooming gloves, analog bathroom scales, dog
-              dental finger brushes, resting respiratory
-              rate notebooks, one-minute kitchen timers,
-              step-in padded harnesses, medical-records
-              binders, AM/PM weekly pill organizers,
-              hanging luggage scales, penlights, emergency
-              contact cards, stretchers, vaccination record
-              books, seat-belt tethers, puppy mats,
-              mosquito dunks, monthly pill organizers, and
-              clinic-visit carriers stay on other pages.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Golden Retriever cancer-watch checklist"
-              subtitle="Email the lymph-node-chart, foam-stair, and ear-wipe notes. No spam."
-              ctaText="Email my Golden Retriever cancer-watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-golden-retriever-health-under-hero"
             />
           </div>
@@ -325,10 +293,8 @@ export default function GoldenRetrieverHealthPage() {
             belly-support harnesses, knee braces,
             waterproof dog booties, orthopedic dog beds,
             dog ramps, and joint-support treats already
-            live on other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            live on other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -374,38 +340,9 @@ export default function GoldenRetrieverHealthPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the Golden Retriever cancer-watch kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page lymphoma lymph-node, hip-and-elbow
-              stair, and allergy ear-cleaning copy — a
-              dog lymph-node anatomy chart, foam dog
-              stairs, and dog ear wipes. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not an
-              Apoquel / Cytopoint / chemotherapy hop,
-              they are not the #1049 sling / hind-paw
-              bootie / hip-brace hops, they are not the
-              #1048 grooming-glove / analog-scale /
-              finger-brush hops, they are not the #1047
-              notebook / timer / harness hops, they are
-              not the #1046 binder / AM-PM
-              pill-organizer / luggage-scale hops, they
-              are not the #1045 penlight / contact-card
-              / stretcher hops, they are not the #1044
-              vaccine-record / seat-belt-tether /
-              puppy-mat hops, they are not the #1043
-              mosquito-dunk / monthly-pill-organizer /
-              clinic-carrier hops, they are not the
-              #1042 anemia gum-chart / recovery-food /
-              syringe hops, they are not digital-pet-scale
-              or first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+lymph+node+anatomy+chart?s=health-golden-retriever-health"
@@ -419,7 +356,7 @@ export default function GoldenRetrieverHealthPage() {
                 amazonHref="/go/amazon-brand/dog+ear+wipes?s=health-golden-retriever-health"
                 amazonLabel="Browse dog ear wipes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
         <h2 id="faq">FAQ</h2>

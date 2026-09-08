@@ -167,45 +167,16 @@ export default function FerretOdorScentControlPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret odor-control checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret odor-control checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-odor-source-map-chart,
-              fridge-bedding-wash-card, and
-              mustelid-odor-control-handbook notes
-              that match the sebaceous-not-anal-map,
-              bathing-backfires-log, and
-              quesenberry-afa-odor-grounding copy on this
-              page — a laminated ferret odor-source-map chart
-              so the skin-oil-musk / startle-burst /
-              room-is-husbandry map is posted on the fridge
-              (not a care-hub routine chart, not a
-              bath-less-frequency chart, not a supplies
-              buy-first chart), a ferret fridge bedding-wash
-              card so laundry-first / paper-pellet /
-              enzymatic-cleaner notes are labeled on the
-              fridge (not a shampoo-choice card, not a
-              paper-pellet training card, not a
-              tunnel-circuit card), and a mustelid
-              odor-control handbook so the Quesenberry / AFA
-              sebaceous-gland grounding is a physical kitchen
-              book (not a grooming-reference handbook, not an
-              enrichment-reference handbook, not a
-              litter-training handbook). Educational kitchen
-              checklist, not a ranked spray list, not a
-              sleep-sack hop, and not a substitute for an
-              exotic-mammal veterinarian. Ferret.com does not
-              sell insurance. Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret odor-control checklist"
-              subtitle="Email the odor-source-map-chart, fridge bedding-wash card, and odor-control-handbook notes. No spam."
-              ctaText="Email my ferret odor-control checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-odor-and-scent-control-under-hero"
             />
           </div>
@@ -388,46 +359,20 @@ export default function FerretOdorScentControlPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs care-hub /
-              bathing / exercise kitchen kits.
-              Directory import left untouched. Ferret
+              bathing / exercise kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret odor-control kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page sebaceous-not-anal-map,
-              bathing-backfires-log, and
-              quesenberry-afa-odor-grounding copy — a
-              laminated ferret odor-source-map chart, a
-              ferret fridge bedding-wash card, and a
-              mustelid odor-control handbook.
-              Educational kitchen searches only. They are
-              not a ranked spray list, they are not a
-              care-hub / bathing / exercise hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance. Ferret.com
-              earns a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+odor+source+map+chart?s=odor-and-scent-control"
-                amazonLabel="Browse laminated ferret odor-source-map charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=odor-and-scent-control"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+bedding+wash+card?s=odor-and-scent-control"
-                amazonLabel="Browse ferret fridge bedding-wash cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+odor+control+handbook?s=odor-and-scent-control"
-                amazonLabel="Browse mustelid odor-control handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

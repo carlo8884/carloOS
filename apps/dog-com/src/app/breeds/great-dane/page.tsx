@@ -38,7 +38,7 @@ export default function GreatDanePage() {
           { label: 'Great Dane vs Mastiff', href: '/compare/great-dane-vs-mastiff' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-great-dane" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-great-dane" />
       </>}
     >
       <div className="carloOS-article">
@@ -46,40 +46,16 @@ export default function GreatDanePage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the great-dane checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Great Dane checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-dane-boar-hunt-chart,
-            dog-fridge-dane-gastropexy-card, and
-            canine-first-owner-great-dane-handbook notes
-            that match the 1800s German boar-hunt origin, the
-            gastropexy-at-spay-neuter floor, and first-time-
-            owner notes on this page — a laminated dog Dane
-            boar-hunt chart so the mastiff-greyhound / estate-
-            guard notes are posted on the fridge (not a
-            Doodle F1B 75% chart, not a Cocker woodcock-
-            flush chart), a fridge Dane gastropexy card so
-            the GDV-rotation / 24-hour-ER notes are labeled
-            in the kitchen (not a Can-f-1 allergy card, not
-            a finger-toothbrush hop), and a first-owner
-            Great Dane handbook so the YES-typically /
-            7–10-year lifespan / 18–24-month giant-puppy
-            diet grounding is a physical kitchen book (not
-            a first-owner Goldendoodle handbook).
-            Educational kitchen checklist, not a ranked
-            product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Great Dane checklist"
-            subtitle="Email the boar-hunt chart, gastropexy card, and first-owner handbook notes. No spam."
-            ctaText="Email my great-dane checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-great-dane-under-hero"
           />
         </div>
@@ -111,35 +87,14 @@ export default function GreatDanePage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Great Dane home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            1800s German boar-hunt origin, the gastropexy-
-            at-spay-neuter floor, and first-time-owner notes
-            — a laminated dog Dane boar-hunt chart, a fridge
-            Dane gastropexy card, and a first-owner Great
-            Dane handbook. Educational kitchen searches
-            only. They are not a ranked product list, they
-            are not a crate hop, they are not a finger-
-            toothbrush hop, and they do not replace a
-            veterinarian. Dog.com does not sell insurance.
-            Dog.com earns a commission on qualifying
-            purchases at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+dane+boar+hunt+chart?s=breed-great-dane"
-              amazonLabel="Browse laminated dog Dane boar-hunt charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+dane+gastropexy+card?s=breed-great-dane"
-              amazonLabel="Browse fridge Dane gastropexy cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+great+dane+handbook?s=breed-great-dane"
-              amazonLabel="Browse first-owner Great Dane handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-great-dane"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -162,17 +162,13 @@ export default function BasicCommandsPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Five-command protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the sit / down / stay / come / leave-it teaching order, session
-            length, and the training kit (high-value treats, treat pouch, clicker,
-            long line) so you can run the protocol without scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Five-command protocol"
-            subtitle="Email the five-command teaching order, session length, and training kit. No spam."
-            ctaText="Email my five-command protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-basic-commands-under-hero"
           />
         </div>
@@ -190,8 +186,7 @@ export default function BasicCommandsPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a five-command kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Soft, pea-sized treats and a belt-clip pouch keep rewards in the
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Soft, pea-sized treats and a belt-clip pouch keep rewards in the
             1–2 second window. Pair them with a clicker (or a verbal &quot;yes&quot;)
             and a 15–30 foot long line for recall before you go off-leash. Same
             treat hop used on the{' '}
@@ -210,8 +205,7 @@ export default function BasicCommandsPage() {
             </Link>
             . They are not a ranked product list and they do not replace the
             teaching order. Dog.com earns a commission on qualifying purchases
-            at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"

@@ -140,35 +140,16 @@ export default function ResourceGuardingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the resource-guarding food-bowl checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Resource-guarding food-bowl checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the resource-guarding trade-game checklist, food-bowl safety question card, and
-              never-punish-growl watch log that match the why-guarding-exists, trade-game, management,
-              and professional-help copy on this page — a laminated dog resource-guarding trade-game
-              checklist so trade-always-means-getting-something-better / original-item-is-usually-returned
-              / always-trade-up stay visible before anyone reaches for a bowl or chew (not a laminated
-              dog off-leash recall-proofing checklist, not a laminated horse snaffle-vs-curb bit
-              checklist), a dog food-bowl safety question card so feed-the-dog-in-a-separate-room /
-              pick-up-high-value-chews-when-guests-arrive / baby-gates-to-separate-guarding-contexts stay
-              posted (not a single stainless floor dog bowl, not a heavy ceramic pet food bowl, not a
-              slow-feeder bowl, not an extra-tall baby gate, not a walk-through pet gate), and a dog
-              resource-guarding never-punish-growl watch log notebook so
-              punishing-a-growl-removes-the-warning-signal / never-punish-growling /
-              dog-that-stops-growling-before-biting-is-more-dangerous stay written down (not a dog
-              recall-cue never-punish watch log, not a horse bit hand-severity watch log). Educational
-              training tools only, not a ranked product list, not a clinic listing, and not a substitute
-              for a CAAB or DACVB. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Resource-guarding food-bowl checklist"
-              subtitle="Email the trade-game checklist, food-bowl safety card, and never-punish-growl log. No spam."
-              ctaText="Email my resource-guarding food-bowl checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="training-resource-guarding-under-hero"
             />
           </div>
@@ -189,20 +170,7 @@ export default function ResourceGuardingPage() {
             before biting is more dangerous than the dog that growls first. Punishing the behavior
             without changing the emotional trigger creates a dog that bites without warning.
           </p>
-          <p>
-            A laminated dog resource-guarding trade-game checklist is how
-            trade-always-means-getting-something-better, original-item-is-usually-returned, and
-            always-trade-up stay visible before anyone reaches for a bowl or chew — it is not a
-            laminated dog off-leash recall-proofing checklist (that lives on off-leash-training), not a
-            laminated horse snaffle-vs-curb bit checklist (that lives on bits-guide), and not a
-            puppy-training-treats hop (that lives on basic-commands / marker-training). A dog
-            resource-guarding never-punish-growl watch log notebook is how
-            punishing-a-growl-removes-the-warning-signal, never-punish-growling, and
-            dog-that-stops-growling-before-biting-is-more-dangerous stay written down — it is not a
-            dog recall-cue never-punish watch log notebook (that lives on off-leash-training). This
-            page does not hop puppy+training+treats, dog+training+clicker, or front-clip no-pull
-            harness searches already pinned on other training pages.
-          </p>
+          
 
           <h2>Assessing Severity</h2>
           <p>
@@ -248,13 +216,7 @@ export default function ResourceGuardingPage() {
               practice the trade game to ensure the behavior generalizes.
             </li>
           </ol>
-          <p>
-            The same laminated dog resource-guarding trade-game checklist is how
-            trade-always-means-getting-something-better and always-trade-up stay posted through those
-            weeks of increasing item value — it is not a socialization-window card (that lives on
-            dog-socialization-window) and not a puppy-schedule card (that lives on
-            training/puppy-schedule).
-          </p>
+          
 
           <h2>Management During Training</h2>
           <p>
@@ -271,8 +233,7 @@ export default function ResourceGuardingPage() {
             not a heavy ceramic pet food bowl (that lives on ferret toxic-foods), not a slow-feeder
             dog bowl (that lives on dog-obesity / calorie-calculator), not an extra-tall baby gate
             (that lives on new-puppy-checklist), and not a walk-through pet gate (that lives on
-            pancreatitis). This page does not hop shock collars, prong collars, or invented ASINs.
-          </p>
+            pancreatitis). </p>
 
           <h2>When to Get Professional Help</h2>
           <p>
@@ -300,26 +261,13 @@ export default function ResourceGuardingPage() {
               pancreatitis walk+through+pet+gate. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
-              Shop the resource-guarding leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page why-guarding-exists, trade-game,
-              management, and professional-help copy — a laminated dog resource-guarding trade-game
-              checklist, a dog food-bowl safety question card, and a dog resource-guarding
-              never-punish-growl watch log notebook. Educational training searches only. They are not
-              a ranked product list, they are not a clinic listing, they are not a #1150 laminated
-              off-leash recall-proofing / 20-to-30-foot long-line / recall-cue never-punish hop, they
-              are not a #1149 laminated snaffle-vs-curb / width-and-wrinkle / hand-severity hop, they
-              are not a basic-commands puppy-treats / clicker / long-line hop, they are not a bloat
-              floor-bowl hop, they are not a slow-feeder hop, they are not an extra-tall baby-gate
-              hop, they are not a walk-through pet-gate hop, and they do not replace a CAAB or DACVB.
-              Dog.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+resource+guarding+trade+game+checklist?s=training-resource-guarding"
-                amazonLabel="Browse laminated dog resource-guarding trade-game checklists on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=training-resource-guarding"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+food+bowl+safety+question+card?s=training-resource-guarding"
@@ -329,7 +277,7 @@ export default function ResourceGuardingPage() {
                 amazonHref="/go/amazon-brand/dog+resource+guarding+never+punish+growl+watch+log+notebook?s=training-resource-guarding"
                 amazonLabel="Browse dog resource-guarding never-punish-growl watch log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

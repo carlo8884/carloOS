@@ -58,18 +58,13 @@ export default function PuppyBitingPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Puppy-biting protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the two-phase bite-inhibition steps, redirection notes, and
-            the nipping kit (puppy chew toys, teething toys, stuffable Kong,
-            bitter spray) so you can run the protocol without scrolling back.
-            No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Puppy-biting protocol"
-            subtitle="Email the bite-inhibition protocol, redirection notes, and nipping kit. No spam."
-            ctaText="Email my puppy-biting protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-puppy-biting-under-hero"
           />
         </div>
@@ -97,8 +92,7 @@ export default function PuppyBitingPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a nipping kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Redirection only works if an appropriate chew is within reach —
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Redirection only works if an appropriate chew is within reach —
             puppy chew toys and teething toys give the mouth something legal
             to do instead of hands. A stuffable Kong occupies the same
             mouth-need during crate naps. Bitter spray is a furniture
@@ -126,8 +120,7 @@ export default function PuppyBitingPage() {
             </Link>
             . They are not a ranked product list and they do not replace the
             ouch-and-pause protocol. Dog.com earns a commission on qualifying
-            purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+chew+toys?s=training-puppy-biting"

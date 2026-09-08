@@ -160,16 +160,13 @@ export default function DogCalorieCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Daily kcal worksheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the daily kcal target — RER, MER, and cups-per-day from your food label — so you
-            can portion tomorrow without re-running the math. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Daily kcal worksheet"
-            subtitle="Email the daily kcal target — RER, MER, and cups-per-day so you can portion tomorrow. No spam."
-            ctaText="Email my dog kcal target"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-calorie-calculator-under-hero"
           />
         </div>
@@ -192,16 +189,7 @@ export default function DogCalorieCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop portions
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              Foods vary widely in calorie density (roughly 270–500 kcal/cup), so the label kcal/cup
-              figure is what turns MER into a bowl amount. A kitchen gram scale beats a measuring
-              cup — cups over-portion by roughly 20%. A slow-feeder bowl or interactive feeder
-              stretches a measured ration without adding calories. Low-calorie treats belong in the
-              10% treat budget. These are Amazon category searches — not a ranked product list and
-              not a diet plan. Ask your veterinarian which foods and portions fit your dog. Dog.com
-              earns a commission on qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/measured+dog+food?s=tools-dog-calorie-calculator"
@@ -223,7 +211,7 @@ export default function DogCalorieCalculatorPage() {
                 amazonHref="/go/amazon-brand/low+calorie+dog+treats?s=tools-dog-calorie-calculator"
                 amazonLabel="Browse low-calorie dog treats on Amazon →"
               />
-            </div>
+          </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Compare formulas on the{' '}

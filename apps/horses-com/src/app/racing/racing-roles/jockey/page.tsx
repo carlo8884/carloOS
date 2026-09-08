@@ -166,39 +166,16 @@ export default function JockeyRolePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the jockey-role checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Jockey-role checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-jockey-pace-position-chart,
-              stall-door-assigned-weight-card, and
-              equine-riding-fee-handbook notes
-              that match the pace-position-ground-saving,
-              assigned-weight, and riding-fee-agent copy on
-              this page — a laminated horse jockey
-              pace-position chart so the rail / timing-the-run
-              notes are posted on the stall door (not an
-              owner-trainer-jockey chart, not a workout-breeze
-              chart), a horse stall-door assigned-weight card
-              so the rider-plus-equipment notes are labeled at
-              the barn (not a steward-official card, not a
-              gate-school card), and an equine riding-fee
-              handbook so the purse-percentage / agent
-              grounding is a physical barn book (not a
-              backstretch-role handbook, not a HISA welfare
-              handbook). Educational barn checklist, not a
-              ranked race list, not a first-aid-kit hop, and
-              not a substitute for a veterinarian. Horses.com
-              does not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Jockey-role checklist"
-              subtitle="Email the jockey pace-position chart, assigned-weight card, and riding-fee handbook notes. No spam."
-              ctaText="Email my jockey-role checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-roles-jockey-under-hero"
             />
           </div>
@@ -251,42 +228,18 @@ export default function JockeyRolePage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs people-of-racing /
               training hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the jockey-role barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page pace-position-ground-saving,
-              assigned-weight, and riding-fee-agent copy — a
-              laminated horse jockey pace-position chart, a
-              horse stall-door assigned-weight card, and an
-              equine riding-fee handbook. Educational barn
-              searches only. They are not a ranked race
-              list, they are not a people-of-racing /
-              training hop, they are not a first-aid-kit
-              hop, they are not a child toothbrush hop, and
-              they do not replace a veterinarian. Horses.com
-              does not sell insurance. Horses.com earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+jockey+pace+position+chart?s=racing-roles-jockey"
-                amazonLabel="Browse laminated horse jockey pace-position charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-roles-jockey"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+assigned+weight+card?s=racing-roles-jockey"
-                amazonLabel="Browse horse stall-door assigned-weight cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+riding+fee+handbook?s=racing-roles-jockey"
-                amazonLabel="Browse equine riding-fee handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

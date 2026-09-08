@@ -61,17 +61,13 @@ export default function HouseTrainingPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             House-training schedule
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the schedule method, accident protocol, and house-training kit
-            (enzymatic cleaner, high-value treats, crate with divider, poop bags)
-            so you can run the routine without scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="House-training schedule"
-            subtitle="Email the schedule method, accident protocol, and house-training kit. No spam."
-            ctaText="Email my house-training schedule"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-house-under-hero"
           />
         </div>
@@ -103,29 +99,7 @@ export default function HouseTrainingPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a house-training kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Enzymatic cleaner is the single most important supply — without it,
-            scent markers invite repeat accidents. Pair it with high-value
-            training treats, a wire crate with a divider for unsupervised time,
-            and poop bags. Same cleaner / treat / crate hops used on the{' '}
-            <Link
-              href="/tools/new-puppy-checklist"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              new-puppy checklist
-            </Link>
-            {' '}and the{' '}
-            <Link
-              href="/training/puppy-schedule"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              puppy schedule
-            </Link>
-            . They are not a ranked product list and they do not replace the
-            schedule method. Size the crate before you order. Dog.com earns a
-            commission on qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"

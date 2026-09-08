@@ -34,7 +34,7 @@ export default function CanineInfluenzaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Kennel Cough', href: '/health/kennel-cough' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-influenza" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-influenza" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -42,37 +42,16 @@ export default function CanineInfluenzaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-flu isolation checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-flu isolation checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the post-boarding notes — a
-              double-door wire dog crate so the
-              returning dog spends the 7-day isolation
-              in a separate room instead of sharing
-              air with household dogs, a pet-safe
-              kennel disinfectant spray so bowls and
-              kennel surfaces get a pass after
-              boarding or daycare, and an analog wall
-              clock with a second hand so rapid or
-              labored breathing gets a one-minute
-              count during rest. Educational
-              checklist, not a diagnosis, not a
-              vaccine decision, and not a substitute
-              for the veterinarian who evaluates
-              fever or pneumonia. Recovery crates,
-              soft-sided crates, digital pet
-              thermometers, cool-mist humidifiers,
-              and Rx stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog-flu isolation checklist"
-              subtitle="Email the crate, kennel-disinfectant, and second-hand-clock notes. No spam."
-              ctaText="Email my dog-flu isolation checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-canine-influenza-under-hero"
             />
           </div>
@@ -88,7 +67,7 @@ export default function CanineInfluenzaPage() {
           <p>No specific antiviral treatment exists for canine influenza in dogs (canine-labeled antivirals are not available). Treatment is supportive: rest, fluid support for dehydrated or anorectic dogs, anti-inflammatory medication for fever, and antibiotics if secondary bacterial pneumonia develops (the most serious complication). Most dogs with mild illness recover in 2–4 weeks without veterinary intervention beyond rest and monitoring. Dogs with fever, complete anorexia, difficulty breathing, or signs of pneumonia (productive cough, rapid/labored breathing) require veterinary evaluation and possibly hospitalization. An analog wall clock with a second hand is how rapid or labored breathing gets a one-minute count during isolation rest — it is not a digital pet thermometer, not a cool-mist humidifier, and not a handheld stopwatch. A rising count or labored effort is a reason to call the veterinarian, not a diagnosis of pneumonia, and not a substitute for the clinic that decides whether supportive care or hospitalization is indicated.</p>
 
           <h2>Vaccination — Who Should Be Vaccinated</h2>
-          <p>The canine influenza vaccine (bivalent, covering both H3N8 and H3N2) is a non-core vaccine recommended based on lifestyle risk. Dogs that should receive it: any dog that attends boarding facilities, doggy daycare, dog parks, dog shows, or group training classes — essentially any dog with regular close contact with other dogs outside the household. The vaccine reduces severity and duration of illness in vaccinated dogs that are exposed; it does not fully prevent infection. Initial vaccination requires a booster 2–4 weeks after the first dose; thereafter, annual or semi-annual boosting depending on exposure risk. This page does not hop vaccine products, Tamiflu, or other antivirals — those decisions stay with the veterinarian.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Dog-flu isolation kit</h2>
           <p>

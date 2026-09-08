@@ -27,44 +27,23 @@ export default function AffordVetCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cost of Veterinary Care', href: '/guides/cost-of-veterinary-care' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-afford" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-afford" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the how-to-afford-vet-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              How-to-afford-vet-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              automatic-monthly-transfer, tiered-plan
-              conversation, and payment-plan /
-              assistance-application copy on this
-              page — a cash envelope budget system
-              so the monthly set-aside for
-              deductibles and surprises stays a
-              counted transfer, a yellow legal pad
-              so the ideal / middle / minimum plan
-              is written during the cost talk, and
-              letter-size hanging file folders so
-              the payment-plan agreement and
-              assistance applications stay a file
-              instead of loose papers. Educational
-              checklist, not a diagnosis, not a
-              substitute for veterinary care, and
-              not a cash-box, budget-workbook, or
-              accordion-file hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="How-to-afford-vet-care checklist"
-              subtitle="Email the envelope, legal-pad, and hanging-file notes. No spam."
-              ctaText="Email my how-to-afford-vet-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-how-to-afford-vet-care-under-hero"
             />
           </div>
@@ -189,8 +168,7 @@ export default function AffordVetCarePage() {
               insurance-brand hop, and they do not
               replace a veterinarian. Vets.co earns
               a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
+              at no extra cost to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

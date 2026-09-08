@@ -177,24 +177,18 @@ export default function ErVsClinicPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the fridge sheet
+            Owner notes
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             ER vs clinic cheat sheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the ER / clinic / telehealth recap plus a shoppable
-            emergency-prep kit (first-aid, thermometer, soft carrier, styptic
-            powder, wound-care gauze) so you can re-check the setting later
-            without re-running the list. A setting chooser, not a diagnosis.
-            No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="ER vs clinic cheat sheet"
-            subtitle="Email the ER / clinic / telehealth recap and emergency-prep kit. No spam."
-            ctaText="Email my ER vs clinic cheat sheet"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-er-vs-clinic-under-hero"
           />
         </div>
@@ -236,17 +230,7 @@ export default function ErVsClinicPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pet emergency-prep kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are cabinet and car items for
-              dog and cat emergency prep — a pet first-aid kit, a digital pet
-              thermometer, a soft pet carrier, styptic powder, and wound-care
-              gauze. They are not a ranked product list, not invented inventory,
-              and they do not diagnose, treat, or replace emergency care. If a
-              sign looks life-threatening, go to an emergency hospital now; this
-              kit is for planning ahead, not for waiting on a crisis. Vets.co
-              earns a commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic"
@@ -268,7 +252,7 @@ export default function ErVsClinicPage() {
                 amazonHref="/go/amazon-brand/wound+care+gauze?s=tools-er-vs-clinic"
                 amazonLabel="Browse wound-care gauze on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -296,9 +280,9 @@ export default function ErVsClinicPage() {
             <EmailCapture
               siteId="vets-co"
               variant="inline"
-              title="ER vs clinic cheat sheet"
-              subtitle="Email the ER / clinic / telehealth recap and emergency-prep kit. No spam."
-              ctaText="Email my ER vs clinic cheat sheet"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tools-er-vs-clinic"
             />
           </div>
@@ -326,8 +310,7 @@ export default function ErVsClinicPage() {
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For a cat-specific sign-list urgency read (go now / same-day / monitor), use{' '}
             <Link href="/tools/is-this-a-cat-emergency" className="text-brand-primary underline-offset-2 hover:underline">
-              Is this a cat emergency?
-            </Link>
+              Is this a cat emergency? </Link>
             — that page does not replace this setting chooser. For the longer sign list, use the{' '}
             <Link href="/symptoms" className="text-brand-primary underline-offset-2 hover:underline">
               symptom library
@@ -336,12 +319,7 @@ export default function ErVsClinicPage() {
             <Link href="/health/emergency-signs" className="text-brand-primary underline-offset-2 hover:underline">
               emergency signs
             </Link>
-            . Non-emergency &ldquo;talk to a vet&rdquo; goes to the existing{' '}
-            <Link href="/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
-              telehealth comparison
-            </Link>
-            — this page does not hop to an empty vendor button.
-          </p>
+            . </p>
         </div>
       </section>
 

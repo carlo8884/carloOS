@@ -27,43 +27,23 @@ export default function CostOfCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-cost" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-cost" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the veterinary-care cost-category checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Veterinary-care cost-category checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              routine-budget, recurring-chronic-line,
-              and last-12-months-of-invoices copy on
-              this page — a household budget workbook
-              so wellness exams, vaccinations, and
-              parasite prevention stay a written
-              annual line, a checkbook register so
-              chronic medication and recheck visits
-              stay a running total instead of a
-              surprise, and a letter-size accordion
-              file folder so the last 12 months of
-              invoices sort into Routine, Procedures,
-              Chronic, and Emergency. Educational
-              checklist, not a diagnosis, not a
-              substitute for veterinary care, and not
-              a locking cash box, desktop calculator,
-              or manila-folder hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Veterinary-care cost-category checklist"
-              subtitle="Email the workbook, register, and accordion-file notes. No spam."
-              ctaText="Email my veterinary-care cost-category checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-cost-of-veterinary-care-under-hero"
             />
           </div>
@@ -191,7 +171,7 @@ export default function CostOfCarePage() {
               and they do not replace a veterinarian.
               Vets.co earns a commission on
               qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
+              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

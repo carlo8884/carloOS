@@ -116,38 +116,16 @@ export default function WaterRequirementsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the horse water checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse water checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the flat-back-horse-water-bucket,
-              heated-horse-water-bucket, and
-              electrolyte-for-horses notes that match
-              the free-choice, winter-warm, and
-              after-sweat copy on this page — a
-              flat-back stall water bucket as the
-              everyday source that is cleaned and
-              refilled (not a wide-mouth mixing
-              bucket, not a color-coded biosecurity
-              bucket), a heated stall water bucket so
-              winter water stays slightly warmed and
-              unfrozen (not a tank heater), and
-              electrolyte for horses after heavy sweat
-              so thirst stays driven (not a salt-first
-              powder hop, not a generic
-              horse-electrolytes hop). Educational
-              barn checklist, not a treatment, and not
-              a substitute for calling the
-              veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse water checklist"
-              subtitle="Email the stall-bucket, heated-bucket, and after-sweat notes. No spam."
-              ctaText="Email my horse water checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-water-under-hero"
             />
           </div>
@@ -238,24 +216,9 @@ export default function WaterRequirementsPage() {
               (emergency / grimace-scale). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the barn water-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page free-choice, winter-warm, and
-              after-sweat copy — a flat-back stall
-              water bucket, a heated stall water
-              bucket, and electrolyte for horses.
-              Educational barn searches only. They are
-              not a ranked product list, they are not
-              a wide-mouth mixing-bucket hop, they are
-              not an automatic-waterer hop, they are
-              not a tank-heater hop, and they do not
-              replace a veterinarian. Horses.com earns
-              a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/flat+back+horse+water+bucket?s=nutrition-water"
@@ -269,7 +232,7 @@ export default function WaterRequirementsPage() {
                 amazonHref="/go/amazon-brand/electrolyte+for+horses?s=nutrition-water"
                 amazonLabel="Browse electrolyte for horses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

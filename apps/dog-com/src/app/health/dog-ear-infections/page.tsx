@@ -42,31 +42,23 @@ export default function DogEarInfectionsPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Hypothyroidism', href: '/health/hypothyroidism' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ear-infections" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-ear-infections" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the weekly ear-cleaning checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog ear-cleaning checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the weekly ear-cleaning notes — a veterinary ear
-              cleaner and cotton balls for wiping the visible canal and
-              ear flap. Educational checklist, not a diagnosis and not a
-              prescription ear drop. Active infections need a vet exam.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog ear-cleaning checklist"
-              subtitle="Email the weekly ear-cleaning notes. No spam."
-              ctaText="Email my dog ear-cleaning checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-ear-infections-under-hero"
             />
           </div>
@@ -110,19 +102,9 @@ export default function DogEarInfectionsPage() {
               parasiticide brands, and brand ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the weekly ear-cleaning kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              ear-cleaning copy — a veterinary ear cleaner and cotton
-              balls for wiping the visible canal and ear flap. Everyday
-              physical supplies only. They are not a ranked product list,
-              they are not prescription ear drops, they are not
-              medications or parasiticide brands, and they do not replace
-              a veterinarian or cytology. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+ear+cleaner?s=health-dog-ear-infections"
@@ -132,7 +114,7 @@ export default function DogEarInfectionsPage() {
                 amazonHref="/go/amazon-brand/cotton+balls?s=health-dog-ear-infections"
                 amazonLabel="Browse cotton balls on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

@@ -36,7 +36,7 @@ export default function DogEyeConditionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-eye-conditions" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-eye-conditions" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -44,44 +44,16 @@ export default function DogEyeConditionsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog red-eye watch checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog red-eye watch checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              cherry-eye, chemical-exposure, KCS, and
-              PRA night-blindness copy on this page —
-              a sterile saline eye wash so a chemical
-              splash or thick mucoid discharge is a
-              rinse, not an Rx drop, a padded
-              Elizabethan collar so a dog cannot paw a
-              prolapsed third-eyelid gland while you
-              wait for surgical repositioning, and a
-              dog blind-halo harness so night
-              blindness becomes a bumpered walk
-              instead of furniture collisions.
-              Educational checklist, not a ranked
-              product list, not a substitute for
-              veterinary care, and not a cyclosporine
-              / tacrolimus / Optimmune / Anipryl hop.
-              Soft e-collars and dog eye wipes already
-              live on dog.com cherry-eye. Recovery
-              cones already live on hot-spots and
-              telehealth. Inflatable dog collars
-              already live on the spay-neuter guide.
-              Plug-in night lights and battery
-              motion-sensor night lights already live
-              on cognitive-dysfunction and
-              senior-pet-care. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog red-eye watch checklist"
-              subtitle="Email the saline-wash, padded-collar, and halo-harness notes. No spam."
-              ctaText="Email my dog red-eye watch checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-eye-conditions-under-hero"
             />
           </div>
@@ -133,9 +105,7 @@ export default function DogEyeConditionsPage() {
             tacrolimus, Optimmune, mannitol, and
             Anipryl are not shoppable hops. Soft
             e-collars and dog eye wipes already live
-            on dog.com cherry-eye. Recovery cones
-            already live on hot-spots and telehealth.
-            Inflatable dog collars already live on
+            on dog.com cherry-eye. Inflatable dog collars already live on
             the spay-neuter guide. Plug-in night
             lights already live on
             cognitive-dysfunction. Battery
@@ -143,8 +113,7 @@ export default function DogEyeConditionsPage() {
             on senior-pet-care. Handheld AA LED
             flashlights already live on
             emergency-signs. This page does not
-            claim hands-on testing.
-          </p>
+            claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -211,32 +180,9 @@ export default function DogEyeConditionsPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page cherry-eye, chemical-exposure,
-              KCS, and PRA night-blindness copy — a
-              sterile saline eye wash, a padded
-              Elizabethan collar, and a dog
-              blind-halo harness. Educational
-              home-care and monitoring tools only.
-              They are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1080 file-box /
-              heated-mat / motion-night-light hop,
-              they are not a #1079 cot / stair-tread
-              / planner hop, they are not a cherry-eye
-              soft-e-collar / eye-wipe hop, they are
-              not a cognitive-dysfunction plug-in-
-              night-light hop, they are not an
-              arthritis traction-rug / ramp /
-              orthopedic-bed hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/sterile+saline+eye+wash?s=health-dog-eye-conditions"
@@ -250,7 +196,7 @@ export default function DogEyeConditionsPage() {
                 amazonHref="/go/amazon-brand/dog+blind+halo+harness?s=health-dog-eye-conditions"
                 amazonLabel="Browse dog blind-halo harnesses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

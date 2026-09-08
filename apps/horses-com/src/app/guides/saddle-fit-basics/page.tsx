@@ -118,24 +118,16 @@ export default function SaddleFitBasicsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the saddle-fit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse saddle-fit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the 12-point owner checks plus the between-fitting kit —
-              a contoured saddle pad, a sheepskin half-pad, thin shims when a
-              fitter has identified a minor asymmetry, and the girth or cinch
-              that hangs at the heart girth. Educational checklist, not a
-              diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse saddle-fit checklist"
-              subtitle="Email the 12-point checks plus pad, half-pad, shim, and girth/cinch order. No spam."
-              ctaText="Email my saddle-fit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guide-saddle-fit-under-hero"
             />
           </div>
@@ -250,20 +242,9 @@ export default function SaddleFitBasicsPage() {
               Wither pads and measuring tapes are not named on this page. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the saddle-fit kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page between-fitting
-              tack copy — a contoured saddle pad, a sheepskin half-pad, saddle
-              shims for correction pockets or foam-panel adjustment, and a
-              girth or cinch. Everyday physical supplies only. They are not a
-              ranked product list, they are not a substitute for a Society of
-              Master Saddlers or Master Saddlers Association fitter, they are
-              not treatments for back pain, lameness, or girthiness, and they
-              do not replace a veterinarian. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics"
@@ -281,7 +262,7 @@ export default function SaddleFitBasicsPage() {
                 amazonHref="/go/amazon-brand/horse+girth+cinch?s=guides-saddle-fit-basics"
                 amazonLabel="Browse horse girths and cinches on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ScoreMethodology />

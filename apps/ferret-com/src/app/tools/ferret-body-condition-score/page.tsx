@@ -167,24 +167,16 @@ export default function FerretBodyConditionScorePage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret BCS checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the rib / waist / belly checklist, the seasonal-swing caveat,
-            and the shoppable BCS kit (ferret food, senior ferret food, digital
-            pet scale, hammock, carrier) so you can re-score next month without
-            re-reading the descriptors. Planning reference only — not a
-            diagnosis. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret BCS checklist"
-            subtitle="Email the ferret BCS checklist and husbandry kit. No spam."
-            ctaText="Email my ferret BCS checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-ferret-bcs-under-hero"
           />
         </div>
@@ -207,16 +199,7 @@ export default function FerretBodyConditionScorePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a BCS / weight-management kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make a
-              body-condition score repeatable — ferret food, senior ferret food,
-              a digital pet scale, a ferret hammock, and a carrier. They are not
-              a ranked product list, not invented inventory, and they do not
-              diagnose a weight problem or set a calorie target. Ask your
-              exotic-mammal veterinarian which products fit this ferret. Do not
-              crash-diet a ferret. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+food?s=tools-ferret-body-condition-score"
@@ -238,7 +221,7 @@ export default function FerretBodyConditionScorePage() {
                 amazonHref="/go/amazon-brand/ferret+carrier?s=tools-ferret-body-condition-score"
                 amazonLabel="Browse ferret carriers on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

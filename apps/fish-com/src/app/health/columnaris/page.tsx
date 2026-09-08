@@ -41,23 +41,14 @@ export default function ColumnarisguidePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the isolate-and-cool plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Isolate-and-cool / hospital-tank checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the isolate-and-cool order — test ammonia, nitrite, and
-            nitrate first, move the affected fish to a spare hospital tank so
-            the display biofilter stays protected, and hold temperature at
-            72°F or lower when the species tolerates it so columnaris
-            progresses more slowly. Educational husbandry, not a diagnosis
-            or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Isolate-and-cool / hospital-tank checklist"
-            subtitle="Email the test-water-first, hospital-tank isolation, and cool-hold order. No spam."
-            ctaText="Email my columnaris isolate-and-cool checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-columnaris-under-hero"
           />
         </div>
@@ -92,8 +83,7 @@ export default function ColumnarisguidePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a water-first hospital-tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Fix the water first — a liquid master kit is how you see ammonia,
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fix the water first — a liquid master kit is how you see ammonia,
             nitrite, and nitrate that let columnaris take hold. Isolate in a
             spare hospital tank with a seeded sponge filter so treatment stays
             off the display biofilter, a heater rated for the tank so you can
@@ -137,9 +127,7 @@ export default function ColumnarisguidePage() {
             </Link>
             . They are not a ranked product list, they are not medications,
             and they do not treat, reverse, or cure columnaris. Fish.com earns
-            a commission on qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+            a commission on qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris"

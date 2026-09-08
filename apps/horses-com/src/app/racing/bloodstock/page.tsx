@@ -151,40 +151,16 @@ export default function BloodstockPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the racing-bloodstock checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Racing-bloodstock checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-horse-yearling-sale-catalog-chart,
-              stall-door-rna-clearance-card, and
-              equine-bloodstock-agent-handbook notes
-              that match the yearling-sale / catalogue,
-              RNA / clearance-rate, and bloodstock-agent
-              copy on this page — a laminated horse yearling-
-              sale-catalog chart so the eighteen-month /
-              pedigree-promise notes are posted on the stall
-              door (not a white-carnation chart, not a barn
-              bloodstock section-map chart), a horse stall-door
-              RNA-clearance card so the reserve-not-attained /
-              sale-health notes are labeled at the barn (not a
-              twelve-furlong card, not a bloodstock-prep card),
-              and an equine bloodstock-agent handbook so the
-              conformation / commission grounding is a physical
-              barn book (not a Test-of-the-Champion handbook,
-              not a bloodstock-reference handbook). Educational
-              barn checklist, not a ranked auction list, not a
-              first-aid-kit hop, and not a substitute for a
-              veterinarian. Horses.com does not sell insurance.
-              No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Racing-bloodstock checklist"
-              subtitle="Email the yearling-sale-catalog chart, RNA-clearance card, and bloodstock-agent handbook notes. No spam."
-              ctaText="Email my racing-bloodstock checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="racing-bloodstock-under-hero"
             />
           </div>
@@ -241,43 +217,18 @@ export default function BloodstockPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs belmont-stakes /
               /bloodstock hub hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the racing-bloodstock barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page yearling-sale / catalogue, RNA /
-              clearance-rate, and bloodstock-agent copy — a
-              laminated horse yearling-sale-catalog chart, a
-              horse stall-door RNA-clearance card, and an
-              equine bloodstock-agent handbook. Educational
-              barn searches only. They are not a ranked
-              auction list, they are not a belmont-stakes /
-              /bloodstock-hub hop, they are not a first-aid-
-              kit hop, they are not a child toothbrush hop,
-              and they do not replace a veterinarian.
-              Horses.com does not sell insurance. Horses.com
-              earns a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+yearling+sale+catalog+chart?s=racing-bloodstock"
-                amazonLabel="Browse laminated horse yearling-sale-catalog charts on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=racing-bloodstock"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stall+door+rna+clearance+card?s=racing-bloodstock"
-                amazonLabel="Browse horse stall-door RNA-clearance cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+bloodstock+agent+handbook?s=racing-bloodstock"
-                amazonLabel="Browse equine bloodstock-agent handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

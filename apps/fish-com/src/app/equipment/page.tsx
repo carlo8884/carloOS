@@ -92,21 +92,14 @@ export default function EquipmentHubPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the equipment list
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Aquarium equipment checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the first-tank gear list — hang-on-back or canister filter,
-            heater, digital thermometer, API Master Test Kit, and dechlorinator
-            (Seachem Prime) — so you can shop the six buyer-guide categories
-            without scrolling back. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Aquarium equipment checklist"
+            title="Owner notes"
             subtitle="Email filter, heater, thermometer, test kit, and dechlorinator. No spam."
-            ctaText="Email my aquarium equipment checklist"
+            ctaText="Send the notes"
             source="equipment-hub-under-hero"
           />
         </div>
@@ -163,8 +156,7 @@ export default function EquipmentHubPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop aquarium equipment
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A hang-on-back or canister filter is where the cycle lives. Pair it
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A hang-on-back or canister filter is where the cycle lives. Pair it
             with a heater rated for the tank, a separate digital thermometer to
             verify the dial, Seachem Prime (or another dechlorinator) at every
             fill, the API Master Test Kit so you can see ammonia/nitrite/nitrate,
@@ -208,8 +200,7 @@ export default function EquipmentHubPage() {
               equipment reviews
             </Link>
             . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"

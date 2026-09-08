@@ -134,41 +134,16 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ferret-food-spoke checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret-food-spoke checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-ferret-food-spoke-verdict-chart,
-            fridge-food-spoke-risk-card, and
-            mustelid-food-spoke-handbook notes that
-            match this remaining {entry.name} verdict
-            (safe / caution / toxic), the obligate-carnivore
-            / insulinoma / GI-blockage framing, and the
-            ASPCA 888-426-4435 grounding — a laminated
-            ferret food-spoke verdict chart so this
-            remaining-food map is posted on the fridge
-            (not a hub meat-egg chart, not a dog
-            food-spoke verdict chart), a fridge
-            food-spoke risk card so the plant / sugar /
-            fiber notes are labeled in the kitchen (not
-            a hub plant-sugar card, not a dog
-            food-spoke risk card), and a food-spoke
-            handbook so the ASPCA / Pet-Poison-Helpline
-            row is a physical kitchen book (not a hub
-            food-safety handbook, not a canine
-            food-spoke handbook). Educational kitchen
-            checklist, not a ranked product list, not a
-            substitute for a veterinarian familiar with
-            ferrets. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret-food-spoke checklist"
-            subtitle="Email the verdict chart, risk card, and food-spoke handbook notes. No spam."
-            ctaText="Email my ferret-food-spoke checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source={`can-ferrets-eat-${entry.slug}-under-hero`}
           />
         </div>
@@ -235,39 +210,14 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the ferret-food-spoke kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page safe / caution / toxic verdict,
-            obligate-carnivore / insulinoma /
-            GI-blockage framing, and ASPCA 888-426-4435
-            grounding — a laminated ferret food-spoke
-            verdict chart, a fridge food-spoke risk
-            card, and a mustelid food-spoke handbook.
-            Educational kitchen searches only. They are
-            not a ranked product list, they are not a
-            can-ferrets-eat hub hop, they are not a
-            dog food-spoke hop, they are not a flea /
-            heartworm / vaccine hop, and they do not
-            replace a veterinarian familiar with
-            ferrets. Ferret.com earns a commission on
-            qualifying purchases at no extra cost to
-            you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+ferret+food+spoke+verdict+chart?s=can-ferrets-eat-food"
-              amazonLabel="Browse laminated ferret food-spoke verdict charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+fridge+food+spoke+risk+card?s=can-ferrets-eat-food"
-              amazonLabel="Browse fridge ferret food-spoke risk cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/mustelid+food+spoke+handbook?s=can-ferrets-eat-food"
-              amazonLabel="Browse mustelid food-spoke handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/ferret+supplies?s=can-ferrets-eat-food"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

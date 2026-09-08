@@ -116,24 +116,16 @@ export default function BlanketingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the blanketing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse blanketing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit — a turnout rug matched to fill weight, a
-              light waterproof sheet for an unclipped horse that only needs to
-              stay dry, plus lightweight, medium, and heavyweight options so
-              you can adjust as the weather changes. Educational checklist,
-              not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse blanketing checklist"
-              subtitle="Email the turnout-rug, waterproof-sheet, and fill-weight order. No spam."
-              ctaText="Email my blanketing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-blanketing-under-hero"
             />
           </div>
@@ -177,18 +169,9 @@ export default function BlanketingPage() {
               or diagnosis hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the blanketing kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page turnout, sheet,
-              and fill-weight copy — a turnout blanket, a waterproof sheet, a
-              lightweight rug, a medium-weight rug, and a heavyweight rug.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not treatments for illness or poor condition, and
-              they do not replace a veterinarian. Horses.com earns a commission
-              on qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+turnout+blanket?s=care-blanketing"
@@ -210,7 +193,7 @@ export default function BlanketingPage() {
                 amazonHref="/go/amazon-brand/horse+heavyweight+blanket?s=care-blanketing"
                 amazonLabel="Browse horse heavyweight blankets on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -186,44 +186,16 @@ export default function FerretTrainingBondingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret training-bonding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret training-bonding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-training-map-chart,
-              fridge-harness-vs-collar-card, and
-              mustelid-training-bonding-reference-handbook notes
-              that match the litter-bite-harness-map,
-              h-harness-vs-collar-log, and
-              afa-avsab-training-grounding copy on this page —
-              a laminated ferret training-map chart so the
-              litter / bite-inhibition / harness sequence is
-              posted on the fridge (not a behavior-hub cue
-              chart, not a play-vs-fight chart, not a
-              litter-box chart), a ferret fridge
-              harness-vs-collar card so H-style / vest /
-              never-collar notes are labeled on the fridge
-              (not a behavior card, not an over-arousal
-              card, not a litter-choice card), and a
-              mustelid training-bonding reference handbook
-              so the AFA / AEMV / AVSAB training grounding
-              is a physical kitchen book (not a behavior
-              handbook, not a play-aggression handbook,
-              not a litter-box handbook). Educational
-              kitchen checklist, not a ranked toy list,
-              not a sleep-sack hop, and not a substitute
-              for an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Aging pages stay
-              held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret training-bonding checklist"
-              subtitle="Email the training-map-chart, fridge harness-vs-collar card, and training-bonding-handbook notes. No spam."
-              ctaText="Email my ferret training-bonding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-training-bonding-under-hero"
             />
           </div>
@@ -617,46 +589,20 @@ export default function FerretTrainingBondingPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs behavior-hub /
               play-aggression / litter-box kitchen kits
-              and child sleep-sack / snuffle-mat hops.
-              Directory import left untouched. Ferret
+              and child sleep-sack / snuffle-mat hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret training-bonding kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page litter-bite-harness-map,
-              h-harness-vs-collar-log, and
-              afa-avsab-training-grounding copy — a laminated
-              ferret training-map chart, a ferret fridge
-              harness-vs-collar card, and a mustelid
-              training-bonding reference handbook.
-              Educational kitchen searches only. They are
-              not a ranked toy list, they are not a
-              behavior-hub / play-aggression / litter-box
-              hop, they are not a child toothbrush hop,
-              and they do not replace an exotic-mammal
-              veterinarian. Ferret.com does not sell
-              insurance. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+training+map+chart?s=training-and-bonding"
-                amazonLabel="Browse laminated ferret training-map charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=training-and-bonding"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+harness+vs+collar+card?s=training-and-bonding"
-                amazonLabel="Browse ferret fridge harness-vs-collar cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+training+bonding+reference+handbook?s=training-and-bonding"
-                amazonLabel="Browse mustelid training-bonding reference handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

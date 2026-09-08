@@ -134,37 +134,16 @@ export default function TyingUpPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the tying-up rest-and-routine checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse tying-up rest-and-routine checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the irish-knit-horse-cooler,
-              wool-exercise-quarter-sheet, and
-              loose-plain-white-salt notes that match the
-              keep-warm-and-calm, warm-up-and-cool-down,
-              and hydration-and-electrolytes copy on this
-              page — an Irish-knit cooler so a horse that
-              must stay still stays warm instead of
-              standing in a sweat-soaked sheet, a wool
-              exercise quarter sheet so the warmup starts
-              on the muscle instead of a cold walk-out,
-              and loose plain white salt so daily sodium
-              is measured into the ration instead of
-              hoped-for on a lick. Educational
-              rest-and-routine checklist, not a treatment,
-              not a diet prescription, not a substitute
-              for calling the veterinarian, and not a
-              fleece-cooler, salt-lick, or electrolyte-paste
-              hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse tying-up rest-and-routine checklist"
-              subtitle="Email the Irish-knit-cooler, quarter-sheet, and loose-salt notes. No spam."
-              ctaText="Email my horse tying-up rest-and-routine checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-tying-up-under-hero"
             />
           </div>
@@ -214,19 +193,8 @@ export default function TyingUpPage() {
             measured into the ration. These are educational
             rest-and-routine tools, not a ranked product
             list, not a substitute for veterinary care, and
-            not a diet or medication prescription. Fleece
-            coolers already live on colic, body-clipping,
-            and the blanket-size calculator. Turnout sheets
-            and waterproof sheets already live on blanketing
-            and the blanket calculator. Salt licks already
-            live on the feed calculator. Bottled electrolytes
-            already live on the emergency tool and grimace
-            scale. Rice-bran fat supplements and high-fat
-            performance feeds already live on the nutrition
-            pages. This page does not hop medications,
-            muscle enzymes, genetic tests, or trailer gear.
-            This page does not claim hands-on testing.
-          </p>
+            not a diet or medication prescription. Salt licks already
+            live on the feed calculator. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -276,42 +244,9 @@ export default function TyingUpPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the tying-up rest-and-routine kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page keep-warm-and-calm,
-              warm-up-and-cool-down, and
-              hydration-and-electrolytes copy — an
-              Irish-knit horse cooler, a wool exercise
-              quarter sheet, and loose plain white salt.
-              Educational rest-and-routine tools only.
-              Fasting a horse that is tying up, walking
-              it out, or guessing a fat ration is not
-              the job of this kit. They are not a ranked
-              product list, they are not a substitute
-              for veterinary care, they are not a #1101
-              heart-bar / wedge-pad / rocker-toe hop,
-              they are not a #1100 stock-tank-brush /
-              barn-mosquito-netting / mosquito-sheet hop,
-              they are not a #1099 lunge-line /
-              lead-shank / traffic-cone hop, they
-              are not a #1098 clipboard / feed-pan /
-              paper-pellet-bedding hop, they
-              are not a #1097 color-coded-bucket /
-              coverall / boot-dip-tub hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a colic fleece-cooler hop, they
-              are not a blanketing turnout-sheet hop,
-              they are not a feed-calculator salt-lick
-              hop, they are not an emergency-tool
-              electrolyte hop, and they do not replace
-              a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons
-              stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up"
@@ -325,7 +260,7 @@ export default function TyingUpPage() {
                 amazonHref="/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"
                 amazonLabel="Browse loose plain white salt for horses on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -153,20 +153,14 @@ export default function PuppyFirstYearBudgetPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the budget plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Puppy first-year budget checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the first-year line items, crate-once notes, and the shoppable
-            kit (wire crate with divider, puppy food, scale, training pads) so
-            you can plan without re-running the calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Puppy first-year budget checklist"
-            subtitle="Email the first-year line items, crate-once notes, and shoppable kit. No spam."
-            ctaText="Email my puppy budget checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-puppy-first-year-budget-under-hero"
           />
         </div>
@@ -188,27 +182,7 @@ export default function PuppyFirstYearBudgetPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-year puppy kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches match the crate, food, and
-              house-training lines above — a wire crate with a divider (same
-              query as the{' '}
-              <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
-                new-puppy checklist
-              </Link>
-              {' '}and the{' '}
-              <Link href="/tools/dog-crate-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
-                crate size calculator
-              </Link>
-              ), puppy food and a kitchen / pet scale (same queries as the{' '}
-              <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
-                puppy weight predictor
-              </Link>
-              ), and puppy training pads. They are not a ranked product list,
-              not invented inventory, and they are not a clinic or retailer
-              quote. Size the crate and food to the adult dog before you
-              order. Dog.com earns a commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
@@ -226,7 +200,7 @@ export default function PuppyFirstYearBudgetPage() {
                 amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"
                 amazonLabel="Browse puppy training pads on Amazon →"
               />
-            </div>
+          </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Pair this with the{' '}

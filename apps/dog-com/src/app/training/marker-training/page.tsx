@@ -55,17 +55,13 @@ export default function MarkerTrainingPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Marker-training protocol
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the charge-the-marker steps, the 10 timing rules, and the
-              marker kit (clicker, pea-sized treats, belt-clip pouch) so you
-              can mark in the 1.3-second window without scrolling back. No spam.
-            </p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
               title="Marker-training protocol"
-              subtitle="Email the charge-the-marker steps, timing rules, and marker kit. No spam."
-              ctaText="Email my marker-training protocol"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="training-marker-training-under-hero"
             />
           </div>
@@ -95,8 +91,7 @@ export default function MarkerTrainingPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a marker-training kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              A clicker marks the exact moment of the behavior; pea-sized
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A clicker marks the exact moment of the behavior; pea-sized
               treats and a belt-clip pouch keep the reward inside the 1.3-second
               window so the click stays charged. Same clicker, treat, and pouch
               hops used on the{' '}
@@ -122,8 +117,7 @@ export default function MarkerTrainingPage() {
               </Link>
               . They are not a ranked product list and they do not replace
               charging the marker. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+              purchases at no extra cost to you.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"
@@ -137,7 +131,7 @@ export default function MarkerTrainingPage() {
                 amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"
                 amazonLabel="Browse treat pouches on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/training/positive-reinforcement" className="text-brand-primary hover:underline">

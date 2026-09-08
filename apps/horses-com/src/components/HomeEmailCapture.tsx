@@ -19,9 +19,9 @@ export function HomeEmailCapture() {
           title="This week for your horse"
           subtitle="What to check this week, one product worth the money, one management trap to avoid. On this site — not emailed."
           source="homepage-under-hero"
-          ctaText="Send the weekly notes"
+          ctaText="Send the notes"
           perks={[
-            'By discipline and life stage',
+            'Inbox notes only',
             'Sourced — no paid placements',
           ]}
         />

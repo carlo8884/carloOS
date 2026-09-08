@@ -27,51 +27,34 @@ export default function EmergencyCostsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Owner Newsletter" subtitle="Practical guidance weekly." source="guides-er-costs" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-er-costs" />
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the emergency-vet-cost prep checklist
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Emergency-vet-cost prep checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              emergency-savings-fund, written-estimate,
-              and deposit copy on this page — a locking
-              cash box with a key so the deductible,
-              non-reimbursed portion, and upfront
-              deposit stay a counted fund, a basic
-              desktop calculator so an estimate range
-              is added up instead of guessed, and
-              letter-size manila file folders so the
-              written treatment plan and cost estimate
-              stay together. Educational checklist,
-              not a diagnosis, not a substitute for
-              emergency care, and not a letter-size
-              expanding-file, plastic file-box,
-              first-aid kit, thermometer, or #1161
-              three-clinic contact hop. No spam.
-            </p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Emergency-vet-cost prep checklist"
-              subtitle="Email the cash-box, calculator, and estimate-folder notes. No spam."
-              ctaText="Email my emergency-vet-cost prep checklist"
-              source="guides-emergency-vet-costs-under-hero"
-            />
-          </div>
-
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
           <CalloutBox variant="warning" title="Never delay genuine emergency care over cost">
             If your pet is having a true emergency — difficulty breathing, severe bleeding, collapse, inability to urinate, suspected bloat — go immediately. Financial options can be discussed once your pet is stable. Delay in a real emergency can cost a life that money cannot recover.
           </CalloutBox>
+
+          {/* Under-hero capture — source must end in under-hero so it always renders. */}
+          <div className="mb-8">
+            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+              Owner notes
+            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
+              Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.
+            </p>
+            <EmailCapture
+              variant="inline"
+              siteId="vets-co"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
+              source="guides-emergency-vet-costs-under-hero"
+            />
+          </div>
 
           <h2>Why Emergency Care Costs More</h2>
           <p>An emergency hospital is a fundamentally different operation from a general practice. It maintains veterinarians and trained technicians on duty around the clock — overnight, weekends, and holidays — and keeps intensive-care equipment, oxygen, blood products, and advanced monitoring ready at all times. This standing capacity to handle the sickest patients the moment they arrive carries substantial fixed costs that are reflected in pricing. In essence, you are paying for guaranteed, immediate access to a fully equipped and staffed facility precisely when you need it.</p>
@@ -185,7 +168,7 @@ export default function EmergencyCostsPage() {
               they do not replace a veterinarian.
               Vets.co earns a commission on
               qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
+              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

@@ -64,36 +64,16 @@ export default function BestJointSupplementsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the joint-supplement checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Joint-supplement checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the joint-supplement notes that
-                match the ranking copy on this page —
-                supplements do not replace NSAIDs for
-                diagnosed osteoarthritis, Dasuquin
-                with MSM for ASU plus a 4–6 week
-                trial, Nordic Naturals EPA/DHA at
-                20–55 mg/kg confirmed with a
-                veterinarian, Cosequin DS as the
-                budget NASC start, and CBD only with
-                a COA and vet-set dose. Educational
-                joint-supplement checklist, not a new
-                product hop, not a prescription
-                NSAID, and not a substitute for a
-                veterinarian. The existing Dasuquin /
-                Nordic Naturals / Cosequin Amazon
-                searches stay below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Joint-supplement checklist"
-                subtitle="Email the NSAID, Dasuquin, and EPA/DHA notes. No spam."
-                ctaText="Email my joint-supplement checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-joint-supplements-under-hero"
               />
             </div>

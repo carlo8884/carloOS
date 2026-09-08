@@ -181,22 +181,14 @@ export default function FerretGrimaceScalePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the pain-check chart
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret pain-check checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the five-sign Ferret Grimace checklist (ears, eyes, nose,
-            cheeks, whiskers) and the observation recap so you can re-score
-            later without re-reading the descriptors. Planning / observation
-            reference only — not a diagnosis or emergency-triage substitute.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
-            title="Ferret pain-check checklist"
-            subtitle="Email the five-sign ferret pain-face checklist and observation recap. No spam."
-            ctaText="Email my ferret pain-check checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-ferret-grimace-scale-under-hero"
           />
         </div>
@@ -246,24 +238,7 @@ export default function FerretGrimaceScalePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are comfort and observation items
-              for a ferret pain-watch — a ferret first-aid kit, a digital pet
-              thermometer, vet wrap / cohesive bandage, a low-setting pet
-              heating pad, and ferret electrolytes / OTC recovery food. They
-              are not a ranked product list, not invented inventory, not Rx
-              pain medicine, and they do not diagnose pain or replace emergency
-              triage. Ferrets overheat easily: a heating pad, if used at all,
-              must be low-setting, never unattended, and always paired with a
-              cool escape path. If the face looks like high pain, skip this
-              kit and use{' '}
-              <Link href="/tools/is-this-a-ferret-emergency" className="text-brand-primary underline-offset-2 hover:underline">
-                Is this a ferret emergency?
-              </Link>
-              . For a stable, non-emergency question, start at telehealth.
-              Ferret.com earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+first+aid+kit?s=tools-ferret-grimace-scale"
@@ -285,7 +260,7 @@ export default function FerretGrimaceScalePage() {
                 amazonHref="/go/amazon-brand/ferret+electrolytes+recovery+food?s=tools-ferret-grimace-scale"
                 amazonLabel="Browse ferret electrolytes / recovery foods on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>
@@ -332,8 +307,7 @@ export default function FerretGrimaceScalePage() {
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-text-dark">
             How the ferret grimace / pain-face checklist works
           </h2>
-          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
-            This checklist scores five facial action units: ear position
+          <p className="mb-4 text-base leading-relaxed text-brand-text-mid">This checklist scores five facial action units: ear position
             (flattening), orbital tightening (how squinted the eyes are),
             nose bulging, cheek bulging, and whisker retraction. Each is
             scored 0 (absent), 1 (moderate or uncertain), or 2 (obvious),
@@ -356,8 +330,7 @@ export default function FerretGrimaceScalePage() {
             measurement properties as a trained-observer score. That study
             found orbital tightening the most reliable unit and whisker
             retraction weaker; this page keeps all five identified units so
-            the 0–10 planning bands stay comparable to the other twins.
-          </p>
+            the 0–10 planning bands stay comparable to the other twins.</p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             It works best on a ferret that is resting rather than being
             handled, playing, eating, or just waking from a dead sleep,

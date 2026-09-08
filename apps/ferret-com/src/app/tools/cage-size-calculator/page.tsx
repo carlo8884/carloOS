@@ -170,16 +170,13 @@ export default function CageSizeCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cage size shopping list
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the L × W × H — floor, usable habitat, and the hammock / pan / bedding list —
-            so you can shop a multi-level cage without re-running the math. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
             title="Cage size shopping list"
-            subtitle="Email the L × W × H — floor, usable habitat, and the setup list so you can shop the cage. No spam."
-            ctaText="Email the cage size"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-cage-size-calculator-under-hero"
           />
         </div>
@@ -235,12 +232,10 @@ export default function CageSizeCalculatorPage() {
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cage-size-calculator"
                 amazonLabel="Browse wood pellet litter on Amazon →"
               />
-            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission. Empty Chewy buttons stay hidden.
-          </p>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Size pans with the{' '}
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">

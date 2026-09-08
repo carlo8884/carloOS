@@ -108,18 +108,13 @@ export default function PositiveReinforcementPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Reward-based training protocol
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the reinforcer-matching steps, the 2-second timing window,
-            how to charge a marker, and the CRF-to-intermittent schedule —
-            plus the kit (pea-sized treats, clicker, belt-clip pouch) so you
-            can run the protocol without scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Reward-based training protocol"
-            subtitle="Email the reinforcer steps, timing window, marker charge, and kit. No spam."
-            ctaText="Email my reward-based training protocol"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-positive-reinforcement-under-hero"
           />
         </div>
@@ -156,8 +151,7 @@ export default function PositiveReinforcementPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a reward-based training kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            High-value, pea-sized treats and a belt-clip pouch keep the
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">High-value, pea-sized treats and a belt-clip pouch keep the
             reinforcer inside the 2-second window. A clicker (or a verbal
             &quot;yes&quot;) marks the exact moment so you can deliver the food a
             beat later without losing the association. Same clicker, treat,
@@ -191,9 +185,7 @@ export default function PositiveReinforcementPage() {
             </Link>
             . They are not a ranked product list and they do not replace
             matching the reinforcer to the task. Dog.com earns a commission
-            on qualifying purchases at no extra cost to you. Empty Chewy
-            buttons stay hidden.
-          </p>
+            on qualifying purchases at no extra cost to you. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement"

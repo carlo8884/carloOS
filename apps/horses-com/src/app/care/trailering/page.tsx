@@ -116,23 +116,16 @@ export default function TraileringPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the trailering checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse trailering checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the everyday kit — shipping boots or wraps and a poll
-              guard for travel protection the horse is accustomed to, plus
-              trailer ties long enough that the horse can lower its head.
-              Educational checklist, not a diagnosis. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse trailering checklist"
-              subtitle="Email the shipping-boot, wrap, poll-guard, and trailer-tie order. No spam."
-              ctaText="Email my trailering checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-trailering-under-hero"
             />
           </div>
@@ -177,17 +170,9 @@ export default function TraileringPage() {
               water buckets are not named on this page, so they are omitted. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the trailering kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page travel-protection
-              and tying copy — shipping boots, shipping wraps, a poll guard,
-              and trailer ties. Everyday physical supplies only. They are not
-              a ranked product list, they are not treatments for shipping
-              fever, dehydration, or loading problems, and they do not replace
-              a veterinarian. Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+shipping+boots?s=care-trailering"
@@ -205,7 +190,7 @@ export default function TraileringPage() {
                 amazonHref="/go/amazon-brand/horse+trailer+ties?s=care-trailering"
                 amazonLabel="Browse horse trailer ties on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

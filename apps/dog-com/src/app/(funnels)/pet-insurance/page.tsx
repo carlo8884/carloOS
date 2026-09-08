@@ -195,7 +195,7 @@ export default function PetInsuranceHubPage() {
             source="dog-com:insurance-comparison"
             title="Get the Pet Insurance Comparison Spreadsheet"
             subtitle="All 9 carriers · all coverage details · downloadable PDF. We'll email it instantly."
-            ctaText="Email me the spreadsheet"
+            ctaText="Send the notes"
           />
         </div>
 

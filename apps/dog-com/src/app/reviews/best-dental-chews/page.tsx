@@ -32,36 +32,16 @@ export default function BestDentalChewsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dental-chew checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dental-chew checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the VOHC dental-chew notes that
-                match the ranking copy on this page —
-                the VOHC seal as the filter (not
-                &quot;dental&quot; marketing), Greenies
-                for plaque AND tartar with a pliable
-                tooth-safe texture, Whimzees for a
-                plant-based longer chew when animal
-                protein is a problem, and the 25–90
-                calorie count that must come out of
-                daily intake. Educational dental-chew
-                checklist, not a new product hop, not
-                a first-aid-kit hop, and not a
-                substitute for a veterinarian. The
-                existing Greenies and Whimzees Chewy
-                searches stay below. Dental chews
-                supplement toothbrushing — they do
-                not replace it. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dental-chew checklist"
-                subtitle="Email the VOHC seal, Greenies, and calorie-count notes. No spam."
-                ctaText="Email my dental-chew checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dental-chews-under-hero"
               />
             </div>
@@ -105,7 +85,7 @@ export default function BestDentalChewsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="review-dental-chews" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-dental-chews" />
           </aside>
         </div>
       </div>

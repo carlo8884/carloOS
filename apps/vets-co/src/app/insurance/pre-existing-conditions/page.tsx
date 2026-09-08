@@ -27,42 +27,23 @@ export default function PreExistingPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'When to Enroll', href: '/insurance/when-to-enroll' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-pre-existing" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-pre-existing" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the pre-existing checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Pre-existing checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              curable-vs-incurable, bilateral, and
-              veterinary-records copy on this page
-              — a pressboard classification folder
-              so curable, incurable, and bilateral
-              conditions stay three labeled
-              sections, a letter-size clasp envelope
-              so the vet-record copy stays one
-              packet for the insurer review, and a
-              red-and-blue checking pencil so
-              incurable vs curable stays marked on
-              that copy. Educational checklist, not
-              a diagnosis, not a substitute for
-              veterinary care, and not a
-              magnifier, copyholder, or
-              line-reader hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Pre-existing checklist"
-              subtitle="Email the classification-folder, clasp-envelope, and checking-pencil notes. No spam."
-              ctaText="Email my pre-existing checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-pre-existing-conditions-under-hero"
             />
           </div>
@@ -74,7 +55,7 @@ export default function PreExistingPage() {
           </CalloutBox>
 
           <h2>What a Pre-Existing Condition Is</h2>
-          <p>A pre-existing condition is any injury or illness that began, showed signs, or was treated before your policy's coverage started, including during any waiting period. Insurers establish this by reviewing your pet's veterinary records. Crucially, a formal diagnosis is not required — a documented symptom can be enough. If your records note repeated scratching before enrollment, a later allergy diagnosis may be classified as pre-existing and excluded. A letter-size clasp envelope is how that vet-record copy stays one packet for the insurer review — it is not a letter-size poly envelope (that lives on how-pet-insurance-works), not a letter-size file jacket (that lives on when-to-enroll), and not a kraft two-pocket folder (that lives on choosing-a-veterinarian). The condition itself is excluded, but unrelated future conditions remain coverable.</p>
+          <p>A pre-existing condition is any injury or illness that began, showed signs, or was treated before your policy's coverage started, including during any waiting period. Insurers establish this by reviewing your pet's veterinary records. Crucially, a formal diagnosis is not required — a documented symptom can be enough. If your records note repeated scratching before enrollment, a later allergy diagnosis may be classified as pre-existing and excluded. The condition itself is excluded, but unrelated future conditions remain coverable.</p>
 
           <h2>Curable vs. Incurable</h2>
           <p>Many insurers separate pre-existing conditions into curable and incurable. Incurable or chronic conditions — diabetes, allergies, heart disease, cancer, kidney disease — are generally excluded for the life of the policy. Curable conditions — a single ear infection, a respiratory infection, a urinary tract infection that fully resolved — may become eligible for coverage after the pet has gone a defined symptom-free and treatment-free period, often six to eighteen months. A red-and-blue checking pencil is how incurable vs curable stays marked on that record copy — it is not an assorted highlighter set (that lives on what-pet-insurance-covers), not a yellow legal pad (that lives on how-to-afford-vet-care), and not a four-column accounting pad (that lives on how-pet-insurance-works). Whether an insurer offers this curable-condition pathway, and how long the waiting period is, varies and is worth comparing.</p>
@@ -149,30 +130,9 @@ export default function PreExistingPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the pre-existing-conditions kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page curable-vs-incurable, bilateral,
-              and veterinary-records copy — a
-              pressboard classification folder, a
-              letter-size clasp envelope, and a
-              red-and-blue checking pencil.
-              Educational pre-existing / records
-              tools only. They are not a ranked
-              product list, they are not a
-              substitute for veterinary care, they
-              are not a #1172 magnifier /
-              copyholder / line-reader hop, they
-              are not a #1171 graph-pad /
-              paid-stamp / tally-counter hop, they
-              are not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions"
@@ -186,7 +146,7 @@ export default function PreExistingPage() {
                 amazonHref="/go/amazon-brand/red+and+blue+checking+pencil?s=insurance-pre-existing-conditions"
                 amazonLabel="Browse red-and-blue checking pencils on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Carriers and Curable Conditions</h2>

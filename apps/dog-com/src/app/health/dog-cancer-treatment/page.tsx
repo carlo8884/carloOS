@@ -42,58 +42,23 @@ export default function DogCancerTreatmentPage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-cancer-treatment" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cancer-treatment" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog cancer-treatment home-care checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog cancer-treatment home-care checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the incision, tripod-traction, and
-              small-meal notes — a dog surgical recovery
-              suit so a post-excision mast-cell or
-              soft-tissue-sarcoma incision stays covered
-              while margins are pending, non-slip dog
-              socks so a newly tripod dog after
-              osteosarcoma amputation has indoor traction
-              during the 2–4 week adaptation window, and
-              adjustable-height dog bowls so small meals
-              stay reachable during the 2–3 day chemo GI
-              window and after oral-tumor surgery.
-              Educational checklist, not a Palladia /
-              Tanovea / CHOP / doxorubicin / carboplatin
-              product list, and not a prescription.
-              Staging, protocol choice, and pain-control
-              decisions still belong with a veterinary
-              oncologist. Locking kitchen trash cans,
-              walk-through pet gates, airtight food
-              storage, pill pockets, dry-erase monthly
-              calendars, medical-alert collar tags,
-              gravity waterers, extra-large disposable
-              pee pads, cooling bandanas, self-warming
-              mats, fleece sweaters, slicker brushes,
-              lymph-node anatomy charts, foam dog stairs,
-              ear wipes, assisted-walking slings,
-              hind-paw booties, hip braces, silicone
-              grooming gloves, analog bathroom scales,
-              dog dental finger brushes, AM/PM weekly
-              pill organizers, monthly pill organizers,
-              medical-records binders, emergency contact
-              cards, and clinic-visit carriers stay on
-              other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog cancer-treatment home-care checklist"
-              subtitle="Email the recovery-suit, non-slip-sock, and adjustable-bowl notes. No spam."
-              ctaText="Email my dog cancer-treatment home-care checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-cancer-treatment-under-hero"
             />
           </div>
@@ -149,31 +114,9 @@ export default function DogCancerTreatmentPage() {
             (toceranib), Tanovea (rabacfosadine),
             VERITAS, prednisone, Cerenia, maropitant,
             mirtazapine, gabapentin, or a ranked
-            oncology product list. Locking kitchen
-            trash cans, walk-through pet gates, airtight
-            dog-food storage containers, dog pill
-            pockets, dry-erase monthly calendars, dog
-            medical-alert collar tags, gallon gravity
-            dog waterers, extra-large disposable dog
-            pee pads, dog cooling bandanas,
-            self-warming dog mats, fleece dog sweaters,
-            dog slicker brushes, lymph-node anatomy
-            charts, foam dog stairs, dog ear wipes,
-            assisted-walking slings, hind-paw booties,
-            hip braces, silicone dog grooming gloves,
-            analog bathroom scales, dog dental finger
-            brushes, AM/PM weekly pill organizers,
-            monthly pill organizers, pet medical
-            records binders, pet emergency contact
-            cards, folding pet stretchers, soft-sided
-            vet-visit carriers, orthopedic dog beds,
-            dog ramps, dog traction rugs, raised dog
-            bowls, soft recovery collars, soft recovery
-            cones, and high-value vet-visit treats
-            already live on other pages. This page does
+            oncology product list. This page does
             not hop medications. This page does not
-            claim hands-on testing.
-          </p>
+            claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -231,44 +174,9 @@ export default function DogCancerTreatmentPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog cancer-treatment home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page post-excision, tripod-adaptation,
-              and small-meal copy — a dog surgical
-              recovery suit, non-slip dog socks, and
-              adjustable-height dog bowls. Everyday
-              physical supplies only. They are not a
-              ranked product list, they are not a
-              Palladia / Tanovea / CHOP / doxorubicin /
-              carboplatin / prednisone / Cerenia /
-              maropitant hop, they are not the #1054
-              locking-trash / kitchen-gate /
-              airtight-storage hops, they are not the
-              #1053 pill-pocket / dry-erase-calendar /
-              medical-alert-tag hops, they are not the
-              #1052 gravity-waterer / extra-large-pee-pad
-              / cooling-bandana hops, they are not the
-              #1051 self-warming-mat / fleece-sweater /
-              slicker-brush hops, they are not the #1050
-              lymph-node-chart / foam-stair / ear-wipe
-              hops, they are not the #1049 sling /
-              hind-paw-bootie / hip-brace hops, they
-              are not the #1048 grooming-glove /
-              analog-scale / finger-brush hops, they
-              are not the vets.co arthritis traction-rug
-              / raised-bowl / orthopedic-bed / ramp
-              hops, they are not soft-recovery-collar
-              or soft-recovery-cone hops, they are not
-              washable-pee-pad / fountain / ceramic-bowl
-              / cooling-mat hops, they are not
-              digital-pet-scale or first-aid-kit hops,
-              and they do not replace a veterinarian.
-              Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+surgical+recovery+suit?s=health-dog-cancer-treatment"
@@ -282,7 +190,7 @@ export default function DogCancerTreatmentPage() {
                 amazonHref="/go/amazon-brand/adjustable+height+dog+bowls?s=health-dog-cancer-treatment"
                 amazonLabel="Browse adjustable-height dog bowls on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

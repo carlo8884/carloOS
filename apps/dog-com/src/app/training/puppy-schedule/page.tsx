@@ -63,7 +63,7 @@ export default function PuppySchedulePage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Schedule Matters', href: '#why' }, { label: 'Sleep Requirements', href: '#sleep' }, { label: 'Sample Daily Schedule', href: '#schedule' }, { label: 'The Socialization Window', href: '#socialization' }, { label: 'Week-by-Week Milestones', href: '#milestones' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Free printable schedule + 8-week course', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Week-by-week puppy schedule (on-page)', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }]} />
         <RelatedLinks title="Feeding a Growing Puppy" links={[{ label: 'Best Dog Food for Puppies', href: '/reviews/best-dog-food-for-puppies' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
         <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-schedule" />
@@ -80,16 +80,13 @@ export default function PuppySchedulePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Week-by-week puppy schedule
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the week-by-week puppy schedule — sleep, meals, potty, crate naps, and
-            the first-week kit — so you can run the routine without scrolling back. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
             title="Week-by-week puppy schedule"
-            subtitle="Email the week-by-week puppy schedule — sleep, meals, potty, crate naps, first-week kit. No spam."
-            ctaText="Email my week-by-week puppy schedule"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="training-puppy-schedule-under-hero"
           />
         </div>
@@ -129,8 +126,7 @@ export default function PuppySchedulePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop schedule essentials
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A few supplies make the schedule easier to run: a wire crate with a divider
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A few supplies make the schedule easier to run: a wire crate with a divider
             (safe nap space), age-appropriate puppy food, high-value training treats, and
             an enzymatic cleaner for accidents. Same crate / food / treat hops used on the{' '}
             <Link
@@ -141,8 +137,7 @@ export default function PuppySchedulePage() {
             </Link>
             . They are not a ranked product list and they do not replace the first vet
             visit. Size the crate before you order. Dog.com earns a commission on
-            qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-puppy-schedule"

@@ -52,7 +52,7 @@ export default function VizslaPage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-vizsla" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-vizsla" />
       </>}
     >
       <div className="carloOS-article">
@@ -60,39 +60,16 @@ export default function VizslaPage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the vizsla checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Vizsla checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-vizsla-magyar-point-chart,
-            dog-fridge-vizsla-velcro-card, and
-            canine-first-owner-vizsla-handbook notes that
-            match the 10th-century Magyar pointing origin, the
-            velcro-dog floor, and first-time-owner notes on
-            this page — a laminated dog Vizsla Magyar-point
-            chart so the Hungarian nobility / upland-game
-            notes are posted on the fridge (not a Shiba
-            underbrush-hunt chart, not a Bernard Alpine-
-            rescue chart), a fridge Vizsla velcro card so
-            the room-to-room / not-a-full-workday notes are
-            labeled in the kitchen (not a scream card, not a
-            finger-toothbrush hop), and a first-owner Vizsla
-            handbook so the NO-typically / 1.5–2-hour run /
-            epilepsy-watch grounding is a physical kitchen
-            book (not a first-owner Shiba Inu handbook).
-            Educational kitchen checklist, not a ranked
-            product list, not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Vizsla checklist"
-            subtitle="Email the Magyar-point chart, velcro card, and first-owner handbook notes. No spam."
-            ctaText="Email my vizsla checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-vizsla-under-hero"
           />
         </div>
@@ -116,35 +93,14 @@ export default function VizslaPage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Vizsla home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            10th-century Magyar pointing origin, the velcro-
-            dog floor, and first-time-owner notes — a
-            laminated dog Vizsla Magyar-point chart, a fridge
-            Vizsla velcro card, and a first-owner Vizsla
-            handbook. Educational kitchen searches only.
-            They are not a ranked product list, they are not
-            a crate hop, they are not a finger-toothbrush
-            hop, and they do not replace a veterinarian.
-            Dog.com does not sell insurance. Dog.com earns a
-            commission on qualifying purchases at no extra
-            cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+vizsla+magyar+point+chart?s=breed-vizsla"
-              amazonLabel="Browse laminated dog Vizsla Magyar-point charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+vizsla+velcro+card?s=breed-vizsla"
-              amazonLabel="Browse fridge Vizsla velcro cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+vizsla+handbook?s=breed-vizsla"
-              amazonLabel="Browse first-owner Vizsla handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-vizsla"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

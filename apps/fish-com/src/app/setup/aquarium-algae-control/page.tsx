@@ -48,27 +48,16 @@ export default function AlgaeControlPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the algae-control scraper checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Algae-control scraper checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the glass-cleaning notes — an aquarium magnetic
-            scraper for the viewing panes, plus a handheld aquarium
-            algae scraper for plant leaves and hardscape the magnet
-            cannot reach — so manual removal is ready while the
-            light / nutrient / CO2 imbalance is fixed. Educational
-            checklist, not a ranked product list and not a first-tank
-            filter / heater / test-kit order. Those stay on the setup
-            hub. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Algae-control scraper checklist"
-            subtitle="Email the magnetic-scraper and handheld-scraper notes. No spam."
-            ctaText="Email my algae-control scraper checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-aquarium-algae-control-under-hero"
           />
         </div>
@@ -118,7 +107,7 @@ export default function AlgaeControlPage() {
             tabs, or pressurized CO2, and they do not replace fixing
             the light / nutrient / CO2 imbalance. Fish.com earns a
             commission on qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
+            you.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

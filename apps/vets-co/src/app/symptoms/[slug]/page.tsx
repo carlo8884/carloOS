@@ -218,43 +218,16 @@ export default function SymptomPage({ params }: PageProps) {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the symptoms-spoke checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Symptoms-spoke checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-pet-sx-spoke-urgency-chart,
-            fridge-sx-spoke-flag-card, and
-            veterinary-sx-spoke-handbook notes that
-            match this remaining {s.name} spoke — the
-            ER-NOW / same-day / schedule / monitor
-            urgency copy, the red-flag / when-to-call
-            notes, and the AVMA / AAHA / ACVIM
-            grounding — a laminated pet symptoms-spoke
-            urgency chart so this remaining-sign map
-            is posted on the fridge (not a hub
-            four-tier triage map, not a
-            diagnostics-spoke urgency chart), a fridge
-            symptoms-spoke flag card so the red-flag
-            notes are labeled in the kitchen (not a
-            hub library card, not a diagnostics cost
-            card), and a symptoms-spoke handbook so
-            the AVMA / AAHA / ACVIM row is a
-            physical kitchen book (not a hub
-            symptoms handbook, not a diagnostics
-            handbook). Educational kitchen checklist,
-            not a ranked product list, not a
-            medication hop, not a substitute for a
-            veterinarian. Vets.co does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Symptoms-spoke checklist"
-            subtitle="Email the urgency chart, flag card, and symptoms-spoke handbook notes. No spam."
-            ctaText="Email my symptoms-spoke checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source={`symptoms-${s.slug}-under-hero`}
           />
         </div>
@@ -553,41 +526,14 @@ export default function SymptomPage({ params }: PageProps) {
             never an Rx product. */}
         <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the symptoms-spoke kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page ER-NOW / same-day / schedule /
-            monitor urgency copy, the red-flag /
-            when-to-call notes, and the AVMA / AAHA /
-            ACVIM grounding — a laminated pet
-            symptoms-spoke urgency chart, a fridge
-            symptoms-spoke flag card, and a
-            veterinary symptoms-spoke handbook.
-            Educational kitchen searches only. They
-            are not a ranked product list, they are
-            not a symptoms-hub hop, they are not a
-            diagnostics-spoke hop, they are not a
-            first-aid-kit hop, they are not a flea /
-            heartworm / vaccine hop, and they do not
-            replace a veterinarian. Vets.co does not
-            sell insurance. Vets.co earns a
-            commission on qualifying purchases at no
-            extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+pet+sx+spoke+urgency+chart?s=symptoms-spoke"
-              amazonLabel="Browse laminated pet symptoms-spoke urgency charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+fridge+sx+spoke+flag+card?s=symptoms-spoke"
-              amazonLabel="Browse fridge pet symptoms-spoke flag cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/veterinary+sx+spoke+handbook?s=symptoms-spoke"
-              amazonLabel="Browse veterinary symptoms-spoke handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/pet+supplies?s=symptoms-spoke"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -82,35 +82,16 @@ export default function BoesemaniPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the boesemani-rainbowfish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Boesemani-rainbowfish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the rainbowfish notes that match
-                the care copy on this page — a
-                55-gallon-class tank so a group of 8–10
-                adults has open swimming room, a school
-                of 8+ (10–12 is better) so males keep
-                displaying, hard alkaline water (pH
-                7.2–8.0, GH 10–18) like Lake Ajamaru,
-                72–82°F, and nitrate under 20 ppm so
-                the blue-orange split stays vivid.
-                Educational boesemani-rainbowfish-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                boesemani-rainbowfish tank-setup Amazon
-                search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Boesemani-rainbowfish-setup checklist"
-                subtitle="Email the hard-alkaline, group, and 55-gallon notes. No spam."
-                ctaText="Email my boesemani-rainbowfish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-boesemani-rainbowfish-under-hero"
               />
             </div>

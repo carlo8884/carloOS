@@ -27,41 +27,23 @@ export default function FinePrintPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="Our plain-English checklist." source="insurance-fine-print" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-fine-print" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the fine-print checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Fine-print checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the prep notes that match the
-              waiting-period, payout-model, and
-              exclusions-list copy on this page — a
-              full-page magnifier so orthopedic
-              waiting-period clauses stay readable
-              on the sample policy, an adjustable
-              copyholder so two sample policies stay
-              propped for a side-by-side read, and
-              a line-reader strip so the exclusions
-              list stays followed line by line.
-              Educational checklist, not a
-              diagnosis, not a substitute for
-              veterinary care, and not a
-              graph-pad, paid-stamp, or
-              tally-counter hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Fine-print checklist"
-              subtitle="Email the magnifier, copyholder, and line-reader notes. No spam."
-              ctaText="Email my fine-print checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="insurance-reading-the-fine-print-under-hero"
             />
           </div>
@@ -82,7 +64,7 @@ export default function FinePrintPage() {
           <p>Some insurers reimburse the exam or consultation fee; others exclude it. Over a chronic condition requiring repeated rechecks, this adds up. Look also at how the plan handles prescription medications, hospitalization, specialist and emergency care, alternative therapies, and behavioral treatment. These ancillary inclusions and exclusions distinguish otherwise-similar plans and can swing the value substantially for a pet with ongoing needs.</p>
 
           <h2>The Exclusions List</h2>
-          <p>The exclusions section is the most important part of the document. Read how the plan treats pre-existing conditions, bilateral conditions, hereditary and congenital conditions, and dental disease. Note any breed-specific exclusions, age limits, and conditions that are never covered. A line-reader strip is how that exclusions list stays followed line by line — it is not 3x3 sticky notes (that live on questions-to-ask-your-vet), not ruled index cards (that live on questions-to-ask-your-vet), and not letter-size sheet protectors (that live on questions-to-ask-your-vet). The coverage list tells you what a plan promises; the exclusions list tells you where it stops — and the gaps are where claims get denied.</p>
+          <p>The exclusions section is the most important part of the document. Read how the plan treats pre-existing conditions, bilateral conditions, hereditary and congenital conditions, and dental disease. Note any breed-specific exclusions, age limits, and conditions that are never covered. The coverage list tells you what a plan promises; the exclusions list tells you where it stops — and the gaps are where claims get denied.</p>
 
           <h2>Practical Reading Strategy</h2>
           <p>Approach the policy with a checklist: waiting periods (especially orthopedic), payout model (percentage vs. schedule), exam-fee coverage, annual limit, and the full exclusions list. Compare two or three plans on these same points side by side rather than on price alone. A few minutes reading the fine print before enrollment prevents the far more painful discovery, during a claim, that the coverage you thought you had does not apply.</p>
@@ -148,28 +130,9 @@ export default function FinePrintPage() {
               not amazon-brand hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the reading-the-fine-print kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page waiting-period, payout-model,
-              and exclusions-list copy — a full-page
-              magnifier, an adjustable copyholder,
-              and a line-reader strip. Educational
-              fine-print / reading tools only. They
-              are not a ranked product list, they
-              are not a substitute for veterinary
-              care, they are not a #1171 graph-pad /
-              paid-stamp / tally-counter hop, they
-              are not a #1170 3-tab-divider /
-              highlighter / page-flag hop, they are
-              not a financing-brand or
-              insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print"
@@ -183,7 +146,7 @@ export default function FinePrintPage() {
                 amazonHref="/go/amazon-brand/line+reader+strip?s=insurance-reading-the-fine-print"
                 amazonLabel="Browse line-reader strips on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="quote">Compare Two or Three Policies</h2>

@@ -117,34 +117,16 @@ export default function ForageBasicsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the forage-first checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse forage-first checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the horse-hay-probe-moisture-tester,
-              equine-hay-core-sampler, and
-              wall-mounted-horse-hay-rack notes that
-              match the cleanliness, representative-
-              sample, and keep-forage-off-the-ground
-              copy on this page — a hay-probe moisture
-              tester so moldy forage is not stored or
-              fed, a hay-core sampler so a lab sample
-              is representative (not an EMS NSC kit),
-              and a wall-mounted hay rack so forage
-              stays off dirty ground. Educational barn
-              checklist, not a treatment, not a hay-net
-              hop, and not a substitute for calling the
-              veterinarian or equine nutritionist. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse forage-first checklist"
-              subtitle="Email the moisture-tester, core-sampler, and hay-rack notes. No spam."
-              ctaText="Email my horse forage-first checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-forage-under-hero"
             />
           </div>
@@ -245,23 +227,9 @@ export default function ForageBasicsPage() {
               (turnout). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the barn forage-quality kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page cleanliness, representative-sample,
-              and keep-forage-off-the-ground copy — a hay-
-              probe moisture tester, a hay-core sampler,
-              and a wall-mounted hay rack. Educational
-              barn tools only. They are not a ranked
-              product list, they are not an EMS hay-test
-              or bale-scale hop, they are not a hay-net
-              hop, and they do not replace a veterinarian
-              or equine nutritionist. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hay+probe+moisture+tester?s=nutrition-forage"
@@ -275,7 +243,7 @@ export default function ForageBasicsPage() {
                 amazonHref="/go/amazon-brand/wall+mounted+horse+hay+rack?s=nutrition-forage"
                 amazonLabel="Browse wall-mounted horse hay racks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

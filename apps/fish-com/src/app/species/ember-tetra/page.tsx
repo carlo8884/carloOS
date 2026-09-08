@@ -82,32 +82,16 @@ export default function EmberTetraPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the ember-tetra-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Ember-tetra-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Hyphessobrycon amandae
-                notes that match the care copy on this
-                page — a school of 10 (20+ for the
-                fire-school display), a planted 5-gallon
-                minimum or 10+ gallons for room,
-                73–82°F and pH 5.5–7.0, and
-                shrimp-safe nano tankmates. Educational
-                ember-tetra-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing ember-tetra tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Ember-tetra-setup checklist"
-                subtitle="Email the school-size, planted-nano, and shrimp-safe notes. No spam."
-                ctaText="Email my ember-tetra-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-ember-tetra-under-hero"
               />
             </div>

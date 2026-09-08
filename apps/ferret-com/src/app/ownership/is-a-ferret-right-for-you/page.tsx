@@ -107,46 +107,16 @@ export default function IsAFerretRightForYouPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret fit-check checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret fit-check checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-fit-check-chart,
-              fridge-time-money-odor-card, and
-              mustelid-fit-decision-handbook notes
-              that match the time-money-odor-map,
-              legality-household-log, and
-              quesenberry-afa-fit-grounding copy on this
-              page — a laminated ferret fit-check chart
-              so the daily-hours / vet-bill / musk /
-              legality map is posted on the fridge (not an
-              ownership-hub section map, not a
-              source-compare chart, not a startup-budget
-              chart), a ferret fridge time-money-odor
-              card so play-hours / four-figure-vet /
-              mild-musk notes are labeled on the fridge
-              (not a monthly-cost card, not a
-              rescue-vs-store card, not an arrival-day
-              card), and a mustelid fit-decision handbook
-              so the Quesenberry / AFA lifespan and
-              husbandry grounding is a physical kitchen
-              book (not a source-choice handbook, not a
-              cost-planning handbook, not an
-              ownership-reference handbook). Educational
-              kitchen checklist, not a ranked pet list,
-              not a sleep-sack hop, and not a substitute
-              for an exotic-mammal veterinarian. Ferret.com
-              does not sell insurance. Aging pages stay
-              held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret fit-check checklist"
-              subtitle="Email the fit-check-chart, fridge time-money-odor card, and fit-decision-handbook notes. No spam."
-              ctaText="Email my ferret fit-check checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-is-a-ferret-right-for-you-under-hero"
             />
           </div>
@@ -205,46 +175,20 @@ export default function IsAFerretRightForYouPage() {
               vaccine / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs ownership-hub /
-              adoption / cost / first-week kitchen kits.
-              Directory import left untouched. Ferret
+              adoption / cost / first-week kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret fit-check kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page time-money-odor-map,
-              legality-household-log, and
-              quesenberry-afa-fit-grounding copy — a
-              laminated ferret fit-check chart, a
-              ferret fridge time-money-odor card, and a
-              mustelid fit-decision handbook.
-              Educational kitchen searches only. They are
-              not a ranked pet list, they are not an
-              ownership-hub / adoption / cost hop, they
-              are not a child toothbrush hop, and they do
-              not replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance. Ferret.com
-              earns a commission on qualifying purchases at
-              no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+fit+check+chart?s=is-a-ferret-right-for-you"
-                amazonLabel="Browse laminated ferret fit-check charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=is-a-ferret-right-for-you"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+time+money+odor+card?s=is-a-ferret-right-for-you"
-                amazonLabel="Browse ferret fridge time-money-odor cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+fit+decision+handbook?s=is-a-ferret-right-for-you"
-                amazonLabel="Browse mustelid fit-decision handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="sources">Sources</h2>

@@ -141,8 +141,8 @@ export default function StockingCalculatorPage() {
           <EmailCapture
             variant="sidebar"
             siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Stocking tips, species spotlights, every Thursday."
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
             source="stocking-calculator"
           />
         </>
@@ -155,31 +155,25 @@ export default function StockingCalculatorPage() {
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-08T00:00:00Z" reviewedBy="Editorial team" />
 
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Aquarium stocking checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the stocking checklist — surface-area ceiling, 60–80% target band,
-            filtration upgrades, and water-param tips — so you can stock without
-            re-running the calculator. No spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Aquarium stocking checklist"
-            subtitle="Email the stocking checklist — 60–80% target band, filtration upgrades, and water-param tips. No spam."
-            ctaText="Email my stocking checklist"
-            source="tools-stocking-calculator-under-hero"
-          />
-        </div>
 
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        {/* Under-hero capture — source must end in under-hero so it always renders. */}
+        <div className="mb-8">
+          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
+            Owner notes
+          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
+          <EmailCapture
+            variant="inline"
+            siteId="fish-com"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
+            source="tools-stocking-calculator-under-hero"
+          />
+        </div>
 
         {/* Money path — live amazon-brand search hops (HOB / canister / heater / sand / test kit / net).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
@@ -188,51 +182,7 @@ export default function StockingCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a stocking kit
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches are husbandry items that match the
-            ceiling you just calculated — an AquaClear HOB or Fluval canister
-            (oversizing filtration is the cheapest way to raise capacity), a
-            heater sized to the same gallons, sand for bottom-dwellers, a liquid
-            test kit to confirm the bioload, and a net for adding fish. Same hops
-            used with the{' '}
-            <Link
-              href="/reviews/best-aquarium-filters"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              aquarium filter reviews
-            </Link>
-            , the{' '}
-            <Link
-              href="/reviews/best-nano-tanks"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              nano tank reviews
-            </Link>
-            {' '}(Fluval Spec for tight stocking), the{' '}
-            <Link
-              href="/tools/heater-wattage-calculator"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              heater wattage calculator
-            </Link>
-            , the{' '}
-            <Link
-              href="/tools/substrate-calculator"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              substrate calculator
-            </Link>
-            , and the{' '}
-            <Link
-              href="/reviews/best-water-test-kits"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              water-test kit review
-            </Link>
-            . They are not a ranked product list and not invented inventory.
-            Fish.com earns a commission on qualifying purchases at no extra cost
-            to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-stocking-calculator"

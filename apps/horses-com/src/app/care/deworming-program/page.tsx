@@ -117,27 +117,16 @@ export default function DewormingProgramPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the fecal-egg-count sampling checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse fecal-egg-count sampling checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine fecal-sample container, pasture
-              manure-rake, and stable muck-cart notes so a
-              fresh sample can reach the clinic and pasture
-              piles do not sit. Educational checklist, not a
-              dewormer order and not a substitute for the
-              veterinary program. Stall forks, grazing
-              muzzles, and soil-test kits stay on other
-              pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse fecal-egg-count sampling checklist"
-              subtitle="Email the sample-container, pasture-rake, and muck-cart notes. No spam."
-              ctaText="Email my horse fecal-egg-count sampling checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-deworming-program-under-hero"
             />
           </div>
@@ -173,7 +162,7 @@ export default function DewormingProgramPage() {
           </ul>
 
           <h2 id="kit">FEC sampling kit</h2>
-          <p>Everyday physical supplies that match the fecal-egg-count and pasture-cleanup copy on this page — an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, and a stable muck cart so those piles leave the paddock. These are household barn tools, not treatments. They do not deworm a horse, they do not replace a veterinarian or a fecal egg count, and they are not a ranked product list. Stall forks, stall manure pickers, grazing muzzles, and soil-test kits already live on other pages. This page does not hop dewormers, ivermectin, praziquantel, or any medication. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the fecal-egg-count and pasture-cleanup copy on this page — an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, and a stable muck cart so those piles leave the paddock. These are household barn tools, not treatments. They do not deworm a horse, they do not replace a veterinarian or a fecal egg count, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -193,25 +182,9 @@ export default function DewormingProgramPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse FEC sampling kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page fecal-egg-count and pasture-cleanup
-              copy — an equine fecal-sample container, a
-              pasture manure rake, and a stable muck cart.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              dewormer or medication hop, they are not a
-              stall-fork / manure-picker hop, they are
-              not a dog fecal-sample-collection-kit or
-              leak-proof-specimen-bag hop, they are not
-              a grazing-muzzle or soil-test-kit hop, and
-              they do not replace a veterinarian.
-              Horses.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+fecal+sample+container?s=care-deworming-program"
@@ -225,7 +198,7 @@ export default function DewormingProgramPage() {
                 amazonHref="/go/amazon-brand/stable+muck+cart?s=care-deworming-program"
                 amazonLabel="Browse stable muck carts on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

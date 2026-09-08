@@ -48,33 +48,23 @@ export default function DogAllergiesPage() {
           </div>
           <RelatedLinks title="Related" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'Elimination Diet Guide', href: '/nutrition/elimination-diet' }, { label: 'Hot Spots in Dogs', href: '/health/dog-hot-spots' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-allergies" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-allergies" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the allergy HEPA-filter checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-allergies HEPA-filter checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the HEPA notes — a HEPA filtration air purifier and a
-              replacement HEPA filter kit for homes where environmental
-              allergen load is part of the plan. Educational checklist,
-              not a diagnosis and not a medicated shampoo.
-              Chlorhexidine bathing products, Apoquel, Cytopoint,
-              Atopica, and prescription diets stay off this list. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-allergies HEPA-filter checklist"
-              subtitle="Email the HEPA air-purifier and filter-kit notes. No spam."
-              ctaText="Email my dog-allergies HEPA checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-dog-allergies-under-hero"
             />
           </div>
@@ -191,19 +181,9 @@ export default function DogAllergiesPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the HEPA filtration kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              environmental-measures copy — a HEPA filtration air
-              purifier and a replacement HEPA filter kit. Everyday
-              physical gear only. They are not a ranked product list,
-              they are not medicated shampoos, they are not
-              medications, they are not brand diet ASINs, and they do
-              not replace a veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies"
@@ -213,7 +193,7 @@ export default function DogAllergiesPage() {
                 amazonHref="/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"
                 amazonLabel="Browse HEPA filter kits on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

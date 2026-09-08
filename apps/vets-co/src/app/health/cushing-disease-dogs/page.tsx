@@ -48,7 +48,7 @@ export default function CushingsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Health Hub', href: '/health' }, { label: 'Diabetes in Dogs and Cats', href: '/health/diabetes-in-dogs-cats' }, { label: 'Hypothyroidism in Dogs', href: '/health/hypothyroidism-dogs' }, { label: 'Senior Bloodwork Guide', href: '/health/senior-bloodwork-guide' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-cushings" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cushings" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -56,40 +56,16 @@ export default function CushingsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the Cushing&apos;s monitoring checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Cushing&apos;s monitoring checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              PU/PD water-intake, pot-belly comfort, and
-              symptom-log copy on this page — a 2-liter
-              plastic graduated pitcher so excessive
-              drinking is a measured pour instead of a
-              guessed refill, an extra-large bolster dog
-              lounge so pot-belly and muscle-loss dogs
-              can rest without climbing, and an A5
-              hardcover dot-grid notebook so thirst,
-              panting, and energy stay dated observations
-              for the next ACTH recheck. Educational
-              checklist, not a ranked product list, not
-              a substitute for veterinary care, and not
-              a trilostane / Vetoryl / mitotane hop.
-              Narrow-neck glass water carafes, 2-quart
-              stainless saucepans, and pocket spiral
-              memo pads already live on
-              vomiting-diarrhea-pets. Gallon gravity
-              dog-waterers, extra-large disposable pee
-              pads, and cooling bandanas already live on
-              dog.com Cushing&apos;s. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
               title="Cushing's monitoring checklist"
-              subtitle="Email the pitcher, bolster-lounge, and notebook notes. No spam."
-              ctaText="Email my Cushing's monitoring checklist"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-cushing-disease-dogs-under-hero"
             />
           </div>
@@ -196,29 +172,9 @@ export default function CushingsPage() {
               and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home monitoring kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page PU/PD water-intake, pot-belly
-              comfort, and symptom-log copy — a 2-liter
-              plastic graduated pitcher, an extra-large
-              bolster dog lounge, and an A5 hardcover
-              dot-grid notebook. Educational home-care
-              and monitoring tools only. They are not a
-              ranked product list, they are not a
-              substitute for veterinary care, they are
-              not a #1077 carafe / saucepan / memo-pad
-              hop, they are not a #1076 toothbrush-kit /
-              VOHC-chew / water-additive hop, they are
-              not a #1075 egg-crate-pad / pet-steps /
-              floor-scale hop, they are not a dog.com
-              gravity-waterer / pee-pad / cooling-bandana
-              hop, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs"
@@ -232,7 +188,7 @@ export default function CushingsPage() {
                 amazonHref="/go/amazon-brand/a5+hardcover+dot+grid+notebook?s=health-cushing-disease-dogs"
                 amazonLabel="Browse A5 hardcover dot-grid notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

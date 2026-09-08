@@ -21,13 +21,13 @@ const TOOLS = [
   {
     href: '/tools/is-this-a-cat-emergency',
     title: 'Is This a Cat Emergency?',
-    desc: 'Check feline signs — open-mouth breathing, pale/blue gums, collapse, unproductive straining, lily/toxin, trauma, seizures, a hard belly — for a conservative go-now / same-day / monitor read, then shop a cat emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A sign-list triage aid, not a diagnosis, and not a replacement for ER vs clinic.',
+    desc: 'Check feline signs — open-mouth breathing, pale/blue gums, collapse, unproductive straining, lily/toxin, trauma, seizures, a hard belly — for a conservative go-now / same-day / monitor read. A sign-list triage aid, not a diagnosis, and not a replacement for ER vs clinic.',
     tag: 'Triage',
   },
   {
     href: '/tools/er-vs-clinic',
     title: 'ER vs Clinic vs Telehealth',
-    desc: 'Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on a screen? Select the signs, then shop a pet emergency-prep kit (first-aid, thermometer, soft carrier, styptic powder, wound-care gauze). A setting chooser, not a diagnosis.',
+    desc: 'Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on a screen? Select the signs. A setting chooser, not a diagnosis.',
     tag: 'Triage',
   },
   {
@@ -39,7 +39,7 @@ const TOOLS = [
   {
     href: '/tools/cat-body-condition-score',
     title: 'Cat Body Condition Score',
-    desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 WSAVA scale, then shop a weight-management kit (digital pet scale, measuring tape, weight-management cat food, puzzle feeder, interactive toy). Planning / wellness reference, not a diagnosis.',
+    desc: 'Is your cat overweight? Answer three hands-on checks — rib feel, waist from above, and the abdominal fat pad (with the primordial-pouch caveat) — to estimate your cat’s body condition score on the 1–9 WSAVA scale. Planning / wellness reference, not a diagnosis.',
     tag: 'Health',
   },
   {
@@ -51,7 +51,7 @@ const TOOLS = [
   {
     href: '/tools/cat-grimace-scale',
     title: 'Cat Grimace Scale',
-    desc: 'Is your cat in pain? Score five facial action units — ears, eyes, muzzle, whiskers, head — using the framework of the validated Feline Grimace Scale for a 0–10 grimace total, with the ≈4/10 pain threshold, then shop a pain-watch observation kit (soft carrier, first-aid kit, calming pheromone diffuser, digital thermometer, cozy recovery bed). Planning / observation reference, not a diagnosis or emergency-triage substitute.',
+    desc: 'Is your cat in pain? Score five facial action units — ears, eyes, muzzle, whiskers, head — using the framework of the validated Feline Grimace Scale for a 0–10 grimace total, with the ≈4/10 pain threshold. Planning / observation reference, not a diagnosis or emergency-triage substitute.',
     tag: 'Health',
   },
   {
@@ -127,42 +127,16 @@ export default function ToolsHub() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the vets tools-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Vets tools-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-cat-calculator-tools-chart,
-            fridge-measurement-card, and
-            feline-calculator-reference-handbook notes that
-            match the calculator-section-map,
-            per-cat-measurement-log, and
-            FGS-RER-and-WSAVA copy on this hub — a laminated
-            cat calculator-tools chart so the section map
-            (cat emergency, ER vs clinic, age, BCS, calories,
-            grimace, insurance worth-it, coverage finder,
-            reimbursement) is posted on the fridge (not a
-            first-aid chart, not an emergency-triage chart,
-            not a grimace-scale chart), a cat fridge
-            measurement card so each cat&apos;s age band, BCS,
-            calorie estimate, and grimace total is labeled
-            on the fridge (not a thermometer card, not a
-            carrier card, not a first-aid card), and a feline
-            calculator reference handbook so the Feline
-            Grimace Scale / RER / WSAVA grounding is a
-            physical kitchen book (not a first-aid handbook,
-            not an emergency handbook, not an insurance
-            handbook). Educational kitchen checklist, not a
-            treatment, not a ranked product list, and not a
-            substitute for a veterinarian. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Vets tools-hub checklist"
-            subtitle="Email the calculator-tools-chart, fridge measurement-card, and calculator-handbook notes. No spam."
-            ctaText="Email my vets tools-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-hub-under-hero"
           />
         </div>
@@ -229,37 +203,13 @@ export default function ToolsHub() {
           <p className="text-base text-brand-text-mid leading-relaxed mb-4">
             We deliberately do not ship a diagnostic &ldquo;pet symptom checker&rdquo; that names a disease from an owner&apos;s description. Consumer checkers over-refer to emergency rooms and still miss the cases where the owner&apos;s sense of severity is the real signal. The <Link href="/tools/is-this-a-cat-emergency" className="text-brand-primary no-underline hover:underline">cat emergency sign-list</Link> answers <em>how urgently</em> to seek care for feline signs. The <Link href="/tools/er-vs-clinic" className="text-brand-primary no-underline hover:underline">ER vs clinic vs telehealth</Link> tool only answers <em>where to go</em>. For named signs in prose, use the emergency triage card, the <Link href="/symptoms" className="text-brand-primary no-underline hover:underline">symptom library</Link>, and named specialists.
           </p>
-          <p className="text-base text-brand-text-mid leading-relaxed">
-            We also do not ship breed-specific health calculators or genetic-risk estimators. Those exist as breed-specific reference content under <Link href="/breeds" className="text-brand-primary no-underline hover:underline">/breeds</Link> and condition-specific content under <Link href="/health" className="text-brand-primary no-underline hover:underline">/health</Link>, with citations to the published breed-prevalence data. A calculator would imply a precision the underlying data does not support.
-            A laminated cat calculator-tools chart is how the hub map (cat emergency, ER vs clinic, age, BCS, calories, grimace, insurance worth-it, coverage finder, reimbursement) stays posted on the fridge — it is not a laminated first-aid chart (that lives on the cat-emergency tool), not a laminated emergency-triage chart (that lives on the triage card), and not a laminated grimace-scale chart (that lives on the grimace tool).
-            A cat fridge measurement card is how each cat&apos;s age band, BCS, calorie estimate, and grimace total is labeled on the fridge — it is not a thermometer card, not a carrier card, and not a first-aid card (those live on the child tools).
-            A feline calculator reference handbook is how the Feline Grimace Scale / RER / WSAVA grounding sits in the kitchen — it is not a feline first-aid handbook and not a feline emergency handbook (those live on the child tools).
-          </p>
+          <p className="text-base text-brand-text-mid leading-relaxed">We also do not ship breed-specific health calculators or genetic-risk estimators. Those exist as breed-specific reference content under <Link href="/breeds" className="text-brand-primary no-underline hover:underline">/breeds</Link> and condition-specific content under <Link href="/health" className="text-brand-primary no-underline hover:underline">/health</Link>, with citations to the published breed-prevalence data. A calculator would imply a precision the underlying data does not support</p>
         </div>
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Tools-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          calculator-section-map, per-cat-measurement-log,
-          and FGS-RER-and-WSAVA copy on this hub — a
-          laminated cat calculator-tools chart so the
-          section map is posted on the fridge, a cat fridge
-          measurement card so each cat&apos;s age band, BCS,
-          calorie estimate, and grimace total is labeled on
-          the fridge, and a feline calculator reference
-          handbook so the Feline Grimace Scale / RER / WSAVA
-          grounding is a physical kitchen book. These are
-          educational kitchen searches, not a ranked product
-          list, not a substitute for a veterinarian, not a
-          first-aid-kit / thermometer / carrier / styptic /
-          gauze hop (those live on the child tools). This
-          page does not hop medications or vaccines. This
-          page does not claim hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
@@ -277,35 +227,13 @@ export default function ToolsHub() {
             styptic+powder / wound+care+gauze. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the tools-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page calculator-section-map,
-            per-cat-measurement-log, and
-            FGS-RER-and-WSAVA copy — a laminated cat
-            calculator-tools chart, a cat fridge
-            measurement card, and a feline calculator
-            reference handbook. Educational kitchen
-            searches only. They are not a ranked product
-            list, they are not a first-aid-kit /
-            thermometer / carrier hop, and they do not
-            replace a veterinarian. Vets.co earns a
-            commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+cat+calculator+tools+chart?s=tools-hub"
-              amazonLabel="Browse laminated cat calculator-tools charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/cat+fridge+measurement+card?s=tools-hub"
-              amazonLabel="Browse cat fridge measurement cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/feline+calculator+reference+handbook?s=tools-hub"
-              amazonLabel="Browse feline calculator reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/pet+supplies?s=tools-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

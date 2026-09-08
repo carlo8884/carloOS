@@ -160,31 +160,16 @@ export default function LeashAndHarnessTrainingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret leash-and-harness checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret leash-and-harness checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the leash notes that match the
-              copy on this page — never a collar,
-              an H-style or vest harness, the
-              two-finger fit plus an indoor back-out
-              test, a days-1–3 treat-and-off
-              break-in before any outdoor walk, and
-              skip heat above about 80°F. Educational
-              checklist, not a new product hop and
-              not a substitute for an exotic-animal
-              veterinarian. The existing Marshall
-              H-style hop and vest Amazon search stay
-              below. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret leash-and-harness checklist"
-              subtitle="Email the H-style, two-finger-fit, and indoor break-in notes. No spam."
-              ctaText="Email my ferret leash-and-harness checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-leash-harness-under-hero"
             />
           </div>

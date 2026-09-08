@@ -298,7 +298,7 @@ export default async function BreedStateInsurancePage({ params }: PageParams) {
           source={`insurance-breed-state-${breed}-${state}`}
           title="Free: Pet Insurance Comparison Spreadsheet"
           subtitle="9 major carriers side-by-side. Premiums, deductibles, waiting periods, coverage exceptions."
-          ctaText="Email me the spreadsheet"
+          ctaText="Send the notes"
         />
       </section>
     </article>

@@ -80,21 +80,14 @@ export default function NitrogenCyclePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the 0/0 confirmation plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Fishless-cycling checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the fishless-cycle order — dechlorinate, dose a measured
-            ammonia source, test ammonia, nitrite, and nitrate every 2–3
-            days, and wait for the 24-hour 0/0 confirmation before adding
-            fish. Educational husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Fishless-cycling checklist"
-            subtitle="Email the dechlorinate, ammonia-dose, and 0/0 confirmation order. No spam."
-            ctaText="Email my fishless-cycling checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-nitrogen-cycle-under-hero"
           />
         </div>
@@ -208,8 +201,7 @@ export default function NitrogenCyclePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a fishless-cycling kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            A liquid master kit is how you see ammonia, nitrite, and nitrate
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">A liquid master kit is how you see ammonia, nitrite, and nitrate
             through the three stages and confirm the 24-hour 0/0 test before
             adding fish. Seachem Prime (or another dechlorinator) is how you
             fill the tank without chlorine killing the colony. A measured
@@ -256,8 +248,7 @@ export default function NitrogenCyclePage() {
             . They are not a ranked product list, they are not medications,
             and they do not treat, reverse, or cure new-tank syndrome.
             Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-nitrogen-cycle"

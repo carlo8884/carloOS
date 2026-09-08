@@ -167,22 +167,14 @@ export default function DogFirstAidKitPage() {
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the first-aid kit list
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog first-aid kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the cabinet and car first-aid order — gauze, self-adhesive
-              bandage wrap, a digital thermometer, saline flush, a soft muzzle,
-              and a carrier or blanket — so you can assemble the kit without
-              scrolling back. Educational kit list, not a diagnosis or a
-              substitute for a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog first-aid kit checklist"
-              subtitle="Email the first-aid kit supply order and emergency-prep notes. No spam."
-              ctaText="Email my dog first-aid kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-first-aid-kit-under-hero"
             />
           </div>
@@ -231,31 +223,7 @@ export default function DogFirstAidKitPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop first-aid kit supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page kit list —
-              wound-care gauze, self-adhesive bandage wrap, a digital pet
-              thermometer, saline wound flush, a soft muzzle, and a soft
-              carrier or blanket for the car. Same thermometer and carrier
-              hops used on the{' '}
-              <Link
-                href="/tools/is-this-a-dog-emergency"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                emergency triage tool
-              </Link>
-              {' '}and the{' '}
-              <Link
-                href="/health"
-                className="text-brand-primary no-underline hover:underline"
-              >
-                health library
-              </Link>
-              . They are not a ranked product list, they are not medications,
-              and they do not diagnose, treat, or replace emergency care. First
-              aid buys time on the way to a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wound+care+gauze?s=guides-first-aid-kit"
@@ -281,7 +249,7 @@ export default function DogFirstAidKitPage() {
                 amazonHref="/go/amazon-brand/soft+dog+carrier?s=guides-first-aid-kit"
                 amazonLabel="Browse soft dog carriers on Amazon →"
               />
-            </div>
+          </div>
             <p className="text-2xs text-brand-text-light mt-3">
               See also:{' '}
               <Link href="/tools/is-this-a-dog-emergency" className="text-brand-primary hover:underline">

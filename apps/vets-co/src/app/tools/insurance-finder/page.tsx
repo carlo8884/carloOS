@@ -153,8 +153,8 @@ export default function InsuranceFinderPage() {
             variant="sidebar"
             siteId="vets-co"
             title="Coverage shortlist"
-            subtitle="Email the coverage priorities so you can compare published terms. No spam."
-            ctaText="Email the insurance checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="insurance-finder"
           />
         </>
@@ -174,16 +174,13 @@ export default function InsuranceFinderPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Coverage-priority notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the coverage priorities — exam fees, dental, wellness add-on, unlimited
-            limit — so you can compare published terms without re-filtering. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
             title="Coverage-priority notes"
-            subtitle="Email the coverage priorities — exam fees, dental, wellness add-on, unlimited limit. No spam."
-            ctaText="Email the insurance checklist"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-insurance-finder-under-hero"
           />
         </div>
@@ -210,8 +207,7 @@ export default function InsuranceFinderPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a home-care prep kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              A first-aid kit, a digital thermometer, a pet scale, a recovery
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">A first-aid kit, a digital thermometer, a pet scale, a recovery
               cone, and a calming aid are the home-care items owners often keep
               on hand while they shortlist published coverage options — and
               after a claim, while a pet recovers. These are Amazon category
@@ -232,8 +228,7 @@ export default function InsuranceFinderPage() {
                 telehealth
               </Link>
               . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+              cost to you.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-finder"
@@ -255,7 +250,7 @@ export default function InsuranceFinderPage() {
                 amazonHref="/go/amazon-brand/pet+calming+aid?s=tools-insurance-finder"
                 amazonLabel="Browse pet calming aids on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
 

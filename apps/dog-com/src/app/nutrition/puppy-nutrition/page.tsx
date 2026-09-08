@@ -27,32 +27,16 @@ export default function PuppyNutritionPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the puppy-nutrition checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Puppy-nutrition checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the large-breed puppy notes that
-                match the care copy on this page —
-                AAFCO growth or all-life-stages
-                formulas, large-breed puppy food when
-                adult weight is over 50 lbs, 4 meals at
-                8–12 weeks then 3 at 3–6 months and 2
-                from 6 months, and a 7–10 day switch
-                at skeletal maturity. Educational
-                puppy-nutrition checklist, not a new
-                product hop, not a prescription diet,
-                and not a substitute for a veterinarian.
-                The existing large-breed puppy Amazon
-                and Chewy searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Puppy-nutrition checklist"
-                subtitle="Email the large-breed formula and meal-schedule notes. No spam."
-                ctaText="Email my puppy-nutrition checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="nutrition-puppy-under-hero"
               />
             </div>

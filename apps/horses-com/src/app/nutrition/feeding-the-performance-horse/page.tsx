@@ -117,11 +117,9 @@ export default function PerformanceFeedingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the performance-horse fueling checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Performance-horse fueling checklist
-            </h2>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Email the nylon-horse-hay-bag,
               horse-feed-grade-vegetable-oil, and
@@ -149,9 +147,9 @@ export default function PerformanceFeedingPage() {
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Performance-horse fueling checklist"
-              subtitle="Email the hay-bag, feed-oil, and grain-scoop notes. No spam."
-              ctaText="Email my performance-horse fueling checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-feeding-the-performance-horse-under-hero"
             />
           </div>

@@ -42,7 +42,7 @@ export default function BloatGDVPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'German Shepherd Health', href: '/breeds/german-shepherd-health' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-bloat" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-bloat" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,36 +50,16 @@ export default function BloatGDVPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog GDV prevention-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog GDV prevention-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the feeding-management notes — a
-              timed automatic dog feeder so two or more
-              smaller meals replace one large meal, a
-              maze slow-feed dog bowl so a fast eater
-              cannot gulp a bowl in seconds, and an
-              indoor dog house-line so a post-meal potty
-              trip stays a short walk, not a run or
-              fetch session. Educational checklist, not
-              a diagnosis, not a gastropexy, and not a
-              substitute for emergency care if the dog
-              is retching without producing anything.
-              Slow-feeder bowls, raised bowls,
-              adjustable-height bowls, puzzle feeders,
-              Northmate feeders, lick mats, long-lines,
-              6-ft leashes, airline crates, and
-              first-aid kits stay on other pages. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog GDV prevention-kit checklist"
-              subtitle="Email the timed-feeder, maze-bowl, and house-line notes. No spam."
-              ctaText="Email my dog GDV prevention-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-bloat-gdv-dogs-under-hero"
             />
           </div>
@@ -122,8 +102,7 @@ export default function BloatGDVPage() {
             household tools, not treatments. They do not
             treat GDV, they do not replace a
             veterinarian or prophylactic gastropexy, and
-            they are not a ranked product list.
-            Slow-feeder dog bowls, elevated slow-feeder
+            they are not a ranked product list. Slow-feeder dog bowls, elevated slow-feeder
             bowls, adjustable-height dog bowls, raised
             dog bowls, puzzle feeders, Northmate
             interactive feeders, lick mats, snuffle
@@ -139,10 +118,8 @@ export default function BloatGDVPage() {
             pants, male dog belly bands, heavy-duty dog
             exercise pens, first-aid kits, and
             emergency-contact cards already live on
-            other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+            other pages. This page does not claim
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -177,34 +154,9 @@ export default function BloatGDVPage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog GDV prevention kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page feeding-management copy — a timed
-              automatic dog feeder, a maze slow-feed
-              dog bowl, and an indoor dog house-line.
-              Everyday physical supplies only. They are
-              not a ranked product list, they are not a
-              gastropexy or medication hop, they are not
-              the #1056 diaper / inflatable-collar /
-              airline-crate hops, they are not the #1055
-              recovery-suit / non-slip-sock /
-              adjustable-bowl hops, they are not the
-              #1054 locking-trash / kitchen-gate /
-              airtight-storage hops, they are not the
-              #1053 pill-pocket / dry-erase-calendar /
-              medical-alert-tag hops, they are not the
-              #1041 heat-pants / belly-band /
-              exercise-pen hops, they are not
-              slow-feeder, elevated-slow-feeder, raised
-              bowl, puzzle-feeder, Northmate, lick-mat,
-              6-ft-leash, long-line, or first-aid-kit
-              hops, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs"
@@ -218,7 +170,7 @@ export default function BloatGDVPage() {
                 amazonHref="/go/amazon-brand/indoor+dog+house+line?s=health-bloat-gdv-dogs"
                 amazonLabel="Browse indoor dog house-lines on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

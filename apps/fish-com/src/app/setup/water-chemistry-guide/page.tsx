@@ -40,31 +40,16 @@ export default function WaterChemistryGuidePage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the water-chemistry checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Water-chemistry checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the water-chemistry checklist that matches the API freshwater
-            master test kit, ammonia / nitrite / nitrate, pH / GH / KH, and
-            nitrogen-cycle copy on this page — read pH as a result of KH and
-            CO2 rather than chasing pH-Up / pH-Down, keep GH (calcium and
-            magnesium) matched to the fish you keep, and treat KH as the
-            buffer that stops pH from swinging. An API freshwater master test
-            kit is the existing hop below for ammonia, nitrite, nitrate, and
-            pH; GH and KH still need their own tests. Educational nitrogen-cycle
-            notes only, not a ranked product list, not livestock, and not a
-            substitute for a fish veterinarian. The existing API freshwater
-            master test kit Amazon search stays below. Empty Chewy buttons
-            stay hidden. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Water-chemistry checklist"
-            subtitle="Email the API master-kit, ammonia / nitrite / nitrate, pH / GH / KH, and nitrogen-cycle notes. No spam."
-            ctaText="Email my water-chemistry checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-water-chemistry-guide-under-hero"
           />
         </div>
@@ -92,7 +77,7 @@ export default function WaterChemistryGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Water Test & Chemistry Tools — Where to Shop</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above. Empty Chewy buttons stay hidden.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse the gear referenced in this guide on Amazon. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <a href="/go/amazon-brand/api%20freshwater%20master%20test%20kit?s=setup-water-chemistry-guide" rel="sponsored noopener" style={{ display: 'inline-block', padding: '9px 16px', background: 'var(--brand-dark, #232f3e)', color: 'white', fontSize: '13px', fontWeight: 700, textDecoration: 'none', borderRadius: '6px' }}>Shop on Amazon →</a>
           </div>

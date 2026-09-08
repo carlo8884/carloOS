@@ -203,17 +203,13 @@ export default function BodyConditionScorePage() {
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Horse BCS worksheet
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the Henneke worksheet — six area scores, the overall BCS, and the
-            six-item condition kit — so you can re-score next month without re-reading
-            the descriptors. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
             title="Horse BCS worksheet"
-            subtitle="Email the Henneke worksheet — six area scores, overall BCS, and the condition kit. No spam."
-            ctaText="Email my horse BCS worksheet"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-body-condition-score-under-hero"
           />
         </div>
@@ -239,15 +235,9 @@ export default function BodyConditionScorePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop the condition kit
+            Shop related supplies
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            The six-item list above is a husbandry starting point — weight tape,
-            curry and body brush, measuring stick, BCS chart, feed scoop, slow
-            feeder — not a ranked product list. Same Amazon search hops as the
-            checklist rows. Horses.com earns a commission on qualifying purchases
-            at no extra cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-body-condition-score"

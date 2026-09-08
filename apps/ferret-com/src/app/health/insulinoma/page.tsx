@@ -221,30 +221,16 @@ export default function FerretInsulinomaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret insulinoma support-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret insulinoma support-kit checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the supportive-nutrition notes — a carnivore-care
-              critical-care formula for syringe- or spoon-fed protein
-              between meals and after a crash, chicken meat baby food
-              as the high-value protein meal once the ferret can
-              swallow, and a silicone-tip oral dosing syringe so that
-              formula is fed by mouth, not with an insulin syringe.
-              Educational support-kit checklist, not a diagnosis and
-              not a substitute for an exotic-mammal veterinarian.
-              Prednisolone, diazoxide, compounded insulin, insulin
-              syringes, glucometer brand ASINs, and Karo stay off this
-              list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret insulinoma support-kit checklist"
-              subtitle="Email the carnivore-care, meat-baby-food, and oral-dosing-syringe notes. No spam."
-              ctaText="Email my ferret insulinoma support-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-insulinoma-under-hero"
             />
           </div>
@@ -479,13 +465,11 @@ export default function FerretInsulinomaPage() {
             The products below are supportive-nutrition tools used alongside veterinary treatment — they do NOT treat or cure insulinoma. Insulinoma requires diagnosis and a management plan from a veterinarian experienced with ferrets.
           </p>
           <p>
-            A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance. A carnivore-care critical-care formula is that recovery powder in a searchable category — it is not a kibble hop and not a brand ASIN. Chicken meat baby food is the high-value protein meal the crisis protocol names once the ferret can swallow — it is not a sugary treat and not a Karo bottle. A silicone-tip oral dosing syringe is how that formula is fed by mouth — it is not an insulin syringe, not a U-100 kit, and not a compounded-insulin ASIN.
-          </p>
+            A high-calorie, protein- and fat-based critical-care supplement (such as Oxbow Carnivore Care) is commonly used in ferret convalescent feeding — as a between-meal supplement and as the food offered during or after a hypoglycemic episode, because it avoids the rebound insulin spike that pure sugar causes. It is syringe- or spoon-fed and does not treat insulinoma; use it only as a nutritional support tool under your veterinarian&apos;s guidance. A carnivore-care critical-care formula is that recovery powder in a searchable category — it is not a kibble hop and not a brand ASIN. Chicken meat baby food is the high-value protein meal the crisis protocol names once the ferret can swallow — it is not a sugary treat and not a Karo bottle. </p>
 
           <h2 id="kit">Insulinoma support kit</h2>
           <p>
-            Everyday physical supplies that match the supportive-nutrition and crisis-meal copy on this page — a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. High-protein ferret kibble, senior ferret food, freeze-dried treats, pet glucometers, light corn syrup, Karo brand bottles, pet oral feeding syringes already used on dog anemia, and ferret electrolytes recovery food already live on other pages. This page does not hop insulin syringes, U-100 kits, compounded insulin, Vetsulin, prednisolone, diazoxide, Banamine, flunixin, bute, or NSAIDs. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.
-          </p>
+            Everyday physical supplies that match the supportive-nutrition and crisis-meal copy on this page — a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -516,25 +500,9 @@ export default function FerretInsulinomaPage() {
               Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret insulinoma support kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page supportive-nutrition and crisis-meal
-              copy — a carnivore-care critical-care formula,
-              chicken meat baby food, and a silicone-tip
-              oral dosing syringe. Everyday physical
-              supplies only. They are not a ranked product
-              list, they are not a medication hop, they
-              are not an insulin-syringe or compounded-insulin
-              hop, they are not a pet-glucometer /
-              light-corn-syrup hop, they are not a
-              #1065 hay-box / stall-guard / hemp-bedding
-              hop, and they do not replace an exotic-mammal
-              veterinarian. Ferret.com earns a commission
-              on qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma"
@@ -548,7 +516,7 @@ export default function FerretInsulinomaPage() {
                 amazonHref="/go/amazon-brand/silicone+tip+oral+dosing+syringe?s=health-insulinoma"
                 amazonLabel="Browse silicone-tip oral dosing syringes on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

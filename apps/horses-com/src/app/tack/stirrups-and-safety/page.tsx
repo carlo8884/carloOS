@@ -115,20 +115,16 @@ export default function StirrupsSafetyPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the stirrups-and-safety checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Stirrups-and-safety checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the peacock-vs-breakaway stirrup checklist, width-inch-clearance fit question card, and drag-entrapment watch log that match the how-stirrups-work, sizing, safety-designs, footwear, and dragged copy on this page — a laminated horse peacock-vs-breakaway stirrup checklist so peacock-rubber-band-stirrups-release-the-foot-under-force / bent-leg-and-offset-safety-stirrups-let-the-foot-escape / modern-breakaway-or-release-stirrups-open-in-a-fall stay visible before anyone hangs a pair (not a laminated horse anatomical-vs-straight girth checklist, not a laminated horse snaffle-vs-double bridle checklist, not a laminated horse standing-vs-running martingale checklist, not a laminated horse turnout-vs-stable rug checklist, not a laminated horse turnout-halter breakaway checklist, not a laminated horse-leg bandage-bow technique checklist, not a laminated saddle-pad cannot-fix-fit checklist, not a laminated riding-helmet fit-and-replace checklist), a horse stirrup width-inch-clearance question card so about-an-inch-wider-than-the-widest-part-of-the-boot / enough-clearance-that-the-foot-is-not-pinched / not-so-wide-that-the-whole-foot-can-slide-through stays posted (not a horse girth buckle-elbow-clearance question card, not a horse bridle cheekpiece-length fit question card, not a horse breastplate-vs-breastgirth fit question card, not a horse denier-vs-fill question card, not a horse rope-vs-flat-halter task question card, not a horse-boot impact-not-tendon-support question card, not a saddle-pad sweat-pattern dry-spot question card), and a horse stirrup drag-entrapment watch log notebook so correctly-sized-stirrups-that-let-the-foot-release / riding-boots-with-a-heel-and-smooth-sole / ball-of-the-foot-on-the-tread-and-heels-down stay written down (not a horse girth-gall skin-wrinkle log, not a horse noseband two-finger welfare log, not a horse martingale-misuse head-carriage log, not a horse over-rugging sweat-shiver watch log, not a horse quick-release wither-height tie log, not a horse-boot grit-rub clean-dry log, not a saddle-pad clean-dry rotation log). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a qualified instructor. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Stirrups-and-safety checklist"
-              subtitle="Email the peacock-vs-breakaway card, width-inch check, and drag-entrapment log. No spam."
-              ctaText="Email my stirrups-and-safety checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-stirrups-and-safety-under-hero"
             />
           </div>
@@ -139,8 +135,7 @@ export default function StirrupsSafetyPage() {
           <h2 id="sizing">Sizing to the Foot</h2>
           <p>Stirrup size is a safety-critical fit. The stirrup should be roughly an inch (about 2.5 cm) wider than the widest part of the rider&apos;s boot -- enough clearance that the foot is not pinched and can release in a fall, but not so wide that the whole foot can slide through and become trapped. Too small risks the foot jamming; too large risks the foot going through to the ankle. Children and adults need stirrups matched to their own footwear.</p>
           <p>
-            A horse stirrup width-inch-clearance question card is how &quot;about an inch wider than the widest part of the boot, enough clearance that the foot is not pinched, and not so wide that the whole foot can slide through&quot; stays posted — it is not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A horse stirrup width-inch-clearance question card is how &quot;about an inch wider than the widest part of the boot, enough clearance that the foot is not pinched, and not so wide that the whole foot can slide through&quot; stays posted — it is not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
 
           <h2 id="safety">Safety Stirrup Designs</h2>
           <ul>
@@ -149,9 +144,7 @@ export default function StirrupsSafetyPage() {
             <li><strong>Modern breakaway / release stirrups</strong> -- engineered to open or release the foot in a fall, an increasingly popular safety upgrade.</li>
             <li><strong>Caged or tapadero western stirrups</strong> -- enclose the front of the foot to stop it sliding through, used in some western and trail contexts.</li>
           </ul>
-          <p>
-            A laminated horse peacock-vs-breakaway stirrup checklist is how peacock-rubber-band-stirrups-release-the-foot-under-force, bent-leg-and-offset-safety-stirrups-let-the-foot-escape, and modern-breakaway-or-release-stirrups-open-in-a-fall stay visible before anyone hangs a pair — it is not a laminated horse anatomical-vs-straight girth checklist (that lives on girths-and-cinches), not a laminated horse snaffle-vs-double bridle checklist (that lives on bridle-types), not a laminated horse standing-vs-running martingale checklist (that lives on martingales-and-breastplates), not a laminated horse turnout-vs-stable rug checklist (that lives on blanket-weights), not a laminated horse turnout-halter breakaway checklist (that lives on halters-and-lead-ropes), not a laminated horse-leg bandage-bow technique checklist (that lives on boots-and-wraps), not a laminated saddle-pad cannot-fix-fit checklist (that lives on saddle-pads), and not a laminated riding-helmet fit-and-replace checklist (that lives on helmet-guide). This page does not hop horse+girth+cinch / horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims (those live on saddle-fit-basics), ASTM+SEI+horse+riding+helmet (that lives on horse-size-for-rider), or horse+halter+lead+rope (that lives on the cost calculator). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
+          
 
           <h2 id="footwear">Footwear and Treads</h2>
           <p>Proper riding footwear is part of stirrup safety. A riding boot has a smooth sole and a defined heel, which together stop the foot sliding too far through the stirrup and hold it in place. Trainers, work boots with heavy treads, and flat shoes are dangerous because a treaded or heelless sole can jam in the stirrup. Stirrup treads (rubber grips on the footbed) add grip and comfort but do not replace the need for correct footwear.</p>
@@ -159,8 +152,7 @@ export default function StirrupsSafetyPage() {
           <h2 id="dragged">Avoiding Being Dragged</h2>
           <p>Being dragged by a trapped foot after a fall can cause catastrophic injury, which is why every other point on this page exists. The defenses stack together: correctly sized stirrups that let the foot release, riding boots with a heel and smooth sole, safety or breakaway stirrup designs where appropriate (especially for children and beginners), riding with the ball of the foot on the tread and heels down, and never riding in unsuitable footwear. Together these dramatically reduce the chance of a foot being trapped in a fall.</p>
           <p>
-            A horse stirrup drag-entrapment watch log notebook is how correctly-sized-stirrups-that-let-the-foot-release, riding-boots-with-a-heel-and-smooth-sole, and ball-of-the-foot-on-the-tread-and-heels-down stay written down — it is not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). This page does not hop first-aid saline / pads / scissors, grimace-scale first-aid-kit / poultice / ice-boot, or vaccine / pergolide / prescription hops. This page does not hop winter+horse+blanket / horse+turnout+sheet / horse+stable+blanket / horse+fleece+cooler (those live on the blanket-size calculator).
-          </p>
+            A horse stirrup drag-entrapment watch log notebook is how correctly-sized-stirrups-that-let-the-foot-release, riding-boots-with-a-heel-and-smooth-sole, and ball-of-the-foot-on-the-tread-and-heels-down stay written down — it is not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -267,15 +259,13 @@ export default function StirrupsSafetyPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the stirrups-and-safety leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page how-stirrups-work, sizing, safety-designs, footwear, and dragged copy — a laminated horse peacock-vs-breakaway stirrup checklist, a horse stirrup width-inch-clearance question card, and a horse stirrup drag-entrapment watch log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a #1147 laminated anatomical-vs-straight / buckle-elbow-clearance / girth-gall-skin-wrinkle hop, they are not a #1146 laminated snaffle-vs-double / cheekpiece-length / noseband-two-finger hop, they are not a #1145 laminated standing-vs-running / breastplate-vs-breastgirth / martingale-misuse-head-carriage hop, they are not a #1144 laminated-turnout-vs-stable / denier-vs-fill / over-rugging-sweat-shiver hop, they are not a #1143 turnout-halter breakaway / rope-vs-flat / wither-height-tie hop, they are not a #1142 horse-leg bandage-bow / impact-not-tendon-support / grit-rub hop, they are not a #1141 saddle-pad cannot-fix-fit / sweat-pattern / clean-dry-rotation hop, they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a saddle-fit-basics pad / half-pad / shim / girth hop, they are not a BCS-chart hop, and they do not replace a qualified instructor. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+horse+peacock+vs+breakaway+stirrup+checklist?s=stirrups-and-safety"
-                amazonLabel="Browse laminated horse peacock-vs-breakaway stirrup checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=stirrups-and-safety"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+stirrup+width+inch+clearance+question+card?s=stirrups-and-safety"
@@ -285,7 +275,7 @@ export default function StirrupsSafetyPage() {
                 amazonHref="/go/amazon-brand/horse+stirrup+drag+entrapment+watch+log+notebook?s=stirrups-and-safety"
                 amazonLabel="Browse horse stirrup drag-entrapment watch log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

@@ -39,35 +39,23 @@ export default function IVDDPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="health-ivdd" />
+          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-ivdd" />
         </>}
       >
         <div className="carloOS-article">
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog-IVDD crate-rest checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog-IVDD crate-rest checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the crate-rest notes — a recovery crate
-              for the 4–6 week Grade 1 confinement window, a
-              belly-support harness that lifts the torso so the
-              spine stays level on those brief toilet walks, and
-              a dog wheelchair (mobility cart) if a Grade 3–5
-              dog cannot walk yet. Educational checklist, not a
-              diagnosis and not a treatment list. NSAIDs, joint
-              supplements, and prescription pain meds stay off
-              this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog-IVDD crate-rest checklist"
-              subtitle="Email the recovery-crate, belly-support-harness, and wheelchair notes. No spam."
-              ctaText="Email my dog-IVDD crate-rest checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-intervertebral-disc-disease-under-hero"
             />
           </div>
@@ -122,21 +110,9 @@ export default function IVDDPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog-IVDD crate-rest kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              crate-rest and mobility copy — a recovery crate, a
-              belly-support harness, and a dog wheelchair
-              (mobility cart). Everyday physical gear only. They
-              are not a ranked product list, they are not
-              medications, they are not joint-supplement ASINs,
-              they are not a rear-support harness, they are not
-              a knee brace, and they do not replace a
-              veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+recovery+crate?s=health-intervertebral-disc-disease"
@@ -150,7 +126,7 @@ export default function IVDDPage() {
                 amazonHref="/go/amazon-brand/dog+wheelchair+mobility+cart?s=health-intervertebral-disc-disease"
                 amazonLabel="Browse dog wheelchairs and mobility carts on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

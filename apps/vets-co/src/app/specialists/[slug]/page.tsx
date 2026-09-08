@@ -245,43 +245,16 @@ export default function SpecialistPage({ params }: PageProps) {
       {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <div className="mb-8">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-          Keep the specialists-spoke checklist
+          Owner notes
         </p>
-        <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-          Specialists-spoke checklist
-        </h2>
-        <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-          Email the laminated-pet-spec-spoke-refer-chart,
-          fridge-spec-spoke-cost-card, and
-          veterinary-spec-spoke-handbook notes that
-          match this remaining {s.specialtyName} spoke —
-          the when-to-see / primary-vet-referral copy,
-          the typical-US-cost ranges, and the
-          {s.boardCertificationOrg.split(' ')[0]} board-certification
-          grounding — a laminated pet specialists-spoke
-          referral chart so this remaining-specialty map
-          is posted on the fridge (not a hub
-          nine-discipline map, not a diagnostics-spoke
-          urgency chart), a fridge specialists-spoke
-          cost card so the typical-US-cost notes
-          are labeled in the kitchen (not a hub
-          referral-consult card, not a diagnostics
-          cost card), and a specialists-spoke handbook
-          so the AVMA / college-directory row is a
-          physical kitchen book (not a hub
-          specialty handbook, not a diagnostics
-          handbook). Educational kitchen checklist,
-          not a ranked clinic list, not a
-          medication hop, not a substitute for a
-          veterinarian. Vets.co does not sell
-          insurance. No spam.
-        </p>
+        <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+        
         <EmailCapture
           variant="inline"
           siteId="vets-co"
-          title="Specialists-spoke checklist"
-          subtitle="Email the referral chart, cost card, and specialists-spoke handbook notes. No spam."
-          ctaText="Email my specialist-spoke checklist"
+          title="Owner notes"
+          subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+          ctaText="Send the notes"
           source={`specialist-${s.slug}-under-hero`}
         />
       </div>
@@ -525,42 +498,16 @@ export default function SpecialistPage({ params }: PageProps) {
           clinic list. */}
       <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
         <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-          Shop the specialists-spoke kitchen kit
+          Shop related supplies
         </div>
-        <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-          These Amazon category searches match the
-          on-page when-to-see / primary-vet-referral
-          copy, typical-US-cost ranges, and AVMA /
-          college-directory board-certification
-          grounding — a laminated pet specialists-spoke
-          referral chart, a fridge specialists-spoke
-          cost card, and a veterinary specialists-spoke
-          handbook. Educational kitchen searches
-          only. They are not a ranked clinic list,
-          they are not a specialists-hub hop, they
-          are not a diagnostics-spoke hop, they are
-          not a medication hop, they are not a flea /
-          heartworm / vaccine hop, and they do not
-          replace a veterinarian. Vets.co does not
-          sell insurance. Vets.co earns a
-          commission on qualifying purchases at no
-          extra cost to you.
-        </p>
+        <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <div className="flex flex-col gap-3 mt-3">
           <ShopCtas
-            amazonHref="/go/amazon-brand/laminated+pet+spec+spoke+refer+chart?s=specialists-spoke"
-            amazonLabel="Browse laminated pet specialists-spoke referral charts on Amazon →"
+            amazonHref="/go/amazon-brand/pet+supplies?s=specialists-spoke"
+            amazonLabel="Shop on Amazon"
           />
-          <ShopCtas
-            amazonHref="/go/amazon-brand/pet+fridge+spec+spoke+cost+card?s=specialists-spoke"
-            amazonLabel="Browse fridge pet specialists-spoke cost cards on Amazon →"
-          />
-          <ShopCtas
-            amazonHref="/go/amazon-brand/veterinary+spec+spoke+handbook?s=specialists-spoke"
-            amazonLabel="Browse veterinary specialists-spoke handbooks on Amazon →"
-          />
-        </div>
+          </div>
       </div>
 
       {/* Back to hub */}

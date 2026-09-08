@@ -123,53 +123,16 @@ export default function OwnershipHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the horses ownership-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Horses ownership-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-horse-barn-ownership-section-map-chart,
-            stall-door-ownership-prep-card, and
-            equine-ownership-reference-handbook notes that
-            match the buying-budget-insurance-map,
-            boarding-and-vet-log, and
-            AAEP-BEVA-grounding copy on this hub — a
-            laminated horse barn ownership section-map
-            chart so the buying / cost / insurance /
-            boarding / vet map is posted on the stall
-            door (not a tools-hub calculator chart, not a
-            reviews buyer-guide chart, not a supplements
-            category chart, not a tack section-map chart,
-            not a forage-first chart, not a daily-care
-            chart, not an emergency-triage chart, not an
-            owner-guides chart), a horse stall-door
-            ownership prep card so boarding-and-vet notes
-            are labeled on the stall door (not a
-            measurement card, not a reviews comparison
-            card, not a supplements label card, not a
-            tack-fit card, not a ration card, not a care
-            card, not a vital-signs card, not an
-            owner-guides card), and an equine ownership
-            reference handbook so the AAEP / BEVA
-            grounding is a physical barn book (not a
-            calculator handbook, not a reviews handbook,
-            not a supplements handbook, not a tack
-            handbook, not a nutrition handbook, not a
-            husbandry handbook, not a health handbook,
-            not an owner-guides handbook). Educational
-            kitchen checklist, not a ranked insurance
-            list, not a child budget-worksheet / bandage
-            scissors hop, and not a substitute for a
-            veterinarian. Horses.com does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="horses-com"
-            title="Horses ownership-hub checklist"
-            subtitle="Email the ownership-section-map-chart, stall-door prep-card, and ownership-handbook notes. No spam."
-            ctaText="Email my horses ownership-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="ownership-hub-under-hero"
           />
         </div>
@@ -203,32 +166,8 @@ export default function OwnershipHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Ownership-hub kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          buying-budget-insurance-map, boarding-and-vet-log,
-          and AAEP-BEVA-grounding copy on this hub — a
-          laminated horse barn ownership section-map
-          chart so the buying / cost / insurance /
-          boarding / vet map is posted on the stall door,
-          a horse stall-door ownership prep card so
-          boarding-and-vet notes are labeled on the stall
-          door, and an equine ownership reference
-          handbook so the AAEP / BEVA grounding is a
-          physical barn book. These are educational
-          kitchen searches, not a ranked insurance list,
-          not a substitute for a veterinarian, not a
-          tools-hub / reviews-hub / supplements-hub /
-          tack-hub / nutrition-hub / care-hub / health-hub
-          / guides-hub hop, and not a child
-          budget-worksheet / bandage-scissors hop (those
-          live on ownership children). This page does not
-          hop medications or vaccines. This page does not
-          sell insurance. This page does not claim
-          hands-on testing.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -244,40 +183,16 @@ export default function OwnershipHubPage() {
             supplements / tack / nutrition / care /
             health / guides kitchen kits and child
             ownership+monthly+budget / bandage+scissors
-            hops. Directory import left untouched. */}
+            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the ownership-hub kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page buying-budget-insurance-map,
-            boarding-and-vet-log, and AAEP-BEVA-grounding
-            copy — a laminated horse barn ownership
-            section-map chart, a horse stall-door
-            ownership prep card, and an equine ownership
-            reference handbook. Educational kitchen
-            searches only. They are not a ranked
-            insurance list, they are not a sibling-hub
-            kitchen hop, they are not a child
-            budget-worksheet hop, and they do not replace
-            a veterinarian. Horses.com does not sell
-            insurance. Horses.com earns a commission on
-            qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+horse+barn+ownership+section+map+chart?s=ownership-hub"
-              amazonLabel="Browse laminated horse barn ownership section-map charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+stall+door+ownership+prep+card?s=ownership-hub"
-              amazonLabel="Browse horse stall-door ownership prep cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/equine+ownership+reference+handbook?s=ownership-hub"
-              amazonLabel="Browse equine ownership reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/horse+supplies?s=ownership-hub"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

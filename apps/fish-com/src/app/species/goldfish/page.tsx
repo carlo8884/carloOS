@@ -88,33 +88,16 @@ export default function GoldfishPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the goldfish-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Goldfish-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the goldfish notes that match the
-                care copy on this page — a 30-gallon
-                start so a single-tail stays out of a
-                bowl, a filter rated 3–4× tank volume so
-                a high-waste goldfish keeps ammonia at
-                0 ppm, and sinking pellets so a fancy
-                variety keeps air out of the swim
-                bladder. Educational goldfish-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                goldfish tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Goldfish-setup checklist"
-                subtitle="Email the 30-gallon, oversized-filter, and sinking-food notes. No spam."
-                ctaText="Email my goldfish-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-goldfish-under-hero"
               />
             </div>

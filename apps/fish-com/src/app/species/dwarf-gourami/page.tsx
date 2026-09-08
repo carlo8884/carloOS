@@ -87,34 +87,16 @@ export default function DwarfGouramiPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dwarf-gourami-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dwarf-gourami-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Trichogaster lalius notes that
-                match the care copy on this page — a
-                covered planted tank so a labyrinth
-                fish can breathe warm humid air, 76–82°F
-                and pH 6.0–7.5, calm surface water, a
-                single male or pair (not two males in a
-                small tank), and the honey-gourami
-                alternative if DGD risk is a concern.
-                Educational dwarf-gourami-setup
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                dwarf-gourami tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Dwarf-gourami-setup checklist"
-                subtitle="Email the covered-tank, 76–82°F, and planted notes. No spam."
-                ctaText="Email my dwarf-gourami-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-dwarf-gourami-under-hero"
               />
             </div>

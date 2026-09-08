@@ -194,7 +194,7 @@ export default function VetsCoInsuranceHub() {
           source="vets-co:insurance-comparison"
           title="Save the comparison for later"
           subtitle="We'll send you the 9-carrier comparison spreadsheet by email."
-          ctaText="Email the spreadsheet"
+          ctaText="Send the notes"
         />
       </div>
     </>

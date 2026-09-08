@@ -141,19 +141,13 @@ export default function ReadinessKit() {
                 </span>
               </label>
               <div className="mt-3 ml-7">
-                <ShopCtas amazonHref={item.amazonHref} amazonLabel={item.amazonLabel} />
               </div>
             </li>
           )
         })}
       </ul>
 
-      <p className="mt-5 text-xs text-brand-text-light leading-relaxed">
-        Assumption: this is a planning checklist for a first ferret already
-        confirmed legal where you live. It does not include the emergency vet
-        fund or exotic-pet insurance — those sit on the cost calculator. Empty
-        Chewy buttons stay hidden.
-      </p>
+      
     </div>
   )
 }

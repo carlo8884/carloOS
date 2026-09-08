@@ -27,43 +27,16 @@ export default function ReadingFoodLabelsPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog label checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog label checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-aafco-trial-chart,
-            fridge-dry-matter-card, and
-            canine-kcal-cup-handbook notes
-            that match the aafco-feeding-trial-map,
-            dry-matter-log, and
-            kcal-cup-grounding copy on this
-            page — a laminated dog AAFCO-trial chart so
-            the feeding-trial vs formulation map is
-            posted on the fridge (not a treat-kcal chart,
-            not a rib-waist chart, not a
-            nutrition-feeding chart), a dog fridge
-            dry-matter card so moisture-removed protein
-            notes are labeled on the fridge (not a
-            VOHC-seal card, not a kcal-scale card, not a
-            WSAVA label card), and a canine
-            kcal-cup handbook so the caloric-density /
-            not-volume grounding is a physical
-            kitchen book (not a jerky-FDA handbook, not a
-            low-impact-walk handbook, not an
-            RER-portion handbook). Educational kitchen
-            checklist, not a ranked clinic list, not a
-            first-aid-kit hop, and not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog label checklist"
-            subtitle="Email the AAFCO-trial chart, fridge dry-matter card, and kcal-cup-handbook notes. No spam."
-            ctaText="Email my dog label checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="nutrition-labels-under-hero"
           />
         </div>
@@ -121,43 +94,16 @@ export default function ReadingFoodLabelsPage() {
             ShopCtas hides empty Chewy; never href="#"
             or PLACEHOLDER. Unused vs dog-treats-guide /
             weight-management / feeding-frequency hops.
-            Directory import left untouched.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the dog label kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page aafco-feeding-trial-map,
-            dry-matter-log, and
-            kcal-cup-grounding copy — a
-            laminated dog AAFCO-trial chart, a
-            dog fridge dry-matter card, and a
-            canine kcal-cup handbook.
-            Educational kitchen searches only. They are
-            not a ranked clinic list, they are not
-            a dog-treats-guide / weight-management /
-            feeding-frequency hop, they are not a
-            first-aid-kit hop, they are not a child
-            toothbrush hop, and they do not replace a
-            veterinarian. Dog.com does not sell
-            insurance. Dog.com earns a commission on
-            qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+aafco+trial+chart?s=nutrition-labels"
-              amazonLabel="Browse laminated dog AAFCO-trial charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+dry+matter+card?s=nutrition-labels"
-              amazonLabel="Browse dog fridge dry-matter cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+kcal+cup+handbook?s=nutrition-labels"
-              amazonLabel="Browse canine kcal-cup handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-labels"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

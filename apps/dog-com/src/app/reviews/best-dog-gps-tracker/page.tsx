@@ -33,34 +33,16 @@ export default function BestGPSTrackerPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dog-GPS-tracker checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dog-GPS-tracker checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the GPS-tracker notes that
-                match the ranking copy on this page —
-                every tracker needs a monthly
-                subscription, Fi Series 3 for a
-                3-month battery and LTE-M geofence
-                alerts, Whistle Go Explore for
-                20-day battery plus lick and scratch
-                health monitoring, and Tractive for
-                the $5/mo annual plan and 175-country
-                coverage. Educational tracker
-                checklist, not a new product hop and
-                not a substitute for a veterinarian.
-                The existing Fi / Whistle / Tractive
-                Amazon searches stay below. Empty
-                Chewy buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Dog-GPS-tracker checklist"
-                subtitle="Email the battery, subscription, and coverage notes. No spam."
-                ctaText="Email my dog-GPS-tracker checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-dog-gps-tracker-under-hero"
               />
             </div>
@@ -111,7 +93,7 @@ export default function BestGPSTrackerPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Best Dog Harnesses', href: '/reviews/best-dog-harnesses' }, { label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-gps" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-gps" />
           </aside>
         </div>
       </div>

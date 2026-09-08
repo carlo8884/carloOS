@@ -116,20 +116,16 @@ export default function SaddlePadsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the saddle-pad checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Saddle-pad checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the cannot-fix-fit checklist, sweat-pattern dry-spot question card, and clean-dry rotation log that match the what-a-pad-does, English-pad, Western-pad, materials, and what-a-pad-cannot-fix copy on this page — a laminated saddle-pad cannot-fix-fit checklist so too-narrow-pinches / too-wide-perches and call-a-fitter stay visible before anyone buys a thicker pad (not a laminated riding-helmet fit-and-replace checklist, not a laminated first-horse 90-day week-by-week checklist, not a laminated senior age-related-change checklist), a saddle-pad sweat-pattern dry-spot question card so a dry patch after a ride stays posted as a pressure-point check (not a riding-helmet certification-label question card, not a buyer-vet-briefing card, not a kick-zone safety card), and a saddle-pad clean-dry rotation log notebook so several washable pads stay written down so a clean, dry pad is always available (not a riding-helmet impact-retirement log, not a pain-demeanor change-log, not a weight-and-joint watch notebook). Educational tack tools only, not a ranked product list, not a clinic listing, and not a substitute for a saddle fitter or a veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Saddle-pad checklist"
-              subtitle="Email the cannot-fix-fit card, sweat-pattern check, and clean-dry rotation log. No spam."
-              ctaText="Email my saddle-pad checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="tack-saddle-pads-under-hero"
             />
           </div>
@@ -145,8 +141,7 @@ export default function SaddlePadsPage() {
             <li><strong>Discipline shapes</strong> -- close-contact and jump pads, dressage pads, and shaped show pads.</li>
           </ul>
           <p>
-            A saddle-pad clean-dry rotation log notebook is how several washable quilted cotton pads stay written down so a clean, dry pad is always available — keeping the pad clean and dry matters more for back health than any premium feature. It is not a riding helmet impact-retirement log notebook (that lives on helmet-guide), not a horse pain-demeanor change-log notebook (that lives on reading-body-language), not a senior horse weight-and-joint watch notebook (that lives on senior-horse-care), and not a first-horse buyer visit field notebook (that lives on buying-your-first-horse). This page does not hop a horse+saddle+pad, horse+sheepskin+half+pad, or horse+saddle+shims search — those live on saddle-fit-basics. This page does not hop first-aid saline / pads / scissors.
-          </p>
+            A saddle-pad clean-dry rotation log notebook is how several washable quilted cotton pads stay written down so a clean, dry pad is always available — keeping the pad clean and dry matters more for back health than any premium feature. It is not a riding helmet impact-retirement log notebook (that lives on helmet-guide), not a horse pain-demeanor change-log notebook (that lives on reading-body-language), not a senior horse weight-and-joint watch notebook (that lives on senior-horse-care), and not a first-horse buyer visit field notebook (that lives on buying-your-first-horse). </p>
 
           <h2 id="western">Western Pads and Blankets</h2>
           <p>Western riders use thicker pads and blankets because western saddles are heavier and rides are often long. Options range from traditional woven wool Navajo-style blankets to contoured felt and foam pads, frequently layered (a blanket over a felt pad). Wool and quality felt are valued for breathability, durability, and the way they conform to the back. The greater bulk reflects the weight of the saddle and the demands of long working rides.</p>
@@ -162,12 +157,9 @@ export default function SaddlePadsPage() {
 
           <h2 id="cannot">What a Pad Cannot Fix</h2>
           <p>The central truth about pads is that they cannot correct a saddle that does not fit. A saddle too narrow pinches, and adding a thick pad makes it tighter, like putting on an extra sock inside a tight shoe. A saddle too wide sits low on the withers, and padding it up only perches it and shifts pressure. Persistent back soreness, dry spots in the sweat pattern, white hairs, or behavioral resistance point to a fit problem that needs a saddle fitter and possibly a veterinarian -- not a new pad. Use pads to keep a well-fitting saddle clean and comfortable, not to paper over fit faults.</p>
+          
           <p>
-            A laminated saddle-pad cannot-fix-fit checklist is how too-narrow-pinches, too-wide-perches, and call-a-saddle-fitter stay visible before anyone buys a thicker pad to paper over a fault — it is not a laminated riding helmet fit-and-replace checklist (that lives on helmet-guide), not a laminated first-horse 90-day week-by-week checklist (that lives on the first-horse-roadmap), not a laminated senior horse age-related change checklist (that lives on senior-horse-care), and not a laminated horse ear-eye-tail signal checklist (that lives on reading-body-language). This page does not hop boarding walkthroughs, lease walkthroughs, or daily-care charts already pinned on those pages.
-          </p>
-          <p>
-            A saddle-pad sweat-pattern dry-spot question card is how a dry patch in an otherwise even sweat pattern after a ride stays posted as a pressure-point check — it is not a riding helmet certification-label question card (that lives on helmet-guide), not a horse buyer vet-briefing question card (that lives on pre-purchase-exam), not a horse handler kick-zone safety question card (that lives on reading-body-language), and not a first-horse tack-room emergency-plan card (that lives on the first-horse-roadmap). This page does not hop owner-guides cards, calculator-tools cards, or vital-signs cards already pinned on those hubs. This page does not invent clinic listings.
-          </p>
+            A saddle-pad sweat-pattern dry-spot question card is how a dry patch in an otherwise even sweat pattern after a ride stays posted as a pressure-point check — it is not a riding helmet certification-label question card (that lives on helmet-guide), not a horse buyer vet-briefing question card (that lives on pre-purchase-exam), not a horse handler kick-zone safety question card (that lives on reading-body-language), and not a first-horse tack-room emergency-plan card (that lives on the first-horse-roadmap). This page does not invent clinic listings. </p>
 
           <h2 id="picks">Pad Picks</h2>
           <p>A few widely-stocked pad types covering the common English and Western needs. These support a correctly fitting saddle — none of them, as the section above makes clear, can correct a saddle that does not fit. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -308,15 +300,13 @@ export default function SaddlePadsPage() {
               equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the saddle-pad leftover kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page what-a-pad-does, English-pad, Western-pad, materials, and what-a-pad-cannot-fix copy — a laminated saddle-pad cannot-fix-fit checklist, a saddle-pad sweat-pattern dry-spot question card, and a saddle-pad clean-dry rotation log notebook. Educational tack searches only. They are not a ranked product list, they are not a clinic listing, they are not a horse+saddle+pad / horse+sheepskin+half+pad / horse+saddle+shims hop (those live on saddle-fit-basics), they are not a #1140 riding-helmet fit-and-replace / certification-label / impact-retirement hop, they are not a first-horse-roadmap 90-day / ground-manners / tack-room-emergency hop, they are not a senior-horse-care hop, they are not a reading-body-language ear-eye-tail / kick-zone / pain-demeanor hop, they are not a pre-purchase-exam stage-walkthrough / findings-worksheet / buyer-vet-briefing hop, they are not a lease / insurance / monthly-budget / choosing-a-vet / first-horse / boarding hop, they are not a first-aid saline / pads / scissors hop, they are not a grimace-scale first-aid-kit / poultice / ice-boot hop, they are not a daily-care / emergency-triage / owner-guides / calculator-tools chart hop, they are not a BCS-chart hop, and they do not replace a saddle fitter or a veterinarian. Horses.com earns a commission on qualifying purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+saddle+pad+cannot+fix+fit+checklist?s=saddle-pads"
-                amazonLabel="Browse laminated saddle-pad cannot-fix-fit checklists on Amazon →"
+                amazonHref="/go/amazon-brand/horse+supplies?s=saddle-pads"
+                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/saddle+pad+sweat+pattern+dry+spot+question+card?s=saddle-pads"
@@ -326,7 +316,7 @@ export default function SaddlePadsPage() {
                 amazonHref="/go/amazon-brand/saddle+pad+clean+dry+rotation+log+notebook?s=saddle-pads"
                 amazonLabel="Browse saddle-pad clean-dry rotation log notebooks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

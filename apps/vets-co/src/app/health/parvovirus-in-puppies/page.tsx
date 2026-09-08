@@ -42,7 +42,7 @@ export default function ParvoPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-parvo" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-parvo" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -52,31 +52,16 @@ export default function ParvoPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the puppy parvo-cleanup checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Puppy parvo-cleanup checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the household-cleanup notes — an
-              accelerated hydrogen peroxide disinfectant
-              that actually inactivates parvovirus on
-              hard surfaces, disposable shoe covers so
-              you do not track the virus from a
-              contaminated yard or kennel, and a pump
-              sprayer for outdoor soil and concrete the
-              bottle cannot reach. Educational
-              checklist, not a diagnosis and not a
-              treatment list. Vaccines, IV fluids,
-              anti-nausea medication, and 3% first-aid
-              peroxide stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Puppy parvo-cleanup checklist"
-              subtitle="Email the AHP-disinfectant, shoe-cover, and pump-sprayer notes. No spam."
-              ctaText="Email my puppy parvo-cleanup checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-parvovirus-in-puppies-under-hero"
             />
           </div>
@@ -115,21 +100,9 @@ export default function ParvoPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the puppy parvo-cleanup kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page
-              cleanup copy — an accelerated hydrogen peroxide
-              disinfectant labeled for parvovirus, disposable
-              shoe covers, and a pump sprayer for outdoor
-              soil and concrete. Everyday physical gear only.
-              They are not a ranked product list, they are not
-              medications, they are not the 3% first-aid
-              peroxide hop, they are not vaccines, and they
-              do not replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/accelerated+hydrogen+peroxide+disinfectant?s=health-parvovirus-in-puppies"
@@ -143,7 +116,7 @@ export default function ParvoPage() {
                 amazonHref="/go/amazon-brand/pump+sprayer?s=health-parvovirus-in-puppies"
                 amazonLabel="Browse pump sprayers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

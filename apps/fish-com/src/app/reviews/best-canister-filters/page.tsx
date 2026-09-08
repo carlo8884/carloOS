@@ -39,35 +39,16 @@ export default function BestCanisterFiltersPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the canister-filter checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Canister-filter checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the canister notes that match the
-                Fluval 307 and Eheim Classic copy on
-                this page — a Fluval 307 so a 40–70
-                gallon tank keeps an AquaStop valve
-                for media changes without
-                disconnecting hoses, and an Eheim
-                Classic 350 so a long-running tank
-                keeps the simple impeller that has
-                decades of field track record.
-                Educational canister-filter
-                checklist, not a new product hop, not
-                livestock, and not a substitute for a
-                fish veterinarian. The existing
-                Fluval 307 and Eheim Classic Amazon
-                searches stay below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Canister-filter checklist"
-                subtitle="Email the Fluval 307 and Eheim Classic notes. No spam."
-                ctaText="Email my canister-filter checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-canister-filters-under-hero"
               />
             </div>

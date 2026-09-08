@@ -62,43 +62,16 @@ export default function CanDogsEatHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the dog food-safety checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Dog food-safety checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-chocolate-grape-chart,
-            fridge-xylitol-onion-card, and
-            canine-food-safety-handbook notes
-            that match the chocolate-grape-toxic-map,
-            xylitol-onion-avoid-log, and
-            aspca-poison-grounding copy on this
-            page — a laminated dog chocolate-grape chart
-            so the chocolate / grape / raisin toxic map is
-            posted on the fridge (not a nutrition-feeding
-            chart, not a puppy-week-schedule chart, not a
-            ferret meat-egg chart), a dog fridge
-            xylitol-onion card so xylitol / onion / garlic
-            notes are labeled on the fridge (not a WSAVA
-            label card, not a puppy-milestone card, not a
-            ferret plant-sugar card), and a canine
-            food-safety handbook so the ASPCA hotline and
-            toxic-list grounding is a physical kitchen book
-            (not a nutrition reference handbook, not a
-            puppy-schedule handbook, not a mustelid
-            food-safety handbook). Educational kitchen
-            checklist, not a ranked clinic list, not a
-            first-aid-kit hop, and not a substitute for a
-            veterinarian. Dog.com does not sell insurance.
-            No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Dog food-safety checklist"
-            subtitle="Email the chocolate-grape chart, fridge xylitol-onion card, and food-safety-handbook notes. No spam."
-            ctaText="Email my dog food-safety checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="can-dogs-eat-under-hero"
           />
         </div>
@@ -173,45 +146,18 @@ export default function CanDogsEatHubPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs nutrition-hub /
               puppy-schedule / ferret can-ferrets-eat hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog food-safety kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page chocolate-grape-toxic-map,
-              xylitol-onion-avoid-log, and
-              aspca-poison-grounding copy — a
-              laminated dog chocolate-grape chart, a
-              dog fridge xylitol-onion card, and a
-              canine food-safety handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a nutrition-hub / puppy-schedule /
-              can-ferrets-eat hop, they are not a
-              first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Dog.com does not sell
-              insurance. Dog.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+chocolate+grape+chart?s=can-dogs-eat"
-                amazonLabel="Browse laminated dog chocolate-grape charts on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=can-dogs-eat"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+fridge+xylitol+onion+card?s=can-dogs-eat"
-                amazonLabel="Browse dog fridge xylitol-onion cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/canine+food+safety+handbook?s=can-dogs-eat"
-                amazonLabel="Browse canine food-safety handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </div>

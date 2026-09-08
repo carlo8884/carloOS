@@ -160,30 +160,16 @@ export default function MultiFerretIntroductionsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret staged-introduction checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret staged-introduction checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the staged-protocol notes — a wire small-animal
-              single-story cage so the newcomer has its own adjacent
-              box during quarantine and the two-week see-and-smell
-              window, a non-slip suction bathtub mat so the first
-              meetings happen on a dry bathtub floor neither ferret
-              owns, and a stainless-steel small-animal crock so the
-              shared cage has a second food station. Educational
-              introduction-kit checklist, not a pairing guarantee
-              and not a substitute for an exotic-mammal veterinarian.
-              Vaccines, Rx, and diagnosis kits stay off this list. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret staged-introduction checklist"
-              subtitle="Email the single-story-cage, bathtub-mat, and stainless-crock notes. No spam."
-              ctaText="Email my ferret staged-introduction checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="behavior-multi-ferret-introductions-under-hero"
             />
           </div>
@@ -338,16 +324,10 @@ export default function MultiFerretIntroductionsPage() {
             treatments. They do not guarantee a pairing, they do not
             replace a veterinary quarantine check, they do not skip
             the separate-room window, and they are not a ranked
-            product list. Extra small-animal travel kennels,
-            scent-swap fleece sleep pouches, portable small-animal
-            playpens, Critter Nation cages, ferret sleep sacks,
-            fleece bonding pouches, ceramic pet food bowls, and
-            puppy playpens already live on other pages. This page
+            product list. This page
             does not hop vaccines, Nobivac, IMRAB, diphenhydramine,
             insulin syringes, compounded meds, or Rx ASINs. This
-            page does not hop diagnosis kits that imply treatment.
-            This page does not claim hands-on testing.
-          </p>
+            page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -386,28 +366,9 @@ export default function MultiFerretIntroductionsPage() {
               shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret staged-introduction kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page quarantine, adjacent-cage, bathtub,
-              and two-of-every-resource copy — a wire
-              small-animal single-story cage, a non-slip
-              suction bathtub mat, and a stainless-steel
-              small-animal crock. Everyday physical
-              supplies only. They are not a ranked product
-              list, they are not a vaccine hop, they are
-              not a #1068 travel-kennel / scent-swap-pouch
-              / portable-playpen hop, they are not a #1067
-              rabies-certificate-holder / top-loading-
-              carrier / bonding-pouch hop, they are not a
-              #1066 carnivore-care / baby-food /
-              silicone-dosing-syringe hop, and they do
-              not replace an exotic-mammal veterinarian.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions"
@@ -421,7 +382,7 @@ export default function MultiFerretIntroductionsPage() {
                 amazonHref="/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"
                 amazonLabel="Browse stainless-steel small-animal crocks on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

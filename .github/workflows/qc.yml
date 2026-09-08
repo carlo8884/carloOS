@@ -107,6 +107,18 @@ jobs:
       - name: Run calculator-integrity
         run: node scripts/ci/calculator-integrity.mjs
 
+  kitchen-kit-ban:
+    name: Kitchen-kit / fake-magnet copy ban (five earning sites)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run kitchen-kit-ban
+        run: node scripts/ci/kitchen-kit-ban.mjs
+
   tool-schema-coverage:
     name: Tool-page GEO schema coverage (SoftwareApplication + HowTo + FAQ)
     runs-on: ubuntu-latest

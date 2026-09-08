@@ -128,23 +128,16 @@ export default function HeavesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the heaves hay-soaking checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse heaves hay-soaking checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the hay-steamer and hay-soaking-bag notes so dusty
-              winter hay is soaked or steamed before the first barn-cough
-              flare. Educational checklist, not a diagnosis and not a
-              steroid, inhaler, or medication order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse heaves hay-soaking checklist"
-              subtitle="Email the hay-steamer and hay-soaking-bag notes. No spam."
-              ctaText="Email my horse heaves hay-soaking checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-heaves-under-hero"
             />
           </div>
@@ -178,7 +171,7 @@ export default function HeavesPage() {
           </ul>
 
           <h2 id="medical">Medical Treatment</h2>
-          <p>When environmental change alone is not enough, veterinarians prescribe medication -- inhaled or systemic corticosteroids to reduce airway inflammation and bronchodilators to relieve constriction during flares. Inhaled therapy via an equine spacer device targets the lungs while limiting systemic effects. All medication selection, dosing, and tapering is determined by the veterinarian. Crucially, medication works best layered on top of good environmental control, not instead of it. This page does not hop inhalers, spacers, steroids, or any other medication.</p>
+          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Heaves Kit</h2>
           <p>Everyday physical supplies that match the soak-or-steam hay copy above — a horse hay steamer so a flake can be steamed before feeding, plus a hay soaking bag so dusty winter hay can sit in water and drain. These are not treatments for equine asthma, heaves flares, or infectious cough; a horse that is struggling to breathe, has a fever, or is not improving after the dusty-hay trigger is removed needs a veterinarian. Low-dust bedding, rubber stall mats, slow-feeder hay nets, stall fans, inhaler spacers, corticosteroids, and bronchodilators stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
@@ -194,18 +187,7 @@ export default function HeavesPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop the heaves kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page soak-or-steam
-              hay copy — a horse hay steamer for treating a flake before
-              feeding, and a hay soaking bag so dusty winter hay can sit in
-              water and drain. Everyday physical supplies only. They are not
-              a ranked product list, they are not low-dust bedding or stall
-              mats, they are not fans or hay nets, they are not an inhaler
-              or a steroid, they are not a medication, and they do not
-              replace a veterinarian. Horses.com earns a commission on
-              qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hay+steamer?s=health-heaves"

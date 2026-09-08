@@ -47,42 +47,16 @@ export default function RawDietRisksPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog raw-diet checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog raw-diet checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-dog-raw-salmonella-chart,
-              fridge-zoonotic-risk-card, and
-              canine-hpp-raw-handbook notes
-              that match the salmonella-survey-map,
-              household-zoonotic-log, and
-              hpp-harm-reduction-grounding copy on this
-              page — a laminated dog raw-salmonella chart
-              so the FDA one-in-five survey map is posted
-              on the fridge (not an FDA-DCM chart, not a
-              WSAVA-six chart, not a nutrition-feeding
-              chart), a dog fridge zoonotic-risk card so
-              infants / 65+ / pregnancy notes are labeled
-              on the fridge (not a high-legume card, not a
-              manufacturer-first card, not a WSAVA label
-              card), and a canine HPP-raw handbook so the
-              commercial-HPP / not-home-prepared grounding
-              is a physical kitchen book (not a
-              taurine-switch handbook, not a DACVN-staff
-              handbook, not a nutrition-reference
-              handbook). Educational kitchen checklist,
-              not a ranked clinic list, not a first-aid-kit
-              hop, and not a substitute for a veterinarian.
-              Dog.com does not sell insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog raw-diet checklist"
-              subtitle="Email the raw-salmonella chart, fridge zoonotic-risk card, and HPP-raw-handbook notes. No spam."
-              ctaText="Email my dog raw-diet checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-raw-risks-under-hero"
             />
           </div>
@@ -183,45 +157,18 @@ export default function RawDietRisksPage() {
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs grain-free-dcm /
               wsava-explained / reading-food-labels hops.
-              Directory import left untouched.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog raw-diet kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page salmonella-survey-map,
-              household-zoonotic-log, and
-              hpp-harm-reduction-grounding copy — a
-              laminated dog raw-salmonella chart, a
-              dog fridge zoonotic-risk card, and a
-              canine HPP-raw handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a grain-free-dcm / wsava-explained /
-              reading-food-labels hop, they are not a
-              first-aid-kit hop, they are not a child
-              toothbrush hop, and they do not replace a
-              veterinarian. Dog.com does not sell
-              insurance. Dog.com earns a commission on
-              qualifying purchases at no extra cost to
-              you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+dog+raw+salmonella+chart?s=nutrition-raw-risks"
-                amazonLabel="Browse laminated dog raw-salmonella charts on Amazon →"
+                amazonHref="/go/amazon-brand/dog+supplies?s=nutrition-raw-risks"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+fridge+zoonotic+risk+card?s=nutrition-raw-risks"
-                amazonLabel="Browse dog fridge zoonotic-risk cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/canine+hpp+raw+handbook?s=nutrition-raw-risks"
-                amazonLabel="Browse canine HPP-raw handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
         </div>
       </ArticleLayout>

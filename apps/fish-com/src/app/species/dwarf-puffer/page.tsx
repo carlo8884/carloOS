@@ -82,33 +82,16 @@ export default function DwarfPufferPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the dwarf-puffer-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Dwarf-puffer-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Carinotetraodon travancoricus
-                notes that match the care copy on this
-                page — a planted 5-gallon for one pea
-                puffer or 10+ gallons for a group, live
-                snails so the beak stays worn down,
-                74–82°F and pH 7.0–7.8, and broken
-                sightlines so fin-nipping stays
-                contained. Educational
-                dwarf-puffer-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing dwarf-puffer nano tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Dwarf-puffer-setup checklist"
-                subtitle="Email the snail, 5-gallon, and planted-cover notes. No spam."
-                ctaText="Email my dwarf-puffer-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-dwarf-puffer-under-hero"
               />
             </div>

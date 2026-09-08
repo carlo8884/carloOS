@@ -46,22 +46,14 @@ export default function PopEyePage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the isolate-and-test plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Isolate-and-test / hospital-tank checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the isolate-and-test order — move the affected fish to a
-            spare hospital tank, test ammonia, nitrite, and nitrate first,
-            and run frequent small water changes so orbital swelling is not
-            sitting on the same poor water that usually precedes it.
-            Educational husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Isolate-and-test / hospital-tank checklist"
-            subtitle="Email the hospital-tank isolation and test-water-first order. No spam."
-            ctaText="Email my pop-eye isolate-and-test checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-pop-eye-under-hero"
           />
         </div>
@@ -91,8 +83,7 @@ export default function PopEyePage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a water-first hospital-tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Isolate first, then test the water — a liquid master kit is how
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Isolate first, then test the water — a liquid master kit is how
             you see ammonia, nitrite, and nitrate that almost always precede
             pop-eye. Move the affected fish to a spare hospital tank with a
             seeded sponge filter so treatment stays off the display
@@ -136,9 +127,7 @@ export default function PopEyePage() {
             </Link>
             . They are not a ranked product list, they are not medications,
             and they do not treat, reverse, or cure pop-eye. Fish.com earns
-            a commission on qualifying purchases at no extra cost to you.
-            Empty Chewy buttons stay hidden.
-          </p>
+            a commission on qualifying purchases at no extra cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-pop-eye"

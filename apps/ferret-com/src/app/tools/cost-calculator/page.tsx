@@ -169,16 +169,13 @@ export default function CostCalculatorPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             First-year ferret budget worksheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the monthly and first-year estimate — setup, food, litter, and vet — so you can
-            shop the cage and the staple bags without re-running the math. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="ferret-com"
             title="First-year ferret budget worksheet"
-            subtitle="Email the monthly and first-year estimate — setup, food, litter, and vet — so you can shop the setup list. No spam."
-            ctaText="Email the budget"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-cost-calculator-under-hero"
           />
         </div>
@@ -233,12 +230,10 @@ export default function CostCalculatorPage() {
                 amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"
                 amazonLabel="Browse cage accessories on Amazon →"
               />
-            </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">
-            We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission. Empty Chewy buttons stay hidden.
-          </p>
+          </div>
+          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
+            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Size pans with the{' '}
             <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">

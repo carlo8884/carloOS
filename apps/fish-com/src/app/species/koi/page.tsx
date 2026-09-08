@@ -85,31 +85,16 @@ export default function KoiPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the koi-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Koi-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the pond notes that match the
-                care copy on this page — 250 gallons
-                per fish as a conservative minimum
-                (1,000 gallons for 4–5; 2,500 for 6–8),
-                3+ feet of depth, 59–77°F, pH 7.0–8.5,
-                and weekly 10–25% water changes.
-                Educational koi-setup checklist, not a
-                new product hop, not livestock, and not
-                a substitute for a fish veterinarian. The
-                existing koi tank-setup Amazon search
-                stays below. Empty Chewy buttons stay
-                hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Koi-setup checklist"
-                subtitle="Email the 250-gallon, depth, and weekly-change notes. No spam."
-                ctaText="Email my koi-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-koi-under-hero"
               />
             </div>

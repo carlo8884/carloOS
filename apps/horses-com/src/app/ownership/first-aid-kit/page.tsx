@@ -118,11 +118,9 @@ export default function FirstAidKitPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the horse first-aid-kit checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse first-aid-kit checklist
-            </h2>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
               Email the sterile-saline-wound-flush,
               nonstick-wound-dressing-pads, and
@@ -152,9 +150,9 @@ export default function FirstAidKitPage() {
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse first-aid-kit checklist"
-              subtitle="Email the saline-flush, nonstick-dressing, and bandage-scissors notes. No spam."
-              ctaText="Email my horse first-aid-kit checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="ownership-first-aid-kit-under-hero"
             />
           </div>
@@ -295,24 +293,7 @@ export default function FirstAidKitPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop the first-aid leftover barn kit
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page wound-cleaning-saline,
-              non-stick-dressings, and
-              scissors-and-tweezers copy — a sterile
-              saline wound flush for horses, nonstick
-              wound dressing pads for horses, and
-              equine bandage scissors. Educational
-              barn searches only. They are not a ranked
-              product list, they are not an assembled
-              first-aid-kit / thermometer / vet-wrap /
-              poultice hop, they are not a saline eye
-              wash or vital-signs-card hop, and they
-              do not replace a veterinarian. Horses.com
-              earns a commission on qualifying purchases
-              at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/sterile+saline+wound+flush+horse?s=ownership-first-aid-kit"

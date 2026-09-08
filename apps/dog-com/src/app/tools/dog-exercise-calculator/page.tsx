@@ -138,22 +138,16 @@ export default function DogExerciseCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Walk-gear checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the walk-gear checklist — leash, harness, fetch toys, and
-            activity-tracker notes that match your daily target — so you can
-            kit the walk without re-running the estimate. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Walk-gear checklist"
-            subtitle="Email the walk-gear checklist — leash, harness, fetch toys, and activity-tracker notes. No spam."
-            ctaText="Email my walk-gear checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-exercise-under-hero"
           />
         </div>
@@ -175,16 +169,7 @@ export default function DogExerciseCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop walk gear
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are walk and play items that match
-              the daily target above — a leash, a well-fitted harness, fetch
-              toys, and activity / GPS trackers. They are not a ranked product
-              list, not invented inventory, and they do not prescribe a workout.
-              Fit a harness before long walks, and check with your veterinarian
-              before ramping up exercise for puppies, seniors, or dogs with a
-              health condition. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+leash?s=tools-dog-exercise"
@@ -210,7 +195,7 @@ export default function DogExerciseCalculatorPage() {
                 amazonHref="/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"
                 amazonLabel="Browse Fi activity / GPS collars on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

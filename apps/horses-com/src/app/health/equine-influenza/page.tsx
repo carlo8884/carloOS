@@ -128,33 +128,16 @@ export default function EquineInfluenzaPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the influenza quarantine-and-rest checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse influenza quarantine-and-rest checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the weatherproof-storage-clipboard,
-              round-rubber-feed-pan, and paper-pellet-bedding
-              notes that match the monitor-temperatures,
-              dedicated-equipment, and clean-air-rest
-              copy on this page — a clipboard so twice-daily
-              quarantine temperatures live on one barn sheet
-              instead of a scrap of paper, a rubber feed pan
-              so a coughing horse eats from its own tub, and
-              paper-pellet bedding so a stripped airway rests
-              on low-dust stall fill. Educational
-              quarantine-and-rest checklist, not a treatment,
-              not a vaccine, not a substitute for calling the
-              veterinarian, and not a thermometer, coverall,
-              bucket, or hay-steamer hop. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse influenza quarantine-and-rest checklist"
-              subtitle="Email the clipboard, feed-pan, and paper-pellet-bedding notes. No spam."
-              ctaText="Email my horse influenza quarantine-and-rest checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-flu-under-hero"
             />
           </div>
@@ -175,7 +158,7 @@ export default function EquineInfluenzaPage() {
           </ul>
 
           <h2 id="care">Care and Recovery</h2>
-          <p>Most healthy adult horses recover with supportive care: rest, clean air, soft palatable feed, and time. The cardinal rule is rest -- the damaged airway lining needs roughly one week of rest for every day of fever, often three weeks or more, to regenerate its cilia. Paper-pellet horse bedding is how that rest stall stays low-dust while the lining regenerates — it is not pine shavings (that live on the stall-bedding calculator), not wood-pellet stall bedding, not hemp stall bedding (that lives on turnout-vs-stabling), and not a hay steamer or hay-soaking bag (those live on heaves). Pushing a horse back to work too soon invites secondary pneumonia and chronic airway problems. A veterinarian directs any medication and watches for complications, which are more likely in foals, old horses, and those with other illness.</p>
+          <p>Most healthy adult horses recover with supportive care: rest, clean air, soft palatable feed, and time. The cardinal rule is rest -- the damaged airway lining needs roughly one week of rest for every day of fever, often three weeks or more, to regenerate its cilia. Pushing a horse back to work too soon invites secondary pneumonia and chronic airway problems. A veterinarian directs any medication and watches for complications, which are more likely in foals, old horses, and those with other illness.</p>
 
           <h2 id="vaccination">Vaccination</h2>
           <p>Vaccination is the foundation of control and is a risk-based vaccine in the AAEP framework, recommended for horses that travel, compete, or live in contact with others. Because the virus drifts antigenically, vaccines are periodically updated, and competition bodies often mandate specific booster intervals. Your veterinarian sets the schedule based on the horse&apos;s lifestyle and the products available. See the vaccination schedule guide.</p>
@@ -205,16 +188,8 @@ export default function EquineInfluenzaPage() {
             on colic, the grimace scale, and the emergency
             tool. Color-coded flat-back buckets, disposable
             coveralls, and boot-dip tubs already live on
-            strangles. Hay steamers and hay-soaking bags
-            already live on heaves. Stall fans and stall
-            screens already live on the vaccination-schedule
-            guide. Pine shavings, wood-pellet bedding, and
-            hemp stall bedding already live on the
-            stall-bedding calculator and turnout-vs-stabling.
-            This page does not hop vaccines, antibiotics, or
-            needles. This page does not claim hands-on
-            testing.
-          </p>
+            strangles. This page does not claim hands-on
+            testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -254,35 +229,9 @@ export default function EquineInfluenzaPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the quarantine-and-rest kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page monitor-temperatures, dedicated-equipment,
-              and clean-air-rest copy — a weatherproof
-              storage clipboard, a round rubber horse feed
-              pan, and paper-pellet horse bedding.
-              Educational quarantine-and-rest tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1097 color-coded-bucket /
-              coverall / boot-dip-tub hop, they
-              are not a #1096 composition-notebook /
-              receiving-blanket / charcoal hop, they
-              are not a #1095 sponge-filter /
-              nano-heater / water-jug hop, they
-              are not a #1094 soaking-pail /
-              feed-tub-rock / apple-wedger hop, they
-              are not a #1093 kitchen-timer /
-              message-pad / pet-carrier hop, they
-              are not a colic thermometer hop, they
-              are not a heaves hay-steamer hop, they
-              are not a vaccination-schedule stall-fan hop,
-              and they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/weatherproof+storage+clipboard?s=health-flu"
@@ -296,7 +245,7 @@ export default function EquineInfluenzaPage() {
                 amazonHref="/go/amazon-brand/paper+pellet+horse+bedding?s=health-flu"
                 amazonLabel="Browse paper-pellet horse bedding on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

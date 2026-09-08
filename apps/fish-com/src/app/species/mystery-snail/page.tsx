@@ -84,31 +84,16 @@ export default function MysterySnailPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the mystery-snail-setup checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Mystery-snail-setup checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the Pomacea bridgesii
-                notes that match the care copy on this
-                page — 68–82°F and pH 7.0–8.0, GH 8+
-                for shell health, copper-free water, and
-                air-humid egg clutches above the
-                waterline. Educational
-                mystery-snail-setup checklist, not a new
-                product hop, not livestock, and not a
-                substitute for a fish veterinarian. The
-                existing mystery-snail tank-setup
-                Amazon search stays below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Mystery-snail-setup checklist"
-                subtitle="Email the copper-free, GH 8+, and above-water clutch notes. No spam."
-                ctaText="Email my mystery-snail-setup checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="species-mystery-snail-under-hero"
               />
             </div>

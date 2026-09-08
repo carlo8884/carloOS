@@ -162,22 +162,16 @@ export default function VaccinationSchedulePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the vaccination-schedule checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse vaccination-schedule checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the AAEP core-vs-risk split, life-stage timing, and the
-              stall-fan / stall-screen note for PHF-endemic barns. Educational
-              checklist, not a diagnosis and not a vaccine order. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse vaccination-schedule checklist"
-              subtitle="Email the AAEP core-vs-risk split and stall-fan / stall-screen note. No spam."
-              ctaText="Email my equine vaccination-schedule checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guide-vaccination-under-hero"
             />
           </div>
@@ -354,16 +348,7 @@ export default function VaccinationSchedulePage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop stall fans and screens
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page PHF
-              endemic-region management copy — stall fans and stall screens.
-              Everyday physical supplies only. They are not a ranked product
-              list, they are not vaccines or a vaccination kit, they are not
-              treatments for Potomac horse fever or any other equine disease,
-              and they do not replace a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+stall+fan?s=guides-equine-vaccination-schedule"
@@ -373,7 +358,7 @@ export default function VaccinationSchedulePage() {
                 amazonHref="/go/amazon-brand/horse+stall+screen?s=guides-equine-vaccination-schedule"
                 amazonLabel="Browse horse stall screens on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

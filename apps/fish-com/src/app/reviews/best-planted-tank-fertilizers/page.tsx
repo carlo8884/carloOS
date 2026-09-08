@@ -44,35 +44,16 @@ export default function BestPlantedFertilizersPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the planted-fertilizer checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Planted-fertilizer checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the fertilizer notes that match the
-                Easy Green, Seachem Flourish, and
-                NilocG Thrive copy on this page — Easy
-                Green so a low-to-medium-tech planted
-                tank keeps one-pump weekly macros and
-                micros, Seachem Flourish so a store-run
-                tank keeps a micronutrient bottle on the
-                shelf, and NilocG Thrive so a
-                CO2-injected high-tech tank keeps a
-                high-dose all-in-one. Educational
-                fertilizer checklist, not a new product
-                hop, not livestock, and not a substitute
-                for a fish veterinarian. The existing
-                Easy Green / Flourish / Thrive Amazon
-                searches stay below. Empty Chewy
-                buttons stay hidden. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="fish-com"
-                title="Planted-fertilizer checklist"
-                subtitle="Email the Easy Green, Flourish, and Thrive notes. No spam."
-                ctaText="Email my planted-fertilizer checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-planted-tank-fertilizers-under-hero"
               />
             </div>

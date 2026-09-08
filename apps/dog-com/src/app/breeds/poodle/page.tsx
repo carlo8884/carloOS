@@ -54,7 +54,7 @@ export default function PoodlePage() {
           { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance weekly." source="breed-poodle" />
+        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-poodle" />
       </>}
     >
       <div className="carloOS-article">
@@ -62,38 +62,16 @@ export default function PoodlePage() {
 
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the poodle checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Poodle checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-dog-poodle-prcd-pra-chart,
-            dog-fridge-poodle-6to8wk-groom-card, and
-            canine-first-owner-poodle-handbook notes that
-            match the prcd-PRA DNA test, the 6–8 week
-            professional grooming cycle, and first-time-owner
-            notes on this page — a laminated dog Poodle
-            prcd-PRA chart so the carrier-test requirement is
-            posted on the fridge (not a Dachshund 25% IVDD
-            chart, not an 1835 bull-baiting-ban chart), a
-            fridge Poodle 6–8-week groom card so the
-            every-other-day brush notes are labeled in the
-            kitchen (not a 20-degree ramp card, not a crate
-            hop), and a first-owner Poodle handbook so the
-            YES-typically / three-size / mental-work grounding
-            is a physical kitchen book (not a first-owner
-            Dachshund handbook). Educational kitchen
-            checklist, not a ranked product list, not a
-            substitute for a veterinarian. Dog.com does not
-            sell insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Poodle checklist"
-            subtitle="Email the prcd-PRA chart, 6–8-week groom card, and first-owner handbook notes. No spam."
-            ctaText="Email my poodle checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="breed-poodle-under-hero"
           />
         </div>
@@ -125,35 +103,14 @@ export default function PoodlePage() {
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the Poodle home kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the on-page
-            prcd-PRA DNA test, the 6–8 week professional
-            grooming cycle, and first-time-owner notes — a
-            laminated dog Poodle prcd-PRA chart, a fridge
-            Poodle 6–8-week groom card, and a first-owner
-            Poodle handbook. Educational kitchen searches
-            only. They are not a ranked product list, they
-            are not a crate hop, they are not a generic
-            dog-ramp hop, and they do not replace a
-            veterinarian. Dog.com does not sell insurance.
-            Dog.com earns a commission on qualifying purchases
-            at no extra cost to you.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+dog+poodle+prcd+pra+chart?s=breed-poodle"
-              amazonLabel="Browse laminated dog Poodle prcd-PRA charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+fridge+poodle+6to8wk+groom+card?s=breed-poodle"
-              amazonLabel="Browse fridge Poodle 6–8-week groom cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/canine+first+owner+poodle+handbook?s=breed-poodle"
-              amazonLabel="Browse first-owner Poodle handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/dog+supplies?s=breed-poodle"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

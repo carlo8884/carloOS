@@ -42,22 +42,14 @@ export default function BacterialInfectionsPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the water-first plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Water-first / hospital-tank checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the water-first / hospital-tank order — test ammonia,
-            nitrite, and nitrate before you treat, isolate the affected fish
-            in a spare hospital tank so the display biofilter stays
-            protected, and quarantine every new arrival. Educational
-            husbandry, not a diagnosis or a cure. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Water-first / hospital-tank checklist"
-            subtitle="Email the test-water-first and hospital-tank isolation order. No spam."
-            ctaText="Email my water-first hospital-tank checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="health-bacterial-infections-under-hero"
           />
         </div>
@@ -89,8 +81,7 @@ export default function BacterialInfectionsPage() {
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a water-first hospital-tank kit
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            Fix the water first — a liquid master kit is how you see ammonia,
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Fix the water first — a liquid master kit is how you see ammonia,
             nitrite, and nitrate that let opportunistic bacteria take hold.
             Isolate in a spare hospital tank with a seeded sponge filter so
             treatment stays off the display biofilter, a heater rated for the
@@ -134,8 +125,7 @@ export default function BacterialInfectionsPage() {
             . They are not a ranked product list, they are not medications,
             and they do not treat, reverse, or cure bacterial infections.
             Fish.com earns a commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+            cost to you.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-bacterial-infections"

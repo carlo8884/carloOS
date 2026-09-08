@@ -42,7 +42,7 @@ export default function AnxietyDogsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Cognitive Dysfunction', href: '/health/cognitive-dysfunction' }, { label: 'Senior Pet Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-anxiety" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-anxiety" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -50,28 +50,16 @@ export default function AnxietyDogsPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog anxiety home-support checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog anxiety home-support checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-support notes — an anxiety vest
-              for gentle pressure during a known trigger, a
-              dog pheromone diffuser for the room the dog
-              rests in, and a heartbeat comfort toy for short
-              absences. Educational checklist, not a
-              diagnosis and not a substitute for behavior
-              modification or a veterinarian. Trazodone,
-              fluoxetine, gabapentin, and other prescription
-              anxiolytics stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog anxiety home-support checklist"
-              subtitle="Email the vest, pheromone-diffuser, and heartbeat-toy notes. No spam."
-              ctaText="Email my dog anxiety home-support checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-anxiety-in-dogs-under-hero"
             />
           </div>
@@ -136,26 +124,9 @@ export default function AnxietyDogsPage() {
               anxiolytics are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog anxiety home-support kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page environmental-management copy — an
-              anxiety vest, a dog pheromone diffuser, and
-              a heartbeat comfort toy. Everyday physical
-              supplies only. They are not a ranked product
-              list, they are not trazodone, fluoxetine, or
-              gabapentin, they are not Thundershirt or
-              Adaptil brand ASINs, they are not the
-              Dog.com wrap / crate-cover / white-noise
-              hops, they are not the Kong / snuffle / lick
-              mat training hops, they are not the allergy
-              oatmeal-shampoo / paw-wipe / recovery-collar
-              hops, and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/anxiety+vest+dog?s=health-anxiety-in-dogs"
@@ -169,7 +140,7 @@ export default function AnxietyDogsPage() {
                 amazonHref="/go/amazon-brand/dog+heartbeat+comfort+toy?s=health-anxiety-in-dogs"
                 amazonLabel="Browse heartbeat comfort toys for dogs on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2>FAQ</h2>

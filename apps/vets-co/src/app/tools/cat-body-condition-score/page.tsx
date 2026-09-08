@@ -172,18 +172,13 @@ export default function CatBodyConditionScorePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cat BCS chart &amp; weight-management recap
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the 1–9 WSAVA BCS chart (rib feel, waist, abdominal fat pad)
-            and the weight-management recap so you can re-score next month
-            without re-reading the descriptors. Planning / wellness reference
-            only — not a diagnosis. No spam.
-          </p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="vets-co"
             title="Cat BCS chart & weight-management recap"
-            subtitle="Email the 1–9 WSAVA BCS chart and weight-management recap. No spam."
-            ctaText="Email my BCS chart"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-cat-body-condition-score-under-hero"
           />
         </div>
@@ -214,17 +209,7 @@ export default function CatBodyConditionScorePage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a weight-management kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make a
-              body-condition score repeatable — a digital pet scale, a measuring
-              tape, weight-management cat food, a puzzle feeder, and an
-              interactive cat toy. They are not a ranked product list, not
-              invented inventory, and they do not diagnose a weight problem or
-              set a calorie target. Ask your veterinarian for a target weight
-              and a safe rate of change before cutting or adding calories.
-              Vets.co earns a commission on qualifying purchases at no extra
-              cost to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score"
@@ -246,7 +231,7 @@ export default function CatBodyConditionScorePage() {
                 amazonHref="/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"
                 amazonLabel="Browse interactive cat toys on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
 

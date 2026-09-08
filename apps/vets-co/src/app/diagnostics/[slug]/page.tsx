@@ -193,43 +193,16 @@ export default function DiagnosticPage({ params }: PageProps) {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the diagnostics-spoke checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Diagnostics-spoke checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-pet-diag-spoke-urgency-chart,
-              fridge-diag-spoke-cost-card, and
-              veterinary-diag-spoke-handbook notes that
-              match this remaining {d.testName} spoke —
-              the what-it-measures / when-vets-order
-              copy, the typical-US-cost ranges, and the
-              ACVIM / AAHA / Merck result-urgency
-              grounding — a laminated pet diagnostics-spoke
-              urgency chart so this remaining-test map
-              is posted on the fridge (not a hub
-              test-category map, not a symptoms-hub
-              triage chart), a fridge diagnostics-spoke
-              cost card so the typical-US-cost notes
-              are labeled in the kitchen (not a hub
-              library card, not a symptoms library
-              card), and a diagnostics-spoke handbook
-              so the ACVIM / AAHA / Merck row is a
-              physical kitchen book (not a hub
-              diagnostics handbook, not a symptoms
-              handbook). Educational kitchen checklist,
-              not a ranked product list, not a
-              medication hop, not a substitute for a
-              veterinarian. Vets.co does not sell
-              insurance. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Diagnostics-spoke checklist"
-              subtitle="Email the urgency chart, cost card, and diagnostics-spoke handbook notes. No spam."
-              ctaText="Email my diagnostics-spoke checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source={`diagnostics-${d.slug}-under-hero`}
             />
           </div>
@@ -378,42 +351,16 @@ export default function DiagnosticPage({ params }: PageProps) {
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the diagnostics-spoke kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page what-it-measures / when-vets-order
-              copy, typical-US-cost ranges, and ACVIM /
-              AAHA / Merck result-urgency grounding — a
-              laminated pet diagnostics-spoke urgency
-              chart, a fridge diagnostics-spoke cost
-              card, and a veterinary diagnostics-spoke
-              handbook. Educational kitchen searches
-              only. They are not a ranked product list,
-              they are not a diagnostics-hub hop, they
-              are not a symptoms-hub hop, they are not
-              a medication hop, they are not a flea /
-              heartworm / vaccine hop, and they do not
-              replace a veterinarian. Vets.co does not
-              sell insurance. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <AffiliateDisclosure variant="inline" siteId="vets-co" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+pet+diag+spoke+urgency+chart?s=diagnostics-spoke"
-                amazonLabel="Browse laminated pet diagnostics-spoke urgency charts on Amazon →"
+                amazonHref="/go/amazon-brand/pet+supplies?s=diagnostics-spoke"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/pet+fridge+diag+spoke+cost+card?s=diagnostics-spoke"
-                amazonLabel="Browse fridge pet diagnostics-spoke cost cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/veterinary+diag+spoke+handbook?s=diagnostics-spoke"
-                amazonLabel="Browse veterinary diagnostics-spoke handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           {/* FAQs */}

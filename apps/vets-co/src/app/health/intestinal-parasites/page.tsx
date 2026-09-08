@@ -38,7 +38,7 @@ export default function IntestinalParasitesPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Heartworm Prevention', href: '/health/heartworm-in-dogs' }, { label: 'Vomiting & Diarrhea', href: '/health/vomiting-diarrhea-pets' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-parasites" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-parasites" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -46,48 +46,16 @@ export default function IntestinalParasitesPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the intestinal-parasite yard-hygiene checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Intestinal-parasite yard-hygiene checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the home-care notes that match the
-              children&apos;s-sandbox, fecal-pickup, and
-              handwashing-after-dog-contact copy on this
-              page — a hinged cedar sandbox cover so a
-              kids&apos; sandbox next to a dog area is a
-              lidded box instead of an open soil tray,
-              a metal-jaw dog waste scooper so yard
-              feces leave the grass before the 2–4 week
-              Toxocara infective window, and an outdoor
-              garden hand-wash station so handwashing
-              after dog contact is a yard-side wash
-              instead of a hoped-for indoor sink.
-              Educational checklist, not a ranked
-              product list, not a substitute for
-              veterinary care, and not a fenbendazole /
-              pyrantel / praziquantel / metronidazole /
-              vaccine hop. 24-ounce stainless hiking
-              dog bottles, powder-free nitrile exam
-              gloves, and 32-gallon locking
-              animal-proof trash cans already live on
-              leptospirosis. Small digital kitchen food
-              scales, silicone cat grooming gloves, and
-              8-ounce glass liquid measuring cups
-              already live on hyperthyroidism-cats.
-              Fecal-sample collection kits and
-              leak-proof specimen bags already live on
-              the dog.com wellness-exam guide. Dog poop
-              bags already live on house-training. No
-              spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Intestinal-parasite yard-hygiene checklist"
-              subtitle="Email the sandbox-cover, waste-scooper, and yard hand-wash notes. No spam."
-              ctaText="Email my intestinal-parasite yard-hygiene checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-intestinal-parasites-under-hero"
             />
           </div>
@@ -120,8 +88,7 @@ export default function IntestinalParasitesPage() {
             leave the grass before the 2–4 week
             Toxocara infective window, and an outdoor
             garden hand-wash station so handwashing
-            after dog contact is a yard-side wash.
-            These are educational home-care / hygiene /
+            after dog contact is a yard-side wash. These are educational home-care / hygiene /
             monitoring tools, not a ranked product
             list, not a substitute for veterinary
             care, and not a treatment for intestinal
@@ -132,12 +99,8 @@ export default function IntestinalParasitesPage() {
             dog bottles already live on
             leptospirosis. Small digital kitchen food
             scales already live on
-            hyperthyroidism-cats. Fecal-sample
-            collection kits already live on the
-            dog.com wellness-exam guide. Dog poop bags
-            already live on house-training. This page
-            does not claim hands-on testing.
-          </p>
+            hyperthyroidism-cats. This page
+            does not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -223,30 +186,9 @@ export default function IntestinalParasitesPage() {
               are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the home-care kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page children&apos;s-sandbox, fecal-pickup,
-              and handwashing-after-dog-contact copy — a
-              hinged cedar sandbox cover, a metal-jaw
-              dog waste scooper, and an outdoor garden
-              hand-wash station. Educational home-care /
-              hygiene / monitoring tools only.
-              They are not a ranked product list,
-              they are not a substitute for veterinary
-              care, they are not a #1089 hiking-bottle /
-              nitrile-exam-glove / animal-proof trash-can
-              hop, they are not a #1088 kitchen-scale /
-              cat-grooming-glove / measuring-cup hop,
-              they are not a fenbendazole / pyrantel /
-              praziquantel / metronidazole / vaccine
-              hop, and they do not replace
-              a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites"
@@ -260,7 +202,7 @@ export default function IntestinalParasitesPage() {
                 amazonHref="/go/amazon-brand/outdoor+garden+hand+wash+station?s=health-intestinal-parasites"
                 amazonLabel="Browse outdoor garden hand-wash stations on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

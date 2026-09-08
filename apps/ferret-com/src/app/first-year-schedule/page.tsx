@@ -173,11 +173,11 @@ export default function FerretFirstYearSchedulePage() {
           <div>
             <div className="flex items-center gap-2.5 mb-5">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Free Download · New Ferret Owners</span>
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">On this page · New Ferret Owners</span>
             </div>
             <h1 className="font-display font-black text-white tracking-tighter leading-[1.05] mb-6"
               style={{ fontSize: 'clamp(36px, 5.5vw, 66px)' }}>
-              Free Ferret First-Year Schedule.<br />
+              Ferret First-Year Schedule.<br />
               <span className="text-brand-primary">From kit to confident owner.</span>
             </h1>
             <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
@@ -196,19 +196,17 @@ export default function FerretFirstYearSchedulePage() {
           <div className="lg:pl-4">
             <div className="bg-white rounded-xl p-7 shadow-card-hover">
               <div className="mb-5">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Step 1 of 1</div>
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Read it now</div>
                 <div className="font-display font-bold text-brand-dark text-xl leading-tight">
                   The first-year schedule (on this page)
                 </div>
               </div>
-              <EmailCapture
-                variant="inline"
-                siteId="ferret-com"
-                title=""
-                ctaText="Send me the schedule →"
-                placeholder="your@email.com"
-                source="first-year-schedule"
-              />
+              <a
+                href="#first-year-schedule"
+                className="inline-flex items-center justify-center w-full px-6 py-3 bg-brand-primary text-brand-white text-sm font-bold rounded no-underline hover:bg-brand-primary-light"
+              >
+                Jump to the schedule
+              </a>
               <p className="text-2xs text-brand-text-light mt-4 leading-relaxed">
                 Email delivery is not live. The schedule is on this page.
                 See our <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>.
@@ -218,70 +216,12 @@ export default function FerretFirstYearSchedulePage() {
         </div>
       </section>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the ferret first-year-schedule checklist
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Ferret first-year-schedule checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Use the laminated-ferret-first-year-schedule-chart,
-            fridge-first-year-milestone-card, and
-            mustelid-first-year-reference-handbook notes
-            that match the q1-to-q4-year-map,
-            kit-to-year-two-milestone-log, and
-            aemv-afa-quesenberry-grounding copy on this
-            page — a laminated ferret first-year schedule
-            chart so the Q1 acclimation / Q2 foundation /
-            Q3 dental-nail / Q4 year-two map is posted on
-            the fridge (not a tools-hub calculator chart,
-            not a reviews buyer-guide chart, not a diet
-            feeding chart, not a care routine chart, not a
-            behavior cue chart, not a health triage chart,
-            not an ownership section-map chart, not a
-            colors palette chart), a ferret fridge
-            first-year milestone card so kit-to-year-two
-            settle-in / dental / nail / vet notes are
-            labeled on the fridge (not a measurement card,
-            not a reviews comparison card, not a diet
-            label card, not a care card, not a behavior
-            card, not a health library card, not an
-            ownership prep card, not a color id card), and
-            a mustelid first-year reference handbook so
-            the AEMV / AFA / Quesenberry grounding is a
-            physical kitchen book (not a calculator
-            handbook, not a reviews handbook, not a diet
-            handbook, not a care handbook, not a behavior
-            handbook, not a health handbook, not an
-            ownership handbook, not a colors handbook).
-            Educational kitchen checklist, not a ranked
-            product list, not a child toothbrush / dosing
-            hop, and not a substitute for an exotic-mammal
-            veterinarian. This page does not hop
-            medications or vaccines. Ferret.com does not
-            sell insurance. Aging pages stay held. No
-            spam.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Ferret first-year-schedule checklist"
-            subtitle="Email the first-year-schedule-chart, fridge milestone-card, and first-year-handbook notes. No spam."
-            ctaText="Email my ferret first-year-schedule checklist"
-            source="first-year-schedule-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="ferret-com:first-year-hero" aspect="16:9" variant="wide" />
       </div>
 
-      {/* QUARTERLY PREVIEW */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      {/* QUARTERLY PREVIEW — on-page, no email gate */}
+      <section id="first-year-schedule" className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto">
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
@@ -291,9 +231,8 @@ export default function FerretFirstYearSchedulePage() {
             52 weeks, broken into four quarters
           </h2>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
-            Below is the focus for each quarter. The printable version (sent by email) breaks each
-            quarter into weekly checklists, with vaccination timing, body-condition reminders, and
-            dental and nail-trim cadence in one column.
+            Below is the focus for each quarter. Print this page from your browser if you want it
+            on the fridge. There is no separate PDF email.
           </p>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -361,7 +300,7 @@ export default function FerretFirstYearSchedulePage() {
         </div>
       </section>
 
-      {/* SECOND CAPTURE */}
+      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
@@ -374,9 +313,10 @@ export default function FerretFirstYearSchedulePage() {
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title=""
-              ctaText="Send me the schedule →"
-              source="first-year-schedule"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
+              source="first-year-schedule-under-hero"
             />
           </div>
         </div>
@@ -422,33 +362,8 @@ export default function FerretFirstYearSchedulePage() {
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          First-year-schedule kitchen kit
-        </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">
-          Everyday physical supplies that match the
-          q1-to-q4-year-map, kit-to-year-two-milestone-log,
-          and aemv-afa-quesenberry-grounding copy on this
-          page — a laminated ferret first-year schedule
-          chart so the Q1 acclimation / Q2 foundation /
-          Q3 dental-nail / Q4 year-two map is posted on
-          the fridge, a ferret fridge first-year
-          milestone card so kit-to-year-two settle-in /
-          dental / nail / vet notes are labeled on the
-          fridge, and a mustelid first-year reference
-          handbook so the AEMV / AFA / Quesenberry
-          grounding is a physical kitchen book. These are
-          educational kitchen searches, not a ranked
-          product list, not a substitute for an
-          exotic-mammal veterinarian, not a tools-hub /
-          reviews-hub / diet-hub / care-hub / behavior-hub
-          / health-hub / ownership-hub / colors-hub hop,
-          and not a child toothbrush / dosing hop (those
-          live on health children). This page does not
-          hop medications or vaccines. This page does not
-          sell insurance. This page does not claim
-          hands-on testing. Ferret aging stays held.
-        </p>
+        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
+        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
@@ -465,44 +380,16 @@ export default function FerretFirstYearSchedulePage() {
             diet / care / behavior / health / ownership /
             colors kitchen kits and child
             finger+toothbrush / carnivore+care hops.
-            Directory import left untouched.
-            Ferret aging stays held.
             Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop the first-year-schedule kitchen kit
+            Shop related supplies
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            These Amazon category searches match the
-            on-page q1-to-q4-year-map,
-            kit-to-year-two-milestone-log, and
-            aemv-afa-quesenberry-grounding copy — a
-            laminated ferret first-year schedule chart, a
-            ferret fridge first-year milestone card, and a
-            mustelid first-year reference handbook.
-            Educational kitchen searches only. They are
-            not a ranked product list, they are not a
-            tools-hub / reviews-hub / diet-hub / care-hub
-            / behavior-hub / health-hub / ownership-hub /
-            colors-hub hop, they are not a child
-            toothbrush hop, and they do not replace an
-            exotic-mammal veterinarian. Ferret.com does
-            not sell insurance. Ferret.com earns a
-            commission on qualifying purchases at no extra
-            cost to you. Empty Chewy buttons stay hidden.
-          </p>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
-              amazonHref="/go/amazon-brand/laminated+ferret+first+year+schedule+chart?s=first-year-schedule"
-              amazonLabel="Browse laminated ferret first-year schedule charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+fridge+first+year+milestone+card?s=first-year-schedule"
-              amazonLabel="Browse ferret fridge first-year milestone cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/mustelid+first+year+reference+handbook?s=first-year-schedule"
-              amazonLabel="Browse mustelid first-year reference handbooks on Amazon →"
+              amazonHref="/go/amazon-brand/ferret+supplies?s=first-year-schedule"
+              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

@@ -194,21 +194,14 @@ export default function WaterChangeCalculatorPage() {
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the change plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Water-change checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the weekly percent, gallons to siphon, dechlorinator note, and
-            the shoppable change kit (Python-style changer, gravel vacuum, Seachem
-            Prime, API test kit) so you can run the schedule without re-running
-            the calculator. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Water-change checklist"
-            subtitle="Email the water-change checklist, weekly percent, and shoppable change kit. No spam."
-            ctaText="Email my water-change checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-water-change-calculator-under-hero"
           />
         </div>
@@ -226,36 +219,7 @@ export default function WaterChangeCalculatorPage() {
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop water-change gear
           </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-            These Amazon category searches match the gallons you just calculated
-            — a hose-to-sink Python-style changer or a gravel-vacuum siphon
-            (same queries this tool already used on the result CTA), Seachem
-            Prime dechlorinator (same query as the{' '}
-            <Link
-              href="/tools/fish-disease-symptom-checker"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              fish disease symptom checker
-            </Link>
-            ), and the API Freshwater Master Test Kit (same query as the{' '}
-            <Link
-              href="/reviews/best-water-test-kits"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              water-test kit review
-            </Link>
-            {' '}and the{' '}
-            <Link
-              href="/tools/stocking-calculator"
-              className="text-brand-primary no-underline hover:underline"
-            >
-              stocking calculator
-            </Link>
-            ). Dose conditioner before new water touches the tank. They are not
-            a ranked product list and not invented inventory. Fish.com earns a
-            commission on qualifying purchases at no extra cost to you. Empty
-            Chewy buttons stay hidden.
-          </p>
+          
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=tools-water-change-calculator"

@@ -48,26 +48,16 @@ export default function LowTechPlantedTankPage() {
         {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the low-tech planted checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Low-tech planted checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the no-CO2 notes — an aquarium light timer so the
-            photoperiod stays at six to eight hours, plus aquarium
-            plant root tabs near swords and crypts — so the tank
-            stays slow, stable, and algae-quiet. Educational
-            checklist, not a ranked product list and not a first-tank
-            filter / heater / test-kit order. Those stay on the setup
-            hub. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="fish-com"
-            title="Low-tech planted checklist"
-            subtitle="Email the light-timer and root-tab notes. No spam."
-            ctaText="Email my low-tech planted checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="setup-low-tech-planted-tank-under-hero"
           />
         </div>
@@ -87,7 +77,7 @@ export default function LowTechPlantedTankPage() {
 
         <h2>Substrate and Fertilization</h2>
         <p>An active aquasoil works well but is not required for low-tech: many successful low-tech tanks use inert gravel or sand with aquarium plant root tabs placed near heavy root-feeders such as swords and crypts. Because growth is slow, fertilization is light. A modest dose of an all-in-one liquid fertilizer once or twice a week, or aquarium plant root tabs replenished every few months, covers the needs of most easy plants. Watch the plants for deficiency signs — yellowing or holed leaves — and dose to correct rather than dosing heavily by default, which only feeds algae in the absence of CO2.</p>
-        <p>Everyday physical supplies for that rhythm — not a first-tank equipment list — start with an aquarium light timer so the six-to-eight-hour photoperiod is automatic, plus aquarium plant root tabs for the swords and crypts that feed from the substrate. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, Seiryu stone, spiderwood, magnetic scrapers, handheld algae scrapers, pressurized CO2, and Flourish Excel already live on the <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/aquarium-algae-control">algae-control guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop liquid fertilizers, algaecides, or any medication.</p>
+        <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <h2>Maintenance Rhythm</h2>
         <p>The low-tech tank is defined by its easy upkeep: a weekly or biweekly water change, occasional trimming of the faster growers, glass cleaning as needed, and light feeding of any fish. The slow growth means the scape holds its shape for long stretches without intervention. This forgiving rhythm is what makes the low-tech approach ideal for beginners and busy keepers alike, and it pairs naturally with the gentle conditions favored by nano fish and shrimp. For the broader setup mechanics shared with high-tech tanks, see the <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
@@ -117,7 +107,7 @@ export default function LowTechPlantedTankPage() {
             algae scraper, or pressurized CO2, and they do not
             replace choosing easy plants. Fish.com earns a
             commission on qualifying purchases at no extra cost to
-            you. Empty Chewy buttons stay hidden.
+            you.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

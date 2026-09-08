@@ -235,7 +235,7 @@ export default function SubstrateCalculatorPage() {
             siteId="fish-com"
             title="Substrate shopping list"
             subtitle="Send the bag sizes — pounds, kilograms, and liters for your tank footprint. No spam."
-            ctaText="Email my substrate shopping list"
+            ctaText="Send the notes"
             source="tools-substrate-calculator-under-hero"
           />
         </div>

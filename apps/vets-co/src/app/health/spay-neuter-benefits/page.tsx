@@ -39,7 +39,7 @@ export default function SpayNeuterPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Pain Signs in Dogs', href: '/health/pain-signs-dogs' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="Practical guidance weekly." source="health-spay-neuter" />
+          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-spay-neuter" />
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
@@ -47,35 +47,16 @@ export default function SpayNeuterPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog post-neuter calorie-cut checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog post-neuter calorie-cut checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the after-surgery portion notes — an
-              adjustable sliding dog-food scoop so the
-              20–25% cut is a set mark instead of a
-              guessed handful, reusable dog-food portion
-              cups so the smaller daily ration is
-              pre-measured for everyone in the house,
-              and a dog weight-log book so monthly body
-              condition stays written down. Educational
-              checklist, not a diagnosis, not a
-              weight-loss diet, and not a substitute for
-              the veterinary timing conversation.
-              Kitchen gram scales, portion-control food
-              scales, measuring cups, heat pants, belly
-              bands, disposable diapers, inflatable
-              collars, and airline crates stay on other
-              pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="vets-co"
-              title="Dog post-neuter calorie-cut checklist"
-              subtitle="Email the scoop, portion-cup, and weight-log notes. No spam."
-              ctaText="Email my dog post-neuter calorie-cut checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-spay-neuter-benefits-under-hero"
             />
           </div>
@@ -113,19 +94,9 @@ export default function SpayNeuterPage() {
             household tools, not treatments. They do
             not treat obesity, they do not replace a
             veterinarian or a weight-management plan,
-            and they are not a ranked product list.
-            Kitchen gram scales, portion-control food
-            scales, digital pet food portion scales,
-            kitchen measuring cups, heat pants, male
-            belly bands, heavy-duty exercise pens,
-            disposable female dog diapers, inflatable
-            dog collars, hard-sided airline crates,
-            surgical recovery suits, timed feeders,
-            maze slow-feed bowls, and house-lines
-            already live on other pages. This page
+            and they are not a ranked product list. This page
             does not hop medications. This page does
-            not claim hands-on testing.
-          </p>
+            not claim hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -152,30 +123,9 @@ export default function SpayNeuterPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog post-neuter calorie-cut kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page after-surgery portion copy — an
-              adjustable sliding dog-food scoop,
-              reusable dog-food portion cups, and a dog
-              weight-log book. Everyday physical
-              supplies only. They are not a ranked
-              product list, they are not a prescription
-              or medication hop, they are not the #1058
-              stopwatch / field-notebook / table-bumper
-              hops, they are not the #1057 timed-feeder
-              / maze-bowl / house-line hops, they are
-              not the #1056 diaper / inflatable-collar /
-              airline-crate hops, they are not the
-              #1041 heat-pants / belly-band /
-              exercise-pen hops, they are not kitchen
-              gram-scale or portion-control food-scale
-              hops, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you. Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/adjustable+sliding+dog+food+scoop?s=health-spay-neuter-benefits"
@@ -189,7 +139,7 @@ export default function SpayNeuterPage() {
                 amazonHref="/go/amazon-brand/dog+weight+log+book?s=health-spay-neuter-benefits"
                 amazonLabel="Browse dog weight-log books on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <ArticleSourcesList sources={SOURCES} />

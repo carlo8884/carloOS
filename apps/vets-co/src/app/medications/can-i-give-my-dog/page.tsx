@@ -81,41 +81,16 @@ export default function CanIGiveMyDogHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the can-i-give-hub checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Can-I-give-hub checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-pet-human-otc-verdict-chart,
-            fridge-human-otc-poison-card, and
-            veterinary-human-otc-safety-handbook notes that
-            match this hub — the never / vet-dose-only /
-            topical-OK verdict map, the ASPCA 888-426-4435
-            poison-control row, and the no-published-dose
-            rule — a laminated pet human-OTC verdict chart
-            so the safety map is posted on the fridge (not
-            a medications-hub therapeutic-category chart,
-            not a medications-spoke safety chart), a fridge
-            human-OTC poison card so the ASPCA number is
-            labeled in the kitchen (not a hub monitoring
-            card, not a medications-spoke recheck card),
-            and a human-OTC safety handbook so the
-            ASPCA / Pet-Poison-Helpline grounding is a
-            physical kitchen book (not a hub Plumb&apos;s
-            handbook, not a medications-spoke handbook).
-            Educational kitchen checklist, not a ranked
-            drug list, not a published dose, not a
-            substitute for a veterinarian. This page does
-            not publish doses. Vets.co does not sell
-            insurance. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          
           <EmailCapture
             variant="inline"
             siteId="vets-co"
-            title="Can-I-give-hub checklist"
-            subtitle="Email the verdict chart, poison card, and human-OTC safety handbook notes. No spam."
-            ctaText="Email my can-i-give-hub checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="can-i-give-my-dog-hub-under-hero"
           />
         </div>
@@ -166,42 +141,16 @@ export default function CanIGiveMyDogHubPage() {
           <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="inline" />
           <div className="not-prose my-8 rounded-xl border border-brand-border bg-brand-surface p-6">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the can-i-give-hub kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page never / vet-dose-only / topical-OK
-              verdict map, the ASPCA 888-426-4435
-              poison-control row, and the no-published-dose
-              rule — a laminated pet human-OTC verdict
-              chart, a fridge human-OTC poison card, and a
-              veterinary human-OTC safety handbook.
-              Educational kitchen searches only. They are
-              not a ranked drug list, they are not a
-              medications-hub hop, they are not a
-              medications-spoke hop, they are not a
-              published dose, they are not a flea /
-              heartworm / vaccine hop, and they do not
-              replace a veterinarian. This page does not
-              publish doses. Vets.co does not sell
-              insurance. Vets.co earns a commission on
-              qualifying purchases at no extra cost to you.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <AffiliateDisclosure variant="inline" siteId="vets-co" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+pet+human+otc+verdict+chart?s=can-i-give-hub"
-                amazonLabel="Browse laminated pet human-OTC verdict charts on Amazon →"
+                amazonHref="/go/amazon-brand/pet+supplies?s=can-i-give-hub"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/pet+fridge+human+otc+poison+card?s=can-i-give-hub"
-                amazonLabel="Browse fridge pet human-OTC poison cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/veterinary+human+otc+safety+handbook?s=can-i-give-hub"
-                amazonLabel="Browse veterinary human-OTC safety handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
           <div className="mt-6">
             <EmailCapture variant="section" siteId="vets-co" title="Vets.co reference letter" subtitle="Veterinary references for pet owners." source="can-i-give-my-dog-hub" />

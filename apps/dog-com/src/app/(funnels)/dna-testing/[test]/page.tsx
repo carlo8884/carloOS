@@ -320,7 +320,7 @@ export default async function DnaTestPage({
           siteId="dog-com"
           source="dog-com:dna-test-comparison"
           title="Get the full DNA test buyer's guide"
-          subtitle="All 3 tests compared. Which test for which breed. Free PDF."
+          subtitle="Owner notes"
           ctaText="Send the guide"
         />
       </div>

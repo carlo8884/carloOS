@@ -235,7 +235,6 @@ export default function FerretBCSCalculator() {
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
           <AffiliateDisclosure variant="inline" siteId="ferret-com" className="my-3" />
-          <ShopCtas amazonHref={result.shop.href} amazonLabel={result.shop.label} />
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">

@@ -140,28 +140,16 @@ export default function DogBodyConditionScorePage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the dog BCS tracking checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Dog BCS tracking checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the monthly scoring notes — a soft
-              measuring tape for pets for girth and
-              pelvic-circumference checks, a dog body
-              condition score chart poster as the visual
-              1–9 reference, and single-ingredient lean
-              dog treats so the treat-calorie audit stays
-              honest. Educational checklist, not a
-              diagnosis and not a substitute for
-              veterinary scoring. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="dog-com"
-              title="Dog BCS tracking checklist"
-              subtitle="Email the tape, chart-poster, and lean-treat notes. No spam."
-              ctaText="Email my dog BCS tracking checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="guides-dog-body-condition-score-under-hero"
             />
           </div>
@@ -399,26 +387,9 @@ export default function DogBodyConditionScorePage() {
               not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the dog BCS tracking kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page monthly scoring, morphometric, and
-              treat-audit copy — a soft measuring tape for
-              pets, a dog body condition score chart poster,
-              and single-ingredient lean dog treats.
-              Everyday physical supplies only. They are not
-              a ranked product list, they are not the
-              dog-obesity scale / slow-feeder hops, they
-              are not the calorie / BCS kitchen-gram or
-              portion-control scale hops, they are not the
-              pancreatitis food / treat / portion-scale
-              hops, they are not the UTI / dehydration
-              electrolyte kits, and they do not replace a
-              veterinarian. Dog.com earns a commission on
-              qualifying purchases at no extra cost to you.
-              Empty Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score"
@@ -432,7 +403,7 @@ export default function DogBodyConditionScorePage() {
                 amazonHref="/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"
                 amazonLabel="Browse single-ingredient lean dog treats on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

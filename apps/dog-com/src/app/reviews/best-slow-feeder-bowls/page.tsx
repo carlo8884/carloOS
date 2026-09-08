@@ -36,35 +36,16 @@ export default function BestSlowFeederBowlsPage() {
             {/* Under-hero capture — source must end in under-hero so it always renders. */}
             <div className="mb-8">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the slow-feeder checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Slow-feeder checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the slow-feeder notes that
-                match the ranking copy on this page —
-                twice-daily meals to cut single-meal
-                volume, an Outward Hound Fun Feeder
-                to stretch kibble meals about 10x, a
-                Northmate Green grass mat for floor-
-                level foraging, and a LickiMat Splash
-                for spreadable food before stressful
-                events. Educational anti-bloat
-                checklist, not a new product hop and
-                not a substitute for a veterinarian.
-                Neither a bowl nor twice-daily
-                feeding eliminates GDV risk. The
-                existing Northmate Amazon and
-                Outward Hound / LickiMat Chewy
-                searches stay below. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Slow-feeder checklist"
-                subtitle="Email the twice-daily, maze, and lick-mat notes. No spam."
-                ctaText="Email my slow-feeder checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source="reviews-best-slow-feeder-bowls-under-hero"
               />
             </div>
@@ -119,7 +100,7 @@ export default function BestSlowFeederBowlsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'GDV / Bloat Guide', href: '/health/dog-bloat-gvd' }, { label: 'Dog Obesity', href: '/health/dog-obesity' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="Practical guidance weekly." source="review-slow-feeders" />
+            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-slow-feeders" />
           </aside>
         </div>
       </div>

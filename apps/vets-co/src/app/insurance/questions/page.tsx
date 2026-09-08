@@ -94,7 +94,7 @@ export default function InsuranceQuestionsHubPage() {
         </div>
 
         <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-10">
-          <EmailCapture variant="section" siteId="vets-co" title="Pet Insurance Decision Guide" subtitle="Get our plain-English insurance checklist by email." source="insurance-questions-hub" ctaText="Send Me the Guide" perks={['No jargon', 'One email', 'Vet perspective']} />
+          <EmailCapture variant="section" siteId="vets-co" title="Pet Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-questions-hub" ctaText="Send Me the Guide" perks={['No jargon', 'One email', 'Vet perspective']} />
         </div>
       </>
     </>

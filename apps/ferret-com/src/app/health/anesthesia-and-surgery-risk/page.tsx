@@ -180,43 +180,16 @@ export default function FerretAnesthesiaRiskPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret anesthesia-risk checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret anesthesia-risk checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the laminated-ferret-short-fast-chart,
-              fridge-glucose-temp-card, and
-              mustelid-anesthesia-clinic-handbook notes
-              that match the short-fast-map,
-              glucose-temp-log, and
-              quesenberry-aemv-clinic-grounding copy on this
-              page — a laminated ferret short-fast chart
-              so the few-hours / never-overnight / ask-the-clinic
-              map is posted on the fridge (not a bruxism-map
-              chart, not a coffee-grounds chart, not a
-              stamina-map chart), a ferret fridge glucose-temp
-              card so heat-loss / blood-sugar / eat-soon notes
-              are labeled on the fridge (not a baseline-log
-              card, not a household-treat card, not a
-              breathing-rate card), and a mustelid
-              anesthesia-clinic handbook so the Quesenberry /
-              AEMV ferret-experienced-team grounding is a
-              physical kitchen book (not a pain-sign handbook,
-              not an otodectes-swab handbook, not a cardio-echo
-              handbook). Educational kitchen checklist, not a
-              ranked clinic list, not a first-aid-kit hop, and
-              not a substitute for an exotic-mammal
-              veterinarian. Ferret.com does not sell insurance.
-              Aging pages stay held. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret anesthesia-risk checklist"
-              subtitle="Email the short-fast-chart, fridge glucose-temp card, and anesthesia-clinic-handbook notes. No spam."
-              ctaText="Email my ferret anesthesia-risk checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-anesthesia-risk-under-hero"
             />
           </div>
@@ -379,47 +352,20 @@ export default function FerretAnesthesiaRiskPage() {
               vaccine / flea / heartworm / nsaid / aging hops.
               ShopCtas hides empty Chewy; never href="#"
               or PLACEHOLDER. Unused vs health-hub /
-              signs-of-pain / ear-mites / heart-disease hops.
-              Directory import left untouched. Ferret
+              signs-of-pain / ear-mites / heart-disease hops. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret anesthesia-risk kitchen kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page short-fast-map,
-              glucose-temp-log, and
-              quesenberry-aemv-clinic-grounding copy — a
-              laminated ferret short-fast chart, a
-              ferret fridge glucose-temp card, and a
-              mustelid anesthesia-clinic handbook.
-              Educational kitchen searches only. They are
-              not a ranked clinic list, they are not
-              a health-hub / signs-of-pain / ear-mites hop,
-              they are not a first-aid-kit hop, they are
-              not a child toothbrush hop, and they do not
-              replace an exotic-mammal veterinarian.
-              Ferret.com does not sell insurance.
-              Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty
-              Chewy buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/laminated+ferret+short+fast+chart?s=anesthesia-and-surgery-risk"
-                amazonLabel="Browse laminated ferret short-fast charts on Amazon →"
+                amazonHref="/go/amazon-brand/ferret+supplies?s=anesthesia-and-surgery-risk"
+                amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+fridge+glucose+temp+card?s=anesthesia-and-surgery-risk"
-                amazonLabel="Browse ferret fridge glucose-temp cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/mustelid+anesthesia+clinic+handbook?s=anesthesia-and-surgery-risk"
-                amazonLabel="Browse mustelid anesthesia-clinic handbooks on Amazon →"
-              />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

@@ -510,40 +510,16 @@ export default async function ComparePage({ params }: PageProps) {
           <article className="carloOS-article min-w-0">
             <div className="mb-8 not-prose">
               <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Keep the breed-compare checklist
+                Owner notes
               </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-                Breed-compare checklist
-              </h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-                Email the laminated-dog-compare-spoke-axis-chart,
-                dog-fridge-compare-vs-row-card, and
-                canine-compare-pair-handbook notes that
-                match the side-by-side energy / size /
-                apartment / first-time-owner rows and the
-                AKC / OFA / Encyclopedia-of-the-Dog grounding
-                on this pair page — a laminated dog compare
-                spoke-axis chart so this vs-row map is posted
-                on the fridge (not a compare-hub decision-axis
-                chart, not an apartment-dog shared-wall chart),
-                a fridge compare vs-row card so the energy /
-                size / lifespan / grooming notes are labeled
-                in the kitchen (not a hub pair card, not a
-                crate hop), and a compare-pair handbook so
-                the AKC / OFA / first-time-owner row is a
-                physical kitchen book (not a compare-hub
-                handbook, not a first-owner Weimaraner
-                handbook). Educational kitchen checklist,
-                not a ranked product list, not a substitute
-                for a veterinarian. Dog.com does not sell
-                insurance. No spam.
-              </p>
+              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <EmailCapture
                 variant="inline"
                 siteId="dog-com"
-                title="Breed-compare checklist"
-                subtitle="Email the spoke-axis chart, vs-row card, and compare-pair handbook notes. No spam."
-                ctaText="Email my breed-compare checklist"
+                title="Owner notes"
+                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+                ctaText="Send the notes"
                 source={`compare-${slug}-under-hero`}
               />
             </div>
@@ -691,38 +667,16 @@ export default async function ComparePage({ params }: PageProps) {
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop the breed-compare pair kit
+                Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-                These Amazon category searches match the on-page
-                side-by-side energy / size / apartment /
-                first-time-owner rows and the AKC / OFA /
-                Encyclopedia-of-the-Dog grounding — a laminated
-                dog compare spoke-axis chart, a fridge compare
-                vs-row card, and a compare-pair handbook.
-                Educational kitchen searches only. They are not
-                a ranked product list, they are not a
-                compare-hub hop, they are not a crate hop, they
-                are not a finger-toothbrush hop, and they do
-                not replace a veterinarian. Dog.com does not
-                sell insurance. Dog.com earns a commission on
-                qualifying purchases at no extra cost to you.
-              </p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/laminated+dog+compare+spoke+axis+chart?s=compare-pair"
-                  amazonLabel="Browse laminated dog compare spoke-axis charts on Amazon →"
+                  amazonHref="/go/amazon-brand/dog+supplies?s=compare-pair"
+                  amazonLabel="Shop on Amazon"
                 />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+fridge+compare+vs+row+card?s=compare-pair"
-                  amazonLabel="Browse fridge compare vs-row cards on Amazon →"
-                />
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/canine+compare+pair+handbook?s=compare-pair"
-                  amazonLabel="Browse canine compare-pair handbooks on Amazon →"
-                />
-              </div>
+          </div>
             </div>
 
             {/* Insurance cross-link */}
@@ -828,7 +782,7 @@ export default async function ComparePage({ params }: PageProps) {
               variant="sidebar"
               siteId="dog-com"
               title="Free Dog Health Tips"
-              subtitle="Practical guidance weekly."
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
               source={`compare-${slug}`}
             />
           </aside>

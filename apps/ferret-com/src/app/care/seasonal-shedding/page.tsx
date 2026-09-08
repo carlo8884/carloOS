@@ -172,25 +172,16 @@ export default function FerretSeasonalSheddingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the ferret molt-grooming checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Ferret molt-grooming checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the coat-blow notes — a soft slicker brush and a
-              fine-toothed metal comb for short daily sessions, plus a
-              reusable lint roller for hammocks and hard surfaces between
-              washes. Educational checklist, not a diagnosis and not a
-              substitute for the exotic-pet vet. Hairball laxative pastes,
-              shampoos, and medications stay off this list. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="ferret-com"
-              title="Ferret molt-grooming checklist"
-              subtitle="Email the slicker-brush, metal-comb, and lint-roller notes. No spam."
-              ctaText="Email my ferret molt-grooming checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="care-seasonal-shedding-under-hero"
             />
           </div>
@@ -376,13 +367,9 @@ export default function FerretSeasonalSheddingPage() {
             daily sessions that lift dead coat before the ferret swallows it,
             plus a reusable lint roller for hammocks and hard surfaces between
             washes. Hairball / petroleum laxative pastes stay a vet
-            conversation, not a shop hop. Ferret shampoo, lickable treat
-            paste, sleep sacks, and hammocks stay off this kit — those hops
-            already live on bathing-and-grooming, ear-cleaning, nail-trimming,
-            and bedding pages. These are not a treatment for adrenal disease
+            conversation, not a shop hop. These are not a treatment for adrenal disease
             or a GI blockage and not a diagnosis. This page does not claim
-            hands-on testing.
-          </p>
+            hands-on testing. </p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -396,20 +383,9 @@ export default function FerretSeasonalSheddingPage() {
               Hairball pastes, shampoos, and medications are not hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the ferret molt-grooming kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the on-page grooming
-              copy — a soft small-animal slicker brush, a fine-tooth metal
-              comb, and a reusable lint roller for hammocks between washes.
-              Everyday physical supplies only. They are not a ranked
-              product list, they are not the dog-grooming slicker hop, they
-              are not a hairball paste or a shampoo, they are not
-              medications, and they do not replace an exotic-pet
-              veterinarian. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding"
@@ -423,7 +399,7 @@ export default function FerretSeasonalSheddingPage() {
                 amazonHref="/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"
                 amazonLabel="Browse reusable lint rollers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">FAQ</h2>

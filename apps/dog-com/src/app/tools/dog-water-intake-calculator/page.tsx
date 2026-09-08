@@ -144,23 +144,16 @@ export default function DogWaterIntakeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the checklist
+            Owner notes
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Hydration checklist
-          </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the hydration checklist — daily water-tracking notes, the
-            shoppable kit (water bowl, fountain, travel bottle, measuring cup),
-            and the drinking changes worth a vet call — so you can measure
-            tomorrow without re-running the estimate. No spam.
-          </p>
+          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <EmailCapture
             variant="inline"
             siteId="dog-com"
-            title="Hydration checklist"
-            subtitle="Email the hydration checklist — water-tracking notes and the shoppable kit. No spam."
-            ctaText="Email my hydration checklist"
+            title="Owner notes"
+            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+            ctaText="Send the notes"
             source="tools-dog-water-intake-under-hero"
           />
         </div>
@@ -182,18 +175,7 @@ export default function DogWaterIntakeCalculatorPage() {
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a hydration kit
             </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              These Amazon category searches are husbandry items that make the
-              daily water range above easier to offer and track — a ceramic
-              water bowl, a pet water fountain, a travel water bottle, and a
-              measuring cup for the ounces and cups the calculator returns.
-              They are not a ranked product list, not invented inventory, and
-              they do not diagnose thirst or set a medical fluid plan. Fresh
-              water should always be available; a marked, lasting change in
-              drinking is worth a veterinary call. Dog.com earns a commission
-              on qualifying purchases at no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
@@ -211,7 +193,7 @@ export default function DogWaterIntakeCalculatorPage() {
                 amazonHref="/go/amazon-brand/kitchen+measuring+cup?s=tools-dog-water-intake"
                 amazonLabel="Browse kitchen measuring cups on Amazon →"
               />
-            </div>
+          </div>
           </div>
         </div>
       </section>

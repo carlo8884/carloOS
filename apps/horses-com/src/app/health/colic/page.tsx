@@ -167,29 +167,16 @@ export default function ColicPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the colic baseline-vitals checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse colic baseline-vitals checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the equine digital rectal-thermometer,
-              large-animal stethoscope, and soft fleece
-              equine-cooler notes so a resting temperature,
-              four-quadrant gut sounds, and a quiet stall
-              stay written down before the veterinarian
-              arrives. Educational monitoring checklist,
-              not a treatment plan and not a substitute
-              for the veterinarian. Stopwatches, field
-              notebooks, first-aid kits, and foaling
-              thermometers stay on other pages. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Horse colic baseline-vitals checklist"
-              subtitle="Email the thermometer, stethoscope, and cooler notes. No spam."
-              ctaText="Email my horse colic baseline-vitals checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="health-colic-under-hero"
             />
           </div>
@@ -369,7 +356,7 @@ export default function ColicPage() {
           <p>Knowing the horse&apos;s resting heart rate, normal gut sounds, normal manure output, and typical attitude makes it possible to recognize early deviations. Owners who can describe the horse&apos;s baseline accurately give the veterinarian a substantial diagnostic advantage in any acute presentation. A soft fleece equine cooler is how a sweating horse stays quietly covered in a stall while you wait for the veterinarian — it is not a turnout blanket, not a body-clipping cooler, and not a treatment.</p>
 
           <h2 id="kit">Baseline-vitals kit</h2>
-          <p>Everyday physical supplies that match the monitoring and quiet-stall copy on this page — an equine digital rectal thermometer so the physical-exam temperature stays written down with the onset notes, a large-animal stethoscope so gut sounds in all four quadrants can be listened to for the auscultation copy, and a soft fleece equine cooler so a sweating horse stays quietly covered in a stall while you wait for the veterinarian. These are household barn tools, not treatments. They do not diagnose or treat colic, they do not replace a veterinarian, and they are not a ranked product list. Stopwatches, field notebooks, first-aid kits, foaling thermometers, veterinary thermometers, turnout blankets, and body-clipping coolers already live on other pages. This page does not hop Banamine, flunixin, bute, Buscopan, mineral oil, psyllium, dewormers, or any medication. This page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the monitoring and quiet-stall copy on this page — an equine digital rectal thermometer so the physical-exam temperature stays written down with the onset notes, a large-animal stethoscope so gut sounds in all four quadrants can be listened to for the auscultation copy, and a soft fleece equine cooler so a sweating horse stays quietly covered in a stall while you wait for the veterinarian. These are household barn tools, not treatments. They do not diagnose or treat colic, they do not replace a veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -394,29 +381,9 @@ export default function ColicPage() {
               ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the horse colic baseline-vitals kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page monitoring and quiet-stall copy —
-              an equine digital rectal thermometer, a
-              large-animal stethoscope, and a soft fleece
-              equine cooler. Everyday physical supplies
-              only. They are not a ranked product list,
-              they are not a medication hop, they are not
-              a diagnosis-kit hop, they are not a #1061
-              farrier-log / hoof-stand / barn-flood-light
-              hop, they are not a #1060 fecal-sample-
-              container / manure-rake / muck-cart hop,
-              they are not a #1058 stopwatch / field-
-              notebook hop, they are not a foaling or
-              veterinary-thermometer hop, they are not a
-              horse-fleece-cooler hop, and they do not
-              replace a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you. Empty Chewy buttons stay
-              hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+digital+rectal+thermometer?s=health-colic"
@@ -430,7 +397,7 @@ export default function ColicPage() {
                 amazonHref="/go/amazon-brand/soft+fleece+equine+cooler?s=health-colic"
                 amazonLabel="Browse soft fleece equine coolers on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

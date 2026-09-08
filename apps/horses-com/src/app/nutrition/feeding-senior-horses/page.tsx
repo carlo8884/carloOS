@@ -118,39 +118,16 @@ export default function SeniorFeedingPage() {
           {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the senior-horse feeding checklist
+              Owner notes
             </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Senior-horse feeding checklist
-            </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Email the horse-chopped-forage,
-              horse-feed-soaking-tub, and
-              horse-corner-feeder notes that match
-              the chewable-forage, soak-into-a-mash,
-              and feed-separately copy on this page —
-              horse chopped forage so a senior that
-              cannot chew long-stem hay still gets
-              digestible fiber (not a dental hay-cube
-              hop, not a beet-pulp hop), a horse feed
-              soaking tub so cubes and complete senior
-              feed soak into a mash for poor teeth
-              (not a lidded 5-gallon soaking pail, not
-              stackable rubber feed tubs, not a hay
-              soaking bag), and a horse corner feeder
-              so a slow-eating senior is not bullied
-              off its meal (not a wall-mounted hay
-              rack, not a slow-feeder hay net).
-              Educational barn checklist, not a
-              treatment, and not a substitute for
-              calling the veterinarian. No spam.
-            </p>
+            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="horses-com"
-              title="Senior-horse feeding checklist"
-              subtitle="Email the chopped-forage, soaking-tub, and corner-feeder notes. No spam."
-              ctaText="Email my senior-horse feeding checklist"
+              title="Owner notes"
+              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
+              ctaText="Send the notes"
               source="nutrition-feeding-senior-horses-under-hero"
             />
           </div>
@@ -270,25 +247,9 @@ export default function SeniorFeedingPage() {
               (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the senior feeding barn kit
+              Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-              These Amazon category searches match the
-              on-page chewable-forage, soak-into-a-mash,
-              and feed-separately copy — horse chopped
-              forage, a horse feed soaking tub, and a
-              horse corner feeder. Educational barn
-              searches only. They are not a ranked
-              product list, they are not a dental
-              hay-cube or mash hop, they are not a
-              beet-pulp hop, they are not a grain
-              feed-tub hop, they are not a slow-feeder
-              hay-net hop, and they do not replace a
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases at
-              no extra cost to you. Empty Chewy
-              buttons stay hidden.
-            </p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+chopped+forage?s=nutrition-feeding-senior-horses"
@@ -302,7 +263,7 @@ export default function SeniorFeedingPage() {
                 amazonHref="/go/amazon-brand/horse+corner+feeder?s=nutrition-feeding-senior-horses"
                 amazonLabel="Browse horse corner feeders on Amazon →"
               />
-            </div>
+          </div>
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
