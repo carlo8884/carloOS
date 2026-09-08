@@ -8760,6 +8760,9 @@ const CALCULATORS = [
     id: 'fish · aquarium-algae-control hops',
     file: 'apps/fish-com/src/app/setup/aquarium-algae-control/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the treatment playbook' },
+      { re: /nextHref="\/tools\/water-change-calculator"/, label: 'next step is a measured water change, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+magnetic\+scraper\?s=setup-aquarium-algae-control"/, label: 'journey hop reuses the existing magnetic-scraper search' },
       { re: /amazon-brand\/aquarium\+magnetic\+scraper\?s=setup-aquarium-algae-control/, label: 'aquarium magnetic-scraper search hop (matches on-page viewing-pane / green-spot / green-dust copy; unique vs #993–#1020 setup-hub filter / heater / test-kit and aquascaping Seiryu / spiderwood hops)' },
       { re: /amazon-brand\/handheld\+aquarium\+algae\+scraper\?s=setup-aquarium-algae-control/, label: 'handheld aquarium algae-scraper search hop (matches on-page plant-leaf / hardscape-tuft copy the magnet cannot reach; unique vs setup-hub / aquascaping / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -8770,8 +8773,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete algae-control scraper-checklist offer; every gear CTA is an amazon-brand category search matching on-page glass-cleaning copy (aquarium magnetic scraper for the viewing panes, handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), a #1020 Seiryu-stone / spiderwood-driftwood hop, an aquasoil hop, a pressurized-CO2 / Flourish Excel hop, a light-timer / root-tab hop reserved for low-tech-planted, or a medication / algaecide hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the treatment playbook, next step is the water-change calculator + the existing magnetic-scraper hop. Shop dump stays below. No invented kitchen hops. No new Amazon query. No named Rx.',
   },
   {
     id: 'fish · low-tech-planted-tank hops',

@@ -6,6 +6,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -57,6 +58,14 @@ export default function AlgaeControlPage() {
         <h2>The Treatment Playbook</h2>
         <p>Start with the universal fixes that help every algae type: cut the photoperiod to 6 to 8 hours on a timer, keep light off direct sunlight, increase water-change frequency to export excess nutrients, improve flow so no dead spots accumulate detritus, and feed less. For black beard algae and persistent spot algae, dosing liquid carbon (such as glutaraldehyde-based products) directly onto the affected areas with the filter briefly off can spot-treat it, but use caution as some plants and invertebrates are sensitive. For diatoms and green dust in a new tank, patience plus regular maintenance is usually all that is required.</p>
         <p>Manual removal is the physical half of that playbook — it clears the bloom you can see while the levers catch up. An aquarium magnetic scraper wipes green-spot dots and green-dust film off the viewing panes without putting a hand in the tank. A handheld aquarium algae scraper reaches the plant leaves, hardscape tufts, and corners a magnet cannot press against. Neither tool replaces a shorter photoperiod or a water change, and neither is a first-tank filter, heater, or test kit. Filters, heaters, dechlorinator, test kits, gravel vacuums, aquasoil, Seiryu stone, spiderwood, light timers, root tabs, pressurized CO2, and Flourish Excel already live on the <a href="/setup">setup hub</a>, the <a href="/setup/aquascaping-guide">aquascaping guide</a>, the <a href="/setup/low-tech-planted-tank">low-tech planted tank guide</a>, and the CO2 calculator, and stay off this kit. This page does not hop algaecides, erythromycin, or any medication.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/water-change-calculator"
+          nextLabel="Measure this week's water change to export nutrients"
+          nextBlurb="The playbook is the order — cut the photoperiod, then export nitrate and phosphate with a measured change. Scraping the glass is support, not the fix. The hop below is the same magnetic-scraper search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control"
+          resourceLabel="Browse aquarium magnetic scrapers on Amazon →"
+        />
 
         <h2>Algae-Eating Animals — Help, Not Magic</h2>
         <p>The right cleanup crew suppresses algae but cannot fix an imbalance on its own. Otocinclus catfish and nerite snails are exceptional grazers of diatoms and green film and are safe for community tanks. Amano shrimp consume hair and thread algae more effectively than almost any fish. Bristlenose plecos rasp algae from broad surfaces and driftwood. Siamese algae eaters are one of the few animals that reliably eat black beard algae. Match the animal to the tank size and the algae present, never overstock for the purpose, and remember that a hungry algae crew in a clean tank still needs supplemental feeding.</p>
