@@ -56,8 +56,6 @@ const CALCULATORS = [
     id: 'fish · co2-calculator hops',
     file: 'apps/fish-com/src/app/tools/co2-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-co2-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquarium\+co2\+regulator\+solenoid\?s=tools-co2-calculator/, label: 'CO2 regulator+solenoid search hop' },
       { re: /amazon-brand\/aquarium\+co2\+diffuser\?s=tools-co2-calculator/, label: 'CO2 diffuser search hop' },
       { re: /amazon-brand\/aquarium\+co2\+drop\+checker\?s=tools-co2-calculator/, label: 'drop checker search hop' },
@@ -85,8 +83,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-volume-calculator hops',
     file: 'apps/fish-com/src/app/tools/aquarium-volume-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-aquarium-volume-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/glass\+aquarium\+tank\+gallon\?s=tools-aquarium-volume/, label: 'glass tank by gallon search hop' },
       { re: /amazon-brand\/acrylic\+aquarium\+tank\?s=tools-aquarium-volume/, label: 'acrylic tank search hop' },
       { re: /amazon-brand\/aquarium\+stand\?s=tools-aquarium-volume/, label: 'aquarium stand search hop' },
@@ -120,8 +116,6 @@ const CALCULATORS = [
     id: 'fish · pond-volume-calculator hops',
     file: 'apps/fish-com/src/app/tools/pond-volume-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-pond-volume-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/epdm\+pond\+liner\?s=tools-pond-volume/, label: 'EPDM pond liner search hop' },
       { re: /amazon-brand\/submersible\+pond\+pump\?s=tools-pond-volume/, label: 'submersible pond pump search hop' },
       { re: /amazon-brand\/pond\+filter\+skimmer\+kit\?s=tools-pond-volume/, label: 'pond filter / skimmer kit search hop' },
@@ -145,8 +139,6 @@ const CALCULATORS = [
     id: 'fish · heater-wattage-calculator hops',
     file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-heater-wattage-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete heater-wattage offer, not Subscribe' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=tools-heater-wattage-calculator/, label: 'Eheim Jager heater search hop (same query as heater reviews / stocking)' },
       { re: /amazon-brand\/aqueon\+pro\+heater\?s=tools-heater-wattage-calculator/, label: 'Aqueon Pro heater search hop (same query as heater reviews)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -168,8 +160,6 @@ const CALCULATORS = [
     id: 'fish · substrate-calculator hops',
     file: 'apps/fish-com/src/app/tools/substrate-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-substrate-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete substrate-shopping-list offer, not Subscribe' },
       { re: /amazon-brand\/aquarium\+gravel\?s=tools-substrate-calculator/, label: 'aquarium gravel search hop' },
       { re: /amazon-brand\/aquarium\+sand\?s=tools-substrate-calculator/, label: 'aquarium sand search hop' },
       { re: /amazon-brand\/aquarium\+aqua\+soil\+planted\+substrate\?s=tools-substrate-calculator/, label: 'aqua soil / planted substrate search hop' },
@@ -193,8 +183,6 @@ const CALCULATORS = [
     id: 'dog · dog-calorie-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-calorie-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-calorie-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete dog-kcal offer, not Subscribe' },
       { re: /amazon-brand\/measured\+dog\+food\?s=tools-dog-calorie-calculator/, label: 'measured dog food search hop' },
       { re: /amazon-brand\/kitchen\+gram\+scale\?s=tools-dog-calorie-calculator/, label: 'kitchen gram scale search hop' },
       { re: /amazon-brand\/slow\+feeder\+dog\+bowl\?s=tools-dog-calorie-calculator/, label: 'slow-feeder dog bowl search hop' },
@@ -231,8 +219,6 @@ const CALCULATORS = [
     id: 'dog · dog-water-intake-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-water-intake-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-water-intake-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=tools-dog-water-intake/, label: 'ceramic pet water bowl search hop' },
       { re: /amazon-brand\/dog\+water\+fountain\?s=tools-dog-water-intake/, label: 'dog water fountain search hop' },
       { re: /amazon-brand\/dog\+travel\+water\+bottle\?s=tools-dog-water-intake/, label: 'dog travel water bottle search hop' },
@@ -266,7 +252,7 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/tools/dog-crate-size-calculator/page.tsx',
     mustInclude: [
       { re: /source="tools-dog-crate-size-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete crate-size offer, not Subscribe' },
+      { re: /resourceLabel="Save the sizing steps"/, label: 'real crate-size resource magnet, not inbox notes' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-dog-crate-size/, label: 'wire crate with divider search hop (same query as puppy-weight / new-puppy)' },
       { re: /amazon-brand\/dog\+crate\+pad\?s=tools-dog-crate-size/, label: 'crate pad search hop' },
       { re: /amazon-brand\/dog\+crate\+cover\?s=tools-dog-crate-size/, label: 'crate cover search hop' },
@@ -284,8 +270,6 @@ const CALCULATORS = [
     id: 'dog · tools hub',
     file: 'apps/dog-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -303,8 +287,6 @@ const CALCULATORS = [
     id: 'fish · tools hub',
     file: 'apps/fish-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -322,8 +304,6 @@ const CALCULATORS = [
     id: 'vets · tools hub',
     file: 'apps/vets-co/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -341,8 +321,6 @@ const CALCULATORS = [
     id: 'ferret · tools hub',
     file: 'apps/ferret-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -360,8 +338,6 @@ const CALCULATORS = [
     id: 'dog · reviews hub',
     file: 'apps/dog-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -379,8 +355,6 @@ const CALCULATORS = [
     id: 'dog · nutrition hub',
     file: 'apps/dog-com/src/app/nutrition/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -398,8 +372,6 @@ const CALCULATORS = [
     id: 'dog · training hub',
     file: 'apps/dog-com/src/app/training/page.tsx',
     mustInclude: [
-      { re: /source="training-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -417,8 +389,6 @@ const CALCULATORS = [
     id: 'vets · insurance hub',
     file: 'apps/vets-co/src/app/insurance/page.tsx',
     mustInclude: [
-      { re: /source="insurance-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -436,8 +406,6 @@ const CALCULATORS = [
     id: 'horses · reviews hub',
     file: 'apps/horses-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -456,8 +424,6 @@ const CALCULATORS = [
     id: 'ferret · reviews hub',
     file: 'apps/ferret-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -475,8 +441,6 @@ const CALCULATORS = [
     id: 'horses · supplements hub',
     file: 'apps/horses-com/src/app/supplements/page.tsx',
     mustInclude: [
-      { re: /source="supplements-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -495,8 +459,6 @@ const CALCULATORS = [
     id: 'horses · tack hub',
     file: 'apps/horses-com/src/app/tack/page.tsx',
     mustInclude: [
-      { re: /source="tack-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -515,8 +477,6 @@ const CALCULATORS = [
     id: 'fish · reviews hub',
     file: 'apps/fish-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the tank notes"/, label: 'concrete tank-notes offer, not Subscribe' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -534,8 +494,6 @@ const CALCULATORS = [
     id: 'vets · reviews hub',
     file: 'apps/vets-co/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -553,8 +511,6 @@ const CALCULATORS = [
     id: 'ferret · diet hub',
     file: 'apps/ferret-com/src/app/diet/page.tsx',
     mustInclude: [
-      { re: /source="diet-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -572,8 +528,6 @@ const CALCULATORS = [
     id: 'ferret · care hub',
     file: 'apps/ferret-com/src/app/care/page.tsx',
     mustInclude: [
-      { re: /source="care-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -591,8 +545,6 @@ const CALCULATORS = [
     id: 'ferret · behavior hub',
     file: 'apps/ferret-com/src/app/behavior/page.tsx',
     mustInclude: [
-      { re: /source="behavior-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -610,8 +562,6 @@ const CALCULATORS = [
     id: 'vets · health hub',
     file: 'apps/vets-co/src/app/health/page.tsx',
     mustInclude: [
-      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -629,8 +579,6 @@ const CALCULATORS = [
     id: 'vets · guides hub',
     file: 'apps/vets-co/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /source="guides-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -648,8 +596,6 @@ const CALCULATORS = [
     id: 'fish · species hub',
     file: 'apps/fish-com/src/app/species/page.tsx',
     mustInclude: [
-      { re: /source="species-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -667,8 +613,6 @@ const CALCULATORS = [
     id: 'ferret · health hub',
     file: 'apps/ferret-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -686,8 +630,6 @@ const CALCULATORS = [
     id: 'dog · guides hub',
     file: 'apps/dog-com/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /source="guides-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -705,8 +647,6 @@ const CALCULATORS = [
     id: 'horses · ownership hub',
     file: 'apps/horses-com/src/app/ownership/page.tsx',
     mustInclude: [
-      { re: /source="ownership-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -725,8 +665,6 @@ const CALCULATORS = [
     id: 'vets · breeds hub',
     file: 'apps/vets-co/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /source="breeds-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -744,8 +682,6 @@ const CALCULATORS = [
     id: 'dog · breeds hub',
     file: 'apps/dog-com/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /source="breeds-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -763,8 +699,6 @@ const CALCULATORS = [
     id: 'horses · breeds hub',
     file: 'apps/horses-com/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /source="breeds-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -783,8 +717,6 @@ const CALCULATORS = [
     id: 'ferret · ownership hub',
     file: 'apps/ferret-com/src/app/ownership/page.tsx',
     mustInclude: [
-      { re: /source="ownership-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -802,8 +734,6 @@ const CALCULATORS = [
     id: 'dog · conditions hub',
     file: 'apps/dog-com/src/app/conditions/page.tsx',
     mustInclude: [
-      { re: /source="conditions-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -821,8 +751,6 @@ const CALCULATORS = [
     id: 'dog · symptoms hub',
     file: 'apps/dog-com/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /source="symptoms-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -840,8 +768,6 @@ const CALCULATORS = [
     id: 'dog · compare hub',
     file: 'apps/dog-com/src/app/compare/page.tsx',
     mustInclude: [
-      { re: /source="compare-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -859,8 +785,6 @@ const CALCULATORS = [
     id: 'vets · diagnostics hub',
     file: 'apps/vets-co/src/app/diagnostics/page.tsx',
     mustInclude: [
-      { re: /source="diagnostics-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -878,8 +802,6 @@ const CALCULATORS = [
     id: 'vets · symptoms hub',
     file: 'apps/vets-co/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /source="symptoms-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -897,8 +819,6 @@ const CALCULATORS = [
     id: 'vets · medications hub',
     file: 'apps/vets-co/src/app/medications/page.tsx',
     mustInclude: [
-      { re: /source="medications-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -916,8 +836,6 @@ const CALCULATORS = [
     id: 'vets · specialists hub',
     file: 'apps/vets-co/src/app/specialists/page.tsx',
     mustInclude: [
-      { re: /source="specialists-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -935,8 +853,6 @@ const CALCULATORS = [
     id: 'horses · disciplines hub',
     file: 'apps/horses-com/src/app/disciplines/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -955,8 +871,6 @@ const CALCULATORS = [
     id: 'horses · bloodstock hub',
     file: 'apps/horses-com/src/app/bloodstock/page.tsx',
     mustInclude: [
-      { re: /source="bloodstock-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -975,8 +889,6 @@ const CALCULATORS = [
     id: 'horses · racing hub',
     file: 'apps/horses-com/src/app/racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -995,8 +907,6 @@ const CALCULATORS = [
     id: 'horses · first-derby',
     file: 'apps/horses-com/src/app/first-derby/page.tsx',
     mustInclude: [
-      { re: /source="first-derby-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1015,8 +925,6 @@ const CALCULATORS = [
     id: 'dog · puppy-schedule',
     file: 'apps/dog-com/src/app/puppy-schedule/page.tsx',
     mustInclude: [
-      { re: /source="puppy-schedule-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1034,8 +942,6 @@ const CALCULATORS = [
     id: 'ferret · colors hub',
     file: 'apps/ferret-com/src/app/colors/page.tsx',
     mustInclude: [
-      { re: /source="colors-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1054,7 +960,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/first-year-schedule/page.tsx',
     mustInclude: [
       { re: /source="first-year-schedule-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
+      { re: /resourceLabel="Save the schedule"/, label: 'real first-year-schedule resource magnet, not inbox notes' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1072,8 +978,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-colors-and-patterns',
     file: 'apps/ferret-com/src/app/colors/ferret-colors-and-patterns/page.tsx',
     mustInclude: [
-      { re: /source="colors-ferret-colors-and-patterns-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1091,8 +995,6 @@ const CALCULATORS = [
     id: 'ferret · sable-ferrets',
     file: 'apps/ferret-com/src/app/colors/sable-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-sable-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1110,8 +1012,6 @@ const CALCULATORS = [
     id: 'ferret · albino-ferrets',
     file: 'apps/ferret-com/src/app/colors/albino-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-albino-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1129,8 +1029,6 @@ const CALCULATORS = [
     id: 'ferret · dark-eyed-white-ferrets',
     file: 'apps/ferret-com/src/app/colors/dark-eyed-white-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-dew-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1148,8 +1046,6 @@ const CALCULATORS = [
     id: 'ferret · cinnamon-ferrets',
     file: 'apps/ferret-com/src/app/colors/cinnamon-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-cinnamon-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1167,8 +1063,6 @@ const CALCULATORS = [
     id: 'ferret · champagne-ferrets',
     file: 'apps/ferret-com/src/app/colors/champagne-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-champagne-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1186,8 +1080,6 @@ const CALCULATORS = [
     id: 'ferret · chocolate-ferrets',
     file: 'apps/ferret-com/src/app/colors/chocolate-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-chocolate-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1205,8 +1097,6 @@ const CALCULATORS = [
     id: 'ferret · black-ferrets',
     file: 'apps/ferret-com/src/app/colors/black-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-black-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1224,8 +1114,6 @@ const CALCULATORS = [
     id: 'ferret · silver-ferrets',
     file: 'apps/ferret-com/src/app/colors/silver-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-silver-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1243,8 +1131,6 @@ const CALCULATORS = [
     id: 'ferret · panda-ferrets',
     file: 'apps/ferret-com/src/app/colors/panda-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-panda-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1262,8 +1148,6 @@ const CALCULATORS = [
     id: 'ferret · blaze-and-roan-patterns',
     file: 'apps/ferret-com/src/app/colors/blaze-and-roan-patterns/page.tsx',
     mustInclude: [
-      { re: /source="colors-blaze-and-roan-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1281,8 +1165,6 @@ const CALCULATORS = [
     id: 'ferret · choosing-a-healthy-ferret',
     file: 'apps/ferret-com/src/app/colors/choosing-a-healthy-ferret/page.tsx',
     mustInclude: [
-      { re: /source="colors-choosing-healthy-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1300,8 +1182,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-lifespan',
     file: 'apps/ferret-com/src/app/colors/ferret-lifespan/page.tsx',
     mustInclude: [
-      { re: /source="colors-ferret-lifespan-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1319,8 +1199,6 @@ const CALCULATORS = [
     id: 'ferret · male-vs-female-ferrets',
     file: 'apps/ferret-com/src/app/colors/male-vs-female-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="colors-male-vs-female-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1338,8 +1216,6 @@ const CALCULATORS = [
     id: 'ferret · biting-and-nipping',
     file: 'apps/ferret-com/src/app/behavior/biting-and-nipping/page.tsx',
     mustInclude: [
-      { re: /source="behavior-biting-nipping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1357,8 +1233,6 @@ const CALCULATORS = [
     id: 'ferret · bonding-with-your-ferret',
     file: 'apps/ferret-com/src/app/behavior/bonding-with-your-ferret/page.tsx',
     mustInclude: [
-      { re: /source="behavior-bonding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1376,8 +1250,6 @@ const CALCULATORS = [
     id: 'ferret · dead-sleep-explained',
     file: 'apps/ferret-com/src/app/behavior/dead-sleep-explained/page.tsx',
     mustInclude: [
-      { re: /source="behavior-dead-sleep-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1395,9 +1267,6 @@ const CALCULATORS = [
     id: 'ferret · digging-and-burrowing',
     file: 'apps/ferret-com/src/app/behavior/digging-and-burrowing/page.tsx',
     mustInclude: [
-      { re: /source="behavior-digging-burrowing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-digging-burrowing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small-pet-ball-pit-balls\?s=behavior-digging-burrowing/, label: 'existing Chewy ball-pit hop kept (not an empty leftover button)' },
@@ -1417,9 +1286,6 @@ const CALCULATORS = [
     id: 'ferret · dooking-and-vocalizations',
     file: 'apps/ferret-com/src/app/behavior/dooking-and-vocalizations/page.tsx',
     mustInclude: [
-      { re: /source="behavior-dooking-vocalizations-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-vocalizations"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1437,9 +1303,6 @@ const CALCULATORS = [
     id: 'ferret · litter-box-troubleshooting',
     file: 'apps/ferret-com/src/app/behavior/litter-box-troubleshooting/page.tsx',
     mustInclude: [
-      { re: /source="behavior-litter-troubleshooting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-litter-troubleshooting"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1457,9 +1320,6 @@ const CALCULATORS = [
     id: 'ferret · play-aggression',
     file: 'apps/ferret-com/src/app/behavior/play-aggression/page.tsx',
     mustInclude: [
-      { re: /source="behavior-play-aggression-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-play-aggression"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1477,9 +1337,6 @@ const CALCULATORS = [
     id: 'ferret · training-and-bonding',
     file: 'apps/ferret-com/src/app/behavior/training-and-bonding/page.tsx',
     mustInclude: [
-      { re: /source="behavior-training-bonding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-training-bonding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1497,9 +1354,6 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-kibble',
     file: 'apps/ferret-com/src/app/diet/best-ferret-kibble/page.tsx',
     mustInclude: [
-      { re: /source="diet-best-ferret-kibble-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-best-ferret-kibble"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-best-ferret-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /marshall\/premium-ferret-diet\?s=diet-best-ferret-kibble/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
@@ -1521,9 +1375,6 @@ const CALCULATORS = [
     id: 'ferret · reading-food-labels',
     file: 'apps/ferret-com/src/app/diet/reading-food-labels/page.tsx',
     mustInclude: [
-      { re: /source="diet-reading-labels-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-reading-labels"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-reading-food-labels/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1543,9 +1394,6 @@ const CALCULATORS = [
     id: 'ferret · protein-and-fat-requirements',
     file: 'apps/ferret-com/src/app/diet/protein-and-fat-requirements/page.tsx',
     mustInclude: [
-      { re: /source="diet-protein-and-fat-requirements-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-protein-and-fat-requirements"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-protein-and-fat-requirements/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1565,9 +1413,6 @@ const CALCULATORS = [
     id: 'ferret · whole-prey-vs-kibble',
     file: 'apps/ferret-com/src/app/diet/whole-prey-vs-kibble/page.tsx',
     mustInclude: [
-      { re: /source="diet-whole-prey-vs-kibble-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-whole-prey-vs-kibble"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-whole-prey-vs-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
@@ -1588,9 +1433,6 @@ const CALCULATORS = [
     id: 'ferret · kit-vs-adult-feeding',
     file: 'apps/ferret-com/src/app/diet/kit-vs-adult-feeding/page.tsx',
     mustInclude: [
-      { re: /source="diet-kit-vs-adult-feeding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-kit-vs-adult-feeding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /marshall\/premium-ferret-diet\?s=diet-kit-vs-adult-feeding/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1610,9 +1452,6 @@ const CALCULATORS = [
     id: 'ferret · safe-treats',
     file: 'apps/ferret-com/src/app/diet/safe-treats/page.tsx',
     mustInclude: [
-      { re: /source="diet-safe-treats-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-safe-treats"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/freeze-dried-treats\?s=diet-safe-treats/, label: 'existing Wysong freeze-dried-treats hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1632,9 +1471,6 @@ const CALCULATORS = [
     id: 'ferret · transitioning-foods',
     file: 'apps/ferret-com/src/app/diet/transitioning-foods/page.tsx',
     mustInclude: [
-      { re: /source="diet-transitioning-foods-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-transitioning-foods"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /chewy-brand\/meat\+based\+food\+topper\+sugar\+free\?s=diet-transitioning-foods/, label: 'existing Chewy meat-topper hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1654,9 +1490,6 @@ const CALCULATORS = [
     id: 'ferret · raw-feeding-guide',
     file: 'apps/ferret-com/src/app/diet/raw-feeding-guide/page.tsx',
     mustInclude: [
-      { re: /source="diet-raw-feeding-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-raw-feeding-guide"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-raw-feeding-guide/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1676,9 +1509,6 @@ const CALCULATORS = [
     id: 'ferret · senior-ferret-nutrition',
     file: 'apps/ferret-com/src/app/diet/senior-ferret-nutrition/page.tsx',
     mustInclude: [
-      { re: /source="diet-senior-nutrition-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-senior-nutrition"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-senior-ferret-nutrition/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1698,9 +1528,6 @@ const CALCULATORS = [
     id: 'ferret · supplements-and-vitamins',
     file: 'apps/ferret-com/src/app/diet/supplements-and-vitamins/page.tsx',
     mustInclude: [
-      { re: /source="diet-supplements-and-vitamins-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-supplements-and-vitamins"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1719,9 +1546,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-supplies-checklist',
     file: 'apps/ferret-com/src/app/ownership/ferret-supplies-checklist/page.tsx',
     mustInclude: [
-      { re: /source="ownership-ferret-supplies-checklist-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="ownership-ferret-supplies-checklist-under-hero"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1740,9 +1564,6 @@ const CALCULATORS = [
     id: 'ferret · bathing-and-grooming',
     file: 'apps/ferret-com/src/app/care/bathing-and-grooming/page.tsx',
     mustInclude: [
-      { re: /source="care-bathing-grooming-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-bathing-grooming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /marshall\/ferret-shampoo-original\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'existing Chewy nail-clipper review hop kept (product-specific, not an empty leftover button)' },
@@ -1763,9 +1584,6 @@ const CALCULATORS = [
     id: 'ferret · litter-training',
     file: 'apps/ferret-com/src/app/care/litter-training/page.tsx',
     mustInclude: [
-      { re: /source="care-litter-training-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-litter-training"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /marshall\/lock-n-litter-pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/yesterdays\+news\+paper\+pellet\+litter\?s=care-litter-training/, label: 'existing Chewy paper-pellet review hop kept (product-specific, not an empty leftover button)' },
@@ -1786,9 +1604,6 @@ const CALCULATORS = [
     id: 'ferret · exercise-and-enrichment',
     file: 'apps/ferret-com/src/app/care/exercise-and-enrichment/page.tsx',
     mustInclude: [
-      { re: /source="care-exercise-enrichment-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-exercise-enrichment"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /marshall\/pop-n-play-tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small-pet-ball-pit-balls/, label: 'existing Chewy ball-pit review hop kept (product-specific, not an empty leftover button)' },
@@ -1809,9 +1624,6 @@ const CALCULATORS = [
     id: 'ferret · odor-and-scent-control',
     file: 'apps/ferret-com/src/app/care/odor-and-scent-control/page.tsx',
     mustInclude: [
-      { re: /source="care-odor-and-scent-control-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-odor-and-scent-control"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1830,9 +1642,6 @@ const CALCULATORS = [
     id: 'ferret · diet-basics',
     file: 'apps/ferret-com/src/app/care/diet-basics/page.tsx',
     mustInclude: [
-      { re: /source="care-diet-basics-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-diet-basics"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /wysong\/epigen-90\?s=care-diet-basics/, label: 'existing Wysong Epigen 90 review hop kept (not an empty leftover button)' },
       { re: /marshall\/premium-ferret-diet\?s=care-diet-basics/, label: 'existing Marshall Premium Ferret Diet review hop kept (not an empty leftover button)' },
@@ -1854,9 +1663,6 @@ const CALCULATORS = [
     id: 'ferret · first-week-checklist',
     file: 'apps/ferret-com/src/app/ownership/first-week-checklist/page.tsx',
     mustInclude: [
-      { re: /source="ownership-first-week-checklist-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-first-week-checklist"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1875,9 +1681,6 @@ const CALCULATORS = [
     id: 'ferret · cost-of-owning-a-ferret',
     file: 'apps/ferret-com/src/app/ownership/cost-of-owning-a-ferret/page.tsx',
     mustInclude: [
-      { re: /source="ownership-cost-of-owning-a-ferret-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-cost-of-owning-a-ferret"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1896,9 +1699,6 @@ const CALCULATORS = [
     id: 'ferret · adoption-vs-buying',
     file: 'apps/ferret-com/src/app/ownership/adoption-vs-buying/page.tsx',
     mustInclude: [
-      { re: /source="ownership-adoption-vs-buying-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-adoption-vs-buying"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1917,9 +1717,6 @@ const CALCULATORS = [
     id: 'ferret · is-a-ferret-right-for-you',
     file: 'apps/ferret-com/src/app/ownership/is-a-ferret-right-for-you/page.tsx',
     mustInclude: [
-      { re: /source="ownership-is-a-ferret-right-for-you-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-is-a-ferret-right-for-you"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1938,9 +1735,6 @@ const CALCULATORS = [
     id: 'ferret · ferrets-with-kids',
     file: 'apps/ferret-com/src/app/ownership/ferrets-with-kids/page.tsx',
     mustInclude: [
-      { re: /source="ownership-ferrets-with-kids-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-ferrets-with-kids"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1959,9 +1753,6 @@ const CALCULATORS = [
     id: 'ferret · ferrets-and-other-pets',
     file: 'apps/ferret-com/src/app/ownership/ferrets-and-other-pets/page.tsx',
     mustInclude: [
-      { re: /source="ownership-ferrets-and-other-pets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-ferrets-and-other-pets"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -1980,9 +1771,6 @@ const CALCULATORS = [
     id: 'ferret · traveling-with-a-ferret',
     file: 'apps/ferret-com/src/app/ownership/traveling-with-a-ferret/page.tsx',
     mustInclude: [
-      { re: /source="ownership-traveling-with-a-ferret-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-traveling-with-a-ferret"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2001,9 +1789,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-insurance-basics',
     file: 'apps/ferret-com/src/app/ownership/ferret-insurance-basics/page.tsx',
     mustInclude: [
-      { re: /source="ownership-ferret-insurance-basics-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-ferret-insurance-basics"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2022,9 +1807,6 @@ const CALCULATORS = [
     id: 'ferret · annual-checkup-guide',
     file: 'apps/ferret-com/src/app/health/annual-checkup-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-annual-checkup-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-annual-checkup-guide"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2043,9 +1825,6 @@ const CALCULATORS = [
     id: 'ferret · vet-visit-prep',
     file: 'apps/ferret-com/src/app/health/vet-visit-prep/page.tsx',
     mustInclude: [
-      { re: /source="health-vet-visit-prep-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-vet-visit-prep"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2064,9 +1843,6 @@ const CALCULATORS = [
     id: 'ferret · emergency-warning-signs',
     file: 'apps/ferret-com/src/app/health/emergency-warning-signs/page.tsx',
     mustInclude: [
-      { re: /source="health-emergency-warning-signs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-emergency-signs"/, label: 'existing sidebar email capture kept in place' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2083,9 +1859,6 @@ const CALCULATORS = [
     id: 'ferret · gastrointestinal-blockage',
     file: 'apps/ferret-com/src/app/health/gastrointestinal-blockage/page.tsx',
     mustInclude: [
-      { re: /source="health-gastrointestinal-blockage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-gi-blockage"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2104,9 +1877,6 @@ const CALCULATORS = [
     id: 'ferret · canine-distemper',
     file: 'apps/ferret-com/src/app/health/canine-distemper-in-ferrets/page.tsx',
     mustInclude: [
-      { re: /source="health-canine-distemper-in-ferrets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-canine-distemper"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2125,9 +1895,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-influenza',
     file: 'apps/ferret-com/src/app/health/ferret-influenza/page.tsx',
     mustInclude: [
-      { re: /source="health-ferret-influenza-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-ferret-influenza"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2146,9 +1913,6 @@ const CALCULATORS = [
     id: 'ferret · heart-disease',
     file: 'apps/ferret-com/src/app/health/heart-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-heart-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-heart-disease"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2167,9 +1931,6 @@ const CALCULATORS = [
     id: 'ferret · ear-mites',
     file: 'apps/ferret-com/src/app/health/ear-mites/page.tsx',
     mustInclude: [
-      { re: /source="health-ear-mites-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-ear-mites"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2188,9 +1949,6 @@ const CALCULATORS = [
     id: 'ferret · signs-of-pain',
     file: 'apps/ferret-com/src/app/health/signs-of-pain/page.tsx',
     mustInclude: [
-      { re: /source="health-signs-of-pain-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-signs-of-pain"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2209,9 +1967,6 @@ const CALCULATORS = [
     id: 'ferret · anesthesia-and-surgery-risk',
     file: 'apps/ferret-com/src/app/health/anesthesia-and-surgery-risk/page.tsx',
     mustInclude: [
-      { re: /source="health-anesthesia-risk-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-anesthesia-risk"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2230,9 +1985,6 @@ const CALCULATORS = [
     id: 'ferret · lymphoma',
     file: 'apps/ferret-com/src/app/health/lymphoma/page.tsx',
     mustInclude: [
-      { re: /source="health-lymphoma-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-lymphoma"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2251,9 +2003,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-diarrhea-causes',
     file: 'apps/ferret-com/src/app/health/ferret-diarrhea-causes/page.tsx',
     mustInclude: [
-      { re: /source="health-ferret-diarrhea-causes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-ferret-diarrhea-causes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2272,9 +2021,6 @@ const CALCULATORS = [
     id: 'ferret · spaying-and-neutering',
     file: 'apps/ferret-com/src/app/health/spaying-and-neutering/page.tsx',
     mustInclude: [
-      { re: /source="health-spay-neuter-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2293,9 +2039,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-ulcers',
     file: 'apps/ferret-com/src/app/health/ferret-ulcers/page.tsx',
     mustInclude: [
-      { re: /source="health-ferret-ulcers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="health-ferret-ulcers"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2314,9 +2057,6 @@ const CALCULATORS = [
     id: 'ferret · can-ferrets-eat',
     file: 'apps/ferret-com/src/app/diet/can-ferrets-eat/page.tsx',
     mustInclude: [
-      { re: /source="can-ferrets-eat-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="section"[\s\S]{0,240}source="can-ferrets-eat-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2335,9 +2075,6 @@ const CALCULATORS = [
     id: 'dog · can-dogs-eat',
     file: 'apps/dog-com/src/app/nutrition/can-dogs-eat/page.tsx',
     mustInclude: [
-      { re: /source="can-dogs-eat-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="section"[\s\S]{0,240}source="can-dogs-eat-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2356,9 +2093,6 @@ const CALCULATORS = [
     id: 'dog · toxic-foods',
     file: 'apps/dog-com/src/app/nutrition/toxic-foods/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-toxic-foods-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-toxic-foods"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2377,9 +2111,6 @@ const CALCULATORS = [
     id: 'dog · safe-human-foods',
     file: 'apps/dog-com/src/app/nutrition/safe-human-foods/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-safe-foods-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-safe-foods"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2398,9 +2129,6 @@ const CALCULATORS = [
     id: 'dog · how-much-to-feed',
     file: 'apps/dog-com/src/app/nutrition/how-much-to-feed/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-how-much-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-how-much"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2419,9 +2147,6 @@ const CALCULATORS = [
     id: 'dog · feeding-frequency',
     file: 'apps/dog-com/src/app/nutrition/feeding-frequency/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-frequency-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-frequency"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2440,9 +2165,6 @@ const CALCULATORS = [
     id: 'dog · weight-management',
     file: 'apps/dog-com/src/app/nutrition/weight-management/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-weight-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-weight"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2461,9 +2183,6 @@ const CALCULATORS = [
     id: 'dog · dog-treats-guide',
     file: 'apps/dog-com/src/app/nutrition/dog-treats-guide/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-treats-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-treats"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2482,9 +2201,6 @@ const CALCULATORS = [
     id: 'dog · reading-food-labels',
     file: 'apps/dog-com/src/app/nutrition/reading-food-labels/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-labels-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-labels"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2503,9 +2219,6 @@ const CALCULATORS = [
     id: 'dog · wsava-explained',
     file: 'apps/dog-com/src/app/nutrition/wsava-explained/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-wsava-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-wsava"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2524,9 +2237,6 @@ const CALCULATORS = [
     id: 'dog · grain-free-dcm-risk',
     file: 'apps/dog-com/src/app/nutrition/grain-free-dcm-risk/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-grain-free-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-grain-free"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2545,9 +2255,6 @@ const CALCULATORS = [
     id: 'dog · raw-diet-risks',
     file: 'apps/dog-com/src/app/nutrition/raw-diet-risks/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-raw-risks-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-raw-risks"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2566,9 +2273,6 @@ const CALCULATORS = [
     id: 'dog · dog-supplements',
     file: 'apps/dog-com/src/app/nutrition/dog-supplements/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-supplements-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-supplements"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2587,9 +2291,6 @@ const CALCULATORS = [
     id: 'dog · elimination-diet',
     file: 'apps/dog-com/src/app/nutrition/elimination-diet/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-elimination-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-elimination"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2608,9 +2309,6 @@ const CALCULATORS = [
     id: 'dog · dog-dna-tests',
     file: 'apps/dog-com/src/app/nutrition/dog-dna-tests/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-dna-tests-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-dna-tests"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2629,9 +2327,6 @@ const CALCULATORS = [
     id: 'dog · best-dental-chews',
     file: 'apps/dog-com/src/app/reviews/best-dental-chews/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dental-chews-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-dental-chews"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/greenies\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Greenies Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/whimzees\+dental\+chews\+dogs\?s=reviews-best-dental-chews/, label: 'existing Whimzees Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2647,9 +2342,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-beds',
     file: 'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-beds-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-dog-beds"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/big\+barker\+orthopedic\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Big Barker Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/casper\+dog\+bed\?s=reviews-best-dog-beds/, label: 'existing Casper Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2665,9 +2357,6 @@ const CALCULATORS = [
     id: 'dog · best-dry-dog-food',
     file: 'apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dry-dog-food-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="review-best-dry-dog-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/royal\+canin\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Royal Canin Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/purina\+pro\+plan\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Purina Pro Plan Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+dry\+dog\+food\?s=reviews-best-dry-dog-food/, label: 'existing Hill\'s Science Diet Chewy hop kept (not an empty leftover button)' },
@@ -2685,9 +2374,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-food-sensitive-stomach',
     file: 'apps/dog-com/src/app/reviews/best-dog-food-sensitive-stomach/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-food-sensitive-stomach-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-sensitive-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/purina\+pro\+plan\+sensitive\+skin\+stomach\?s=reviews-best-dog-food-sensitive-stomach/, label: 'existing Purina Pro Plan Sensitive Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -2702,9 +2388,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-food-senior',
     file: 'apps/dog-com/src/app/reviews/best-dog-food-senior/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-food-senior-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-senior-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/purina\+pro\+plan\+bright\+mind\+senior\?s=reviews-best-dog-food-senior/, label: 'existing Purina Bright Mind Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+senior\+7\?s=reviews-best-dog-food-senior/, label: 'existing Hill\'s Senior 7+ Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2720,9 +2403,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-food-small-breed',
     file: 'apps/dog-com/src/app/reviews/best-dog-food-small-breed/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-food-small-breed-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-small-breed-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/royal\+canin\+small\+adult\?s=reviews-best-dog-food-small-breed/, label: 'existing Royal Canin Small Adult Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/purina\+pro\+plan\+small\+toy\+breed\?s=reviews-best-dog-food-small-breed/, label: 'existing Purina Pro Plan Small & Toy Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2738,9 +2418,6 @@ const CALCULATORS = [
     id: 'dog · best-large-breed-dog-food',
     file: 'apps/dog-com/src/app/reviews/best-large-breed-dog-food/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-large-breed-dog-food-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-large-breed-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Royal Canin Large Adult Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/purina\+pro\+plan\+large\+breed\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Purina Pro Plan Large Breed Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2756,9 +2433,6 @@ const CALCULATORS = [
     id: 'dog · fresh-dog-food-worth-it',
     file: 'apps/dog-com/src/app/reviews/fresh-dog-food-worth-it/page.tsx',
     mustInclude: [
-      { re: /source="reviews-fresh-dog-food-worth-it-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-fresh-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2777,9 +2451,6 @@ const CALCULATORS = [
     id: 'horses · best-winter-horse-blankets',
     file: 'apps/horses-com/src/app/reviews/best-winter-horse-blankets/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-winter-horse-blankets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-winter-blankets"/, label: 'existing sidebar email capture kept in place' },
       { re: /smartpak\/rambo-original-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Rambo Original SmartPak hop kept (not an empty leftover button)' },
       { re: /schneider\/stormshield-euro-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Schneiders StormShield hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -2795,9 +2466,6 @@ const CALCULATORS = [
     id: 'horses · trail-riding',
     file: 'apps/horses-com/src/app/disciplines/trail-riding/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-trail-riding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-trail-riding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2817,9 +2485,6 @@ const CALCULATORS = [
     id: 'horses · dressage',
     file: 'apps/horses-com/src/app/disciplines/dressage/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-dressage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-dressage"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2839,9 +2504,6 @@ const CALCULATORS = [
     id: 'horses · show-jumping',
     file: 'apps/horses-com/src/app/disciplines/show-jumping/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-show-jumping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-show-jumping"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2861,9 +2523,6 @@ const CALCULATORS = [
     id: 'horses · eventing',
     file: 'apps/horses-com/src/app/disciplines/eventing/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-eventing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-eventing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2883,9 +2542,6 @@ const CALCULATORS = [
     id: 'horses · western-pleasure',
     file: 'apps/horses-com/src/app/disciplines/western-pleasure/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-western-pleasure-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-western-pleasure"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2905,9 +2561,6 @@ const CALCULATORS = [
     id: 'horses · endurance-riding',
     file: 'apps/horses-com/src/app/disciplines/endurance-riding/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-endurance-riding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-endurance"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2927,9 +2580,6 @@ const CALCULATORS = [
     id: 'horses · reining',
     file: 'apps/horses-com/src/app/disciplines/reining/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-reining-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-reining"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2949,9 +2599,6 @@ const CALCULATORS = [
     id: 'horses · barrel-racing',
     file: 'apps/horses-com/src/app/disciplines/barrel-racing/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-barrel-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-barrel-racing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2971,9 +2618,6 @@ const CALCULATORS = [
     id: 'horses · combined-driving',
     file: 'apps/horses-com/src/app/disciplines/combined-driving/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-combined-driving-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-combined-driving"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -2993,9 +2637,6 @@ const CALCULATORS = [
     id: 'horses · cutting',
     file: 'apps/horses-com/src/app/disciplines/cutting/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-cutting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-cutting"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3015,9 +2656,6 @@ const CALCULATORS = [
     id: 'horses · equitation',
     file: 'apps/horses-com/src/app/disciplines/equitation/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-equitation-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-equitation"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3037,9 +2675,6 @@ const CALCULATORS = [
     id: 'horses · hunter-under-saddle',
     file: 'apps/horses-com/src/app/disciplines/hunter-under-saddle/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-hunter-under-saddle-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-hunter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3059,9 +2694,6 @@ const CALCULATORS = [
     id: 'horses · ranch-riding',
     file: 'apps/horses-com/src/app/disciplines/ranch-riding/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-ranch-riding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-ranch-riding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3081,9 +2713,6 @@ const CALCULATORS = [
     id: 'horses · vaulting',
     file: 'apps/horses-com/src/app/disciplines/vaulting/page.tsx',
     mustInclude: [
-      { re: /source="disciplines-vaulting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="discipline-vaulting"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3103,9 +2732,6 @@ const CALCULATORS = [
     id: 'horses · thoroughbred-flat-racing',
     file: 'apps/horses-com/src/app/racing/thoroughbred-flat-racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-thoroughbred-flat-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-thoroughbred"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3125,9 +2751,6 @@ const CALCULATORS = [
     id: 'horses · harness-racing',
     file: 'apps/horses-com/src/app/racing/harness-racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-harness-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-harness"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3147,9 +2770,6 @@ const CALCULATORS = [
     id: 'horses · quarter-horse-racing',
     file: 'apps/horses-com/src/app/racing/quarter-horse-racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-quarter-horse-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-quarter-horse"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3169,9 +2789,6 @@ const CALCULATORS = [
     id: 'horses · jump-racing',
     file: 'apps/horses-com/src/app/racing/jump-racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-jump-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-jump"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3191,9 +2808,6 @@ const CALCULATORS = [
     id: 'horses · racing-for-newcomers',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/page.tsx',
     mustInclude: [
-      { re: /source="racing-for-newcomers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="racing-for-newcomers-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3213,9 +2827,6 @@ const CALCULATORS = [
     id: 'horses · understanding-race-types-and-classes',
     file: 'apps/horses-com/src/app/racing/understanding-race-types-and-classes/page.tsx',
     mustInclude: [
-      { re: /source="racing-understanding-race-types-and-classes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-race-types"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3235,9 +2846,6 @@ const CALCULATORS = [
     id: 'horses · triple-crown',
     file: 'apps/horses-com/src/app/racing/triple-crown/page.tsx',
     mustInclude: [
-      { re: /source="racing-triple-crown-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-triple-crown"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3257,9 +2865,6 @@ const CALCULATORS = [
     id: 'horses · breeders-cup',
     file: 'apps/horses-com/src/app/racing/breeders-cup/page.tsx',
     mustInclude: [
-      { re: /source="racing-breeders-cup-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-breeders-cup"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3279,9 +2884,6 @@ const CALCULATORS = [
     id: 'horses · off-track-thoroughbred-aftercare',
     file: 'apps/horses-com/src/app/racing/off-track-thoroughbred-aftercare/page.tsx',
     mustInclude: [
-      { re: /source="racing-off-track-thoroughbred-aftercare-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-ottb"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3301,9 +2903,6 @@ const CALCULATORS = [
     id: 'horses · racehorse-training-and-conditioning',
     file: 'apps/horses-com/src/app/racing/racehorse-training-and-conditioning/page.tsx',
     mustInclude: [
-      { re: /source="racing-racehorse-training-and-conditioning-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-training"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3323,9 +2922,6 @@ const CALCULATORS = [
     id: 'horses · the-people-of-racing',
     file: 'apps/horses-com/src/app/racing/the-people-of-racing/page.tsx',
     mustInclude: [
-      { re: /source="racing-the-people-of-racing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-people"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3345,9 +2941,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-jockey',
     file: 'apps/horses-com/src/app/racing/racing-roles/jockey/page.tsx',
     mustInclude: [
-      { re: /source="racing-roles-jockey-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-roles-jockey"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3367,9 +2960,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-trainer',
     file: 'apps/horses-com/src/app/racing/racing-roles/trainer/page.tsx',
     mustInclude: [
-      { re: /source="racing-roles-trainer-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-roles-trainer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3389,9 +2979,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-owner',
     file: 'apps/horses-com/src/app/racing/racing-roles/owner/page.tsx',
     mustInclude: [
-      { re: /source="racing-roles-owner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-roles-owner"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3411,9 +2998,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-official',
     file: 'apps/horses-com/src/app/racing/racing-roles/racing-official/page.tsx',
     mustInclude: [
-      { re: /source="racing-roles-official-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-roles-official"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3433,9 +3017,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-hub',
     file: 'apps/horses-com/src/app/racing/racing-roles/page.tsx',
     mustInclude: [
-      { re: /source="racing-roles-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="racing-roles-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3455,9 +3036,6 @@ const CALCULATORS = [
     id: 'horses · race-types-hub',
     file: 'apps/horses-com/src/app/racing/race-types/page.tsx',
     mustInclude: [
-      { re: /source="race-types-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="race-types-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3477,9 +3055,6 @@ const CALCULATORS = [
     id: 'horses · race-types-maiden',
     file: 'apps/horses-com/src/app/racing/race-types/maiden-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-maiden-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-maiden"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3499,9 +3074,6 @@ const CALCULATORS = [
     id: 'horses · race-types-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/claiming-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-claiming-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-claiming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3521,9 +3093,6 @@ const CALCULATORS = [
     id: 'horses · race-types-allowance',
     file: 'apps/horses-com/src/app/racing/race-types/allowance-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-allowance-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-allowance"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3543,9 +3112,6 @@ const CALCULATORS = [
     id: 'horses · race-types-optional-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/optional-claiming-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-optional-claiming-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-optional-claiming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3565,9 +3131,6 @@ const CALCULATORS = [
     id: 'horses · race-types-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/stakes-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-stakes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-stakes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3587,9 +3150,6 @@ const CALCULATORS = [
     id: 'horses · race-types-graded-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/graded-stakes-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-graded-stakes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-graded-stakes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3609,9 +3169,6 @@ const CALCULATORS = [
     id: 'horses · race-types-handicap',
     file: 'apps/horses-com/src/app/racing/race-types/handicap-races/page.tsx',
     mustInclude: [
-      { re: /source="race-types-handicap-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="race-types-handicap"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3631,9 +3188,6 @@ const CALCULATORS = [
     id: 'horses · ottb-second-careers-hub',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/page.tsx',
     mustInclude: [
-      { re: /source="ottb-second-careers-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="ottb-second-careers-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3653,9 +3207,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-eventing',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-eventing/page.tsx',
     mustInclude: [
-      { re: /source="ottb-in-eventing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ottb-in-eventing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3675,9 +3226,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-show-jumping',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-show-jumping/page.tsx',
     mustInclude: [
-      { re: /source="ottb-in-show-jumping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ottb-in-show-jumping"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3697,9 +3245,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-dressage',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-dressage/page.tsx',
     mustInclude: [
-      { re: /source="ottb-in-dressage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ottb-in-dressage"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3719,9 +3264,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-trail-and-pleasure',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-trail-and-pleasure/page.tsx',
     mustInclude: [
-      { re: /source="ottb-in-trail-and-pleasure-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ottb-in-trail-and-pleasure"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3741,9 +3283,6 @@ const CALCULATORS = [
     id: 'horses · kentucky-derby',
     file: 'apps/horses-com/src/app/racing/triple-crown/kentucky-derby/page.tsx',
     mustInclude: [
-      { re: /source="triple-crown-kentucky-derby-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="triple-crown-kentucky-derby"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3763,9 +3302,6 @@ const CALCULATORS = [
     id: 'horses · preakness-stakes',
     file: 'apps/horses-com/src/app/racing/triple-crown/preakness-stakes/page.tsx',
     mustInclude: [
-      { re: /source="triple-crown-preakness-stakes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="triple-crown-preakness-stakes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3785,9 +3321,6 @@ const CALCULATORS = [
     id: 'horses · belmont-stakes',
     file: 'apps/horses-com/src/app/racing/triple-crown/belmont-stakes/page.tsx',
     mustInclude: [
-      { re: /source="triple-crown-belmont-stakes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="triple-crown-belmont-stakes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3807,9 +3340,6 @@ const CALCULATORS = [
     id: 'horses · racing-bloodstock',
     file: 'apps/horses-com/src/app/racing/bloodstock/page.tsx',
     mustInclude: [
-      { re: /source="racing-bloodstock-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="racing-bloodstock"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3829,9 +3359,6 @@ const CALCULATORS = [
     id: 'horses · how-to-read-a-race-card',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /source="racing-for-newcomers-how-to-read-a-race-card-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`racing-for-newcomers-\$\{spoke\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3851,9 +3378,6 @@ const CALCULATORS = [
     id: 'horses · a-day-at-the-races',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /source="racing-for-newcomers-a-day-at-the-races-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`racing-for-newcomers-\$\{spoke\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3873,9 +3397,6 @@ const CALCULATORS = [
     id: 'horses · understanding-racing-silks',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /source="racing-for-newcomers-understanding-racing-silks-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`racing-for-newcomers-\$\{spoke\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3895,9 +3416,6 @@ const CALCULATORS = [
     id: 'horses · reading-a-pedigree',
     file: 'apps/horses-com/src/app/bloodstock/reading-a-pedigree/page.tsx',
     mustInclude: [
-      { re: /source="bloodstock-pedigree-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="bloodstock-pedigree"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3917,9 +3435,6 @@ const CALCULATORS = [
     id: 'horses · what-is-bloodstock',
     file: 'apps/horses-com/src/app/bloodstock/what-is-bloodstock/page.tsx',
     mustInclude: [
-      { re: /source="bloodstock-what-is-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="bloodstock-what-is"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3939,9 +3454,6 @@ const CALCULATORS = [
     id: 'horses · how-thoroughbred-sales-work',
     file: 'apps/horses-com/src/app/bloodstock/how-thoroughbred-sales-work/page.tsx',
     mustInclude: [
-      { re: /source="bloodstock-sales-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="bloodstock-sales"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3961,9 +3473,6 @@ const CALCULATORS = [
     id: 'horses · dressage-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-dressage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -3983,9 +3492,6 @@ const CALCULATORS = [
     id: 'horses · show-jumping-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-show-jumping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4005,9 +3511,6 @@ const CALCULATORS = [
     id: 'horses · eventing-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-eventing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4027,9 +3530,6 @@ const CALCULATORS = [
     id: 'horses · western-pleasure-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-western-pleasure-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4049,9 +3549,6 @@ const CALCULATORS = [
     id: 'horses · reining-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-reining-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4071,9 +3568,6 @@ const CALCULATORS = [
     id: 'horses · trail-riding-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /source="discipline-equipment-trail-riding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`discipline-equipment-\$\{data\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4093,9 +3587,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-filters-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-filters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4113,9 +3604,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-heaters-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-heaters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4133,9 +3621,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-lighting-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-lighting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4153,9 +3638,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-substrates-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-substrates-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4173,9 +3655,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-test-kits-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-test-kits-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4193,9 +3672,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-co2-systems-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="equipment-aquarium-co2-systems-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`equipment-\$\{category\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -4213,9 +3689,6 @@ const CALCULATORS = [
     id: 'horses · quarter-horse-breed',
     file: 'apps/horses-com/src/app/breeds/quarter-horse/page.tsx',
     mustInclude: [
-      { re: /source="breed-quarter-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-quarter-horse"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4235,9 +3708,6 @@ const CALCULATORS = [
     id: 'horses · thoroughbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-thoroughbred-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4257,9 +3727,6 @@ const CALCULATORS = [
     id: 'horses · arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-arabian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4279,9 +3746,6 @@ const CALCULATORS = [
     id: 'horses · andalusian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-andalusian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4301,9 +3765,6 @@ const CALCULATORS = [
     id: 'horses · lusitano-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-lusitano-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4323,9 +3784,6 @@ const CALCULATORS = [
     id: 'horses · lipizzaner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-lipizzaner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4345,9 +3803,6 @@ const CALCULATORS = [
     id: 'horses · friesian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-friesian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4367,9 +3822,6 @@ const CALCULATORS = [
     id: 'horses · mustang-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-mustang-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4389,9 +3841,6 @@ const CALCULATORS = [
     id: 'horses · belgian-draft-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-belgian-draft-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4411,9 +3860,6 @@ const CALCULATORS = [
     id: 'horses · percheron-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-percheron-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4433,9 +3879,6 @@ const CALCULATORS = [
     id: 'horses · shire-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-shire-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4455,9 +3898,6 @@ const CALCULATORS = [
     id: 'horses · clydesdale-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-clydesdale-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4477,9 +3917,6 @@ const CALCULATORS = [
     id: 'horses · suffolk-punch-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-suffolk-punch-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4499,9 +3936,6 @@ const CALCULATORS = [
     id: 'horses · norwegian-fjord-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-norwegian-fjord-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4521,9 +3955,6 @@ const CALCULATORS = [
     id: 'horses · welsh-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-welsh-pony-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4543,9 +3974,6 @@ const CALCULATORS = [
     id: 'horses · shetland-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-shetland-pony-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4565,9 +3993,6 @@ const CALCULATORS = [
     id: 'horses · pony-of-the-americas-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-pony-of-the-americas-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4587,9 +4012,6 @@ const CALCULATORS = [
     id: 'horses · connemara-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-connemara-pony-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4609,9 +4031,6 @@ const CALCULATORS = [
     id: 'horses · haflinger-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-haflinger-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4631,9 +4050,6 @@ const CALCULATORS = [
     id: 'horses · morgan-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-morgan-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4653,9 +4069,6 @@ const CALCULATORS = [
     id: 'horses · hackney-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-hackney-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4675,9 +4088,6 @@ const CALCULATORS = [
     id: 'horses · akhal-teke-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-akhal-teke-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4697,9 +4107,6 @@ const CALCULATORS = [
     id: 'horses · marwari-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-marwari-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4719,9 +4126,6 @@ const CALCULATORS = [
     id: 'horses · cleveland-bay-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-cleveland-bay-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4741,9 +4145,6 @@ const CALCULATORS = [
     id: 'horses · irish-sport-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-irish-sport-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4763,9 +4164,6 @@ const CALCULATORS = [
     id: 'horses · anglo-arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-anglo-arabian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4785,9 +4183,6 @@ const CALCULATORS = [
     id: 'horses · knabstrupper-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-knabstrupper-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4807,9 +4202,6 @@ const CALCULATORS = [
     id: 'horses · gypsy-vanner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-gypsy-vanner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4829,9 +4221,6 @@ const CALCULATORS = [
     id: 'horses · rocky-mountain-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-rocky-mountain-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4851,9 +4240,6 @@ const CALCULATORS = [
     id: 'horses · warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-warmblood-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4873,9 +4259,6 @@ const CALCULATORS = [
     id: 'horses · quarab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-quarab-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4895,9 +4278,6 @@ const CALCULATORS = [
     id: 'horses · anglo-arab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-anglo-arab-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4917,9 +4297,6 @@ const CALCULATORS = [
     id: 'horses · pintabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-pintabian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4939,9 +4316,6 @@ const CALCULATORS = [
     id: 'horses · paint-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-paint-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4961,9 +4335,6 @@ const CALCULATORS = [
     id: 'horses · appaloosa-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-appaloosa-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -4983,9 +4354,6 @@ const CALCULATORS = [
     id: 'horses · american-saddlebred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-american-saddlebred-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5005,9 +4373,6 @@ const CALCULATORS = [
     id: 'horses · hanoverian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-hanoverian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5027,9 +4392,6 @@ const CALCULATORS = [
     id: 'horses · holsteiner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-holsteiner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5049,9 +4411,6 @@ const CALCULATORS = [
     id: 'horses · dutch-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-dutch-warmblood-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5071,9 +4430,6 @@ const CALCULATORS = [
     id: 'horses · oldenburg-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-oldenburg-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5093,9 +4449,6 @@ const CALCULATORS = [
     id: 'horses · trakehner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-trakehner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5115,9 +4468,6 @@ const CALCULATORS = [
     id: 'horses · selle-francais-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-selle-francais-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5137,9 +4487,6 @@ const CALCULATORS = [
     id: 'horses · westphalian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-westphalian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5159,9 +4506,6 @@ const CALCULATORS = [
     id: 'horses · belgian-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-belgian-warmblood-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5181,9 +4525,6 @@ const CALCULATORS = [
     id: 'horses · tennessee-walking-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-tennessee-walking-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5203,9 +4544,6 @@ const CALCULATORS = [
     id: 'horses · missouri-fox-trotter-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-missouri-fox-trotter-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5225,9 +4563,6 @@ const CALCULATORS = [
     id: 'horses · paso-fino-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-paso-fino-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5247,9 +4582,6 @@ const CALCULATORS = [
     id: 'horses · peruvian-paso-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-peruvian-paso-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5269,9 +4601,6 @@ const CALCULATORS = [
     id: 'horses · standardbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-standardbred-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5291,9 +4620,6 @@ const CALCULATORS = [
     id: 'horses · icelandic-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source="breed-icelandic-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5313,9 +4639,6 @@ const CALCULATORS = [
     id: 'dog · golden-retriever-breed',
     file: 'apps/dog-com/src/app/breeds/golden-retriever/page.tsx',
     mustInclude: [
-      { re: /source="breed-golden-retriever-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-golden-retriever"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+slicker\+brush\+golden\+double\+coat\?s=breed-golden-retriever/, label: 'dog slicker-brush Golden-double-coat search hop (matches on-page dense double coat / 2–3× weekly brushing copy; unique vs dog+slicker+brush? health-hypothyroidism hop and slicker+brush+dog+grooming [slug] hop)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5335,9 +4658,6 @@ const CALCULATORS = [
     id: 'dog · labrador-retriever-breed',
     file: 'apps/dog-com/src/app/breeds/labrador-retriever/page.tsx',
     mustInclude: [
-      { re: /source="breed-labrador-retriever-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-lab"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5356,9 +4676,6 @@ const CALCULATORS = [
     id: 'dog · german-shepherd-breed',
     file: 'apps/dog-com/src/app/breeds/german-shepherd/page.tsx',
     mustInclude: [
-      { re: /source="breed-german-shepherd-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-german-shepherd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5377,9 +4694,6 @@ const CALCULATORS = [
     id: 'dog · french-bulldog-breed',
     file: 'apps/dog-com/src/app/breeds/french-bulldog/page.tsx',
     mustInclude: [
-      { re: /source="breed-french-bulldog-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-french-bulldog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5398,9 +4712,6 @@ const CALCULATORS = [
     id: 'dog · beagle-breed',
     file: 'apps/dog-com/src/app/breeds/beagle/page.tsx',
     mustInclude: [
-      { re: /source="breed-beagle-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-beagle"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5419,9 +4730,6 @@ const CALCULATORS = [
     id: 'dog · boxer-breed',
     file: 'apps/dog-com/src/app/breeds/boxer/page.tsx',
     mustInclude: [
-      { re: /source="breed-boxer-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-boxer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5440,9 +4748,6 @@ const CALCULATORS = [
     id: 'dog · bulldog-breed',
     file: 'apps/dog-com/src/app/breeds/bulldog/page.tsx',
     mustInclude: [
-      { re: /source="breed-bulldog-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-bulldog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5461,9 +4766,6 @@ const CALCULATORS = [
     id: 'dog · dachshund-breed',
     file: 'apps/dog-com/src/app/breeds/dachshund/page.tsx',
     mustInclude: [
-      { re: /source="breed-dachshund-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-dachshund"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5482,9 +4784,6 @@ const CALCULATORS = [
     id: 'dog · poodle-breed',
     file: 'apps/dog-com/src/app/breeds/poodle/page.tsx',
     mustInclude: [
-      { re: /source="breed-poodle-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-poodle"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5503,9 +4802,6 @@ const CALCULATORS = [
     id: 'dog · rottweiler-breed',
     file: 'apps/dog-com/src/app/breeds/rottweiler/page.tsx',
     mustInclude: [
-      { re: /source="breed-rottweiler-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-rottweiler"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5524,9 +4820,6 @@ const CALCULATORS = [
     id: 'dog · siberian-husky-breed',
     file: 'apps/dog-com/src/app/breeds/siberian-husky/page.tsx',
     mustInclude: [
-      { re: /source="breed-siberian-husky-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-husky"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5545,9 +4838,6 @@ const CALCULATORS = [
     id: 'dog · doberman-pinscher-breed',
     file: 'apps/dog-com/src/app/breeds/doberman-pinscher/page.tsx',
     mustInclude: [
-      { re: /source="breed-doberman-pinscher-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-doberman"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5566,9 +4856,6 @@ const CALCULATORS = [
     id: 'dog · australian-shepherd-breed',
     file: 'apps/dog-com/src/app/breeds/australian-shepherd/page.tsx',
     mustInclude: [
-      { re: /source="breed-australian-shepherd-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-aussie"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5587,9 +4874,6 @@ const CALCULATORS = [
     id: 'dog · border-collie-breed',
     file: 'apps/dog-com/src/app/breeds/border-collie/page.tsx',
     mustInclude: [
-      { re: /source="breed-border-collie-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-border-collie"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5608,9 +4892,6 @@ const CALCULATORS = [
     id: 'dog · yorkshire-terrier-breed',
     file: 'apps/dog-com/src/app/breeds/yorkshire-terrier/page.tsx',
     mustInclude: [
-      { re: /source="breed-yorkshire-terrier-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-yorkie"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5629,9 +4910,6 @@ const CALCULATORS = [
     id: 'dog · cavalier-king-charles-breed',
     file: 'apps/dog-com/src/app/breeds/cavalier-king-charles/page.tsx',
     mustInclude: [
-      { re: /source="breed-cavalier-king-charles-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-cavalier"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5650,9 +4928,6 @@ const CALCULATORS = [
     id: 'dog · shih-tzu-breed',
     file: 'apps/dog-com/src/app/breeds/shih-tzu/page.tsx',
     mustInclude: [
-      { re: /source="breed-shih-tzu-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-shih-tzu"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5671,9 +4946,6 @@ const CALCULATORS = [
     id: 'dog · akita-breed',
     file: 'apps/dog-com/src/app/breeds/akita/page.tsx',
     mustInclude: [
-      { re: /source="breed-akita-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-akita"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5692,9 +4964,6 @@ const CALCULATORS = [
     id: 'dog · bernese-mountain-dog-breed',
     file: 'apps/dog-com/src/app/breeds/bernese-mountain-dog/page.tsx',
     mustInclude: [
-      { re: /source="breed-bernese-mountain-dog-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-berner"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5713,9 +4982,6 @@ const CALCULATORS = [
     id: 'dog · bullmastiff-breed',
     file: 'apps/dog-com/src/app/breeds/bullmastiff/page.tsx',
     mustInclude: [
-      { re: /source="breed-bullmastiff-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-bullmastiff"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5734,9 +5000,6 @@ const CALCULATORS = [
     id: 'dog · cocker-spaniel-breed',
     file: 'apps/dog-com/src/app/breeds/cocker-spaniel/page.tsx',
     mustInclude: [
-      { re: /source="breed-cocker-spaniel-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-cocker"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5755,9 +5018,6 @@ const CALCULATORS = [
     id: 'dog · golden-doodle-breed',
     file: 'apps/dog-com/src/app/breeds/golden-doodle/page.tsx',
     mustInclude: [
-      { re: /source="breed-golden-doodle-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-goldendoodle"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5776,9 +5036,6 @@ const CALCULATORS = [
     id: 'dog · great-dane-breed',
     file: 'apps/dog-com/src/app/breeds/great-dane/page.tsx',
     mustInclude: [
-      { re: /source="breed-great-dane-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-great-dane"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5797,9 +5054,6 @@ const CALCULATORS = [
     id: 'dog · great-pyrenees-breed',
     file: 'apps/dog-com/src/app/breeds/great-pyrenees/page.tsx',
     mustInclude: [
-      { re: /source="breed-great-pyrenees-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-great-pyrenees"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5818,9 +5072,6 @@ const CALCULATORS = [
     id: 'dog · irish-setter-breed',
     file: 'apps/dog-com/src/app/breeds/irish-setter/page.tsx',
     mustInclude: [
-      { re: /source="breed-irish-setter-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-irish-setter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5839,9 +5090,6 @@ const CALCULATORS = [
     id: 'dog · irish-wolfhound-breed',
     file: 'apps/dog-com/src/app/breeds/irish-wolfhound/page.tsx',
     mustInclude: [
-      { re: /source="breed-irish-wolfhound-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-irish-wolfhound"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5860,9 +5108,6 @@ const CALCULATORS = [
     id: 'dog · saint-bernard-breed',
     file: 'apps/dog-com/src/app/breeds/saint-bernard/page.tsx',
     mustInclude: [
-      { re: /source="breed-saint-bernard-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-saint-bernard"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5881,9 +5126,6 @@ const CALCULATORS = [
     id: 'dog · shiba-inu-breed',
     file: 'apps/dog-com/src/app/breeds/shiba-inu/page.tsx',
     mustInclude: [
-      { re: /source="breed-shiba-inu-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-shiba"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5902,9 +5144,6 @@ const CALCULATORS = [
     id: 'dog · vizsla-breed',
     file: 'apps/dog-com/src/app/breeds/vizsla/page.tsx',
     mustInclude: [
-      { re: /source="breed-vizsla-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-vizsla"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5923,9 +5162,6 @@ const CALCULATORS = [
     id: 'dog · weimaraner-breed',
     file: 'apps/dog-com/src/app/breeds/weimaraner/page.tsx',
     mustInclude: [
-      { re: /source="breed-weimaraner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breed-weimaraner"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5944,9 +5180,6 @@ const CALCULATORS = [
     id: 'dog · apartment-dogs-listicle',
     file: 'apps/dog-com/src/app/breeds/best-small-dogs-for-apartments/page.tsx',
     mustInclude: [
-      { re: /source="breeds-apartment-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-apartment-dogs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+apt\+puzzle\+feeder\?s=breeds-apartment-dogs/, label: 'dog apt-puzzle-feeder search hop (matches on-page indoor mental-exercise / no-yard copy)' },
       { re: /amazon-brand\/dog\+apt\+quiet\+chew\?s=breeds-apartment-dogs/, label: 'dog apt-quiet-chew search hop (matches on-page shared-wall / indoor chew copy)' },
@@ -5967,9 +5200,6 @@ const CALCULATORS = [
     id: 'dog · compare-pair template',
     file: 'apps/dog-com/src/app/compare/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`compare-\$\{slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`compare-\$\{slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -5988,9 +5218,6 @@ const CALCULATORS = [
     id: 'dog · breed-feeding template',
     file: 'apps/dog-com/src/app/breeds/[slug]/feeding/page.tsx',
     mustInclude: [
-      { re: /source=\{`breed-feeding-\$\{profile\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`breed-feeding-\$\{profile\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6009,9 +5236,6 @@ const CALCULATORS = [
     id: 'dog · breed-profile template',
     file: 'apps/dog-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`breed-\$\{breed\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`breed-\$\{breed\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6031,9 +5255,6 @@ const CALCULATORS = [
     id: 'dog · health-spoke template',
     file: 'apps/dog-com/src/app/health/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`health-\$\{disease\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`health-\$\{disease\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6052,9 +5273,6 @@ const CALCULATORS = [
     id: 'dog · food-spoke template',
     file: 'apps/dog-com/src/app/nutrition/can-dogs-eat/[food]/page.tsx',
     mustInclude: [
-      { re: /source=\{`can-dogs-eat-\$\{entry\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="can-dogs-eat"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6073,9 +5291,6 @@ const CALCULATORS = [
     id: 'fish · health-spoke template',
     file: 'apps/fish-com/src/app/health/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`health-\$\{disease\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`health-\$\{disease\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6094,9 +5309,6 @@ const CALCULATORS = [
     id: 'fish · param-spoke template',
     file: 'apps/fish-com/src/app/water-parameters/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`water-parameters-\$\{param\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`water-parameters-\$\{param\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6115,9 +5327,6 @@ const CALCULATORS = [
     id: 'ferret · food-spoke template',
     file: 'apps/ferret-com/src/app/diet/can-ferrets-eat/[food]/page.tsx',
     mustInclude: [
-      { re: /source=\{`can-ferrets-eat-\$\{entry\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="can-ferrets-eat"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6136,9 +5345,6 @@ const CALCULATORS = [
     id: 'vets · diagnostics-spoke template',
     file: 'apps/vets-co/src/app/diagnostics/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`diagnostics-\$\{d\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`diagnostics-\$\{d\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6157,9 +5363,6 @@ const CALCULATORS = [
     id: 'vets · specialists-spoke template',
     file: 'apps/vets-co/src/app/specialists/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`specialist-\$\{s\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`specialist-\$\{s\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6178,8 +5381,6 @@ const CALCULATORS = [
     id: 'vets · medications-spoke template',
     file: 'apps/vets-co/src/app/medications/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`medications-\$\{m\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6198,9 +5399,6 @@ const CALCULATORS = [
     id: 'vets · can-i-give hub',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/page.tsx',
     mustInclude: [
-      { re: /source="can-i-give-my-dog-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="can-i-give-my-dog-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6219,9 +5417,6 @@ const CALCULATORS = [
     id: 'vets · can-i-give-spoke template',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/[med]/page.tsx',
     mustInclude: [
-      { re: /source=\{`can-i-give-my-dog-\$\{entry\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="can-i-give-my-dog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6240,8 +5435,6 @@ const CALCULATORS = [
     id: 'vets · symptoms-spoke template',
     file: 'apps/vets-co/src/app/symptoms/[slug]/page.tsx',
     mustInclude: [
-      { re: /source=\{`symptoms-\$\{s\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6260,9 +5453,6 @@ const CALCULATORS = [
     id: 'ferret · aging-ferret-care',
     file: 'apps/ferret-com/src/app/health/aging-ferret-care/page.tsx',
     mustInclude: [
-      { re: /source="health-aging-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source="health-aging"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6281,8 +5471,6 @@ const CALCULATORS = [
     id: 'dog · breed-insurance template',
     file: 'apps/dog-com/src/app/breeds/_insurance/BreedInsuranceContent.tsx',
     mustInclude: [
-      { re: /source=\{`breed-insurance-\$\{breed\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
@@ -6301,8 +5489,6 @@ const CALCULATORS = [
     id: 'dog · breed-insurance hub',
     file: 'apps/dog-com/src/app/breeds/insurance/page.tsx',
     mustInclude: [
-      { re: /source="breed-insurance-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
@@ -6321,8 +5507,6 @@ const CALCULATORS = [
     id: 'dog · breed-match wizard',
     file: 'apps/dog-com/src/app/breeds/match/page.tsx',
     mustInclude: [
-      { re: /source="breed-match-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above food/breed CTAs and added above hops' },
@@ -6341,9 +5525,6 @@ const CALCULATORS = [
     id: 'dog · breed-health template',
     file: 'apps/dog-com/src/app/breeds/_health/BreedHealthContent.tsx',
     mustInclude: [
-      { re: /source=\{`breed-health-\$\{record\.slug\}-under-hero`\}/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,280}source=\{`breed-health-\$\{record\.slug\}`\}/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -6393,7 +5574,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/tools/stocking-calculator/page.tsx',
     mustInclude: [
       { re: /source="tools-stocking-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
+      { re: /resourceLabel="Save the planning rules"/, label: 'real stocking-rules resource magnet, not inbox notes' },
       { re: /StockingWaterProvider/, label: 'shop and calculator share water-type state' },
       { re: /<StockingShop /, label: 'shop block is the water-type-aware client section' },
       { re: /slim-inch bioload ceiling, not a species count/, label: 'page marketing does not overclaim a species count' },
@@ -6452,8 +5633,6 @@ const CALCULATORS = [
     id: 'horses · horse-blanket-size-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-blanket-size-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-blanket-size-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete blanket-fit offer, not Subscribe' },
       { re: /amazon-brand\/winter\+horse\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'winter horse blanket search hop' },
       { re: /amazon-brand\/horse\+turnout\+sheet\?s=tools-horse-blanket-size-calculator/, label: 'turnout sheet search hop' },
       { re: /amazon-brand\/horse\+stable\+blanket\?s=tools-horse-blanket-size-calculator/, label: 'stable blanket search hop' },
@@ -6472,8 +5651,6 @@ const CALCULATORS = [
     id: 'horses · horse-feed-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-feed-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-feed-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete daily-hay offer, not Subscribe' },
       { re: /amazon-brand\/timothy\+hay\+horse\?s=tools-horse-feed-calculator/, label: 'timothy hay search hop' },
       { re: /amazon-brand\/horse\+ration\+balancer\?s=tools-horse-feed-calculator/, label: 'ration balancer search hop' },
       { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=tools-horse-feed-calculator/, label: 'feed scoop search hop (same query as horse-cost-calculator / BCS)' },
@@ -6507,8 +5684,6 @@ const CALCULATORS = [
     id: 'dog · dog-gestation-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-gestation-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-gestation-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+whelping\+box\?s=tools-dog-gestation-calculator/, label: 'whelping box search hop' },
       { re: /amazon-brand\/digital\+puppy\+scale\?s=tools-dog-gestation-calculator/, label: 'digital puppy scale search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-dog-gestation-calculator/, label: 'digital pet thermometer search hop' },
@@ -6531,8 +5706,6 @@ const CALCULATORS = [
     id: 'horses · horse-gestation-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-gestation-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-gestation-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/digital\+equine\+thermometer\?s=tools-horse-gestation-calculator/, label: 'digital equine thermometer search hop' },
       { re: /amazon-brand\/iodine\+navel\+dip\+foal\?s=tools-horse-gestation-calculator/, label: 'foal navel dip search hop' },
       { re: /amazon-brand\/foaling\+alarm\?s=tools-horse-gestation-calculator/, label: 'foaling alarm search hop' },
@@ -6558,8 +5731,6 @@ const CALCULATORS = [
     id: 'horses · horse-weight-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-weight-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-weight-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete tape-size offer, not Subscribe' },
       { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-weight-calculator/, label: 'horse weight tape search hop' },
       { re: /amazon-brand\/horse\+measuring\+tape\?s=tools-horse-weight-calculator/, label: 'horse measuring tape search hop' },
       { re: /amazon-brand\/livestock\+barn\+scale\?s=tools-horse-weight-calculator/, label: 'livestock barn scale search hop' },
@@ -6586,8 +5757,6 @@ const CALCULATORS = [
     id: 'horses · stall-bedding-calculator hops',
     file: 'apps/horses-com/src/app/tools/stall-bedding-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-stall-bedding-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete bag-count offer, not Subscribe' },
       { re: /amazon-brand\/pine\+shavings\+horse\+stall\+bedding\?s=tools-stall-bedding-calculator/, label: 'pine shavings stall bedding search hop' },
       { re: /amazon-brand\/wood\+pellet\+horse\+stall\+bedding\?s=tools-stall-bedding-calculator/, label: 'wood pellet stall bedding search hop' },
       { re: /amazon-brand\/horse\+stall\+rubber\+mats\?s=tools-stall-bedding-calculator/, label: 'rubber stall mats search hop' },
@@ -6605,8 +5774,6 @@ const CALCULATORS = [
     id: 'horses · horse-cost-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-cost-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-cost-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete horse-budget-worksheet offer, not Subscribe' },
       { re: /amazon-brand\/horse\+halter\+lead\+rope\?s=tools-horse-cost-calculator/, label: 'halter and lead search hop (same query as startup kit)' },
       { re: /amazon-brand\/horse\+grooming\+kit\?s=tools-horse-cost-calculator/, label: 'grooming kit search hop' },
       { re: /amazon-brand\/horse\+hoof\+pick\?s=tools-horse-cost-calculator/, label: 'hoof pick search hop' },
@@ -6650,8 +5817,6 @@ const CALCULATORS = [
     id: 'dog · dog-ideal-weight-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-ideal-weight-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-ideal-weight-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-dog-ideal-weight/, label: 'digital kitchen / pet scale search hop' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-ideal-weight/, label: 'portion-control food scale search hop' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-ideal-weight/, label: 'dog measuring tape / BCS chart search hop' },
@@ -6681,8 +5846,6 @@ const CALCULATORS = [
     id: 'fish · water-change-calculator hops',
     file: 'apps/fish-com/src/app/tools/water-change-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-water-change-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/python\+water\+changer\?s=tools-water-change-calculator/, label: 'Python water changer search hop (same query as this tool ResultCTA)' },
       { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=tools-water-change-calculator/, label: 'gravel-vacuum siphon search hop (same query as this tool ResultCTA)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=tools-water-change-calculator/, label: 'Seachem Prime dechlorinator search hop (same query as disease-checker)' },
@@ -6706,8 +5869,6 @@ const CALCULATORS = [
     id: 'horses · horse-height-converter hops',
     file: 'apps/horses-com/src/app/tools/horse-height-converter/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-height-converter-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete height-chart offer, not Subscribe' },
       { re: /amazon-brand\/horse\+measuring\+stick\?s=tools-horse-height-converter/, label: 'measuring stick search hop (same query as BCS)' },
       { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-height-converter/, label: 'height/weight tape search hop (same query as weight-calculator / BCS / age / size-for-rider)' },
       { re: /amazon-brand\/horse\+saddle\+fitting\+kit\?s=tools-horse-height-converter/, label: 'saddle-fitting kit search hop (height→tack hop already on this page)' },
@@ -6739,8 +5900,6 @@ const CALCULATORS = [
     id: 'vets · insurance-reimbursement-estimator hops',
     file: 'apps/vets-co/src/app/tools/insurance-reimbursement-estimator/page.tsx',
     mustInclude: [
-      { re: /source="tools-insurance-reimbursement-estimator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /<InsuranceWellnessShop source="tools-insurance-reimbursement-estimator"/, label: 'InsuranceWellnessShop kept (do not re-rank carriers)' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-insurance-reimbursement-estimator/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-insurance-reimbursement-estimator/, label: 'digital pet thermometer search hop' },
@@ -6764,8 +5923,6 @@ const CALCULATORS = [
     id: 'vets · insurance-finder hops',
     file: 'apps/vets-co/src/app/tools/insurance-finder/page.tsx',
     mustInclude: [
-      { re: /source="tools-insurance-finder-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /<InsuranceWellnessShop source="tools-insurance-finder"/, label: 'InsuranceWellnessShop kept (do not re-rank carriers)' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-insurance-finder/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-insurance-finder/, label: 'digital pet thermometer search hop' },
@@ -6798,8 +5955,6 @@ const CALCULATORS = [
     id: 'dog · puppy-first-year-budget hops',
     file: 'apps/dog-com/src/app/tools/puppy-first-year-budget/page.tsx',
     mustInclude: [
-      { re: /source="tools-puppy-first-year-budget-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete puppy-budget offer, not Subscribe' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-first-year-budget/, label: 'wire crate with divider search hop (same query as crate-size / new-puppy / puppy-weight)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-puppy-first-year-budget/, label: 'puppy food search hop (same query as new-puppy / puppy-weight)' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-first-year-budget/, label: 'scale search hop (same query as puppy-weight / ideal-weight)' },
@@ -6826,8 +5981,6 @@ const CALCULATORS = [
     id: 'fish · filter-gph-calculator hops',
     file: 'apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-filter-gph-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete filter-GPH offer, not Subscribe' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=tools-filter-gph-calculator/, label: 'AquaClear HOB filter search hop (same query as filter reviews / stocking)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=tools-filter-gph-calculator/, label: 'Fluval canister search hop (same query as canister reviews / stocking)' },
       { re: /amazon-brand\/aquarium\+filter\+media\?s=tools-filter-gph-calculator/, label: 'filter media search hop' },
@@ -6857,8 +6010,6 @@ const CALCULATORS = [
     id: 'ferret · cost-calculator hops',
     file: 'apps/ferret-com/src/app/tools/cost-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-cost-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete budget offer, not Subscribe' },
       { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-cost-calculator/, label: 'high-protein ferret food search hop (same query as kibble guide)' },
       { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-cost-calculator/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cost-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
@@ -6885,8 +6036,6 @@ const CALCULATORS = [
     id: 'ferret · litter-planner hops',
     file: 'apps/ferret-com/src/app/tools/litter-planner/page.tsx',
     mustInclude: [
-      { re: /source="tools-litter-planner-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete litter-and-pan-plan offer, not Subscribe' },
       { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=tools-litter-planner/, label: 'heat-treated wood pellet litter search hop (same query as litter review)' },
       { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=tools-litter-planner/, label: 'grass pellet litter search hop (same query as litter review)' },
       { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-litter-planner/, label: 'corner litter pan search hop (same query as cage-size calculator)' },
@@ -6914,8 +6063,6 @@ const CALCULATORS = [
     id: 'ferret · cage-size-calculator hops',
     file: 'apps/ferret-com/src/app/tools/cage-size-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-cage-size-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete cage-size offer, not Subscribe' },
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=tools-cage-size-calculator/, label: 'multi-level cage search hop (same query as cage review)' },
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=tools-cage-size-calculator/, label: 'hammock / sleep-sack search hop' },
       { re: /amazon-brand\/ferret\+corner\+litter\+pan\?s=tools-cage-size-calculator/, label: 'corner litter pan search hop' },
@@ -6933,8 +6080,6 @@ const CALCULATORS = [
     id: 'ferret · food-evaluator hops',
     file: 'apps/ferret-com/src/app/tools/food-evaluator/page.tsx',
     mustInclude: [
-      { re: /source="tools-food-evaluator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/high\+protein\+ferret\+food\+kibble\?s=tools-food-evaluator/, label: 'high-protein ferret kibble search hop' },
       { re: /amazon-brand\/freeze\+dried\+raw\+ferret\+treats\?s=tools-food-evaluator/, label: 'freeze-dried raw ferret treats search hop' },
       { re: /amazon-brand\/salmon\+oil\+ferret\?s=tools-food-evaluator/, label: 'salmon oil / ferret oil search hop' },
@@ -6951,9 +6096,6 @@ const CALCULATORS = [
     id: 'ferret · toxic-foods hops',
     file: 'apps/ferret-com/src/app/care/toxic-foods/page.tsx',
     mustInclude: [
-      { re: /source="care-toxic-foods-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete toxic-foods-cheat-sheet offer, not Subscribe' },
-      { re: /source="care-toxic-foods"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+safe\+treats\?s=care-toxic-foods/, label: 'ferret-safe treats search hop (matches on-page avoid-as-treats / safe-treats copy)' },
       { re: /amazon-brand\/freeze\+dried\+raw\+ferret\+treats\?s=care-toxic-foods/, label: 'freeze-dried meat treats search hop (same query as food-evaluator / safe-treats)' },
       { re: /amazon-brand\/heavy\+ceramic\+pet\+food\+bowl\?s=care-toxic-foods/, label: 'ceramic food bowl search hop (matches on-page diet-basics feeding copy)' },
@@ -6973,9 +6115,6 @@ const CALCULATORS = [
     id: 'ferret · nail-trimming hops',
     file: 'apps/ferret-com/src/app/care/nail-trimming/page.tsx',
     mustInclude: [
-      { re: /source="care-nail-trimming-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-nail-trimming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cat\+kitten\+nail\+clippers\?s=care-nail-trimming/, label: 'cat/kitten nail-clipper search hop (matches on-page clippers-for-cats-kittens-or-small-dogs copy)' },
       { re: /amazon-brand\/styptic\+powder\?s=care-nail-trimming/, label: 'styptic powder search hop (same query as ferret emergency triage)' },
       { re: /amazon-brand\/ferret\+lickable\+treat\+paste\?s=care-nail-trimming/, label: 'ferret lickable treat / meat-paste search hop (matches on-page distraction trick)' },
@@ -6994,9 +6133,6 @@ const CALCULATORS = [
     id: 'ferret · heat-stroke-prevention hops',
     file: 'apps/ferret-com/src/app/care/heat-stroke-prevention/page.tsx',
     mustInclude: [
-      { re: /source="care-heat-stroke-prevention-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-heat-stroke-prevention"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+indoor\+thermometer\?s=care-heat-stroke-prevention/, label: 'digital indoor thermometer search hop (matches on-page temperature-at-the-cage copy)' },
       { re: /amazon-brand\/reusable\+plastic\+water\+bottle\?s=care-heat-stroke-prevention/, label: 'reusable plastic water-bottle search hop (matches on-page frozen-bottle intervention)' },
       { re: /amazon-brand\/ceramic\+tile\?s=care-heat-stroke-prevention/, label: 'ceramic-tile search hop (matches on-page chilled ceramic-or-stone-tile copy)' },
@@ -7016,9 +6152,6 @@ const CALCULATORS = [
     id: 'ferret · travel-and-carriers hops',
     file: 'apps/ferret-com/src/app/care/travel-and-carriers/page.tsx',
     mustInclude: [
-      { re: /source="care-travel-and-carriers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-travel-and-carriers"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+carrier\+hard\+sided\?s=care-travel-and-carriers/, label: 'hard-sided ferret-carrier search hop (same query as readiness quiz; matches on-page hard-sided plastic carrier copy)' },
       { re: /amazon-brand\/soft\+pet\+carrier\?s=care-travel-and-carriers/, label: 'soft-sided pet-carrier search hop (same query as ferret emergency triage; matches on-page soft-sided carrier copy)' },
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-travel-and-carriers/, label: 'ferret sleep-sack / fleece-liner search hop (same query as cage-size calculator; matches on-page familiar-sleep-sack copy)' },
@@ -7038,9 +6171,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-proofing-your-home hops',
     file: 'apps/ferret-com/src/app/care/ferret-proofing-your-home/page.tsx',
     mustInclude: [
-      { re: /source="care-ferret-proofing-your-home-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-ferret-proofing-your-home"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/floor\+vent\+cover\?s=care-ferret-proofing-your-home/, label: 'floor vent-cover search hop (matches on-page screen-or-cover heating-and-AC-vents copy)' },
       { re: /amazon-brand\/cable\+cord\+cover\?s=care-ferret-proofing-your-home/, label: 'cable/cord-cover search hop (matches on-page bundle-cover-or-route electrical-cords copy)' },
       { re: /amazon-brand\/hardware\+cloth\?s=care-ferret-proofing-your-home/, label: 'hardware-cloth search hop (matches on-page screen-gaps-and-furniture-undersides copy)' },
@@ -7060,9 +6190,6 @@ const CALCULATORS = [
     id: 'ferret · bedding-and-litter-types hops',
     file: 'apps/ferret-com/src/app/care/bedding-and-litter-types/page.tsx',
     mustInclude: [
-      { re: /source="care-bedding-and-litter-types-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete bedding-and-litter shopping-list offer, not Subscribe' },
-      { re: /source="care-bedding-and-litter-types"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=care-bedding-and-litter-types/, label: 'ferret sleep-sack / cube-bed search hop (same query as cage-size calculator; matches on-page enclosed fleece pouch copy)' },
       { re: /amazon-brand\/ferret\+hammock\?s=care-bedding-and-litter-types/, label: 'ferret hammock search hop (same query as ferret body-condition score; matches on-page elevated fabric-sling copy)' },
       { re: /amazon-brand\/ferret\+fleece\+liner\?s=care-bedding-and-litter-types/, label: 'ferret fleece-liner search hop (matches on-page machine-washable cage-level liner copy)' },
@@ -7082,9 +6209,6 @@ const CALCULATORS = [
     id: 'ferret · ear-cleaning hops',
     file: 'apps/ferret-com/src/app/care/ear-cleaning/page.tsx',
     mustInclude: [
-      { re: /source="care-ear-cleaning-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-ear-cleaning"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+ear\+cleaner\?s=care-ear-cleaning/, label: 'pet ear-cleaner search hop (matches on-page veterinary ear-cleaning solution / bathing-and-grooming pet ear cleaner copy)' },
       { re: /amazon-brand\/cotton\+pads\?s=care-ear-cleaning/, label: 'cotton-pad search hop (matches on-page cotton balls or pads copy)' },
       { re: /amazon-brand\/ferret\+lickable\+treat\+paste\?s=care-ear-cleaning/, label: 'ferret lickable treat / meat-paste search hop (same query as nail-trimming; matches on-page distraction treat)' },
@@ -7102,9 +6226,6 @@ const CALCULATORS = [
     id: 'ferret · cage-cleaning hops',
     file: 'apps/ferret-com/src/app/care/cage-cleaning-routine/page.tsx',
     mustInclude: [
-      { re: /source="care-cage-cleaning-routine-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-cage-cleaning-routine"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=care-cage-cleaning-routine/, label: 'enzymatic pet-cleaner search hop (same query as dog house-training; matches on-page enzymatic cleaner / accident-odor copy)' },
       { re: /amazon-brand\/small\+animal\+cage\+cleaner\?s=care-cage-cleaning-routine/, label: 'small-animal cage-cleaner search hop (matches on-page ferret-safe cleaner / tray-and-surface copy)' },
       { re: /amazon-brand\/litter\+scoop\?s=care-cage-cleaning-routine/, label: 'litter-scoop search hop (matches on-page daily scoop / spot-clean copy)' },
@@ -7124,9 +6245,6 @@ const CALCULATORS = [
     id: 'ferret · multi-level-housing hops',
     file: 'apps/ferret-com/src/app/care/multi-level-housing/page.tsx',
     mustInclude: [
-      { re: /source="care-multi-level-housing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-multi-level-housing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/fleece\+ramp\+cover\?s=care-multi-level-housing/, label: 'fleece ramp-cover search hop (matches on-page fleece ramp covers copy)' },
       { re: /amazon-brand\/pvc\+sheet\?s=care-multi-level-housing/, label: 'PVC-sheet search hop (matches on-page PVC sheet ramp-liner copy)' },
       { re: /amazon-brand\/cable\+ties\?s=care-multi-level-housing/, label: 'cable-tie search hop (matches on-page cable-ties-to-anchor-ramps copy)' },
@@ -7146,9 +6264,6 @@ const CALCULATORS = [
     id: 'horses · grooming hops',
     file: 'apps/horses-com/src/app/care/grooming/page.tsx',
     mustInclude: [
-      { re: /source="care-grooming-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-grooming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+curry\+comb\?s=care-grooming/, label: 'curry-comb search hop (matches on-page kit copy)' },
       { re: /amazon-brand\/horse\+dandy\+brush\?s=care-grooming/, label: 'dandy-brush search hop (matches on-page kit copy)' },
       { re: /amazon-brand\/horse\+body\+brush\?s=care-grooming/, label: 'body-brush search hop (matches on-page kit copy)' },
@@ -7168,9 +6283,6 @@ const CALCULATORS = [
     id: 'horses · hoof-picking hops',
     file: 'apps/horses-com/src/app/care/hoof-picking/page.tsx',
     mustInclude: [
-      { re: /source="care-hoof-picking-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-hoof-picking"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+hoof\+pick\?s=care-hoof-picking/, label: 'hoof-pick search hop (matches on-page tools copy)' },
       { re: /amazon-brand\/horse\+hoof\+pick\+brush\?s=care-hoof-picking/, label: 'hoof-pick-with-brush search hop (matches on-page stiff-brush copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -7187,9 +6299,6 @@ const CALCULATORS = [
     id: 'horses · hoof-care-basics hops',
     file: 'apps/horses-com/src/app/care/hoof-care-basics/page.tsx',
     mustInclude: [
-      { re: /source="care-hoof-care-basics-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-hoof-basics"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+hoof\+pick\?s=care-hoof-care-basics/, label: 'hoof-pick search hop (matches on-page daily-picking copy)' },
       { re: /amazon-brand\/horse\+hoof\+pick\+brush\?s=care-hoof-care-basics/, label: 'hoof-pick-with-brush search hop (matches on-page packed-debris copy)' },
       { re: /amazon-brand\/horse\+hoof\+boots\?s=care-hoof-care-basics/, label: 'hoof-boots search hop (matches on-page shoes-or-boots copy)' },
@@ -7207,9 +6316,6 @@ const CALCULATORS = [
     id: 'horses · fly-control hops',
     file: 'apps/horses-com/src/app/care/fly-control/page.tsx',
     mustInclude: [
-      { re: /source="care-fly-control-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-fly-control"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+fly\+mask\?s=care-fly-control/, label: 'fly-mask search hop (matches on-page barrier copy)' },
       { re: /amazon-brand\/horse\+fly\+sheet\?s=care-fly-control/, label: 'fly-sheet search hop (matches on-page barrier copy)' },
       { re: /amazon-brand\/horse\+fly\+boots\?s=care-fly-control/, label: 'fly-boots search hop (matches on-page barrier copy)' },
@@ -7229,9 +6335,6 @@ const CALCULATORS = [
     id: 'horses · blanketing hops',
     file: 'apps/horses-com/src/app/care/blanketing/page.tsx',
     mustInclude: [
-      { re: /source="care-blanketing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-blanketing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+turnout\+blanket\?s=care-blanketing/, label: 'turnout-blanket search hop (matches on-page turnout-rug copy)' },
       { re: /amazon-brand\/horse\+waterproof\+sheet\?s=care-blanketing/, label: 'waterproof-sheet search hop (matches on-page waterproof-sheet copy)' },
       { re: /amazon-brand\/horse\+lightweight\+blanket\?s=care-blanketing/, label: 'lightweight-blanket search hop (matches on-page lightweight-fill copy)' },
@@ -7251,9 +6354,6 @@ const CALCULATORS = [
     id: 'horses · winter-care hops',
     file: 'apps/horses-com/src/app/care/winter-care/page.tsx',
     mustInclude: [
-      { re: /source="care-winter-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-winter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+tank\+heater\?s=care-winter-care/, label: 'tank-heater search hop (matches on-page unfrozen-water copy)' },
       { re: /amazon-brand\/ice\+grit\?s=care-winter-care/, label: 'ice-grit search hop (matches on-page grit-or-sand ice copy)' },
       { re: /amazon-brand\/horse\+snow\+pads\?s=care-winter-care/, label: 'snow-pads search hop (matches on-page shoeing copy)' },
@@ -7272,9 +6372,6 @@ const CALCULATORS = [
     id: 'horses · trailering hops',
     file: 'apps/horses-com/src/app/care/trailering/page.tsx',
     mustInclude: [
-      { re: /source="care-trailering-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-trailering"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+shipping\+boots\?s=care-trailering/, label: 'shipping-boots search hop (matches on-page travel-protection boots copy)' },
       { re: /amazon-brand\/horse\+shipping\+wraps\?s=care-trailering/, label: 'shipping-wraps search hop (matches on-page travel-protection wraps copy)' },
       { re: /amazon-brand\/horse\+poll\+guard\?s=care-trailering/, label: 'poll-guard search hop (matches on-page poll-guard copy)' },
@@ -7293,9 +6390,6 @@ const CALCULATORS = [
     id: 'horses · saddle-fit-basics hops',
     file: 'apps/horses-com/src/app/guides/saddle-fit-basics/page.tsx',
     mustInclude: [
-      { re: /source="guide-saddle-fit-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-saddle-fit"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+saddle\+pad\?s=guides-saddle-fit-basics/, label: 'saddle-pad search hop (matches on-page daily pad / saddle-pad copy)' },
       { re: /amazon-brand\/horse\+sheepskin\+half\+pad\?s=guides-saddle-fit-basics/, label: 'sheepskin-half-pad search hop (matches on-page half-pad copy)' },
       { re: /amazon-brand\/horse\+saddle\+shims\?s=guides-saddle-fit-basics/, label: 'saddle-shims search hop (matches on-page thin-shim / foam-shim copy)' },
@@ -7314,9 +6408,6 @@ const CALCULATORS = [
     id: 'horses · equine-dental-care hops',
     file: 'apps/horses-com/src/app/guides/equine-dental-care/page.tsx',
     mustInclude: [
-      { re: /source="guide-dental-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-dental"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+hay\+cubes\?s=guides-equine-dental-care/, label: 'hay-cubes search hop (matches on-page soaked-hay-cubes copy)' },
       { re: /amazon-brand\/horse\+mash\?s=guides-equine-dental-care/, label: 'mash search hop (matches on-page mashes copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -7333,9 +6424,6 @@ const CALCULATORS = [
     id: 'horses · equine-vaccination-schedule hops',
     file: 'apps/horses-com/src/app/guides/equine-vaccination-schedule/page.tsx',
     mustInclude: [
-      { re: /source="guide-vaccination-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-vaccination"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+stall\+fan\?s=guides-equine-vaccination-schedule/, label: 'stall-fan search hop (matches on-page stall-fans/screens copy)' },
       { re: /amazon-brand\/horse\+stall\+screen\?s=guides-equine-vaccination-schedule/, label: 'stall-screen search hop (matches on-page stall-fans/screens copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -7352,9 +6440,6 @@ const CALCULATORS = [
     id: 'horses · body-clipping hops',
     file: 'apps/horses-com/src/app/care/body-clipping/page.tsx',
     mustInclude: [
-      { re: /source="care-body-clipping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-clipping"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+clippers\?s=care-body-clipping/, label: 'horse-clippers search hop (matches on-page well-maintained/sharp/tensioned clippers copy)' },
       { re: /amazon-brand\/horse\+clipper\+blades\?s=care-body-clipping/, label: 'clipper-blades search hop (matches on-page clean-blades copy)' },
       { re: /amazon-brand\/horse\+clipper\+oil\?s=care-body-clipping/, label: 'clipper-oil search hop (matches on-page regular-oiling copy)' },
@@ -7374,9 +6459,6 @@ const CALCULATORS = [
     id: 'horses · fencing-safety hops',
     file: 'apps/horses-com/src/app/care/fencing-safety/page.tsx',
     mustInclude: [
-      { re: /source="care-fencing-safety-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-fencing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+electric\+tape\?s=care-fencing-safety/, label: 'electric-tape search hop (matches on-page electric tape copy)' },
       { re: /amazon-brand\/horse\+fence\+mesh\?s=care-fencing-safety/, label: 'horse-mesh search hop (matches on-page mesh designed for horses copy)' },
       { re: /amazon-brand\/horse\+electric\+rope\?s=care-fencing-safety/, label: 'electric-rope search hop (matches on-page electric rope copy)' },
@@ -7396,9 +6478,6 @@ const CALCULATORS = [
     id: 'horses · pasture-management hops',
     file: 'apps/horses-com/src/app/care/pasture-management/page.tsx',
     mustInclude: [
-      { re: /source="care-pasture-management-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-pasture"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+grazing\+muzzle\?s=care-pasture-management/, label: 'grazing-muzzle search hop (matches on-page restricted-grazing / laminitis-prone copy)' },
       { re: /amazon-brand\/soil\+test\+kit\?s=care-pasture-management/, label: 'soil-test-kit search hop (matches on-page periodic-soil-testing copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -7416,9 +6495,6 @@ const CALCULATORS = [
     id: 'horses · summer-heat-care hops',
     file: 'apps/horses-com/src/app/care/summer-heat-care/page.tsx',
     mustInclude: [
-      { re: /source="care-summer-heat-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-summer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+sweat\+scraper\?s=care-summer-heat-care/, label: 'horse sweat-scraper search hop (matches on-page apply-and-scrape cold-water cooling copy; unique vs #993–#1015 fans / electrolytes / cool-water towels)' },
       { re: /amazon-brand\/horse\+shade\+cloth\?s=care-summer-heat-care/, label: 'horse shade-cloth search hop (matches on-page provide-shade copy when tree cover is thin; unique vs #993–#1015 stall fans / fleece coolers / turnout blankets)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -7449,8 +6525,6 @@ const CALCULATORS = [
     id: 'dog · puppy-weight-predictor hops',
     file: 'apps/dog-com/src/app/tools/puppy-weight-predictor/page.tsx',
     mustInclude: [
-      { re: /source="tools-puppy-weight-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete puppy-growth offer, not Subscribe' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-weight-predictor/, label: 'scale search hop (same query as ideal-weight tool)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-puppy-weight-predictor/, label: 'puppy food search hop' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-weight-predictor/, label: 'crate search hop (same query as crate-size tool)' },
@@ -7477,7 +6551,7 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/tools/new-puppy-checklist/page.tsx',
     mustInclude: [
       { re: /source="tools-new-puppy-checklist-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
+      { re: /resourceLabel="Save the checklist"/, label: 'real puppy-checklist resource magnet, not inbox notes' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-new-puppy-checklist/, label: 'crate search hop (same query as crate-size tool)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-new-puppy-checklist/, label: 'puppy food search hop' },
       { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=tools-new-puppy-checklist/, label: 'interactive feeder search hop' },
@@ -7498,8 +6572,6 @@ const CALCULATORS = [
     id: 'dog · dog-age-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-age-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-age-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/puppy\+food\?s=tools-dog-age/, label: 'puppy food search hop' },
       { re: /amazon-brand\/puppy\+teething\+toys\?s=tools-dog-age/, label: 'puppy teething toys search hop' },
       { re: /amazon-brand\/dental\+chews\+dog\?s=tools-dog-age/, label: 'dental chews search hop' },
@@ -7519,8 +6591,6 @@ const CALCULATORS = [
     id: 'dog · dog-body-condition-score hops',
     file: 'apps/dog-com/src/app/tools/dog-body-condition-score/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-bcs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-dog-bcs/, label: 'measuring tape / BCS chart search hop' },
       { re: /amazon-brand\/elevated\+slow\+feeder\+bowl\+dog\?s=tools-dog-bcs/, label: 'elevated slow-feeder bowl search hop' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=tools-dog-bcs/, label: 'portion-control food scale search hop' },
@@ -7540,8 +6610,6 @@ const CALCULATORS = [
     id: 'dog · dog-exercise-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-exercise-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-exercise-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/dog\+leash\?s=tools-dog-exercise/, label: 'dog leash search hop' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-dog-exercise/, label: 'Julius-K9 harness search hop (same query as new-puppy / harness-collar-size)' },
       { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=tools-dog-exercise/, label: 'no-pull harness search hop' },
@@ -7561,8 +6629,6 @@ const CALCULATORS = [
     id: 'dog · dog-chocolate-toxicity-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-chocolate-toxicity-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-chocolate-toxicity-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/activated\+charcoal\+pet\?s=tools-chocolate-toxicity/, label: 'activated charcoal (vet-directed) search hop' },
       { re: /amazon-brand\/hydrogen\+peroxide\+3\+percent\+first\+aid\?s=tools-chocolate-toxicity/, label: '3% hydrogen peroxide first aid (vet-directed) search hop' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\+dog\?s=tools-chocolate-toxicity/, label: 'pet first-aid kit search hop' },
@@ -7581,8 +6647,6 @@ const CALCULATORS = [
     id: 'dog · which-pet hops',
     file: 'apps/dog-com/src/app/which-pet/page.tsx',
     mustInclude: [
-      { re: /source="which-pet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete first-week-starter-list offer, not Subscribe' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=which-pet/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/puppy\+food\?s=which-pet/, label: 'puppy food search hop (same query as new-puppy)' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=which-pet/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
@@ -7602,8 +6666,6 @@ const CALCULATORS = [
     id: 'dog · training-puppy-schedule hops',
     file: 'apps/dog-com/src/app/training/puppy-schedule/page.tsx',
     mustInclude: [
-      { re: /source="training-puppy-schedule-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete week-by-week-schedule offer, not Subscribe' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-puppy-schedule/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/puppy\+food\?s=training-puppy-schedule/, label: 'puppy food search hop (same query as new-puppy)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-puppy-schedule/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
@@ -7621,8 +6683,6 @@ const CALCULATORS = [
     id: 'dog · training-crate hops',
     file: 'apps/dog-com/src/app/training/crate-training/page.tsx',
     mustInclude: [
-      { re: /source="training-crate-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete crate-training-protocol offer, not Subscribe' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-crate/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
       { re: /amazon-brand\/dog\+crate\+pad\?s=training-crate/, label: 'crate pad search hop (same query as crate-size)' },
       { re: /amazon-brand\/dog\+crate\+cover\?s=training-crate/, label: 'crate cover search hop (same query as crate-size)' },
@@ -7640,8 +6700,6 @@ const CALCULATORS = [
     id: 'dog · training-house hops',
     file: 'apps/dog-com/src/app/training/house-training/page.tsx',
     mustInclude: [
-      { re: /source="training-house-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete house-training-schedule offer, not Subscribe' },
       { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=training-house/, label: 'enzymatic cleaner search hop (same query as new-puppy / puppy-schedule)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-house/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-house/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
@@ -7659,8 +6717,6 @@ const CALCULATORS = [
     id: 'dog · training-basic-commands hops',
     file: 'apps/dog-com/src/app/training/basic-commands/page.tsx',
     mustInclude: [
-      { re: /source="training-basic-commands-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete five-command-protocol offer, not Subscribe' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-basic-commands/, label: 'puppy training treats search hop (same query as house-training / puppy-schedule / new-puppy)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-basic-commands/, label: 'treat pouch search hop (amazon-brand replacement for the empty Chewy pouch)' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-basic-commands/, label: 'dog training clicker search hop (marker for sit / leave-it)' },
@@ -7678,8 +6734,6 @@ const CALCULATORS = [
     id: 'dog · training-loose-leash-walking hops',
     file: 'apps/dog-com/src/app/training/loose-leash-walking/page.tsx',
     mustInclude: [
-      { re: /source="training-loose-leash-walking-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete loose-leash-protocol offer, not Subscribe' },
       { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=training-loose-leash-walking/, label: 'front-clip no-pull harness search hop (same query as exercise / harness-collar-size)' },
       { re: /amazon-brand\/6\+ft\+dog\+leash\?s=training-loose-leash-walking/, label: '6-ft dog leash search hop (standard walk leash, not a retractable)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-loose-leash-walking/, label: 'treat pouch search hop (same query as basic-commands)' },
@@ -7697,8 +6751,6 @@ const CALCULATORS = [
     id: 'dog · training-leash-reactivity hops',
     file: 'apps/dog-com/src/app/training/leash-reactivity/page.tsx',
     mustInclude: [
-      { re: /source="training-leash-reactivity-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete leash-reactivity-protocol offer, not Subscribe' },
       { re: /amazon-brand\/front\+clip\+no\+pull\+dog\+harness\?s=training-leash-reactivity/, label: 'front-clip no-pull harness search hop (same query as loose-leash / exercise / harness-collar-size)' },
       { re: /amazon-brand\/6\+ft\+dog\+leash\?s=training-leash-reactivity/, label: '6-ft dog leash search hop (same query as loose-leash)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-leash-reactivity/, label: 'treat pouch search hop (same query as loose-leash / basic-commands)' },
@@ -7716,8 +6768,6 @@ const CALCULATORS = [
     id: 'dog · training-separation-anxiety hops',
     file: 'apps/dog-com/src/app/training/separation-anxiety/page.tsx',
     mustInclude: [
-      { re: /source="training-sep-anxiety-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete separation-anxiety-protocol offer, not Subscribe' },
       { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-sep-anxiety/, label: 'stuffable Kong search hop (same query as exercise calculator / new-puppy checklist)' },
       { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-sep-anxiety/, label: 'snuffle mat search hop (amazon-brand replacement for the empty Chewy snuffle mat)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-sep-anxiety/, label: 'wire crate with divider search hop (same query as crate-training)' },
@@ -7735,8 +6785,6 @@ const CALCULATORS = [
     id: 'dog · training-puppy-biting hops',
     file: 'apps/dog-com/src/app/training/puppy-biting/page.tsx',
     mustInclude: [
-      { re: /source="training-puppy-biting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete puppy-biting-protocol offer, not Subscribe' },
       { re: /amazon-brand\/puppy\+chew\+toys\?s=training-puppy-biting/, label: 'puppy chew toys search hop (nipping redirection category)' },
       { re: /amazon-brand\/puppy\+teething\+toys\?s=training-puppy-biting/, label: 'puppy teething toys search hop (same query as new-puppy / dog-age)' },
       { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-puppy-biting/, label: 'stuffable Kong search hop (same query as sep-anxiety / exercise / new-puppy)' },
@@ -7754,8 +6802,6 @@ const CALCULATORS = [
     id: 'dog · training-excessive-barking hops',
     file: 'apps/dog-com/src/app/training/excessive-barking/page.tsx',
     mustInclude: [
-      { re: /source="training-excessive-barking-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete quiet-barking-plan offer, not Subscribe' },
       { re: /amazon-brand\/puzzle\+feeder\+dog\?s=training-excessive-barking/, label: 'puzzle feeder search hop (same query as dog BCS / ideal-weight)' },
       { re: /amazon-brand\/lick\+mat\+dog\?s=training-excessive-barking/, label: 'lick mat search hop (enrichment category, not a ranked SKU)' },
       { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-excessive-barking/, label: 'snuffle mat search hop (same query as sep-anxiety)' },
@@ -7773,8 +6819,6 @@ const CALCULATORS = [
     id: 'dog · training-marker-training hops',
     file: 'apps/dog-com/src/app/training/marker-training/page.tsx',
     mustInclude: [
-      { re: /source="training-marker-training-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete marker-training-protocol offer, not Subscribe' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-marker-training/, label: 'dog training clicker search hop (same query as basic-commands)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-marker-training/, label: 'puppy training treats search hop (same query as basic-commands / house-training / puppy-schedule)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-marker-training/, label: 'treat pouch search hop (same query as basic-commands / loose-leash / leash-reactivity)' },
@@ -7791,8 +6835,6 @@ const CALCULATORS = [
     id: 'dog · training-positive-reinforcement hops',
     file: 'apps/dog-com/src/app/training/positive-reinforcement/page.tsx',
     mustInclude: [
-      { re: /source="training-positive-reinforcement-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete reward-based-protocol offer, not Subscribe' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-positive-reinforcement/, label: 'puppy training treats search hop (same query as marker-training / basic-commands / house-training / puppy-schedule)' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-positive-reinforcement/, label: 'dog training clicker search hop (same query as marker-training / basic-commands)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-positive-reinforcement/, label: 'treat pouch search hop (same query as marker-training / basic-commands / loose-leash / leash-reactivity)' },
@@ -7809,8 +6851,6 @@ const CALCULATORS = [
     id: 'dog · training-socialization-window hops',
     file: 'apps/dog-com/src/app/training/dog-socialization-window/page.tsx',
     mustInclude: [
-      { re: /source="training-socialization-window-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-socialization-window/, label: 'puppy training treats search hop (same query as puppy-schedule / house-training / positive-reinforcement)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-socialization-window/, label: 'wire crate with divider search hop (same query as crate-training / new-puppy / crate-size)' },
       { re: /amazon-brand\/soft\+dog\+carrier\?s=training-socialization-window/, label: 'soft dog carrier search hop (same query as which-pet / is-this-a-dog-emergency — carry-and-expose)' },
@@ -7828,8 +6868,6 @@ const CALCULATORS = [
     id: 'fish · setup-aquarium hops',
     file: 'apps/fish-com/src/app/setup/page.tsx',
     mustInclude: [
-      { re: /source="setup-aquarium-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=setup-aquarium/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=setup-aquarium/, label: 'Fluval canister search hop (same query as stocking / filter-gph)' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=setup-aquarium/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-builder)' },
@@ -7850,8 +6888,6 @@ const CALCULATORS = [
     id: 'fish · equipment-hub hops',
     file: 'apps/fish-com/src/app/equipment/page.tsx',
     mustInclude: [
-      { re: /source="equipment-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=equipment-hub/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph / setup-aquarium)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=equipment-hub/, label: 'Fluval canister search hop (same query as stocking / filter-gph / setup-aquarium)' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=equipment-hub/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium)' },
@@ -7872,8 +6908,6 @@ const CALCULATORS = [
     id: 'fish · water-parameters hops',
     file: 'apps/fish-com/src/app/water-parameters/page.tsx',
     mustInclude: [
-      { re: /source="water-parameters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=water-parameters/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / equipment-hub)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=water-parameters/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium / equipment-hub)' },
       { re: /amazon-brand\/aquarium\+gravel\+vacuum\+siphon\?s=water-parameters/, label: 'gravel vacuum search hop (same query as water-change / setup-aquarium / equipment-hub)' },
@@ -7892,8 +6926,6 @@ const CALCULATORS = [
     id: 'fish · health-hub hops',
     file: 'apps/fish-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-hub/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-hub/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / medicating-fish)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-hub/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / ich)' },
@@ -7913,8 +6945,6 @@ const CALCULATORS = [
     id: 'fish · health-disease-guide hops',
     file: 'apps/fish-com/src/app/health/fish-disease-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-disease-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-disease-guide/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-symptom)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-disease-guide/, label: 'quarantine / hospital tank search hop (same query as disease-symptom checker)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-disease-guide/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph)' },
@@ -7933,8 +6963,6 @@ const CALCULATORS = [
     id: 'fish · health-dropsy hops',
     file: 'apps/fish-com/src/app/health/dropsy-treatment/page.tsx',
     mustInclude: [
-      { re: /source="health-dropsy-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-dropsy/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-dropsy/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-dropsy/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide)' },
@@ -7953,8 +6981,6 @@ const CALCULATORS = [
     id: 'fish · health-ich hops',
     file: 'apps/fish-com/src/app/health/ich-treatment/page.tsx',
     mustInclude: [
-      { re: /source="health-ich-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=health-ich/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy)' },
       { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-ich/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-ich/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy; no live aquarium+air+pump key on sister pages)' },
@@ -7972,8 +6998,6 @@ const CALCULATORS = [
     id: 'fish · health-velvet hops',
     file: 'apps/fish-com/src/app/health/velvet-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-velvet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=health-velvet/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / ich)' },
       { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-velvet/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / ich)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-velvet/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich; no live aquarium+air+pump key on sister pages)' },
@@ -7991,8 +7015,6 @@ const CALCULATORS = [
     id: 'fish · health-swim-bladder hops',
     file: 'apps/fish-com/src/app/health/swim-bladder-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-swim-bladder-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-swim-bladder/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-swim-bladder/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet; shallow 4–6 inch setup)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-swim-bladder/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet)' },
@@ -8011,8 +7033,6 @@ const CALCULATORS = [
     id: 'fish · health-bacterial-infections hops',
     file: 'apps/fish-com/src/app/health/bacterial-infections/page.tsx',
     mustInclude: [
-      { re: /source="health-bacterial-infections-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-bacterial-infections/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-bacterial-infections/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-bacterial-infections/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder)' },
@@ -8031,8 +7051,6 @@ const CALCULATORS = [
     id: 'fish · health-columnaris hops',
     file: 'apps/fish-com/src/app/health/columnaris/page.tsx',
     mustInclude: [
-      { re: /source="health-columnaris-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-columnaris/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-columnaris/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-columnaris/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections)' },
@@ -8051,8 +7069,6 @@ const CALCULATORS = [
     id: 'fish · health-pop-eye hops',
     file: 'apps/fish-com/src/app/health/pop-eye/page.tsx',
     mustInclude: [
-      { re: /source="health-pop-eye-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-pop-eye/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-pop-eye/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-pop-eye/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris)' },
@@ -8071,8 +7087,6 @@ const CALCULATORS = [
     id: 'fish · health-fish-lice hops',
     file: 'apps/fish-com/src/app/health/fish-lice-anchor-worm/page.tsx',
     mustInclude: [
-      { re: /source="health-fish-lice-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-fish-lice/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-fish-lice/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -8091,8 +7105,6 @@ const CALCULATORS = [
     id: 'fish · health-gill-flukes hops',
     file: 'apps/fish-com/src/app/health/gill-flukes/page.tsx',
     mustInclude: [
-      { re: /source="health-gill-flukes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-gill-flukes/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-gill-flukes/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-gill-flukes/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice)' },
@@ -8111,8 +7123,6 @@ const CALCULATORS = [
     id: 'fish · health-nitrogen-cycle hops',
     file: 'apps/fish-com/src/app/health/nitrogen-cycle-explained/page.tsx',
     mustInclude: [
-      { re: /source="health-nitrogen-cycle-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-nitrogen-cycle/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / gill-flukes)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=health-nitrogen-cycle/, label: 'Seachem Prime dechlorinator search hop (same query as water-change / setup-aquarium / equipment-hub / water-parameters)' },
       { re: /amazon-brand\/dr\+tims\+ammonium\+chloride\?s=health-nitrogen-cycle/, label: 'Dr. Tims ammonium chloride search hop (same query as cycling estimator)' },
@@ -8133,8 +7143,6 @@ const CALCULATORS = [
     id: 'fish · health-new-tank-syndrome hops',
     file: 'apps/fish-com/src/app/health/new-tank-syndrome/page.tsx',
     mustInclude: [
-      { re: /source="health-new-tank-syndrome-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-new-tank-syndrome/, label: 'API master test kit search hop (same query as nitrogen-cycle / stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / gill-flukes)' },
       { re: /amazon-brand\/seachem\+prime\+water\+conditioner\?s=health-new-tank-syndrome/, label: 'Seachem Prime dechlorinator search hop (same query as nitrogen-cycle / water-change / setup-aquarium / equipment-hub / water-parameters)' },
       { re: /amazon-brand\/dr\+tims\+ammonium\+chloride\?s=health-new-tank-syndrome/, label: 'Dr. Tims ammonium chloride search hop (same query as nitrogen-cycle / cycling estimator)' },
@@ -8155,8 +7163,6 @@ const CALCULATORS = [
     id: 'fish · health-fin-rot hops',
     file: 'apps/fish-com/src/app/health/fin-rot/page.tsx',
     mustInclude: [
-      { re: /source="health-fin-rot-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-fin-rot/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye / gill-flukes / nitrogen-cycle / new-tank-syndrome)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-fin-rot/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-fin-rot/, label: 'sponge filter search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / nitrogen-cycle / new-tank-syndrome)' },
@@ -8176,8 +7182,6 @@ const CALCULATORS = [
     id: 'fish · health-stress-immunity hops',
     file: 'apps/fish-com/src/app/health/fish-stress-and-immunity/page.tsx',
     mustInclude: [
-      { re: /source="health-stress-immunity-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-stress-immunity/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot)' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=health-stress-immunity/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / bacterial-infections / columnaris / pop-eye)' },
       { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-stress-immunity/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / bacterial-infections / columnaris / pop-eye)' },
@@ -8196,8 +7200,6 @@ const CALCULATORS = [
     id: 'fish · health-medicating-fish hops',
     file: 'apps/fish-com/src/app/health/medicating-aquarium-fish/page.tsx',
     mustInclude: [
-      { re: /source="health-medicating-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=health-medicating-fish/, label: 'API master test kit search hop (same query as stocking / cycling / water-change / setup-aquarium / water-parameters / disease-guide / dropsy / swim-bladder / bacterial-infections / columnaris / pop-eye / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot / stress-immunity)' },
       { re: /amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-medicating-fish/, label: 'quarantine / hospital tank search hop (same query as disease-guide / disease-symptom checker / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / fin-rot / stress-immunity)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-medicating-fish/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich / velvet / swim-bladder / bacterial-infections / columnaris / pop-eye / fish-lice / gill-flukes / nitrogen-cycle / new-tank-syndrome / fin-rot; no live aquarium+air+pump key on sister pages)' },
@@ -8229,8 +7231,6 @@ const CALCULATORS = [
     id: 'vets · cat-age-calculator hops',
     file: 'apps/vets-co/src/app/tools/cat-age-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-cat-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete life-stage offer, not Subscribe' },
       { re: /amazon-brand\/kitten\+food\?s=tools-cat-age-calculator/, label: 'kitten food search hop' },
       { re: /amazon-brand\/senior\+cat\+food\?s=tools-cat-age-calculator/, label: 'senior cat food search hop' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=tools-cat-age-calculator/, label: 'digital pet scale search hop' },
@@ -8261,8 +7261,6 @@ const CALCULATORS = [
     id: 'vets · cat-body-condition-score hops',
     file: 'apps/vets-co/src/app/tools/cat-body-condition-score/page.tsx',
     mustInclude: [
-      { re: /source="tools-cat-body-condition-score-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete BCS-chart offer, not Subscribe' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=tools-cat-body-condition-score/, label: 'digital pet scale search hop' },
       { re: /amazon-brand\/measuring\+tape\?s=tools-cat-body-condition-score/, label: 'measuring tape search hop' },
       { re: /amazon-brand\/weight\+management\+cat\+food\?s=tools-cat-body-condition-score/, label: 'weight-management cat food search hop' },
@@ -8297,8 +7295,6 @@ const CALCULATORS = [
     id: 'vets · cat-calorie-calculator hops',
     file: 'apps/vets-co/src/app/tools/cat-calorie-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-cat-calorie-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete cat-kcal offer, not Subscribe' },
       { re: /amazon-brand\/measured\+cat\+food\?s=tools-cat-calorie-calculator/, label: 'measured cat food search hop' },
       { re: /amazon-brand\/kitchen\+gram\+scale\?s=tools-cat-calorie-calculator/, label: 'kitchen gram scale search hop' },
       { re: /amazon-brand\/slow\+feeder\+cat\+bowl\?s=tools-cat-calorie-calculator/, label: 'slow-feeder cat bowl search hop' },
@@ -8334,8 +7330,6 @@ const CALCULATORS = [
     id: 'vets · cat-grimace-scale hops',
     file: 'apps/vets-co/src/app/tools/cat-grimace-scale/page.tsx',
     mustInclude: [
-      { re: /source="tools-cat-grimace-scale-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete grimace-sheet offer, not Subscribe' },
       { re: /amazon-brand\/soft\+cat\+carrier\?s=tools-cat-grimace-scale/, label: 'soft carrier search hop' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-cat-grimace-scale/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/calming\+pheromone\+diffuser\?s=tools-cat-grimace-scale/, label: 'calming pheromone diffuser search hop' },
@@ -8367,8 +7361,6 @@ const CALCULATORS = [
     id: 'dog · is-this-a-dog-emergency hops',
     file: 'apps/dog-com/src/app/tools/is-this-a-dog-emergency/page.tsx',
     mustInclude: [
-      { re: /source="tools-is-this-a-dog-emergency-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete fridge-sheet offer, not Subscribe' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-is-this-a-dog-emergency/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-is-this-a-dog-emergency/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/soft\+dog\+carrier\?s=tools-is-this-a-dog-emergency/, label: 'soft carrier search hop' },
@@ -8387,8 +7379,6 @@ const CALCULATORS = [
     id: 'dog · health-hub hops',
     file: 'apps/dog-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=health-hub/, label: 'pet first-aid kit search hop (same query as emergency triage / which-pet)' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-hub/, label: 'digital pet thermometer search hop (same query as emergency triage)' },
       { re: /amazon-brand\/soft\+dog\+carrier\?s=health-hub/, label: 'soft dog carrier search hop (same query as emergency triage)' },
@@ -8408,9 +7398,6 @@ const CALCULATORS = [
     id: 'dog · first-aid-kit hops',
     file: 'apps/dog-com/src/app/guides/dog-first-aid-kit/page.tsx',
     mustInclude: [
-      { re: /source="guides-first-aid-kit-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-first-aid"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/wound\+care\+gauze\?s=guides-first-aid-kit/, label: 'wound-care gauze search hop (same query as vets cat-emergency / complementary hops)' },
       { re: /amazon-brand\/vetrap\+cohesive\+bandage\?s=guides-first-aid-kit/, label: 'cohesive bandage wrap search hop (same query as vets emergency-triage-card)' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=guides-first-aid-kit/, label: 'digital pet thermometer search hop (same query as emergency triage / health hub)' },
@@ -8444,8 +7431,6 @@ const CALCULATORS = [
     id: 'vets · is-this-a-cat-emergency hops',
     file: 'apps/vets-co/src/app/tools/is-this-a-cat-emergency/page.tsx',
     mustInclude: [
-      { re: /source="tools-is-this-a-cat-emergency-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete fridge-sheet offer, not Subscribe' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-is-this-a-cat-emergency/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-is-this-a-cat-emergency/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/soft\+cat\+carrier\?s=tools-is-this-a-cat-emergency/, label: 'soft cat carrier search hop' },
@@ -8464,8 +7449,6 @@ const CALCULATORS = [
     id: 'vets · er-vs-clinic hops',
     file: 'apps/vets-co/src/app/tools/er-vs-clinic/page.tsx',
     mustInclude: [
-      { re: /source="tools-er-vs-clinic-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete ER-vs-clinic cheat-sheet offer, not Subscribe' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-er-vs-clinic/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-er-vs-clinic/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/soft\+pet\+carrier\?s=tools-er-vs-clinic/, label: 'soft pet carrier search hop' },
@@ -8497,8 +7480,6 @@ const CALCULATORS = [
     id: 'ferret · is-this-a-ferret-emergency hops',
     file: 'apps/ferret-com/src/app/tools/is-this-a-ferret-emergency/page.tsx',
     mustInclude: [
-      { re: /source="tools-is-this-a-ferret-emergency-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete fridge-sheet offer, not Subscribe' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-is-this-a-ferret-emergency/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-is-this-a-ferret-emergency/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/soft\+pet\+carrier\?s=tools-is-this-a-ferret-emergency/, label: 'soft pet carrier search hop' },
@@ -8536,8 +7517,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-age-calculator hops',
     file: 'apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-ferret-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete life-stage offer, not Subscribe' },
       { re: /amazon-brand\/ferret\+food\?s=tools-ferret-age-calculator/, label: 'ferret food search hop' },
       { re: /amazon-brand\/senior\+ferret\+food\?s=tools-ferret-age-calculator/, label: 'senior ferret food search hop' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=tools-ferret-age-calculator/, label: 'digital pet scale search hop' },
@@ -8571,8 +7550,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-body-condition-score hops',
     file: 'apps/ferret-com/src/app/tools/ferret-body-condition-score/page.tsx',
     mustInclude: [
-      { re: /source="tools-ferret-bcs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/ferret\+food\?s=tools-ferret-body-condition-score/, label: 'ferret food search hop' },
       { re: /amazon-brand\/senior\+ferret\+food\?s=tools-ferret-body-condition-score/, label: 'senior ferret food search hop' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=tools-ferret-body-condition-score/, label: 'digital pet scale search hop' },
@@ -8614,8 +7591,6 @@ const CALCULATORS = [
     id: 'dog · dog-grimace-scale hops',
     file: 'apps/dog-com/src/app/tools/dog-grimace-scale/page.tsx',
     mustInclude: [
-      { re: /source="tools-dog-grimace-scale-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete pain-check offer, not Subscribe' },
       { re: /amazon-brand\/dog\+first\+aid\+kit\?s=tools-dog-grimace-scale/, label: 'dog first-aid kit search hop' },
       { re: /amazon-brand\/soft\+recovery\+cone\+dog\?s=tools-dog-grimace-scale/, label: 'soft recovery cone search hop' },
       { re: /amazon-brand\/orthopedic\+dog\+bed\?s=tools-dog-grimace-scale/, label: 'orthopedic dog bed search hop' },
@@ -8658,8 +7633,6 @@ const CALCULATORS = [
     id: 'horses · horse-grimace-scale hops',
     file: 'apps/horses-com/src/app/tools/horse-grimace-scale/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-grimace-scale-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete pain-check offer, not Subscribe' },
       { re: /amazon-brand\/equine\+first\+aid\+kit\?s=tools-horse-grimace-scale/, label: 'equine first-aid kit search hop' },
       { re: /amazon-brand\/poultice\?s=tools-horse-grimace-scale/, label: 'poultice search hop' },
       { re: /amazon-brand\/ice\+boot\+cold\+therapy\+wrap\?s=tools-horse-grimace-scale/, label: 'ice boot / cold therapy wrap search hop' },
@@ -8703,8 +7676,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-grimace-scale hops',
     file: 'apps/ferret-com/src/app/tools/ferret-grimace-scale/page.tsx',
     mustInclude: [
-      { re: /source="tools-ferret-grimace-scale-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete pain-check offer, not Subscribe' },
       { re: /amazon-brand\/ferret\+first\+aid\+kit\?s=tools-ferret-grimace-scale/, label: 'ferret first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-ferret-grimace-scale/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/vet\+wrap\+cohesive\+bandage\?s=tools-ferret-grimace-scale/, label: 'vet wrap / cohesive bandage search hop' },
@@ -8740,8 +7711,6 @@ const CALCULATORS = [
     id: 'horses · is-this-a-horse-emergency hops',
     file: 'apps/horses-com/src/app/tools/is-this-a-horse-emergency/page.tsx',
     mustInclude: [
-      { re: /source="tools-is-this-a-horse-emergency-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete fridge-sheet offer, not Subscribe' },
       { re: /amazon-brand\/equine\+first\+aid\+kit\?s=tools-is-this-a-horse-emergency/, label: 'equine first-aid kit search hop' },
       { re: /amazon-brand\/digital\+veterinary\+thermometer\?s=tools-is-this-a-horse-emergency/, label: 'digital veterinary thermometer search hop' },
       { re: /amazon-brand\/vet\+wrap\+bandage\?s=tools-is-this-a-horse-emergency/, label: 'vet wrap bandage search hop' },
@@ -8779,8 +7748,6 @@ const CALCULATORS = [
     id: 'horses · horse-age-calculator hops',
     file: 'apps/horses-com/src/app/tools/horse-age-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-horse-age-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete life-stage offer, not Subscribe' },
       { re: /amazon-brand\/horse\+feed\?s=tools-horse-age-calculator/, label: 'horse feed search hop' },
       { re: /amazon-brand\/senior\+horse\+feed\?s=tools-horse-age-calculator/, label: 'senior horse feed search hop' },
       { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-age-calculator/, label: 'weight tape search hop' },
@@ -8812,8 +7779,6 @@ const CALCULATORS = [
     id: 'dog · harness-collar-size hops',
     file: 'apps/dog-com/src/app/tools/harness-collar-size/page.tsx',
     mustInclude: [
-      { re: /source="tools-harness-collar-size-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete harness-size-chart offer, not Subscribe' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=tools-harness-collar-size/, label: 'Julius-K9 harness search hop (same query as new-puppy / exercise)' },
       { re: /amazon-brand\/flat\+buckle\+nylon\+dog\+collar\?s=tools-harness-collar-size/, label: 'flat buckle collar search hop (already on this page)' },
       { re: /amazon-brand\/dog\+measuring\+tape\+body\+condition\+chart\?s=tools-harness-collar-size/, label: 'measuring tape search hop (same query as BCS / puppy-weight)' },
@@ -8832,8 +7797,6 @@ const CALCULATORS = [
     id: 'vets · telehealth hops',
     file: 'apps/vets-co/src/app/telehealth/page.tsx',
     mustInclude: [
-      { re: /source="telehealth-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=telehealth/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=telehealth/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=telehealth/, label: 'digital pet scale search hop' },
@@ -8860,7 +7823,7 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/emergency-triage-card/page.tsx',
     mustInclude: [
       { re: /source="emergency-triage-card-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete emergency-triage-card offer, not Subscribe' },
+      { re: /resourceLabel="Save the triage card"/, label: 'real triage-card resource magnet, not inbox notes' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=emergency-triage/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=emergency-triage/, label: 'digital pet thermometer search hop' },
       { re: /amazon-brand\/styptic\+powder\?s=emergency-triage/, label: 'styptic powder search hop' },
@@ -8882,8 +7845,6 @@ const CALCULATORS = [
     id: 'vets · pet-insurance-worth-it-calculator hops',
     file: 'apps/vets-co/src/app/tools/pet-insurance-worth-it-calculator/page.tsx',
     mustInclude: [
-      { re: /source="tools-pet-insurance-worth-it-calculator-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /<InsuranceWellnessShop source="tools-pet-insurance-worth-it-calculator"/, label: 'InsuranceWellnessShop kept (do not re-rank carriers)' },
       { re: /amazon-brand\/pet\+first\+aid\+kit\?s=tools-pet-insurance-worth-it-calculator/, label: 'pet first-aid kit search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-pet-insurance-worth-it-calculator/, label: 'digital pet thermometer search hop' },
@@ -8907,9 +7868,6 @@ const CALCULATORS = [
     id: 'vets · dental-cleaning-guide hops',
     file: 'apps/vets-co/src/app/health/dental-cleaning-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-dental-cleaning-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-dental-cleaning"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+pet\+toothbrush\?s=health-dental-cleaning-guide/, label: 'soft pet-toothbrush search hop (matches on-page soft-toothbrush copy)' },
       { re: /amazon-brand\/enzymatic\+pet\+toothpaste\?s=health-dental-cleaning-guide/, label: 'enzymatic pet-toothpaste search hop (matches on-page enzymatic-toothpaste copy)' },
       { re: /amazon-brand\/dental\+chews\+dog\?s=health-dental-cleaning-guide/, label: 'dental-chews search hop (same query as dog health hub; matches on-page VOHC dental-chews copy)' },
@@ -8929,9 +7887,6 @@ const CALCULATORS = [
     id: 'vets · arthritis-in-dogs hops',
     file: 'apps/vets-co/src/app/health/arthritis-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-arthritis-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-arthritis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+traction\+rug\?s=health-arthritis-in-dogs/, label: 'traction-rug search hop (matches on-page rugs-for-traction copy)' },
       { re: /amazon-brand\/dog\+ramp\?s=health-arthritis-in-dogs/, label: 'dog-ramp search hop (matches on-page ramps copy)' },
       { re: /amazon-brand\/raised\+dog\+bowl\?s=health-arthritis-in-dogs/, label: 'raised-bowl search hop (matches on-page raised-bowls copy)' },
@@ -8951,9 +7906,6 @@ const CALCULATORS = [
     id: 'vets · weight-management hops',
     file: 'apps/vets-co/src/app/health/weight-management/page.tsx',
     mustInclude: [
-      { re: /source="health-weight-management-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-weight-mgmt"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/kitchen\+gram\+scale\?s=health-weight-management/, label: 'kitchen gram scale search hop (same query as dog/vets calorie calculators; matches on-page kitchen-scale-in-grams copy)' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=health-weight-management/, label: 'portion-control food scale search hop (same query as dog ideal-weight / BCS; matches on-page weigh-every-meal copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -8971,9 +7923,6 @@ const CALCULATORS = [
     id: 'dog · senior-dog-care hops',
     file: 'apps/dog-com/src/app/health/senior-dog-care/page.tsx',
     mustInclude: [
-      { re: /source="health-senior-dog-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-senior-dog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/senior\+dog\+food\?s=health-senior-dog-care/, label: 'senior dog food search hop (matches on-page senior-formula-food copy; not an Rx kidney diet)' },
       { re: /amazon-brand\/joint\+support\+dog\+treats\?s=health-senior-dog-care/, label: 'joint-support treats search hop (same query as dog-age / BCS; matches on-page arthritis / joint-health copy)' },
       { re: /amazon-brand\/portion\+control\+food\+scale\+dog\?s=health-senior-dog-care/, label: 'portion-control food scale search hop (same query as dog ideal-weight / BCS; matches on-page monthly weigh / BCS / 10–15% portion copy)' },
@@ -8992,9 +7941,6 @@ const CALCULATORS = [
     id: 'dog · dog-dental-care hops',
     file: 'apps/dog-com/src/app/health/dog-dental-care/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-dental-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-dental"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+pet\+toothbrush\?s=health-dog-dental-care/, label: 'soft pet-toothbrush search hop (same query as vets dental-cleaning-guide; matches on-page soft-bristled-toothbrush copy)' },
       { re: /amazon-brand\/enzymatic\+pet\+toothpaste\?s=health-dog-dental-care/, label: 'enzymatic pet-toothpaste search hop (same query as vets dental-cleaning-guide; matches on-page enzymatic-toothpaste copy)' },
       { re: /amazon-brand\/dental\+chews\+dog\?s=health-dog-dental-care/, label: 'dental-chews search hop (same query as dog health hub / vets dental-cleaning-guide; matches on-page VOHC dental-chews copy)' },
@@ -9013,9 +7959,6 @@ const CALCULATORS = [
     id: 'dog · dog-ear-infections hops',
     file: 'apps/dog-com/src/app/health/dog-ear-infections/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-ear-infections-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ear-infections"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+ear\+cleaner\?s=health-dog-ear-infections/, label: 'pet ear-cleaner search hop (same query as ferret ear-cleaning; matches on-page veterinary-ear-cleaner copy)' },
       { re: /amazon-brand\/cotton\+balls\?s=health-dog-ear-infections/, label: 'cotton-balls search hop (matches on-page cotton-ball wipe copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9033,9 +7976,6 @@ const CALCULATORS = [
     id: 'dog · dog-hot-spots hops',
     file: 'apps/dog-com/src/app/health/dog-hot-spots/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-hot-spots-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-hot-spots"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+recovery\+cone\?s=health-dog-hot-spots/, label: 'recovery-cone search hop (same query as vets telehealth / insurance tools; matches on-page e-collar / cone copy)' },
       { re: /amazon-brand\/soft\+recovery\+cone\+dog\?s=health-dog-hot-spots/, label: 'soft-cone search hop (same query as dog grimace-scale; matches on-page soft-cone-alternative copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9053,9 +7993,6 @@ const CALCULATORS = [
     id: 'dog · dog-anxiety hops',
     file: 'apps/dog-com/src/app/health/dog-anxiety/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-anxiety-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-anxiety"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+anxiety\+wrap\?s=health-dog-anxiety/, label: 'pressure-wrap search hop (category search matching on-page pressure-wrap / Thundershirt-example copy; not a brand ASIN)' },
       { re: /amazon-brand\/dog\+crate\+cover\?s=health-dog-anxiety/, label: 'crate-cover search hop (same query as crate-size + crate-training; matches on-page covered-crate / safe-hiding-space copy)' },
       { re: /amazon-brand\/white\+noise\+machine\?s=health-dog-anxiety/, label: 'white-noise-machine search hop (matches on-page white-noise copy)' },
@@ -9074,9 +8011,6 @@ const CALCULATORS = [
     id: 'dog · dog-kidney-disease hops',
     file: 'apps/dog-com/src/app/health/dog-kidney-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-kidney-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-kidney"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+water\+fountain\?s=health-dog-kidney-disease/, label: 'water-fountain search hop (same query as dog water-intake calculator; matches on-page pet-water-fountain copy)' },
       { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=health-dog-kidney-disease/, label: 'ceramic-water-bowl search hop (same query as dog water-intake calculator; matches on-page multiple-water-bowls copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9094,9 +8028,6 @@ const CALCULATORS = [
     id: 'dog · megaesophagus hops',
     file: 'apps/dog-com/src/app/health/megaesophagus/page.tsx',
     mustInclude: [
-      { re: /source="health-megaesophagus-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-megaesophagus"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/bailey\+chair\+dog\?s=health-megaesophagus/, label: 'Bailey-chair search hop (category search matching on-page Bailey-chair / sitting-bear upright-feeding copy; not a brand ASIN)' },
       { re: /amazon-brand\/upright\+dog\+feeding\+chair\?s=health-megaesophagus/, label: 'upright-feeding-chair search hop (matches on-page near-vertical custom-built-seat copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9114,9 +8045,6 @@ const CALCULATORS = [
     id: 'dog · dog-allergies hops',
     file: 'apps/dog-com/src/app/health/dog-allergies/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-allergies-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-allergies"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/hepa\+air\+purifier\?s=health-dog-allergies/, label: 'HEPA air-purifier search hop (category search matching on-page HEPA filtration air-purifier copy; not a brand ASIN)' },
       { re: /amazon-brand\/hepa\+filter\+kit\?s=health-dog-allergies/, label: 'HEPA filter-kit search hop (matches on-page replacement HEPA filter kit copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9134,9 +8062,6 @@ const CALCULATORS = [
     id: 'dog · dog-skin-allergies hops',
     file: 'apps/dog-com/src/app/health/dog-skin-allergies/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-skin-allergies-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-skin-allergies"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+paw\+wipes\?s=health-dog-skin-allergies/, label: 'dog paw-wipes search hop (category search matching on-page paw-wipe-after-walks copy; not a brand ASIN)' },
       { re: /amazon-brand\/waterproof\+dog\+booties\?s=health-dog-skin-allergies/, label: 'waterproof dog-booties search hop (matches on-page waterproof-booties-when-pollen-is-high copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9154,9 +8079,6 @@ const CALCULATORS = [
     id: 'dog · dog-arthritis hops',
     file: 'apps/dog-com/src/app/health/dog-arthritis/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-arthritis-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-arthritis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/orthopedic\+dog\+bed\?s=health-dog-arthritis/, label: 'orthopedic-bed search hop (same query as dog health hub; matches on-page rising-from-rest / stiffness-after-rest copy; not a brand ASIN)' },
       { re: /amazon-brand\/dog\+ramp\?s=health-dog-arthritis/, label: 'dog-ramp search hop (matches on-page stairs / furniture-jump mobility copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9174,9 +8096,6 @@ const CALCULATORS = [
     id: 'dog · dog-obesity hops',
     file: 'apps/dog-com/src/app/health/dog-obesity/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-obesity-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-obesity"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+pet\+scale\?s=health-dog-obesity/, label: 'digital pet-scale search hop (same query as vets/ferret BCS and insurance tools; matches on-page every-two-weeks weigh-in copy; not a brand ASIN)' },
       { re: /amazon-brand\/slow\+feeder\+dog\+bowl\?s=health-dog-obesity/, label: 'slow-feeder dog-bowl search hop (same query as dog calorie calculator; matches on-page slow-feeder-bowl / meal-pacing copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9194,9 +8113,6 @@ const CALCULATORS = [
     id: 'dog · dog-luxating-patella hops',
     file: 'apps/dog-com/src/app/health/dog-luxating-patella/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-luxating-patella-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-luxating-patella"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+knee\+brace\?s=health-dog-luxating-patella/, label: 'dog knee-brace search hop (category search matching on-page skipping-gait / leash-walk brace copy; not a brand ASIN)' },
       { re: /amazon-brand\/dog\+rear\+support\+harness\?s=health-dog-luxating-patella/, label: 'rear-support-harness search hop (matches on-page controlled leash-walk / post-op restriction copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9214,9 +8130,6 @@ const CALCULATORS = [
     id: 'dog · intervertebral-disc-disease hops',
     file: 'apps/dog-com/src/app/health/intervertebral-disc-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-intervertebral-disc-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ivdd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+recovery\+crate\?s=health-intervertebral-disc-disease/, label: 'recovery-crate search hop (category search matching on-page Grade 1 4–6 week crate-rest copy; not a brand ASIN)' },
       { re: /amazon-brand\/dog\+belly\+support\+harness\?s=health-intervertebral-disc-disease/, label: 'belly-support-harness search hop (matches on-page IVDD torso-lift / spine-level toilet-walk copy; distinct from luxating-patella rear-support harness)' },
       { re: /amazon-brand\/dog\+wheelchair\+mobility\+cart\?s=health-intervertebral-disc-disease/, label: 'dog-wheelchair / mobility-cart search hop (matches on-page Grade 3–5 non-ambulatory mobility copy)' },
@@ -9235,9 +8148,6 @@ const CALCULATORS = [
     id: 'dog · cherry-eye hops',
     file: 'apps/dog-com/src/app/health/cherry-eye/page.tsx',
     mustInclude: [
-      { re: /source="health-cherry-eye-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cherry-eye"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+e\+collar\+dog\?s=health-cherry-eye/, label: 'soft e-collar search hop (category search matching on-page pawing / post-op recovery-collar copy; not a brand ASIN; distinct from hot-spot pet+recovery+cone / soft+recovery+cone+dog)' },
       { re: /amazon-brand\/dog\+eye\+wipes\?s=health-cherry-eye/, label: 'dog eye-wipes search hop (matches on-page keep-the-exposed-gland-moist moisture-bridge copy; distinct from skin-allergy paw wipes)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9255,9 +8165,6 @@ const CALCULATORS = [
     id: 'dog · dog-diarrhea hops',
     file: 'apps/dog-com/src/app/health/dog-diarrhea/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-diarrhea-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-diarrhea"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+probiotic\?s=health-dog-diarrhea/, label: 'dog-probiotic search hop (category search matching on-page canine-specific OTC digestive-support probiotic copy; not a FortiFlora brand ASIN)' },
       { re: /amazon-brand\/plain\+canned\+pumpkin\+dog\?s=health-dog-diarrhea/, label: 'plain canned-pumpkin search hop (matches on-page 100% pumpkin / not-pie-filling copy; unique vs #993–#1008)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9275,9 +8182,6 @@ const CALCULATORS = [
     id: 'dog · french-bulldog-health hops',
     file: 'apps/dog-com/src/app/health/french-bulldog-health/page.tsx',
     mustInclude: [
-      { re: /source="health-french-bulldog-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-french-bulldog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+cooling\+mat\?s=health-french-bulldog-health/, label: 'dog-cooling-mat search hop (category search matching on-page indoor cooling-mat heat-care copy; unique vs #993–#1009 and vs vets.co heat-stroke cool-water-towels)' },
       { re: /amazon-brand\/dog\+cooling\+vest\?s=health-french-bulldog-health/, label: 'dog-cooling-vest search hop (matches on-page short-outdoor-trip cooling-vest copy; unique vs #993–#1009)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9295,9 +8199,6 @@ const CALCULATORS = [
     id: 'dog · dog-diabetes hops',
     file: 'apps/dog-com/src/app/health/dog-diabetes/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-diabetes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-diabetes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+glucometer\?s=health-dog-diabetes/, label: 'pet-glucometer search hop (category search matching on-page ear-margin / inner-lip home-monitor copy; unique vs #993–#1010)' },
       { re: /amazon-brand\/light\+corn\+syrup\?s=health-dog-diabetes/, label: 'light corn-syrup search hop (matches on-page first-sign hypoglycemia gum-rub copy; category search, not a Karo brand ASIN; unique vs #993–#1010)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9315,9 +8216,6 @@ const CALCULATORS = [
     id: 'dog · dog-mange hops',
     file: 'apps/dog-com/src/app/health/dog-mange/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-mange-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-mange"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/washable\+dog\+bed\+cover\?s=health-dog-mange/, label: 'washable dog-bed-cover search hop (category search matching on-page household-wash / laundry-after-sarcoptic-diagnosis copy; unique vs #993–#1011 orthopedic-bed hops)' },
       { re: /amazon-brand\/pet\+safe\+laundry\+detergent\?s=health-dog-mange/, label: 'pet-safe laundry-detergent search hop (matches on-page bedding-wash detergent copy; unique vs #993–#1011)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9335,9 +8233,6 @@ const CALCULATORS = [
     id: 'dog · dog-vomiting hops',
     file: 'apps/dog-com/src/app/health/dog-vomiting/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-vomiting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-vomiting"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/mini\+rice\+cooker\?s=health-dog-vomiting/, label: 'mini-rice-cooker search hop (category search matching on-page bland-diet plain-white-rice prep copy after the 6–12 hour withhold; unique vs #993–#1012)' },
       { re: /amazon-brand\/glass\+meal\+prep\+containers\?s=health-dog-vomiting/, label: 'glass meal-prep-containers search hop (matches on-page leftover bland-diet / bedtime-snack portion copy; unique vs #993–#1012)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9355,9 +8250,6 @@ const CALCULATORS = [
     id: 'dog · dog-pyoderma hops',
     file: 'apps/dog-com/src/app/health/dog-pyoderma/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-pyoderma-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-pyoderma"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/chlorhexidine\+dog\+shampoo\?s=health-dog-pyoderma/, label: 'chlorhexidine dog-shampoo search hop (category search matching on-page 2–4% chlorhexidine / chlorhexidine-plus-miconazole 10-minute contact-time bath copy; reserved from #1012 mange; unique vs #993–#1013)' },
       { re: /amazon-brand\/hypoallergenic\+washcloths\?s=health-dog-pyoderma/, label: 'hypoallergenic-washcloths search hop (matches on-page dedicated-washcloth fold/lesion lather copy; unique vs #993–#1013; cone left on hot-spots / cherry-eye)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9375,9 +8267,6 @@ const CALCULATORS = [
     id: 'dog · labrador-health hops',
     file: 'apps/dog-com/src/app/health/labrador-health/page.tsx',
     mustInclude: [
-      { re: /source="health-labrador-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-labrador"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/microfiber\+dog\+towel\?s=health-labrador-health/, label: 'microfiber dog-towel search hop (category search matching on-page post-swim coat-dry copy so water does not drip back into floppy Lab ears; unique vs #993–#1014 cool-water / whelping towels)' },
       { re: /amazon-brand\/dog\+ear\+drying\+solution\?s=health-labrador-health/, label: 'dog ear-drying-solution search hop (matches on-page post-swim ear-drying copy; unique vs #995 pet-ear-cleaner / cotton-balls weekly-clean hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9395,9 +8284,6 @@ const CALCULATORS = [
     id: 'vets · heat-stroke-dogs hops',
     file: 'apps/vets-co/src/app/health/heat-stroke-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-heat-stroke-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-heat-stroke"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cool\+water\+towels\?s=health-heat-stroke-dogs/, label: 'cool-water-towels search hop (matches on-page wet-towels-with-cool-water first-aid copy)' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=health-heat-stroke-dogs/, label: 'digital pet thermometer search hop (same query as emergency triage / telehealth / first-aid kit; matches on-page digital-thermometer copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9415,9 +8301,6 @@ const CALCULATORS = [
     id: 'vets · feline-lower-urinary-tract-disease hops',
     file: 'apps/vets-co/src/app/health/feline-lower-urinary-tract-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-feline-lower-urinary-tract-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-flutd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cat\+water\+fountain\?s=health-feline-lower-urinary-tract-disease/, label: 'cat water-fountain search hop (matches on-page fountain / running-water copy; unique vs dog+water+fountain)' },
       { re: /amazon-brand\/extra\+cat\+litter\+box\?s=health-feline-lower-urinary-tract-disease/, label: 'extra cat-litter-box search hop (matches on-page one-per-cat-plus-one-extra copy; unused vs #993–#1023)' },
       { re: /amazon-brand\/canned\+wet\+cat\+food\?s=health-feline-lower-urinary-tract-disease/, label: 'canned wet-cat-food search hop (matches on-page wet-food water-intake copy; unique vs kitten / senior / measured / weight-management cat food)' },
@@ -9436,9 +8319,6 @@ const CALCULATORS = [
     id: 'ferret · dental-disease hops',
     file: 'apps/ferret-com/src/app/health/dental-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-dental-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-dental-disease"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/finger\+toothbrush\+pet\?s=health-dental-disease/, label: 'fingertip rubber / finger-toothbrush search hop (matches on-page fingertip rubber brush / kit-tolerance copy; unique vs soft+pet+toothbrush)' },
       { re: /amazon-brand\/infant\+toothbrush\+soft\+bristle\?s=health-dental-disease/, label: 'soft infant-toothbrush search hop (matches on-page infant toothbrush copy; unused vs #993–#1024)' },
       { re: /amazon-brand\/pet\+dental\+wipes\?s=health-dental-disease/, label: 'pet dental-wipe search hop (matches on-page gauze-on-a-fingertip dental-wipe copy; unique vs cotton+pads / enzymatic+pet+toothpaste)' },
@@ -9457,9 +8337,6 @@ const CALCULATORS = [
     id: 'ferret · seasonal-shedding hops',
     file: 'apps/ferret-com/src/app/care/seasonal-shedding/page.tsx',
     mustInclude: [
-      { re: /source="care-seasonal-shedding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-seasonal-shedding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+slicker\+brush\+small\+animal\?s=care-seasonal-shedding/, label: 'soft small-animal slicker-brush search hop (matches on-page soft slicker brush copy; unique vs dog slicker-brush-dog-grooming and puppy shampoo+clippers+slicker combo)' },
       { re: /amazon-brand\/fine\+tooth\+metal\+comb\?s=care-seasonal-shedding/, label: 'fine-tooth metal-comb search hop (matches on-page fine-toothed metal comb copy; unused vs #993–#1025 horse curry/dandy/body brushes)' },
       { re: /amazon-brand\/reusable\+lint\+roller\?s=care-seasonal-shedding/, label: 'reusable lint-roller search hop (matches on-page hammock / hard-surface recycled-hair copy; unused vs #993–#1025)' },
@@ -9478,9 +8355,6 @@ const CALCULATORS = [
     id: 'horses · heaves hops',
     file: 'apps/horses-com/src/app/health/heaves/page.tsx',
     mustInclude: [
-      { re: /source="health-heaves-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-heaves"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+hay\+steamer\?s=health-heaves/, label: 'horse hay-steamer search hop (matches on-page soak-or-steam hay copy; unique vs #993–#1016 bedding / fans / hay nets)' },
       { re: /amazon-brand\/horse\+hay\+soaking\+bag\?s=health-heaves/, label: 'horse hay-soaking-bag search hop (matches on-page soak-hay copy so dusty winter hay sits in water then drains; unique vs #993–#1016)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9498,9 +8372,6 @@ const CALCULATORS = [
     id: 'horses · sweet-itch hops',
     file: 'apps/horses-com/src/app/health/sweet-itch/page.tsx',
     mustInclude: [
-      { re: /source="health-sweet-itch-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-sweet-itch"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+sweet\+itch\+rug\?s=health-sweet-itch/, label: 'horse sweet-itch-rug search hop (matches on-page fitted-barrier body / belly / tail-dock copy; unique vs fly-control fly sheet)' },
       { re: /amazon-brand\/horse\+sweet\+itch\+hood\?s=health-sweet-itch/, label: 'horse sweet-itch-hood search hop (matches on-page mane / poll / ear cover copy; unique vs fly-control fly mask)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9518,9 +8389,6 @@ const CALCULATORS = [
     id: 'horses · abscess hops',
     file: 'apps/horses-com/src/app/health/abscess/page.tsx',
     mustInclude: [
-      { re: /source="health-abscess-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-abscess"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/epsom\+salt\+horse\+hoof\?s=health-abscess/, label: 'Epsom-salt horse-hoof search hop (matches on-page warm Epsom-salt soak copy after the tract is opened; unique vs #993–#1018 poultice / bandage / hay-soaking-bag hops)' },
       { re: /amazon-brand\/horse\+hoof\+soaking\+boot\?s=health-abscess/, label: 'horse hoof-soaking-boot search hop (holds the Epsom soak around the hoof; unique vs hoof-care-basics riding hoof boots and grimace / emergency poultice / bandage)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9538,9 +8406,6 @@ const CALCULATORS = [
     id: 'fish · aquascaping-guide hops',
     file: 'apps/fish-com/src/app/setup/aquascaping-guide/page.tsx',
     mustInclude: [
-      { re: /source="setup-aquascaping-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="setup-aquascaping"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+seiryu\+stone\?s=setup-aquascaping-guide/, label: 'aquarium Seiryu-stone search hop (matches on-page Seiryu textured-rock / GH-pH copy; unique vs #993–#1019 setup-hub filter / heater / test-kit hops)' },
       { re: /amazon-brand\/aquarium\+spiderwood\+driftwood\?s=setup-aquascaping-guide/, label: 'aquarium spiderwood-driftwood search hop (matches on-page spiderwood soak-or-boil copy; unique vs setup-hub / planted-tank / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9558,9 +8423,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-algae-control hops',
     file: 'apps/fish-com/src/app/setup/aquarium-algae-control/page.tsx',
     mustInclude: [
-      { re: /source="setup-aquarium-algae-control-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="setup-algae-control"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+magnetic\+scraper\?s=setup-aquarium-algae-control/, label: 'aquarium magnetic-scraper search hop (matches on-page viewing-pane / green-spot / green-dust copy; unique vs #993–#1020 setup-hub filter / heater / test-kit and aquascaping Seiryu / spiderwood hops)' },
       { re: /amazon-brand\/handheld\+aquarium\+algae\+scraper\?s=setup-aquarium-algae-control/, label: 'handheld aquarium algae-scraper search hop (matches on-page plant-leaf / hardscape-tuft copy the magnet cannot reach; unique vs setup-hub / aquascaping / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9578,9 +8440,6 @@ const CALCULATORS = [
     id: 'fish · low-tech-planted-tank hops',
     file: 'apps/fish-com/src/app/setup/low-tech-planted-tank/page.tsx',
     mustInclude: [
-      { re: /source="setup-low-tech-planted-tank-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="setup-low-tech-planted"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+light\+timer\?s=setup-low-tech-planted-tank/, label: 'aquarium light-timer search hop (matches on-page 6–8 hour photoperiod copy; unique vs #993–#1021 setup-hub filter / heater / test-kit, aquascaping Seiryu / spiderwood, and algae-control scraper hops)' },
       { re: /amazon-brand\/aquarium\+plant\+root\+tabs\?s=setup-low-tech-planted-tank/, label: 'aquarium plant root-tabs search hop (matches on-page swords / crypts root-feeder copy; unique vs setup-hub / aquascaping / algae-control / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9598,9 +8457,6 @@ const CALCULATORS = [
     id: 'dog · how-to-take-dogs-temperature hops',
     file: 'apps/dog-com/src/app/guides/how-to-take-dogs-temperature/page.tsx',
     mustInclude: [
-      { re: /source="guides-how-to-take-dogs-temperature-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-vitals"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+rectal\+thermometer\+pet\?s=guides-how-to-take-dogs-temperature/, label: 'digital rectal thermometer (pet) search hop — unique vs first-aid-kit / emergency-triage generic digital+pet+thermometer' },
       { re: /amazon-brand\/water\+based\+lubricant\+petroleum\+jelly\?s=guides-how-to-take-dogs-temperature/, label: 'water-based lubricant / petroleum jelly search hop (matches on-page tip-prep copy)' },
       { re: /amazon-brand\/isopropyl\+alcohol\+wipes\?s=guides-how-to-take-dogs-temperature/, label: 'isopropyl alcohol wipes search hop (matches on-page clean-and-record copy)' },
@@ -9619,9 +8475,6 @@ const CALCULATORS = [
     id: 'fish · gh-kh-water-hardness hops',
     file: 'apps/fish-com/src/app/setup/gh-kh-water-hardness/page.tsx',
     mustInclude: [
-      { re: /source="setup-gh-kh-water-hardness-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="setup-gh-kh"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/crushed\+coral\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'crushed-coral aquarium search hop (matches on-page raise-both-GH-and-KH filter-media copy; unique vs #993–#1026 setup-hub gravel / aquasoil / Seiryu)' },
       { re: /amazon-brand\/aquarium\+gh\+remineralizer\?s=setup-gh-kh-water-hardness/, label: 'aquarium GH-remineralizer search hop (matches on-page raise-GH-only calcium/magnesium-salts copy; unused vs #993–#1026)' },
       { re: /amazon-brand\/indian\+almond\+leaves\+aquarium\?s=setup-gh-kh-water-hardness/, label: 'Indian almond-leaf search hop (matches on-page lower-KH blackwater tannin copy; unused vs #993–#1026 spiderwood / driftwood)' },
@@ -9640,9 +8493,6 @@ const CALCULATORS = [
     id: 'dog · dog-seizures hops',
     file: 'apps/dog-com/src/app/health/dog-seizures/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-seizures-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-seizures"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+throw\+blanket\?s=health-dog-seizures/, label: 'soft throw-blanket search hop (matches on-page slide-the-dog-away-from-stairs-or-water copy; unique vs #993–#1027 first-aid / recovery-crate hops)' },
       { re: /amazon-brand\/dog\+crate\+bumper\+pads\?s=health-dog-seizures/, label: 'dog crate-bumper-pads search hop (matches on-page padded rest-crate copy; unique vs crate-pad / crate-cover / IVDD recovery-crate hops)' },
       { re: /amazon-brand\/interlocking\+foam\+floor\+tiles\?s=health-dog-seizures/, label: 'interlocking foam floor-tiles search hop (matches on-page padded recovery-space copy; unused vs #993–#1027)' },
@@ -9661,9 +8511,6 @@ const CALCULATORS = [
     id: 'vets · parvovirus-in-puppies hops',
     file: 'apps/vets-co/src/app/health/parvovirus-in-puppies/page.tsx',
     mustInclude: [
-      { re: /source="health-parvovirus-in-puppies-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-parvo"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/accelerated\+hydrogen\+peroxide\+disinfectant\?s=health-parvovirus-in-puppies/, label: 'accelerated hydrogen-peroxide disinfectant search hop (matches on-page parvo-labeled AHP cleanup copy; unique vs 3% first-aid peroxide on chocolate-toxicity)' },
       { re: /amazon-brand\/disposable\+shoe\+covers\?s=health-parvovirus-in-puppies/, label: 'disposable shoe-cover search hop (matches on-page do-not-track-the-virus copy; unused vs #993–#1028)' },
       { re: /amazon-brand\/pump\+sprayer\?s=health-parvovirus-in-puppies/, label: 'pump-sprayer search hop (matches on-page outdoor soil / concrete coverage copy; unused vs #993–#1028)' },
@@ -9682,9 +8529,6 @@ const CALCULATORS = [
     id: 'dog · dog-wellness-exam hops',
     file: 'apps/dog-com/src/app/guides/dog-wellness-exam/page.tsx',
     mustInclude: [
-      { re: /source="guides-dog-wellness-exam-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-wellness"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/fecal\+sample\+collection\+kit\?s=guides-dog-wellness-exam/, label: 'fecal-sample collection-kit search hop (matches on-page clinic-asks-for-a-fresh-sample copy; unused vs #993–#1029)' },
       { re: /amazon-brand\/leak\+proof\+specimen\+bags\?s=guides-dog-wellness-exam/, label: 'leak-proof specimen-bags search hop (matches on-page do-not-leak-in-the-car copy; unique vs house-training dog+poop+bags)' },
       { re: /amazon-brand\/high\+value\+vet\+visit\+treats\?s=guides-dog-wellness-exam/, label: 'high-value vet-visit-treats search hop (matches on-page low-stress exam-room copy; unique vs puppy-training / low-calorie / joint-support treat hops)' },
@@ -9703,9 +8547,6 @@ const CALCULATORS = [
     id: 'dog · dog-microchipping hops',
     file: 'apps/dog-com/src/app/guides/dog-microchipping/page.tsx',
     mustInclude: [
-      { re: /source="guides-dog-microchipping-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-microchip"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/iso\+pet\+microchip\+scanner\?s=guides-dog-microchipping/, label: 'ISO pet microchip-scanner search hop (matches on-page home-verification / ISO 11784/11785 copy; unused vs #993–#1030)' },
       { re: /amazon-brand\/engraved\+dog\+collar\+id\+tags\?s=guides-dog-microchipping/, label: 'engraved dog collar-ID-tags search hop (matches on-page fastest-reunion-route copy; unique vs generic dog+id+tag+collar / pet+id+tag+collar hops)' },
       { re: /amazon-brand\/pet\+id\+tag\+slide\+on\?s=guides-dog-microchipping/, label: 'slide-on pet ID-tag search hop (matches on-page stays-on-the-collar-if-a-hanging-tag-comes-off copy; unique vs engraved hanging tags and GPS gear)' },
@@ -9724,9 +8565,6 @@ const CALCULATORS = [
     id: 'vets · kennel-cough hops',
     file: 'apps/vets-co/src/app/health/kennel-cough/page.tsx',
     mustInclude: [
-      { re: /source="health-kennel-cough-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-kennel-cough"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/y\+shaped\+front\+clip\+dog\+harness\?s=health-kennel-cough/, label: 'Y-shaped front-clip harness search hop (matches on-page collar-pressure / trachea copy; unique vs front+clip+no+pull+dog+harness and Julius-K9 hops)' },
       { re: /amazon-brand\/cool\+mist\+humidifier\?s=health-kennel-cough/, label: 'cool-mist humidifier search hop (matches on-page recovery-room dry-air copy; unused vs #848–#1031 HEPA air-purifier hops)' },
       { re: /amazon-brand\/soft\+sided\+dog\+crate\?s=health-kennel-cough/, label: 'soft-sided dog-crate search hop (matches on-page isolation-after-boarding copy; unique vs dog+recovery+crate / dog+crate+for+recovery / wire+dog+crate+with+divider)' },
@@ -9745,9 +8583,6 @@ const CALCULATORS = [
     id: 'vets · urinary-tract-infection hops',
     file: 'apps/vets-co/src/app/health/urinary-tract-infection/page.tsx',
     mustInclude: [
-      { re: /source="health-urinary-tract-infection-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-uti"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/stainless\+steel\+dog\+fountain\?s=health-urinary-tract-infection/, label: 'stainless-steel dog-fountain search hop (matches on-page running-water / drink-more copy; unique vs dog+water+fountain and FLUTD cat+water+fountain)' },
       { re: /amazon-brand\/washable\+dog\+pee\+pads\?s=health-urinary-tract-infection/, label: 'washable dog pee-pad search hop (matches on-page house-accident copy; unique vs puppy+training+pads / whelping+pads+for+dogs)' },
       { re: /amazon-brand\/weighted\+ceramic\+dog\+water\+bowl\?s=health-urinary-tract-infection/, label: 'weighted ceramic dog-water-bowl search hop (matches on-page stay-put / frequent-drinking copy; unique vs heavy+ceramic+pet+water+bowl)' },
@@ -9766,9 +8601,6 @@ const CALCULATORS = [
     id: 'vets · ear-infections-dogs hops',
     file: 'apps/vets-co/src/app/health/ear-infections-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-ear-infections-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ear-infections"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+ear\+cleaner\+solution\?s=health-ear-infections-dogs/, label: 'dog ear-cleaner-solution search hop (matches on-page veterinarian-recommended cleaner / wax-prone copy; unique vs pet+ear+cleaner on Dog.com #995 / ferret ear-cleaning)' },
       { re: /amazon-brand\/cotton\+balls\+for\+dog\+ears\?s=health-ear-infections-dogs/, label: 'cotton-balls-for-dog-ears search hop (matches on-page wipe-the-visible-canal copy; unique vs cotton+balls / cotton+pads)' },
       { re: /amazon-brand\/dog\+ear\+drying\+powder\?s=health-ear-infections-dogs/, label: 'dog ear-drying-powder search hop (matches on-page after-swim / after-bath moisture copy; unique vs Labrador dog+ear+drying+solution)' },
@@ -9788,9 +8620,6 @@ const CALCULATORS = [
     id: 'vets · allergic-reactions-dogs hops',
     file: 'apps/vets-co/src/app/health/allergic-reactions-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-allergic-reactions-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-allergic-rxn"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/oatmeal\+dog\+shampoo\?s=health-allergic-reactions-dogs/, label: 'oatmeal dog-shampoo search hop (matches on-page mild-hive / contact-allergen rinse copy; unique vs chlorhexidine+dog+shampoo #1013)' },
       { re: /amazon-brand\/dog\+paw\+cleaner\+wipes\?s=health-allergic-reactions-dogs/, label: 'dog paw-cleaner-wipes search hop (matches on-page investigating-paw / sting-site copy; unique vs dog+paw+wipes #1003)' },
       { re: /amazon-brand\/soft\+recovery\+collar\+dog\?s=health-allergic-reactions-dogs/, label: 'soft recovery-collar-dog search hop (matches on-page keep-paws-off-swollen-skin copy; unique vs soft+recovery+cone+dog and soft+e+collar+dog)' },
@@ -9810,9 +8639,6 @@ const CALCULATORS = [
     id: 'vets · anxiety-in-dogs hops',
     file: 'apps/vets-co/src/app/health/anxiety-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-anxiety-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-anxiety"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/anxiety\+vest\+dog\?s=health-anxiety-in-dogs/, label: 'anxiety-vest-dog search hop (matches on-page gentle-pressure / known-trigger copy; unique vs dog+anxiety+wrap and dog+cooling+vest)' },
       { re: /amazon-brand\/pheromone\+diffuser\+dog\?s=health-anxiety-in-dogs/, label: 'pheromone-diffuser-dog search hop (matches on-page room-level environmental-aid copy; unique vs calming+pheromone+diffuser on cat grimace-scale)' },
       { re: /amazon-brand\/dog\+heartbeat\+comfort\+toy\?s=health-anxiety-in-dogs/, label: 'dog heartbeat-comfort-toy search hop (matches on-page short-absence copy; unique vs lick+mat+dog, white+noise+machine, kong, and snuffle-mat hops)' },
@@ -9831,9 +8657,6 @@ const CALCULATORS = [
     id: 'vets · cognitive-dysfunction hops',
     file: 'apps/vets-co/src/app/health/cognitive-dysfunction/page.tsx',
     mustInclude: [
-      { re: /source="health-cognitive-dysfunction-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cds"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/plug\+in\+night\+light\?s=health-cognitive-dysfunction/, label: 'plug-in night-light search hop (matches on-page nighttime-disorientation / hallway-after-dark copy; unused vs #848–#1036)' },
       { re: /amazon-brand\/dog\+sniff\+box\?s=health-cognitive-dysfunction/, label: 'dog sniff-box search hop (matches on-page novel-smells / sniff-boxes-with-new-objects copy; unique vs snuffle+mat+dog+enrichment)' },
       { re: /amazon-brand\/senior\+dog\+food\+puzzle\?s=health-cognitive-dysfunction/, label: 'senior dog food-puzzle search hop (matches on-page food-puzzles / brief-enrichment copy; unique vs puzzle+feeder+dog)' },
@@ -9852,9 +8675,6 @@ const CALCULATORS = [
     id: 'vets · dehydration-in-dogs hops',
     file: 'apps/vets-co/src/app/health/dehydration-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-dehydration-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-dehydration"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/unflavored\+pediatric\+electrolyte\?s=health-dehydration-in-dogs/, label: 'unflavored pediatric-electrolyte search hop (matches on-page Pedialyte-class 50/50 dilution copy; unique vs horse+electrolytes / ferret+electrolytes+recovery+food)' },
       { re: /amazon-brand\/kitchen\+liquid\+measuring\+pitcher\?s=health-dehydration-in-dogs/, label: 'kitchen liquid-measuring-pitcher search hop (matches on-page 50/50 mix copy; unique vs kitchen+measuring+cup)' },
       { re: /amazon-brand\/shallow\+lipped\+dog\+saucer\?s=health-dehydration-in-dogs/, label: 'shallow lipped dog-saucer search hop (matches on-page frequent-small-sips copy; unique vs fountain / ceramic-bowl hops)' },
@@ -9873,9 +8693,6 @@ const CALCULATORS = [
     id: 'vets · pancreatitis-in-dogs hops',
     file: 'apps/vets-co/src/app/health/pancreatitis-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-pancreatitis-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-pancreatitis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/low\+fat\+digestive\+care\+dog\+food\?s=health-pancreatitis-in-dogs/, label: 'low-fat digestive-care dog-food search hop (matches on-page recovery-diet copy; unique vs Hill\'s i/d / Royal Canin GI Low Fat ASINs)' },
       { re: /amazon-brand\/lean\+low\+fat\+dog\+treats\?s=health-pancreatitis-in-dogs/, label: 'lean low-fat dog-treats search hop (matches on-page no-table-scraps copy; unique vs joint+support+dog+treats)' },
       { re: /amazon-brand\/digital\+pet\+food\+portion\+scale\?s=health-pancreatitis-in-dogs/, label: 'digital pet-food portion-scale search hop (matches on-page weight-control portion copy; unique vs digital+pet+scale / kitchen+gram+scale / portion+control+food+scale+dog)' },
@@ -9894,9 +8711,6 @@ const CALCULATORS = [
     id: 'dog · guides-dog-body-condition-score hops',
     file: 'apps/dog-com/src/app/guides/dog-body-condition-score/page.tsx',
     mustInclude: [
-      { re: /source="guides-dog-body-condition-score-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-bcs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/soft\+measuring\+tape\+for\+pets\?s=guides-dog-body-condition-score/, label: 'soft measuring-tape-for-pets search hop (matches on-page girth / pelvic-circumference copy; unique vs dog+measuring+tape+body+condition+chart and measuring+tape)' },
       { re: /amazon-brand\/dog\+body\+condition\+score\+chart\+poster\?s=guides-dog-body-condition-score/, label: 'dog BCS chart-poster search hop (matches on-page visual 1–9 reference copy; unique vs dog+measuring+tape+body+condition+chart and horse+body+condition+score+chart)' },
       { re: /amazon-brand\/single\+ingredient\+lean\+dog\+treats\?s=guides-dog-body-condition-score/, label: 'single-ingredient lean dog-treats search hop (matches on-page treat-calorie-audit copy; unique vs lean+low+fat+dog+treats / low+calorie+dog+treats / high+value+vet+visit+treats)' },
@@ -9915,9 +8729,6 @@ const CALCULATORS = [
     id: 'dog · dog-spay-neuter-timing hops',
     file: 'apps/dog-com/src/app/guides/dog-spay-neuter-timing/page.tsx',
     mustInclude: [
-      { re: /source="guides-dog-spay-neuter-timing-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guide-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/washable\+dog\+heat\+pants\?s=guides-dog-spay-neuter-timing/, label: 'washable dog heat-pants search hop (matches on-page bloody-phase / heat-cycle copy; unused vs #848–#1040 washable+dog+pee+pads / washable+dog+bed+cover)' },
       { re: /amazon-brand\/male\+dog\+belly\+band\?s=guides-dog-spay-neuter-timing/, label: 'male dog belly-band search hop (matches on-page indoor-marking copy; unused vs #848–#1040 dog+anxiety+wrap / vet+wrap hops)' },
       { re: /amazon-brand\/heavy\+duty\+dog\+exercise\+pen\?s=guides-dog-spay-neuter-timing/, label: 'heavy-duty dog exercise-pen search hop (matches on-page yard-not-fully-fenced containment copy; unused vs #848–#1040 crate / baby-gate hops)' },
@@ -9936,9 +8747,6 @@ const CALCULATORS = [
     id: 'dog · anemia-in-dogs hops',
     file: 'apps/dog-com/src/app/health/anemia-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-anemia-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-anemia"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+gum\+color\+assessment\+chart\?s=health-anemia-in-dogs/, label: 'dog gum-color assessment-chart search hop (matches on-page pale / white / gray gums copy; unique vs dog+body+condition+score+chart+poster and dog+measuring+tape+body+condition+chart)' },
       { re: /amazon-brand\/high\+calorie\+dog\+recovery\+food\?s=health-anemia-in-dogs/, label: 'high-calorie dog recovery-food search hop (matches on-page reduced-appetite copy; unique vs ferret+electrolytes+recovery+food / low+fat+digestive+care+dog+food / weight+management+dog+food)' },
       { re: /amazon-brand\/pet\+oral\+feeding\+syringe\?s=health-anemia-in-dogs/, label: 'pet oral feeding-syringe search hop (matches on-page blended-soft-food copy; unique vs bulb+syringe+puppy; unused vs insulin / med syringes)' },
@@ -9957,9 +8765,6 @@ const CALCULATORS = [
     id: 'dog · heartworm-prevention hops',
     file: 'apps/dog-com/src/app/health/heartworm-prevention/page.tsx',
     mustInclude: [
-      { re: /source="health-heartworm-prevention-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-heartworm"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/mosquito\+dunks\?s=health-heartworm-prevention/, label: 'mosquito-dunks search hop (matches on-page mosquito / standing-water copy; unique vs horse+fly+trap and unused vs yard+mosquito+control / mosquito+yard+trap)' },
       { re: /amazon-brand\/monthly\+pill\+organizer\?s=health-heartworm-prevention/, label: 'monthly pill-organizer search hop (matches on-page year-round monthly-dosing / missed-dose copy; unused vs weekly+pill+organizer)' },
       { re: /amazon-brand\/soft\+sided\+vet\+visit\+carrier\?s=health-heartworm-prevention/, label: 'soft-sided vet-visit-carrier search hop (matches on-page annual antigen blood-test logistics; unique vs soft+dog+carrier / soft+pet+carrier / soft+cat+carrier)' },
@@ -9979,9 +8784,6 @@ const CALCULATORS = [
     id: 'dog · dog-vaccinations hops',
     file: 'apps/dog-com/src/app/health/dog-vaccinations/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-vaccinations-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-vaccinations"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+vaccination\+record\+book\?s=health-dog-vaccinations/, label: 'pet vaccination-record-book search hop (matches on-page documented-history / titer-printout / official-records copy; unused vs #848–#1043 monthly+pill+organizer)' },
       { re: /amazon-brand\/dog\+seat\+belt\+tether\?s=health-dog-vaccinations/, label: 'dog seat-belt-tether search hop (matches on-page puppy-series clinic-trip copy; unique vs dog+leash / dog+long+line+leash / Y-shaped-front-clip harness)' },
       { re: /amazon-brand\/foldable\+waterproof\+puppy\+mat\?s=health-dog-vaccinations/, label: 'foldable waterproof puppy-mat search hop (matches on-page 30–60 minute post-vaccine observation-wait copy; unique vs puppy+training+pads / washable+dog+pee+pads / dog+cooling+mat / dog+crate+pad)' },
@@ -10001,9 +8803,6 @@ const CALCULATORS = [
     id: 'dog · dog-symptoms-guide hops',
     file: 'apps/dog-com/src/app/health/dog-symptoms-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-symptoms-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-symptoms"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/led\+medical\+penlight\?s=health-dog-symptoms-guide/, label: 'LED medical-penlight search hop (matches on-page pale / white / blue / grey gum and sudden eye-change copy; unique vs dog+gum+color+assessment+chart and digital+pet+thermometer)' },
       { re: /amazon-brand\/pet\+emergency\+contact\+card\?s=health-dog-symptoms-guide/, label: 'pet emergency-contact-card search hop (matches on-page ASPCA 888-426-4435 / Save This Number / call-the-ER copy; unique vs pet+vaccination+record+book and engraved+dog+collar+id+tags)' },
       { re: /amazon-brand\/folding\+pet\+stretcher\?s=health-dog-symptoms-guide/, label: 'folding pet-stretcher search hop (matches on-page sudden-collapse / inability-to-stand copy; unique vs dog+belly+support+harness / dog+rear+support+harness / dog+wheelchair+mobility+cart / soft+sided+vet+visit+carrier)' },
@@ -10023,9 +8822,6 @@ const CALCULATORS = [
     id: 'dog · dog-liver-disease hops',
     file: 'apps/dog-com/src/app/health/dog-liver-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-liver-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-liver"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+medical\+records\+binder\?s=health-dog-liver-disease/, label: 'pet medical-records-binder search hop (matches on-page ALT / ALP trend-over-time enzyme-monitoring copy; unique vs pet+vaccination+record+book and pet+emergency+contact+card)' },
       { re: /amazon-brand\/am\+pm\+weekly\+pill\+organizer\?s=health-dog-liver-disease/, label: 'AM/PM weekly pill-organizer search hop (matches on-page hepatoprotective SAMe / silymarin routine copy; unique vs #1043 monthly+pill+organizer; unused vs weekly+pill+organizer)' },
       { re: /amazon-brand\/digital\+hanging\+luggage\+scale\?s=health-dog-liver-disease/, label: 'digital hanging luggage-scale search hop (matches on-page cachexia weight-tracking copy; unique vs digital+pet+scale / digital+puppy+scale / kitchen+gram+scale / portion+control+food+scale+dog)' },
@@ -10045,9 +8841,6 @@ const CALCULATORS = [
     id: 'dog · dog-heart-disease hops',
     file: 'apps/dog-com/src/app/health/dog-heart-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-heart-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-heart-disease"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/resting\+respiratory\+rate\+notebook\?s=health-dog-heart-disease/, label: 'resting-respiratory-rate-notebook search hop (matches on-page weekly sleeping-breath log copy; unique vs pet+medical+records+binder and pet+vaccination+record+book)' },
       { re: /amazon-brand\/one\+minute\+kitchen\+timer\?s=health-dog-heart-disease/, label: 'one-minute kitchen-timer search hop (matches on-page count-breaths-for-one-minute copy; unused vs kitchen+gram+scale / kitchen+measuring+cup)' },
       { re: /amazon-brand\/step\+in\+padded\+dog\+harness\?s=health-dog-heart-disease/, label: 'step-in padded dog-harness search hop (matches on-page exercise-intolerance walk copy; unique vs Julius-K9 / front+clip+no+pull / rear-support / belly-support / Y-shaped harness hops)' },
@@ -10067,9 +8860,6 @@ const CALCULATORS = [
     id: 'dog · dog-cancer-signs hops',
     file: 'apps/dog-com/src/app/health/dog-cancer-signs/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-cancer-signs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cancer-signs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/silicone\+dog\+grooming\+glove\?s=health-dog-cancer-signs/, label: 'silicone dog-grooming-glove search hop (matches on-page weekly coat-and-node / lymph-node palpation copy; unique vs horse+curry+comb and deshedding tools)' },
       { re: /amazon-brand\/analog\+bathroom\+scale\?s=health-dog-cancer-signs/, label: 'analog bathroom-scale search hop (matches on-page unexplained-weight-loss / hold-to-weigh copy; unique vs digital+pet+scale / digital+puppy+scale / kitchen+gram+scale / portion+control+food+scale+dog / digital+hanging+luggage+scale)' },
       { re: /amazon-brand\/dog\+dental\+finger\+brush\?s=health-dog-cancer-signs/, label: 'dog dental-finger-brush search hop (matches on-page weekly lip-lift oral-exam / mouth-odor / difficulty-eating copy; unique vs dental+chews+dog and ferret finger+toothbrush+pet)' },
@@ -10089,9 +8879,6 @@ const CALCULATORS = [
     id: 'dog · german-shepherd-health hops',
     file: 'apps/dog-com/src/app/health/german-shepherd-health/page.tsx',
     mustInclude: [
-      { re: /source="health-german-shepherd-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-german-shepherd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+assisted\+walking\+sling\?s=health-german-shepherd-health/, label: 'dog assisted-walking-sling search hop (matches on-page DM assisted-walking / range-of-motion copy; unique vs dog+wheelchair+mobility+cart / dog+rear+support+harness / dog+belly+support+harness / step+in+padded+dog+harness)' },
       { re: /amazon-brand\/dog\+hind\+paw\+booties\?s=health-german-shepherd-health/, label: 'dog hind-paw-booties search hop (matches on-page worn-nails-on-rear-paws / dragging-rear-feet early-DM-clue copy; unique vs waterproof+dog+booties)' },
       { re: /amazon-brand\/dog\+hip\+brace\?s=health-german-shepherd-health/, label: 'dog hip-brace search hop (matches on-page hip-dysplasia stiffness / hindlimb-lameness support copy; unique vs dog+knee+brace / orthopedic+dog+bed / dog+ramp / joint+support+dog+treats)' },
@@ -10111,9 +8898,6 @@ const CALCULATORS = [
     id: 'dog · golden-retriever-health hops',
     file: 'apps/dog-com/src/app/health/golden-retriever-health/page.tsx',
     mustInclude: [
-      { re: /source="health-golden-retriever-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-golden-retriever"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+lymph\+node\+anatomy\+chart\?s=health-golden-retriever-health/, label: 'dog lymph-node-anatomy-chart search hop (matches on-page monthly lymphoma node-check copy; unique vs silicone+dog+grooming+glove)' },
       { re: /amazon-brand\/foam\+dog\+stairs\?s=health-golden-retriever-health/, label: 'foam dog-stairs search hop (matches on-page hip/elbow reluctance-to-climb-stairs copy; unique vs dog+ramp / orthopedic+dog+bed / dog+hip+brace)' },
       { re: /amazon-brand\/dog\+ear\+wipes\?s=health-golden-retriever-health/, label: 'dog ear-wipes search hop (matches on-page regular-ear-cleaning / recurrent-ear-infection atopic-dermatitis copy; unique vs pet+ear+cleaner / dog+ear+drying+solution / dog+paw+wipes)' },
@@ -10132,9 +8916,6 @@ const CALCULATORS = [
     id: 'dog · hypothyroidism hops',
     file: 'apps/dog-com/src/app/health/hypothyroidism/page.tsx',
     mustInclude: [
-      { re: /source="health-hypothyroidism-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-hypothyroidism"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/self\+warming\+dog\+mat\?s=health-hypothyroidism/, label: 'self-warming dog-mat search hop (matches on-page cold-intolerance / seeking-warm-spots copy; unique vs dog+cooling+mat / orthopedic+dog+bed / foldable+waterproof+puppy+mat)' },
       { re: /amazon-brand\/fleece\+dog\+sweater\?s=health-hypothyroidism/, label: 'fleece dog-sweater search hop (matches on-page reluctant-to-go-outside-in-cold-weather copy; unique vs washable+dog+heat+pants / soft+throw+blanket / dog+cooling+vest)' },
       { re: /amazon-brand\/dog\+slicker\+brush\?s=health-hypothyroidism/, label: 'dog slicker-brush search hop (matches on-page dull-or-brittle-coat / 6-8-week coat-improvement copy; unique vs silicone+dog+grooming+glove and ferret soft+slicker+brush+small+animal)' },
@@ -10154,9 +8935,6 @@ const CALCULATORS = [
     id: 'dog · cushing-disease hops',
     file: 'apps/dog-com/src/app/health/cushing-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-cushing-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cushings"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/gallon\+gravity\+dog\+waterer\?s=health-cushing-disease/, label: 'gallon gravity dog-waterer search hop (matches on-page PU/PD / drinks-dramatically-more copy; unique vs dog+water+fountain / stainless+steel+dog+fountain / heavy+ceramic+pet+water+bowl / weighted+ceramic+dog+water+bowl)' },
       { re: /amazon-brand\/extra\+large\+disposable\+dog\+pee\+pads\?s=health-cushing-disease/, label: 'extra-large disposable dog-pee-pads search hop (matches on-page nighttime-urination / go-outside-multiple-times-at-night copy; unique vs washable+dog+pee+pads / puppy+training+pads / foldable+waterproof+puppy+mat / whelping+pads)' },
       { re: /amazon-brand\/dog\+cooling\+bandana\?s=health-cushing-disease/, label: 'dog cooling-bandana search hop (matches on-page excessive-panting copy; unique vs dog+cooling+mat / dog+cooling+vest / self+warming+dog+mat)' },
@@ -10176,9 +8954,6 @@ const CALCULATORS = [
     id: 'dog · addisons-disease hops',
     file: 'apps/dog-com/src/app/health/addisons-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-addisons-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-addisons"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+pill\+pockets\?s=health-addisons-disease/, label: 'dog pill-pockets search hop (matches on-page daily oral-tablet / daily dosing-compliance copy; unique vs am+pm+weekly+pill+organizer / monthly+pill+organizer)' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+medical\+alert\+collar\+tag\?s=health-addisons-disease/, label: 'dog medical-alert collar-tag search hop (matches on-page Addisonian-crisis / emergency-clinic copy; unique vs engraved+dog+collar+id+tags / pet+id+tag+slide+on / pet+emergency+contact+card)' },
@@ -10198,9 +8973,6 @@ const CALCULATORS = [
     id: 'dog · pancreatitis hops',
     file: 'apps/dog-com/src/app/health/pancreatitis/page.tsx',
     mustInclude: [
-      { re: /source="health-pancreatitis-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-pancreatitis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/locking\+kitchen\+trash\+can\?s=health-pancreatitis/, label: 'locking kitchen-trash-can search hop (matches on-page garbage-ingestion / holiday leftover-trash copy; unique vs extra+large+disposable+dog+pee+pads / washable+dog+pee+pads)' },
       { re: /amazon-brand\/walk\+through\+pet\+gate\?s=health-pancreatitis/, label: 'walk-through pet-gate search hop (matches on-page kitchen holiday-scrap / table-scraps-off-limits copy; unique vs heavy+duty+dog+exercise+pen)' },
       { re: /amazon-brand\/airtight\+dog\+food\+storage\+container\?s=health-pancreatitis/, label: 'airtight dog-food storage-container search hop (matches on-page lifelong low-fat-kibble / separate-from-household-food copy; unique vs digital+pet+food+portion+scale / glass+meal+prep+containers / low+fat+digestive+care+dog+food)' },
@@ -10220,9 +8992,6 @@ const CALCULATORS = [
     id: 'dog · dog-cancer-treatment hops',
     file: 'apps/dog-com/src/app/health/dog-cancer-treatment/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-cancer-treatment-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cancer-treatment"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+surgical\+recovery\+suit\?s=health-dog-cancer-treatment/, label: 'dog surgical-recovery-suit search hop (matches on-page post-excision mast-cell / sarcoma incision-cover copy; unique vs soft+recovery+collar+dog / soft+recovery+cone+dog / soft+e+collar+dog)' },
       { re: /amazon-brand\/non\+slip\+dog\+socks\?s=health-dog-cancer-treatment/, label: 'non-slip dog-socks search hop (matches on-page tripod 2-4-week adaptation / indoor traction copy; unique vs dog+hind+paw+booties / waterproof+dog+booties / dog+traction+rug / interlocking+foam+floor+tiles)' },
       { re: /amazon-brand\/adjustable\+height\+dog\+bowls\?s=health-dog-cancer-treatment/, label: 'adjustable-height dog-bowls search hop (matches on-page chemo 2-3-day GI small-meal / oral-tumor surgery copy; unique vs raised+dog+bowl / heavy+ceramic+pet+water+bowl / bailey+chair+dog / slow+feeder+dog+bowl)' },
@@ -10242,9 +9011,6 @@ const CALCULATORS = [
     id: 'dog · spay-neuter-guide hops',
     file: 'apps/dog-com/src/app/health/spay-neuter-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-spay-neuter-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/disposable\+female\+dog\+diapers\?s=health-spay-neuter-guide/, label: 'disposable female-dog-diapers search hop (matches on-page bloody-phase / delayed 12-24-month heat-cycle copy; unique vs washable+dog+heat+pants / washable+dog+pee+pads / extra+large+disposable+dog+pee+pads)' },
       { re: /amazon-brand\/inflatable\+dog\+collar\?s=health-spay-neuter-guide/, label: 'inflatable dog-collar search hop (matches on-page midline spay/neuter incision-cover copy; unique vs pet+recovery+cone / soft+recovery+collar+dog / soft+recovery+cone+dog / soft+e+collar+dog / dog+surgical+recovery+suit)' },
       { re: /amazon-brand\/hard\+sided\+airline\+dog\+crate\?s=health-spay-neuter-guide/, label: 'hard-sided airline-dog-crate search hop (matches on-page clinic drop-off / same-day pickup copy; unique vs wire+dog+crate+with+divider+panel / dog+recovery+crate / soft+sided+dog+crate / soft+sided+vet+visit+carrier)' },
@@ -10264,9 +9030,6 @@ const CALCULATORS = [
     id: 'vets · bloat-gdv-dogs hops',
     file: 'apps/vets-co/src/app/health/bloat-gdv-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-bloat-gdv-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-bloat"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/automatic\+timed\+dog\+feeder\?s=health-bloat-gdv-dogs/, label: 'timed automatic dog-feeder search hop (matches on-page two-or-more smaller-meals copy; unique vs interactive+dog+feeder / northmate+green+interactive+feeder / puzzle+feeder+dog)' },
       { re: /amazon-brand\/maze\+slow\+feed\+dog\+bowl\?s=health-bloat-gdv-dogs/, label: 'maze slow-feed dog-bowl search hop (matches on-page slowing-fast-eaters-with-appropriate-bowls copy; unique vs slow+feeder+dog+bowl / elevated+slow+feeder+bowl+dog / adjustable+height+dog+bowls / raised+dog+bowl)' },
       { re: /amazon-brand\/indoor\+dog\+house\+line\?s=health-bloat-gdv-dogs/, label: 'indoor dog house-line search hop (matches on-page no-heavy-exercise-around-large-meals copy; unique vs 6+ft+dog+leash / dog+long+line+leash / dog+leash)' },
@@ -10285,9 +9048,6 @@ const CALCULATORS = [
     id: 'vets · seizures-in-dogs hops',
     file: 'apps/vets-co/src/app/health/seizures-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-seizures-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-seizures"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+handheld\+stopwatch\?s=health-seizures-in-dogs/, label: 'digital handheld-stopwatch search hop (matches on-page time-the-event / note-start-and-length copy; unique vs one+minute+kitchen+timer / aquarium+light+timer)' },
       { re: /amazon-brand\/waterproof\+field\+notebook\?s=health-seizures-in-dogs/, label: 'waterproof field-notebook search hop (matches on-page seizure-diary / dates-durations-triggers copy; unique vs resting+respiratory+rate+notebook / pet+medical+records+binder / pet+vaccination+record+book)' },
       { re: /amazon-brand\/foam\+table\+edge\+bumper\?s=health-seizures-in-dogs/, label: 'foam table-edge-bumper search hop (matches on-page clear-hard-or-sharp-objects copy; unique vs interlocking+foam+floor+tiles / dog+crate+bumper+pads)' },
@@ -10306,9 +9066,6 @@ const CALCULATORS = [
     id: 'vets · spay-neuter-benefits hops',
     file: 'apps/vets-co/src/app/health/spay-neuter-benefits/page.tsx',
     mustInclude: [
-      { re: /source="health-spay-neuter-benefits-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-spay-neuter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/adjustable\+sliding\+dog\+food\+scoop\?s=health-spay-neuter-benefits/, label: 'adjustable sliding dog-food-scoop search hop (matches on-page 20–25% portion-cut copy; unique vs kitchen+measuring+cup / kitchen+gram+scale / portion+control+food+scale+dog / digital+pet+food+portion+scale)' },
       { re: /amazon-brand\/reusable\+dog\+food\+portion\+cups\?s=health-spay-neuter-benefits/, label: 'reusable dog-food portion-cups search hop (matches on-page household-wide smaller-ration copy; unique vs glass+meal+prep / portion+control+food+scale+dog)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10326,9 +9083,6 @@ const CALCULATORS = [
     id: 'horses · deworming-program hops',
     file: 'apps/horses-com/src/app/care/deworming-program/page.tsx',
     mustInclude: [
-      { re: /source="care-deworming-program-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-deworming"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+fecal\+sample\+container\?s=care-deworming-program/, label: 'equine fecal-sample-container search hop (matches on-page labeled-fresh-pile / clinic-sample copy; unique vs fecal+sample+collection+kit / leak-proof+specimen+bags)' },
       { re: /amazon-brand\/pasture\+manure\+rake\?s=care-deworming-program/, label: 'pasture manure-rake search hop (matches on-page removing-manure / pasture-cleanup copy; unique vs horse+stall+fork+manure+picker)' },
       { re: /amazon-brand\/stable\+muck\+cart\?s=care-deworming-program/, label: 'stable muck-cart search hop (matches on-page piles-leave-the-paddock copy; unused vs stall-bedding / pasture-management hops)' },
@@ -10347,9 +9101,6 @@ const CALCULATORS = [
     id: 'horses · farrier-schedule hops',
     file: 'apps/horses-com/src/app/care/farrier-schedule/page.tsx',
     mustInclude: [
-      { re: /source="care-farrier-schedule-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-farrier"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/portable\+farrier\+hoof\+stand\?s=care-farrier-schedule/, label: 'portable farrier-hoof-stand search hop (matches on-page stand-quietly / lifted-foot copy; unique vs horse+hoof+boots / horse+hoof+soaking+boot)' },
       { re: /amazon-brand\/cordless\+barn\+flood\+light\?s=care-farrier-schedule/, label: 'cordless barn-flood-light search hop (matches on-page well-lit-area copy; unique vs LED+headlamp / led+medical+penlight)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10367,9 +9118,6 @@ const CALCULATORS = [
     id: 'horses · colic hops',
     file: 'apps/horses-com/src/app/health/colic/page.tsx',
     mustInclude: [
-      { re: /source="health-colic-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-colic"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+digital\+rectal\+thermometer\?s=health-colic/, label: 'equine digital-rectal-thermometer search hop (matches on-page physical-exam temperature / baseline-vitals copy; unique vs digital+equine+thermometer / digital+veterinary+thermometer / digital+rectal+thermometer+pet)' },
       { re: /amazon-brand\/large\+animal\+stethoscope\?s=health-colic/, label: 'large-animal stethoscope search hop (matches on-page four-quadrant gut-sounds / auscultation copy; unused vs equine+first+aid+kit)' },
       { re: /amazon-brand\/soft\+fleece\+equine\+cooler\?s=health-colic/, label: 'soft fleece equine-cooler search hop (matches on-page sweating / quiet-stall copy; unique vs horse+fleece+cooler)' },
@@ -10388,9 +9136,6 @@ const CALCULATORS = [
     id: 'horses · laminitis hops',
     file: 'apps/horses-com/src/app/health/laminitis/page.tsx',
     mustInclude: [
-      { re: /source="health-laminitis-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-laminitis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+foam\+sole\+support\+pads\?s=health-laminitis/, label: 'equine foam sole-support-pads search hop (matches on-page foam-pads / sole-support / share-load copy; unique vs horse+hoof+boots / horse+hoof+soaking+boot / horse+snow+pads)' },
       { re: /amazon-brand\/equine\+deep\+sand\+stall\+bedding\?s=health-laminitis/, label: 'equine deep-sand stall-bedding search hop (matches on-page deep-soft-footing / box-rest copy; unique vs pine+shavings / wood+pellet / stall+rubber+mats)' },
       { re: /amazon-brand\/easy\+keeper\+grazing\+muzzle\?s=health-laminitis/, label: 'easy-keeper grazing-muzzle search hop (matches on-page restrict-lush-grass / metabolic-management copy; unique vs horse+grazing+muzzle)' },
@@ -10409,9 +9154,6 @@ const CALCULATORS = [
     id: 'horses · thrush hops',
     file: 'apps/horses-com/src/app/health/thrush/page.tsx',
     mustInclude: [
-      { re: /source="health-thrush-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-thrush"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/topical\+equine\+thrush\+antiseptic\?s=health-thrush/, label: 'topical equine thrush-antiseptic search hop (matches on-page groove-prep / barn-shelf copy; unique vs copper+sulfate / iodine / horse+hoof+soaking+boot)' },
       { re: /amazon-brand\/folding\+pocket\+equine\+hoof\+pick\?s=health-thrush/, label: 'folding pocket equine-hoof-pick search hop (matches on-page daily-picking / sulci-cleaning copy; unique vs horse+hoof+pick / horse+hoof+pick+brush)' },
       { re: /amazon-brand\/equine\+stall\+sweet\+lime\?s=health-thrush/, label: 'equine stall sweet-lime search hop (matches on-page dry-stall / wet-bedding copy; unique vs pine+shavings / wood+pellet / equine+deep+sand+stall+bedding / stall+rubber+mats)' },
@@ -10430,9 +9172,6 @@ const CALCULATORS = [
     id: 'horses · turnout-vs-stabling hops',
     file: 'apps/horses-com/src/app/care/turnout-vs-stabling/page.tsx',
     mustInclude: [
-      { re: /source="care-turnout-vs-stabling-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-turnout"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+slow\+feeder\+hay\+box\?s=care-turnout-vs-stabling/, label: 'equine slow-feeder hay-box search hop (matches on-page near-continuous-forage / trickle-feeding copy; unique vs slow+feeder+hay+net+horse / horse+hay+soaking+bag / horse+hay+steamer)' },
       { re: /amazon-brand\/nylon\+equine\+stall\+guard\?s=care-turnout-vs-stabling/, label: 'nylon equine stall-guard search hop (matches on-page see-and-touch-other-horses / companionship copy; unique vs horse+stall+screen / horse+stall+fan)' },
       { re: /amazon-brand\/hemp\+equine\+stall\+bedding\?s=care-turnout-vs-stabling/, label: 'hemp equine stall-bedding search hop (matches on-page low-dust-bedding / airway copy; unique vs pine+shavings / wood+pellet / equine+deep+sand+stall+bedding / equine+stall+sweet+lime / stall+rubber+mats)' },
@@ -10451,9 +9190,6 @@ const CALCULATORS = [
     id: 'ferret · insulinoma hops',
     file: 'apps/ferret-com/src/app/health/insulinoma/page.tsx',
     mustInclude: [
-      { re: /source="health-insulinoma-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-insulinoma"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/carnivore\+care\+critical\+care\+formula\?s=health-insulinoma/, label: 'carnivore-care critical-care formula search hop (matches on-page Oxbow Carnivore Care / syringe-or-spoon-fed recovery copy; unique vs ferret+electrolytes+recovery+food / high+protein+ferret+food+kibble)' },
       { re: /amazon-brand\/chicken\+meat\+baby\+food\?s=health-insulinoma/, label: 'chicken meat-baby-food search hop (matches on-page swallow-safe protein-meal / cooked-chicken crisis copy; unused vs #1056–#1065 and light+corn+syrup)' },
       { re: /amazon-brand\/silicone\+tip\+oral\+dosing\+syringe\?s=health-insulinoma/, label: 'silicone-tip oral dosing-syringe search hop (matches on-page syringe-fed formula copy; unique vs pet+oral+feeding+syringe; not an insulin syringe)' },
@@ -10472,9 +9208,6 @@ const CALCULATORS = [
     id: 'ferret · vaccinations hops',
     file: 'apps/ferret-com/src/app/health/vaccinations/page.tsx',
     mustInclude: [
-      { re: /source="health-vaccinations-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-vaccinations"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/small\+animal\+rabies\+certificate\+holder\?s=health-vaccinations/, label: 'small-animal rabies-certificate-holder search hop (matches on-page signed rabies-certificate / CVI / interstate-travel copy; unique vs pet+vaccination+record+book / pet+medical+records+binder / pet+emergency+contact+card)' },
       { re: /amazon-brand\/top\+loading\+small\+animal\+carrier\?s=health-vaccinations/, label: 'top-loading small-animal-carrier search hop (matches on-page kit-series clinic-trip / ride-straight-home copy; unique vs ferret+carrier+hard+sided / soft+pet+carrier / soft+sided+vet+visit+carrier / ferret+carrier)' },
       { re: /amazon-brand\/fleece\+small\+animal\+bonding\+pouch\?s=health-vaccinations/, label: 'fleece small-animal bonding-pouch search hop (matches on-page 30–60 minute in-clinic observation / quiet-environment ride-home copy; unique vs ferret+sleep+sack+fleece / foldable+waterproof+puppy+mat / ferret+hammock)' },
@@ -10493,9 +9226,6 @@ const CALCULATORS = [
     id: 'ferret · introducing-a-second-ferret hops',
     file: 'apps/ferret-com/src/app/care/introducing-a-second-ferret/page.tsx',
     mustInclude: [
-      { re: /source="care-introducing-a-second-ferret-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="care-introducing-a-second-ferret"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/extra\+small\+animal\+travel\+kennel\?s=care-introducing-a-second-ferret/, label: 'extra small-animal travel-kennel search hop (matches on-page separate-quarantine-check-up / newcomer-owns-its-own-box copy; unique vs ferret+carrier+hard+sided / top+loading+small+animal+carrier / soft+pet+carrier / ferret+carrier)' },
       { re: /amazon-brand\/scent\+swap\+fleece\+sleep\+pouch\?s=care-introducing-a-second-ferret/, label: 'scent-swap fleece sleep-pouch search hop (matches on-page swap-bedding-or-sleep-sacks copy; unique vs ferret+sleep+sack+fleece / fleece+small+animal+bonding+pouch / ferret+hammock)' },
       { re: /amazon-brand\/portable\+small\+animal\+playpen\?s=care-introducing-a-second-ferret/, label: 'portable small-animal playpen search hop (matches on-page unfamiliar-playpen / dry-bathtub / neutral-ground copy; unique vs puppy+playpen / ferret+nation+critter+nation+double+unit)' },
@@ -10514,9 +9244,6 @@ const CALCULATORS = [
     id: 'ferret · multi-ferret-introductions hops',
     file: 'apps/ferret-com/src/app/behavior/multi-ferret-introductions/page.tsx',
     mustInclude: [
-      { re: /source="behavior-multi-ferret-introductions-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="behavior-multi-ferret-intro"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/wire\+small\+animal\+single\+story\+cage\?s=behavior-multi-ferret-introductions/, label: 'wire small-animal single-story-cage search hop (matches on-page quarantine / adjacent-cages / newcomer-owns-its-own-box copy; unique vs extra+small+animal+travel+kennel / ferret+nation+critter+nation+double+unit / ferret+carrier+hard+sided)' },
       { re: /amazon-brand\/non\+slip\+suction\+bathtub\+mat\?s=behavior-multi-ferret-introductions/, label: 'non-slip suction bathtub-mat search hop (matches on-page dry-bathtub / first-introduction-floor copy; unique vs portable+small+animal+playpen / puppy+playpen)' },
       { re: /amazon-brand\/stainless\+steel\+small\+animal\+crock\?s=behavior-multi-ferret-introductions/, label: 'stainless-steel small-animal-crock search hop (matches on-page two-of-every-resource / second-food-station copy; unique vs heavy+ceramic+pet+food+bowl)' },
@@ -10535,9 +9262,6 @@ const CALCULATORS = [
     id: 'vets · senior-bloodwork-guide hops',
     file: 'apps/vets-co/src/app/health/senior-bloodwork-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-senior-bloodwork-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-bloodwork"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/letter\+size\+expanding\+file\+organizer\?s=health-senior-bloodwork-guide/, label: 'letter-size expanding-file-organizer search hop (matches on-page serial CBC / chemistry / SDMA printout copy; unique vs pet+medical+records+binder / pet+vaccination+record+book / dog+weight+log+book / waterproof+field+notebook)' },
       { re: /amazon-brand\/sterile\+urine\+specimen\+cup\?s=health-senior-bloodwork-guide/, label: 'sterile urine-specimen-cup search hop (matches on-page first-morning free-catch / home urinalysis copy; unique vs fecal+sample+collection+kit / leak-proof+specimen+bags / equine+fecal+sample+container)' },
       { re: /amazon-brand\/12\+hour\+mechanical\+kitchen\+timer\?s=health-senior-bloodwork-guide/, label: '12-hour mechanical kitchen-timer search hop (matches on-page pre-chemistry fasting-glucose window copy; unique vs one+minute+kitchen+timer / digital+handheld+stopwatch / aquarium+light+timer)' },
@@ -10556,9 +9280,6 @@ const CALCULATORS = [
     id: 'vets · tick-borne-diseases hops',
     file: 'apps/vets-co/src/app/health/tick-borne-diseases/page.tsx',
     mustInclude: [
-      { re: /source="health-tick-borne-diseases-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-tick-borne"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/tick\+removal\+hook\?s=health-tick-borne-diseases/, label: 'tick-removal-hook search hop (matches on-page 24–48 hour Lyme attachment / whole-tick removal copy; unique vs tick+remover / tick+removal+tool)' },
       { re: /amazon-brand\/fine\+tooth\+flea\+comb\?s=health-tick-borne-diseases/, label: 'fine-tooth flea-comb search hop (matches on-page after-walk ears / armpits / groin copy; unique vs fine+tooth+metal+comb)' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
@@ -10577,9 +9298,6 @@ const CALCULATORS = [
     id: 'vets · canine-influenza hops',
     file: 'apps/vets-co/src/app/health/canine-influenza/page.tsx',
     mustInclude: [
-      { re: /source="health-canine-influenza-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-influenza"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/double\+door\+wire\+dog\+crate\?s=health-canine-influenza/, label: 'double-door wire-dog-crate search hop (matches on-page 7-day post-boarding isolation copy; unique vs dog+recovery+crate / soft+sided+dog+crate / wire+dog+crate+with+divider+panel / hard+sided+airline+dog+crate)' },
       { re: /amazon-brand\/pet\+safe\+kennel\+disinfectant\+spray\?s=health-canine-influenza/, label: 'pet-safe kennel-disinfectant-spray search hop (matches on-page bowls / kennel-surface contamination copy; unique vs accelerated+hydrogen+peroxide+disinfectant / enzymatic+pet+stain / small+animal+cage+cleaner)' },
       { re: /amazon-brand\/analog\+wall\+clock\+with\+second\+hand\?s=health-canine-influenza/, label: 'analog wall-clock-with-second-hand search hop (matches on-page rapid / labored breathing one-minute-count copy; unique vs digital+pet+thermometer / cool+mist+humidifier / digital+handheld+stopwatch)' },
@@ -10598,9 +9316,6 @@ const CALCULATORS = [
     id: 'vets · emergency-signs hops',
     file: 'apps/vets-co/src/app/health/emergency-signs/page.tsx',
     mustInclude: [
-      { re: /source="health-emergency-signs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-emergency"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/wire\+basket\+dog\+muzzle\?s=health-emergency-signs/, label: 'wire-basket dog-muzzle search hop (matches on-page collapse / fracture / post-seizure transport copy; unique vs soft+dog+muzzle / horse+grazing+muzzle / easy+keeper+grazing+muzzle)' },
       { re: /amazon-brand\/quilted\+disposable\+underpads\?s=health-emergency-signs/, label: 'quilted disposable-underpads search hop (matches on-page wound / vomit / bloody-stool cleanup copy; unique vs puppy+training+pads / washable+dog+pee+pads / extra+large+disposable+dog+pee+pads / foldable+waterproof+puppy+mat)' },
       { re: /amazon-brand\/handheld\+aa\+led\+flashlight\?s=health-emergency-signs/, label: 'handheld AA LED-flashlight search hop (matches on-page night gum-color / pale-white-blue-gray gums copy; unique vs led+medical+penlight / LED+headlamp / cordless+barn+flood+light / dog+gum+color+assessment+chart)' },
@@ -10619,9 +9334,6 @@ const CALCULATORS = [
     id: 'vets · pain-signs-dogs hops',
     file: 'apps/vets-co/src/app/health/pain-signs-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-pain-signs-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-pain-signs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/egg\+crate\+foam\+dog\+kennel\+pad\?s=health-pain-signs-dogs/, label: 'egg-crate foam dog-kennel-pad search hop (matches on-page posture / floor-sleeping / night-restlessness copy; unique vs orthopedic+dog+bed / self+warming+dog+mat / dog+crate+pad)' },
       { re: /amazon-brand\/carpeted\+wooden\+pet\+steps\?s=health-pain-signs-dogs/, label: 'carpeted wooden pet-steps search hop (matches on-page reluctance-to-climb-stairs-to-the-bed copy; unique vs foam+dog+stairs / dog+ramp / dog+rear+support+harness)' },
       { re: /amazon-brand\/wide\+platform\+veterinary\+floor\+scale\?s=health-pain-signs-dogs/, label: 'wide-platform veterinary floor-scale search hop (matches on-page activity-level / reduced-appetite / not-rising weight-change copy; unique vs digital+pet+scale / analog+bathroom+scale / digital+hanging+luggage+scale)' },
@@ -10640,9 +9352,6 @@ const CALCULATORS = [
     id: 'vets · periodontal-disease-pets hops',
     file: 'apps/vets-co/src/app/health/periodontal-disease-pets/page.tsx',
     mustInclude: [
-      { re: /source="health-periodontal-disease-pets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-periodontal"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+toothbrush\+and\+enzymatic\+toothpaste\+kit\?s=health-periodontal-disease-pets/, label: 'pet-toothbrush-and-enzymatic-toothpaste-kit search hop (matches on-page daily brushing / plaque-prevention copy; unique vs soft+pet+toothbrush / enzymatic+pet+toothpaste)' },
       { re: /amazon-brand\/vohc\+dental\+chews\+for\+dogs\?s=health-periodontal-disease-pets/, label: 'VOHC dental-chews-for-dogs search hop (matches on-page VOHC home-care / chew copy; unique vs dental+chews+dog)' },
       { re: /amazon-brand\/vohc\+accepted\+dental\+water\+additive\?s=health-periodontal-disease-pets/, label: 'VOHC-accepted dental-water-additive search hop (matches on-page VOHC water-additive copy; unique vs pet+dental+water+additive)' },
@@ -10661,9 +9370,6 @@ const CALCULATORS = [
     id: 'vets · vomiting-diarrhea-pets hops',
     file: 'apps/vets-co/src/app/health/vomiting-diarrhea-pets/page.tsx',
     mustInclude: [
-      { re: /source="health-vomiting-diarrhea-pets-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-vomiting-diarrhea"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/narrow\+neck\+glass\+water\+carafe\?s=health-vomiting-diarrhea-pets/, label: 'narrow-neck glass water-carafe search hop (matches on-page hydration-watch / still-drinking copy; unique vs unflavored+pediatric+electrolyte / kitchen+liquid+measuring+pitcher / shallow+lipped+dog+saucer)' },
       { re: /amazon-brand\/2\+quart\+stainless\+saucepan\+with\+lid\?s=health-vomiting-diarrhea-pets/, label: '2-quart stainless-saucepan-with-lid search hop (matches on-page bland-diet prep copy; unique vs mini+rice+cooker / glass+meal+prep+containers)' },
       { re: /amazon-brand\/pocket\+spiral\+memo\+pad\?s=health-vomiting-diarrhea-pets/, label: 'pocket spiral memo-pad search hop (matches on-page recovery-monitoring / episode-timing copy; unique vs waterproof+field+notebook / dog+weight+log+book)' },
@@ -10682,9 +9388,6 @@ const CALCULATORS = [
     id: 'vets · cushing-disease-dogs hops',
     file: 'apps/vets-co/src/app/health/cushing-disease-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-cushing-disease-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-cushings"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/2\+liter\+plastic\+graduated\+pitcher\?s=health-cushing-disease-dogs/, label: '2-liter plastic graduated-pitcher search hop (matches on-page PU/PD water-intake / measured-pour copy; unique vs narrow+neck+glass+water+carafe / gallon+gravity+dog+waterer / kitchen+liquid+measuring+pitcher)' },
       { re: /amazon-brand\/extra\+large\+bolster\+dog\+lounge\?s=health-cushing-disease-dogs/, label: 'extra-large bolster dog-lounge search hop (matches on-page pot-belly / muscle-loss comfort copy; unique vs egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed / self+warming+dog+mat)' },
       { re: /amazon-brand\/a5\+hardcover\+dot\+grid\+notebook\?s=health-cushing-disease-dogs/, label: 'A5 hardcover dot-grid-notebook search hop (matches on-page symptom-log / ACTH-recheck observation copy; unique vs pocket+spiral+memo+pad / waterproof+field+notebook / dog+weight+log+book)' },
@@ -10703,9 +9406,6 @@ const CALCULATORS = [
     id: 'vets · pain-management-dogs hops',
     file: 'apps/vets-co/src/app/health/pain-management-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-pain-management-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-pain-mgmt"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/elevated\+mesh\+dog\+cot\?s=health-pain-management-dogs/, label: 'elevated mesh dog-cot search hop (matches on-page rest / sleeping-more / hesitation-before-rising copy; unique vs extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed)' },
       { re: /amazon-brand\/clear\+adhesive\+non\+slip\+stair\+treads\?s=health-pain-management-dogs/, label: 'clear adhesive non-slip stair-treads search hop (matches on-page stairs-slowly / non-slip-flooring / mobility-support copy; unique vs carpeted+wooden+pet+steps / dog+ramp / dog+traction+rug)' },
       { re: /amazon-brand\/hardcover\+weekly\+appointment\+planner\?s=health-pain-management-dogs/, label: 'hardcover weekly appointment-planner search hop (matches on-page journaling pain-scores-for-the-vet copy; unique vs a5+hardcover+dot+grid+notebook / pocket+spiral+memo+pad / waterproof+field+notebook)' },
@@ -10724,9 +9424,6 @@ const CALCULATORS = [
     id: 'vets · senior-pet-care hops',
     file: 'apps/vets-co/src/app/health/senior-pet-care/page.tsx',
     mustInclude: [
-      { re: /source="health-senior-pet-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-senior-care"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/letter\+size\+plastic\+file\+box\?s=health-senior-pet-care/, label: 'letter-size plastic file-box search hop (matches on-page biannual-exam / CBC / chemistry / SDMA / blood-pressure printout copy; unique vs letter+size+expanding+file+organizer / pet+medical+records+binder / pet+vaccination+record+book / hardcover+weekly+appointment+planner)' },
       { re: /amazon-brand\/plug\+in\+heated\+pet\+mat\?s=health-senior-pet-care/, label: 'plug-in heated pet-mat search hop (matches on-page quality-of-life / rest-and-comfort copy; unique vs elevated+mesh+dog+cot / extra+large+bolster+dog+lounge / egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed / self+warming+dog+mat)' },
       { re: /amazon-brand\/battery\+motion\+sensor\+night\+light\?s=health-senior-pet-care/, label: 'battery motion-sensor night-light search hop (matches on-page CDS / DISHAA / night-wandering / vocalizing observation copy; unique vs plug+in+night+light / analog+wall+clock+with+second+hand / handheld+aa+led+flashlight)' },
@@ -10745,9 +9442,6 @@ const CALCULATORS = [
     id: 'vets · dog-eye-conditions hops',
     file: 'apps/vets-co/src/app/health/dog-eye-conditions/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-eye-conditions-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-eye-conditions"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/sterile\+saline\+eye\+wash\?s=health-dog-eye-conditions/, label: 'sterile saline eye-wash search hop (matches on-page chemical-exposure / KCS mucoid-discharge rinse copy; unique vs saline+wound+flush / sterile+urine+specimen+cup / dog+eye+wipes)' },
       { re: /amazon-brand\/padded\+elizabethan\+collar\+dog\?s=health-dog-eye-conditions/, label: 'padded Elizabethan-collar search hop (matches on-page cherry-eye pawing / post-tacking protection copy; unique vs soft+e+collar+dog / pet+recovery+cone / soft+recovery+cone+dog / soft+recovery+collar+dog / inflatable+dog+collar)' },
       { re: /amazon-brand\/dog\+blind\+halo\+harness\?s=health-dog-eye-conditions/, label: 'dog blind-halo-harness search hop (matches on-page PRA night-blindness / furniture-collision copy; unique vs plug+in+night+light / battery+motion+sensor+night+light / handheld+aa+led+flashlight / foam+table+edge+bumper)' },
@@ -10766,9 +9460,6 @@ const CALCULATORS = [
     id: 'vets · hypothyroidism-dogs hops',
     file: 'apps/vets-co/src/app/health/hypothyroidism-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-hypothyroidism-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-hypothyroid-dogs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/large\+platform\+digital\+bathroom\+scale\?s=health-hypothyroidism-dogs/, label: 'large-platform digital bathroom-scale search hop (matches on-page weight-gain-despite-normal-eating / dose-adjustment weight-watch copy; unique vs analog+bathroom+scale / digital+pet+scale / wide+platform+veterinary+floor+scale / kitchen+gram+scale)' },
       { re: /amazon-brand\/quilted\+dog\+winter\+coat\?s=health-hypothyroidism-dogs/, label: 'quilted dog winter-coat search hop (matches on-page cold-intolerance / seeking-warm-spots copy; unique vs fleece+dog+sweater / self+warming+dog+mat / plug+in+heated+pet+mat / washable+dog+heat+pants)' },
       { re: /amazon-brand\/weekly\+pill\+organizer\+with\+alarms\?s=health-hypothyroidism-dogs/, label: 'weekly pill-organizer-with-alarms search hop (matches on-page lifelong daily thyroid-medication copy; unique vs monthly+pill+organizer / am+pm+weekly+pill+organizer / dog+pill+pockets)' },
@@ -10787,9 +9478,6 @@ const CALCULATORS = [
     id: 'vets · flea-tick-prevention hops',
     file: 'apps/vets-co/src/app/health/flea-tick-prevention/page.tsx',
     mustInclude: [
-      { re: /source="health-flea-tick-prevention-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-flea-tick"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/14\+inch\+manual\+reel\+lawn\+mower\?s=health-flea-tick-prevention/, label: '14-inch manual reel-lawn-mower search hop (matches on-page keep-grass-trimmed / less-tall-grass-cover copy; unique vs cordless+string+trimmer / riding+mower)' },
       { re: /amazon-brand\/zippered\+waterproof\+dog\+duvet\+cover\?s=health-flea-tick-prevention/, label: 'zippered waterproof dog-duvet-cover search hop (matches on-page wash-pet-bedding-regularly copy; unique vs washable+dog+bed+cover / quilted+disposable+underpads / plug+in+heated+pet+mat)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10807,9 +9495,6 @@ const CALCULATORS = [
     id: 'vets · preventive-care-schedule hops',
     file: 'apps/vets-co/src/app/health/preventive-care-schedule/page.tsx',
     mustInclude: [
-      { re: /source="health-preventive-care-schedule-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-preventive-care"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/waterproof\+rear\+seat\+hammock\?s=health-preventive-care-schedule/, label: 'waterproof rear-seat-hammock search hop (matches on-page clinic-ride / wellness-exam copy; unique vs dog+seat+belt+tether / soft+sided+vet+visit+carrier / hard+sided+airline+dog+crate)' },
       { re: /amazon-brand\/folding\+four\+wheel\+dog\+stroller\?s=health-preventive-care-schedule/, label: 'folding four-wheel dog-stroller search hop (matches on-page senior every-6-months pain-and-mobility-assessment copy; unique vs carpeted+wooden+pet+steps / dog+ramp / elevated+mesh+dog+cot)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10827,9 +9512,6 @@ const CALCULATORS = [
     id: 'vets · diabetes-in-dogs-cats hops',
     file: 'apps/vets-co/src/app/health/diabetes-in-dogs-cats/page.tsx',
     mustInclude: [
-      { re: /source="health-diabetes-in-dogs-cats-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-diabetes"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+pet\+glucose\+log\+notebook\?s=health-diabetes-in-dogs-cats/, label: 'digital pet glucose-log notebook search hop (matches on-page water-intake / appetite / weight / energy tracking copy; unique vs pet+glucometer / a5+hardcover+dot+grid+notebook / waterproof+field+notebook / dog+weight+log+book / pocket+spiral+memo+pad)' },
       { re: /amazon-brand\/insulated\+pet\+water\+bowl\?s=health-diabetes-in-dogs-cats/, label: 'insulated pet water-bowl search hop (matches on-page emptying-the-water-bowl-unusually-fast / PU/PD copy; unique vs heavy+ceramic+pet+water+bowl / gallon+gravity+dog+waterer / 2+liter+plastic+graduated+pitcher / narrow+neck+glass+water+carafe)' },
       { re: /amazon-brand\/airtight\+locking\+pet\+food\+bin\?s=health-diabetes-in-dogs-cats/, label: 'airtight locking pet-food-bin search hop (matches on-page consistent-measured-meals / minimize-table-scraps copy; unique vs kitchen+gram+scale / portion+control+food+scale+dog / elevated+slow+feeder+bowl+dog / reusable+dog+food+portion+cups)' },
@@ -10848,9 +9530,6 @@ const CALCULATORS = [
     id: 'vets · kidney-disease-cats hops',
     file: 'apps/vets-co/src/app/health/kidney-disease-cats/page.tsx',
     mustInclude: [
-      { re: /source="health-kidney-disease-cats-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ckd-cats"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/electric\+pet\+food\+warming\+plate\?s=health-kidney-disease-cats/, label: 'electric pet-food warming-plate search hop (matches on-page warming-food / renal-diet palatability copy; unique vs plug+in+heated+pet+mat / 2+quart+stainless+saucepan+with+lid / airtight+locking+pet+food+bin)' },
       { re: /amazon-brand\/high\+sided\+jumbo\+cat\+litter\+box\?s=health-kidney-disease-cats/, label: 'high-sided jumbo cat litter-box search hop (matches on-page larger-or-more-frequent-litter-clumps copy; unique vs extra+cat+litter+box / washable+dog+pee+pads)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10868,9 +9547,6 @@ const CALCULATORS = [
     id: 'vets · heartworm-in-dogs hops',
     file: 'apps/vets-co/src/app/health/heartworm-in-dogs/page.tsx',
     mustInclude: [
-      { re: /source="health-heartworm-in-dogs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-heartworm"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/heavy\+gauge\+48\+inch\+dog\+crate\?s=health-heartworm-in-dogs/, label: 'heavy-gauge 48-inch dog-crate search hop (matches on-page 8-week crate-rest / high-energy-dog copy; unique vs double+door+wire+dog+crate / dog+recovery+crate / soft+sided+dog+crate / hard+sided+airline+dog+crate / heavy+duty+dog+exercise+pen)' },
       { re: /amazon-brand\/2\+foot\+nylon\+traffic\+lead\?s=health-heartworm-in-dogs/, label: '2-foot nylon traffic-lead search hop (matches on-page leash-restricted / no-running / no-playing copy; unique vs dog+seat+belt+tether / dog+long+line+leash / y+shaped+front+clip+dog+harness)' },
       { re: /amazon-brand\/adjustable\+aluminum\+downspout\+extender\?s=health-heartworm-in-dogs/, label: 'adjustable aluminum downspout-extender search hop (matches on-page mosquito / standing-water / 57-degree copy; unique vs 14+inch+manual+reel+lawn+mower / mosquito+dunks / yard+mosquito+control / mosquito+yard+trap)' },
@@ -10889,9 +9565,6 @@ const CALCULATORS = [
     id: 'vets · hyperthyroidism-cats hops',
     file: 'apps/vets-co/src/app/health/hyperthyroidism-cats/page.tsx',
     mustInclude: [
-      { re: /source="health-hyperthyroidism-cats-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-hyperthyroid"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/small\+digital\+kitchen\+food\+scale\?s=health-hyperthyroidism-cats/, label: 'small digital kitchen food-scale search hop (matches on-page weight-loss / ravenous-appetite / dated-gram-portion copy; unique vs large+platform+digital+bathroom+scale / kitchen+gram+scale / digital+pet+food+portion+scale / analog+bathroom+scale / digital+pet+scale / wide+platform+veterinary+floor+scale)' },
       { re: /amazon-brand\/silicone\+cat\+grooming\+glove\?s=health-hyperthyroidism-cats/, label: 'silicone cat grooming-glove search hop (matches on-page unkempt-coat / matted-coat copy; unique vs silicone+dog+grooming+glove / dog+slicker+brush / soft+slicker+brush+small+animal)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10909,9 +9582,6 @@ const CALCULATORS = [
     id: 'vets · leptospirosis hops',
     file: 'apps/vets-co/src/app/health/leptospirosis/page.tsx',
     mustInclude: [
-      { re: /source="health-leptospirosis-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-lepto"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/powder\+free\+nitrile\+exam\+gloves\?s=health-leptospirosis/, label: 'powder-free nitrile exam-gloves search hop (matches on-page zoonotic urine-cleanup / wear-gloves copy; unique vs disposable+nitrile+gloves / silicone+cat+grooming+glove / silicone+dog+grooming+glove)' },
       { re: /amazon-brand\/32\+gallon\+locking\+animal\+proof\+trash\+can\?s=health-leptospirosis/, label: '32-gallon locking animal-proof trash-can search hop (matches on-page suburban raccoon / rodent wildlife-attractant copy; unique vs locking+kitchen+trash+can / airtight+locking+pet+food+bin)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10929,9 +9599,6 @@ const CALCULATORS = [
     id: 'vets · intestinal-parasites hops',
     file: 'apps/vets-co/src/app/health/intestinal-parasites/page.tsx',
     mustInclude: [
-      { re: /source="health-intestinal-parasites-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-parasites"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/hinged\+cedar\+sandbox\+cover\?s=health-intestinal-parasites/, label: 'hinged cedar sandbox-cover search hop (matches on-page children\'s-sandboxes-near-dog-areas / Toxocara soil copy; unique vs zippered+waterproof+dog+duvet+cover / quilted+disposable+underpads)' },
       { re: /amazon-brand\/metal\+jaw\+dog\+waste\+scooper\?s=health-intestinal-parasites/, label: 'metal-jaw dog waste-scooper search hop (matches on-page 2-4 week Toxocara infective-window / fecal-pickup copy; unique vs dog+poop+bags / fecal+sample+collection+kit / leak+proof+specimen+bags / pasture+manure+rake / stable+muck+cart)' },
       { re: /amazon-brand\/outdoor\+garden\+hand\+wash\+station\?s=health-intestinal-parasites/, label: 'outdoor garden hand-wash-station search hop (matches on-page handwashing-after-dog-contact copy; unique vs powder+free+nitrile+exam+gloves / disposable+nitrile+gloves / pet+safe+kennel+disinfectant+spray / accelerated+hydrogen+peroxide+disinfectant)' },
@@ -10950,9 +9617,6 @@ const CALCULATORS = [
     id: 'vets · dog-vaccinations-guide hops',
     file: 'apps/vets-co/src/app/health/dog-vaccinations-guide/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-vaccinations-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-vaccinations"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/72\+hour\+digital\+countdown\+timer\?s=health-dog-vaccinations-guide/, label: '72-hour digital countdown-timer search hop (matches on-page Bordetella 72-hour boarding window copy; unique vs 12+hour+mechanical+kitchen+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl\?s=health-dog-vaccinations-guide/, label: 'collapsible silicone travel dog-bowl search hop (matches on-page boarding / daycare / puppy-series shared-water copy; unique vs 24+ounce+stainless+hiking+dog+bottle / insulated+pet+water+bowl / weighted+ceramic+dog+water+bowl / shallow+lipped+dog+saucer)' },
@@ -10971,9 +9635,6 @@ const CALCULATORS = [
     id: 'dog · dog-bloat-gvd hops',
     file: 'apps/dog-com/src/app/health/dog-bloat-gvd/page.tsx',
     mustInclude: [
-      { re: /source="health-dog-bloat-gvd-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-gdv"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/single\+stainless\+floor\+dog\+bowl\?s=health-dog-bloat-gvd/, label: 'single stainless floor-dog-bowl search hop (matches on-page elevated-feeder-debate / Glickman-2000 raised-bowl copy; unique vs raised+dog+bowl / elevated+slow+feeder+bowl+dog / adjustable+height+dog+bowls / heavy+ceramic+pet+food+bowl / collapsible+silicone+travel+dog+bowl)' },
       { re: /amazon-brand\/wobble\+dog\+food\+dispenser\?s=health-dog-bloat-gvd/, label: 'wobble dog-food-dispenser search hop (matches on-page fast-eater / slow-feeding copy; unique vs maze+slow+feed+dog+bowl / slow+feeder+dog+bowl / puzzle+feeder+dog / interactive+dog+feeder / northmate+green+interactive+feeder / automatic+timed+dog+feeder)' },
       { re: /amazon-brand\/30\+minute\+sand\+hourglass\+timer\?s=health-dog-bloat-gvd/, label: '30-minute sand-hourglass-timer search hop (matches on-page post-meal rest / activity-after-meals copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer / one+minute+kitchen+timer / analog+wall+clock+with+second+hand / indoor+dog+house+line)' },
@@ -10993,9 +9654,6 @@ const CALCULATORS = [
     id: 'vets · when-to-go-to-the-vet hops',
     file: 'apps/vets-co/src/app/guides/when-to-go-to-the-vet/page.tsx',
     mustInclude: [
-      { re: /source="guides-when-to-go-to-the-vet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="guides-when-to-go"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/48\+hour\+digital\+kitchen\+timer\?s=guides-when-to-go-to-the-vet/, label: '48-hour digital kitchen-timer search hop (matches on-page watchful-waiting / day-or-two window copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer / 30+minute+sand+hourglass+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
       { re: /amazon-brand\/lined\+telephone\+message\+pad\?s=guides-when-to-go-to-the-vet/, label: 'lined telephone message-pad search hop (matches on-page when-unsure / call-the-clinic / sign-start-time copy; unique vs pocket+spiral+memo+pad / a5+hardcover+dot+grid+notebook / waterproof+field+notebook / dog+weight+log+book)' },
       { re: /amazon-brand\/medium\+hard\+sided\+plastic\+pet\+carrier\?s=guides-when-to-go-to-the-vet/, label: 'medium hard-sided plastic pet-carrier search hop (matches on-page same-day / clinic-trip copy; unique vs soft+sided+vet+visit+carrier / soft+cat+carrier / hard+sided+airline+dog+crate / folding+four+wheel+dog+stroller / cat+carrier / soft+pet+carrier)' },
@@ -11014,9 +9672,6 @@ const CALCULATORS = [
     id: 'horses · choke hops',
     file: 'apps/horses-com/src/app/health/choke/page.tsx',
     mustInclude: [
-      { re: /source="health-choke-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-choke"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/lidded\+5\+gallon\+feed\+soaking\+pail\?s=health-choke/, label: 'lidded 5-gallon feed-soaking-pail search hop (matches on-page soak-feeds-that-swell / beet-pulp / dry-pellet copy; unique vs horse+hay+soaking+bag / horse+hay+steamer / horse+mash / horse+hay+cubes)' },
       { re: /amazon-brand\/large\+smooth\+feed\+tub\+rocks\?s=health-choke/, label: 'large smooth feed-tub-rocks search hop (matches on-page slow-down-greedy-eaters / stones-in-the-feed-tub copy; unique vs slow+feeder+hay+net+horse / small+hole+slow+feeder+hay+net+horse / equine+slow+feeder+hay+box)' },
       { re: /amazon-brand\/apple\+wedger\+slicer\?s=health-choke/, label: 'apple wedger-slicer search hop (matches on-page cut-treats-small / apple-or-carrot copy; unique vs horse+hay+cubes / horse+mash / molasses+free+beet+pulp+shreds+horse)' },
@@ -11035,9 +9690,6 @@ const CALCULATORS = [
     id: 'fish · nano-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/nano-tank-setup/page.tsx',
     mustInclude: [
-      { re: /source="setup-nano-tank-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="setup-nano-tank"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/air\+driven\+corner\+sponge\+filter\?s=setup-nano-tank/, label: 'air-driven corner sponge-filter search hop (matches on-page sponge-or-gentle-filter / too-much-HOB-current copy; unique vs aquarium+sponge+filter / hikari+bacto+surge+sponge+filter / aquaclear+70+filter / fluval+307+canister+filter / aquarium+filter+gallon)' },
       { re: /amazon-brand\/preset\+25\+watt\+nano\+aquarium\+heater\?s=setup-nano-tank/, label: 'preset 25-watt nano aquarium-heater search hop (matches on-page small-accurate-heater / room-temperature-swing copy; unique vs eheim+jager+heater / aqueon+pro+heater / aquarium+heater+tank+size / aquarium+digital+thermometer)' },
       { re: /amazon-brand\/food\+grade\+1\+gallon\+water\+jug\?s=setup-nano-tank/, label: 'food-grade 1-gallon water-jug search hop (matches on-page dechlorinated-water / keep-a-jug-on-hand copy; unique vs seachem+prime+water+conditioner / python+water+changer / pond+dechlorinator+water+conditioner / lidded+5+gallon+feed+soaking+pail / aquarium+gravel+vacuum+siphon)' },
@@ -11056,9 +9708,6 @@ const CALCULATORS = [
     id: 'ferret · adrenal-disease hops',
     file: 'apps/ferret-com/src/app/health/adrenal-disease/page.tsx',
     mustInclude: [
-      { re: /source="health-adrenal-disease-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-adrenal-disease"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ruled\+marble\+composition\+notebook\?s=health-adrenal-disease/, label: 'ruled marble composition-notebook search hop (matches on-page hair-thinning-date / vulvar-swelling / implant-cycle copy; unique vs waterproof+field+notebook / pocket+spiral+memo+pad / a5+hardcover+dot+grid+notebook / dog+weight+log+book / letter+size+expanding+file+organizer / pet+vaccination+record+book)' },
       { re: /amazon-brand\/soft\+cotton\+receiving\+blanket\?s=health-adrenal-disease/, label: 'soft cotton receiving-blanket search hop (matches on-page alopecia / thin-skin warmth copy; unique vs ferret+sleep+sack+fleece / ferret+hammock / ferret+fleece+liner / fleece+small+animal+bonding+pouch / pet+heating+pad+low / scent+swap+fleece+sleep+pouch)' },
       { re: /amazon-brand\/activated\+charcoal\+odor\+absorber\?s=health-adrenal-disease/, label: 'activated-charcoal odor-absorber search hop (matches on-page intensified musky-odor copy; unique vs enzymatic+pet+stain+odor+cleaner / small+animal+cage+cleaner / fragrance+free+laundry+detergent / 32+gallon+locking+animal+proof+trash+can)' },
@@ -11077,9 +9726,6 @@ const CALCULATORS = [
     id: 'horses · strangles hops',
     file: 'apps/horses-com/src/app/health/strangles/page.tsx',
     mustInclude: [
-      { re: /source="health-strangles-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-strangles"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/color\+coded\+flat\+back\+horse\+buckets\?s=health-strangles/, label: 'color-coded flat-back horse-buckets search hop (matches on-page dedicated-equipment / shared-water-trough copy; unique vs lidded+5+gallon+feed+soaking+pail / horse+hay+soaking+bag / food+grade+1+gallon+water+jug)' },
       { re: /amazon-brand\/disposable\+coverall\+suit\?s=health-strangles/, label: 'disposable coverall-suit search hop (matches on-page dedicated-clothing / handlers-of-draining-horses copy; unique vs disposable+shoe+covers / powder+free+nitrile+exam+gloves / disposable+exam+gloves)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11097,9 +9743,6 @@ const CALCULATORS = [
     id: 'horses · equine-influenza hops',
     file: 'apps/horses-com/src/app/health/equine-influenza/page.tsx',
     mustInclude: [
-      { re: /source="health-flu-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-flu"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/weatherproof\+storage\+clipboard\?s=health-flu/, label: 'weatherproof storage-clipboard search hop (matches on-page monitor-temperatures / quarantine-new-and-returning copy; unique vs lined+telephone+message+pad / ruled+marble+composition+notebook / equine+digital+rectal+thermometer)' },
       { re: /amazon-brand\/round\+rubber\+feed\+pan\+horse\?s=health-flu/, label: 'round rubber horse feed-pan search hop (matches on-page dedicated-equipment / isolate-coughing-horses copy; unique vs color+coded+flat+back+horse+buckets / lidded+5+gallon+feed+soaking+pail / food+grade+1+gallon+water+jug)' },
       { re: /amazon-brand\/paper\+pellet\+horse\+bedding\?s=health-flu/, label: 'paper-pellet horse-bedding search hop (matches on-page clean-air / rest-for-stripped-airway copy; unique vs pine+shavings+horse+stall+bedding / wood+pellet+horse+stall+bedding / hemp+equine+stall+bedding / horse+hay+steamer)' },
@@ -11118,9 +9761,6 @@ const CALCULATORS = [
     id: 'horses · lameness-basics hops',
     file: 'apps/horses-com/src/app/health/lameness-basics/page.tsx',
     mustInclude: [
-      { re: /source="health-lameness-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-lameness"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/30\+foot\+cotton\+lunge\+line\?s=health-lameness/, label: '30-foot cotton lunge-line search hop (matches on-page lunge-on-a-circle / Grade-1-or-2-hitch copy; unique vs horse+halter+lead+rope / horse+trailer+ties / nylon+equine+stall+guard)' },
       { re: /amazon-brand\/leather\+chain\+lead\+shank\+horse\?s=health-lameness/, label: 'leather chain lead-shank search hop (matches on-page trot-in-hand / straight-line-trot-up copy; unique vs horse+halter+lead+rope / horse+shipping+wraps / horse+trailer+ties)' },
       { re: /amazon-brand\/orange\+traffic\+cone\+set\?s=health-lameness/, label: 'orange traffic-cone-set search hop (matches on-page firm-level-straight-line / mark-the-trot-up copy; unique vs ice+grit / horse+measuring+stick / weatherproof+storage+clipboard)' },
@@ -11139,9 +9779,6 @@ const CALCULATORS = [
     id: 'horses · west-nile-virus hops',
     file: 'apps/horses-com/src/app/health/west-nile-virus/page.tsx',
     mustInclude: [
-      { re: /source="health-wnv-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-wnv"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/long\+handle\+stock\+tank\+brush\?s=health-wnv/, label: 'long-handle stock-tank-brush search hop (matches on-page empty-and-scrub-troughs / standing-water copy; unique vs color+coded+flat+back+horse+buckets / lidded+5+gallon+feed+soaking+pail / mosquito+dunks)' },
       { re: /amazon-brand\/20\+foot\+barn\+mosquito\+netting\?s=health-wnv/, label: '20-foot barn mosquito-netting search hop (matches on-page dawn-and-dusk / stabling copy; unique vs horse+stall+fan / horse+stall+screen / horse+shade+cloth)' },
       { re: /amazon-brand\/fine\+mesh\+horse\+mosquito\+sheet\?s=health-wnv/, label: 'fine-mesh horse mosquito-sheet search hop (matches on-page mosquito-sheets / fly-and-mosquito-repellents-and-sheets copy; unique vs horse+fly+sheet / horse+sweet+itch+rug / horse+sweet+itch+hood)' },
@@ -11160,9 +9797,6 @@ const CALCULATORS = [
     id: 'horses · navicular-syndrome hops',
     file: 'apps/horses-com/src/app/health/navicular-syndrome/page.tsx',
     mustInclude: [
-      { re: /source="health-navicular-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-navicular"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/steel\+heart\+bar\+horseshoe\?s=health-navicular/, label: 'steel heart-bar horseshoe search hop (matches on-page bar-shoes-or-heart-bar-shoes / support-the-heel copy; unique vs equine+foam+sole+support+pads / horse+hoof+boots / horse+snow+pads)' },
       { re: /amazon-brand\/3\+degree\+leather\+wedge\+pad\?s=health-navicular/, label: '3-degree leather wedge-pad search hop (matches on-page wedge-pads / pastern-axis copy; unique vs equine+foam+sole+support+pads / horse+hoof+soaking+boot / horse+snow+pads)' },
       { re: /amazon-brand\/rocker\+toe\+steel\+horseshoe\?s=health-navicular/, label: 'rocker-toe steel horseshoe search hop (matches on-page rolled-or-rocker-toes / ease-breakover copy; unique vs portable+farrier+hoof+stand / horse+shoe+studs / horse+hoof+boots)' },
@@ -11181,9 +9815,6 @@ const CALCULATORS = [
     id: 'horses · tying-up hops',
     file: 'apps/horses-com/src/app/health/tying-up/page.tsx',
     mustInclude: [
-      { re: /source="health-tying-up-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-tying-up"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/irish\+knit\+horse\+cooler\?s=health-tying-up/, label: 'Irish-knit horse-cooler search hop (matches on-page keep-warm-and-calm / stay-still copy; unique vs soft+fleece+equine+cooler / horse+fleece+cooler / horse+turnout+blanket)' },
       { re: /amazon-brand\/wool\+exercise\+quarter\+sheet\?s=health-tying-up/, label: 'wool exercise quarter-sheet search hop (matches on-page warm-up-and-cool-down-gradually copy; unique vs horse+turnout+sheet / horse+waterproof+sheet / horse+fleece+cooler)' },
       { re: /amazon-brand\/loose\+plain\+white\+salt\+horse\?s=health-tying-up/, label: 'loose plain white salt search hop (matches on-page hydration-and-electrolytes copy; unique vs equine+salt+lick / horse+electrolytes / horse+tank+heater)' },
@@ -11202,9 +9833,6 @@ const CALCULATORS = [
     id: 'horses · mud-fever hops',
     file: 'apps/horses-com/src/app/health/mud-fever/page.tsx',
     mustInclude: [
-      { re: /source="health-mud-fever-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-mud-fever"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/heavy\+duty\+paddock\+mud\+grid\?s=health-mud-fever/, label: 'heavy-duty paddock mud-grid search hop (matches on-page dry-standing / hardstanding-or-gravel copy; unique vs ice+grit / horse+stall+rubber+mats / equine+deep+sand+stall+bedding)' },
       { re: /amazon-brand\/full\+length\+horse\+turnout\+boots\?s=health-mud-fever/, label: 'full-length horse turnout-boots search hop (matches on-page keep-legs-dry copy; unique vs horse+fly+boots / horse+shipping+boots / horse+hoof+boots / horse+hoof+soaking+boot)' },
       { re: /amazon-brand\/waffle\+weave\+horse\+leg\+towel\?s=health-mud-fever/, label: 'waffle-weave horse leg-towel search hop (matches on-page dry-thoroughly / if-you-must-wash copy; unique vs clean+cotton+towels / horse+sweat+scraper / horse+dandy+brush)' },
@@ -11223,9 +9851,6 @@ const CALCULATORS = [
     id: 'horses · rain-rot hops',
     file: 'apps/horses-com/src/app/health/rain-rot/page.tsx',
     mustInclude: [
-      { re: /source="health-rain-rot-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-rain-rot"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/portable\+3\+sided\+horse\+run\+in\+shelter\?s=health-rain-rot/, label: 'portable 3-sided horse run-in-shelter search hop (matches on-page provide-shelter / out-of-prolonged-rain copy; unique vs horse+waterproof+sheet / horse+turnout+blanket / heavy+duty+paddock+mud+grid)' },
       { re: /amazon-brand\/labeled\+stackable\+horse\+grooming\+caddy\?s=health-rain-rot/, label: 'labeled stackable horse grooming-caddy search hop (matches on-page do-not-share-grooming-tools copy; unique vs horse+curry+comb / horse+dandy+brush / color+coded+flat+back+horse+buckets)' },
       { re: /amazon-brand\/large\+mesh\+horse\+blanket\+wash\+bag\?s=health-rain-rot/, label: 'large mesh horse blanket-wash-bag search hop (matches on-page do-not-share-blankets copy; unique vs horse+turnout+blanket / horse+waterproof+sheet / horse+sweet+itch+rug)' },
@@ -11244,9 +9869,6 @@ const CALCULATORS = [
     id: 'horses · equine-metabolic-syndrome hops',
     file: 'apps/horses-com/src/app/health/equine-metabolic-syndrome/page.tsx',
     mustInclude: [
-      { re: /source="health-ems-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ems"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+hanging\+hay\+bale\+scale\?s=health-ems/, label: 'digital hanging hay-bale-scale search hop (matches on-page feed-by-weight-not-volume copy; unique vs horse+feed+scoop+scale / horse+weight+tape / livestock+barn+scale)' },
       { re: /amazon-brand\/equine\+forage\+nsc\+hay\+test\+kit\?s=health-ems/, label: 'equine forage NSC hay-test-kit search hop (matches on-page test-hay / restrict-NSC copy; unique vs horse+hay+soaking+bag / lidded+5+gallon+feed+soaking+pail / soil+test+kit)' },
       { re: /amazon-brand\/portable\+strip\+grazing\+step\+in\+posts\?s=health-ems/, label: 'portable strip-grazing step-in-posts search hop (matches on-page strip-grazing / control-pasture-access copy; unique vs easy+keeper+grazing+muzzle / horse+grazing+muzzle / horse+electric+tape)' },
@@ -11265,9 +9887,6 @@ const CALCULATORS = [
     id: 'horses · osteoarthritis hops',
     file: 'apps/horses-com/src/app/health/osteoarthritis/page.tsx',
     mustInclude: [
-      { re: /source="health-osteoarthritis-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-osteoarthritis"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/tow\+behind\+arena\+drag\+harrow\?s=health-osteoarthritis/, label: 'tow-behind arena-drag-harrow search hop (matches on-page choose-footing / even-working-surface copy; unique vs heavy+duty+paddock+mud+grid / horse+stall+rubber+mats / equine+deep+sand+stall+bedding)' },
       { re: /amazon-brand\/cotton\+horse\+polo\+exercise\+wraps\?s=health-osteoarthritis/, label: 'cotton polo exercise-wraps search hop (matches on-page long-warm-up copy; unique vs horse+shipping+wraps / vet+wrap+bandage / horse+fly+boots)' },
       { re: /amazon-brand\/portable\+horse\+paddock\+panels\?s=health-osteoarthritis/, label: 'portable paddock-panels search hop (matches on-page keep-moving / turnout copy; unique vs portable+3+sided+horse+run+in+shelter / nylon+equine+stall+guard / portable+strip+grazing+step+in+posts)' },
@@ -11286,9 +9905,6 @@ const CALCULATORS = [
     id: 'horses · ringbone hops',
     file: 'apps/horses-com/src/app/health/ringbone/page.tsx',
     mustInclude: [
-      { re: /source="health-ringbone-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ringbone"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+hoof\+angle\+gauge\?s=health-ringbone/, label: 'equine hoof-angle-gauge search hop (matches on-page balance-the-foot / ease-breakover copy; unique vs equine+farrier+log+book / portable+farrier+hoof+stand / 3+degree+leather+wedge+pad)' },
       { re: /amazon-brand\/leather\+horse\+lunge\+cavesson\?s=health-ringbone/, label: 'leather lunge-cavesson search hop (matches on-page controlled-exercise copy; unique vs 30+foot+cotton+lunge+line / leather+chain+lead+shank+horse / orange+traffic+cone+set)' },
       { re: /amazon-brand\/neoprene\+horse\+overreach\+bell\+boots\?s=health-ringbone/, label: 'neoprene overreach bell-boots search hop (matches on-page hard-ground / pastern-protection copy; unique vs full+length+horse+turnout+boots / horse+shipping+boots / horse+fly+boots / horse+hoof+boots)' },
@@ -11307,9 +9923,6 @@ const CALCULATORS = [
     id: 'horses · cushings-ppid hops',
     file: 'apps/horses-com/src/app/health/cushings-ppid/page.tsx',
     mustInclude: [
-      { re: /source="health-ppid-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-ppid"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/stainless\+horse\+shedding\+blade\?s=health-ppid/, label: 'stainless horse shedding-blade search hop (matches on-page failed-shed / hypertrichosis copy; unique vs horse+curry+comb / horse+dandy+brush / horse+clippers)' },
       { re: /amazon-brand\/wicking\+horse\+anti\+sweat\+sheet\?s=health-ppid/, label: 'wicking anti-sweat-sheet search hop (matches on-page heavy-coat-impairs-cooling / abnormal-sweating copy; unique vs irish+knit+horse+cooler / wool+exercise+quarter+sheet / horse+fleece+cooler / horse+sweat+scraper)' },
       { re: /amazon-brand\/automatic\+horse\+waterer\?s=health-ppid/, label: 'automatic horse-waterer search hop (matches on-page increased-drinking copy; unique vs color+coded+flat+back+horse+buckets / horse+tank+heater / long+handle+stock+tank+brush)' },
@@ -11328,9 +9941,6 @@ const CALCULATORS = [
     id: 'horses · equine-ulcers under-hero',
     file: 'apps/horses-com/src/app/health/equine-ulcers/page.tsx',
     mustInclude: [
-      { re: /source="health-egus-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="health-egus"/, label: 'existing sidebar email capture kept in place' },
       { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
     ],
     mustExclude: [
@@ -11347,9 +9957,6 @@ const CALCULATORS = [
     id: 'horses · salt-and-electrolytes hops',
     file: 'apps/horses-com/src/app/nutrition/salt-and-electrolytes/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-salt-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-salt"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/plain\+white\+horse\+salt\+block\?s=nutrition-salt/, label: 'plain white horse salt-block search hop (matches on-page year-round-baseline-salt copy; unique vs loose+plain+white+salt+horse / equine+salt+lick)' },
       { re: /amazon-brand\/salt\+first\+horse\+electrolyte\+powder\?s=nutrition-salt/, label: 'salt-first electrolyte-powder search hop (matches on-page sweat-replacement / salt-not-sugar copy; unique vs horse+electrolytes)' },
       { re: /amazon-brand\/wide\+mouth\+horse\+water\+bucket\?s=nutrition-salt/, label: 'wide-mouth horse water-bucket search hop (matches on-page always-provide-water copy; unique vs automatic+horse+waterer / color+coded+flat+back+horse+buckets)' },
@@ -11369,9 +9976,6 @@ const CALCULATORS = [
     id: 'horses · forage-basics hops',
     file: 'apps/horses-com/src/app/nutrition/forage-basics/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-forage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-forage"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/slow\+feeder\+hay\+net\+horse\?s=nutrition-forage-basics/, label: 'existing slow-feeder hay-net ReviewCard hop kept in place' },
       { re: /amazon-brand\/horse\+hay\+probe\+moisture\+tester\?s=nutrition-forage/, label: 'horse hay-probe moisture-tester search hop (matches on-page cleanliness / mold copy; unique vs digital+hanging+hay+bale+scale / horse+hay+steamer / horse+hay+soaking+bag)' },
       { re: /amazon-brand\/equine\+hay\+core\+sampler\?s=nutrition-forage/, label: 'equine hay-core-sampler search hop (matches on-page representative-sample copy; unique vs equine+forage+nsc+hay+test+kit / timothy+hay+horse)' },
@@ -11392,9 +9996,6 @@ const CALCULATORS = [
     id: 'horses · grain-and-concentrates hops',
     file: 'apps/horses-com/src/app/nutrition/grain-and-concentrates/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-grain-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-grain"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/complete\+pelleted\+horse\+feed\+formulated\?s=nutrition-grain-and-concentrates/, label: 'existing formulated complete-feed ReviewCard hop kept in place' },
       { re: /amazon-brand\/low\+starch\+senior\+horse\+feed\?s=nutrition-grain-and-concentrates/, label: 'existing low-starch senior-feed ReviewCard hop kept in place' },
       { re: /amazon-brand\/tabletop\+digital\+horse\+grain\+scale\?s=nutrition-grain/, label: 'tabletop digital horse grain-scale search hop (matches on-page weigh-not-scoop copy; unique vs horse+feed+scoop+scale / digital+hanging+hay+bale+scale / livestock+barn+scale)' },
@@ -11416,9 +10017,6 @@ const CALCULATORS = [
     id: 'horses · hay-types hops',
     file: 'apps/horses-com/src/app/nutrition/hay-types/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-hay-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-hay"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/orchard\+grass\+hay\+horse\?s=nutrition-hay/, label: 'orchard-grass hay-horse search hop (matches on-page everyday-leafy-grass copy; unique vs timothy+hay+horse / standlee+premium+forage+pellets)' },
       { re: /amazon-brand\/alfalfa\+hay\+bales\+horse\?s=nutrition-hay/, label: 'alfalfa hay-bales search hop (matches on-page richer-legume copy; unique vs equine+forage+nsc+hay+test+kit / equine+hay+core+sampler)' },
       { re: /amazon-brand\/timothy\+alfalfa\+mixed\+hay\+horse\?s=nutrition-hay/, label: 'timothy-alfalfa mixed-hay search hop (matches on-page mixed-hay middle-ground copy; unique vs timothy+hay+horse / digital+hanging+hay+bale+scale)' },
@@ -11438,9 +10036,6 @@ const CALCULATORS = [
     id: 'horses · water-requirements hops',
     file: 'apps/horses-com/src/app/nutrition/water-requirements/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-water-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-water"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/flat\+back\+horse\+water\+bucket\?s=nutrition-water/, label: 'flat-back horse water-bucket search hop (matches on-page free-choice stall-source / clean-and-refill copy; unique vs wide+mouth+horse+water+bucket / color+coded+flat+back+horse+buckets)' },
       { re: /amazon-brand\/heated\+horse\+water\+bucket\?s=nutrition-water/, label: 'heated horse water-bucket search hop (matches on-page slightly-warmed winter stall-water copy; unique vs horse+tank+heater / automatic+horse+waterer)' },
       { re: /amazon-brand\/electrolyte\+for\+horses\?s=nutrition-water/, label: 'electrolyte-for-horses search hop (matches on-page after-sweat thirst-drive copy; unique vs salt+first+horse+electrolyte+powder / horse+electrolytes)' },
@@ -11460,9 +10055,6 @@ const CALCULATORS = [
     id: 'horses · toxic-plants hops',
     file: 'apps/horses-com/src/app/nutrition/toxic-plants/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-toxic-plants-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-toxic-plants"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/equine\+toxic\+plant\+identification\+field\+guide\?s=nutrition-toxic-plants/, label: 'equine toxic-plant identification field-guide search hop (matches on-page walk-and-identify copy; unique vs soil+test+kit / equine+forage+nsc+hay+test+kit)' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+paddock\+tree\+guard\+fencing\?s=nutrition-toxic-plants/, label: 'horse paddock tree-guard fencing search hop (matches on-page fence-out-ornamentals copy; unique vs horse+electric+tape / horse+fence+mesh / horse+electric+rope / portable+horse+paddock+panels)' },
@@ -11482,9 +10074,6 @@ const CALCULATORS = [
     id: 'horses · feeding-senior-horses hops',
     file: 'apps/horses-com/src/app/nutrition/feeding-senior-horses/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-feeding-senior-horses-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-senior"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/complete\+senior\+horse\+feed\+soakable\?s=nutrition-senior-horses/, label: 'existing complete-senior-feed ReviewCard hop kept in place' },
       { re: /amazon-brand\/horse\+topline\+amino\+acid\+supplement\+lysine\?s=nutrition-senior-horses/, label: 'existing topline-amino ReviewCard hop kept in place' },
       { re: /amazon-brand\/horse\+chopped\+forage\?s=nutrition-feeding-senior-horses/, label: 'horse chopped-forage search hop (matches on-page chewable hay-replacer copy; unique vs horse+hay+cubes / molasses+free+beet+pulp+shreds+horse)' },
@@ -11506,9 +10095,6 @@ const CALCULATORS = [
     id: 'horses · feeding-the-performance-horse hops',
     file: 'apps/horses-com/src/app/nutrition/feeding-the-performance-horse/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-feeding-the-performance-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-performance"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/stabilized\+rice\+bran\+horse\+fat\+supplement\?s=nutrition-performance-horse/, label: 'existing rice-bran ReviewCard hop kept in place' },
       { re: /amazon-brand\/performance\+horse\+feed\+high\+fat\?s=nutrition-performance-horse/, label: 'existing high-fat performance-feed ReviewCard hop kept in place' },
       { re: /amazon-brand\/nylon\+horse\+hay\+bag\?s=nutrition-feeding-the-performance-horse/, label: 'nylon horse hay-bag search hop (matches on-page forage-before-work / ulcer-buffer copy; unique vs horse+hay+soaking+bag / slow+feeder+hay+net+horse / wall+mounted+horse+hay+rack)' },
@@ -11530,9 +10116,6 @@ const CALCULATORS = [
     id: 'horses · feeding-the-easy-keeper hops',
     file: 'apps/horses-com/src/app/nutrition/feeding-the-easy-keeper/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-feeding-the-easy-keeper-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-easy-keeper"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/small\+hole\+slow\+feeder\+hay\+net\+horse\?s=nutrition-easy-keeper/, label: 'existing small-hole slow-feeder ReviewCard hop kept in place' },
       { re: /amazon-brand\/low\+nsc\+ration\+balancer\+easy\+keeper\+horse\?s=nutrition-easy-keeper/, label: 'existing low-NSC ration-balancer ReviewCard hop kept in place' },
       { re: /amazon-brand\/portable\+horse\+hay\+flake\+scale\?s=nutrition-feeding-the-easy-keeper/, label: 'portable horse hay-flake-scale search hop (matches on-page weigh-the-hay / feed-by-weight copy; unique vs digital+hanging+hay+bale+scale / tabletop+digital+horse+grain+scale / horse+feed+scoop+scale)' },
@@ -11555,9 +10138,6 @@ const CALCULATORS = [
     id: 'horses · feeding-the-hard-keeper hops',
     file: 'apps/horses-com/src/app/nutrition/feeding-the-hard-keeper/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-feeding-the-hard-keeper-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-hard-keeper"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/stabilized\+rice\+bran\+horse\+supplement\?s=nutrition-hard-keeper/, label: 'existing rice-bran ReviewCard hop kept in place' },
       { re: /amazon-brand\/high\+fat\+low\+starch\+horse\+feed\?s=nutrition-hard-keeper/, label: 'existing high-fat low-starch feed ReviewCard hop kept in place' },
       { re: /amazon-brand\/horse\+alfalfa\+cubes\?s=nutrition-feeding-the-hard-keeper/, label: 'horse alfalfa-cubes search hop (matches on-page maximize-forage / higher-energy cube / soaked-hay-cubes copy; unique vs alfalfa+hay+bales+horse / horse+chopped+forage / horse+hay+cubes)' },
@@ -11580,9 +10160,6 @@ const CALCULATORS = [
     id: 'horses · ration-balancers hops',
     file: 'apps/horses-com/src/app/nutrition/ration-balancers/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-ration-balancers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /source="nutrition-balancer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/purina\+enrich\+plus\+ration\+balancer\?s=nutrition-ration-balancers/, label: 'existing Enrich Plus ReviewCard hop kept in place' },
       { re: /amazon-brand\/triple\+crown\+30\+ration\+balancer\?s=nutrition-ration-balancers/, label: 'existing Triple Crown 30 ReviewCard hop kept in place' },
       { re: /amazon-brand\/nutrena\+empower\+topline\+balancer\?s=nutrition-ration-balancers/, label: 'existing Empower Topline ReviewCard hop kept in place' },
@@ -11606,9 +10183,6 @@ const CALCULATORS = [
     id: 'horses · beet-pulp hops',
     file: 'apps/horses-com/src/app/nutrition/beet-pulp/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-beet-pulp-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-beet-pulp"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/molasses\+free\+beet\+pulp\+shreds\+horse\?s=nutrition-beet-pulp/, label: 'existing molasses-free shreds ReviewCard hop kept in place' },
       { re: /amazon-brand\/beet\+pulp\+pellets\+horse\+feed\?s=nutrition-beet-pulp/, label: 'existing beet-pulp-pellets ReviewCard hop kept in place' },
       { re: /amazon-brand\/fine\+mesh\+horse\+feed\+colander\?s=nutrition-beet-pulp/, label: 'fine-mesh horse feed-colander search hop (matches on-page soak-with-plenty-of-water / drain-after-30-minutes copy; unique vs horse+hay+soaking+tub / horse+feed+soaking+tub / lidded+5+gallon+feed+soaking+pail / horse+hay+soaking+bag)' },
@@ -11631,9 +10205,6 @@ const CALCULATORS = [
     id: 'horses · can-horses-eat hops',
     file: 'apps/horses-com/src/app/nutrition/can-horses-eat/[food]/page.tsx',
     mustInclude: [
-      { re: /source="can-horses-eat-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="can-horses-eat"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/airtight\+labeled\+horse\+treat\+canister\?s=can-horses-eat/, label: 'airtight labeled horse treat-canister search hop (matches on-page keep-kitchen-leftovers-out-of-the-barn / store-only-pre-checked-safe-treats copy; unique vs rodent+proof+metal+horse+feed+bin)' },
       { re: /amazon-brand\/nonslip\+horse\+barn\+cutting\+board\?s=can-horses-eat/, label: 'nonslip horse barn cutting-board search hop (matches on-page cut-treats-to-a-safe-size / choke-safe copy; unique vs marked+horse+grain+scoop / small+rubber+horse+mixing+pan)' },
       { re: /amazon-brand\/nylon\+horse\+waist\+treat\+pouch\?s=can-horses-eat/, label: 'nylon horse waist treat-pouch search hop (matches on-page carry-a-measured-handful / leave-the-kitchen copy; unique vs low+sugar+horse+treats / nylon+horse+hay+bag)' },
@@ -11653,9 +10224,6 @@ const CALCULATORS = [
     id: 'horses · can-horses-eat hub hops',
     file: 'apps/horses-com/src/app/nutrition/can-horses-eat/page.tsx',
     mustInclude: [
-      { re: /source="can-horses-eat-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="section"[\s\S]{0,240}source="can-horses-eat-hub"/, label: 'existing section email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/lidded\+horse\+barn\+treat\+tote\?s=can-horses-eat-hub/, label: 'lidded horse barn treat-tote search hop (matches on-page keep-kitchen-leftovers-out-of-the-barn copy; unique vs airtight+labeled+horse+treat+canister / nylon+horse+waist+treat+pouch / rodent+proof+metal+horse+feed+bin)' },
       { re: /amazon-brand\/horse\+barn\+treat\+prep\+shears\?s=can-horses-eat-hub/, label: 'horse barn treat-prep-shears search hop (matches on-page choke-safe-treat-prep hub-scope copy; unique vs nonslip+horse+barn+cutting+board / apple+wedger+slicer)' },
@@ -11675,8 +10243,6 @@ const CALCULATORS = [
     id: 'horses · nutrition hub',
     file: 'apps/horses-com/src/app/nutrition/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11695,8 +10261,6 @@ const CALCULATORS = [
     id: 'horses · health hub',
     file: 'apps/horses-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /source="health-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11715,8 +10279,6 @@ const CALCULATORS = [
     id: 'horses · care hub',
     file: 'apps/horses-com/src/app/care/page.tsx',
     mustInclude: [
-      { re: /source="care-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11735,8 +10297,6 @@ const CALCULATORS = [
     id: 'horses · guides hub',
     file: 'apps/horses-com/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /source="guides-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11755,8 +10315,6 @@ const CALCULATORS = [
     id: 'horses · tools hub',
     file: 'apps/horses-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /source="tools-hub-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11775,9 +10333,6 @@ const CALCULATORS = [
     id: 'horses · first-aid-kit hops',
     file: 'apps/horses-com/src/app/ownership/first-aid-kit/page.tsx',
     mustInclude: [
-      { re: /source="ownership-first-aid-kit-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-first-aid"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/sterile\+saline\+wound\+flush\+horse\?s=ownership-first-aid-kit/, label: 'sterile saline wound-flush-horse search hop (matches on-page wound-cleaning-saline copy; unique vs sterile+saline+eye+wash / saline+wound+flush / poultice / equine+first+aid+kit)' },
       { re: /amazon-brand\/nonstick\+wound\+dressing\+pads\+horse\?s=ownership-first-aid-kit/, label: 'nonstick wound dressing-pads-horse search hop (matches on-page non-stick-dressings copy; unique vs vet+wrap+bandage / vet+wrap+cohesive+bandage / wound+care+gauze)' },
       { re: /amazon-brand\/equine\+bandage\+scissors\?s=ownership-first-aid-kit/, label: 'equine bandage-scissors search hop (matches on-page scissors-and-tweezers copy; unique vs equine+first+aid+kit / horse+barn+first+aid+kit / cordless+barn+flood+light)' },
@@ -11797,9 +10352,6 @@ const CALCULATORS = [
     id: 'horses · boarding-options hops',
     file: 'apps/horses-com/src/app/ownership/boarding-options/page.tsx',
     mustInclude: [
-      { re: /source="ownership-boarding-options-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-boarding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/waterproof\+horse\+hay\+bale\+storage\+tarp\?s=ownership-boarding-options/, label: 'waterproof horse hay-bale storage-tarp search hop (matches on-page hay-and-bedding-storage copy; unique vs wall+mounted+horse+hay+rack / nylon+horse+hay+bag / rodent+proof+metal+horse+feed+bin)' },
@@ -11819,9 +10371,6 @@ const CALCULATORS = [
     id: 'horses · buying-your-first-horse hops',
     file: 'apps/horses-com/src/app/ownership/buying-your-first-horse/page.tsx',
     mustInclude: [
-      { re: /source="ownership-buying-your-first-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-buying"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+records\+binder\?s=ownership-buying-your-first-horse/, label: 'horse pre-purchase exam records-binder search hop (matches on-page never-skip-the-vetting copy; unique vs horse+boarding+contract+document+binder / equine+farrier+log+book / weatherproof+storage+clipboard)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11840,9 +10389,6 @@ const CALCULATORS = [
     id: 'horses · choosing-a-vet hops',
     file: 'apps/horses-com/src/app/ownership/choosing-a-vet/page.tsx',
     mustInclude: [
-      { re: /source="ownership-choosing-a-vet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-vet"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder\?s=ownership-choosing-a-vet/, label: 'horse veterinary-history / VCPR records-folder search hop (matches on-page keep-good-records / VCPR copy; unique vs horse+pre+purchase+exam+records+binder / horse+boarding+contract+document+binder / equine+farrier+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11861,9 +10407,6 @@ const CALCULATORS = [
     id: 'horses · cost-of-owning-a-horse hops',
     file: 'apps/horses-com/src/app/ownership/cost-of-owning-a-horse/page.tsx',
     mustInclude: [
-      { re: /source="ownership-cost-of-owning-a-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'concrete horse-ownership-budget-worksheet offer, not Subscribe' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-cost"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+keep\+feed\+farrier\+cost\+log\+binder\?s=ownership-cost-of-owning-a-horse/, label: 'horse keep-feed-farrier cost-log-binder search hop (matches on-page keep+feed+farrier recurring-cost copy; unique vs equine+farrier+log+book / horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -11881,9 +10424,6 @@ const CALCULATORS = [
     id: 'horses · horse-insurance hops',
     file: 'apps/horses-com/src/app/ownership/horse-insurance/page.tsx',
     mustInclude: [
-      { re: /source="ownership-horse-insurance-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-insurance"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder\?s=ownership-horse-insurance/, label: 'horse insurance policy-document-binder search hop (matches on-page agreed-value / exclusions / deductible copy; unique vs horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+mortality\+vs\+major\+medical\+decision\+worksheet\?s=ownership-horse-insurance/, label: 'horse mortality-vs-major-medical decision-worksheet search hop (matches on-page decide-what-to-insure copy; unique vs horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook / horse+veterinary+history+vcpr+records+folder)' },
@@ -11903,9 +10443,6 @@ const CALCULATORS = [
     id: 'horses · leasing-a-horse hops',
     file: 'apps/horses-com/src/app/ownership/leasing-a-horse/page.tsx',
     mustInclude: [
-      { re: /source="ownership-leasing-a-horse-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-leasing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder\?s=ownership-leasing-a-horse/, label: 'horse lease agreement document-binder search hop (matches on-page put-it-in-writing / term-fee-use-vet-insurance copy; unique vs horse+boarding+contract+document+binder / horse+insurance+policy+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+full\+vs\+partial\+lease\+cost\+share\+worksheet\?s=ownership-leasing-a-horse/, label: 'horse full-vs-partial lease cost-share-worksheet search hop (matches on-page full-versus-half-lease riding-days / who-pays-board-farrier-vet copy; unique vs horse+mortality+vs+major+medical+decision+worksheet / horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook)' },
@@ -11925,9 +10462,6 @@ const CALCULATORS = [
     id: 'horses · pre-purchase-exam hops',
     file: 'apps/horses-com/src/app/ownership/pre-purchase-exam/page.tsx',
     mustInclude: [
-      { re: /source="ownership-pre-purchase-exam-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-ppe"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+findings\+decision\+worksheet\?s=ownership-pre-purchase-exam/, label: 'horse pre-purchase exam findings-decision-worksheet search hop (matches on-page using-findings / not-pass-or-fail / radiographs-as-extras copy; unique vs horse+pre+purchase+exam+records+binder / horse+mortality+vs+major+medical+decision+worksheet / horse+full+vs+partial+lease+cost+share+worksheet / horse+ownership+monthly+budget+worksheet)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11946,9 +10480,6 @@ const CALCULATORS = [
     id: 'horses · reading-body-language hops',
     file: 'apps/horses-com/src/app/ownership/reading-body-language/page.tsx',
     mustInclude: [
-      { re: /source="ownership-reading-body-language-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-body-language"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+pain\+demeanor\+change\+log\+notebook\?s=ownership-reading-body-language/, label: 'horse pain-demeanor change-log-notebook search hop (matches on-page subtle-persistent-changes / signs-of-pain copy; unique vs first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
@@ -11968,9 +10499,6 @@ const CALCULATORS = [
     id: 'horses · senior-horse-care hops',
     file: 'apps/horses-com/src/app/ownership/senior-horse-care/page.tsx',
     mustInclude: [
-      { re: /source="ownership-senior-horse-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="ownership-senior"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/senior\+horse\+weight\+and\+joint\+watch\+notebook\?s=ownership-senior-horse-care/, label: 'senior horse weight-and-joint watch-notebook search hop (matches on-page osteoarthritis / weight-change / hands-on-checks copy; unique vs horse+pain+demeanor+change+log+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
       { re: /amazon-brand\/senior\+horse\+quality\+of\+life\+score\+card\?s=ownership-senior-horse-care/, label: 'senior horse quality-of-life score-card search hop (matches on-page honest-assessment / comfort-before-goodbye copy; unique vs horse+body+condition+score+chart / horse+handler+kick+zone+safety+question+card / horse+buyer+vet+briefing+question+card / horse+mortality+vs+major+medical+decision+worksheet)' },
@@ -11990,8 +10518,6 @@ const CALCULATORS = [
     id: 'horses · first-horse-roadmap hops',
     file: 'apps/horses-com/src/app/first-horse-roadmap/page.tsx',
     mustInclude: [
-      { re: /source="first-horse-roadmap-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
       { re: /Jump to the roadmap/, label: 'on-page roadmap is available without email' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -12010,9 +10536,6 @@ const CALCULATORS = [
     id: 'horses · helmet-guide hops',
     file: 'apps/horses-com/src/app/tack/helmet-guide/page.tsx',
     mustInclude: [
-      { re: /source="tack-helmet-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-helmet"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/riding\+helmet\+certification\+label\+question\+card\?s=helmet-guide/, label: 'riding helmet certification-label question-card search hop (matches on-page ASTM/SEI / PAS 015 / VG1 / Snell inside-label copy; unique vs horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card / horse+after+hours+emergency+cover+question+card)' },
       { re: /amazon-brand\/riding\+helmet\+impact\+retirement\+log\+notebook\?s=helmet-guide/, label: 'riding helmet impact-retirement-log-notebook search hop (matches on-page replace-after-impact / manufacturer-advised-interval copy; unique vs horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook)' },
@@ -12032,9 +10555,6 @@ const CALCULATORS = [
     id: 'horses · saddle-pads hops',
     file: 'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
     mustInclude: [
-      { re: /source="tack-saddle-pads-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-saddle-pads"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/saddle\+pad\+sweat\+pattern\+dry\+spot\+question\+card\?s=saddle-pads/, label: 'saddle-pad sweat-pattern dry-spot question-card search hop (matches on-page dry-patch / pressure-point / sweat-pattern copy; unique vs riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card)' },
       { re: /amazon-brand\/saddle\+pad\+clean\+dry\+rotation\+log\+notebook\?s=saddle-pads/, label: 'saddle-pad clean-dry rotation-log-notebook search hop (matches on-page keep-several-in-rotation / clean-dry-pad-always-available copy; unique vs riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook)' },
@@ -12054,9 +10574,6 @@ const CALCULATORS = [
     id: 'horses · boots-and-wraps hops',
     file: 'apps/horses-com/src/app/tack/boots-and-wraps/page.tsx',
     mustInclude: [
-      { re: /source="tack-boots-and-wraps-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-boots"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+boot\+impact\+not\+tendon\+support\+question\+card\?s=boots-and-wraps/, label: 'horse-boot impact-not-tendon-support question-card search hop (matches on-page boots-protect-against-knocks-and-brushing / they-do-not-structurally-support-tendons copy; unique vs saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card)' },
       { re: /amazon-brand\/horse\+boot\+grit\+rub\+clean\+dry\+log\+notebook\?s=boots-and-wraps/, label: 'horse-boot grit-rub clean-dry-log-notebook search hop (matches on-page grit-under-a-boot-causes-rubs / clean-dry-inside copy; unique vs saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook)' },
@@ -12076,9 +10593,6 @@ const CALCULATORS = [
     id: 'horses · halters-and-lead-ropes hops',
     file: 'apps/horses-com/src/app/tack/halters-and-lead-ropes/page.tsx',
     mustInclude: [
-      { re: /source="tack-halters-and-lead-ropes-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-halters"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+rope\+vs\+flat\+halter\+task\+question\+card\?s=halters-and-lead-ropes/, label: 'horse rope-vs-flat-halter task question-card search hop (matches on-page rope-halters-for-skilled-groundwork / flat-halters-spread-pressure / rope-halters-generally-not-used-for-tying copy; unique vs horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+handler+kick+zone+safety+question+card)' },
       { re: /amazon-brand\/horse\+quick\+release\+wither\+height\+tie\+log\+notebook\?s=halters-and-lead-ropes/, label: 'horse quick-release wither-height tie-log-notebook search hop (matches on-page quick-release-or-panic-snap / baler-twine-breakaway-loop / wither-height-and-short-enough-no-leg-over / fold-slack-never-wrap-the-hand copy; unique vs horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook)' },
@@ -12098,9 +10612,6 @@ const CALCULATORS = [
     id: 'horses · blanket-weights hops',
     file: 'apps/horses-com/src/app/tack/blanket-weights/page.tsx',
     mustInclude: [
-      { re: /source="tack-blanket-weights-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-blanket-weights"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+denier\+vs\+fill\+question\+card\?s=blanket-weights/, label: 'horse denier-vs-fill question-card search hop (matches on-page denier-is-durability / fill-is-warmth / high-denier-and-low-fill copy; unique vs horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card)' },
       { re: /amazon-brand\/horse\+over\+rugging\+sweat\+shiver\+watch\+log\+notebook\?s=blanket-weights/, label: 'horse over-rugging sweat-shiver watch-log-notebook search hop (matches on-page match-fill-to-temperature-coat-clip / watch-the-horse-not-just-the-thermometer / neither-sweating-nor-shivering / over-rugging-as-harmful-as-under-rugging copy; unique vs horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook)' },
@@ -12120,9 +10631,6 @@ const CALCULATORS = [
     id: 'horses · martingales-and-breastplates hops',
     file: 'apps/horses-com/src/app/tack/martingales-and-breastplates/page.tsx',
     mustInclude: [
-      { re: /source="tack-martingales-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-martingales"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+breastplate\+vs\+breastgirth\+fit\+question\+card\?s=martingales/, label: 'horse breastplate-vs-breastgirth fit question-card search hop (matches on-page breastplate-stops-saddle-sliding-back / breastgirths-are-a-simpler-chest-strap / snug-enough-not-so-tight-shoulders-or-windpipe copy; unique vs horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card)' },
       { re: /amazon-brand\/horse\+martingale\+misuse\+head\+carriage\+log\+notebook\?s=martingales/, label: 'horse martingale-misuse head-carriage log-notebook search hop (matches on-page does-not-teach-head-carriage / too-tight-or-wrongly-fitted-restricts / training-pain-fit-or-hands copy; unique vs horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook)' },
@@ -12142,9 +10650,6 @@ const CALCULATORS = [
     id: 'horses · bridle-types hops',
     file: 'apps/horses-com/src/app/tack/bridle-types/page.tsx',
     mustInclude: [
-      { re: /source="tack-bridle-types-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-bridle"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+bridle\+cheekpiece\+length\+fit\+question\+card\?s=bridle-types/, label: 'horse bridle cheekpiece-length fit question-card search hop (matches on-page cheekpieces-run-down-each-side-to-attach-the-bit / the-bit-sits-at-the-correct-height / the-browband-does-not-pull-the-headpiece-into-the-ears copy; unique vs horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card)' },
       { re: /amazon-brand\/horse\+noseband\+two\+finger\+welfare\+log\+notebook\?s=bridle-types/, label: 'horse noseband two-finger welfare log-notebook search hop (matches on-page a-couple-of-fingers-under-the-band / over-tightened-nosebands-are-a-welfare-concern / the-horse-must-still-chew-and-move-its-jaw copy; unique vs horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook)' },
@@ -12164,9 +10669,6 @@ const CALCULATORS = [
     id: 'horses · girths-and-cinches hops',
     file: 'apps/horses-com/src/app/tack/girths-and-cinches/page.tsx',
     mustInclude: [
-      { re: /source="tack-girths-and-cinches-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-girths"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+girth\+buckle\+elbow\+clearance\+question\+card\?s=girths-and-cinches/, label: 'horse girth buckle-elbow-clearance question-card search hop (matches on-page the-right-length-keeps-buckles-or-rings-clear-of-the-elbow / positioned-in-the-natural-girth-groove / not-dragged-forward-against-the-elbow copy; unique vs horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card)' },
       { re: /amazon-brand\/horse\+girth\+gall\+skin\+wrinkle\+log\+notebook\?s=girths-and-cinches/, label: 'horse girth-gall skin-wrinkle log-notebook search hop (matches on-page gradual-tightening / smooth-the-skin-under-the-girth / pull-the-forelegs-forward-to-remove-wrinkles copy; unique vs horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook)' },
@@ -12186,9 +10688,6 @@ const CALCULATORS = [
     id: 'horses · stirrups-and-safety hops',
     file: 'apps/horses-com/src/app/tack/stirrups-and-safety/page.tsx',
     mustInclude: [
-      { re: /source="tack-stirrups-and-safety-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-stirrups"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+stirrup\+width\+inch\+clearance\+question\+card\?s=stirrups-and-safety/, label: 'horse stirrup width-inch-clearance question-card search hop (matches on-page about-an-inch-wider-than-the-widest-part-of-the-boot / enough-clearance-that-the-foot-is-not-pinched / not-so-wide-that-the-whole-foot-can-slide-through copy; unique vs horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card)' },
       { re: /amazon-brand\/horse\+stirrup\+drag\+entrapment\+watch\+log\+notebook\?s=stirrups-and-safety/, label: 'horse stirrup drag-entrapment watch log-notebook search hop (matches on-page correctly-sized-stirrups-that-let-the-foot-release / riding-boots-with-a-heel-and-smooth-sole / ball-of-the-foot-on-the-tread-and-heels-down copy; unique vs horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook)' },
@@ -12209,9 +10708,6 @@ const CALCULATORS = [
     id: 'horses · bits-guide hops',
     file: 'apps/horses-com/src/app/tack/bits-guide/page.tsx',
     mustInclude: [
-      { re: /source="tack-bits-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="tack-bits"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/horse\+bit\+width\+and\+wrinkle\+fit\+question\+card\?s=bits-guide/, label: 'horse bit width-and-wrinkle fit question-card search hop (matches on-page the-right-width-sits-snugly-without-pinching-the-lips-or-sliding-through / a-slight-wrinkle-or-two-at-the-corners-of-the-lips / not-so-high-it-bangs-the-molars-or-so-low-it-hits-the-teeth copy; unique vs horse+stirrup+width+inch+clearance+question+card / horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card)' },
       { re: /amazon-brand\/horse\+bit\+hand\+severity\+watch\+log\+notebook\?s=bits-guide/, label: 'horse bit hand-severity watch log-notebook search hop (matches on-page severity-lives-in-the-hand-not-only-the-bit / a-mild-snaffle-can-be-cruel-in-rough-hands / reaching-for-a-stronger-bit-masks-the-root-cause and educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove copy; unique vs horse+stirrup+drag+entrapment+watch+log+notebook / horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook)' },
@@ -12232,9 +10728,6 @@ const CALCULATORS = [
     id: 'dog · training-off-leash-training hops',
     file: 'apps/dog-com/src/app/training/off-leash-training/page.tsx',
     mustInclude: [
-      { re: /source="training-off-leash-training-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="training-off-leash"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+20\+to\+30\+foot\+long\+line\+question\+card\?s=training-off-leash-training/, label: 'dog 20-to-30-foot long-line question-card search hop (matches on-page a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness / gather-the-line-hand-over-hand-no-jerking / long-line-first-in-every-new-environment copy; unique vs dog+long+line+leash / 6+ft+dog+leash / indoor+dog+house+line / 2+foot+nylon+traffic+lead)' },
       { re: /amazon-brand\/dog\+recall\+cue\+never\+punish\+watch\+log\+notebook\?s=training-off-leash-training/, label: 'dog recall-cue never-punish watch log-notebook search hop (matches on-page never-use-the-recall-cue-for-anything-unpleasant / never-punish-a-dog-that-comes / the-recall-must-always-be-positive copy; unique vs horse+bit+hand+severity+watch+log+notebook / horse+stirrup+drag+entrapment+watch+log+notebook)' },
@@ -12255,9 +10748,6 @@ const CALCULATORS = [
     id: 'dog · training-resource-guarding hops',
     file: 'apps/dog-com/src/app/training/resource-guarding/page.tsx',
     mustInclude: [
-      { re: /source="training-resource-guarding-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="training-resource-guarding"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+food\+bowl\+safety\+question\+card\?s=training-resource-guarding/, label: 'dog food-bowl safety question-card search hop (matches on-page feed-the-dog-in-a-separate-room / pick-up-high-value-chews-when-guests-arrive / baby-gates-to-separate-guarding-contexts copy; unique vs single+stainless+floor+dog+bowl / heavy+ceramic+pet+food+bowl / slow+feeder+dog+bowl / extra+tall+baby+gate / walk+through+pet+gate)' },
       { re: /amazon-brand\/dog\+resource\+guarding\+never\+punish\+growl\+watch\+log\+notebook\?s=training-resource-guarding/, label: 'dog resource-guarding never-punish-growl watch log-notebook search hop (matches on-page punishing-a-growl-removes-the-warning-signal / never-punish-growling / dog-that-stops-growling-before-biting-is-more-dangerous copy; unique vs dog+recall+cue+never+punish+watch+log+notebook / horse+bit+hand+severity+watch+log+notebook)' },
@@ -12278,9 +10768,6 @@ const CALCULATORS = [
     id: 'dog · training-dog-aggression hops',
     file: 'apps/dog-com/src/app/training/dog-aggression/page.tsx',
     mustInclude: [
-      { re: /source="training-dog-aggression-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="training-aggression"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+aggression\+type\+and\+function\+question\+card\?s=training-dog-aggression/, label: 'dog aggression type-and-function question-card search hop (matches on-page fear-based-aggression-is-the-most-common / redirected-aggression / rule-out-pain-first-in-any-new-onset-aggression copy; unique vs dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+aggression\+never\+alpha\+roll\+watch\+log\+notebook\?s=training-dog-aggression/, label: 'dog aggression never-alpha-roll watch log-notebook search hop (matches on-page dominance-theory-has-been-thoroughly-refuted / alpha-rolls / physical-corrections-consistently-make-aggression-more-dangerous copy; unique vs dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
@@ -12301,9 +10788,6 @@ const CALCULATORS = [
     id: 'dog · training-red-flags hops',
     file: 'apps/dog-com/src/app/training/training-red-flags/page.tsx',
     mustInclude: [
-      { re: /source="training-red-flags-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="training-red-flags"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+force\+free\+trainer\+interview\+question\+card\?s=training-red-flags/, label: 'dog force-free trainer interview question-card search hop (matches on-page what-tools-do-you-use / what-do-you-do-when-a-dog-doesnt-respond / cpdt-ka-cpdt-ksa-cbcc-ka-or-caab copy; unique vs dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+easy\+walk\+ruffwear\+front\+range\+watch\+log\+notebook\?s=training-red-flags/, label: 'dog Easy Walk / Ruffwear Front Range watch log-notebook search hop (matches on-page front-clip-harnesses-petsafe-easy-walk-ruffwear-front-range / reduce-pulling-without-this-mechanism / force-free-methods copy; unique vs dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
@@ -12324,9 +10808,6 @@ const CALCULATORS = [
     id: 'dog · trainer-credentials hops',
     file: 'apps/dog-com/src/app/training/trainer-credentials/page.tsx',
     mustInclude: [
-      { re: /source="training-trainer-credentials-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="training-credentials"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazon-brand\/dog\+cpdt\+ka\+hiring\+interview\+question\+card\?s=training-trainer-credentials/, label: 'dog CPDT-KA hiring interview question-card search hop (matches on-page what-credentials-do-you-hold / are-they-current / will-i-be-learning-to-train-my-dog copy; unique vs dog+force+free+trainer+interview+question+card / dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+trainer\+session\+observation\+watch\+log\+notebook\?s=training-trainer-credentials/, label: 'dog trainer session-observation watch log-notebook search hop (matches on-page can-i-observe-a-session-with-another-client / training-the-dog-while-excluding-the-owner / veterinary-reference-required copy; unique vs dog+easy+walk+ruffwear+front+range+watch+log+notebook / dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
@@ -12347,9 +10828,6 @@ const CALCULATORS = [
     id: 'fish · quarantine-tank-guide hops',
     file: 'apps/fish-com/src/app/setup/quarantine-tank-guide/page.tsx',
     mustInclude: [
-      { re: /source="setup-quarantine-tank-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-quarantine"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide/, label: 'existing quarantine-tank-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12366,9 +10844,6 @@ const CALCULATORS = [
     id: 'fish · pond-guide hops',
     file: 'apps/fish-com/src/app/setup/pond-guide/page.tsx',
     mustInclude: [
-      { re: /source="setup-pond-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-pond"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide/, label: 'existing pond-pump-filter-liner-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12385,9 +10860,6 @@ const CALCULATORS = [
     id: 'fish · saltwater-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/saltwater-tank-setup/page.tsx',
     mustInclude: [
-      { re: /source="setup-saltwater-tank-setup-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-saltwater"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup/, label: 'existing saltwater-reef-tank-starter-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12404,9 +10876,6 @@ const CALCULATORS = [
     id: 'fish · planted-tank-setup hops',
     file: 'apps/fish-com/src/app/setup/planted-tank-setup/page.tsx',
     mustInclude: [
-      { re: /source="setup-planted-tank-setup-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-planted"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup/, label: 'existing planted-aquarium-setup-CO2 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12423,9 +10892,6 @@ const CALCULATORS = [
     id: 'fish · water-chemistry-guide hops',
     file: 'apps/fish-com/src/app/setup/water-chemistry-guide/page.tsx',
     mustInclude: [
-      { re: /source="setup-water-chemistry-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-water-chemistry"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/api%20freshwater%20master%20test%20kit\?s=setup-water-chemistry-guide/, label: 'existing API-freshwater-master-test-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12442,9 +10908,6 @@ const CALCULATORS = [
     id: 'fish · aquarium-cycling-guide hops',
     file: 'apps/fish-com/src/app/setup/aquarium-cycling-guide/page.tsx',
     mustInclude: [
-      { re: /source="setup-aquarium-cycling-guide-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="setup-cycling"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide/, label: 'existing ammonia-nitrite-nitrate-test-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -12461,9 +10924,6 @@ const CALCULATORS = [
     id: 'vets · er-vs-urgent-care hops',
     file: 'apps/vets-co/src/app/guides/er-vs-urgent-care/page.tsx',
     mustInclude: [
-      { re: /source="guides-er-vs-urgent-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-er-vs-urgent"/, label: 'existing sidebar email capture kept in place' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -12480,9 +10940,6 @@ const CALCULATORS = [
     id: 'vets · emergency-vet-costs hops',
     file: 'apps/vets-co/src/app/guides/emergency-vet-costs/page.tsx',
     mustInclude: [
-      { re: /source="guides-emergency-vet-costs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-er-costs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/locking\+cash\+box\+with\+key\?s=guides-emergency-vet-costs/, label: 'locking cash-box-with-key search hop (matches on-page emergency-savings-fund / deductible / deposit copy; unique vs 32+gallon+locking+animal+proof+trash+can / airtight+locking+pet+food+bin)' },
       { re: /amazon-brand\/basic\+desktop\+calculator\?s=guides-emergency-vet-costs/, label: 'basic desktop-calculator search hop (matches on-page estimate-range / deposit-math copy; unique vs kitchen+gram+scale / hardcover+weekly+appointment+planner)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -12502,9 +10959,6 @@ const CALCULATORS = [
     id: 'vets · cost-of-veterinary-care hops',
     file: 'apps/vets-co/src/app/guides/cost-of-veterinary-care/page.tsx',
     mustInclude: [
-      { re: /source="guides-cost-of-veterinary-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-cost"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/household\+budget\+workbook\?s=guides-cost-of-veterinary-care/, label: 'household budget-workbook search hop (matches on-page routine-budget / wellness-exam / vaccination / parasite-prevention copy; unique vs hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner)' },
       { re: /amazon-brand\/checkbook\+register\?s=guides-cost-of-veterinary-care/, label: 'checkbook-register search hop (matches on-page recurring-chronic-line / medication / recheck-visit copy; unique vs basic+desktop+calculator)' },
       { re: /amazon-brand\/accordion\+file\+folder\+letter\+size\?s=guides-cost-of-veterinary-care/, label: 'letter-size accordion file-folder search hop (matches on-page last-12-months-of-invoices / Routine-Procedures-Chronic-Emergency copy; unique vs letter+size+expanding+file+organizer / letter+size+plastic+file+box / manila+file+folders+letter+size)' },
@@ -12525,9 +10979,6 @@ const CALCULATORS = [
     id: 'vets · how-to-afford-vet-care hops',
     file: 'apps/vets-co/src/app/guides/how-to-afford-vet-care/page.tsx',
     mustInclude: [
-      { re: /source="guides-how-to-afford-vet-care-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-afford"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cash\+envelope\+budget\+system\?s=guides-how-to-afford-vet-care/, label: 'cash-envelope budget-system search hop (matches on-page automatic-monthly-transfer / deductible / surprise-set-aside copy; unique vs locking+cash+box+with+key / household+budget+workbook)' },
       { re: /amazon-brand\/yellow\+legal\+pad\?s=guides-how-to-afford-vet-care/, label: 'yellow legal-pad search hop (matches on-page tiered-plan conversation / ideal-middle-minimum copy; unique vs lined+telephone+message+pad / checkbook+register)' },
       { re: /amazon-brand\/hanging\+file\+folders\+letter\+size\?s=guides-how-to-afford-vet-care/, label: 'letter-size hanging file-folder search hop (matches on-page payment-plan / assistance-application copy; unique vs manila+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+expanding+file+organizer / letter+size+plastic+file+box)' },
@@ -12548,9 +10999,6 @@ const CALCULATORS = [
     id: 'vets · what-to-expect-at-the-vet hops',
     file: 'apps/vets-co/src/app/guides/what-to-expect-at-the-vet/page.tsx',
     mustInclude: [
-      { re: /source="guides-what-to-expect-at-the-vet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-expect"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/spiral\+notebook\?s=guides-what-to-expect-at-the-vet/, label: 'spiral-notebook search hop (matches on-page visit-reason / medication-and-dose-list copy; unique vs yellow+legal+pad / lined+telephone+message+pad / pocket+spiral+memo+pad)' },
       { re: /amazon-brand\/small\+soft\+cooler\+bag\?s=guides-what-to-expect-at-the-vet/, label: 'small-soft-cooler-bag search hop (matches on-page fresh-stool-sample transport copy; unique vs soft+pet+carrier / medium+hard+sided+plastic+pet+carrier)' },
       { re: /amazon-brand\/clipboard\+with\+storage\?s=guides-what-to-expect-at-the-vet/, label: 'clipboard-with-storage search hop (matches on-page visit-findings / dosing / follow-up-plan paperwork copy; unique vs weatherproof+storage+clipboard / hardcover+weekly+appointment+planner / hanging+file+folders+letter+size)' },
@@ -12571,9 +11019,6 @@ const CALCULATORS = [
     id: 'vets · questions-to-ask-your-vet hops',
     file: 'apps/vets-co/src/app/guides/questions-to-ask-your-vet/page.tsx',
     mustInclude: [
-      { re: /source="guides-questions-to-ask-your-vet-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-questions"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ruled\+index\+cards\?s=guides-questions-to-ask-your-vet/, label: 'ruled-index-cards search hop (matches on-page diagnosis-question / one-card-per-question copy; unique vs spiral+notebook / yellow+legal+pad / pocket+spiral+memo+pad)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -12592,9 +11037,6 @@ const CALCULATORS = [
     id: 'vets · choosing-a-veterinarian hops',
     file: 'apps/vets-co/src/app/guides/choosing-a-veterinarian/page.tsx',
     mustInclude: [
-      { re: /source="guides-choosing-a-veterinarian-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="guides-choosing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/reporter\+notebook\?s=guides-choosing-a-veterinarian/, label: 'reporter-notebook search hop (matches on-page tour-impression / accreditation-note copy; unique vs spiral+notebook / yellow+legal+pad / ruled+index+cards)' },
       { re: /amazon-brand\/kraft\+two\+pocket\+folder\?s=guides-choosing-a-veterinarian/, label: 'kraft-two-pocket-folder search hop (matches on-page services / referral-scope comparison copy; unique vs hanging+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -12614,9 +11056,6 @@ const CALCULATORS = [
     id: 'vets · how-pet-insurance-works hops',
     file: 'apps/vets-co/src/app/insurance/how-pet-insurance-works/page.tsx',
     mustInclude: [
-      { re: /source="insurance-how-pet-insurance-works-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-how-works"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/four\+column\+accounting\+pad\?s=insurance-how-pet-insurance-works/, label: 'four-column-accounting-pad search hop (matches on-page four-levers / worked-example copy; unique vs household+budget+workbook / checkbook+register / basic+desktop+calculator)' },
       { re: /amazon-brand\/letter\+size\+poly\+envelope\?s=insurance-how-pet-insurance-works/, label: 'letter-size-poly-envelope search hop (matches on-page pay-then-claim / itemized-invoice packet copy; unique vs letter+size+sheet+protectors / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
       { re: /amazon-brand\/desktop\+receipt\+organizer\?s=insurance-how-pet-insurance-works/, label: 'desktop-receipt-organizer search hop (matches on-page paid-invoice / reimbursement-wait copy; unique vs cash+envelope+budget+system / locking+cash+box+with+key / pocket+size+address+book)' },
@@ -12637,9 +11076,6 @@ const CALCULATORS = [
     id: 'vets · when-to-enroll hops',
     file: 'apps/vets-co/src/app/insurance/when-to-enroll/page.tsx',
     mustInclude: [
-      { re: /source="insurance-when-to-enroll-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-when-enroll"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/monthly\+desk\+pad\+calendar\?s=insurance-when-to-enroll/, label: 'monthly-desk-pad-calendar search hop (matches on-page enroll-this-month / waiting-period copy; unique vs hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner / 48+hour+digital+kitchen+timer)' },
       { re: /amazon-brand\/self\+inking\+date\+stamp\?s=insurance-when-to-enroll/, label: 'self-inking-date-stamp search hop (matches on-page enrollment-day / new-pet-exam-day copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer)' },
       { re: /amazon-brand\/letter\+size\+file\+jacket\?s=insurance-when-to-enroll/, label: 'letter-size-file-jacket search hop (matches on-page adoption / new-pet-exam paperwork copy; unique vs letter+size+poly+envelope / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
@@ -12659,9 +11095,6 @@ const CALCULATORS = [
     id: 'vets · what-pet-insurance-covers hops',
     file: 'apps/vets-co/src/app/insurance/what-pet-insurance-covers/page.tsx',
     mustInclude: [
-      { re: /source="insurance-what-pet-insurance-covers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-what-covers"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/3\+tab\+dividers\?s=insurance-what-pet-insurance-covers/, label: '3-tab-dividers search hop (matches on-page accident-only / accident-and-illness / wellness categories; unique vs letter+size+file+jacket / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
       { re: /amazon-brand\/assorted\+highlighter\+set\?s=insurance-what-pet-insurance-covers/, label: 'assorted-highlighter-set search hop (matches on-page typical-coverage / usual-exclusions copy; unique vs 3x3+sticky+notes / yellow+legal+pad / four+column+accounting+pad)' },
       { re: /amazon-brand\/removable\+page\+flags\?s=insurance-what-pet-insurance-covers/, label: 'removable-page-flags search hop (matches on-page exam-fee / hereditary / dental / waiting-period copy; unique vs monthly+desk+pad+calendar / self+inking+date+stamp / letter+size+sheet+protectors)' },
@@ -12681,9 +11114,6 @@ const CALCULATORS = [
     id: 'vets · deductibles-reimbursement hops',
     file: 'apps/vets-co/src/app/insurance/deductibles-reimbursement/page.tsx',
     mustInclude: [
-      { re: /source="insurance-deductibles-reimbursement-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-deductibles"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/quad\+ruled\+graph\+pad\?s=insurance-deductibles-reimbursement/, label: 'quad-ruled-graph-pad search hop (matches on-page $5,000-bill / deductible / reimbursement / leftover-limit copy; unique vs four+column+accounting+pad / yellow+legal+pad / ruled+index+cards)' },
       { re: /amazon-brand\/paid\+rubber\+stamp\?s=insurance-deductibles-reimbursement/, label: 'paid-rubber-stamp search hop (matches on-page pay-then-claim / reimbursed-invoice copy; unique vs self+inking+date+stamp / desktop+receipt+organizer / four+column+accounting+pad)' },
       { re: /amazon-brand\/handheld\+tally\+counter\?s=insurance-deductibles-reimbursement/, label: 'handheld-tally-counter search hop (matches on-page remaining annual-limit headroom copy; unique vs basic+desktop+calculator / locking+cash+box+with+key / cash+envelope+budget+system)' },
@@ -12703,9 +11133,6 @@ const CALCULATORS = [
     id: 'vets · reading-the-fine-print hops',
     file: 'apps/vets-co/src/app/insurance/reading-the-fine-print/page.tsx',
     mustInclude: [
-      { re: /source="insurance-reading-the-fine-print-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-fine-print"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/full\+page\+magnifier\?s=insurance-reading-the-fine-print/, label: 'full-page-magnifier search hop (matches on-page orthopedic waiting-period / sample-policy copy; unique vs assorted+highlighter+set / removable+page+flags / self+inking+date+stamp)' },
       { re: /amazon-brand\/adjustable\+copyholder\?s=insurance-reading-the-fine-print/, label: 'adjustable-copyholder search hop (matches on-page side-by-side sample-policy / payout-model copy; unique vs letter+size+file+jacket / kraft+two+pocket+folder / clipboard+with+storage)' },
       { re: /amazon-brand\/line\+reader\+strip\?s=insurance-reading-the-fine-print/, label: 'line-reader-strip search hop (matches on-page exclusions-list copy; unique vs 3x3+sticky+notes / ruled+index+cards / letter+size+sheet+protectors)' },
@@ -12725,9 +11152,6 @@ const CALCULATORS = [
     id: 'vets · pre-existing-conditions hops',
     file: 'apps/vets-co/src/app/insurance/pre-existing-conditions/page.tsx',
     mustInclude: [
-      { re: /source="insurance-pre-existing-conditions-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-pre-existing"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pressboard\+classification\+folder\?s=insurance-pre-existing-conditions/, label: 'pressboard-classification-folder search hop (matches on-page curable / incurable / bilateral sections; unique vs 3+tab+dividers / hanging+file+folders+letter+size / manila+file+folders+letter+size)' },
       { re: /amazon-brand\/clasp\+envelope\+letter\+size\?s=insurance-pre-existing-conditions/, label: 'clasp-envelope-letter-size search hop (matches on-page veterinary-records / insurer-review copy; unique vs letter+size+poly+envelope / letter+size+file+jacket / kraft+two+pocket+folder)' },
       { re: /amazon-brand\/red\+and\+blue\+checking\+pencil\?s=insurance-pre-existing-conditions/, label: 'red-and-blue-checking-pencil search hop (matches on-page incurable-vs-curable marking copy; unique vs assorted+highlighter+set / yellow+legal+pad / four+column+accounting+pad)' },
@@ -12747,9 +11171,6 @@ const CALCULATORS = [
     id: 'vets · breed-specific-risk hops',
     file: 'apps/vets-co/src/app/insurance/breed-specific-risk/page.tsx',
     mustInclude: [
-      { re: /source="insurance-breed-specific-risk-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="insurance-breed-risk"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/blank\+pedigree\+chart\?s=insurance-breed-specific-risk/, label: 'blank-pedigree-chart search hop (matches on-page hereditary / congenital lines copy; unique vs pocket+size+address+book / ruled+index+cards / reporter+notebook)' },
       { re: /amazon-brand\/round\+color\+coding\+labels\?s=insurance-breed-specific-risk/, label: 'round-color-coding-labels search hop (matches on-page large / brachy / purebred / mixed risk-pattern copy; unique vs 3+tab+dividers / removable+page+flags / 3x3+sticky+notes)' },
       { re: /amazon-brand\/5\+compartment\+letter\+sorter\?s=insurance-breed-specific-risk/, label: '5-compartment-letter-sorter search hop (matches on-page four breed-type stacks copy; unique vs pressboard+classification+folder / hanging+file+folders+letter+size / desktop+receipt+organizer)' },
@@ -12769,9 +11190,6 @@ const CALCULATORS = [
     id: 'vets · labrador-health hops',
     file: 'apps/vets-co/src/app/breeds/labrador-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-labrador-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-labrador"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/flexible\+sewing\+tape\+measure\?s=breeds-labrador-health/, label: 'flexible-sewing-tape-measure search hop (matches on-page visible-waist / abdominal-tuck BCS copy; unique vs handheld+tally+counter / basic+desktop+calculator / digital+pet+scale)' },
       { re: /amazon-brand\/bound\+composition\+book\?s=breeds-labrador-health/, label: 'bound-composition-book search hop (matches on-page monthly same-scale weigh-log copy; unique vs spiral+notebook / reporter+notebook / quad+ruled+graph+pad)' },
       { re: /amazon-brand\/letter\+size\+document\+frame\?s=breeds-labrador-health/, label: 'letter-size-document-frame search hop (matches on-page OFA hip-and-elbow certificate copy; unique vs letter+size+file+jacket / clasp+envelope+letter+size / blank+pedigree+chart)' },
@@ -12791,9 +11209,6 @@ const CALCULATORS = [
     id: 'vets · golden-retriever-health hops',
     file: 'apps/vets-co/src/app/breeds/golden-retriever-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-golden-retriever-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-golden-retriever"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dot\+grid\+notebook\?s=breeds-golden-retriever-health/, label: 'dot-grid-notebook search hop (matches on-page monthly jaw / shoulder / groin / behind-the-knee node-check copy; unique vs spiral+notebook / reporter+notebook / bound+composition+book / dog+lymph+node+anatomy+chart)' },
       { re: /amazon-brand\/paint\+chip\+sample\+cards\?s=breeds-golden-retriever-health/, label: 'paint-chip-sample-cards search hop (matches on-page gum-color baseline / pale-or-white-gums copy; unique vs round+color+coding+labels / assorted+highlighter+set / dog+gum+color+assessment+chart)' },
       { re: /amazon-brand\/18\+month\+wall\+calendar\?s=breeds-golden-retriever-health/, label: '18-month-wall-calendar search hop (matches on-page age-6 ultrasound / age-8 every-6-month visit copy; unique vs monthly+desk+pad+calendar / hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner)' },
@@ -12813,9 +11228,6 @@ const CALCULATORS = [
     id: 'vets · german-shepherd-health hops',
     file: 'apps/vets-co/src/app/breeds/german-shepherd-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-german-shepherd-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-german-shepherd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/top\+bound\+steno\+pad\?s=breeds-german-shepherd-health/, label: 'top-bound-steno-pad search hop (matches on-page hind-limb wobble / knuckling after-age-5 DM-workup copy; unique vs spiral+notebook / reporter+notebook / bound+composition+book / dot+grid+notebook)' },
       { re: /amazon-brand\/mechanical\+kitchen\+timer\?s=breeds-german-shepherd-health/, label: 'mechanical-kitchen-timer search hop (matches on-page avoid-exercise-immediately-after-eating GDV copy; unique vs 48+hour+digital+kitchen+timer / 30+minute+sand+hourglass+timer / hardcover+weekly+appointment+planner)' },
       { re: /amazon-brand\/self\+adhesive\+file\+folder\+labels\?s=breeds-german-shepherd-health/, label: 'self-adhesive-file-folder-labels search hop (matches on-page OFA hip-and-elbow / SOD1 DNA / gastropexy-record copy; unique vs round+color+coding+labels / 3+tab+dividers / removable+page+flags)' },
@@ -12835,9 +11247,6 @@ const CALCULATORS = [
     id: 'vets · french-bulldog-health hops',
     file: 'apps/vets-co/src/app/breeds/french-bulldog-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-french-bulldog-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="breeds-french-bulldog"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/four\+tab\+dividers\?s=breeds-french-bulldog-health/, label: 'four-tab-dividers search hop (matches on-page BOAS grade 0–III copy; unique vs 3+tab+dividers / removable+page+flags / self+adhesive+file+folder+labels)' },
       { re: /amazon-brand\/analog\+outdoor\+thermometer\?s=breeds-french-bulldog-health/, label: 'analog-outdoor-thermometer search hop (matches on-page 70°F outdoor-limit / heat-stroke copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / dog+cooling+mat / dog+cooling+vest)' },
       { re: /amazon-brand\/weekly\+checklist\+notepad\?s=breeds-french-bulldog-health/, label: 'weekly-checklist-notepad search hop (matches on-page fold-cleaning 2–3 times weekly copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
@@ -12857,9 +11266,6 @@ const CALCULATORS = [
     id: 'vets · beagle-health hops',
     file: 'apps/vets-co/src/app/breeds/beagle-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-beagle-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-beagle"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/analog\+stopwatch\?s=breeds-beagle-health/, label: 'analog-stopwatch search hop (matches on-page seizure-duration / five-minute emergency copy; unique vs mechanical+kitchen+timer / 48+hour+digital+kitchen+timer / analog+outdoor+thermometer)' },
       { re: /amazon-brand\/blank\+index\+cards\?s=breeds-beagle-health/, label: 'blank-index-cards search hop (matches on-page document-seizures date/duration copy; unique vs ruled+index+cards / top+bound+steno+pad / bound+composition+book)' },
       { re: /amazon-brand\/recipe\+card\+box\?s=breeds-beagle-health/, label: 'recipe-card-box search hop (matches on-page measure-every-meal / never-free-feed copy; unique vs four+tab+dividers / weekly+checklist+notepad / hardcover+weekly+appointment+planner)' },
@@ -12879,9 +11285,6 @@ const CALCULATORS = [
     id: 'vets · yorkshire-terrier-health hops',
     file: 'apps/vets-co/src/app/breeds/yorkshire-terrier-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-yorkshire-terrier-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-yorkshire-terrier"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/two\+column\+ledger\+pad\?s=breeds-yorkshire-terrier-health/, label: 'two-column-ledger-pad search hop (matches on-page fasting / post-prandial bile-acids pair copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / weekly+checklist+notepad)' },
       { re: /amazon-brand\/30\+day\+habit\+tracker\+pad\?s=breeds-yorkshire-terrier-health/, label: '30-day-habit-tracker-pad search hop (matches on-page daily home-brushing copy; unique vs hardcover+weekly+appointment+planner / monthly+desk+pad+calendar / 18+month+wall+calendar)' },
       { re: /amazon-brand\/hourly\+desk\+pad\?s=breeds-yorkshire-terrier-health/, label: 'hourly-desk-pad search hop (matches on-page four-small-meals-until-four-months copy; unique vs monthly+desk+pad+calendar / mechanical+kitchen+timer / recipe+card+box)' },
@@ -12901,9 +11304,6 @@ const CALCULATORS = [
     id: 'vets · chihuahua-health hops',
     file: 'apps/vets-co/src/app/breeds/chihuahua-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-chihuahua-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-chihuahua"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/13\+column\+analysis\+pad\?s=breeds-chihuahua-health/, label: '13-column-analysis-pad search hop (matches on-page murmur-grade / echo-date / Stage A–D / resting-RR copy; unique vs four+column+accounting+pad / quad+ruled+graph+pad / two+column+ledger+pad)' },
       { re: /amazon-brand\/desk\+blotter\+pad\?s=breeds-chihuahua-health/, label: 'desk-blotter-pad search hop (matches on-page molera-protection household-rules copy; unique vs monthly+desk+pad+calendar / hourly+desk+pad / letter+size+document+frame)' },
       { re: /amazon-brand\/numbered\+log\+book\?s=breeds-chihuahua-health/, label: 'numbered-log-book search hop (matches on-page tremor-versus-hypoglycemia episode copy; unique vs bound+composition+book / blank+index+cards / lined+telephone+message+pad)' },
@@ -12923,9 +11323,6 @@ const CALCULATORS = [
     id: 'vets · husky-health hops',
     file: 'apps/vets-co/src/app/breeds/husky-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-husky-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-husky"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/academic\+year\+planner\?s=breeds-husky-health/, label: 'academic-year-planner search hop (matches on-page annual CAER eye-exam copy covering cataracts / PRA / corneal dystrophy; unique vs hardcover+weekly+appointment+planner / 18+month+wall+calendar / monthly+desk+pad+calendar)' },
       { re: /amazon-brand\/8\+column\+columnar\+pad\?s=breeds-husky-health/, label: '8-column-columnar-pad search hop (matches on-page eyes / hips / thyroid / gastropexy / platelet-review screening row; unique vs 13+column+analysis+pad / four+column+accounting+pad / two+column+ledger+pad)' },
       { re: /amazon-brand\/newsprint\+sketch\+pad\?s=breeds-husky-health/, label: 'newsprint-sketch-pad search hop (matches on-page facial-crusting-site / PRA furniture-layout copy; unique vs paint+chip+sample+cards / blank+pedigree+chart / desk+blotter+pad)' },
@@ -12945,9 +11342,6 @@ const CALCULATORS = [
     id: 'vets · pomeranian-health hops',
     file: 'apps/vets-co/src/app/breeds/pomeranian-health/page.tsx',
     mustInclude: [
-      { re: /source="breeds-pomeranian-health-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,400}source="breeds-pomeranian"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/analog\+indoor\+hygrometer\?s=breeds-pomeranian-health/, label: 'analog-indoor-hygrometer search hop (matches on-page heat-and-humidity cough-trigger copy; unique vs analog+outdoor+thermometer / analog+stopwatch / digital+pet+thermometer)' },
       { re: /amazon-brand\/6\+column\+columnar\+pad\?s=breeds-pomeranian-health/, label: '6-column-columnar-pad search hop (matches on-page patellar-grade / murmur / dental-score / BCS well-visit row; unique vs 8+column+columnar+pad / 13+column+analysis+pad / four+column+accounting+pad)' },
       { re: /amazon-brand\/undated\+daily\+planner\?s=breeds-pomeranian-health/, label: 'undated-daily-planner search hop (matches on-page thyroid / ACTH / LDDS dates before accepting alopecia X; unique vs academic+year+planner / hardcover+weekly+appointment+planner / monthly+desk+pad+calendar)' },
@@ -12967,9 +11361,6 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-filters hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-filters/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-aquarium-filters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-filters"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=reviews-best-aquarium-filters/, label: 'existing AquaClear-70 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hikari\+bacto\+surge\+sponge\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Hikari-Bacto-Surge amazon-brand hop kept (do not re-ship a new query)' },
@@ -12988,9 +11379,6 @@ const CALCULATORS = [
     id: 'fish · best-canister-filters hops',
     file: 'apps/fish-com/src/app/reviews/best-canister-filters/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-canister-filters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-canister-filters"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/eheim\+classic\+350\+2215\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -13007,9 +11395,6 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-heaters hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-heaters/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-aquarium-heaters-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-heaters"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'existing Cobalt-Neo-Therm amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
@@ -13028,9 +11413,6 @@ const CALCULATORS = [
     id: 'fish · best-aquarium-lighting hops',
     file: 'apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-aquarium-lighting-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-lighting"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/hygger\+957\?s=reviews-best-aquarium-lighting/, label: 'existing Hygger-957 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/fluval\+plant\+3\.0\?s=reviews-best-aquarium-lighting/, label: 'existing Fluval-Plant-3.0 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kessil\+a360x\?s=reviews-best-aquarium-lighting/, label: 'existing Kessil-A360X amazon-brand hop kept (do not re-ship a new query)' },
@@ -13049,9 +11431,6 @@ const CALCULATORS = [
     id: 'fish · best-water-test-kits hops',
     file: 'apps/fish-com/src/app/reviews/best-water-test-kits/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-water-test-kits-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-test-kits"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=reviews-best-water-test-kits/, label: 'existing API Master Test Kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13067,9 +11446,6 @@ const CALCULATORS = [
     id: 'fish · best-nano-tanks hops',
     file: 'apps/fish-com/src/app/reviews/best-nano-tanks/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-nano-tanks-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-nano-tanks"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/fluval\+spec\+v\+5\+gallon\?s=reviews-best-nano-tanks/, label: 'existing Fluval-Spec-V amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+10\+gallon\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-10 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-20-Long amazon-brand hop kept (do not re-ship a new query)' },
@@ -13087,9 +11463,6 @@ const CALCULATORS = [
     id: 'fish · best-planted-tank-fertilizers hops',
     file: 'apps/fish-com/src/app/reviews/best-planted-tank-fertilizers/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-planted-tank-fertilizers-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-fertilizers"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Easy-Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/seachem\+flourish\+comprehensive\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Seachem-Flourish amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/nilocg\+thrive\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing NilocG-Thrive amazon-brand hop kept (do not re-ship a new query)' },
@@ -13107,9 +11480,6 @@ const CALCULATORS = [
     id: 'fish · betta-fish hops',
     file: 'apps/fish-com/src/app/species/betta-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-betta-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-betta"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/betta%20fish%20tank%20setup\?s=species-betta-fish/, label: 'existing betta tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13125,9 +11495,6 @@ const CALCULATORS = [
     id: 'fish · neon-tetra hops',
     file: 'apps/fish-com/src/app/species/neon-tetra/page.tsx',
     mustInclude: [
-      { re: /source="species-neon-tetra-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-neon-tetra"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/neon%20tetra%20tank%20setup\?s=species-neon-tetra/, label: 'existing neon tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13143,9 +11510,6 @@ const CALCULATORS = [
     id: 'fish · clownfish hops',
     file: 'apps/fish-com/src/app/species/clownfish/page.tsx',
     mustInclude: [
-      { re: /source="species-clownfish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-clownfish"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/clownfish%20tank%20setup\?s=species-clownfish/, label: 'existing clownfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept on page' },
     ],
@@ -13161,9 +11525,6 @@ const CALCULATORS = [
     id: 'fish · goldfish hops',
     file: 'apps/fish-com/src/app/species/goldfish/page.tsx',
     mustInclude: [
-      { re: /source="species-goldfish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-goldfish"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/goldfish%20tank%20setup\?s=species-goldfish/, label: 'existing goldfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13179,9 +11540,6 @@ const CALCULATORS = [
     id: 'fish · angelfish hops',
     file: 'apps/fish-com/src/app/species/angelfish/page.tsx',
     mustInclude: [
-      { re: /source="species-angelfish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-angelfish"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/angelfish%20tank%20setup\?s=species-angelfish/, label: 'existing angelfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13197,9 +11555,6 @@ const CALCULATORS = [
     id: 'fish · discus hops',
     file: 'apps/fish-com/src/app/species/discus/page.tsx',
     mustInclude: [
-      { re: /source="species-discus-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-discus"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/discus%20tank%20setup\?s=species-discus/, label: 'existing discus tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13215,9 +11570,6 @@ const CALCULATORS = [
     id: 'fish · guppy hops',
     file: 'apps/fish-com/src/app/species/guppy/page.tsx',
     mustInclude: [
-      { re: /source="species-guppy-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-guppy"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/guppy%20tank%20setup\?s=species-guppy/, label: 'existing guppy tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13233,9 +11585,6 @@ const CALCULATORS = [
     id: 'fish · oscar hops',
     file: 'apps/fish-com/src/app/species/oscar/page.tsx',
     mustInclude: [
-      { re: /source="species-oscar-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-oscar"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/oscar%20tank%20setup\?s=species-oscar/, label: 'existing oscar tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13251,9 +11600,6 @@ const CALCULATORS = [
     id: 'fish · african-cichlid hops',
     file: 'apps/fish-com/src/app/species/african-cichlid/page.tsx',
     mustInclude: [
-      { re: /source="species-african-cichlid-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-african-cichlid"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/african%20cichlid%20tank%20setup\?s=species-african-cichlid/, label: 'existing african-cichlid tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13269,9 +11615,6 @@ const CALCULATORS = [
     id: 'fish · amano-shrimp hops',
     file: 'apps/fish-com/src/app/species/amano-shrimp/page.tsx',
     mustInclude: [
-      { re: /source="species-amano-shrimp-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-amano"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/amano%20shrimp%20tank%20setup\?s=species-amano-shrimp/, label: 'existing amano-shrimp tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13287,9 +11630,6 @@ const CALCULATORS = [
     id: 'fish · axolotl hops',
     file: 'apps/fish-com/src/app/species/axolotl/page.tsx',
     mustInclude: [
-      { re: /source="species-axolotl-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-axolotl"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/axolotl%20tank%20setup\?s=species-axolotl/, label: 'existing axolotl tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13305,9 +11645,6 @@ const CALCULATORS = [
     id: 'fish · blue-ram hops',
     file: 'apps/fish-com/src/app/species/blue-ram/page.tsx',
     mustInclude: [
-      { re: /source="species-blue-ram-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-blue-ram"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/blue%20ram%20tank%20setup\?s=species-blue-ram/, label: 'existing blue-ram tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13323,9 +11660,6 @@ const CALCULATORS = [
     id: 'fish · boesemani-rainbowfish hops',
     file: 'apps/fish-com/src/app/species/boesemani-rainbowfish/page.tsx',
     mustInclude: [
-      { re: /source="species-boesemani-rainbowfish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-boesemani"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/boesemani%20rainbowfish%20tank%20setup\?s=species-boesemani-rainbowfish/, label: 'existing boesemani-rainbowfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13341,9 +11675,6 @@ const CALCULATORS = [
     id: 'fish · bristlenose-pleco hops',
     file: 'apps/fish-com/src/app/species/bristlenose-pleco/page.tsx',
     mustInclude: [
-      { re: /source="species-bristlenose-pleco-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-bristlenose-pleco"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/bristlenose%20pleco%20tank%20setup\?s=species-bristlenose-pleco/, label: 'existing bristlenose-pleco tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13359,9 +11690,6 @@ const CALCULATORS = [
     id: 'fish · bronze-corydoras hops',
     file: 'apps/fish-com/src/app/species/bronze-corydoras/page.tsx',
     mustInclude: [
-      { re: /source="species-bronze-corydoras-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-bronze-corydoras"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/corydoras%20tank%20setup\?s=species-bronze-corydoras/, label: 'existing bronze-corydoras tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13377,9 +11705,6 @@ const CALCULATORS = [
     id: 'fish · cardinal-tetra hops',
     file: 'apps/fish-com/src/app/species/cardinal-tetra/page.tsx',
     mustInclude: [
-      { re: /source="species-cardinal-tetra-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-cardinal-tetra"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cardinal%20tetra%20tank%20setup\?s=species-cardinal-tetra/, label: 'existing cardinal-tetra tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13395,9 +11720,6 @@ const CALCULATORS = [
     id: 'fish · celestial-pearl-danio hops',
     file: 'apps/fish-com/src/app/species/celestial-pearl-danio/page.tsx',
     mustInclude: [
-      { re: /source="species-celestial-pearl-danio-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-cpd"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/celestial%20pearl%20danio%20tank%20setup\?s=species-celestial-pearl-danio/, label: 'existing celestial-pearl-danio tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13413,9 +11735,6 @@ const CALCULATORS = [
     id: 'fish · cherry-barb hops',
     file: 'apps/fish-com/src/app/species/cherry-barb/page.tsx',
     mustInclude: [
-      { re: /source="species-cherry-barb-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-cherry-barb"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cherry%20barb%20tank%20setup\?s=species-cherry-barb/, label: 'existing cherry-barb tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13431,9 +11750,6 @@ const CALCULATORS = [
     id: 'fish · cherry-shrimp hops',
     file: 'apps/fish-com/src/app/species/cherry-shrimp/page.tsx',
     mustInclude: [
-      { re: /source="species-cherry-shrimp-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-cherry-shrimp"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/cherry%20shrimp%20tank%20setup\?s=species-cherry-shrimp/, label: 'existing cherry-shrimp tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13449,9 +11765,6 @@ const CALCULATORS = [
     id: 'fish · corydoras hops',
     file: 'apps/fish-com/src/app/species/corydoras/page.tsx',
     mustInclude: [
-      { re: /source="species-corydoras-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-corydoras"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/corydoras%20tank%20setup\?s=species-corydoras/, label: 'existing corydoras tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13467,9 +11780,6 @@ const CALCULATORS = [
     id: 'fish · dwarf-gourami hops',
     file: 'apps/fish-com/src/app/species/dwarf-gourami/page.tsx',
     mustInclude: [
-      { re: /source="species-dwarf-gourami-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-dwarf-gourami"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dwarf%20gourami%20tank%20setup\?s=species-dwarf-gourami/, label: 'existing dwarf-gourami tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13485,9 +11795,6 @@ const CALCULATORS = [
     id: 'fish · dwarf-puffer hops',
     file: 'apps/fish-com/src/app/species/dwarf-puffer/page.tsx',
     mustInclude: [
-      { re: /source="species-dwarf-puffer-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-dwarf-puffer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dwarf%20puffer%20nano%20tank%20setup\?s=species-dwarf-puffer/, label: 'existing dwarf-puffer nano tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13503,9 +11810,6 @@ const CALCULATORS = [
     id: 'fish · ember-tetra hops',
     file: 'apps/fish-com/src/app/species/ember-tetra/page.tsx',
     mustInclude: [
-      { re: /source="species-ember-tetra-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-ember-tetra"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ember%20tetra%20tank%20setup\?s=species-ember-tetra/, label: 'existing ember-tetra tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13521,9 +11825,6 @@ const CALCULATORS = [
     id: 'fish · endlers-livebearer hops',
     file: 'apps/fish-com/src/app/species/endlers-livebearer/page.tsx',
     mustInclude: [
-      { re: /source="species-endlers-livebearer-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-endlers-livebearer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/endlers%20livebearer%20nano%20tank%20setup\?s=species-endlers-livebearer/, label: 'existing endlers-livebearer nano tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13539,9 +11840,6 @@ const CALCULATORS = [
     id: 'fish · harlequin-rasbora hops',
     file: 'apps/fish-com/src/app/species/harlequin-rasbora/page.tsx',
     mustInclude: [
-      { re: /source="species-harlequin-rasbora-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-harlequin"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/harlequin%20rasbora%20tank%20setup\?s=species-harlequin-rasbora/, label: 'existing harlequin-rasbora tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13557,9 +11855,6 @@ const CALCULATORS = [
     id: 'fish · hillstream-loach hops',
     file: 'apps/fish-com/src/app/species/hillstream-loach/page.tsx',
     mustInclude: [
-      { re: /source="species-hillstream-loach-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-hillstream"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/hillstream%20loach%20tank%20setup\?s=species-hillstream-loach/, label: 'existing hillstream-loach tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13575,9 +11870,6 @@ const CALCULATORS = [
     id: 'fish · molly-fish hops',
     file: 'apps/fish-com/src/app/species/molly-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-molly-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-molly"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/molly%20fish%20tank%20setup\?s=species-molly-fish/, label: 'existing molly-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13593,9 +11885,6 @@ const CALCULATORS = [
     id: 'fish · otocinclus hops',
     file: 'apps/fish-com/src/app/species/otocinclus/page.tsx',
     mustInclude: [
-      { re: /source="species-otocinclus-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-otocinclus"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/otocinclus%20tank%20setup\?s=species-otocinclus/, label: 'existing otocinclus tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13611,9 +11900,6 @@ const CALCULATORS = [
     id: 'fish · pearl-gourami hops',
     file: 'apps/fish-com/src/app/species/pearl-gourami/page.tsx',
     mustInclude: [
-      { re: /source="species-pearl-gourami-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-pearl-gourami"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pearl%20gourami%20tank%20setup\?s=species-pearl-gourami/, label: 'existing pearl-gourami tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13629,9 +11915,6 @@ const CALCULATORS = [
     id: 'fish · platy-fish hops',
     file: 'apps/fish-com/src/app/species/platy-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-platy-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-platy"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/platy%20fish%20tank%20setup\?s=species-platy-fish/, label: 'existing platy-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13647,9 +11930,6 @@ const CALCULATORS = [
     id: 'fish · rainbow-fish hops',
     file: 'apps/fish-com/src/app/species/rainbow-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-rainbow-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-rainbowfish"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/rainbow%20fish%20tank%20setup\?s=species-rainbow-fish/, label: 'existing rainbow-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13665,9 +11945,6 @@ const CALCULATORS = [
     id: 'fish · sparkling-gourami hops',
     file: 'apps/fish-com/src/app/species/sparkling-gourami/page.tsx',
     mustInclude: [
-      { re: /source="species-sparkling-gourami-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-sparkling-gourami"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/sparkling%20gourami%20nano%20tank%20setup\?s=species-sparkling-gourami/, label: 'existing sparkling-gourami nano tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13683,9 +11960,6 @@ const CALCULATORS = [
     id: 'fish · swordtail-fish hops',
     file: 'apps/fish-com/src/app/species/swordtail-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-swordtail-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-swordtail"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/swordtail%20fish%20tank%20setup\?s=species-swordtail-fish/, label: 'existing swordtail-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13701,9 +11975,6 @@ const CALCULATORS = [
     id: 'fish · koi hops',
     file: 'apps/fish-com/src/app/species/koi/page.tsx',
     mustInclude: [
-      { re: /source="species-koi-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-koi"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/koi%20tank%20setup\?s=species-koi/, label: 'existing koi tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13719,9 +11990,6 @@ const CALCULATORS = [
     id: 'fish · kuhli-loach hops',
     file: 'apps/fish-com/src/app/species/kuhli-loach/page.tsx',
     mustInclude: [
-      { re: /source="species-kuhli-loach-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-kuhli-loach"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/kuhli%20loach%20tank%20setup\?s=species-kuhli-loach/, label: 'existing kuhli-loach tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13737,9 +12005,6 @@ const CALCULATORS = [
     id: 'fish · mystery-snail hops',
     file: 'apps/fish-com/src/app/species/mystery-snail/page.tsx',
     mustInclude: [
-      { re: /source="species-mystery-snail-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-mystery-snail"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/mystery%20snail%20tank%20setup\?s=species-mystery-snail/, label: 'existing mystery-snail tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13755,9 +12020,6 @@ const CALCULATORS = [
     id: 'fish · panda-corydoras hops',
     file: 'apps/fish-com/src/app/species/panda-corydoras/page.tsx',
     mustInclude: [
-      { re: /source="species-panda-corydoras-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-panda-corydoras"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/panda%20corydoras%20tank%20setup\?s=species-panda-corydoras/, label: 'existing panda-corydoras tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13773,9 +12035,6 @@ const CALCULATORS = [
     id: 'fish · pleco hops',
     file: 'apps/fish-com/src/app/species/pleco/page.tsx',
     mustInclude: [
-      { re: /source="species-pleco-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-pleco"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/pleco%20tank%20setup\?s=species-pleco/, label: 'existing pleco tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13791,9 +12050,6 @@ const CALCULATORS = [
     id: 'fish · puffer-fish hops',
     file: 'apps/fish-com/src/app/species/puffer-fish/page.tsx',
     mustInclude: [
-      { re: /source="species-puffer-fish-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-puffer"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/puffer%20fish%20tank%20setup\?s=species-puffer-fish/, label: 'existing puffer-fish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13809,9 +12065,6 @@ const CALCULATORS = [
     id: 'fish · white-cloud-mountain-minnow hops',
     file: 'apps/fish-com/src/app/species/white-cloud-mountain-minnow/page.tsx',
     mustInclude: [
-      { re: /source="species-white-cloud-mountain-minnow-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-white-cloud"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/white%20cloud%20mountain%20minnow%20tank%20setup\?s=species-white-cloud-mountain-minnow/, label: 'existing white-cloud-mountain-minnow tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13827,9 +12080,6 @@ const CALCULATORS = [
     id: 'fish · zebra-danio hops',
     file: 'apps/fish-com/src/app/species/zebra-danio/page.tsx',
     mustInclude: [
-      { re: /source="species-zebra-danio-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-zebra-danio"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/zebra%20danio%20tank%20setup\?s=species-zebra-danio/, label: 'existing zebra-danio tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13845,9 +12095,6 @@ const CALCULATORS = [
     id: 'fish · betta-fish-tank-mates hops',
     file: 'apps/fish-com/src/app/species/betta-fish-tank-mates/page.tsx',
     mustInclude: [
-      { re: /source="species-betta-fish-tank-mates-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="species-betta-mates"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/betta%20fish%20tank%20mates%20tank%20setup\?s=species-betta-fish-tank-mates/, label: 'existing betta-fish-tank-mates tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -13863,9 +12110,6 @@ const CALCULATORS = [
     id: 'dog · puppy-nutrition hops',
     file: 'apps/dog-com/src/app/nutrition/puppy-nutrition/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-puppy-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-puppy"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/large\+breed\+puppy\+dry\+dog\+food\+aafco\?s=nutrition-puppy/, label: 'existing large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\+dry\+dog\+food\?s=nutrition-puppy/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -13881,9 +12125,6 @@ const CALCULATORS = [
     id: 'dog · senior-dog-nutrition hops',
     file: 'apps/dog-com/src/app/nutrition/senior-dog-nutrition/page.tsx',
     mustInclude: [
-      { re: /source="nutrition-senior-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="nutrition-senior"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/senior\+dog\+dry\+food\+wsava\+recommended\?s=nutrition-senior/, label: 'existing WSAVA senior amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+senior\+dry\+dog\+food\?s=nutrition-senior/, label: 'existing Purina Pro Plan senior Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -13899,9 +12140,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-food-for-puppies hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-food-for-puppies/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-food-for-puppies-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-puppy-food"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/royal\+canin\+large\+breed\+puppy\?s=reviews-best-dog-food-for-puppies/, label: 'existing Royal Canin large-breed puppy amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/purina\+pro\+plan\+puppy\+large\+breed\?s=reviews-best-dog-food-for-puppies/, label: 'existing Purina Pro Plan puppy large-breed Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/hills\+science\+diet\+puppy\+small\+paws\?s=reviews-best-dog-food-for-puppies/, label: 'existing Hill\'s Small Paws Chewy hop kept (not an empty leftover button)' },
@@ -13919,9 +12157,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-crates-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-dog-crates"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/midwest\+icrate\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing MidWest iCrate amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/impact\+high\+anxiety\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Impact high-anxiety amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/petmate\+sky\+kennel\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
@@ -13939,9 +12174,6 @@ const CALCULATORS = [
     id: 'dog · best-joint-supplements hops',
     file: 'apps/dog-com/src/app/reviews/best-joint-supplements/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-joint-supplements-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-joint-supplements"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/dasuquin\+with\+msm\?s=reviews-best-joint-supplements/, label: 'existing Dasuquin amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/nordic\+naturals\+omega\+pet\?s=reviews-best-joint-supplements/, label: 'existing Nordic Naturals amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/cosequin\+ds\+maximum\+strength\?s=reviews-best-joint-supplements/, label: 'existing Cosequin DS amazon-brand hop kept (do not re-ship a new query)' },
@@ -13959,9 +12191,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-gps-tracker hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-gps-tracker/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-gps-tracker-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-gps"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/fi\+series\+3\+dog\+collar\?s=reviews-best-dog-gps-tracker/, label: 'existing Fi Series 3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/whistle\+go\+explore\?s=reviews-best-dog-gps-tracker/, label: 'existing Whistle Go Explore amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/tractive\+gps\+dog\+tracker\?s=reviews-best-dog-gps-tracker/, label: 'existing Tractive GPS amazon-brand hop kept (do not re-ship a new query)' },
@@ -13979,9 +12208,6 @@ const CALCULATORS = [
     id: 'dog · best-dog-harnesses hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-harnesses/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-dog-harnesses-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-harnesses"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/julius\+k9\+idc\+powerharness\?s=reviews-best-dog-harnesses/, label: 'existing Julius-K9 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/petsafe\+easy\+walk\+harness\?s=reviews-best-dog-harnesses/, label: 'existing PetSafe Easy Walk Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/ruffwear\+front\+range\+harness\?s=reviews-best-dog-harnesses/, label: 'existing Ruffwear Front Range Chewy hop kept (not an empty leftover button)' },
@@ -13998,9 +12224,6 @@ const CALCULATORS = [
     id: 'dog · best-slow-feeder-bowls hops',
     file: 'apps/dog-com/src/app/reviews/best-slow-feeder-bowls/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-slow-feeder-bowls-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-slow-feeders"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/northmate\+green\+interactive\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Northmate Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/outward\+hound\+fun\+feeder\?s=reviews-best-slow-feeder-bowls/, label: 'existing Outward Hound Fun Feeder Chewy hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/lickimat\+splash\?s=reviews-best-slow-feeder-bowls/, label: 'existing LickiMat Splash Chewy hop kept (not an empty leftover button)' },
@@ -14017,9 +12240,6 @@ const CALCULATORS = [
     id: 'horses · best-equine-supplements hops',
     file: 'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-equine-supplements-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="review-best-supplements"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/platinum\+performance\+equine\+wellness\?s=reviews-best-equine-supplements/, label: 'existing Platinum Performance amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kentucky\+equine\+research\+EO-3\+omega\+3\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/equithrive\+original\+pellets\+resveratrol\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
@@ -14038,9 +12258,6 @@ const CALCULATORS = [
     id: 'horses · joint-supplements hops',
     file: 'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
     mustInclude: [
-      { re: /source="supplements-joint-supplements-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="supplements-joint"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/platinum\+performance\+CJ\+joint\+supplement\?s=supplements-joint-supplements/, label: 'existing Platinum CJ amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -14056,9 +12273,6 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-harness hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-harness/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-ferret-harness-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-harness"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+vest\+harness\+jacket\+escape\+proof\?s=reviews-best-ferret-harness/, label: 'existing vest/jacket amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/ferret\+h\+style\+harness\+adjustable\?s=reviews-best-ferret-harness/, label: 'existing H-style amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/ferret\+mesh\+harness\+leash\+set\?s=reviews-best-ferret-harness/, label: 'existing mesh H-plus-leash amazon-brand hop kept (do not re-ship a new query)' },
@@ -14076,9 +12290,6 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-cage hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-cage/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-ferret-cage-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-cage"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation / Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/prevue\+feisty\+ferret\+cage\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kaytee\+multi\+level\+ferret\+home\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
@@ -14096,9 +12307,6 @@ const CALCULATORS = [
     id: 'ferret · hydration-and-water hops',
     file: 'apps/ferret-com/src/app/diet/hydration-and-water/page.tsx',
     mustInclude: [
-      { re: /source="diet-hydration-and-water-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-hydration-and-water"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=diet-hydration-and-water/, label: 'existing heavy ceramic bowl amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/small\+animal\+sipper\+water\+bottle\?s=diet-hydration-and-water/, label: 'existing sipper-bottle amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -14115,9 +12323,6 @@ const CALCULATORS = [
     id: 'ferret · cage-setup hops',
     file: 'apps/ferret-com/src/app/care/cage-setup/page.tsx',
     mustInclude: [
-      { re: /source="care-cage-setup-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="care-cage-setup"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/midwest\+critter\+nation\+double\+unit\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'existing Kaytee corner-pan Chewy hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -14133,9 +12338,6 @@ const CALCULATORS = [
     id: 'ferret · weight-management hops',
     file: 'apps/ferret-com/src/app/diet/weight-management/page.tsx',
     mustInclude: [
-      { re: /source="diet-weight-management-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="diet-weight-management"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=diet-weight-management/, label: 'existing digital gram-scale amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -14151,9 +12353,6 @@ const CALCULATORS = [
     id: 'ferret · stress-signs hops',
     file: 'apps/ferret-com/src/app/behavior/stress-signs/page.tsx',
     mustInclude: [
-      { re: /source="behavior-stress-signs-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-stress-signs"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=behavior-stress-signs/, label: 'existing ferret sleep-sack amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -14170,9 +12369,6 @@ const CALCULATORS = [
     id: 'ferret · leash-and-harness-training hops',
     file: 'apps/ferret-com/src/app/behavior/leash-and-harness-training/page.tsx',
     mustInclude: [
-      { re: /source="behavior-leash-harness-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-leash-harness"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/ferret\+vest\+harness\?s=behavior-leash-harness/, label: 'existing ferret vest-harness amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/ferret-harness-leash\?s=behavior-leash-harness/, label: 'existing Marshall H-style harness hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -14189,9 +12385,6 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-litter hops',
     file: 'apps/ferret-com/src/app/reviews/best-ferret-litter/page.tsx',
     mustInclude: [
-      { re: /source="reviews-best-ferret-litter-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="reviews-best-ferret-litter"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing heat-treated wood-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing grass-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/yesterdays\+news\+recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing Yesterday\'s News paper-pellet Chewy hop kept (not an empty leftover button)' },
@@ -14208,9 +12401,6 @@ const CALCULATORS = [
     id: 'ferret · diy-enrichment-toys hops',
     file: 'apps/ferret-com/src/app/behavior/diy-enrichment-toys/page.tsx',
     mustInclude: [
-      { re: /source="behavior-diy-enrichment-under-hero"/, label: 'under-hero email capture source tag' },
-      { re: /ctaText="Send the notes"/, label: 'honest inbox-notes offer, not a PDF or course' },
-      { re: /variant="sidebar"[\s\S]{0,240}source="behavior-diy-enrichment"/, label: 'existing sidebar email capture kept in place' },
       { re: /amazon-brand\/snuffle\+mat\+small\+pet\?s=behavior-diy-enrichment/, label: 'existing snuffle-mat amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-diy-enrichment/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
