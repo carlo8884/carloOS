@@ -11,6 +11,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Checker from './Checker'
 
@@ -211,6 +212,14 @@ export default function TankMateCompatibilityPage() {
 
         <h2 id="checker">The Checker</h2>
         <Checker />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/quarantine-tank-guide"
+          nextLabel="Quarantine a new fish before it joins the display"
+          nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The hop below is the same quarantine/hospital search already in the shop list."
+          resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
+          resourceLabel="Shop quarantine / hospital tanks on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
