@@ -8,6 +8,7 @@ import {
   FAQAccordion,
   SchemaScript,
   ShopCtas,
+  JourneyNext,
   buildFAQSchema,
   buildMetadata,
   combineSchemas,
@@ -199,15 +200,6 @@ export default function WhichPetPage() {
         }}
       >
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the starter list
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            First-week starter list
-          </h2>
-
-        </div>
 
         {/* Intro */}
         <p className="text-lg leading-relaxed text-brand-text-mid mb-3">
@@ -253,6 +245,14 @@ export default function WhichPetPage() {
             </div>
           </div>
         </section>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/tools/new-puppy-checklist"
+          nextLabel="Run the new-puppy checklist before you buy a crate"
+          nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The hop below is the same wire crate with divider search already on this page."
+          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
+          resourceLabel="Browse crates on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (first-week starter kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
