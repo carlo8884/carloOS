@@ -12602,6 +12602,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the large-breed formula rule, next step is puppy-nutrition + the existing Royal Canin hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'dog · best-large-breed-dog-food hops',
+    file: 'apps/dog-com/src/app/reviews/best-large-breed-dog-food/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the puppy vs adult formula rule' },
+      { re: /nextHref="\/nutrition\/puppy-nutrition"/, label: 'next step is puppy-nutrition, not a shop dump' },
+      { re: /resourceHref="\/go\/chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food"/, label: 'journey hop reuses the existing Royal Canin Large Adult Chewy search' },
+      { re: /chewy-brand\/royal\+canin\+large\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Royal Canin Large Adult Chewy hop kept (do not re-ship a new query)' },
+      { re: /chewy-brand\/purina\+pro\+plan\+large\+breed\+adult\?s=reviews-best-large-breed-dog-food/, label: 'existing Purina Pro Plan Large Breed Chewy hop kept (not an empty leftover button)' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+    ],
+    mustExclude: [
+      { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
+      { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the puppy vs adult formula rule, next step is puppy-nutrition + the existing Royal Canin Large Adult hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [
