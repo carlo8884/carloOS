@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -169,18 +170,20 @@ export default function AquariumCyclingEstimatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the timeline
-          </p>
-
-        </div>
 
         <h2 id="estimator">The estimator</h2>
         <p>
           Choose your cycling method and tank temperature. The estimator returns a total cycle time, a typical range, and a four-phase timeline (ammonia rise → nitrite spike → nitrate appears → cycle complete).
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/stocking-calculator"
+          nextLabel="Sketch a slim-inch ceiling before you stock"
+          nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
+          resourceLabel="Shop API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
