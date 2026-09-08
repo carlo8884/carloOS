@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish stocking JourneyNext after #1553)
+**Last updated:** 2026-09-08 (COO — dog puppy-schedule JourneyNext after #1554)
 
-> **COO fish stocking journey (2026-09-08):** After #1553. Stocking calculator → `/tools/tank-mate-compatibility-checker` + existing heater `/go` (already on both fresh and salt shop lists). EmailCapture + StockingShop water-type switch untouched. Details: `ops/handoffs/2026-09-08-coo-fish-stocking-journey.md`.
+> **COO dog puppy-schedule journey (2026-09-08):** After #1554. `/training/puppy-schedule` → `/nutrition/puppy-nutrition` + existing puppy-food `/go`. Empty “Keep the schedule” husk removed. Shop dump stays after the sample day. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-schedule-journey.md`.
+
+> **COO fish stocking journey (2026-09-08):** After #1553. Stocking calculator → `/tools/tank-mate-compatibility-checker` + existing heater `/go` (already on both fresh and salt shop lists). EmailCapture + StockingShop water-type switch untouched. Details: `ops/handoffs/2026-09-08-coo-fish-stocking-journey.md`. #1554 merged.
 
 > **COO house-training journey (2026-09-08):** Live #1552 verify was clean. House-training → `/training/puppy-schedule` + existing enzymatic-cleaner `/go`. Empty schedule husk removed. Details: `ops/handoffs/2026-09-08-coo-house-training-journey.md`. #1553 merged.
 
