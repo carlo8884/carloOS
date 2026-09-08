@@ -7072,6 +7072,9 @@ const CALCULATORS = [
     id: 'dog · training-positive-reinforcement hops',
     file: 'apps/dog-com/src/app/training/positive-reinforcement/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the marker-charging protocol' },
+      { re: /nextHref="\/training\/marker-training"/, label: 'next step is marker-training, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/dog\+training\+clicker\?s=training-positive-reinforcement"/, label: 'journey hop reuses the existing clicker search' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-positive-reinforcement/, label: 'puppy training treats search hop (same query as marker-training / basic-commands / house-training / puppy-schedule)' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-positive-reinforcement/, label: 'dog training clicker search hop (same query as marker-training / basic-commands)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-positive-reinforcement/, label: 'treat pouch search hop (same query as marker-training / basic-commands / loose-leash / leash-reactivity)' },
@@ -7081,8 +7084,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the reward-based protocol/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete reward-based-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the marker-charging protocol, next step is marker-training + the existing clicker hop. Empty Keep-the-reward-based husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-socialization-window hops',
