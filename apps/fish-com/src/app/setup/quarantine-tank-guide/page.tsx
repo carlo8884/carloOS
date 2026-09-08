@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Quarantine Tank Guide — Setup, Duration | Fish.com', description: 'A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.', path: '/setup/quarantine-tank-guide', type: 'article' })
@@ -90,6 +90,14 @@ export default function QuarantineGuidePage() {
           <h2>Duration — Why 4 Weeks Is the Minimum</h2>
           <p>The 4-week minimum is based on the incubation and latency periods of the most common fish diseases. Ich (Ichthyophthirius): can be subclinical for 2–3 weeks as the parasite completes multiple cycles before enough trophonts are attached to cause visible white spots. Velvet (Oodinium): shorter latency but invisible early — the flashlight test daily catches it before clinical signs appear. Lymphocystis: slow-growing viral infection that may not be visible for 3–4 weeks. Bacterial infections: most become apparent within 1–2 weeks. The 4-week window catches essentially all of these.</p>
           <p>Six weeks is better for wild-caught fish from unfamiliar regions, discus (which carry internal parasites that emerge slowly), and any fish from a source where disease history is unknown. Two weeks is not sufficient for any situation — skip quarantine entirely rather than use a 2-week period that provides false assurance without capturing the diseases that appear in weeks 3–4.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/health/ich-treatment"
+          nextLabel="Know the ich protocol before spots show"
+          nextBlurb="Four weeks is the observation window. Ich is the disease that most often appears in that window. The hop below is the same quarantine-tank kit search already on this page — not a new query."
+          resourceHref="/go/amazon-brand/quarantine%20tank%20kit%20aquarium?s=setup-quarantine-tank-guide"
+          resourceLabel="Shop quarantine tank kits on Amazon →"
+        />
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Quarantine Tank Essentials — Where to Shop</div>
