@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -38,12 +38,6 @@ export default function IchTreatmentPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the heat-method plan
-          </p>
-
-        </div>
 
         <h2>The Life Cycle — Why Treatment Takes 10-14 Days</h2>
         <p>Ich has three life stages: the trophont (attached to the fish — the visible white spots), the tomont (fallen to the substrate, dividing to produce new parasites), and the theront (free-swimming infective stage, seeking a new host). Medications only kill the free-swimming theront stage — the parasite cannot be killed while attached to the fish or while encysted in the substrate tomont stage. The treatment strategy is therefore: maintain effective medication concentration continuously until all tomonts have completed their division cycle and released theronts, and all theronts have been exposed to the medication. This cycle takes 10-14 days at 72-76°F, or as little as 4-5 days at 82-84°F (the heat method).</p>
@@ -51,6 +45,14 @@ export default function IchTreatmentPage() {
 
         <h2>The Heat Method</h2>
         <p>Raising temperature to 82-86°F (if the species tolerates it) accelerates the ich life cycle dramatically — the entire cycle from trophont to theront is completed in 3-4 days rather than 10-14 days, and the theront's viability window at high temperature is reduced. Maintain the elevated temperature for a minimum of 10 days after the last visible spot to ensure all life cycle stages are complete. Increase aeration — warmer water holds less oxygen. Not appropriate for cold-water fish (goldfish, white clouds) or temperature-sensitive species (discus tolerate high temps; delicate species may not).</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/health/velvet-disease"
+          nextLabel="Rule out velvet before you stop treating"
+          nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — the hop below is the same heater search already on this page."
+          resourceHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
+          resourceLabel="Browse aquarium heaters on Amazon →"
+        />
 
         <h2>Chemical Treatments</h2>
         <p><strong>Ich-X (Hikari, formerly Fritz Ich-X):</strong> A formaldehyde and malachite green-based treatment considered one of the safest and most effective for ich. Dye-free formula is safer for scaleless fish and some sensitive species. Follow label dosing; remove activated carbon. Repeat every 24 hours with a 25-30% water change before each dose for 10 days minimum.</p>

@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog how-much JourneyNext after #1558)
+**Last updated:** 2026-09-08 (COO — fish ich JourneyNext after #1559)
 
-> **COO dog how-much journey (2026-09-08):** After #1558. How-much-to-feed → `/tools/dog-calorie-calculator` + existing `dog+supplies` `/go`. Shop dump stays after seniors. Details: `ops/handoffs/2026-09-08-coo-dog-how-much-journey.md`.
+> **COO fish ich journey (2026-09-08):** After #1559. Ich treatment → `/health/velvet-disease` + existing heater `/go`. Empty “Keep the heat-method plan” husk removed. Shop dump stays after prevention. Details: `ops/handoffs/2026-09-08-coo-fish-ich-journey.md`.
+
+> **COO dog how-much journey (2026-09-08):** After #1558. How-much-to-feed → `/tools/dog-calorie-calculator` + existing `dog+supplies` `/go`. Shop dump stays after seniors. Details: `ops/handoffs/2026-09-08-coo-dog-how-much-journey.md`. #1559 merged.
 
 > **COO fish quarantine journey (2026-09-08):** After #1557. Quarantine guide → `/health/ich-treatment` + existing quarantine-tank-kit `/go`. Shop dump stays after the 4-week minimum. Details: `ops/handoffs/2026-09-08-coo-fish-quarantine-journey.md`. #1558 merged.
 
