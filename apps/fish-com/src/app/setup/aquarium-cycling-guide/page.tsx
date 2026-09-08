@@ -13,6 +13,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ArticleSourcesList,
+  JourneyNext,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -491,10 +492,18 @@ export default function CyclingGuidePage() {
           <p>
             Before adding fish, do a 50% water change to bring nitrate under 20 ppm. Stock in
             small additions (one or two species at a time) with 1–2 week gaps so the colony has
-            time to scale up to the new ammonia load. Test weekly for the first month after
+            time to scale up to the new ammonia load.             Test weekly for the first month after
             stocking; if either ammonia or nitrite rises, slow stocking and confirm the colony
             keeps up.
           </p>
+          <JourneyNext
+            siteId="fish-com"
+            nextHref="/tools/stocking-calculator"
+            nextLabel="Sketch a slim-inch ceiling before you stock"
+            nextBlurb="The cycle is done when ammonia and nitrite stay at zero after a 2 ppm dose. The stocking calculator is a slim-inch bioload ceiling, not a species headcount. Keep testing while you add fish."
+            resourceHref="/go/amazon-brand/ammonia%20nitrite%20nitrate%20test%20kit?s=setup-aquarium-cycling-guide"
+            resourceLabel="Browse ammonia/nitrite/nitrate test kits on Amazon →"
+          />
 
           <h2>Frequently Asked Questions</h2>
           <FAQAccordion
