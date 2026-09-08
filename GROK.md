@@ -31,7 +31,7 @@ Keep useful regression checks (trust-bar, no fake trainers/DVMs/doses, no for-sa
 - Kitchen-kit scrub + inbox-honesty pass (PR 1542) — leftover contradictions on live `/symptoms` and Fish stocking still needed a follow-up (this queue).
 - **PR 1544 merged** — Fish saltwater shop + stocking slim-inch model honesty. Fish prod READY. Do not revert shop wiring or the slim-inch model.
 
-## Hour log 2026-09-08 ~12:15 PDT
-- Visual QA: Fish homepage hero matches Dog (subject-forward, dual CTAs, start-here strip). Dog /trainers + /join/pro shells honest/empty. Horses /inquire parity. Shared footer inquire present.
-- No isolated one-delta CX/journey fix this hour (prior COO wave #1550–#1574 already deepened journeys). Hold per one-delta rule.
+## Hour log 2026-09-08 ~13:15 PDT
+- One-delta: removed empty “Keep the worksheet / Owner notes” husk on horses `/tools/horse-size-for-rider` (commit 0834b13). No form, no resource — pure decorative block. Value-first: quick-answer + calculator remain first.
+- Regression hold: Fish homepage hero parity, Dog `/trainers` + `/join/pro` honest/empty shells, Horses `/inquire` parity, shared footer inquire — all still clean. No fake trainers/DVMs/doses, no for-sale banners, no sitemap regen.
 - Preview: dog-com-three.vercel.app · carlo-os-fish-com.vercel.app · horses-com.vercel.app
