@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -65,6 +65,14 @@ export default function HowMuchToFeedPage() {
           <li>Senior inactive: RER × 1.4</li>
         </ul>
         <p>This gives you a daily calorie target. Divide by the calories per cup of your specific food (listed on the bag as kcal/cup) to get daily cup amount.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/tools/dog-calorie-calculator"
+          nextLabel="Run the calorie calculator for a starting scoop"
+          nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The hop below is the same generic supplies search already on this page — not a new query."
+          resourceHref="/go/amazon-brand/dog+supplies?s=nutrition-how-much"
+          resourceLabel="Shop dog supplies on Amazon →"
+        />
 
         <h2 id="activity">Adjusting for Activity Level</h2>
         <p>Activity dramatically affects caloric needs. A working Border Collie may need 2–3x the calories of a similarly-sized couch dog. Monitor BCS monthly and adjust by 10% increments when the score drifts from ideal. Do not make large sudden changes — gradual adjustment is easier to calibrate.</p>

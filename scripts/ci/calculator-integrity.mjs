@@ -2167,6 +2167,9 @@ const CALCULATORS = [
     id: 'dog · how-much-to-feed',
     file: 'apps/dog-com/src/app/nutrition/how-much-to-feed/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the RER formula' },
+      { re: /nextHref="\/tools\/dog-calorie-calculator"/, label: 'next step is the calorie calculator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/dog\+supplies\?s=nutrition-how-much"/, label: 'journey hop reuses the existing generic supplies search' },
       { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -2179,7 +2182,7 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
     ],
-    why: 'Money path leftover after #1356: dog.com /nutrition/safe-human-foods is on main. Remaining ferret leftovers are aging (held), fleas-and-parasites (skip flea hops), glossary/legality/names, and programmatic children. This existing dog.com /nutrition/how-much-to-feed commercial spoke had sidebar EmailCapture only (source nutrition-how-much, not under-hero), no AffiliateDisclosure, and no amazon-brand hops. Add under-hero capture with a concrete dog portion-checklist offer; keep the existing sidebar capture; add AffiliateDisclosure; add amazon-brand kitchen hops matching on-page bcs-ideal-map / ideal-weight-guideline-log / rer-formula-grounding copy (a laminated dog BCS-score chart so the 9-point / ribs-felt / waist-visible map is posted on the fridge, a dog fridge ideal-weight card so feed-the-ideal-not-current notes are labeled on the fridge, a canine RER-portion handbook so the 70 × kg^0.75 life-stage-factor grounding is a physical kitchen book), never a placeholder ASIN, a sibling safe-human-foods kitchen hop, a toxic-foods hop, a can-dogs-eat hop, a first-aid-kit hop, a child toothbrush hop, or a flea / heartworm / nsaid / vaccine hop. Educational kitchen searches only — not a ranked clinic list, not a substitute for a veterinarian. Dog.com does not sell insurance. No existing product hop to keep. Directory import left untouched. Ferret aging stays held at /health/aging-ferret-care. Do not re-open #1165 / #1251–#1356 / crate-size / stocking.',
+    why: '2026-09-08 journeys: after the RER formula, next step is the calorie calculator + the existing generic dog+supplies hop. Shop dump stays below. No invented kitchen hops. Do not re-ship a new Amazon query.',
   },
   {
     id: 'dog · feeding-frequency',
