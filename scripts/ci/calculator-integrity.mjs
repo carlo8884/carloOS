@@ -6829,6 +6829,9 @@ const CALCULATORS = [
     id: 'dog · training-house hops',
     file: 'apps/dog-com/src/app/training/house-training/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the schedule method' },
+      { re: /nextHref="\/training\/puppy-schedule"/, label: 'next step is puppy schedule, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=training-house"/, label: 'journey hop reuses the existing enzymatic-cleaner search' },
       { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=training-house/, label: 'enzymatic cleaner search hop (same query as new-puppy / puppy-schedule)' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-house/, label: 'puppy training treats search hop (same query as new-puppy checklist)' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=training-house/, label: 'wire crate with divider search hop (same query as new-puppy / crate-size)' },
@@ -6839,8 +6842,11 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the schedule method/, label: 'empty husk heading removed' },
+      { re: /House-training schedule/, label: 'empty schedule husk removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete house-training-schedule offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy cleaner button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the schedule method, next step is puppy-schedule + the existing enzymatic-cleaner hop. Shop dump stays below accidents. No invented kitchen hops.',
   },
   {
     id: 'dog · training-basic-commands hops',

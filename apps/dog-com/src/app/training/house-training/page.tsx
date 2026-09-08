@@ -9,6 +9,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -51,15 +52,6 @@ export default function HouseTrainingPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the schedule method
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            House-training schedule
-          </h2>
-
-        </div>
 
         <h2 id="principle">The Core Principle</h2>
         <p>House training works by making outdoor elimination the path of least resistance through consistent scheduling, and by making indoor accidents impossible (via crate or direct supervision) or unrewarding (via neutral cleanup rather than attention). Punishment does not work — a puppy that is punished for indoor accidents learns to hide their accidents, not to go outside. The goal is to reward the right behavior, not to punish the wrong one.</p>
@@ -75,6 +67,14 @@ export default function HouseTrainingPage() {
         </ul>
         <p>Additionally: every 30–60 minutes for puppies under 12 weeks, every 1–2 hours for puppies 3–4 months. Young puppies cannot communicate the need to eliminate until they are already eliminating — the schedule removes the need for communication. You take them out before they need to, and they eliminate outside.</p>
         <p>Go to the same spot each time — the scent cue from previous eliminations prompts faster response. Use a consistent cue word ("go potty," "outside," whatever you choose) when they begin to eliminate, and reward immediately after finishing.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/puppy-schedule"
+          nextLabel="Put the schedule on a first-year timeline"
+          nextBlurb="The schedule method is take them out after every meal, nap, play, drink, and crate. The puppy schedule is when those windows change by age. An enzymatic cleaner is for accidents that already happened — not a substitute for the schedule."
+          resourceHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
+          resourceLabel="Browse enzymatic pet cleaners on Amazon →"
+        />
 
         <h2 id="accidents">Accident Protocol</h2>
         <p>If you catch the puppy in the act: a calm, neutral "ah-ah" or clap to interrupt, then immediately take outside. If they finish outside, reward. Never yell, never rub the puppy&apos;s nose in it, never physical punishment — none of these work and all of them damage the relationship and trust required for effective training.</p>
