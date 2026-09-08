@@ -7174,6 +7174,9 @@ const CALCULATORS = [
     id: 'fish · health-velvet hops',
     file: 'apps/fish-com/src/app/health/velvet-disease/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the flashlight test' },
+      { re: /nextHref="\/health\/fish-disease-guide"/, label: 'next step is the disease hub, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+quarantine\+hospital\+tank\+net\?s=health-velvet"/, label: 'journey hop reuses the existing hospital-tank search' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=health-velvet/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-aquarium / equipment-hub / disease-guide / dropsy / ich)' },
       { re: /amazon-brand\/aquarium\+digital\+thermometer\?s=health-velvet/, label: 'digital aquarium thermometer search hop (same query as setup-aquarium / equipment-hub / water-parameters / disease-guide / dropsy / ich)' },
       { re: /amazon-brand\/aquarium\+sponge\+filter\?s=health-velvet/, label: 'sponge filter / aeration search hop (same query as cycling estimator / filter-gph / disease-guide / dropsy / ich; no live aquarium+air+pump key on sister pages)' },
@@ -7184,8 +7187,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the temp-and-blackout plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete velvet temp-and-blackout checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the flashlight test, next step is the disease guide + the existing hospital-tank hop. Empty Keep-the-temp-and-blackout husk removed. Shop dump stays below. No invented kitchen hops. No medication hops.',
   },
   {
     id: 'fish · health-swim-bladder hops',

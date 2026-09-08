@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog calorie JourneyNext after #1560)
+**Last updated:** 2026-09-08 (COO — fish velvet JourneyNext after #1561)
 
-> **COO dog calorie journey (2026-09-08):** After #1560. Calorie calculator → `/tools/dog-body-condition-score` + existing kitchen-scale `/go`. Empty “Keep the target” husk removed. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-calorie-journey.md`.
+> **COO fish velvet journey (2026-09-08):** After #1561. Velvet flashlight test → `/health/fish-disease-guide` + existing hospital-tank `/go`. Empty “Keep the temp-and-blackout plan” husk removed. Shop dump stays after saltwater. Details: `ops/handoffs/2026-09-08-coo-fish-velvet-journey.md`.
+
+> **COO dog calorie journey (2026-09-08):** After #1560. Calorie calculator → `/tools/dog-body-condition-score` + existing kitchen-scale `/go`. Empty “Keep the target” husk removed. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-calorie-journey.md`. #1561 merged.
 
 > **COO fish ich journey (2026-09-08):** After #1559. Ich treatment → `/health/velvet-disease` + existing heater `/go`. Empty “Keep the heat-method plan” husk removed. Shop dump stays after prevention. Details: `ops/handoffs/2026-09-08-coo-fish-ich-journey.md`. #1560 merged.
 
