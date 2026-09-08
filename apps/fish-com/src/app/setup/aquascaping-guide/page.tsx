@@ -6,6 +6,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -63,6 +64,14 @@ export default function AquascapingGuidePage() {
 
         <h2>Planting for Structure</h2>
         <p>Once hardscape is set, plant in zones: low carpeting and foreground plants at the front, midground species filling the spaces around hardscape, and tall stem or background plants at the rear to build height and hide equipment. Use leaf size and color to reinforce depth — fine textures and muted greens recede, while bold leaves and reds advance and draw the eye to focal points. A planted scape is never truly finished; regular trimming shapes the growth and is part of the ongoing craft. For the equipment and substrate side of building a planted scape, see our <a href="/setup/planted-tank-setup">planted tank setup guide</a>.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/planted-tank-setup"
+          nextLabel="Build the planted tank equipment and substrate next"
+          nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The hop below is the same Seiryu-stone search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
+          resourceLabel="Browse aquarium Seiryu stone on Amazon →"
+        />
 
         <h2 id="kit">Aquascape hardscape kit</h2>
         <p>Everyday physical supplies that match the hardscape copy above — aquarium Seiryu stone for the textured rock skeleton, plus aquarium spiderwood driftwood for the wood lines. These are layout materials, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, substrate vacuums, and pressurized CO2 gear stay off this kit — those already ship on the setup hub, equipment hub, planted-tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>

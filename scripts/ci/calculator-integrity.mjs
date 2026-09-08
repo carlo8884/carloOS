@@ -8743,6 +8743,9 @@ const CALCULATORS = [
     id: 'fish · aquascaping-guide hops',
     file: 'apps/fish-com/src/app/setup/aquascaping-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the hardscape and planting answer' },
+      { re: /nextHref="\/setup\/planted-tank-setup"/, label: 'next step is planted-tank setup, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+seiryu\+stone\?s=setup-aquascaping-guide"/, label: 'journey hop reuses the existing Seiryu-stone search' },
       { re: /amazon-brand\/aquarium\+seiryu\+stone\?s=setup-aquascaping-guide/, label: 'aquarium Seiryu-stone search hop (matches on-page Seiryu textured-rock / GH-pH copy; unique vs #993–#1019 setup-hub filter / heater / test-kit hops)' },
       { re: /amazon-brand\/aquarium\+spiderwood\+driftwood\?s=setup-aquascaping-guide/, label: 'aquarium spiderwood-driftwood search hop (matches on-page spiderwood soak-or-boil copy; unique vs setup-hub / planted-tank / CO2 hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -8753,8 +8756,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete aquascape hardscape-checklist offer; every gear CTA is an amazon-brand category search matching on-page hardscape copy (aquarium Seiryu stone for the textured rock skeleton, aquarium spiderwood driftwood for the wood lines), never a placeholder ASIN, a first-tank filter / heater / thermometer / Prime / API-test-kit / gravel-vacuum hop (setup hub), an aquasoil hop (planted-tank / substrate calculator), a pressurized-CO2 hop (CO2 calculator), or a fertilizer hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the hardscape and planting answer, next step is planted-tank setup + the existing Seiryu-stone hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · aquarium-algae-control hops',
