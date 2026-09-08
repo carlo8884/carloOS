@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog basic-commands JourneyNext after #1580)
+**Last updated:** 2026-09-08 (COO — fish substrate JourneyNext after #1581)
 
-> **COO dog basic-commands journey (2026-09-08):** After #1580. Five-command protocol → `/training/puppy-schedule` + existing puppy-treats `/go`. Empty “Keep the five commands” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-basic-commands-journey.md`.
+> **COO fish substrate journey (2026-09-08):** After #1581. Substrate bag weight → `/tools/aquarium-setup-builder` + existing gravel `/go`. Empty “Keep the bag sizes” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-substrate-journey.md`.
+
+> **COO dog basic-commands journey (2026-09-08):** After #1580. Five-command protocol → `/training/puppy-schedule` + existing puppy-treats `/go`. Empty “Keep the five commands” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-basic-commands-journey.md`. #1581 merged.
 
 > **COO fish heater-wattage journey (2026-09-08):** After #1579. Heater wattage → `/tools/substrate-calculator` + existing Eheim Jager `/go`. Empty “Keep the heater plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-heater-wattage-journey.md`. #1580 merged.
 
