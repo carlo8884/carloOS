@@ -11,6 +11,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -161,6 +162,14 @@ export default function DogCrateSizeCalculatorPage() {
         <div className="max-w-5xl">
           <Calculator />
         </div>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/crate-training"
+          nextLabel="Make the crate a den, not a timeout"
+          nextBlurb="You have the size. The crate-training guide covers introduction, how long is too long, and nights. For a growing puppy, pair the adult crate with the new-puppy checklist so day-one gear is already in the house."
+          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
+          resourceLabel="Browse crates on Amazon →"
+        />
         <div className="max-w-2xl mt-8">
           <EmailCapture
             variant="inline"
@@ -222,15 +231,15 @@ export default function DogCrateSizeCalculatorPage() {
             Standard wire and plastic crates come in a fixed set of lengths — 18, 22, 24, 30, 36, 42,
             and 48 inches — so the practical answer is the smallest of those that clears both of your
             minimums. The calculator does that match for you. For a growing puppy, buy for the adult
-            size and divide the space down; the{' '}
-            <Link href="/tools/puppy-weight-predictor" className="text-brand-primary underline-offset-2 hover:underline">
-              puppy weight predictor
+            size and divide the space down. Next:{' '}
+            <Link href="/training/crate-training" className="text-brand-primary underline-offset-2 hover:underline">
+              crate training
+            </Link>
+            , then the{' '}
+            <Link href="/tools/new-puppy-checklist" className="text-brand-primary underline-offset-2 hover:underline">
+              new-puppy checklist
             </Link>{' '}
-            and the{' '}
-            <Link href="/training" className="text-brand-primary underline-offset-2 hover:underline">
-              training guides
-            </Link>{' '}
-            cover the rest.
+            for the rest of day one.
           </p>
         </div>
       </section>

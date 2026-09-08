@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -121,6 +122,7 @@ export default function AquariumSetupBuilderPage() {
           <TableOfContents
             items={[
               { label: 'The builder', href: '#builder' },
+              { label: 'Next step', href: '#journey-next' },
               { label: 'Shop related supplies', href: '#shop' },
               { label: 'The order to do it in', href: '#order' },
               { label: 'FAQ', href: '#faq' },
@@ -144,12 +146,6 @@ export default function AquariumSetupBuilderPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-14T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Starter-kit shopping list
-          </h2>
-
-        </div>
 
         <h2 id="builder">The builder</h2>
         <p>
@@ -159,6 +155,14 @@ export default function AquariumSetupBuilderPage() {
           thumb to get you in the right ballpark; the linked guides and reviews go deeper.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/aquarium-cycling-guide"
+          nextLabel="Cycle the tank before any fish"
+          nextBlurb="The builder sized the kit. A liquid master kit is how you watch ammonia and nitrite hit zero — that is the step that prevents new-tank syndrome. Stock later with a slim-inch bioload ceiling, not a species headcount."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
+          resourceLabel="Shop API Master Test Kit on Amazon →"
+        />
 
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
@@ -235,8 +239,8 @@ export default function AquariumSetupBuilderPage() {
           its filter to grow the bacteria that make fish waste safe. Our{' '}
           <Link href="/setup/aquarium-cycling-guide">cycling guide</Link> and{' '}
           <Link href="/health/new-tank-syndrome">new-tank-syndrome</Link> explainer cover that step, and the{' '}
-          <Link href="/tools/stocking-calculator">stocking calculator</Link> tells you how many fish your
-          finished tank can hold.
+          <Link href="/tools/stocking-calculator">stocking calculator</Link> gives a slim-inch bioload
+          ceiling for the finished tank — not a species headcount.
         </p>
 
         <h2 id="faq">Frequently asked questions</h2>

@@ -23,6 +23,8 @@ export { Breadcrumb } from './components/Breadcrumb'
 // Content components
 export { ReviewCard, QuickPicks } from './components/ReviewCard'
 export { ShopCtas } from './components/ShopCtas'
+export { JourneyNext } from './components/JourneyNext'
+export type { JourneyNextProps } from './components/JourneyNext'
 export { ScoreMethodology } from './components/ScoreMethodology'
 export { FAQAccordion } from './components/FAQAccordion'
 export type { FAQItem } from './components/FAQAccordion'

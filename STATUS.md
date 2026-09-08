@@ -3,7 +3,9 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — CX batch 1: email honesty + real magnets + value-first on five earning sites; GROK.md queue replaced “reconfirm and hold”)
+**Last updated:** 2026-09-08 (COO — dog puppy/crate + fish new-tank journeys: useful answer → next step → existing /go hop)
+
+> **COO journeys (2026-09-08):** After #1544 (fish stocking honesty) + #1545 (CX batch 1). One next-step strip on new-puppy checklist → crate size + crate hop; crate size → crate-training + crate hop; aquarium setup builder → cycling + master-kit hop. Empty setup-builder husk removed; “how many fish” → slim-inch ceiling. HomeEmailCapture / OnPageMagnet / EmailCapture props untouched. Details: `ops/handoffs/2026-09-08-coo-dog-fish-journeys.md`.
 
 > **COO CX batch 1 (2026-09-08):** Carlo queue — finish CX and prove commercial journeys on dog / fish / horses / vets / ferret. No DNS / spend. Shared `OnPageMagnet` now requires a real resource (or the offer is removed). Under-hero strips link puppy/crate, new-tank/stocking, first-horse, triage card, first-year schedule. Dog `/symptoms` puts Rule #1 + ER list before the decorative image. Empty Owner notes / contradictory inbox copy stripped. Details: `ops/handoffs/2026-09-08-coo-cx-email-magnet-batch1.md`.
 

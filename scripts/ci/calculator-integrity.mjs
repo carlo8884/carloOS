@@ -257,6 +257,9 @@ const CALCULATORS = [
       { re: /amazon-brand\/dog\+crate\+pad\?s=tools-dog-crate-size/, label: 'crate pad search hop' },
       { re: /amazon-brand\/dog\+crate\+cover\?s=tools-dog-crate-size/, label: 'crate cover search hop' },
       { re: /amazon-brand\/puppy\+training\+pads\?s=tools-dog-crate-size/, label: 'puppy training pads search hop' },
+      { re: /<JourneyNext/, label: 'journey next-step after the size result' },
+      { re: /nextHref="\/training\/crate-training"/, label: 'next step is crate-training, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-dog-crate-size"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -265,6 +268,20 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
     ],
     why: 'Money path: under-hero capture with a concrete crate-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
+    id: 'shared · JourneyNext',
+    file: 'packages/ui/src/components/JourneyNext.tsx',
+    mustInclude: [
+      { re: /id="journey-next"/, label: 'stable next-step anchor lives on the shared strip' },
+      { re: /resourceHref/, label: 'one existing /go hop, not a magnet' },
+      { re: /AffiliateDisclosure/, label: 'disclosure above the hop' },
+    ],
+    mustExclude: [
+      { re: /laminated\+/, label: 'no invented kitchen hops' },
+      { re: /fridge\+/, label: 'no invented fridge hops' },
+    ],
+    why: '2026-09-08 journeys: one next-step strip after a useful calculator answer. Anchor stays on the component; pages pass nextHref + resourceHref.',
   },
   {
     id: 'dog · tools hub',
@@ -5619,6 +5636,26 @@ const CALCULATORS = [
     why: '2026-09-08 saltwater shop bug: the lower kit was a static freshwater list. Fresh hops stay; salt hops must render when waterType is salt.',
   },
   {
+    id: 'fish · aquarium-setup-builder hops',
+    file: 'apps/fish-com/src/app/tools/aquarium-setup-builder/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the builder' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-aquarium-setup-builder"/, label: 'journey hop reuses the existing master-kit search' },
+      { re: /slim-inch bioload/, label: 'stocking honesty: slim-inch ceiling, not a headcount' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-aquarium-setup-builder/, label: 'API master test kit search hop' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /Starter-kit shopping list/, label: 'empty husk heading removed after CX stripped the form' },
+      { re: /how many fish/, label: 'no leftover species-headcount marketing' },
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+    ],
+    why: '2026-09-08 journeys: new-tank builder answers the kit, then cycling + the existing master-kit hop. Shop dump stays below. No invented kitchen hops.',
+  },
+  {
     id: 'horses · horse-blanket-size-calculator',
     file: 'apps/horses-com/src/app/tools/horse-blanket-size-calculator/Calculator.tsx',
     mustInclude: [
@@ -6559,6 +6596,9 @@ const CALCULATORS = [
       { re: /amazon-brand\/dog\+id\+tag\+collar\?s=tools-new-puppy-checklist/, label: 'ID tag / collar search hop' },
       { re: /amazon-brand\/puppy\+teething\+toys\?s=tools-new-puppy-checklist/, label: 'puppy teething toys search hop' },
       { re: /amazon-brand\/enzymatic\+pet\+stain\+odor\+cleaner\?s=tools-new-puppy-checklist/, label: 'enzymatic cleaner search hop' },
+      { re: /<JourneyNext/, label: 'journey next-step after the checklist' },
+      { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate-size calculator' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-new-puppy-checklist"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
