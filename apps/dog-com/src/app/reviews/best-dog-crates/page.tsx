@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -68,6 +68,14 @@ export default function BestDogCratesPage() {
                 The crate should be large enough for your dog to stand up, turn around, and lie down fully stretched — no larger. A crate that is too large allows a puppy to use one end as a bathroom. Use a divider panel (included with most wire crates) and expand as the puppy grows.
               </p>
             </div>
+            <JourneyNext
+              siteId="dog-com"
+              nextHref="/tools/dog-crate-size-calculator"
+              nextLabel="Size the crate before you pick a model"
+              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The hop below is the same MidWest iCrate search already on this page."
+              resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+              resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
+            />
 
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
