@@ -142,6 +142,25 @@ const CALCULATORS = [
     why: '2026-09-08 journeys: after the pond gallons result, next step is pond-guide + the existing EPDM liner hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
+    id: 'fish · fish-disease-symptom-checker hops',
+    file: 'apps/fish-com/src/app/tools/fish-disease-symptom-checker/page.tsx',
+    mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the water-first rule' },
+      { re: /nextHref="\/water-parameters"/, label: 'next step is water-parameters, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-fish-disease-symptom"/, label: 'journey hop reuses the existing API Master search' },
+      { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=tools-fish-disease-symptom/, label: 'existing API Master amazon-brand hop kept (do not re-ship a new query)' },
+      { re: /amazon-brand\/ich\+white\+spot\+treatment\+aquarium\?s=tools-fish-disease-symptom/, label: 'existing ich-treatment amazon-brand hop kept (not an empty leftover button)' },
+      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+    ],
+    mustExclude: [
+      { re: /amazonHref=["']#["']/, label: 'never href="#"' },
+      { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
+      { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+    ],
+    why: '2026-09-08 journeys: after the water-first rule, next step is water-parameters + the existing API Master hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
+  },
+  {
     id: 'fish · heater-wattage-calculator',
     file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/Calculator.tsx',
     mustInclude: [{ re: /gal\s*\*\s*3\s*\*\s*\(deltaF\s*\/\s*10\)/, label: '3 W/gal per 10°F lift' }],

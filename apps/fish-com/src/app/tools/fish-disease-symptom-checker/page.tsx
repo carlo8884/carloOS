@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -148,6 +149,14 @@ export default function FishDiseaseSymptomCheckerPage() {
           <a href="/health">aquarium disease reference library</a>.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/water-parameters"
+          nextLabel="Test ammonia and nitrite before you treat"
+          nextBlurb="The checker ranks signs. Water comes first — new-tank ammonia and nitrite look like disease. Water-parameters is the next step: read the numbers, then treat only if the water is clean. The hop below is the same API Master test-kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
+          resourceLabel="Browse API Freshwater Master test kits on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (test kit / ich / salt / conditioner / quarantine).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}

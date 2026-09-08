@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog GPS-tracker JourneyNext after #1623)
+**Last updated:** 2026-09-08 (COO — fish disease-checker JourneyNext after #1624)
 
-> **COO dog GPS-tracker journey (2026-09-08):** After #1623. GPS-vs-microchip ID rule → `/guides/dog-microchipping` + existing Fi Series 3 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-gps-tracker-journey.md`.
+> **COO fish disease-checker journey (2026-09-08):** After #1624. Water-first rule → `/water-parameters` + existing API Master `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-disease-checker-journey.md`.
+
+> **COO dog GPS-tracker journey (2026-09-08):** After #1623. GPS-vs-microchip ID rule → `/guides/dog-microchipping` + existing Fi Series 3 `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-gps-tracker-journey.md`. #1624 merged.
 
 > **COO fish pond-volume journey (2026-09-08):** After #1622. Pond gallons result → `/setup/pond-guide` + existing EPDM liner `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-pond-volume-journey.md`. #1623 merged.
 
