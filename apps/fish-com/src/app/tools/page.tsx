@@ -47,7 +47,7 @@ const TOOLS = [
   {
     href: '/tools/stocking-calculator',
     title: 'Stocking Calculator',
-    desc: 'How many fish can your tank hold? Filtration-adjusted estimate using surface area and bioload, not the broken "inch per gallon" rule.',
+    desc: 'Slim-inch bioload ceiling from surface area, volume, and filtration — not a species headcount, and not the broken inch-per-gallon rule.',
     tag: 'Beginner essential',
   },
   {
@@ -127,7 +127,7 @@ export default function ToolsHub() {
         alt="A planted freshwater aquarium with healthy aquascaping"
         eyebrow="Calculators & Tools"
         title="Aquarium math, done for you."
-        subtitle="Free calculators for the questions everyone Googles: how many gallons is my tank, how many fish can I stock, what wattage heater do I need, and how much CO2 is in my planted tank. Mobile-friendly, no signup."
+        subtitle="Free calculators for the questions everyone Googles: how many gallons is my tank, what slim-inch bioload ceiling fits, what wattage heater do I need, and how much CO2 is in my planted tank. Mobile-friendly, no signup."
         primaryCta={{ href: '/tools/stocking-calculator', label: 'Check your stocking' }}
         secondaryCta={{ href: '/tools/aquarium-volume-calculator', label: 'Calculate tank volume' }}
       />

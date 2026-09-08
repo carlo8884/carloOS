@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — #6 verify: magnets + tagged /go OK; GA4 click/save events; inquire/GA env Carlo-only)
+**Last updated:** 2026-09-08 (COO — leftover fish hub honesty: homepage / tools / setup / substrate no longer sell a species headcount)
 
-> **COO verify #6 (2026-09-08):** Live after #1546. Puppy/crate/setup journeys + five-site Save-a-copy magnets deliver real .txt. Journey `/go` hops 302 to Amazon with `tag=boltonpets20-20ls`. Code-side: ShopCtas + OnPageMagnet fire `affiliate_click` / `resource_save` when gtag exists. Inquire FormSubmit 502 (dog/fish/horses) and missing `INQUIRE_EMAIL` (vets/ferret) + missing GA on vets/ferret are Carlo-only. Details: `ops/handoffs/2026-09-08-coo-cx-verify-delivery.md`.
+> **COO fish hub honesty leftover (2026-09-08):** After #1544 the stocking calculator is a slim-inch ceiling (`Species headcount: Not calculated`). Homepage HomeGuides, `/tools` hub, `/setup`, and substrate still sold “how many fish” / “numbers by species.” Copy aligned; calculator/model/shop untouched. Details: `ops/handoffs/2026-09-08-coo-fish-hub-honesty.md`.
+
+> **COO verify #6 (2026-09-08):** Live after #1546. #1547 merged. Puppy/crate/setup journeys + five-site Save-a-copy magnets deliver real .txt. Journey `/go` hops 302 to Amazon with `tag=boltonpets20-20ls`. Code-side: ShopCtas + OnPageMagnet fire `affiliate_click` / `resource_save` when gtag exists. Inquire FormSubmit 502 (dog/fish/horses) and missing `INQUIRE_EMAIL` (vets/ferret) + missing GA on vets/ferret are Carlo-only. Details: `ops/handoffs/2026-09-08-coo-cx-verify-delivery.md`.
 
 > **COO journeys (2026-09-08):** After #1544 (fish stocking honesty) + #1545 (CX batch 1). One next-step strip on new-puppy checklist → crate size + crate hop; crate size → crate-training + crate hop; aquarium setup builder → cycling + master-kit hop. Empty setup-builder husk removed; “how many fish” → slim-inch ceiling. HomeEmailCapture / OnPageMagnet / EmailCapture props untouched. Details: `ops/handoffs/2026-09-08-coo-dog-fish-journeys.md`.
 
