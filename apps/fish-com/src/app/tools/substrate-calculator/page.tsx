@@ -11,6 +11,7 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -183,6 +184,14 @@ export default function SubstrateCalculatorPage() {
 
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/aquarium-setup-builder"
+          nextLabel="Build the rest of the first-tank kit"
+          nextBlurb="Bag weight is the bed, not the whole setup. Use the setup builder next so filter, heater, and substrate land in one kit before fill-day. The hop below is the same aquarium-gravel search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator"
+          resourceLabel="Shop aquarium gravel on Amazon →"
+        />
 
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
@@ -216,20 +225,6 @@ export default function SubstrateCalculatorPage() {
               amazonLabel="Shop substrate vacuums on Amazon →"
             />
           </div>
-        </div>
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the bag sizes
-          </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Substrate shopping list
-          </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Send the pounds, kilograms, and liters for your footprint — plus the 10% buffer — so you
-            are not one bag short on setup day. No spam.
-          </p>
-
         </div>
 
         <h2 id="formula">The Formula</h2>
