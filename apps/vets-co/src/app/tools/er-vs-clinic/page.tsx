@@ -9,6 +9,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
   CrossPortfolioCard,
   ArticleSourcesList,
 } from '@carloOS/ui'
@@ -171,15 +172,6 @@ export default function ErVsClinicPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">ER vs Clinic vs Telehealth</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            ER vs clinic cheat sheet
-          </h2>
-
-        </div>
-      </section>
-
       <section className="px-container-sm sm:px-container pt-section">
         <div className="max-w-5xl">
           <div
@@ -204,6 +196,14 @@ export default function ErVsClinicPage() {
         <div className="max-w-5xl">
           <Calculator />
         </div>
+        <JourneyNext
+          siteId="vets-co"
+          nextHref="/guides/when-to-go-to-the-vet"
+          nextLabel="Watch vs same-day vs emergency"
+          nextBlurb="The tool picked a setting. The guide is the prose list for watch, same-day, and ER. If you are going in, a carrier is how the pet travels — not a substitute for the hospital."
+          resourceHref="/go/amazon-brand/soft+pet+carrier?s=tools-er-vs-clinic"
+          resourceLabel="Browse soft pet carriers on Amazon →"
+        />
       </section>
 
       {/* Money path — live amazon-brand search hops (pet emergency-prep / first-aid kit).

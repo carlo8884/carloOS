@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — Horses blanket + cost JourneyNext; #1548 fish hub honesty merged)
+**Last updated:** 2026-09-08 (COO — vets ER journey after #1549; /inquire stays quiet buyer path)
 
-> **COO horses journeys (2026-09-08):** After #1548. Blanket-size calculator → `/tack/blanket-weights` + existing winter-blanket `/go`. Cost calculator → `/first-horse-roadmap` + existing halter `/go`. Empty fit-notes / owner-notes husks removed. No kitchen-kit hops. Details: `ops/handoffs/2026-09-08-coo-horses-journeys.md`.
+> **COO vets ER journey (2026-09-08):** After #1549. ER vs clinic tool → `/guides/when-to-go-to-the-vet` + existing soft-carrier `/go`. Empty cheat-sheet husk removed. Owners are not sent to `/inquire`. Details: `ops/handoffs/2026-09-08-coo-vets-er-journey.md`.
+
+> **COO horses journeys (2026-09-08):** After #1548. Blanket-size calculator → `/tack/blanket-weights` + existing winter-blanket `/go`. Cost calculator → `/first-horse-roadmap` + existing halter `/go`. Empty fit-notes / owner-notes husks removed. No kitchen-kit hops. Details: `ops/handoffs/2026-09-08-coo-horses-journeys.md`. #1549 merged.
 
 > **COO fish hub honesty leftover (2026-09-08):** After #1544 the stocking calculator is a slim-inch ceiling (`Species headcount: Not calculated`). Homepage HomeGuides, `/tools` hub, `/setup`, and substrate still sold “how many fish” / “numbers by species.” Copy aligned; calculator/model/shop untouched. Details: `ops/handoffs/2026-09-08-coo-fish-hub-honesty.md`. #1548 merged.
 
