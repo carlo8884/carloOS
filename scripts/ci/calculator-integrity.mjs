@@ -5838,6 +5838,9 @@ const CALCULATORS = [
     id: 'dog · dog-gestation-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-gestation-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 63-day due-date answer' },
+      { re: /nextHref="\/tools\/new-puppy-checklist"/, label: 'next step is the new-puppy checklist, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/digital\+puppy\+scale\?s=tools-dog-gestation-calculator"/, label: 'journey hop reuses the existing puppy-scale search' },
       { re: /amazon-brand\/dog\+whelping\+box\?s=tools-dog-gestation-calculator/, label: 'whelping box search hop' },
       { re: /amazon-brand\/digital\+puppy\+scale\?s=tools-dog-gestation-calculator/, label: 'digital puppy scale search hop' },
       { re: /amazon-brand\/digital\+pet\+thermometer\?s=tools-dog-gestation-calculator/, label: 'digital pet thermometer search hop' },
@@ -5847,8 +5850,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Whelping kit packing list/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete whelping-kit-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the 63-day due-date answer, next step is the new-puppy checklist + the existing puppy-scale hop. Empty whelping-kit packing-list husk removed. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'horses · horse-gestation-calculator',

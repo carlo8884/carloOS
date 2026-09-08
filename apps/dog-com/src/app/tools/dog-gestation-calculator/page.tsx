@@ -12,6 +12,7 @@ import {
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 import WhelpingKit from './WhelpingKit'
@@ -178,15 +179,6 @@ export default function DogGestationCalculatorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Dog Pregnancy Calculator</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Whelping kit packing list
-          </h2>
-
-        </div>
-      </section>
-
       {/* GEO: extractable answer + worked example, ABOVE the tool */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
@@ -222,6 +214,16 @@ export default function DogGestationCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-4xl">
           <Calculator />
+        </div>
+        <div className="max-w-2xl mt-8">
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/new-puppy-checklist"
+            nextLabel="Pack the new-puppy list once the due date is set"
+            nextBlurb="The short answer is breeding date plus 63 days, with a 58–68 day window. After the due date, the new-puppy checklist is the crate, food, and first-week order. The hop below is the same digital puppy-scale search already on this page."
+            resourceHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
+            resourceLabel="Browse puppy scales on Amazon →"
+          />
         </div>
       </section>
 
