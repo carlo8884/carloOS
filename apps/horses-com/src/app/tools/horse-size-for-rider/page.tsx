@@ -181,14 +181,6 @@ export default function HorseSizeForRiderPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
 
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the worksheet
-          </p>
-          <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h3>
-
-        </div>
-
         <p>
           <strong>The quick answer:</strong> a widely cited welfare guideline is that the rider plus their
           saddle and tack should weigh roughly <strong>15&ndash;20% of the horse&rsquo;s bodyweight</strong>.
@@ -262,7 +254,7 @@ export default function HorseSizeForRiderPage() {
           not a soundness verdict on any individual animal.
         </p>
 
-        <h2 id="methodology">How it works &amp; limits</h2>
+        <h2 id="methodology">How it works & limits</h2>
         <p>
           The calculator adds a typical tack weight to your rider weight, then divides that combined load by
           the guideline percentages to back out a horse bodyweight: combined weight divided by 0.20 gives
