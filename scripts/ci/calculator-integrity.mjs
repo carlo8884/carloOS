@@ -7047,6 +7047,9 @@ const CALCULATORS = [
     id: 'fish · setup-aquarium hops',
     file: 'apps/fish-com/src/app/setup/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the equipment list' },
+      { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=setup-aquarium"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/aquaclear\+70\+filter\?s=setup-aquarium/, label: 'AquaClear HOB filter search hop (same query as stocking / filter-gph)' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=setup-aquarium/, label: 'Fluval canister search hop (same query as stocking / filter-gph)' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=setup-aquarium/, label: 'Eheim Jager heater search hop (same query as heater-wattage / stocking / setup-builder)' },
@@ -7060,8 +7063,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the first-tank plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete first-tank-setup-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the equipment list, next step is the cycling guide + the existing test-kit hop. Empty Keep-the-first-tank husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · equipment-hub hops',

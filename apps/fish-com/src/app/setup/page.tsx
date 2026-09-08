@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas } from '@carloOS/ui'
 
@@ -99,12 +100,6 @@ export default function AquariumSetupPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the first-tank plan
-          </p>
-
-        </div>
 
         <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />
 
@@ -133,6 +128,14 @@ export default function AquariumSetupPage() {
         <p className="text-sm text-brand-text-mid">
           Need the heater wattage for your tank size and target temperature? Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link>.
         </p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/setup/aquarium-cycling-guide"
+          nextLabel="Cycle before you add fish"
+          nextBlurb="The kit list is not the cycle. The next useful page is the cycling guide — 4–8 weeks of ammonia/nitrite tests before livestock. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (first-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

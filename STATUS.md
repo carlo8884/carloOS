@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog ideal-weight JourneyNext after #1564)
+**Last updated:** 2026-09-08 (COO — fish setup JourneyNext after #1565)
 
-> **COO dog ideal-weight journey (2026-09-08):** After #1564. Ideal-weight estimate → `/tools/dog-calorie-calculator` + existing portion-control scale `/go`. Shop dump stays after the calculator. Details: `ops/handoffs/2026-09-08-coo-dog-ideal-weight-journey.md`.
+> **COO fish setup journey (2026-09-08):** After #1565. Setup hub equipment list → `/setup/aquarium-cycling-guide` + existing test-kit `/go`. Empty “Keep the first-tank plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-setup-journey.md`.
+
+> **COO dog ideal-weight journey (2026-09-08):** After #1564. Ideal-weight estimate → `/tools/dog-calorie-calculator` + existing portion-control scale `/go`. Shop dump stays after the calculator. Details: `ops/handoffs/2026-09-08-coo-dog-ideal-weight-journey.md`. #1565 merged.
 
 > **COO fish disease-guide journey (2026-09-08):** After #1563. Disease guide hospital-tank answer → `/setup/quarantine-tank-guide` + existing hospital-tank `/go`. Empty “Keep the hospital-tank plan” husk removed. Shop dump stays after. Details: `ops/handoffs/2026-09-08-coo-fish-disease-guide-journey.md`. #1564 merged.
 
