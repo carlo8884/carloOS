@@ -7043,6 +7043,9 @@ const CALCULATORS = [
     id: 'dog · training-excessive-barking hops',
     file: 'apps/dog-com/src/app/training/excessive-barking/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the six-type diagnosis' },
+      { re: /nextHref="\/training\/separation-anxiety"/, label: 'next step is separation-anxiety, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-excessive-barking"/, label: 'journey hop reuses the existing snuffle-mat search' },
       { re: /amazon-brand\/puzzle\+feeder\+dog\?s=training-excessive-barking/, label: 'puzzle feeder search hop (same query as dog BCS / ideal-weight)' },
       { re: /amazon-brand\/lick\+mat\+dog\?s=training-excessive-barking/, label: 'lick mat search hop (enrichment category, not a ranked SKU)' },
       { re: /amazon-brand\/snuffle\+mat\+dog\+enrichment\?s=training-excessive-barking/, label: 'snuffle mat search hop (same query as sep-anxiety)' },
@@ -7053,8 +7056,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the quiet-barking plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete quiet-barking-plan offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the six-type diagnosis, next step is separation-anxiety + the existing snuffle-mat hop. Empty Keep-the-quiet-barking husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-marker-training hops',
