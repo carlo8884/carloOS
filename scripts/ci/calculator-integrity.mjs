@@ -6105,6 +6105,9 @@ const CALCULATORS = [
     id: 'dog · puppy-first-year-budget hops',
     file: 'apps/dog-com/src/app/tools/puppy-first-year-budget/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the budget estimate' },
+      { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate size, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-first-year-budget"/, label: 'journey hop reuses the existing crate search' },
       { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-puppy-first-year-budget/, label: 'wire crate with divider search hop (same query as crate-size / new-puppy / puppy-weight)' },
       { re: /amazon-brand\/puppy\+food\?s=tools-puppy-first-year-budget/, label: 'puppy food search hop (same query as new-puppy / puppy-weight)' },
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=tools-puppy-first-year-budget/, label: 'scale search hop (same query as puppy-weight / ideal-weight)' },
@@ -6115,8 +6118,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the budget plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete puppy-budget offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the budget estimate, next step is the crate-size calculator + the existing divider-crate hop. Empty Keep-the-budget husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'fish · filter-gph-calculator',

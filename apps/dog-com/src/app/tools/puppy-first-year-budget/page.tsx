@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -145,18 +146,17 @@ export default function PuppyFirstYearBudgetPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Puppy First-Year Budget</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the budget plan
-          </p>
-
-        </div>
-      </section>
-
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-crate-size-calculator"
+            nextLabel="Size the crate once for adult length"
+            nextBlurb="The budget is a planning range. The crate is usually the largest gear line — buy adult length once and use a divider. The hop below is the same wire-crate-with-divider search already on this page."
+            resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget"
+            resourceLabel="Browse crates on Amazon →"
+          />
         </div>
       </section>
 
