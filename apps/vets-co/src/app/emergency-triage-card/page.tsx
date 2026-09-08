@@ -13,7 +13,7 @@ import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Free Pet Emergency Triage Card — When to ER | Vets.co',
-  description: 'Wallet + fridge card: when a pet symptom is ER-immediate, same-day, or monitor-at-home. Species vitals, first-aid kit list, free 8-email course.',
+  description: 'Wallet + fridge card: when a pet symptom is ER-immediate, same-day, or monitor-at-home. Species vitals and first-aid kit list — on this page.',
   path: '/emergency-triage-card',
   type: 'article',
 })
@@ -29,7 +29,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Free Pet Emergency Triage Card',
-  description: 'A printable wallet + fridge card with species-specific vital sign ranges, ER-vs-monitor triage categories, and a first-aid kit list. Free plus an 8-email triage course.',
+  description: 'A printable wallet + fridge card with species-specific vital sign ranges, ER-vs-monitor triage categories, and a first-aid kit list. On this page — not emailed.',
   url: 'https://vets.co/emergency-triage-card',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -40,7 +40,7 @@ const articleSchema = buildArticleSchema({
 const FAQS = [
   {
     question: 'What exactly do I get when I sign up?',
-    answer: 'A printable Pet Emergency Triage Card sized to fold into a wallet, plus a larger US-Letter fridge version. It lists species-specific normal vital sign ranges for dogs, cats, ferrets, and rabbits, plus three triage categories: ER NOW, same-day vet, monitor-at-home. You also get an 8-email course over roughly three months.',
+    answer: 'A printable Pet Emergency Triage Card sized to fold into a wallet, plus a larger US-Letter fridge version. It lists species-specific normal vital sign ranges for dogs, cats, ferrets, and rabbits, plus three triage categories: ER NOW, same-day vet, monitor-at-home. The card is on this page — email delivery is not live.',
   },
   {
     question: 'Is this a substitute for calling my vet?',
@@ -55,8 +55,8 @@ const FAQS = [
     answer: 'Dog and cat ranges are drawn from VECCS and standard small-animal internal-medicine references (Ettinger; Plumb). Ferret and rabbit ranges come from exotic-animal references (Carpenter; Quesenberry & Carpenter). The card lists normal ranges, not hard cutoffs — your vet may use a tighter range for your individual pet.',
   },
   {
-    question: 'How often will you email me?',
-    answer: 'Eight emails over roughly three months — immediate, then +3 days, +7d, +14d, +21d, +35d, +56d, +90d. Occasional updates after that. Unsubscribe is one click in every email.',
+    question: 'Can I get this card by email?',
+    answer: 'Not right now. Email delivery is not live. The wallet and fridge card stay on this page — print or save a copy. No signup is required.',
   },
   {
     question: 'Are there affiliate links?',
@@ -193,7 +193,7 @@ export default function EmergencyTriageCardPage() {
             <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Wallet-sized triage card + US-Letter fridge version</span></li>
             <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Vital sign ranges (HR, RR, temp, CRT, gums) per species</span></li>
             <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>First-aid kit list — exactly what to stock, why each item</span></li>
-            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>8 short emails over ~3 months. Free. One-click unsubscribe.</span></li>
+            <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>On this page — not emailed. Print or save a copy; no signup required.</span></li>
           </ul>
         </div>
       </section>
@@ -205,11 +205,11 @@ export default function EmergencyTriageCardPage() {
             Keep the fridge card
           </p>
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Email my emergency triage card
+            Emergency triage card
           </h2>
           <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the wallet + fridge triage card and the first-aid kit list so you can
-            re-check ER vs same-day vs monitor later without re-reading this page. A
+            The wallet + fridge triage card and first-aid kit list are on this page —
+            email delivery is not live. Re-check ER vs same-day vs monitor here. A
             triage aid, not a substitute for veterinary care. See our{' '}
             <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">
               Privacy Policy
@@ -467,11 +467,11 @@ export default function EmergencyTriageCardPage() {
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            Get the triage card + first-aid kit list
+            The triage card + first-aid kit list
           </h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
-            One signup. Card delivered immediately. Eight short emails over three months covering
-            vitals, common emergencies by species, telehealth, and insurance. Unsubscribe any time.
+            On this page — not emailed. Scroll up for the card. Email delivery is not live.
+            A triage aid, not a substitute for veterinary care.
           </p>
           <div className="max-w-md mx-auto">
             <EmailCapture

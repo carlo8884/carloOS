@@ -5,11 +5,24 @@
  * Submits to /api/subscribe (FormSubmit via INQUIRE_EMAIL until Mailchimp).
  * Tracks GA4 signup event.
  * Three variants: inline, sidebar card, full-section.
+ *
+ * Five earning sites (dog / fish / horses / vets / ferret): FormSubmit is
+ * down (502/503). Do not promise a checklist or guide by email. Render the
+ * magnet on the page (and a no-email save) instead of a broken signup.
  */
 
-import { useState, useCallback, useId } from 'react'
+import { useState, useCallback, useId, useMemo } from 'react'
 
 type EmailCaptureVariant = 'inline' | 'sidebar' | 'section'
+
+/** FormSubmit magnets are not delivered on these live sites. Leave other brands alone. */
+const EMAIL_MAGNET_DELIVERY_PAUSED = new Set([
+  'dog-com',
+  'fish-com',
+  'horses-com',
+  'vets-co',
+  'ferret-com',
+])
 
 interface EmailCaptureProps {
   variant?: EmailCaptureVariant
@@ -104,6 +117,18 @@ export function EmailCapture({
     return null
   }
 
+  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId)) {
+    return (
+      <OnPageMagnet
+        variant={variant}
+        title={title}
+        subtitle={subtitle}
+        leadMagnet={leadMagnet}
+        perks={perks}
+      />
+    )
+  }
+
   if (status === 'success') {
     if (variant === 'section') {
       return (
@@ -194,6 +219,148 @@ export function EmailCapture({
       <p className="text-xs text-brand-text-light mt-3">
         🔒 No spam. Unsubscribe anytime.
       </p>
+    </div>
+  )
+}
+
+function stripEmailPromise(text: string): string {
+  return text
+    .replace(/\bEmail (?:my|the|this|your)\s+/gi, '')
+    .replace(/\bin your inbox\b/gi, 'on this page')
+    .replace(/\bOne short (?:Tuesday )?email:\s*/gi, '')
+    .replace(/\bfree 8-email course\b/gi, 'on-page guide')
+    .replace(/\ban eight-email course:\s*/gi, '')
+    .replace(/\bOne signup\.\s*/gi, '')
+    .replace(/\bNo spam\.?\s*/gi, '')
+    .replace(/\bUnsubscribe anytime\.?\s*/gi, '')
+    .replace(/\s{2,}/g, ' ')
+    .replace(/^[\s—–-]+/, '')
+    .trim()
+}
+
+function slugifyMagnet(title: string): string {
+  const slug = title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '')
+    .slice(0, 60)
+  return slug || 'checklist'
+}
+
+function OnPageMagnet({
+  variant,
+  title,
+  subtitle,
+  leadMagnet,
+  perks,
+}: {
+  variant: EmailCaptureVariant
+  title: string
+  subtitle?: string
+  leadMagnet?: string
+  perks?: string[]
+}) {
+  const heading = stripEmailPromise(title)
+  const body = stripEmailPromise(subtitle ?? leadMagnet ?? '')
+  const visiblePerks = (perks ?? []).filter(
+    (p) => !/unsubscribe|inbox|email course|one signup/i.test(p),
+  )
+
+  const fileText = useMemo(() => {
+    const lines = [heading]
+    if (body) lines.push('', body)
+    if (visiblePerks.length) lines.push('', ...visiblePerks.map((p) => `• ${p}`))
+    lines.push('', 'On this page — not emailed. Email delivery is not live.')
+    return lines.join('\n')
+  }, [heading, body, visiblePerks])
+
+  const saveCopy = useCallback(() => {
+    const blob = new Blob([fileText], { type: 'text/plain;charset=utf-8' })
+    const url = URL.createObjectURL(blob)
+    const a = document.createElement('a')
+    a.href = url
+    a.download = `${slugifyMagnet(heading)}.txt`
+    a.rel = 'noopener'
+    document.body.appendChild(a)
+    a.click()
+    a.remove()
+    URL.revokeObjectURL(url)
+  }, [fileText, heading])
+
+  const note =
+    'Email delivery is not live. This checklist stays on the page — no signup required.'
+
+  if (variant === 'sidebar') {
+    return (
+      <div data-email-capture="sidebar" data-magnet="on-page" className="bg-brand-dark rounded-lg p-5 ring-1 ring-white/8">
+        <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-2">
+          On this page — not emailed
+        </p>
+        <h3 className="font-display text-base font-bold text-brand-white mb-2">{heading}</h3>
+        {body && <p className="text-xs text-white/45 mb-3 leading-relaxed">{body}</p>}
+        <p className="text-xs text-white/55 mb-3 leading-relaxed">{note}</p>
+        <button
+          type="button"
+          onClick={saveCopy}
+          className="w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded cursor-pointer border-0"
+        >
+          Save a copy
+        </button>
+      </div>
+    )
+  }
+
+  if (variant === 'inline') {
+    return (
+      <div data-email-capture="inline" data-magnet="on-page" className="rounded-lg border border-brand-border bg-brand-surface p-4">
+        <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-1">
+          On this page — not emailed
+        </p>
+        {heading && <p className="font-display text-base font-semibold text-brand-dark mb-1">{heading}</p>}
+        {body && <p className="text-sm text-brand-text-mid leading-relaxed mb-2">{body}</p>}
+        <p className="text-xs text-brand-text-light mb-3">{note}</p>
+        <button
+          type="button"
+          onClick={saveCopy}
+          className="px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors"
+        >
+          Save a copy
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <div data-email-capture="section" data-magnet="on-page" className="text-center">
+      <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-2">
+        On this page — not emailed
+      </p>
+      <h2 className="font-display text-3xl font-bold text-brand-dark tracking-tight mb-3">
+        {heading}
+      </h2>
+      {body && (
+        <p className="text-base text-brand-text-light max-w-lg mx-auto mb-4 leading-relaxed">
+          {body}
+        </p>
+      )}
+      {visiblePerks.length > 0 && (
+        <div className="flex items-center justify-center gap-5 flex-wrap mb-5">
+          {visiblePerks.map((perk) => (
+            <span key={perk} className="text-sm text-brand-text-mid flex items-center gap-1.5">
+              <span aria-hidden className="text-brand-success font-bold text-xs">✓</span>
+              {perk}
+            </span>
+          ))}
+        </div>
+      )}
+      <p className="text-sm text-brand-text-mid mb-4">{note}</p>
+      <button
+        type="button"
+        onClick={saveCopy}
+        className="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors"
+      >
+        Save a copy
+      </button>
     </div>
   )
 }

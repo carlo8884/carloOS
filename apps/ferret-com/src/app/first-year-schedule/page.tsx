@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Free Ferret First-Year Schedule — Week-by-Week | Ferret.com',
   description:
-    'A 52-week first-year care schedule for new ferret owners: vaccines, neuter timing, dental onset, diet milestones. Free printable plus 8-email course.',
+    'A 52-week first-year care schedule for new ferret owners: vaccines, neuter timing, dental onset, diet milestones. On this page — not emailed.',
   path: '/first-year-schedule',
   type: 'article',
 })
@@ -33,9 +33,9 @@ const articleSchema = buildArticleSchema({
 
 const FAQS = [
   {
-    question: 'What exactly do I get when I sign up?',
+    question: 'What is on this page?',
     answer:
-      'A printable 52-week schedule covering vaccinations, vet visits, neuter timing, dental routine onset, nail trimming, diet transitions, and the run-up to the insulinoma watch window. Plus an 8-email course delivered over ~90 days, one email per topic.',
+      'A 52-week schedule covering vaccinations, vet visits, neuter timing, dental routine onset, nail trimming, diet transitions, and the run-up to the insulinoma watch window. It is on this page — email delivery is not live, and no signup is required.',
   },
   {
     question: 'When is the right age to neuter or spay a ferret?',
@@ -65,12 +65,12 @@ const FAQS = [
   {
     question: 'I missed the first few weeks — is this still useful?',
     answer:
-      'Yes. The structural pieces — finding an exotic-pet vet, the vaccine calendar, dental onset, insulinoma awareness — apply whether your ferret is 8 weeks or 8 months. Skip ahead in the printable to your current week, and start the email course from email 00 regardless.',
+      'Yes. The structural pieces — finding an exotic-pet vet, the vaccine calendar, dental onset, insulinoma awareness — apply whether your ferret is 8 weeks or 8 months. Skip ahead in the schedule to your current week.',
   },
   {
-    question: 'How often will you email me?',
+    question: 'Can I get the schedule by email?',
     answer:
-      'Eight emails over ~90 days during the course, then weekly at most thereafter (often less). One-click unsubscribe in every email. We do not sell or rent your address.',
+      'Not right now. Email delivery is not live. The 52-week schedule stays on this page — print or save a copy. No signup is required.',
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -182,14 +182,14 @@ export default function FerretFirstYearSchedulePage() {
             </h1>
             <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">
               Ferrets are unusual pets — they need vaccines, dental care, an exotic-pet vet, and
-              lifelong monitoring most pet owners do not expect. This 52-week schedule plus an
-              8-email course builds the foundation for the next 5–8 years of their life.
+              lifelong monitoring most pet owners do not expect. This 52-week schedule builds the
+              foundation for the next 5–8 years of their life. It is on this page — not emailed.
             </p>
             <ul className="text-sm text-white/70 space-y-2 mb-10 max-w-md">
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Printable 52-week schedule (vaccines, dental, neuter, diet, vet visits)</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>8 emails over ~90 days — one per major first-year topic</span></li>
+              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>On this page — not emailed. No signup required.</span></li>
               <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Grounded in exotic-pet veterinary references (AEMV, AFA, Quesenberry &amp; Carpenter)</span></li>
-              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Free. One-click unsubscribe in every email.</span></li>
+              <li className="flex items-start gap-3"><span className="text-brand-primary">✓</span><span>Print or save a copy from this page.</span></li>
             </ul>
           </div>
 
@@ -198,7 +198,7 @@ export default function FerretFirstYearSchedulePage() {
               <div className="mb-5">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Step 1 of 1</div>
                 <div className="font-display font-bold text-brand-dark text-xl leading-tight">
-                  Get the first-year schedule + 8-email course
+                  The first-year schedule (on this page)
                 </div>
               </div>
               <EmailCapture
@@ -210,7 +210,7 @@ export default function FerretFirstYearSchedulePage() {
                 source="first-year-schedule"
               />
               <p className="text-2xs text-brand-text-light mt-4 leading-relaxed">
-                We&apos;ll email the schedule immediately and start the email course shortly after.
+                Email delivery is not live. The schedule is on this page.
                 See our <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>.
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function FerretFirstYearSchedulePage() {
             Ferret first-year-schedule checklist
           </h2>
           <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Email the laminated-ferret-first-year-schedule-chart,
+            Use the laminated-ferret-first-year-schedule-chart,
             fridge-first-year-milestone-card, and
             mustelid-first-year-reference-handbook notes
             that match the q1-to-q4-year-map,
@@ -365,11 +365,10 @@ export default function FerretFirstYearSchedulePage() {
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            Get the printable schedule + the email course
+            The printable schedule
           </h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
-            One signup. Schedule in your inbox immediately. Eight emails over roughly 90 days,
-            then weekly at most. Unsubscribe any time.
+            On this page — not emailed. Scroll up for the 52-week map. Email delivery is not live.
           </p>
           <div className="max-w-md mx-auto">
             <EmailCapture
