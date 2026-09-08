@@ -12548,6 +12548,9 @@ const CALCULATORS = [
     id: 'dog · best-dog-crates hops',
     file: 'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the stand-turn-lie sizing rule' },
+      { re: /nextHref="\/tools\/dog-crate-size-calculator"/, label: 'next step is crate-size, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/midwest\+icrate\+dog\+crate\?s=reviews-best-dog-crates"/, label: 'journey hop reuses the existing MidWest iCrate search' },
       { re: /amazon-brand\/midwest\+icrate\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing MidWest iCrate amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/impact\+high\+anxiety\+dog\+crate\?s=reviews-best-dog-crates/, label: 'existing Impact high-anxiety amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/petmate\+sky\+kennel\?s=reviews-best-dog-crates/, label: 'existing Petmate Sky Kennel amazon-brand hop kept (do not re-ship a new query)' },
@@ -12558,8 +12561,9 @@ const CALCULATORS = [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1235: puppy-food review under-hero is on main. Keep the existing sidebar capture and the already-hopped MidWest / Impact / Petmate Amazon + Frisco Chewy searches; add under-hero capture with a concrete dog-crate-checklist offer matching on-page stand-turn-lie sizing / divider / escape-artist / IATA cargo / furniture-calm-only copy. Do not re-ship new queries. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the stand-turn-lie sizing rule, next step is crate-size + the existing MidWest iCrate hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · best-joint-supplements hops',

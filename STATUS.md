@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish GH/KH JourneyNext after #1597)
+**Last updated:** 2026-09-08 (COO — dog crates JourneyNext after #1599)
 
-> **COO fish GH/KH journey (2026-09-08):** After #1597. Hardness-band table → `/water-parameters` + existing crushed-coral `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-gh-kh-journey.md`.
+> **COO dog crates journey (2026-09-08):** After #1599. Stand-turn-lie sizing rule → `/tools/dog-crate-size-calculator` + existing MidWest iCrate `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-crates-journey.md`.
+
+> **COO fish GH/KH journey (2026-09-08):** After #1597. Hardness-band table → `/water-parameters` + existing crushed-coral `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-gh-kh-journey.md`. #1598 merged.
 
 > **COO dog health-hub journey (2026-09-08):** After #1596. Urgency-tier table → `/tools/is-this-a-dog-emergency` + existing first-aid kit `/go`. Empty “Keep the health-library order” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-health-hub-journey.md`. #1597 merged.
 
