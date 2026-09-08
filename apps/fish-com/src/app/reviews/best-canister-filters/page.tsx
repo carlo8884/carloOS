@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -41,6 +41,14 @@ export default function BestCanisterFiltersPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For 40–70 gallon tanks the <strong>Fluval 307</strong> is our overall pick — near-silent, with an AquaStop valve that lets you change media without disconnecting hoses. For maximum long-term reliability, the <strong>Eheim Classic 350</strong> is the pick — decades of track record. The <strong>Penn Plax Cascade 1000</strong> is the best-value budget canister for larger tanks.</p>
             </div>
+            <JourneyNext
+              siteId="fish-com"
+              nextHref="/tools/filter-gph-calculator"
+              nextLabel="Size canister GPH against the tank before you buy the 307"
+              nextBlurb="The bottom line is the size band — Fluval 307 for 40–70 gallons, Eheim Classic when you want decades of runtime. Filter-GPH is the next step: 4–6× turnover, then pick the canister that actually hits it. The hop below is the same Fluval 307 search already on this page."
+              resourceHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
+              resourceLabel="Browse Fluval 307 canister filters on Amazon →"
+            />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" score={9.4} winner
