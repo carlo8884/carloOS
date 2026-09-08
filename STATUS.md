@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog large-breed food JourneyNext after #1617)
+**Last updated:** 2026-09-08 (COO — fish nano-tanks JourneyNext after #1618)
 
-> **COO dog large-breed food journey (2026-09-08):** After #1617. Puppy vs adult formula rule → `/nutrition/puppy-nutrition` + existing Royal Canin Large Adult `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-large-breed-food-journey.md`.
+> **COO fish nano-tanks journey (2026-09-08):** After #1618. Bigger-is-more-forgiving size rule → `/setup/aquarium-cycling-guide` + existing Aqueon 20-long `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-nano-tanks-journey.md`.
+
+> **COO dog large-breed food journey (2026-09-08):** After #1617. Puppy vs adult formula rule → `/nutrition/puppy-nutrition` + existing Royal Canin Large Adult `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-large-breed-food-journey.md`. #1618 merged.
 
 > **COO fish CO2 journey (2026-09-08):** After #1616. Bubble-rate / 15–35 ppm answer → `/tools/aquarium-cycling-estimator` + existing drop-checker `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-co2-journey.md`. #1617 merged.
 
