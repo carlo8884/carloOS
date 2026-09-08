@@ -6929,6 +6929,9 @@ const CALCULATORS = [
     id: 'dog · training-basic-commands hops',
     file: 'apps/dog-com/src/app/training/basic-commands/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the five-command protocol' },
+      { re: /nextHref="\/training\/puppy-schedule"/, label: 'next step is the puppy schedule, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/puppy\+training\+treats\?s=training-basic-commands"/, label: 'journey hop reuses the existing puppy-treats search' },
       { re: /amazon-brand\/puppy\+training\+treats\?s=training-basic-commands/, label: 'puppy training treats search hop (same query as house-training / puppy-schedule / new-puppy)' },
       { re: /amazon-brand\/dog\+training\+treat\+pouch\+belt\+clip\?s=training-basic-commands/, label: 'treat pouch search hop (amazon-brand replacement for the empty Chewy pouch)' },
       { re: /amazon-brand\/dog\+training\+clicker\?s=training-basic-commands/, label: 'dog training clicker search hop (marker for sit / leave-it)' },
@@ -6939,8 +6942,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the five commands/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete five-command-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Replaces the empty Chewy treat-pouch button that was rendering on this page.',
+    why: '2026-09-08 journeys: after the five-command protocol, next step is the puppy schedule + the existing puppy-treats hop. Empty Keep-the-five-commands husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-loose-leash-walking hops',
