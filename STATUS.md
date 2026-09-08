@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish nitrogen-cycle JourneyNext after #1569)
+**Last updated:** 2026-09-08 (COO — dog harness-size JourneyNext after #1570)
 
-> **COO fish nitrogen-cycle journey (2026-09-08):** After #1569. Nitrogen-cycle 0/0 answer → `/tools/aquarium-cycling-estimator` + existing test-kit `/go`. Empty “Keep the 0/0 confirmation plan” husk removed. Shop dump stays after FAQ. Details: `ops/handoffs/2026-09-08-coo-fish-nitrogen-cycle-journey.md`.
+> **COO dog harness-size journey (2026-09-08):** After #1570. Harness/collar size → `/tools/new-puppy-checklist` + existing Julius-K9 harness `/go`. Empty “Keep the size chart” husk removed. Shop dump stays after the size result. Details: `ops/handoffs/2026-09-08-coo-dog-harness-size-journey.md`.
+
+> **COO fish nitrogen-cycle journey (2026-09-08):** After #1569. Nitrogen-cycle 0/0 answer → `/tools/aquarium-cycling-estimator` + existing test-kit `/go`. Empty “Keep the 0/0 confirmation plan” husk removed. Shop dump stays after FAQ. Details: `ops/handoffs/2026-09-08-coo-fish-nitrogen-cycle-journey.md`. #1570 merged.
 
 > **COO dog puppy-weight journey (2026-09-08):** After #1568. Puppy-weight predictor → `/tools/dog-crate-size-calculator` + existing divider-crate `/go`. Empty “Keep the growth notes” husk removed. Shop dump stays after the estimate. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-weight-journey.md`. #1569 merged.
 
