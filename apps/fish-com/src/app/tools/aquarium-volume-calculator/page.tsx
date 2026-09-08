@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -144,6 +145,14 @@ export default function VolumeCalculatorPage() {
 
         <h2 id="calculator">The Calculator</h2>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/filter-gph-calculator"
+          nextLabel="Size the filter from those gallons"
+          nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The hop below is the same filter-by-gallon search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
+          resourceLabel="Shop filters sized to gallons on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
