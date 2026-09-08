@@ -10,6 +10,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -202,6 +203,14 @@ export default function CO2CalculatorPage() {
           dissolved ppm from a test kit.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/tools/aquarium-cycling-estimator"
+          nextLabel="Estimate the cycle before you push high-light injection"
+          nextBlurb="The calculator is the starting bubble rate and the 15–35 ppm band. A new tank still has to read zero ammonia and nitrite before you run that rate hard. The cycling estimator is the wait window. The hop below is the same drop-checker search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator"
+          resourceLabel="Browse aquarium CO2 drop checkers on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (regulator / diffuser / drop checker / liquid carbon).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
