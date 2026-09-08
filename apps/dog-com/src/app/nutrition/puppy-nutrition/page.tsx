@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Nutrition Guide — Large Breed Formulas | Dog.com', description: 'Complete puppy nutrition guide. Large breed puppy formula explained, how much to feed by age, feeding schedule, and when to switch to adult food.', path: '/nutrition/puppy-nutrition', type: 'article' })
@@ -28,6 +28,19 @@ export default function PuppyNutritionPage() {
         <p>Puppy formulas are nutritionally distinct from adult formulas in ways that matter. Puppies require more protein, more fat, more calories per pound of body weight, and a different calcium-to-phosphorus ratio than adults. Feeding adult food to a growing puppy is not ideal and can result in nutrient deficiencies that affect development. Conversely, feeding adult food with appropriate supplementation is not a substitute — the ratio adjustments in puppy-specific formulas are designed for the requirements of growth.</p>
         <p>Choose a puppy food with an <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> statement that includes &quot;growth&quot; or &quot;all life stages&quot; in the life stage claim. &quot;Maintenance&quot; formulas are not appropriate for puppies.</p>
 
+        <h2 id="large-breed">Large Breed Puppies — A Critical Difference</h2>
+        <p>The most important nutritional distinction in puppy feeding: <strong>large and giant breed puppies (expected adult weight over 50 lbs) must eat a large breed puppy formula.</strong> This is not a marketing preference — it is a clinically meaningful distinction.</p>
+        <p>Large breed puppies that eat standard puppy formulas (higher calcium content) grow their skeletons faster than their joint structures can accommodate, contributing to developmental orthopedic diseases including hip dysplasia, osteochondrosis dissecans (OCD), and elbow dysplasia. Large breed puppy formulas are formulated with controlled calcium levels that allow appropriate skeletal development.</p>
+        <p><strong>Rule:</strong> Any dog expected to weigh more than 50 lbs as an adult should eat a formula explicitly labeled &quot;large breed puppy&quot; or have a guaranteed analysis that meets large breed puppy calcium specifications (1.0–1.8% DM calcium). When in doubt, ask your veterinarian.</p>
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/nutrition/how-much-to-feed"
+          nextLabel="Turn the bag guideline into a portion"
+          nextBlurb="Large-breed formula is which bag. How much to feed is the starting scoop, then body-condition scoring. The hop below is the same large-breed AAFCO search already on this page — not a new query."
+          resourceHref="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy"
+          resourceLabel="Shop large-breed puppy food on Amazon →"
+        />
+
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
@@ -43,11 +56,6 @@ export default function PuppyNutritionPage() {
           </div>
           <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a></p>
         </div>
-
-        <h2 id="large-breed">Large Breed Puppies — A Critical Difference</h2>
-        <p>The most important nutritional distinction in puppy feeding: <strong>large and giant breed puppies (expected adult weight over 50 lbs) must eat a large breed puppy formula.</strong> This is not a marketing preference — it is a clinically meaningful distinction.</p>
-        <p>Large breed puppies that eat standard puppy formulas (higher calcium content) grow their skeletons faster than their joint structures can accommodate, contributing to developmental orthopedic diseases including hip dysplasia, osteochondrosis dissecans (OCD), and elbow dysplasia. Large breed puppy formulas are formulated with controlled calcium levels that allow appropriate skeletal development.</p>
-        <p><strong>Rule:</strong> Any dog expected to weigh more than 50 lbs as an adult should eat a formula explicitly labeled &quot;large breed puppy&quot; or have a guaranteed analysis that meets large breed puppy calcium specifications (1.0–1.8% DM calcium). When in doubt, ask your veterinarian.</p>
 
         <h2 id="schedule">Feeding Schedule by Age</h2>
         <ul>

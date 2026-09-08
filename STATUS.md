@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish tank-mate JourneyNext after #1555)
+**Last updated:** 2026-09-08 (COO — dog puppy-nutrition JourneyNext after #1556)
 
-> **COO fish tank-mate journey (2026-09-08):** After #1555. Tank-mate checker → `/setup/quarantine-tank-guide` + existing quarantine/hospital `/go`. Shop dump stays after the checker. Details: `ops/handoffs/2026-09-08-coo-fish-tank-mate-journey.md`.
+> **COO dog puppy-nutrition journey (2026-09-08):** After #1556. Puppy nutrition → `/nutrition/how-much-to-feed` + existing large-breed AAFCO `/go`. Shop dump (Amazon + existing Chewy) moves below the large-breed rule. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-nutrition-journey.md`.
+
+> **COO fish tank-mate journey (2026-09-08):** After #1555. Tank-mate checker → `/setup/quarantine-tank-guide` + existing quarantine/hospital `/go`. Shop dump stays after the checker. Details: `ops/handoffs/2026-09-08-coo-fish-tank-mate-journey.md`. #1556 merged.
 
 > **COO dog puppy-schedule journey (2026-09-08):** After #1554. `/training/puppy-schedule` → `/nutrition/puppy-nutrition` + existing puppy-food `/go`. Empty “Keep the schedule” husk removed. Shop dump stays after the sample day. Details: `ops/handoffs/2026-09-08-coo-dog-puppy-schedule-journey.md`. #1555 merged.
 
