@@ -8,6 +8,7 @@ import {
   TableOfContents,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -154,12 +155,6 @@ export default function DogFirstAidKitPage() {
             updatedAt="2026-09-04T00:00:00Z"
             reviewedBy="Editorial team"
           />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the first-aid kit list
-            </p>
-
-          </div>
 
           <CalloutBox variant="evidence" title="TL;DR — Be ready before you need to be">
             <p>
@@ -196,6 +191,14 @@ export default function DogFirstAidKitPage() {
               Many common human drugs are toxic to dogs — including ibuprofen and other NSAIDs, acetaminophen, and some decongestants — and a dose safe for a person can be dangerous or fatal for a dog. Never include or administer human medication unless your own veterinarian has approved it for your specific dog, and call before giving anything in an emergency.
             </p>
           </CalloutBox>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/guides/how-to-take-dogs-temperature"
+            nextLabel="Practice a temperature reading before you need one"
+            nextBlurb="The kit list is the packing order. A digital thermometer only helps if you already know this dog's normal. Take a calm-day reading next. The hop below is the same digital pet thermometer search already on this page."
+            resourceHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
+            resourceLabel="Browse digital pet thermometers on Amazon →"
+          />
 
           {/* Money path — live amazon-brand search hops (first-aid / emergency-prep kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
