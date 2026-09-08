@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish volume JourneyNext after #1587)
+**Last updated:** 2026-09-08 (COO — dog excessive-barking JourneyNext after #1588)
 
-> **COO fish volume journey (2026-09-08):** After #1587. Volume gallons result → `/tools/filter-gph-calculator` + existing filter-by-gallon `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-volume-journey.md`.
+> **COO dog excessive-barking journey (2026-09-08):** After #1588. Six-type bark diagnosis → `/training/separation-anxiety` + existing snuffle-mat `/go`. Empty “Keep the quiet-barking plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-excessive-barking-journey.md`.
+
+> **COO fish volume journey (2026-09-08):** After #1587. Volume gallons result → `/tools/filter-gph-calculator` + existing filter-by-gallon `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-volume-journey.md`. #1588 merged.
 
 > **COO dog sep-anxiety journey (2026-09-08):** After #1586. Boredom protocol → `/training/crate-training` + existing divider-crate `/go`. Empty “Keep the alone-time plan” husk removed. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-sep-anxiety-journey.md`. #1587 merged.
 

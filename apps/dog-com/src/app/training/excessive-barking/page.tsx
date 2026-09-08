@@ -8,6 +8,7 @@ import {
   ArticleByline,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
@@ -40,15 +41,6 @@ export default function ExcessiveBarkingPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the quiet-barking plan
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-            Quiet-barking plan
-          </h2>
-
-        </div>
 
         <h2>Diagnose Before You Treat</h2>
         <p>The first step is identifying which type of barking you are dealing with — not guessing. Set up a camera and record your dog when the barking occurs. Watch the footage. Is the barking triggered by something external (alert barking)? Does it happen when the dog is alone (separation anxiety)? Is it during play (excitement)? Does it happen when the dog sees a specific trigger (fear)? The footage tells you what type you have.</p>
@@ -61,6 +53,14 @@ export default function ExcessiveBarkingPage() {
             </div>
           </div>
         ))}
+        <JourneyNext
+          siteId="dog-com"
+          nextHref="/training/separation-anxiety"
+          nextLabel="Run the camera check if the bark is alone-time"
+          nextBlurb="The six types are the diagnosis, not the protocol. If the footage starts the moment you leave, use the separation-anxiety guide next — treat the distress, not the bark. The hop below is the same snuffle-mat search already on this page."
+          resourceHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-excessive-barking"
+          resourceLabel="Browse snuffle mats on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (bark-control / enrichment kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
