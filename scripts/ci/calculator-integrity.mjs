@@ -6987,6 +6987,9 @@ const CALCULATORS = [
     id: 'dog · training-puppy-biting hops',
     file: 'apps/dog-com/src/app/training/puppy-biting/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the two-phase protocol' },
+      { re: /nextHref="\/training\/puppy-schedule"/, label: 'next step is the puppy schedule, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-puppy-biting"/, label: 'journey hop reuses the existing Kong search' },
       { re: /amazon-brand\/puppy\+chew\+toys\?s=training-puppy-biting/, label: 'puppy chew toys search hop (nipping redirection category)' },
       { re: /amazon-brand\/puppy\+teething\+toys\?s=training-puppy-biting/, label: 'puppy teething toys search hop (same query as new-puppy / dog-age)' },
       { re: /amazon-brand\/kong\+classic\+dog\+toy\+stuffable\?s=training-puppy-biting/, label: 'stuffable Kong search hop (same query as sep-anxiety / exercise / new-puppy)' },
@@ -6997,8 +7000,10 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /Keep the nipping plan/, label: 'empty husk heading removed' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete puppy-biting-protocol offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the two-phase bite-inhibition protocol, next step is the puppy schedule + the existing Kong hop. Empty Keep-the-nipping-plan husk removed. Shop dump stays below. No invented kitchen hops.',
   },
   {
     id: 'dog · training-excessive-barking hops',
