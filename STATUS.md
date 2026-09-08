@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — dog slow-feeder JourneyNext after #1615)
+**Last updated:** 2026-09-08 (COO — fish CO2 JourneyNext after #1616)
 
-> **COO dog slow-feeder journey (2026-09-08):** After #1615. Twice-daily plus slow-feeder bloat rule → `/nutrition/how-much-to-feed` + existing Northmate `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-slow-feeder-journey.md`.
+> **COO fish CO2 journey (2026-09-08):** After #1616. Bubble-rate / 15–35 ppm answer → `/tools/aquarium-cycling-estimator` + existing drop-checker `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-co2-journey.md`.
+
+> **COO dog slow-feeder journey (2026-09-08):** After #1615. Twice-daily plus slow-feeder bloat rule → `/nutrition/how-much-to-feed` + existing Northmate `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-slow-feeder-journey.md`. #1616 merged.
 
 > **COO fish fertilizers journey (2026-09-08):** After #1614. Macro vs micro nutrient rule → `/tools/co2-calculator` + existing Easy Green `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-fertilizers-journey.md`. #1615 merged.
 

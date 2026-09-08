@@ -56,6 +56,9 @@ const CALCULATORS = [
     id: 'fish · co2-calculator hops',
     file: 'apps/fish-com/src/app/tools/co2-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the bubble-rate / ppm answer' },
+      { re: /nextHref="\/tools\/aquarium-cycling-estimator"/, label: 'next step is the cycling estimator, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquarium\+co2\+drop\+checker\?s=tools-co2-calculator"/, label: 'journey hop reuses the existing drop-checker search' },
       { re: /amazon-brand\/aquarium\+co2\+regulator\+solenoid\?s=tools-co2-calculator/, label: 'CO2 regulator+solenoid search hop' },
       { re: /amazon-brand\/aquarium\+co2\+diffuser\?s=tools-co2-calculator/, label: 'CO2 diffuser search hop' },
       { re: /amazon-brand\/aquarium\+co2\+drop\+checker\?s=tools-co2-calculator/, label: 'drop checker search hop' },
@@ -66,8 +69,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete planted-tank-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+    why: '2026-09-08 journeys: after the bubble-rate / ppm answer, next step is the cycling estimator + the existing drop-checker hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · aquarium-volume-calculator',
