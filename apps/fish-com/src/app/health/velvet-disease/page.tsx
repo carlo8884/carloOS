@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -39,16 +39,18 @@ export default function VelvetDiseasePage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the temp-and-blackout plan
-          </p>
-
-        </div>
 
         <h2>Identification — The Flashlight Test</h2>
         <p>Velvet in its early stages is difficult to see under normal aquarium lighting — the gold or rust-colored dust that gives the disease its name is often invisible until fish are examined with a flashlight held at an angle to the body. This flashlight inspection reveals the gold sheen on the fish's skin that is characteristic of Oodinium. By the time velvet is clearly visible to the naked eye under normal lighting, the infection is advanced.</p>
         <p>Early behavioral signs before the gold dust is visible: fish scratching against surfaces (flashing or glancing — same as ich), lethargy, clamped fins, rapid gill movement (Oodinium infects gill tissue heavily — gill involvement causes labored breathing that often precedes visible skin signs). A fish that is flashing and breathing rapidly in an otherwise clean, well-maintained tank should be examined with a flashlight for velvet.</p>
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/health/fish-disease-guide"
+          nextLabel="Sort velvet from other look-alikes"
+          nextBlurb="Gold dust under a flashlight is velvet, not ich. The next useful page is the disease hub — so you can sort parasitic, bacterial, and water-quality look-alikes before treating. Isolate first; copper stays hospital-tank only. The hop below is the same quarantine / hospital-tank search already on this page."
+          resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-velvet"
+          resourceLabel="Browse quarantine / hospital tanks on Amazon →"
+        />
 
         <h2>The Parasite Life Cycle — Why Treatment Is Timed</h2>
         <p>Oodinium has three stages: the trophont (attached feeding stage on the fish — visible as the gold dust), the tomont (fallen to substrate, dividing — not visible and not treatable), and the dinospore (free-swimming, infective stage — the only stage that can be killed by medication). Treatment must continue long enough to catch all dinospores as they are released from tomonts — the tomont stage lasts 3–6 days at typical aquarium temperatures. Treatment for a minimum of 2 weeks ensures all dinospores are exposed.</p>
