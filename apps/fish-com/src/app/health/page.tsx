@@ -8,6 +8,7 @@ import {
   DirectoryPlacesCta,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { Diseases, RESERVED_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
@@ -78,15 +79,6 @@ export default function FishHealthPage() {
         primaryCta={{ href: '/health/fish-disease-guide', label: 'Diagnose a sick fish' }}
         secondaryCta={{ href: '/tools/water-change-calculator', label: 'Plan a water change' }}
       />
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Keep the test-first health order
-          </p>
-
-        </div>
-      </div>
-
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid sm:grid-cols-2 gap-4 max-w-content-wide mx-auto">
           {GUIDES.map(g => (
@@ -97,6 +89,15 @@ export default function FishHealthPage() {
             </Link>
           ))}
         </div>
+
+        <JourneyNext
+          siteId="fish-com"
+          nextHref="/water-parameters"
+          nextLabel="Read the 8-parameter test order"
+          nextBlurb="The library is not a diagnosis. Test ammonia, nitrite, and nitrate first — those numbers look like disease and they are not. The hop below is the same API Master Test Kit search already on this page."
+          resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-hub"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (health-library kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
