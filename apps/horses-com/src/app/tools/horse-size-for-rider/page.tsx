@@ -9,7 +9,6 @@ import {
   ArticleByline,
   ArticleSourcesList,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -187,15 +186,7 @@ export default function HorseSizeForRiderPage() {
             Keep the worksheet
           </p>
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-horse-size-for-rider-under-hero"
-          />
+
         </div>
 
         <p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,13 +96,7 @@ export default function GroomingPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="care-grooming"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -112,23 +106,6 @@ export default function GroomingPage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="care-grooming-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why Groom</h2>
           <p>Grooming removes mud, sweat, and dead hair; massages the skin and stimulates blood flow; spreads the protective oils that keep the coat weatherproof; and prevents girth galls and saddle sores by ensuring no dirt or debris sits under the tack. It is also one of the most reliable ways to handle a horse calmly every day, reinforcing trust and good manners. And it doubles as a daily head-to-toe inspection.</p>

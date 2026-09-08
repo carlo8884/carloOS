@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,13 +96,7 @@ export default function WinterCarePage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="care-winter"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -112,23 +106,6 @@ export default function WinterCarePage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="care-winter-care-under-hero"
-            />
-          </div>
 
           <h2 id="water">Water First</h2>
           <p>The biggest winter health risk is reduced water intake. Horses drink less when water is icy, and dehydration combined with dry winter forage is a leading cause of impaction colic. Keep water available and unfrozen with tank heaters or frequent breaking and refilling, and offer slightly warmed water, which horses drink more readily in cold weather. A horse needs roughly 5 to 10 gallons or more a day even in winter; monitor that troughs are actually being drunk down.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
@@ -42,29 +42,12 @@ export default function KennelCoughPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Canine Influenza', href: '/health/canine-influenza' }, { label: 'Dog Vaccinations Guide', href: '/health/dog-vaccinations-guide' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-kennel-cough" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-kennel-cough-under-hero"
-            />
-          </div>
 
           <CalloutBox variant="info" title="Usually mild, but watch the vulnerable">
             In a healthy adult dog, kennel cough is typically a self-limiting nuisance that clears with rest. In puppies, seniors, and dogs with underlying disease, it can be more serious and occasionally leads to pneumonia, so these dogs warrant closer monitoring and a lower threshold for veterinary care.

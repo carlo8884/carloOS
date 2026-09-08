@@ -35,7 +35,7 @@ const FAQS = [
   {
     question: 'What is on this page?',
     answer:
-      'A 52-week schedule covering vaccinations, vet visits, neuter timing, dental routine onset, nail trimming, diet transitions, and the run-up to the insulinoma watch window. It is on this page — email delivery is not live, and no signup is required.',
+      'A 52-week schedule covering vaccinations, vet visits, neuter timing, dental routine onset, nail trimming, diet transitions, and the run-up to the insulinoma watch window. It is on this page — print or save a copy. No signup is required.',
   },
   {
     question: 'When is the right age to neuter or spay a ferret?',
@@ -70,7 +70,7 @@ const FAQS = [
   {
     question: 'Can I get the schedule by email?',
     answer:
-      'Not right now. Email delivery is not live. The 52-week schedule stays on this page — print or save a copy. No signup is required.',
+      'The 52-week schedule stays on this page. Print from your browser or save a copy below. No signup is required.',
   },
 ]
 const faqSchema = buildFAQSchema({ questions: FAQS })
@@ -162,6 +162,17 @@ const QUARTERS = [
   },
 ]
 
+const FIRST_YEAR_TEXT = [
+  'Ferret first-year schedule',
+  '',
+  ...QUARTERS.flatMap((q) => [
+    `${q.label} (${q.weeks}) — ${q.title}`,
+    ...q.bullets.map((b) => `• ${b}`),
+    '',
+  ]),
+  'Vaccination dates are typical AFA / AEMV reference points; your exotic-pet vet sets the actual schedule.',
+].join('\n')
+
 export default function FerretFirstYearSchedulePage() {
   return (
     <>
@@ -208,7 +219,7 @@ export default function FerretFirstYearSchedulePage() {
                 Jump to the schedule
               </a>
               <p className="text-2xs text-brand-text-light mt-4 leading-relaxed">
-                Email delivery is not live. The schedule is on this page.
+                The schedule is on this page.{' '}
                 See our <Link href="/legal/privacy-policy" className="text-brand-primary hover:underline">Privacy Policy</Link>.
               </p>
             </div>
@@ -299,26 +310,17 @@ export default function FerretFirstYearSchedulePage() {
           </div>
         </div>
       </section>
-
-      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
-          <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            The printable schedule
-          </h2>
-          <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
-            On this page — not emailed. Scroll up for the 52-week map. Email delivery is not live.
-          </p>
-          <div className="max-w-md mx-auto">
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="first-year-schedule-under-hero"
-            />
-          </div>
+          <EmailCapture
+            variant="section"
+            siteId="ferret-com"
+            title="Save the first-year schedule"
+            subtitle="The four-quarter map from this page — vaccines, neuter timing, dental, insulinoma watch."
+            source="first-year-schedule-under-hero"
+            resourceText={FIRST_YEAR_TEXT}
+            resourceLabel="Save the schedule"
+          />
         </div>
       </section>
 

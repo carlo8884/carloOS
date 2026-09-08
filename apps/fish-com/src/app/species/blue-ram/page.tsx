@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -74,27 +74,11 @@ export default function BlueRamPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Discus Care', href: '/species/discus' }, { label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }, { label: 'Angelfish Care', href: '/species/angelfish' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-blue-ram" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-blue-ram-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-blue-ram" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A blue ram cichlid in a home aquarium." priority />
         <h2>Water Chemistry — Why Most Blue Rams Die</h2>
         <p>The German Blue Ram's native habitat is the Llanos of Venezuela and Colombia — warm, blackwater rivers and pools with extremely soft, acidic water. The parameters they require reflect this origin: pH 5.5–7.0 (ideally 6.0–6.8), GH under 8 (preferably 3–6), and temperature 80–86°F. These are not adjustable preferences — they are physiological requirements. Blue rams kept in hard alkaline tap water (pH 7.5–8.0, GH 15+) that characterizes much of the US will show chronic stress, compromised immune function, and shortened lifespans. Most "blue rams die easily" experiences are water chemistry mismatches.</p>

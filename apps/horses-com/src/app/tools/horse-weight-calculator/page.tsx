@@ -7,7 +7,6 @@ import {
   ArticleByline,
   ArticleSourcesList,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -229,15 +228,7 @@ export default function HorseWeightCalculatorPage() {
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Weight-tape size chart
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Weight-tape size chart"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-horse-weight-calculator-under-hero"
-          />
+
         </div>
 
         <h2 id="formula">The formula</h2>

@@ -41,8 +41,6 @@ export function InsuranceWellnessShop({
           </Link>{' '}
           review. Vets.co earns a commission on qualifying Amazon purchases at no extra cost to
           you.</p>
-        <div className="flex flex-col gap-3">
-</div>
       </div>
     </div>
   )

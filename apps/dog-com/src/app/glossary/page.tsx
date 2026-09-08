@@ -5,7 +5,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -148,17 +147,6 @@ export default function DogGlossaryPage() {
             </dl>
           </section>
         ))}
-      </div>
-
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          title="Free Dog Health & Training Tips"
-          subtitle="Plain-English guidance every Tuesday. No spam."
-          source="glossary"
-          ctaText="Send the weekly notes"
-        />
       </div>
     </>
   )

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -61,25 +61,6 @@ export default function HorsesReviewsPage() {
         <span className="text-brand-text-mid font-medium">Reviews</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-3xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="reviews-hub-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container pt-12 max-w-3xl">
         <h2 className="font-display font-bold text-brand-dark text-2xl mb-4 leading-tight">How these reviews are decided</h2>
         <p className="text-base text-brand-text-mid leading-relaxed mb-4">
@@ -117,7 +98,6 @@ export default function HorsesReviewsPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
           Reviews-hub barn kit
         </h2>
-        <p className="max-w-3xl text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-3xl mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

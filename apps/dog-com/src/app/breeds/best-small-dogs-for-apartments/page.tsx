@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, ShopCtas, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, ShopCtas, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,27 +59,11 @@ export default function BestSmallDogsForApartmentsPage() {
         <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'What Makes a Breed Apartment-Suited', href: '#what' }, { label: 'The Breeds', href: '#breeds' }, { label: 'Before You Choose', href: '#before' }, { label: 'Next Steps', href: '#now' }]} />
         <RelatedLinks title="Related" links={[{ label: 'Breed-Match Wizard', href: '/breeds/match' }, { label: 'Compare Breeds', href: '/compare' }, { label: 'Dog Breed Guide', href: '/breeds' }, { label: 'Excessive Barking', href: '/training/excessive-barking' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="breeds-apartment-dogs" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breeds-apartment-dogs-under-hero"
-          />
-        </div>
 
         <p>The working story starts with shared walls: apartment living rewards energy, noise, and exercise needs that fit a no-yard, neighbor-close floor plan — not the smallest weight on the scale. That shared-wall / indoor-exercise history is why a household apartment dog still needs a potty-logistics plan and a quiet indoor kit, not a crate-only afternoon. First-time apartment owners typically do better when they accept daily walks without a yard, a backup indoor potty plan on a third-floor unit, and training for alert-barking before they pick a high-drive toy.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -74,27 +74,11 @@ export default function CPDPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Ember Tetra', href: '/species/ember-tetra' }, { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-cpd" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-celestial-pearl-danio-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-celestial-pearl-danio" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A celestial pearl danio in a home aquarium." priority />
         <h2>Sexual Dimorphism and Display</h2>
         <p>CPD males are significantly more colorful than females — the iridescent pearlescent spots are vivid and the fin coloration (red-orange with bold black edges) is dramatic, especially during display. Females are rounder-bodied with less intense fin coloration. Males display to each other and to females in tight, circling, fin-flared behavioral exchanges that are one of the most engaging micro-fish behaviors available. In a group of 8-10 with a 3:2 female-to-male ratio, the display is near-constant and makes the tank feel alive.</p>

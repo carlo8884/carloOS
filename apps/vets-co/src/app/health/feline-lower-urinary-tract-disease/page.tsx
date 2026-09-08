@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
@@ -42,29 +42,12 @@ export default function FLUTDPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Urinary Tract Infection', href: '/health/urinary-tract-infection' }, { label: 'Kidney Disease in Cats', href: '/health/kidney-disease-cats' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-flutd" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-feline-lower-urinary-tract-disease-under-hero"
-            />
-          </div>
 
           <CalloutBox variant="warning" title="A cat that cannot urinate is an emergency">
             If your cat — especially a male cat — is straining in the litter box and producing little or no urine, crying, vomiting, or hiding and lethargic, treat it as an emergency and seek veterinary care right away. A complete urethral obstruction can be fatal within a day. Do not wait until morning.

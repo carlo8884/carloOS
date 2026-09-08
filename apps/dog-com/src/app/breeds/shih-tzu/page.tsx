@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide — Brachycephalic Health, Grooming | Dog.com', description: 'Shih Tzus are brachycephalic with prominent eyes prone to corneal injuries. Daily eye cleaning, professional grooming every 6-8 weeks.', path: '/breeds/shih-tzu', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Shih Tzu Breed Guide', description: 'Brachycephalic health, eye care, grooming, and dental disease for Shih Tzus.', url: 'https://dog.com/breeds/shih-tzu', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -50,27 +50,11 @@ export default function ShihTzuPage() {
           { label: 'Shih Tzu vs Maltese', href: '/compare/shih-tzu-vs-maltese' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-shih-tzu" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-shih-tzu-under-hero"
-          />
-        </div>
 
         <p>The companion story starts in the Chinese imperial court: a Tibetan temple dog refined as a lap dog for royalty, never a working breed. That palace / flat-face history is why a household Shih Tzu still needs a 6–8 week groom clock and a same-day squint watch, not a crate-only afternoon. Shih Tzus are typically first-time-owner friendly — YES-typically — when the household accepts the 6–8 week professional-groom floor, the corneal-ulcer same-day rule, and heat-sensitive BOAS limits.</p>
 

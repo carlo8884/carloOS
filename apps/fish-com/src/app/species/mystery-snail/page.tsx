@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -76,27 +76,11 @@ export default function MysterySnailPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Cherry Shrimp', href: '/species/cherry-shrimp' }, { label: 'Amano Shrimp', href: '/species/amano-shrimp' }, { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-mystery-snail" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-mystery-snail-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-mystery-snail" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A mystery snail in a home aquarium." priority />
         <h2>Copper — The Single Most Important Care Fact</h2>
         <p>Mystery snails, like all freshwater snails, are killed by copper at concentrations that are safe for fish. This is the most critical care fact — more important than any other husbandry consideration. Sources of copper that kill snails: copper-based algae treatments (API AlgaeFix contains copper), copper-based disease treatments, tap water from old copper pipes, some plant fertilizers, and some fish foods. Before adding mystery snails to any established tank, verify that no copper-containing products have ever been used. Test with a copper test kit if uncertain. Even trace copper remaining from a previous treatment can kill snails.</p>

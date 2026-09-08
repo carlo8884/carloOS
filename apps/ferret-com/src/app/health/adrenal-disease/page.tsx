@@ -3,7 +3,6 @@ import {
   buildMetadata,
   ArticleLayout,
   StockImage,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -186,13 +185,7 @@ export default function FerretAdrenalDiseasePage() {
                 Compare exotic-pet insurance →
               </a>
             </div>
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Health Notes"
-              subtitle="Evidence-based ferret health, monthly."
-              source="health-adrenal-disease"
-            />
+
           </>
         }
       
@@ -214,23 +207,6 @@ export default function FerretAdrenalDiseasePage() {
             publishedAt="2026-05-28"
             updatedAt="2026-09-06"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-adrenal-disease-under-hero"
-            />
-          </div>
 
           <DropCap>
             Adrenal disease is the diagnosis owners learn to expect somewhere in

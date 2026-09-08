@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,13 +107,7 @@ export default function ThrushPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="health-thrush"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -123,23 +117,6 @@ export default function ThrushPage() {
             updatedAt="2026-09-05"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-thrush-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Is Thrush</h2>
           <p>Thrush is a degenerative infection of the frog -- the V-shaped, rubbery cushion on the underside of the hoof -- and especially of the deep grooves (sulci) on either side of it and in its center. Anaerobic bacteria, classically Fusobacterium necrophorum, colonize the grooves and break down the horn, producing a characteristic black, moist, foul-smelling discharge. It usually starts in the central or collateral sulci where debris packs in and air cannot reach.</p>

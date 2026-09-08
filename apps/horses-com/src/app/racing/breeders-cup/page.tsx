@@ -19,7 +19,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -144,13 +143,7 @@ export default function BreedersCupPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-breeders-cup"
-            />
+
           </>
         }
       >
@@ -161,23 +154,6 @@ export default function BreedersCupPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-breeders-cup-under-hero"
-            />
-          </div>
 
           <h2 id="what">What the Breeders&apos; Cup Is</h2>
           <p>The Breeders&apos; Cup is an end-of-season championship event for Thoroughbred racing, first run in 1984. Where the Triple Crown is a spring series for three-year-olds, the Breeders&apos; Cup is a single championship meeting held in late autumn that brings together the best horses of the year across every major division -- from two-year-olds to seasoned older horses, on dirt and on turf, at distances from sprints to a mile and a half. It is frequently described as the &quot;World Championships&quot; of the sport because it draws leading horses from Europe, Japan, and elsewhere alongside the top North American runners.</p>

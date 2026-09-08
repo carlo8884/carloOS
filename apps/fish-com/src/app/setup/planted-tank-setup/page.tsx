@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com', description: 'How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.', path: '/setup/planted-tank-setup', type: 'article' })
@@ -63,28 +63,11 @@ export default function PlantedTankSetupPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Fertilizers', href: '/reviews/best-planted-tank-fertilizers' }, { label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }]} />
-          <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Planted tank tips every Thursday." source="setup-planted" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-planted-tank-setup-under-hero"
-          />
-        </div>
 
           <h2>Low-Tech vs High-Tech — Choose Before You Buy Anything</h2>
           <p><strong>Low-tech planted tank:</strong> No CO2 injection. Easy plants only (Java fern, Anubias, Cryptocoryne, mosses, hornwort). Standard lighting (moderate PAR). All-in-one liquid fertilizer once weekly. Lower maintenance. Still beautiful — most of the famous Dutch aquascapes and natural-style tanks use low-tech or medium-tech approaches. Appropriate for beginners and most hobbyists.</p>

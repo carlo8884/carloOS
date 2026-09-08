@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -51,28 +51,11 @@ export default function GrainFreeDCMPage() {
           { label: 'Find a Cardiologist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-grain-free" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-grain-free-under-hero"
-          />
-        </div>
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
           <strong className="not-italic">TL;DR.</strong> The FDA investigated more than 500 reports of dilated cardiomyopathy (DCM) in dogs eating grain-free diets, most with peas, lentils, or potatoes as primary ingredients. The link is an association, not proven causation — but most veterinary cardiologists now recommend avoiding high-legume grain-free formulas. Switch to a WSAVA-compliant brand (Royal Canin, Purina Pro Plan, Hill&apos;s) unless your vet directs otherwise.

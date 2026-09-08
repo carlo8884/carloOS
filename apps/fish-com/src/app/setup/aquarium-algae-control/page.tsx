@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   ArticleSourcesList,
   AffiliateDisclosure,
@@ -39,28 +38,11 @@ export default function AlgaeControlPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Best Fertilizers', href: '/reviews/best-planted-tank-fertilizers' }, { label: 'Otocinclus', href: '/species/otocinclus' }]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-algae-control" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-aquarium-algae-control-under-hero"
-          />
-        </div>
 
         <h2>The Three Levers</h2>
         <DropCap>Algae growth is governed by three inputs: light, nutrients (nitrate and phosphate), and carbon dioxide. In a healthy planted tank, fast-growing plants outcompete algae for these resources, and algae stays in check. Algae blooms when one lever is out of proportion with the others — most often too much light for the available CO2 and plant mass, or a nutrient surplus from overfeeding and infrequent water changes. The durable fix for any algae problem is therefore not an algaecide but a rebalancing: reduce the photoperiod, increase water changes, improve circulation, and either add CO2 or add more (and faster-growing) plants to consume the surplus. Manual removal and algae-eating animals are useful supporting tools, never the whole solution.</DropCap>

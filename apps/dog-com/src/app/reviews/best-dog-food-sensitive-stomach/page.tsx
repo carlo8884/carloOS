@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -29,22 +29,6 @@ export default function SensitiveStomachFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-dog-food-sensitive-stomach-under-hero"
-              />
-            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When to See a Vet First</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Recurring vomiting, chronic diarrhea, blood in stool, significant weight loss, or GI symptoms that have not improved after a proper 8-12 week dietary trial require veterinary workup — not just food switching. A dietary change without diagnosis is guessing. Your vet can determine if the issue is diet, IBD, food allergy, parasites, or another condition requiring specific treatment.</p>
@@ -74,7 +58,7 @@ export default function SensitiveStomachFoodPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Elimination Diet', href: '/nutrition/elimination-diet' }, { label: 'Dog Diarrhea', href: '/health/dog-diarrhea' }, { label: 'Dog Vomiting', href: '/health/dog-vomiting' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-sensitive-food" />
+
           </aside>
         </div>
       </div>

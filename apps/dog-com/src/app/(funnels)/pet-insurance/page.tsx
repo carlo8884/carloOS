@@ -7,9 +7,7 @@ import {
   buildItemListSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
-  EmailCapture
-} from '@carloOS/ui'
+  AffiliateDisclosure} from '@carloOS/ui'
 import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
 import { CARRIERS } from '../../../data/insurance-carriers'
 
@@ -188,16 +186,6 @@ export default function PetInsuranceHubPage() {
         </div>
 
         {/* Lead magnet */}
-        <div className="mb-12">
-          <EmailCapture
-            variant="section"
-            siteId="dog-com"
-            source="dog-com:insurance-comparison"
-            title="Get the Pet Insurance Comparison Spreadsheet"
-            subtitle="All 9 carriers · all coverage details · downloadable PDF. We'll email it instantly."
-            ctaText="Send the notes"
-          />
-        </div>
 
         {/* Editorial picks summary */}
         <h2 className="font-display text-3xl font-bold tracking-tight mb-6">
@@ -390,14 +378,7 @@ export default function PetInsuranceHubPage() {
         </div>
 
         {/* Email lead capture (footer) */}
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          source="dog-com:insurance-comparison"
-          title="One more time: get the comparison spreadsheet"
-          subtitle="All 9 carriers, side-by-side, downloadable. Free."
-          ctaText="Send the spreadsheet"
-        />
+
       </div>
     </>
   )

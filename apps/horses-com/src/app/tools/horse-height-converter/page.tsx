@@ -7,7 +7,6 @@ import {
   ArticleByline,
   ArticleSourcesList,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -161,13 +160,7 @@ export default function HorseHeightConverterPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Horses.com owner letter"
-            subtitle="Horse-care references and tool updates."
-            source="height-converter"
-          />
+
         </>
       }
     >
@@ -183,8 +176,6 @@ export default function HorseHeightConverterPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the conversion chart
@@ -192,15 +183,7 @@ export default function HorseHeightConverterPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Height conversion chart
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Height conversion chart"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-horse-height-converter-under-hero"
-          />
+
         </div>
 
         <p>

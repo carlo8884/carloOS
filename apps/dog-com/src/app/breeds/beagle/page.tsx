@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -41,27 +41,11 @@ export default function BeaglePage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-beagle" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-beagle-under-hero"
-          />
-        </div>
 
         <h2>Temperament</h2>
         <DropCap>Beagles were bred to trail rabbit and hare by scent — this history defines their behavior in captivity. They are friendly, pack-oriented dogs that coexist well with other dogs, children, and most people. The challenges: they follow their nose with extraordinary single-mindedness, bark and howl vocally (they were bred to alert hunters), and have a low threshold for bolting after scent trails.</DropCap>

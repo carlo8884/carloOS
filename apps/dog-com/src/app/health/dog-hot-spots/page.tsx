@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -43,26 +43,10 @@ export default function DogHotSpotsPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Best Flea & Tick', href: '/reviews/best-flea-tick-prevention' }]} />
           <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-hot-spots" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dog-hot-spots-under-hero"
-            />
-          </div>
 
           <h2>What Triggers Hot Spots</h2>
           <p>Hot spots are secondary to an underlying trigger that initiates self-trauma. The most common triggers: <strong>allergies</strong> (environmental atopy, food allergy, or flea allergy creating an itch that the dog traumatizes), <strong>flea infestation</strong> (flea allergy dermatitis — a single flea bite on an allergic dog can initiate scratching intense enough to create a hot spot at the site of the bite, typically over the lower back and base of tail), <strong>ear infections</strong> (dogs scratch at painful ears and traumatize the skin around the ear base — the most common hot spot location), <strong>coat matting</strong> (matted fur traps moisture against the skin), and <strong>boredom or anxiety</strong> (some dogs lick compulsively, creating hot spots in the absence of any external trigger).</p>

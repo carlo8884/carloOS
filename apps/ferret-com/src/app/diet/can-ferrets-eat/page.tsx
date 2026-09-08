@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { FERRET_FOODS, FERRET_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -58,25 +58,6 @@ export default function CanFerretsEatHubPage() {
           A plain-English safety check for the foods ferret owners ask about most. Ferrets are <strong className="text-white/80">strict obligate carnivores</strong>, so each food is rated <strong className="text-white/80">safe</strong>, <strong className="text-white/80">not recommended</strong>, or <strong className="text-white/80">toxic</strong> — tap any for the full reason, serving guidance, and what to do. The safe column is meat, egg, and meat-based treats; sugar, grain, and plant matter are not.
         </p>
       </div>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="can-ferrets-eat-under-hero"
-          />
-        </div>
-      </section>
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
@@ -168,9 +149,6 @@ export default function CanFerretsEatHubPage() {
       <section className="px-container-sm sm:px-container py-12" style={{ background: 'var(--brand-primary-pale)' }}>
         <div className="max-w-content-wide">
           <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="inline" />
-          <div className="mt-6">
-            <EmailCapture variant="section" siteId="ferret-com" title="The Ferret.com Nutrition Reference" subtitle="Evidence-based ferret diet and feeding. Cited. No product pushes." source="can-ferrets-eat-hub" />
-          </div>
         </div>
       </section>
     </>

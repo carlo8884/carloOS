@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+.', path: '/health/preventive-care-schedule', type: 'article' })
@@ -29,27 +29,11 @@ export default function PreventiveCareSchedulePage() {
         ]}
         sidebar={<>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-preventive-care" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-preventive-care-schedule-under-hero"
-            />
-          </div>
 
           <h2>Puppy Schedule (Birth to 16 Weeks)</h2>
           <div className="overflow-x-auto mb-6">
@@ -91,7 +75,6 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Senior Dog Schedule (7+ Years)</h2>
           <div className="overflow-x-auto mb-6">
@@ -112,12 +95,9 @@ export default function PreventiveCareSchedulePage() {
               </tbody>
             </table>
           </div>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Year-Round Parasite Prevention</h2>
           <p><strong>Heartworm:</strong> Monthly oral preventives (Heartgard, Sentinel, Interceptor Plus) or 6-month injectable ProHeart 6/12. Annual heartworm antigen test required for all dogs on prevention — to detect infection before starting prevention and to verify ongoing efficacy. A dog that misses doses or has a lapse in coverage should be tested before restarting prevention.</p>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2 id="kit">Visit-cadence kit</h2>
           <p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -39,27 +39,11 @@ export default function AllergicReactionsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Signs Guide', href: '/health/emergency-signs' }, { label: 'Dog Vaccinations', href: '/health/dog-vaccinations-guide' }, { label: 'Find Emergency Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-allergic-rxn" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-allergic-reactions-dogs-under-hero"
-            />
-          </div>
 
           <h2>Types of Allergic Reaction — Severity Spectrum</h2>
           <p><strong>Mild (localized hives/urticaria):</strong> Raised bumpy welts on the skin, often visible as hair standing up in patches across the body. The dog may scratch at affected areas. No facial swelling, no respiratory signs, the dog is alert and mobile. Most common after insect stings, contact with allergens, or certain vaccines. This is the mildest form of allergic reaction — concerning but not immediately life-threatening.</p>

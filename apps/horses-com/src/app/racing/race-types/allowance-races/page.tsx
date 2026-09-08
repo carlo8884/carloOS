@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -135,13 +134,7 @@ export default function AllowanceRacesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="race-types-allowance"
-            />
+
           </>
         }
       >
@@ -152,23 +145,6 @@ export default function AllowanceRacesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="race-types-allowance-under-hero"
-            />
-          </div>
 
           <h2 id="what">What an Allowance Race Is</h2>
           <p>An <strong>allowance race</strong> occupies the middle of the class structure: it sits clearly above <a href="/racing/race-types/claiming-races">claiming races</a> and clearly below <a href="/racing/race-types/stakes-races">stakes</a>. Two things define it. First, the horses are <strong>not for sale</strong> &mdash; there is no claiming price, so no runner can be bought out of the race. Second, the weights each horse carries are adjusted by <strong>allowances</strong> written into the race&apos;s conditions.</p>

@@ -17,7 +17,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -133,13 +132,7 @@ export default function JumpRacingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-jump"
-            />
+
           </>
         }
       >
@@ -150,23 +143,6 @@ export default function JumpRacingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-jump-racing-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Jump Racing Is</h2>
           <p>Jump racing is horse racing contested over obstacles. In Britain and Ireland it is known as National Hunt racing; in the United States it is most often called steeplechasing or simply jump racing. Where flat racing tests speed over a clear track, jump racing adds the demands of jumping at speed and of stamina over longer distances -- jump races are commonly two miles or more. A jump horse must be fast enough to be competitive, athletic enough to clear obstacles cleanly, and sound and experienced enough to do both repeatedly over a long career.</p>

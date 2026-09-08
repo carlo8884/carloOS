@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -39,26 +39,10 @@ export default function IVDDPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-ivdd" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-intervertebral-disc-disease-under-hero"
-            />
-          </div>
 
           <h2>What IVDD Is</h2>
           <p>Intervertebral discs are cartilaginous cushions between each vertebra of the spine. In chondrodystrophic breeds — dogs genetically selected for shortened, bowed legs (Dachshunds being the most affected) — the nucleus of these discs mineralizes and hardens abnormally early in life. Mineralized discs lose their shock-absorbing quality and are prone to sudden extrusion (Type I IVDD) into the spinal canal, where they compress the spinal cord.</p>

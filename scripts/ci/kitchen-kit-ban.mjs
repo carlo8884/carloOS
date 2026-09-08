@@ -37,6 +37,9 @@ const FORBIDDEN = [
   { pattern: /8-week email course/i, reason: 'Promises an email course that does not exist' },
   { pattern: /8-email course/i, reason: 'Promises an email course that does not exist' },
   { pattern: /eight-email course/i, reason: 'Promises an email course that does not exist' },
+  { pattern: /Leave an email if you want occasional owner notes/i, reason: 'Promises inbox delivery we do not fulfill' },
+  { pattern: /We send them to the inbox you enter/i, reason: 'Contradicts paused email delivery' },
+  { pattern: /Email delivery is not live/i, reason: 'Unfinished-infra essay shown to visitors' },
 ]
 
 function stripComments(src) {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -76,27 +76,11 @@ export default function CherryBarbPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Neon Tetra', href: '/species/neon-tetra' }, { label: 'Corydoras Care', href: '/species/corydoras' }, { label: 'Betta Tank Mates', href: '/species/betta-fish-tank-mates' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-cherry-barb" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-cherry-barb-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-cherry-barb" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A cherry barb in a home aquarium." priority />
         <h2>Why Cherry Barbs Are Different From Other Barbs</h2>
         <p>The barb family has an undeserved reputation for aggression — deserved by tiger barbs (notorious fin-nippers), rosy barbs (semi-aggressive), and odessa barbs (males fight). Cherry barbs are the exception. They are peaceful with every species small enough to not eat them. They will not nip fins, harass smaller fish, or bother invertebrates. This makes them one of the few barbs appropriate for tanks with guppies, bettas, neon tetras, and shrimp.</p>

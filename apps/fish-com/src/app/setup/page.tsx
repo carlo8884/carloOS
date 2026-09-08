@@ -8,7 +8,6 @@ import {
   TableOfContents,
   StockImage,
   ArticleByline,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
@@ -100,22 +99,11 @@ export default function AquariumSetupPage() {
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the first-tank plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="Email tank size, filter/heater, dechlorinator, API Master Test Kit, and cycling steps. No spam."
-            ctaText="Send the notes"
-            source="setup-aquarium-under-hero"
-          />
+
         </div>
 
         <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />

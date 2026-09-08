@@ -17,7 +17,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  EmailCapture,
   CrossPortfolioCard,
 } from '@carloOS/ui'
 
@@ -196,17 +195,6 @@ export default function RacingGlossaryPage() {
             </dl>
           </section>
         ))}
-      </div>
-
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="Equestrian Reference"
-          subtitle="Citation-anchored equine reference articles, one email a week."
-          source="racing-glossary"
-          ctaText="Send the weekly notes"
-        />
       </div>
       <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />
     </>

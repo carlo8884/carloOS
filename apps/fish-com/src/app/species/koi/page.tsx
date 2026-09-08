@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -77,27 +77,11 @@ export default function KoiPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Pond Setup Guide', href: '/setup/pond-guide' }, { label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Water Chemistry', href: '/setup/water-chemistry-guide' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Pond and fishkeeping tips." source="species-koi" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-koi-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-koi" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A koi in a home aquarium." priority />
         <h2>Pond Size — The Non-Negotiable</h2>
         <p>The most common koi husbandry mistake: underestimating pond size requirements. A single koi purchased at 6 inches will reach 18–24 inches within 3–5 years under good conditions. Koi produce substantial waste — ammonia load per fish is significantly higher than smaller pond fish. The guideline of 250 gallons per koi is a conservative minimum; experienced koi keepers recommend 500–1,000 gallons per fish for high-quality water conditions and optimal growth.</p>

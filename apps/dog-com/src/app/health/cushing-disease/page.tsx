@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -49,26 +49,10 @@ export default function CushingDiseasePage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cushings" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Dog Cushing's thirst-and-comfort checklist"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-cushing-disease-under-hero"
-            />
-          </div>
 
           <h2 id="signs">Signs — What Owners Notice</h2>
           <p>The signs of Cushing's develop slowly — owners often attribute them to normal aging over 1–2 years before diagnosis. The most common clinical presentation: <strong>polyuria/polydipsia (PU/PD)</strong> — the dog drinks and urinates dramatically more than before, sometimes needing to go outside multiple times at night. <strong>Pot-bellied appearance</strong> — the abdomen enlarges not from fat but from organ enlargement (liver hepatomegaly) and muscle weakness causing the abdominal muscles to relax. <strong>Bilateral symmetrical hair loss</strong> — the coat thins symmetrically, beginning at the flanks. <strong>Skin changes</strong> — the skin becomes thin, loses elasticity, and may develop calcium deposits (calcinosis cutis), blackheads (comedones), and fragile blood vessels that bruise easily. Recurrent skin infections and urinary tract infections occur because cortisol suppresses immune function.</p>

@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   ArticleSourcesList,
   AffiliateDisclosure,
@@ -39,28 +38,11 @@ export default function AquascapingGuidePage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }, { label: 'Best Aquarium Lighting', href: '/reviews/best-aquarium-lighting' }, { label: 'Best Fertilizers', href: '/reviews/best-planted-tank-fertilizers' }, { label: 'Algae Control', href: '/setup/aquarium-algae-control' }]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-aquascaping" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-aquascaping-guide-under-hero"
-          />
-        </div>
 
         <h2>Composition First, Plants Second</h2>
         <DropCap>The defining lesson of aquascaping is that the layout is decided before a single plant goes in. The arrangement of substrate slopes, rock, and wood — the hardscape — is the skeleton of the scape, and plants merely clothe it. A common beginner error is to fill a flat-bottomed tank with assorted plants and decorations and hope it coheres; it never quite does. Established scapers begin with the empty tank, build the terrain and hardscape until the bones of the composition work on their own, and only then select plants to reinforce that structure. If the hardscape looks intentional and balanced before any greenery, the finished scape almost always does too.</DropCap>

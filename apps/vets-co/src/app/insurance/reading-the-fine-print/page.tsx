@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Reading Pet Insurance Fine Print — What to Check | Vets.co", description: "Waiting periods, exam-fee coverage, payout schedules, and exclusions hide in the policy document. Use this checklist to read a pet insurance policy properly.", path: '/insurance/reading-the-fine-print', type: 'article' })
@@ -27,26 +27,10 @@ export default function FinePrintPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'Pre-Existing Conditions', href: '/insurance/pre-existing-conditions' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-fine-print" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="insurance-reading-the-fine-print-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 

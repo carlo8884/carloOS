@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -79,27 +79,11 @@ export default function DwarfGouramiPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Betta Fish', href: '/species/betta-fish' }, { label: 'Harlequin Rasbora', href: '/species/harlequin-rasbora' }, { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-dwarf-gourami" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-dwarf-gourami-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-dwarf-gourami" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A dwarf gourami in a home aquarium." priority />
         <h2>Dwarf Gourami Disease (DGD) — The Critical Issue</h2>
         <p>Dwarf Gourami Disease is caused by Dwarf Gourami Iridovirus (DGIV) — a systemic viral infection that has become endemic in the mass-farm operations that supply most of the global aquarium trade with dwarf gouramis. Estimates suggest that 22% or more of commercially produced dwarf gouramis carry the virus at time of purchase. There is no treatment and no cure. Infected fish may appear healthy for months before showing signs: color fading, lesions on the body, swollen abdomen, lethargy, and eventually death.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -98,13 +98,7 @@ export default function CostOfOwningPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="ownership-cost"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -114,8 +108,6 @@ export default function CostOfOwningPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the horse-ownership budget worksheet
@@ -123,15 +115,7 @@ export default function CostOfOwningPage() {
             <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
               Horse-ownership budget worksheet
             </h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Horse-ownership budget worksheet"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ownership-cost-of-owning-a-horse-under-hero"
-            />
+
           </div>
 
           <h2 id="purchase">Purchase vs Upkeep</h2>
@@ -194,7 +178,6 @@ export default function CostOfOwningPage() {
             substitute for a veterinarian or accountant. </p>
 
           <h2 id="kit">Horse-ownership leftover budget kit</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 

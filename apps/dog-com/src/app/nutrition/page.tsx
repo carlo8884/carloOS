@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, FAQAccordion, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, EmailCapture, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, FAQAccordion, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -168,25 +168,6 @@ export default function NutritionHubPage() {
         <StockImage manifestKey="dog-com:category-nutrition" aspect="16:9" variant="wide" priority />
       </div>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-container-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-hub-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container py-14 max-w-container-wide mx-auto">
         {GUIDES.map((section) => (
           <div key={section.category} className="mb-12">
@@ -249,7 +230,6 @@ export default function NutritionHubPage() {
       </section>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-container-wide">Related supplies</h2>
-        <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-container-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />

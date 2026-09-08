@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,13 +97,7 @@ export default function HoofCareBasicsPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="care-hoof-basics"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -113,23 +107,6 @@ export default function HoofCareBasicsPage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="care-hoof-care-basics-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why the Foot Matters</h2>
           <p>The hoof bears and dissipates enormous loads, helps pump blood back up the leg, and provides traction and feel. A neglected foot is the root of an outsized share of lameness, from abscesses and thrush to long-term imbalance that strains joints and tendons higher up the limb. Good hoof care is cheap insurance against expensive lameness.</p>

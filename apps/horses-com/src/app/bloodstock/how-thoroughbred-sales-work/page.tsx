@@ -14,7 +14,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -129,13 +128,7 @@ export default function HowSalesWorkPage() {
                 { label: 'Horse Ownership', href: '/ownership' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="bloodstock-sales"
-            />
+
           </>
         }
       >
@@ -146,23 +139,6 @@ export default function HowSalesWorkPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="bloodstock-sales-under-hero"
-            />
-          </div>
 
           <h2 id="types">The Main Types of Sale</h2>
           <p>Thoroughbreds are sold at distinct stages. Yearling sales &mdash; horses around eighteen months old &mdash; are the biggest market, where buyers bet on pedigree and physical promise before the horse has ever raced. Two-year-olds in training sales add a breeze-up, a short, timed gallop, so buyers see athleticism before bidding. Breeding stock sales trade broodmares, weanlings, and stallion shares.</p>

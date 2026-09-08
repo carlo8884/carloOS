@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -77,27 +77,11 @@ export default function AngelfishPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Discus Care', href: '/species/discus' }, { label: 'German Blue Ram', href: '/species/blue-ram' }, { label: 'Cardinal Tetra', href: '/species/cardinal-tetra' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-angelfish" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-angelfish-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-angelfish" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A freshwater angelfish in a home aquarium." priority />
         <h2>Tank Height — The Non-Negotiable</h2>
         <p>Angelfish grow vertically — their body is laterally compressed and their dorsal and ventral fins extend dramatically above and below. An adult angelfish may reach 6 inches in height (fin tip to fin tip) while being only 4 inches long. A standard 20-gallon "high" tank at 16 inches depth is barely adequate; a 55-gallon with 21 inches of depth works; a 75-gallon with 20+ inches and longer footprint is ideal for a small group or a pair. Shallow tanks stunt their growth, restrict their natural fin expression, and cause chronic stress. When buying angelfish, buy for the adult, not the juvenile.</p>

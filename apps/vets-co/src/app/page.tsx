@@ -876,10 +876,6 @@ export default function VetsHomePage() {
               <h3 className="font-display font-bold text-xl leading-snug mb-3 text-white">
                 Emergency Triage Card
               </h3>
-              <p
-                className="text-sm leading-relaxed mb-5"
-                style={{ color: 'rgba(255,255,255,0.60)' }}
-              >Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
               <span
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
                 style={{ color: 'var(--brand-accent-light)' }}

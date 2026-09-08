@@ -20,7 +20,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingVenues } from '@/data/racing-venues'
 
@@ -187,25 +187,6 @@ export default function RacingVenuesHubPage() {
       </div>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
-      <section
-        className="px-container-sm sm:px-container py-12"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Reference"
-          subtitle="One email a week: a deep-dive on a discipline, breed, or welfare topic. Citation-anchored. No product pushes."
-          ctaText="Send the weekly notes"
-          source="racing-venues-hub"
-          perks={[
-            'One email weekly',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
     </>
   )
 }

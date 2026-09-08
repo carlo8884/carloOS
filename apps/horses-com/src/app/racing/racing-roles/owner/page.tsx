@@ -17,7 +17,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -144,13 +143,7 @@ export default function OwnerRolePage() {
                 { label: 'Horse Racing Glossary', href: '/racing/glossary' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-roles-owner"
-            />
+
           </>
         }
       >
@@ -161,23 +154,6 @@ export default function OwnerRolePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-roles-owner-under-hero"
-            />
-          </div>
 
           <p>The owner holds the horse and carries its costs -- purchase, training fees, vet and farrier bills, transport -- in exchange for a share of any prize money and the experience of competing. Ownership ranges from a single individual to partnerships, syndicates, and fractional micro-shares with thousands of small stakeholders. It is the role that funds the whole enterprise, and the one most open to newcomers.</p>
 

@@ -6,9 +6,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
-  EmailCapture
-} from '@carloOS/ui'
+  AffiliateDisclosure} from '@carloOS/ui'
 import { DNA_TESTS, BREED_DNA_RECOMMENDATIONS } from '../../../data/dna-tests'
 
 export const metadata: Metadata = buildMetadata({
@@ -151,14 +149,6 @@ export default function DnaTestingHub() {
           ))}
         </div>
 
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          source="dog-com:dna-test-comparison"
-          title="Get our pet DNA test buyer's guide"
-          subtitle="Owner notes"
-          ctaText="Send the buyer's guide"
-        />
 
         {/* Breed-specific landing */}
         <h2 className="font-display text-3xl font-bold tracking-tight mb-6 mt-12">

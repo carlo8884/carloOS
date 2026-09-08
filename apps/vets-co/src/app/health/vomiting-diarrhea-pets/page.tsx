@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
@@ -42,27 +42,11 @@ export default function VomitingDiarrheaPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Dehydration in Dogs', href: '/health/dehydration-in-dogs' }, { label: 'Pancreatitis in Dogs', href: '/health/pancreatitis-in-dogs' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vomiting-diarrhea" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-vomiting-diarrhea-pets-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
 

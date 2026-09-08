@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -102,13 +102,7 @@ export default function ToxicPlantsPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="nutrition-toxic-plants"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -118,23 +112,6 @@ export default function ToxicPlantsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-toxic-plants-under-hero"
-            />
-          </div>
 
           <h2 id="how">How Poisoning Happens</h2>
           <p>Horses are selective grazers and often avoid bitter or unpalatable toxic plants when good forage is plentiful. The danger rises when pasture is bare or overgrazed and hungry horses eat what they normally would not, when toxic plants are dried in hay (which can mask bitterness and concentrate toxin), when wilted leaves become more palatable or more poisonous, or when curious or bored horses sample ornamental plants and hedge clippings. Never assume a horse will simply avoid everything harmful.</p>

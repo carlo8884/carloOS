@@ -7,8 +7,8 @@
  * Three variants: inline, sidebar card, full-section.
  *
  * Five earning sites (dog / fish / horses / vets / ferret): FormSubmit is
- * down (502/503). Do not promise a checklist or guide by email. Render the
- * magnet on the page (and a no-email save) instead of a broken signup.
+ * down (502/503). Do not promise a checklist or guide by email. Render an
+ * on-page magnet only when a real resource (href or complete text) exists.
  */
 
 import { useState, useCallback, useId, useMemo } from 'react'
@@ -42,6 +42,12 @@ interface EmailCaptureProps {
   leadMagnet?: string
 
   perks?: string[]
+
+  /** Complete useful resource text. Exported as-is — not the heading/promo. */
+  resourceText?: string
+  /** Link to the actual checklist / schedule / tool. */
+  resourceHref?: string
+  resourceLabel?: string
 }
 
 export function EmailCapture({
@@ -56,6 +62,9 @@ export function EmailCapture({
   tag,
   leadMagnet,
   perks,
+  resourceText,
+  resourceHref,
+  resourceLabel,
 }: EmailCaptureProps) {
   const resolvedCtaText = ctaText ?? buttonText ?? 'Send the notes'
   const resolvedSource = source ?? tag ?? 'unknown'
@@ -125,6 +134,9 @@ export function EmailCapture({
         subtitle={subtitle}
         leadMagnet={leadMagnet}
         perks={perks}
+        resourceText={resourceText}
+        resourceHref={resourceHref}
+        resourceLabel={resourceLabel}
       />
     )
   }
@@ -253,28 +265,39 @@ function OnPageMagnet({
   subtitle,
   leadMagnet,
   perks,
+  resourceText,
+  resourceHref,
+  resourceLabel,
 }: {
   variant: EmailCaptureVariant
   title: string
   subtitle?: string
   leadMagnet?: string
   perks?: string[]
+  resourceText?: string
+  resourceHref?: string
+  resourceLabel?: string
 }) {
   const heading = stripEmailPromise(title)
   const body = stripEmailPromise(subtitle ?? leadMagnet ?? '')
+  const usefulText = resourceText?.trim() ?? ''
+  const href = resourceHref?.trim() ?? ''
+  const hasText = usefulText.length > 0
+  const hasHref = href.length > 0
+
+  // No hollow save of heading/promo/perks/disclaimer. No resource → no offer.
+  if (!hasText && !hasHref) {
+    return null
+  }
+
   const visiblePerks = (perks ?? []).filter(
     (p) => !/unsubscribe|inbox|email course|one signup/i.test(p),
   )
 
-  const fileText = useMemo(() => {
-    const lines = [heading]
-    if (body) lines.push('', body)
-    if (visiblePerks.length) lines.push('', ...visiblePerks.map((p) => `• ${p}`))
-    lines.push('', 'On this page — not emailed. Email delivery is not live.')
-    return lines.join('\n')
-  }, [heading, body, visiblePerks])
+  const fileText = useMemo(() => usefulText, [usefulText])
 
   const saveCopy = useCallback(() => {
+    if (!fileText) return
     const blob = new Blob([fileText], { type: 'text/plain;charset=utf-8' })
     const url = URL.createObjectURL(blob)
     const a = document.createElement('a')
@@ -287,25 +310,44 @@ function OnPageMagnet({
     URL.revokeObjectURL(url)
   }, [fileText, heading])
 
-  const note =
-    'Email delivery is not live. This checklist stays on the page — no signup required.'
+  const actionLabel = resourceLabel
+    ?? (hasHref && !hasText ? 'Open the resource' : 'Save a copy')
+
+  const action = hasHref ? (
+    <a
+      href={href}
+      className={
+        variant === 'sidebar'
+          ? 'block w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded text-center no-underline'
+          : variant === 'inline'
+            ? 'inline-block px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded no-underline hover:bg-brand-primary-light transition-colors'
+            : 'inline-block px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md no-underline hover:bg-brand-primary-light transition-colors'
+      }
+    >
+      {actionLabel}
+    </a>
+  ) : (
+    <button
+      type="button"
+      onClick={saveCopy}
+      className={
+        variant === 'sidebar'
+          ? 'w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded cursor-pointer border-0'
+          : variant === 'inline'
+            ? 'px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors'
+            : 'px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors'
+      }
+    >
+      {actionLabel}
+    </button>
+  )
 
   if (variant === 'sidebar') {
     return (
       <div data-email-capture="sidebar" data-magnet="on-page" className="bg-brand-dark rounded-lg p-5 ring-1 ring-white/8">
-        <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-2">
-          On this page — not emailed
-        </p>
         <h3 className="font-display text-base font-bold text-brand-white mb-2">{heading}</h3>
         {body && <p className="text-xs text-white/45 mb-3 leading-relaxed">{body}</p>}
-        <p className="text-xs text-white/55 mb-3 leading-relaxed">{note}</p>
-        <button
-          type="button"
-          onClick={saveCopy}
-          className="w-full py-2.5 bg-brand-primary text-brand-white text-xs font-bold rounded cursor-pointer border-0"
-        >
-          Save a copy
-        </button>
+        {action}
       </div>
     )
   }
@@ -313,28 +355,15 @@ function OnPageMagnet({
   if (variant === 'inline') {
     return (
       <div data-email-capture="inline" data-magnet="on-page" className="rounded-lg border border-brand-border bg-brand-surface p-4">
-        <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-1">
-          On this page — not emailed
-        </p>
         {heading && <p className="font-display text-base font-semibold text-brand-dark mb-1">{heading}</p>}
         {body && <p className="text-sm text-brand-text-mid leading-relaxed mb-2">{body}</p>}
-        <p className="text-xs text-brand-text-light mb-3">{note}</p>
-        <button
-          type="button"
-          onClick={saveCopy}
-          className="px-5 py-2.5 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors"
-        >
-          Save a copy
-        </button>
+        {action}
       </div>
     )
   }
 
   return (
     <div data-email-capture="section" data-magnet="on-page" className="text-center">
-      <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-2">
-        On this page — not emailed
-      </p>
       <h2 className="font-display text-3xl font-bold text-brand-dark tracking-tight mb-3">
         {heading}
       </h2>
@@ -353,14 +382,7 @@ function OnPageMagnet({
           ))}
         </div>
       )}
-      <p className="text-sm text-brand-text-mid mb-4">{note}</p>
-      <button
-        type="button"
-        onClick={saveCopy}
-        className="px-6 py-3.5 bg-brand-primary text-brand-white text-sm font-bold rounded-md cursor-pointer border-0 hover:bg-brand-primary-light transition-colors"
-      >
-        Save a copy
-      </button>
+      {action}
     </div>
   )
 }

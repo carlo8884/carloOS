@@ -16,7 +16,6 @@ import {
   Breadcrumb,
   AffiliateDisclosure,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   SchemaScript,
   ShopCtas,
@@ -108,22 +107,6 @@ export default function BreedInsuranceHubPage() {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8 not-prose">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="breed-insurance-hub-under-hero"
-              />
-            </div>
 
             <h2>Why breed matters for pet insurance</h2>
             <p>

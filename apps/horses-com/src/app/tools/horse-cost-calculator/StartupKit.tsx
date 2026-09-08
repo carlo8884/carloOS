@@ -141,8 +141,6 @@ export default function StartupKit() {
                   </span>
                 </span>
               </label>
-              <div className="mt-3 ml-7">
-              </div>
             </li>
           )
         })}

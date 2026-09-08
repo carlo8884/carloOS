@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide — Hypoglycemia | Dog.com', description: 'Yorkshire Terriers have big personalities in a fragile body. Hypoglycemia in puppies, tracheal collapse from collar pressure.', path: '/breeds/yorkshire-terrier', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Yorkshire Terrier Breed Guide', description: 'Hypoglycemia, tracheal collapse, and dental care for Yorkshire Terriers.', url: 'https://dog.com/breeds/yorkshire-terrier', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -52,27 +52,11 @@ export default function YorkiePage() {
           { label: 'Pomeranian vs Yorkshire Terrier', href: '/compare/pomeranian-vs-yorkshire-terrier' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-yorkie" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-yorkshire-terrier-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 19th-century Yorkshire mills: a ratting terrier packed into a 4–7 lb body. That mill / tiny-jaw history is why a household Yorkie still needs a harness from day one and a 4–6 hour puppy meal clock, not a crate-only afternoon. Yorkshire Terriers are typically first-time-owner friendly — YES-typically — when the household accepts harness-not-collar, the 4–6 hour puppy feed floor, and the 42-tooth dental load.</p>
 

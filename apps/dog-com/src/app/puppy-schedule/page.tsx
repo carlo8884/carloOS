@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, EmailCapture, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -162,26 +162,11 @@ export default function PuppySchedulePage() {
           </p>
         </div>
       </section>
-
-      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
-          <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            Owner notes
-          </h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
             Optional. We&apos;ll use this address for occasional notes. No schedule email, PDF, or course.
           </p>
-          <div className="max-w-md mx-auto">
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="puppy-schedule-under-hero"
-            />
-          </div>
         </div>
       </section>
 

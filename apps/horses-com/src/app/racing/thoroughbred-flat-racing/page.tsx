@@ -16,7 +16,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -133,13 +132,7 @@ export default function ThoroughbredFlatRacingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-thoroughbred"
-            />
+
           </>
         }
       >
@@ -150,23 +143,6 @@ export default function ThoroughbredFlatRacingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-thoroughbred-flat-racing-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Flat Racing Is</h2>
           <p>Flat racing is a form of horse racing in which horses carry a jockey and compete over a defined distance on a level or gently undulating track, without jumps or obstacles. The winner is determined by which horse crosses the finish line first. It is distinguished from jump racing (steeplechase and hurdles) by the absence of obstacles, and from harness racing by the fact that the horse is ridden rather than driven.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -107,13 +107,7 @@ export default function RainRotPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="health" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="health-rain-rot"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -123,23 +117,6 @@ export default function RainRotPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-rain-rot-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Is Rain Rot</h2>
           <p>Rain rot is a skin infection caused by Dermatophilus congolensis, a bacterium that behaves in some ways like a fungus. It infects the outer skin layers and provokes an inflammatory response that produces crusty, matted scabs binding tufts of hair, which lift off to leave bare, sometimes raw, patches. It most commonly appears over the topline, back, croup, and hindquarters -- the areas that stay wettest in rain.</p>

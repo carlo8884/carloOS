@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Poodle Breed Guide — Standard, Miniature & Toy | Dog.com', description: 'Poodles are the most intelligent dog breed. Three sizes with different health profiles — Standard Poodles at risk for GDV/bloat and Addison\'s disease.', path: '/breeds/poodle', type: 'article' })
@@ -54,27 +54,11 @@ export default function PoodlePage() {
           { label: 'Poodle vs Goldendoodle', href: '/compare/poodle-vs-golden-doodle' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-poodle" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-poodle-under-hero"
-          />
-        </div>
 
         <p>The working story starts with the German Pudel: a water retriever whose continuously growing coat is why a household Poodle still needs a 6–8 week clip, not a crate-only afternoon. Poodles are typically first-time-owner friendly when the household accepts professional grooming every 6–8 weeks, daily or every-other-day brushing, and the mental-work load of the breed ranked first in canine intelligence assessments.</p>
 

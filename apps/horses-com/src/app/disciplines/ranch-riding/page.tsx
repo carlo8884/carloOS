@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -95,13 +95,7 @@ export default function RanchRidingPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="discipline-ranch-riding"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -111,23 +105,6 @@ export default function RanchRidingPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="disciplines-ranch-riding-under-hero"
-            />
-          </div>
 
           <h2 id="what">What Ranch Riding Is</h2>
           <p>Ranch riding is a judged pattern class in which horse and rider perform a set sequence of gaits and maneuvers that reflect the work of a versatile ranch horse. It emerged and grew rapidly in the 2010s, championed by the AQHA and other stock-horse associations, as part of a broader ranch-horse movement reacting against the increasingly artificial western pleasure style. The class prizes a horse that is forward, soft, willing, and looks like a genuine working partner.</p>

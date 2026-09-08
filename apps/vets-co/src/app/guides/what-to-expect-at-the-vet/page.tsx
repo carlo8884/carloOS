@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What to Expect at the Vet — A Visit Walkthrough | Vets.co", description: "From check-in to physical exam to the treatment plan, here is what happens at a typical veterinary visit and how to prepare so your pet gets the best care.", path: '/guides/what-to-expect-at-the-vet', type: 'article' })
@@ -27,26 +27,10 @@ export default function WhatToExpectPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { label: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-expect" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-what-to-expect-at-the-vet-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 

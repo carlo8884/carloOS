@@ -8,7 +8,6 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
@@ -166,8 +165,6 @@ export default function CatGrimaceScalePage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the grimace chart
@@ -175,15 +172,7 @@ export default function CatGrimaceScalePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Cat grimace-score cheat sheet
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-cat-grimace-scale-under-hero"
-          />
+
         </div>
 
         <h2 id="assessor">The assessor</h2>

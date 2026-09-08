@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, FAQAccordion } from '@carloOS/ui'
 
@@ -68,28 +68,11 @@ export default function GhKhPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }, { label: 'Water Parameters Hub', href: '/water-parameters' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' }]} />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="setup-gh-kh" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-05T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="setup-gh-kh-water-hardness-under-hero"
-            />
-          </div>
 
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-6">
           <strong className="not-italic">TL;DR.</strong> GH (general hardness) measures dissolved calcium and magnesium; KH (carbonate hardness) measures the carbonate/bicarbonate that buffers pH. They are independent parameters — a tank can be high in one and low in the other. One degree of hardness equals 17.9 ppm CaCO₃. Soft water runs 0–6 dGH, hard water 12+ dGH; for a stable community buffer, keep KH at or above roughly 4 dKH. Crushed coral or aragonite raise both GH and KH together; baking soda raises KH only; diluting with RO water lowers both. Change hardness slowly — over days, not minutes.

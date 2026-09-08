@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -77,13 +77,7 @@ export default function WeightManagementPage() {
                 { label: 'Diet & Nutrition Hub', href: '/diet' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Nutrition Notes"
-              subtitle="Evidence-based ferret feeding, monthly."
-              source="diet-weight-management"
-            />
+
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
@@ -103,23 +97,6 @@ export default function WeightManagementPage() {
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="ferret-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="diet-weight-management-under-hero"
-            />
-          </div>
 
           <h2 id="seasonal">The Seasonal Weight Swing</h2>
           <p>

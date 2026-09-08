@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Irish Setter Breed Guide — Epilepsy, PRA | Dog.com', description: 'Irish Setters are exuberantly energetic sporting dogs. Progressive retinal atrophy (PRA) and epilepsy are the primary health concerns.', path: '/breeds/irish-setter', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Irish Setter Breed Guide', description: 'PRA, epilepsy, exercise requirements, and care for Irish Setters.', url: 'https://dog.com/breeds/irish-setter', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -47,27 +47,11 @@ export default function IrishSetterPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Seizures', href: '/health/dog-seizures' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Separation Anxiety', href: '/training/separation-anxiety' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-irish-setter" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-irish-setter-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 1700s Ireland: English Setter, Spaniel, and Pointer stock refined to locate game birds for net-trappers and hunters. That upland-bird / all-day-hunt history is why a household Irish Setter still needs a 90-minute vigorous-run clock and a slow-maturity plan, not a crate-only afternoon. Irish Setters are typically first-time-owner friendly — YES-typically — when the household accepts the Peter Pan 3–4 year maturity clock, weekly mahogany-coat grooming, and the rcd1 PRA / gluten-enteropathy screening conversation.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -74,27 +74,11 @@ export default function WhiteCloudPage() {
         </div>
         <RelatedLinks title="Related Species" links={[{ label: 'Goldfish Care', href: '/species/goldfish' }, { label: 'Axolotl Care', href: '/species/axolotl' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-white-cloud" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-white-cloud-mountain-minnow-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-white-cloud-mountain-minnow" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A white cloud mountain minnow in a home aquarium." priority />
         <h2>The Cold Water Advantage</h2>
         <p>White clouds thrive at 60–72°F — a temperature range that encompasses most unheated homes during most of the year in temperate climates. This is their defining advantage: a quality cold-tolerant fish that handles room temperature without a heater. They are the correct choice for unheated fish tanks, outdoor tub setups in summer, and indoor rooms that run cooler than typical tropical fish setups tolerate.</p>

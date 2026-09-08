@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Heart Disease in Dogs — Murmurs, CHF Signs & Pimobendan | Dog.com', description: 'Heart disease in dogs: MMVD (mitral valve disease), DCM, murmur grading, when to start pimobendan (Vetmedin), and managing congestive heart failure.', path: '/health/dog-heart-disease', type: 'article' })
@@ -33,26 +33,10 @@ export default function DogHeartDiseasePage() {
             <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-heart-disease" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dog-heart-disease-under-hero"
-            />
-          </div>
 
           <h2 id="mmvd">Myxomatous Mitral Valve Disease (MMVD)</h2>
           <p>MMVD is the most common form of heart disease in dogs — accounting for approximately 75% of all canine cardiac cases. The mitral valve, which separates the left atrium from the left ventricle, degenerates over time. The leaflets thicken, become nodular, and no longer close properly, allowing blood to flow backward (regurgitation) from the left ventricle into the left atrium with each heartbeat. The heart compensates by enlarging; eventually compensation fails and congestive heart failure (CHF) develops.</p>

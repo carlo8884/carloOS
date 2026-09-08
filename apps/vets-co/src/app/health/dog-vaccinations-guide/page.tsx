@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing.', path: '/health/dog-vaccinations-guide', type: 'article' })
@@ -43,27 +43,11 @@ export default function DogVaccinationsGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-vaccinations" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dog-vaccinations-guide-under-hero"
-            />
-          </div>
 
           <h2>Core Vaccines — Every Dog Regardless of Lifestyle</h2>
           <p><strong>Rabies:</strong> Required by law in virtually all US states and many countries. Fatal in all mammals including humans. No treatment exists for clinical rabies — prevention is the only option. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1 or 3 years depending on state law and vaccine product label. Rabies vaccination certificates must be kept current for legal compliance. Letter-size thermal laminating pouches are how that certificate — and a later titer printout — stay a pocketable legal copy at boarding or a state checkpoint instead of a crumpled clinic slip. They are not a pet vaccination record book (those live on dog.com vaccinations), not a letter-size plastic file box (that lives on senior-pet-care), and not a letter-size expanding file organizer (that lives on senior-bloodwork-guide). A laminating pouch does not vaccinate a dog and it does not replace the veterinarian who signs the certificate.</p>
@@ -71,7 +55,6 @@ export default function DogVaccinationsGuidePage() {
 
           <h2>Non-Core Vaccines — Lifestyle Dependent</h2>
           <p><strong>Bordetella bronchiseptica (kennel cough):</strong> Recommended for any dog with exposure to other dogs — boarding, daycare, dog parks, training classes, grooming salons, dog shows. Bordetella is highly contagious via respiratory secretions. Intranasal or oral administration provides local immunity faster (within 72 hours) than injectable — important before boarding. Annual booster; some facilities require every 6 months. A 72-hour digital countdown timer is how that boarding window is a counted 72 hours after the intranasal dose instead of a guessed morning — it is not a 12-hour mechanical kitchen timer (that lives on senior-bloodwork-guide), not an analog wall clock with a second hand (that lives on canine-influenza), and it is not a Bordetella product. The timer does not confer immunity. A collapsible silicone travel dog bowl is how boarding water is a carried bowl instead of a shared kennel bucket — the same high-contact setting that is why Bordetella is a lifestyle vaccine in the first place.</p>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
           <p><strong>Lyme disease:</strong> Recommended in tick-endemic areas — Northeast, Upper Midwest, Pacific Northwest. Two initial doses 3–4 weeks apart, then annual booster. Does not replace tick prevention — use both. The Lyme vaccine reduces disease severity if a vaccinated dog is infected but does not provide complete protection.</p>
           <p><strong>Canine influenza (H3N2/H3N8):</strong> For dogs with high-contact lifestyles — boarding, dog shows, competition events, grooming salons. Influenza outbreaks occur periodically in dog populations and can be severe. Two initial doses 3–4 weeks apart, then annual booster. A carried travel bowl is household hygiene at those same high-contact drops; it is not a kennel disinfectant spray and it is not an influenza vaccine.</p>
 

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pre-Existing Conditions & Pet Insurance Explained | Vets.co", description: "Pre-existing conditions are the most important pet insurance concept. Learn the difference between curable and incurable, and why enrolling early matters.", path: '/insurance/pre-existing-conditions', type: 'article' })
@@ -27,26 +27,10 @@ export default function PreExistingPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'When to Enroll', href: '/insurance/when-to-enroll' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Insurance Decision Guide" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="insurance-pre-existing" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="insurance-pre-existing-conditions-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 

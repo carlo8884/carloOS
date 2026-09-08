@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, EmailCapture, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -142,13 +142,7 @@ export default function VaccinationSchedulePage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="guide" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Evidence-led equine health articles."
-            source="guide-vaccination"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -158,23 +152,6 @@ export default function VaccinationSchedulePage() {
             updatedAt="2026-09-04"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guide-vaccination-under-hero"
-            />
-          </div>
 
           <h2 id="core-vs-risk">Core vs Risk-Based — The AAEP Framework</h2>
           <p>The American Association of Equine Practitioners (AAEP) classifies equine vaccines into two categories. <strong>Core vaccines</strong> are those that protect against diseases that are endemic to a region, virulent or highly infectious, of significant public health concern, or required by law — and are recommended for every horse regardless of geographic location or intended use. <strong>Risk-based vaccines</strong> are those whose use is determined by individual horse risk based on exposure pattern, age, geographic location, and use.</p>

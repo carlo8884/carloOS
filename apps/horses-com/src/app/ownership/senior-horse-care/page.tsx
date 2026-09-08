@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,13 +97,7 @@ export default function SeniorHorseCarePage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="ownership-senior"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -113,23 +107,6 @@ export default function SeniorHorseCarePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ownership-senior-horse-care-under-hero"
-            />
-          </div>
 
           <h2 id="when">When Is a Horse Old</h2>
           <p>There is no single age at which a horse becomes a senior -- much depends on the individual, the breed, and a lifetime of management. Many horses are considered geriatric somewhere from the late teens into the twenties, but a well-kept horse may be working soundly at twenty-five while another shows its age at fifteen. Rather than a birthday, the cue to shift into senior care is the appearance of age-related changes, which is why regular monitoring matters more than counting years.</p>

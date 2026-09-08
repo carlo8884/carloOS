@@ -18,7 +18,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -318,17 +317,6 @@ export default function EquestrianGlossaryPage() {
             </dl>
           </section>
         ))}
-      </div>
-
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="Equestrian Reference"
-          subtitle="Citation-anchored equine reference articles, one email a week."
-          source="glossary"
-          ctaText="Send the weekly notes"
-        />
       </div>
     </>
   )

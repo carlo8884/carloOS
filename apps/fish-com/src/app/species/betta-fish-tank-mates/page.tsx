@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -29,27 +29,11 @@ export default function BettaTankMatesPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Tank Mate Compatibility Checker', href: '/tools/tank-mate-compatibility-checker' }, { label: 'Betta Fish Care', href: '/species/betta-fish' }, { label: 'Best Nano Tanks', href: '/reviews/best-nano-tanks' }, { label: 'Corydoras Care', href: '/species/corydoras' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Fishkeeping tips every Thursday." source="species-betta-mates" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-betta-fish-tank-mates-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-betta-fish-tank-mates" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A betta fish community in a home aquarium." priority />
         <h2>Individual Variation — The Most Important Factor</h2>
         <p>Betta aggression varies enormously between individual fish. Some bettas live peacefully with a full community tank including other colorful fish. Others will attack, fin-nip, or kill fish that are typically considered "safe" companions. No compatibility guide can predict how a specific betta will behave — the individual fish's temperament is the determining factor. Always have a backup plan (a separate tank or divider) when introducing new tankmates to a betta.</p>

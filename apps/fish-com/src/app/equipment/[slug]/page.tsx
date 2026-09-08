@@ -27,7 +27,6 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
-  EmailCapture,
   ShopCtas,
   buildMetadata,
   buildArticleSchema,
@@ -184,124 +183,17 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
               Get the Survival Kit →
             </a>
           </div>
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Equipment picks and fishkeeping tips every Thursday."
-            source={`equipment-${category.slug}`}
-          />
+
         </>
       }
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
 
-        {category.slug === 'aquarium-filters' ? (
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-filters-under-hero"
-            />
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-heaters' ? (
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-heaters-under-hero"
-            />
-          </div>
-        ) : null}
-
         {category.slug === 'aquarium-lighting' ? (
           <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
             <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-lighting-under-hero"
-            />
-          </div>
-        ) : null}
 
-        {category.slug === 'aquarium-substrates' ? (
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-substrates-under-hero"
-            />
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-test-kits' ? (
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-test-kits-under-hero"
-            />
-          </div>
-        ) : null}
-
-        {category.slug === 'aquarium-co2-systems' ? (
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="equipment-aquarium-co2-systems-under-hero"
-            />
           </div>
         ) : null}
 
@@ -489,8 +381,6 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
           earns an affiliate commission when you purchase through these links — at no extra cost
           to you. Commission does not influence editorial picks.
         </p>
-        <div style={{ margin: '8px 0 24px' }}>
-        </div>
 
         {category.slug === 'aquarium-filters' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">

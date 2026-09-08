@@ -4,7 +4,6 @@ import {
   buildMetadata,
   ArticleLayout,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -153,13 +152,7 @@ export default function ReiningPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Evidence-led equine reference articles."
-            source="discipline-reining"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -168,23 +161,6 @@ export default function ReiningPage() {
             publishedAt="2026-05-28"
             updatedAt="2026-05-28"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="disciplines-reining-under-hero"
-            />
-          </div>
 
           <h2 id="tldr">TL;DR</h2>
           <ul>

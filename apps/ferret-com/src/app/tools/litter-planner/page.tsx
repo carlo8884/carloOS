@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  EmailCapture,
   buildBreadcrumbSchema,
   buildHowToSchema,
   combineSchemas,
@@ -146,8 +145,6 @@ export default function LitterPlannerPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Litter Planner</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-2xl">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
@@ -156,15 +153,7 @@ export default function LitterPlannerPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Litter and pan plan
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Litter and pan plan"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-litter-planner-under-hero"
-          />
+
         </div>
       </section>
 
@@ -256,19 +245,6 @@ export default function LitterPlannerPage() {
             Frequently asked questions
           </h2>
           <FAQAccordion items={FAQS} />
-        </div>
-      </section>
-
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
-        <div className="max-w-2xl">
-          <EmailCapture
-            siteId="ferret-com"
-            variant="inline"
-            title="Litter and pan plan"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-litter-planner"
-          />
         </div>
       </section>
 

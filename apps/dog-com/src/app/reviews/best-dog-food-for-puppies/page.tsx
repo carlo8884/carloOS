@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,22 +61,6 @@ export default function BestPuppyFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-dog-food-for-puppies-under-hero"
-              />
-            </div>
             <div className="bg-brand-danger/5 border-l-4 border-brand-danger rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-2">Large Breed Puppy Formula — Not Optional</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
@@ -211,7 +195,7 @@ export default function BestPuppyFoodPage() {
               { label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' },
               { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
             ]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="review-puppy-food" />
+
           </aside>
         </div>
       </div>

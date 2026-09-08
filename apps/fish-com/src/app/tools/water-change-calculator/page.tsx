@@ -5,7 +5,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   ArticleByline,
@@ -167,13 +166,7 @@ export default function WaterChangeCalculatorPage() {
               { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="The Weekly Tank"
-            subtitle="Water-change math, test-kit notes, and equipment picks. No spam."
-            source="water-change-calculator"
-          />
+
         </>
       }
     >
@@ -188,22 +181,11 @@ export default function WaterChangeCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the change plan
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-water-change-calculator-under-hero"
-          />
+
         </div>
 
         <h2 id="calculator">The Calculator</h2>
@@ -250,13 +232,7 @@ export default function WaterChangeCalculatorPage() {
           <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
             Send the change math — weekly percent and gallons for your tank type. No spam.
           </p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Water-change schedule notes"
-            subtitle="Send the change math — weekly percent and gallons for your tank type. No spam."
-            source="tools-water-change-calculator"
-          />
+
         </div>
 
         <h2 id="volume-math">How the volume math works</h2>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Veterinary Care Really Costs — A Realistic Guide | Vets.co", description: "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.", path: '/guides/cost-of-veterinary-care', type: 'article' })
@@ -27,26 +27,10 @@ export default function CostOfCarePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Emergency Vet Costs', href: '/guides/emergency-vet-costs' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-cost" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-cost-of-veterinary-care-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 

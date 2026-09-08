@@ -8,9 +8,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
-  EmailCapture
-} from '@carloOS/ui'
+  AffiliateDisclosure} from '@carloOS/ui'
 import {
   BREED_DNA_RECOMMENDATIONS,
   getDnaTestBySlug,
@@ -194,14 +192,7 @@ export default async function BreedDnaPage({
           ))}
         </div>
 
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          source="dog-com:dna-test-comparison"
-          title={`Get our ${b.breedName} hereditary conditions guide`}
-          subtitle="What every owner should screen for, what each result means, and which tests catch what."
-          ctaText="Send the guide"
-        />
+
       </div>
     </>
   )

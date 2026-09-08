@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Prescription Dog Food Explained — Kidney, Liver | Dog.com', description: 'When prescription diet food matters and what each type does. Kidney disease, liver disease, urinary health, weight management, allergies.', path: '/nutrition/prescription-diets', type: 'article' })
@@ -28,7 +28,7 @@ export default function PrescriptionDietsPage() {
         <TableOfContents items={DIETS.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s\/&,()]/g, '-').replace(/-+/g, '-')}` }))} />
         <RelatedLinks title="Related" links={[{ label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-prescription" />
+
       </>}
     >
       <div className="carloOS-article">

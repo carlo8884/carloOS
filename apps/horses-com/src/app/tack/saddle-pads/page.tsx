@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,13 +96,7 @@ export default function SaddlePadsPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="tack-saddle-pads"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -112,23 +106,6 @@ export default function SaddlePadsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="tack-saddle-pads-under-hero"
-            />
-          </div>
 
           <h2 id="what">What a Pad Does</h2>
           <p>The primary jobs of a saddle pad are simple: to absorb sweat and protect the underside of the saddle from it, to provide a thin, clean, comfortable interface between saddle and back, and to wick moisture. A correctly fitting saddle on a healthy back needs only a clean, appropriate pad. The pad is a supporting player, not the thing that determines whether the saddle fits.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Cocker Spaniel Guide — Ear Infections, Eye Conditions | Dog.com', description: 'Cocker Spaniels have the highest rate of ear infections of any breed — their ear structure creates a perfect warm, dark environment for yeast and bacteria.', path: '/breeds/cocker-spaniel', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Cocker Spaniel Breed Guide', description: 'Ear infections, eye conditions, IMHA, and grooming for Cocker Spaniels.', url: 'https://dog.com/breeds/cocker-spaniel', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -38,27 +38,11 @@ export default function CockerSpanielPage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-cocker" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-cocker-spaniel-under-hero"
-          />
-        </div>
 
         <p>The working story starts with woodcock: a spaniel bred to flush and retrieve, then sized down in the late-1800s American show ring. That flush / pendulous-ear history is why a household Cocker still needs a monthly ear-clean clock and a pale-gum IMHA watch, not a crate-only afternoon. Cocker Spaniels are typically first-time-owner friendly — YES-typically — when the household accepts monthly ear cleaning, the 6–8 week groom floor, and same-day pale-gum emergency signs.</p>
 

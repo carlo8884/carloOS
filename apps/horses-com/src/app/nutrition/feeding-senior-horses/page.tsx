@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -98,13 +98,7 @@ export default function SeniorFeedingPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="nutrition-senior"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -114,23 +108,6 @@ export default function SeniorFeedingPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-feeding-senior-horses-under-hero"
-            />
-          </div>
 
           <h2 id="aging">How Aging Changes Needs</h2>
           <p>As horses age, several things shift together: teeth wear down and chewing becomes less effective, digestion of fiber and protein becomes somewhat less efficient, the ability to maintain condition declines, and chronic conditions such as PPID become common. Some seniors become hard keepers needing more support, while others -- especially those with PPID and regional fat -- stay overweight and need restriction. The diet must be tailored to the individual aging horse, not a single senior template.</p>

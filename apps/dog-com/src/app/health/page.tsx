@@ -10,7 +10,6 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   DirectoryPlacesCta,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
   type FAQItem,
@@ -246,23 +245,12 @@ export default function DogHealthHubPage() {
           </p>
         </div>
       </section>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
       <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-10">
         <div className="max-w-content-wide mx-auto">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the health-library order
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="health-hub-under-hero"
-          />
+
         </div>
       </div>
 

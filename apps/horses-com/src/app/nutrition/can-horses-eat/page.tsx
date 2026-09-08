@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { HORSE_FOODS, HORSE_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -74,25 +74,6 @@ export default function CanHorsesEatHubPage() {
         </div>
       </div>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="can-horses-eat-hub-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container py-12">
         {HORSE_FOOD_CATEGORIES.map((cat) => {
           const items = HORSE_FOODS.filter((f) => f.category === cat)
@@ -135,7 +116,6 @@ export default function CanHorsesEatHubPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-10 mb-4 max-w-content-wide">
           Can-horses-eat hub barn kit
         </h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -225,9 +205,6 @@ export default function CanHorsesEatHubPage() {
       <section className="px-container-sm sm:px-container py-12" style={{ background: 'var(--brand-primary-pale)' }}>
         <div className="max-w-content-wide">
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="inline" />
-          <div className="mt-6">
-            <EmailCapture variant="section" siteId="horses-com" title="The Horses.com Reference" subtitle="One email a week: a deep-dive on a breed, condition, or piece of gear. Citation-anchored." source="can-horses-eat-hub" />
-          </div>
         </div>
       </section>
     </>

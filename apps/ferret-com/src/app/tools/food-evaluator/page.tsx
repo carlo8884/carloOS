@@ -6,7 +6,6 @@ import {
   ArticleLayout,
   ArticleByline,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -150,14 +149,7 @@ export default function FerretFoodEvaluatorPage() {
               { label: 'Health Library', href: '/health' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="ferret-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-food-evaluator-sidebar"
-          />
+
           <CrossPortfolioCard currentSite="ferret-com" contentType="tool" variant="sidebar" />
         </>
       }
@@ -183,22 +175,11 @@ export default function FerretFoodEvaluatorPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <section className="not-prose mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the panel
           </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="ferret-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-food-evaluator-under-hero"
-          />
+
         </section>
 
         <h2 id="evaluator">The evaluator</h2>

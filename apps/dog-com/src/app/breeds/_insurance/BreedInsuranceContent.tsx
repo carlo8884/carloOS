@@ -28,7 +28,6 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   SchemaScript,
   ShopCtas,
@@ -240,22 +239,6 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
       <div className="px-container-sm sm:px-container py-12">
         <div className="grid lg:grid-cols-[1fr_290px] gap-12">
           <article className="carloOS-article min-w-0">
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8 not-prose">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source={`breed-insurance-${breed.slug}-under-hero`}
-              />
-            </div>
 
             {/* Extractable top answer */}
             <section className="bg-brand-surface border-l-4 border-brand-primary rounded-r-lg p-5 mb-8 not-prose">

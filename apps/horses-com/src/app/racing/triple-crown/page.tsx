@@ -19,7 +19,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -148,13 +147,7 @@ export default function TripleCrownPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-triple-crown"
-            />
+
           </>
         }
       >
@@ -165,23 +158,6 @@ export default function TripleCrownPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-triple-crown-under-hero"
-            />
-          </div>
 
           <h2 id="what">What the Triple Crown Is</h2>
           <p>The American Triple Crown is the achievement of winning three specific Thoroughbred races in a single year: the Kentucky Derby, the Preakness Stakes, and the Belmont Stakes. All three are restricted to three-year-old horses, so any individual horse has exactly one season in which it is eligible to attempt the sweep. There is no separate Triple Crown trophy race -- the title is conferred on a horse that wins all three legs in the same spring.</p>

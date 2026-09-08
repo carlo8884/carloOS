@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Weimaraner Breed Guide — Gray Ghost, Bloat Risk | Dog.com', description: 'Weimaraners are the "Gray Ghost" — haunting silver-gray, intense, and demanding. GDV/bloat risk high, prey drive extreme, and they bond deeply with one person.', path: '/breeds/weimaraner', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Weimaraner Breed Guide', description: 'GDV risk, prey drive, separation anxiety, and care for Weimaraners.', url: 'https://dog.com/breeds/weimaraner', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -51,27 +51,11 @@ export default function WeimaranerPage() {
         ]} />
         <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-weimaraner" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-weimaraner-under-hero"
-          />
-        </div>
 
         <p>The working story starts in 19th-century Weimar: a noble's hunting dog bred at court to point and retrieve large game, then later upland birds. That Weimar-court / high-drive pointing history is why a household Weimaraner still needs a 2-hour vigorous-run clock and a one-person-bond plan, not a crate-only afternoon. Weimaraners are not typically first-time-owner friendly — NO-typically — when the household expects off-leash reliability around wildlife, a full unattended workday, or a dog that can be trained out of Gray Ghost intensity.</p>
 

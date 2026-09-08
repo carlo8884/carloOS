@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -117,25 +117,6 @@ export default function VetsPetInsurancePage() {
         <span className="text-brand-text-mid">Best Pet Insurance</span>
       </nav>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-2xl">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="reviews-best-pet-insurance-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-12">
           <div>
@@ -224,11 +205,7 @@ export default function VetsPetInsurancePage() {
               { label: 'Find a Specialist', href: '/find-a-vet' },
               { label: 'Emergency Signs', href: '/health/emergency-signs' },
             ]} />
-            <EmailCapture variant="sidebar" siteId="vets-co"
-              title="Owner notes"
-              subtitle="Waiting periods, exclusions, and wellness add-on — emailed so you can compare quotes."
-              ctaText="Send the notes"
-              source="review-pet-insurance" />
+
           </aside>
         </div>
       </div>

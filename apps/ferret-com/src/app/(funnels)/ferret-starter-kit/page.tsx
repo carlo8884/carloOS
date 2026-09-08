@@ -7,7 +7,6 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
-  EmailCapture,
 } from '@carloOS/ui'
 import { STARTER_KIT, BUDGET_SUMMARIES } from '../../../data/starter-kit'
 
@@ -162,16 +161,6 @@ export default function FerretStarterKitPage() {
       </section>
 
       {/* ─── Lead magnet ──────────────────────────────────────────────────── */}
-      <section className="mt-12">
-        <EmailCapture
-          variant="section"
-          siteId="ferret-com"
-          source="ferret-starter-kit"
-          title="Owner notes"
-          subtitle="Vaccines, vet visits, dietary milestones, and warning signs to watch for — the first 12 months by week."
-          ctaText="Send the notes"
-        />
-      </section>
     </article>
   )
 }

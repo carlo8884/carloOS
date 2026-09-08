@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com', description: 'How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.', path: '/setup/saltwater-tank-setup', type: 'article' })
@@ -62,28 +62,11 @@ export default function SaltwaterTankSetupPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Clownfish Care', href: '/species/clownfish' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }]} />
-          <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Saltwater tips every Thursday." source="setup-saltwater" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="setup-saltwater-tank-setup-under-hero"
-          />
-        </div>
 
           <h2>FOWLR vs Reef — Choose First</h2>
           <p><strong>FOWLR (Fish Only With Live Rock):</strong> Saltwater fish in a tank with live rock for biological filtration. No corals or invertebrates. Much more forgiving water chemistry requirements. Standard lighting. Less equipment. Less expensive. The appropriate starting point for most people entering saltwater keeping. Many popular marine fish — tangs, angelfish, triggers, lionfish — are kept in FOWLR tanks.</p>

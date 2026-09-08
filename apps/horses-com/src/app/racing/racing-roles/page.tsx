@@ -15,7 +15,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingRoleSpokes } from '@/data/racing-roles'
 
@@ -75,25 +75,6 @@ export default function RacingRolesHubPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Racing Roles</span>
       </nav>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="racing-roles-hub-under-hero"
-          />
-        </div>
-      </section>
 
       {/* ── INTRO ──────────────────────────────────────────────────── */}
       <div className="px-container-sm sm:px-container py-12">
@@ -191,7 +172,6 @@ export default function RacingRolesHubPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
@@ -221,25 +201,6 @@ export default function RacingRolesHubPage() {
       </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
-      <section
-        className="px-container-sm sm:px-container py-12"
-        style={{ background: 'var(--brand-primary-pale)' }}
-      >
-        <EmailCapture
-          variant="section"
-          siteId="horses-com"
-          title="The Horses.com Reference"
-          subtitle="One email a week: a deep-dive on a discipline, breed, or welfare topic. Citation-anchored. No product pushes."
-          ctaText="Send the weekly notes"
-          source="racing-roles-hub"
-          perks={[
-            'One email weekly',
-            'Citation-anchored',
-            'No paid placements',
-            'Unsubscribe anytime',
-          ]}
-        />
-      </section>
       <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />
     </>
   )

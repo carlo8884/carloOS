@@ -20,7 +20,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -142,13 +141,7 @@ export default function OttbInShowJumpingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="ottb-in-show-jumping"
-            />
+
           </>
         }
       >
@@ -159,23 +152,6 @@ export default function OttbInShowJumpingPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ottb-in-show-jumping-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why Show Jumping Works for the OTTB</h2>
           <p>The off-track Thoroughbred has a long history in the jumper ring. The breed brings scope — the raw ability to jump big — along with athleticism and, once retrained, a rideable temperament. Thoroughbreds and Thoroughbred-cross horses, the Irish Sport Horse being the most familiar example, compete successfully across the lower and middle levels and beyond. At the very top of modern international show jumping, purpose-bred European warmblood studbooks dominate, but that reflects decades of targeted breeding for the discipline rather than any limitation of the Thoroughbred. For how courses, levels, and scoring actually work, see the general <Link href="/disciplines/show-jumping">show-jumping reference</Link>; this page covers only the Thoroughbred-from-the-track angle.</p>

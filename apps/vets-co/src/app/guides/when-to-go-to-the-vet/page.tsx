@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Take Your Pet to the Vet — A Decision Guide | Vets.co", description: "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.", path: '/guides/when-to-go-to-the-vet', type: 'article' })
@@ -27,7 +27,7 @@ export default function WhenToGoPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }, { label: 'ER vs. Urgent Care', href: '/guides/er-vs-urgent-care' }, { label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-when-to-go" />
+
         </>}
       >
         <div className="carloOS-article">
@@ -37,22 +37,6 @@ export default function WhenToGoPage() {
           <CalloutBox variant="warning" title="Trust your instinct on serious signs">
             You know your pet better than anyone. If your gut says something is seriously wrong — even if you cannot name the sign — it is reasonable to seek care. Owners are often the first to detect that something is off, and acting on that instinct saves lives.
           </CalloutBox>
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-when-to-go-to-the-vet-under-hero"
-            />
-          </div>
 
           <h2>The Three Buckets</h2>
           <p>Most situations sort into three categories. <strong>Watchful waiting</strong> suits mild, isolated signs in a pet that is otherwise bright, eating, drinking, and acting normally. <strong>Same-day or urgent care</strong> is for problems that are not immediately life-threatening but should not wait days. <strong>Emergency care</strong> is for time-critical, life-threatening situations. Sorting a sign into the right bucket — and erring toward caution when unsure — is the core skill of responsible pet ownership.</p>

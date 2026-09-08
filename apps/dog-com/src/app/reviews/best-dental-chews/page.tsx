@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -29,22 +29,6 @@ export default function BestDentalChewsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="dog-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="reviews-best-dental-chews-under-hero"
-              />
-            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The VOHC Standard</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The Veterinary Oral Health Council awards its seal to products that demonstrate plaque or tartar reduction in controlled clinical studies. This is the correct filter for dental products — not ingredient claims, not packaging promises. The full VOHC-accepted product list is at vohc.org. Dental chews supplement toothbrushing — they do not replace it, and they do not substitute for professional cleaning.</p>
@@ -85,7 +69,7 @@ export default function BestDentalChewsPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
-            <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="review-dental-chews" />
+
           </aside>
         </div>
       </div>

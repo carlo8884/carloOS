@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, EmailCapture, AffiliateDisclosure, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, AffiliateDisclosure, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { PET_MEDS, PET_MED_CATEGORIES, MED_VERDICT_META } from '../../../data/pet-meds'
 
 export const metadata: Metadata = buildMetadata({
@@ -77,25 +77,6 @@ export default function CanIGiveMyDogHubPage() {
         </div>
       </div>
 
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="can-i-give-my-dog-hub-under-hero"
-          />
-        </div>
-      </section>
-
       <div className="px-container-sm sm:px-container py-12">
         {PET_MED_CATEGORIES.map((cat) => {
           const items = PET_MEDS.filter((m) => m.category === cat)
@@ -151,9 +132,6 @@ export default function CanIGiveMyDogHubPage() {
                 amazonLabel="Shop on Amazon"
               />
           </div>
-          </div>
-          <div className="mt-6">
-            <EmailCapture variant="section" siteId="vets-co" title="Vets.co reference letter" subtitle="Veterinary references for pet owners." source="can-i-give-my-dog-hub" />
           </div>
         </div>
       </section>

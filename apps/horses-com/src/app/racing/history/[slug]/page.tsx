@@ -15,7 +15,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -134,13 +133,7 @@ export default function RacingHistorySpokePage({ params }: { params: { slug: str
                 { label: 'Bloodstock & Breeding', href: '/bloodstock' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source={`racing-history-${spoke.slug}`}
-            />
+
           </>
         }
       >

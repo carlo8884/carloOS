@@ -20,7 +20,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -142,13 +141,7 @@ export default function OttbInDressagePage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="ottb-in-dressage"
-            />
+
           </>
         }
       >
@@ -159,23 +152,6 @@ export default function OttbInDressagePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ottb-in-dressage-under-hero"
-            />
-          </div>
 
           <h2 id="why">Why Dressage Rewards the OTTB</h2>
           <p>At first glance dressage looks like the least likely second career for a horse bred and trained to race. The reality is more encouraging: the Thoroughbred&apos;s sensitivity and elastic, ground-covering movement are qualities correct dressage training rewards, and off-track Thoroughbreds compete successfully through the levels. The sensitivity that can feel like too much in a green ex-racehorse becomes responsiveness to subtle aids in a trained dressage horse. Modern top-level competition is dominated by purpose-bred warmbloods selected specifically for the gaits the sport judges, but that is a story about targeted breeding, not about what a Thoroughbred can learn to do. For how the levels and movements are structured, see the general <Link href="/disciplines/dressage">dressage reference</Link>; this page covers only the Thoroughbred-from-the-track angle.</p>

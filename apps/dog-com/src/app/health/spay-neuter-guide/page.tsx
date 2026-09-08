@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -43,26 +43,10 @@ export default function SpayNeuterGuidePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Golden Retriever Health', href: '/health/golden-retriever-health' }, { label: 'Puppy Schedule', href: '/training/puppy-schedule' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-spay-neuter" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-spay-neuter-guide-under-hero"
-            />
-          </div>
 
           <h2>The Research That Changed Recommendations</h2>
           <p>A series of studies from UC Davis (Hart et al., 2014 and subsequent follow-up research) examined the relationship between spay/neuter timing and health outcomes in Golden Retrievers, Labrador Retrievers, German Shepherds, and other breeds. The findings showed that early gonadectomy (before 12 months) in large breeds was associated with significantly higher rates of certain joint disorders (hip dysplasia, cranial cruciate ligament rupture, elbow dysplasia) and some cancers compared to dogs neutered after 12 months or left intact.</p>

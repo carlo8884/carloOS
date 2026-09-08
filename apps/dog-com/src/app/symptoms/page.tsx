@@ -29,7 +29,6 @@ import {
   buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
-  EmailCapture,
   SchemaScript,
   ShopCtas,
   StockImage,
@@ -319,31 +318,8 @@ export default function SymptomsHubPage() {
         <span className="text-brand-text-mid font-medium">Symptoms</span>
       </nav>
 
-      <div className="px-container-sm sm:px-container pt-8">
-        <StockImage manifestKey="dog-com:symptoms-hero" aspect="16:9" variant="wide" priority />
-      </div>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="symptoms-hub-under-hero"
-          />
-        </div>
-      </section>
-
-      {/* Body */}
-      <div className="px-container-sm sm:px-container py-12">
+      {/* Body — urgent guidance before decorative image */}
+      <div className="px-container-sm sm:px-container py-12" data-value-first>
         {/* Rule #1 callout — mirrors the master guide voice */}
         <div
           className="rounded-xl p-5 mb-10 max-w-3xl"
@@ -363,8 +339,14 @@ export default function SymptomsHubPage() {
           </div>
         </div>
 
-        {/* Tier sections */}
         <TierSection urgency="emergency" symptoms={EMERGENCY_SYMPTOMS} />
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-8">
+        <StockImage manifestKey="dog-com:symptoms-hero" aspect="16:9" variant="wide" priority />
+      </div>
+
+      <div className="px-container-sm sm:px-container pb-12">
         <TierSection urgency="urgent" symptoms={URGENT_SYMPTOMS} />
         <TierSection urgency="monitor" symptoms={MONITOR_SYMPTOMS} />
 
@@ -446,7 +428,6 @@ export default function SymptomsHubPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-        <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />

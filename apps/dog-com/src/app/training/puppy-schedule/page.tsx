@@ -3,7 +3,6 @@ import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   CrossPortfolioCard,
@@ -66,13 +65,11 @@ export default function PuppySchedulePage() {
         <RelatedLinks title="Related Guides" links={[{ label: 'Week-by-week puppy schedule (on-page)', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }]} />
         <RelatedLinks title="Feeding a Growing Puppy" links={[{ label: 'Best Dog Food for Puppies', href: '/reviews/best-dog-food-for-puppies' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Training Tips" subtitle="Science-based guidance every Tuesday." source="training-puppy-schedule" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the schedule
@@ -80,15 +77,7 @@ export default function PuppySchedulePage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Week-by-week puppy schedule
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Week-by-week puppy schedule"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="training-puppy-schedule-under-hero"
-          />
+
         </div>
 
         <h2 id="why">Why a Schedule Is Your Best Training Tool</h2>

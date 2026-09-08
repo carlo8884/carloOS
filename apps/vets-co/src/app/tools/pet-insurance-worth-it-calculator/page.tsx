@@ -9,7 +9,6 @@ import {
   FAQAccordion,
   ArticleSourcesList,
   AffiliateDisclosure,
-  EmailCapture,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -194,14 +193,7 @@ export default function PetInsuranceWorthItPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="vets-co" contentType="tool" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="insurance-worth-it"
-          />
+
         </>
       }
     >
@@ -214,8 +206,6 @@ export default function PetInsuranceWorthItPage() {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }}
         />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
         <div className="mb-8">
           <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Keep the number
@@ -223,15 +213,7 @@ export default function PetInsuranceWorthItPage() {
           <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Insurance breakeven notes
           </h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Insurance breakeven notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-pet-insurance-worth-it-calculator-under-hero"
-          />
+
         </div>
 
         {/* GEO: extractable plain-language answer near the top. Calibrated, honest,

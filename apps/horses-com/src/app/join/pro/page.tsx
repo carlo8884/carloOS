@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { directoryClaimPrefill } from '@carloOS/config'
-import { buildMetadata, ArticleLayout, InquireForm, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
 export const metadata: Metadata = {
@@ -56,16 +56,6 @@ export default function JoinProPage({
           The form above is for professionals applying for a page. One email
           when accepted pages exist — no invented directory.
         </p>
-        <div className="not-prose max-w-md my-6">
-          <EmailCapture
-            variant="section"
-            siteId="horses-com"
-            title="When claimed horse trainers have a page"
-            subtitle="Owners only. One email when an accepted professional page exists. Use the application form if you train horses."
-            source="join-pro-under-hero"
-            ctaText="Email me when listings appear"
-          />
-        </div>
       </div>
     </ArticleLayout>
   )

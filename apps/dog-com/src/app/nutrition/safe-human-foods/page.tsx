@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Human Foods Safe for Dogs — What Can Dogs Actually Eat? | Dog.com', description: 'Complete list of human foods that are safe to share with dogs — with portion guidance and which preparations to avoid. research-based.', path: '/nutrition/safe-human-foods', type: 'article' })
@@ -49,28 +49,11 @@ export default function SafeHumanFoodsPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Toxic Foods Guide', href: '/nutrition/toxic-foods' }, { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Dog Supplements', href: '/nutrition/dog-supplements' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-safe-foods" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-safe-foods-under-hero"
-          />
-        </div>
 
         <div style={{ background: 'rgba(42,106,58,0.06)', border: '1px solid rgba(42,106,58,0.15)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#2A6A3A', marginBottom: '8px' }}>The 10% Rule</div>

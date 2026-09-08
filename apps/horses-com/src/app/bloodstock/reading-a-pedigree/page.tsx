@@ -14,7 +14,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -129,13 +128,7 @@ export default function ReadingPedigreePage() {
                 { label: 'Horse Breeds', href: '/breeds' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="bloodstock-pedigree"
-            />
+
           </>
         }
       >
@@ -146,23 +139,6 @@ export default function ReadingPedigreePage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="bloodstock-pedigree-under-hero"
-            />
-          </div>
 
           <h2 id="page">Sire, Dam, and the Shape of the Page</h2>
           <p>Every Thoroughbred traces to a sire (father) and dam (mother). The pedigree page shows the sire&apos;s line across the top and the dam&apos;s family (the &ldquo;distaff&rdquo; side) below, going back several generations. Breeders pay enormous attention to the dam line &mdash; a strong female family is prized because it tends to produce quality generation after generation.</p>

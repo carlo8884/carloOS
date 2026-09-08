@@ -7,7 +7,6 @@ import {
   ArticleByline,
   ArticleSourcesList,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -185,21 +184,10 @@ export default function HorseGestationCalculatorPage() {
         />
 
         <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
           <h3 className="mb-2 font-display text-xl font-bold text-brand-dark">
             Foaling kit packing list
           </h3>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Foaling kit packing list"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="tools-horse-gestation-calculator-under-hero"
-          />
+
         </div>
 
         <p>
@@ -221,8 +209,6 @@ export default function HorseGestationCalculatorPage() {
           run longer or shorter.
         </p>
         <Calculator />
-
-        <h2 id="foaling-kit">Owner notes</h2>
         <p>
           Once you have a window, pack before the early date. The six-item list
           below is a husbandry starting point — thermometer, navel dip, towels,

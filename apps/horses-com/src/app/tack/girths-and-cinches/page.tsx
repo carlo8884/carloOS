@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, EmailCapture, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -96,13 +96,7 @@ export default function GirthsCinchesPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="equipment" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="tack-girths"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -112,23 +106,6 @@ export default function GirthsCinchesPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="tack-girths-and-cinches-under-hero"
-            />
-          </div>
 
           <h2 id="what">What the Girth Does</h2>
           <p>The girth passes under the barrel just behind the elbows and fastens to the saddle on both sides, holding it securely in place against the forces of riding. Because it sits in the sensitive girth groove and moves against the skin with every stride, its material, shape, and fit directly affect the horse&apos;s comfort and freedom of movement. It must be secure enough that the saddle cannot slip, without being so tight or ill-shaped that it pinches or rubs.</p>

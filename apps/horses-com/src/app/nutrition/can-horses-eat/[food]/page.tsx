@@ -8,7 +8,6 @@ import {
   combineSchemas,
   ArticleLayout,
   FAQAccordion,
-  EmailCapture,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -132,29 +131,12 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="horses-com" title="Practical Horse Reference" subtitle="Citation-anchored equine reference, weekly." source="can-horses-eat" />
+
         </>
       }
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Horses.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="horses-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="can-horses-eat-under-hero"
-          />
-        </div>
 
         <div className="rounded-lg border p-5 my-4" style={{ borderColor: meta.color, background: meta.tone === 'good' ? '#f0fdf4' : meta.tone === 'warn' ? '#fffbeb' : '#fef2f2' }}>
           <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Verdict</span>

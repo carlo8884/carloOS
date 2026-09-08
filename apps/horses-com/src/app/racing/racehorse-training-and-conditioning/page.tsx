@@ -16,7 +16,6 @@ import {
   ArticleLayout,
   ArticleByline,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -137,13 +136,7 @@ export default function RacehorseTrainingPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="racing-training"
-            />
+
           </>
         }
       >
@@ -154,23 +147,6 @@ export default function RacehorseTrainingPage() {
             updatedAt="2026-06-02"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="racing-racehorse-training-and-conditioning-under-hero"
-            />
-          </div>
 
           <h2 id="stable">The Training Stable</h2>
           <p>A racing stable is the unit of operation through which racehorses are trained. At the racetrack level, horses are housed in barn facilities on or near the track. A trainer operates a stable of horses belonging to one or many owners, and the stable may range in size from a handful of horses to dozens depending on the trainer&apos;s capacity and reputation. The stable includes a physical barn, an exercise track, and a staff of riders, grooms, and support personnel.</p>

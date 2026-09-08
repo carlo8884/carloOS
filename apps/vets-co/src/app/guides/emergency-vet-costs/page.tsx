@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Emergency Vet Costs Explained — Why ER Care Costs More | Vets.co", description: "Emergency veterinary care costs more than routine care for real reasons. Learn what drives ER pricing, how estimates work, and how to prepare financially.", path: '/guides/emergency-vet-costs', type: 'article' })
@@ -27,7 +27,7 @@ export default function EmergencyCostsPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'ER vs Clinic vs Telehealth (tool)', href: '/tools/er-vs-clinic' }, { label: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { label: 'Emergency Signs', href: '/health/emergency-signs' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-er-costs" />
+
         </>}
       >
         <div className="carloOS-article">
@@ -36,25 +36,6 @@ export default function EmergencyCostsPage() {
           <CalloutBox variant="warning" title="Never delay genuine emergency care over cost">
             If your pet is having a true emergency — difficulty breathing, severe bleeding, collapse, inability to urinate, suspected bloat — go immediately. Financial options can be discussed once your pet is stable. Delay in a real emergency can cost a life that money cannot recover.
           </CalloutBox>
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-              Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.
-            </p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-emergency-vet-costs-under-hero"
-            />
-          </div>
 
           <h2>Why Emergency Care Costs More</h2>
           <p>An emergency hospital is a fundamentally different operation from a general practice. It maintains veterinarians and trained technicians on duty around the clock — overnight, weekends, and holidays — and keeps intensive-care equipment, oxygen, blood products, and advanced monitoring ready at all times. This standing capacity to handle the sickest patients the moment they arrive carries substantial fixed costs that are reflected in pricing. In essence, you are paying for guaranteed, immediate access to a fully equipped and staffed facility precisely when you need it.</p>

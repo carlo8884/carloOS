@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Raw Diet Risks for Dogs — Pathogens, AAFCO | Dog.com', description: 'Raw dog diets: Salmonella, Listeria, Campylobacter contamination, AAFCO completeness gaps, household risk, bone hazards, and harm-reduction guidance.', path: '/nutrition/raw-diet-risks', type: 'article' })
@@ -38,28 +38,11 @@ export default function RawDietRisksPage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'WSAVA Explained', href: '/nutrition/wsava-explained' }, { label: 'Reading Food Labels', href: '/nutrition/reading-food-labels' }, { label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Nutrition Tips" subtitle="Evidence-based guidance weekly." source="nutrition-raw-risks" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-28T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-raw-risks-under-hero"
-            />
-          </div>
 
           <div style={{ background: 'rgba(60, 90, 140, 0.06)', border: '1px solid rgba(60, 90, 140, 0.20)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
             <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '8px' }}>Scope</div>

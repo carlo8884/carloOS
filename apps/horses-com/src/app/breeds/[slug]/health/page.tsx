@@ -27,7 +27,6 @@ import {
   SchemaScript,
   ArticleByline,
   CalloutBox,
-  EmailCapture,
   RelatedLinks,
 } from '@carloOS/ui'
 import {
@@ -270,13 +269,7 @@ export default async function BreedHealthPage({ params }: PageProps) {
               ]}
             />
 
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Practical Horse Reference"
-              subtitle="Discipline-aware buyer guides and reference articles."
-              source={`breed-health-${record.slug}`}
-            />
+
           </>
         }
       >

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -97,13 +97,7 @@ export default function SaltElectrolytesPage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="nutrition-salt"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -113,23 +107,6 @@ export default function SaltElectrolytesPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-salt-under-hero"
-            />
-          </div>
 
           <h2 id="salt">Why Salt Matters</h2>
           <p>Sodium and chloride -- common salt -- are essential nutrients that forage is usually too low in to meet a horse&apos;s baseline needs, even before any sweating. Adequate salt drives the thirst that maintains water intake, supports nerve and muscle function, and underpins the body&apos;s fluid balance. Every horse should have access to salt, and many benefit from a measured daily amount of loose salt added to feed, which is more reliably consumed than a salt block alone.</p>

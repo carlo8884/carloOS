@@ -28,7 +28,6 @@ import {
   ArticleByline,
   CalloutBox,
   CrossPortfolioCard,
-  EmailCapture,
   RelatedLinks,
   SchemaScript,
   ShopCtas,
@@ -185,13 +184,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
             </div>
           </div>
 
-          <EmailCapture
-            variant="sidebar"
-            siteId="dog-com"
-            title="Free Dog Health Tips"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            source={`breed-health-${record.slug}`}
-          />
+
         </>
       }
     >
@@ -208,25 +201,6 @@ export function BreedHealthContent({ slug }: { slug: string }) {
         alt={`A ${record.breedName}`}
         aspect="16:9"
       />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8 not-prose">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">
-            Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.
-          </p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source={`breed-health-${record.slug}-under-hero`}
-          />
-        </div>
 
       {/* Mandatory top callout */}
       <CalloutBox variant="note" title="Educational reference, not medical advice">

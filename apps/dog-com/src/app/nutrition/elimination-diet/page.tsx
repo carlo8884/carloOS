@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard , ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs | Dog.com', description: 'How to run a proper 8-12 week food allergy elimination diet in dogs. Novel protein selection, what to avoid, how to confirm food allergy.', path: '/nutrition/elimination-diet', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Food Allergy Elimination Diet Protocol for Dogs', description: '8-12 week food allergy elimination trial — how to do it correctly.', url: 'https://dog.com/nutrition/elimination-diet', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2025-05-01T00:00:00Z' })
@@ -28,28 +28,11 @@ export default function EliminationDietPage() {
           <TableOfContents items={[{ label: 'Choosing the Diet', href: '#diet-choice' }, { label: 'What to Eliminate', href: '#eliminate' }, { label: 'Duration', href: '#duration' }, { label: 'Food Challenge', href: '#challenge' }, { label: 'FAQ', href: '#faq' }]} />
           <RelatedLinks title="Related Guides" links={[{ label: 'Dog Allergies Guide', href: '/health/dog-allergies' }, { label: 'Prescription Diets', href: '/nutrition/prescription-diets' }, { label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="nutrition-elimination" />
+
         </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="nutrition-elimination-under-hero"
-            />
-          </div>
 
           <h2 id="diet-choice">Choosing the Right Elimination Diet</h2>
           <p>Two options are appropriate for a diagnostic elimination trial:</p>

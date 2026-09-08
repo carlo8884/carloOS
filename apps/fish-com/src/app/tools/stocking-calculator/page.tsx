@@ -141,13 +141,7 @@ export default function StockingCalculatorPage() {
               { label: 'All Species Profiles', href: '/species' },
             ]}
           />
-          <EmailCapture
-            variant="sidebar"
-            siteId="fish-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            source="stocking-calculator"
-          />
+
         </>
       }
     >
@@ -162,20 +156,24 @@ export default function StockingCalculatorPage() {
         <StockingWaterProvider>
           <h2 id="calculator">The Calculator</h2>
           <Calculator />
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
           <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
             <EmailCapture
               variant="inline"
               siteId="fish-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
+              title="Save the stocking rules"
+              subtitle="Planning ceiling, 60–80% headroom, and why inch-per-gallon fails."
               source="tools-stocking-calculator-under-hero"
+              resourceText={`Aquarium stocking — planning rules
+
+• Ignore "1 inch of fish per gallon." It ignores body mass, surface area, and temperament.
+• This tool sketches a slim-inch / bioload ceiling from net volume, surface area, filtration, and aquascape — not a species count.
+• Plan around 60–80% of the ceiling. Headroom is insurance.
+• Saltwater uses a tighter ceiling (24 sq in per slim inch and 0.6 slim-in/gal vs freshwater 12 / 1.1). Reef style multiplies that by 0.55.
+• Choose species from adult-size care guides, not from this estimate.
+
+Use the calculator on this page for the estimate.
+`}
+              resourceLabel="Save the planning rules"
             />
           </div>
 

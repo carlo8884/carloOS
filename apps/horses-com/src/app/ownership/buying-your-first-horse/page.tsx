@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -99,13 +99,7 @@ export default function BuyingFirstHorsePage() {
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />
-          <EmailCapture
-            variant="sidebar"
-            siteId="horses-com"
-            title="Practical Horse Reference"
-            subtitle="Citation-anchored equine reference articles."
-            source="ownership-buying"
-          />
+
         </>}
       >
         <div className="carloOS-article">
@@ -115,23 +109,6 @@ export default function BuyingFirstHorsePage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="ownership-buying-your-first-horse-under-hero"
-            />
-          </div>
 
           <h2 id="honest">Be Honest About Your Level</h2>
           <p>The single most important step is an honest assessment of your own experience and goals. A first-time or returning rider needs a calm, well-trained, forgiving horse that already knows its job -- the opposite of the young, green, or athletic prospect that appeals to ambition. The painful truth behind many failed first purchases is the saying that green plus green equals black and blue: an inexperienced rider and an inexperienced horse are a dangerous combination. Buy the horse for who you are now, not who you hope to become.</p>

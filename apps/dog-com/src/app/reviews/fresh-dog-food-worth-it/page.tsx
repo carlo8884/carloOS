@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -59,28 +59,11 @@ export default function FreshDogFoodWorthItPage() {
         <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'What "Fresh" Means', href: '#what' }, { label: 'Fresh vs Kibble vs Raw', href: '#compare' }, { label: 'Who Benefits Most', href: '#who' }, { label: 'How to Evaluate a Brand', href: '#evaluate' }, { label: 'The Bottom Line', href: '#bottom' }]} />
         <RelatedLinks title="Related" links={[{ label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' }, { label: 'Reading a Dog Food Label', href: '/nutrition/reading-food-labels' }, { label: 'Raw Diet Risks', href: '/nutrition/raw-diet-risks' }, { label: 'Weight Management', href: '/nutrition/weight-management' }, { label: 'Dog DNA Tests Explained', href: '/nutrition/dog-dna-tests' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="reviews-fresh-food" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-06-15T00:00:00Z" updatedAt="2026-06-15T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="reviews-fresh-dog-food-worth-it-under-hero"
-          />
-        </div>
 
         <h2 id="short">The Short Answer</h2>
         <p>Fresh, gently-cooked dog food is one of the fastest-growing categories in pet nutrition — fresh-food sales have grown sharply since the early 2020s as more owners look for higher-moisture, less-processed options. But growth is not the same as necessity. <strong>For most healthy dogs, fresh food is a reasonable upgrade in palatability and transparency, not a medical requirement.</strong> A complete-and-balanced fresh diet and a quality kibble from a <a href="/nutrition/wsava-explained">WSAVA-aligned manufacturer</a> can both meet a dog&apos;s nutritional needs.</p>

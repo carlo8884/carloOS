@@ -2,7 +2,6 @@ import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -151,13 +150,7 @@ export default function FerretFleasParasitesPage() {
               ]}
             />
             <CrossPortfolioCard currentSite="ferret-com" contentType="health" variant="sidebar" />
-            <EmailCapture
-              variant="sidebar"
-              siteId="ferret-com"
-              title="Ferret Health Notes"
-              subtitle="Evidence-based ferret health, monthly."
-              source="health-fleas-parasites"
-            />
+
           </>
         }
       

@@ -9,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   AffiliateDisclosure,
-  EmailCapture,
   FAQAccordion
 } from '@carloOS/ui'
 import { VETS_PET_INSURANCE_REVIEW } from '@carloOS/config'
@@ -373,14 +372,7 @@ export default async function CarrierPage({
         </div>
 
         {/* Email capture */}
-        <EmailCapture
-          variant="section"
-          siteId="dog-com"
-          source="dog-com:insurance-comparison"
-          title="See all 9 carriers side-by-side"
-          subtitle="Download the comparison spreadsheet — free."
-          ctaText="Send the spreadsheet"
-        />
+
       </div>
     </>
   )

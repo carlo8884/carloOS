@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, EmailCapture, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -487,26 +487,11 @@ export default function FirstHorseRoadmapPage() {
           </div>
         </div>
       </section>
-
-      {/* After-value capture — source must end in under-hero so it always renders. */}
       <section className="bg-brand-primary-pale border-y border-brand-border px-container-sm sm:px-container py-section">
         <div className="max-w-content mx-auto text-center">
-          <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
-            Owner notes
-          </h2>
           <p className="text-base text-brand-text-mid leading-relaxed mb-7 max-w-xl mx-auto">
             Optional. We&apos;ll use this address for occasional notes. No roadmap email, PDF, or course.
           </p>
-          <div className="max-w-md mx-auto">
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="first-horse-roadmap-under-hero"
-            />
-          </div>
         </div>
       </section>
 

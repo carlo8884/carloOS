@@ -20,7 +20,6 @@ import {
   buildBreadcrumbSchema,
   buildFAQSchema,
   combineSchemas,
-  EmailCapture,
   FAQAccordion,
   SchemaScript,
   CalloutBox,
@@ -151,25 +150,6 @@ export default function SpecialistsHubPage() {
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="vets-co:specialists-hero" aspect="16:9" variant="wide" priority />
       </div>
-
-      {/* Under-hero capture — source must end in under-hero so it always renders. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
-        <div className="max-w-content-wide mx-auto">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="vets-co"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="specialists-hub-under-hero"
-          />
-        </div>
-      </section>
 
       <main className="px-container-sm sm:px-container py-12 max-w-5xl">
         {/* Extractable direct-answer summary (TL;DR) for SERP + AI citation */}

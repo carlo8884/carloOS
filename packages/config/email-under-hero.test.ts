@@ -13,6 +13,9 @@ describe('isEmailUnderHeroPath', () => {
     assert.equal(isEmailUnderHeroPath('/join/pro'), false)
     assert.equal(isEmailUnderHeroPath('/reviews/best-dog-food'), false)
     assert.equal(isEmailUnderHeroPath('/faq'), false)
+    assert.equal(isEmailUnderHeroPath('/symptoms'), false)
+    assert.equal(isEmailUnderHeroPath('/tools/stocking-calculator'), false)
+    assert.equal(isEmailUnderHeroPath('/tools/new-puppy-checklist'), false)
   })
 
   it('lets fish exclude homepage and reviews hub', () => {

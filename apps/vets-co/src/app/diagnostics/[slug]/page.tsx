@@ -11,7 +11,6 @@ import {
   ArticleLayout,
   CalloutBox,
   RelatedLinks,
-  EmailCapture,
   AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
@@ -179,33 +178,11 @@ export default function DiagnosticPage({ params }: PageProps) {
               ]}
             />
 
-            <EmailCapture
-              variant="sidebar"
-              siteId="vets-co"
-              title="Free Pet Health Tips"
-              subtitle="Practical, vet-sourced guidance weekly."
-              source={`diagnostics-${d.slug}`}
-            />
+
           </>
         }
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source={`diagnostics-${d.slug}-under-hero`}
-            />
-          </div>
 
           {/* MANDATORY TOP CALLOUT — interpretation supersedes general guidance */}
           <CalloutBox variant="note" title="Result interpretation depends on your pet's clinical picture">

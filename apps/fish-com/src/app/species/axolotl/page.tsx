@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { StockImage, buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
 import { FAQAccordion, SchemaScript, buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -77,27 +77,11 @@ export default function AxolotlPage() {
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'White Cloud Minnow', href: '/species/white-cloud-mountain-minnow' }, { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }]} />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="fish-com" title="The Weekly Tank" subtitle="Species spotlights every Thursday." source="species-axolotl" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="fish-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="species-axolotl-under-hero"
-              />
-            </div>
         <StockImage manifestKey="fish-com:species-axolotl" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="An axolotl in a home aquarium." priority />
         <h2>Neoteny — Why Axolotls Stay "Larval"</h2>
         <p>Most salamander species undergo metamorphosis — transitioning from aquatic larvae to terrestrial adults. Axolotls are neotenic: they reach sexual maturity while retaining larval characteristics (external gills, aquatic lifestyle, larval body proportions). The metamorphosis pathway still exists in their genetics — it can be triggered by thyroid hormone administration — but in normal conditions it does not occur. This means an axolotl is not a "baby" that will grow into something different; it is a sexually mature adult in its natural form, permanently aquatic, permanently displaying the feathery external gills and broad, flat head that make them distinctive.</p>

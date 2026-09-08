@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
@@ -40,26 +40,10 @@ export default function CherryEyePage() {
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Bulldog Health', href: '/breeds/bulldog' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
-          <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-cherry-eye" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="dog-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-cherry-eye-under-hero"
-            />
-          </div>
 
           <h2>What Cherry Eye Is</h2>
           <p>Dogs have a third eyelid (nictitating membrane) in the inner corner of each eye. Inside this membrane sits a gland — the nictitating membrane gland (also called the third eyelid gland or Harderian gland) — that produces approximately 30–50% of the dog's total tear film. This gland is held in place by a small ligament and connective tissue. In dogs genetically predisposed to cherry eye, this anchoring system is weak or malformed — the gland pops out of position and becomes visible as a red, fleshy oval mass at the inner corner of the eye.</p>

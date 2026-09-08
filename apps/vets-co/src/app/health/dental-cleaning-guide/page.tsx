@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
@@ -42,29 +42,12 @@ export default function DentalCleaningGuidePage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'Periodontal Disease', href: '/health/periodontal-disease-pets' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Free Pet Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="health-dental-cleaning" />
+
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="health-dental-cleaning-guide-under-hero"
-            />
-          </div>
 
           <h2>Why Anesthesia Is Required</h2>
           <DropCap>Proper dental cleaning requires scaling above and below the gumline (subgingival scaling), probing every tooth to assess pocket depth (the space between tooth and gum — deep pockets indicate periodontitis), dental radiographs to evaluate the tooth root and surrounding bone (70% of tooth structure is below the gumline — invisible to visual examination), extraction of non-viable teeth, polishing, and charting for the dental record. None of these can be performed safely or effectively in an awake, unsedated dog. The mouth must be still, the subgingival environment must be accessible, and the animal must not aspirate water, debris, or extracted tooth fragments. General anesthesia with an endotracheal tube provides all of these requirements.</DropCap>

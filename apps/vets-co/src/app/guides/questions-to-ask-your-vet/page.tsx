@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, EmailCapture, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Questions to Ask Your Vet — Get the Most From Every Visit | Vets.co", description: "The right questions turn a rushed appointment into clear, confident care. Use this list to ask about diagnosis, treatment options, costs, and follow-up.", path: '/guides/questions-to-ask-your-vet', type: 'article' })
@@ -27,26 +27,10 @@ export default function QuestionsToAskPage() {
             ))}
           </div>
           <RelatedLinks title="Related Guides" links={[{ label: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { label: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }, { label: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }]} />
-          <EmailCapture variant="sidebar" siteId="vets-co" title="Owner notes" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="guides-questions" />
+
         </>}
       >
         <div className="carloOS-article">
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="vets-co"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="guides-questions-to-ask-your-vet-under-hero"
-            />
-          </div>
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
@@ -61,10 +45,8 @@ export default function QuestionsToAskPage() {
           <p>Rarely is there only one path. Ask what the treatment options are, including the option of monitoring or doing nothing, and the benefits, risks, and likely outcomes of each. Ask what you would do if this were your own pet, and what the consequences of delaying treatment might be. 3x3 sticky notes flag the next options question on the index-card stack so it is asked instead of remembered in the parking lot — they are not a small magnetic dry-erase board (that lives on ER-vs-urgent-care) and they are not a hardcover weekly appointment planner (that lives on pain-management-dogs). Understanding the range of options — not just the first recommendation — lets you choose a plan that fits your pet, your circumstances, and your values.</p>
 
           <h2>Questions About Medications</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Questions About Cost</h2>
-          <p>Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
 
           <h2>Questions About Follow-Up</h2>
           <p>Before you leave, clarify the follow-up plan. Ask when a recheck is needed, what improvement to expect and by when, and which signs at home should prompt you to call back urgently. Request written instructions or a summary so you do not have to rely on memory. Letter-size sheet protectors are how that written summary stays readable in the glove box instead of a crumpled printout — they are not letter-size thermal laminating pouches (that live on dog-vaccinations-guide), not credit-card-size laminating pouches (that live on ER-vs-urgent-care), and not a clipboard with storage (that lives on what-to-expect-at-the-vet for findings and dosing). Knowing exactly what to watch for and when to return closes the loop on the visit and keeps your pet&apos;s care on track between appointments.</p>

@@ -5,7 +5,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  EmailCapture,
 } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -143,17 +142,6 @@ export default function VetsGlossaryPage() {
             </dl>
           </section>
         ))}
-      </div>
-
-      <div className="bg-brand-primary-pale border-t border-brand-border px-container-sm sm:px-container py-12">
-        <EmailCapture
-          variant="section"
-          siteId="vets-co"
-          title="Free Pet Health Tips"
-          subtitle="Plain-English veterinary and insurance guidance. No spam."
-          source="glossary"
-          ctaText="Send the triage card"
-        />
       </div>
     </>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, EmailCapture, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Bernese Mountain Dog Guide — Cancer, 7-Year Lifespan | Dog.com', description: 'Berners have the shortest lifespan of any breed (~7 years). Cancer causes ~50% of deaths, with histiocytic sarcoma a breed-specific malignancy.', path: '/breeds/bernese-mountain-dog', type: 'article' })
@@ -38,27 +38,11 @@ export default function BerneseMountainDogPage() {
           { label: 'Golden Retriever vs Bernese Mountain Dog', href: '/compare/golden-retriever-vs-bernese-mountain-dog' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course." source="breed-berner" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="breed-bernese-mountain-dog-under-hero"
-          />
-        </div>
 
         <p>The working story starts in the Swiss canton of Bern: a farm dog that pulled carts, droved cattle, and guarded the homestead. That cart / giant-frame history is why a household Berner still needs lean-weight joint care and a same-day lump-aspirate rule, not a crate-only afternoon. Bernese Mountain Dogs are typically first-time-owner friendly — YES-typically — when the household accepts the 7–8-year lifespan floor, the ~50% cancer-mortality watch, and lean-weight hip-and-elbow management.</p>
 

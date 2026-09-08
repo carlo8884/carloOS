@@ -19,7 +19,6 @@ import {
   buildMetadata,
   ArticleLayout,
   ArticleByline,
-  EmailCapture,
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
@@ -147,13 +146,7 @@ export default function BelmontStakesPage() {
                 { label: 'Racing Hub', href: '/racing' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Equestrian Reference"
-              subtitle="Citation-anchored equine reference articles, one email a week."
-              source="triple-crown-belmont-stakes"
-            />
+
           </>
         }
       >
@@ -164,23 +157,6 @@ export default function BelmontStakesPage() {
             updatedAt="2026-06-08"
             reviewedBy="Editorial team"
           />
-
-          {/* Under-hero capture — source must end in under-hero so it always renders. */}
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Owner notes
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-            <EmailCapture
-              variant="inline"
-              siteId="horses-com"
-              title="Owner notes"
-              subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-              ctaText="Send the notes"
-              source="triple-crown-belmont-stakes-under-hero"
-            />
-          </div>
 
           <h2 id="final-leg">The Final Leg</h2>
           <p>The <strong>Belmont Stakes</strong> is the third and final leg of the American <a href="/racing/triple-crown">Triple Crown</a>, run about three weeks after the <a href="/racing/triple-crown/preakness-stakes">Preakness Stakes</a>. The oldest of the three races — first run in 1867 — it is also the longest and, by reputation, the hardest. It is the race that completes the sweep for the rare horse that wins all three, and the race that ends the bid for almost everyone else.</p>

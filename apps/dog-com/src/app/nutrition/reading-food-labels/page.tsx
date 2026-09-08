@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, EmailCapture, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
@@ -18,28 +18,11 @@ export default function ReadingFoodLabelsPage() {
         <TableOfContents items={[{ label: 'AAFCO Statement — Most Important', href: '#aafco' }, { label: 'Ingredient List — What It Tells You', href: '#ingredients' }, { label: 'Ingredient List — What It Doesn\'t', href: '#what-it-doesnt' }, { label: 'Guaranteed Analysis', href: '#guaranteed-analysis' }, { label: 'Caloric Content', href: '#calories' }, { label: 'Marketing Claims to Ignore', href: '#marketing' }]} />
         <RelatedLinks title="Related" links={[{ label: 'WSAVA Guidelines', href: '/nutrition/wsava-explained' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Grain-Free & DCM Risk', href: '/nutrition/grain-free-dcm-risk' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
-        <EmailCapture variant="sidebar" siteId="dog-com" title="Free Dog Health Tips" subtitle="Practical guidance every Tuesday." source="nutrition-labels" />
+
       </>}
     >
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
-
-        {/* Under-hero capture — source must end in under-hero so it always renders. */}
-        <div className="mb-8">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Owner notes
-          </p>
-          <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-          <EmailCapture
-            variant="inline"
-            siteId="dog-com"
-            title="Owner notes"
-            subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-            ctaText="Send the notes"
-            source="nutrition-labels-under-hero"
-          />
-        </div>
 
         <h2 id="aafco">The AAFCO Statement — The Most Important Thing on the Bag</h2>
         <p>The <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Association of American Feed Control Officials (AAFCO)</a> establishes nutrient profiles for dog food. Every complete and balanced dog food must include one of two AAFCO statements:</p>

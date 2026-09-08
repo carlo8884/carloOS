@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, EmailCapture, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -73,22 +73,6 @@ export default function JointSupplementsPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">
           <div>
-            {/* Under-hero capture — source must end in under-hero so it always renders. */}
-            <div className="mb-8">
-              <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-                Owner notes
-              </p>
-              <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">Owner notes</h2>
-              <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Leave an email if you want occasional owner notes from this page. We send them to the inbox you enter. There is no downloadable kit, PDF, or course.</p>
-              <EmailCapture
-                variant="inline"
-                siteId="horses-com"
-                title="Owner notes"
-                subtitle="We'll use this address for occasional notes from this page. No downloadable kit, PDF, or course."
-                ctaText="Send the notes"
-                source="supplements-joint-supplements-under-hero"
-              />
-            </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Supplements Are Not a Substitute for Veterinary Diagnosis</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
@@ -306,13 +290,7 @@ export default function JointSupplementsPage() {
                 { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
               ]}
             />
-            <EmailCapture
-              variant="sidebar"
-              siteId="horses-com"
-              title="Practical Horse Reference"
-              subtitle="Evidence-led articles for owners."
-              source="supplements-joint"
-            />
+
           </aside>
         </div>
       </div>
