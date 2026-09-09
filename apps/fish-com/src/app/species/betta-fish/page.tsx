@@ -12,6 +12,7 @@ import {
   AffiliateDisclosure,
   ArticleByline,
   ArticleSourcesList,
+  JourneyNext,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -185,6 +186,14 @@ export default function BettaFishPage() {
             planted tanks live 3–5 years and display vivid colors and active, curious behavior.
             The same fish in a bowl rarely reaches two.
           </p>
+          <JourneyNext
+            siteId="fish-com"
+            nextHref="/setup/nano-tank-setup"
+            nextLabel="Build the 5–10 gallon tank before you buy the fish"
+            nextBlurb="The bowl is the failure mode. Five gallons heated and filtered is the welfare floor; ten is more stable. Nano-tank setup is the next step: sponge filter, heater, and a cycle before the betta goes in. The hop below is the same betta tank-setup search already on this page."
+            resourceHref="/go/amazon-brand/betta%20fish%20tank%20setup?s=species-betta-fish"
+            resourceLabel="Browse betta tank setups on Amazon →"
+          />
 
           <h2>Obligate Carnivores — What That Actually Means</h2>
           <p>
