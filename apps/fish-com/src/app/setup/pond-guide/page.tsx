@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks , AffiliateDisclosure, JourneyNext} from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com', description: 'How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.', path: '/setup/pond-guide', type: 'article' })
@@ -71,6 +71,14 @@ export default function PondGuidePage() {
           <h2>The Most Common Pond Failure — Undersizing</h2>
           <p>The overwhelming majority of failed backyard ponds fail for the same reason: the pond was built too small for the number of fish eventually added. The cognitive sequence that leads to failure: a 500-gallon pond is built "for just a few koi." The koi are purchased at 6 inches — they fit easily. They grow. They produce more waste. Water quality degrades. Fish get sick. More fish are added. The pond spirals into chronic water quality problems and fish illness. The pond is eventually either drained or the fish given away.</p>
           <p>The corrective thinking: plan for the fish at adult size, not juvenile size. A koi purchased at 6 inches will be 18–24 inches in 4–5 years. Plan for that fish, not this fish. Build the largest pond that budget and space allow — you will fill it, and you will be glad of the capacity.</p>
+          <JourneyNext
+            siteId="fish-com"
+            nextHref="/tools/pond-volume-calculator"
+            nextLabel="Turn the adult-size rule into a gallon number"
+            nextBlurb="The failure mode is undersizing — 250+ gallons per adult koi, planned at 18–24 inches, not the 6-inch fish you buy. Pond-volume is the next step: length × width × average depth before you order liner and pump. The hop below is the same pond pump/filter/liner kit search already on this page."
+            resourceHref="/go/amazon-brand/pond%20pump%20filter%20liner%20kit?s=setup-pond-guide"
+            resourceLabel="Browse pond pump, filter, and liner kits on Amazon →"
+          />
 
           <h2>Liner Selection</h2>
           <p><strong>45 mil EPDM rubber liner:</strong> The recommended standard. Flexible enough to conform to irregular excavation, durable (20+ year lifespan under normal conditions), UV-resistant, and importantly — fish-safe. Purchase from pond specialty suppliers, not roofing suppliers (roofing EPDM may contain fungicides). Firestone Pondgard and Carlisle EPDM are reliable brands.</p>
