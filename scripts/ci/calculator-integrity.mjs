@@ -8838,6 +8838,9 @@ const CALCULATORS = [
     id: 'dog · how-to-take-dogs-temperature hops',
     file: 'apps/dog-com/src/app/guides/how-to-take-dogs-temperature/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the go-now temperature thresholds' },
+      { re: /nextHref="\/tools\/is-this-a-dog-emergency"/, label: 'next step is emergency triage, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/digital\+rectal\+thermometer\+pet\?s=guides-how-to-take-dogs-temperature"/, label: 'journey hop reuses the existing digital rectal thermometer search' },
       { re: /amazon-brand\/digital\+rectal\+thermometer\+pet\?s=guides-how-to-take-dogs-temperature/, label: 'digital rectal thermometer (pet) search hop — unique vs first-aid-kit / emergency-triage generic digital+pet+thermometer' },
       { re: /amazon-brand\/water\+based\+lubricant\+petroleum\+jelly\?s=guides-how-to-take-dogs-temperature/, label: 'water-based lubricant / petroleum jelly search hop (matches on-page tip-prep copy)' },
       { re: /amazon-brand\/isopropyl\+alcohol\+wipes\?s=guides-how-to-take-dogs-temperature/, label: 'isopropyl alcohol wipes search hop (matches on-page clean-and-record copy)' },
@@ -8848,9 +8851,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
-      { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: keep the existing sidebar capture; under-hero capture with a concrete home-vitals-kit-checklist offer; every gear CTA is an amazon-brand category search matching on-page home-check copy (digital rectal thermometer dedicated to the dog, water-based lubricant / petroleum jelly for the tip, isopropyl alcohol wipes to clean after each reading), never a placeholder ASIN, the generic digital+pet+thermometer hop already pinned on the first-aid-kit guide, a first-aid wound-kit hop (gauze / Vetrap / saline / muzzle / carrier), or a medication hop. Chewy stays omitted so empty buttons stay hidden.',
+    why: '2026-09-08 journeys: after the go-now temperature thresholds, next step is emergency triage + the existing digital rectal thermometer hop. Shop dump stays below. No invented kitchen hops. No named Rx.',
   },
   {
     id: 'fish · gh-kh-water-hardness hops',
