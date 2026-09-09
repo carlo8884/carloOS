@@ -11958,6 +11958,9 @@ const CALCULATORS = [
     id: 'fish · betta-fish hops',
     file: 'apps/fish-com/src/app/species/betta-fish/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the 5-gallon bowl-myth rule' },
+      { re: /nextHref="\/setup\/nano-tank-setup"/, label: 'next step is nano-tank setup, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/betta%20fish%20tank%20setup\?s=species-betta-fish"/, label: 'journey hop reuses the existing betta tank-setup search' },
       { re: /amazon-brand\/betta%20fish%20tank%20setup\?s=species-betta-fish/, label: 'existing betta tank-setup amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11966,8 +11969,9 @@ const CALCULATORS = [
       { re: /href=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1190: keep the existing sidebar capture and the already-hopped betta tank-setup amazon-brand search; add under-hero capture with a concrete betta-setup-checklist offer matching on-page 5-gallon / sponge-filter / rest-spot copy. Do not re-ship a new Amazon query. Empty Chewy button hidden. No new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the 5-gallon heated-filtered bowl-myth rule, next step is nano-tank setup + the existing betta tank-setup hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'fish · neon-tetra hops',
