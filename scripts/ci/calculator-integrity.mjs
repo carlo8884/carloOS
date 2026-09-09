@@ -11249,6 +11249,9 @@ const CALCULATORS = [
     id: 'fish · pond-guide hops',
     file: 'apps/fish-com/src/app/setup/pond-guide/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the undersizing rule' },
+      { re: /nextHref="\/tools\/pond-volume-calculator"/, label: 'next step is pond-volume, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide"/, label: 'journey hop reuses the existing pond-pump-filter-liner-kit search' },
       { re: /amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide/, label: 'existing pond-pump-filter-liner-kit amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -11257,8 +11260,9 @@ const CALCULATORS = [
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path leftover after #1155: keep the existing sidebar capture and the already-hopped pond-pump-filter-liner-kit amazon-brand search; add under-hero capture with a concrete backyard-pond-setup-checklist offer matching on-page 250-plus-gallons-per-koi / 45-mil-EPDM / one-pond-volume-per-hour filtration copy. Do not re-ship a new Amazon query. Chewy stays omitted so empty buttons stay hidden. No ReviewCard partner hops, no new brand, no PLACEHOLDER.',
+    why: '2026-09-08 journeys: after the undersizing / 250+ gallons per adult koi rule, next step is pond-volume + the existing pond-pump-filter-liner-kit hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
 
   {
