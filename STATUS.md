@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish pond-guide JourneyNext after #1626)
+**Last updated:** 2026-09-08 (COO — dog temperature JourneyNext after #1627)
 
-> **COO fish pond-guide journey (2026-09-08):** After #1626. Undersizing / 250+ gal per adult koi → `/tools/pond-volume-calculator` + existing liner-kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-pond-guide-journey.md`.
+> **COO dog temperature journey (2026-09-08):** After #1627. Go-now temperature thresholds → `/tools/is-this-a-dog-emergency` + existing rectal thermometer `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-temperature-journey.md`.
+
+> **COO fish pond-guide journey (2026-09-08):** After #1626. Undersizing / 250+ gal per adult koi → `/tools/pond-volume-calculator` + existing liner-kit `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-pond-guide-journey.md`. #1627 merged.
 
 > **COO dog senior-food journey (2026-09-08):** After #1625. Senior protein rule → `/nutrition/senior-dog-nutrition` + existing Bright Mind `/go`. Review cards stay after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-senior-food-journey.md`. #1626 merged.
 

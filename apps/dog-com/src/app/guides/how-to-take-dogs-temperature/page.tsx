@@ -7,6 +7,7 @@ import {
   TableOfContents,
   AffiliateDisclosure,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -280,6 +281,14 @@ export default function HowToTakeDogsTemperaturePage() {
             <li>Collapse, unresponsiveness, or severe difficulty breathing</li>
             <li>A distended, hard abdomen with unproductive retching (possible <a href="/health/dog-bloat-gvd" className="text-brand-primary hover:underline">bloat / GDV</a> — a true emergency)</li>
           </ul>
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/is-this-a-dog-emergency"
+            nextLabel="Triage the reading before you start shopping the kit"
+            nextBlurb="104.5 °F+ or under 99 °F is a same-day vet call. 106 °F+ is an emergency. The triage tool is the next step: go-now vs wait, using the number you just took. The hop below is the same digital rectal thermometer search already on this page."
+            resourceHref="/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature"
+            resourceLabel="Browse digital rectal thermometers for pets on Amazon →"
+          />
 
           <h2 id="kit">Building a Simple Home Vitals Kit</h2>
           <p>
