@@ -3,9 +3,11 @@
 Single source of truth for the operating state of the portfolio.
 Trust standards live in [`QC-STANDARDS.md`](./QC-STANDARDS.md).
 
-**Last updated:** 2026-09-08 (COO — fish betta JourneyNext after #1628)
+**Last updated:** 2026-09-08 (COO — dog age-calculator JourneyNext after #1630)
 
-> **COO fish betta journey (2026-09-08):** After #1628. 5-gallon bowl-myth rule → `/setup/nano-tank-setup` + existing betta tank-setup `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-betta-journey.md`.
+> **COO dog age-calculator journey (2026-09-08):** After #1630. Year-one ≈ 15 human years → `/nutrition/puppy-nutrition` + existing puppy-food `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-age-calculator-journey.md`.
+
+> **COO fish betta journey (2026-09-08):** After #1628. 5-gallon bowl-myth rule → `/setup/nano-tank-setup` + existing betta tank-setup `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-fish-betta-journey.md`. #1630 merged.
 
 > **COO dog temperature journey (2026-09-08):** After #1627. Go-now temperature thresholds → `/tools/is-this-a-dog-emergency` + existing rectal thermometer `/go`. Shop dump stays after JourneyNext. Details: `ops/handoffs/2026-09-08-coo-dog-temperature-journey.md`. #1628 merged.
 
