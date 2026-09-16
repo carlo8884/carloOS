@@ -17,7 +17,7 @@ Preview URLs (Vercel):
 
 Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
 
-Carlo offline until next week. Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
+Carlo offline until next week. Gmail scopes remain limited this hour — recap logged here. Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
 
 ---
 
