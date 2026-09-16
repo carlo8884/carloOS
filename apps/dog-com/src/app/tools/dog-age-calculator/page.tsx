@@ -10,6 +10,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
 
@@ -149,6 +150,14 @@ export default function DogAgeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/nutrition/puppy-nutrition"
+            nextLabel="Feed year one like 15 human years, not 7"
+            nextBlurb="The ×7 rule is wrong. Year one already maps to about 15 human years — growth calories and calcium, not an adult bag. Puppy-nutrition is the next step. The hop below is the same puppy-food search already on this page."
+            resourceHref="/go/amazon-brand/puppy+food?s=tools-dog-age"
+            resourceLabel="Browse puppy food on Amazon →"
+          />
         </div>
       </section>
 

@@ -6800,6 +6800,9 @@ const CALCULATORS = [
     id: 'dog · dog-age-calculator hops',
     file: 'apps/dog-com/src/app/tools/dog-age-calculator/page.tsx',
     mustInclude: [
+      { re: /<JourneyNext/, label: 'journey next-step after the human-year estimate' },
+      { re: /nextHref="\/nutrition\/puppy-nutrition"/, label: 'next step is puppy-nutrition, not a shop dump' },
+      { re: /resourceHref="\/go\/amazon-brand\/puppy\+food\?s=tools-dog-age"/, label: 'journey hop reuses the existing puppy-food search' },
       { re: /amazon-brand\/puppy\+food\?s=tools-dog-age/, label: 'puppy food search hop' },
       { re: /amazon-brand\/puppy\+teething\+toys\?s=tools-dog-age/, label: 'puppy teething toys search hop' },
       { re: /amazon-brand\/dental\+chews\+dog\?s=tools-dog-age/, label: 'dental chews search hop' },
@@ -6812,8 +6815,9 @@ const CALCULATORS = [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
       { re: /amazonHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
+      { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
-    why: 'Money path: under-hero capture with a concrete dog-age-checklist offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN. Twin of the already-pinned vets/ferret/horse age-calculator hops.',
+    why: '2026-09-08 journeys: after the human-year estimate, next step is puppy-nutrition + the existing puppy-food hop. Shop dump stays below. No invented kitchen hops. No new Amazon query.',
   },
   {
     id: 'dog · dog-body-condition-score hops',
