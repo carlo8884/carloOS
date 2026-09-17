@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-09-16 ~20:03 PDT hour
+1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
+2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
+3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
+4. Shared Footer inquire already exists — left alone.
+
+One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here (Gmail write scopes insufficient). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
+
+---
+
 ## 2026-09-16 ~19:07 PDT hour
 1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
 2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
@@ -39,276 +60,3 @@ Preview URLs (Vercel):
 Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
 
 Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~16:09 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~15:15 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~14:03 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~12:07 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~11:07 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~10:15 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~09:04 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~08:07 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~07:26 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~06:12 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~05:02 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~04:21 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here (Gmail recipient unknown / scopes may be limited). Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
-
----
-
-## 2026-09-16 ~03:05 PDT hour
-1. Fish.com homepage visual quality — hero image-first, teal wash, dual CTAs, subject-forward photo matching dog.com pattern. HomeTriage + HomeGuides coherent; no drift. Desktop screenshot confirms clean subject-forward composition.
-2. Dog.com /join/pro + /trainers claimed-directory shells present, substantive, empty-by-design (no fake trainers), robots noindex, honest copy. Not thin.
-3. Horses.com /inquire uses shared form surface with parity. Homepage polished (hero, categories, calculators, featured).
-4. Shared Footer inquire already exists — left alone.
-
-One real merged improvement: none this hour (all priority items reconfirmed complete and non-thin). Held to one-delta rule.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap emailed. Next hour: re-check fish visual edge cases or horses homepage spacing if drift appears.
