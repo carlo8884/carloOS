@@ -12,10 +12,10 @@ const FEATURED_SPECIES = [
 ]
 
 const TANK_PLANNING = [
-  { title: 'Choose tank size', desc: 'Volume calculator + bioload math for the species you want.', href: '/tools/aquarium-volume-calculator' },
-  { title: 'Freshwater vs saltwater', desc: 'Cost, complexity, time commitment, what changes month-to-month.', href: '/setup' },
-  { title: 'Beginner species', desc: 'Hardy, peaceful, schooling — species most newcomers do well with.', href: '/species' },
-  { title: 'Equipment checklist', desc: 'What you actually need before adding your first fish.', href: '/equipment' },
+  { title: 'Choose tank size', desc: 'Volume calculator + bioload math for the species you want.', href: '/tools/aquarium-volume-calculator', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+  { title: 'Freshwater vs saltwater', desc: 'Cost, complexity, time commitment, what changes month-to-month.', href: '/setup', imageKey: 'fish-com:category-saltwater', imageAlt: 'A clownfish among the tentacles of a sea anemone' },
+  { title: 'Beginner species', desc: 'Hardy, peaceful, schooling — species most newcomers do well with.', href: '/species', imageKey: 'fish-com:species-thumb-guppy', imageAlt: 'A guppy fish' },
+  { title: 'Equipment checklist', desc: 'What you actually need before adding your first fish.', href: '/equipment', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
 ]
 
 const WATER_SAFETY = [
@@ -120,8 +120,11 @@ export function HomeGuides() {
             <Link
               key={item.title}
               href={item.href}
-              className="group flex gap-4 p-5 rounded-xl border border-brand-border no-underline hover:border-brand-primary hover:bg-brand-surface transition-all"
+              className="group flex gap-4 p-4 rounded-xl border border-brand-border no-underline hover:border-brand-primary hover:bg-brand-surface transition-all"
             >
+              <div className={`relative h-24 w-32 shrink-0 overflow-hidden rounded-lg bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+              </div>
               <div>
                 <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
                 <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
