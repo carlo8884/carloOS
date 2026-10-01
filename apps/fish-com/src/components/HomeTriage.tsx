@@ -77,6 +77,7 @@ const CALCULATORS = [
   { title: 'Heater wattage', href: '/tools/heater-wattage-calculator' },
   { title: 'Water-change calculator', href: '/tools/water-change-calculator' },
   { title: 'CO₂ calculator (planted)', href: '/tools/co2-calculator' },
+  { title: 'Cycling estimator', href: '/tools/aquarium-cycling-estimator' },
 ]
 
 export function HomeTriage() {
