@@ -75,12 +75,12 @@ const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: stri
 ]
 
 const CALCULATORS = [
-  { title: 'Aquarium volume', href: '/tools/aquarium-volume-calculator' },
-  { title: 'Stocking calculator', href: '/tools/stocking-calculator' },
-  { title: 'Heater wattage', href: '/tools/heater-wattage-calculator' },
-  { title: 'Water-change calculator', href: '/tools/water-change-calculator' },
-  { title: 'CO₂ calculator (planted)', href: '/tools/co2-calculator' },
-  { title: 'Cycling estimator', href: '/tools/aquarium-cycling-estimator' },
+  { title: 'Aquarium volume', href: '/tools/aquarium-volume-calculator', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+  { title: 'Stocking calculator', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-guppy', imageAlt: 'A guppy fish' },
+  { title: 'Heater wattage', href: '/tools/heater-wattage-calculator', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
+  { title: 'Water-change calculator', href: '/tools/water-change-calculator', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
+  { title: 'CO₂ calculator (planted)', href: '/tools/co2-calculator', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { title: 'Cycling estimator', href: '/tools/aquarium-cycling-estimator', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
 ]
 
 export function HomeTriage() {
@@ -123,19 +123,20 @@ export function HomeTriage() {
         ))}
       </div>
 
-      <section className="bg-brand-dark border-b border-brand-border px-container-sm sm:px-container py-6">
-        <div className="flex items-center justify-between gap-6 flex-wrap">
-          <div>
-            <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">Decide with math, not guesses</div>
-            <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
-          </div>
-          <div className="flex gap-2 flex-wrap">
-            {CALCULATORS.map((c) => (
-              <Link key={c.href} href={c.href} className="inline-flex items-center bg-white/10 hover:bg-white/15 border border-white/15 text-white text-xs font-semibold px-3 py-2 rounded no-underline transition-colors duration-200">
-                {c.title}
-              </Link>
-            ))}
-          </div>
+      <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
+        <div className="mb-4 max-w-3xl">
+          <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">Decide with math, not guesses</div>
+          <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+        </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {CALCULATORS.map((c) => (
+            <Link key={c.href} href={c.href} className="group block overflow-hidden rounded-lg no-underline bg-white/[0.05] border border-white/10 hover:border-brand-primary transition-colors duration-200">
+              <div className={`relative h-16 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={c.imageKey} alt={c.imageAlt} aspect="16:9" subtleCredit />
+              </div>
+              <div className="px-2.5 py-2 text-xs font-semibold text-white leading-tight">{c.title}</div>
+            </Link>
+          ))}
         </div>
       </section>
     </>
