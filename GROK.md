@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-01 ~08:03 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, and calculator rows remain photo-led. The triage problem row was icon-only; now photo-led with existing credited thumbs (Ryan Zazueta, Worachat Sodsri, Delbert Pagayona, J Cruikshank, Huy Phan, William F. Aicher). Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
+3. Horses.com /inquire shared offer form intact. Homepage cards remain photo-led with existing credited thumbs. No homepage for-sale banner.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com triage problem cards now use existing manifest thumbs that already have photographer credits, so the start-where-you-are row matches the rest of the homepage and dog.com's photo-led pattern. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-01 ~07:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, and equipment rows remain photo-led. Calculator strip was text-only; now photo-led with existing credited thumbs (Cruik, sohrab zia, Ryan Zazueta, Rachel Hisko, Delbert Pagayona, Huy Phan). Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
@@ -44,7 +65,7 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ## Currently underway
 
-* Priority 1–4 satisfied. Fish homepage calculator strip now photo-led with existing credited thumbs.
+* Priority 1–4 satisfied. Fish homepage triage problem row now photo-led with existing credited thumbs.
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
 * Horses homepage and /inquire left alone.
 
