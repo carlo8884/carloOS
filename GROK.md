@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-01 ~05:04 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species strip and tank-planning row remain photo-led with existing credited thumbs. Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
+3. Horses.com /inquire shared offer form intact. Homepage Guides and ownership cards were falling back to "Source: Unsplash" because category-tack and category-ownership have blank photographers. Pointed those cards at existing credited keys (Mikayla Storms guide-saddle-fit, Wolfgang Hasselmann hero). Cornerstone ulcers / saddle-fit / blankets cards were text-only; now photo-led with existing credited keys (Svetlana Svetlana, Mikayla Storms, Gene Devine). No homepage for-sale banner. Photographer strings not invented.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com homepage cards that rendered "Source: Unsplash" or no image now use existing manifest thumbs that already have photographer credits. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-01 ~04:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species strip remains photo-led. Tank-planning row was text-only; now photo-led with existing credited thumbs (planted tank, saltwater clownfish, guppy, equipment). Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
@@ -128,7 +149,7 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ## Currently underway
 
-* Priority 1–4 satisfied. Fish tank-planning strip now photo-led with existing credited thumbs.
+* Priority 1–4 satisfied. Horses homepage Guides, ownership, and cornerstone cards now photo-led with existing credited thumbs.
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
 
 ## Test and deployment status
