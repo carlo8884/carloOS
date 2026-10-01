@@ -41,6 +41,16 @@ const CALCULATORS = [
   { href: '/glossary', eyebrow: 'Reference', title: 'Aquarist Glossary', desc: 'Plain-English definitions for aquarium terminology — from ammonia and GH/KH to reverse osmosis.', cta: 'Browse the glossary', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
 ]
 
+const PRODUCT_GUIDES = [
+  { title: 'Filters', href: '/reviews/best-aquarium-filters', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
+  { title: 'Canister filters', href: '/reviews/best-canister-filters', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { title: 'Heaters', href: '/reviews/best-aquarium-heaters', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
+  { title: 'Lighting', href: '/reviews/best-aquarium-lighting', imageKey: 'fish-com:species-thumb-discus', imageAlt: 'A discus fish' },
+  { title: 'Test kits', href: '/reviews/best-water-test-kits', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
+  { title: 'Nano tanks', href: '/reviews/best-nano-tanks', imageKey: 'fish-com:species-thumb-betta', imageAlt: 'A betta fish' },
+  { title: 'Planted fertilizers', href: '/reviews/best-planted-tank-fertilizers', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+]
+
 function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { href: string; eyebrow: string; title: string; desc: string; cta: string; imageKey: string; imageAlt: string }) {
   return (
     <Link href={href} className="group block overflow-hidden bg-white/[0.05] border border-white/[0.10] rounded-xl no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200">
@@ -180,6 +190,16 @@ export function HomeGuides() {
             </div>
             <h2 className="font-display font-bold text-white tracking-tight text-3xl italic mb-4">Compared, not ranked by ad spend.</h2>
             <p className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</p>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 mb-6 max-w-xl">
+              {PRODUCT_GUIDES.map((guide) => (
+                <Link key={guide.href} href={guide.href} className="group block overflow-hidden rounded-lg ring-1 ring-white/10 no-underline hover:ring-brand-primary">
+                  <div className={`relative h-20 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={guide.imageKey} alt={guide.imageAlt} aspect="4:3" subtleCredit />
+                  </div>
+                  <div className="px-2.5 py-2 text-xs font-bold text-white group-hover:text-brand-primary-light">{guide.title}</div>
+                </Link>
+              ))}
+            </div>
             <Link href="/reviews" className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded-lg no-underline hover:bg-brand-primary-light">Browse all product guides <IconArrowRight /></Link>
           </div>
           <Link href="/reviews" className={`group relative block rounded-xl overflow-hidden no-underline ring-1 ring-white/10 hover:ring-brand-primary min-h-[220px] ${FILL_IMAGE}`}>

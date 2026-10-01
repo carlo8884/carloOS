@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-01 ~15:03 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator cards, triage, how-we-work, math-strip, and under-hero start band remain photo-led. The product-guide band listed seven real review pages in prose plus one photo card; those pages are now photo chips using existing credited thumbs (equipment, glossary, clownfish, discus, cycling test kit, betta, planted). Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage discipline chips, start-here band, calculator shortcuts, and body-condition aside stay photo-led. No homepage for-sale banner.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com product-guide band now links the seven existing review pages with manifest thumbs that already have photographer credits, so that row matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-01 ~14:18 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator cards, triage, product-guide, how-we-work, math-strip, and under-hero start band remain photo-led. Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
@@ -21,179 +42,11 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ---
 
-## 2026-10-01 ~13:03 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator cards, triage, product-guide, how-we-work, and math-strip rows remain photo-led. The under-hero start band was text-only buttons; now photo chips with existing credited thumbs (J Cruikshank planted tank, sohrab zia guppy) linking the same new-tank builder and stocking planner. Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage category, popular, cornerstone cards, body-condition aside, and calculator shortcut chips remain photo-led. Discipline filter chips stay text pills this hour. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com under-hero start band now uses existing manifest thumbs that already have photographer credits, so the first band after the hero matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~12:03 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator cards, triage, product-guide, how-we-work, and math-strip rows remain photo-led. Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage category, popular, and cornerstone cards remain photo-led. Body-condition aside stays photo-led with the Mikayla Storms credit. The "more free calculators" list under that aside was text links; now photo chips with existing credited thumbs (Mikayla Storms, Wolfgang Hasselmann, Svetlana Svetlana). No homepage for-sale banner. Calculator copy and scoring left unchanged — no new doses.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Horses.com homepage calculator shortcut list now uses existing manifest thumbs that already have photographer credits, so the tools aside matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~11:03 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator cards, triage, product-guide, and how-we-work rows remain photo-led. The "decide with math" strip under triage was text pills; now photo chips with existing credited thumbs (J Cruikshank, sohrab zia, Rachel Hisko, Ryan Zazueta, Huy Phan, Delbert Pagayona). Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage category, popular, and cornerstone cards remain photo-led. Body-condition aside stays photo-led with the Mikayla Storms credit. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com calculator shortcut strip now uses existing manifest thumbs that already have photographer credits, so the math row matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~10:09 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator, triage, product-guide, and how-we-work rows remain photo-led with existing credited images. Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage category, popular, and cornerstone cards remain photo-led. The Henneke body-condition aside was text-only; now paired with the existing credited photo already used on the weight card (Mikayla Storms). No homepage for-sale banner. Calculator copy and scoring left unchanged — no new doses.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Horses.com homepage body-condition band now uses the existing Mikayla Storms manifest image that already has a photographer credit, so the calculator aside matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~09:05 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator, triage, and product-guide rows remain photo-led. The how-we-work band was text-only; now paired with an existing credited photo (Pawel Czerwinski, African cichlid). Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage cards remain photo-led with existing credited thumbs. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com how-we-work band now uses the existing African cichlid manifest image that already has a photographer credit, so the closing editorial row matches the rest of the homepage. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~08:03 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, and calculator rows remain photo-led. The triage problem row was icon-only; now photo-led with existing credited thumbs (Ryan Zazueta, Worachat Sodsri, Delbert Pagayona, J Cruikshank, Huy Phan, William F. Aicher). Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact. Homepage cards remain photo-led with existing credited thumbs. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com triage problem cards now use existing manifest thumbs that already have photographer credits, so the start-where-you-are row matches the rest of the homepage and dog.com's photo-led pattern. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~07:03 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, and equipment rows remain photo-led. Calculator strip was text-only; now photo-led with existing credited thumbs (Cruik, sohrab zia, Ryan Zazueta, Rachel Hisko, Delbert Pagayona, Huy Phan). Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact. Homepage cards remain photo-led with existing credited thumbs. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com calculator cards now use existing manifest thumbs that already have photographer credits, so the tools strip matches the rest of the homepage and dog.com's photo-led pattern. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
-## 2026-10-01 ~06:04 PDT hour
-1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species strip and tank-planning row remain photo-led. Water-safety and equipment rows were text-only; now photo-led with existing credited thumbs (Ryan Zazueta, Huy Phan, Indula Chanaka, Akash Dey, Delbert Pagayona, Rachel Hisko, Michael Rodock). Hero credit left as the photographer's real display name (ק. פ.).
-2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
-3. Horses.com /inquire shared offer form intact. Homepage Guides, ownership, and cornerstone cards remain photo-led with existing credited thumbs. No homepage for-sale banner.
-4. Shared Footer inquire left alone.
-
-One real merged improvement: Fish.com water-safety and equipment decision cards now use existing manifest thumbs that already have photographer credits, matching the species and tank-planning strips. No new images, no doses, no sitemap.
-
-Preview URLs (Vercel):
-- https://carlo-os-fish-com.vercel.app/
-- https://dog-com-three.vercel.app/join/pro
-- https://dog-com-three.vercel.app/trainers
-- https://horses-com.vercel.app/inquire
-- https://horses-com.vercel.app/
-
-Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
-
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
-
----
-
 ## Currently underway
 
-* Priority 1–4 satisfied. Horses start-here band now photo-led with existing credited thumbs.
+* Priority 1 this hour: Fish.com product-guide chips merged. Hero left alone.
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
-* Fish homepage left alone this hour (hero and start band already photo-led).
+* Horses homepage and /inquire left alone (already consistent).
 * Shared footer inquire left alone.
 
 ## Test and deployment status
