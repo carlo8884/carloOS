@@ -196,18 +196,25 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-white border-t border-brand-border px-container-sm sm:px-container py-12">
-        <div className="max-w-3xl">
-          <div className="flex items-center gap-2.5 mb-3">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">How we work</span>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          <div className="max-w-3xl">
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">How we work</span>
+            </div>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl mb-4 italic">Practical and source-grounded.</h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
+              Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.
+            </p>
+            <div className="flex gap-5 mt-4 flex-wrap">
+              <Link href="/editorial-standards" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Editorial standards →</Link>
+              <Link href="/disclosure" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Affiliate disclosure →</Link>
+            </div>
           </div>
-          <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl mb-4 italic">Practical and source-grounded.</h2>
-          <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
-            Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.
-          </p>
-          <div className="flex gap-5 mt-4 flex-wrap">
-            <Link href="/editorial-standards" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Editorial standards →</Link>
-            <Link href="/disclosure" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Affiliate disclosure →</Link>
+          <div className={`relative min-h-[220px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
+            <div className={`absolute inset-0 ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
+            </div>
           </div>
         </div>
       </section>
