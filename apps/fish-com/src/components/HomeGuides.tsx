@@ -19,17 +19,17 @@ const TANK_PLANNING = [
 ]
 
 const WATER_SAFETY = [
-  { title: 'Parameter ranges by species', desc: 'pH, GH, KH, temperature targets — and what "stable" really means.', href: '/setup/water-chemistry-guide' },
-  { title: 'Cycling basics', desc: 'The nitrogen cycle explained, and how to know when your tank is ready for fish.', href: '/setup/aquarium-cycling-guide' },
-  { title: 'Emergency water changes', desc: 'When to do a large change, how to do it safely, calculator for volume.', href: '/tools/water-change-calculator' },
-  { title: 'Nitrogen cycle explained', desc: 'Ammonia to nitrite to nitrate, and why each matters for fish health.', href: '/health/nitrogen-cycle-explained' },
+  { title: 'Parameter ranges by species', desc: 'pH, GH, KH, temperature targets — and what "stable" really means.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
+  { title: 'Cycling basics', desc: 'The nitrogen cycle explained, and how to know when your tank is ready for fish.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { title: 'Emergency water changes', desc: 'When to do a large change, how to do it safely, calculator for volume.', href: '/tools/water-change-calculator', imageKey: 'fish-com:species-thumb-angelfish', imageAlt: 'An angelfish in an aquarium' },
+  { title: 'Nitrogen cycle explained', desc: 'Ammonia to nitrite to nitrate, and why each matters for fish health.', href: '/health/nitrogen-cycle-explained', imageKey: 'fish-com:species-thumb-oscar', imageAlt: 'An Oscar fish' },
 ]
 
 const EQUIPMENT_DECISIONS = [
-  { title: 'Filters', desc: 'HOB vs. canister vs. sponge vs. sump — picking by tank size and stock.', href: '/equipment/aquarium-filters' },
-  { title: 'Heaters', desc: 'Wattage by tank volume, accuracy, redundancy strategy.', href: '/equipment/aquarium-heaters' },
-  { title: 'Lighting', desc: 'PAR, spectrum, photoperiod — planted, reef, FOWLR.', href: '/equipment/aquarium-lighting' },
-  { title: 'Test kits', desc: 'API vs. Salifert vs. Hanna — what to test for and how often.', href: '/equipment/aquarium-test-kits' },
+  { title: 'Filters', desc: 'HOB vs. canister vs. sponge vs. sump — picking by tank size and stock.', href: '/equipment/aquarium-filters', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
+  { title: 'Heaters', desc: 'Wattage by tank volume, accuracy, redundancy strategy.', href: '/equipment/aquarium-heaters', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
+  { title: 'Lighting', desc: 'PAR, spectrum, photoperiod — planted, reef, FOWLR.', href: '/equipment/aquarium-lighting', imageKey: 'fish-com:species-thumb-discus', imageAlt: 'A discus fish' },
+  { title: 'Test kits', desc: 'API vs. Salifert vs. Hanna — what to test for and how often.', href: '/equipment/aquarium-test-kits', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
 ]
 
 function ToolCard({ href, eyebrow, title, desc, cta }: { href: string; eyebrow: string; title: string; desc: string; cta: string }) {
@@ -43,6 +43,28 @@ function ToolCard({ href, eyebrow, title, desc, cta }: { href: string; eyebrow: 
         <IconArrowRight />
       </span>
     </Link>
+  )
+}
+
+function PhotoRow({ items }: { items: { title: string; desc: string; href: string; imageKey: string; imageAlt: string }[] }) {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      {items.map((item) => (
+        <Link
+          key={item.title}
+          href={item.href}
+          className="group flex gap-4 p-4 rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+        >
+          <div className={`relative h-24 w-32 shrink-0 overflow-hidden rounded-lg bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+            <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+          </div>
+          <div>
+            <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
+            <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
+          </div>
+        </Link>
+      ))}
+    </div>
   )
 }
 
@@ -115,23 +137,7 @@ export function HomeGuides() {
         <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-6" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
           Before you buy the tank.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {TANK_PLANNING.map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group flex gap-4 p-4 rounded-xl border border-brand-border no-underline hover:border-brand-primary hover:bg-brand-surface transition-all"
-            >
-              <div className={`relative h-24 w-32 shrink-0 overflow-hidden rounded-lg bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
-              </div>
-              <div>
-                <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
-                <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <PhotoRow items={TANK_PLANNING} />
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
@@ -142,20 +148,7 @@ export function HomeGuides() {
         <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-6" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
           The parameters that actually matter.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {WATER_SAFETY.map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group flex gap-4 p-5 rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
-            >
-              <div>
-                <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
-                <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <PhotoRow items={WATER_SAFETY} />
       </section>
 
       <section className="bg-brand-white px-container-sm sm:px-container py-section">
@@ -166,20 +159,7 @@ export function HomeGuides() {
         <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-6" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
           Gear that earns its place.
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {EQUIPMENT_DECISIONS.map((item) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group flex gap-4 p-5 rounded-xl border border-brand-border no-underline hover:border-brand-primary hover:bg-brand-surface transition-all"
-            >
-              <div>
-                <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
-                <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
-              </div>
-            </Link>
-          ))}
-        </div>
+        <PhotoRow items={EQUIPMENT_DECISIONS} />
       </section>
 
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
