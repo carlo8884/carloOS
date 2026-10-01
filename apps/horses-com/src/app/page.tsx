@@ -125,8 +125,8 @@ const CATEGORIES: {
     title: 'Guides',
     desc: 'Tack, turnout, and management fundamentals — written for owners who own the decision.',
     href: '/guides/saddle-fit-basics',
-    manifestKey: 'horses-com:category-tack',
-    imageAlt: 'Tack and saddle fitting equipment',
+    manifestKey: 'horses-com:guide-saddle-fit',
+    imageAlt: 'A dressage horse and rider working in tack at the canter',
   },
   {
     icon: 'supplements',
@@ -168,8 +168,8 @@ const FEATURED_GUIDES = [
     title: 'What a horse actually costs',
     desc: 'Board, farrier, vet, feed, and the once-a-year surprises — a realistic annual budget before you buy.',
     href: '/ownership/cost-of-owning-a-horse',
-    manifestKey: 'horses-com:category-ownership',
-    imageAlt: 'A horse owner caring for their horse',
+    manifestKey: 'horses-com:hero',
+    imageAlt: 'Horses running through a grassy field',
   },
   {
     eyebrow: 'Free tool',
@@ -215,6 +215,8 @@ const FEATURED_ARTICLES: {
     teaser:
       'Up to 90% of racehorses and 60% of sport horses develop ulcers. Squamous vs. glandular disease, omeprazole protocols, and the management changes that actually move the needle.',
     readTime: '16 min',
+    imageKey: 'horses-com:category-care',
+    imageAlt: 'A horse receiving routine care',
   },
   {
     href: '/guides/saddle-fit-basics',
@@ -223,6 +225,8 @@ const FEATURED_ARTICLES: {
     teaser:
       'A field reference for the owner checking tree width, wither clearance, and panel contact between professional fittings.',
     readTime: '12 min',
+    imageKey: 'horses-com:guide-saddle-fit',
+    imageAlt: 'A dressage horse and rider working in tack at the canter',
   },
   {
     href: '/supplements/joint-supplements',
@@ -241,6 +245,8 @@ const FEATURED_ARTICLES: {
     teaser:
       'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.',
     readTime: '11 min',
+    imageKey: 'horses-com:category-reviews',
+    imageAlt: 'Horse gear compared side by side',
   },
 ]
 
@@ -488,7 +494,7 @@ export default function HomePage() {
                 style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}
               >
                 {art.imageKey ? (
-                  <StockImage manifestKey={art.imageKey} alt={art.imageAlt} aspect="16:9" variant="inline" />
+                  <StockImage manifestKey={art.imageKey} alt={art.imageAlt} aspect="16:9" variant="inline" subtleCredit />
                 ) : null}
                 <div className="p-7 lg:p-8">
                   <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-primary)' }}>
