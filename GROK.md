@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-01 ~10:09 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator, triage, product-guide, and how-we-work rows remain photo-led with existing credited images. Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage category, popular, and cornerstone cards remain photo-led. The Henneke body-condition aside was text-only; now paired with the existing credited photo already used on the weight card (Mikayla Storms). No homepage for-sale banner. Calculator copy and scoring left unchanged — no new doses.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com homepage body-condition band now uses the existing Mikayla Storms manifest image that already has a photographer credit, so the calculator aside matches the rest of the photo-led homepage. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-01 ~09:05 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species, tank-planning, water-safety, equipment, calculator, triage, and product-guide rows remain photo-led. The how-we-work band was text-only; now paired with an existing credited photo (Pawel Czerwinski, African cichlid). Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings.
@@ -86,9 +107,10 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ## Currently underway
 
-* Priority 1–4 satisfied. Fish homepage how-we-work band now photo-led with an existing credited image.
+* Priority 1–4 satisfied. Horses homepage body-condition aside now photo-led with the existing Mikayla Storms credit.
+* Fish homepage rows left alone (already photo-led).
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
-* Horses homepage and /inquire left alone.
+* Horses /inquire left alone.
 
 ## Test and deployment status
 
