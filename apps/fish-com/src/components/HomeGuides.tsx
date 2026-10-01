@@ -32,16 +32,30 @@ const EQUIPMENT_DECISIONS = [
   { title: 'Test kits', desc: 'API vs. Salifert vs. Hanna — what to test for and how often.', href: '/equipment/aquarium-test-kits', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
 ]
 
-function ToolCard({ href, eyebrow, title, desc, cta }: { href: string; eyebrow: string; title: string; desc: string; cta: string }) {
+const CALCULATORS = [
+  { href: '/tools/aquarium-volume-calculator', eyebrow: 'Calculator', title: 'Aquarium Volume Calculator', desc: 'Enter length, width, and height in any unit — get exact gallons and liters, plus bioload math for the fish you’re planning to keep.', cta: 'Calculate tank volume', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+  { href: '/tools/stocking-calculator', eyebrow: 'Calculator', title: 'Stocking Calculator', desc: 'A slim-inch bioload ceiling from footprint, volume, and filter class — not a species headcount, and not inch-per-gallon.', cta: 'Check your stocking', imageKey: 'fish-com:species-thumb-guppy', imageAlt: 'A guppy fish' },
+  { href: '/tools/water-change-calculator', eyebrow: 'Calculator', title: 'Water-Change Calculator', desc: 'Enter current nitrate level and your target — get the exact percentage and gallon volume to change.', cta: 'Plan your water change', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
+  { href: '/tools/heater-wattage-calculator', eyebrow: 'Calculator', title: 'Heater Wattage Calculator', desc: 'Tank volume, room temperature, and target species temperature — get the correct wattage.', cta: 'Size your heater', imageKey: 'fish-com:species-thumb-clownfish', imageAlt: 'A clownfish' },
+  { href: '/tools', eyebrow: 'Tools hub', title: 'All Calculators', desc: 'CO₂ calculator for planted tanks, cycling time estimator, equipment recommender, and every other aquarist tool.', cta: 'Browse all tools', imageKey: 'fish-com:tools-hero', imageAlt: 'An aquarium water test kit' },
+  { href: '/glossary', eyebrow: 'Reference', title: 'Aquarist Glossary', desc: 'Plain-English definitions for aquarium terminology — from ammonia and GH/KH to reverse osmosis.', cta: 'Browse the glossary', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+]
+
+function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { href: string; eyebrow: string; title: string; desc: string; cta: string; imageKey: string; imageAlt: string }) {
   return (
-    <Link href={href} className="group block bg-white/[0.05] border border-white/[0.10] rounded-xl p-6 no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200">
-      <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{eyebrow}</div>
-      <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">{title}</h3>
-      <p className="text-sm text-white/55 leading-relaxed mb-5">{desc}</p>
-      <span className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light group-hover:gap-2.5 transition-all">
-        {cta}
-        <IconArrowRight />
-      </span>
+    <Link href={href} className="group block overflow-hidden bg-white/[0.05] border border-white/[0.10] rounded-xl no-underline hover:bg-white/[0.10] hover:border-brand-primary transition-all duration-200">
+      <div className={`relative h-28 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+        <StockImage manifestKey={imageKey} alt={imageAlt} aspect="16:9" subtleCredit />
+      </div>
+      <div className="p-6">
+        <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{eyebrow}</div>
+        <h3 className="font-display font-bold text-white text-xl leading-tight mb-2 italic">{title}</h3>
+        <p className="text-sm text-white/55 leading-relaxed mb-5">{desc}</p>
+        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light group-hover:gap-2.5 transition-all">
+          {cta}
+          <IconArrowRight />
+        </span>
+      </div>
     </Link>
   )
 }
@@ -82,15 +96,10 @@ export function HomeGuides() {
         <p className="text-base text-white/60 mb-8 max-w-2xl leading-relaxed">
           Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
-          <ToolCard href="/tools/aquarium-volume-calculator" eyebrow="Calculator" title="Aquarium Volume Calculator" desc="Enter length, width, and height in any unit — get exact gallons and liters, plus bioload math for the fish you’re planning to keep." cta="Calculate tank volume" />
-          <ToolCard href="/tools/stocking-calculator" eyebrow="Calculator" title="Stocking Calculator" desc="A slim-inch bioload ceiling from footprint, volume, and filter class — not a species headcount, and not inch-per-gallon." cta="Check your stocking" />
-          <ToolCard href="/tools/water-change-calculator" eyebrow="Calculator" title="Water-Change Calculator" desc="Enter current nitrate level and your target — get the exact percentage and gallon volume to change." cta="Plan your water change" />
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
-          <ToolCard href="/tools/heater-wattage-calculator" eyebrow="Calculator" title="Heater Wattage Calculator" desc="Tank volume, room temperature, and target species temperature — get the correct wattage." cta="Size your heater" />
-          <ToolCard href="/tools" eyebrow="Tools hub" title="All Calculators" desc="CO₂ calculator for planted tanks, cycling time estimator, equipment recommender, and every other aquarist tool." cta="Browse all tools" />
-          <ToolCard href="/glossary" eyebrow="Reference" title="Aquarist Glossary" desc="Plain-English definitions for aquarium terminology — from ammonia and GH/KH to reverse osmosis." cta="Browse the glossary" />
+          {CALCULATORS.map((tool) => (
+            <ToolCard key={tool.href} {...tool} />
+          ))}
         </div>
       </section>
 
