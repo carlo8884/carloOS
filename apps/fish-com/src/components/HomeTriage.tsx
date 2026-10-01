@@ -83,6 +83,13 @@ const CALCULATORS = [
   { title: 'Cycling estimator', href: '/tools/aquarium-cycling-estimator', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
 ]
 
+const TRUST_CHIPS = [
+  { label: 'Source-grounded fishkeeping guides', href: '/editorial-standards', imageKey: 'fish-com:species-african-cichlid', imageAlt: 'An African cichlid in an aquarium' },
+  { label: 'Interactive calculators, not just articles', href: '/tools', imageKey: 'fish-com:tools-hero', imageAlt: 'An aquarium water test kit' },
+  { label: '37+ species profiles with parameter targets', href: '/species', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
+  { label: 'Equipment compared, not paid placements', href: '/reviews', imageKey: 'fish-com:category-equipment', imageAlt: 'Aquarium filtration and heating equipment' },
+]
+
 export function HomeTriage() {
   return (
     <>
@@ -114,13 +121,17 @@ export function HomeTriage() {
         </div>
       </section>
 
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
-        {['Source-grounded fishkeeping guides', 'Interactive calculators, not just articles', '37+ species profiles with parameter targets', 'Equipment compared, not paid placements'].map((item, i) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
-            {i > 0 && <span className="text-brand-primary/30">·</span>}
-            {item}
-          </span>
-        ))}
+      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+          {TRUST_CHIPS.map((item) => (
+            <Link key={item.href} href={item.href} className="group flex items-center gap-3 rounded-lg border border-brand-border bg-white no-underline hover:border-brand-primary transition-colors">
+              <span className={`relative h-14 w-16 shrink-0 overflow-hidden rounded-l-lg bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+              </span>
+              <span className="pr-3 py-2 text-xs font-semibold text-brand-primary leading-snug group-hover:underline">{item.label}</span>
+            </Link>
+          ))}
+        </div>
       </div>
 
       <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
