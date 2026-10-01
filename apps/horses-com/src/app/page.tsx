@@ -475,10 +475,19 @@ export default function HomePage() {
               <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">More free calculators</div>
                 <div className="flex flex-col gap-2 text-sm font-semibold">
-                  <Link href="/tools/horse-weight-calculator" className="text-brand-primary no-underline hover:underline">Horse weight calculator →</Link>
-                  <Link href="/tools/horse-feed-calculator" className="text-brand-primary no-underline hover:underline">Feed & hay calculator →</Link>
-                  <Link href="/tools/stall-bedding-calculator" className="text-brand-primary no-underline hover:underline">Stall bedding calculator →</Link>
-                  <Link href="/tools" className="text-brand-primary no-underline hover:underline">Browse the tools hub →</Link>
+                  {[
+                    { href: '/tools/horse-weight-calculator', label: 'Horse weight calculator', imageKey: 'horses-com:tool-bcs-calculator', imageAlt: 'A horse standing square for body condition assessment' },
+                    { href: '/tools/horse-feed-calculator', label: 'Feed & hay calculator', imageKey: 'horses-com:hero', imageAlt: 'Horses running through a grassy field' },
+                    { href: '/tools/stall-bedding-calculator', label: 'Stall bedding calculator', imageKey: 'horses-com:category-care', imageAlt: 'A horse receiving routine care' },
+                    { href: '/tools', label: 'Browse the tools hub', imageKey: 'horses-com:category-guides', imageAlt: 'A horse and rider working in the arena' },
+                  ].map((tool) => (
+                    <Link key={tool.href} href={tool.href} className="group flex items-center gap-3 text-brand-primary no-underline hover:underline">
+                      <span className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
+                        <StockImage manifestKey={tool.imageKey} fallbackKey="horses-com:hero" alt={tool.imageAlt} aspect="4:3" variant="inline" subtleCredit />
+                      </span>
+                      <span>{tool.label} →</span>
+                    </Link>
+                  ))}
                 </div>
               </div>
             </aside>
