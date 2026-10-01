@@ -1,15 +1,14 @@
 import Link from 'next/link'
 import { StockImage } from '@carloOS/ui'
-import VolumeCalculator from '../app/tools/aquarium-volume-calculator/Calculator'
 import { IconArrowRight } from './HomeTriage'
 
 const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 const FEATURED_SPECIES = [
-  { name: 'Betta', type: 'Freshwater · Beginner', note: '5 gal min · solitary · tropical', href: '/species/betta-fish' },
-  { name: 'Neon Tetra', type: 'Freshwater · Schooling', note: '10 gal min · schools 6+ · peaceful', href: '/species/neon-tetra' },
-  { name: 'Corydoras', type: 'Freshwater · Bottom dweller', note: '20 gal · schools 6+ · sand substrate', href: '/species/corydoras' },
-  { name: 'Goldfish', type: 'Coldwater · Large', note: '30+ gal · highly bioloaded · long-lived', href: '/species/goldfish' },
+  { name: 'Betta', type: 'Freshwater · Beginner', note: '5 gal min · solitary · tropical', href: '/species/betta-fish', imageKey: 'fish-com:species-thumb-betta', imageAlt: 'A betta fish' },
+  { name: 'Neon Tetra', type: 'Freshwater · Schooling', note: '10 gal min · schools 6+ · peaceful', href: '/species/neon-tetra', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
+  { name: 'Corydoras', type: 'Freshwater · Bottom dweller', note: '20 gal · schools 6+ · sand substrate', href: '/species/corydoras', imageKey: 'fish-com:species-thumb-corydoras', imageAlt: 'Corydoras catfish' },
+  { name: 'Goldfish', type: 'Coldwater · Large', note: '30+ gal · highly bioloaded · long-lived', href: '/species/goldfish', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish' },
 ]
 
 const TANK_PLANNING = [
@@ -93,11 +92,16 @@ export function HomeGuides() {
             <Link
               key={s.name}
               href={s.href}
-              className="group block bg-white border border-brand-border rounded-xl p-5 no-underline hover:border-brand-primary hover:shadow-sm transition-all"
+              className="group block bg-white border border-brand-border rounded-xl overflow-hidden no-underline hover:border-brand-primary hover:shadow-sm transition-all"
             >
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">{s.type}</div>
-              <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic">{s.name}</h3>
-              <p className="text-sm text-brand-text-mid">{s.note}</p>
+              <div className={`relative h-36 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={s.imageKey} alt={s.imageAlt} aspect="16:9" subtleCredit />
+              </div>
+              <div className="p-5">
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1">{s.type}</div>
+                <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic">{s.name}</h3>
+                <p className="text-sm text-brand-text-mid">{s.note}</p>
+              </div>
             </Link>
           ))}
         </div>
