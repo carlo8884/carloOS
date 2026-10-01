@@ -1,5 +1,8 @@
 import Link from 'next/link'
 import type React from 'react'
+import { StockImage } from '@carloOS/ui'
+
+const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 function ProblemIconCloud() {
   return (
@@ -62,13 +65,13 @@ export function IconArrowRight({ className }: { className?: string }) {
   )
 }
 
-const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string }[] = [
-  { icon: <ProblemIconCloud />, title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide' },
-  { icon: <ProblemIconBubbles />, title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide' },
-  { icon: <ProblemIconWarning />, title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome' },
-  { icon: <ProblemIconLeaf />, title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup' },
-  { icon: <ProblemIconCycle />, title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide' },
-  { icon: <ProblemIconFish />, title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator' },
+const PROBLEMS: { icon: React.ReactNode; title: string; desc: string; href: string; imageKey: string; imageAlt: string }[] = [
+  { icon: <ProblemIconCloud />, title: 'Cloudy water', desc: 'White/grey haze, bacterial bloom, or green water — what caused it and what fixes it.', href: '/setup/water-chemistry-guide', imageKey: 'fish-com:water-parameters-hero', imageAlt: 'Aquarium water testing tubes and reagents' },
+  { icon: <ProblemIconBubbles />, title: 'Fish gasping at the surface', desc: 'Low oxygen, high ammonia, gill irritation — triage and emergency actions.', href: '/health/fish-disease-guide', imageKey: 'fish-com:species-thumb-goldfish', imageAlt: 'A goldfish' },
+  { icon: <ProblemIconWarning />, title: 'Ammonia / nitrite spike', desc: 'Cycle crash, overstocking, dead fish, new-tank syndrome — what the readings mean.', href: '/health/new-tank-syndrome', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
+  { icon: <ProblemIconLeaf />, title: 'Algae outbreak', desc: 'Green water, brown diatoms, black beard, hair algae — identify and treat by type.', href: '/setup/planted-tank-setup', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
+  { icon: <ProblemIconCycle />, title: 'New tank cycling', desc: 'Fishless cycle, fish-in cycle, the nitrogen cycle in plain English — how long, what to test.', href: '/setup/aquarium-cycling-guide', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { icon: <ProblemIconFish />, title: 'Stocking & compatibility', desc: 'How many fish in your tank, who fights with whom, temperament + tank-size math.', href: '/tools/stocking-calculator', imageKey: 'fish-com:species-thumb-neon-tetra', imageAlt: 'Neon tetra fish in an aquarium' },
 ]
 
 const CALCULATORS = [
@@ -92,14 +95,19 @@ export function HomeTriage() {
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {PROBLEMS.map((p) => (
-              <Link key={p.href} href={p.href} className="group block rounded-xl p-5 no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200">
-                <div className="mb-3 text-brand-primary-light">{p.icon}</div>
-                <h2 className="font-display font-bold text-white text-base leading-tight mb-2 italic">{p.title}</h2>
-                <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
-                <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-primary-light group-hover:gap-2 transition-all">
-                  Start here
-                  <IconArrowRight className="w-3.5 h-3.5" />
-                </span>
+              <Link key={p.href} href={p.href} className="group block overflow-hidden rounded-xl no-underline bg-white/[0.05] border border-white/[0.08] hover:bg-white/[0.1] hover:border-white/20 transition-all duration-200">
+                <div className={`relative h-28 bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey={p.imageKey} alt={p.imageAlt} aspect="16:9" subtleCredit />
+                </div>
+                <div className="p-5">
+                  <div className="mb-3 text-brand-primary-light">{p.icon}</div>
+                  <h2 className="font-display font-bold text-white text-base leading-tight mb-2 italic">{p.title}</h2>
+                  <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
+                  <span className="inline-flex items-center gap-1 text-xs font-bold text-brand-primary-light group-hover:gap-2 transition-all">
+                    Start here
+                    <IconArrowRight className="w-3.5 h-3.5" />
+                  </span>
+                </div>
               </Link>
             ))}
           </div>
