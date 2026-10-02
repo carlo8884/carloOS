@@ -22,6 +22,7 @@ export function InquireForm({
   defaultListing?: string
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
+  const [errorMsg, setErrorMsg] = useState('')
   const isPro = intent === 'pro-application'
   const onCard = variant === 'card'
 
@@ -35,20 +36,31 @@ export function InquireForm({
     }
     if (data.robot !== 'on') {
       setStatus('error')
+      setErrorMsg('Tick the box to confirm you are not a robot.')
       return
     }
     setStatus('sending')
+    setErrorMsg('')
     try {
       const res = await fetch('/api/inquire', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ ...data, siteName, intent }),
       })
-      if (!res.ok) throw new Error('fail')
+      if (!res.ok) {
+        setStatus('error')
+        setErrorMsg(
+          res.status === 503
+            ? 'This inbox is not connected yet.'
+            : 'Could not send that note. Try again in a little while.',
+        )
+        return
+      }
       setStatus('sent')
       form.reset()
     } catch {
       setStatus('error')
+      setErrorMsg('Could not send that note. Try again in a little while.')
     }
   }
 
@@ -123,7 +135,7 @@ export function InquireForm({
       </button>
       {status === 'error' && (
         <p className={onCard ? 'text-white text-sm text-center' : 'text-sm text-red-700'}>
-          Could not send. Tick the box and try again.
+          {errorMsg || 'Could not send that note. Try again in a little while.'}
         </p>
       )}
     </form>
