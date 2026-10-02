@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, AffiliateDisclosure, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, AffiliateDisclosure CrossPortfolioCard } from '@carloOS/ui'
 import { PET_MEDS, PET_MED_CATEGORIES, MED_VERDICT_META } from '../../../data/pet-meds'
 
 export const metadata: Metadata = buildMetadata({
@@ -121,17 +121,7 @@ export default function CanIGiveMyDogHubPage() {
         <div className="max-w-content-wide">
           <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="inline" />
           <div className="not-prose my-8 rounded-xl border border-brand-border bg-brand-surface p-6">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" />
-            <div className="flex flex-col gap-3 mt-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/pet+supplies?s=can-i-give-hub"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
+                                    <AffiliateDisclosure variant="inline" siteId="vets-co" />
           </div>
         </div>
       </section>

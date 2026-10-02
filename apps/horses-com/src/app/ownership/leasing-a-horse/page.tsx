@@ -257,8 +257,8 @@ export default function LeasingHorsePage() {
                 amazonLabel="Browse horse lease agreement document binders on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=ownership-leasing-a-horse"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse"
+                amazonLabel="Shop equine supplements on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+full+vs+partial+lease+cost+share+worksheet?s=ownership-leasing-a-horse"

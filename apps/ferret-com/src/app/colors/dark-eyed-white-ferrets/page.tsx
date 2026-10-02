@@ -10,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   AffiliateDisclosure,
-  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -246,9 +245,7 @@ export default function DarkEyedWhiteFerretsPage() {
             veterinarian.
           </p>
 
-          <h2 id="kit">Related supplies</h2>
-          <p>Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-
+                    
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           {/* Money path — live amazon-brand search hops
@@ -265,19 +262,7 @@ export default function DarkEyedWhiteFerretsPage() {
               albino-ferrets kitchen kits and child
               finger+toothbrush / carnivore+care hops.
               Do not re-open #1165 / what-to-expect. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+supplies?s=dew-ferrets"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
-          </div>
-        </div>
+                  </div>
       </ArticleLayout>
     </>
   )

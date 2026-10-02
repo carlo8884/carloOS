@@ -10,8 +10,7 @@ import {
   combineSchemas,
   SchemaScript,
   CrossPortfolioCard,
-  AffiliateDisclosure,
-  ShopCtas,
+  AffiliateDisclosure
 } from '@carloOS/ui'
 import { Medications, MedicationsBySlug, type Medication } from '../../../data/medications'
 
@@ -404,19 +403,7 @@ export default function MedicationPage({ params }: PageProps) {
             monitoring / FDA-CVM-Plumb's copy. Unique vs
             the medications hub kitchen. Educational
             only — never a dose, never an Rx product. */}
-        <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
-          <div className="flex flex-col gap-3 mt-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+supplies?s=medications-spoke"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
+        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Cross-portfolio recommendations */}
         <div className="not-prose mt-10">

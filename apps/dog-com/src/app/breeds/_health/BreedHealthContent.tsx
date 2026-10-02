@@ -29,8 +29,7 @@ import {
   CalloutBox,
   CrossPortfolioCard,
   RelatedLinks,
-  SchemaScript,
-  ShopCtas,
+  SchemaScript
   StockImage,
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -396,27 +395,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
           the health-spoke + breeds-hub kitchens.
           Educational only — never a vaccine hop,
           never an Rx hop. */}
-      <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-        <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-          Shop supplies
-        </div>
-        <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
-        <div className="flex flex-col gap-3 mt-3">
-          <ShopCtas
-            amazonHref="/go/amazon-brand/dog+supplies?s=breed-health-spoke"
-            amazonLabel="Shop on Amazon"
-          />
-          <ShopCtas
-            amazonHref="/go/amazon-brand/dog+supplies?s=breed-health-spoke"
-            amazonLabel="Shop on Amazon"
-          />
-          <ShopCtas
-            amazonHref="/go/amazon-brand/dog+supplies?s=breed-health-spoke"
-            amazonLabel="Shop on Amazon"
-          />
-        </div>
-      </div>
+      <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
       {/* ── Section: FAQs ─────────────────────────────────────────────────── */}
       <h2 id="faqs">Frequently Asked Questions</h2>

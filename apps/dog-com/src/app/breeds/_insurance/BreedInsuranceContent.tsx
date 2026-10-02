@@ -29,8 +29,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
-  SchemaScript,
-  ShopCtas,
+  SchemaScript
   buildArticleSchema,
   combineSchemas,
 } from '@carloOS/ui'
@@ -389,14 +388,7 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                 Shop related supplies
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
-              <div className="flex flex-col gap-3 mt-3">
-                <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-insurance-spoke"
-                  amazonLabel="Shop on Amazon"
-                />
-          </div>
+                            <AffiliateDisclosure variant="inline" siteId="dog-com" />
             </div>
 
             {/* FAQ — FAQAccordion emits FAQPage schema */}

@@ -24,7 +24,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure } from '@carloOS/ui'
 import { Breeds } from '../../../data/breeds'
 
 type Unit = 'lb' | 'kg'

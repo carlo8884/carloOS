@@ -30,7 +30,6 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
-  ShopCtas,
   StockImage,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -427,8 +426,7 @@ export default function SymptomsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-
+        
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
@@ -446,19 +444,7 @@ export default function SymptomsHubPage() {
             wound+care+gauze / digital+pet+thermometer
             hops.
             Do not re-open #1165 / what-to-expect. */}
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+supplies?s=symptoms-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
-      </section>
+              </section>
 
       <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="footer" />
     </>

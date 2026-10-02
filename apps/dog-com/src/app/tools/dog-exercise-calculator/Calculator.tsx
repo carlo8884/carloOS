@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure } from '@carloOS/ui'
 
 type Stage = 'puppy' | 'adult' | 'senior'
 type Energy = 'low' | 'moderate' | 'high' | 'veryhigh'

@@ -266,10 +266,6 @@ export default function PrePurchaseExamPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=ownership-pre-purchase-exam"
-                amazonLabel="Shop on Amazon"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/horse+pre+purchase+exam+findings+decision+worksheet?s=ownership-pre-purchase-exam"
                 amazonLabel="Browse horse pre-purchase exam findings decision worksheets on Amazon →"
               />

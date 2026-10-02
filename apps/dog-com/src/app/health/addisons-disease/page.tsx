@@ -161,10 +161,6 @@ export default function AddisonsDiseaseePage() {
                 amazonLabel="Browse dog pill pockets on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/dog+supplies?s=health-addisons-disease"
-                amazonLabel="Shop on Amazon"
-              />
-              <ShopCtas
                 amazonHref="/go/amazon-brand/dog+medical+alert+collar+tag?s=health-addisons-disease"
                 amazonLabel="Browse dog medical-alert collar tags on Amazon →"
               />

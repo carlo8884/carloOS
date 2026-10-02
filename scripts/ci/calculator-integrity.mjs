@@ -361,7 +361,7 @@ const CALCULATORS = [
     id: 'dog · tools hub',
     file: 'apps/dog-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/digital\+pet\+thermometer/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -378,7 +378,7 @@ const CALCULATORS = [
     id: 'fish · tools hub',
     file: 'apps/fish-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/eheim\+aquarium\+heater/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -395,7 +395,7 @@ const CALCULATORS = [
     id: 'vets · tools hub',
     file: 'apps/vets-co/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/digital\+pet\+scale/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -412,7 +412,7 @@ const CALCULATORS = [
     id: 'ferret · tools hub',
     file: 'apps/ferret-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -429,7 +429,7 @@ const CALCULATORS = [
     id: 'dog · reviews hub',
     file: 'apps/dog-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -446,7 +446,7 @@ const CALCULATORS = [
     id: 'dog · nutrition hub',
     file: 'apps/dog-com/src/app/nutrition/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -463,7 +463,7 @@ const CALCULATORS = [
     id: 'dog · training hub',
     file: 'apps/dog-com/src/app/training/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -480,8 +480,6 @@ const CALCULATORS = [
     id: 'vets · insurance hub',
     file: 'apps/vets-co/src/app/insurance/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -497,8 +495,8 @@ const CALCULATORS = [
     id: 'horses · reviews hub',
     file: 'apps/horses-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -515,7 +513,7 @@ const CALCULATORS = [
     id: 'ferret · reviews hub',
     file: 'apps/ferret-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -532,8 +530,8 @@ const CALCULATORS = [
     id: 'horses · supplements hub',
     file: 'apps/horses-com/src/app/supplements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equine\+supplement/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/equine\+supplement/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -550,8 +548,8 @@ const CALCULATORS = [
     id: 'horses · tack hub',
     file: 'apps/horses-com/src/app/tack/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -568,7 +566,7 @@ const CALCULATORS = [
     id: 'fish · reviews hub',
     file: 'apps/fish-com/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/eheim\+aquarium\+heater/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -585,8 +583,6 @@ const CALCULATORS = [
     id: 'vets · reviews hub',
     file: 'apps/vets-co/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -602,7 +598,7 @@ const CALCULATORS = [
     id: 'ferret · diet hub',
     file: 'apps/ferret-com/src/app/diet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -619,7 +615,7 @@ const CALCULATORS = [
     id: 'ferret · care hub',
     file: 'apps/ferret-com/src/app/care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -636,7 +632,7 @@ const CALCULATORS = [
     id: 'ferret · behavior hub',
     file: 'apps/ferret-com/src/app/behavior/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -653,7 +649,7 @@ const CALCULATORS = [
     id: 'vets · health hub',
     file: 'apps/vets-co/src/app/health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+flea\+and\+tick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -670,8 +666,6 @@ const CALCULATORS = [
     id: 'vets · guides hub',
     file: 'apps/vets-co/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -687,7 +681,7 @@ const CALCULATORS = [
     id: 'fish · species hub',
     file: 'apps/fish-com/src/app/species/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -704,8 +698,6 @@ const CALCULATORS = [
     id: 'ferret · health hub',
     file: 'apps/ferret-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -721,7 +713,7 @@ const CALCULATORS = [
     id: 'dog · guides hub',
     file: 'apps/dog-com/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+first\+aid\+kit/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -738,8 +730,8 @@ const CALCULATORS = [
     id: 'horses · ownership hub',
     file: 'apps/horses-com/src/app/ownership/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+first\+aid\+kit/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+first\+aid\+kit/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -756,8 +748,6 @@ const CALCULATORS = [
     id: 'vets · breeds hub',
     file: 'apps/vets-co/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -773,8 +763,6 @@ const CALCULATORS = [
     id: 'dog · breeds hub',
     file: 'apps/dog-com/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -790,8 +778,8 @@ const CALCULATORS = [
     id: 'horses · breeds hub',
     file: 'apps/horses-com/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -808,7 +796,7 @@ const CALCULATORS = [
     id: 'ferret · ownership hub',
     file: 'apps/ferret-com/src/app/ownership/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -825,8 +813,6 @@ const CALCULATORS = [
     id: 'dog · conditions hub',
     file: 'apps/dog-com/src/app/conditions/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -842,8 +828,6 @@ const CALCULATORS = [
     id: 'dog · symptoms hub',
     file: 'apps/dog-com/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -859,8 +843,6 @@ const CALCULATORS = [
     id: 'dog · compare hub',
     file: 'apps/dog-com/src/app/compare/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -876,8 +858,6 @@ const CALCULATORS = [
     id: 'vets · diagnostics hub',
     file: 'apps/vets-co/src/app/diagnostics/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -893,8 +873,6 @@ const CALCULATORS = [
     id: 'vets · symptoms hub',
     file: 'apps/vets-co/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -910,8 +888,6 @@ const CALCULATORS = [
     id: 'vets · medications hub',
     file: 'apps/vets-co/src/app/medications/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -927,8 +903,6 @@ const CALCULATORS = [
     id: 'vets · specialists hub',
     file: 'apps/vets-co/src/app/specialists/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -944,8 +918,8 @@ const CALCULATORS = [
     id: 'horses · disciplines hub',
     file: 'apps/horses-com/src/app/disciplines/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -962,9 +936,6 @@ const CALCULATORS = [
     id: 'horses · bloodstock hub',
     file: 'apps/horses-com/src/app/bloodstock/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -980,8 +951,8 @@ const CALCULATORS = [
     id: 'horses · racing hub',
     file: 'apps/horses-com/src/app/racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -998,8 +969,8 @@ const CALCULATORS = [
     id: 'horses · first-derby',
     file: 'apps/horses-com/src/app/first-derby/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1016,7 +987,7 @@ const CALCULATORS = [
     id: 'dog · puppy-schedule',
     file: 'apps/dog-com/src/app/puppy-schedule/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1033,8 +1004,6 @@ const CALCULATORS = [
     id: 'ferret · colors hub',
     file: 'apps/ferret-com/src/app/colors/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1052,7 +1021,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /source="first-year-schedule-under-hero"/, label: 'under-hero email capture source tag' },
       { re: /resourceLabel="Save the schedule"/, label: 'real first-year-schedule resource magnet, not inbox notes' },
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1069,8 +1038,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-colors-and-patterns',
     file: 'apps/ferret-com/src/app/colors/ferret-colors-and-patterns/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1086,8 +1053,6 @@ const CALCULATORS = [
     id: 'ferret · sable-ferrets',
     file: 'apps/ferret-com/src/app/colors/sable-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1103,8 +1068,6 @@ const CALCULATORS = [
     id: 'ferret · albino-ferrets',
     file: 'apps/ferret-com/src/app/colors/albino-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1120,8 +1083,6 @@ const CALCULATORS = [
     id: 'ferret · dark-eyed-white-ferrets',
     file: 'apps/ferret-com/src/app/colors/dark-eyed-white-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1137,7 +1098,7 @@ const CALCULATORS = [
     id: 'ferret · cinnamon-ferrets',
     file: 'apps/ferret-com/src/app/colors/cinnamon-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1154,8 +1115,6 @@ const CALCULATORS = [
     id: 'ferret · champagne-ferrets',
     file: 'apps/ferret-com/src/app/colors/champagne-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1171,8 +1130,6 @@ const CALCULATORS = [
     id: 'ferret · chocolate-ferrets',
     file: 'apps/ferret-com/src/app/colors/chocolate-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1188,8 +1145,6 @@ const CALCULATORS = [
     id: 'ferret · black-ferrets',
     file: 'apps/ferret-com/src/app/colors/black-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1205,8 +1160,6 @@ const CALCULATORS = [
     id: 'ferret · silver-ferrets',
     file: 'apps/ferret-com/src/app/colors/silver-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1222,8 +1175,6 @@ const CALCULATORS = [
     id: 'ferret · panda-ferrets',
     file: 'apps/ferret-com/src/app/colors/panda-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1239,8 +1190,6 @@ const CALCULATORS = [
     id: 'ferret · blaze-and-roan-patterns',
     file: 'apps/ferret-com/src/app/colors/blaze-and-roan-patterns/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1256,7 +1205,7 @@ const CALCULATORS = [
     id: 'ferret · choosing-a-healthy-ferret',
     file: 'apps/ferret-com/src/app/colors/choosing-a-healthy-ferret/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1273,7 +1222,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-lifespan',
     file: 'apps/ferret-com/src/app/colors/ferret-lifespan/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1290,8 +1239,6 @@ const CALCULATORS = [
     id: 'ferret · male-vs-female-ferrets',
     file: 'apps/ferret-com/src/app/colors/male-vs-female-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1307,7 +1254,7 @@ const CALCULATORS = [
     id: 'ferret · biting-and-nipping',
     file: 'apps/ferret-com/src/app/behavior/biting-and-nipping/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+crinkle\+toy/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1324,7 +1271,7 @@ const CALCULATORS = [
     id: 'ferret · bonding-with-your-ferret',
     file: 'apps/ferret-com/src/app/behavior/bonding-with-your-ferret/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1341,7 +1288,7 @@ const CALCULATORS = [
     id: 'ferret · dead-sleep-explained',
     file: 'apps/ferret-com/src/app/behavior/dead-sleep-explained/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage\+hammock/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1358,7 +1305,7 @@ const CALCULATORS = [
     id: 'ferret · digging-and-burrowing',
     file: 'apps/ferret-com/src/app/behavior/digging-and-burrowing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small-pet-ball-pit-balls\?s=behavior-digging-burrowing/, label: 'existing Chewy ball-pit hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1377,8 +1324,6 @@ const CALCULATORS = [
     id: 'ferret · dooking-and-vocalizations',
     file: 'apps/ferret-com/src/app/behavior/dooking-and-vocalizations/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1394,7 +1339,7 @@ const CALCULATORS = [
     id: 'ferret · litter-box-troubleshooting',
     file: 'apps/ferret-com/src/app/behavior/litter-box-troubleshooting/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1411,7 +1356,7 @@ const CALCULATORS = [
     id: 'ferret · play-aggression',
     file: 'apps/ferret-com/src/app/behavior/play-aggression/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1428,7 +1373,7 @@ const CALCULATORS = [
     id: 'ferret · training-and-bonding',
     file: 'apps/ferret-com/src/app/behavior/training-and-bonding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1445,7 +1390,7 @@ const CALCULATORS = [
     id: 'ferret · best-ferret-kibble',
     file: 'apps/ferret-com/src/app/diet/best-ferret-kibble/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-best-ferret-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /marshall\/premium-ferret-diet\?s=diet-best-ferret-kibble/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
       { re: /carniwhole\/ferret-diet\?s=diet-best-ferret-kibble/, label: 'existing Carniwhole hop kept (not an empty leftover button)' },
@@ -1466,7 +1411,7 @@ const CALCULATORS = [
     id: 'ferret · reading-food-labels',
     file: 'apps/ferret-com/src/app/diet/reading-food-labels/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-reading-food-labels/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1485,7 +1430,7 @@ const CALCULATORS = [
     id: 'ferret · protein-and-fat-requirements',
     file: 'apps/ferret-com/src/app/diet/protein-and-fat-requirements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-protein-and-fat-requirements/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1504,7 +1449,7 @@ const CALCULATORS = [
     id: 'ferret · whole-prey-vs-kibble',
     file: 'apps/ferret-com/src/app/diet/whole-prey-vs-kibble/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-whole-prey-vs-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1524,7 +1469,7 @@ const CALCULATORS = [
     id: 'ferret · kit-vs-adult-feeding',
     file: 'apps/ferret-com/src/app/diet/kit-vs-adult-feeding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/marshall\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/premium-ferret-diet\?s=diet-kit-vs-adult-feeding/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1543,7 +1488,7 @@ const CALCULATORS = [
     id: 'ferret · safe-treats',
     file: 'apps/ferret-com/src/app/diet/safe-treats/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/freeze-dried-treats\?s=diet-safe-treats/, label: 'existing Wysong freeze-dried-treats hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1562,7 +1507,7 @@ const CALCULATORS = [
     id: 'ferret · transitioning-foods',
     file: 'apps/ferret-com/src/app/diet/transitioning-foods/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /chewy-brand\/meat\+based\+food\+topper\+sugar\+free\?s=diet-transitioning-foods/, label: 'existing Chewy meat-topper hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1581,7 +1526,7 @@ const CALCULATORS = [
     id: 'ferret · raw-feeding-guide',
     file: 'apps/ferret-com/src/app/diet/raw-feeding-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-raw-feeding-guide/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1600,7 +1545,7 @@ const CALCULATORS = [
     id: 'ferret · senior-ferret-nutrition',
     file: 'apps/ferret-com/src/app/diet/senior-ferret-nutrition/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-senior-ferret-nutrition/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -1619,7 +1564,7 @@ const CALCULATORS = [
     id: 'ferret · supplements-and-vitamins',
     file: 'apps/ferret-com/src/app/diet/supplements-and-vitamins/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1637,7 +1582,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-supplies-checklist',
     file: 'apps/ferret-com/src/app/ownership/ferret-supplies-checklist/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1655,7 +1600,7 @@ const CALCULATORS = [
     id: 'ferret · bathing-and-grooming',
     file: 'apps/ferret-com/src/app/care/bathing-and-grooming/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/ferret-shampoo-original\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'existing Chewy nail-clipper review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1675,7 +1620,7 @@ const CALCULATORS = [
     id: 'ferret · litter-training',
     file: 'apps/ferret-com/src/app/care/litter-training/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/lock-n-litter-pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/yesterdays\+news\+paper\+pellet\+litter\?s=care-litter-training/, label: 'existing Chewy paper-pellet review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1695,7 +1640,7 @@ const CALCULATORS = [
     id: 'ferret · exercise-and-enrichment',
     file: 'apps/ferret-com/src/app/care/exercise-and-enrichment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/pop-n-play-tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small-pet-ball-pit-balls/, label: 'existing Chewy ball-pit review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -1715,7 +1660,7 @@ const CALCULATORS = [
     id: 'ferret · odor-and-scent-control',
     file: 'apps/ferret-com/src/app/care/odor-and-scent-control/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1733,7 +1678,7 @@ const CALCULATORS = [
     id: 'ferret · diet-basics',
     file: 'apps/ferret-com/src/app/care/diet-basics/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=care-diet-basics/, label: 'existing Wysong Epigen 90 review hop kept (not an empty leftover button)' },
       { re: /marshall\/premium-ferret-diet\?s=care-diet-basics/, label: 'existing Marshall Premium Ferret Diet review hop kept (not an empty leftover button)' },
       { re: /carniwhole\/ferret-diet\?s=care-diet-basics/, label: 'existing Carniwhole Ferret Diet review hop kept (not an empty leftover button)' },
@@ -1754,7 +1699,7 @@ const CALCULATORS = [
     id: 'ferret · first-week-checklist',
     file: 'apps/ferret-com/src/app/ownership/first-week-checklist/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1772,7 +1717,7 @@ const CALCULATORS = [
     id: 'ferret · cost-of-owning-a-ferret',
     file: 'apps/ferret-com/src/app/ownership/cost-of-owning-a-ferret/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1790,8 +1735,6 @@ const CALCULATORS = [
     id: 'ferret · adoption-vs-buying',
     file: 'apps/ferret-com/src/app/ownership/adoption-vs-buying/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1808,7 +1751,7 @@ const CALCULATORS = [
     id: 'ferret · is-a-ferret-right-for-you',
     file: 'apps/ferret-com/src/app/ownership/is-a-ferret-right-for-you/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1826,7 +1769,7 @@ const CALCULATORS = [
     id: 'ferret · ferrets-with-kids',
     file: 'apps/ferret-com/src/app/ownership/ferrets-with-kids/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1844,7 +1787,7 @@ const CALCULATORS = [
     id: 'ferret · ferrets-and-other-pets',
     file: 'apps/ferret-com/src/app/ownership/ferrets-and-other-pets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1862,7 +1805,7 @@ const CALCULATORS = [
     id: 'ferret · traveling-with-a-ferret',
     file: 'apps/ferret-com/src/app/ownership/traveling-with-a-ferret/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1880,8 +1823,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-insurance-basics',
     file: 'apps/ferret-com/src/app/ownership/ferret-insurance-basics/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1898,7 +1839,7 @@ const CALCULATORS = [
     id: 'ferret · annual-checkup-guide',
     file: 'apps/ferret-com/src/app/health/annual-checkup-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1916,7 +1857,7 @@ const CALCULATORS = [
     id: 'ferret · vet-visit-prep',
     file: 'apps/ferret-com/src/app/health/vet-visit-prep/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+carrier/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1950,7 +1891,7 @@ const CALCULATORS = [
     id: 'ferret · gastrointestinal-blockage',
     file: 'apps/ferret-com/src/app/health/gastrointestinal-blockage/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -1968,8 +1909,6 @@ const CALCULATORS = [
     id: 'ferret · canine-distemper',
     file: 'apps/ferret-com/src/app/health/canine-distemper-in-ferrets/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -1986,8 +1925,6 @@ const CALCULATORS = [
     id: 'ferret · ferret-influenza',
     file: 'apps/ferret-com/src/app/health/ferret-influenza/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2004,8 +1941,6 @@ const CALCULATORS = [
     id: 'ferret · heart-disease',
     file: 'apps/ferret-com/src/app/health/heart-disease/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2022,7 +1957,7 @@ const CALCULATORS = [
     id: 'ferret · ear-mites',
     file: 'apps/ferret-com/src/app/health/ear-mites/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2040,8 +1975,6 @@ const CALCULATORS = [
     id: 'ferret · signs-of-pain',
     file: 'apps/ferret-com/src/app/health/signs-of-pain/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2058,8 +1991,6 @@ const CALCULATORS = [
     id: 'ferret · anesthesia-and-surgery-risk',
     file: 'apps/ferret-com/src/app/health/anesthesia-and-surgery-risk/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2076,8 +2007,6 @@ const CALCULATORS = [
     id: 'ferret · lymphoma',
     file: 'apps/ferret-com/src/app/health/lymphoma/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2094,7 +2023,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-diarrhea-causes',
     file: 'apps/ferret-com/src/app/health/ferret-diarrhea-causes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+oral\+electrolyte\+solution/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2112,8 +2041,6 @@ const CALCULATORS = [
     id: 'ferret · spaying-and-neutering',
     file: 'apps/ferret-com/src/app/health/spaying-and-neutering/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2130,7 +2057,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-ulcers',
     file: 'apps/ferret-com/src/app/health/ferret-ulcers/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2148,7 +2075,7 @@ const CALCULATORS = [
     id: 'ferret · can-ferrets-eat',
     file: 'apps/ferret-com/src/app/diet/can-ferrets-eat/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2166,7 +2093,7 @@ const CALCULATORS = [
     id: 'dog · can-dogs-eat',
     file: 'apps/dog-com/src/app/nutrition/can-dogs-eat/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2184,7 +2111,7 @@ const CALCULATORS = [
     id: 'dog · toxic-foods',
     file: 'apps/dog-com/src/app/nutrition/toxic-foods/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2202,7 +2129,7 @@ const CALCULATORS = [
     id: 'dog · safe-human-foods',
     file: 'apps/dog-com/src/app/nutrition/safe-human-foods/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/plain\+boiled\+chicken\+for\+dogs/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2222,8 +2149,8 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the RER formula' },
       { re: /nextHref="\/tools\/dog-calorie-calculator"/, label: 'next step is the calorie calculator, not a shop dump' },
-      { re: /resourceHref="\/go\/amazon-brand\/dog\+supplies\?s=nutrition-how-much"/, label: 'journey hop reuses the existing generic supplies search' },
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /resourceHref="\/go\/amazon-brand\/dry\+dog\+food\?s=nutrition-how-much"/, label: 'journey hop reuses the on-page dry dog food search' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2241,7 +2168,7 @@ const CALCULATORS = [
     id: 'dog · feeding-frequency',
     file: 'apps/dog-com/src/app/nutrition/feeding-frequency/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2259,7 +2186,7 @@ const CALCULATORS = [
     id: 'dog · weight-management',
     file: 'apps/dog-com/src/app/nutrition/weight-management/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2277,7 +2204,7 @@ const CALCULATORS = [
     id: 'dog · dog-treats-guide',
     file: 'apps/dog-com/src/app/nutrition/dog-treats-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/purina\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2295,7 +2222,7 @@ const CALCULATORS = [
     id: 'dog · reading-food-labels',
     file: 'apps/dog-com/src/app/nutrition/reading-food-labels/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2313,7 +2240,7 @@ const CALCULATORS = [
     id: 'dog · wsava-explained',
     file: 'apps/dog-com/src/app/nutrition/wsava-explained/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2331,7 +2258,7 @@ const CALCULATORS = [
     id: 'dog · grain-free-dcm-risk',
     file: 'apps/dog-com/src/app/nutrition/grain-free-dcm-risk/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2349,7 +2276,7 @@ const CALCULATORS = [
     id: 'dog · raw-diet-risks',
     file: 'apps/dog-com/src/app/nutrition/raw-diet-risks/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2367,7 +2294,7 @@ const CALCULATORS = [
     id: 'dog · dog-supplements',
     file: 'apps/dog-com/src/app/nutrition/dog-supplements/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/purina\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2385,7 +2312,7 @@ const CALCULATORS = [
     id: 'dog · elimination-diet',
     file: 'apps/dog-com/src/app/nutrition/elimination-diet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2403,7 +2330,7 @@ const CALCULATORS = [
     id: 'dog · dog-dna-tests',
     file: 'apps/dog-com/src/app/nutrition/dog-dna-tests/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2527,7 +2454,7 @@ const CALCULATORS = [
     id: 'dog · fresh-dog-food-worth-it',
     file: 'apps/dog-com/src/app/reviews/fresh-dog-food-worth-it/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2560,8 +2487,8 @@ const CALCULATORS = [
     id: 'horses · trail-riding',
     file: 'apps/horses-com/src/app/disciplines/trail-riding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2579,8 +2506,8 @@ const CALCULATORS = [
     id: 'horses · dressage',
     file: 'apps/horses-com/src/app/disciplines/dressage/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2598,8 +2525,8 @@ const CALCULATORS = [
     id: 'horses · show-jumping',
     file: 'apps/horses-com/src/app/disciplines/show-jumping/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/close\+contact\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/close\+contact\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2617,8 +2544,8 @@ const CALCULATORS = [
     id: 'horses · eventing',
     file: 'apps/horses-com/src/app/disciplines/eventing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2636,8 +2563,8 @@ const CALCULATORS = [
     id: 'horses · western-pleasure',
     file: 'apps/horses-com/src/app/disciplines/western-pleasure/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2655,8 +2582,8 @@ const CALCULATORS = [
     id: 'horses · endurance-riding',
     file: 'apps/horses-com/src/app/disciplines/endurance-riding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+electrolytes/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+electrolytes/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2674,8 +2601,8 @@ const CALCULATORS = [
     id: 'horses · reining',
     file: 'apps/horses-com/src/app/disciplines/reining/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2693,8 +2620,8 @@ const CALCULATORS = [
     id: 'horses · barrel-racing',
     file: 'apps/horses-com/src/app/disciplines/barrel-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/barrel\+racing\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/barrel\+racing\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2712,8 +2639,8 @@ const CALCULATORS = [
     id: 'horses · combined-driving',
     file: 'apps/horses-com/src/app/disciplines/combined-driving/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2731,8 +2658,8 @@ const CALCULATORS = [
     id: 'horses · cutting',
     file: 'apps/horses-com/src/app/disciplines/cutting/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2750,8 +2677,8 @@ const CALCULATORS = [
     id: 'horses · equitation',
     file: 'apps/horses-com/src/app/disciplines/equitation/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2769,8 +2696,8 @@ const CALCULATORS = [
     id: 'horses · hunter-under-saddle',
     file: 'apps/horses-com/src/app/disciplines/hunter-under-saddle/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2788,9 +2715,6 @@ const CALCULATORS = [
     id: 'horses · ranch-riding',
     file: 'apps/horses-com/src/app/disciplines/ranch-riding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2807,8 +2731,8 @@ const CALCULATORS = [
     id: 'horses · vaulting',
     file: 'apps/horses-com/src/app/disciplines/vaulting/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2826,8 +2750,8 @@ const CALCULATORS = [
     id: 'horses · thoroughbred-flat-racing',
     file: 'apps/horses-com/src/app/racing/thoroughbred-flat-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2845,8 +2769,8 @@ const CALCULATORS = [
     id: 'horses · harness-racing',
     file: 'apps/horses-com/src/app/racing/harness-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2864,8 +2788,8 @@ const CALCULATORS = [
     id: 'horses · quarter-horse-racing',
     file: 'apps/horses-com/src/app/racing/quarter-horse-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+driving\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2883,9 +2807,6 @@ const CALCULATORS = [
     id: 'horses · jump-racing',
     file: 'apps/horses-com/src/app/racing/jump-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2902,8 +2823,8 @@ const CALCULATORS = [
     id: 'horses · racing-for-newcomers',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2921,8 +2842,8 @@ const CALCULATORS = [
     id: 'horses · understanding-race-types-and-classes',
     file: 'apps/horses-com/src/app/racing/understanding-race-types-and-classes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2940,8 +2861,8 @@ const CALCULATORS = [
     id: 'horses · triple-crown',
     file: 'apps/horses-com/src/app/racing/triple-crown/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2959,9 +2880,6 @@ const CALCULATORS = [
     id: 'horses · breeders-cup',
     file: 'apps/horses-com/src/app/racing/breeders-cup/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -2978,8 +2896,8 @@ const CALCULATORS = [
     id: 'horses · off-track-thoroughbred-aftercare',
     file: 'apps/horses-com/src/app/racing/off-track-thoroughbred-aftercare/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -2997,8 +2915,8 @@ const CALCULATORS = [
     id: 'horses · racehorse-training-and-conditioning',
     file: 'apps/horses-com/src/app/racing/racehorse-training-and-conditioning/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3016,8 +2934,8 @@ const CALCULATORS = [
     id: 'horses · the-people-of-racing',
     file: 'apps/horses-com/src/app/racing/the-people-of-racing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3035,8 +2953,8 @@ const CALCULATORS = [
     id: 'horses · racing-roles-jockey',
     file: 'apps/horses-com/src/app/racing/racing-roles/jockey/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3054,8 +2972,8 @@ const CALCULATORS = [
     id: 'horses · racing-roles-trainer',
     file: 'apps/horses-com/src/app/racing/racing-roles/trainer/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+feed/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3073,8 +2991,8 @@ const CALCULATORS = [
     id: 'horses · racing-roles-owner',
     file: 'apps/horses-com/src/app/racing/racing-roles/owner/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3092,9 +3010,6 @@ const CALCULATORS = [
     id: 'horses · racing-roles-official',
     file: 'apps/horses-com/src/app/racing/racing-roles/racing-official/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3111,8 +3026,8 @@ const CALCULATORS = [
     id: 'horses · racing-roles-hub',
     file: 'apps/horses-com/src/app/racing/racing-roles/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3130,9 +3045,6 @@ const CALCULATORS = [
     id: 'horses · race-types-hub',
     file: 'apps/horses-com/src/app/racing/race-types/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3149,9 +3061,6 @@ const CALCULATORS = [
     id: 'horses · race-types-maiden',
     file: 'apps/horses-com/src/app/racing/race-types/maiden-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3168,9 +3077,6 @@ const CALCULATORS = [
     id: 'horses · race-types-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/claiming-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3187,9 +3093,6 @@ const CALCULATORS = [
     id: 'horses · race-types-allowance',
     file: 'apps/horses-com/src/app/racing/race-types/allowance-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3206,9 +3109,6 @@ const CALCULATORS = [
     id: 'horses · race-types-optional-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/optional-claiming-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3225,9 +3125,6 @@ const CALCULATORS = [
     id: 'horses · race-types-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/stakes-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3244,9 +3141,6 @@ const CALCULATORS = [
     id: 'horses · race-types-graded-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/graded-stakes-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3263,8 +3157,8 @@ const CALCULATORS = [
     id: 'horses · race-types-handicap',
     file: 'apps/horses-com/src/app/racing/race-types/handicap-races/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle\+pad/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3282,8 +3176,8 @@ const CALCULATORS = [
     id: 'horses · ottb-second-careers-hub',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3301,8 +3195,8 @@ const CALCULATORS = [
     id: 'horses · ottb-in-eventing',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-eventing/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3320,9 +3214,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-show-jumping',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-show-jumping/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3339,9 +3230,6 @@ const CALCULATORS = [
     id: 'horses · ottb-in-dressage',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-dressage/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3358,8 +3246,8 @@ const CALCULATORS = [
     id: 'horses · ottb-in-trail-and-pleasure',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-trail-and-pleasure/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+reins/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3377,9 +3265,6 @@ const CALCULATORS = [
     id: 'horses · kentucky-derby',
     file: 'apps/horses-com/src/app/racing/triple-crown/kentucky-derby/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3396,8 +3281,8 @@ const CALCULATORS = [
     id: 'horses · preakness-stakes',
     file: 'apps/horses-com/src/app/racing/triple-crown/preakness-stakes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3415,8 +3300,8 @@ const CALCULATORS = [
     id: 'horses · belmont-stakes',
     file: 'apps/horses-com/src/app/racing/triple-crown/belmont-stakes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+blanket/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3434,9 +3319,6 @@ const CALCULATORS = [
     id: 'horses · racing-bloodstock',
     file: 'apps/horses-com/src/app/racing/bloodstock/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3453,8 +3335,8 @@ const CALCULATORS = [
     id: 'horses · how-to-read-a-race-card',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3472,8 +3354,8 @@ const CALCULATORS = [
     id: 'horses · a-day-at-the-races',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3491,8 +3373,8 @@ const CALCULATORS = [
     id: 'horses · understanding-racing-silks',
     file: 'apps/horses-com/src/app/racing/racing-for-newcomers/NewcomerSpokePage.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/daily\+racing\+form/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3510,9 +3392,6 @@ const CALCULATORS = [
     id: 'horses · reading-a-pedigree',
     file: 'apps/horses-com/src/app/bloodstock/reading-a-pedigree/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3529,9 +3408,6 @@ const CALCULATORS = [
     id: 'horses · what-is-bloodstock',
     file: 'apps/horses-com/src/app/bloodstock/what-is-bloodstock/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3548,9 +3424,6 @@ const CALCULATORS = [
     id: 'horses · how-thoroughbred-sales-work',
     file: 'apps/horses-com/src/app/bloodstock/how-thoroughbred-sales-work/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -3567,8 +3440,8 @@ const CALCULATORS = [
     id: 'horses · dressage-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3586,8 +3459,8 @@ const CALCULATORS = [
     id: 'horses · show-jumping-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3605,8 +3478,8 @@ const CALCULATORS = [
     id: 'horses · eventing-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3624,8 +3497,8 @@ const CALCULATORS = [
     id: 'horses · western-pleasure-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3643,8 +3516,8 @@ const CALCULATORS = [
     id: 'horses · reining-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3662,8 +3535,8 @@ const CALCULATORS = [
     id: 'horses · trail-riding-equipment',
     file: 'apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/albion\+dressage\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3681,7 +3554,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-filters-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3698,7 +3571,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-heaters-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3715,7 +3588,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-lighting-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3732,7 +3605,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-substrates-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3749,7 +3622,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-test-kits-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3766,7 +3639,7 @@ const CALCULATORS = [
     id: 'fish · aquarium-co2-systems-equipment',
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
@@ -3783,8 +3656,8 @@ const CALCULATORS = [
     id: 'horses · quarter-horse-breed',
     file: 'apps/horses-com/src/app/breeds/quarter-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3802,8 +3675,8 @@ const CALCULATORS = [
     id: 'horses · thoroughbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3821,8 +3694,8 @@ const CALCULATORS = [
     id: 'horses · arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3840,8 +3713,8 @@ const CALCULATORS = [
     id: 'horses · andalusian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3859,8 +3732,8 @@ const CALCULATORS = [
     id: 'horses · lusitano-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3878,8 +3751,8 @@ const CALCULATORS = [
     id: 'horses · lipizzaner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3897,8 +3770,8 @@ const CALCULATORS = [
     id: 'horses · friesian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3916,8 +3789,8 @@ const CALCULATORS = [
     id: 'horses · mustang-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3935,8 +3808,8 @@ const CALCULATORS = [
     id: 'horses · belgian-draft-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3954,8 +3827,8 @@ const CALCULATORS = [
     id: 'horses · percheron-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3973,8 +3846,8 @@ const CALCULATORS = [
     id: 'horses · shire-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -3992,8 +3865,8 @@ const CALCULATORS = [
     id: 'horses · clydesdale-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4011,8 +3884,8 @@ const CALCULATORS = [
     id: 'horses · suffolk-punch-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4030,8 +3903,8 @@ const CALCULATORS = [
     id: 'horses · norwegian-fjord-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4049,8 +3922,8 @@ const CALCULATORS = [
     id: 'horses · welsh-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4068,8 +3941,8 @@ const CALCULATORS = [
     id: 'horses · shetland-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4087,8 +3960,8 @@ const CALCULATORS = [
     id: 'horses · pony-of-the-americas-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4106,8 +3979,8 @@ const CALCULATORS = [
     id: 'horses · connemara-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4125,8 +3998,8 @@ const CALCULATORS = [
     id: 'horses · haflinger-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4144,8 +4017,8 @@ const CALCULATORS = [
     id: 'horses · morgan-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4163,8 +4036,8 @@ const CALCULATORS = [
     id: 'horses · hackney-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4182,8 +4055,8 @@ const CALCULATORS = [
     id: 'horses · akhal-teke-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4201,8 +4074,8 @@ const CALCULATORS = [
     id: 'horses · marwari-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4220,8 +4093,8 @@ const CALCULATORS = [
     id: 'horses · cleveland-bay-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4239,8 +4112,8 @@ const CALCULATORS = [
     id: 'horses · irish-sport-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4258,8 +4131,8 @@ const CALCULATORS = [
     id: 'horses · anglo-arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4277,8 +4150,8 @@ const CALCULATORS = [
     id: 'horses · knabstrupper-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4296,8 +4169,8 @@ const CALCULATORS = [
     id: 'horses · gypsy-vanner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4315,8 +4188,8 @@ const CALCULATORS = [
     id: 'horses · rocky-mountain-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4334,8 +4207,8 @@ const CALCULATORS = [
     id: 'horses · warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4353,8 +4226,8 @@ const CALCULATORS = [
     id: 'horses · quarab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4372,8 +4245,8 @@ const CALCULATORS = [
     id: 'horses · anglo-arab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4391,8 +4264,8 @@ const CALCULATORS = [
     id: 'horses · pintabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4410,8 +4283,8 @@ const CALCULATORS = [
     id: 'horses · paint-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4429,8 +4302,8 @@ const CALCULATORS = [
     id: 'horses · appaloosa-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4448,8 +4321,8 @@ const CALCULATORS = [
     id: 'horses · american-saddlebred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4467,8 +4340,8 @@ const CALCULATORS = [
     id: 'horses · hanoverian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4486,8 +4359,8 @@ const CALCULATORS = [
     id: 'horses · holsteiner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4505,8 +4378,8 @@ const CALCULATORS = [
     id: 'horses · dutch-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4524,8 +4397,8 @@ const CALCULATORS = [
     id: 'horses · oldenburg-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4543,8 +4416,8 @@ const CALCULATORS = [
     id: 'horses · trakehner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4562,8 +4435,8 @@ const CALCULATORS = [
     id: 'horses · selle-francais-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4581,8 +4454,8 @@ const CALCULATORS = [
     id: 'horses · westphalian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4600,8 +4473,8 @@ const CALCULATORS = [
     id: 'horses · belgian-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4619,8 +4492,8 @@ const CALCULATORS = [
     id: 'horses · tennessee-walking-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4638,8 +4511,8 @@ const CALCULATORS = [
     id: 'horses · missouri-fox-trotter-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4657,8 +4530,8 @@ const CALCULATORS = [
     id: 'horses · paso-fino-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4676,8 +4549,8 @@ const CALCULATORS = [
     id: 'horses · peruvian-paso-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4695,8 +4568,8 @@ const CALCULATORS = [
     id: 'horses · standardbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4714,8 +4587,8 @@ const CALCULATORS = [
     id: 'horses · icelandic-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4733,7 +4606,7 @@ const CALCULATORS = [
     id: 'dog · golden-retriever-breed',
     file: 'apps/dog-com/src/app/breeds/golden-retriever/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+slicker\+brush\+golden\+double\+coat\?s=breed-golden-retriever/, label: 'dog slicker-brush Golden-double-coat search hop (matches on-page dense double coat / 2–3× weekly brushing copy; unique vs dog+slicker+brush? health-hypothyroidism hop and slicker+brush+dog+grooming [slug] hop)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -4752,7 +4625,7 @@ const CALCULATORS = [
     id: 'dog · labrador-retriever-breed',
     file: 'apps/dog-com/src/app/breeds/labrador-retriever/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4770,7 +4643,7 @@ const CALCULATORS = [
     id: 'dog · german-shepherd-breed',
     file: 'apps/dog-com/src/app/breeds/german-shepherd/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4788,7 +4661,7 @@ const CALCULATORS = [
     id: 'dog · french-bulldog-breed',
     file: 'apps/dog-com/src/app/breeds/french-bulldog/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+skin\+fold\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4806,7 +4679,7 @@ const CALCULATORS = [
     id: 'dog · beagle-breed',
     file: 'apps/dog-com/src/app/breeds/beagle/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4824,7 +4697,7 @@ const CALCULATORS = [
     id: 'dog · boxer-breed',
     file: 'apps/dog-com/src/app/breeds/boxer/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4842,7 +4715,7 @@ const CALCULATORS = [
     id: 'dog · bulldog-breed',
     file: 'apps/dog-com/src/app/breeds/bulldog/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/douxo\+s3\+wipes/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4860,7 +4733,7 @@ const CALCULATORS = [
     id: 'dog · dachshund-breed',
     file: 'apps/dog-com/src/app/breeds/dachshund/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4878,7 +4751,7 @@ const CALCULATORS = [
     id: 'dog · poodle-breed',
     file: 'apps/dog-com/src/app/breeds/poodle/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4896,7 +4769,7 @@ const CALCULATORS = [
     id: 'dog · rottweiler-breed',
     file: 'apps/dog-com/src/app/breeds/rottweiler/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4914,7 +4787,7 @@ const CALCULATORS = [
     id: 'dog · siberian-husky-breed',
     file: 'apps/dog-com/src/app/breeds/siberian-husky/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4932,7 +4805,7 @@ const CALCULATORS = [
     id: 'dog · doberman-pinscher-breed',
     file: 'apps/dog-com/src/app/breeds/doberman-pinscher/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4950,7 +4823,7 @@ const CALCULATORS = [
     id: 'dog · australian-shepherd-breed',
     file: 'apps/dog-com/src/app/breeds/australian-shepherd/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4968,7 +4841,7 @@ const CALCULATORS = [
     id: 'dog · border-collie-breed',
     file: 'apps/dog-com/src/app/breeds/border-collie/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -4986,7 +4859,7 @@ const CALCULATORS = [
     id: 'dog · yorkshire-terrier-breed',
     file: 'apps/dog-com/src/app/breeds/yorkshire-terrier/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5004,7 +4877,7 @@ const CALCULATORS = [
     id: 'dog · cavalier-king-charles-breed',
     file: 'apps/dog-com/src/app/breeds/cavalier-king-charles/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5022,7 +4895,7 @@ const CALCULATORS = [
     id: 'dog · shih-tzu-breed',
     file: 'apps/dog-com/src/app/breeds/shih-tzu/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+skin\+fold\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5040,7 +4913,7 @@ const CALCULATORS = [
     id: 'dog · akita-breed',
     file: 'apps/dog-com/src/app/breeds/akita/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5058,7 +4931,7 @@ const CALCULATORS = [
     id: 'dog · bernese-mountain-dog-breed',
     file: 'apps/dog-com/src/app/breeds/bernese-mountain-dog/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5076,7 +4949,7 @@ const CALCULATORS = [
     id: 'dog · bullmastiff-breed',
     file: 'apps/dog-com/src/app/breeds/bullmastiff/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5094,7 +4967,7 @@ const CALCULATORS = [
     id: 'dog · cocker-spaniel-breed',
     file: 'apps/dog-com/src/app/breeds/cocker-spaniel/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+ear\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5112,7 +4985,7 @@ const CALCULATORS = [
     id: 'dog · golden-doodle-breed',
     file: 'apps/dog-com/src/app/breeds/golden-doodle/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5130,7 +5003,7 @@ const CALCULATORS = [
     id: 'dog · great-dane-breed',
     file: 'apps/dog-com/src/app/breeds/great-dane/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5148,7 +5021,7 @@ const CALCULATORS = [
     id: 'dog · great-pyrenees-breed',
     file: 'apps/dog-com/src/app/breeds/great-pyrenees/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5166,7 +5039,7 @@ const CALCULATORS = [
     id: 'dog · irish-setter-breed',
     file: 'apps/dog-com/src/app/breeds/irish-setter/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5184,7 +5057,7 @@ const CALCULATORS = [
     id: 'dog · irish-wolfhound-breed',
     file: 'apps/dog-com/src/app/breeds/irish-wolfhound/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5202,7 +5075,7 @@ const CALCULATORS = [
     id: 'dog · saint-bernard-breed',
     file: 'apps/dog-com/src/app/breeds/saint-bernard/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5220,7 +5093,7 @@ const CALCULATORS = [
     id: 'dog · shiba-inu-breed',
     file: 'apps/dog-com/src/app/breeds/shiba-inu/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5238,7 +5111,7 @@ const CALCULATORS = [
     id: 'dog · vizsla-breed',
     file: 'apps/dog-com/src/app/breeds/vizsla/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5256,7 +5129,7 @@ const CALCULATORS = [
     id: 'dog · weimaraner-breed',
     file: 'apps/dog-com/src/app/breeds/weimaraner/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5274,7 +5147,7 @@ const CALCULATORS = [
     id: 'dog · apartment-dogs-listicle',
     file: 'apps/dog-com/src/app/breeds/best-small-dogs-for-apartments/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+apt\+puzzle\+feeder\?s=breeds-apartment-dogs/, label: 'dog apt-puzzle-feeder search hop (matches on-page indoor mental-exercise / no-yard copy)' },
       { re: /amazon-brand\/dog\+apt\+quiet\+chew\?s=breeds-apartment-dogs/, label: 'dog apt-quiet-chew search hop (matches on-page shared-wall / indoor chew copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -5294,7 +5167,7 @@ const CALCULATORS = [
     id: 'dog · compare-pair template',
     file: 'apps/dog-com/src/app/compare/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5312,7 +5185,7 @@ const CALCULATORS = [
     id: 'dog · breed-feeding template',
     file: 'apps/dog-com/src/app/breeds/[slug]/feeding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5330,7 +5203,7 @@ const CALCULATORS = [
     id: 'dog · breed-profile template',
     file: 'apps/dog-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/no\+pull\+dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
       { re: /amazon-brand\/\$\{enc\(/, label: 'existing size-derived amazon-brand crate hop kept (no new crate ShopCtas)' },
@@ -5349,8 +5222,6 @@ const CALCULATORS = [
     id: 'dog · health-spoke template',
     file: 'apps/dog-com/src/app/health/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5367,7 +5238,7 @@ const CALCULATORS = [
     id: 'dog · food-spoke template',
     file: 'apps/dog-com/src/app/nutrition/can-dogs-eat/[food]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5385,7 +5256,7 @@ const CALCULATORS = [
     id: 'fish · health-spoke template',
     file: 'apps/fish-com/src/app/health/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5403,7 +5274,7 @@ const CALCULATORS = [
     id: 'fish · param-spoke template',
     file: 'apps/fish-com/src/app/water-parameters/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/aquarium\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5421,7 +5292,7 @@ const CALCULATORS = [
     id: 'ferret · food-spoke template',
     file: 'apps/ferret-com/src/app/diet/can-ferrets-eat/[food]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5439,8 +5310,6 @@ const CALCULATORS = [
     id: 'vets · diagnostics-spoke template',
     file: 'apps/vets-co/src/app/diagnostics/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5457,8 +5326,6 @@ const CALCULATORS = [
     id: 'vets · specialists-spoke template',
     file: 'apps/vets-co/src/app/specialists/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5475,8 +5342,6 @@ const CALCULATORS = [
     id: 'vets · medications-spoke template',
     file: 'apps/vets-co/src/app/medications/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5493,8 +5358,6 @@ const CALCULATORS = [
     id: 'vets · can-i-give hub',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5511,8 +5374,6 @@ const CALCULATORS = [
     id: 'vets · can-i-give-spoke template',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/[med]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5529,8 +5390,6 @@ const CALCULATORS = [
     id: 'vets · symptoms-spoke template',
     file: 'apps/vets-co/src/app/symptoms/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5547,7 +5406,7 @@ const CALCULATORS = [
     id: 'ferret · aging-ferret-care',
     file: 'apps/ferret-com/src/app/health/aging-ferret-care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ferret\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -5565,8 +5424,6 @@ const CALCULATORS = [
     id: 'dog · breed-insurance template',
     file: 'apps/dog-com/src/app/breeds/_insurance/BreedInsuranceContent.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
     ],
     mustExclude: [
@@ -5583,8 +5440,6 @@ const CALCULATORS = [
     id: 'dog · breed-insurance hub',
     file: 'apps/dog-com/src/app/breeds/insurance/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
     ],
     mustExclude: [
@@ -5601,7 +5456,7 @@ const CALCULATORS = [
     id: 'dog · breed-match wizard',
     file: 'apps/dog-com/src/app/breeds/match/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above food/breed CTAs and added above hops' },
     ],
@@ -5619,8 +5474,6 @@ const CALCULATORS = [
     id: 'dog · breed-health template',
     file: 'apps/dog-com/src/app/breeds/_health/BreedHealthContent.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -5726,7 +5579,6 @@ const CALCULATORS = [
       { re: /amazon-brand\/live\+aragonite\+sand\?s=tools-stocking-calculator/, label: 'live aragonite sand search hop' },
       { re: /amazon-brand\/api\+saltwater\+master\+test\+kit\?s=tools-stocking-calculator/, label: 'API saltwater master test kit search hop' },
       { re: /amazon-brand\/aquarium\+drip\+acclimation\+kit\?s=tools-stocking-calculator/, label: 'drip acclimation kit search hop' },
-      { re: /amazonHref=\{hop\.amazonHref\}/, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -9362,7 +9214,7 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/health/addisons-disease/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dog\+pill\+pockets\?s=health-addisons-disease/, label: 'dog pill-pockets search hop (matches on-page daily oral-tablet / daily dosing-compliance copy; unique vs am+pm+weekly+pill+organizer / monthly+pill+organizer)' },
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+pill\+pockets/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+medical\+alert\+collar\+tag\?s=health-addisons-disease/, label: 'dog medical-alert collar-tag search hop (matches on-page Addisonian-crisis / emergency-clinic copy; unique vs engraved+dog+collar+id+tags / pet+id+tag+slide+on / pet+emergency+contact+card)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
@@ -9689,7 +9541,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/tick\+removal\+hook\?s=health-tick-borne-diseases/, label: 'tick-removal-hook search hop (matches on-page 24–48 hour Lyme attachment / whole-tick removal copy; unique vs tick+remover / tick+removal+tool)' },
       { re: /amazon-brand\/fine\+tooth\+flea\+comb\?s=health-tick-borne-diseases/, label: 'fine-tooth flea-comb search hop (matches on-page after-walk ears / armpits / groin copy; unique vs fine+tooth+metal+comb)' },
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/tick\+removal\+hook/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -10024,7 +9876,7 @@ const CALCULATORS = [
     id: 'vets · dog-vaccinations-guide hops',
     file: 'apps/vets-co/src/app/health/dog-vaccinations-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/pet\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/72\+hour\+digital\+countdown\+timer\?s=health-dog-vaccinations-guide/, label: '72-hour digital countdown-timer search hop (matches on-page Bordetella 72-hour boarding window copy; unique vs 12+hour+mechanical+kitchen+timer / analog+wall+clock+with+second+hand / digital+handheld+stopwatch)' },
       { re: /amazon-brand\/collapsible\+silicone\+travel\+dog\+bowl\?s=health-dog-vaccinations-guide/, label: 'collapsible silicone travel dog-bowl search hop (matches on-page boarding / daycare / puppy-series shared-water copy; unique vs 24+ounce+stainless+hiking+dog+bottle / insulated+pet+water+bowl / weighted+ceramic+dog+water+bowl / shallow+lipped+dog+saucer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10467,7 +10319,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/nutrition/toxic-plants/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equine\+toxic\+plant\+identification\+field\+guide\?s=nutrition-toxic-plants/, label: 'equine toxic-plant identification field-guide search hop (matches on-page walk-and-identify copy; unique vs soil+test+kit / equine+forage+nsc+hay+test+kit)' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equine\+toxic\+plant\+identification\+field\+guide/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+paddock\+tree\+guard\+fencing\?s=nutrition-toxic-plants/, label: 'horse paddock tree-guard fencing search hop (matches on-page fence-out-ornamentals copy; unique vs horse+electric+tape / horse+fence+mesh / horse+electric+rope / portable+horse+paddock+panels)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10635,7 +10487,7 @@ const CALCULATORS = [
     id: 'horses · can-horses-eat hub hops',
     file: 'apps/horses-com/src/app/nutrition/can-horses-eat/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hay/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/lidded\+horse\+barn\+treat\+tote\?s=can-horses-eat-hub/, label: 'lidded horse barn treat-tote search hop (matches on-page keep-kitchen-leftovers-out-of-the-barn copy; unique vs airtight+labeled+horse+treat+canister / nylon+horse+waist+treat+pouch / rodent+proof+metal+horse+feed+bin)' },
       { re: /amazon-brand\/horse\+barn\+treat\+prep\+shears\?s=can-horses-eat-hub/, label: 'horse barn treat-prep-shears search hop (matches on-page choke-safe-treat-prep hub-scope copy; unique vs nonslip+horse+barn+cutting+board / apple+wedger+slicer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10654,8 +10506,8 @@ const CALCULATORS = [
     id: 'horses · nutrition hub',
     file: 'apps/horses-com/src/app/nutrition/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10672,8 +10524,8 @@ const CALCULATORS = [
     id: 'horses · health hub',
     file: 'apps/horses-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10690,8 +10542,8 @@ const CALCULATORS = [
     id: 'horses · care hub',
     file: 'apps/horses-com/src/app/care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10708,8 +10560,8 @@ const CALCULATORS = [
     id: 'horses · guides hub',
     file: 'apps/horses-com/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10726,8 +10578,8 @@ const CALCULATORS = [
     id: 'horses · tools hub',
     file: 'apps/horses-com/src/app/tools/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10763,8 +10615,8 @@ const CALCULATORS = [
     id: 'horses · boarding-options hops',
     file: 'apps/horses-com/src/app/ownership/boarding-options/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hay/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hay/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/waterproof\+horse\+hay\+bale\+storage\+tarp\?s=ownership-boarding-options/, label: 'waterproof horse hay-bale storage-tarp search hop (matches on-page hay-and-bedding-storage copy; unique vs wall+mounted+horse+hay+rack / nylon+horse+hay+bag / rodent+proof+metal+horse+feed+bin)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10782,7 +10634,7 @@ const CALCULATORS = [
     id: 'horses · buying-your-first-horse hops',
     file: 'apps/horses-com/src/app/ownership/buying-your-first-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/first\+horse\+buyer\+visit\+field\+notebook/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+records\+binder\?s=ownership-buying-your-first-horse/, label: 'horse pre-purchase exam records-binder search hop (matches on-page never-skip-the-vetting copy; unique vs horse+boarding+contract+document+binder / equine+farrier+log+book / weatherproof+storage+clipboard)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10800,7 +10652,7 @@ const CALCULATORS = [
     id: 'horses · choosing-a-vet hops',
     file: 'apps/horses-com/src/app/ownership/choosing-a-vet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+after\+hours\+emergency\+cover\+question\+card/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder\?s=ownership-choosing-a-vet/, label: 'horse veterinary-history / VCPR records-folder search hop (matches on-page keep-good-records / VCPR copy; unique vs horse+pre+purchase+exam+records+binder / horse+boarding+contract+document+binder / equine+farrier+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10836,7 +10688,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/horse-insurance/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder\?s=ownership-horse-insurance/, label: 'horse insurance policy-document-binder search hop (matches on-page agreed-value / exclusions / deductible copy; unique vs horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+mortality\+vs\+major\+medical\+decision\+worksheet\?s=ownership-horse-insurance/, label: 'horse mortality-vs-major-medical decision-worksheet search hop (matches on-page decide-what-to-insure copy; unique vs horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook / horse+veterinary+history+vcpr+records+folder)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10855,7 +10707,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/leasing-a-horse/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder\?s=ownership-leasing-a-horse/, label: 'horse lease agreement document-binder search hop (matches on-page put-it-in-writing / term-fee-use-vet-insurance copy; unique vs horse+boarding+contract+document+binder / horse+insurance+policy+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+full\+vs\+partial\+lease\+cost\+share\+worksheet\?s=ownership-leasing-a-horse/, label: 'horse full-vs-partial lease cost-share-worksheet search hop (matches on-page full-versus-half-lease riding-days / who-pays-board-farrier-vet copy; unique vs horse+mortality+vs+major+medical+decision+worksheet / horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10873,7 +10725,7 @@ const CALCULATORS = [
     id: 'horses · pre-purchase-exam hops',
     file: 'apps/horses-com/src/app/ownership/pre-purchase-exam/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+pre\+purchase\+exam\+findings\+decision\+worksheet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+findings\+decision\+worksheet\?s=ownership-pre-purchase-exam/, label: 'horse pre-purchase exam findings-decision-worksheet search hop (matches on-page using-findings / not-pass-or-fail / radiographs-as-extras copy; unique vs horse+pre+purchase+exam+records+binder / horse+mortality+vs+major+medical+decision+worksheet / horse+full+vs+partial+lease+cost+share+worksheet / horse+ownership+monthly+budget+worksheet)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10891,8 +10743,8 @@ const CALCULATORS = [
     id: 'horses · reading-body-language hops',
     file: 'apps/horses-com/src/app/ownership/reading-body-language/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+pain\+demeanor\+change\+log\+notebook\?s=ownership-reading-body-language/, label: 'horse pain-demeanor change-log-notebook search hop (matches on-page subtle-persistent-changes / signs-of-pain copy; unique vs first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10910,7 +10762,7 @@ const CALCULATORS = [
     id: 'horses · senior-horse-care hops',
     file: 'apps/horses-com/src/app/ownership/senior-horse-care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/senior\+horse\+weight\+and\+joint\+watch\+notebook\?s=ownership-senior-horse-care/, label: 'senior horse weight-and-joint watch-notebook search hop (matches on-page osteoarthritis / weight-change / hands-on-checks copy; unique vs horse+pain+demeanor+change+log+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
       { re: /amazon-brand\/senior\+horse\+quality\+of\+life\+score\+card\?s=ownership-senior-horse-care/, label: 'senior horse quality-of-life score-card search hop (matches on-page honest-assessment / comfort-before-goodbye copy; unique vs horse+body+condition+score+chart / horse+handler+kick+zone+safety+question+card / horse+buyer+vet+briefing+question+card / horse+mortality+vs+major+medical+decision+worksheet)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10930,7 +10782,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/first-horse-roadmap/page.tsx',
     mustInclude: [
       { re: /Jump to the roadmap/, label: 'on-page roadmap is available without email' },
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10947,7 +10799,7 @@ const CALCULATORS = [
     id: 'horses · helmet-guide hops',
     file: 'apps/horses-com/src/app/tack/helmet-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/troxel\+spirit\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/riding\+helmet\+certification\+label\+question\+card\?s=helmet-guide/, label: 'riding helmet certification-label question-card search hop (matches on-page ASTM/SEI / PAS 015 / VG1 / Snell inside-label copy; unique vs horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card / horse+after+hours+emergency+cover+question+card)' },
       { re: /amazon-brand\/riding\+helmet\+impact\+retirement\+log\+notebook\?s=helmet-guide/, label: 'riding helmet impact-retirement-log-notebook search hop (matches on-page replace-after-impact / manufacturer-advised-interval copy; unique vs horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10966,7 +10818,7 @@ const CALCULATORS = [
     id: 'horses · saddle-pads hops',
     file: 'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/saddle\+pad\+sweat\+pattern\+dry\+spot\+question\+card\?s=saddle-pads/, label: 'saddle-pad sweat-pattern dry-spot question-card search hop (matches on-page dry-patch / pressure-point / sweat-pattern copy; unique vs riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card)' },
       { re: /amazon-brand\/saddle\+pad\+clean\+dry\+rotation\+log\+notebook\?s=saddle-pads/, label: 'saddle-pad clean-dry rotation-log-notebook search hop (matches on-page keep-several-in-rotation / clean-dry-pad-always-available copy; unique vs riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10985,7 +10837,7 @@ const CALCULATORS = [
     id: 'horses · boots-and-wraps hops',
     file: 'apps/horses-com/src/app/tack/boots-and-wraps/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+boot\+impact\+not\+tendon\+support\+question\+card\?s=boots-and-wraps/, label: 'horse-boot impact-not-tendon-support question-card search hop (matches on-page boots-protect-against-knocks-and-brushing / they-do-not-structurally-support-tendons copy; unique vs saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card)' },
       { re: /amazon-brand\/horse\+boot\+grit\+rub\+clean\+dry\+log\+notebook\?s=boots-and-wraps/, label: 'horse-boot grit-rub clean-dry-log-notebook search hop (matches on-page grit-under-a-boot-causes-rubs / clean-dry-inside copy; unique vs saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11004,7 +10856,7 @@ const CALCULATORS = [
     id: 'horses · halters-and-lead-ropes hops',
     file: 'apps/horses-com/src/app/tack/halters-and-lead-ropes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+rope\+vs\+flat\+halter\+task\+question\+card\?s=halters-and-lead-ropes/, label: 'horse rope-vs-flat-halter task question-card search hop (matches on-page rope-halters-for-skilled-groundwork / flat-halters-spread-pressure / rope-halters-generally-not-used-for-tying copy; unique vs horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+handler+kick+zone+safety+question+card)' },
       { re: /amazon-brand\/horse\+quick\+release\+wither\+height\+tie\+log\+notebook\?s=halters-and-lead-ropes/, label: 'horse quick-release wither-height tie-log-notebook search hop (matches on-page quick-release-or-panic-snap / baler-twine-breakaway-loop / wither-height-and-short-enough-no-leg-over / fold-slack-never-wrap-the-hand copy; unique vs horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11023,7 +10875,7 @@ const CALCULATORS = [
     id: 'horses · blanket-weights hops',
     file: 'apps/horses-com/src/app/tack/blanket-weights/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+denier\+vs\+fill\+question\+card\?s=blanket-weights/, label: 'horse denier-vs-fill question-card search hop (matches on-page denier-is-durability / fill-is-warmth / high-denier-and-low-fill copy; unique vs horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card)' },
       { re: /amazon-brand\/horse\+over\+rugging\+sweat\+shiver\+watch\+log\+notebook\?s=blanket-weights/, label: 'horse over-rugging sweat-shiver watch-log-notebook search hop (matches on-page match-fill-to-temperature-coat-clip / watch-the-horse-not-just-the-thermometer / neither-sweating-nor-shivering / over-rugging-as-harmful-as-under-rugging copy; unique vs horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11042,7 +10894,7 @@ const CALCULATORS = [
     id: 'horses · martingales-and-breastplates hops',
     file: 'apps/horses-com/src/app/tack/martingales-and-breastplates/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+martingale/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+breastplate\+vs\+breastgirth\+fit\+question\+card\?s=martingales/, label: 'horse breastplate-vs-breastgirth fit question-card search hop (matches on-page breastplate-stops-saddle-sliding-back / breastgirths-are-a-simpler-chest-strap / snug-enough-not-so-tight-shoulders-or-windpipe copy; unique vs horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card)' },
       { re: /amazon-brand\/horse\+martingale\+misuse\+head\+carriage\+log\+notebook\?s=martingales/, label: 'horse martingale-misuse head-carriage log-notebook search hop (matches on-page does-not-teach-head-carriage / too-tight-or-wrongly-fitted-restricts / training-pain-fit-or-hands copy; unique vs horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11061,7 +10913,7 @@ const CALCULATORS = [
     id: 'horses · bridle-types hops',
     file: 'apps/horses-com/src/app/tack/bridle-types/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+bridle\+cheekpiece\+length\+fit\+question\+card\?s=bridle-types/, label: 'horse bridle cheekpiece-length fit question-card search hop (matches on-page cheekpieces-run-down-each-side-to-attach-the-bit / the-bit-sits-at-the-correct-height / the-browband-does-not-pull-the-headpiece-into-the-ears copy; unique vs horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card)' },
       { re: /amazon-brand\/horse\+noseband\+two\+finger\+welfare\+log\+notebook\?s=bridle-types/, label: 'horse noseband two-finger welfare log-notebook search hop (matches on-page a-couple-of-fingers-under-the-band / over-tightened-nosebands-are-a-welfare-concern / the-horse-must-still-chew-and-move-its-jaw copy; unique vs horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11080,7 +10932,7 @@ const CALCULATORS = [
     id: 'horses · girths-and-cinches hops',
     file: 'apps/horses-com/src/app/tack/girths-and-cinches/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+martingale/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+girth\+buckle\+elbow\+clearance\+question\+card\?s=girths-and-cinches/, label: 'horse girth buckle-elbow-clearance question-card search hop (matches on-page the-right-length-keeps-buckles-or-rings-clear-of-the-elbow / positioned-in-the-natural-girth-groove / not-dragged-forward-against-the-elbow copy; unique vs horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card)' },
       { re: /amazon-brand\/horse\+girth\+gall\+skin\+wrinkle\+log\+notebook\?s=girths-and-cinches/, label: 'horse girth-gall skin-wrinkle log-notebook search hop (matches on-page gradual-tightening / smooth-the-skin-under-the-girth / pull-the-forelegs-forward-to-remove-wrinkles copy; unique vs horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11099,7 +10951,7 @@ const CALCULATORS = [
     id: 'horses · stirrups-and-safety hops',
     file: 'apps/horses-com/src/app/tack/stirrups-and-safety/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+stirrup\+width\+inch\+clearance\+question\+card\?s=stirrups-and-safety/, label: 'horse stirrup width-inch-clearance question-card search hop (matches on-page about-an-inch-wider-than-the-widest-part-of-the-boot / enough-clearance-that-the-foot-is-not-pinched / not-so-wide-that-the-whole-foot-can-slide-through copy; unique vs horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card)' },
       { re: /amazon-brand\/horse\+stirrup\+drag\+entrapment\+watch\+log\+notebook\?s=stirrups-and-safety/, label: 'horse stirrup drag-entrapment watch log-notebook search hop (matches on-page correctly-sized-stirrups-that-let-the-foot-release / riding-boots-with-a-heel-and-smooth-sole / ball-of-the-foot-on-the-tread-and-heels-down copy; unique vs horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11119,7 +10971,7 @@ const CALCULATORS = [
     id: 'horses · bits-guide hops',
     file: 'apps/horses-com/src/app/tack/bits-guide/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+bit\+width\+and\+wrinkle\+fit\+question\+card\?s=bits-guide/, label: 'horse bit width-and-wrinkle fit question-card search hop (matches on-page the-right-width-sits-snugly-without-pinching-the-lips-or-sliding-through / a-slight-wrinkle-or-two-at-the-corners-of-the-lips / not-so-high-it-bangs-the-molars-or-so-low-it-hits-the-teeth copy; unique vs horse+stirrup+width+inch+clearance+question+card / horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card)' },
       { re: /amazon-brand\/horse\+bit\+hand\+severity\+watch\+log\+notebook\?s=bits-guide/, label: 'horse bit hand-severity watch log-notebook search hop (matches on-page severity-lives-in-the-hand-not-only-the-bit / a-mild-snaffle-can-be-cruel-in-rough-hands / reaching-for-a-stronger-bit-masks-the-root-cause and educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove copy; unique vs horse+stirrup+drag+entrapment+watch+log+notebook / horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11139,7 +10991,7 @@ const CALCULATORS = [
     id: 'dog · training-off-leash-training hops',
     file: 'apps/dog-com/src/app/training/off-leash-training/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+20\+to\+30\+foot\+long\+line\+question\+card\?s=training-off-leash-training/, label: 'dog 20-to-30-foot long-line question-card search hop (matches on-page a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness / gather-the-line-hand-over-hand-no-jerking / long-line-first-in-every-new-environment copy; unique vs dog+long+line+leash / 6+ft+dog+leash / indoor+dog+house+line / 2+foot+nylon+traffic+lead)' },
       { re: /amazon-brand\/dog\+recall\+cue\+never\+punish\+watch\+log\+notebook\?s=training-off-leash-training/, label: 'dog recall-cue never-punish watch log-notebook search hop (matches on-page never-use-the-recall-cue-for-anything-unpleasant / never-punish-a-dog-that-comes / the-recall-must-always-be-positive copy; unique vs horse+bit+hand+severity+watch+log+notebook / horse+stirrup+drag+entrapment+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11159,7 +11011,7 @@ const CALCULATORS = [
     id: 'dog · training-resource-guarding hops',
     file: 'apps/dog-com/src/app/training/resource-guarding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+food\+bowl\+safety\+question\+card\?s=training-resource-guarding/, label: 'dog food-bowl safety question-card search hop (matches on-page feed-the-dog-in-a-separate-room / pick-up-high-value-chews-when-guests-arrive / baby-gates-to-separate-guarding-contexts copy; unique vs single+stainless+floor+dog+bowl / heavy+ceramic+pet+food+bowl / slow+feeder+dog+bowl / extra+tall+baby+gate / walk+through+pet+gate)' },
       { re: /amazon-brand\/dog\+resource\+guarding\+never\+punish\+growl\+watch\+log\+notebook\?s=training-resource-guarding/, label: 'dog resource-guarding never-punish-growl watch log-notebook search hop (matches on-page punishing-a-growl-removes-the-warning-signal / never-punish-growling / dog-that-stops-growling-before-biting-is-more-dangerous copy; unique vs dog+recall+cue+never+punish+watch+log+notebook / horse+bit+hand+severity+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11179,7 +11031,7 @@ const CALCULATORS = [
     id: 'dog · training-dog-aggression hops',
     file: 'apps/dog-com/src/app/training/dog-aggression/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+aggression\+type\+and\+function\+question\+card\?s=training-dog-aggression/, label: 'dog aggression type-and-function question-card search hop (matches on-page fear-based-aggression-is-the-most-common / redirected-aggression / rule-out-pain-first-in-any-new-onset-aggression copy; unique vs dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+aggression\+never\+alpha\+roll\+watch\+log\+notebook\?s=training-dog-aggression/, label: 'dog aggression never-alpha-roll watch log-notebook search hop (matches on-page dominance-theory-has-been-thoroughly-refuted / alpha-rolls / physical-corrections-consistently-make-aggression-more-dangerous copy; unique vs dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11199,7 +11051,7 @@ const CALCULATORS = [
     id: 'dog · training-red-flags hops',
     file: 'apps/dog-com/src/app/training/training-red-flags/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+force\+free\+trainer\+interview\+question\+card\?s=training-red-flags/, label: 'dog force-free trainer interview question-card search hop (matches on-page what-tools-do-you-use / what-do-you-do-when-a-dog-doesnt-respond / cpdt-ka-cpdt-ksa-cbcc-ka-or-caab copy; unique vs dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+easy\+walk\+ruffwear\+front\+range\+watch\+log\+notebook\?s=training-red-flags/, label: 'dog Easy Walk / Ruffwear Front Range watch log-notebook search hop (matches on-page front-clip-harnesses-petsafe-easy-walk-ruffwear-front-range / reduce-pulling-without-this-mechanism / force-free-methods copy; unique vs dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11219,7 +11071,7 @@ const CALCULATORS = [
     id: 'dog · trainer-credentials hops',
     file: 'apps/dog-com/src/app/training/trainer-credentials/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dog\+supplies/, label: 'generic supplies Amazon search hop' },
+      { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+cpdt\+ka\+hiring\+interview\+question\+card\?s=training-trainer-credentials/, label: 'dog CPDT-KA hiring interview question-card search hop (matches on-page what-credentials-do-you-hold / are-they-current / will-i-be-learning-to-train-my-dog copy; unique vs dog+force+free+trainer+interview+question+card / dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
       { re: /amazon-brand\/dog\+trainer\+session\+observation\+watch\+log\+notebook\?s=training-trainer-credentials/, label: 'dog trainer session-observation watch log-notebook search hop (matches on-page can-i-observe-a-session-with-another-client / training-the-dog-while-excluding-the-owner / veterinary-reference-required copy; unique vs dog+easy+walk+ruffwear+front+range+watch+log+notebook / dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
