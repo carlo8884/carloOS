@@ -83,6 +83,37 @@ const CALCULATORS = [
   { title: 'Cycling estimator', href: '/tools/aquarium-cycling-estimator', imageKey: 'fish-com:cornerstone-cycling', imageAlt: 'A freshwater aquarium test kit being used to check water parameters' },
 ]
 
+const TRUST_CHIPS = [
+  {
+    label: 'Source-grounded guides',
+    note: 'Published aquarist literature, not invented experts.',
+    href: '/editorial-standards',
+    imageKey: 'fish-com:species-african-cichlid',
+    imageAlt: 'An African cichlid in an aquarium',
+  },
+  {
+    label: 'Calculators, not articles only',
+    note: 'Volume, stocking, heater, water change, CO₂, cycling.',
+    href: '/tools',
+    imageKey: 'fish-com:tools-hero',
+    imageAlt: 'An aquarium water test kit',
+  },
+  {
+    label: '37+ species profiles',
+    note: 'Parameter targets before you add the next fish.',
+    href: '/species',
+    imageKey: 'fish-com:species-thumb-neon-tetra',
+    imageAlt: 'Neon tetra fish in an aquarium',
+  },
+  {
+    label: 'Equipment compared',
+    note: 'Scored on the page — not paid placements.',
+    href: '/reviews',
+    imageKey: 'fish-com:category-equipment',
+    imageAlt: 'Aquarium filtration and heating equipment',
+  },
+]
+
 export function HomeTriage() {
   return (
     <>
@@ -114,14 +145,33 @@ export function HomeTriage() {
         </div>
       </section>
 
-      <div className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-3 flex flex-wrap gap-x-6 gap-y-1.5 items-center">
-        {['Source-grounded fishkeeping guides', 'Interactive calculators, not just articles', '37+ species profiles with parameter targets', 'Equipment compared, not paid placements'].map((item, i) => (
-          <span key={item} className="text-xs font-semibold text-brand-primary inline-flex items-center gap-2">
-            {i > 0 && <span className="text-brand-primary/30">·</span>}
-            {item}
-          </span>
-        ))}
-      </div>
+      <section className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-6">
+        <div className="max-w-container mx-auto">
+          <div className="flex items-center gap-2.5 mb-4">
+            <span className="w-6 h-0.5 bg-brand-primary" />
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Why this site</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {TRUST_CHIPS.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+              >
+                <div className={`relative h-24 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
+                </div>
+                <div className="p-3.5">
+                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
+                    {item.label}
+                  </div>
+                  <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
         <div className="mb-4 max-w-3xl">
