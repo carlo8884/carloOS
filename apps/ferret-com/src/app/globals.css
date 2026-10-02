@@ -93,8 +93,13 @@ h1, h2, h3, h4, h5, h6, .font-display {
 /* Homepage hero — keep the albino ferret (lower-left of ferret-com:hero)
    in frame. Copy sits on the native black field (top on small screens,
    bottom-right from md up) so we do not need a full-bleed mid scrim. */
+.ferret-home-hero {
+  overflow: hidden;
+  max-width: 100%;
+}
 .ferret-home-hero img {
   object-position: 12% 70%;
+  max-width: 100%;
 }
 .ferret-home-hero__scrim {
   position: absolute;

@@ -180,7 +180,7 @@ export function ReviewCard({
 
       {/* Footer: price + CTA */}
       {(price || href) && (
-        <div className="flex items-end justify-between pt-5 border-t border-brand-border mt-2 gap-4 flex-wrap">
+        <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
           {price && (
             <div>
               <div className="text-2xs uppercase tracking-wide text-brand-text-light mb-1">
@@ -196,7 +196,7 @@ export function ReviewCard({
           {href && (
             <a
               href={href}
-              className="inline-flex items-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 flex-shrink-0 whitespace-nowrap"
+              className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
               data-program={editorial ? undefined : program}
               data-product={editorial ? undefined : ctaAffiliateProduct}
               rel={editorial ? undefined : 'nofollow sponsored'}

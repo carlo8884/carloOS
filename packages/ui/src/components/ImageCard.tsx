@@ -77,6 +77,8 @@ export function ImageCard({
 
   const wrapperStyle: CSSProperties = {
     position: 'relative',
+    width: '100%',
+    maxWidth: '100%',
     aspectRatio: ASPECT_RATIO[aspect],
     overflow: 'hidden',
     borderRadius: variant === 'full-bleed' ? 0 : 8,
