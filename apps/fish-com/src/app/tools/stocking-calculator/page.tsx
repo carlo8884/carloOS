@@ -160,9 +160,9 @@ export default function StockingCalculatorPage() {
             siteId="fish-com"
             nextHref="/reviews/best-aquarium-filters"
             nextLabel="Match a filter to this ceiling"
-            nextBlurb="The number is a slim-inch bioload ceiling, not a species count. Filtration is one of the inputs, so the filter review is the next page. One search below is the Eheim Jager already used on this calculator — heat the same gallons, then choose livestock from species guides."
-            resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-stocking-calculator"
-            resourceLabel="Browse Eheim Jager heaters on Amazon →"
+            nextBlurb="The number is a slim-inch bioload ceiling, not a species count. Filtration is one of the inputs, so the filter review is the next page. One search below is the AquaClear 70 hang-on-back filter that review leads with."
+            resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-stocking-calculator"
+            resourceLabel="Browse AquaClear 70 filters on Amazon →"
           />
           <div className="mb-8">
             <EmailCapture

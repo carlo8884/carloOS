@@ -83,7 +83,7 @@ const softwareApplicationSchema = {
     'Condition narrative + feeding guidance per BCS range',
     'Underlying-condition flag at BCS 1-2 (refeeding syndrome) and 8-9 (EMS / laminitis / PPID risk)',
     'Explicit "BCS is husbandry, not diagnosis" framing',
-    'Interactive condition-tracking kit with Amazon shop hops',
+    'One next step: forage basics, plus a horse weight-tape search',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }

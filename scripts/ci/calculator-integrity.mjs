@@ -5527,7 +5527,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /<JourneyNext/, label: 'journey next-step after the slim-inch estimate' },
       { re: /nextHref="\/reviews\/best-aquarium-filters"/, label: 'next step is the filter review, one money page' },
-      { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=tools-stocking-calculator"/, label: 'journey hop reuses the existing heater search' },
+      { re: /resourceHref="\/go\/amazon-brand\/aquaclear\+70\+filter\?s=tools-stocking-calculator"/, label: 'journey hop reuses the existing AquaClear HOB search' },
       { re: /source="tools-stocking-calculator-under-hero"/, label: 'under-hero email capture source tag' },
       { re: /resourceLabel="Save the planning rules"/, label: 'real stocking-rules resource magnet, not inbox notes' },
       { re: /StockingWaterProvider/, label: 'calculator keeps shared water-type state' },
@@ -5544,8 +5544,9 @@ const CALCULATORS = [
       { re: /15 cardinal tetras/, label: 'no leftover species-mix table rows' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
       { re: /<StockingShop/, label: 'no stacked water-type shop under the ceiling' },
+      { re: /eheim\+jager\+heater\?s=tools-stocking-calculator/, label: 'one filter hop, not a second heater button' },
     ],
-    why: 'After the slim-inch ceiling, one next step: the filter review plus the existing Eheim Jager search. Water type still drives the calculator. No stacked shop.',
+    why: 'After the slim-inch ceiling, one next step: the filter review plus the existing AquaClear 70 search. Water type still drives the calculator. No stacked shop.',
   },
   {
     id: 'fish · tank-mate-compatibility hops',
@@ -5766,6 +5767,25 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
     ],
     why: 'Money path: under-hero capture with a concrete tape-size offer; every gear CTA is an amazon-brand category search, never a placeholder ASIN.',
+  },
+  {
+    id: 'horses · body-condition-score',
+    file: 'apps/horses-com/src/app/tools/body-condition-score/page.tsx',
+    mustInclude: [
+      { re: /BodyConditionScoreCalculator/, label: 'Henneke calculator and its results stay on the page' },
+      { re: /id="scale"/, label: '1–9 reference scale stays' },
+      { re: /id="methodology"/, label: 'methodology and limits stay' },
+      { re: /Henneke, D\. R\./, label: '1983 citation stays' },
+      { re: /What BCS should my horse be\?/, label: 'FAQ education stays' },
+      { re: /<JourneyNext/, label: 'one next step after the score' },
+      { re: /nextHref="\/nutrition\/forage-basics"/, label: 'next step is forage basics' },
+      { re: /resourceHref="\/go\/amazon-brand\/horse\+weight\+tape\?s=tools-body-condition-score"/, label: 'one weight-tape hop' },
+    ],
+    mustExclude: [
+      { re: /ConditionKit/, label: 'no stacked condition-kit component' },
+      { re: /horse\+curry\+comb|horse\+measuring\+stick|horse\+feed\+scoop\+scale\?s=tools-body-condition-score|slow\+feeder\+hay\+net|horse\+body\+condition\+score\+chart/, label: 'one weight-tape hop, not the six-button kit' },
+    ],
+    why: 'Score, scale, methodology, sources, and FAQ stay. One next step: forage basics plus the existing weight-tape search. The condition kit was a shop stack, not the scoring content.',
   },
   {
     id: 'horses · stall-bedding-calculator',
