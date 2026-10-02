@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
-import { ResultCTA } from '../_components/ResultCTA'
 import { pickHeater, sizeHeater, type Insulation } from './wattage'
 
 type TempUnit = 'F' | 'C'
@@ -123,20 +122,6 @@ export default function HeaterWattageCalculator() {
               Always run on a separate controller (Inkbird, Ranco) for failure protection on tanks over 75 gallons.
             </>
           }
-        />
-      )}
-
-      {result && result.hint === 'heat' && result.watts > 0 && (
-        <ResultCTA
-          heading={`Shop aquarium heaters in your ${result.heaterPick}W range`}
-          blurb={
-            <>
-              On tanks 40 gal and up, two smaller heaters near half this wattage give you redundancy.
-            </>
-          }
-          query={`aquarium heater ${result.heaterPick}w`}
-          cta="Browse heaters on Amazon"
-          source="tools-heater-wattage"
         />
       )}
     </div>

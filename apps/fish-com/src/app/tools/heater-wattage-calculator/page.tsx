@@ -8,8 +8,6 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
-  ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -123,7 +121,7 @@ export default function HeaterWattageCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a heater kit', href: '#shop' },
+              { label: 'Heater reviews', href: '#journey-next' },
               { label: 'Quick reference chart', href: '#chart' },
               { label: 'Why two heaters?', href: '#two-heaters' },
               { label: 'Controllers & safety', href: '#controllers' },
@@ -158,33 +156,12 @@ export default function HeaterWattageCalculatorPage() {
         <Calculator />
         <JourneyNext
           siteId="fish-com"
-          nextHref="/tools/substrate-calculator"
-          nextLabel="Size the substrate bed for the same gallons"
-          nextBlurb="Wattage is sized against water volume. Substrate displaces that volume — convert footprint × depth into bag weight before you buy the heater. The hop below is the same Eheim Jager search already on this page."
+          nextHref="/reviews/best-aquarium-heaters"
+          nextLabel="Read the heater review before you buy"
+          nextBlurb="The wattage is the size. The review compares Eheim Jager, Cobalt, Hydor, and Aqueon on the same tanks. One search below is the Eheim Jager this page already uses as the reference heater."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
           resourceLabel="Shop Eheim Jager heaters on Amazon →"
         />
-
-        {/* Money path — live amazon-brand search hops (Eheim Jager / Aqueon Pro).
-            ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. Queries
-            match this page's prior hops and reviews/best-aquarium-heaters. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
-          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop a heater kit
-          </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
-              amazonLabel="Shop Eheim Jager heaters on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/aqueon+pro+heater?s=tools-heater-wattage-calculator"
-              amazonLabel="Shop Aqueon Pro heaters on Amazon →"
-            />
-          </div>
-        </div>
 
         <h2 id="chart">Quick Reference — Wattage by Tank Size</h2>
         <p>

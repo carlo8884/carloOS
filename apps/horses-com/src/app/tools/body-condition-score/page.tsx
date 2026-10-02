@@ -9,11 +9,9 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
-  ShopCtas,
+  JourneyNext,
 } from '@carloOS/ui'
 import { BodyConditionScoreCalculator } from '../../../components/visual/BodyConditionScoreCalculator'
-import ConditionKit from './ConditionKit'
 
 const URL = 'https://horses.com/tools/body-condition-score'
 
@@ -85,7 +83,7 @@ const softwareApplicationSchema = {
     'Condition narrative + feeding guidance per BCS range',
     'Underlying-condition flag at BCS 1-2 (refeeding syndrome) and 8-9 (EMS / laminitis / PPID risk)',
     'Explicit "BCS is husbandry, not diagnosis" framing',
-    'Interactive condition-tracking kit with Amazon shop hops',
+    'One next step: forage basics, plus a horse weight-tape search',
   ],
   publisher: { '@type': 'Organization', name: 'Horses.com Editorial', url: 'https://horses.com' },
 }
@@ -158,7 +156,7 @@ export default function BodyConditionScorePage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Condition kit', href: '#condition-kit' },
+              { label: 'Next: forage', href: '#journey-next' },
               { label: 'BCS reference scale', href: '#scale' },
               { label: 'Methodology &amp; limits', href: '#methodology' },
               { label: 'Sources', href: '#sources' },
@@ -201,51 +199,14 @@ export default function BodyConditionScorePage() {
         </p>
         <BodyConditionScoreCalculator />
 
-        <h2 id="condition-kit">Condition-tracking kit</h2>
-        <p>
-          Once you have a score, pack the kit that makes the next score repeatable:
-          a weight tape, a curry and body brush so you can palpate through the coat,
-          a measuring stick, a Henneke chart, a feed scoop or scale, and a slow-feeder
-          hay net for the easy keeper drifting above BCS 6. The six-item list below
-          is a husbandry starting point — not a ranked product list and not a
-          substitute for the ration or exam your veterinarian specifies when BCS
-          sits outside 4–7.
-        </p>
-        <ConditionKit />
-
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
-          <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Shop related supplies
-          </div>
-          <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-body-condition-score"
-              amazonLabel="Browse horse weight tapes on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+curry+comb+body+brush?s=tools-body-condition-score"
-              amazonLabel="Browse horse curry combs and body brushes on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-body-condition-score"
-              amazonLabel="Browse horse measuring sticks on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+body+condition+score+chart?s=tools-body-condition-score"
-              amazonLabel="Browse horse BCS charts on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-body-condition-score"
-              amazonLabel="Browse feed scoops and scales on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-body-condition-score"
-              amazonLabel="Browse slow-feeder hay nets on Amazon →"
-            />
-          </div>
-        </div>
+        <JourneyNext
+          siteId="horses-com"
+          nextHref="/nutrition/forage-basics"
+          nextLabel="Feed to the score, starting with forage"
+          nextBlurb="The number is fat cover on the Henneke scale, not a diet. Forage basics is the next page for every score: weigh the hay, then change grain. One search below is a weight tape so the next score has a mass beside it."
+          resourceHref="/go/amazon-brand/horse+weight+tape?s=tools-body-condition-score"
+          resourceLabel="Browse horse weight tapes on Amazon →"
+        />
 
         <h2 id="scale">BCS reference scale (Henneke 1983)</h2>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
@@ -305,7 +266,7 @@ export default function BodyConditionScorePage() {
         />
 
         <p className="mt-8 text-sm">
-          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. Fold the kit into the monthly budget with the <Link href="/tools/horse-cost-calculator">horse cost of ownership calculator</Link>. Match the score to a foal / young / adult / senior label on the <Link href="/tools/horse-age-calculator">horse age calculator</Link> — a planning reference, not a diagnosis. If a horse that was just scored suddenly looks painful or off, the <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a conservative triage aid — not a diagnosis. For a facial pain-watch, the <Link href="/tools/horse-grimace-scale">horse grimace scale</Link> is a planning reference, not a diagnosis. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
+          Pair regular BCS tracking with the <Link href="/tools/horse-weight-calculator">horse weight calculator</Link> and the <Link href="/tools/horse-feed-calculator">feed &amp; hay calculator</Link> to turn condition changes into ration adjustments. Put the monthly spend next to the score with the <Link href="/tools/horse-cost-calculator">horse cost of ownership calculator</Link>. Match the score to a foal / young / adult / senior label on the <Link href="/tools/horse-age-calculator">horse age calculator</Link> — a planning reference, not a diagnosis. If a horse that was just scored suddenly looks painful or off, the <Link href="/tools/is-this-a-horse-emergency">horse emergency sign-list</Link> is a conservative triage aid — not a diagnosis. For a facial pain-watch, the <Link href="/tools/horse-grimace-scale">horse grimace scale</Link> is a planning reference, not a diagnosis. New owners can start with the <Link href="/first-horse-roadmap">First Horse Roadmap</Link>.
         </p>
       </div>
     </ArticleLayout>

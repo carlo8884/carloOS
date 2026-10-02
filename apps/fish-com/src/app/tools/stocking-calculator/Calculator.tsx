@@ -2,7 +2,6 @@
 
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
-import { ResultCTA } from '../_components/ResultCTA'
 import {
   STYLES_FOR_WATER,
   estimateStocking,
@@ -130,20 +129,6 @@ export default function StockingCalculator() {
               (goldfish, oscars) consume this ceiling much faster than slim community fish.
             </>
           }
-        />
-      )}
-
-      {result && result.slimInches > 0 && (
-        <ResultCTA
-          heading="Track your bioload with a water test kit"
-          blurb={
-            <>
-              Stocking math is a ceiling, not a guarantee. As you add fish, a {waterType === 'salt' ? 'saltwater' : 'freshwater'} test kit confirms the tank is keeping up with the load before problems show.
-            </>
-          }
-          query={waterType === 'salt' ? 'saltwater aquarium test kit' : 'freshwater aquarium master test kit'}
-          cta="Browse test kits on Amazon"
-          source="tools-stocking"
         />
       )}
     </div>

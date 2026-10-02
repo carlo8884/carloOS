@@ -7,9 +7,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
-  ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
 import CageSizeCalculator from './Calculator'
@@ -166,82 +164,12 @@ export default function CageSizeCalculatorPage() {
         </div>
         <JourneyNext
           siteId="ferret-com"
-          nextHref="/care/cage-setup"
-          nextLabel="Set the cage up before you buy extras"
-          nextBlurb="The calculator is the L×W×H footprint. Cage setup covers bar spacing, hammocks, and the four-hour out-of-cage rule. Shop the multi-level cage that matches the size — not a hamster habitat."
+          nextHref="/reviews/best-ferret-cage"
+          nextLabel="Compare the cages that meet this footprint"
+          nextBlurb="The calculator is the L×W×H footprint. The cage review ranks Ferret Nation, Prevue, and Kaytee against bar spacing and floor space. One search below is the double-unit Ferret Nation this page already uses as the multi-level example."
           resourceHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator"
-          resourceLabel="Browse multi-level cages on Amazon →"
+          resourceLabel="Browse Ferret Nation double units on Amazon →"
         />
-      </section>
-
-      {/* Money path — live amazon-brand search hops (cage / hammock / pan / bedding).
-          Reuses queries already shipped on ferret reviews + care + cost calculator.
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-      <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
-            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop the habitat
-            </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">
-              The footprint is mostly a multi-level cage, then hammocks, corner pans, and
-              washable fleece — not loose shavings. Same Amazon hops used on the{' '}
-              <Link href="/reviews/best-ferret-cage" className="text-brand-primary underline-offset-2 hover:underline">
-                cage review
-              </Link>
-              , the{' '}
-              <Link href="/care/cage-setup" className="text-brand-primary underline-offset-2 hover:underline">
-                cage setup
-              </Link>{' '}
-              guide, and the{' '}
-              <Link href="/reviews/best-ferret-litter" className="text-brand-primary underline-offset-2 hover:underline">
-                litter review
-              </Link>
-              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
-            </p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cage-size-calculator"
-                amazonLabel="Browse multi-level cages on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cage-size-calculator"
-                amazonLabel="Browse hammocks and sleep sacks on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=tools-cage-size-calculator"
-                amazonLabel="Browse corner litter pans on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cage-size-calculator"
-                amazonLabel="Browse wood pellet litter on Amazon →"
-              />
-          </div>
-          </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
-          <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
-            Size pans with the{' '}
-            <Link href="/tools/litter-planner" className="text-brand-primary underline-offset-2 hover:underline">
-              litter planner
-            </Link>
-            . Fold the cage into year-one cost with the{' '}
-            <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
-              cost calculator
-            </Link>
-            . The narrative minimums live on{' '}
-            <Link href="/care/cage-setup" className="text-brand-primary underline-offset-2 hover:underline">
-              cage setup
-            </Link>{' '}
-            and{' '}
-            <Link href="/care/multi-level-housing" className="text-brand-primary underline-offset-2 hover:underline">
-              multi-level housing
-            </Link>
-            .
-          </p>
-        </div>
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
