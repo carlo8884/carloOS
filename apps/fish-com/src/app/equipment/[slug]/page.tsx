@@ -377,7 +377,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         <h2 id="shop">Where to Shop</h2>
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
-          Browse the {category.categoryName.toLowerCase()} category on Amazon or Chewy. Fish.com
+          Browse the {category.categoryName.toLowerCase()} category on Amazon. Fish.com
           earns an affiliate commission when you purchase through these links — at no extra cost
           to you. Commission does not influence editorial picks.
         </p>
@@ -385,7 +385,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-filters' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-filters stand kit
+              Shop aquarium filters
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -400,7 +400,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-heaters' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-heaters stand kit
+              Shop aquarium heaters
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -415,7 +415,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-lighting' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-lighting stand kit
+              Shop aquarium lighting
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -430,7 +430,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-substrates' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-substrates stand kit
+              Shop aquarium substrates
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -445,7 +445,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-test-kits' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-test-kits stand kit
+              Shop aquarium test kits
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
@@ -460,7 +460,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         {category.slug === 'aquarium-co2-systems' ? (
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the aquarium-CO2-systems stand kit
+              Shop aquarium CO2 systems
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
