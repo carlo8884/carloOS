@@ -193,6 +193,14 @@ const CALCULATORS = [
     why: 'After the wattage answer, one next step: the heater review plus the existing Eheim Jager search. No second brand button. The chart is generated from wattage.ts so the 40 gal default (150W) matches the table.',
   },
   {
+    id: 'fish · heater-wattage-calculator result',
+    file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/Calculator.tsx',
+    mustExclude: [
+      { re: /ResultCTA/, label: 'no second next-step under the wattage; the page journey is the one hop' },
+    ],
+    why: 'The wattage answer stands alone. The page JourneyNext is the one shop hop.',
+  },
+  {
     id: 'fish · substrate-calculator',
     file: 'apps/fish-com/src/app/tools/substrate-calculator/Calculator.tsx',
     mustInclude: [{ re: /G_PER_LB\s*=\s*453\.592/, label: '453.592 g per lb' }],
@@ -5495,6 +5503,7 @@ const CALCULATORS = [
       { re: /Angelfish/, label: 'no angelfish species-count tiles' },
       { re: /Neon Tetra/, label: 'no neon-tetra species-count tiles' },
       { re: /Math\.floor\(slimInches \//, label: 'no slim-inch ÷ length species counts' },
+      { re: /ResultCTA/, label: 'no second next-step under the ceiling; the page journey is the one hop' },
     ],
     why: '2026-09-07 trust pivot: the model is a slim-inch / bioload ceiling (volume ≈ 1.1 in/gal fresh), not species-specific stocking. Species tiles overstated (default 40g → ~6 angels). Lock the estimate label and forbid count tiles.',
   },
