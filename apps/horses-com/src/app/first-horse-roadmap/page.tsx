@@ -405,7 +405,7 @@ export default function FirstHorseRoadmapPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Week-by-week card, ground-manners cues, tack-room plan
           </h2>
-          <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+          <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -469,10 +469,10 @@ export default function FirstHorseRoadmapPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=first-horse-roadmap"
+                amazonHref="/go/amazon-brand/horse+hoof+pick?s=first-horse-roadmap"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas

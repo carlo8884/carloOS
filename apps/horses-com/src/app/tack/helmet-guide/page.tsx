@@ -329,7 +329,7 @@ export default function HelmetGuidePage() {
             
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=helmet-guide"
+                amazonHref="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas

@@ -110,7 +110,7 @@ export default function GoldenRetrieverBreedPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pt-8 pb-0">
         <div className="max-w-content-wide mx-auto">
-          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+          <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         </div>
       </section>
@@ -194,11 +194,11 @@ export default function GoldenRetrieverBreedPage() {
               <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                 Shop the Golden Retriever home kit
               </div>
-              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+              <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-golden-retriever"
+                  amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
                   amazonLabel="Shop on Amazon"
                 />
                 <ShopCtas
@@ -206,7 +206,7 @@ export default function GoldenRetrieverBreedPage() {
                   amazonLabel="Browse slickers for the Golden double coat on Amazon →"
                 />
                 <ShopCtas
-                  amazonHref="/go/amazon-brand/dog+supplies?s=breed-golden-retriever"
+                  amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
                   amazonLabel="Shop on Amazon"
                 />
               </div>

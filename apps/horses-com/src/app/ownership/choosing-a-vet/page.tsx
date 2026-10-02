@@ -224,7 +224,7 @@ export default function ChoosingVetPage() {
             
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=ownership-choosing-a-vet"
+                amazonHref="/go/amazon-brand/horse+hoof+pick?s=ownership-choosing-a-vet"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas

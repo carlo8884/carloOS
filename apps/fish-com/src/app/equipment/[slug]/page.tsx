@@ -192,7 +192,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
 
         {category.slug === 'aquarium-lighting' ? (
           <div className="mb-8">
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
           </div>
         ) : null}
@@ -387,10 +387,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium filters
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-filters"
+                amazonHref="/go/amazon-brand/aquarium+filter?s=equipment-aquarium-filters"
                 amazonLabel="Shop on Amazon"
               />
 </div>
@@ -402,10 +402,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium heaters
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-heaters"
+                amazonHref="/go/amazon-brand/aquarium+heater?s=equipment-aquarium-heaters"
                 amazonLabel="Shop on Amazon"
               />
 </div>
@@ -417,10 +417,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium lighting
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-lighting"
+                amazonHref="/go/amazon-brand/aquarium+led+light?s=equipment-aquarium-lighting"
                 amazonLabel="Shop on Amazon"
               />
 </div>
@@ -432,10 +432,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium substrates
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-substrates"
+                amazonHref="/go/amazon-brand/aquarium+substrate?s=equipment-aquarium-substrates"
                 amazonLabel="Shop on Amazon"
               />
 </div>
@@ -447,10 +447,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium test kits
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-test-kits"
+                amazonHref="/go/amazon-brand/aquarium+test+kit?s=equipment-aquarium-test-kits"
                 amazonLabel="Shop on Amazon"
               />
 </div>
@@ -462,10 +462,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop aquarium CO2 systems
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/aquarium+supplies?s=equipment-aquarium-co2-systems"
+                amazonHref="/go/amazon-brand/aquarium+co2+system?s=equipment-aquarium-co2-systems"
                 amazonLabel="Shop on Amazon"
               />
 </div>

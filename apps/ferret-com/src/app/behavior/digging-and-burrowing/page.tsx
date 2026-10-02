@@ -150,7 +150,7 @@ export default function FerretDiggingBurrowingPage() {
             updatedAt="2026-06-01"
           />
           <div className="mb-8">
-            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-3 text-sm leading-relaxed text-brand-text-mid">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
           </div>
 
@@ -304,18 +304,18 @@ export default function FerretDiggingBurrowingPage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+supplies?s=digging-and-burrowing"
+                amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
                 amazonLabel="Shop on Amazon"
               />
             </div>

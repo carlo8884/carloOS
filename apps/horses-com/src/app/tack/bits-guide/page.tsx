@@ -247,10 +247,10 @@ export default function BitsGuidePage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=bits-guide"
+                amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bits-guide"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas
