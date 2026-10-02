@@ -8,6 +8,7 @@
     ".": "./index.ts",
     "./tailwind": "./tailwind.preset.ts",
     "./robots": "./robots.ts",
+    "./indexing": "./indexing.ts",
     "./affiliate-hop": "./affiliate-hop.ts",
     "./directory": "./directory.ts",
     "./subscribe": "./subscribe.ts",
