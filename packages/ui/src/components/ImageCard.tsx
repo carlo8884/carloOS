@@ -2,8 +2,9 @@
  * CarloOS ImageCard — editorial image-with-caption block.
  *
  * Uses next/image for optimization and lazy loading. Renders a proper
- * <figure> + <figcaption> for accessibility & schema. Built-in skeleton
- * loader appears while the image is loading.
+ * <figure> + <figcaption> for accessibility & schema. The aspect-ratio box
+ * reserves space before the bytes arrive. The image paints at full opacity
+ * so the largest paint is not held behind a fade.
  *
  * Variants:
  *  - inline     : standard article-width figure
@@ -64,7 +65,6 @@ export function ImageCard({
   priority = false,
   subtleCredit = false,
 }: ImageCardProps) {
-  const [loaded, setLoaded] = useState(false)
   const [errored, setErrored] = useState(false)
 
   const containerClass = [
@@ -88,17 +88,6 @@ export function ImageCard({
   return (
     <figure className={containerClass}>
       <div style={wrapperStyle}>
-        {/* Skeleton */}
-        {!loaded && (
-          <div
-            aria-hidden="true"
-            className="absolute inset-0 animate-pulse"
-            style={{
-              background:
-                'linear-gradient(90deg, var(--brand-surface) 0%, var(--brand-border) 50%, var(--brand-surface) 100%)',
-            }}
-          />
-        )}
         <Image
           src={src}
           alt={alt}
@@ -111,12 +100,10 @@ export function ImageCard({
                 : '(min-width: 768px) 720px, 100vw'
           }
           priority={priority}
-          onLoadingComplete={() => setLoaded(true)}
           onError={() => setErrored(true)}
           style={{
             objectFit: 'cover',
-            opacity: loaded && !errored ? 1 : 0,
-            transition: 'opacity 240ms ease-out',
+            opacity: errored ? 0 : 1,
           }}
         />
 
