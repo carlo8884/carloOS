@@ -8,9 +8,7 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
-  ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -74,7 +72,7 @@ const appSchema = {
     'Recommended standard crate size (18–48 inch line) with size class',
     'Inches or centimetres',
     'Puppy guidance: size to adult dimensions and use a divider',
-    'Shoppable crate kit via Amazon category searches (wire crate with divider, crate pad, crate cover, puppy training pads)',
+    'One next step: the crate review, plus a wire-crate-with-divider search',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -164,11 +162,11 @@ export default function DogCrateSizeCalculatorPage() {
         </div>
         <JourneyNext
           siteId="dog-com"
-          nextHref="/training/crate-training"
-          nextLabel="Make the crate a den, not a timeout"
-          nextBlurb="You have the size. The crate-training guide covers introduction, how long is too long, and nights. For a growing puppy, pair the adult crate with the new-puppy checklist so day-one gear is already in the house."
+          nextHref="/reviews/best-dog-crates"
+          nextLabel="Compare wire, airline, and heavy-duty crates"
+          nextBlurb="The calculator is the internal size. The crate review ranks the wire, airline, and heavy-duty styles that meet it. One search below is a wire crate with a divider — the usual match for a growing puppy."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider on Amazon →"
         />
         <div className="max-w-2xl mt-8">
           <EmailCapture
@@ -180,39 +178,6 @@ export default function DogCrateSizeCalculatorPage() {
             resourceText={CRATE_SIZE_TEXT}
             resourceLabel="Save the sizing steps"
           />
-        </div>
-      </section>
-
-      {/* Money path — live amazon-brand search hops (crate kit).
-          ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
-          Category searches only — not a ranked list, not invented inventory. */}
-      <section id="crate-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
-          <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
-            <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Shop a crate kit
-            </div>
-            <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
-                amazonLabel="Browse crates on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+crate+pad?s=tools-dog-crate-size"
-                amazonLabel="Browse crate pads on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+crate+cover?s=tools-dog-crate-size"
-                amazonLabel="Browse crate covers on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-dog-crate-size"
-                amazonLabel="Browse puppy training pads on Amazon →"
-              />
-          </div>
-          </div>
         </div>
       </section>
 

@@ -12,7 +12,6 @@ import {
   JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
-import StockingShop from './StockingShop'
 import { StockingWaterProvider } from './StockingWaterContext'
 import { EXAMPLE_FOOTPRINTS, estimateStocking, formatSlimBand } from './model'
 
@@ -120,7 +119,7 @@ export default function StockingCalculatorPage() {
           <TableOfContents
             items={[
               { label: 'The calculator', href: '#calculator' },
-              { label: 'Shop a stocking kit', href: '#shop' },
+              { label: 'Filter reviews', href: '#journey-next' },
               { label: 'Why not inch-per-gallon?', href: '#inch-rule' },
               { label: 'How the model works', href: '#model' },
               { label: 'Reading the result', href: '#reading' },
@@ -159,11 +158,11 @@ export default function StockingCalculatorPage() {
           <Calculator />
           <JourneyNext
             siteId="fish-com"
-            nextHref="/tools/tank-mate-compatibility-checker"
-            nextLabel="Check tank-mates before you buy livestock"
-            nextBlurb="The calculator is a slim-inch bioload ceiling, not a species headcount. The tank-mate checker is temperament pairing. Shop a heater sized to the same gallons — the shop block below still follows freshwater vs saltwater."
+            nextHref="/reviews/best-aquarium-filters"
+            nextLabel="Match a filter to this ceiling"
+            nextBlurb="The number is a slim-inch bioload ceiling, not a species count. Filtration is one of the inputs, so the filter review is the next page. One search below is the Eheim Jager already used on this calculator — heat the same gallons, then choose livestock from species guides."
             resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-stocking-calculator"
-            resourceLabel="Browse aquarium heaters on Amazon →"
+            resourceLabel="Browse Eheim Jager heaters on Amazon →"
           />
           <div className="mb-8">
             <EmailCapture
@@ -186,9 +185,6 @@ Use the calculator on this page for the estimate.
             />
           </div>
 
-          {/* Money path — hops follow the calculator water-type selection.
-              ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-          <StockingShop />
         </StockingWaterProvider>
 
         <h2 id="inch-rule">Why &quot;1 Inch Per Gallon&quot; Is Wrong</h2>
