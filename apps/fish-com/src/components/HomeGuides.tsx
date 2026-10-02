@@ -217,7 +217,18 @@ export function HomeGuides() {
             </div>
             <h2 className="font-display font-bold text-white tracking-tight text-3xl italic mb-4">Compared, not ranked by ad spend.</h2>
             <p className="text-base text-white/70 leading-relaxed mb-6 max-w-xl">Heaters, filters, lighting, canister filters, water-test kits, nano tanks, and planted-tank fertilizers — each guide weighs accuracy, durability, and price.</p>
-            <Link href="/reviews" className="inline-flex items-center gap-2 bg-brand-primary text-white font-bold text-sm px-6 py-3 rounded-lg no-underline hover:bg-brand-primary-light">Browse all product guides <IconArrowRight /></Link>
+            <Link
+              href="/reviews"
+              className="group inline-flex items-center gap-3 overflow-hidden rounded-xl border border-white/15 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
+              </div>
+              <div className="pr-4 py-2">
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All product guides</div>
+                <p className="text-xs text-white/55 mt-0.5">Filters, heaters, lighting, test kits.</p>
+              </div>
+            </Link>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6">
               {PRODUCT_CHIPS.map((item) => (
                 <Link
