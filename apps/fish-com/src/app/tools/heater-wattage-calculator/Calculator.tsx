@@ -3,22 +3,16 @@
 import { useMemo, useState } from 'react'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
+import { pickHeater, sizeHeater, type Insulation } from './wattage'
 
 type TempUnit = 'F' | 'C'
-
-const HEATER_STEPS = [25, 50, 75, 100, 150, 200, 250, 300, 400, 500, 800]
-
-function pickHeater(watts: number): number {
-  for (const w of HEATER_STEPS) if (w >= watts) return w
-  return HEATER_STEPS[HEATER_STEPS.length - 1]
-}
 
 export default function HeaterWattageCalculator() {
   const [gallons, setGallons] = useState('40')
   const [tempUnit, setTempUnit] = useState<TempUnit>('F')
   const [roomTemp, setRoomTemp] = useState('68')
   const [targetTemp, setTargetTemp] = useState('78')
-  const [insulation, setInsulation] = useState<'open' | 'lid' | 'sealed'>('lid')
+  const [insulation, setInsulation] = useState<Insulation>('lid')
 
   const result = useMemo(() => {
     const gal = parseFloat(gallons) || 0
@@ -31,18 +25,15 @@ export default function HeaterWattageCalculator() {
     if (tempUnit === 'C') {
       deltaF = (target - room) * 9 / 5
     }
-    if (deltaF <= 0) return { watts: 0, recommended: 0, heaterPick: 0, deltaF, hint: 'cool' as const }
+    if (deltaF <= 0) return { watts: 0, recommended: 0, heaterPick: 0, eachHeater: 0, deltaF, hint: 'cool' as const }
 
-    // Rule of thumb: 3 watts per gallon for a 10°F lift, scaled linearly.
-    // Adjust for insulation (open top loses heat faster).
-    const insulationFactor = insulation === 'open' ? 1.2 : insulation === 'sealed' ? 0.85 : 1.0
-    const watts = gal * 3 * (deltaF / 10) * insulationFactor
-
-    // Recommend 25% headroom for cold snaps and heater aging
-    const recommended = watts * 1.25
-    const heaterPick = pickHeater(recommended)
-
-    return { watts, recommended, heaterPick, deltaF, hint: 'heat' as const }
+    const sized = sizeHeater(gal, deltaF, insulation)
+    return {
+      ...sized,
+      eachHeater: pickHeater(sized.heaterPick / 2),
+      deltaF,
+      hint: 'heat' as const,
+    }
   }, [gallons, roomTemp, targetTemp, tempUnit, insulation])
 
   return (
@@ -68,7 +59,7 @@ export default function HeaterWattageCalculator() {
           <FieldSelect
             label="Room Insulation"
             value={insulation}
-            onChange={(v) => setInsulation(v as 'open' | 'lid' | 'sealed')}
+            onChange={(v) => setInsulation(v as Insulation)}
             options={[
               { value: 'open', label: 'Open-top tank (high heat loss)' },
               { value: 'lid', label: 'Glass lid / hood (standard)' },
@@ -119,8 +110,17 @@ export default function HeaterWattageCalculator() {
           note={
             <>
               <strong className="text-white/90">For tanks 40 gal and larger, run two smaller heaters instead of one large one.</strong>{' '}
-              Two 100W heaters are safer than one 200W: if one fails stuck-on, the other can&apos;t cook the tank; if one fails off, the
-              other maintains baseline temperature. Always run on a separate controller (Inkbird, Ranco) for failure protection on tanks over 75 gallons.
+              {(parseFloat(gallons) || 0) >= 40 ? (
+                <>
+                  Two {result.eachHeater}W heaters are safer than one {result.heaterPick}W: if one fails stuck-on, the other can&apos;t cook the tank; if one fails off, the
+                  other maintains baseline temperature.{' '}
+                </>
+              ) : (
+                <>
+                  Below 40 gallons a single heater at this wattage is enough. From 40 gallons up, split that wattage across two heaters so one failure cannot cook or chill the tank.{' '}
+                </>
+              )}
+              Always run on a separate controller (Inkbird, Ranco) for failure protection on tanks over 75 gallons.
             </>
           }
         />
