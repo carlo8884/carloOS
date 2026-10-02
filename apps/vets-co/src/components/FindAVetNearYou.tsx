@@ -1,35 +1,16 @@
 /**
- * FindAVetNearYou — geolocation-prompt entry component.
+ * FindAVetNearYou — directory entry.
  *
- * Server component that performs IP-based state detection (stubbed for now —
- * always returns "NY") and renders a deep-link into /vets/[state]. When IP
- * geo is later wired, the stub function is replaced by a real lookup. We
- * deliberately avoid JS-based geolocation prompts (browser permission UI is
- * intrusive and conversion-hostile for a directory entry component).
- *
- * Trust-bar (QC §1):
- *  - The component does not claim location accuracy ("near you" is shown as
- *    an aspirational label, not a measurement).
- *  - If detection fails or returns an unknown state, we fall back to a
- *    generic "Browse by state" CTA — never invent a plausible-looking match.
+ * IP geolocation is not connected. Until it is, this never names a state
+ * from a guessed IP. The visitor picks a state. Directory listing import
+ * stays frozen.
  */
 
 import Link from 'next/link'
 import { STATES } from '../data/vet-directory'
 
-/**
- * Stub IP-to-state resolver. Carlo will wire a real IP-geo service (e.g.
- * Vercel's request geo headers, ipapi.co, or MaxMind) in a follow-up PR.
- * For now this returns "NY" so the directory entry component renders a
- * usable deep-link on every page load.
- */
 async function detectStateFromIp(): Promise<string | null> {
-  // TODO: replace with real lookup. Possible options:
-  //   - Vercel: read `request.geo?.region` in middleware and pass it down
-  //   - ipapi.co: GET https://ipapi.co/${ip}/region_code/
-  //   - MaxMind GeoIP2: self-hosted DB lookup
-  // For now, return the placeholder so the UI shape can be reviewed.
-  return 'NY'
+  return null
 }
 
 interface FindAVetNearYouProps {
