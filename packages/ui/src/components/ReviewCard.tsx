@@ -237,7 +237,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
   return (
     <div className={embedded
       ? 'bg-brand-surface border border-brand-border rounded-lg py-5 px-4 mb-6'
-      : 'bg-brand-surface border-b border-brand-border px-container sm:px-container-sm py-5'}>
+      : 'bg-brand-surface border-b border-brand-border px-container-sm sm:px-container py-5'}>
       <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
         {title}
       </div>

@@ -57,7 +57,7 @@ function FooterVariant({ recs }: { recs: CrossPortfolioRecommendation[] }) {
       aria-label="Related sister sites"
       className="border-t border-brand-border bg-brand-surface"
     >
-      <div className="px-container sm:px-container-sm py-12">
+      <div className="px-container-sm sm:px-container py-12">
         <div className="mb-6">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
             {EYEBROW}

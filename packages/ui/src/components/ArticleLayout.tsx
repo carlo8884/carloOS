@@ -107,7 +107,7 @@ export function ArticleLayout({
           aria-hidden="true"
         />
 
-        <div className="relative z-10 px-container sm:px-container-sm pb-0">
+        <div className="relative z-10 px-container-sm sm:px-container pb-0">
           {/* Category */}
           <div className="flex items-center gap-3 mb-5">
             {hero.category && (
@@ -171,7 +171,7 @@ export function ArticleLayout({
       )}
 
       {/* Content area */}
-      <div className="px-container sm:px-container-sm py-14">
+      <div className="px-container-sm sm:px-container py-14">
         <div className={[
           'grid gap-14',
           sidebar ? 'lg:grid-cols-[1fr_300px] max-w-6xl mx-auto' : 'max-w-content mx-auto',
@@ -193,7 +193,7 @@ export function ArticleLayout({
 
       {/* Related links */}
       {relatedLinks && relatedLinks.length > 0 && (
-        <div className="px-container sm:px-container-sm py-12 border-t border-brand-border bg-brand-surface">
+        <div className="px-container-sm sm:px-container py-12 border-t border-brand-border bg-brand-surface">
           <h2 className="font-display text-2xl font-bold text-brand-dark mb-6">Related Guides</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {relatedLinks.map((link) => (
