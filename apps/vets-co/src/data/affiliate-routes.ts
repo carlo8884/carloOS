@@ -26,19 +26,19 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   trupanion: {
     // Network: Impact. Carlo-approved per policy §5 (vets-co insurance only).
     name: 'Trupanion (Pet Insurance)',
-    template: 'https://trupanion.com/?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://www.trupanion.com/enrollments/get-a-quote?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   'healthy-paws': {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Healthy Paws (Pet Insurance)',
-    template: 'https://healthypawspetinsurance.com/?affid=PLACEHOLDER&pid={sku}',
+    template: 'https://www.healthypawspetinsurance.com/quote?affid=PLACEHOLDER&pid={sku}',
     requiresSku: false,
   },
   embrace: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Embrace (Pet Insurance)',
-    template: 'https://embracepetinsurance.com/?source=PLACEHOLDER&campaign={sku}',
+    template: 'https://quote.embracepetinsurance.com/?source=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   lemonade: {
@@ -50,7 +50,7 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   pumpkin: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Pumpkin Pet Insurance',
-    template: 'https://pumpkin.care/?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://get.pumpkin.care/quote?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   manypets: {
@@ -62,31 +62,31 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   fetch: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Fetch by The Dodo (Pet Insurance)',
-    template: 'https://fetchpet.com/?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://www.fetchpet.com/quote?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   spot: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Spot Pet Insurance',
-    template: 'https://spotpetins.com/?refid=PLACEHOLDER&offer={sku}',
+    template: 'https://quote.spotpet.com/?refid=PLACEHOLDER&offer={sku}',
     requiresSku: false,
   },
   'pets-best': {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Pets Best (Pet Insurance)',
-    template: 'https://petsbest.com/?affid=PLACEHOLDER&campaign={sku}',
+    template: 'https://www.petsbest.com/enroll?affid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   aspca: {
     // Network: Direct (ASPCA / Crum & Forster). Carlo-approved per policy §5.
     name: 'ASPCA Pet Insurance',
-    template: 'https://aspcapetinsurance.com/?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://www.aspcapetinsurance.com/quote/?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   figo: {
     // Network: Impact. Carlo-approved per policy §5.
     name: 'Figo Pet Insurance',
-    template: 'https://figopetinsurance.com/?refid=PLACEHOLDER&campaign={sku}',
+    template: 'https://figopetinsurance.com/get-started?refid=PLACEHOLDER&campaign={sku}',
     requiresSku: false,
   },
   // ─── Wiring-doc carriers added 2026-05-31 (referenced in env-var swap
