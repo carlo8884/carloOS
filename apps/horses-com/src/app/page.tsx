@@ -128,11 +128,35 @@ const FEATURED_ARTICLES = [
   { href: '/reviews/best-winter-horse-blankets', eyebrow: 'Gear Review', title: 'Best Winter Horse Blankets', teaser: 'Denier ratings, fill weight, gusset design, and shoulder-fit by build. Eight blankets compared on the same dimensions.', readTime: '11 min', imageKey: 'horses-com:category-reviews', imageAlt: 'Horse gear compared side by side' },
 ]
 
-const TRUST_CLAIMS = [
-  'Research-based, citation-anchored content',
-  'Cross-discipline coverage',
-  'No paid placements',
-  'Veterinarian-respectful',
+const TRUST_CHIPS = [
+  {
+    label: 'Research-based, citation-anchored',
+    note: 'Published equine literature, not invented experts.',
+    href: '/editorial-standards',
+    imageKey: 'horses-com:hero',
+    imageAlt: 'Horses running through a grassy field',
+  },
+  {
+    label: 'Cross-discipline coverage',
+    note: 'English, Western, trail, racing, eventing, and driving.',
+    href: '/disciplines',
+    imageKey: 'horses-com:category-disciplines',
+    imageAlt: 'Horses competing on a track',
+  },
+  {
+    label: 'No paid placements',
+    note: 'Gear scored on the page — not ranked by ad spend.',
+    href: '/disclosure',
+    imageKey: 'horses-com:category-reviews',
+    imageAlt: 'Horse gear compared side by side',
+  },
+  {
+    label: 'Veterinarian-respectful',
+    note: 'When-to-call thresholds. Not a diagnosis, not a dose.',
+    href: '/health',
+    imageKey: 'horses-com:category-care',
+    imageAlt: 'A horse receiving routine care',
+  },
 ]
 
 const FILL_IMAGE =
@@ -148,17 +172,27 @@ export default function HomePage() {
     <>
       <SchemaScript schema={homeSchema} />
       <HomeHero />
-      <div className="px-container-sm sm:px-container py-4" style={{ background: 'var(--brand-surface)', borderTop: '1px solid var(--brand-border)', borderBottom: '1px solid var(--brand-border)' }}>
-        <div className="mx-auto max-w-container-wide flex flex-wrap items-center justify-center sm:justify-between gap-y-2">
-          {TRUST_CLAIMS.map((item, i, arr) => (
-            <span key={item} className="flex items-center text-2xs font-semibold uppercase tracking-eyebrow whitespace-nowrap" style={{ color: 'var(--brand-text-mid)' }}>
-              <span aria-hidden="true" className="mr-2" style={{ color: 'var(--brand-accent)' }}>✓</span>
-              {item}
-              {i < arr.length - 1 && <span aria-hidden="true" className="hidden sm:inline mx-5 h-3 w-px" style={{ background: 'var(--brand-border)' }} />}
-            </span>
-          ))}
+      <section className="px-container-sm sm:px-container py-6" style={{ background: 'var(--brand-surface)', borderTop: '1px solid var(--brand-border)', borderBottom: '1px solid var(--brand-border)' }}>
+        <div className="mx-auto max-w-container-wide">
+          <div className="flex items-center gap-3 mb-4">
+            <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
+            <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
+            {TRUST_CHIPS.map((item) => (
+              <Link key={item.href} href={item.href} className="group block overflow-hidden rounded-md no-underline transition-all duration-300 ease-carloOS hover:-translate-y-0.5" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
+                <div className={`relative h-24 ${FILL_IMAGE}`}>
+                  <StockImage manifestKey={item.imageKey} fallbackKey="horses-com:hero" alt={item.imageAlt} aspect="16:9" variant="inline" subtleCredit />
+                </div>
+                <div className="p-3.5">
+                  <div className="font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>{item.label}</div>
+                  <p className="text-xs leading-relaxed mt-1" style={{ color: 'var(--brand-text-mid)' }}>{item.note}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
       <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-surface)' }}>
         <div className="mx-auto max-w-container-wide">
           <div className="flex items-baseline justify-between gap-6 flex-wrap mb-10">
