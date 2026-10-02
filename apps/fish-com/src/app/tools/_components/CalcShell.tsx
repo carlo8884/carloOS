@@ -15,9 +15,9 @@ interface FieldNumberProps {
 
 export function FieldNumber({ label, value, onChange, unit, placeholder, min, step, hint }: FieldNumberProps) {
   return (
-    <label className="block mb-4">
-      <span className="block text-xs font-bold tracking-wider uppercase text-brand-text-light mb-1.5">{label}</span>
-      <div className="flex items-stretch border border-brand-border rounded overflow-hidden focus-within:border-brand-primary">
+    <label className="block mb-4 min-w-0 max-w-full">
+      <span className="block text-xs font-bold tracking-wider uppercase text-brand-text-light mb-1.5 break-words">{label}</span>
+      <div className="flex items-stretch border border-brand-border rounded overflow-hidden focus-within:border-brand-primary min-w-0 max-w-full">
         <input
           type="number"
           inputMode="decimal"
@@ -26,7 +26,7 @@ export function FieldNumber({ label, value, onChange, unit, placeholder, min, st
           placeholder={placeholder}
           min={min}
           step={step}
-          className="flex-1 px-3 py-2.5 text-base text-brand-dark outline-none bg-brand-white"
+          className="min-w-0 w-0 flex-1 px-3 py-2.5 text-base text-brand-dark outline-none bg-brand-white"
         />
         {unit && (
           <span className="px-3 flex items-center bg-brand-surface text-brand-text-light text-xs font-semibold border-l border-brand-border">
@@ -48,12 +48,12 @@ interface FieldSelectProps {
 
 export function FieldSelect({ label, value, onChange, options }: FieldSelectProps) {
   return (
-    <label className="block mb-4">
-      <span className="block text-xs font-bold tracking-wider uppercase text-brand-text-light mb-1.5">{label}</span>
+    <label className="block mb-4 min-w-0 max-w-full">
+      <span className="block text-xs font-bold tracking-wider uppercase text-brand-text-light mb-1.5 break-words">{label}</span>
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className="w-full px-3 py-2.5 text-base text-brand-dark bg-brand-white border border-brand-border rounded outline-none focus:border-brand-primary"
+        className="w-full max-w-full px-3 py-2.5 text-base text-brand-dark bg-brand-white border border-brand-border rounded outline-none focus:border-brand-primary"
       >
         {options.map((o) => (
           <option key={o.value} value={o.value}>{o.label}</option>

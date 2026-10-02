@@ -71,8 +71,8 @@ export default function BestWinterBlanketsPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Most Horses Do Not Need a Blanket</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
@@ -126,8 +126,8 @@ export default function BestWinterBlanketsPage() {
             <p>Hardware is where cheap blankets fail. Stainless-steel surcingle hardware (Horseware Rambo, Schneiders) outlasts polymer hardware by years; T-bar buckles tolerate winter ice and frozen-strap conditions far better than spring-clip alternatives. The number and arrangement of straps matters too — most modern turnouts use crisscrossed belly surcingles plus leg straps; some heavier-duty designs add a third belly surcingle. A blanket that comes loose in the field is a hazard; cheap hardware that breaks at −10&deg;C is one of the more common ways a turnout blanket fails in service.</p>
 
             <h2>Spec Comparison</h2>
-            <div className="overflow-x-auto my-6">
-              <table className="w-full text-xs border-collapse">
+            <div className="overflow-x-auto my-6 max-w-full">
+              <table className="w-full text-xs border-collapse min-w-[36rem]">
                 <thead>
                   <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                     <th className="p-3 font-bold text-brand-dark">Brand / Model</th>
