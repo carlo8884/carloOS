@@ -177,7 +177,7 @@ export default function ToolsHub() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
-          Tools-hub stand kit
+          Related supplies
         </h2>
 
         <div className="max-w-content-wide mt-6">
