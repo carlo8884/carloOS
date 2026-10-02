@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -356,6 +356,24 @@ export default function BestWinterBlanketsPage() {
               <li>Weatherbeeta. &ldquo;ComFiTec Product Specifications,&rdquo; current catalog. weatherbeeta.com.</li>
               <li>Holcomb KE, Tucker CB, Stull CL. &ldquo;Preference of Domestic Horses for Shelter or Blanketing in Different Weather Conditions.&rdquo; <em>Journal of Animal Science</em>, 2014; 92(4):1638–1646.</li>
             </ol>
+
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which turnout does this page pick for a harsh winter?',
+                  answer: 'Schneiders StormShield Euro, scored 9.2. The card calls it a heavyweight ballistic blanket. Horseware Rambo Original, scored 9.4, is the premium multi-season turnout, not the heavy-winter specialist.',
+                },
+                {
+                  question: 'What is the value pick on this page?',
+                  answer: 'Horseware Amigo Bravo 12 Plus, scored 8.5. The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.',
+                },
+                {
+                  question: 'Do the scores on this page come from customer reviews?',
+                  answer: 'No. Each number is this page\'s editorial score for denier, fill, neck shape, and hardware. It is not an average of owner ratings.',
+                },
+              ]} />
+            </div>
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

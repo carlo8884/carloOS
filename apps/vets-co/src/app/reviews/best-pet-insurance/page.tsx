@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -19,8 +19,8 @@ const schema = buildArticleSchema({
   url: 'https://vets.co/reviews/best-pet-insurance',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
-  publishedAt: new Date().toISOString(),
-  modifiedAt: new Date().toISOString(),
+  publishedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-06-07T00:00:00Z',
 })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -191,6 +191,24 @@ export default function VetsPetInsurancePage() {
             />
 
             <InsuranceWellnessShop source="reviews-best-pet-insurance" />
+
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which carrier is the top pick on this page?',
+                  answer: 'Trupanion, with an editor score of 9.4. The card highlights direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, scored 9.1, for reimbursement speed.',
+                },
+                {
+                  question: 'Which plan on this page covers routine care?',
+                  answer: 'Embrace, scored 8.8, is the card for owners who want a wellness add-on beside accident and illness coverage. The page notes a 6-month orthopedic waiting period on that plan.',
+                },
+                {
+                  question: 'Does an editor score here mean a star rating from customers?',
+                  answer: 'No. Each score is this page\'s editorial assessment of published contract terms. It is not an average of customer reviews, and it is not a quote.',
+                },
+              ]} />
+            </div>
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
