@@ -126,8 +126,17 @@ export function HomeGuides() {
               Start with the right fish.
             </h2>
           </div>
-          <Link href="/species" className="text-sm font-bold text-brand-primary no-underline hover:underline">
-            All species guides →
+          <Link
+            href="/species"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All species guides</div>
+              <p className="text-xs text-brand-text-mid mt-0.5">Parameter targets before the next fish.</p>
+            </div>
           </Link>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
