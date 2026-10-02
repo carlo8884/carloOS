@@ -104,7 +104,8 @@ export default function DisclosurePage() {
             for entry-level aquarium equipment — test kits, heaters,
             thermometers, dechlorinators, and many tank and filter brands.
             Most aquarium categories on Amazon pay a small commission
-            (typically 1% to 4%).
+            (typically 1% to 4%). As an Amazon Associate we earn from
+            qualifying purchases.
           </li>
           <li>
             <strong>Chewy Affiliate Program.</strong> Chewy carries a large

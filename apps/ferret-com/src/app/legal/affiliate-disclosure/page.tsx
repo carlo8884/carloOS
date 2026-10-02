@@ -20,7 +20,7 @@ export default function AffiliateDisclosurePage() {
       <p className="text-sm text-brand-text-light mb-10">Last updated: June 2026</p>
       <div className="carloOS-article">
         <h2>FTC Required Statement</h2>
-        <p>Ferret.com participates in affiliate programs including Amazon Associates, Chewy, and other pet-supply retailers. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
+        <p>Ferret.com participates in affiliate programs including Amazon Associates, Chewy, and other pet-supply retailers. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
 
         <h2>How It Works</h2>
         <ul>

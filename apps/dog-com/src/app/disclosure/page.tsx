@@ -106,7 +106,8 @@ export default function DisclosurePage() {
             <strong>Amazon Associates.</strong> The world&apos;s largest retail
             affiliate program. Commission rates vary by category and are
             published in the Amazon Associates operating agreement. Most pet
-            categories on Amazon pay between 1% and 4% commission.
+            categories on Amazon pay between 1% and 4% commission. As an
+            Amazon Associate we earn from qualifying purchases.
           </li>
           <li>
             <strong>Chewy Affiliate Program.</strong> Chewy is the largest
