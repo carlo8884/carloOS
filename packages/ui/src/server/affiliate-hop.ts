@@ -4,6 +4,7 @@
  */
 
 import { NextResponse } from 'next/server'
+import { track } from '@vercel/analytics/server'
 import {
   resolveAffiliateHop,
   type AffiliateRoute,
@@ -26,19 +27,41 @@ export function createGoGet(siteId: string, routes: Record<string, AffiliateRout
     const hop = resolveAffiliateHop({ vendor, sku, routes })
 
     const url = new URL(request.url)
+    const source = url.searchParams.get('s')
     console.log(
       JSON.stringify({
         event: 'affiliate_click',
         site: siteId,
         vendor: hop.vendor,
         sku: hop.sku,
-        source: url.searchParams.get('s'),
+        source,
         tagResolved: hop.tagResolved,
         envVarName: hop.envVarName,
         target: hop.target,
         timestamp: new Date().toISOString(),
       }),
     )
+
+    // Vercel Web Analytics custom event. Site is the project. Page is `source`
+    // (`?s=`). Product is `sku`. Does not block the redirect for long: on
+    // Vercel, track() registers waitUntil and returns. No extra env var —
+    // VERCEL_URL is injected. Web Analytics must be enabled on the project.
+    const clip = (value: string) => (value.length <= 255 ? value : value.slice(0, 255))
+    await Promise.race([
+      track(
+        'affiliate_click',
+        {
+          vendor: clip(hop.vendor || 'unknown'),
+          sku: clip(hop.sku || 'none'),
+          source: clip(source || 'none'),
+          tagged: hop.tagResolved ? 'yes' : 'no',
+        },
+        { request },
+      ).catch((err) => {
+        console.error('[affiliate-click] analytics track failed', err)
+      }),
+      new Promise((resolve) => setTimeout(resolve, 800)),
+    ])
 
     return NextResponse.redirect(hop.target, 302)
   }
