@@ -124,7 +124,11 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: 'Disclosure', href: '/disclosure' },
               { label: 'Editorial Standards', href: '/editorial-standards' },
-              ...(siteId === 'dog-com' || siteId === 'fish-com' || siteId === 'horses-com'
+              ...(siteId === 'dog-com' ||
+              siteId === 'fish-com' ||
+              siteId === 'horses-com' ||
+              siteId === 'vets-co' ||
+              siteId === 'ferret-com'
                 ? [{ label: 'Inquiries', href: '/inquire' }]
                 : []),
             ].map((link) => (
