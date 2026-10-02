@@ -35,6 +35,18 @@ export function HomeEmailCapture() {
             <p className="text-sm text-brand-text-mid mb-0 max-w-lg mx-auto lg:mx-0 leading-relaxed">
               Build the tank first, then sketch a slim-inch ceiling — on this site, no email required.
             </p>
+            <Link
+              href="/tools/aquarium-setup-builder"
+              className="group mt-4 inline-flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all text-left"
+            >
+              <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+              </div>
+              <div className="pr-3 py-2">
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">New-tank builder</div>
+                <p className="text-xs text-brand-text-mid mt-0.5">Volume, filter, and cycle order.</p>
+              </div>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {START_LINKS.map((item) => (
