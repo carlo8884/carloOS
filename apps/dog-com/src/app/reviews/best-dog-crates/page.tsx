@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -182,6 +182,24 @@ export default function BestDogCratesPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="frisco+furniture+style+dog+crate"
             />
+
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which crate does this page pick for house-training a puppy?',
+                  answer: 'The MidWest iCrate, scored 9.3, because it includes a divider. Size the crate to the adult dog and close the divider down while the puppy is small.',
+                },
+                {
+                  question: 'Which crate does this page pick for airline cargo?',
+                  answer: 'The Petmate Sky Kennel, scored 9.0. The card calls it IATA compliant. It is not the pick for an escape artist.',
+                },
+                {
+                  question: 'Which crate does this page pick for an escape artist?',
+                  answer: 'The Impact aluminum crate, scored 9.4. The furniture-style Frisco crate, scored 8.3, is the living-room pick and is not described as chew-resistant.',
+                },
+              ]} />
+            </div>
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

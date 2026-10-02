@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Best Dry Dog Food 2026 — Royal Canin, Hill\'s & Purina Ranked',
-  description: 'We compared 12 dry dog foods on ingredient quality, nutritional adequacy, and WSAVA compliance using published specs. Royal Canin, Hill\'s, Purina ranked.',
+  description: 'Dry dog foods ranked on published ingredient, adequacy, and WSAVA criteria. Royal Canin, Hill\'s Science Diet, and Purina Pro Plan.',
   path: '/reviews/best-dry-dog-food',
   type: 'article',
 })
@@ -18,8 +18,8 @@ const schema = buildArticleSchema({
   url: 'https://dog.com/reviews/best-dry-dog-food',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
-  publishedAt: new Date().toISOString(),
-  modifiedAt: new Date().toISOString(),
+  publishedAt: '2025-05-01T00:00:00Z',
+  modifiedAt: '2026-05-28T00:00:00Z',
 })
 
 const PICKS = [
@@ -29,10 +29,26 @@ const PICKS = [
   { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Purina Pro Plan Adult Large Breed', description: 'WSAVA-compliant dry dog food with chicken as primary protein and 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Royal Canin Breed Health Nutrition', description: 'Research-backed breed-specific dry dog food formulas for adult dogs.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const productSchema2 = buildProductSchema({ name: "Hill's Science Diet Adult Large Breed", description: 'veterinarian-formulated large breed adult dry dog food.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
-const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
+const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
+const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.3, reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
+const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewBody: 'Leads this page on prescription and life-stage formulas.' })
+const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page scores it below the WSAVA-compliant picks.', imageUrl: '', ratingValue: 8.4, reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
+const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2, productSchema3)
+
+const FOOD_FAQS = [
+  {
+    question: 'Which dry dog food is the top pick on this page?',
+    answer: 'Royal Canin, with an editor score of 9.5. The page ranks it first because the manufacturer employs veterinary nutritionists, runs AAFCO feeding trials, and publishes research — the WSAVA criteria used here. Purina Pro Plan is the best-value pick at the same standard. Hill\'s Science Diet leads on prescription formulas.',
+  },
+  {
+    question: 'What does WSAVA compliance mean on this page?',
+    answer: 'Whether the manufacturer employs qualified nutritionists, conducts feeding trials rather than formulation-only testing, and can answer questions about manufacturing. Price and palatability are secondary on this ranking.',
+  },
+  {
+    question: 'Why does this page flag grain-free formulas with peas, lentils, or chickpeas?',
+    answer: 'The FDA\'s dilated cardiomyopathy investigation identified high-legume grain-free formulas as a risk factor. This page treats that as a reason to avoid those formulas even when the ingredient list looks appealing.',
+  },
+]
 
 export default function BestDogFoodPage() {
   return (
@@ -236,6 +252,11 @@ export default function BestDogFoodPage() {
               <p className="text-base text-brand-text-mid leading-relaxed">
                 Avoid grain-free diets with high legume content (peas, lentils, chickpeas as primary ingredients) — the FDA&apos;s DCM investigation identified these as a risk factor. This rules out most &quot;boutique&quot; brand formulas regardless of how appealing the ingredient list looks.
               </p>
+            </div>
+
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this ranking answers</h2>
+              <FAQAccordion items={FOOD_FAQS} />
             </div>
           </div>
 
