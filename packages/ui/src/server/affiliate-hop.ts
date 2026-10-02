@@ -20,49 +20,89 @@ function skuFromParams(sku: string | string[] | undefined): string {
   return sku
 }
 
+const clip = (value: string) => (value.length <= 255 ? value : value.slice(0, 255))
+
+async function logAffiliateClick(
+  request: Request,
+  fields: {
+    site: string
+    vendor: string
+    sku: string
+    source: string
+    tagResolved: boolean
+    envVarName: string
+    target: string
+  },
+) {
+  console.log(
+    JSON.stringify({
+      event: 'affiliate_click',
+      site: fields.site,
+      vendor: fields.vendor,
+      sku: fields.sku,
+      source: fields.source,
+      tagResolved: fields.tagResolved,
+      envVarName: fields.envVarName,
+      target: fields.target,
+      timestamp: new Date().toISOString(),
+    }),
+  )
+
+  // Vercel Web Analytics custom event. `site` and `source` (`?s=`) travel
+  // with the event. Does not block the redirect for long: on Vercel, track()
+  // registers waitUntil and returns. Web Analytics must be enabled.
+  await Promise.race([
+    track(
+      'affiliate_click',
+      {
+        site: clip(fields.site),
+        vendor: clip(fields.vendor || 'unknown'),
+        sku: clip(fields.sku || 'none'),
+        source: clip(fields.source || 'none'),
+        tagged: fields.tagResolved ? 'yes' : 'no',
+      },
+      { request },
+    ).catch((err) => {
+      console.error('[affiliate-click] analytics track failed', err)
+    }),
+    new Promise((resolve) => setTimeout(resolve, 800)),
+  ])
+}
+
 export function createGoGet(siteId: string, routes: Record<string, AffiliateRoute>) {
   return async function GET(request: Request, context: GoRouteParams) {
     const vendor = (context.params?.vendor || '').toLowerCase()
     const sku = skuFromParams(context.params?.sku)
     const hop = resolveAffiliateHop({ vendor, sku, routes })
+    const source = new URL(request.url).searchParams.get('s') || 'none'
 
-    const url = new URL(request.url)
-    const source = url.searchParams.get('s')
-    console.log(
-      JSON.stringify({
-        event: 'affiliate_click',
-        site: siteId,
-        vendor: hop.vendor,
-        sku: hop.sku,
-        source,
-        tagResolved: hop.tagResolved,
-        envVarName: hop.envVarName,
-        target: hop.target,
-        timestamp: new Date().toISOString(),
-      }),
-    )
-
-    // Vercel Web Analytics custom event. Site is the project. Page is `source`
-    // (`?s=`). Product is `sku`. Does not block the redirect for long: on
-    // Vercel, track() registers waitUntil and returns. No extra env var —
-    // VERCEL_URL is injected. Web Analytics must be enabled on the project.
-    const clip = (value: string) => (value.length <= 255 ? value : value.slice(0, 255))
-    await Promise.race([
-      track(
-        'affiliate_click',
-        {
-          vendor: clip(hop.vendor || 'unknown'),
-          sku: clip(hop.sku || 'none'),
-          source: clip(source || 'none'),
-          tagged: hop.tagResolved ? 'yes' : 'no',
-        },
-        { request },
-      ).catch((err) => {
-        console.error('[affiliate-click] analytics track failed', err)
-      }),
-      new Promise((resolve) => setTimeout(resolve, 800)),
-    ])
+    await logAffiliateClick(request, {
+      site: siteId,
+      vendor: hop.vendor || 'unknown',
+      sku: hop.sku || 'none',
+      source,
+      tagResolved: hop.tagResolved,
+      envVarName: hop.envVarName,
+      target: hop.target,
+    })
 
     return NextResponse.redirect(hop.target, 302)
+  }
+}
+
+/** Bare `/go` has no vendor. Log the click and send the reader to the disclosure. */
+export function createGoIndexGet(siteId: string) {
+  return async function GET(request: Request) {
+    const source = new URL(request.url).searchParams.get('s') || 'none'
+    await logAffiliateClick(request, {
+      site: siteId,
+      vendor: 'unknown',
+      sku: 'none',
+      source,
+      tagResolved: false,
+      envVarName: '',
+      target: '/disclosure',
+    })
+    return NextResponse.redirect(new URL('/disclosure', request.url), 302)
   }
 }

@@ -107,7 +107,8 @@ export default function DisclosurePage() {
             <strong>Amazon Associates.</strong> Amazon stocks the bulk of the
             broad pet-supply market — cages, litter, litter boxes, hammocks,
             harnesses, carriers, basic toys. Commission rates are low but the
-            inventory overlap with ferret needs is high.
+            inventory overlap with ferret needs is high. As an Amazon
+            Associate we earn from qualifying purchases.
           </li>
           <li>
             <strong>Chewy Affiliate Program.</strong> Chewy carries a moderate

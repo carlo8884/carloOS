@@ -1,6 +1,10 @@
 {
   "$schema": "https://turbo.build/schema.json",
-  "globalDependencies": ["**/.env.*local"],
+  "globalDependencies": [
+    "**/.env.*local",
+    "scripts/ci/next-build.mjs",
+    "scripts/ci/patch-google-font-fetch.cjs"
+  ],
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
