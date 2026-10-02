@@ -82,7 +82,7 @@ export default function RationBalancersPage() {
             { label: "Who Benefits Most", href: "#who" },
             { label: "Balancer vs Regular Feed", href: "#vs" },
             { label: "Using a Balancer", href: "#using" },
-            { label: "Ration-balancer barn kit", href: "#kit" },
+            { label: "Ration-balancer supplies", href: "#kit" },
             { label: "Ration Balancer Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -129,7 +129,7 @@ export default function RationBalancersPage() {
           <h2 id="using">Using a Balancer</h2>
           <p>Feed a ration balancer at the manufacturer&apos;s recommended daily amount, alongside forage, to top up the diet. Because the serving is small — typically a few hundred grams rather than a scooped grain meal — weigh it on a compact digital gram scale instead of guessing. Mix the weighed serving with a handful of molasses-free chaff or soaked fiber to make it palatable and slow eating. Molasses-free chaff is that handful mixer — it is not chopped forage as a hay replacer (that lives on feeding-senior-horses) and not molasses-free beet pulp shreds (that lives on the beet-pulp leftover). Stir balancer and chaff in a small rubber horse mixing pan so the tiny serving is not lost in a deep tub — it is not a round rubber feed pan (that lives on flu), not stackable rubber feed tubs (those live on grain), and not an over-door horse feed bucket (that lives on feeding-the-hard-keeper). Choose a balancer appropriate to the horse and forage (some are formulated for grass forage, others for legume), and for metabolic horses a low-sugar, low-starch balancer. As always, build the specifics with your veterinarian or an equine nutritionist.</p>
 
-          <h2 id="kit">Ration-balancer barn kit</h2>
+          <h2 id="kit">Ration-balancer supplies</h2>
           <p>
             Everyday physical supplies that match the
             weigh-the-few-hundred-grams,

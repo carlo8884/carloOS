@@ -82,7 +82,7 @@ export default function LeasingHorsePage() {
             { label: "On-Site vs Off-Site", href: "#location" },
             { label: "The Lease Agreement", href: "#agreement" },
             { label: "Pros and Cons", href: "#proscons" },
-            { label: "Horse-lease leftover agreement kit", href: "#kit" },
+            { label: "Lease paperwork", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -181,7 +181,7 @@ export default function LeasingHorsePage() {
           <p>Leasing lets a rider gain experience, ride regularly, and try the responsibilities of ownership at lower cost and risk, with the flexibility to walk away at the end of the term -- ideal for testing whether you are ready to buy. The downsides are that you do not own the horse and may have to give it up, you ride within the owner&apos;s rules, and a poorly defined arrangement can lead to disputes over costs, care decisions, and an injured horse. A good lease rests on a fair, specific, written agreement and a trustworthy owner.</p>
           
 
-          <h2 id="kit">Horse-lease leftover agreement kit</h2>
+          <h2 id="kit">Lease paperwork</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

@@ -83,7 +83,7 @@ export default function BoardingOptionsPage() {
             { label: "Self-Care Board", href: "#self" },
             { label: "Keeping a Horse at Home", href: "#home" },
             { label: "Choosing a Facility", href: "#choosing" },
-            { label: "Boarding leftover barn kit", href: "#kit" },
+            { label: "Boarding supplies", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -142,7 +142,7 @@ export default function BoardingOptionsPage() {
           </ul>
           
 
-          <h2 id="kit">Boarding leftover barn kit</h2>
+          <h2 id="kit">Boarding supplies</h2>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 

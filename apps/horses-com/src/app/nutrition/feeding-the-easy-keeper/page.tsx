@@ -83,7 +83,7 @@ export default function EasyKeeperPage() {
             { label: "Slow Feeding", href: "#slow" },
             { label: "Balancing Nutrients", href: "#balancer" },
             { label: "Exercise and Monitoring", href: "#exercise" },
-            { label: "Easy-keeper feeding barn kit", href: "#kit" },
+            { label: "Easy-keeper feeding supplies", href: "#kit" },
             { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -133,7 +133,7 @@ export default function EasyKeeperPage() {
           <h2 id="exercise">Exercise and Monitoring</h2>
           <p>When the horse is sound, exercise both burns calories and improves insulin sensitivity, making it a powerful ally in weight management. Combine the dietary plan with regular work suited to the horse&apos;s fitness. Track progress objectively with body condition scoring and a weigh tape rather than the eye, which adapts to a fat horse over time; score regularly with the body-condition tool. Crash dieting is dangerous in horses, so aim for steady, gradual loss under veterinary guidance.</p>
 
-          <h2 id="kit">Easy-keeper feeding barn kit</h2>
+          <h2 id="kit">Easy-keeper feeding supplies</h2>
           <p>
             Everyday physical supplies that match the
             weigh-the-hay, soak-to-leach-sugar, and

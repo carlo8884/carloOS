@@ -82,7 +82,7 @@ export default function BeetPulpPage() {
             { label: "Soaking Beet Pulp", href: "#soaking" },
             { label: "Who It Suits", href: "#who" },
             { label: "Myths and Cautions", href: "#myths" },
-            { label: "Beet-pulp soaking barn kit", href: "#kit" },
+            { label: "Beet-pulp soaking supplies", href: "#kit" },
             { label: "Beet Pulp Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -129,7 +129,7 @@ export default function BeetPulpPage() {
           <h2 id="myths">Myths and Cautions</h2>
           <p>Two myths persist. The first is that dry beet pulp commonly causes stomach rupture from swelling -- there is little real-world evidence of this, though soaking is still sensible practice and prevents choke from bolting. The second is that beet pulp is high in sugar -- the opposite is true once the molasses-free form is used, since the sugar has been extracted. Real cautions are to soak it to prevent choke, to introduce it gradually like any feed, to choose molasses-free for low-sugar diets, and to balance the overall ration (beet pulp is low in some minerals, so it complements rather than replaces a balanced diet).</p>
 
-          <h2 id="kit">Beet-pulp soaking barn kit</h2>
+          <h2 id="kit">Beet-pulp soaking supplies</h2>
           <p>
             Everyday physical supplies that match the
             soak-with-plenty-of-water, stir-into-a-mash,

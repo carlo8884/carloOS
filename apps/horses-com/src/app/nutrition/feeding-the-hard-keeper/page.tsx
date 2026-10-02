@@ -83,7 +83,7 @@ export default function HardKeeperPage() {
             { label: "Fat and Super-Fibers", href: "#fat" },
             { label: "Feeding Management", href: "#management" },
             { label: "Monitoring", href: "#monitoring" },
-            { label: "Hard-keeper feeding barn kit", href: "#kit" },
+            { label: "Hard-keeper feeding supplies", href: "#kit" },
             { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -138,7 +138,7 @@ export default function HardKeeperPage() {
           <h2 id="monitoring">Monitoring</h2>
           <p>Track condition objectively with body condition scoring and a weigh tape, recorded over time, rather than relying on the eye. Weight gain in horses is slow, so give a new regimen weeks before judging it, and keep coordinating with your veterinarian -- a hard keeper that still will not gain on a good plan needs further investigation rather than ever-larger grain meals.</p>
 
-          <h2 id="kit">Hard-keeper feeding barn kit</h2>
+          <h2 id="kit">Hard-keeper feeding supplies</h2>
           <p>
             Everyday physical supplies that match the
             maximize-forage, add-calories-safely with

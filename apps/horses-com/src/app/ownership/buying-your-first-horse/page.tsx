@@ -84,7 +84,7 @@ export default function BuyingFirstHorsePage() {
             { label: "Trying a Horse", href: "#trying" },
             { label: "The Pre-Purchase Exam", href: "#vetting" },
             { label: "Bring Experienced Help", href: "#help" },
-            { label: "First-horse leftover buyer kit", href: "#kit" },
+            { label: "First-horse buyer supplies", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -146,7 +146,7 @@ export default function BuyingFirstHorsePage() {
           <h2 id="help">Bring Experienced Help</h2>
           <p>Take a knowledgeable, trusted, and ideally independent horseperson -- your instructor or an experienced friend with no stake in the sale -- to view and try any horse. They will see things a first-timer cannot, ask the right questions, ride the horse, and provide a sober second opinion against the emotional pull of falling for a horse. Combined with an honest self-assessment, a temperament-first priority, and a proper vetting, experienced help is the best protection against a costly first-horse mistake.</p>
 
-          <h2 id="kit">First-horse leftover buyer kit</h2>
+          <h2 id="kit">First-horse buyer supplies</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

@@ -83,7 +83,7 @@ export default function FirstAidKitPage() {
             { label: "Know Your Vitals", href: "#vitals" },
             { label: "When to Call the Vet", href: "#when" },
             { label: "Kit Management", href: "#management" },
-            { label: "First-aid leftover barn kit", href: "#kit" },
+            { label: "First-aid supplies", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -193,7 +193,7 @@ export default function FirstAidKitPage() {
           <h2 id="management">Kit Management</h2>
           <p>A first-aid kit only helps if it is stocked, accessible, and current. Keep it in a clean, clearly marked, easily reached container in the barn, and keep a second smaller kit for travel and trail. Check it regularly, replacing used and out-of-date items, and keep your veterinarian&apos;s emergency number with it. Just as important as the supplies is knowing how to use them and what is beyond first aid: the goal is to stabilize and protect until professional help arrives, not to play vet. Ask your veterinarian to show you the basics for your horse. Restock the leftover flush, nonstick pads, and bandage scissors after any use so the next night-time graze is not a scramble — that restock is not a reason to hop an assembled first-aid kit, a digital thermometer, vet wrap, or a poultice (those hops already live on the emergency and grimace tools).</p>
 
-          <h2 id="kit">First-aid leftover barn kit</h2>
+          <h2 id="kit">First-aid supplies</h2>
           <p>
             Everyday physical supplies that match the
             wound-cleaning-saline, non-stick-dressings,
@@ -272,7 +272,7 @@ export default function FirstAidKitPage() {
               sterile+saline+eye+wash. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the first-aid leftover barn kit
+              Shop first-aid supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">

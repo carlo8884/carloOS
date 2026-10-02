@@ -83,7 +83,7 @@ export default function CostOfOwningPage() {
             { label: "Routine Health and Farrier", href: "#routine" },
             { label: "Hidden and Emergency Costs", href: "#hidden" },
             { label: "Budgeting Honestly", href: "#budget" },
-            { label: "Horse-ownership leftover budget kit", href: "#kit" },
+            { label: "Ownership budget supplies", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -177,7 +177,7 @@ export default function CostOfOwningPage() {
             owner budgeting tools only. They are not a
             substitute for a veterinarian or accountant. </p>
 
-          <h2 id="kit">Horse-ownership leftover budget kit</h2>
+          <h2 id="kit">Ownership budget supplies</h2>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 

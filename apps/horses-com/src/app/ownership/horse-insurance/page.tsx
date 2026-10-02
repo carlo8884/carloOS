@@ -83,7 +83,7 @@ export default function HorseInsurancePage() {
             { label: "Loss of Use", href: "#lou" },
             { label: "Liability Cover", href: "#liability" },
             { label: "Exclusions and Deciding", href: "#deciding" },
-            { label: "Horse-insurance leftover policy kit", href: "#kit" },
+            { label: "Insurance paperwork", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -180,7 +180,7 @@ export default function HorseInsurancePage() {
           <p>Every policy has exclusions and conditions -- pre-existing conditions, certain procedures, requirements to report illness and obtain prior approval for treatment, and limits per condition or per year -- and failing to follow them (such as not notifying the insurer promptly) can void a claim. Read the policy carefully, disclose the horse&apos;s history honestly, and understand the limits before relying on cover. The decision of what to insure comes down to the horse&apos;s value, the owner&apos;s ability to absorb a large bill, and how the premiums compare with self-insuring through savings.</p>
           
 
-          <h2 id="kit">Horse-insurance leftover policy kit</h2>
+          <h2 id="kit">Insurance paperwork</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
