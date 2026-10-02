@@ -230,13 +230,29 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-white px-container-sm sm:px-container py-section">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment decisions</span>
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Equipment decisions</span>
+            </div>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+              Gear that earns its place.
+            </h2>
+          </div>
+          <Link
+            href="/equipment"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
+              <p className="text-xs text-brand-text-mid mt-0.5">Filters, heaters, lighting, and kits.</p>
+            </div>
+          </Link>
         </div>
-        <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-6" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-          Gear that earns its place.
-        </h2>
         <PhotoRow items={EQUIPMENT_DECISIONS} />
       </section>
 
