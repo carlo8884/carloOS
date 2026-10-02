@@ -176,13 +176,29 @@ export function HomeGuides() {
       </section>
 
       <section className="bg-brand-white px-container-sm sm:px-container py-section">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Tank planning</span>
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Tank planning</span>
+            </div>
+            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+              Before you buy the tank.
+            </h2>
+          </div>
+          <Link
+            href="/setup"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:category-saltwater" alt="A clownfish among the tentacles of a sea anemone" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All setup guides</div>
+              <p className="text-xs text-brand-text-mid mt-0.5">Size, cycle, and first stocking.</p>
+            </div>
+          </Link>
         </div>
-        <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-6" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-          Before you buy the tank.
-        </h2>
         <PhotoRow items={TANK_PLANNING} />
       </section>
 
