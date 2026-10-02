@@ -96,7 +96,7 @@ export default function HorsesReviewsPage() {
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-3xl">
-          Reviews-hub barn kit
+          Related supplies
         </h2>
 
         <div className="max-w-3xl mt-6">

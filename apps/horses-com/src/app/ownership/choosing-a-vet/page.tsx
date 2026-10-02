@@ -83,7 +83,7 @@ export default function ChoosingVetPage() {
             { label: "Emergency Cover", href: "#emergency" },
             { label: "The Vet-Client-Patient Relationship", href: "#vcpr" },
             { label: "Building the Relationship", href: "#building" },
-            { label: "Equine-vet leftover interview kit", href: "#kit" },
+            { label: "Vet interview notes", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -158,7 +158,7 @@ export default function ChoosingVetPage() {
             This page does not claim hands-on testing.
           </p>
 
-          <h2 id="kit">Equine-vet leftover interview kit</h2>
+          <h2 id="kit">Vet interview notes</h2>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 

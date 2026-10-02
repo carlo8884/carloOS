@@ -83,7 +83,7 @@ export default function PrePurchaseExamPage() {
             { label: "Radiographs and Extras", href: "#radiographs" },
             { label: "Who the Vet Works For", href: "#whofor" },
             { label: "Using the Results", href: "#results" },
-            { label: "Pre-purchase exam leftover findings kit", href: "#kit" },
+            { label: "Pre-purchase exam notes", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -189,7 +189,7 @@ export default function PrePurchaseExamPage() {
             (that lives on boarding-options). This page does not
             claim hands-on testing. </p>
 
-          <h2 id="kit">Pre-purchase exam leftover findings kit</h2>
+          <h2 id="kit">Pre-purchase exam notes</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

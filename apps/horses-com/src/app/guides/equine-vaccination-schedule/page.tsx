@@ -122,7 +122,7 @@ export default function VaccinationSchedulePage() {
             { label: 'Schedule by Discipline', href: '#discipline' },
             { label: 'Vaccine Reactions', href: '#reactions' },
             { label: 'Cost &amp; Logistics', href: '#cost' },
-            { label: 'Barn Kit', href: '#kit' },
+            { label: 'Related supplies', href: '#kit' },
             { label: 'FAQ', href: '#faq' },
             { label: 'References', href: '#references' },
           ]} />
@@ -309,7 +309,7 @@ export default function VaccinationSchedulePage() {
 
           <p>Practical logistics: many veterinary practices offer barn-call discounts when multiple horses are vaccinated in one visit. Sharing a farm call with neighbors or boarders reduces per-horse cost. Maintain vaccination records (paper or digital — many practices offer online records); USEF and FEI competition both require documented vaccination records.</p>
 
-          <h2 id="kit">Barn Kit</h2>
+          <h2 id="kit">Related supplies</h2>
           <p>Everyday physical supplies that match the PHF endemic-region management copy above — stall fans and stall screens. The vaccine does not eliminate risk; reducing pasture or turnout near water and using stall fans/screens is barn management, not a vaccination. These are not vaccines, not a vaccination or prescription kit, and not treatments for Potomac horse fever, encephalitis, West Nile, rabies, tetanus, influenza, EHV, or strangles. Needles, combination products, and documented vaccination records belong with the veterinarian and the official USEF / FEI record — not a retail Amazon kit. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

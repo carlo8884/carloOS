@@ -82,7 +82,7 @@ export default function PerformanceFeedingPage() {
             { label: "Protein and Electrolytes", href: "#protein" },
             { label: "Feeding Around Work", href: "#timing" },
             { label: "Avoiding Problems", href: "#problems" },
-            { label: "Performance fueling barn kit", href: "#kit" },
+            { label: "Performance feeding supplies", href: "#kit" },
             { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -156,7 +156,7 @@ export default function PerformanceFeedingPage() {
           <h2 id="problems">Avoiding Problems</h2>
           <p>High-grain diets fed to performance horses are linked to gastric ulcers (very common in competition horses), tying-up, hindgut acidosis, colic, and excitable, hard-to-handle behavior. The defenses are to keep forage central, prefer fat and fiber for added calories, limit starch per meal, feed consistently, and treat ulcers when present. A calm, well-fueled horse on a fiber-and-fat-based diet usually performs and recovers better than one fizzed up on grain.</p>
 
-          <h2 id="kit">Performance fueling barn kit</h2>
+          <h2 id="kit">Performance feeding supplies</h2>
           <p>
             Everyday physical supplies that match the
             forage-before-work, fat-and-fiber fuel, and
@@ -252,7 +252,7 @@ export default function PerformanceFeedingPage() {
               (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop the performance fueling barn kit
+              Shop performance feeding supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
               These Amazon category searches match the

@@ -83,7 +83,7 @@ export default function SeniorHorseCarePage() {
             { label: "Comfort and Exercise", href: "#comfort" },
             { label: "Veterinary Monitoring", href: "#monitoring" },
             { label: "Quality of Life", href: "#qol" },
-            { label: "Senior-horse leftover comfort-watch kit", href: "#kit" },
+            { label: "Senior horse comfort supplies", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -157,7 +157,7 @@ export default function SeniorHorseCarePage() {
           <p>The hardest and most important part of senior care is honest assessment of quality of life. An old horse can be kept comfortable and happy for many years with good management, but there comes a point in some lives when pain, disease, or decline can no longer be managed well, and the kindest decision is to let the horse go before it suffers. Discussing quality of life openly with a trusted veterinarian, and prioritizing the horse&apos;s comfort over the owner&apos;s reluctance to say goodbye, is the final responsibility of good ownership.</p>
           
 
-          <h2 id="kit">Senior-horse leftover comfort-watch kit</h2>
+          <h2 id="kit">Senior horse comfort supplies</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

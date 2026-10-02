@@ -83,7 +83,7 @@ export default function SeniorFeedingPage() {
             { label: "Protein and Condition", href: "#protein" },
             { label: "PPID and Metabolic Issues", href: "#ppid" },
             { label: "Practical Feeding", href: "#practical" },
-            { label: "Senior feeding barn kit", href: "#kit" },
+            { label: "Senior feeding supplies", href: "#kit" },
             { label: "Product Picks", href: "#picks" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
@@ -133,7 +133,7 @@ export default function SeniorFeedingPage() {
             <li><strong>Monitor condition closely</strong> with body condition scoring, since a thick or PPID coat hides weight change.</li>
           </ul>
 
-          <h2 id="kit">Senior feeding barn kit</h2>
+          <h2 id="kit">Senior feeding supplies</h2>
           <p>
             Everyday physical supplies that match the
             chewable-forage, soak-into-a-mash, and

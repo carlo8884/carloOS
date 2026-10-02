@@ -83,7 +83,7 @@ export default function BodyLanguagePage() {
             { label: "The Tail", href: "#tail" },
             { label: "Whole-Body Posture", href: "#posture" },
             { label: "Signs of Pain", href: "#pain" },
-            { label: "Horse body-language leftover signal kit", href: "#kit" },
+            { label: "Body-language notes", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -176,7 +176,7 @@ export default function BodyLanguagePage() {
             hops. This page does
             not claim hands-on testing. </p>
 
-          <h2 id="kit">Horse body-language leftover signal kit</h2>
+          <h2 id="kit">Body-language notes</h2>
           
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />

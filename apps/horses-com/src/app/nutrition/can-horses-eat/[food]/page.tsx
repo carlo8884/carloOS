@@ -119,7 +119,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
               ...(entry.benefits?.length ? [{ label: 'Benefits', href: '#benefits' }] : []),
               ...(entry.safePrep ? [{ label: 'How to serve it', href: '#serve' }] : []),
               ...(entry.symptoms?.length ? [{ label: 'Signs of trouble', href: '#symptoms' }] : []),
-              { label: 'Treat-safety barn kit', href: '#kit' },
+              { label: 'Treat-safety supplies', href: '#kit' },
               { label: 'FAQ', href: '#faq' },
             ]}
           />
@@ -191,7 +191,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
         <p className="text-sm text-gray-500 mt-2">
           See also: <Link href="/nutrition/toxic-plants">toxic plants for horses</Link>, <Link href="/health/colic">equine colic</Link>, <Link href="/health/laminitis">laminitis</Link>, and the full <Link href="/nutrition/can-horses-eat">can-horses-eat list</Link>. An airtight labeled horse treat canister is how only pre-checked safe treats sit sealed and labeled away from kitchen leftovers — it is not a rodent-proof metal horse feed bin (that lives on grain). A nylon horse waist treat pouch is how a measured handful of pre-approved treats leaves the kitchen instead of chocolate or avocado — it is not a low-sugar horse-treat hop (that lives on feeding-the-easy-keeper). </p>
 
-        <h2 id="kit">Treat-safety barn kit</h2>
+        <h2 id="kit">Treat-safety supplies</h2>
         <p>
           Everyday physical supplies that match the
           keep-kitchen-leftovers-out-of-the-barn,

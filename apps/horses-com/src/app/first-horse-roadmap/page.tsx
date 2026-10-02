@@ -399,7 +399,7 @@ export default function FirstHorseRoadmapPage() {
           <div className="flex items-center gap-2.5 mb-3">
             <span className="w-6 h-0.5 bg-brand-primary" />
             <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">
-              90-day first-horse leftover kit
+              First 90 days
             </span>
           </div>
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">

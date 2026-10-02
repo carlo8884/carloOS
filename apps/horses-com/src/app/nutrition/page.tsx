@@ -170,7 +170,7 @@ export default function NutritionHubPage() {
         </ul>
 
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
-          Nutrition-hub barn kit
+          Related supplies
         </h2>
 
         <div className="max-w-content-wide mt-6">
