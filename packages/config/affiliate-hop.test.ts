@@ -116,4 +116,48 @@ describe('resolveAffiliateHop', () => {
   it('keeps Dog insurance quotes on the Vets.co review', () => {
     assert.equal(VETS_PET_INSURANCE_REVIEW, 'https://vets.co/reviews/best-pet-insurance')
   })
+
+  it('strips a leading PLACEHOLDER param without leaving a bare ampersand', () => {
+    assert.equal(
+      stripPlaceholder('https://www.trupanion.com/enrollments/get-a-quote?refid=PLACEHOLDER&campaign=home'),
+      'https://www.trupanion.com/enrollments/get-a-quote?campaign=home',
+    )
+  })
+
+  it('sends an untagged insurance hop to the quote page', () => {
+    const insurance = {
+      trupanion: {
+        name: 'Trupanion',
+        template: 'https://www.trupanion.com/enrollments/get-a-quote?refid=PLACEHOLDER&campaign={sku}',
+        requiresSku: false,
+      },
+    }
+    const hop = resolveAffiliateHop({ vendor: 'trupanion', sku: 'home', routes: insurance, env: {} })
+    assert.equal(hop.tagResolved, false)
+    assert.equal(hop.envVarName, 'AFF_TRUPANION_TAG')
+    assert.equal(hop.target, 'https://www.trupanion.com/enrollments/get-a-quote?campaign=home')
+    assert.equal(hop.target.includes('PLACEHOLDER'), false)
+  })
+
+  it('substitutes AFF_TRUPANION_TAG on the quote page', () => {
+    const insurance = {
+      trupanion: {
+        name: 'Trupanion',
+        template: 'https://www.trupanion.com/enrollments/get-a-quote?refid=PLACEHOLDER&campaign={sku}',
+        requiresSku: false,
+      },
+    }
+    const hop = resolveAffiliateHop({
+      vendor: 'trupanion',
+      sku: 'home',
+      routes: insurance,
+      env: { AFF_TRUPANION_TAG: 'tru-live' },
+    })
+    assert.equal(hop.tagResolved, true)
+    assert.equal(hop.envVarName, 'AFF_TRUPANION_TAG')
+    assert.equal(
+      hop.target,
+      'https://www.trupanion.com/enrollments/get-a-quote?refid=tru-live&campaign=home',
+    )
+  })
 })

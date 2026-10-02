@@ -1,7 +1,10 @@
 /**
  * Shared /go hop resolver — one implementation for dog, fish, horses, vets, ferret.
  * Never writes literal PLACEHOLDER into Location or hop query strings.
- * Empty hop → partner homepage 302. Missing tag → partner homepage, never 404.
+ * Empty retail hop → partner homepage 302. Missing Amazon/Chewy tag → partner homepage, never 404.
+ * Other vendors (insurance, telehealth) keep the template path when the tag is unset,
+ * with the PLACEHOLDER param removed, so a quote button does not dump onto a homepage.
+ * When AFF_<VENDOR>_TAG is set, that tag is substituted into the template.
  * amazon-brand falls back to AFF_AMAZON_TAG when AFF_AMAZON_BRAND_TAG is empty.
  */
 
@@ -70,6 +73,13 @@ export function visibleShopHref(
 
 const DEFAULT_HOME = 'https://www.amazon.com'
 
+/** Amazon and Chewy stay on the partner homepage until a tag and sku exist. */
+const RETAIL_VENDORS = new Set(['amazon', 'amazon-brand', 'chewy', 'chewy-brand', 'chewy-pharmacy'])
+
+export function isRetailVendor(vendor: string): boolean {
+  return RETAIL_VENDORS.has(vendor)
+}
+
 export function resolveTag(
   vendor: string,
   env: NodeJS.ProcessEnv = process.env,
@@ -107,12 +117,15 @@ export function partnerHome(vendor: string, template?: string): string {
 }
 
 export function stripPlaceholder(url: string): string {
-  return url
-    .replace(/[?&][^=]*PLACEHOLDER[^&]*/g, '')
-    .replace(/PLACEHOLDER/g, '')
-    .replace(/\?&/, '?')
+  let out = url.replace(/PLACEHOLDER/g, '')
+  // Drop params whose value was only PLACEHOLDER (now empty). Keep real values.
+  out = out
+    .replace(/([?&])[^=?]+=(?=&|$)/g, '$1')
+    .replace(/\?&/g, '?')
     .replace(/&&+/g, '&')
     .replace(/[?&]$/, '')
+  if (!out.includes('?') && out.includes('&')) out = out.replace('&', '?')
+  return out
 }
 
 export interface HopResult {
@@ -140,11 +153,18 @@ export function resolveAffiliateHop(opts: {
     return { target: DEFAULT_HOME, tagResolved, envVarName, vendor, sku }
   }
 
-  if (!sku || !tagResolved) {
+  const retail = isRetailVendor(vendor)
+  // Retail: no sku or no tag → homepage. Never an untagged Amazon/Chewy URL.
+  if (retail && (!sku || !tagResolved)) {
+    return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
+  }
+  // Non-retail product URLs that require a sku still go home when the sku is empty.
+  if (!retail && !sku && route.requiresSku !== false) {
     return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
   }
 
-  let target = route.template.replace('{sku}', encodeURIComponent(sku)).split('PLACEHOLDER').join(tag)
+  let target = route.template.split('{sku}').join(encodeURIComponent(sku))
+  if (tag) target = target.split('PLACEHOLDER').join(tag)
   target = stripPlaceholder(target)
   if (!target || target.includes('PLACEHOLDER')) {
     target = partnerHome(vendor, route.template)

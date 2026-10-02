@@ -176,7 +176,7 @@ export default function FinePrintPage() {
             pros={['Simpler single plan to read', 'Clear sample policy', 'Covers many conditions']}
             cons={['Fewer structures to mix and match', 'Availability varies by state']}
             price="Quote-based"
-            ctaText="Get a Quote →"
+            ctaText="Visit ManyPets →"
             ctaHref="/go/manypets/home?s=insurance-reading-the-fine-print"
             ctaAffiliateProgram="manypets"
             ctaAffiliateProduct="home"
