@@ -186,7 +186,7 @@ export default function BestFerretCagePage() {
             reviewedBy="Editorial team"
           />
 
-          <QuickPicks items={QUICK_PICKS} />
+          <QuickPicks items={QUICK_PICKS} embedded />
 
           <p>
             More than any other ferret purchase, the cage is where specifications are safety. A ferret is a long,

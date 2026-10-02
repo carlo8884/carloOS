@@ -233,13 +233,15 @@ interface QuickPicksProps {
   title?: string
 }
 
-export function QuickPicks({ items, title = 'Jump to Your Pick' }: QuickPicksProps) {
+export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = false }: QuickPicksProps & { embedded?: boolean }) {
   return (
-    <div className="bg-brand-surface border-b border-brand-border px-container sm:px-container-sm py-5">
+    <div className={embedded
+      ? 'bg-brand-surface border border-brand-border rounded-lg py-5 px-4 mb-6'
+      : 'bg-brand-surface border-b border-brand-border px-container sm:px-container-sm py-5'}>
       <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
         {title}
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
+      <div className={embedded ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-2 lg:grid-cols-4 gap-3'}>
         {items.map((item) => (
           <a
             key={item.href}
