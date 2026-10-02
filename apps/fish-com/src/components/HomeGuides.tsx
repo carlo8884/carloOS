@@ -98,16 +98,32 @@ export function HomeGuides() {
   return (
     <>
       <section className="bg-brand-dark px-container-sm sm:px-container py-section">
-        <div className="flex items-center gap-2.5 mb-3">
-          <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Calculators & Tools</span>
+        <div className="flex items-end justify-between mb-7 flex-wrap gap-4">
+          <div>
+            <div className="flex items-center gap-2.5 mb-3">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Calculators & Tools</span>
+            </div>
+            <h2 className="font-display font-bold text-white tracking-tight italic mb-3 max-w-3xl" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
+              Get a number, not just an article.
+            </h2>
+            <p className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed">
+              Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.
+            </p>
+          </div>
+          <Link
+            href="/tools"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              <p className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, water change.</p>
+            </div>
+          </Link>
         </div>
-        <h2 className="font-display font-bold text-white tracking-tight italic mb-3 max-w-3xl" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
-          Get a number, not just an article.
-        </h2>
-        <p className="text-base text-white/60 mb-8 max-w-2xl leading-relaxed">
-          Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.
-        </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {CALCULATORS.map((tool) => (
             <ToolCard key={tool.href} {...tool} />
