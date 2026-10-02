@@ -17,7 +17,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
-  SchemaScript
+  SchemaScript,
   buildMetadata,
 } from '@carloOS/ui'
 import {

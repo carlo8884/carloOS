@@ -29,7 +29,7 @@ import {
   CalloutBox,
   CrossPortfolioCard,
   RelatedLinks,
-  SchemaScript
+  SchemaScript,
   StockImage,
   buildArticleSchema,
   buildMedicalWebPageSchema,

@@ -8,7 +8,7 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure
+  AffiliateDisclosure,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,

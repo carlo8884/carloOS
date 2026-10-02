@@ -29,7 +29,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
-  SchemaScript
+  SchemaScript,
   buildArticleSchema,
   combineSchemas,
 } from '@carloOS/ui'
