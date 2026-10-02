@@ -34,5 +34,11 @@ jobs:
           key: turbo-${{ runner.os }}-${{ github.sha }}
           restore-keys: turbo-${{ runner.os }}-
       - run: npm ci
+      - uses: actions/cache@v4
+        with:
+          path: node_modules/.cache/google-fonts
+          key: google-fonts-${{ runner.os }}-${{ hashFiles('apps/**/src/app/layout.tsx', 'scripts/ci/patch-google-font-fetch.cjs') }}
+          restore-keys: google-fonts-${{ runner.os }}-
+      - run: node --test scripts/ci/google-font-fetch.test.mjs
       - run: npx turbo type-check
       - run: npx turbo build
