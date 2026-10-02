@@ -40,31 +40,41 @@ export function ShopCtas({
   const chewy = visibleChewyHref(chewyHref)
   if (!amazon && !chewy) return null
   return (
-    <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-      {amazon ? (
-        <a
-          href={amazon}
-          rel="sponsored noopener"
-          style={amazonStyle}
-          onClick={() =>
-            trackEvent('affiliate_click', { vendor: 'amazon', link_url: amazon, link_text: amazonLabel })
-          }
-        >
-          {amazonLabel}
-        </a>
-      ) : null}
-      {chewy ? (
-        <a
-          href={chewy}
-          rel="sponsored noopener"
-          style={chewyStyle}
-          onClick={() =>
-            trackEvent('affiliate_click', { vendor: 'chewy', link_url: chewy, link_text: chewyLabel })
-          }
-        >
-          {chewyLabel}
-        </a>
-      ) : null}
+    <div>
+      <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
+        {amazon ? (
+          <a
+            href={amazon}
+            rel="sponsored noopener"
+            style={amazonStyle}
+            onClick={() =>
+              trackEvent('affiliate_click', { vendor: 'amazon', link_url: amazon, link_text: amazonLabel })
+            }
+          >
+            {amazonLabel}
+          </a>
+        ) : null}
+        {chewy ? (
+          <a
+            href={chewy}
+            rel="sponsored noopener"
+            style={chewyStyle}
+            onClick={() =>
+              trackEvent('affiliate_click', { vendor: 'chewy', link_url: chewy, link_text: chewyLabel })
+            }
+          >
+            {chewyLabel}
+          </a>
+        ) : null}
+      </div>
+      <p
+        data-affiliate-disclosure="hop"
+        style={{ margin: '8px 0 0', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
+      >
+        {amazon
+          ? 'As an Amazon Associate we earn from qualifying purchases.'
+          : 'We may earn a commission from qualifying purchases.'}
+      </p>
     </div>
   )
 }

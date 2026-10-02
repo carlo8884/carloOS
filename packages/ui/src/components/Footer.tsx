@@ -9,6 +9,8 @@ import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
 import { isChewyHopLive } from '@carloOS/config/affiliate-hop'
 
+const EARNING_SITES = new Set<SiteId>(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
+
 const LAUNCH_FOOTER: Partial<Record<SiteId, { moneyLabel: string; moneyHref: string }>> = {
   'dog-com': { moneyLabel: 'Best dry dog food', moneyHref: '/reviews/best-dry-dog-food' },
   'fish-com': { moneyLabel: 'Best water test kits', moneyHref: '/reviews/best-water-test-kits' },
@@ -100,7 +102,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             {[
               { label: 'Home', href: '/' },
               { label: 'Directory', href: '/' + 'directory' },
-              { label: 'Disclosure', href: '/disclosure' },
+              { label: 'Affiliate Disclosure', href: '/disclosure' },
               { label: LAUNCH_FOOTER[siteId]!.moneyLabel, href: LAUNCH_FOOTER[siteId]!.moneyHref },
             ].map((link) => (
               <Link
@@ -122,7 +124,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
             {[
               { label: 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
-              { label: 'Disclosure', href: '/disclosure' },
+              { label: EARNING_SITES.has(siteId) ? 'Affiliate Disclosure' : 'Disclosure', href: '/disclosure' },
               { label: 'Editorial Standards', href: '/editorial-standards' },
               ...(siteId === 'dog-com' ||
               siteId === 'fish-com' ||

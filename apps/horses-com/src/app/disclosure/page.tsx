@@ -120,7 +120,8 @@ export default function DisclosurePage() {
           </li>
           <li>
             <strong>Amazon Associates.</strong> Limited overlap — primarily
-            accessory items (grooming brushes, fly spray, hoof picks).
+            accessory items (grooming brushes, fly spray, hoof picks). As an
+            Amazon Associate we earn from qualifying purchases.
           </li>
         </ul>
         <p>
