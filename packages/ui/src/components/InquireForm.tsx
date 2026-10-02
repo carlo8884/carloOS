@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { INQUIRE_FALLBACK_HREF, inquireFailureLead } from '../inquire-copy'
 
 export type InquireIntent = 'offer' | 'pro-application'
 
@@ -23,6 +24,7 @@ export function InquireForm({
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
+  const [showFallback, setShowFallback] = useState(false)
   const isPro = intent === 'pro-application'
   const onCard = variant === 'card'
 
@@ -36,11 +38,13 @@ export function InquireForm({
     }
     if (data.robot !== 'on') {
       setStatus('error')
+      setShowFallback(false)
       setErrorMsg('Tick the box to confirm you are not a robot.')
       return
     }
     setStatus('sending')
     setErrorMsg('')
+    setShowFallback(false)
     try {
       const res = await fetch('/api/inquire', {
         method: 'POST',
@@ -49,18 +53,16 @@ export function InquireForm({
       })
       if (!res.ok) {
         setStatus('error')
-        setErrorMsg(
-          res.status === 503
-            ? 'This inbox is not connected yet.'
-            : 'Could not send that note. Try again in a little while.',
-        )
+        setShowFallback(true)
+        setErrorMsg(inquireFailureLead(res.status))
         return
       }
       setStatus('sent')
       form.reset()
     } catch {
       setStatus('error')
-      setErrorMsg('Could not send that note. Try again in a little while.')
+      setShowFallback(true)
+      setErrorMsg(inquireFailureLead(0))
     }
   }
 
@@ -134,8 +136,17 @@ export function InquireForm({
           : submitLabel || (isPro ? 'Send application' : 'Send offer')}
       </button>
       {status === 'error' && (
-        <p className={onCard ? 'text-white text-sm text-center' : 'text-sm text-red-700'}>
-          {errorMsg || 'Could not send that note. Try again in a little while.'}
+        <p role="alert" className={onCard ? 'text-white text-sm text-center' : 'text-sm text-red-700'}>
+          {errorMsg || inquireFailureLead(0)}
+          {showFallback ? (
+            <>
+              {' '}
+              <a href={INQUIRE_FALLBACK_HREF} className="underline font-semibold">
+                disclosure page
+              </a>
+              .
+            </>
+          ) : null}
         </p>
       )}
     </form>
