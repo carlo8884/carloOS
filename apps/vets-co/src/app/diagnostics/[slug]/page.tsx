@@ -11,8 +11,7 @@ import {
   ArticleLayout,
   CalloutBox,
   RelatedLinks,
-  AffiliateDisclosure,
-  ShopCtas,
+  AffiliateDisclosure
 } from '@carloOS/ui'
 import {
   Diagnostics,
@@ -326,19 +325,7 @@ export default function DiagnosticPage({ params }: PageProps) {
             interpretation supersedes any general guidance here.
           </CalloutBox>
 
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" />
-            <div className="flex flex-col gap-3 mt-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/pet+supplies?s=diagnostics-spoke"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
-          </div>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
           {/* FAQs */}
           <h2>Frequently asked questions</h2>

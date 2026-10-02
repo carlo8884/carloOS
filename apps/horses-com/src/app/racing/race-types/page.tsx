@@ -15,7 +15,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { raceTypeSpokes } from '@/data/race-types'
 
@@ -176,8 +176,7 @@ export default function RaceTypesHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-
+        
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
@@ -191,19 +190,7 @@ export default function RaceTypesHubPage() {
             or PLACEHOLDER. Unused vs racing-roles /
             understanding-race-types / newcomers hops. Do not
             re-open #1165 / what-to-expect. */}
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+supplies?s=race-types-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
-      </section>
+              </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
       <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="footer" />

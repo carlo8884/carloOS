@@ -12,7 +12,6 @@ import {
   ArticleSourcesList,
   StockImage,
   AffiliateDisclosure,
-  ShopCtas,
 } from '@carloOS/ui'
 
 const SOURCES = [

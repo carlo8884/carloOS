@@ -9,8 +9,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
-  ShopCtas,
+  AffiliateDisclosure
 } from '@carloOS/ui'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
 
@@ -507,19 +506,7 @@ export default function SymptomPage({ params }: PageProps) {
             symptoms hub + diagnostics-spoke kitchens.
             Educational only — never a first-aid kit,
             never an Rx product. */}
-        <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
-          <div className="flex flex-col gap-3 mt-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/pet+supplies?s=symptoms-spoke"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
+        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Back to symptoms */}
         <div className="mt-10 pt-8 border-t border-brand-border not-prose">

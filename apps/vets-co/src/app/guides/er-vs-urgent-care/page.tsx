@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co", description: "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.", path: '/guides/er-vs-urgent-care', type: 'article' })

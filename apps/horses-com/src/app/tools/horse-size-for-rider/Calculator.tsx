@@ -14,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure } from '@carloOS/ui'
 
 type Unit = 'imperial' | 'metric'
 

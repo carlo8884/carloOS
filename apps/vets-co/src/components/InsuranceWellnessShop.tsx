@@ -8,7 +8,7 @@
  * /reviews/best-pet-insurance — this block does not re-rank insurers.
  */
 import Link from 'next/link'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure } from '@carloOS/ui'
 
 export function InsuranceWellnessShop({
   source,

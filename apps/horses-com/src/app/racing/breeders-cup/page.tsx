@@ -23,7 +23,6 @@ import {
   TableOfContents,
   FAQAccordion,
   AffiliateDisclosure,
-  ShopCtas,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -212,19 +211,7 @@ export default function BreedersCupPage() {
               or PLACEHOLDER. Unused vs triple-crown /
               race-types hops.
               Do not re-open #1165 / what-to-expect. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=racing-breeders-cup"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
-          </div>
-        </div>
+                  </div>
       </ArticleLayout>
     </>
   )

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -144,19 +144,7 @@ export default function AdoptionVsBuyingPage() {
               first-week / cost / supplies kitchen kits. Ferret
               aging stays held.
               Do not re-open #1165 / what-to-expect. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ferret+supplies?s=adoption-vs-buying"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
-          </div>
-
+          
           <h2 id="sources">Sources</h2>
           <p>
             Estrogen-toxicity risk in intact unbred jills, the role of altering, and discussion of early-altering and adrenal-disease associations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Descenting and odor management reflect standard ferret-husbandry references and American Ferret Association guidance. Locate primary publications by title.

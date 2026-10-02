@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, FAQAccordion, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -494,8 +494,7 @@ export default function HealthHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
-
+        
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
@@ -510,19 +509,7 @@ export default function HealthHubPage() {
             or PLACEHOLDER. Unused vs tools / reviews /
             diet / care / behavior kitchen kits and child
             finger+toothbrush / carnivore+care hops. */}
-        <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
-          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
-          </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/ferret+supplies?s=health-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
-        </div>
-      </section>
+              </section>
 
       {/* FAQ — grounded in on-page facts; FAQPage schema is injected via the combined
           schema above, so includeSchema={false} avoids a duplicate JSON-LD block */}

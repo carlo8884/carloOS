@@ -181,10 +181,10 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonHref="/go/amazon-brand/daily+racing+form?s=racing-for-newcomers-how-to-read-a-race-card"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -211,10 +211,10 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonHref="/go/amazon-brand/horse+racing+binoculars?s=racing-for-newcomers-a-day-at-the-races"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -241,10 +241,10 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <div className="flex flex-col gap-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks"
                     amazonLabel="Shop on Amazon"
                   />
           </div>

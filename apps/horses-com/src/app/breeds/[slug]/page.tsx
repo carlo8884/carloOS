@@ -504,11 +504,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-thoroughbred"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-thoroughbred"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -520,11 +520,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-arabian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-arabian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -536,11 +536,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-andalusian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-andalusian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -552,11 +552,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-lusitano"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-lusitano"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -568,11 +568,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-lipizzaner"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-lipizzaner"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -584,11 +584,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-friesian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-friesian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -600,11 +600,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-mustang"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-mustang"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -616,11 +616,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-belgian-draft"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-belgian-draft"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -632,11 +632,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-percheron"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-percheron"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -648,11 +648,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-shire"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-shire"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -664,11 +664,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-clydesdale"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-clydesdale"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -680,11 +680,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-suffolk-punch"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-suffolk-punch"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -696,11 +696,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-norwegian-fjord"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-norwegian-fjord"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -712,11 +712,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-welsh-pony"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-welsh-pony"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -728,11 +728,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-shetland-pony"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-shetland-pony"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -744,11 +744,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-pony-of-the-americas"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-pony-of-the-americas"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -760,11 +760,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-connemara-pony"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-connemara-pony"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -776,11 +776,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-haflinger"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-haflinger"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -792,11 +792,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-morgan"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-morgan"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -808,11 +808,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-hackney"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-hackney"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -824,11 +824,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-akhal-teke"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-akhal-teke"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -840,11 +840,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-marwari"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-marwari"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -856,11 +856,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-cleveland-bay"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-cleveland-bay"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -872,11 +872,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-irish-sport-horse"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-irish-sport-horse"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -888,11 +888,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-anglo-arabian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-anglo-arabian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -904,11 +904,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-knabstrupper"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-knabstrupper"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -920,11 +920,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-gypsy-vanner"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-gypsy-vanner"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -936,11 +936,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-rocky-mountain-horse"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-rocky-mountain-horse"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -952,11 +952,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-warmblood"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-warmblood"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -968,11 +968,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-quarab"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-quarab"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -984,11 +984,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-anglo-arab"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-anglo-arab"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1000,11 +1000,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-pintabian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-pintabian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1016,11 +1016,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-paint-horse"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-paint-horse"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1032,11 +1032,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-appaloosa"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-appaloosa"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1048,11 +1048,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-american-saddlebred"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-american-saddlebred"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1064,11 +1064,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-hanoverian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-hanoverian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1080,11 +1080,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-holsteiner"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-holsteiner"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1096,11 +1096,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-dutch-warmblood"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-dutch-warmblood"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1112,11 +1112,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-oldenburg"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-oldenburg"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1128,11 +1128,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-trakehner"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-trakehner"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1144,11 +1144,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-selle-francais"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-selle-francais"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1160,11 +1160,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-westphalian"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-westphalian"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1176,11 +1176,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-belgian-warmblood"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-belgian-warmblood"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1192,11 +1192,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-tennessee-walking-horse"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-tennessee-walking-horse"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1208,11 +1208,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-missouri-fox-trotter"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-missouri-fox-trotter"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1224,11 +1224,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-paso-fino"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-paso-fino"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1240,11 +1240,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-peruvian-paso"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-peruvian-paso"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1256,11 +1256,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-standardbred"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-standardbred"
                     amazonLabel="Shop on Amazon"
                   />
           </div>
@@ -1272,11 +1272,11 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
                 </div>
-                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+                <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
                 <AffiliateDisclosure variant="inline" siteId="horses-com" />
                 <div className="flex flex-col gap-3 mt-3">
                   <ShopCtas
-                    amazonHref="/go/amazon-brand/horse+supplies?s=breed-icelandic"
+                    amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-icelandic"
                     amazonLabel="Shop on Amazon"
                   />
           </div>

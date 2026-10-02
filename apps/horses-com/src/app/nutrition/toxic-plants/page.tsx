@@ -224,7 +224,7 @@ export default function ToxicPlantsPage() {
                 amazonLabel="Browse equine toxic-plant identification field guides on Amazon →"
               />
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=nutrition-toxic-plants"
+                amazonHref="/go/amazon-brand/horse+hay?s=nutrition-toxic-plants"
                 amazonLabel="Shop on Amazon"
               />
               <ShopCtas

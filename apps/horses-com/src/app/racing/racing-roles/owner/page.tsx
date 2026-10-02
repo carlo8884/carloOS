@@ -208,11 +208,11 @@ export default function OwnerRolePage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+supplies?s=racing-roles-owner"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-roles-owner"
+                amazonLabel="Shop jockey silks on Amazon"
               />
           </div>
           </div>
