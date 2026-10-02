@@ -1,5 +1,27 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-02 ~14:03 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage, product-guide, how-we-work, under-hero start band, trust chips, product-guide chips, species header chip, calculators header chip, product-guides action, tank-planning header chip, water-safety header chip, equipment header chip, and math-strip header chip remain photo-led. Left alone this hour. Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. No homepage for-sale banner. The category header ("Where to start") was title-only; now a photo chip with the existing credited breed-portrait thumb already used on the breeds card (Niklas Schikora), linking /breeds. Trust chips left alone.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com category header now uses an existing manifest thumb that already has a photographer credit, so the breed path matches the fish.com header chips and the photo-led horses homepage. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
+
 ## 2026-10-02 ~13:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage, product-guide, how-we-work, under-hero start band, trust chips, product-guide chips, species header chip, calculators header chip, product-guides action, tank-planning header chip, water-safety header chip, and equipment header chip remain photo-led. The math-strip header was title-only; now a photo chip with the existing credited betta thumb already used on the species row (Worachat Sodsri), linking /tools. Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
@@ -277,10 +299,10 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ## Currently underway
 
-* Priority 1–4 satisfied. Fish water-safety header is now a photo chip with the existing credited water-parameters thumb, linking /water.
+* Priority 1–4 satisfied. Horses category header is now a photo chip with the existing credited breed-portrait thumb (Niklas Schikora), linking /breeds.
+* Fish homepage left photo-led, including the math-strip header chip.
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
-* Horses /inquire and homepage trust row left alone (shared offer form; photo-led).
-* Shared footer inquire left alone.
+* Horses /inquire left alone (shared offer form). Shared footer inquire left alone.
 
 ## Test and deployment status
 
