@@ -34,7 +34,7 @@ export function Breadcrumb({ items, siteId }: BreadcrumbProps) {
 
       <nav
         aria-label="Breadcrumb"
-        className="px-container sm:px-container-sm py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border"
+        className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border"
       >
         <ol className="flex items-center gap-2 flex-wrap list-none m-0 p-0" role="list">
           {items.map((item, i) => {
