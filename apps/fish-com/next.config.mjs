@@ -12,6 +12,15 @@ const nextConfig = {
   env: {
     NEXT_PUBLIC_SITE_ID: 'fish-com',
   },
+  async redirects() {
+    return [
+      {
+        source: '/tools/fish-stocking-calculator',
+        destination: '/tools/stocking-calculator',
+        permanent: true,
+      },
+    ]
+  },
 }
 
 export default nextConfig

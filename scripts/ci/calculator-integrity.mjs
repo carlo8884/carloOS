@@ -162,9 +162,12 @@ const CALCULATORS = [
   },
   {
     id: 'fish · heater-wattage-calculator',
-    file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/Calculator.tsx',
-    mustInclude: [{ re: /gal\s*\*\s*3\s*\*\s*\(deltaF\s*\/\s*10\)/, label: '3 W/gal per 10°F lift' }],
-    why: 'Aquarium heater rule of thumb: ~3 watts per gallon for a 10°F lift, scaled linearly.',
+    file: 'apps/fish-com/src/app/tools/heater-wattage-calculator/wattage.ts',
+    mustInclude: [
+      { re: /gal\s*\*\s*3\s*\*\s*\(deltaF\s*\/\s*10\)/, label: '3 W/gal per 10°F lift' },
+      { re: /watts \* 1\.25/, label: '25% headroom before stock-size rounding' },
+    ],
+    why: 'Aquarium heater rule of thumb: ~3 watts per gallon for a 10°F lift, scaled linearly, then 25% headroom. The quick-reference table imports this same function.',
   },
   {
     id: 'fish · heater-wattage-calculator hops',
@@ -176,6 +179,9 @@ const CALCULATORS = [
       { re: /amazon-brand\/eheim\+jager\+heater\?s=tools-heater-wattage-calculator/, label: 'Eheim Jager heater search hop (same query as heater reviews / stocking)' },
       { re: /amazon-brand\/aqueon\+pro\+heater\?s=tools-heater-wattage-calculator/, label: 'Aqueon Pro heater search hop (same query as heater reviews)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /referenceRows\(\)/, label: 'quick-reference table uses the shared heater formula' },
+      { re: /glass lid/, label: 'table states the glass-lid assumption' },
+      { re: /25% headroom/, label: 'table states the 25% headroom assumption' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -183,8 +189,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /Keep the heater plan/, label: 'empty husk heading removed' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+      { re: />40 gal<\/td><td[^>]*>200W/, label: '40 gal row must not hardcode 200W against the 150W default' },
     ],
-    why: '2026-09-08 journeys: after the wattage answer, next step is the substrate calculator + the existing Eheim Jager hop. Empty Keep-the-heater-plan husk removed. Shop dump stays below. No invented kitchen hops.',
+    why: '2026-09-08 journeys: after the wattage answer, next step is the substrate calculator + the existing Eheim Jager hop. Empty Keep-the-heater-plan husk removed. Shop dump stays below. No invented kitchen hops. The chart is generated from wattage.ts so the 40 gal default (150W) matches the table.',
   },
   {
     id: 'fish · substrate-calculator',

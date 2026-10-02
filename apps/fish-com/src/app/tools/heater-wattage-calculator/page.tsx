@@ -13,6 +13,13 @@ import {
   JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import {
+  HEATER_STEPS,
+  REFERENCE_LIFT_F,
+  REFERENCE_ROOM_F,
+  REFERENCE_TARGET_F,
+  referenceRows,
+} from './wattage'
 
 const URL = 'https://fish.com/tools/heater-wattage-calculator'
 
@@ -180,7 +187,13 @@ export default function HeaterWattageCalculatorPage() {
         </div>
 
         <h2 id="chart">Quick Reference — Wattage by Tank Size</h2>
-        <p>Assuming a ~10°F lift (68°F room → 78°F tank) for a standard tropical setup with a glass lid:</p>
+        <p>
+          Same formula as the calculator, at its default inputs: a {REFERENCE_ROOM_F}°F room to a {REFERENCE_TARGET_F}°F tank
+          (a {REFERENCE_LIFT_F}°F lift), a glass lid, 3 watts per gallon for that 10°F lift, then 25% headroom, rounded up
+          to the next stock heater size ({HEATER_STEPS.join(', ')} W). The 5–10 gallon row uses the 10-gallon end of the
+          range. An open top, a colder room, or a warmer target needs more wattage — change those inputs in the calculator.
+          From 40 gallons up, the dual column splits that stock size across two heaters.
+        </p>
         <div style={{ overflowX: 'auto', marginBottom: '24px' }}>
           <table className="w-full text-sm border-collapse">
             <thead>
@@ -191,14 +204,13 @@ export default function HeaterWattageCalculatorPage() {
               </tr>
             </thead>
             <tbody className="text-brand-text-mid">
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">5–10 gal</td><td className="py-2 pr-4">50W</td><td className="py-2">—</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">20 gal</td><td className="py-2 pr-4">100W</td><td className="py-2">—</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">29 gal</td><td className="py-2 pr-4">150W</td><td className="py-2">2 × 75W</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">40 gal</td><td className="py-2 pr-4">200W</td><td className="py-2">2 × 100W</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">55 gal</td><td className="py-2 pr-4">250W</td><td className="py-2">2 × 150W</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">75 gal</td><td className="py-2 pr-4">300W</td><td className="py-2">2 × 150W</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">125 gal</td><td className="py-2 pr-4">500W</td><td className="py-2">2 × 250W</td></tr>
-              <tr className="border-b border-brand-border/50"><td className="py-2 pr-4">180+ gal</td><td className="py-2 pr-4">800W</td><td className="py-2">2 × 400W + controller</td></tr>
+              {referenceRows().map((row) => (
+                <tr key={row.label} className="border-b border-brand-border/50">
+                  <td className="py-2 pr-4">{row.label}</td>
+                  <td className="py-2 pr-4">{row.single}</td>
+                  <td className="py-2">{row.dual}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
