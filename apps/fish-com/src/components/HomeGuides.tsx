@@ -39,6 +39,11 @@ const PRODUCT_CHIPS = [
   { title: 'Test kits', note: 'What to test, and how often, before the next water change.', href: '/reviews/best-water-test-kits', imageKey: 'fish-com:tools-hero', imageAlt: 'An aquarium water test kit' },
 ]
 
+const WORK_CHIPS = [
+  { title: 'Editorial standards', note: 'How guides are sourced and signed.', href: '/editorial-standards', imageKey: 'fish-com:glossary-hero', imageAlt: 'A clear planted aquarium' },
+  { title: 'Affiliate disclosure', note: 'Links disclosed above the fold on product pages.', href: '/disclosure', imageKey: 'fish-com:species-thumb-oscar', imageAlt: 'An Oscar fish' },
+]
+
 const CALCULATORS = [
   { href: '/tools/aquarium-volume-calculator', eyebrow: 'Calculator', title: 'Aquarium Volume Calculator', desc: 'Enter length, width, and height in any unit — get exact gallons and liters, plus bioload math for the fish you’re planning to keep.', cta: 'Calculate tank volume', imageKey: 'fish-com:category-planted', imageAlt: 'Lush aquatic plants in a planted aquarium' },
   { href: '/tools/stocking-calculator', eyebrow: 'Calculator', title: 'Stocking Calculator', desc: 'A slim-inch bioload ceiling from footprint, volume, and filter class — not a species headcount, and not inch-per-gallon.', cta: 'Check your stocking', imageKey: 'fish-com:species-thumb-guppy', imageAlt: 'A guppy fish' },
@@ -230,9 +235,22 @@ export function HomeGuides() {
             <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
               Fish.com Editorial writes the guides on this site. We reference published aquarist literature, manufacturer specifications, and species-specific water-parameter data. We don't use AI-generated aquarists or biologists. Affiliate links are disclosed above the fold on every product page.
             </p>
-            <div className="flex gap-5 mt-4 flex-wrap">
-              <Link href="/editorial-standards" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Editorial standards →</Link>
-              <Link href="/disclosure" className="text-sm font-semibold text-brand-primary no-underline hover:underline">Affiliate disclosure →</Link>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-4">
+              {WORK_CHIPS.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className="group flex gap-3 overflow-hidden rounded-xl border border-brand-border bg-brand-surface no-underline hover:border-brand-primary transition-all"
+                >
+                  <div className={`relative h-20 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                  </div>
+                  <div className="py-3 pr-3">
+                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">{item.title}</div>
+                    <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
+                  </div>
+                </Link>
+              ))}
             </div>
           </div>
           <div className={`relative min-h-[220px] overflow-hidden rounded-xl ring-1 ring-brand-border ${FILL_IMAGE}`}>
