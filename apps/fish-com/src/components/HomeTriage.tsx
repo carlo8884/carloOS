@@ -174,9 +174,23 @@ export function HomeTriage() {
       </section>
 
       <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
-        <div className="mb-4 max-w-3xl">
-          <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">Decide with math, not guesses</div>
-          <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+        <div className="mb-4 flex items-end justify-between gap-4 flex-wrap">
+          <div className="max-w-3xl">
+            <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">Decide with math, not guesses</div>
+            <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+          </div>
+          <Link
+            href="/tools"
+            className="group flex items-center gap-3 overflow-hidden rounded-lg border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-1.5">
+              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              <p className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, CO₂.</p>
+            </div>
+          </Link>
         </div>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
           {CALCULATORS.map((c) => (
