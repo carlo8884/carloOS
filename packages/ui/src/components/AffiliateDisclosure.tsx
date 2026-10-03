@@ -110,7 +110,7 @@ export function AffiliateDisclosure({
       <p
         data-affiliate-disclosure="footer"
         className={[
-          'mt-8 pt-6 border-t border-white/10 text-2xs text-white/45 leading-relaxed max-w-3xl',
+          'mt-8 pt-6 border-t border-white/10 text-2xs text-white/80 leading-relaxed max-w-3xl',
           className ?? '',
         ].join(' ')}
       >
