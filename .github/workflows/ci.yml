@@ -42,3 +42,7 @@ jobs:
       - run: node --test scripts/ci/google-font-fetch.test.mjs
       - run: npx turbo type-check
       - run: npx turbo build
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Money journey smoke tests
+        run: npx playwright test

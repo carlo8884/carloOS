@@ -2,12 +2,13 @@
   "name": "carloOS",
   "version": "1.0.0",
   "private": true,
-  "description": "CarloOS \u2014 Premium domain portfolio monorepo. dog.com \u00b7 fish.com \u00b7 lizard.com \u00b7 saddle.com \u00b7 vets.co",
+  "description": "CarloOS — Premium domain portfolio monorepo. dog.com · fish.com · lizard.com · saddle.com · vets.co",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
     "type-check": "turbo type-check",
     "lint": "turbo lint",
+    "test:journeys": "playwright test",
     "clean": "turbo clean && rm -rf node_modules",
     "seed": "tsx scripts/seed.ts --all && tsx scripts/seed-fish.ts",
     "seed:fish": "tsx scripts/seed-fish.ts",
@@ -26,6 +27,7 @@
     "packages/*"
   ],
   "devDependencies": {
+    "@playwright/test": "^1.55.1",
     "tsx": "^4.7.0",
     "turbo": "^2.0.0",
     "typescript": "^5.4.0"
