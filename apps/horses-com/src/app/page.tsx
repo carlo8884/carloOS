@@ -174,9 +174,20 @@ export default function HomePage() {
       <HomeHero />
       <section className="px-container-sm sm:px-container py-6" style={{ background: 'var(--brand-surface)', borderTop: '1px solid var(--brand-border)', borderBottom: '1px solid var(--brand-border)' }}>
         <div className="mx-auto max-w-container-wide">
-          <div className="flex items-center gap-3 mb-4">
-            <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-            <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+          <div className="flex items-end justify-between gap-4 flex-wrap mb-4">
+            <div className="flex items-center gap-3">
+              <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
+              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+            </div>
+            <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
+              <span className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+                <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+              </span>
+              <span className="pr-3 py-2">
+                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Editorial standards</span>
+                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Signed guides, no invented experts.</span>
+              </span>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {TRUST_CHIPS.map((item) => (
