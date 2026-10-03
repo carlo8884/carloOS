@@ -18,7 +18,7 @@
   --brand-white: #FFFFFF;
   --brand-text-dark: #13241C;
   --brand-text-mid: #3F3A2E;
-  --brand-text-light: #7A6E5C;
+  --brand-text-light: #766A59;
   --brand-border: #D9D0BE;
   --brand-success: #1F3A2F;
   --brand-warning: #B68830;
@@ -89,3 +89,8 @@ img { max-width: 100%; height: auto; display: block; }
   --font-playfair: Georgia, 'Times New Roman', serif;
   --font-source-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
 }
+
+/* Forest primary disappears on the dark masthead. */
+.bg-brand-dark .text-brand-primary { color: #D6A14A; }
+.carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
+p a { text-decoration-line: underline; text-underline-offset: 2px; }

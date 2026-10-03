@@ -104,7 +104,7 @@ export default function VetsPetInsurancePage() {
           routine wellness coverage matters. Enroll before any vet visit — every
           insurer permanently excludes conditions documented before the policy starts.
         </p>
-        <div className="mt-4 text-xs text-white/30">Vets.co Editorial · Updated Jun 2026 · Affiliate disclosure applies</div>
+        <div className="mt-4 text-xs text-white/80">Vets.co Editorial · Updated Jun 2026 · Affiliate disclosure applies</div>
       </div>
 
       <QuickPicks items={PICKS} />

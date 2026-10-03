@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
 import { Nav, Footer, buildMetadata } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
@@ -48,15 +49,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="en"
       className={`${baskerville.variable} ${manrope.variable} font-vars`}
     >
-      <head>
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
-          </>
-        )}
-      </head>
       <body>
+        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
+          </>
+        ) : null}
         <Nav siteId="vets-co" />
 
         {/*

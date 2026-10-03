@@ -162,7 +162,7 @@ export function HubMasthead({
             <Link
               href={primaryCta.href}
               className="inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200 hover:opacity-90 shadow-[0_6px_24px_rgba(10,107,94,0.4)]"
-              style={{ background: 'var(--brand-primary-light)', color: '#FFFFFF' }}
+              style={{ background: 'var(--brand-primary)', color: '#FFFFFF' }}
             >
               {primaryCta.label}
               <IconArrowRight />

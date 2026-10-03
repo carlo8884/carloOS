@@ -179,7 +179,7 @@ export default function ErVsClinicPage() {
             className="rounded-xl p-5 sm:p-6"
             style={{ background: 'rgba(200,74,42,0.07)', border: '2px solid rgba(200,74,42,0.45)' }}
           >
-            <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#C84A2A' }}>
+            <div className="text-2xs font-bold tracking-eyebrow uppercase mb-2" style={{ color: '#8C2F1C' }}>
               Do not wait for this tool
             </div>
             <p className="text-sm sm:text-base text-brand-dark leading-relaxed m-0">
