@@ -162,10 +162,10 @@ function verdictForScore(score: number): Verdict {
 }
 
 const TONE_CLASSES: Record<Verdict['tone'], string> = {
-  good: 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200',
-  underweight: 'border-amber-700/40 bg-amber-950/30 text-amber-200',
-  overweight: 'border-amber-700/40 bg-amber-950/30 text-amber-200',
-  critical: 'border-red-700/40 bg-red-950/30 text-red-200',
+  good: 'border-emerald-800 bg-emerald-50 text-emerald-950',
+  underweight: 'border-amber-800 bg-amber-50 text-amber-950',
+  overweight: 'border-amber-800 bg-amber-50 text-amber-950',
+  critical: 'border-red-800 bg-red-50 text-red-950',
 }
 
 export function BodyConditionScoreCalculator() {

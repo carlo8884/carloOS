@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import { Nav, Footer, buildMetadata, DisplayAds } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
@@ -53,17 +54,11 @@ export default function RootLayout({
       lang="en"
       className={`${playfair.variable} ${sourceSans.variable} font-vars`}
     >
-      <head>
-        {/* GA4 — only loads in production with a real ID */}
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
+      <body>
+        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
           <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
                   gtag('js', new Date());
@@ -74,13 +69,9 @@ export default function RootLayout({
                       dimension3: 'site_name'
                     }
                   });
-                `,
-              }}
-            />
+                ` }} />
           </>
-        )}
-      </head>
-      <body>
+        ) : null}
         {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="horses-com" />
 

@@ -20,12 +20,12 @@ export function SidebarCard({ title, children, dark = false }: SidebarCardProps)
         ? 'bg-brand-dark border border-white/8'
         : 'bg-brand-surface border border-brand-border',
     ].join(' ')}>
-      <h4 className={[
+      <p className={[
         'text-2xs font-bold tracking-eyebrow uppercase mb-3.5',
-        dark ? 'text-white/40' : 'text-brand-text-light',
+        dark ? 'text-white/80' : 'text-brand-text-light',
       ].join(' ')}>
         {title}
-      </h4>
+      </p>
       {children}
     </div>
   )

@@ -27,7 +27,7 @@
   /* Text */
   --brand-text-dark: #06121B;
   --brand-text-mid: #21465B;
-  --brand-text-light: #6E92A8;
+  --brand-text-light: #51758B;
 
   /* Borders */
   --brand-border: #CADDE8;
@@ -167,3 +167,8 @@ main > section:first-of-type figure > div {
   aspect-ratio: auto !important;
   border-radius: 0 !important;
 }
+
+/* Deep teal sits too close to the masthead for small labels. */
+.bg-brand-dark .text-brand-primary { color: #1A85AE; }
+.carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
+p a { text-decoration-line: underline; text-underline-offset: 2px; }

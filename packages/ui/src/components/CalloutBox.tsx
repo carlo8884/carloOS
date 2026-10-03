@@ -157,8 +157,9 @@ export function CalloutBox({
     borderBottom: `1px solid ${spec.border}33`,
   }
 
+  const Tag = spec.role === 'alert' ? 'div' : 'aside'
   return (
-    <aside
+    <Tag
       role={spec.role}
       aria-label={spec.ariaLabel}
       className="my-6 rounded-r-lg p-5"
@@ -184,6 +185,6 @@ export function CalloutBox({
           </div>
         </div>
       </div>
-    </aside>
+    </Tag>
   )
 }

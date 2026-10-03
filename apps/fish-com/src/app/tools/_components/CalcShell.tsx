@@ -107,7 +107,7 @@ export function ResultPanel({ primary, secondary, note }: ResultProps) {
         <div className="grid grid-cols-2 gap-4 mt-5 pt-5 border-t border-white/10">
           {secondary.map((s) => (
             <div key={s.label}>
-              <div className="text-2xs uppercase tracking-wider text-white/40 mb-0.5">{s.label}</div>
+              <div className="text-2xs uppercase tracking-wider text-white/80 mb-0.5">{s.label}</div>
               <div className="font-display font-semibold text-lg">{s.value}</div>
             </div>
           ))}

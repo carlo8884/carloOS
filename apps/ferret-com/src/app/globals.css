@@ -16,7 +16,7 @@
   --brand-white: #FFFFFF;
   --brand-text-dark: #1E140A;
   --brand-text-mid: #4A3220;
-  --brand-text-light: #8A7058;
+  --brand-text-light: #846A53;
   --brand-border: #E6D6BE;
   --brand-success: #3A6A2A;
   --brand-warning: #C99D5F;
@@ -160,3 +160,8 @@ h1, h2, h3, h4, h5, h6, .font-display {
     );
   }
 }
+
+/* Chocolate primary disappears on the dark masthead. */
+.bg-brand-dark .text-brand-primary { color: #C99D5F; }
+.carloOS-article a { text-decoration-line: underline; text-underline-offset: 2px; }
+p a { text-decoration-line: underline; text-underline-offset: 2px; }

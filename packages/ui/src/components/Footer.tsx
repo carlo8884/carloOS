@@ -55,9 +55,9 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
           {/* Link columns */}
           {config.footerLinks.map((col) => (
             <div key={col.heading}>
-              <h4 className="text-2xs font-bold tracking-eyebrow uppercase text-white mb-4">
+              <p className="text-2xs font-bold tracking-eyebrow uppercase text-white mb-4">
                 {col.heading}
-              </h4>
+              </p>
               <ul className="list-none m-0 p-0 flex flex-col gap-2.5" role="list">
                 {col.links.map((link) => (
                   <li key={link.href}>

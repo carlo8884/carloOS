@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Script from 'next/script'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
 import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
@@ -34,15 +35,13 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable} font-vars`}>
-      <head>
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
-          <>
-            <script async src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} />
-            <script dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
-          </>
-        )}
-      </head>
       <body>
+        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
+          </>
+        ) : null}
         <Nav siteId="fish-com" />
         <main>
           {children}

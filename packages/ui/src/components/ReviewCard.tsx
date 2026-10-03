@@ -98,9 +98,9 @@ export function ReviewCard({
               {badgeEmoji} {badge}
             </div>
           )}
-          <h3 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1">
+          <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1">
             {name}
-          </h3>
+          </h2>
           {subtitle && (
             <p className="text-xs text-brand-text-light mt-1">{subtitle}</p>
           )}

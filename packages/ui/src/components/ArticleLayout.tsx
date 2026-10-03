@@ -147,10 +147,10 @@ export function ArticleLayout({
                   <div className="text-sm font-semibold text-white">{hero.authorName}</div>
                 )}
                 {hero.authorCredentials && (
-                  <div className="text-xs text-white/40">{hero.authorCredentials}</div>
+                  <div className="text-xs text-white/80">{hero.authorCredentials}</div>
                 )}
               </div>
-              <div className="flex items-center gap-4 text-xs text-white/35 ml-auto">
+              <div className="flex items-center gap-4 text-xs text-white/80 ml-auto">
                 {hero.publishedAt && <span>Updated {hero.publishedAt}</span>}
                 {hero.readTime && <span>{hero.readTime} read</span>}
               </div>

@@ -68,7 +68,6 @@ function SignRow({
       type="button"
       role="checkbox"
       aria-checked={checked}
-      aria-pressed={checked}
       onClick={() => onToggle(sign.id)}
       className="text-left rounded-xl p-4 sm:p-5 flex gap-3 sm:gap-4 transition-shadow focus:outline-none focus:ring-2 focus:ring-brand-primary"
       style={{
@@ -175,7 +174,7 @@ export default function Calculator() {
               const items = visible.filter((s) => s.setting === g.setting)
               return (
                 <div key={g.setting}>
-                  <h3 className="font-display text-base font-bold text-brand-dark mb-3">{g.label}</h3>
+                  <h2 className="font-display text-base font-bold text-brand-dark mb-3">{g.label}</h2>
                   <div className="flex flex-col gap-3">
                     {items.map((sign) => (
                       <SignRow

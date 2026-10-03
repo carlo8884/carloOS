@@ -52,30 +52,6 @@ export default function RootLayout({
           content="f06484a9-0400-4029-a0b5-f1f1014163fc"
         />
 
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' && (
-          <>
-            <script
-              async
-              src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
-            />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', {
-                    custom_map: {
-                      dimension1: 'content_type',
-                      dimension2: 'site_section',
-                      dimension3: 'site_name'
-                    }
-                  });
-                `,
-              }}
-            />
-          </>
-        )}
       </head>
       <body>
         <a
@@ -98,7 +74,25 @@ export default function RootLayout({
 
         <Footer siteId="dog-com" showAffiliateDisclosure />
 
-        <Script src={SKIMLINKS_SRC} strategy="afterInteractive" />
+        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
+          <>
+            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
+            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_ID}', {
+                    custom_map: {
+                      dimension1: 'content_type',
+                      dimension2: 'site_section',
+                      dimension3: 'site_name'
+                    }
+                  });
+                ` }} />
+          </>
+        ) : null}
+
+        <Script src={SKIMLINKS_SRC} strategy="lazyOnload" />
 
         <DisplayAds config={displayAds} />
       </body>
