@@ -295,7 +295,15 @@ export default function HomePage() {
                 <p className="text-sm text-brand-text-mid leading-relaxed">Score the six Henneke checkpoints and the tool returns the 1–9 score vets and nutritionists use.</p>
               </div>
               <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">More free calculators</div>
+                <Link href="/tools" className="group mb-3 flex items-center gap-3 no-underline">
+                  <span className={`relative h-12 w-16 shrink-0 overflow-hidden rounded-md ring-1 ring-brand-border ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-guides" fallbackKey="horses-com:hero" alt="A horse and rider working in the arena" aspect="4:3" variant="inline" subtleCredit />
+                  </span>
+                  <span>
+                    <span className="block text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light">More free calculators</span>
+                    <span className="block text-sm font-semibold text-brand-primary group-hover:underline">Tools hub, on the page</span>
+                  </span>
+                </Link>
                 <div className="flex flex-col gap-2 text-sm font-semibold">
                   {[
                     { href: '/tools/horse-weight-calculator', label: 'Horse weight calculator', imageKey: 'horses-com:tool-bcs-calculator', imageAlt: 'A horse standing square for body condition assessment' },
