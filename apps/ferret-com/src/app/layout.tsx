@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
-import { Nav, Footer, DisplayAds } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, Ga4Loader } from '@carloOS/ui'
 import { buildMetadata } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
@@ -45,23 +44,7 @@ export default function RootLayout({
       className={`font-vars ${playfair.variable} ${sourceSans.variable}`}
     >
       <body>
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_ID}', {
-                    custom_map: {
-                      dimension1: 'content_type',
-                      dimension2: 'site_section',
-                      dimension3: 'site_name'
-                    }
-                  });
-                ` }} />
-          </>
-        ) : null}
+        <Ga4Loader measurementId={GA_ID} customMap />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:absolute focus:z-50 focus:top-2 focus:left-2 focus:bg-brand-primary focus:text-white focus:px-4 focus:py-2 focus:rounded"
