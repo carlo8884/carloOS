@@ -13,7 +13,8 @@ test('gtag library waits, and a shop click still queues affiliate_click', async 
   expect(home.status()).toBe(200)
   const html = await home.text()
   expect(html).toContain('function gtag(){dataLayer.push(arguments);}')
-  expect(html).not.toContain('googletagmanager.com/gtag/js')
+  expect(html).not.toMatch(/<script[^>]+src="https:\/\/www\.googletagmanager\.com\/gtag\/js/)
+  expect(html).not.toMatch(/<link[^>]+href="https:\/\/www\.googletagmanager\.com\/gtag\/js/)
 
   const path = shopPath[testInfo.project.name]
   await page.goto(path)
@@ -26,10 +27,16 @@ test('gtag library waits, and a shop click still queues affiliate_click', async 
 
   const queued = await page.evaluate(() => {
     const layer = (window as unknown as { dataLayer?: unknown[] }).dataLayer ?? []
-    return JSON.stringify(layer).includes('affiliate_click')
+    return layer.some((entry) => {
+      if (entry && typeof entry === 'object' && 'event' in entry) {
+        return (entry as { event?: string }).event === 'affiliate_click'
+      }
+      const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
+      return list[0] === 'event' && list[1] === 'affiliate_click'
+    })
   })
   expect(queued).toBe(true)
 
   const library = page.locator('script[src*="googletagmanager.com/gtag/js"]')
-  await expect(library).toHaveAttribute('data-nscript', 'afterInteractive')
+  await expect(library).toHaveAttribute('data-nscript', 'lazyOnload')
 })

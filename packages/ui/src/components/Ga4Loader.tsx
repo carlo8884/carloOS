@@ -5,9 +5,10 @@
  * script Lighthouse labels "Google Tag Manager". It is not a GTM- container.
  * ShopCtas and other callers use window.gtag for affiliate_click, so the
  * page keeps a tiny queue stub in the initial HTML. The ~178kb library
- * itself waits until after hydration (next/script afterInteractive) so it
- * does not compete with first paint. Hits use sendBeacon so a click that
- * navigates to /go still leaves the browser.
+ * itself uses next/script lazyOnload. afterInteractive preloads that file
+ * from the head, which is the same bandwidth fight as the old tag.
+ * Hits use sendBeacon so a click that navigates to /go still leaves
+ * once the library has loaded.
  */
 import Script from 'next/script'
 
@@ -32,14 +33,10 @@ export function Ga4Loader({
   if (!id || id === PLACEHOLDER_ID) return null
   return (
     <>
-      <Script
-        id="ga4"
-        strategy="beforeInteractive"
-        dangerouslySetInnerHTML={{ __html: ga4Bootstrap(id, customMap) }}
-      />
+      <script id="ga4" dangerouslySetInnerHTML={{ __html: ga4Bootstrap(id, customMap) }} />
       <Script
         src={`https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(id)}`}
-        strategy="afterInteractive"
+        strategy="lazyOnload"
       />
     </>
   )
