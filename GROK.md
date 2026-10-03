@@ -17,7 +17,7 @@ Preview URLs (Vercel):
 
 Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
 
-Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+Carlo offline until next week. Recap logged here. Gmail scopes still insufficient for send/draft (403); 5-line recap is in chat.
 
 ---
 
