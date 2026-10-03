@@ -120,9 +120,23 @@ export function HomeTriage() {
       <section className="bg-brand-dark relative overflow-hidden">
         <div className="absolute inset-0 opacity-15" style={{ backgroundImage: 'radial-gradient(ellipse at 70% 30%, rgba(14,107,138,0.35) 0%, transparent 55%)' }} aria-hidden="true" />
         <div className="relative z-10 px-container-sm sm:px-container pt-12 pb-16">
-          <div className="flex items-center gap-2.5 mb-5">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Start where you are</span>
+          <div className="flex items-end justify-between mb-5 flex-wrap gap-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Start where you are</span>
+            </div>
+            <Link
+              href="/health"
+              className="group flex items-center gap-3 overflow-hidden rounded-xl border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
+              </div>
+              <div className="pr-3 py-2">
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">Health guides</div>
+                <p className="text-xs text-white/55 mt-0.5">Spikes, gasping, and when to test.</p>
+              </div>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
             {PROBLEMS.map((p) => (
