@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
-import { Nav, Footer, buildMetadata } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, Ga4Loader } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import { EmailUnderHero } from '@carloOS/ui'
@@ -50,12 +49,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${baskerville.variable} ${manrope.variable} font-vars`}
     >
       <body>
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
-          </>
-        ) : null}
+        <Ga4Loader measurementId={GA_ID} />
         <Nav siteId="vets-co" />
 
         {/*

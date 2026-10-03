@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
-import Script from 'next/script'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero, Ga4Loader } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -36,12 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" className={`${cormorant.variable} ${inter.variable} font-vars`}>
       <body>
-        {GA_ID && GA_ID !== 'G-XXXXXXXXXX' ? (
-          <>
-            <Script src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`} strategy="lazyOnload" />
-            <Script id="ga4" strategy="lazyOnload" dangerouslySetInnerHTML={{ __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','${GA_ID}');` }} />
-          </>
-        ) : null}
+        <Ga4Loader measurementId={GA_ID} />
         <Nav siteId="fish-com" />
         <main>
           {children}
