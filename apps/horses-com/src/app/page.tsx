@@ -233,12 +233,23 @@ export default function HomePage() {
       </section>
       <section className="px-container-sm sm:px-container py-section" style={{ background: 'var(--brand-white)' }}>
         <div className="mx-auto max-w-container-wide">
-          <div className="mb-10">
-            <div className="flex items-center gap-3 mb-3">
-              <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Popular on Horses.com</span>
+          <div className="flex items-end justify-between gap-6 flex-wrap mb-10">
+            <div>
+              <div className="flex items-center gap-3 mb-3">
+                <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
+                <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Popular on Horses.com</span>
+              </div>
+              <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where owners start most</h2>
             </div>
-            <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where owners start most</h2>
+            <Link href="/ownership/cost-of-owning-a-horse" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
+              <span className={`relative h-16 w-24 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+                <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+              </span>
+              <span className="pr-3 py-2">
+                <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Annual cost guide</span>
+                <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Board, farrier, vet, feed.</span>
+              </span>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {FEATURED_GUIDES.map((guide) => (
