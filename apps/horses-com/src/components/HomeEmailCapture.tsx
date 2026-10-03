@@ -25,37 +25,50 @@ export function HomeEmailCapture() {
   return (
     <section className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-8">
       <div className="max-w-container mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          <div className="text-center lg:text-left">
-            <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-2">
-              Start here
-            </p>
+        <div className="flex items-end justify-between mb-5 flex-wrap gap-4">
+          <div className="text-center lg:text-left max-w-xl">
+            <div className="flex items-center justify-center lg:justify-start gap-2.5 mb-2">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Start here</span>
+            </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-2">
               First-horse roadmap
             </h2>
-            <p className="text-sm text-brand-text-mid mb-0 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+            <p className="text-sm text-brand-text-mid mb-0 leading-relaxed">
               What to decide before you buy, and the care guides that follow — on this site, no email required.
             </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {START_LINKS.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
-              >
-                <div className={`relative h-28 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
+          <Link
+            href="/first-horse-roadmap"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+          >
+            <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="horses-com:hero" alt="A horse galloping through an open field" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight group-hover:text-brand-primary">First-horse roadmap</div>
+              <p className="text-xs text-brand-text-mid mt-0.5">Decide before you buy.</p>
+            </div>
+          </Link>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {START_LINKS.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="group block overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-28 bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
+              </div>
+              <div className="p-4">
+                <div className="font-display font-bold text-brand-dark text-base leading-tight group-hover:text-brand-primary">
+                  {item.title}
                 </div>
-                <div className="p-4">
-                  <div className="font-display font-bold text-brand-dark text-base leading-tight group-hover:text-brand-primary">
-                    {item.title}
-                  </div>
-                  <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
-                </div>
-              </Link>
-            ))}
-          </div>
+                <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
