@@ -161,9 +161,23 @@ export function HomeTriage() {
 
       <section className="bg-brand-primary-pale border-b border-brand-border px-container-sm sm:px-container py-6">
         <div className="max-w-container mx-auto">
-          <div className="flex items-center gap-2.5 mb-4">
-            <span className="w-6 h-0.5 bg-brand-primary" />
-            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Why this site</span>
+          <div className="flex items-end justify-between mb-4 flex-wrap gap-4">
+            <div className="flex items-center gap-2.5">
+              <span className="w-6 h-0.5 bg-brand-primary" />
+              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Why this site</span>
+            </div>
+            <Link
+              href="/editorial-standards"
+              className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all"
+            >
+              <div className={`relative h-14 w-20 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
+              </div>
+              <div className="pr-3 py-2">
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                <p className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</p>
+              </div>
+            </Link>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {TRUST_CHIPS.map((item) => (
