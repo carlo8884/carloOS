@@ -289,7 +289,21 @@ export default function HomePage() {
                 </div>
               </div>
               <div>
-                <div className="flex items-center gap-2.5 mb-3"><span className="w-6 h-0.5 bg-brand-primary" /><span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Try it · Henneke body condition score</span></div>
+                <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
+                  <div className="flex items-center gap-2.5">
+                    <span className="w-6 h-0.5 bg-brand-primary" />
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Try it · Henneke body condition score</span>
+                  </div>
+                  <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
+                    <span className={`relative h-12 w-16 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+                      <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
+                    </span>
+                    <span className="pr-3 py-1.5">
+                      <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>Body condition tool</span>
+                      <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>Six checkpoints, 1–9 score.</span>
+                    </span>
+                  </Link>
+                </div>
                 <h2 className="font-display font-bold text-brand-dark tracking-tight mb-3" style={{ fontSize: 'clamp(24px, 3vw, 38px)' }}>Is your horse the right weight?</h2>
                 <p className="text-sm text-brand-text-mid leading-relaxed mb-3">Body condition is the single most useful daily check an owner can make.</p>
                 <p className="text-sm text-brand-text-mid leading-relaxed">Score the six Henneke checkpoints and the tool returns the 1–9 score vets and nutritionists use.</p>
