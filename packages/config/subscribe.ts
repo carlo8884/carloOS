@@ -3,6 +3,14 @@
  * Delivers to the same FormSubmit inbox as /api/inquire (INQUIRE_EMAIL).
  * Does not add Mailchimp. Empty inbox → 503, never a fake success.
  */
+import {
+  JUNK_EMAIL_MESSAGE,
+  RATE_LIMIT_MESSAGE,
+  clientIp,
+  honeypotTripped,
+  isJunkEmail,
+  takeRateLimit,
+} from './form-guard'
 
 export function isValidSubscribeEmail(email: string): boolean {
   if (email.length < 3 || email.length > 200) return false
@@ -21,14 +29,14 @@ export function parseSubscribeBody(
     return { kind: 'error', status: 400, message: 'Invalid request' }
   }
   const rec = body as Record<string, unknown>
-  if (typeof rec.company_website === 'string' && rec.company_website.length > 0) {
+  if (honeypotTripped(rec)) {
     return { kind: 'honeypot' }
   }
   const email = String(rec.email || '')
     .trim()
     .toLowerCase()
-  if (!isValidSubscribeEmail(email)) {
-    return { kind: 'error', status: 400, message: 'Enter a valid email address' }
+  if (!isValidSubscribeEmail(email) || isJunkEmail(email)) {
+    return { kind: 'error', status: 400, message: JUNK_EMAIL_MESSAGE }
   }
   return {
     kind: 'ok',
@@ -68,7 +76,13 @@ export async function deliverSubscribe(opts: {
 
 export async function handleSubscribePost(
   req: Request,
-  opts: { site: string; env?: NodeJS.ProcessEnv; fetchImpl?: typeof fetch },
+  opts: {
+    site: string
+    env?: NodeJS.ProcessEnv
+    fetchImpl?: typeof fetch
+    limit?: number
+    now?: number
+  },
 ): Promise<{ status: number; body: { ok?: boolean; message?: string } }> {
   const env = opts.env ?? process.env
   const inbox = env.INQUIRE_EMAIL || env.NEXT_PUBLIC_INQUIRE_EMAIL
@@ -80,6 +94,12 @@ export async function handleSubscribePost(
   }
 
   const raw = await req.json().catch(() => null)
+  const record = raw && typeof raw === 'object' ? (raw as Record<string, unknown>) : null
+  if (record && honeypotTripped(record)) return { status: 200, body: { ok: true } }
+
+  const limited = takeRateLimit(`subscribe:${clientIp(req)}`, { limit: opts.limit, now: opts.now })
+  if (!limited.ok) return { status: 429, body: { message: RATE_LIMIT_MESSAGE } }
+
   const parsed = parseSubscribeBody(raw)
   if (parsed.kind === 'honeypot') return { status: 200, body: { ok: true } }
   if (parsed.kind === 'error') return { status: parsed.status, body: { message: parsed.message } }

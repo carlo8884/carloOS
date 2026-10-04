@@ -12,10 +12,10 @@ const note = {
   intent: 'offer',
 }
 
-function post(body: unknown) {
+function post(body: unknown, ip = '203.0.113.50') {
   return new Request('http://localhost/api/inquire', {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: { 'Content-Type': 'application/json', 'x-forwarded-for': ip },
     body: JSON.stringify(body),
   })
 }
@@ -98,6 +98,52 @@ test('accepted send is the only ok:true path besides the honeypot', async () => 
   })
   assert.equal(honeypot.status, 200)
   assert.equal((await honeypot.json()).ok, true)
+})
+
+test('junk notes are not sent', async () => {
+  let called = false
+  const res = await handleInquirePost(
+    post({ ...note, email: 'test@test.com', message: 'asdf' }, '203.0.113.77'),
+    {
+      siteName: 'Dog.com',
+      siteHost: 'dog.com',
+      env: { INQUIRE_EMAIL: 'inbox@example.com' },
+      fetchImpl: async () => {
+        called = true
+        return new Response('ok', { status: 200 })
+      },
+    },
+  )
+  const body = await res.json()
+  assert.equal(res.status, 422)
+  assert.equal(body.ok, false)
+  assert.equal(body.error, 'junk')
+  assert.equal(called, false)
+  assert.match(inquireFailureLead(422), /not sent/)
+  assert.doesNotMatch(inquireFailureLead(422), /Received/)
+})
+
+test('a repeat IP is told to wait', async () => {
+  let called = 0
+  const opts = {
+    siteName: 'Horses.com',
+    siteHost: 'horses.com',
+    env: { INQUIRE_EMAIL: 'inbox@example.com' },
+    limit: 1,
+    fetchImpl: async () => {
+      called += 1
+      return new Response('ok', { status: 200 })
+    },
+  }
+  const first = await handleInquirePost(post(note, '203.0.113.88'), opts)
+  const second = await handleInquirePost(post(note, '203.0.113.88'), opts)
+  assert.equal(first.status, 200)
+  assert.equal(second.status, 429)
+  assert.equal((await second.json()).ok, false)
+  assert.equal(called, 1)
+  assert.match(inquireFailureLead(429), /not sent/)
+  assert.match(inquireFailureLead(429), /Wait a few minutes/)
+  assert.doesNotMatch(inquireFailureLead(429), /Received/)
 })
 
 test('earning-site routes use the shared handler', () => {

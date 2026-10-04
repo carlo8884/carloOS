@@ -1,4 +1,14 @@
 import { NextResponse } from 'next/server'
+import {
+  clientIp,
+  honeypotTripped,
+  isJunkEmail,
+  isJunkLabel,
+  isJunkMessage,
+  isJunkOffer,
+  isJunkPhone,
+  takeRateLimit,
+} from '@carloOS/config/form-guard'
 import { INQUIRE_FALLBACK_HREF } from '../inquire-copy'
 
 function clip(value: unknown, max: number): string {
@@ -24,6 +34,8 @@ export async function handleInquirePost(
     siteHost: string
     env?: NodeJS.ProcessEnv
     fetchImpl?: typeof fetch
+    limit?: number
+    now?: number
   },
 ): Promise<Response> {
   const env = opts.env ?? process.env
@@ -34,8 +46,24 @@ export async function handleInquirePost(
   const body = await req.json().catch(() => null)
   if (!body || typeof body !== 'object') return fail(400, 'bad-request')
   const record = body as Record<string, unknown>
-  if (record.company_website) return NextResponse.json({ ok: true })
+  if (honeypotTripped(record)) return NextResponse.json({ ok: true })
+
+  const limited = takeRateLimit(`inquire:${clientIp(req)}`, { limit: opts.limit, now: opts.now })
+  if (!limited.ok) return fail(429, 'rate-limit')
+
   if (record.robot !== 'on') return fail(400, 'robot')
+  const email = String(record.email || '')
+  const name = String(record.name || '')
+  const message = String(record.message || '')
+  if (
+    isJunkEmail(email) ||
+    isJunkLabel(name) ||
+    isJunkMessage(message) ||
+    isJunkPhone(String(record.phone || '')) ||
+    isJunkOffer(String(record.offer || ''))
+  ) {
+    return fail(422, 'junk')
+  }
 
   const intent = String(record.intent || 'offer')
   const payload = {

@@ -12,6 +12,7 @@
     "./affiliate-hop": "./affiliate-hop.ts",
     "./directory": "./directory.ts",
     "./subscribe": "./subscribe.ts",
+    "./form-guard": "./form-guard.ts",
     "./email-under-hero": "./email-under-hero.ts"
   }
 }
