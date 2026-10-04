@@ -80,7 +80,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Printed bands from $40 to $80</h2>
         <p>The harness review prints the Ruffwear Front Range at $40–55 and the Julius-K9 IDC Powerharness at $40–70. The crate review prints the MidWest iCrate at $40–80. Those three are the mid bands on those cards. The Front Range is the hiking harness, the Julius-K9 is the escape-resistant harness, and the iCrate is the wire crate. The reviews say what each one is not for. This page does not reopen those limits.</p>
         <h2>Printed bands over $100</h2>
-        <p>The bed review prints the Casper Dog Bed at $125–175. The GPS review prints the Fi Series 3 at $149 plus $9.99 a month. The monthly fee is part of that card, so a gift of the collar is not a one-time price. Read the tracker review before you treat the collar as a finished purchase.</p>
+        <p>The bed review prints the Casper Dog Bed at $125–175. The GPS review prints the Fi Series 3 at $140–160 plus $8–12 a month. The monthly fee is part of that card, so a gift of the collar is not a one-time price. Read the tracker review before you treat the collar as a finished purchase.</p>
         <h2>Who should get which printed band</h2>
         <p>Match the band on the card to the job the review already named. A slow bowl is for a dog that eats too fast. A dental chew does not replace brushing. A front-clip harness is for pulling, and it is the wrong harness for a dog with a shoulder or elbow problem. A wire crate is for house training when the dog does not already defeat wire.</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
@@ -145,7 +145,7 @@ export default function NovemberDecemberGiftGuidePage() {
                 <td className="p-3"><Link href="/reviews/best-dog-beds">Bed review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3 text-brand-text-mid">$149 plus $9.99 a month</td>
+                <td className="p-3 text-brand-text-mid">$140–160 plus $8–12 a month</td>
                 <td className="p-3 font-bold text-brand-dark">Fi Series 3<TableShopLink href={`/go/amazon-brand/fi+series+3+dog+collar?s=${SOURCE}`} product="Fi Series 3" /></td>
                 <td className="p-3"><Link href="/reviews/best-dog-gps-tracker">GPS review</Link></td>
               </tr>

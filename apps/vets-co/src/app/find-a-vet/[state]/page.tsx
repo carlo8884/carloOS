@@ -94,7 +94,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
           Find a Vet in {state.name}
         </h1>
-        <PriceAsOf date="2026-05-28" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           {hasImportedRows
             ? `How to choose a ${state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. Unclaimed license-board stubs for ${state.name} are on the Vets.co directory.`
@@ -245,7 +245,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-6 mb-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-3">If You Suspect Poisoning</div>
             <p className="text-sm text-brand-text-mid m-0 mb-2 leading-relaxed">
-              Call <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">ASPCA Animal Poison Control: 888-426-4435</a> (24/7, $75 consultation fee). They can advise whether to induce vomiting, what to monitor for, and whether to transport to an ER.
+              Call <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">ASPCA Animal Poison Control: 888-426-4435</a> (24/7, $70–100 consultation fee). They can advise whether to induce vomiting, what to monitor for, and whether to transport to an ER.
             </p>
             <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
               Alternative: <a href="tel:8557647661" className="font-bold text-brand-dark hover:underline">Pet Poison Helpline: 855-764-7661</a> (24/7, fee applies).

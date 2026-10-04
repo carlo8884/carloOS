@@ -146,7 +146,7 @@ export default function CityHubPage({ params }: PageProps) {
         >
           {heading}
         </h1>
-        <PriceAsOf date="2026-05-30" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           {vets.length > 0
             ? `${vets.length} sample listing${vets.length === 1 ? '' : 's'} across ${presentSpecialties.size} specialt${presentSpecialties.size === 1 ? 'y' : 'ies'} in ${city.city}.`
@@ -219,7 +219,7 @@ export default function CityHubPage({ params }: PageProps) {
                 <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">
                   888-426-4435
                 </a>{' '}
-                (24/7, $75 fee).
+                (24/7, $70–100 fee).
               </p>
             </div>
           </section>
