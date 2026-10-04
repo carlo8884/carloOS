@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,7 +39,7 @@ export default function WholePreyVsKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Find Wysong Epigen 90' />}
+        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Check price of Wysong Epigen 90 from Wysong' />}
         hero={{
           title: 'Whole-Prey vs Kibble for Ferrets',
           subtitle:
@@ -67,6 +67,8 @@ export default function WholePreyVsKibblePage() {
                 { label: 'Nutritional Reliability', href: '#reliability' },
                 { label: 'A Realistic Recommendation', href: '#recommendation' },
                 { label: 'A Starter Pick for Each Model', href: '#picks' },
+                { label: 'Who should buy which', href: '#who' },
+                { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
             />
@@ -176,7 +178,7 @@ export default function WholePreyVsKibblePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Check price of Wysong ferret food on Amazon"
               />
           </div>
           </div>
@@ -205,7 +207,7 @@ export default function WholePreyVsKibblePage() {
             pros={['Lowest commercial carb load in wide ferret use', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Good base for the middle path']}
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
-            ctaText="Find Wysong Epigen 90"
+            ctaText="Check price of Wysong Epigen 90 from Wysong"
             ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
@@ -228,7 +230,7 @@ export default function WholePreyVsKibblePage() {
             pros={['Best biological match', 'Natural calcium-to-phosphorus ratio', 'Strong dental abrasion', 'Works as a supplement or a sole diet']}
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
-            ctaText="Browse Frozen Feeder Prey"
+            ctaText="Check price of frozen feeder mice and chicks on Chewy"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
@@ -263,6 +265,22 @@ export default function WholePreyVsKibblePage() {
             </table>
           </div>
           <ComparisonFoot updated="2026-10-04" />
+
+          <h2 id="faq">FAQ</h2>
+          <FAQAccordion items={[
+            {
+              question: 'Which option does this page pick for a shelf-stable base a sitter can feed?',
+              answer: 'Wysong Epigen 90, scored 9.3 and marked Kibble Model. The card prints $30–50 / 5 lb, single-digit carbohydrate, and distribution as direct plus specialty pet retail. The button goes to Wysong. Skip it when you want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium.',
+            },
+            {
+              question: 'Which option does this page pick for whole prey as the diet or as a supplement?',
+              answer: 'Frozen feeder mice and chicks, scored 8.4. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Chewy. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
+            },
+            {
+              question: 'What does this page say premium low-carb kibble costs?',
+              answer: 'The cost section says premium low-carb kibble runs roughly $30–50 per 5 lb bag, and a single ferret eats modestly. The Wysong Epigen 90 card prints the same $30–50 / 5 lb range. Whole-prey cost is not a fixed figure on this page. It says the price varies with how the prey is sourced.',
+            },
+          ]} />
 
           <h2 id="sources">Sources</h2>
           <p>
