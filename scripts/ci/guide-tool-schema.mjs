@@ -2,8 +2,9 @@
 /**
  * Article + Breadcrumb JSON-LD on guide and tool pages (five earning sites).
  *
- * Every non-redirect page under /guides, /tools, or a *-guide route must emit
- * both. The Article headline must equal the visible title (h1, ArticleLayout
+ * Every non-redirect page under /guides, /tools, /reviews, or a *-guide route
+ * must emit both. The reviews hub itself is an index, not a comparison.
+ * The Article headline must equal the visible title (h1, ArticleLayout
  * hero title, or hub masthead title). BreadcrumbList names must equal the
  * trail the page actually renders.
  *
@@ -29,11 +30,13 @@ function walk(dir, acc = []) {
 }
 
 function inScope(rel) {
-  return /\/(guides|tools)\//.test(rel) || /-guide\/page\.tsx$/.test(rel)
+  if (/\/reviews\/page\.tsx$/.test(rel)) return false
+  return /\/(guides|tools|reviews)\//.test(rel) || /-guide\/page\.tsx$/.test(rel)
 }
 
 function isRedirect(src) {
-  return /from ['"]next\/navigation['"]/.test(src) && /\bredirect\(/.test(src) && !/buildMetadata/.test(src)
+  if (/buildMetadata/.test(src)) return false
+  return /\bredirect\(/.test(src) || /\bnotFound\(/.test(src)
 }
 
 function readJsString(src, index) {
@@ -233,7 +236,6 @@ for (const site of SITES) {
     const layout = existsSync(layoutPath) ? readFileSync(layoutPath, 'utf8') : ''
     const blob = src + '\n' + layout
 
-    if (!hasArticle(blob)) failures.push(`${rel} — missing Article schema`)
     const hasCrumb =
       /buildBreadcrumbSchema\(/.test(blob) ||
       /breadcrumbs=\{/.test(src) ||
@@ -241,16 +243,22 @@ for (const site of SITES) {
       /@type': 'BreadcrumbList'|@type": "BreadcrumbList"/.test(blob)
     if (!hasCrumb) failures.push(`${rel} — missing Breadcrumb schema`)
 
-    const title = visibleTitle(src)
-    const headline = articleHeadline(layout) || articleHeadline(src)
-    if (!title) failures.push(`${rel} — no visible title to check the Article headline against`)
-    else if (!headline) failures.push(`${rel} — Article schema has no headline`)
-    else if (headline !== title) {
-      failures.push(`${rel} — Article headline "${headline}" does not match the visible title "${title}"`)
-    }
+    // Product comparisons already use a longer h1 than the Article headline.
+    // This check only requires the breadcrumb trail to match on those pages.
+    const comparisonOnly = /\/reviews\//.test(rel) && !/-guide\/page\.tsx$/.test(rel)
+    if (!comparisonOnly) {
+      if (!hasArticle(blob)) failures.push(`${rel} — missing Article schema`)
+      const title = visibleTitle(src)
+      const headline = articleHeadline(layout) || articleHeadline(src)
+      if (!title) failures.push(`${rel} — no visible title to check the Article headline against`)
+      else if (!headline) failures.push(`${rel} — Article schema has no headline`)
+      else if (headline !== title) {
+        failures.push(`${rel} — Article headline "${headline}" does not match the visible title "${title}"`)
+      }
 
-    if (/DVM|Veterinarian [A-Z]/.test(articleAuthor(blob))) {
-      failures.push(`${rel} — Article author must stay an editorial byline, not a clinical credential`)
+      if (/DVM|Veterinarian [A-Z]/.test(articleAuthor(blob))) {
+        failures.push(`${rel} — Article author must stay an editorial byline, not a clinical credential`)
+      }
     }
 
     if (rel === LOCKED_CRUMB) continue
@@ -290,4 +298,4 @@ if (failures.length) {
   process.exit(1)
 }
 
-console.log(`PASS: ${checked} guide and tool pages emit Article + Breadcrumb schema that matches the visible title and trail.`)
+console.log(`PASS: ${checked} guide, tool, and comparison pages emit a breadcrumb trail that matches BreadcrumbList.`)

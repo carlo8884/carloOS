@@ -58,7 +58,7 @@ export default function BestDogCratesPage() {
         <span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>
         <span>›</span>
-        <span className="text-brand-text-mid font-medium">Best Dog Crates</span>
+        <span className="text-brand-text-mid font-medium" aria-current="page">Best Dog Crates 2026</span>
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">

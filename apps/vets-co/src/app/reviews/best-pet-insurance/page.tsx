@@ -116,7 +116,7 @@ export default function VetsPetInsurancePage() {
         <span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link>
         <span>›</span>
-        <span className="text-brand-text-mid">Best Pet Insurance</span>
+        <span className="text-brand-text-mid" aria-current="page">Best Pet Insurance</span>
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
