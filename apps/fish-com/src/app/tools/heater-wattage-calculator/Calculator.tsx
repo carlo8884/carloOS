@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, heaterFromStockWatts, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { pickHeater, sizeHeater, type Insulation } from './wattage'
 
@@ -136,9 +136,12 @@ export default function HeaterWattageCalculator() {
         />
       )}
       {!inputError && result && result.hint === 'heat' && result.watts > 0 && (
+        <>
         <ResultMeaning>
           That wattage is the heater size for this temperature lift. It is not a guarantee the tank stays at the target if the room gets colder than the number you entered.
         </ResultMeaning>
+        <ResultPick siteId="fish-com" pick={heaterFromStockWatts(result.heaterPick)} />
+        </>
       )}
     </div>
   )

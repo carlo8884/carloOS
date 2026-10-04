@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, numberFieldError, puppyClassFoodPick } from '@carloOS/ui'
 
 type Size = 'small' | 'medium' | 'large' | 'giant'
 type Acquisition = 'adopted' | 'purchased' | 'already'
@@ -262,6 +262,7 @@ export default function PuppyFirstYearBudget() {
         <ResultMeaning>
           That total adds the gear, food, vet, training, and arrival lines you entered, and it is a planning figure rather than a quote.
         </ResultMeaning>
+        <ResultPick siteId="dog-com" pick={puppyClassFoodPick(size, 'tools-puppy-first-year-budget')} />
       </div>
       )}
 

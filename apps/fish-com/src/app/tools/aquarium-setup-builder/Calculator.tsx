@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, filterFromGallons, heaterFromGallons, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, UnitToggle } from '../_components/CalcShell'
 
 type SetupType = 'community' | 'planted' | 'betta' | 'goldfish' | 'nano'
@@ -237,6 +237,14 @@ export default function AquariumSetupBuilder() {
           <ResultMeaning>
             This checklist is the gear that matches the tank size and setup you picked. Confirm each fish&apos;s needs before you buy livestock.
           </ResultMeaning>
+          <ResultPick
+            siteId="fish-com"
+            pick={
+              type === 'goldfish'
+                ? filterFromGallons(gallons, 'goldfish', 'tools-aquarium-setup-builder')
+                : heaterFromGallons(gallons, 'tools-aquarium-setup-builder')
+            }
+          />
         </div>
       )}
     </div>

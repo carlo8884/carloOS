@@ -13,7 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, harnessPick, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 type SizeClass = 'toy' | 'small' | 'medium' | 'large' | 'giant'
@@ -411,6 +411,7 @@ export default function HarnessCollarSizeCalculator() {
         <ResultMeaning>
           Those letter sizes are typical retail bands for the neck and chest you entered, not a guarantee that a specific brand will fit.
         </ResultMeaning>
+        <ResultPick siteId="dog-com" pick={harnessPick(result.harness.band.id)} />
       </div>
       )}
 

@@ -1,9 +1,8 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, heaterFromGallons, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
-import { ResultCTA } from '../_components/ResultCTA'
 
 type Shape = 'rectangular' | 'bowfront' | 'cylinder' | 'cube' | 'hexagonal'
 type Unit = 'in' | 'cm'
@@ -200,19 +199,7 @@ export default function VolumeCalculator() {
         <ResultMeaning>
           Net volume is the water you can put in at this fill level. Size stocking, filtration, and the heater from that number, not from the empty glass.
         </ResultMeaning>
-        <ResultCTA
-          heading={`Shop a ${result.netUSGal.toFixed(0)}-gallon tank, stand, and heater`}
-          blurb={
-            <>
-              Match the glass or acrylic tank to this net volume, then pick a stand rated for the
-              filled weight ({result.weightLbs.toFixed(0)} lb freshwater) and a heater sized to
-              those gallons. A filter rated at or above this volume is the next buy.
-            </>
-          }
-          query={`${result.netUSGal.toFixed(0)} gallon glass aquarium tank stand heater`}
-          cta="Browse tanks and stands on Amazon"
-          source="tools-aquarium-volume"
-        />
+        <ResultPick siteId="fish-com" pick={heaterFromGallons(result.netUSGal)} />
         </>
       )}
     </div>

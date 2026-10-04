@@ -15,7 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, icratePick, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 
@@ -183,6 +183,7 @@ export default function DogCrateSizeCalculator() {
         <ResultMeaning>
           The recommended size is the smallest standard crate that clears both minimums, so the dog can stand, turn, and lie flat.
         </ResultMeaning>
+        <ResultPick siteId="dog-com" pick={icratePick(result.crate ? result.crate.len : null)} />
       </div>
       )}
 

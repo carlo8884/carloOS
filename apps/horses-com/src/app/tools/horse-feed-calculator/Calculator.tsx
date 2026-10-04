@@ -13,7 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, foragePick, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 type Workload = 'maintenance' | 'light' | 'moderate' | 'heavy'
@@ -258,9 +258,12 @@ export default function Calculator() {
       </div>}
 
       {result && (
+        <>
         <ResultMeaning>
           This range is a daily dry-matter target from the bodyweight you entered, a forage-first planning figure rather than a weighed ration.
         </ResultMeaning>
+        <ResultPick siteId="horses-com" pick={foragePick(`${fmt(result.forageMin)}+`, wl.label)} />
+        </>
       )}
 
       <div className="mt-6 rounded border border-emerald-700/40 bg-emerald-950/30 p-4 text-emerald-200">

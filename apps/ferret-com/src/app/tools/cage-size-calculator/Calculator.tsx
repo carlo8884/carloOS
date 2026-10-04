@@ -13,7 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, ferretCagePick, numberFieldError } from '@carloOS/ui'
 
 /** AFA-cited planning floor: 24 × 24 in per ferret (4 sq ft). */
 const SQIN_PER_FERRET = 24 * 24
@@ -188,6 +188,7 @@ export default function CageSizeCalculator() {
         <ResultMeaning>
           The footprint is the minimum sleeping-and-litter size for this ferret count, level count, and play time. It is a planning figure, not a brand recommendation.
         </ResultMeaning>
+        <ResultPick siteId="ferret-com" pick={ferretCagePick(ferrets)} />
       </div>
       )}
 

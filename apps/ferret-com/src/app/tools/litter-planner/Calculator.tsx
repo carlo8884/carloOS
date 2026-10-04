@@ -11,7 +11,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, numberFieldError, paperLitterPick } from '@carloOS/ui'
 
 type Cadence = 'daily' | 'every-2-days'
 
@@ -123,6 +123,7 @@ export default function LitterPlanner() {
         <ResultMeaning>
           Corner pans and bag counts are a starter-kit plan for this number of ferrets. They use the 7-week midpoint for a 30 lb bag, not a store quote.
         </ResultMeaning>
+        <ResultPick siteId="ferret-com" pick={paperLitterPick(ferrets)} />
       </div>
       )}
 

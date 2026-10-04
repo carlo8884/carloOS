@@ -10,9 +10,8 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, filterFromGallons, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
-import { ResultCTA } from '../_components/ResultCTA'
 
 type Style = 'community' | 'planted' | 'goldfish' | 'cichlid' | 'reef'
 
@@ -81,28 +80,6 @@ function compute(gal: number, style: Style): Result | null {
   return { gphMin, gphMax, gphMid, filterClass: filterClass(gphMid, gal) }
 }
 
-function shopQuery(gal: number): { query: string; cta: string; heading: string } {
-  if (gal <= 15) {
-    return {
-      query: 'fluval spec v 5 gallon',
-      cta: 'Browse nano tanks on Amazon',
-      heading: 'A purpose-built nano often includes filtration',
-    }
-  }
-  if (gal <= 40) {
-    return {
-      query: 'aquaclear 70 filter',
-      cta: 'Browse hang-on-back filters on Amazon',
-      heading: 'Size the HOB above the tank label',
-    }
-  }
-  return {
-    query: 'fluval 307 canister filter',
-    cta: 'Browse canister filters on Amazon',
-    heading: 'A canister is the usual step-up past 40 gallons',
-  }
-}
-
 export default function FilterGphCalculator() {
   const [gallons, setGallons] = useState('20')
   const [style, setStyle] = useState<Style>('community')
@@ -117,7 +94,6 @@ export default function FilterGphCalculator() {
 
   const gal = galError ? 0 : parseFloat(gallons) || 0
   const band = TURNOVER[style]
-  const shop = shopQuery(gal)
 
   return (
     <div>
@@ -172,18 +148,7 @@ export default function FilterGphCalculator() {
       )}
 
       {result && gal > 0 && (
-        <ResultCTA
-          heading={shop.heading}
-          blurb={
-            <>
-              Same Amazon hops used on the filter and nano-tank reviews — no invented SKUs. Fish.com
-              earns a commission on qualifying purchases at no extra cost to you.
-            </>
-          }
-          query={shop.query}
-          cta={shop.cta}
-          source="tools-filter-gph-calculator"
-        />
+        <ResultPick siteId="fish-com" pick={filterFromGallons(gal, style)} />
       )}
     </div>
   )

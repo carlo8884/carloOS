@@ -12,9 +12,8 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, diseaseTestPick } from '@carloOS/ui'
 import Link from 'next/link'
-import { ResultCTA } from '../_components/ResultCTA'
 
 interface Symptom {
   id: string
@@ -137,19 +136,7 @@ export default function FishDiseaseSymptomChecker() {
                 </li>
               ))}
             </ul>
-            <ResultCTA
-              heading="Test the water before you medicate"
-              blurb={
-                <>
-                  Ammonia and nitrite mimic most of these signs. A liquid multi-test kit rules that
-                  out first — then quarantine if you can and treat from the linked guide.
-                  Educational triage, not a diagnosis.
-                </>
-              }
-              query="api freshwater master test kit"
-              cta="Browse aquarium test kits on Amazon"
-              source="tools-fish-disease-symptom"
-            />
+            <ResultPick siteId="fish-com" pick={diseaseTestPick(ranked[0].name)} />
           </div>
         ) : (
           <ToolError>Select at least one sign to see conditions that match.</ToolError>
