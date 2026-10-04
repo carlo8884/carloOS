@@ -204,7 +204,15 @@ export function HomeTriage() {
       <section className="bg-brand-dark border-b border-white/10 px-container-sm sm:px-container py-6">
         <div className="mb-4 flex items-end justify-between gap-4 flex-wrap">
           <div className="max-w-3xl">
-            <div className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">Decide with math, not guesses</div>
+            <Link
+              href="/tools/aquarium-cycling-estimator"
+              className="group mb-2 inline-flex items-center gap-2.5 overflow-hidden rounded-lg border border-white/10 bg-white/[0.05] no-underline hover:border-brand-primary transition-all"
+            >
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
+              </span>
+              <span className="pr-2.5 text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Decide with math, not guesses</span>
+            </Link>
             <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
           </div>
           <Link
