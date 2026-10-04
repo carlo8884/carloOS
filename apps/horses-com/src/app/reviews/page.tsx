@@ -39,6 +39,18 @@ const REVIEWS = [
       'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
   },
   {
+    slug: 'weatherbeeta-vs-amigo-guide',
+    title: 'Weatherbeeta vs Amigo',
+    description:
+      'A wither-relief mid-tier turnout, or Horseware’s value blanket. Denier and prices are already on those cards.',
+  },
+  {
+    slug: 'ker-eo3-vs-equithrive-guide',
+    title: 'KER EO-3 vs Equithrive',
+    description:
+      'Marine omega-3 liquid, or a resveratrol pellet. Monthly prices are the ones on the supplement review.',
+  },
+  {
     slug: 'best-blanket-for-clipped-horse-guide',
     title: 'Best Blanket for a Clipped Horse',
     description:

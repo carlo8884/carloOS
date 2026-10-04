@@ -14,9 +14,14 @@ export interface RelatedRead {
 export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>>> = {
   'dog-com': {
     '/reviews/best-dog-crates': [
+      { title: 'iCrate vs Impact', href: '/reviews/icrate-vs-impact-guide', kind: 'Guide' },
       { title: 'Puppy house-training crate', href: '/reviews/best-puppy-crate-guide', kind: 'Guide' },
       { title: 'Crate size calculator', href: '/tools/dog-crate-size-calculator', kind: 'Tool' },
-      { title: 'Dog beds', href: '/reviews/best-dog-beds', kind: 'Comparison' },
+    ],
+    '/reviews/icrate-vs-impact-guide': [
+      { title: 'Dog crates', href: '/reviews/best-dog-crates', kind: 'Comparison' },
+      { title: 'Puppy house-training crate', href: '/reviews/best-puppy-crate-guide', kind: 'Guide' },
+      { title: 'Crate size calculator', href: '/tools/dog-crate-size-calculator', kind: 'Tool' },
     ],
     '/reviews/best-puppy-crate-guide': [
       { title: 'Dog crates', href: '/reviews/best-dog-crates', kind: 'Comparison' },
@@ -34,6 +39,12 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'Dog crates', href: '/reviews/best-dog-crates', kind: 'Comparison' },
     ],
     '/reviews/best-dog-harnesses': [
+      { title: 'Easy Walk vs Front Range', href: '/reviews/easy-walk-vs-front-range-guide', kind: 'Guide' },
+      { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', kind: 'Guide' },
+      { title: 'Harness and collar size', href: '/tools/harness-collar-size', kind: 'Tool' },
+    ],
+    '/reviews/easy-walk-vs-front-range-guide': [
+      { title: 'Dog harnesses', href: '/reviews/best-dog-harnesses', kind: 'Comparison' },
       { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', kind: 'Guide' },
       { title: 'Harness and collar size', href: '/tools/harness-collar-size', kind: 'Tool' },
     ],
@@ -148,8 +159,13 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
   },
   'fish-com': {
     '/reviews/best-aquarium-filters': [
+      { title: 'AquaClear 70 vs Fluval 307', href: '/reviews/aquaclear-70-vs-fluval-307-guide', kind: 'Guide' },
       { title: 'HOB vs canister', href: '/reviews/hob-vs-canister-guide', kind: 'Guide' },
-      { title: 'Canister filters', href: '/reviews/best-canister-filters', kind: 'Comparison' },
+      { title: 'Filter GPH calculator', href: '/tools/filter-gph-calculator', kind: 'Tool' },
+    ],
+    '/reviews/aquaclear-70-vs-fluval-307-guide': [
+      { title: 'Aquarium filters', href: '/reviews/best-aquarium-filters', kind: 'Comparison' },
+      { title: 'HOB vs canister', href: '/reviews/hob-vs-canister-guide', kind: 'Guide' },
       { title: 'Filter GPH calculator', href: '/tools/filter-gph-calculator', kind: 'Tool' },
     ],
     '/reviews/best-canister-filters': [
@@ -163,9 +179,14 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'Filter GPH calculator', href: '/tools/filter-gph-calculator', kind: 'Tool' },
     ],
     '/reviews/best-aquarium-heaters': [
+      { title: 'Eheim vs Cobalt', href: '/reviews/eheim-vs-cobalt-heater-guide', kind: 'Guide' },
       { title: 'Display-tank heater', href: '/reviews/best-display-tank-heater-guide', kind: 'Guide' },
       { title: 'Heater wattage calculator', href: '/tools/heater-wattage-calculator', kind: 'Tool' },
-      { title: 'Tank volume calculator', href: '/tools/aquarium-volume-calculator', kind: 'Tool' },
+    ],
+    '/reviews/eheim-vs-cobalt-heater-guide': [
+      { title: 'Aquarium heaters', href: '/reviews/best-aquarium-heaters', kind: 'Comparison' },
+      { title: 'Display-tank heater', href: '/reviews/best-display-tank-heater-guide', kind: 'Guide' },
+      { title: 'Heater wattage calculator', href: '/tools/heater-wattage-calculator', kind: 'Tool' },
     ],
     '/reviews/best-display-tank-heater-guide': [
       { title: 'Aquarium heaters', href: '/reviews/best-aquarium-heaters', kind: 'Comparison' },
@@ -234,8 +255,13 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
   },
   'horses-com': {
     '/reviews/best-winter-horse-blankets': [
+      { title: 'Weatherbeeta vs Amigo', href: '/reviews/weatherbeeta-vs-amigo-guide', kind: 'Guide' },
       { title: 'Rambo vs Rhino', href: '/reviews/rambo-vs-rhino-guide', kind: 'Guide' },
-      { title: 'Blanket for a clipped horse', href: '/reviews/best-blanket-for-clipped-horse-guide', kind: 'Guide' },
+      { title: 'Blanket size calculator', href: '/tools/horse-blanket-size-calculator', kind: 'Tool' },
+    ],
+    '/reviews/weatherbeeta-vs-amigo-guide': [
+      { title: 'Winter blankets', href: '/reviews/best-winter-horse-blankets', kind: 'Comparison' },
+      { title: 'Rambo vs Rhino', href: '/reviews/rambo-vs-rhino-guide', kind: 'Guide' },
       { title: 'Blanket size calculator', href: '/tools/horse-blanket-size-calculator', kind: 'Tool' },
     ],
     '/reviews/rambo-vs-rhino-guide': [
@@ -249,8 +275,13 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'Blanket size calculator', href: '/tools/horse-blanket-size-calculator', kind: 'Tool' },
     ],
     '/reviews/best-equine-supplements': [
+      { title: 'KER EO-3 vs Equithrive', href: '/reviews/ker-eo3-vs-equithrive-guide', kind: 'Guide' },
       { title: 'Cosequin vs Platinum', href: '/reviews/cosequin-vs-platinum-guide', kind: 'Guide' },
-      { title: 'Joint supplements', href: '/supplements/joint-supplements', kind: 'Comparison' },
+      { title: 'Feed calculator', href: '/tools/horse-feed-calculator', kind: 'Tool' },
+    ],
+    '/reviews/ker-eo3-vs-equithrive-guide': [
+      { title: 'Equine supplements', href: '/reviews/best-equine-supplements', kind: 'Comparison' },
+      { title: 'Cosequin vs Platinum', href: '/reviews/cosequin-vs-platinum-guide', kind: 'Guide' },
       { title: 'Feed calculator', href: '/tools/horse-feed-calculator', kind: 'Tool' },
     ],
     '/reviews/cosequin-vs-platinum-guide': [
@@ -312,8 +343,13 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
   },
   'vets-co': {
     '/reviews/best-pet-insurance': [
+      { title: 'Healthy Paws vs Embrace', href: '/reviews/healthy-paws-vs-embrace-guide', kind: 'Guide' },
       { title: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide', kind: 'Guide' },
-      { title: 'Trupanion vs Embrace', href: '/reviews/trupanion-vs-embrace-guide', kind: 'Guide' },
+      { title: 'Is insurance worth it?', href: '/tools/pet-insurance-worth-it-calculator', kind: 'Tool' },
+    ],
+    '/reviews/healthy-paws-vs-embrace-guide': [
+      { title: 'Pet insurance', href: '/reviews/best-pet-insurance', kind: 'Comparison' },
+      { title: 'Trupanion vs Healthy Paws', href: '/reviews/trupanion-vs-healthy-paws-guide', kind: 'Guide' },
       { title: 'Is insurance worth it?', href: '/tools/pet-insurance-worth-it-calculator', kind: 'Tool' },
     ],
     '/reviews/trupanion-vs-healthy-paws-guide': [
@@ -337,9 +373,14 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'ER vs urgent care', href: '/guides/er-vs-urgent-care', kind: 'Guide' },
     ],
     '/telehealth': [
+      { title: 'Vetster vs Chewy Connect', href: '/reviews/vetster-vs-chewy-connect-guide', kind: 'Guide' },
       { title: 'Vetster vs AskVet', href: '/reviews/vetster-vs-askvet-guide', kind: 'Guide' },
       { title: 'ER vs clinic', href: '/tools/er-vs-clinic', kind: 'Tool' },
-      { title: 'ER vs urgent care', href: '/guides/er-vs-urgent-care', kind: 'Guide' },
+    ],
+    '/reviews/vetster-vs-chewy-connect-guide': [
+      { title: 'Telehealth services', href: '/telehealth', kind: 'Comparison' },
+      { title: 'Vetster vs AskVet', href: '/reviews/vetster-vs-askvet-guide', kind: 'Guide' },
+      { title: 'ER vs clinic', href: '/tools/er-vs-clinic', kind: 'Tool' },
     ],
     '/insurance/how-pet-insurance-works': [
       { title: 'Pet insurance', href: '/reviews/best-pet-insurance', kind: 'Comparison' },
@@ -419,9 +460,14 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
   },
   'ferret-com': {
     '/reviews/best-ferret-cage': [
+      { title: 'Kaytee vs Ferret Nation', href: '/reviews/kaytee-vs-ferret-nation-guide', kind: 'Guide' },
       { title: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide', kind: 'Guide' },
       { title: 'Cage size calculator', href: '/tools/cage-size-calculator', kind: 'Tool' },
-      { title: 'Ferret litter', href: '/reviews/best-ferret-litter', kind: 'Comparison' },
+    ],
+    '/reviews/kaytee-vs-ferret-nation-guide': [
+      { title: 'Ferret cages', href: '/reviews/best-ferret-cage', kind: 'Comparison' },
+      { title: 'Ferret Nation vs Prevue', href: '/reviews/ferret-nation-vs-prevue-guide', kind: 'Guide' },
+      { title: 'Cage size calculator', href: '/tools/cage-size-calculator', kind: 'Tool' },
     ],
     '/reviews/ferret-nation-vs-prevue-guide': [
       { title: 'Ferret cages', href: '/reviews/best-ferret-cage', kind: 'Comparison' },
@@ -429,9 +475,14 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'Ferret litter', href: '/reviews/best-ferret-litter', kind: 'Comparison' },
     ],
     '/reviews/best-ferret-litter': [
+      { title: 'Paper vs grass litter', href: '/reviews/paper-vs-grass-litter-guide', kind: 'Guide' },
       { title: 'Paper vs wood litter', href: '/reviews/paper-vs-wood-litter-guide', kind: 'Guide' },
       { title: 'Litter planner', href: '/tools/litter-planner', kind: 'Tool' },
-      { title: 'Ferret cages', href: '/reviews/best-ferret-cage', kind: 'Comparison' },
+    ],
+    '/reviews/paper-vs-grass-litter-guide': [
+      { title: 'Ferret litter', href: '/reviews/best-ferret-litter', kind: 'Comparison' },
+      { title: 'Paper vs wood litter', href: '/reviews/paper-vs-wood-litter-guide', kind: 'Guide' },
+      { title: 'Litter planner', href: '/tools/litter-planner', kind: 'Tool' },
     ],
     '/reviews/paper-vs-wood-litter-guide': [
       { title: 'Ferret litter', href: '/reviews/best-ferret-litter', kind: 'Comparison' },

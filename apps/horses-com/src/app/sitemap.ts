@@ -171,6 +171,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/reviews/best-equine-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/best-winter-horse-blankets', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/rambo-vs-rhino-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/reviews/weatherbeeta-vs-amigo-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/reviews/ker-eo3-vs-equithrive-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/best-blanket-for-clipped-horse-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/cosequin-vs-platinum-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/quilted-vs-sheepskin-pad-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

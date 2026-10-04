@@ -141,6 +141,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/reviews/paper-vs-wood-litter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/vest-vs-h-harness-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/ferret-nation-vs-prevue-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/kaytee-vs-ferret-nation-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/paper-vs-grass-litter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/wysong-vs-marshall-kibble-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/fall-molt-brush-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/winter-harness-fit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

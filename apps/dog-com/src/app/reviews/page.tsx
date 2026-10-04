@@ -35,6 +35,8 @@ const REVIEWS = [
   { title: 'Front-Clip vs Back-Clip Harness', desc: 'Which reviewed harness is for pulling, hiking, or escaping', href: '/reviews/front-clip-vs-back-clip-guide', badge: 'Walking' },
   { title: 'Big Barker vs Casper', desc: '7-inch orthopedic foam for a large arthritic dog, or a machine-washable cover', href: '/reviews/big-barker-vs-casper-guide', badge: 'Comfort' },
   { title: 'Greenies vs Whimzees', desc: 'VOHC plaque and tartar, or a plant-based chew. Neither replaces brushing', href: '/reviews/greenies-vs-whimzees-guide', badge: 'Dental' },
+  { title: 'MidWest iCrate vs Impact', desc: 'Divider wire for house training, or aluminum when the dog already defeats wire', href: '/reviews/icrate-vs-impact-guide', badge: 'Housing' },
+  { title: 'Easy Walk vs Front Range', desc: 'Front-clip for pulling, or a padded two-clip harness for hiking', href: '/reviews/easy-walk-vs-front-range-guide', badge: 'Walking' },
   { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season' },
   { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season' },
 ]
