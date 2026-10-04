@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout} from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = {
   ...buildMetadata({
@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   }),
   robots: { index: false, follow: false },
 }
+
+const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
 
 export default function TrainersIndexPage() {
   return (
@@ -37,6 +39,21 @@ export default function TrainersIndexPage() {
           “featured trainers” would cheapen the domain. When a trainer has a
           page here, it will be a page they asked for.
         </p>
+
+        <div className="not-prose my-6">
+          <Link
+            href="/training/trainer-credentials"
+            className="group flex items-center gap-3 overflow-hidden rounded-xl border border-brand-border bg-white no-underline hover:border-brand-primary transition-all max-w-md"
+          >
+            <div className={`relative h-16 w-24 shrink-0 overflow-hidden bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="dog-com:category-training" alt="A dog in a training session" aspect="4:3" subtleCredit />
+            </div>
+            <div className="pr-3 py-2">
+              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Read credentials first</div>
+              <p className="text-xs text-brand-text-mid mt-0.5">CPDT-KA, CBCC-KA, CAAB — no listings yet.</p>
+            </div>
+          </Link>
+        </div>
 
         <h2>If you need a trainer now</h2>
         <p>
