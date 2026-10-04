@@ -28,7 +28,15 @@ export function HomeEmailCapture() {
           <div className="text-center lg:text-left max-w-xl">
             <div className="flex items-center justify-center lg:justify-start gap-2.5 mb-2">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Start here</span>
+              <Link
+                href="/tools/aquarium-setup-builder"
+                className="group flex items-center gap-2.5 no-underline"
+              >
+                <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+                </span>
+                <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary group-hover:text-brand-dark">Start here</span>
+              </Link>
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-2 italic">
               New-tank setup and stocking
