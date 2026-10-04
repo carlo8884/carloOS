@@ -143,6 +143,18 @@ jobs:
       - name: Run hop-target
         run: node scripts/ci/hop-target.mjs
 
+  social-cards:
+    name: Guide, tool, and comparison social cards
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run social-cards
+        run: node scripts/ci/social-cards.mjs
+
   price-as-of:
     name: Price figures carry their git as-of date
     runs-on: ubuntu-latest
