@@ -100,7 +100,7 @@ export default function VetsPetInsurancePage() {
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Across the 11 major pet insurance carriers, Trupanion is the only one
           that pays the practice directly at checkout, eliminating the
-          submit-and-wait reimbursement gap that strands owners with a $5,000
+          submit-and-wait reimbursement gap that strands owners with a large
           emergency bill. Healthy Paws is among the fastest for reimbursement (the
           carrier cites an average of about two days, with no payout caps), and Embrace is the practical choice when
           routine wellness coverage matters. Enroll before any vet visit — every

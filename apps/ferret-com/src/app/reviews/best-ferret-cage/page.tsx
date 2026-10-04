@@ -90,7 +90,7 @@ const FAQS = [
   {
     question: 'What bar spacing is safe for a ferret cage?',
     answer:
-      'Bar spacing of roughly half an inch (about 1 cm) is the widely cited target. Ferrets are escape artists with a flexible skeleton — the rule of thumb is that if a ferret can fit its head through a gap, the rest of the body will follow. Spacing wider than about an inch risks both escape and a limb or head becoming trapped. Always confirm the spacing on the exact model, as a "small animal" cage marketed for rabbits or guinea pigs often has bars too far apart.',
+      'Bar spacing of roughly half an inch (~0.5 in on the Ferret Nation card) is the target used on this page. Ferrets are escape artists with a flexible skeleton — the rule of thumb is that if a ferret can fit its head through a gap, the rest of the body will follow. Spacing wider than about an inch risks both escape and a limb or head becoming trapped. Always confirm the spacing on the exact model, as a "small animal" cage marketed for rabbits or guinea pigs often has bars too far apart.',
   },
   {
     question: 'Are wire-floor or wire-shelf cages bad for ferrets?',
@@ -215,7 +215,7 @@ export default function BestFerretCagePage() {
           <h2 id="bar-spacing">Bar Spacing — The Escape-and-Injury Variable</h2>
           <p>
             The single most important number on a cage spec sheet is wire spacing. The widely cited target for ferrets
-            is roughly half an inch, about one centimetre. The reasoning is simple and unforgiving: a ferret&rsquo;s
+            is roughly half an inch (~0.5 in on the Ferret Nation card). The reasoning is simple and unforgiving: a ferret&rsquo;s
             skull is the widest fixed part of its body, and if the head fits through a gap, the spine and ribs will
             compress and follow. Spacing much wider than that creates two distinct hazards — escape, and entrapment,
             where a ferret pushes its head through and cannot back out, or wedges a leg. Both are common reasons ferrets

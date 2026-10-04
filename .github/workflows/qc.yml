@@ -269,6 +269,18 @@ jobs:
       - name: Run a11y-pages
         run: node scripts/ci/a11y-pages.mjs
 
+  claim-audit:
+    name: Money-page prices trace to a review card
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run claim-audit
+        run: node scripts/ci/claim-audit.mjs
+
   content-stub-guard:
     name: Stub and placeholder guard (GROK.md, tools, guides)
     runs-on: ubuntu-latest

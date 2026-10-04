@@ -171,7 +171,7 @@ export default function SaddleFitBasicsPage() {
           </ul>
 
           <h2 id="reflock">When to Re-Flock vs Replace</h2>
-          <p>Wool-flocked English saddles can usually be brought back into fit by a qualified saddle fitter for the price of a fitter visit ($150–300 for an in-home call in most US markets) plus re-flocking ($50–150 depending on the work). Re-flocking is appropriate when:</p>
+          <p>Wool-flocked English saddles can usually be brought back into fit by a qualified saddle fitter. This page does not publish a fee for the visit or for re-flocking. Re-flocking is appropriate when:</p>
           <ul>
             <li>The saddle's tree angle, width, length, and rocker still match the horse.</li>
             <li>The fit problems are localized to flocking asymmetry, compression, or lumpiness.</li>

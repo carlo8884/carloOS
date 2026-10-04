@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks for 50+ lb Dogs | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', description: 'Glucosamine and chondroitin joint support formula for large breed adult dogs.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
@@ -20,7 +20,7 @@ export default function BestLargeBreedFoodPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
         <PriceAsOf date="2026-05-25" tone="dark" />
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large breed dogs (50+ lbs) have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large-breed adults have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds. Royal Canin Large Adult on this page is for dogs 55–100 lb, and Giant Adult is for dogs over 100 lb.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
@@ -33,13 +33,13 @@ export default function BestLargeBreedFoodPage() {
           <div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Puppy vs Adult — Feed the Right Formula</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas. Large breed puppy formulas have controlled calcium and phosphorus and lower caloric density to slow growth rate, preventing the rapid growth that contributes to hip dysplasia and other developmental orthopedic diseases. Switch to adult large breed formula at 12–18 months depending on breed size.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas. Large breed puppy formulas have controlled calcium and phosphorus and lower caloric density to slow growth rate, preventing the rapid growth that contributes to hip dysplasia and other developmental orthopedic diseases. Switch to an adult large-breed formula when the puppy food's feeding guide says growth is finished.</p>
             </div>
             <JourneyNext
               siteId="dog-com"
               nextHref="/nutrition/puppy-nutrition"
               nextLabel="Read the large-breed puppy formula rule before you buy adult"
-              nextBlurb="The callout is the bag rule — expected adult weight over 50 lb needs a large-breed puppy formula until 12–18 months, then this adult bag. Puppy-nutrition is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin Large Adult search already on this page."
+              nextBlurb="The callout is the bag rule — use a large-breed puppy formula until that bag's feeding guide says to switch, then the adult bag whose card lists 55–100 lb. Puppy-nutrition is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin Large Adult search already on this page."
               resourceHref="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"
               resourceLabel="Browse Royal Canin Large Adult dog food →"
             />

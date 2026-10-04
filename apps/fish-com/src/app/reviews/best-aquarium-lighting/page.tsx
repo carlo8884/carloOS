@@ -9,7 +9,7 @@ const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light',
 const schema = combineSchemas(articleSchema, hyggerSchema)
 
 const PICKS = [
-  { label: 'Best Planted (Budget)', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · Under $60', href: '#hygger' },
+  { label: 'Best Planted (Budget)', name: 'Hygger 957', subtitle: 'PAR-efficient · Programmable · $45–65', href: '#hygger' },
   { label: 'Best Planted (Premium)', name: 'Fluval Plant 3.0', subtitle: 'App-controlled · Best spectrum quality', href: '#fluval' },
   { label: 'Best Reef', name: 'Kessil A360X', subtitle: 'Shimmer effect · Established reef-growth track record', href: '#kessil' },
   { label: 'Best FOWLR', name: 'Nicrew Classic LED+', subtitle: 'Fish-only · Budget · Reliable', href: '#nicrew' },
@@ -41,7 +41,7 @@ export default function BestAquariumLightingPage() {
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most planted tanks the budget <strong>Hygger 957</strong> is our overall pick — planted-capable PAR with seven programmable channels well under $60. Step up to the app-controlled <strong>Fluval Plant 3.0</strong> for high-tech planted tanks needing the best spectrum quality. For reef tanks the <strong>Kessil A360X</strong> is the pick; for fish-only/FOWLR setups, the budget <strong>Nicrew Classic LED+</strong>. PAR at the substrate is what matters — match it to your tank type.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most planted tanks the budget <strong>Hygger 957</strong> is our overall pick — planted-capable PAR with seven programmable channels at $45–65. Step up to the app-controlled <strong>Fluval Plant 3.0</strong> for high-tech planted tanks needing the best spectrum quality. For reef tanks the <strong>Kessil A360X</strong> is the pick; for fish-only/FOWLR setups, the budget <strong>Nicrew Classic LED+</strong>. PAR at the substrate is what matters — match it to your tank type.</p>
             </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">PAR — What Actually Matters</div>
@@ -57,9 +57,9 @@ export default function BestAquariumLightingPage() {
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="hygger" badge="Best Planted (Budget)" name="Hygger 957 LED Aquarium Light" subtitle="Programmable · Good PAR efficiency · Under $60 · 7 independently controlled channels" score={9.2} winner
+            <ReviewCard id="hygger" badge="Best Planted (Budget)" name="Hygger 957 LED Aquarium Light" subtitle="Programmable · Good PAR efficiency · $45–65 · 7 independently controlled channels" score={9.2} winner
               description={<p>The Hygger 957 delivers planted-tank-capable PAR output at a price point that undercuts competitors by 60–80%. Seven independently adjustable channels (red, green, blue, white, UV, cold white, warm white) allow spectrum tuning. Programmable sunrise/sunset and lunar cycles via built-in timer. At a 20" depth in a standard 20-gallon, measured PAR is 45–65 at midday setting — adequate for low-to-medium tech planted tanks without CO2. With CO2 injection, this is enough light for most stem plants, crypts, and midground plants. Not sufficient for demanding high-light plants (HC Cuba carpets, most moss walls) — step up to the Fluval 3.0 for those.</p>}
-              specs={[{ label: 'PAR at 20"', value: '45–65 (midday)', highlight: 'good' }, { label: 'Channels', value: '7 independently controlled', highlight: 'good' }, { label: 'Timer', value: 'Built-in programmable', highlight: 'good' }, { label: 'Price', value: 'Under $60', highlight: 'good' }, { label: 'Best For', value: 'Low-medium tech planted tanks' }]}
+              specs={[{ label: 'PAR at 20"', value: '45–65 (midday)', highlight: 'good' }, { label: 'Channels', value: '7 independently controlled', highlight: 'good' }, { label: 'Timer', value: 'Built-in programmable', highlight: 'good' }, { label: 'Price', value: '$45–65', highlight: 'good' }, { label: 'Best For', value: 'Low-medium tech planted tanks' }]}
               pros={['Best value planted tank light', '7 channels — fine spectrum control', 'Programmable timer built-in', 'Good PAR for price', 'Slim profile']}
               cons={['Not enough for demanding high-light plants', 'No app control', 'Plastic build quality']}
               price="$45–65" ctaText="Check price of the Hygger 957 on Amazon" ctaHref="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="hygger-957" />
@@ -98,7 +98,7 @@ export default function BestAquariumLightingPage() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">A low-to-medium tech planted tank under about $60</td>
+                      <td className="p-3 text-brand-text-mid">A low-to-medium tech planted tank, and a light at $45–65</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#hygger" className="text-brand-primary">Hygger 957</a></td>
                       <td className="p-3 text-brand-text-mid">Best Planted (Budget). 7 channels. PAR 45–65 at 20&quot;. $45–65</td>
                       <td className="p-3 text-brand-text-mid">Demanding high-light plants. The card says step up to the Fluval 3.0. No app control</td>
