@@ -77,15 +77,20 @@ export default function PaperVsWoodLitterGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The link below searches for the paper-pellet litter from the review, the usual pick.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide">Find paper pellet litter on Chewy →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-paper-vs-wood-litter-guide"
+          checklist={[
+            'Buy paper pellets for most ferrets.',
+            'Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent.',
+            'Buy grass pellets only when the ferret refuses the other two textures.',
+            'Do not “upgrade” any of them to a clumping, perfumed cat litter.',
+            'Find paper pellet litter on Chewy',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

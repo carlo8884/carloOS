@@ -78,15 +78,21 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The link below opens the Trupanion quote from the insurance review. A quote is not the range printed above.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide">Get a Trupanion quote →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-trupanion-vs-healthy-paws-guide"
+          checklist={[
+            'Start with Trupanion if the reason you are shopping is a large emergency you do not want to finance yourself at the front desk.',
+            'Start with Healthy Paws if you can pay the clinic and you want the faster reimbursement the review describes, at the lower printed range.',
+            'If the missing piece is vaccines and wellness exams, neither of these policies is that product.',
+            'The review sends that job to Embrace.',
+            'A wellness plan is also not a substitute for either policy.',
+            'Get a Trupanion quote',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

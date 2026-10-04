@@ -4,7 +4,8 @@
  * Funnel events for the five earning sites. Names are locked by
  * scripts/ci/journey-events.mjs:
  *   calculator_complete — site, tool
- *   guide_signup_submit — site, page, result (no address)
+ *   guide_signup_submit — site, page, result (no address; form flag only)
+ *   guide_checklist_copy / guide_checklist_print — site, page (no address)
  *   hop_view — site, page, hop, when the primary hop enters the viewport
  * affiliate_click stays on AffiliateClickListener.
  */

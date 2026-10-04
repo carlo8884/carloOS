@@ -81,15 +81,20 @@ export default function WinterHarnessFitGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find a ferret vest harness on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-harness-fit-guide"
+          checklist={[
+            'Heading into the colder months, the action on that page is the same recheck, not a new size chart.',
+            'Use the review\'s check on the review\'s harness, and the training page\'s check when you are following that page.',
+            'Both say a loose harness is how a ferret backs out.',
+            'The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing.',
+            'Find a ferret vest harness on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

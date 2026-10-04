@@ -13,7 +13,9 @@
 
 import { useState, useCallback, useId, useMemo } from 'react'
 import { JUNK_EMAIL_MESSAGE, isJunkEmail } from '@carloOS/config/form-guard'
+import { guideAddressCaptureEnabled } from '../lib/guide-checklist'
 import { trackEvent } from '../lib/track-event'
+import { GuideChecklist } from './GuideChecklist'
 
 type EmailCaptureVariant = 'inline' | 'sidebar' | 'section'
 
@@ -51,10 +53,13 @@ interface EmailCaptureProps {
   resourceHref?: string
   resourceLabel?: string
   /**
-   * Store the address only. Shows the form on paused sites and does not
-   * claim a message is sent. Pages still pass a specific reason in title/subtitle.
+   * Store the address only. The form stays in this file and posts to
+   * /api/subscribe, but it renders only when
+   * NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE is exactly "true".
    */
   addressOnly?: boolean
+  /** Sentences already on the guide. Shown when address capture is off. */
+  checklist?: readonly string[]
 }
 
 export function EmailCapture({
@@ -73,12 +78,13 @@ export function EmailCapture({
   resourceHref,
   resourceLabel,
   addressOnly = false,
+  checklist,
 }: EmailCaptureProps) {
   const resolvedCtaText = ctaText ?? buttonText ?? (addressOnly ? 'Save my address' : 'Send the notes')
   const resolvedSource = source ?? tag ?? 'unknown'
   // Under-hero cash-register captures always render (no Vercel env write).
   // Other placements stay behind NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED.
-  // addressOnly is the guide update list: the form is the offer.
+  // The guide address form is a separate flag, off until an email provider exists.
   const underHero = resolvedSource.endsWith('under-hero')
   const enabled =
     addressOnly || underHero || process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true'
@@ -164,6 +170,11 @@ export function EmailCapture({
         resourceLabel={resourceLabel}
       />
     )
+  }
+
+  if (addressOnly && !guideAddressCaptureEnabled()) {
+    if (!checklist || checklist.length === 0) return null
+    return <GuideChecklist siteId={siteId} items={checklist} />
   }
 
   if (addressOnly) {

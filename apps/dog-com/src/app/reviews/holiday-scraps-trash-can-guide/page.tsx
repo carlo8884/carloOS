@@ -83,15 +83,20 @@ export default function HolidayScrapsTrashCanGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/locking+kitchen+trash+can?s=reviews-holiday-scraps-trash-can-guide">Browse locking kitchen trash cans on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-holiday-scraps-trash-can-guide"
+          checklist={[
+            'A locking kitchen trash can keeps leftovers from becoming the garbage-ingestion trigger.',
+            'A walk-through pet gate keeps the dog out of the kitchen while scraps sit on the counter.',
+            'If the dog is vomiting, painful, or unable to keep water down, the pancreatitis page\'s hospitalization criteria are the next read, not a shopping link.',
+            'Those are reasons to go to a clinic.',
+            'Browse locking kitchen trash cans on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

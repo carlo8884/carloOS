@@ -81,15 +81,20 @@ export default function FallMoltBrushGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide">Browse soft slicker brushes for small animals on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-fall-molt-brush-guide"
+          checklist={[
+            'A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names.',
+            'Daily brushing during the peak captures more hair.',
+            'Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it.',
+            'Most of the work is the brush.',
+            'Browse soft slicker brushes for small animals on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

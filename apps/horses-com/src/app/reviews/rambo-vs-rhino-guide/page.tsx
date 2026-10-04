@@ -78,15 +78,20 @@ export default function RamboVsRhinoGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The link below is the Rambo search from the blanket review, for a blanket you expect to keep for years.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Check price of the Horseware Rambo Original on SmartPak</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="horses-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-rambo-vs-rhino-guide"
+          checklist={[
+            'Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino.',
+            'Buy the Rhino if you want Horseware\'s cut at the printed $180–260 band and you accept polymer hardware and a shorter warranty.',
+            'Neither product is the heavy-winter specification.',
+            'A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two.',
+            'Check price of the Horseware Rambo Original on SmartPak',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

@@ -81,15 +81,20 @@ export default function WinterHeaterSizingGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-heater-sizing-guide"
+          checklist={[
+            'On tanks of 40 gallons or larger, the calculator says to run two smaller heaters rather than one large one.',
+            'The heater review adds the same idea in shorter form: buy slightly above the minimum, and split two heaters on a large tank.',
+            'Pair either setup with a separate thermometer.',
+            'Wattage still comes from the calculator, not from the brand name.',
+            'Check price of the Eheim Jager heater on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

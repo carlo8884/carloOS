@@ -79,15 +79,19 @@ export default function ClippedHorseBlanketGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The link below is the StormShield from the blanket review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide">Shop the Schneiders StormShield Euro →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="horses-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-best-blanket-for-clipped-horse-guide"
+          checklist={[
+            'Use the blanket size calculator and the fit notes on the review.',
+            'Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing.',
+            'Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.',
+            'Shop the Schneiders StormShield Euro',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
