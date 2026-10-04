@@ -10,13 +10,15 @@
  */
 
 import { useState, useEffect } from 'react'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SITES = [
   { id: 'dog-com',    domain: 'dog.com',      url: 'https://dog.com',      color: '#E8622A', emoji: '🐕' },
-  { id: 'fish-com',   domain: 'fish.com',     url: 'https://fish.com',     color: '#0E6B8A', emoji: '🐠' },
+  { id: 'fish-com',   domain: 'fish.com',     url: crossSiteHref('fish-com', '/'),     color: '#0E6B8A', emoji: '🐠' },
   { id: 'lizard-com', domain: 'lizard.com',   url: 'https://lizard.com',   color: '#7AB52A', emoji: '🦎' },
   { id: 'saddle-com', domain: 'saddle.com',   url: 'https://saddle.com',   color: '#A07840', emoji: '🐴' },
-  { id: 'vets-co',    domain: 'vets.co',      url: 'https://vets.co',      color: '#0A8A7A', emoji: '⚕️' },
+  { id: 'vets-co',    domain: 'vets.co',      url: crossSiteHref('vets-co', '/'),      color: '#0A8A7A', emoji: '⚕️' },
 ] as const
 
 interface SiteMetrics {

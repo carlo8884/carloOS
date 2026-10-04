@@ -15,6 +15,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -286,7 +288,7 @@ export default function IsThisAHorseEmergencyPage() {
                 Horse insurance basics →
               </Link>
               <a
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -376,7 +378,7 @@ export default function IsThisAHorseEmergencyPage() {
               { label: 'Horse Cost Calculator', href: '/tools/horse-cost-calculator', note: 'Size the emergency-fund line' },
               { label: 'Horse Age Calculator', href: '/tools/horse-age-calculator', note: 'Human-year estimate and foal / young / adult / senior label' },
               { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Heartworm Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
   { label: 'CAPC: Companion Animal Parasite Council — Heartworm Recommendations', url: 'https://capcvet.org/guidelines/heartworm/', publisher: 'CAPC' },
@@ -45,7 +47,7 @@ export default function HeartwormPreventionPage() {
       schema={schema}
       sidebar={<>
         <RelatedLinks title="Related Guides" links={[{ label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' }, { label: 'Dog Vaccination Guide', href: '/health/dog-vaccinations' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
-        <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Plan for the Cost" links={[{ label: 'Compare Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
       </>}

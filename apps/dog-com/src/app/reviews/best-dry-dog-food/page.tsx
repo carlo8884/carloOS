@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -310,7 +312,7 @@ export default function BestDogFoodPage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Reviews" links={[
-              { label: 'Best Pet Insurance 2026', href: 'https://vets.co/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance 2026', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
               { label: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention' },
               { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
             ]} />

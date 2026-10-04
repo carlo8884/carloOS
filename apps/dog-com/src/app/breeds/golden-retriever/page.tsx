@@ -9,6 +9,8 @@ import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, S
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -224,7 +226,7 @@ export default function GoldenRetrieverBreedPage() {
             <RelatedLinks title="Health Resources" links={[
               { label: 'Golden Retriever Feeding Guide', href: '/breeds/golden-retriever/feeding' },
               { label: 'Golden Retriever Health Guide', href: '/health/golden-retriever-health' },
-              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
               { label: 'Find a Specialist', href: '/find-a-vet' },
             ]} />
             <RelatedLinks title="Related Breeds" links={[

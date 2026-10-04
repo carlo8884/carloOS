@@ -4,6 +4,8 @@ import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, S
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'French Bulldog — Breed Guide, Temperament & Health | Dog.com', description: 'Complete French Bulldog profile. BOAS breathing issues, IVDD spine disease, heat danger, skin folds, financial reality.', path: '/breeds/french-bulldog', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'French Bulldog Breed Guide', description: 'Complete French Bulldog breed profile.', url: 'https://dog.com/breeds/french-bulldog', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -95,7 +97,7 @@ export default function FrenchBulldogBreedPage() {
             <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a French Bulldog?', href: '/breeds/french-bulldog/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Bulldog', href: '/breeds/bulldog' }, { label: 'Poodle', href: '/breeds/poodle' }]} />
             <RelatedLinks title="French Bulldog Health Deep-Dive" links={[{ label: 'French Bulldog Health Issues & Screenings', href: '/breeds/french-bulldog/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'French Bulldog Health Guide', href: '/health/french-bulldog-health' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <RelatedLinks title="Breed Comparisons" links={[
               { label: 'French Bulldog vs Bulldog', href: '/compare/french-bulldog-vs-bulldog' },
               { label: 'French Bulldog vs Boston Terrier', href: '/compare/french-bulldog-vs-boston-terrier' },

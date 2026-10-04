@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'AVMA: Behavior Problems in Pets — Anxiety and Fear', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/behavior-problems-pets', publisher: 'AVMA' },
   { label: 'American College of Veterinary Behaviorists (ACVB): Canine Anxiety and Fear-Related Behaviors', url: 'https://www.dacvb.org', publisher: 'ACVB' },
@@ -33,7 +35,7 @@ export default function DogAnxietyPage() {
         relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Symptoms Guide', href: '/health/dog-symptoms-guide', category: 'Dog Health' }, { title: 'Senior Dog Care', href: '/health/senior-dog-care', category: 'Dog Health' }, { title: 'Dog Seizures', href: '/health/dog-seizures', category: 'Dog Health' }, { title: 'Separation Anxiety Training', href: '/training/separation-anxiety', category: 'Training' }, { title: 'Dog Aggression Guide', href: '/training/dog-aggression', category: 'Training' }]}
         sidebar={<>
           <TableOfContents items={[{ label: 'Separation Anxiety', href: '#separation' }, { label: 'Noise Phobia', href: '#noise' }, { label: 'Generalized Anxiety', href: '#generalized' }, { label: 'Signs', href: '#signs' }, { label: 'Treatment', href: '#treatment' }, { label: 'Medication', href: '#medication' }, { label: 'Safe-space kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Separation Anxiety Training', href: '/training/separation-anxiety' }, { label: 'Trainer Credentials', href: '/training/trainer-credentials' }, { label: 'Crate Training', href: '/training/crate-training' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}

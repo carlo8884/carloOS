@@ -14,6 +14,8 @@ import { StockImage,
   AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SOURCES = [
   { label: "Corydoras paleatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/corydoras-paleatus/", publisher: "Seriously Fish" },
@@ -172,7 +174,7 @@ export default function CorydorasPage() {
                 { label: 'Otocinclus Care', href: '/species/otocinclus' },
                 { label: 'Cherry Shrimp', href: '/species/cherry-shrimp' },
                 { label: 'Planted Tank Setup', href: '/setup/planted-tank-setup' },
-                { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
+                { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
             />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
@@ -434,7 +436,7 @@ export default function CorydorasPage() {
           <p>
             For complicated cases, consult an ornamental-fish vet via
             the{' '}
-            <a href="https://vets.co/find-a-vet/aquarium">
+            <a href={crossSiteHref('vets-co', '/find-a-vet/aquarium')}>
               Vets.co aquarium vet finder
             </a>{' '}
             (WAVMA referral directory). Corydoras' medication

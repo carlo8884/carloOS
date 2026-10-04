@@ -22,6 +22,8 @@ jobs:
           node-version: '20'
       - name: Run link-check
         run: node scripts/ci/link-check.mjs
+      - name: Reject relative links to another site
+        run: node scripts/ci/cross-site-links.mjs
 
   metadata-policy:
     name: Metadata policy (title ≤70, desc ≤160, no duplicates)

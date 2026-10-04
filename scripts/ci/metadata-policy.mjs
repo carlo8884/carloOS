@@ -86,7 +86,7 @@ function listPages(siteId) {
 function isRedirectStub(src) {
   return (
     /from\s+['"]next\/navigation['"]/.test(src) &&
-    /\bredirect\s*\(\s*['"`]/.test(src) &&
+    (/\bredirect\s*\(\s*['"`]/.test(src) || /\bredirect\s*\(\s*crossSiteHref\s*\(/.test(src)) &&
     !/buildMetadata\s*\(/.test(src)
   )
 }

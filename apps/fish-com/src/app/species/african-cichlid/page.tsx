@@ -14,6 +14,8 @@ import { StockImage,
   AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SOURCES = [
   { label: "Haplochromine Cichlids of Lake Malawi — Seriously Fish", url: "https://www.seriouslyfish.com/taxonomy/cichlidae/", publisher: "Seriously Fish" },
@@ -166,7 +168,7 @@ export default function AfricanCichlidPage() {
                 { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
                 { label: 'Best Canister Filters', href: '/reviews/best-canister-filters' },
                 { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
-                { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
+                { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
             />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
@@ -477,7 +479,7 @@ export default function AfricanCichlidPage() {
             For persistent or unexplained losses — particularly
             suspected bloat or mycobacterial infection — work with an
             ornamental-fish vet via the{' '}
-            <a href="https://vets.co/find-a-vet/aquarium">
+            <a href={crossSiteHref('vets-co', '/find-a-vet/aquarium')}>
               Vets.co aquarium vet finder
             </a>{' '}
             (WAVMA referral directory). Metronidazole and similar

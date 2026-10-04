@@ -14,6 +14,8 @@ import { StockImage,
   AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SOURCES = [
   { label: "Xiphophorus maculatus — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/xiphophorus-maculatus/", publisher: "Seriously Fish" },
@@ -172,7 +174,7 @@ export default function PlatyPage() {
                 { label: 'Molly Fish Care', href: '/species/molly-fish' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
                 { label: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide' },
-                { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
+                { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
             />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
@@ -389,7 +391,7 @@ export default function PlatyPage() {
           </ul>
           <p>
             For complicated or persistent issues, use the{' '}
-            <a href="https://vets.co/find-a-vet/aquarium">
+            <a href={crossSiteHref('vets-co', '/find-a-vet/aquarium')}>
               Vets.co aquarium vet finder
             </a>{' '}
             to locate an ornamental-fish-experienced vet through the

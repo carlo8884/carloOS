@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SOURCES = [
   {
@@ -178,7 +180,7 @@ export default function FerretInsulinomaPage() {
                 symptoms appear.
               </p>
               <a
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 rel="noopener"
                 className="inline-block text-xs font-bold text-brand-primary hover:underline"
               >

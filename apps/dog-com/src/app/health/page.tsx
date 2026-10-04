@@ -17,6 +17,8 @@ import {
 } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { Diseases, EXISTING_STATIC_HEALTH_SLUGS, type DiseaseCategory } from '../../data/diseases'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Health Library — 100+ Sourced Guides | Dog.com', description: 'Complete dog health guides. Breed-specific conditions, emergency signs, dental care, senior dog care, symptoms guide — all research-based.', path: '/health' })
 
@@ -34,7 +36,7 @@ const SECTIONS: Array<{ category: string; icon: SectionIcon; items: Array<{ titl
   { category: "Emergency", icon: "emergency", items: [{ title: "15 Dog Symptoms to Never Ignore", href: "/health/dog-symptoms-guide", badge: "Essential" }, { title: "Is This a Dog Emergency? Triage Tool", href: "/tools/is-this-a-dog-emergency", badge: "Tool" }, { title: "Find an Emergency Vet", href: "/find-a-vet" }] },
   { category: "Breed Health Guides", icon: "breed", items: [{ title: "Golden Retriever Health", href: "/health/golden-retriever-health", badge: "60%+ cancer rate" }, { title: "Labrador Retriever Health", href: "/health/labrador-health" }, { title: "French Bulldog Health", href: "/health/french-bulldog-health", badge: "BOAS · IVDD" }, { title: "German Shepherd Health", href: "/health/german-shepherd-health", badge: "DM · GDV" }] },
   { category: "Preventive Care", icon: "preventive", items: [{ title: "Dog Dental Care Guide", href: "/health/dog-dental-care" }, { title: "Senior Dog Care Guide", href: "/health/senior-dog-care" }, { title: "Dog Vaccination Guide", href: "/health/dog-vaccinations" }, { title: "Heartworm Prevention", href: "/health/heartworm-prevention" }] },
-  { category: "Treatments & Products", icon: "treatment", items: [{ title: "Best Flea & Tick Prevention", href: "/reviews/best-flea-tick-prevention" }, { title: "Best Dry Dog Food 2026", href: "/reviews/best-dry-dog-food" }, { title: "Best Pet Insurance 2026", href: "https://vets.co/reviews/best-pet-insurance" }] },
+  { category: "Treatments & Products", icon: "treatment", items: [{ title: "Best Flea & Tick Prevention", href: "/reviews/best-flea-tick-prevention" }, { title: "Best Dry Dog Food 2026", href: "/reviews/best-dry-dog-food" }, { title: "Best Pet Insurance 2026", href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }] },
 ]
 
 const healthItems = SECTIONS.flatMap(s => s.items)

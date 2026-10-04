@@ -4,6 +4,8 @@ import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, S
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'German Shepherd — Breed Guide, Temperament & Health | Dog.com', description: 'Complete German Shepherd breed profile. DM, hip dysplasia, GDV, EPI. One of the world\'s most capable working breeds', path: '/breeds/german-shepherd', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'German Shepherd Breed Guide', description: 'Complete German Shepherd breed profile.', url: 'https://dog.com/breeds/german-shepherd', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -90,7 +92,7 @@ export default function GermanShepherdBreedPage() {
             <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a German Shepherd?', href: '/breeds/german-shepherd/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
             <RelatedLinks title="All Breeds" links={[{ label: 'All Dog Breeds', href: '/breeds' }, { label: 'Rottweiler', href: '/breeds/rottweiler' }, { label: 'Doberman Pinscher', href: '/breeds/doberman-pinscher' }]} />
             <RelatedLinks title="German Shepherd Health Deep-Dive" links={[{ label: 'German Shepherd Health Issues & Screenings', href: '/breeds/german-shepherd/health' }]} />
-            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
+            <RelatedLinks title="Health Resources" links={[{ label: 'German Shepherd Health Guide', href: '/health/german-shepherd-health' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }, { label: 'Find a Specialist', href: '/find-a-vet' }]} />
             <RelatedLinks title="Breed Comparisons" links={[
               { label: 'German Shepherd vs Belgian Malinois', href: '/compare/german-shepherd-vs-belgian-malinois' },
               { label: 'German Shepherd vs Rottweiler', href: '/compare/german-shepherd-vs-rottweiler' },

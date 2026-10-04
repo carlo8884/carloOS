@@ -4,6 +4,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer and Longevity', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
   { label: 'Orthopedic Foundation for Animals (OFA): Golden Retriever Hip and Cardiac Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
@@ -88,7 +90,7 @@ export default function GoldenRetrieverHealthPage() {
           ]} />
           <RelatedLinks title="Related" links={[
             { label: 'Golden Retriever Breed Profile', href: '/breeds/golden-retriever' },
-            { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+            { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
             { label: 'Find a Specialist', href: '/find-a-vet' },
             { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
           ]} />
@@ -98,7 +100,7 @@ export default function GoldenRetrieverHealthPage() {
       }
       relatedLinks={[
         { title: 'Golden Retriever Breed Guide', href: '/breeds/golden-retriever', category: 'Breed Profile' },
-        { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Insurance' },
+        { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
      priceAsOf="2026-06-11">
@@ -219,7 +221,7 @@ export default function GoldenRetrieverHealthPage() {
         <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fast claims processing per the carrier, no payout limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
-          <Link href="https://vets.co/reviews/best-pet-insurance"
+          <Link href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
             style={{ display: 'inline-flex', alignItems: 'center', background: 'var(--brand-primary)', color: 'white', padding: '12px 24px', borderRadius: '6px', fontWeight: 700, fontSize: '14px', textDecoration: 'none' }}>
             Compare Pet Insurance Plans →
           </Link>

@@ -14,6 +14,8 @@ import {
   JourneyNext,
 } from '@carloOS/ui'
 import DogGrimaceScale from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const URL = 'https://dog.com/tools/dog-grimace-scale'
 
@@ -282,13 +284,13 @@ export default function DogGrimaceScalePage() {
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </Link>
               <Link
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -311,7 +313,7 @@ export default function DogGrimaceScalePage() {
             clearly than cats), and head position. Each is scored 0 (absent),
             1 (moderate or uncertain), or 2 (obvious), for a total between 0
             and 10. The structure is the dog twin of the{' '}
-            <Link href="https://vets.co/tools/cat-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/tools/cat-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               cat grimace scale
             </Link>{' '}
             on Vets.co. The descriptors are dog-specific and drawn from
@@ -346,7 +348,7 @@ export default function DogGrimaceScalePage() {
               dog first-aid kit guide
             </Link>
             . For a stable, non-emergency question, start at{' '}
-            <Link href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </Link>
             . If a sign is in front of you right now, the{' '}
@@ -425,7 +427,7 @@ export default function DogGrimaceScalePage() {
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily kcal estimate by life stage' },
               { label: 'Dog Exercise Calculator', href: '/tools/dog-exercise-calculator', note: 'Daily activity target by energy and life stage' },
               { label: 'Dog First-Aid Kit Guide', href: '/guides/dog-first-aid-kit', note: 'What to pack before you need it' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

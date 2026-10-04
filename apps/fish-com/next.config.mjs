@@ -11,6 +11,7 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     NEXT_PUBLIC_SITE_ID: 'fish-com',
+    NEXT_PUBLIC_SITE_ORIGIN_MODE: process.env.VERCEL_ENV === 'preview' ? 'preview' : 'apex',
   },
   async redirects() {
     return [

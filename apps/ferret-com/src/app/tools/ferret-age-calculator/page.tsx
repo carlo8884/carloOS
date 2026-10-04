@@ -13,6 +13,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import FerretAgeCalculator from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const URL = 'https://ferret.com/tools/ferret-age-calculator'
 
@@ -240,13 +242,13 @@ export default function FerretAgeCalculatorPage() {
             <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </Link>
               <Link
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -309,7 +311,7 @@ export default function FerretAgeCalculatorPage() {
               cost calculator
             </Link>
             . For a stable, non-emergency question, start at{' '}
-            <Link href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </Link>
             . If a sign is in front of you right now, the{' '}
@@ -346,7 +348,7 @@ export default function FerretAgeCalculatorPage() {
               { label: 'Ferret Lifespan', href: '/colors/ferret-lifespan', note: 'Typical 5–8 year life and the stage bands' },
               { label: 'Aging Ferret Care', href: '/health/aging-ferret-care', note: 'Senior monitoring from around 4–5+' },
               { label: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition', note: 'Protein stays high; eating gets harder' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

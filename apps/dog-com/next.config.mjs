@@ -1,3 +1,5 @@
+import { crossSiteHref } from '../../packages/config/site-origin.mjs'
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   transpilePackages: ['@carloOS/ui', '@carloOS/config', '@carloOS/db'],
@@ -11,17 +13,19 @@ const nextConfig = {
   reactStrictMode: true,
   env: {
     NEXT_PUBLIC_SITE_ID: 'dog-com',
+    // Apex in production. Preview builds link the public Vercel alias, not SSO deployment URLs.
+    NEXT_PUBLIC_SITE_ORIGIN_MODE: process.env.VERCEL_ENV === 'preview' ? 'preview' : 'apex',
   },
   async redirects() {
     return [
       {
         source: '/reviews/best-pet-insurance',
-        destination: 'https://vets.co/reviews/best-pet-insurance',
+        destination: crossSiteHref('vets-co', '/reviews/best-pet-insurance'),
         permanent: false,
       },
       {
         source: '/talk-to-a-vet',
-        destination: 'https://vets.co/telehealth',
+        destination: crossSiteHref('vets-co', '/telehealth'),
         permanent: false,
       },
       // Browsers request these even when the page links /icon.svg and /apple-icon.

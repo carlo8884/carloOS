@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -160,7 +162,7 @@ export default function ToxicFoodsPage() {
           { name: 'Nutrition', href: '/nutrition' },
           { name: 'Toxic Foods', href: '/nutrition/toxic-foods' },
         ]}
-        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Safe Human Foods', href: '/nutrition/safe-human-foods', category: 'Nutrition' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }, { title: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide', category: 'Nutrition' }]}
+        relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'Safe Human Foods', href: '/nutrition/safe-human-foods', category: 'Nutrition' }, { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Reviews' }, { title: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide', category: 'Nutrition' }]}
         schema={schema}
         sidebar={<>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-5">
@@ -177,7 +179,7 @@ export default function ToxicFoodsPage() {
           ]} />
           <RelatedLinks title="Related" links={[
             { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-            { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+            { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
             { label: 'Nutrition Hub', href: '/nutrition' },
           ]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />

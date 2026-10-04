@@ -45,6 +45,8 @@ import {
   combineSchemas,
   SchemaScript,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -178,7 +180,7 @@ export default function FerretAdrenalDiseasePage() {
                 enrolled before symptoms appear.
               </p>
               <a
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 rel="noopener"
                 className="inline-block text-xs font-bold text-brand-primary hover:underline"
               >

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -267,7 +269,7 @@ export default function BestDogCratesPage() {
               { label: 'All Dog Reviews', href: '/reviews' },
               { label: 'Best Dog Beds', href: '/reviews/best-dog-beds' },
               { label: 'Crate Training Guide', href: '/training' },
-              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
             ]} />
 
           </aside>

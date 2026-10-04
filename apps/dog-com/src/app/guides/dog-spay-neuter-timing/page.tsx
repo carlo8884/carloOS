@@ -17,6 +17,8 @@ import {
   SchemaScript,
 } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -99,7 +101,7 @@ export default function DogSpayNeuterTimingPage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing' },
         ]}
-        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score', category: 'Guides' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Reviews' }]}
+        relatedLinks={[{ title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score', category: 'Guides' }, { title: 'Puppy Schedule', href: '/training/puppy-schedule', category: 'Training' }, { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Reviews' }]}
         sidebar={
           <>
             <TableOfContents

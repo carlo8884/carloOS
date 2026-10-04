@@ -17,6 +17,8 @@ import {
 } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, CrossPortfolioCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'AAHA: Weight Management Guidelines for Dogs and Cats (2014, updated 2021)', url: 'https://www.aaha.org/aaha-guidelines/weight-management/weight-management-guidelines/', publisher: 'AAHA' },
   { label: 'Kealy RD et al. Effects of diet restriction on life span and age-related changes in dogs. J Am Vet Med Assoc. 2002;220(9):1315-1320.', publisher: 'JAVMA' },
@@ -134,7 +136,7 @@ export default function DogObesityPage() {
                 { label: 'Weight Management Diets', href: '/nutrition/weight-management' },
                 { label: 'Dog Treats Guide', href: '/nutrition/dog-treats-guide' },
                 { label: 'Dog Arthritis', href: '/health/dog-arthritis' },
-                { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+                { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
               ]}
             />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -277,7 +279,7 @@ export default function DogObesityPage() {
           </p>
 
           <h2 id="kit">Weigh-in kit</h2>
-          <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href="https://vets.co/health/weight-management">vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

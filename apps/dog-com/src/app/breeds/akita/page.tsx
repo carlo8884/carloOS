@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, CrossPortfolioCard, ArticleByline } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Akita Breed Guide — Same-Sex Aggression, Loyalty | Dog.com', description: 'Akitas are fiercely loyal to their family and potentially dangerous to other dogs. Same-sex aggression is strong in the breed.', path: '/breeds/akita', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Akita Breed Guide', description: 'Same-sex aggression, loyalty, health priorities, and care for Akitas.', url: 'https://dog.com/breeds/akita', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -33,7 +35,7 @@ export default function AkitaPage() {
           ))}
         </div>
         <RelatedLinks title="Related Guides" links={[{ label: 'Dog Aggression', href: '/training/dog-aggression' }, { label: 'Dog Bloat / GDV', href: '/health/dog-bloat-gvd' }, { label: 'Dog Allergies', href: '/health/dog-allergies' }]} />
-        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+        <RelatedLinks title="Planning for Breed-Specific Costs" links={[{ label: 'Compare Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
 
       </>}

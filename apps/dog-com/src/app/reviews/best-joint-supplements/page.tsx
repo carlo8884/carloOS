@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -184,7 +186,7 @@ export default function BestJointSupplementsPage() {
             <RelatedLinks title="Related Guides" links={[
               { label: 'Dog Supplements Guide', href: '/nutrition/dog-supplements' },
               { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
-              { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
             ]} />
 
           </aside>

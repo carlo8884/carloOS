@@ -16,6 +16,8 @@
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { AffiliateDisclosure, ResultMeaning, ShopCtas } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 type Size = 'small' | 'medium' | 'large' | 'giant'
 type PickupAge = '8-weeks' | '10-12-weeks' | '4-6-months' | 'already-home'
@@ -366,7 +368,7 @@ function buildList(
       stage: 'vet-paperwork',
       essential: true,
       gear: false,
-      links: [{ href: 'https://vets.co/reviews/best-pet-insurance', label: 'Compare pet insurance' }],
+      links: [{ href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), label: 'Compare pet insurance' }],
     },
     {
       id: 'carrier',
@@ -401,7 +403,7 @@ function buildList(
       stage: 'vet-paperwork',
       essential: false,
       gear: false,
-      links: [{ href: 'https://vets.co/reviews/best-pet-insurance', label: 'Compare pet insurance' }],
+      links: [{ href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), label: 'Compare pet insurance' }],
     },
     {
       id: 'socialisation',

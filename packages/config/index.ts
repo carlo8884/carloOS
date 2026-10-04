@@ -4,6 +4,8 @@
  * Every color, font, spacing, and site-specific config lives here.
  */
 
+import { crossSiteHref, isEarningSiteId, joinSiteUrl } from './site-origin'
+
 // ─────────────────────────────────────────────
 // SITE IDENTIFIERS
 // ─────────────────────────────────────────────
@@ -593,7 +595,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
         heading: 'Reviews',
         links: [
           { label: 'Best Dog Food', href: '/reviews/best-dry-dog-food' },
-          { label: 'Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Flea & Tick', href: '/reviews/best-flea-tick-prevention' },
           { label: 'Dog Beds', href: '/reviews/best-dog-beds' },
           { label: 'All Reviews', href: '/reviews' },
@@ -1264,180 +1266,190 @@ export interface CrossPortfolioRecommendation {
   href: string
 }
 
+interface RecommendationSeed {
+  siteId: SiteId
+  siteName: string
+  headline: string
+  blurb: string
+  cta: string
+  /** Route on `siteId`, not on the site the reader is currently on. */
+  path: string
+}
+
 // Static recommendation table. Each entry has (currentSite × contentType)
 // keyed on `${siteId}:${contentType}` → array of 2-3 sibling recs.
 // Editorial decisions: dog/cat health → vets-co; product/diet → petfood/petfoods;
 // equestrian discipline ↔ saddle brand; ferret care ↔ ferrets-com state info.
-const RECOMMENDATIONS: Record<string, CrossPortfolioRecommendation[]> = {
+const RECOMMENDATIONS: Record<string, RecommendationSeed[]> = {
   // ── dog-com ───────────────────────────────────────────
   'dog-com:health': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Specialist Vet', blurb: 'Board-certified veterinary specialists by condition, with average cost ranges.', cta: 'Browse specialists', href: 'https://vets.co/specialists' },
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'AAFCO Life-Stage Guides', blurb: 'How to read pet food labels by life stage — puppy, adult, senior.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Specialist Vet', blurb: 'Board-certified veterinary specialists by condition, with average cost ranges.', cta: 'Browse specialists', path: '/specialists' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'AAFCO Life-Stage Guides', blurb: 'How to read pet food labels by life stage — puppy, adult, senior.', cta: 'Read guides', path: '/life-stage' },
   ],
   'dog-com:nutrition': [
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Reviews', blurb: 'Independent reviews of Royal Canin, Hill\'s, Purina, Orijen and more — scored against WSAVA guidelines.', cta: 'See rankings', href: 'https://petfoods.com/brands' },
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Deep Dives', blurb: 'AAFCO-anchored guides on puppy, adult, senior, and large-breed nutrition.', cta: 'Read more', href: 'https://petfood.com/life-stage' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Reviews', blurb: 'Independent reviews of Royal Canin, Hill\'s, Purina, Orijen and more — scored against WSAVA guidelines.', cta: 'See rankings', path: '/brands' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Deep Dives', blurb: 'AAFCO-anchored guides on puppy, adult, senior, and large-breed nutrition.', cta: 'Read more', path: '/life-stage' },
   ],
   'dog-com:breed': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Breed Health Profiles', blurb: 'Hereditary screening recommendations and breed-specific conditions, sourced from veterinary references.', cta: 'See breed health', href: 'https://vets.co/breeds' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Breed Health Profiles', blurb: 'Hereditary screening recommendations and breed-specific conditions, sourced from veterinary references.', cta: 'See breed health', path: '/breeds' },
   ],
   'dog-com:training': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Behavioral Specialists', blurb: 'When to consult a veterinary behaviorist for training-resistant issues.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-behavior' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Behavioral Specialists', blurb: 'When to consult a veterinary behaviorist for training-resistant issues.', cta: 'Find a specialist', path: '/specialists/veterinary-behavior' },
   ],
   'dog-com:review': [
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored puppy, adult, senior, and large-breed nutrition to pair with any food pick.', cta: 'Read nutrition guides', href: 'https://petfood.com/life-stage' },
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Who makes each brand, where ingredients are sourced, and how they score on WSAVA criteria.', cta: 'See brand ratings', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored puppy, adult, senior, and large-breed nutrition to pair with any food pick.', cta: 'Read nutrition guides', path: '/life-stage' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Who makes each brand, where ingredients are sourced, and how they score on WSAVA criteria.', cta: 'See brand ratings', path: '/brands' },
   ],
   'dog-com:tool': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Vet', blurb: 'When a number from a calculator needs a professional read, find a local veterinarian or specialist.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition', blurb: 'Turn a calorie or weight estimate into a real feeding plan with AAFCO-anchored life-stage guides.', cta: 'Read nutrition guides', href: 'https://petfood.com/life-stage' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Vet', blurb: 'When a number from a calculator needs a professional read, find a local veterinarian or specialist.', cta: 'Find a vet', path: '/find-a-vet' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition', blurb: 'Turn a calorie or weight estimate into a real feeding plan with AAFCO-anchored life-stage guides.', cta: 'Read nutrition guides', path: '/life-stage' },
   ],
 
   // ── vets-co ───────────────────────────────────────────
   'vets-co:medication': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Best Pet Insurance', blurb: 'Compare pet insurance plans that cover chronic prescriptions — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', href: 'https://dog.com/reviews/best-pet-insurance' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Best Pet Insurance', blurb: 'Compare pet insurance plans that cover chronic prescriptions — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', path: '/reviews/best-pet-insurance' },
   ],
   'vets-co:specialty': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist visits run $3,000–15,000/year. Find a plan that covers them.', cta: 'See comparison', href: 'https://dog.com/reviews/best-pet-insurance' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Pet Insurance Comparison', blurb: 'Specialist visits run $3,000–15,000/year. Find a plan that covers them.', cta: 'See comparison', path: '/reviews/best-pet-insurance' },
   ],
   'vets-co:breed': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', href: 'https://dog.com/breeds' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Care Guides', blurb: 'In-depth breed-specific care, feeding, and training resources.', cta: 'Browse breeds', path: '/breeds' },
   ],
   'vets-co:tool': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Compare Pet Insurance', blurb: 'Once you know your likely vet costs, compare plans that cover them — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', href: 'https://dog.com/reviews/best-pet-insurance' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Compare Pet Insurance', blurb: 'Once you know your likely vet costs, compare plans that cover them — Lemonade, Embrace, Pets Best, Spot.', cta: 'Compare plans', path: '/reviews/best-pet-insurance' },
   ],
   'vets-co:health': [
-    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Condition Guides', blurb: 'Golden Retriever, Labrador, Frenchie, German Shepherd — breed-specific hereditary conditions explained.', cta: 'Browse breed guides', href: 'https://dog.com/breeds' },
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Disease-Specific Nutrition', blurb: 'Renal, cardiac, hepatic, and diabetic diets — how food choices interact with a diagnosis.', cta: 'See condition diets', href: 'https://petfood.com/conditions' },
+    { siteId: 'dog-com', siteName: 'Dog.com', headline: 'Breed Condition Guides', blurb: 'Golden Retriever, Labrador, Frenchie, German Shepherd — breed-specific hereditary conditions explained.', cta: 'Browse breed guides', path: '/breeds' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Disease-Specific Nutrition', blurb: 'Renal, cardiac, hepatic, and diabetic diets — how food choices interact with a diagnosis.', cta: 'See condition diets', path: '/conditions' },
   ],
 
   // ── horses-com ────────────────────────────────────────
   'horses-com:discipline': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Brand Reviews', blurb: 'Independent reviews of Stübben, Pessoa, Bates, County, and Custom Saddlery for English riders.', cta: 'See brand reviews', href: 'https://saddle.com/brands' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Brand Reviews', blurb: 'Independent reviews of Stübben, Pessoa, Bates, County, and Custom Saddlery for English riders.', cta: 'See brand reviews', path: '/brands' },
   ],
   'horses-com:equipment': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Brands', blurb: 'Discipline-specific saddle brand recommendations and fit guides.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Brands', blurb: 'Discipline-specific saddle brand recommendations and fit guides.', cta: 'Browse saddles', path: '/brands' },
   ],
   'horses-com:breed': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle-Fit Guidance', blurb: 'How conformation affects saddle fit — including breed-specific notes.', cta: 'Read more', href: 'https://saddle.com' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle-Fit Guidance', blurb: 'How conformation affects saddle fit — including breed-specific notes.', cta: 'Read more', path: '/' },
   ],
 
   // ── saddle-com ────────────────────────────────────────
   'saddle-com:brand': [
-    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Equipment Guides', blurb: 'Required and optional equipment for dressage, hunter-jumper, eventing, western, trail, and endurance.', cta: 'Browse disciplines', href: 'https://horses.com/disciplines' },
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Equipment Guides', blurb: 'Required and optional equipment for dressage, hunter-jumper, eventing, western, trail, and endurance.', cta: 'Browse disciplines', path: '/disciplines' },
   ],
   'saddle-com:review': [
-    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Selection', blurb: 'Pick the right discipline for your goals — then come back for the right saddle.', cta: 'Explore disciplines', href: 'https://horses.com/disciplines' },
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Discipline Selection', blurb: 'Pick the right discipline for your goals — then come back for the right saddle.', cta: 'Explore disciplines', path: '/disciplines' },
   ],
 
   // ── lizard-com ────────────────────────────────────────
   'lizard-com:health': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'ARAV-certified reptile veterinarians + what to expect at the visit.', cta: 'Find a specialist', href: 'https://vets.co/specialists/veterinary-internal-medicine' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'ARAV-certified reptile veterinarians + what to expect at the visit.', cta: 'Find a specialist', path: '/specialists/veterinary-internal-medicine' },
   ],
   'lizard-com:species': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Reptile Health Conditions', blurb: 'Cross-reference species-specific conditions with veterinary specialist guidance.', cta: 'Browse conditions', href: 'https://vets.co/specialists' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Reptile Health Conditions', blurb: 'Cross-reference species-specific conditions with veterinary specialist guidance.', cta: 'Browse conditions', path: '/specialists' },
   ],
   'lizard-com:care': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic / Reptile Vet', blurb: 'ARAV-certified reptile veterinarians, what to expect at a visit, and how to prepare.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic / Reptile Vet', blurb: 'ARAV-certified reptile veterinarians, what to expect at a visit, and how to prepare.', cta: 'Find a specialist', path: '/find-a-vet' },
   ],
   'lizard-com:tool': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Reptile Vet', blurb: 'A husbandry calculator gets the setup right; an ARAV-certified reptile vet handles the rest.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find a Reptile Vet', blurb: 'A husbandry calculator gets the setup right; an ARAV-certified reptile vet handles the rest.', cta: 'Find a specialist', path: '/find-a-vet' },
   ],
 
   // ── fish-com ──────────────────────────────────────────
   'fish-com:equipment': [],  // Same-site reviews handle this; no fish sister site.
   'fish-com:species': [],
   'fish-com:health': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Aquatic Vet', blurb: 'Aquatic and exotic-animal veterinarians — for when a fish needs more than a water change.', cta: 'Find a specialist', href: 'https://vets.co/find-a-vet' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Aquatic Vet', blurb: 'Aquatic and exotic-animal veterinarians — for when a fish needs more than a water change.', cta: 'Find a specialist', path: '/find-a-vet' },
   ],
 
   // ── petfood-com ───────────────────────────────────────
   'petfood-com:nutrition': [
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Scorecards', blurb: 'Independent brand-by-brand WSAVA compliance reviews to pair with life-stage choice.', cta: 'See brand rankings', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'WSAVA Brand Scorecards', blurb: 'Independent brand-by-brand WSAVA compliance reviews to pair with life-stage choice.', cta: 'See brand rankings', path: '/brands' },
   ],
   'petfood-com:tool': [
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Once you know the portion or cost, see who makes the food well — brand-by-brand WSAVA scorecards.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand Reference Database', blurb: 'Once you know the portion or cost, see who makes the food well — brand-by-brand WSAVA scorecards.', cta: 'Explore brands', path: '/brands' },
   ],
   'petfood-com:guide': [
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Independent Brand Reference', blurb: 'When you know what to feed, find out who makes it well.', cta: 'Explore brands', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Independent Brand Reference', blurb: 'When you know what to feed, find out who makes it well.', cta: 'Explore brands', path: '/brands' },
   ],
 
   // ── petfoods-com ──────────────────────────────────────
   'petfoods-com:brand': [
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored advice on matching food to your pet\'s life stage and special needs.', cta: 'Read guides', href: 'https://petfood.com/life-stage' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Life-Stage Nutrition Guides', blurb: 'AAFCO-anchored advice on matching food to your pet\'s life stage and special needs.', cta: 'Read guides', path: '/life-stage' },
   ],
   'petfoods-com:nutrition': [
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading the Label', blurb: 'What AAFCO statements, guaranteed analysis, and ingredient lists actually tell you.', cta: 'Learn more', href: 'https://petfood.com/guides' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading the Label', blurb: 'What AAFCO statements, guaranteed analysis, and ingredient lists actually tell you.', cta: 'Learn more', path: '/guides' },
   ],
 
   // ── ferret-com ────────────────────────────────────────
   'ferret-com:health': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians and what to expect at the visit.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
-    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Ferret legality varies by state. Check your state\'s rules before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians and what to expect at the visit.', cta: 'Find a vet', path: '/find-a-vet' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Ferret legality varies by state. Check your state\'s rules before acquiring.', cta: 'Check your state', path: '/states' },
   ],
   'ferret-com:care': [
-    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Adoption Directory', blurb: 'Find local shelters, rescues, and AEMV-certified exotic vets by state.', cta: 'Browse states', href: 'https://ferrets.com/states' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Adoption Directory', blurb: 'Find local shelters, rescues, and AEMV-certified exotic vets by state.', cta: 'Browse states', path: '/states' },
   ],
   'ferret-com:diet': [
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading Pet Food Labels', blurb: 'AAFCO statements, guaranteed analysis, and ingredient lists — the same skills apply to ferret kibble.', cta: 'Learn to read labels', href: 'https://petfood.com/guides/reading-pet-food-labels' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Reading Pet Food Labels', blurb: 'AAFCO statements, guaranteed analysis, and ingredient lists — the same skills apply to ferret kibble.', cta: 'Learn to read labels', path: '/guides/reading-pet-food-labels' },
   ],
   'ferret-com:behavior': [
-    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'Ferret Legality by State', blurb: 'Ferrets are prohibited or regulated in California, Hawaii, and several cities — verify before acquiring.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'Ferret Legality by State', blurb: 'Ferrets are prohibited or regulated in California, Hawaii, and several cities — verify before acquiring.', cta: 'Check your state', path: '/states' },
   ],
   'ferret-com:tool': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians for the ferret-specific care a calculator can\'t cover.', cta: 'Find a vet', href: 'https://vets.co/find-a-vet' },
-    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Before you budget for a ferret, confirm they\'re legal where you live.', cta: 'Check your state', href: 'https://ferrets.com/states' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Find an Exotic Vet', blurb: 'AEMV-certified exotic-animal veterinarians for the ferret-specific care a calculator can\'t cover.', cta: 'Find a vet', path: '/find-a-vet' },
+    { siteId: 'ferrets-com', siteName: 'Ferrets.com', headline: 'State Legality + Adoption', blurb: 'Before you budget for a ferret, confirm they\'re legal where you live.', cta: 'Check your state', path: '/states' },
   ],
 
   // ── ferrets-com ───────────────────────────────────────
   'ferrets-com:directory': [
-    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', href: 'https://ferret.com/care' },
-    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', href: 'https://ferret.com/health' },
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Complete Care Guides', blurb: 'Litter training, vaccinations, diet, dental care — everything new owners need.', cta: 'Browse care guides', path: '/care' },
+    { siteId: 'ferret-com', siteName: 'Ferret.com', headline: 'Ferret Health Library', blurb: 'Adrenal disease, insulinoma, lymphoma — what to watch for and when.', cta: 'See health topics', path: '/health' },
   ],
 
   // ── horses-com (activate already-placed cards: care/gear/health/nutrition/training)
   // Equestrian sibling Saddle.com is the relevant cross-portfolio target.
   'horses-com:health': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Care & First-Aid Guides', blurb: 'Grooming, first aid, dentistry, and trailer-safety guides for owners.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Care & First-Aid Guides', blurb: 'Grooming, first aid, dentistry, and trailer-safety guides for owners.', cta: 'Browse guides', path: '/guides' },
   ],
   'horses-com:nutrition': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Nutrition & Body Condition', blurb: 'Body-condition scoring and feeding guidance from the equestrian library.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Horse Nutrition & Body Condition', blurb: 'Body-condition scoring and feeding guidance from the equestrian library.', cta: 'Browse guides', path: '/guides' },
   ],
   'horses-com:care': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack, Grooming & Daily Care', blurb: 'Leather care, tack cleaning, and grooming routines for the well-kept horse.', cta: 'See care guides', href: 'https://saddle.com/guides' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack, Grooming & Daily Care', blurb: 'Leather care, tack cleaning, and grooming routines for the well-kept horse.', cta: 'See care guides', path: '/guides' },
   ],
   'horses-com:gear': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddles, Tack & Accessories', blurb: 'Independent saddle, bridle, and accessory buyer guidance by discipline.', cta: 'Shop the guide', href: 'https://saddle.com/accessories' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddles, Tack & Accessories', blurb: 'Independent saddle, bridle, and accessory buyer guidance by discipline.', cta: 'Shop the guide', path: '/accessories' },
   ],
   'horses-com:training': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Discipline & Riding Guides', blurb: 'English, western, dressage, and discipline-specific tack and technique.', cta: 'Browse disciplines', href: 'https://saddle.com/guides' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Discipline & Riding Guides', blurb: 'English, western, dressage, and discipline-specific tack and technique.', cta: 'Browse disciplines', path: '/guides' },
   ],
 
   // ── petfood-com (activate already-placed brand card) — sibling ingredient/brand DB
   'petfood-com:brand': [
-    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand & Ingredient Database', blurb: 'WSAVA compliance, ingredient sourcing, and brand evaluations side by side.', cta: 'Compare brands', href: 'https://petfoods.com/brands' },
+    { siteId: 'petfoods-com', siteName: 'PetFoods.com', headline: 'Brand & Ingredient Database', blurb: 'WSAVA compliance, ingredient sourcing, and brand evaluations side by side.', cta: 'Compare brands', path: '/brands' },
   ],
 
   // ── saddle-com (activate already-placed guide card) — equestrian sibling authority
   'saddle-com:guide': [
-    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', href: 'https://horses.com/tack' },
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Equine Health & Breed Authority', blurb: 'Breed profiles, health, nutrition, and discipline references for owners.', cta: 'Explore Horses.com', path: '/tack' },
   ],
   'saddle-com:tool': [
-    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Horse Care & Ownership', blurb: 'A fit or girth measurement is half the picture — the horse-care side lives on Horses.com.', cta: 'Explore Horses.com', href: 'https://horses.com/ownership' },
+    { siteId: 'horses-com', siteName: 'Horses.com', headline: 'Horse Care & Ownership', blurb: 'A fit or girth measurement is half the picture — the horse-care side lives on Horses.com.', cta: 'Explore Horses.com', path: '/ownership' },
   ],
   'horses-com:tool': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Tack', blurb: 'Weight and measurement in hand, get the tack right — saddle fit guides and brand reviews.', cta: 'Browse saddles', href: 'https://saddle.com/brands' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Saddle Fit & Tack', blurb: 'Weight and measurement in hand, get the tack right — saddle fit guides and brand reviews.', cta: 'Browse saddles', path: '/brands' },
   ],
 
   // ── dog-com guide spokes (general dog-owner guides → clinical + nutrition siblings)
   'dog-com:guide': [
-    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Veterinary Care Reference', blurb: 'Conditions, medications, and specialist directories from a clinical-authority desk.', cta: 'Browse vet topics', href: 'https://vets.co/health' },
-    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Feeding & Nutrition Guides', blurb: 'AAFCO life-stage profiles, label-reading, and feeding fundamentals.', cta: 'Read nutrition guides', href: 'https://petfood.com/nutrition' },
+    { siteId: 'vets-co', siteName: 'Vets.co', headline: 'Veterinary Care Reference', blurb: 'Conditions, medications, and specialist directories from a clinical-authority desk.', cta: 'Browse vet topics', path: '/health' },
+    { siteId: 'petfood-com', siteName: 'PetFood.com', headline: 'Feeding & Nutrition Guides', blurb: 'AAFCO life-stage profiles, label-reading, and feeding fundamentals.', cta: 'Read nutrition guides', path: '/nutrition' },
   ],
 
   // ── horses-com guide spokes (equestrian sibling)
   'horses-com:guide': [
-    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack Fit & Care Guides', blurb: 'Saddle fit, leather care, and discipline-specific tack guidance.', cta: 'Browse guides', href: 'https://saddle.com/guides' },
+    { siteId: 'saddle-com', siteName: 'Saddle.com', headline: 'Tack Fit & Care Guides', blurb: 'Saddle fit, leather care, and discipline-specific tack guidance.', cta: 'Browse guides', path: '/guides' },
   ],
 }
 
@@ -1452,7 +1464,19 @@ export function getCrossPortfolioRecommendations(
 ): CrossPortfolioRecommendation[] {
   const key = `${currentSite}:${contentType}`
   const recs = RECOMMENDATIONS[key] ?? []
-  return recs.slice(0, limit)
+  return recs.slice(0, limit).map((rec) => ({
+    siteId: rec.siteId,
+    siteName: rec.siteName,
+    headline: rec.headline,
+    blurb: rec.blurb,
+    cta: rec.cta,
+    href: recommendationHref(rec.siteId, rec.path),
+  }))
+}
+
+function recommendationHref(siteId: SiteId, path: string): string {
+  if (isEarningSiteId(siteId)) return crossSiteHref(siteId, path)
+  return joinSiteUrl(themes[siteId].siteUrl, path)
 }
 
 export {
@@ -1499,3 +1523,11 @@ export {
   isValidSubscribeEmail,
   parseSubscribeBody,
 } from './subscribe'
+export {
+  crossSiteHref,
+  isEarningSiteId,
+  joinSiteUrl,
+  siteBaseUrl,
+  siteOriginMode,
+} from './site-origin'
+export type { EarningSiteId, SiteOriginMode } from './site-origin'

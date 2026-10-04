@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Luxating Patella (Slipping Kneecap) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
@@ -39,7 +41,7 @@ export default function LuxatingPatellaPage() {
               <div key={b} className="py-1 border-b border-brand-border last:border-0 text-xs text-brand-text-mid">{b}</div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dog Arthritis', href: '/health/dog-arthritis' }, { label: 'Best Joint Supplements', href: '/reviews/best-joint-supplements' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
@@ -76,7 +78,7 @@ export default function LuxatingPatellaPage() {
           <p>Exercise modification during flares — reduce high-impact jumping and running during symptomatic periods. Low-impact activity (leash walks, swimming) maintains muscle mass without worsening the joint. Some owners use a dog knee brace on the affected hind limb during those leash walks when skipping flares, so the kneecap has less room to slip sideways. Ask your veterinarian whether a brace fits this dog and this grade — it is a walk-support aid, not a substitute for grading, weight management, or surgery when those are indicated.</p>
 
           <h2 id="kit">Walk-support kit</h2>
-          <p>Everyday physical supplies that match the walk-control copy above — a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>. The allergy work-up is on <a href="/health/dog-allergies">dog allergies</a>. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the walk-control copy above — a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. The allergy work-up is on <a href="/health/dog-allergies">dog allergies</a>. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

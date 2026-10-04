@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats (2023)', url: 'https://www.aaha.org/aaha-guidelines/senior-care/senior-care-guidelines/', publisher: 'AAHA' },
   { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/caring-senior-pets', publisher: 'AVMA' },
@@ -105,7 +107,7 @@ export default function SeniorDogCarePage() {
         ]} />
         <RelatedLinks title="Related Guides" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Dog Dental Care', href: '/health/dog-dental-care' },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
