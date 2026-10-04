@@ -26,7 +26,7 @@ const PICKS = [
   { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear' },
   { label: 'Best Canister', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
   { label: 'Best Sponge', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
-  { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: 'Under $35 · Widely available', href: '#aqueon' },
+  { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
 ]
 
 const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
@@ -59,7 +59,7 @@ export default function BestAquariumFiltersPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
           The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
@@ -179,11 +179,11 @@ export default function BestAquariumFiltersPage() {
               id="aqueon"
               badge="Best Budget HOB"
               name="Aqueon QuietFlow 30"
-              subtitle="Under $35 · LED indicator light · Widely available"
+              subtitle="$25–40 · LED indicator light · Widely available"
               score={8.3}
               description={<p>The Aqueon QuietFlow 30 is the most widely available budget HOB filter — found at every pet store, reliable, and functional for smaller tanks. The LED indicator light that signals when the cartridge needs replacement is a useful feature for beginners. Main limitation: the proprietary cartridge system requires purchasing Aqueon replacement cartridges rather than custom media. For beginners who prefer a simpler maintenance workflow, this is a minor concern. For keepers who want to optimize biological filtration, upgrade to the AquaClear.</p>}
               specs={[
-                { label: 'Price', value: 'Under $35', highlight: 'good' },
+                { label: 'Price', value: '$25–40', highlight: 'good' },
                 { label: 'For Tanks', value: 'Up to 30 gallons' },
                 { label: 'Indicator', value: 'LED cartridge alert', highlight: 'good' },
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
@@ -233,7 +233,7 @@ export default function BestAquariumFiltersPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Up to 30 gallons, and you want the cheapest widely stocked HOB</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a></td>
-                      <td className="p-3 text-brand-text-mid">Best budget HOB. Under $35. Proprietary cartridge</td>
+                      <td className="p-3 text-brand-text-mid">Best budget HOB. $25–40. Proprietary cartridge</td>
                       <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>
                     </tr>
                   </tbody>

@@ -15,7 +15,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when your pet needs $5,000 of care at 11pm', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
+  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when a large emergency bill arrives at 11pm', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
   { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: 'Convenient Care' },
   { title: 'Trupanion vs Healthy Paws', desc: 'Direct vet payment versus fast reimbursement, using the figures already on the insurance review', href: '/reviews/trupanion-vs-healthy-paws-guide', badge: 'Insurance' },
   { title: 'Vetster vs AskVet', desc: 'Pay-per-visit video versus a chat subscription. Not a substitute for emergency care', href: '/reviews/vetster-vs-askvet-guide', badge: 'Telehealth' },

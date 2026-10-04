@@ -41,14 +41,14 @@ const PICKS = [
 ]
 
 const CATEGORY_TABLE = [
-  { category: 'Joint', topPick: 'Cosequin ASU Plus', evidence: 'Strong (ASU + glucosamine + chondroitin)', priceRange: '$50–110/mo' },
-  { category: 'Gastric / Ulcer Prevention', topPick: 'SmartGut Ultra (adjunct)', evidence: 'Moderate (calcium/Mg buffer); pharmacologic for active disease', priceRange: '$35–80/mo' },
-  { category: 'Hoof', topPick: 'Farrier&apos;s Formula Double Strength', evidence: 'Strong (biotin, methionine, zinc, copper)', priceRange: '$30–55/mo' },
-  { category: 'Calming', topPick: 'SmartCalm Ultra / Mare Magic', evidence: 'Limited (magnesium, L-tryptophan, raspberry leaf)', priceRange: '$25–60/mo' },
-  { category: 'Electrolyte', topPick: 'Perform &apos;N Win / Adams Plus', evidence: 'Strong (Na/Cl/K replacement)', priceRange: '$20–40/mo' },
-  { category: 'Weight Gain', topPick: 'Cool Calories 100 / Empower Boost', evidence: 'Strong (stabilized rice bran, vegetable oil)', priceRange: '$25–55/mo' },
-  { category: 'Marine Omega-3', topPick: 'KER EO-3', evidence: 'Strong (marine DHA/EPA)', priceRange: '$45–85/mo' },
-  { category: 'General Wellness', topPick: 'Platinum Performance Equine', evidence: 'Moderate (broad nutrient profile)', priceRange: '$85–140/mo' },
+  { category: 'Joint', topPick: 'Cosequin ASU Plus', evidence: 'Strong (ASU + glucosamine + chondroitin)', priceRange: '$80–110/mo' },
+  { category: 'Gastric / Ulcer Prevention', topPick: 'SmartGut Ultra (adjunct)', evidence: 'Moderate (calcium/Mg buffer); pharmacologic for active disease', priceRange: '$60–80/mo' },
+  { category: 'Hoof', topPick: 'Farrier&apos;s Formula Double Strength', evidence: 'Strong (biotin, methionine, zinc, copper)', priceRange: 'Not reviewed on this page' },
+  { category: 'Calming', topPick: 'SmartCalm Ultra / Mare Magic', evidence: 'Limited (magnesium, L-tryptophan, raspberry leaf)', priceRange: 'Not reviewed on this page' },
+  { category: 'Electrolyte', topPick: 'Perform &apos;N Win / Adams Plus', evidence: 'Strong (Na/Cl/K replacement)', priceRange: '$20–35/mo (Adams Plus)' },
+  { category: 'Weight Gain', topPick: 'Cool Calories 100 / Empower Boost', evidence: 'Strong (stabilized rice bran, vegetable oil)', priceRange: 'Not reviewed on this page' },
+  { category: 'Marine Omega-3', topPick: 'KER EO-3', evidence: 'Strong (marine DHA/EPA)', priceRange: '$55–85/mo' },
+  { category: 'General Wellness', topPick: 'Platinum Performance Equine', evidence: 'Moderate (broad nutrient profile)', priceRange: '$95–140/mo' },
 ]
 
 const FAQS = [
@@ -98,7 +98,7 @@ export default function BestEquineSupplementsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Equine Supplements 2026
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           A category-by-category buyer&apos;s guide to the equine supplement market — joint, gastric, hoof, calmer, electrolyte, weight gain, marine omega-3, and comprehensive wellness. Brands and products evaluated against the NASC Quality Seal, FEI/USEF prohibited-substance rules, and the peer-reviewed evidence base behind each category.
@@ -385,19 +385,19 @@ export default function BestEquineSupplementsPage() {
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">One broad wellness product, after the ration is already balanced</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a></td>
-                    <td className="p-3 text-brand-text-mid">Best comprehensive. One daily top-dress. Category table lists $85–140/mo</td>
+                    <td className="p-3 text-brand-text-mid">Best comprehensive. One daily top-dress. Card price $95–140/mo</td>
                     <td className="p-3 text-brand-text-mid">Among the most expensive per month. The card says the same targets can be met more cheaply with a marine omega-3, vitamin E, and a balancer</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Gastric support beside veterinary care, not instead of it</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a></td>
-                    <td className="p-3 text-brand-text-mid">Best gastric adjunct. Category table: moderate buffer evidence, $35–80/mo</td>
+                    <td className="p-3 text-brand-text-mid">Best gastric adjunct. Card price $60–80/mo. The category row calls the buffer evidence moderate</td>
                     <td className="p-3 text-brand-text-mid">Treatment of active ulcers. The table says pharmacologic care is for active disease</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine DHA/EPA, not a plant-oil substitute</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a></td>
-                    <td className="p-3 text-brand-text-mid">Best marine omega-3. Category table: strong marine DHA/EPA evidence, $45–85/mo</td>
+                    <td className="p-3 text-brand-text-mid">Best marine omega-3. Card price $55–85/mo. The category row calls the marine DHA/EPA evidence strong</td>
                     <td className="p-3 text-brand-text-mid">A joint or gastric product. It is an oil, not those categories</td>
                   </tr>
                   <tr className="border-b border-brand-border">
@@ -415,7 +415,7 @@ export default function BestEquineSupplementsPage() {
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Sweat replacement after work</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a></td>
-                    <td className="p-3 text-brand-text-mid">Best electrolyte. Category table: strong Na/Cl/K replacement, $20–40/mo</td>
+                    <td className="p-3 text-brand-text-mid">Best electrolyte. Card price $20–35/mo. The category row calls Na/Cl/K replacement strong</td>
                     <td className="p-3 text-brand-text-mid">A daily wellness powder for a horse that is not sweating</td>
                   </tr>
                 </tbody>

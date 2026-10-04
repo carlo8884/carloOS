@@ -60,7 +60,7 @@ export default function DeductiblesPage() {
             Everyday physical supplies that match the
             deductible, reimbursement-rate, and
             annual-limit copy on this page — a
-            quad-ruled graph pad so the $5,000 bill,
+            quad-ruled graph pad so the sample bill,
             deductible, reimbursement rate, and
             leftover limit stay plotted combinations,
             a paid rubber stamp so reimbursed

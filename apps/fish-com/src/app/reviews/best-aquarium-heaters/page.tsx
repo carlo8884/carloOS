@@ -39,7 +39,7 @@ const PICKS = [
   { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim' },
   { label: 'Best Flat Design', name: 'Cobalt Neo-Therm', subtitle: 'Slim profile · LED indicator', href: '#cobalt' },
   { label: 'Best Canister Inline', name: 'Hydor Inline', subtitle: 'No heater in tank · For canister setups', href: '#hydor' },
-  { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · Under $30', href: '#aqueon' },
+  { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · $18–30', href: '#aqueon' },
 ]
 
 // GEO: ItemList of the ranked picks. Names + URLs come only from this page's
@@ -67,7 +67,7 @@ export default function BestHeatersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
           A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We ranked 8 heaters using manufacturer-published accuracy specs and aggregated keeper reports. Here&apos;s what holds temperature best on the record.
@@ -186,11 +186,11 @@ export default function BestHeatersPage() {
               id="aqueon"
               badge="Best Budget"
               name="Aqueon Pro Adjustable Heater"
-              subtitle="Shatterproof · Under $30 · Widely available"
+              subtitle="Shatterproof · $18–30 · Widely available"
               score={8.1}
               description={<p>The Aqueon Pro is the best budget heater for beginners — shatterproof construction removes the main safety risk of the Eheim Jager, and it is available in every pet store. Accuracy is acceptable (±1–1.5°F per published reviews — worse than the Eheim or Cobalt but usable for most freshwater setups). For sensitive species with tight temperature requirements (discus, cardinal tetras, certain invertebrates), invest in a more accurate heater. For robust community fish with 4–6°F tolerance ranges, the Aqueon Pro performs adequately at the best price.</p>}
               specs={[
-                { label: 'Price', value: 'Under $30', highlight: 'good' },
+                { label: 'Price', value: '$18–30', highlight: 'good' },
                 { label: 'Accuracy', value: '±1–1.5°F', highlight: 'warn' },
                 { label: 'Housing', value: 'Shatterproof', highlight: 'good' },
                 { label: 'Availability', value: 'All pet stores', highlight: 'good' },

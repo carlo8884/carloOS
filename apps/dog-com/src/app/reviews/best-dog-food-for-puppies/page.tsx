@@ -32,7 +32,7 @@ const PICKS = [
   { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin' },
   { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
   { label: 'Best Small Breed', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
-  { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · Under $40/bag', href: '#iams' },
+  { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · $30–50 per 30 lb bag', href: '#iams' },
 ]
 
 export default function BestPuppyFoodPage() {
@@ -45,7 +45,7 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
-        <PriceAsOf date="2026-06-06" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The most important rule in puppy nutrition: large breeds (expected adult weight 50+ lbs) must eat a large breed puppy formula. We ranked by <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials, and whether the manufacturer employs board-certified veterinary nutritionists.
         </p>

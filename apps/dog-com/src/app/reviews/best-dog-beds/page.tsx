@@ -9,7 +9,7 @@ const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: '
 // Furhaven and the Best Friends bolster are Quick Picks on this page but have
 // no scored ReviewCards yet, so their schemas carry no editorial rating
 // (per buildProductSchema contract).
-const furhavenSchema = buildProductSchema({ name: 'Furhaven Orthopedic Dog Bed', description: 'Budget orthopedic foam dog bed available in multiple sizes.', imageUrl: '', priceRange: '40-80' })
+const furhavenSchema = buildProductSchema({ name: 'Furhaven Orthopedic Dog Bed', description: 'Budget orthopedic foam dog bed available in multiple sizes.', imageUrl: '' })
 const bestFriendsSchema = buildProductSchema({ name: 'Best Friends by Sheri OrthoComfort Bolster Bed', description: 'Donut-shape bolster dog bed with washable design, suited to dogs that prefer to curl up.', imageUrl: '' })
 const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema, furhavenSchema, bestFriendsSchema)
 const PICKS = [
@@ -111,7 +111,7 @@ export default function BestDogBedsPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div id="by-dog-type" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Dog Type</div>
-              {[['Arthritic large breed', 'Big Barker — clinical evidence'], ['Large breed everyday', 'Casper or Big Barker'], ['Small/medium everyday', 'Casper or Furhaven'], ['Anxious dog', 'Bolster/donut style (Best Friends Sheri)'], ['Destructive chewer', 'Molly Mutt cover + insert (replaceable)'], ['Budget', 'Furhaven Orthopedic ($40–80)']].map(([t, r]) => (
+              {[['Arthritic large breed', 'Big Barker — clinical evidence'], ['Large breed everyday', 'Casper or Big Barker'], ['Small/medium everyday', 'Casper or Furhaven'], ['Anxious dog', 'Bolster/donut style (Best Friends Sheri)'], ['Destructive chewer', 'Molly Mutt cover + insert (replaceable)'], ['Budget', 'Furhaven Orthopedic (no reviewed price on this page)']].map(([t, r]) => (
                 <div key={t} className="py-2.5 border-b border-brand-border last:border-0">
                   <div className="text-2xs text-brand-text-light mb-0.5">{t}</div>
                   <div className="text-xs font-bold text-brand-dark">→ {r}</div>

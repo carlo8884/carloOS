@@ -12,7 +12,6 @@ const PICKS = [
   { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound' },
   { label: 'Best Puzzle', name: 'Northmate Green Interactive', subtitle: 'Grass-pattern · Scatter feeding · Enrichment', href: '#northmate' },
   { label: 'Best for Large Breeds', name: 'LickiMat Splash', subtitle: 'Spread food · Calm eating · Anti-anxiety', href: '#lickimat' },
-  { label: 'Best Budget', name: 'Gorilla Grip Slow Feeder', subtitle: 'Non-slip base · Under $15', href: '#gorilla' },
 ]
 
 export default function BestSlowFeederBowlsPage() {
@@ -23,7 +22,7 @@ export default function BestSlowFeederBowlsPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A $15 bowl can meaningfully reduce bloat risk.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A slow feeder bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
@@ -124,7 +123,7 @@ export default function BestSlowFeederBowlsPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Situation</div>
-              {[['Fast eater (kibble)', 'Outward Hound Fun Feeder'], ['Mental enrichment goal', 'Northmate Green'], ['Anxiety / vet visits', 'LickiMat (frozen)'], ['Senior dog', 'Northmate Green (floor level)'], ['Large breed GDV risk', 'Fun Feeder + twice daily feeding'], ['Budget', 'Gorilla Grip ($12)']].map(([s, r]) => (
+              {[['Fast eater (kibble)', 'Outward Hound Fun Feeder'], ['Mental enrichment goal', 'Northmate Green'], ['Anxiety / vet visits', 'LickiMat (frozen)'], ['Senior dog', 'Northmate Green (floor level)'], ['Large breed GDV risk', 'Fun Feeder + twice daily feeding'], ['Budget', 'Outward Hound Fun Feeder ($10–18)']].map(([s, r]) => (
                 <div key={s} className="py-2.5 border-b border-brand-border last:border-0">
                   <div className="text-2xs text-brand-text-light mb-0.5">{s}</div>
                   <div className="text-xs font-bold text-brand-dark">→ {r}</div>

@@ -46,7 +46,7 @@ export default function BestDogCratesPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' label='Check price of the MidWest iCrate on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
@@ -91,7 +91,7 @@ export default function BestDogCratesPage() {
               score={9.3}
               winner
               description={
-                <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". At under $60 for most sizes, the value-to-quality ratio is hard to beat among wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
+                <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". The printed price is $40–80. The value-to-quality ratio is hard to beat among wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
               }
               specs={[
                 { label: 'Type', value: 'Wire, fold-flat' },
@@ -99,7 +99,7 @@ export default function BestDogCratesPage() {
                 { label: 'Doors', value: 'Front + side double door', highlight: 'good' },
                 { label: 'Escape Resistance', value: 'Standard — not for escape artists', highlight: 'warn' },
                 { label: 'Sizes', value: '18" to 54"', highlight: 'good' },
-                { label: 'Price', value: 'Under $60 most sizes', highlight: 'good' },
+                { label: 'Price', value: '$40–80', highlight: 'good' },
               ]}
               pros={['Divider included — grows with puppy', 'Fold-flat for easy storage', 'Double door access', 'Best price-to-quality in wire category', 'Easy to clean']}
               cons={['Not escape-proof for determined dogs', 'Wire can feel industrial in living space']}
@@ -206,7 +206,7 @@ export default function BestDogCratesPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">House-training a puppy, or a calm adult who needs a fold-flat wire crate</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a></td>
-                      <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80. Under $60 for most sizes</td>
+                      <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80</td>
                       <td className="p-3 text-brand-text-mid">The dog destroys wire crates</td>
                     </tr>
                     <tr className="border-b border-brand-border">
