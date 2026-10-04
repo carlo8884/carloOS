@@ -30,7 +30,7 @@ export default function BestAquariumLightingPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
         <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Shop Hygger 957 →' />
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
+        <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2"><Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span><Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span><span className="text-brand-text-mid">Best Aquarium Lighting</span></nav>
@@ -44,7 +44,7 @@ export default function BestAquariumLightingPage() {
             </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">PAR — What Actually Matters</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine. Running CO2 with these high-PAR lights? Use the <Link href="/tools/co2-calculator" className="text-brand-primary no-underline hover:underline">CO2 calculator</Link> to set a safe drop-checker target.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">PAR (Photosynthetically Active Radiation) measures the light spectrum (400–700nm) that plants and corals actually use. Higher PAR at the substrate level = more plant/coral growth potential. Low-tech planted tanks need 20–50 PAR. High-tech (CO2 injected): 50–100+ PAR. Reef SPS corals: 150–350+ PAR. Fish-only tanks: irrelevant — any light is fine. Running CO2 with these high-PAR lights? Use the <Link href="/tools/co2-calculator" className="text-brand-primary underline underline-offset-2">CO2 calculator</Link> to set a safe drop-checker target.</p>
             </div>
             <JourneyNext
               siteId="fish-com"

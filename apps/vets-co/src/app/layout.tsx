@@ -17,6 +17,8 @@ const baskerville = Libre_Baskerville({
   style: ['normal', 'italic'],
   variable: '--font-baskerville',
   display: 'swap',
+  // Phone LCP is the body lede or the hero photo, not this display face.
+  preload: false,
 })
 
 // Manrope — neutral humanist sans for body, UI, eyebrows, and labels. Wide

@@ -68,7 +68,7 @@ export default function BestHeatersPage() {
           Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
         <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Shop Eheim Jager →' />
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
+        <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
           A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We ranked 8 heaters using manufacturer-published accuracy specs and aggregated keeper reports. Here&apos;s what holds temperature best on the record.
         </p>
       </div>
@@ -89,7 +89,7 @@ export default function BestHeatersPage() {
             </div>
 
             <CalloutBox variant="tip" title="Right-sizing wattage">
-              Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer. Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary no-underline hover:underline">heater wattage calculator</Link> to size for your tank volume and target temperature.
+              Buy slightly above the minimum wattage for your tank — an undersized heater running continuously at max wears out faster and fails sooner. Two smaller heaters split across opposite ends of a larger tank also provide redundancy if one fails. Always pair the heater with a separate verified thermometer. Use the <Link href="/tools/heater-wattage-calculator" className="text-brand-primary underline underline-offset-2">heater wattage calculator</Link> to size for your tank volume and target temperature.
             </CalloutBox>
 
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
