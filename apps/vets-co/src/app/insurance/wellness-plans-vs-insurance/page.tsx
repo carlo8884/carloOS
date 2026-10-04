@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
-import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance", description: 'The difference between wellness plans and insurance, and when each makes sense.', url: 'https://vets.co/insurance/wellness-plans-vs-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
@@ -10,10 +10,17 @@ const FAQS = [
   { question: "Do wellness plans save money?", answer: "Generally, a wellness plan returns roughly what you pay into it over a year, sometimes a little more with bundled discounts. Their main value is budgeting — converting several lump-sum visits into smaller, predictable payments — and encouraging owners to keep up with preventive care. They are not a way to come out significantly ahead financially. If you are disciplined about saving for routine care, you may not need one; if predictable monthly payments help you stay current on preventive care, they can be worthwhile." },
   { question: "Which should I prioritize if I can only choose one?", answer: "Most veterinary and financial advisers suggest prioritizing accident-and-illness insurance over a wellness plan. Routine care is predictable and budgetable, while a single emergency surgery or cancer diagnosis can cost thousands and is exactly the kind of unpredictable, large expense insurance exists to handle. If funds are limited, insuring against catastrophe protects you from the bills most likely to force a difficult decision, and routine care can be saved for separately." },
 ]
+const itemList = buildItemListSchema({
+  name: "Wellness Plans vs. Pet Insurance",
+  items: [
+    { name: "Embrace", url: "https://vets.co/insurance/wellness-plans-vs-insurance#embrace" },
+    { name: "Pumpkin Pet Insurance", url: "https://vets.co/insurance/wellness-plans-vs-insurance#pumpkin" },
+  ],
+})
 export default function WellnessVsInsurancePage() {
   return (
     <>
-      <SchemaScript schema={schema} />
+      <SchemaScript schema={combineSchemas(schema, itemList)} />
       <ArticleLayout siteId="vets-co"
         heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' />}
         hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -36,11 +36,20 @@ const FAQS = [
   },
 ]
 
+const RANKED = [
+  'Lemonade',
+  'Pets Best',
+]
+const itemList = buildItemListSchema({
+  name: 'Lemonade or Pets Best',
+  items: RANKED.map((name) => ({ name, url: 'https://vets.co/reviews/lemonade-vs-pets-best-guide' })),
+})
+
 export default function LemonadeVsPetsBestGuidePage() {
   return (
     <ArticleLayout
       siteId="vets-co"
-      schema={schema}
+      schema={combineSchemas(schema, itemList)}
       hero={{
         title: 'Lemonade or Pets Best',
         subtitle: 'A young-pet quote, or a carrier the enrollment page says will still take an older pet. Scores below are the ones on that page. Neither price line is a premium.',
