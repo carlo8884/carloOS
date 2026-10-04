@@ -8,11 +8,13 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  CrossSiteHelp,
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import Calculator from './Calculator'
 
 export const metadata: Metadata = buildMetadata({
@@ -248,6 +250,15 @@ export default function PuppyFirstYearBudgetPage() {
         <div className="max-w-2xl">
           <h2 className="mb-4 font-display text-2xl font-semibold text-brand-dark">Frequently asked questions</h2>
           <FAQAccordion items={FAQS} />
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/insurance/questions/how-much-does-pet-insurance-cost')}
+            label="How much does pet insurance cost?"
+            fromSite="dog-com"
+            toSite="vets-co"
+            topic="insurance"
+          >
+            This calculator leaves the premium out on purpose. Vets.co explains what changes a dog or cat premium: breed, deductible, reimbursement, and annual limit.
+          </CrossSiteHelp>
         </div>
       </section>
 

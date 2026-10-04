@@ -63,6 +63,7 @@ export {
   RankingsList,
   RelatedLinks,
 } from './components/SidebarCard'
+export { CrossSiteHelp } from './components/CrossSiteHelp'
 
 // Forms
 export { EmailCapture } from './components/EmailCapture'

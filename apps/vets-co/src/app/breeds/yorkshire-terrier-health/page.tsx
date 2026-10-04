@@ -6,7 +6,9 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   ShopCtas,
+  CrossSiteHelp,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import {
   buildArticleSchema,
   buildMedicalWebPageSchema,
@@ -366,6 +368,15 @@ export default function VetsYorkshireTerrierHealthPage() {
           </div>
           </div>
 
+          <CrossSiteHelp
+            href={crossSiteHref('dog-com', '/breeds/yorkshire-terrier')}
+            label="Dog.com Yorkshire Terrier guide"
+            fromSite="vets-co"
+            toSite="dog-com"
+            topic="species-care"
+          >
+            The Dog.com Yorkshire Terrier page is the owner-side guide for this breed: size, temperament, and everyday care.
+          </CrossSiteHelp>
           <h2>FAQ</h2>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}

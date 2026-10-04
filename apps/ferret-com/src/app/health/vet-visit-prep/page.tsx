@@ -12,7 +12,9 @@ import {
   ArticleSourcesList,
   AffiliateDisclosure,
   ShopCtas,
+  CrossSiteHelp,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   {
@@ -480,6 +482,15 @@ export default function FerretVetVisitPrepPage() {
             consider purchasing in the first year of ownership rather
             than later.
           </p>
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="ferret-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            The ranges above are planning figures for exotic-pet clinics. Vets.co explains why an after-hours hospital bill costs more than a routine exam, and it is not an exotic-carrier comparison.
+          </CrossSiteHelp>
 
           <h2 id="cadence">Visit Cadence by Age</h2>
           <p>

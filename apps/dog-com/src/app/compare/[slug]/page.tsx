@@ -30,8 +30,10 @@ import {
   RelatedLinks,
   ShopCtas,
   StockImage,
-  PriceAsOf
+  PriceAsOf,
+  CrossSiteHelp,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { getBreedBySlug, type Breed } from '../../../data/breeds'
 import {
   BREED_COMPARISON_PAIRS,
@@ -681,6 +683,15 @@ export default async function ComparePage({ params }: PageProps) {
                 Find pet insurance for your breed →
               </Link>
             </p>
+            <CrossSiteHelp
+              href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
+              label="Best pet insurance comparison"
+              fromSite="dog-com"
+              toSite="vets-co"
+              topic="insurance"
+            >
+              Vets.co compares the major dog and cat carriers on direct-pay versus reimbursement, waiting periods, and pre-existing exclusions.
+            </CrossSiteHelp>
 
             {/* FAQ */}
             <h2>Frequently asked questions</h2>

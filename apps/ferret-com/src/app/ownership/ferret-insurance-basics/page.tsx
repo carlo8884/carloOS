@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, AffiliateDisclosure, CrossSiteHelp } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -178,6 +179,15 @@ export default function FerretInsuranceBasicsPage() {
             <a href="/ownership/is-a-ferret-right-for-you">is a ferret right for
             you?</a>.
           </p>
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="ferret-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            Exotic-pet policies are a different market from the dog and cat carriers on Vets.co. That guide explains why an emergency hospital bill costs more than a routine exam.
+          </CrossSiteHelp>
 
           <h2 id="questions">Questions to Ask Before Buying</h2>
           <p>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
@@ -221,6 +222,15 @@ export default function VetsGoldenRetrieverHealthPage() {
           </div>
         </div>
 
+        <CrossSiteHelp
+          href={crossSiteHref('dog-com', '/breeds/golden-retriever')}
+          label="Dog.com Golden Retriever guide"
+          fromSite="vets-co"
+          toSite="dog-com"
+          topic="species-care"
+        >
+          The Dog.com Golden Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
+        </CrossSiteHelp>
         <h2 id="faq">FAQ</h2>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
