@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -76,10 +76,13 @@ export default function VetsReviewsPage() {
           </p>
         </div>
       </div>
-      <div className="px-container-sm sm:px-container pb-12 pt-4">
+      <div id="vets-reviews-list" className="px-container-sm sm:px-container pb-12 pt-4">
+        <div className="max-w-content-wide mx-auto">
+          <HubSearch listId="vets-reviews-list" total={REVIEWS.length} noun="reviews" />
+        </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {REVIEWS.map(r => (
-            <Link key={r.href} href={r.href} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all">
+            <Link key={r.href} href={r.href} data-hub-item data-title={r.title} data-topic={`${r.badge ?? ''} ${r.desc}`} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all">
               {r.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>}
               <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
               <div className="text-xs text-brand-text-light">{r.desc}</div>

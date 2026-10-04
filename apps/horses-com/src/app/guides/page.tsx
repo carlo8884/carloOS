@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -90,9 +90,11 @@ export default function GuidesHubPage() {
       <div className="px-container-sm sm:px-container py-12">
         <p className="text-sm text-brand-text-light mb-10 max-w-2xl">Three owner guides citing AAEP guidelines, veterinary clinical literature, and Society of Master Saddlers criteria. None of these replace a veterinarian, a qualified saddle fitter, or a dental practitioner</p>
 
+        <div id="horses-guides-list">
+        <HubSearch listId="horses-guides-list" total={GUIDES.length} noun="guides" />
         <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
           {GUIDES.map((g) => (
-            <li key={g.slug}>
+            <li key={g.slug} data-hub-item data-title={g.title} data-topic={`${g.eyebrow} ${g.description}`}>
               <Link
                 href={`/guides/${g.slug}`}
                 className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
@@ -110,6 +112,7 @@ export default function GuidesHubPage() {
             </li>
           ))}
         </ul>
+        </div>
 
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
           Related supplies

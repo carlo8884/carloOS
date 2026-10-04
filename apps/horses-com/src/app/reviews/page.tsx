@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -113,10 +113,11 @@ export default function HorsesReviewsPage() {
         </p>
       </div>
 
-      <div className="px-container-sm sm:px-container py-12">
+      <div id="horses-reviews-list" className="px-container-sm sm:px-container py-12">
+        <HubSearch listId="horses-reviews-list" total={REVIEWS.length} noun="reviews" />
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0">
           {REVIEWS.map((r) => (
-            <li key={r.slug}>
+            <li key={r.slug} data-hub-item data-title={r.title} data-topic={r.description}>
               <Link
                 href={`/reviews/${r.slug}`}
                 className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"

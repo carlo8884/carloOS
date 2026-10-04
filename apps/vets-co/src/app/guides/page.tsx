@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, HubSearch } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -75,13 +75,14 @@ export default function VetsGuidesHubPage() {
           </p>
         </div>
       </div>
-      <div className="px-container-sm sm:px-container pb-14 pt-4">
+      <div id="vets-guides-list" className="px-container-sm sm:px-container pb-14 pt-4">
+        <HubSearch listId="vets-guides-list" total={ALL_GUIDE_ITEMS.length} noun="guides" />
         {SECTIONS.map(section => (
-          <div key={section.category} className="mb-10">
+          <div key={section.category} data-hub-group className="mb-10">
             <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
             <div className="grid sm:grid-cols-2 gap-4">
               {section.items.map(item => (
-                <Link key={item.href} href={item.href} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
+                <Link key={item.href} href={item.href} data-hub-item data-title={item.title} data-topic={`${section.category} ${(item as { badge?: string }).badge ?? ''}`} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
                   {(item as any).badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{(item as any).badge}</div>}
                   <div className="font-display font-bold text-brand-dark text-sm">{item.title}</div>
                 </Link>

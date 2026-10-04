@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -131,12 +131,19 @@ export default function FishReviewsPage() {
       />
 
       {/* REVIEWS GRID */}
+      <div id="fish-reviews-list">
       <div className="px-container-sm sm:px-container py-12">
+        <div className="max-w-content-wide mx-auto">
+          <HubSearch listId="fish-reviews-list" total={REVIEWS.length} noun="reviews" />
+        </div>
         <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
           {REVIEWS.map((r) => (
             <Link
               key={r.href}
               href={r.href}
+              data-hub-item
+              data-title={r.title}
+              data-topic={`${r.badge} ${r.desc}`}
               className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
             >
               {r.badge && (
@@ -161,16 +168,25 @@ export default function FishReviewsPage() {
       </div>
 
       {/* BROWSE ALL */}
-      <section className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
+      <section data-hub-group className="border-t border-brand-border bg-brand-surface px-container-sm sm:px-container py-10">
         <h2 className="font-display font-bold text-brand-dark text-lg mb-4">All Reviews</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-x-6 gap-y-2">
           {REVIEWS.map((r) => (
-            <Link key={r.href} href={r.href} className="text-sm text-brand-primary no-underline hover:underline">
+            <Link
+              key={r.href}
+              href={r.href}
+              data-hub-item
+              data-hub-count="off"
+              data-title={r.title}
+              data-topic={`${r.badge} ${r.desc}`}
+              className="text-sm text-brand-primary no-underline hover:underline"
+            >
               {r.title.replace(' 2026', '')}
             </Link>
           ))}
         </div>
       </section>
+      </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">
