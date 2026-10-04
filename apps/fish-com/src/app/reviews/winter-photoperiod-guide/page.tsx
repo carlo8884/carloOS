@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Winter Light Hours for a Planted Tank | Fish.com',
-  description: 'Shorter days outside do not lengthen the 6 to 8 hour photoperiod already on the low-tech and algae pages. The hop is the light timer those pages already use.',
+  description: 'Shorter days outside do not change the 6 to 8 hour photoperiod on the low-tech and algae pages. The link is the light timer those pages use.',
   path: '/reviews/winter-photoperiod-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Winter light hours for a planted tank',
-  description: 'Keep the published 6 to 8 hour photoperiod. The timer hop is the one already on the low-tech page.',
+  description: 'Keep the published 6 to 8 hour photoperiod. The timer link is the one already on the low-tech page.',
   url: 'https://fish.com/reviews/winter-photoperiod-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -35,7 +35,7 @@ const FAQS = [
     answer: 'The algae page says to cut the photoperiod to 6 to 8 hours on a timer and keep the fixture off direct sun. Shorten toward that band. Do not leave the light on through the evening so the room feels less dark. A magnetic scraper does not replace a shorter photoperiod.',
   },
   {
-    question: 'What does this hop buy?',
+    question: 'What should you buy from this page?',
     answer: 'The aquarium light timer search already on the low-tech page. Fixture choice, PAR, and the Hygger versus Fluval comparison stay on the lighting review. This guide does not rank a light.',
   },
 ]
@@ -77,17 +77,17 @@ export default function WinterPhotoperiodGuidePage() {
         <h2>What winter does not change</h2>
         <p>Neither page adds hours because the sun sets earlier. They also do not publish a winter-only duration below six hours. If the tank is already growing algae, the instruction already on the algae page is to shorten toward that band, not to leave the light on through the evening so the room feels less dark. Fixture choice, PAR, and the Hygger versus Fluval comparison stay on the <Link href="/reviews/best-aquarium-lighting">lighting review</Link>. This guide does not rank a light.</p>
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <p>The hop is the aquarium light timer search already on the low-tech page.</p>
+        <p>The link below searches for an aquarium light timer, the same search as on the low-tech page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquarium+light+timer?s=reviews-winter-photoperiod-guide">Browse aquarium light timers on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
           addressOnly
-          title="Winter photoperiod update list"
-          subtitle="Leave an address to be on the list for changes to the six-to-eight-hour note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-photoperiod-guide"
         />

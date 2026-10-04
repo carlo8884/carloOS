@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Fall Molt: Brush the Winter Coat | Ferret.com',
-  description: 'The fall molt, about September through November, is already on the grooming and shedding pages. The hop is the soft slicker brush those pages already link.',
+  description: 'The fall molt, about September through November, is already on the grooming and shedding pages. The shop link is the soft slicker brush those pages already use.',
   path: '/reviews/fall-molt-brush-guide',
   type: 'article',
 })
@@ -47,7 +47,7 @@ export default function FallMoltBrushGuidePage() {
       schema={schema}
       hero={{
         title: 'Fall molt: brush the winter coat',
-        subtitle: 'Grooming already places the fall molt in September through November and names a soft slicker or a fine comb. This guide does not add a shed calendar.',
+        subtitle: 'Grooming already places the fall molt in September through November and names a soft slicker or a fine comb. The months below are the ones on the grooming page.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
@@ -75,19 +75,19 @@ export default function FallMoltBrushGuidePage() {
         <h2>What to do with the loose coat</h2>
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
         <h2>Baths stay limited</h2>
-        <p>Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it. Frequent bathing strips skin oils and can make the coat greasier. Most of the work is the brush. Shampoo stays on the grooming page. The comb and the lint roller stay on the shedding page. This guide hops only the soft slicker search already there.</p>
+        <p>Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it. Frequent bathing strips skin oils and can make the coat greasier. Most of the work is the brush. Shampoo stays on the grooming page. The comb and the lint roller stay on the shedding page. The link on this page is the soft slicker search from that page.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-        <p>The hop is that soft slicker search.</p>
+        <p>The link below searches for a soft slicker brush.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide">Browse soft slicker brushes for small animals on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
           addressOnly
-          title="Fall molt update list"
-          subtitle="Leave an address to be on the list for changes to the slicker-brush note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-fall-molt-brush-guide"
         />

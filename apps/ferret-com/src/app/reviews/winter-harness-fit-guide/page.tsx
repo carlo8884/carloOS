@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Recheck a Ferret Harness as Weight Changes | Ferret.com',
-  description: 'Recheck harness fit as seasonal weight changes. The hop is the vest already on the harness review.',
+  description: 'Recheck harness fit as seasonal weight changes. The shop link is the vest already on the harness review.',
   path: '/reviews/winter-harness-fit-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Recheck a ferret harness as weight changes',
-  description: 'Seasonal weight changes the harness fit. The hop is the vest on the harness review.',
+  description: 'Seasonal weight changes the harness fit. The shop link is the vest on the harness review.',
   url: 'https://ferret.com/reviews/winter-harness-fit-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -28,10 +28,10 @@ const FAQS = [
   },
   {
     question: 'Is the fit rule one finger or two?',
-    answer: 'The training page says two fingers should slide under the harness anywhere it touches the body. The vest guide restates the review rule as one finger of slack, checked before the walk. This page does not average those into a third rule. Use the review check on the review harness, and the training-page check when you are following that page.',
+    answer: 'The training page says two fingers should slide under the harness anywhere it touches the body. The vest guide repeats the review rule as one finger of slack, checked before the walk. This page does not average those into a third rule. Use the review check on the review harness, and the training-page check when you are following that page.',
   },
   {
-    question: 'Which harness does this page hop?',
+    question: 'Which harness does this page link?',
     answer: 'The vest, the escape-resistance pick on the vest guide, scored 9.0. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing.',
   },
   {
@@ -73,21 +73,21 @@ export default function WinterHarnessFitGuidePage() {
       <div className="carloOS-article">
         <p>The <Link href="/behavior/leash-and-harness-training">leash and harness training page</Link> says to recheck fit every few weeks because ferrets gain and lose noticeable weight with the seasons. Its example runs one direction: a harness that fit in winter may be loose by summer. It does not publish the reverse as a separate measurement. Heading into the colder months, the action on that page is the same recheck, not a new size chart. The two-finger rule on that page is its own sentence: two fingers should slide under the harness anywhere it touches the body. Tighter chafes. Looser lets the ferret back out.</p>
         <h2>The review uses a different finger count</h2>
-        <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> restates the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
-        <h2>Which harness the review hops</h2>
-        <p>The vest card is the escape-resistance pick on that guide, scored 9.0, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The hop here is the vest search already on the harness review, because that is the layout the review names when backing out is the problem. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
+        <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> repeats the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
+        <h2>Which harness to shop</h2>
+        <p>The vest is the escape-resistance pick on that guide, scored 9.0, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The link on this page is the vest search from the harness review, the layout named when backing out is the problem. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-        <p>The hop is the vest search already on the harness review.</p>
+        <p>The link below searches for the vest harness from the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find a ferret vest harness on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"
           addressOnly
-          title="Winter harness update list"
-          subtitle="Leave an address to be on the list for changes to the seasonal fit note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-harness-fit-guide"
         />
