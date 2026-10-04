@@ -61,6 +61,18 @@ const REVIEWS = [
     href: '/reviews/best-planted-tank-fertilizers',
     badge: 'Planted Tanks',
   },
+  {
+    title: 'HOB vs Canister Filter',
+    desc: 'AquaClear 70 versus Fluval 307 on flow, cleaning, noise, and the price already on the filter cards.',
+    href: '/reviews/hob-vs-canister-guide',
+    badge: 'Filtration',
+  },
+  {
+    title: 'Best Heater for a Display Tank',
+    desc: 'Flat shatterproof heater versus glass versus an inline heater, from the heater review.',
+    href: '/reviews/best-display-tank-heater-guide',
+    badge: 'Essential',
+  },
 ]
 
 const itemListSchema = {

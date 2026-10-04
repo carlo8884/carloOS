@@ -59,6 +59,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://fish.com/legal/terms', lastModified: now, changeFrequency: 'yearly', priority: 0.20 },
     { url: 'https://fish.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/reviews/best-aquarium-filters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/reviews/hob-vs-canister-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/reviews/best-display-tank-heater-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-aquarium-heaters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-aquarium-lighting', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-canister-filters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

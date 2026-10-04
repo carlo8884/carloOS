@@ -63,6 +63,22 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     description:
       'How to read a kibble panel and the three commercial tiers, with editorial picks scored against the obligate-carnivore macronutrient window. Lives in the Diet hub.',
   },
+  {
+    slug: 'paper-vs-wood-litter-guide',
+    href: '/reviews/paper-vs-wood-litter-guide',
+    eyebrow: 'Litter',
+    title: 'Paper vs Wood Pellet Litter',
+    description:
+      'Recycled paper pellets versus heat-treated wood pellets: odor, dust, and the shavings the litter review rules out.',
+  },
+  {
+    slug: 'vest-vs-h-harness-guide',
+    href: '/reviews/vest-vs-h-harness-guide',
+    eyebrow: 'Walking',
+    title: 'Vest vs H-Style Harness',
+    description:
+      'Which harness is harder for a ferret to back out of, and which one only works if you recheck the fit.',
+  },
 ]
 
 const itemListSchema = buildItemListSchema({

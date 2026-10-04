@@ -137,6 +137,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/reviews/best-ferret-cage', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://ferret.com/reviews/best-ferret-litter', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://ferret.com/reviews/best-ferret-harness', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://ferret.com/reviews/paper-vs-wood-litter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/vest-vs-h-harness-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://ferret.com/tools/food-evaluator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
