@@ -32,6 +32,11 @@ export default function EditorialStandardsPage() {
       <p className="text-sm text-brand-text-light mb-10">How we create, source, and update content at Fish.com</p>
 
       <div className="carloOS-article">
+        <p>
+          This page is Fish.com&apos;s editorial and affiliate policy. How comparison tables are assembled is on{' '}
+          <Link href="/how-we-pick" className="text-brand-primary hover:underline">How we pick</Link>.
+          A short account of the site is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
+        </p>
         <h2>What Fish.com Is</h2>
         <p>Fish.com is a consumer-facing reference site for the aquarium hobby — species profiles, tank setup, water chemistry, fish health, and equipment comparisons. Articles are written by the Fish.com editorial team and draw on publicly available sources: peer-reviewed ichthyology and aquaculture literature, professional aquarium-society material (such as the AGA and IAPLC), manufacturer documentation, hobbyist-society care sheets, and reputable industry reporting.</p>
         <p>Fish.com is <strong>not</strong> a veterinary practice and is not a substitute for one. If a fish is sick and you need diagnostic advice for a specific animal, consult an aquatic veterinarian (the World Aquatic Veterinary Medical Association lists practitioners worldwide).</p>
@@ -54,7 +59,7 @@ export default function EditorialStandardsPage() {
         </ul>
 
         <h2>Corrections</h2>
-        <p>Fishkeeping practice changes (cycling protocols, ich treatment, planted-tank dosing). If you find a factual error or out-of-date guidance, email us with the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
+        <p>Fishkeeping practice changes (cycling protocols, ich treatment, planted-tank dosing). If you find a factual error or out-of-date guidance, email <a href="mailto:editorial@fish.com">editorial@fish.com</a> with the page address and the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
 
         <h2>Fish Health Notice</h2>
         <p>Fish.com content is general reference, not individual veterinary advice. If a fish is acutely ill, contact an aquatic veterinarian or your local aquarium store with an experienced staff member. The World Aquatic Veterinary Medical Association (wavma.org) maintains a worldwide directory of fish-experienced vets.</p>

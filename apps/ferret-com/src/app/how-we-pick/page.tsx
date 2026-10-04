@@ -39,8 +39,9 @@ export default function HowWePickPage() {
             The editorial team writes the cards. Ferret.com is not a veterinary practice, and a licensed veterinarian does not sign these rankings. There is no hands-on trial and no lab test behind an editor score.
           </p>
           <p>
-            Affiliate links are added after the card is written. A commission does not decide which row wins. The independence rules are on the{' '}
+            Affiliate links are added after the card is written. A commission does not decide which row wins. The editorial and affiliate policy is on the{' '}
             <Link href="/editorial-standards" className="text-brand-primary hover:underline">editorial standards</Link> page.
+            What the site is, and how to report an error, is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
           </p>
         </div>
       </div>

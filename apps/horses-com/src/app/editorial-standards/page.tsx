@@ -54,7 +54,13 @@ export default function EditorialStandardsPage() {
       <p>Horses.com does not own equity in any brand it reviews. Affiliate commercial relationships with named vendors are disclosed on every affected page and centrally on <Link href="/disclosure" className="text-brand-primary no-underline hover:underline">/disclosure</Link>.</p>
 
       <h2>Contact</h2>
-      <p>Feedback on this policy or a specific article: see <Link href="/disclosure" className="text-brand-primary no-underline hover:underline">/disclosure</Link>.</p>
+      <p>
+        This page is the editorial and affiliate policy. How product tables are assembled is on{' '}
+        <Link href="/how-we-pick" className="text-brand-primary no-underline hover:underline">How we pick</Link>.
+        A short account of the site is on <Link href="/about" className="text-brand-primary no-underline hover:underline">About</Link>.
+        To report an error, email <a href="mailto:editorial@horses.com">editorial@horses.com</a> with the page address and the sentence that looks wrong.
+        The same address is on the <Link href="/disclosure" className="text-brand-primary no-underline hover:underline">disclosure</Link>.
+      </p>
 </div>
     </div>
   )

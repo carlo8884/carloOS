@@ -32,6 +32,11 @@ export default function EditorialStandardsPage() {
       <p className="text-sm text-brand-text-light mb-10">How we create, source, and update content at Dog.com</p>
 
       <div className="carloOS-article">
+        <p>
+          This page is Dog.com&apos;s editorial and affiliate policy. How comparison tables are assembled is on{' '}
+          <Link href="/how-we-pick" className="text-brand-primary hover:underline">How we pick</Link>.
+          A short account of the site is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
+        </p>
         <h2>What Dog.com Is</h2>
         <p>Dog.com is a consumer-facing reference site about dogs — breed profiles, health overviews, nutrition guidance, product comparisons, and training basics. Articles are written by the Dog.com editorial team and draw on publicly available sources: peer-reviewed veterinary research, professional veterinary organisations (such as the <a href="https://wsava.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>, <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a>, and <a href="https://afd.avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVDC</a>), manufacturer documentation, and reputable industry reporting.</p>
         <p>Dog.com is <strong>not</strong> a veterinary practice and is not a substitute for one. Our articles are not individually authored or signed off by a licensed veterinarian. If you need medical advice for a specific animal, please consult your own vet.</p>
@@ -54,7 +59,7 @@ export default function EditorialStandardsPage() {
         </ul>
 
         <h2>Corrections</h2>
-        <p>If you find a factual error, email us with the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
+        <p>If you find a factual error, email <a href="mailto:editorial@dog.com">editorial@dog.com</a> with the page address and the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
 
         <h2>Content Updates</h2>
         <p>Veterinary recommendations evolve. We re-read health and nutrition articles periodically and update them when the underlying guidance changes. The &quot;Updated&quot; date on each article reflects the most recent substantive review.</p>

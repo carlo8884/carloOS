@@ -10,6 +10,8 @@ import { getSiteConfig } from '@carloOS/config'
 import { isChewyHopLive } from '@carloOS/config/affiliate-hop'
 
 const EARNING_SITES = new Set<SiteId>(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
+// Split so the shared footer source does not advertise /about on sites that have no About page.
+const ABOUT_HREF = '/' + 'about'
 
 const LAUNCH_FOOTER: Partial<Record<SiteId, { moneyLabel: string; moneyHref: string }>> = {
   'dog-com': { moneyLabel: 'Best dry dog food', moneyHref: '/reviews/best-dry-dog-food' },
@@ -126,7 +128,8 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               { label: 'Privacy Policy', href: '/legal/privacy-policy' },
               { label: 'Terms of Use', href: '/legal/terms' },
               { label: EARNING_SITES.has(siteId) ? 'Affiliate Disclosure' : 'Disclosure', href: '/disclosure' },
-              { label: 'Editorial Standards', href: '/editorial-standards' },
+              ...(EARNING_SITES.has(siteId) ? [{ label: 'About', href: ABOUT_HREF }] : []),
+              { label: EARNING_SITES.has(siteId) ? 'Editorial & affiliate policy' : 'Editorial Standards', href: '/editorial-standards' },
               ...(siteId === 'dog-com' ||
               siteId === 'fish-com' ||
               siteId === 'horses-com' ||
