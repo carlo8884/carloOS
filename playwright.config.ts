@@ -44,7 +44,7 @@ export default defineConfig({
   })),
   projects: selected.map((site) => ({
     name: site.name,
-    testMatch: [`${site.name}.spec.ts`, 'ga4-queue.spec.ts', 'hydration.spec.ts', 'attribution.spec.ts'],
+    testMatch: [`${site.name}.spec.ts`, 'ga4-queue.spec.ts', 'hydration.spec.ts', 'attribution.spec.ts', 'journey-events.spec.ts'],
     use: { baseURL: `http://127.0.0.1:${site.port}` },
   })),
 })
