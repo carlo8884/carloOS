@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, HubSearch } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage, HubSearch, HubJumpNav } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -13,9 +13,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const SECTIONS = [
-  { category: 'Cost of Care', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
-  { category: 'The Vet Visit', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
-  { category: 'Urgent vs. Routine', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
+  { id: 'vets-guides-cost', category: 'Cost of Care', intro: 'What care costs and how owners pay for it.', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
+  { id: 'vets-guides-visit', category: 'The Vet Visit', intro: 'What happens at an appointment and how to choose a clinic.', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
+  { id: 'vets-guides-urgent', category: 'Urgent vs. Routine', intro: 'Which setting fits the situation.', items: [{ title: 'ER vs. Urgent Care vs. Regular Vet', href: '/guides/er-vs-urgent-care' }, { title: 'When to Go to the Vet', href: '/guides/when-to-go-to-the-vet' }] },
 ]
 
 const ALL_GUIDE_ITEMS = SECTIONS.flatMap((s) => s.items)
@@ -77,18 +77,20 @@ export default function VetsGuidesHubPage() {
       </div>
       <div id="vets-guides-list" className="px-container-sm sm:px-container pb-14 pt-4">
         <HubSearch listId="vets-guides-list" total={ALL_GUIDE_ITEMS.length} noun="guides" />
+        <HubJumpNav groups={SECTIONS.map((section) => ({ id: section.id, label: section.category }))} />
         {SECTIONS.map(section => (
-          <div key={section.category} data-hub-group className="mb-10">
-            <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">{section.category}</h2>
+          <section key={section.id} id={section.id} data-hub-group className="mb-10 scroll-mt-24">
+            <h2 className="font-display text-xl font-bold text-brand-dark mb-2 pb-3 border-b border-brand-border">{section.category}</h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{section.intro}</p>
             <div className="grid sm:grid-cols-2 gap-4">
               {section.items.map(item => (
-                <Link key={item.href} href={item.href} data-hub-item data-title={item.title} data-topic={`${section.category} ${(item as { badge?: string }).badge ?? ''}`} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
-                  {(item as any).badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{(item as any).badge}</div>}
+                <Link key={item.href} href={item.href} data-hub-item data-title={item.title} data-topic={`${section.category} ${item.badge ?? ''}`} className="block min-h-11 bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">
+                  {item.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{item.badge}</div>}
                   <div className="font-display font-bold text-brand-dark text-sm">{item.title}</div>
                 </Link>
               ))}
             </div>
-          </div>
+          </section>
         ))}
       </div>
 

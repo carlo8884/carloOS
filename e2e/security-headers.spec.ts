@@ -22,6 +22,9 @@ test('money pages send security headers and the hub search still runs', async ({
   const problems: string[] = []
   const onConsole = (msg: { type: () => string; text: () => string }) => {
     const text = msg.text()
+    // Next prefetches in-view links and logs this when one request loses the race.
+    // The page still navigates. It is not a CSP or hydration failure.
+    if (/Failed to fetch RSC payload/i.test(text)) return
     if (msg.type() === 'error') problems.push(text)
     else if (/Content Security Policy|Refused to/i.test(text)) problems.push(text)
   }

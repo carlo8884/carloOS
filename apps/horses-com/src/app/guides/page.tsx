@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas, HubSearch } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -19,9 +19,15 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+const GUIDE_GROUPS = [
+  { id: 'horses-guides-equipment', label: 'Equipment', intro: 'Saddle fit basics.' },
+  { id: 'horses-guides-preventive', label: 'Preventive care', intro: 'Dental care and the vaccination schedule.' },
+]
+
 const GUIDES = [
   {
     slug: 'saddle-fit-basics',
+    group: 'horses-guides-equipment',
     eyebrow: 'Equipment',
     title: 'Saddle Fit Basics',
     description:
@@ -29,6 +35,7 @@ const GUIDES = [
   },
   {
     slug: 'equine-dental-care',
+    group: 'horses-guides-preventive',
     eyebrow: 'Preventive care',
     title: 'Equine Dental Care',
     description:
@@ -36,6 +43,7 @@ const GUIDES = [
   },
   {
     slug: 'equine-vaccination-schedule',
+    group: 'horses-guides-preventive',
     eyebrow: 'Preventive care',
     title: 'Vaccination Schedule',
     description:
@@ -92,26 +100,33 @@ export default function GuidesHubPage() {
 
         <div id="horses-guides-list">
         <HubSearch listId="horses-guides-list" total={GUIDES.length} noun="guides" />
-        <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
-          {GUIDES.map((g) => (
-            <li key={g.slug} data-hub-item data-title={g.title} data-topic={`${g.eyebrow} ${g.description}`}>
-              <Link
-                href={`/guides/${g.slug}`}
-                className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
-              >
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-                  {g.eyebrow}
-                </div>
-                <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
-                  {g.title}
-                </div>
-                <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                  {g.description}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <HubJumpNav groups={GUIDE_GROUPS} />
+        {GUIDE_GROUPS.map((group) => (
+          <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+            <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 list-none p-0">
+              {GUIDES.filter((g) => g.group === group.id).map((g) => (
+                <li key={g.slug} data-hub-item data-title={g.title} data-topic={`${g.eyebrow} ${group.label} ${g.description}`}>
+                  <Link
+                    href={`/guides/${g.slug}`}
+                    className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                  >
+                    <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+                      {g.eyebrow}
+                    </div>
+                    <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
+                      {g.title}
+                    </div>
+                    <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                      {g.description}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
         </div>
 
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">

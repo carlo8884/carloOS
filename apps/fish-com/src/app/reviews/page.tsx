@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -18,107 +18,133 @@ export const metadata: Metadata = buildMetadata({
   path: '/reviews',
 })
 
+const REVIEW_GROUPS = [
+  { id: 'fish-reviews-filters', label: 'Filters', intro: 'Hang-on-back and canister reviews, and the comparisons that use those cards.' },
+  { id: 'fish-reviews-heat', label: 'Heat', intro: 'Heater reviews, including the cold-room sizing page.' },
+  { id: 'fish-reviews-lighting', label: 'Lighting', intro: 'Lighting reviews and the winter photoperiod page.' },
+  { id: 'fish-reviews-water', label: 'Water tests', intro: 'Liquid test kits and the reef-kit comparison.' },
+  { id: 'fish-reviews-tanks', label: 'Tanks', intro: 'The nano tank review.' },
+  { id: 'fish-reviews-planted', label: 'Planted tanks', intro: 'Fertilizer reviews and the all-in-one comparison.' },
+]
+
 const REVIEWS = [
   {
     title: 'Best Aquarium Filters 2026',
     desc: 'HOB, canister, and sponge filters ranked by flow rate, media volume, and noise — for tanks from 10 to 125 gallons.',
     href: '/reviews/best-aquarium-filters',
+    group: 'fish-reviews-filters',
     badge: 'Most Important',
   },
   {
     title: 'Best Canister Filters 2026',
     desc: 'Fluval, Eheim, and SunSun compared on bio-media volume, flow rate, and seal reliability.',
     href: '/reviews/best-canister-filters',
+    group: 'fish-reviews-filters',
     badge: 'Filtration',
   },
   {
     title: 'Best Aquarium Heaters 2026',
     desc: 'Eheim Jager, Fluval E-series, and Aqueon Pro compared on published temperature accuracy and failure safety.',
     href: '/reviews/best-aquarium-heaters',
+    group: 'fish-reviews-heat',
     badge: 'Essential',
   },
   {
     title: 'Best Aquarium Lighting 2026',
     desc: 'Full-spectrum, planted-tank, and reef-capable lights compared on PAR output and spectrum quality.',
     href: '/reviews/best-aquarium-lighting',
+    group: 'fish-reviews-lighting',
     badge: 'Lighting',
   },
   {
     title: 'Best Water Test Kits 2026',
     desc: 'API Master Test Kit vs test strips — why liquid reagent tests are generally the more reliable option, with top picks.',
     href: '/reviews/best-water-test-kits',
+    group: 'fish-reviews-water',
     badge: 'Water Quality',
   },
   {
     title: 'Best Nano Tanks 2026',
     desc: 'All-in-one nano aquariums for shrimp, bettas, and small communities — compared on filtration quality and light output.',
     href: '/reviews/best-nano-tanks',
+    group: 'fish-reviews-tanks',
     badge: 'Small Tanks',
   },
   {
     title: 'Best Planted-Tank Fertilizers 2026',
     desc: 'Macro, micro, and all-in-one fertilizers ranked by nutrient completeness and value. With dosing guidance.',
     href: '/reviews/best-planted-tank-fertilizers',
+    group: 'fish-reviews-planted',
     badge: 'Planted Tanks',
   },
   {
     title: 'HOB vs Canister Filter',
     desc: 'AquaClear 70 versus Fluval 307 on flow, cleaning, noise, and the price already on the filter cards.',
     href: '/reviews/hob-vs-canister-guide',
+    group: 'fish-reviews-filters',
     badge: 'Filtration',
   },
   {
     title: 'AquaClear 70 vs Fluval 307',
     desc: 'The AquaClear 70 hang-on-back versus the Fluval 307 canister, using the flow and prices already in the filter review.',
     href: '/reviews/aquaclear-70-vs-fluval-307-guide',
+    group: 'fish-reviews-filters',
     badge: 'Filtration',
   },
   {
     title: 'Eheim Jager vs Cobalt Neo-Therm',
     desc: 'Glass heater you can recalibrate, or a flat shatterproof heater for a display tank.',
     href: '/reviews/eheim-vs-cobalt-heater-guide',
+    group: 'fish-reviews-heat',
     badge: 'Essential',
   },
   {
     title: 'Fluval 307 vs Eheim Classic',
     desc: 'AquaStop and a quieter canister, or the Classic the canister review credits with a longer service life.',
     href: '/reviews/fluval-307-vs-eheim-guide',
+    group: 'fish-reviews-filters',
     badge: 'Filtration',
   },
   {
     title: 'Easy Green vs Seachem Flourish',
     desc: 'One weekly all-in-one dose, or trace elements from a fish store. Doses are already on the fertilizer review.',
     href: '/reviews/easy-green-vs-flourish-guide',
+    group: 'fish-reviews-planted',
     badge: 'Planted Tanks',
   },
   {
     title: 'Best Heater for a Display Tank',
     desc: 'Flat shatterproof heater versus glass versus an inline heater, from the heater review.',
     href: '/reviews/best-display-tank-heater-guide',
+    group: 'fish-reviews-heat',
     badge: 'Essential',
   },
   {
     title: 'Hygger 957 vs Fluval Plant 3.0',
     desc: 'Budget planted PAR versus the higher published PAR and app control on the lighting review.',
     href: '/reviews/hygger-vs-fluval-light-guide',
+    group: 'fish-reviews-lighting',
     badge: 'Lighting',
   },
   {
     title: 'API Master Kit vs Salifert',
     desc: 'Freshwater pH, ammonia, nitrite, and nitrate, or reef alkalinity, calcium, and magnesium.',
     href: '/reviews/api-vs-salifert-guide',
+    group: 'fish-reviews-water',
     badge: 'Water Quality',
   },
   {
     title: 'Heater Size for a Cold Room',
     desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The hop is the Eheim Jager.',
     href: '/reviews/winter-heater-sizing-guide',
+    group: 'fish-reviews-heat',
     badge: 'Season',
   },
   {
     title: 'Winter Light Hours for a Planted Tank',
     desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The hop is the light timer.',
     href: '/reviews/winter-photoperiod-guide',
+    group: 'fish-reviews-lighting',
     badge: 'Season',
   },
 ]
@@ -159,23 +185,32 @@ export default function FishReviewsPage() {
       <div className="px-container-sm sm:px-container py-12">
         <div className="max-w-content-wide mx-auto">
           <HubSearch listId="fish-reviews-list" total={REVIEWS.length} noun="reviews" />
+          <HubJumpNav groups={REVIEW_GROUPS} />
         </div>
-        <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
-          {REVIEWS.map((r) => (
-            <Link
-              key={r.href}
-              href={r.href}
-              data-hub-item
-              data-title={r.title}
-              data-topic={`${r.badge} ${r.desc}`}
-              className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
-            >
-              {r.badge && (
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>
-              )}
-              <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
-              <div className="text-xs text-brand-text-light leading-relaxed">{r.desc}</div>
-            </Link>
+        <div className="max-w-content-wide mx-auto">
+          {REVIEW_GROUPS.map((group) => (
+            <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {REVIEWS.filter((r) => r.group === group.id).map((r) => (
+                  <Link
+                    key={r.href}
+                    href={r.href}
+                    data-hub-item
+                    data-title={r.title}
+                    data-topic={`${r.badge} ${group.label} ${r.desc}`}
+                    className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card hover:-translate-y-0.5 transition-all duration-200"
+                  >
+                    {r.badge && (
+                      <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>
+                    )}
+                    <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
+                    <div className="text-xs text-brand-text-light leading-relaxed">{r.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
 

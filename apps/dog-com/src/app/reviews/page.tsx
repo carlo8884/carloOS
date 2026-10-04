@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -15,34 +15,47 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
+const REVIEW_GROUPS = [
+  { id: 'dog-reviews-food', label: 'Food', intro: 'Dry food, life-stage foods, the slow feeder bowl, and the fresh-versus-kibble page.' },
+  { id: 'dog-reviews-prevention', label: 'Prevention', intro: 'Flea, tick, and heartworm pages.' },
+  { id: 'dog-reviews-housing', label: 'Housing', intro: 'Crate reviews and the crate comparisons.' },
+  { id: 'dog-reviews-walking', label: 'Walking', intro: 'Harness reviews and the clip comparisons.' },
+  { id: 'dog-reviews-comfort', label: 'Comfort', intro: 'Bed reviews and the orthopedic comparison.' },
+  { id: 'dog-reviews-dental', label: 'Dental', intro: 'Dental chew pages. They do not replace brushing.' },
+  { id: 'dog-reviews-joints', label: 'Joints', intro: 'Joint supplement pages and the Cosequin comparison.' },
+  { id: 'dog-reviews-tracking', label: 'Tracking', intro: 'The GPS tracker review.' },
+  { id: 'dog-reviews-season', label: 'Season', intro: 'Holiday feeding pages that point at guides already on the site.' },
+  { id: 'dog-reviews-insurance', label: 'Insurance', intro: 'The insurance comparison is on Vets.co.' },
+]
+
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), badge: 'Most Important' },
-  { title: 'Best Dry Dog Food 2026', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: 'Nutrition' },
-  { title: 'Best Flea & Tick Prevention 2026', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: 'Prevention' },
-  { title: 'Best Dog Beds 2026', desc: 'Orthopedic, elevated, and washable beds compared on foam quality, clinical data, and durability', href: '/reviews/best-dog-beds', badge: 'Comfort' },
-  { title: 'Best Dog Crates 2026', desc: 'Wire, heavy duty, airline-approved, and furniture style ranked', href: '/reviews/best-dog-crates', badge: 'Housing' },
-  { title: 'Best Dog Food for Sensitive Stomach 2026', desc: 'Purina Pro Plan Sensitive, Hill\'s Sensitive Stomach, Royal Canin Digestive Care ranked', href: '/reviews/best-dog-food-sensitive-stomach' },
-  { title: 'Best Puppy Food 2026', desc: 'WSAVA-compliant puppy foods ranked for large breed, small breed, and all sizes', href: '/reviews/best-dog-food-for-puppies' },
-  { title: 'Best Slow Feeder Bowls for Dogs 2026', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls' },
-  { title: 'Best Dental Chews for Dogs 2026', desc: 'VOHC-accepted dental chews — Greenies, Virbac CET, Whimzees ranked', href: '/reviews/best-dental-chews' },
-  { title: 'Best Joint Supplements for Dogs 2026', desc: 'Cosequin, Dasuquin, and other glucosamine/chondroitin supplements ranked', href: '/reviews/best-joint-supplements' },
-  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy and battery life', href: '/reviews/best-dog-gps-tracker' },
-  { title: 'Best Large Breed Dog Food 2026', desc: 'WSAVA-compliant foods for 50+ lb dogs — Royal Canin, Purina Pro Plan ranked', href: '/reviews/best-large-breed-dog-food' },
-  { title: 'Best Senior Dog Food 2026', desc: 'Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior compared', href: '/reviews/best-dog-food-senior' },
-  { title: 'Best Dog Harnesses 2026', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses' },
-  { title: 'Best Dog Food for Small Breeds 2026', desc: 'WSAVA-compliant small breed foods — Royal Canin, Purina Pro Plan, Hill\'s ranked', href: '/reviews/best-dog-food-small-breed' },
-  { title: 'Best Heartworm Prevention for Dogs 2026', desc: 'Heartgard Plus, Interceptor Plus, Simparica Trio compared for heartworm prevention', href: '/reviews/best-heartworm-prevention' },
-  { title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', desc: 'A calibrated buyer\'s guide to fresh and gently-cooked food vs kibble and raw — cost, nutrition, safety, and how to judge a brand', href: '/reviews/fresh-dog-food-worth-it', badge: '🆕 New' },
-  { title: 'Best Puppy Crate for House-Training', desc: 'The wire crate with a divider, and the crates that are the wrong puppy purchase', href: '/reviews/best-puppy-crate-guide', badge: 'Housing' },
-  { title: 'Front-Clip vs Back-Clip Harness', desc: 'Which reviewed harness is for pulling, hiking, or escaping', href: '/reviews/front-clip-vs-back-clip-guide', badge: 'Walking' },
-  { title: 'Big Barker vs Casper', desc: '7-inch orthopedic foam for a large arthritic dog, or a machine-washable cover', href: '/reviews/big-barker-vs-casper-guide', badge: 'Comfort' },
-  { title: 'Greenies vs Whimzees', desc: 'VOHC plaque and tartar, or a plant-based chew. Neither replaces brushing', href: '/reviews/greenies-vs-whimzees-guide', badge: 'Dental' },
-  { title: 'MidWest iCrate vs Impact', desc: 'Divider wire for house training, or aluminum when the dog already defeats wire', href: '/reviews/icrate-vs-impact-guide', badge: 'Housing' },
-  { title: 'Easy Walk vs Front Range', desc: 'Front-clip for pulling, or a padded two-clip harness for hiking', href: '/reviews/easy-walk-vs-front-range-guide', badge: 'Walking' },
-  { title: 'Royal Canin vs Pro Plan', desc: 'Both meet the WSAVA bar on the dry-food review. Royal Canin is the research pick; Pro Plan is the lower bag price', href: '/reviews/royal-canin-vs-pro-plan-guide', badge: 'Nutrition' },
-  { title: 'Cosequin vs Dasuquin', desc: 'Glucosamine and chondroitin, or the same base plus ASU. Scores are the ones on the joint review', href: '/reviews/cosequin-vs-dasuquin-guide', badge: 'Joints' },
-  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season' },
-  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season' },
+  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), badge: 'Most Important', group: 'dog-reviews-insurance' },
+  { title: 'Best Dry Dog Food 2026', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: 'Nutrition', group: 'dog-reviews-food' },
+  { title: 'Best Flea & Tick Prevention 2026', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: 'Prevention', group: 'dog-reviews-prevention' },
+  { title: 'Best Dog Beds 2026', desc: 'Orthopedic, elevated, and washable beds compared on foam quality, clinical data, and durability', href: '/reviews/best-dog-beds', badge: 'Comfort', group: 'dog-reviews-comfort' },
+  { title: 'Best Dog Crates 2026', desc: 'Wire, heavy duty, airline-approved, and furniture style ranked', href: '/reviews/best-dog-crates', badge: 'Housing', group: 'dog-reviews-housing' },
+  { title: 'Best Dog Food for Sensitive Stomach 2026', desc: 'Purina Pro Plan Sensitive, Hill\'s Sensitive Stomach, Royal Canin Digestive Care ranked', href: '/reviews/best-dog-food-sensitive-stomach', group: 'dog-reviews-food' },
+  { title: 'Best Puppy Food 2026', desc: 'WSAVA-compliant puppy foods ranked for large breed, small breed, and all sizes', href: '/reviews/best-dog-food-for-puppies', group: 'dog-reviews-food' },
+  { title: 'Best Slow Feeder Bowls for Dogs 2026', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls', group: 'dog-reviews-food' },
+  { title: 'Best Dental Chews for Dogs 2026', desc: 'VOHC-accepted dental chews — Greenies, Virbac CET, Whimzees ranked', href: '/reviews/best-dental-chews', group: 'dog-reviews-dental' },
+  { title: 'Best Joint Supplements for Dogs 2026', desc: 'Cosequin, Dasuquin, and other glucosamine/chondroitin supplements ranked', href: '/reviews/best-joint-supplements', group: 'dog-reviews-joints' },
+  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy and battery life', href: '/reviews/best-dog-gps-tracker', group: 'dog-reviews-tracking' },
+  { title: 'Best Large Breed Dog Food 2026', desc: 'WSAVA-compliant foods for 50+ lb dogs — Royal Canin, Purina Pro Plan ranked', href: '/reviews/best-large-breed-dog-food', group: 'dog-reviews-food' },
+  { title: 'Best Senior Dog Food 2026', desc: 'Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior compared', href: '/reviews/best-dog-food-senior', group: 'dog-reviews-food' },
+  { title: 'Best Dog Harnesses 2026', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses', group: 'dog-reviews-walking' },
+  { title: 'Best Dog Food for Small Breeds 2026', desc: 'WSAVA-compliant small breed foods — Royal Canin, Purina Pro Plan, Hill\'s ranked', href: '/reviews/best-dog-food-small-breed', group: 'dog-reviews-food' },
+  { title: 'Best Heartworm Prevention for Dogs 2026', desc: 'Heartgard Plus, Interceptor Plus, Simparica Trio compared for heartworm prevention', href: '/reviews/best-heartworm-prevention', group: 'dog-reviews-prevention' },
+  { title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', desc: 'A calibrated buyer\'s guide to fresh and gently-cooked food vs kibble and raw — cost, nutrition, safety, and how to judge a brand', href: '/reviews/fresh-dog-food-worth-it', badge: '🆕 New', group: 'dog-reviews-food' },
+  { title: 'Best Puppy Crate for House-Training', desc: 'The wire crate with a divider, and the crates that are the wrong puppy purchase', href: '/reviews/best-puppy-crate-guide', badge: 'Housing', group: 'dog-reviews-housing' },
+  { title: 'Front-Clip vs Back-Clip Harness', desc: 'Which reviewed harness is for pulling, hiking, or escaping', href: '/reviews/front-clip-vs-back-clip-guide', badge: 'Walking', group: 'dog-reviews-walking' },
+  { title: 'Big Barker vs Casper', desc: '7-inch orthopedic foam for a large arthritic dog, or a machine-washable cover', href: '/reviews/big-barker-vs-casper-guide', badge: 'Comfort', group: 'dog-reviews-comfort' },
+  { title: 'Greenies vs Whimzees', desc: 'VOHC plaque and tartar, or a plant-based chew. Neither replaces brushing', href: '/reviews/greenies-vs-whimzees-guide', badge: 'Dental', group: 'dog-reviews-dental' },
+  { title: 'MidWest iCrate vs Impact', desc: 'Divider wire for house training, or aluminum when the dog already defeats wire', href: '/reviews/icrate-vs-impact-guide', badge: 'Housing', group: 'dog-reviews-housing' },
+  { title: 'Easy Walk vs Front Range', desc: 'Front-clip for pulling, or a padded two-clip harness for hiking', href: '/reviews/easy-walk-vs-front-range-guide', badge: 'Walking', group: 'dog-reviews-walking' },
+  { title: 'Royal Canin vs Pro Plan', desc: 'Both meet the WSAVA bar on the dry-food review. Royal Canin is the research pick; Pro Plan is the lower bag price', href: '/reviews/royal-canin-vs-pro-plan-guide', badge: 'Nutrition', group: 'dog-reviews-food' },
+  { title: 'Cosequin vs Dasuquin', desc: 'Glucosamine and chondroitin, or the same base plus ASU. Scores are the ones on the joint review', href: '/reviews/cosequin-vs-dasuquin-guide', badge: 'Joints', group: 'dog-reviews-joints' },
+  { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
+  { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
 ]
 
 const itemListSchema = {
@@ -80,14 +93,23 @@ export default function DogReviewsPage() {
       <div className="px-container-sm sm:px-container py-12">
         <div className="max-w-content-wide mx-auto">
           <HubSearch listId="dog-reviews-list" total={REVIEWS.length} noun="reviews" />
+          <HubJumpNav groups={REVIEW_GROUPS} />
         </div>
-        <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
-          {REVIEWS.map(r => (
-            <Link key={r.href} href={r.href} data-hub-item data-title={r.title} data-topic={`${r.badge ?? ''} ${r.desc}`} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200">
-              {r.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>}
-              <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
-              <div className="text-xs text-brand-text-light leading-relaxed">{r.desc}</div>
-            </Link>
+        <div className="max-w-content-wide mx-auto">
+          {REVIEW_GROUPS.map((group) => (
+            <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {REVIEWS.filter((r) => r.group === group.id).map((r) => (
+                  <Link key={r.href} href={r.href} data-hub-item data-title={r.title} data-topic={`${r.badge ?? ''} ${group.label} ${r.desc}`} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200">
+                    {r.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>}
+                    <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
+                    <div className="text-xs text-brand-text-light leading-relaxed">{r.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
         <div className="mt-10 text-center">

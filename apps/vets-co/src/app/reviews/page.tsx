@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -14,19 +14,37 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
+const REVIEW_GROUPS = [
+  { id: 'vets-reviews-insurance', label: 'Insurance', intro: 'Insurance comparisons. Printed prices are not a quote.' },
+  { id: 'vets-reviews-telehealth', label: 'Telehealth', intro: 'Remote-vet comparisons. They are not emergency care.' },
+  { id: 'vets-reviews-season', label: 'Season', intro: 'Holiday feeding and holiday emergency-visit pages.' },
+]
+
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when a large emergency bill arrives at 11pm', href: '/reviews/best-pet-insurance', badge: 'Most Important' },
-  { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth', badge: 'Convenient Care' },
-  { title: 'Trupanion vs Healthy Paws', desc: 'Direct vet payment versus fast reimbursement, using the figures already on the insurance review', href: '/reviews/trupanion-vs-healthy-paws-guide', badge: 'Insurance' },
-  { title: 'Vetster vs AskVet', desc: 'Pay-per-visit video versus a chat subscription. Not a substitute for emergency care', href: '/reviews/vetster-vs-askvet-guide', badge: 'Telehealth' },
-  { title: 'Trupanion vs Embrace', desc: 'Direct vet payment versus a wellness add-on. Card prices are not a quote', href: '/reviews/trupanion-vs-embrace-guide', badge: 'Insurance' },
-  { title: 'Healthy Paws vs Embrace', desc: 'Fast reimbursement versus a wellness add-on. Printed prices are not a quote', href: '/reviews/healthy-paws-vs-embrace-guide', badge: 'Insurance' },
-  { title: 'Vetster vs Chewy Connect', desc: 'Pay-per-visit video versus telehealth included with Chewy+. Not emergency care', href: '/reviews/vetster-vs-chewy-connect-guide', badge: 'Telehealth' },
-  { title: 'Spot vs ManyPets', desc: 'Adjustable limits versus one comprehensive plan. Both prices are quote-based', href: '/reviews/spot-vs-manypets-guide', badge: 'Insurance' },
-  { title: 'AskVet vs Chewy Connect', desc: 'A chat subscription, or telehealth included with Chewy+. Not a substitute for emergency care', href: '/reviews/askvet-vs-chewy-connect-guide', badge: 'Telehealth' },
-  { title: 'Lemonade vs Pets Best', desc: 'A young-pet quote, or a carrier that still enrolls an older pet. Both prices are quote-based', href: '/reviews/lemonade-vs-pets-best-guide', badge: 'Insurance' },
-  { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. The food hop applies after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide', badge: 'Season' },
-  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The hop is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide', badge: 'Season' },
+  { title: 'Best Pet Insurance 2026 — Owner Reference', desc: 'Which plans actually pay when a large emergency bill arrives at 11pm', href: '/reviews/best-pet-insurance',
+    group: 'vets-reviews-insurance', badge: 'Most Important' },
+  { title: 'Best Pet Telehealth 2026', desc: 'Vetster, AskVet, Chewy Connect compared by availability and credentials', href: '/telehealth',
+    group: 'vets-reviews-telehealth', badge: 'Convenient Care' },
+  { title: 'Trupanion vs Healthy Paws', desc: 'Direct vet payment versus fast reimbursement, using the figures already on the insurance review', href: '/reviews/trupanion-vs-healthy-paws-guide',
+    group: 'vets-reviews-insurance', badge: 'Insurance' },
+  { title: 'Vetster vs AskVet', desc: 'Pay-per-visit video versus a chat subscription. Not a substitute for emergency care', href: '/reviews/vetster-vs-askvet-guide',
+    group: 'vets-reviews-telehealth', badge: 'Telehealth' },
+  { title: 'Trupanion vs Embrace', desc: 'Direct vet payment versus a wellness add-on. Card prices are not a quote', href: '/reviews/trupanion-vs-embrace-guide',
+    group: 'vets-reviews-insurance', badge: 'Insurance' },
+  { title: 'Healthy Paws vs Embrace', desc: 'Fast reimbursement versus a wellness add-on. Printed prices are not a quote', href: '/reviews/healthy-paws-vs-embrace-guide',
+    group: 'vets-reviews-insurance', badge: 'Insurance' },
+  { title: 'Vetster vs Chewy Connect', desc: 'Pay-per-visit video versus telehealth included with Chewy+. Not emergency care', href: '/reviews/vetster-vs-chewy-connect-guide',
+    group: 'vets-reviews-telehealth', badge: 'Telehealth' },
+  { title: 'Spot vs ManyPets', desc: 'Adjustable limits versus one comprehensive plan. Both prices are quote-based', href: '/reviews/spot-vs-manypets-guide',
+    group: 'vets-reviews-insurance', badge: 'Insurance' },
+  { title: 'AskVet vs Chewy Connect', desc: 'A chat subscription, or telehealth included with Chewy+. Not a substitute for emergency care', href: '/reviews/askvet-vs-chewy-connect-guide',
+    group: 'vets-reviews-telehealth', badge: 'Telehealth' },
+  { title: 'Lemonade vs Pets Best', desc: 'A young-pet quote, or a carrier that still enrolls an older pet. Both prices are quote-based', href: '/reviews/lemonade-vs-pets-best-guide',
+    group: 'vets-reviews-insurance', badge: 'Insurance' },
+  { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. The food hop applies after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide',
+    group: 'vets-reviews-season', badge: 'Season' },
+  { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The hop is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide',
+    group: 'vets-reviews-season', badge: 'Season' },
 ]
 
 const itemListSchema = {
@@ -83,14 +101,23 @@ export default function VetsReviewsPage() {
       <div id="vets-reviews-list" className="px-container-sm sm:px-container pb-12 pt-4">
         <div className="max-w-content-wide mx-auto">
           <HubSearch listId="vets-reviews-list" total={REVIEWS.length} noun="reviews" />
+          <HubJumpNav groups={REVIEW_GROUPS} />
         </div>
-        <div className="grid sm:grid-cols-2 gap-5 max-w-content-wide mx-auto">
-          {REVIEWS.map(r => (
-            <Link key={r.href} href={r.href} data-hub-item data-title={r.title} data-topic={`${r.badge ?? ''} ${r.desc}`} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all">
-              {r.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>}
-              <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
-              <div className="text-xs text-brand-text-light">{r.desc}</div>
-            </Link>
+        <div className="max-w-content-wide mx-auto">
+          {REVIEW_GROUPS.map((group) => (
+            <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+              <div className="grid sm:grid-cols-2 gap-5">
+                {REVIEWS.filter((r) => r.group === group.id).map((r) => (
+                  <Link key={r.href} href={r.href} data-hub-item data-title={r.title} data-topic={`${r.badge ?? ''} ${group.label} ${r.desc}`} className="block bg-brand-white border border-brand-border rounded-xl p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all">
+                    {r.badge && <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{r.badge}</div>}
+                    <div className="font-display font-bold text-brand-dark text-base mb-1.5">{r.title}</div>
+                    <div className="text-xs text-brand-text-light">{r.desc}</div>
+                  </Link>
+                ))}
+              </div>
+            </section>
           ))}
         </div>
       </div>
