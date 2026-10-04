@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -370,7 +371,16 @@ export default function DogTreatsGuidePage() {
           </div>
           </div>
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/nutrition"
+        hubLabel="Dog nutrition"
+        links={[
+          { href: '/reviews/best-dry-dog-food', label: 'Best dry dog food' },
+          { href: '/reviews/best-dog-food-for-puppies', label: 'Best puppy food' },
+          { href: '/reviews/best-dental-chews', label: 'Best dental chews' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
@@ -244,7 +245,16 @@ export default function DogSymptomsGuidePage() {
 
           <ArticleSourcesList sources={SOURCES} />
       </div>
-    </ArticleLayout>
+          <HubMoneyLinks
+        hubHref="/health"
+        hubLabel="Dog health"
+        links={[
+          { href: '/reviews/best-flea-tick-prevention', label: 'Flea and tick prevention' },
+          { href: '/reviews/best-dry-dog-food', label: 'Best dry dog food' },
+          { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

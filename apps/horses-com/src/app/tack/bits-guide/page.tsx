@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
@@ -274,7 +275,16 @@ export default function BitsGuidePage() {
             <li>USEF and FEI rulebooks, current editions (permitted bits by discipline and level).</li>
           </ol>
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/tack"
+        hubLabel="Tack"
+        links={[
+          { href: '/reviews/best-winter-horse-blankets', label: 'Best winter blankets' },
+          { href: '/reviews/best-equine-supplements', label: 'Best equine supplements' },
+          { href: '/ownership/horse-insurance', label: 'Horse insurance covers' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

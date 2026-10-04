@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -109,7 +110,16 @@ export default function DentalCleaningGuidePage() {
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/health"
+        hubLabel="Pet health"
+        links={[
+          { href: '/reviews/best-pet-insurance', label: 'Best pet insurance' },
+          { href: '/telehealth', label: 'Pet telehealth' },
+          { href: '/insurance/wellness-plans-vs-insurance', label: 'Wellness vs insurance' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

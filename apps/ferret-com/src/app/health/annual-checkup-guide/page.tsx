@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -376,7 +377,16 @@ export default function FerretAnnualCheckupGuidePage() {
             schedules are decisions for a veterinarian experienced with ferrets.
           </p>
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/health"
+        hubLabel="Ferret health"
+        links={[
+          { href: '/reviews/best-ferret-cage', label: 'Best ferret cage' },
+          { href: '/reviews/best-ferret-harness', label: 'Best ferret harness' },
+          { href: '/diet/best-ferret-kibble', label: 'Best ferret food' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

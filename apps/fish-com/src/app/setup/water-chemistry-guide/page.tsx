@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -76,6 +77,15 @@ export default function WaterChemistryGuidePage() {
 
         <ArticleSourcesList sources={SOURCES} />
       </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/setup"
+        hubLabel="Tank setup"
+        links={[
+          { href: '/reviews/best-water-test-kits', label: 'Best water test kits' },
+          { href: '/reviews/best-aquarium-filters', label: 'Best aquarium filters' },
+          { href: '/reviews/best-aquarium-heaters', label: 'Best aquarium heaters' },
+        ]}
+      />
+</ArticleLayout>
   )
 }

@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -140,7 +141,16 @@ export default function SpayNeuterGuidePage() {
 
           <ArticleSourcesList sources={SOURCES} />
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/health"
+        hubLabel="Dog health"
+        links={[
+          { href: '/reviews/best-dry-dog-food', label: 'Best dry dog food' },
+          { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
+          { href: '/reviews/best-flea-tick-prevention', label: 'Flea and tick prevention' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

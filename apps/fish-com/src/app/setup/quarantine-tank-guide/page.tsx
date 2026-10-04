@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, RelatedLinks, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -109,7 +110,16 @@ export default function QuarantineGuidePage() {
         </div>
 
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/setup"
+        hubLabel="Tank setup"
+        links={[
+          { href: '/reviews/best-aquarium-filters', label: 'Best aquarium filters' },
+          { href: '/reviews/best-aquarium-heaters', label: 'Best aquarium heaters' },
+          { href: '/reviews/best-water-test-kits', label: 'Best water test kits' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }

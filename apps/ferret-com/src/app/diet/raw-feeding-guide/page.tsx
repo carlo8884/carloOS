@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -230,7 +231,16 @@ export default function RawFeedingGuidePage() {
             This page is general information. Raw feeding has genuine risks and is not appropriate for every household. Confirm any raw diet's nutritional adequacy and discuss food-safety risk with a veterinarian familiar with ferrets before adopting it as a sole diet.
           </p>
         </div>
-      </ArticleLayout>
+            <HubMoneyLinks
+        hubHref="/diet"
+        hubLabel="Ferret diet"
+        links={[
+          { href: '/diet/best-ferret-kibble', label: 'Best ferret food' },
+          { href: '/reviews/best-ferret-cage', label: 'Best ferret cage' },
+          { href: '/reviews/best-ferret-litter', label: 'Best ferret litter' },
+        ]}
+      />
+</ArticleLayout>
     </>
   )
 }
