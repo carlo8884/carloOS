@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -31,7 +31,14 @@ const med = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-06-01',
 })
-const combined = combineSchemas(schema, med)
+const itemList = buildItemListSchema({
+  name: "Whole-Prey vs Kibble for Ferrets",
+  items: [
+    { name: "Wysong Epigen 90", url: "https://ferret.com/diet/whole-prey-vs-kibble#wysong-epigen-90" },
+    { name: "Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)", url: "https://ferret.com/diet/whole-prey-vs-kibble#frozen-feeder-prey" },
+  ],
+})
+const combined = combineSchemas(schema, med, itemList)
 
 export default function WholePreyVsKibblePage() {
   return (

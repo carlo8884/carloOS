@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -36,11 +36,21 @@ const FAQS = [
   },
 ]
 
+const RANKED = [
+  'Cobalt Neo-Therm Pro',
+  'Eheim Jager',
+  'Hydor inline',
+]
+const itemList = buildItemListSchema({
+  name: 'Best heater for a display tank',
+  items: RANKED.map((name) => ({ name, url: 'https://fish.com/reviews/best-display-tank-heater-guide' })),
+})
+
 export default function DisplayTankHeaterGuidePage() {
   return (
     <ArticleLayout
       siteId="fish-com"
-      schema={schema}
+      schema={combineSchemas(schema, itemList)}
       hero={{
         title: 'Best heater for a display tank',
         subtitle: 'A display tank cares about the shape of the heater and whether the glass can break. Accuracy figures below are the manufacturer figures already quoted on the heater review.',

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import Link from 'next/link'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -52,10 +52,14 @@ const FOOD_FAQS = [
   },
 ]
 
+const itemList = buildItemListSchema({
+  name: "Best Dry Dog Food 2026",
+  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dry-dog-food${pick.href}` })),
+})
 export default function BestDogFoodPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2026', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Dry Dog Food 2026', url: 'https://dog.com/reviews/best-dry-dog-food' } ] }))} />
 
       {/* Hero */}
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">

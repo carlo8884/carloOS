@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { AffiliateDisclosure, buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, ShopCtas, CrossPortfolioCard, ArticleByline, FAQAccordion } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -44,7 +44,23 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-15T00:00:00Z',
 })
 const faqSchema = buildFAQSchema({ questions: FAQS })
-const schema = combineSchemas(articleSchema, faqSchema)
+const RANKED = [
+  'Cavalier King Charles Spaniel',
+  'French Bulldog',
+  'Shih Tzu',
+  'Yorkshire Terrier',
+  'Dachshund',
+  'Bulldog',
+  'Maltese',
+  'Bichon Frise',
+  'Havanese',
+  'Boston Terrier',
+]
+const itemList = buildItemListSchema({
+  name: 'Best Small Dog Breeds for Apartments',
+  items: RANKED.map((name) => ({ name, url: 'https://dog.com/breeds/best-small-dogs-for-apartments' })),
+})
+const schema = combineSchemas(articleSchema, faqSchema, itemList)
 
 export default function BestSmallDogsForApartmentsPage() {
   return (

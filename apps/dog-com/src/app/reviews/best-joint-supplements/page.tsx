@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
-import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 
@@ -37,10 +37,14 @@ const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet',
 const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://nutramax.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
+const itemList = buildItemListSchema({
+  name: "Best Joint Supplements for Dogs 2026",
+  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-joint-supplements${pick.href}` })),
+})
 export default function BestJointSupplementsPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Joint Supplements for Dogs 2026', url: 'https://dog.com/reviews/best-joint-supplements' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://dog.com/' }, { name: 'Reviews', url: 'https://dog.com/reviews' }, { name: 'Best Joint Supplements for Dogs 2026', url: 'https://dog.com/reviews/best-joint-supplements' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · June 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl"
