@@ -163,7 +163,7 @@ export default function BestEquineSupplementsPage() {
             </div>
 
             <h2>Joint Supplements</h2>
-            <p>The most-marketed and most-studied equine supplement category. The strongest evidence is for combinations including avocado/soybean unsaponifiables (ASU) with glucosamine and chondroitin sulfate. See our <Link href="/supplements/joint-supplements" className="text-brand-primary">joint supplements evidence-ladder guide</Link> for the full ingredient-level analysis.</p>
+            <p>The most-marketed and most-studied equine supplement category. The strongest evidence is for combinations including avocado/soybean unsaponifiables (ASU) with glucosamine and chondroitin sulfate. See our <Link href="/supplements/joint-supplements" className="text-brand-primary underline underline-offset-2">joint supplements evidence-ladder guide</Link> for the full ingredient-level analysis.</p>
 
             <ReviewCard
               id="cosequin-asu"
@@ -221,7 +221,7 @@ export default function BestEquineSupplementsPage() {
             />
 
             <h2>Gastric Support</h2>
-            <p>An important distinction: gastric supplements provide adjunctive support — they are not pharmacologic treatments for diagnosed Equine Gastric Ulcer Syndrome (EGUS). Active disease requires gastroscopy and prescription omeprazole (see our <Link href="/health/equine-ulcers" className="text-brand-primary">EGUS reference</Link>). Gastric supplements are appropriate as adjuncts during treatment, during high-risk periods (shipping, competition), or as part of long-term management in a multi-pronged ulcer-prevention program alongside forage management.</p>
+            <p>An important distinction: gastric supplements provide adjunctive support — they are not pharmacologic treatments for diagnosed Equine Gastric Ulcer Syndrome (EGUS). Active disease requires gastroscopy and prescription omeprazole (see our <Link href="/health/equine-ulcers" className="text-brand-primary underline underline-offset-2">EGUS reference</Link>). Gastric supplements are appropriate as adjuncts during treatment, during high-risk periods (shipping, competition), or as part of long-term management in a multi-pronged ulcer-prevention program alongside forage management.</p>
 
             <ReviewCard
               id="smartgut"

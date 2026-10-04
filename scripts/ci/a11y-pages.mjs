@@ -5,14 +5,26 @@
  * `no-underline` and its color is too close to the surrounding text.
  * An underline is enough to pass. Breadcrumb and card links are not this pattern.
  *
- * Pinned pages: the five phone-Lighthouse money pages on fish.com, vets.co,
- * and ferret.com, plus the round 7 and round 9 buyer guides and the five
- * How we pick pages.
+ * Pinned pages: the five phone-Lighthouse money pages on dog.com, fish.com,
+ * horses.com, vets.co, and ferret.com, plus the round 7 and round 9 buyer
+ * guides and the five How we pick pages.
  */
 import { readFileSync } from 'node:fs'
 import path from 'node:path'
 
 const PAGES = [
+  // Dog.com money pages
+  'apps/dog-com/src/app/reviews/best-dog-crates/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-harnesses/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dental-chews/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx',
+  // Horses.com money pages
+  'apps/horses-com/src/app/reviews/best-winter-horse-blankets/page.tsx',
+  'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
+  'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
+  'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
+  'apps/horses-com/src/app/ownership/horse-insurance/page.tsx',
   // Fish.com money pages
   'apps/fish-com/src/app/reviews/best-aquarium-filters/page.tsx',
   'apps/fish-com/src/app/reviews/best-aquarium-heaters/page.tsx',
