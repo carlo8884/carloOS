@@ -32,6 +32,18 @@ const REVIEWS = [
     description:
       'Turnout and stable blankets compared for denier, fill weight, and fit — for clipped horses and harsh climates.',
   },
+  {
+    slug: 'rambo-vs-rhino-guide',
+    title: 'Rambo vs Rhino Turnout',
+    description:
+      'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
+  },
+  {
+    slug: 'best-blanket-for-clipped-horse-guide',
+    title: 'Best Blanket for a Clipped Horse',
+    description:
+      'The heavy-winter turnout the blanket review names for a clipped horse in a northern climate, and when it is too much blanket.',
+  },
 ]
 
 const itemListSchema = {
