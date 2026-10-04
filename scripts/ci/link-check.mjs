@@ -3,8 +3,9 @@
  * CI check: internal link integrity.
  *
  * Walks each app's src/app/ directory, enumerates routable pages, then scans
- * all TSX files (plus packages/config/index.ts nav/footerLinks slices and the
- * shared Footer.tsx) for internal hrefs. Any internal href that doesn't
+ * all TSX files (plus packages/config/index.ts nav/footerLinks slices, the
+ * shared Footer.tsx, and the per-site slice of packages/ui related-reads)
+ * for internal hrefs. Any internal href that doesn't
  * resolve to a real page.tsx or a [slug] catch-all is a failure.
  *
  * Skips: anchors (#...), external (http://, https://, mailto:, tel:).
@@ -181,6 +182,37 @@ function collectHrefs(site) {
           const offsetInConfig = start + m.index
           const line = configSrc.slice(0, offsetInConfig).split('\n').length
           hrefs.push({ source: 'packages/config/index.ts', line, href: v })
+        }
+      }
+    }
+  } catch {}
+
+  // Curated related-comparison lists. Only the current site's object is scanned,
+  // so a dog.com href is not required to exist on fish.com.
+  try {
+    const readsSrc = readFileSync(join(ROOT, 'packages/ui/src/data/related-reads.ts'), 'utf8')
+    const siteSliceRe = new RegExp(`'${site}'\\s*:\\s*\\{`, 'g')
+    let lastMatch = null
+    let mm
+    while ((mm = siteSliceRe.exec(readsSrc)) !== null) lastMatch = mm
+    if (lastMatch) {
+      let depth = 0
+      let i = lastMatch.index + lastMatch[0].length - 1
+      const start = i
+      do {
+        if (readsSrc[i] === '{') depth++
+        else if (readsSrc[i] === '}') depth--
+        i++
+      } while (depth > 0 && i < readsSrc.length)
+      const slice = readsSrc.slice(start, i)
+      for (const re of [jsxHrefRe, objHrefRe]) {
+        let m
+        while ((m = re.exec(slice)) !== null) {
+          const v = m[1] || m[2] || m[3] || m[4] || m[5]
+          if (!v || !v.startsWith('/') || v.startsWith('//')) continue
+          const offset = start + m.index
+          const line = readsSrc.slice(0, offset).split('\n').length
+          hrefs.push({ source: 'packages/ui/src/data/related-reads.ts', line, href: v })
         }
       }
     }

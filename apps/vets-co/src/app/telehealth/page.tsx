@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -167,6 +167,7 @@ export default function TelehealthPage() {
           </aside>
         </div>
       </div>
+      <RelatedReads siteId="vets-co" path="/telehealth" />
     </>
   )
 }
