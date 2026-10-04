@@ -44,6 +44,18 @@ const REVIEWS = [
     description:
       'The heavy-winter turnout the blanket review names for a clipped horse in a northern climate, and when it is too much blanket.',
   },
+  {
+    slug: 'cosequin-vs-platinum-guide',
+    title: 'Cosequin ASU Plus vs Platinum CJ',
+    description:
+      'The ASU formula at $60–95 per 30 days, or the comprehensive tub at $130–180. Neither replaces joint injections.',
+  },
+  {
+    slug: 'quilted-vs-sheepskin-pad-guide',
+    title: 'Quilted Pad vs Sheepskin Half Pad',
+    description:
+      'A washable everyday English pad, or a sheepskin half pad for friction. Neither fixes saddle fit.',
+  },
 ]
 
 const itemListSchema = {

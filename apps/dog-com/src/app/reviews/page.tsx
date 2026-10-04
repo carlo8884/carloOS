@@ -33,6 +33,8 @@ const REVIEWS = [
   { title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', desc: 'A calibrated buyer\'s guide to fresh and gently-cooked food vs kibble and raw — cost, nutrition, safety, and how to judge a brand', href: '/reviews/fresh-dog-food-worth-it', badge: '🆕 New' },
   { title: 'Best Puppy Crate for House-Training', desc: 'The wire crate with a divider, and the crates that are the wrong puppy purchase', href: '/reviews/best-puppy-crate-guide', badge: 'Housing' },
   { title: 'Front-Clip vs Back-Clip Harness', desc: 'Which reviewed harness is for pulling, hiking, or escaping', href: '/reviews/front-clip-vs-back-clip-guide', badge: 'Walking' },
+  { title: 'Big Barker vs Casper', desc: '7-inch orthopedic foam for a large arthritic dog, or a machine-washable cover', href: '/reviews/big-barker-vs-casper-guide', badge: 'Comfort' },
+  { title: 'Greenies vs Whimzees', desc: 'VOHC plaque and tartar, or a plant-based chew. Neither replaces brushing', href: '/reviews/greenies-vs-whimzees-guide', badge: 'Dental' },
 ]
 
 const itemListSchema = {
