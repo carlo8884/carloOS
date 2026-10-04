@@ -80,8 +80,8 @@ export default function BestHeatersPage() {
         <span className="text-brand-text-mid">Best Heaters</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
@@ -101,7 +101,7 @@ export default function BestHeatersPage() {
               siteId="fish-com"
               nextHref="/tools/heater-wattage-calculator"
               nextLabel="Size the heater wattage before you pick a model"
-              nextBlurb="The callout is the wattage rule — buy slightly above the tank minimum, and split two heaters on large tanks. The heater-wattage calculator is the watt band for this volume and target. The hop below is the same Eheim Jager search already on this page."
+              nextBlurb="The callout is the wattage rule — buy slightly above the tank minimum, and split two heaters on large tanks. The heater-wattage calculator is the watt band for this volume and target. The link below searches Amazon for the Eheim Jager, the same search as on this page."
               resourceHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
               resourceLabel="Browse Eheim Jager aquarium heaters on Amazon →"
             />

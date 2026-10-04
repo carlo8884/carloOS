@@ -72,8 +72,8 @@ export default function BestAquariumFiltersPage() {
         <span className="text-brand-text-mid">Best Filters</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
@@ -92,7 +92,7 @@ export default function BestAquariumFiltersPage() {
               siteId="fish-com"
               nextHref="/tools/filter-gph-calculator"
               nextLabel="Size the filter GPH before you pick a model"
-              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The hop below is the same AquaClear 70 search already on this page."
+              nextBlurb="The callout is the type rule — HOB for 10–75 gallons, canister for 50+, sponge for nano and fry. The filter-GPH calculator is the turnover range for this tank. The link below searches Amazon for the AquaClear 70, the same search as on this page."
               resourceHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />

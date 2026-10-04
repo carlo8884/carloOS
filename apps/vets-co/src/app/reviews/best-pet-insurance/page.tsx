@@ -120,8 +120,8 @@ export default function VetsPetInsurancePage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-12">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
+          <div className="min-w-0">
             <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-07T00:00:00Z" reviewedBy="Editorial team" />
 
             <AffiliateDisclosure variant="inline" siteId="vets-co" />

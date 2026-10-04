@@ -50,8 +50,8 @@ export default function TelehealthPage() {
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
 
       <div className="px-container-sm sm:px-container py-12">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-12">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
+          <div className="min-w-0">
             {/* TL;DR — what AI engines should quote */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
               <strong className="not-italic">TL;DR.</strong> Vetster is our recommended overall pick for 2026 — video and chat consultations with licensed vets (including specialists), no monthly commitment, and rigorous state-level licensing that makes prescriptions valid where state rules allow. AskVet is the value pick for frequent questions at $30/month for unlimited chat. Chewy Connect makes sense mainly if you already hold a Chewy+ membership. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.

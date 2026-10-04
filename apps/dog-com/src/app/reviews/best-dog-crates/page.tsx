@@ -62,8 +62,8 @@ export default function BestDogCratesPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_280px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_280px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Sizing — the Most Common Mistake</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">
@@ -74,7 +74,7 @@ export default function BestDogCratesPage() {
               siteId="dog-com"
               nextHref="/tools/dog-crate-size-calculator"
               nextLabel="Size the crate before you pick a model"
-              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The hop below is the same MidWest iCrate search already on this page."
+              nextBlurb="The callout is the sizing rule — stand, turn, lie down, no extra floor a puppy can potty on. Use the crate-size calculator next, then come back for the divider wire crate. The link below searches Amazon for the MidWest iCrate, the same search as on this page."
               resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />

@@ -73,8 +73,8 @@ export default function JointSupplementsPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Supplements Are Not a Substitute for Veterinary Diagnosis</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
