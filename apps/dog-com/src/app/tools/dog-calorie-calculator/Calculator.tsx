@@ -9,6 +9,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -78,8 +79,13 @@ export default function DogCalorieCalculator() {
     }
   }
 
-  const weightNum = parseFloat(weight) || 0
-  const kcalPerCup = kcalPerCupStr.trim() !== '' ? parseFloat(kcalPerCupStr) || null : null
+  const weightMax = unit === 'lb' ? 250 : 113
+  const weightError = numberFieldError(weight, 'body weight', 0.5, weightMax, unit)
+  const kcalError = kcalPerCupStr.trim() === ''
+    ? null
+    : numberFieldError(kcalPerCupStr, 'kcal per cup', 1, 1000, 'kcal')
+  const weightNum = weightError ? 0 : parseFloat(weight)
+  const kcalPerCup = kcalError || kcalPerCupStr.trim() === '' ? null : parseFloat(kcalPerCupStr)
   const factor = LIFE_STAGES[stageIndex].factor
 
   const result = useMemo(
@@ -87,7 +93,8 @@ export default function DogCalorieCalculator() {
     [weightNum, unit, factor, kcalPerCup]
   )
 
-  const isValid = weightNum > 0
+  const weightOk = !weightError && weightNum > 0
+  const isValid = weightOk && !kcalError
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -127,8 +134,9 @@ export default function DogCalorieCalculator() {
               type="number"
               inputMode="decimal"
               min={0.1}
-              max={200}
+              max={weightMax}
               step={0.1}
+              aria-invalid={weightError ? true : undefined}
               value={weight}
               onChange={(e) => setWeight(e.target.value)}
               className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
@@ -163,9 +171,13 @@ export default function DogCalorieCalculator() {
               </button>
             </div>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">
-            Use your dog&apos;s target or current healthy weight, as assessed by your veterinarian.
-          </p>
+          {weightError ? (
+            <ToolError>{weightError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              Use your dog&apos;s target or current healthy weight, as assessed by your veterinarian.
+            </p>
+          )}
         </div>
 
         {/* Life stage / activity factor */}
@@ -210,9 +222,13 @@ export default function DogCalorieCalculator() {
             />
             <span className="text-sm text-brand-text-light whitespace-nowrap">kcal / cup</span>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">
-            Found on the food bag (usually listed as &quot;kcal/cup&quot; or &quot;ME kcal/cup&quot; in the calorie statement). Leave blank to skip the cups estimate.
-          </p>
+          {kcalError ? (
+            <ToolError>{kcalError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              Found on the food bag (usually listed as &quot;kcal/cup&quot; or &quot;ME kcal/cup&quot; in the calorie statement). Leave blank to skip the cups estimate.
+            </p>
+          )}
         </div>
       </div>
 
@@ -221,29 +237,34 @@ export default function DogCalorieCalculator() {
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Weight (kg)</p>
           <p className="mt-1 font-display text-xl text-brand-dark">
-            {isValid ? toKg(weightNum, unit).toFixed(2) : '--'}
+            {weightOk ? toKg(weightNum, unit).toFixed(2) : '--'}
           </p>
         </div>
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">RER / day</p>
-          <p className="mt-1 font-display text-xl text-brand-dark">{isValid ? kcal(result.rer) : '--'}</p>
+          <p className="mt-1 font-display text-xl text-brand-dark">{weightOk ? kcal(result.rer) : '--'}</p>
           <p className="mt-0.5 text-2xs text-brand-text-light">70 &times; kg^0.75</p>
         </div>
         <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">MER / day</p>
-          <p className="mt-1 font-display text-xl text-brand-dark">{isValid ? kcal(result.mer) : '--'}</p>
+          <p className="mt-1 font-display text-xl text-brand-dark">{weightOk ? kcal(result.mer) : '--'}</p>
           <p className="mt-0.5 text-2xs text-brand-text-light">{factor} &times; RER</p>
         </div>
         <div className="rounded border border-brand-border bg-brand-white p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Cups / day</p>
           <p className="mt-1 font-display text-xl text-brand-dark">
-            {isValid && result.cupsPerDay !== null
+            {weightOk && !kcalError && result.cupsPerDay !== null
               ? result.cupsPerDay.toFixed(1) + ' cups'
               : '--'}
           </p>
           <p className="mt-0.5 text-2xs text-brand-text-light">MER &divide; kcal/cup</p>
         </div>
       </div>
+      {weightOk && (
+        <ResultMeaning>
+          Daily energy is the maintenance estimate for this weight and life stage. It is a starting point, not a feeding prescription.
+        </ResultMeaning>
+      )}
 
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">

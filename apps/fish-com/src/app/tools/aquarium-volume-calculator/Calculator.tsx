@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -59,8 +60,17 @@ export default function VolumeCalculator() {
   const [width, setWidth] = useState('18')
   const [height, setHeight] = useState('18')
   const [fillPct, setFillPct] = useState('92')
+  const showWidth = shape !== 'cylinder' && shape !== 'hexagonal'
+
+  const dimMax = unit === 'in' ? 240 : 600
+  const lengthError = numberFieldError(length, shape === 'cylinder' ? 'diameter' : 'length', 1, dimMax, unit)
+  const widthError = showWidth ? numberFieldError(width, 'width', 1, dimMax, unit) : null
+  const heightError = numberFieldError(height, 'height', 1, dimMax, unit)
+  const fillError = numberFieldError(fillPct, 'fill level', 1, 100, '%')
+  const inputError = lengthError || widthError || heightError || fillError
 
   const result = useMemo(() => {
+    if (inputError) return null
     const lRaw = parseFloat(length) || 0
     const wRaw = parseFloat(width) || 0
     const hRaw = parseFloat(height) || 0
@@ -84,9 +94,7 @@ export default function VolumeCalculator() {
       weightLbs: (netIn3 / IN3_PER_US_GAL) * 8.345, // 8.345 lb per US gallon of fresh water
       weightKg: (netIn3 / IN3_PER_LITER) * 1.0,
     }
-  }, [shape, unit, length, width, height, fillPct])
-
-  const showWidth = shape !== 'cylinder' && shape !== 'hexagonal'
+  }, [shape, unit, length, width, height, fillPct, inputError])
 
   return (
     <div>
@@ -121,8 +129,10 @@ export default function VolumeCalculator() {
             value={length}
             onChange={setLength}
             unit={unit}
-            min={0}
+            min={1}
+            max={dimMax}
             step={0.1}
+            error={lengthError}
           />
 
           {showWidth && (
@@ -131,8 +141,10 @@ export default function VolumeCalculator() {
               value={width}
               onChange={setWidth}
               unit={unit}
-              min={0}
+              min={1}
+              max={dimMax}
               step={0.1}
+              error={widthError}
             />
           )}
 
@@ -141,8 +153,10 @@ export default function VolumeCalculator() {
             value={height}
             onChange={setHeight}
             unit={unit}
-            min={0}
+            min={1}
+            max={dimMax}
             step={0.1}
+            error={heightError}
           />
 
           <FieldNumber
@@ -151,13 +165,15 @@ export default function VolumeCalculator() {
             onChange={setFillPct}
             unit="%"
             min={1}
+            max={100}
             step={1}
             hint="Most tanks fill to ~92% of gross volume (substrate, decor, freeboard)."
+            error={fillError}
           />
         </div>
       </CalcCard>
 
-      {result && result.grossUSGal > 0 && (
+      {!inputError && result && result.grossUSGal > 0 && (
         <ResultPanel
           primary={{
             label: 'Net water volume',
@@ -179,7 +195,11 @@ export default function VolumeCalculator() {
         />
       )}
 
-      {result && result.grossUSGal > 0 && (
+      {!inputError && result && result.grossUSGal > 0 && (
+        <>
+        <ResultMeaning>
+          Net volume is the water you can put in at this fill level. Size stocking, filtration, and the heater from that number, not from the empty glass.
+        </ResultMeaning>
         <ResultCTA
           heading={`Shop a ${result.netUSGal.toFixed(0)}-gallon tank, stand, and heater`}
           blurb={
@@ -193,6 +213,7 @@ export default function VolumeCalculator() {
           cta="Browse tanks and stands on Amazon"
           source="tools-aquarium-volume"
         />
+        </>
       )}
     </div>
   )

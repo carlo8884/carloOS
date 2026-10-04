@@ -20,6 +20,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -177,12 +178,18 @@ export default function CO2Calculator() {
   const [kh, setKh] = useState('4')
   const [ph, setPh] = useState('6.8')
 
+  const volMax = unit === 'gal' ? 1000 : 4000
+  const volumeError = numberFieldError(volume, 'tank volume', 1, volMax, unit === 'gal' ? 'gal' : 'L')
+  const khError = numberFieldError(kh, 'KH', 0.5, 20, 'dKH')
+  const phError = numberFieldError(ph, 'pH', 5, 9)
+
   const dosing = useMemo(
-    () => computeDosing(parseFloat(volume) || 0, unit, density, method),
-    [volume, unit, density, method],
+    () => (volumeError ? null : computeDosing(parseFloat(volume) || 0, unit, density, method)),
+    [volume, unit, density, method, volumeError],
   )
 
   const khph = useMemo(() => {
+    if (khError || phError) return null
     const khN = parseFloat(kh) || 0
     const phN = parseFloat(ph) || 0
     if (khN <= 0 || phN <= 0) return null
@@ -190,7 +197,7 @@ export default function CO2Calculator() {
     const ppm = 3 * khN * Math.pow(10, 7 - phN)
     const classification = classifyCO2(ppm)
     return { ppm, ...classification }
-  }, [kh, ph])
+  }, [kh, ph, khError, phError])
 
   return (
     <div>
@@ -221,9 +228,11 @@ export default function CO2Calculator() {
               value={volume}
               onChange={setVolume}
               unit={unit === 'gal' ? 'gal' : 'L'}
-              min={0}
+              min={1}
+              max={volMax}
               step={1}
               hint="Net water volume. Decor and substrate reduce the box label — when in doubt, use the volume calculator."
+              error={volumeError}
             />
             <FieldSelect
               label="Plant density"
@@ -254,18 +263,22 @@ export default function CO2Calculator() {
               value={kh}
               onChange={setKh}
               unit="dKH"
-              min={0}
+              min={0.5}
+              max={20}
               step={0.1}
               hint="Measure with a liquid KH test kit. Typical planted-tank KH: 3–6 dKH."
+              error={khError}
             />
             <FieldNumber
               label="pH"
               value={ph}
               onChange={setPh}
               unit="pH"
-              min={0}
+              min={5}
+              max={9}
               step={0.05}
               hint="Measure at the same time as KH. Use a pH pen or freshly calibrated liquid kit."
+              error={phError}
             />
           </div>
         </CalcCard>
@@ -313,6 +326,11 @@ export default function CO2Calculator() {
               </>
             }
           />
+          <ResultMeaning>
+            {method === 'pressurized'
+              ? 'That bubble rate is a starting point for this volume and plant density. A drop checker, not the bubble count, shows whether dissolved CO2 is in range.'
+              : 'That daily amount is a typical liquid-carbon dose for this volume. It is not the same as pressurized CO2.'}
+          </ResultMeaning>
           {method === 'pressurized' ? (
             <ResultCTA
               heading="Shop a regulator, diffuser, and drop checker"
@@ -365,6 +383,9 @@ export default function CO2Calculator() {
               </>
             }
           />
+          <ResultMeaning>
+            That ppm is the dissolved CO2 the KH and pH formula estimates. It only holds when carbonate is the buffer.
+          </ResultMeaning>
           {khph.tone === 'low' ? (
             <ResultCTA
               heading="Shop a pressurized CO2 system to reach the planted-tank range"

@@ -19,6 +19,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 import { SIGNS, STYLES, MONITOR_ELIGIBLE, type Sign } from '../../../data/dog-symptom-signs'
 
 type Tier = 'go-now' | 'same-day' | 'monitor'
@@ -192,11 +193,7 @@ export default function TriageHelper() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
               Your result will appear here
             </div>
-            <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-              Check the signs you are seeing and an urgency read will appear here. When in doubt, call your
-              vet or your nearest emergency clinic — this tool helps you decide how urgently to seek care, it
-              does not diagnose your dog.
-            </p>
+            <ToolError>Check at least one sign to see an urgency read.</ToolError>
           </div>
         )}
 
@@ -218,6 +215,9 @@ export default function TriageHelper() {
               {verdict.headline}
             </p>
             <p className="text-sm text-brand-text-mid leading-relaxed m-0">{verdict.lead}</p>
+            <ResultMeaning>
+              That urgency read follows the most serious sign you checked, not a diagnosis.
+            </ResultMeaning>
 
             {/* Primary action on EVERY verdict */}
             <Link

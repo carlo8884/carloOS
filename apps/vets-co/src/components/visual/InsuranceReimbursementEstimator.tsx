@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function dollars(n: number): string {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
@@ -53,18 +54,28 @@ const LIMIT_PRESETS: Array<{ label: string; value: number | null }> = [
 ]
 
 export function InsuranceReimbursementEstimator() {
-  const [monthlyPremium, setMonthlyPremium] = useState(45)
-  const [annualDeductible, setAnnualDeductible] = useState(500)
+  const [monthlyPremiumRaw, setMonthlyPremiumRaw] = useState('45')
+  const [annualDeductibleRaw, setAnnualDeductibleRaw] = useState('500')
   const [reimbursementPct, setReimbursementPct] = useState(80)
   const [annualLimit, setAnnualLimit] = useState<number | null>(10000)
-  const [expectedAnnualClaims, setExpectedAnnualClaims] = useState(3000)
+  const [expectedAnnualClaimsRaw, setExpectedAnnualClaimsRaw] = useState('3000')
+
+  const premiumError = numberFieldError(monthlyPremiumRaw, 'monthly premium', 0, 100000, 'dollars')
+  const deductibleError = numberFieldError(annualDeductibleRaw, 'annual deductible', 0, 100000, 'dollars')
+  const claimsError = numberFieldError(expectedAnnualClaimsRaw, 'expected covered claims', 0, 100000, 'dollars')
+  const inputsValid = !premiumError && !deductibleError && !claimsError
+  const monthlyPremium = inputsValid ? Number(monthlyPremiumRaw) : 0
+  const annualDeductible = inputsValid ? Number(annualDeductibleRaw) : 0
+  const expectedAnnualClaims = inputsValid ? Number(expectedAnnualClaimsRaw) : 0
 
   const result = useMemo(
-    () => compute({ monthlyPremium, annualDeductible, reimbursementPct, annualLimit, expectedAnnualClaims }),
-    [monthlyPremium, annualDeductible, reimbursementPct, annualLimit, expectedAnnualClaims],
+    () => (inputsValid
+      ? compute({ monthlyPremium, annualDeductible, reimbursementPct, annualLimit, expectedAnnualClaims })
+      : null),
+    [inputsValid, monthlyPremium, annualDeductible, reimbursementPct, annualLimit, expectedAnnualClaims],
   )
 
-  const benefit = result.netBenefit
+  const benefit = result?.netBenefit ?? 0
   const benefitTone =
     benefit > 0
       ? 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200'
@@ -82,14 +93,15 @@ export function InsuranceReimbursementEstimator() {
           <input
             id="premium"
             type="number"
-            min={5}
-            max={500}
+            min={0}
+            max={100000}
             step={1}
-            value={monthlyPremium}
-            onChange={(e) => setMonthlyPremium(Math.max(0, Number(e.target.value) || 0))}
+            value={monthlyPremiumRaw}
+            onChange={(e) => setMonthlyPremiumRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">From the carrier&apos;s quote for the specific pet (age, breed, ZIP).</p>
+          {premiumError && <ToolError>{premiumError}</ToolError>}
         </div>
 
         <div>
@@ -100,13 +112,14 @@ export function InsuranceReimbursementEstimator() {
             id="deductible"
             type="number"
             min={0}
-            max={2000}
+            max={100000}
             step={50}
-            value={annualDeductible}
-            onChange={(e) => setAnnualDeductible(Math.max(0, Number(e.target.value) || 0))}
+            value={annualDeductibleRaw}
+            onChange={(e) => setAnnualDeductibleRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">Most carriers offer $100-$1,000. Per-condition deductibles (Trupanion-style) behave differently — see methodology.</p>
+          {deductibleError && <ToolError>{deductibleError}</ToolError>}
         </div>
 
         <div>
@@ -159,18 +172,21 @@ export function InsuranceReimbursementEstimator() {
             id="claims"
             type="number"
             min={0}
-            max={50000}
+            max={100000}
             step={100}
-            value={expectedAnnualClaims}
-            onChange={(e) => setExpectedAnnualClaims(Math.max(0, Number(e.target.value) || 0))}
+            value={expectedAnnualClaimsRaw}
+            onChange={(e) => setExpectedAnnualClaimsRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">
             Routine wellness is usually excluded (or paid via separate wellness add-on). Use this for unexpected illness + accident only.
           </p>
+          {claimsError && <ToolError>{claimsError}</ToolError>}
         </div>
       </div>
 
+      {result && (
+      <>
       <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Annual premium</p>
@@ -208,6 +224,11 @@ export function InsuranceReimbursementEstimator() {
               : `At ${dollars(expectedAnnualClaims)} in claims, insurance is break-even for this scenario.`}
         </p>
       </div>
+      <ResultMeaning>
+        Net benefit compares premium plus leftover bills with paying the same claims yourself. It is an estimate from these inputs, not a carrier quote.
+      </ResultMeaning>
+      </>
+      )}
 
       <p className="mt-4 text-xs text-brand-text-mid">
         Estimator only. Actual reimbursement depends on the policy contract, excluded conditions, pre-existing condition exclusions, state regulations, and the carrier&apos;s adjudication. Verify against the carrier&apos;s Sample Policy and Schedule of Benefits before purchasing.

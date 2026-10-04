@@ -30,6 +30,7 @@ export type { JourneyNextProps } from './components/JourneyNext'
 export { ScoreMethodology } from './components/ScoreMethodology'
 export { ComparisonFoot } from './components/ComparisonFoot'
 export { RelatedReads } from './components/RelatedReads'
+export { ToolError, ResultMeaning, numberFieldError } from './components/ToolFeedback'
 export { FAQAccordion } from './components/FAQAccordion'
 export type { FAQItem } from './components/FAQAccordion'
 

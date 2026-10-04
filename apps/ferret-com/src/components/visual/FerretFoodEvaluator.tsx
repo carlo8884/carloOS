@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type FirstIngredient = 'whole-meat' | 'meat-meal' | 'by-product-meal' | 'grain-first' | 'corn-first'
 
@@ -98,16 +99,32 @@ const TONE_CLASSES: Record<Verdict['tone'], string> = {
 }
 
 export function FerretFoodEvaluator() {
-  const [inputs, setInputs] = useState<Inputs>({
-    proteinPct: 38,
-    fatPct: 20,
-    fiberPct: 2.5,
-    ashPct: 7,
-    moisturePct: 10,
-    firstIngredient: 'meat-meal',
-  })
+  const [firstIngredient, setFirstIngredient] = useState<FirstIngredient>('meat-meal')
+  const [proteinRaw, setProteinRaw] = useState('38')
+  const [fatRaw, setFatRaw] = useState('20')
+  const [fiberRaw, setFiberRaw] = useState('2.5')
+  const [ashRaw, setAshRaw] = useState('7')
+  const [moistureRaw, setMoistureRaw] = useState('10')
 
-  const verdict = useMemo(() => evaluate(inputs), [inputs])
+  const proteinError = numberFieldError(proteinRaw, 'crude protein percent', 10, 70)
+  const fatError = numberFieldError(fatRaw, 'crude fat percent', 5, 50)
+  const fiberError = numberFieldError(fiberRaw, 'crude fiber percent', 0, 20)
+  const ashError = numberFieldError(ashRaw, 'ash percent', 0, 15)
+  const moistureError = numberFieldError(moistureRaw, 'moisture percent', 0, 90)
+  const inputsValid = !proteinError && !fatError && !fiberError && !ashError && !moistureError
+
+  const verdict = useMemo(() => {
+    if (!inputsValid) return null
+    const inputs: Inputs = {
+      proteinPct: Number(proteinRaw),
+      fatPct: Number(fatRaw),
+      fiberPct: Number(fiberRaw),
+      ashPct: Number(ashRaw),
+      moisturePct: Number(moistureRaw),
+      firstIngredient,
+    }
+    return evaluate(inputs)
+  }, [inputsValid, proteinRaw, fatRaw, fiberRaw, ashRaw, moistureRaw, firstIngredient])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -120,62 +137,72 @@ export function FerretFoodEvaluator() {
           <label htmlFor="ff-ingredient" className="mb-1 block text-sm font-medium text-brand-text-mid">First ingredient</label>
           <select
             id="ff-ingredient"
-            value={inputs.firstIngredient}
-            onChange={(e) => setInputs({ ...inputs, firstIngredient: e.target.value as FirstIngredient })}
+            value={firstIngredient}
+            onChange={(e) => setFirstIngredient(e.target.value as FirstIngredient)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           >
             {(Object.entries(FIRST_INGREDIENT) as Array<[FirstIngredient, (typeof FIRST_INGREDIENT)[FirstIngredient]]>).map(([k, v]) => (
               <option key={k} value={k}>{v.label}</option>
             ))}
           </select>
-          <p className="mt-1 text-xs text-brand-text-mid">{FIRST_INGREDIENT[inputs.firstIngredient].note}</p>
+          <p className="mt-1 text-xs text-brand-text-mid">{FIRST_INGREDIENT[firstIngredient].note}</p>
         </div>
 
         <div>
           <label htmlFor="ff-protein" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude protein (%)</label>
-          <input id="ff-protein" type="number" min={10} max={70} step={0.5} value={inputs.proteinPct}
-            onChange={(e) => setInputs({ ...inputs, proteinPct: Math.max(0, Number(e.target.value) || 0) })}
+          <input id="ff-protein" type="number" min={10} max={70} step={0.5} value={proteinRaw}
+            onChange={(e) => setProteinRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
           <p className="mt-1 text-xs text-brand-text-mid">Target: 38-45%. Minimum: 35%.</p>
+          {proteinError && <ToolError>{proteinError}</ToolError>}
         </div>
 
         <div>
           <label htmlFor="ff-fat" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude fat (%)</label>
-          <input id="ff-fat" type="number" min={5} max={50} step={0.5} value={inputs.fatPct}
-            onChange={(e) => setInputs({ ...inputs, fatPct: Math.max(0, Number(e.target.value) || 0) })}
+          <input id="ff-fat" type="number" min={5} max={50} step={0.5} value={fatRaw}
+            onChange={(e) => setFatRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
           <p className="mt-1 text-xs text-brand-text-mid">Target: 18-25%.</p>
+          {fatError && <ToolError>{fatError}</ToolError>}
         </div>
 
         <div>
           <label htmlFor="ff-fiber" className="mb-1 block text-sm font-medium text-brand-text-mid">Crude fiber (%)</label>
-          <input id="ff-fiber" type="number" min={0} max={20} step={0.5} value={inputs.fiberPct}
-            onChange={(e) => setInputs({ ...inputs, fiberPct: Math.max(0, Number(e.target.value) || 0) })}
+          <input id="ff-fiber" type="number" min={0} max={20} step={0.5} value={fiberRaw}
+            onChange={(e) => setFiberRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
           <p className="mt-1 text-xs text-brand-text-mid">Target: ≤3%. Ferrets are obligate carnivores with a short GI tract.</p>
+          {fiberError && <ToolError>{fiberError}</ToolError>}
         </div>
 
         <div>
           <label htmlFor="ff-ash" className="mb-1 block text-sm font-medium text-brand-text-mid">Ash (%)</label>
-          <input id="ff-ash" type="number" min={0} max={15} step={0.5} value={inputs.ashPct}
-            onChange={(e) => setInputs({ ...inputs, ashPct: Math.max(0, Number(e.target.value) || 0) })}
+          <input id="ff-ash" type="number" min={0} max={15} step={0.5} value={ashRaw}
+            onChange={(e) => setAshRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
           <p className="mt-1 text-xs text-brand-text-mid">Target: ≤7%.</p>
+          {ashError && <ToolError>{ashError}</ToolError>}
         </div>
 
         <div>
           <label htmlFor="ff-moisture" className="mb-1 block text-sm font-medium text-brand-text-mid">Moisture (%)</label>
-          <input id="ff-moisture" type="number" min={0} max={90} step={0.5} value={inputs.moisturePct}
-            onChange={(e) => setInputs({ ...inputs, moisturePct: Math.max(0, Number(e.target.value) || 0) })}
+          <input id="ff-moisture" type="number" min={0} max={90} step={0.5} value={moistureRaw}
+            onChange={(e) => setMoistureRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark" />
           <p className="mt-1 text-xs text-brand-text-mid">Typical kibble: 8-12%. Wet food: 70-80%. Reference only.</p>
+          {moistureError && <ToolError>{moistureError}</ToolError>}
         </div>
       </div>
 
+      {verdict && (
+      <>
       <div className={`mt-6 rounded border p-4 ${TONE_CLASSES[verdict.tone]}`}>
         <p className="text-sm font-semibold uppercase tracking-wide">Verdict</p>
         <p className="mt-1 font-display text-2xl">{verdict.label}</p>
         <p className="mt-1 text-xs opacity-80">Score: {verdict.overallScore} / 18</p>
+        <ResultMeaning>
+          The verdict scores this guaranteed analysis against published ferret-kibble targets. It is a label-reading aid, not a feeding plan.
+        </ResultMeaning>
       </div>
 
       <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4 text-sm text-brand-text-mid">
@@ -188,6 +215,8 @@ export function FerretFoodEvaluator() {
           <li><strong>Ash:</strong> {verdict.ashNote}</li>
         </ul>
       </div>
+      </>
+      )}
 
       <p className="mt-4 text-xs text-brand-text-mid">
         Targets are drawn from Lewington&apos;s <em>Ferret Husbandry, Medicine and Surgery</em>, Marshall Pet Products published guidance, and the AAFCO Cat Food Nutrient Profiles (used as proxy — no AAFCO ferret profile exists). For an actual feeding plan, work with an exotics-experienced veterinarian.

@@ -13,6 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 /** AFA-cited planning floor: 24 × 24 in per ferret (4 sq ft). */
 const SQIN_PER_FERRET = 24 * 24
@@ -58,13 +59,15 @@ function playHoursFromBand(band: PlayBand): number {
 }
 
 export default function CageSizeCalculator() {
-  const [ferrets, setFerrets] = useState(2)
+  const [ferretsRaw, setFerretsRaw] = useState('2')
   const [levels, setLevels] = useState(3)
   const [playBand, setPlayBand] = useState<PlayBand>('about-4')
+  const ferretsError = numberFieldError(ferretsRaw, 'ferret count', 1, 12)
+  const ferrets = ferretsError ? 0 : Number(ferretsRaw)
 
   const result = useMemo(
-    () => compute(ferrets, levels, playHoursFromBand(playBand)),
-    [ferrets, levels, playBand],
+    () => (ferretsError ? null : compute(ferrets, levels, playHoursFromBand(playBand))),
+    [ferrets, ferretsError, levels, playBand],
   )
 
   return (
@@ -81,13 +84,14 @@ export default function CageSizeCalculator() {
             min={1}
             max={12}
             step={1}
-            value={ferrets}
-            onChange={(e) => setFerrets(Math.max(1, Math.min(12, Number(e.target.value) || 1)))}
+            value={ferretsRaw}
+            onChange={(e) => setFerretsRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-2xs text-brand-text-light leading-snug">
             Ferrets are social; many keepers house two or more. Floor scales with headcount.
           </p>
+          {ferretsError && <ToolError>{ferretsError}</ToolError>}
         </div>
 
         <div>
@@ -145,6 +149,7 @@ export default function CageSizeCalculator() {
         </div>
       </div>
 
+      {result && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <div className="grid gap-5 sm:grid-cols-3">
           <div>
@@ -180,7 +185,11 @@ export default function CageSizeCalculator() {
             : 'This is a sleeping-and-litter footprint, not a full-time house. Keep supervised out-of-cage time at four hours a day or more, split across the crepuscular morning and evening peaks if that is easier.'}{' '}
           Bar spacing: one inch or less for adults, half an inch or less for kits. Solid floors or fleece-covered wire — never a bare grid.
         </p>
+        <ResultMeaning>
+          The footprint is the minimum sleeping-and-litter size for this ferret count, level count, and play time. It is a planning figure, not a brand recommendation.
+        </ResultMeaning>
       </div>
+      )}
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
         Planning figure only, from the American Ferret Association owner-education minimums cited on

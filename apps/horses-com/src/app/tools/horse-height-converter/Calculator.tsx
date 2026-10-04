@@ -21,7 +21,14 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
+
+function wholeNumberFieldError(raw: string, label: string, min: number, max: number): string | null {
+  const base = numberFieldError(raw, label, min, max)
+  if (base) return base
+  if (!Number.isInteger(Number(raw))) return `Enter a whole number for the ${label}.`
+  return null
+}
 
 const CM_PER_INCH = 2.54
 const IN_PER_HAND = 4
@@ -62,12 +69,18 @@ function round1(n: number): number {
 
 export default function Calculator() {
   const [mode, setMode] = useState<Mode>('hands')
-  const [handsWhole, setHandsWhole] = useState<string>('')
-  const [handsInches, setHandsInches] = useState<string>('')
-  const [inches, setInches] = useState<string>('')
-  const [cm, setCm] = useState<string>('')
+  const [handsWhole, setHandsWhole] = useState<string>('15')
+  const [handsInches, setHandsInches] = useState<string>('2')
+  const [inches, setInches] = useState<string>('62')
+  const [cm, setCm] = useState<string>('157.5')
+  const handsError = mode === 'hands' ? wholeNumberFieldError(handsWhole, 'hand count', 5, 22) : null
+  const extraError = mode === 'hands' ? wholeNumberFieldError(handsInches, 'remainder in inches', 0, 3) : null
+  const inchesError = mode === 'inches' ? numberFieldError(inches, 'height', 20, 88, 'in') : null
+  const cmError = mode === 'cm' ? numberFieldError(cm, 'height', 51, 224, 'cm') : null
+  const inputError = handsError || extraError || inchesError || cmError
 
   const result = useMemo<Result | null>(() => {
+    if (inputError) return null
     if (mode === 'hands') {
       const h = parseInt(handsWhole, 10)
       const i = handsInches === '' ? 0 : parseInt(handsInches, 10)
@@ -83,7 +96,7 @@ export default function Calculator() {
     const v = parseFloat(cm)
     if (Number.isNaN(v) || v <= 0) return null
     return fromInches(v / CM_PER_INCH)
-  }, [mode, handsWhole, handsInches, inches, cm])
+  }, [mode, handsWhole, handsInches, inches, cm, inputError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -128,6 +141,7 @@ export default function Calculator() {
               min="0"
               step="1"
               value={handsWhole}
+              aria-invalid={handsError ? true : undefined}
               onChange={(e) => setHandsWhole(e.target.value)}
               placeholder="e.g. 15"
               className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -152,6 +166,7 @@ export default function Calculator() {
               max="3"
               step="1"
               value={handsInches}
+              aria-invalid={extraError ? true : undefined}
               onChange={(e) => setHandsInches(e.target.value)}
               placeholder="e.g. 2"
               className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -175,6 +190,7 @@ export default function Calculator() {
             min="0"
             step="0.1"
             value={inches}
+            aria-invalid={inchesError ? true : undefined}
             onChange={(e) => setInches(e.target.value)}
             placeholder="e.g. 62"
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark sm:max-w-xs"
@@ -197,6 +213,7 @@ export default function Calculator() {
             min="0"
             step="0.1"
             value={cm}
+            aria-invalid={cmError ? true : undefined}
             onChange={(e) => setCm(e.target.value)}
             placeholder="e.g. 157.5"
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark sm:max-w-xs"
@@ -204,8 +221,10 @@ export default function Calculator() {
         </div>
       )}
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
       {/* Results */}
-      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      {result && <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
             Hands
@@ -233,7 +252,13 @@ export default function Calculator() {
             {result ? `${round1(result.cm)} cm` : '—'}
           </p>
         </div>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          These three figures are the same withers height in hands, inches, and centimetres.
+        </ResultMeaning>
+      )}
 
       {result && (
         <p className="mt-4 text-sm text-brand-text-mid">

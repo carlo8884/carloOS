@@ -25,6 +25,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -203,6 +204,9 @@ export default function DogGrimaceScale() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+          <ResultMeaning>
+            That total is the sum of the five facial scores, not a diagnosis of pain.
+          </ResultMeaning>
           {result.pushTriage ? (
             <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
@@ -221,9 +225,7 @@ export default function DogGrimaceScale() {
           ) : null}
         </div>
       ) : (
-        <p className="mt-2 text-sm text-brand-text-light">
-          Score all five facial action units to see your dog&apos;s grimace total.
-        </p>
+        <ToolError>Score all five facial areas to see a grimace total.</ToolError>
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">

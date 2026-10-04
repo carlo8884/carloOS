@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
 import {
   STYLES_FOR_WATER,
@@ -25,7 +26,13 @@ export default function StockingCalculator() {
   const [filtration, setFiltration] = useState<Filtration>('rated')
   const [style, setStyle] = useState<Style>('community')
 
+  const galError = numberFieldError(tankGal, 'tank volume', 1, 1000, 'US gal')
+  const lengthError = numberFieldError(tankL, 'tank length', 1, 240, 'in')
+  const widthError = numberFieldError(tankW, 'tank width', 1, 96, 'in')
+  const inputError = galError || lengthError || widthError
+
   const result = useMemo(() => {
+    if (inputError) return null
     const gal = parseFloat(tankGal) || 0
     const l = parseFloat(tankL) || 0
     const w = parseFloat(tankW) || 0
@@ -37,7 +44,7 @@ export default function StockingCalculator() {
       filtration,
       style,
     })
-  }, [tankGal, tankL, tankW, waterType, filtration, style])
+  }, [tankGal, tankL, tankW, waterType, filtration, style, inputError])
 
   const styleOptions = STYLES_FOR_WATER[waterType].map((id) => STYLE_OPTIONS[id])
 
@@ -51,7 +58,9 @@ export default function StockingCalculator() {
             onChange={setTankGal}
             unit="US gal"
             min={1}
+            max={1000}
             hint="Use net water volume from our Volume Calculator."
+            error={galError}
           />
           <FieldSelect
             label="Water Type"
@@ -74,7 +83,9 @@ export default function StockingCalculator() {
             onChange={setTankL}
             unit="in"
             min={1}
+            max={240}
             hint="Surface area drives oxygen, not depth."
+            error={lengthError}
           />
           <FieldNumber
             label="Tank Width (front-to-back)"
@@ -82,6 +93,8 @@ export default function StockingCalculator() {
             onChange={setTankW}
             unit="in"
             min={1}
+            max={96}
+            error={widthError}
           />
           <FieldSelect
             label="Filtration"
@@ -103,7 +116,7 @@ export default function StockingCalculator() {
         </div>
       </CalcCard>
 
-      {result && result.slimInches > 0 && (
+      {!inputError && result && result.slimInches > 0 && (
         <ResultPanel
           primary={{
             label: 'Rough planning estimate — not a species count',
@@ -130,6 +143,11 @@ export default function StockingCalculator() {
             </>
           }
         />
+      )}
+      {!inputError && result && result.slimInches > 0 && (
+        <ResultMeaning>
+          Slim inches are a planning ceiling for waste and oxygen, not a count of fish you should buy.
+        </ResultMeaning>
       )}
     </div>
   )

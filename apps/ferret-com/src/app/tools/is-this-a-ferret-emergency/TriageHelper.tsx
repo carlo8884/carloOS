@@ -18,6 +18,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning } from '@carloOS/ui'
 import { SIGNS, STYLES, MONITOR_ELIGIBLE, type Sign } from '../../../data/ferret-symptom-signs'
 
 type Tier = 'go-now' | 'same-day' | 'monitor'
@@ -217,6 +218,9 @@ export default function TriageHelper() {
               {verdict.headline}
             </p>
             <p className="text-sm text-brand-text-mid leading-relaxed m-0">{verdict.lead}</p>
+            <ResultMeaning>
+              This urgency read follows the most serious sign you checked. It helps you decide how fast to seek care, and it is not a diagnosis.
+            </ResultMeaning>
 
             {/* Primary action on EVERY verdict */}
             <Link

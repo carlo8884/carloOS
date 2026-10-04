@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Size = 'small' | 'medium' | 'large' | 'giant'
 type Acquisition = 'adopted' | 'purchased' | 'already'
@@ -102,44 +103,48 @@ function dollars(n: number): string {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
 }
 
+const MONEY_MAX = 20000
+
 export default function PuppyFirstYearBudget() {
   const [size, setSize] = useState<Size>('medium')
   const [path, setPath] = useState<Acquisition>('adopted')
-  const [crateAndGear, setCrateAndGear] = useState<number | null>(null)
-  const [monthlyFood, setMonthlyFood] = useState<number | null>(null)
-  const [firstYearVet, setFirstYearVet] = useState<number | null>(null)
-  const [trainingMisc, setTrainingMisc] = useState<number | null>(null)
-  const [acquisition, setAcquisition] = useState<number | null>(null)
+  const [crateText, setCrateText] = useState('250')
+  const [foodText, setFoodText] = useState('50')
+  const [vetText, setVetText] = useState('500')
+  const [trainingText, setTrainingText] = useState('200')
+  const [acquisitionText, setAcquisitionText] = useState('250')
 
   const band = SIZE_DEFAULTS[size]
-  const result = useMemo(
-    () =>
-      compute(band, path, {
-        crateAndGear: crateAndGear ?? undefined,
-        monthlyFood: monthlyFood ?? undefined,
-        firstYearVet: firstYearVet ?? undefined,
-        trainingMisc: trainingMisc ?? undefined,
-        acquisition: acquisition ?? undefined,
-      }),
-    [band, path, crateAndGear, monthlyFood, firstYearVet, trainingMisc, acquisition],
-  )
-
-  function resetOverrides() {
-    setCrateAndGear(null)
-    setMonthlyFood(null)
-    setFirstYearVet(null)
-    setTrainingMisc(null)
-    setAcquisition(null)
-  }
+  const crateError = numberFieldError(crateText, 'crate and gear cost', 0, MONEY_MAX)
+  const foodError = numberFieldError(foodText, 'monthly food cost', 0, MONEY_MAX)
+  const vetError = numberFieldError(vetText, 'first-year vet cost', 0, MONEY_MAX)
+  const trainingError = numberFieldError(trainingText, 'training and miscellaneous cost', 0, MONEY_MAX)
+  const acquisitionError = numberFieldError(acquisitionText, 'acquisition fee', 0, MONEY_MAX)
+  const inputError = crateError || foodError || vetError || trainingError || acquisitionError
+  const result = useMemo(() => {
+    if (inputError) return null
+    return compute(band, path, {
+      crateAndGear: Number(crateText),
+      monthlyFood: Number(foodText),
+      firstYearVet: Number(vetText),
+      trainingMisc: Number(trainingText),
+      acquisition: Number(acquisitionText),
+    })
+  }, [band, path, crateText, foodText, vetText, trainingText, acquisitionText, inputError])
 
   function onSize(next: Size) {
+    const nextBand = SIZE_DEFAULTS[next]
     setSize(next)
-    resetOverrides()
+    setCrateText(String(nextBand.crateAndGear))
+    setFoodText(String(nextBand.monthlyFood))
+    setVetText(String(nextBand.firstYearVet))
+    setTrainingText(String(nextBand.trainingMisc))
+    setAcquisitionText(String(acquisitionFee(nextBand, path)))
   }
 
   function onPath(next: Acquisition) {
     setPath(next)
-    setAcquisition(null)
+    setAcquisitionText(String(acquisitionFee(SIZE_DEFAULTS[size], next)))
   }
 
   return (
@@ -201,35 +206,41 @@ export default function PuppyFirstYearBudget() {
         <NumberField
           id="pb-crate"
           label="Crate, bowls, leash, bed (one-time)"
-          value={crateAndGear ?? band.crateAndGear}
-          onChange={setCrateAndGear}
+          value={crateText}
+          onChange={setCrateText}
+          error={crateError}
         />
         <NumberField
           id="pb-food"
           label="Food per month"
-          value={monthlyFood ?? band.monthlyFood}
-          onChange={setMonthlyFood}
+          value={foodText}
+          onChange={setFoodText}
+          error={foodError}
         />
         <NumberField
           id="pb-vet"
           label="First-year vet (vaccines, spay/neuter, preventives)"
-          value={firstYearVet ?? band.firstYearVet}
-          onChange={setFirstYearVet}
+          value={vetText}
+          onChange={setVetText}
+          error={vetError}
         />
         <NumberField
           id="pb-train"
           label="Training, toys, miscellaneous"
-          value={trainingMisc ?? band.trainingMisc}
-          onChange={setTrainingMisc}
+          value={trainingText}
+          onChange={setTrainingText}
+          error={trainingError}
         />
         <NumberField
           id="pb-acq"
           label={path === 'already' ? 'Acquisition (set to 0 if already home)' : 'Adoption or purchase fee'}
-          value={acquisition ?? acquisitionFee(band, path)}
-          onChange={setAcquisition}
+          value={acquisitionText}
+          onChange={setAcquisitionText}
+          error={acquisitionError}
         />
       </div>
 
+      {result && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <p className="text-2xs uppercase tracking-wide text-brand-text-light">First-year planning total</p>
         <p className="mt-1 font-display text-3xl font-bold text-brand-primary">{dollars(result.firstYear)}</p>
@@ -248,7 +259,11 @@ export default function PuppyFirstYearBudget() {
             <p className="font-display text-xl font-semibold text-brand-dark">{dollars(result.crateAndGear)}</p>
           </div>
         </div>
+        <ResultMeaning>
+          That total adds the gear, food, vet, training, and arrival lines you entered, and it is a planning figure rather than a quote.
+        </ResultMeaning>
       </div>
+      )}
 
       <p className="mt-5 text-sm leading-relaxed text-brand-text-mid">
         The crate is usually the largest gear line. Size it to the adult dog and use a divider — the{' '}
@@ -271,11 +286,13 @@ function NumberField({
   label,
   value,
   onChange,
+  error,
 }: {
   id: string
   label: string
-  value: number
-  onChange: (n: number) => void
+  value: string
+  onChange: (raw: string) => void
+  error: string | null
 }) {
   return (
     <div>
@@ -289,13 +306,15 @@ function NumberField({
           type="number"
           inputMode="decimal"
           min={0}
-          max={20000}
+          max={MONEY_MAX}
           step={5}
           value={value}
-          onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
+          aria-invalid={error ? true : undefined}
+          onChange={(e) => onChange(e.target.value)}
           className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
         />
       </div>
+      {error ? <ToolError>{error}</ToolError> : null}
     </div>
   )
 }

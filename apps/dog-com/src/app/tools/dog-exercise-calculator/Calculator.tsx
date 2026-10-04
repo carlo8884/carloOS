@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Stage = 'puppy' | 'adult' | 'senior'
 type Energy = 'low' | 'moderate' | 'high' | 'veryhigh'
@@ -73,9 +73,12 @@ export default function DogExerciseCalculator() {
   const [months, setMonths] = useState('4')
   const [energy, setEnergy] = useState<Energy>('moderate')
 
+  const monthsError = stage === 'puppy' ? numberFieldError(months, 'puppy age', 2, 18, 'months') : null
+
   const result = useMemo(() => {
     if (stage === 'puppy') {
-      const m = Math.max(2, Math.min(18, parseFloat(months) || 0))
+      if (monthsError) return null
+      const m = parseFloat(months)
       const perSession = Math.round(m * 5)
       return {
         headline: `${perSession} min per session, once or twice a day`,
@@ -98,7 +101,7 @@ export default function DogExerciseCalculator() {
       body: `For an adult ${e.label.toLowerCase()} dog, aim for ${e.min}–${e.max} minutes of real activity daily — and mental work counts too. Mix walks with sniff-walks, fetch, training games, and off-lead running where safe. Under-exercised dogs are a common source of "behaviour problems" that are really unmet needs. Build up gradually if your dog is currently unfit, and cut back in heat.`,
       tone: 'good' as const,
     }
-  }, [stage, months, energy])
+  }, [stage, months, energy, monthsError])
 
   const shop = resultShop(stage, energy)
 
@@ -136,9 +139,11 @@ export default function DogExerciseCalculator() {
             max={18}
             step={1}
             value={months}
+            aria-invalid={monthsError ? true : undefined}
             onChange={(e) => setMonths(e.target.value)}
             className="w-full max-w-[180px] rounded border border-brand-border bg-brand-white px-3 py-2.5 text-base text-brand-text-dark outline-none focus:border-brand-primary"
           />
+          {monthsError && <ToolError>{monthsError}</ToolError>}
         </label>
       ) : (
         <div className="mb-6">
@@ -165,13 +170,18 @@ export default function DogExerciseCalculator() {
         </div>
       )}
 
-      <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
-        <p className="text-2xs uppercase tracking-eyebrow text-brand-text-light">Suggested daily exercise</p>
-        <p className="mt-1 font-display text-2xl font-bold" style={{ color: result.tone === 'warn' ? '#b45309' : '#15803d' }}>
-          {result.headline}
-        </p>
-        <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.body}</p>
-      </div>
+      {result && (
+        <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
+          <p className="text-2xs uppercase tracking-eyebrow text-brand-text-light">Suggested daily exercise</p>
+          <p className="mt-1 font-display text-2xl font-bold" style={{ color: result.tone === 'warn' ? '#b45309' : '#15803d' }}>
+            {result.headline}
+          </p>
+          <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.body}</p>
+          <ResultMeaning>
+            That minute range is a planning guideline for this life stage, not a prescription for how much this dog must exercise.
+          </ResultMeaning>
+        </div>
+      )}
 
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">

@@ -16,6 +16,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -187,6 +188,9 @@ export default function CatGrimaceScale() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+          <ResultMeaning>
+            The total adds the five facial scores. It is an education aid for deciding whether to call a veterinarian, not a diagnosis.
+          </ResultMeaning>
         </div>
       ) : (
         <p className="mt-2 text-sm text-brand-text-light">

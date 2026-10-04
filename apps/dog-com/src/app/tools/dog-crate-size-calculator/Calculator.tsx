@@ -15,6 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 
@@ -59,15 +60,21 @@ function show(nIn: number, unit: Unit): string {
 }
 
 export default function DogCrateSizeCalculator() {
-  const [length, setLength] = useState<number>(24)
-  const [height, setHeight] = useState<number>(18)
+  const [lengthText, setLengthText] = useState('24')
+  const [heightText, setHeightText] = useState('18')
   const [unit, setUnit] = useState<Unit>('in')
+  const lengthMax = unit === 'in' ? 80 : 200
+  const heightMax = unit === 'in' ? 48 : 120
+  const lengthError = numberFieldError(lengthText, 'body length', 4, lengthMax, unit)
+  const heightError = numberFieldError(heightText, 'standing height', 4, heightMax, unit)
+  const inputError = lengthError || heightError
 
   const result = useMemo(() => {
-    const lengthIn = inFromUnit(length, unit)
-    const heightIn = inFromUnit(height, unit)
+    if (inputError) return null
+    const lengthIn = inFromUnit(Number(lengthText), unit)
+    const heightIn = inFromUnit(Number(heightText), unit)
     return compute(lengthIn, heightIn)
-  }, [length, height, unit])
+  }, [lengthText, heightText, unit, inputError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -84,8 +91,9 @@ export default function DogCrateSizeCalculator() {
             min={1}
             max={120}
             step={unit === 'cm' ? 1 : 0.5}
-            value={length}
-            onChange={(e) => setLength(Math.max(1, Number(e.target.value) || 1))}
+            value={lengthText}
+            aria-invalid={lengthError ? true : undefined}
+            onChange={(e) => setLengthText(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-2xs text-brand-text-light leading-snug">
@@ -105,8 +113,9 @@ export default function DogCrateSizeCalculator() {
             min={1}
             max={60}
             step={unit === 'cm' ? 1 : 0.5}
-            value={height}
-            onChange={(e) => setHeight(Math.max(1, Number(e.target.value) || 1))}
+            value={heightText}
+            aria-invalid={heightError ? true : undefined}
+            onChange={(e) => setHeightText(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-2xs text-brand-text-light leading-snug">
@@ -137,7 +146,10 @@ export default function DogCrateSizeCalculator() {
         </div>
       </div>
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
       {/* Result */}
+      {result && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <div className="grid gap-5 sm:grid-cols-3">
           <div>
@@ -168,7 +180,11 @@ export default function DogCrateSizeCalculator() {
             lets your dog stand, turn, and lie flat with room to spare. If your dog is between sizes or still growing, size up.
           </p>
         )}
+        <ResultMeaning>
+          The recommended size is the smallest standard crate that clears both minimums, so the dog can stand, turn, and lie flat.
+        </ResultMeaning>
       </div>
+      )}
 
       <p className="mt-5 text-sm leading-relaxed text-brand-text-mid">
         <strong>Buying for a puppy?</strong> Size the crate to the expected <em>adult</em> dimensions and

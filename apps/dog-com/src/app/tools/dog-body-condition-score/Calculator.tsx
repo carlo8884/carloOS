@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -218,6 +218,9 @@ export default function DogBCSCalculator() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+          <ResultMeaning>
+            That score is the rounded average of the rib, waist, and tuck answers, not a veterinary diagnosis.
+          </ResultMeaning>
         </div>
       ) : null}
 
@@ -233,9 +236,7 @@ export default function DogBCSCalculator() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
         </div>
       ) : (
-        <p className="mt-2 text-sm text-brand-text-light">
-          Answer all three to see your dog&apos;s estimated body condition score.
-        </p>
+        <ToolError>Answer all three body-condition questions to see a score.</ToolError>
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">

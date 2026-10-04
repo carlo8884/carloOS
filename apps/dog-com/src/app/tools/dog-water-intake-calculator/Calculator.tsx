@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -85,11 +85,14 @@ function resultShop(highOz: number): {
 }
 
 export default function DogWaterIntakeCalculator() {
-  const [weight, setWeight] = useState<number>(40)
+  const [weightText, setWeightText] = useState('40')
   const [unit, setUnit] = useState<Unit>('lb')
+  const weightMax = unit === 'lb' ? 250 : 113
+  const weightError = numberFieldError(weightText, 'body weight', 0.5, weightMax, unit)
+  const weight = weightError ? null : Number(weightText)
 
-  const result = useMemo(() => compute(weight, unit), [weight, unit])
-  const shop = resultShop(result.highOz)
+  const result = useMemo(() => (weight == null ? null : compute(weight, unit)), [weight, unit])
+  const shop = result ? resultShop(result.highOz) : null
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -106,8 +109,9 @@ export default function DogWaterIntakeCalculator() {
             min={0.5}
             max={250}
             step={0.5}
-            value={weight}
-            onChange={(e) => setWeight(Math.max(0.5, Number(e.target.value) || 0.5))}
+            value={weightText}
+            aria-invalid={weightError ? true : undefined}
+            onChange={(e) => setWeightText(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
           />
         </div>
@@ -135,7 +139,10 @@ export default function DogWaterIntakeCalculator() {
         </div>
       </div>
 
+      {weightError && <ToolError>{weightError}</ToolError>}
+
       {/* Result */}
+      {result && shop && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <p className="text-2xs uppercase tracking-wide text-brand-text-light">Typical daily water intake</p>
         <p className="mt-1 font-display text-3xl font-bold text-brand-primary">
@@ -149,8 +156,13 @@ export default function DogWaterIntakeCalculator() {
           dry-kibble diet (canned food supplies a lot of water on its own). This is total water — what your
           dog drinks plus the moisture in its food.
         </p>
+        <ResultMeaning>
+          That range is the typical amount of water to offer this dog in a day. It is not a medical fluid plan.
+        </ResultMeaning>
       </div>
+      )}
 
+      {shop && (
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
           Next step
@@ -161,6 +173,7 @@ export default function DogWaterIntakeCalculator() {
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
       </div>
+      )}
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
         Husbandry estimate only. A sustained jump or drop in how much your dog drinks — or sudden excessive

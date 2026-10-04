@@ -19,7 +19,14 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+
+function stallCountError(raw: string): string | null {
+  const base = numberFieldError(raw, 'stall count', 1, 20)
+  if (base) return base
+  if (!Number.isInteger(Number(raw))) return 'Enter a whole number of stalls between 1 and 20.'
+  return null
+}
 
 type BeddingType = 'shavings' | 'pellets' | 'straw'
 
@@ -99,15 +106,21 @@ export default function Calculator() {
   const [type, setType] = useState<BeddingType>('shavings')
 
   const bedding = BEDDING.find((b) => b.value === type) ?? BEDDING[0]
+  const stallsError = stallCountError(stalls)
+  const lengthError = numberFieldError(length, 'stall length', 4, 40, 'ft')
+  const widthError = numberFieldError(width, 'stall width', 4, 40, 'ft')
+  const depthError = numberFieldError(depth, 'bed depth', 1, 18, 'in')
+  const inputError = stallsError || lengthError || widthError || depthError
 
   const result = useMemo(() => {
+    if (inputError) return null
     const l = parseFloat(length)
     const w = parseFloat(width)
     const d = parseFloat(depth)
     const n = parseFloat(stalls)
     if ([l, w, d, n].some((v) => Number.isNaN(v))) return null
     return compute(l, w, d, n, bedding)
-  }, [length, width, depth, stalls, bedding])
+  }, [length, width, depth, stalls, bedding, inputError])
 
   const unitWord = result && result.unitsInitial === 1 ? bedding.unitLabel : bedding.unitPlural
   const weeklyWord = result && result.unitsWeekly === 1 ? bedding.unitLabel : bedding.unitPlural
@@ -144,6 +157,7 @@ export default function Calculator() {
             min="1"
             step="1"
             value={stalls}
+            aria-invalid={stallsError ? true : undefined}
             onChange={(e) => setStalls(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
@@ -160,6 +174,7 @@ export default function Calculator() {
             min="0"
             step="0.5"
             value={length}
+            aria-invalid={lengthError ? true : undefined}
             onChange={(e) => setLength(e.target.value)}
             placeholder="e.g. 12"
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -177,6 +192,7 @@ export default function Calculator() {
             min="0"
             step="0.5"
             value={width}
+            aria-invalid={widthError ? true : undefined}
             onChange={(e) => setWidth(e.target.value)}
             placeholder="e.g. 12"
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -197,6 +213,7 @@ export default function Calculator() {
             min="0"
             step="0.5"
             value={depth}
+            aria-invalid={depthError ? true : undefined}
             onChange={(e) => setDepth(e.target.value)}
             placeholder="e.g. 6"
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -204,7 +221,9 @@ export default function Calculator() {
         </div>
       </div>
 
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
+      {inputError && <ToolError>{inputError}</ToolError>}
+
+      {result && <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
             Initial bed
@@ -240,7 +259,13 @@ export default function Calculator() {
             {bedding.cuFtPerUnit} cu ft per {bedding.unitLabel}
           </p>
         </div>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          This bag count is the bedding volume for the stall size and depth you entered, a planning estimate rather than a bag label.
+        </ResultMeaning>
+      )}
 
       <p className="mt-4 text-sm text-brand-text-mid">{bedding.note}</p>
 

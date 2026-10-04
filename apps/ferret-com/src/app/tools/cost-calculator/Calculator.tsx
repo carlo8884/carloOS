@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Housing = 'starter' | 'multilevel' | 'room'
 type FoodStyle = 'kibble' | 'kibble-topper' | 'whole-prey'
@@ -78,6 +79,8 @@ interface Inputs {
   insuranceMonthly: number
 }
 
+type RawInputs = Record<keyof Inputs, string>
+
 const OTHER_DEFAULTS = {
   ferrets: 2,
   lifespanYears: 6,
@@ -123,6 +126,7 @@ interface Field {
   step: number
   prefix?: string
   suffix?: string
+  unit?: string
 }
 
 const HOUSEHOLD_FIELDS: Field[] = [
@@ -131,41 +135,62 @@ const HOUSEHOLD_FIELDS: Field[] = [
 ]
 
 const ONETIME_FIELDS: Field[] = [
-  { key: 'cageAndSetup', label: 'Cage + initial setup (household)', hint: 'Filled from the housing preset. Edit to match your receipt.', min: 0, max: 2000, step: 10, prefix: '$' },
-  { key: 'acquisition', label: 'Acquisition (per ferret)', hint: 'Adoption fee or purchase price.', min: 0, max: 1000, step: 10, prefix: '$' },
-  { key: 'initialVet', label: 'Initial vet (per ferret)', hint: 'First exam, vaccines (distemper/rabies), spay/neuter if not already done, microchip.', min: 0, max: 1000, step: 10, prefix: '$' },
+  { key: 'cageAndSetup', label: 'Cage + initial setup (household)', hint: 'Filled from the housing preset. Edit to match your receipt.', min: 0, max: 2000, step: 10, prefix: '$', unit: 'dollars' },
+  { key: 'acquisition', label: 'Acquisition (per ferret)', hint: 'Adoption fee or purchase price.', min: 0, max: 1000, step: 10, prefix: '$', unit: 'dollars' },
+  { key: 'initialVet', label: 'Initial vet (per ferret)', hint: 'First exam, vaccines (distemper/rabies), spay/neuter if not already done, microchip.', min: 0, max: 1000, step: 10, prefix: '$', unit: 'dollars' },
 ]
 
 const RECURRING_FIELDS: Field[] = [
-  { key: 'monthlyFoodLitter', label: 'Food + litter / month (per ferret)', hint: 'Filled from the food-style preset. Edit to match your bag prices.', min: 0, max: 300, step: 5, prefix: '$' },
-  { key: 'monthlySupplies', label: 'Supplies + enrichment / month (per ferret)', hint: 'Bedding replacement, toys, cleaning supplies, treats.', min: 0, max: 200, step: 5, prefix: '$' },
-  { key: 'annualVet', label: 'Routine vet / year (per ferret)', hint: 'Annual wellness exam and vaccine boosters. Excludes illness.', min: 0, max: 1500, step: 25, prefix: '$' },
-  { key: 'insuranceMonthly', label: 'Pet insurance / month (per ferret)', hint: 'Optional. Exotic-pet coverage varies; leave at 0 if self-insuring.', min: 0, max: 200, step: 5, prefix: '$' },
+  { key: 'monthlyFoodLitter', label: 'Food + litter / month (per ferret)', hint: 'Filled from the food-style preset. Edit to match your bag prices.', min: 0, max: 300, step: 5, prefix: '$', unit: 'dollars' },
+  { key: 'monthlySupplies', label: 'Supplies + enrichment / month (per ferret)', hint: 'Bedding replacement, toys, cleaning supplies, treats.', min: 0, max: 200, step: 5, prefix: '$', unit: 'dollars' },
+  { key: 'annualVet', label: 'Routine vet / year (per ferret)', hint: 'Annual wellness exam and vaccine boosters. Excludes illness.', min: 0, max: 1500, step: 25, prefix: '$', unit: 'dollars' },
+  { key: 'insuranceMonthly', label: 'Pet insurance / month (per ferret)', hint: 'Optional. Exotic-pet coverage varies; leave at 0 if self-insuring.', min: 0, max: 200, step: 5, prefix: '$', unit: 'dollars' },
 ]
+
+const ALL_FIELDS: Field[] = [...HOUSEHOLD_FIELDS, ...ONETIME_FIELDS, ...RECURRING_FIELDS]
+
+function defaultRaw(): RawInputs {
+  return {
+    ferrets: String(OTHER_DEFAULTS.ferrets),
+    lifespanYears: String(OTHER_DEFAULTS.lifespanYears),
+    acquisition: String(OTHER_DEFAULTS.acquisition),
+    initialVet: String(OTHER_DEFAULTS.initialVet),
+    monthlySupplies: String(OTHER_DEFAULTS.monthlySupplies),
+    annualVet: String(OTHER_DEFAULTS.annualVet),
+    insuranceMonthly: String(OTHER_DEFAULTS.insuranceMonthly),
+    cageAndSetup: String(HOUSING.multilevel.cageAndSetup),
+    monthlyFoodLitter: String(FOOD.kibble.monthlyFoodLitter),
+  }
+}
 
 export default function CostCalculator() {
   const [housing, setHousing] = useState<Housing>('multilevel')
   const [foodStyle, setFoodStyle] = useState<FoodStyle>('kibble')
-  const [inputs, setInputs] = useState<Inputs>({
-    ...OTHER_DEFAULTS,
-    cageAndSetup: HOUSING.multilevel.cageAndSetup,
-    monthlyFoodLitter: FOOD.kibble.monthlyFoodLitter,
-  })
-  const result = useMemo(() => compute(inputs), [inputs])
+  const [inputs, setInputs] = useState<RawInputs>(defaultRaw)
+  const fieldErrors = ALL_FIELDS.map((f) => ({
+    key: f.key,
+    message: numberFieldError(inputs[f.key], f.label.charAt(0).toLowerCase() + f.label.slice(1), f.min, f.max, f.unit),
+  }))
+  const inputsValid = fieldErrors.every((e) => e.message === null)
+  const result = useMemo(() => {
+    if (!inputsValid) return null
+    const numeric = {} as Inputs
+    for (const f of ALL_FIELDS) numeric[f.key] = Number(inputs[f.key])
+    return compute(numeric)
+  }, [inputs, inputsValid])
 
   function applyHousing(next: Housing) {
     setHousing(next)
-    setInputs((prev) => ({ ...prev, cageAndSetup: HOUSING[next].cageAndSetup }))
+    setInputs((prev) => ({ ...prev, cageAndSetup: String(HOUSING[next].cageAndSetup) }))
   }
 
   function applyFood(next: FoodStyle) {
     setFoodStyle(next)
-    setInputs((prev) => ({ ...prev, monthlyFoodLitter: FOOD[next].monthlyFoodLitter }))
+    setInputs((prev) => ({ ...prev, monthlyFoodLitter: String(FOOD[next].monthlyFoodLitter) }))
   }
 
   function set(key: keyof Inputs, raw: string) {
-    const v = Number(raw)
-    setInputs((prev) => ({ ...prev, [key]: Number.isFinite(v) ? Math.max(0, v) : 0 }))
+    setInputs((prev) => ({ ...prev, [key]: raw }))
   }
 
   function renderFields(fields: Field[]) {
@@ -190,6 +215,9 @@ export default function CostCalculator() {
           {f.suffix && <span className="text-sm text-brand-text-light">{f.suffix}</span>}
         </div>
         {f.hint && <p className="mt-1 text-2xs text-brand-text-light leading-snug">{f.hint}</p>}
+        {fieldErrors.find((e) => e.key === f.key)?.message && (
+          <ToolError>{fieldErrors.find((e) => e.key === f.key)?.message}</ToolError>
+        )}
       </div>
     ))
   }
@@ -255,6 +283,7 @@ export default function CostCalculator() {
         </div>
       </div>
 
+      {result && (
       <div aria-live="polite" aria-atomic="true" className="mt-6 grid grid-cols-2 gap-3 lg:grid-cols-4">
         <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Monthly (ongoing)</p>
@@ -276,6 +305,12 @@ export default function CostCalculator() {
           <p className="mt-1 text-2xs text-brand-text-light">≈ {dollars(result.lifetime)} over {inputs.lifespanYears} yrs</p>
         </div>
       </div>
+      )}
+      {result && (
+        <ResultMeaning>
+          First-year cost adds one-time setup to a year of recurring costs. These are editable planning figures, not a quote.
+        </ResultMeaning>
+      )}
 
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">Budget for illness separately.</span> This estimate covers routine

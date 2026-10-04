@@ -13,6 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 type SizeClass = 'toy' | 'small' | 'medium' | 'large' | 'giant'
@@ -206,52 +207,71 @@ function rangeLabel(band: Band, unit: Unit): string {
   return `${showIn(band.minIn, unit)}–${showIn(band.maxIn, unit)}`
 }
 
+function displayNum(n: number): string {
+  return String(Math.round(n * 10) / 10)
+}
+
 export default function HarnessCollarSizeCalculator() {
   const [sizeClass, setSizeClass] = useState<SizeClass>('medium')
   const [unit, setUnit] = useState<Unit>('in')
-  const [weight, setWeight] = useState<number>(SIZE_PRESETS.medium.weightLb)
-  const [neck, setNeck] = useState<number>(SIZE_PRESETS.medium.neckIn)
-  const [chest, setChest] = useState<number>(SIZE_PRESETS.medium.chestIn)
+  const [weightText, setWeightText] = useState('40')
+  const [neckText, setNeckText] = useState('16')
+  const [chestText, setChestText] = useState('25')
+
+  const weightMax = unit === 'in' ? 250 : 113
+  const lengthMax = unit === 'in' ? 60 : 152
+  const weightUnit = unit === 'in' ? 'lb' : 'kg'
+  const weightError = numberFieldError(weightText, 'body weight', 0.5, weightMax, weightUnit)
+  const neckError = numberFieldError(neckText, 'neck circumference', 1, lengthMax, unit)
+  const chestError = numberFieldError(chestText, 'chest girth', 1, lengthMax, unit)
+  const inputError = weightError || neckError || chestError
 
   const result = useMemo(() => {
+    if (inputError) return null
+    const neck = Number(neckText)
+    const chest = Number(chestText)
+    const weight = Number(weightText)
     const neckIn = inFromUnit(neck, unit)
     const chestIn = inFromUnit(chest, unit)
     const weightLb = lbFromDisplay(weight, unit)
     return compute(neckIn, chestIn, weightLb, sizeClass, neck > 0, chest > 0, weight > 0)
-  }, [neck, chest, weight, sizeClass, unit])
+  }, [neckText, chestText, weightText, sizeClass, unit, inputError])
 
   function onSize(next: SizeClass) {
     setSizeClass(next)
     const preset = SIZE_PRESETS[next]
     if (unit === 'cm') {
-      setWeight(Math.round((preset.weightLb / LB_PER_KG) * 10) / 10)
-      setNeck(Math.round(preset.neckIn * 2.54))
-      setChest(Math.round(preset.chestIn * 2.54))
+      setWeightText(displayNum(preset.weightLb / LB_PER_KG))
+      setNeckText(String(Math.round(preset.neckIn * 2.54)))
+      setChestText(String(Math.round(preset.chestIn * 2.54)))
     } else {
-      setWeight(preset.weightLb)
-      setNeck(preset.neckIn)
-      setChest(preset.chestIn)
+      setWeightText(String(preset.weightLb))
+      setNeckText(String(preset.neckIn))
+      setChestText(String(preset.chestIn))
     }
   }
 
   function onUnit(next: Unit) {
     if (next === unit) return
-    if (next === 'cm') {
-      setWeight(Math.round((weight * (unit === 'in' ? 1 / LB_PER_KG : 1)) * 10) / 10)
-      setNeck(Math.round(inFromUnit(neck, unit) * 2.54))
-      setChest(Math.round(inFromUnit(chest, unit) * 2.54))
-    } else {
-      const neckIn = inFromUnit(neck, unit)
-      const chestIn = inFromUnit(chest, unit)
-      const weightLb = lbFromDisplay(weight, unit)
-      setWeight(Math.round(weightLb * 10) / 10)
-      setNeck(Math.round(neckIn * 10) / 10)
-      setChest(Math.round(chestIn * 10) / 10)
+    const neck = Number(neckText)
+    const chest = Number(chestText)
+    const weight = Number(weightText)
+    if (Number.isFinite(neck) && Number.isFinite(chest) && Number.isFinite(weight)) {
+      if (next === 'cm') {
+        setWeightText(displayNum(weight / LB_PER_KG))
+        setNeckText(String(Math.round(inFromUnit(neck, unit) * 2.54)))
+        setChestText(String(Math.round(inFromUnit(chest, unit) * 2.54)))
+      } else {
+        const neckIn = inFromUnit(neck, unit)
+        const chestIn = inFromUnit(chest, unit)
+        const weightLb = lbFromDisplay(weight, unit)
+        setWeightText(displayNum(weightLb))
+        setNeckText(displayNum(neckIn))
+        setChestText(displayNum(chestIn))
+      }
     }
     setUnit(next)
   }
-
-  const weightUnit = unit === 'cm' ? 'kg' : 'lb'
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -306,35 +326,39 @@ export default function HarnessCollarSizeCalculator() {
         <NumberField
           id="hc-weight"
           label={`Weight (${weightUnit})`}
-          value={weight}
-          min={1}
-          max={unit === 'cm' ? 120 : 250}
+          value={weightText}
+          min={0.5}
+          max={weightMax}
           step={unit === 'cm' ? 0.5 : 1}
-          onChange={setWeight}
-          hint="Optional. Used as a cross-check and as a fallback if a measurement is blank."
+          onChange={setWeightText}
+          error={weightError}
+          hint="Used as a cross-check against the tape measurements."
         />
         <NumberField
           id="hc-neck"
           label={`Neck circumference (${unit})`}
-          value={neck}
+          value={neckText}
           min={1}
-          max={unit === 'cm' ? 90 : 36}
+          max={lengthMax}
           step={unit === 'cm' ? 1 : 0.5}
-          onChange={setNeck}
+          onChange={setNeckText}
+          error={neckError}
           hint="Tape around the neck where a flat collar sits — snug, not tight."
         />
         <NumberField
           id="hc-chest"
           label={`Chest / girth (${unit})`}
-          value={chest}
+          value={chestText}
           min={1}
-          max={unit === 'cm' ? 140 : 56}
+          max={lengthMax}
           step={unit === 'cm' ? 1 : 0.5}
-          onChange={setChest}
+          onChange={setChestText}
+          error={chestError}
           hint="Widest point of the ribcage, just behind the front legs."
         />
       </div>
 
+      {result && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <div className="grid gap-5 sm:grid-cols-2">
           <div>
@@ -384,7 +408,11 @@ export default function HarnessCollarSizeCalculator() {
             Trust the tape. Coat, chest shape, and brand cut all move the letter size.
           </p>
         )}
+        <ResultMeaning>
+          Those letter sizes are typical retail bands for the neck and chest you entered, not a guarantee that a specific brand will fit.
+        </ResultMeaning>
       </div>
+      )}
 
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
         <div className="rounded-lg border border-brand-border bg-brand-white p-4">
@@ -425,15 +453,17 @@ function NumberField({
   step,
   onChange,
   hint,
+  error,
 }: {
   id: string
   label: string
-  value: number
+  value: string
   min: number
   max: number
   step: number
-  onChange: (n: number) => void
+  onChange: (raw: string) => void
   hint: string
+  error: string | null
 }) {
   return (
     <div>
@@ -448,10 +478,11 @@ function NumberField({
         max={max}
         step={step}
         value={value}
-        onChange={(e) => onChange(Math.max(0, Number(e.target.value) || 0))}
+        aria-invalid={error ? true : undefined}
+        onChange={(e) => onChange(e.target.value)}
         className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
       />
-      <p className="mt-1 text-2xs text-brand-text-light leading-snug">{hint}</p>
+      {error ? <ToolError>{error}</ToolError> : <p className="mt-1 text-2xs text-brand-text-light leading-snug">{hint}</p>}
     </div>
   )
 }

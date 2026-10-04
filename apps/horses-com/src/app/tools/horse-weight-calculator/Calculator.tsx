@@ -20,7 +20,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 type HorseType = 'pony' | 'riding' | 'draft' | 'youngstock'
@@ -98,17 +98,23 @@ function round(n: number): number {
 export default function Calculator() {
   const [unit, setUnit] = useState<Unit>('in')
   const [type, setType] = useState<HorseType>('riding')
-  const [girth, setGirth] = useState<string>('')
-  const [length, setLength] = useState<string>('')
+  const [girth, setGirth] = useState<string>('72')
+  const [length, setLength] = useState<string>('64')
 
   const typeOption = TYPES.find((t) => t.value === type) ?? TYPES[1]
+  const measureMin = unit === 'in' ? 20 : 51
+  const measureMax = unit === 'in' ? 120 : 305
+  const girthError = numberFieldError(girth, 'heart girth', measureMin, measureMax, unit)
+  const lengthError = numberFieldError(length, 'body length', measureMin, measureMax, unit)
+  const inputError = girthError || lengthError
 
   const result = useMemo(() => {
+    if (inputError) return null
     const g = parseFloat(girth)
     const l = parseFloat(length)
     if (Number.isNaN(g) || Number.isNaN(l)) return null
     return compute(g, l, unit, typeOption)
-  }, [girth, length, unit, typeOption])
+  }, [girth, length, unit, typeOption, inputError])
 
   const unitLabel = unit === 'in' ? 'inches' : 'cm'
 
@@ -177,6 +183,7 @@ export default function Calculator() {
             min="0"
             step="0.1"
             value={girth}
+            aria-invalid={girthError ? true : undefined}
             onChange={(e) => setGirth(e.target.value)}
             placeholder={unit === 'in' ? 'e.g. 72' : 'e.g. 183'}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -201,6 +208,7 @@ export default function Calculator() {
             min="0"
             step="0.1"
             value={length}
+            aria-invalid={lengthError ? true : undefined}
             onChange={(e) => setLength(e.target.value)}
             placeholder={unit === 'in' ? 'e.g. 64' : 'e.g. 163'}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -208,8 +216,10 @@ export default function Calculator() {
         </div>
       </div>
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
       {/* Result */}
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
+      {result && <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
             Estimated weight
@@ -233,7 +243,13 @@ export default function Calculator() {
             ({unit === 'in' ? 'imperial' : 'metric'})
           </p>
         </div>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          This figure is a girth-and-length estimate for planning feed and condition checks, not a scale weight.
+        </ResultMeaning>
+      )}
 
       <p className="mt-4 text-sm text-brand-text-mid">{typeOption.note}</p>
 

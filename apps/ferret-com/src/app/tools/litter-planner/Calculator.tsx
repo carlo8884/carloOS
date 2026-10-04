@@ -11,6 +11,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Cadence = 'daily' | 'every-2-days'
 
@@ -32,10 +33,12 @@ function compute(ferrets: number): Result {
 }
 
 export default function LitterPlanner() {
-  const [ferrets, setFerrets] = useState(2)
+  const [ferretsRaw, setFerretsRaw] = useState('2')
   const [cadence, setCadence] = useState<Cadence>('daily')
+  const ferretsError = numberFieldError(ferretsRaw, 'ferret count', 1, 12)
+  const ferrets = ferretsError ? 0 : Number(ferretsRaw)
 
-  const result = useMemo(() => compute(ferrets), [ferrets])
+  const result = useMemo(() => (ferretsError ? null : compute(ferrets)), [ferrets, ferretsError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -51,13 +54,14 @@ export default function LitterPlanner() {
             min={1}
             max={12}
             step={1}
-            value={ferrets}
-            onChange={(e) => setFerrets(Math.max(1, Math.min(12, Number(e.target.value) || 1)))}
+            value={ferretsRaw}
+            onChange={(e) => setFerretsRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-2xs text-brand-text-light leading-snug">
             Ferrets are social; many keepers house two or more. Litter scales with headcount.
           </p>
+          {ferretsError && <ToolError>{ferretsError}</ToolError>}
         </div>
         <div>
           <p className="mb-2 text-xs font-medium text-brand-text-mid">Full pan change</p>
@@ -89,6 +93,7 @@ export default function LitterPlanner() {
         </div>
       </div>
 
+      {result && (
       <div className="mt-8 rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
         <div className="grid gap-5 sm:grid-cols-3">
           <div>
@@ -115,7 +120,11 @@ export default function LitterPlanner() {
             : 'Every-other-day full changes work if you scoop wet spots daily. If accidents start, go back to daily.'}{' '}
           Default litter is recycled paper pellet — never clumping clay or aromatic pine/cedar shavings.
         </p>
+        <ResultMeaning>
+          Corner pans and bag counts are a starter-kit plan for this number of ferrets. They use the 7-week midpoint for a 30 lb bag, not a store quote.
+        </ResultMeaning>
       </div>
+      )}
 
       <p className="mt-5 text-2xs leading-snug text-brand-text-light">
         Planning figure only: a 30 lb paper-pellet bag lasts about 6–8 weeks for one ferret (this tool uses

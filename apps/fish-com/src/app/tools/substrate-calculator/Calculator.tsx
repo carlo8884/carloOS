@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -40,7 +41,15 @@ export default function SubstrateCalculator() {
   const [depth, setDepth] = useState('2')
   const [substrate, setSubstrate] = useState<Substrate>('gravel')
 
+  const dimMax = unit === 'in' ? 240 : 600
+  const depthMax = unit === 'in' ? 12 : 30
+  const lengthError = numberFieldError(length, 'tank length', 1, dimMax, unit)
+  const widthError = numberFieldError(width, 'tank width', 1, dimMax, unit)
+  const depthError = numberFieldError(depth, 'substrate depth', unit === 'in' ? 0.25 : 0.5, depthMax, unit)
+  const inputError = lengthError || widthError || depthError
+
   const result = useMemo(() => {
+    if (inputError) return null
     const lRaw = parseFloat(length) || 0
     const wRaw = parseFloat(width) || 0
     const dRaw = parseFloat(depth) || 0
@@ -68,7 +77,7 @@ export default function SubstrateCalculator() {
       lbsBuy: lbs * BUY_MARGIN,
       litersBuy: liters * BUY_MARGIN,
     }
-  }, [unit, length, width, depth, substrate])
+  }, [unit, length, width, depth, substrate, inputError])
 
   return (
     <div>
@@ -90,8 +99,10 @@ export default function SubstrateCalculator() {
             value={length}
             onChange={setLength}
             unit={unit}
-            min={0}
+            min={1}
+            max={dimMax}
             step={0.1}
+            error={lengthError}
           />
 
           <FieldNumber
@@ -99,8 +110,10 @@ export default function SubstrateCalculator() {
             value={width}
             onChange={setWidth}
             unit={unit}
-            min={0}
+            min={1}
+            max={dimMax}
             step={0.1}
+            error={widthError}
           />
 
           <FieldNumber
@@ -108,9 +121,11 @@ export default function SubstrateCalculator() {
             value={depth}
             onChange={setDepth}
             unit={unit}
-            min={0}
+            min={unit === 'in' ? 0.25 : 0.5}
+            max={depthMax}
             step={0.1}
             hint="1–2 in (2.5–5 cm) is typical; go 2.5–3 in for rooted/planted tanks."
+            error={depthError}
           />
 
           <FieldSelect
@@ -149,6 +164,12 @@ export default function SubstrateCalculator() {
             </>
           }
         />
+      )}
+
+      {result && (
+        <ResultMeaning>
+          That weight is how much substrate to buy for this footprint and depth, including about 10% extra for settling. Check the bag, because poured density varies by product.
+        </ResultMeaning>
       )}
 
       {result && (

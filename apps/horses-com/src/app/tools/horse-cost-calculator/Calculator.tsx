@@ -13,6 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 interface BoardOption {
   value: string
@@ -54,29 +55,31 @@ const BOARD_OPTIONS: BoardOption[] = [
 
 interface CostState {
   boardType: string
-  board: number
-  feed: number
-  farrierVisit: number
-  vetAnnual: number
-  insuranceMonthly: number
+  board: string
+  feed: string
+  farrierVisit: string
+  vetAnnual: string
+  insuranceMonthly: string
   insuranceOn: boolean
   startupOn: boolean
-  startupTack: number
-  startupFirstVet: number
+  startupTack: string
+  startupFirstVet: string
 }
 
 const DEFAULTS: CostState = {
   boardType: 'full',
-  board: 700,
-  feed: 120, // supplemental feed/hay beyond what board provides; full-board often bundles hay
-  farrierVisit: 55, // trim; shoeing runs higher (see note)
-  vetAnnual: 500, // routine spring/fall exam + core vaccines + annual dental float
-  insuranceMonthly: 45, // major-medical + mortality on a mid-value horse
+  board: '700',
+  feed: '120', // supplemental feed/hay beyond what board provides; full-board often bundles hay
+  farrierVisit: '55', // trim; shoeing runs higher (see note)
+  vetAnnual: '500', // routine spring/fall exam + core vaccines + annual dental float
+  insuranceMonthly: '45', // major-medical + mortality on a mid-value horse
   insuranceOn: false,
   startupOn: false,
-  startupTack: 1500, // saddle, bridle, pad, halters, grooming, blankets, basics
-  startupFirstVet: 600, // pre-purchase exam + initial workup/vaccines
+  startupTack: '1500', // saddle, bridle, pad, halters, grooming, blankets, basics
+  startupFirstVet: '600', // pre-purchase exam + initial workup/vaccines
 }
+
+const COST_MAX = 100000
 
 const FARRIER_CYCLE_WEEKS = 6
 // 52 weeks / 6-week cycle ≈ 8.67 visits per year.
@@ -101,35 +104,55 @@ export default function Calculator() {
 
   function selectBoard(boardType: string) {
     const opt = BOARD_OPTIONS.find((o) => o.value === boardType) ?? BOARD_OPTIONS[0]
-    setS((prev) => ({ ...prev, boardType, board: opt.monthly }))
+    setS((prev) => ({ ...prev, boardType, board: String(opt.monthly) }))
   }
 
   const boardOption = BOARD_OPTIONS.find((o) => o.value === s.boardType) ?? BOARD_OPTIONS[0]
+  const boardError = numberFieldError(s.board, 'boarding cost', 0, COST_MAX, 'dollars')
+  const feedError = numberFieldError(s.feed, 'feed cost', 0, COST_MAX, 'dollars')
+  const farrierError = numberFieldError(s.farrierVisit, 'farrier cost', 0, COST_MAX, 'dollars')
+  const vetError = numberFieldError(s.vetAnnual, 'vet cost', 0, COST_MAX, 'dollars')
+  const insuranceError = s.insuranceOn
+    ? numberFieldError(s.insuranceMonthly, 'insurance cost', 0, COST_MAX, 'dollars')
+    : null
+  const tackError = s.startupOn
+    ? numberFieldError(s.startupTack, 'tack cost', 0, COST_MAX, 'dollars')
+    : null
+  const firstVetError = s.startupOn
+    ? numberFieldError(s.startupFirstVet, 'pre-purchase exam cost', 0, COST_MAX, 'dollars')
+    : null
+  const inputError = boardError || feedError || farrierError || vetError || insuranceError || tackError || firstVetError
 
-  const { recurringMonthly, recurringAnnual, breakdown, startupTotal } = useMemo(() => {
-    const farrierAnnual = (s.farrierVisit || 0) * FARRIER_VISITS_PER_YEAR
-    const insuranceMonthly = s.insuranceOn ? s.insuranceMonthly || 0 : 0
+  const totals = useMemo(() => {
+    if (inputError) return null
+    const boardN = Number(s.board)
+    const feedN = Number(s.feed)
+    const farrierN = Number(s.farrierVisit)
+    const vetN = Number(s.vetAnnual)
+    const farrierAnnual = farrierN * FARRIER_VISITS_PER_YEAR
+    const insuranceMonthly = s.insuranceOn ? Number(s.insuranceMonthly) : 0
 
     const rows: Breakdown[] = [
-      { label: 'Boarding', monthly: s.board || 0, annual: (s.board || 0) * 12 },
-      { label: 'Feed & hay (supplemental)', monthly: s.feed || 0, annual: (s.feed || 0) * 12 },
+      { label: 'Boarding', monthly: boardN, annual: boardN * 12 },
+      { label: 'Feed & hay (supplemental)', monthly: feedN, annual: feedN * 12 },
       { label: `Farrier (every ${FARRIER_CYCLE_WEEKS} wks)`, monthly: farrierAnnual / 12, annual: farrierAnnual },
-      { label: 'Routine vet, dental & vaccines', monthly: (s.vetAnnual || 0) / 12, annual: s.vetAnnual || 0 },
+      { label: 'Routine vet, dental & vaccines', monthly: vetN / 12, annual: vetN },
       { label: 'Insurance', monthly: insuranceMonthly, annual: insuranceMonthly * 12 },
     ]
 
     const recurringMonthly = rows.reduce((a, r) => a + r.monthly, 0)
     const recurringAnnual = rows.reduce((a, r) => a + r.annual, 0)
-    const startupTotal = s.startupOn ? (s.startupTack || 0) + (s.startupFirstVet || 0) : 0
+    const startupTotal = s.startupOn ? Number(s.startupTack) + Number(s.startupFirstVet) : 0
 
     return { recurringMonthly, recurringAnnual, breakdown: rows, startupTotal }
-  }, [s])
+  }, [s, inputError])
 
   const numberField = (
     id: string,
     label: string,
-    value: number,
-    onChange: (n: number) => void,
+    value: string,
+    onChange: (raw: string) => void,
+    invalid: boolean,
     help?: string,
   ) => (
     <div>
@@ -145,8 +168,9 @@ export default function Calculator() {
           inputMode="decimal"
           min="0"
           step="1"
-          value={Number.isFinite(value) ? value : ''}
-          onChange={(e) => onChange(parseFloat(e.target.value) || 0)}
+          value={value}
+          aria-invalid={invalid ? true : undefined}
+          onChange={(e) => onChange(e.target.value)}
           className="w-full rounded-r border-0 bg-transparent px-1 py-2 text-brand-text-dark focus:outline-none"
         />
       </div>
@@ -176,10 +200,10 @@ export default function Calculator() {
       </div>
 
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        {numberField('hc-board', 'Boarding ($/month)', s.board, (n) => set('board', n), 'Editable — start from the board-type default above, then adjust to a real quote in your area.')}
-        {numberField('hc-feed', 'Feed & hay ($/month)', s.feed, (n) => set('feed', n), 'Supplemental grain/hay beyond what board provides. Self-care owners should raise this to cover all forage.')}
-        {numberField('hc-farrier', 'Farrier ($/visit)', s.farrierVisit, (n) => set('farrierVisit', n), `Charged every ~${FARRIER_CYCLE_WEEKS} weeks (~${FARRIER_VISITS_PER_YEAR.toFixed(1)} visits/yr). A trim runs less; full shoeing runs more.`)}
-        {numberField('hc-vet', 'Routine vet, dental & vaccines ($/year)', s.vetAnnual, (n) => set('vetAnnual', n), 'Annual wellness: spring/fall exam, core vaccines, and a dental float. Excludes emergencies/lameness work.')}
+        {numberField('hc-board', 'Boarding ($/month)', s.board, (n) => set('board', n), Boolean(boardError), 'Editable — start from the board-type default above, then adjust to a real quote in your area.')}
+        {numberField('hc-feed', 'Feed & hay ($/month)', s.feed, (n) => set('feed', n), Boolean(feedError), 'Supplemental grain/hay beyond what board provides. Self-care owners should raise this to cover all forage.')}
+        {numberField('hc-farrier', 'Farrier ($/visit)', s.farrierVisit, (n) => set('farrierVisit', n), Boolean(farrierError), `Charged every ~${FARRIER_CYCLE_WEEKS} weeks (~${FARRIER_VISITS_PER_YEAR.toFixed(1)} visits/yr). A trim runs less; full shoeing runs more.`)}
+        {numberField('hc-vet', 'Routine vet, dental & vaccines ($/year)', s.vetAnnual, (n) => set('vetAnnual', n), Boolean(vetError), 'Annual wellness: spring/fall exam, core vaccines, and a dental float. Excludes emergencies/lameness work.')}
       </div>
 
       {/* Insurance toggle */}
@@ -194,7 +218,7 @@ export default function Calculator() {
         </label>
         {s.insuranceOn && (
           <div className="mt-3 max-w-xs">
-            {numberField('hc-ins', 'Insurance ($/month)', s.insuranceMonthly, (n) => set('insuranceMonthly', n), 'Major-medical + mortality cover varies with the horse’s value and use.')}
+            {numberField('hc-ins', 'Insurance ($/month)', s.insuranceMonthly, (n) => set('insuranceMonthly', n), Boolean(insuranceError), 'Major-medical + mortality cover varies with the horse’s value and use.')}
           </div>
         )}
       </div>
@@ -211,25 +235,32 @@ export default function Calculator() {
         </label>
         {s.startupOn && (
           <div className="mt-3 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            {numberField('hc-tack', 'Tack & equipment (one-time)', s.startupTack, (n) => set('startupTack', n), 'Saddle, bridle, pads, halters, grooming kit, blankets, first-aid basics.')}
-            {numberField('hc-fvet', 'Pre-purchase exam + initial vet (one-time)', s.startupFirstVet, (n) => set('startupFirstVet', n), 'Vetting before purchase plus the first round of vaccines/workup.')}
+            {numberField('hc-tack', 'Tack & equipment (one-time)', s.startupTack, (n) => set('startupTack', n), Boolean(tackError), 'Saddle, bridle, pads, halters, grooming kit, blankets, first-aid basics.')}
+            {numberField('hc-fvet', 'Pre-purchase exam + initial vet (one-time)', s.startupFirstVet, (n) => set('startupFirstVet', n), Boolean(firstVetError), 'Vetting before purchase plus the first round of vaccines/workup.')}
           </div>
         )}
       </div>
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
+      {totals && (
+      <>
       {/* Result */}
       <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Estimated monthly</p>
-          <p className="mt-1 font-display text-4xl text-brand-text-dark">{usd(Math.round(recurringMonthly))}</p>
+          <p className="mt-1 font-display text-4xl text-brand-text-dark">{usd(Math.round(totals.recurringMonthly))}</p>
           <p className="mt-1 text-xs text-brand-text-mid">recurring cost / month</p>
         </div>
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Estimated annual</p>
-          <p className="mt-1 font-display text-4xl text-brand-text-dark">{usd(Math.round(recurringAnnual))}</p>
+          <p className="mt-1 font-display text-4xl text-brand-text-dark">{usd(Math.round(totals.recurringAnnual))}</p>
           <p className="mt-1 text-xs text-brand-text-mid">recurring cost / year</p>
         </div>
       </div>
+      <ResultMeaning>
+        These totals add the monthly amounts you entered into a planning budget, not a quote from a barn.
+      </ResultMeaning>
 
       {/* Breakdown table */}
       <div className="mt-4 overflow-hidden rounded border border-brand-border">
@@ -242,7 +273,7 @@ export default function Calculator() {
             </tr>
           </thead>
           <tbody>
-            {breakdown
+            {totals.breakdown
               .filter((r) => r.monthly > 0 || r.annual > 0)
               .map((r) => (
                 <tr key={r.label} className="border-t border-brand-border">
@@ -253,19 +284,21 @@ export default function Calculator() {
               ))}
             <tr className="border-t border-brand-border bg-brand-surface font-semibold">
               <td className="px-4 py-2 text-brand-text-dark">Total recurring</td>
-              <td className="px-4 py-2 text-right text-brand-text-dark">{usd(Math.round(recurringMonthly))}</td>
-              <td className="px-4 py-2 text-right text-brand-text-dark">{usd(Math.round(recurringAnnual))}</td>
+              <td className="px-4 py-2 text-right text-brand-text-dark">{usd(Math.round(totals.recurringMonthly))}</td>
+              <td className="px-4 py-2 text-right text-brand-text-dark">{usd(Math.round(totals.recurringAnnual))}</td>
             </tr>
           </tbody>
         </table>
       </div>
 
-      {s.startupOn && startupTotal > 0 && (
+      {s.startupOn && totals && totals.startupTotal > 0 && (
         <p className="mt-4 text-sm text-brand-text-mid">
           <strong>One-time startup (not in the totals above):</strong> about{' '}
-          <strong className="text-brand-text-dark">{usd(Math.round(startupTotal))}</strong> for tack and the
+          <strong className="text-brand-text-dark">{usd(Math.round(totals.startupTotal))}</strong> for tack and the
           pre-purchase exam. Add the purchase price of the horse itself separately — it ranges enormously.
         </p>
+      )}
+      </>
       )}
 
       <p className="mt-4 text-xs text-brand-text-mid">

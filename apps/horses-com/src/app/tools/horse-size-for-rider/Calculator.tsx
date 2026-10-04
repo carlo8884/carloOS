@@ -14,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'imperial' | 'metric'
 
@@ -93,24 +93,48 @@ export default function Calculator() {
   const [unit, setUnit] = useState<Unit>('imperial')
   const [discipline, setDiscipline] = useState<Discipline>('english')
   const [experience, setExperience] = useState<string>('intermediate')
-  const [weight, setWeight] = useState<string>('')
+  const [weight, setWeight] = useState<string>('160')
   const [heightFt, setHeightFt] = useState<string>('')
   const [heightIn, setHeightIn] = useState<string>('')
   const [heightCm, setHeightCm] = useState<string>('')
 
   const expOption = EXPERIENCE.find((e) => e.value === experience) ?? EXPERIENCE[1]
   const discOption = DISCIPLINES.find((d) => d.value === discipline) ?? DISCIPLINES[0]
+  const weightError = numberFieldError(
+    weight,
+    'rider weight',
+    unit === 'imperial' ? 50 : 20,
+    unit === 'imperial' ? 400 : 200,
+    unit === 'imperial' ? 'lb' : 'kg',
+  )
+  const heightError = ((): string | null => {
+    if (unit === 'imperial') {
+      if (!heightFt.trim() && !heightIn.trim()) return null
+      const feetError = numberFieldError(heightFt, 'height in feet', 3, 7, 'ft')
+      if (feetError) return feetError
+      if (!Number.isInteger(Number(heightFt))) return 'Enter a whole number of feet.'
+      if (!heightIn.trim()) return null
+      const inchesError = numberFieldError(heightIn, 'height in inches', 0, 11, 'in')
+      if (inchesError) return inchesError
+      if (!Number.isInteger(Number(heightIn))) return 'Enter whole inches from 0 to 11.'
+      return null
+    }
+    if (!heightCm.trim()) return null
+    return numberFieldError(heightCm, 'height', 90, 220, 'cm')
+  })()
+  const inputError = weightError || heightError
 
   const riderWeightLb = useMemo(() => {
+    if (weightError) return null
     const w = parseFloat(weight)
     if (Number.isNaN(w) || w <= 0) return null
     return unit === 'imperial' ? w : w / 0.453592
-  }, [weight, unit])
+  }, [weight, unit, weightError])
 
   const result = useMemo(() => {
-    if (riderWeightLb == null) return null
+    if (inputError || riderWeightLb == null) return null
     return compute(riderWeightLb, discipline, expOption.pct)
-  }, [riderWeightLb, discipline, expOption.pct])
+  }, [riderWeightLb, discipline, expOption.pct, inputError])
 
   // Tall riders need leg length / barrel; flag if rider height suggests a taller horse.
   const riderTall = useMemo(() => {
@@ -159,6 +183,7 @@ export default function Calculator() {
             min="0"
             step="1"
             value={weight}
+            aria-invalid={weightError ? true : undefined}
             onChange={(e) => setWeight(e.target.value)}
             placeholder={unit === 'imperial' ? 'e.g. 160' : 'e.g. 73'}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -178,6 +203,7 @@ export default function Calculator() {
                 min="0"
                 step="1"
                 value={heightFt}
+                aria-invalid={unit === 'imperial' && heightError ? true : undefined}
                 onChange={(e) => setHeightFt(e.target.value)}
                 placeholder="ft"
                 className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -190,6 +216,7 @@ export default function Calculator() {
                 max="11"
                 step="1"
                 value={heightIn}
+                aria-invalid={unit === 'imperial' && heightIn.trim() !== '' && heightError ? true : undefined}
                 onChange={(e) => setHeightIn(e.target.value)}
                 placeholder="in"
                 className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -203,6 +230,7 @@ export default function Calculator() {
               min="0"
               step="1"
               value={heightCm}
+              aria-invalid={unit === 'metric' && heightError ? true : undefined}
               onChange={(e) => setHeightCm(e.target.value)}
               placeholder="cm"
               className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -248,8 +276,10 @@ export default function Calculator() {
         </div>
       </div>
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
       {/* Result */}
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
+      {result && <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
             Suggested horse weight range
@@ -276,7 +306,13 @@ export default function Calculator() {
             {result ? 'a rough height reference for that weight' : ''}
           </p>
         </div>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          This range is the horse bodyweight that keeps rider plus tack near 15–20 percent, a welfare planning guide rather than a hard fitting rule.
+        </ResultMeaning>
+      )}
 
       {result && (
         <div className="mt-4 rounded border border-brand-border bg-brand-surface p-4 text-sm text-brand-text-mid">

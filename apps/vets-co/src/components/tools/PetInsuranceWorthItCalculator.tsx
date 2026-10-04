@@ -29,6 +29,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function dollars(n: number): string {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
@@ -99,18 +100,26 @@ const COST_SCENARIOS: Array<{ label: string; value: number; note: string }> = [
 ]
 
 export function PetInsuranceWorthItCalculator() {
-  const [monthlyPremium, setMonthlyPremium] = useState(45)
-  const [deductible, setDeductible] = useState(250)
+  const [monthlyPremiumRaw, setMonthlyPremiumRaw] = useState('45')
+  const [deductibleRaw, setDeductibleRaw] = useState('250')
   const [reimbursementPct, setReimbursementPct] = useState(80)
   const [annualLimit, setAnnualLimit] = useState<number | null>(10000)
   const [eligibleCosts, setEligibleCosts] = useState(1500)
 
+  const premiumError = numberFieldError(monthlyPremiumRaw, 'monthly premium', 0, 100000, 'dollars')
+  const deductibleError = numberFieldError(deductibleRaw, 'annual deductible', 0, 100000, 'dollars')
+  const inputsValid = !premiumError && !deductibleError
+  const monthlyPremium = inputsValid ? Number(monthlyPremiumRaw) : 0
+  const deductible = inputsValid ? Number(deductibleRaw) : 0
+
   const result = useMemo(
-    () => computeWorthIt({ monthlyPremium, deductible, reimbursementPct, annualLimit, eligibleCosts }),
-    [monthlyPremium, deductible, reimbursementPct, annualLimit, eligibleCosts],
+    () => (inputsValid
+      ? computeWorthIt({ monthlyPremium, deductible, reimbursementPct, annualLimit, eligibleCosts })
+      : null),
+    [inputsValid, monthlyPremium, deductible, reimbursementPct, annualLimit, eligibleCosts],
   )
 
-  const paidForItself = result.netVsPremium > 0
+  const paidForItself = result !== null && result.netVsPremium > 0
   const tone = paidForItself
     ? 'border-emerald-700/40 bg-emerald-950/30 text-emerald-200'
     : 'border-amber-700/40 bg-amber-950/30 text-amber-200'
@@ -125,16 +134,17 @@ export function PetInsuranceWorthItCalculator() {
           <input
             id="wi-premium"
             type="number"
-            min={5}
-            max={500}
+            min={0}
+            max={100000}
             step={1}
-            value={monthlyPremium}
-            onChange={(e) => setMonthlyPremium(Math.max(0, Number(e.target.value) || 0))}
+            value={monthlyPremiumRaw}
+            onChange={(e) => setMonthlyPremiumRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">
             Typical accident-and-illness premiums run roughly $25–$70/mo for dogs and $12–$40/mo for cats, rising with age and breed. Use the carrier&apos;s quote for your pet.
           </p>
+          {premiumError && <ToolError>{premiumError}</ToolError>}
         </div>
 
         <div>
@@ -145,13 +155,14 @@ export function PetInsuranceWorthItCalculator() {
             id="wi-deductible"
             type="number"
             min={0}
-            max={2000}
+            max={100000}
             step={50}
-            value={deductible}
-            onChange={(e) => setDeductible(Math.max(0, Number(e.target.value) || 0))}
+            value={deductibleRaw}
+            onChange={(e) => setDeductibleRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
           <p className="mt-1 text-xs text-brand-text-mid">Most carriers offer $100–$1,000. You pay this before reimbursement begins.</p>
+          {deductibleError && <ToolError>{deductibleError}</ToolError>}
         </div>
 
         <div>
@@ -207,7 +218,7 @@ export function PetInsuranceWorthItCalculator() {
             max={15000}
             step={100}
             value={eligibleCosts}
-            onChange={(e) => setEligibleCosts(Math.max(0, Number(e.target.value) || 0))}
+            onChange={(e) => setEligibleCosts(Number(e.target.value))}
             className="w-full accent-brand-primary"
           />
           <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -234,6 +245,8 @@ export function PetInsuranceWorthItCalculator() {
         </div>
       </div>
 
+      {result && (
+      <>
       <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">Annual premium</p>
@@ -280,6 +293,11 @@ export function PetInsuranceWorthItCalculator() {
           </>
         )}
       </div>
+      <ResultMeaning>
+        The breakeven is the eligible-cost level where modeled reimbursement equals the annual premium. It is a planning estimate, not a guarantee of savings.
+      </ResultMeaning>
+      </>
+      )}
 
       <p className="mt-4 text-xs text-brand-text-mid leading-relaxed">
         This is a planning estimate, not a guarantee of savings. Insurance is risk protection against rare, large

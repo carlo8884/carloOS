@@ -13,6 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 type Workload = 'maintenance' | 'light' | 'moderate' | 'heavy'
@@ -96,14 +97,22 @@ function toDisplay(weightKg: number, unit: Unit): number {
 
 export default function Calculator() {
   const [unit, setUnit] = useState<Unit>('lb')
-  const [weight, setWeight] = useState<string>('')
+  const [weight, setWeight] = useState<string>('1000')
   const [workload, setWorkload] = useState<Workload>('maintenance')
   const [keeper, setKeeper] = useState<Keeper>('average')
 
   const wl = WORKLOADS.find((w) => w.value === workload) ?? WORKLOADS[0]
   const kp = KEEPERS.find((k) => k.value === keeper) ?? KEEPERS[1]
+  const weightError = numberFieldError(
+    weight,
+    'bodyweight',
+    unit === 'lb' ? 100 : 45,
+    unit === 'lb' ? 2500 : 1200,
+    unit,
+  )
 
   const result: Result | null = useMemo(() => {
+    if (weightError) return null
     const bw = parseFloat(weight)
     if (Number.isNaN(bw) || !(bw > 0)) return null
 
@@ -121,7 +130,7 @@ export default function Calculator() {
       forageMin: (bw * foragePct) / 100,
       forageMid: (bw * ((foragePct + Math.min(maxPct, foragePct + 0.5)) / 2)) / 100,
     }
-  }, [weight, unit, wl, kp])
+  }, [weight, unit, wl, kp, weightError])
 
   const fmt = (n: number) => `${Math.round(n * 10) / 10} ${unit}`
 
@@ -170,6 +179,7 @@ export default function Calculator() {
             min="0"
             step="1"
             value={weight}
+            aria-invalid={weightError ? true : undefined}
             onChange={(e) => setWeight(e.target.value)}
             placeholder={unit === 'lb' ? 'e.g. 1000' : 'e.g. 450'}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -219,8 +229,10 @@ export default function Calculator() {
         </div>
       </div>
 
+      {weightError && <ToolError>{weightError}</ToolError>}
+
       {/* Result */}
-      <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
+      {result && <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-2">
         <div className="rounded border border-brand-border bg-brand-surface p-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
             Total daily dry matter
@@ -243,7 +255,13 @@ export default function Calculator() {
             {result ? 'Keep forage DM at or above this floor' : 'Enter a bodyweight'}
           </p>
         </div>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          This range is a daily dry-matter target from the bodyweight you entered, a forage-first planning figure rather than a weighed ration.
+        </ResultMeaning>
+      )}
 
       <div className="mt-6 rounded border border-emerald-700/40 bg-emerald-950/30 p-4 text-emerald-200">
         <p className="text-sm font-semibold">Forage first — concentrates only fill the gap.</p>

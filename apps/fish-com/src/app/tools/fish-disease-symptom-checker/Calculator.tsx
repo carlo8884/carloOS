@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 import Link from 'next/link'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -114,6 +115,9 @@ export default function FishDiseaseSymptomChecker() {
               Ranked by how many of your signs match — a starting point to investigate, not a diagnosis. Many signs
               overlap, so read the linked guide and confirm before treating.
             </p>
+            <ResultMeaning>
+              Those matches are conditions that share the signs you ticked. They are a place to start reading, not a diagnosis.
+            </ResultMeaning>
             <ul className="space-y-4">
               {ranked.map((c) => (
                 <li key={c.slug} className="border-b border-brand-border pb-4 last:border-0 last:pb-0">
@@ -148,9 +152,7 @@ export default function FishDiseaseSymptomChecker() {
             />
           </div>
         ) : (
-          <p className="text-sm text-brand-text-light">
-            Tick the signs you can see on your fish to find the conditions that match.
-          </p>
+          <ToolError>Select at least one sign to see conditions that match.</ToolError>
         )}
       </div>
 
