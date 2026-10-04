@@ -57,7 +57,7 @@ export default function BestWinterBlanketsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Winter Horse Blankets 2026
         </h1>
-        <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Shop the Rambo Original at SmartPak →' />
+        <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability. The category-defining brands compared against the value-tier alternatives that actually compete with them.
         </p>
@@ -175,7 +175,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Multi-season durability (5–8 years typical)', 'V-front cut reduces shoulder rub', 'Stainless hardware tolerates ice and cold', 'Lifetime tear-repair program', 'Resells well used']}
               cons={['Premium price tier', 'Less generous shoulder room than some competitors for very wide horses', 'Color/pattern range smaller than Rhino']}
               price="$280–420"
-              ctaText="Shop at SmartPak →"
+              ctaText="Check price of the Horseware Rambo Original on SmartPak"
               ctaHref="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="rambo-original-turnout"

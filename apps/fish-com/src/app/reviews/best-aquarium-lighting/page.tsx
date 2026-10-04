@@ -29,7 +29,7 @@ export default function BestAquariumLightingPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
-        <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Shop Hygger 957 →' />
+        <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -61,7 +61,7 @@ export default function BestAquariumLightingPage() {
               specs={[{ label: 'PAR at 20"', value: '45–65 (midday)', highlight: 'good' }, { label: 'Channels', value: '7 independently controlled', highlight: 'good' }, { label: 'Timer', value: 'Built-in programmable', highlight: 'good' }, { label: 'Price', value: 'Under $60', highlight: 'good' }, { label: 'Best For', value: 'Low-medium tech planted tanks' }]}
               pros={['Best value planted tank light', '7 channels — fine spectrum control', 'Programmable timer built-in', 'Good PAR for price', 'Slim profile']}
               cons={['Not enough for demanding high-light plants', 'No app control', 'Plastic build quality']}
-              price="$45–65" ctaText="Shop Hygger 957 →" ctaHref="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="hygger-957" />
+              price="$45–65" ctaText="Check price of the Hygger 957 on Amazon" ctaHref="/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="hygger-957" />
             <ReviewCard id="fluval" badge="Best Planted (Premium)" name="Fluval Plant 3.0 LED" subtitle="App-controlled · Best spectrum · High PAR · Bluetooth programmable" score={9.4}
               description={<p>The Fluval Plant 3.0 is the benchmark premium planted tank light. App control via Bluetooth allows precise programming of daily light schedules, sunrise/sunset curves, and cloud/storm effects that mimic natural light variation (which improves plant health). PAR output is exceptional — 100+ PAR at 12" depth, 60+ at 20", making it capable of driving demanding high-light plants with CO2 injection. Its published spectrum quality is among the strongest of any freshwater LED in this comparison — strong red/blue peaks with a balanced white component that, per manufacturer specs and aggregated keeper reports, produces vivid plant and fish coloration. Build quality is significantly better than budget Chinese alternatives.</p>}
               specs={[{ label: 'PAR at 20"', value: '60–80+ (high setting)', highlight: 'good' }, { label: 'Control', value: 'Bluetooth app', highlight: 'good' }, { label: 'Spectrum', value: 'Best measured quality', highlight: 'good' }, { label: 'Best For', value: 'Medium-high tech planted' }, { label: 'Build Quality', value: 'Premium aluminum' }]}

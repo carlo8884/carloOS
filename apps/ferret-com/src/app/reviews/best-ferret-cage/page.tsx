@@ -125,7 +125,7 @@ export default function BestFerretCagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Find Ferret Nation / Critter Nation' />}
+        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:
@@ -294,7 +294,7 @@ export default function BestFerretCagePage() {
             pros={['Ferret-correct half-inch spacing', 'Full-front doors for easy cleaning', 'Modular — expands with the colony', 'Deep pull-out pans', 'Community reference standard']}
             cons={['Premium price', 'Heavy and large assembled', 'Wire shelves need covering']}
             price="$$$"
-            ctaText="Find Ferret Nation / Critter Nation"
+            ctaText="Check price of the Ferret Nation double unit on Amazon"
             ctaHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-nation-double-unit"

@@ -80,6 +80,12 @@ export function ReviewCard({
     : href?.includes('/go/amazon')
       ? 'amazon'
       : ctaAffiliateProgram
+  // Same honesty rule as PrimaryHop: a Chewy hop that falls back to Amazon
+  // must not keep an "on Chewy" label.
+  const label =
+    /\/go\/amazon/.test(href ?? '') && /chewy/i.test(rawHref ?? '')
+      ? ctaText.replace(/\bon Chewy\b/i, 'on Amazon')
+      : ctaText
   return (
     <div
       id={id}
@@ -202,7 +208,7 @@ export function ReviewCard({
               rel={editorial ? undefined : 'nofollow sponsored'}
               target={editorial ? undefined : '_blank'}
             >
-              {ctaText}
+              {label}
             </a>
           )}
         </div>
