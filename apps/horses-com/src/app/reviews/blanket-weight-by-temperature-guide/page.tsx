@@ -82,15 +82,21 @@ export default function BlanketWeightByTemperatureGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide">Check price of the Horseware Rambo Original on SmartPak →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="horses-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-blanket-weight-by-temperature-guide"
+          checklist={[
+            'Lightweight is 50 to 150 grams, for cool autumn temperatures of 5 to 15°C (40 to 60°F), light wind, and light rain.',
+            'Medium-weight is 180 to 250 grams, which the review calls the workhorse of most US and UK climates, with an effective range of about −5 to +10°C (25 to 50°F) on most clipped horses.',
+            'Heavyweight is 300 to 400 grams and up, for deep winter, sustained sub-zero temperatures, and clipped horses in cold climates.',
+            'A heavy fill in the wrong length is a rub.',
+            'Blanketing a horse that does not need one can suppress the winter coat.',
+            'Check price of the Horseware Rambo Original on SmartPak',
+          ]}
         />
       </div>
     </ArticleLayout>

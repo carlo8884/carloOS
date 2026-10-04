@@ -80,15 +80,20 @@ export default function BestPuppyCrateGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
         <p>The link below searches Amazon for the MidWest iCrate, the same search as on the crate review. Choose the size there. The sale price can differ from the band above.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide">Browse MidWest iCrate dog crates on Amazon →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-best-puppy-crate-guide"
+          checklist={[
+            'Buy the iCrate if you are house-training and the dog is not already an escape artist.',
+            'Buy Impact if wire has already failed.',
+            'Buy the Sky Kennel only when the trip is airline cargo, and confirm the airline before you pay.',
+            'Leave the furniture crate until the dog is calm and crate-trained.',
+            'Browse MidWest iCrate dog crates on Amazon',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

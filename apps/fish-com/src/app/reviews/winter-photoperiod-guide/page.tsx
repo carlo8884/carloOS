@@ -81,15 +81,20 @@ export default function WinterPhotoperiodGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquarium+light+timer?s=reviews-winter-photoperiod-guide">Browse aquarium light timers on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-photoperiod-guide"
+          checklist={[
+            'The photoperiod it publishes is six to eight hours on an aquarium light timer, with a low-to-medium fixture.',
+            'Neither page adds hours because the sun sets earlier.',
+            'If the tank is already growing algae, the instruction already on the algae page is to shorten toward that band, not to leave the light on through the evening so the room feels less dark.',
+            'This guide does not rank a light.',
+            'Browse aquarium light timers on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

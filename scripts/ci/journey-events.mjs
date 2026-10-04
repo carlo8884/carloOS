@@ -3,6 +3,8 @@
  * Lock the funnel event names and their parameters.
  * calculator_complete (site, tool) → hop_view (site, page, hop) → affiliate_click.
  * guide_signup_submit (site, page, result) carries no address or email.
+ * guide_checklist_copy / guide_checklist_print (site, page) replace that
+ * form until NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE is exactly "true".
  */
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
@@ -34,6 +36,7 @@ function read(rel) {
 
 const journey = read('packages/ui/src/components/JourneyEvents.tsx')
 const capture = read('packages/ui/src/components/EmailCapture.tsx')
+const checklist = read('packages/ui/src/components/GuideChecklist.tsx')
 const meaning = read('packages/ui/src/components/ToolFeedback.tsx')
 const hop = read('packages/ui/src/components/PrimaryHop.tsx')
 const click = read('packages/ui/src/components/AffiliateClickListener.tsx')
@@ -48,6 +51,16 @@ const signup = capture.match(/trackEvent\(\s*'guide_signup_submit'\s*,\s*\{[^}]*
 if (!signup) hits.push('guide_signup_submit call not found')
 else if (/email|address|phone/i.test(signup[0])) hits.push('guide_signup_submit includes a personal field')
 if (!/if \(!addressOnly\) return/.test(capture)) hits.push('guide_signup_submit must stay on the guide address form')
+if (!/guideAddressCaptureEnabled\(/.test(capture)) hits.push('guide address form must stay behind NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE')
+if (!/fetch\('\/api\/subscribe'/.test(capture)) hits.push('address storage must stay ready')
+if (!/addressOnly && !guideAddressCaptureEnabled\(\)/.test(capture)) hits.push('address form must hide when the flag is off')
+
+for (const name of ['guide_checklist_copy', 'guide_checklist_print']) {
+  const call = checklist.match(new RegExp(`trackEvent\\(\\s*'${name}'\\s*,\\s*\\{[^}]*\\}\\s*\\)`))
+  if (!call) hits.push(`${name} call not found`)
+  else if (/email|address|phone/i.test(call[0])) hits.push(`${name} includes a personal field`)
+  else if (!/site:\s*siteId\s*,\s*page:\s*window\.location\.pathname/.test(call[0])) hits.push(`${name} params drifted`)
+}
 
 if (!/data-calculator-result/.test(meaning)) hits.push('ResultMeaning missing data-calculator-result')
 if (!/\[data-calculator-result\]/.test(journey)) hits.push('calculator_complete does not watch the result marker')

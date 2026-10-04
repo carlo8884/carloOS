@@ -81,15 +81,19 @@ export default function HolidayLeftoversLowFatGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide">Browse low-fat digestive-care dog foods on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-holiday-leftovers-low-fat-guide"
+          checklist={[
+            'For a dog that has already had pancreatitis, prevention on that page is a consistent low-fat diet, no fatty table scraps, no rich treats, and a lean body weight.',
+            'The low-fat digestive-care food is described as the same class of consistent recovery diet the page already names.',
+            'If vomiting, belly pain, or refusal to eat returns, the instruction is to go in, not to reorder food.',
+            'Browse low-fat digestive-care dog foods on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

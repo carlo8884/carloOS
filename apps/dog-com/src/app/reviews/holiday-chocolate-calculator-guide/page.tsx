@@ -81,15 +81,21 @@ export default function HolidayChocolateCalculatorGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide">Browse pet first-aid kits on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="dog-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-holiday-chocolate-calculator-guide"
+          checklist={[
+            'Any ingestion warrants a call to a veterinarian or a poison-control hotline, with the product and the amount.',
+            'Enter type, amount, and body weight in the calculator.',
+            'Do not treat a round number on this guide as a clearance to wait.',
+            'They do not reverse chocolate poisoning.',
+            'Shop the kit only after you have called a veterinarian or poison control about an actual ingestion.',
+            'Browse pet first-aid kits on Amazon',
+          ]}
         />
       </div>
     </ArticleLayout>

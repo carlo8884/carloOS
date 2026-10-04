@@ -78,15 +78,20 @@ export default function HobVsCanisterGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The link below searches for the AquaClear 70, the hang-on-back from the filter review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide">Browse AquaClear 70 hang-on-back filters on Amazon →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-hob-vs-canister-guide"
+          checklist={[
+            'Buy the AquaClear 70 for a community tank in that 30 to 70 gallon band when you want refillable media and a simpler cleaning day.',
+            'Buy the Fluval 307 when the bioload is high, you want the longer service interval and the quieter box, and you have cabinet space.',
+            'Buy the Aqueon QuietFlow 30, under $35, only for a tank up to 30 gallons where a proprietary cartridge is acceptable.',
+            'Buy the sponge, not either of these, for shrimp, fry, or a nano under the sizes those listings claim.',
+            'Browse AquaClear 70 hang-on-back filters on Amazon',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

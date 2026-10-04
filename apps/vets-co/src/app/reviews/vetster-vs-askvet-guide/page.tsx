@@ -78,15 +78,19 @@ export default function VetsterVsAskvetGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The link below opens Vetster from the telehealth page, for a video visit.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/vetster/telehealth?s=reviews-vetster-vs-askvet-guide">Visit Vetster →</a></p>
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-vetster-vs-askvet-guide"
+          checklist={[
+            'Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent.',
+            'Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit.',
+            'If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself.',
+            'Visit Vetster',
+          ]}
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

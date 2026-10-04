@@ -42,7 +42,7 @@ async function eventParams(page: import('@playwright/test').Page, name: string) 
   return found as Record<string, unknown>
 }
 
-test('tool result, guide signup, and primary hop view queue without an address', async ({ page }, testInfo) => {
+test('tool result, guide checklist, and primary hop view queue without an address', async ({ page }, testInfo) => {
   const site = testInfo.project.name
   const tool = toolPath[site]
   const guide = guidePath[site]
@@ -54,10 +54,12 @@ test('tool result, guide signup, and primary hop view queue without an address',
   expect(calc).not.toHaveProperty('email')
 
   await page.goto(guide)
-  await page.getByLabel('Email address').fill('not-an-email')
-  await page.getByRole('button', { name: 'Save my address' }).click()
-  const signup = await eventParams(page, 'guide_signup_submit')
-  expect(signup).toEqual({ site, page: guide, result: 'invalid' })
+  await expect(page.getByLabel('Email address')).toHaveCount(0)
+  await expect(page.getByRole('heading', { name: 'Shopping checklist' })).toBeVisible()
+  await page.getByRole('button', { name: 'Copy checklist' }).click()
+  const copied = await eventParams(page, 'guide_checklist_copy')
+  expect(copied).toEqual({ site, page: guide })
+  expect(copied).not.toHaveProperty('email')
 
   await page.goto(hopPage)
   await page.locator('[data-primary-hop]').scrollIntoViewIfNeeded()

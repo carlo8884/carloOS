@@ -81,15 +81,20 @@ export default function HolidayEmergencyVisitGuidePage() {
         <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide">Get a Trupanion quote →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
           addressOnly
           title="Save an address with this guide"
-          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-holiday-emergency-visit-guide"
+          checklist={[
+            'Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go.',
+            'If a pet is already in crisis, the costs guide says go.',
+            'A quote form is not emergency care.',
+            'Its primary quote link is Trupanion.',
+            'Get a Trupanion quote',
+          ]}
         />
       </div>
     </ArticleLayout>
