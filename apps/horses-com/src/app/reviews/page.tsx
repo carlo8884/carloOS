@@ -45,6 +45,18 @@ const REVIEWS = [
       'A wither-relief mid-tier turnout, or Horseware’s value blanket. Denier and prices are already on those cards.',
   },
   {
+    slug: 'rambo-vs-schneiders-guide',
+    title: 'Rambo vs Schneiders',
+    description:
+      'Horseware’s premium mid-weight turnout, or Schneiders’ heavy fill for a northern winter. Denier and prices are already on the blanket review.',
+  },
+  {
+    slug: 'cosequin-vs-equithrive-guide',
+    title: 'Cosequin ASU vs Equithrive',
+    description:
+      'ASU with glucosamine, or a resveratrol pellet the supplement review treats as a complement. Monthly prices are already on that review.',
+  },
+  {
     slug: 'ker-eo3-vs-equithrive-guide',
     title: 'KER EO-3 vs Equithrive',
     description:
