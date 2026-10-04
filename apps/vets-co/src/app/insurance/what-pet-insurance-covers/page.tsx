@@ -192,6 +192,35 @@ export default function WhatCoversPage() {
             ctaAffiliateProduct="home"
           />
 
+          <h2 id="who">Who should quote which</h2>
+          <p>Both cards are quote-based. Wellness and preventive extras are already described as add-ons, not the insurance policy. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Quote</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Limit on the card</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Accident-and-illness plus an optional wellness rewards plan</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                  <td className="p-3 text-brand-text-mid">Wellness Add-On. Optional wellness plan. Diminishing deductible. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">The wellness add-on is a budgeted benefit, not insurance. Standard exclusions apply</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">App-based claims, with preventive packages kept separate</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#lemonade" className="text-brand-primary">Lemonade Pet</a></td>
+                  <td className="p-3 text-brand-text-mid">App-First. Optional preventive packages. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">Availability varies by state. The preventive package is not insurance</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>

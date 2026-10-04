@@ -89,6 +89,44 @@ export default function BestNanoTanksPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-20-long"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tank</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Volume, what is included, and the price are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A complete 5-gallon for a betta or shrimp</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval-spec" className="text-brand-primary">Fluval Spec V</a></td>
+                      <td className="p-3 text-brand-text-mid">Best 5 Gallon. Rimless all-in-one. Filter and low-light LED included. $75–95</td>
+                      <td className="p-3 text-brand-text-mid">You want a more stable volume. The card calls 5 gallons the minimum. Baffle the flow for a betta</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A bare 10-gallon you will equip yourself</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a></td>
+                      <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20&quot; × 10&quot; × 12&quot;. No equipment in the box. $20–30</td>
+                      <td className="p-3 text-brand-text-mid">You want a kit. Filter, heater, and light are separate purchases</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A first community or planted tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall Nano. 30&quot; × 12&quot; × 12&quot;. $30–50</td>
+                      <td className="p-3 text-brand-text-mid">You want equipment in the box. The card says you still need a 20-gallon-rated filter, heater, and light</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

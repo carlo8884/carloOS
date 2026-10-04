@@ -220,6 +220,41 @@ export default function HaltersLeadRopesPage() {
             ctaAffiliateProduct="cotton-lead-rope-bull-snap"
           />
 
+          <h2 id="who">Who should buy which</h2>
+          <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Leading, grooming, and tying while someone is there</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a></td>
+                  <td className="p-3 text-brand-text-mid">Everyday. Adjustable crown and noseband. $10–25</td>
+                  <td className="p-3 text-brand-text-mid">Turnout. The card says it does not break, so it is unsafe to leave on a horse alone</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A halter that has to stay on in the field</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a></td>
+                  <td className="p-3 text-brand-text-mid">Safer turnout. Leather crown or breakable tab. $25–55</td>
+                  <td className="p-3 text-brand-text-mid">You will not replace the leather crown. The card says it wears and costs more than plain nylon</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A lead that is soft in the hand and long enough to tie</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a></td>
+                  <td className="p-3 text-brand-text-mid">Lead rope. Trigger or bull snap. Fold the slack. $8–22</td>
+                  <td className="p-3 text-brand-text-mid">The clip is a cheap one you have not checked. The card says those snaps can fail, and cotton frays over years</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           {/* Shop leftover kit — unused vs #1142
               laminated+horse+leg+bandage+bow+technique+checklist /
               horse+boot+impact+not+tendon+support+question+card /

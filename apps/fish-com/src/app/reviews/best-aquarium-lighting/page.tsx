@@ -79,6 +79,50 @@ export default function BestAquariumLightingPage() {
               pros={['Lowest price of any recommended light', 'Good fish color rendering', 'Simple timer built-in', 'Adequate for fish-only display']}
               cons={['Not for planted or reef tanks', '2–3 year lifespan typical', 'No app control or programmability']}
               price="$20–35" ctaText="Shop Nicrew LED →" ctaHref="/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="nicrew-led" />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which light</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                PAR, price, and the tank type are already on the four cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A low-to-medium tech planted tank under about $60</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hygger" className="text-brand-primary">Hygger 957</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Planted (Budget). 7 channels. PAR 45–65 at 20&quot;. $45–65</td>
+                      <td className="p-3 text-brand-text-mid">Demanding high-light plants. The card says step up to the Fluval 3.0. No app control</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Medium-to-high tech plants, including a CO2 tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval Plant 3.0</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Planted (Premium). Bluetooth app. PAR 60–80+ at 20&quot; on the high setting. $150–200</td>
+                      <td className="p-3 text-brand-text-mid">A low-tech tank. The card calls that overkill. Bluetooth range is short</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A mixed reef or SPS coral tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#kessil" className="text-brand-primary">Kessil A360X Tuna Blue</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Reef. Dense Matrix. 150–300+ PAR at 12&quot;. Wi-Fi. $400–500</td>
+                      <td className="p-3 text-brand-text-mid">Fish-only or a wide tank that needs more than one point source. The card says one fixture covers about a 24&quot; square</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Fish-only or fish-only-with-live-rock display light</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nicrew" className="text-brand-primary">Nicrew Classic LED+</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Fish-Only. Display PAR about 15–25 at 12&quot;. $20–35</td>
+                      <td className="p-3 text-brand-text-mid">Plants or corals. The card says it is not for photosynthetic growth, and typical life is 2–3 years</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

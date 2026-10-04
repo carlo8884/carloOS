@@ -93,6 +93,44 @@ export default function BestPlantedFertilizersPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which fertilizer</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Dose, price, and the tank type are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">One bottle for a low- or medium-tech planted tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. 1 pump per 10 gallons weekly. Macros and micros. $15–25</td>
+                      <td className="p-3 text-brand-text-mid">You need it from a local fish store. The card says Aquarium Co-Op online only. High-tech CO2 tanks may need extra macros</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Trace elements today, from a store that already stocks it</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Trace Elements. Micros, not a full macro bottle. 5 ml per 250 L twice weekly. $10–20</td>
+                      <td className="p-3 text-brand-text-mid">The tank is short on nitrogen, phosphorus, or potassium. The card says those need separate Flourish bottles</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A CO2-injected high-tech tank with fast plants</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a></td>
+                      <td className="p-3 text-brand-text-mid">Best for High-Tech. Higher NPK than Easy Green or Flourish. $12–22</td>
+                      <td className="p-3 text-brand-text-mid">A low-tech tank. The card says the higher dose is an algae risk if you overfeed nutrients</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

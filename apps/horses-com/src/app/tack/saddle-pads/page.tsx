@@ -218,6 +218,41 @@ export default function SaddlePadsPage() {
             ctaAffiliateProduct="wool-felt-western-pad"
           />
 
+          <h2 id="who">Who should buy which pad</h2>
+          <p>Material, price, and the limit are already on the three cards. None of them corrects a saddle that does not fit. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A washable everyday English schooling pad</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-quilted-numnah" className="text-brand-primary">Quilted cotton all-purpose</a></td>
+                  <td className="p-3 text-brand-text-mid">Everyday English. Machine washable. $20–45</td>
+                  <td className="p-3 text-brand-text-mid">You want wool or felt durability. The card says cotton wears faster, and it does not correct fit</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Less friction under a saddle that already fits</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#sheepskin-half-pad" className="text-brand-primary">Sheepskin half pad</a></td>
+                  <td className="p-3 text-brand-text-mid">Half pad. Some have shim pockets. $60–160</td>
+                  <td className="p-3 text-brand-text-mid">The saddle is the wrong width. The card says a half pad cannot fix that. Real sheepskin needs careful washing</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A heavier Western saddle on long rides</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#western-felt-pad" className="text-brand-primary">Wool-felt Western pad</a></td>
+                  <td className="p-3 text-brand-text-mid">Western. Often layered under a woven blanket. $80–200</td>
+                  <td className="p-3 text-brand-text-mid">You want a light English numnah. Felt is heavier, and it still cannot correct saddle fit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           {/* Shop leftover kit — unused vs #1140
               laminated+riding+helmet+fit+and+replace+checklist /
               riding+helmet+certification+label+question+card /
