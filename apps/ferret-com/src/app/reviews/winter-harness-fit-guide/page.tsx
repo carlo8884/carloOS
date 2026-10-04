@@ -1,0 +1,76 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+
+export const metadata: Metadata = buildMetadata({
+  siteId: 'ferret-com',
+  title: 'Recheck a Ferret Harness as Weight Changes | Ferret.com',
+  description: 'Recheck harness fit as seasonal weight changes. The hop is the vest already on the harness review.',
+  path: '/reviews/winter-harness-fit-guide',
+  type: 'article',
+})
+
+const schema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Recheck a ferret harness as weight changes',
+  description: 'Seasonal weight changes the harness fit. The hop is the vest on the harness review.',
+  url: 'https://ferret.com/reviews/winter-harness-fit-guide',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+  publishedAt: '2026-10-04T00:00:00Z',
+  modifiedAt: '2026-10-04T00:00:00Z',
+})
+
+export default function WinterHarnessFitGuidePage() {
+  return (
+    <ArticleLayout
+      siteId="ferret-com"
+      schema={schema}
+      hero={{
+        title: 'Recheck a ferret harness as weight changes',
+        subtitle: 'The training page already says a harness that fit in winter can be loose by summer. The review’s vest is the escape-resistance pick, and its fit rule is still one finger of slack.',
+        category: 'Buyer guide',
+        authorName: 'Ferret.com Editorial',
+        publishedAt: 'October 2026',
+        readTime: '7 min',
+      }}
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: 'Reviews', href: '/reviews' },
+        { name: 'Winter harness fit', href: '/reviews/winter-harness-fit-guide' },
+      ]}
+      sidebar={
+        <RelatedLinks
+          title="Related"
+          links={[
+            { label: 'Reviews hub', href: '/reviews' },
+            { label: 'Best ferret harness', href: '/reviews/best-ferret-harness' },
+            { label: 'Vest vs H-style', href: '/reviews/vest-vs-h-harness-guide' },
+            { label: 'Leash training', href: '/behavior/leash-and-harness-training' },
+          ]}
+        />
+      }
+    >
+      <div className="carloOS-article">
+        <p>The <Link href="/behavior/leash-and-harness-training">leash and harness training page</Link> says to recheck fit every few weeks because ferrets gain and lose noticeable weight with the seasons. Its example runs one direction: a harness that fit in winter may be loose by summer. It does not publish the reverse as a separate measurement. Heading into the colder months, the action on that page is the same recheck, not a new size chart. The two-finger rule on that page is its own sentence: two fingers should slide under the harness anywhere it touches the body. Tighter chafes. Looser lets the ferret back out.</p>
+        <h2>The review uses a different finger count</h2>
+        <p>The <Link href="/reviews/vest-vs-h-harness-guide">vest versus H-style guide</Link> restates the harness review&apos;s fit rule as one finger of slack, checked before the walk, with no unsupervised time in the harness. This page does not average one finger and two fingers into a third rule. Use the review&apos;s check on the review&apos;s harness, and the training page&apos;s check when you are following that page. Both say a loose harness is how a ferret backs out.</p>
+        <h2>Which harness the review hops</h2>
+        <p>The vest card is the escape-resistance pick on that guide, scored 9.0, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The hop here is the vest search already on the harness review, because that is the layout the review names when backing out is the problem. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
+        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <p>The hop is the vest search already on the harness review.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find a ferret vest harness on Amazon →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Winter harness update list"
+          subtitle="Leave an address to be on the list for changes to the seasonal fit note on this page."
+          ctaText="Save my address"
+          source="reviews-winter-harness-fit-guide"
+        />
+      </div>
+    </ArticleLayout>
+  )
+}

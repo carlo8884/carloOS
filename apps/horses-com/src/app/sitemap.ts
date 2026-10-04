@@ -174,6 +174,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/reviews/best-blanket-for-clipped-horse-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/cosequin-vs-platinum-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/reviews/quilted-vs-sheepskin-pad-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/reviews/blanket-weight-by-temperature-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://horses.com/reviews/winter-water-unfrozen-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/supplements', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://horses.com/supplements/joint-supplements', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/tack', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

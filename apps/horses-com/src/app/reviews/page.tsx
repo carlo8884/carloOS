@@ -56,6 +56,18 @@ const REVIEWS = [
     description:
       'A washable everyday English pad, or a sheepskin half pad for friction. Neither fixes saddle fit.',
   },
+  {
+    slug: 'blanket-weight-by-temperature-guide',
+    title: 'Blanket Weight by Temperature',
+    description:
+      'The fill bands already on the winter blanket review, and the Rambo hop for the medium band.',
+  },
+  {
+    slug: 'winter-water-unfrozen-guide',
+    title: 'Keep Horse Water Unfrozen',
+    description:
+      'Icy water and dry hay are the winter colic pattern already published. The hop is the heated bucket.',
+  },
 ]
 
 const itemListSchema = {

@@ -128,6 +128,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/reviews/vetster-vs-askvet-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/trupanion-vs-embrace-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/spot-vs-manypets-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/reviews/holiday-leftovers-low-fat-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/reviews/holiday-emergency-visit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/specialists', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/symptoms', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/telehealth', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

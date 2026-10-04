@@ -64,6 +64,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://fish.com/reviews/best-display-tank-heater-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/hygger-vs-fluval-light-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/api-vs-salifert-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/reviews/winter-heater-sizing-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/reviews/winter-photoperiod-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-aquarium-heaters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-aquarium-lighting', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/best-canister-filters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

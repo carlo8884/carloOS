@@ -142,6 +142,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/reviews/vest-vs-h-harness-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/ferret-nation-vs-prevue-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/wysong-vs-marshall-kibble-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/fall-molt-brush-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/winter-harness-fit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.95 },
     { url: 'https://ferret.com/tools/food-evaluator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://ferret.com/tools/cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
