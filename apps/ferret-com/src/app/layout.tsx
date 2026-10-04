@@ -13,6 +13,8 @@ const playfair = Playfair_Display({
   weight: ['400', '700', '900'],
   variable: '--font-playfair',
   display: 'swap',
+  // Phone LCP on comparison pages is the body lede, not this display face.
+  preload: false,
 })
 
 const sourceSans = Source_Sans_3({

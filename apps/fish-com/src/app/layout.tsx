@@ -12,6 +12,8 @@ const cormorant = Cormorant_Garamond({
   style: ['normal', 'italic'],
   variable: '--font-cormorant',
   display: 'swap',
+  // Phone LCP on comparison pages is the body lede, not this display face.
+  preload: false,
 })
 
 const inter = Inter({

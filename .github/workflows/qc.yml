@@ -205,6 +205,18 @@ jobs:
       - name: Run vercel-ignore-test
         run: node scripts/ci/vercel-ignore-test.mjs
 
+  a11y-pages:
+    name: Accessibility on money pages and round 7–10 guides
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run a11y-pages
+        run: node scripts/ci/a11y-pages.mjs
+
   content-stub-guard:
     name: Stub and placeholder guard (GROK.md, tools, guides)
     runs-on: ubuntu-latest
