@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Libre_Baskerville, Manrope } from 'next/font/google'
-import { Nav, Footer, buildMetadata, Ga4Loader } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, Ga4Loader, AffiliateClickListener } from '@carloOS/ui'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
 import { EmailUnderHero } from '@carloOS/ui'
@@ -50,6 +50,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     >
       <body>
         <Ga4Loader measurementId={GA_ID} />
+        <AffiliateClickListener site="vets-co" />
         <Nav siteId="vets-co" />
 
         {/*

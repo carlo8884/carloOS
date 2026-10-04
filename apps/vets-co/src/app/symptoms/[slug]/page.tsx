@@ -379,7 +379,7 @@ export default function SymptomPage({ params }: PageProps) {
                     Find an emergency vet →
                   </Link>
                   <a
-                    href="/go/vetster/telehealth"
+                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
                     rel="sponsored nofollow"
                     className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
                   >
@@ -389,7 +389,7 @@ export default function SymptomPage({ params }: PageProps) {
               ) : (
                 <>
                   <a
-                    href="/go/vetster/telehealth"
+                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
                     rel="sponsored nofollow"
                     className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
                   >

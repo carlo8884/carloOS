@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds, Ga4Loader } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds, Ga4Loader, AffiliateClickListener } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -55,6 +55,7 @@ export default function RootLayout({
     >
       <body>
         <Ga4Loader measurementId={GA_ID} customMap />
+        <AffiliateClickListener site="horses-com" />
         {/* Shared Nav — reads nav links from siteConfig */}
         <Nav siteId="horses-com" />
 

@@ -342,10 +342,11 @@ const CALCULATORS = [
   },
   {
     id: 'shared · ShopCtas affiliate_click',
-    file: 'packages/ui/src/components/ShopCtas.tsx',
+    file: 'packages/ui/src/components/AffiliateClickListener.tsx',
     mustInclude: [
       { re: /trackEvent\('affiliate_click'/, label: 'GA4 affiliate_click on shop hops when gtag exists' },
-      { re: /visibleShopHref/, label: 'still hide empty / invented hops' },
+      { re: /partner:/, label: 'partner (vendor) travels with the click' },
+      { re: /source/, label: 'source page travels with the click' },
     ],
     mustExclude: [
       { re: /laminated\+/, label: 'no invented kitchen hops' },
@@ -8029,9 +8030,9 @@ const CALCULATORS = [
       { re: /amazon-brand\/pet\+calming\+aid\?s=telehealth/, label: 'pet calming aid search hop' },
       { re: /amazon-brand\/pet\+recovery\+cone\?s=telehealth/, label: 'pet recovery cone search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /ctaHref="\/go\/vetster\/telehealth"/, label: 'Vetster partner hop kept' },
-      { re: /ctaHref="\/go\/askvet\/telehealth"/, label: 'AskVet partner hop kept' },
-      { re: /ctaHref="\/go\/chewy\/connect"/, label: 'Chewy Connect partner hop kept (ReviewCard hides it when empty)' },
+      { re: /ctaHref="\/go\/vetster\/telehealth\?s=telehealth"/, label: 'Vetster partner hop kept' },
+      { re: /ctaHref="\/go\/askvet\/telehealth\?s=telehealth"/, label: 'AskVet partner hop kept' },
+      { re: /ctaHref="\/go\/chewy\/connect\?s=telehealth"/, label: 'Chewy Connect partner hop kept (ReviewCard hides it when empty)' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

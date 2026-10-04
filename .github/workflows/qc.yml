@@ -143,6 +143,18 @@ jobs:
       - name: Run hop-target
         run: node scripts/ci/hop-target.mjs
 
+  hop-attribution:
+    name: Money-page hop attribution (site, source, partner, Amazon tag slot)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run hop-attribution
+        run: node scripts/ci/hop-attribution.mjs
+
   guide-tool-schema:
     name: Guide and tool Article + Breadcrumb schema
     runs-on: ubuntu-latest
