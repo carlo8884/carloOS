@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { Cormorant_Garamond, Inter } from 'next/font/google'
-import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero, Ga4Loader, AffiliateClickListener } from '@carloOS/ui'
+import { Nav, Footer, buildMetadata, DisplayAds, EmailUnderHero, Ga4Loader, AffiliateClickListener, JourneyEvents } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -39,6 +39,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <Ga4Loader measurementId={GA_ID} />
         <AffiliateClickListener site="fish-com" />
+        <JourneyEvents site="fish-com" />
         <Nav siteId="fish-com" />
         <main>
           {children}

@@ -87,11 +87,21 @@ export function EmailCapture({
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
 
+  const reportGuideSignup = useCallback((result: 'success' | 'error' | 'invalid') => {
+    if (!addressOnly) return
+    trackEvent('guide_signup_submit', {
+      site: siteId,
+      page: window.location.pathname,
+      result,
+    })
+  }, [addressOnly, siteId])
+
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault()
     if (!email || !email.includes('@')) {
       setStatus('error')
       setErrorMsg('Enter a valid email address')
+      reportGuideSignup('invalid')
       return
     }
 
@@ -120,6 +130,7 @@ export function EmailCapture({
       }
 
       setStatus('success')
+      reportGuideSignup('success')
 
       // GA4 event
       if (typeof window !== 'undefined' && 'gtag' in window) {
@@ -131,8 +142,9 @@ export function EmailCapture({
     } catch (err) {
       setStatus('error')
       setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please try again.')
+      reportGuideSignup('error')
     }
-  }, [email, siteId, resolvedSource])
+  }, [email, siteId, resolvedSource, reportGuideSignup])
 
   if (!enabled) {
     return null

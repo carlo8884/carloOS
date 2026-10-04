@@ -11,7 +11,11 @@ export function ToolError({ children }: { children: ReactNode }) {
 
 /** One sentence under a result: what the number is for, not a second calculation. */
 export function ResultMeaning({ children }: { children: ReactNode }) {
-  return <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{children}</p>
+  return (
+    <p data-calculator-result="" className="mt-3 text-sm leading-relaxed text-brand-text-mid">
+      {children}
+    </p>
+  )
 }
 
 /**
