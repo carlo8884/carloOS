@@ -66,6 +66,7 @@ export { AffiliateLink, AffiliateDisclosureContext } from './components/Affiliat
 export type { Vendor } from './components/AffiliateLink'
 export { SkimlinksLoader } from './components/SkimlinksLoader'
 export { Ga4Loader } from './components/Ga4Loader'
+export { AffiliateClickListener } from './components/AffiliateClickListener'
 export { AdSenseLoader, AdSlot } from './components/AdSense'
 export { DisplayAds } from './components/DisplayAds'
 export type { DisplayAdConfig } from './components/DisplayAds'

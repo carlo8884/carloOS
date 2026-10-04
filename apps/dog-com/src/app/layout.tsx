@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Script from 'next/script'
 import { Playfair_Display, DM_Sans } from 'next/font/google'
-import { Nav, Footer, DisplayAds, buildMetadata, EmailUnderHero, Ga4Loader } from '@carloOS/ui'
+import { Nav, Footer, DisplayAds, buildMetadata, EmailUnderHero, Ga4Loader, AffiliateClickListener } from '@carloOS/ui'
 import { displayAds } from '../data/display-ads'
 import { HomeEmailCapture } from '../components/HomeEmailCapture'
 import { EmailCaptureGate } from '../components/EmailCaptureGate'
@@ -75,6 +75,7 @@ export default function RootLayout({
         <Footer siteId="dog-com" showAffiliateDisclosure />
 
         <Ga4Loader measurementId={GA_ID} customMap />
+        <AffiliateClickListener site="dog-com" />
 
         <Script src={SKIMLINKS_SRC} strategy="lazyOnload" />
 

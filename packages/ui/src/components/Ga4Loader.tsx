@@ -3,7 +3,7 @@
  *
  * The library at googletagmanager.com/gtag/js?id=G-… is the measurement
  * script Lighthouse labels "Google Tag Manager". It is not a GTM- container.
- * ShopCtas and other callers use window.gtag for affiliate_click, so the
+ * AffiliateClickListener uses window.gtag for affiliate_click, so the
  * page keeps a tiny queue stub in the initial HTML. The ~178kb library
  * itself uses next/script lazyOnload. afterInteractive preloads that file
  * from the head, which is the same bandwidth fight as the old tag.
