@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -204,6 +204,8 @@ export default function ReviewsHubPage() {
           padding: 'clamp(32px, 5vw, 56px) clamp(20px, 5vw, 80px) clamp(40px, 6vw, 72px)',
         }}
       >
+        <div id="ferret-reviews-list">
+        <HubSearch listId="ferret-reviews-list" total={REVIEW_CARDS.length} noun="reviews" />
         <ul
           style={{
             listStyle: 'none',
@@ -215,7 +217,7 @@ export default function ReviewsHubPage() {
           }}
         >
           {REVIEW_CARDS.map((card) => (
-            <li key={card.slug}>
+            <li key={card.slug} data-hub-item data-title={card.title} data-topic={`${card.eyebrow} ${card.description}`}>
               <Link
                 href={card.href}
                 style={{
@@ -292,6 +294,7 @@ export default function ReviewsHubPage() {
             </li>
           ))}
         </ul>
+        </div>
       </div>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>

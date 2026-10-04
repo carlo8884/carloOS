@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,12 +126,16 @@ export default function GuidesHubPage() {
         </div>
       </div>
 
-      <div className="px-container-sm sm:px-container pb-14 max-w-container-wide mx-auto">
+      <div id="dog-guides-list" className="px-container-sm sm:px-container pb-14 max-w-container-wide mx-auto">
+        <HubSearch listId="dog-guides-list" total={GUIDES.length} noun="guides" />
         <div className="grid sm:grid-cols-2 gap-4">
           {GUIDES.map((item) => (
             <Link
               key={item.href}
               href={item.href}
+              data-hub-item
+              data-title={item.title}
+              data-topic={`${item.badge} ${item.desc}`}
               className="block bg-brand-white border border-brand-border rounded-lg p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
             >
               {item.badge && (

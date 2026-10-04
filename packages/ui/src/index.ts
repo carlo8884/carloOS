@@ -45,6 +45,7 @@ export {
 
 // Forms
 export { EmailCapture } from './components/EmailCapture'
+export { HubSearch } from './components/HubSearch'
 export { EmailUnderHero, isEmailUnderHeroPath } from './components/EmailUnderHero'
 export { DirectoryHub, DirectoryDetail, DirectoryPlacesCta } from './components/DirectoryHub'
 export {
