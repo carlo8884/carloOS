@@ -293,4 +293,4 @@ jobs:
       - name: Run content-stub-guard
         run: node scripts/ci/content-stub-guard.mjs
       - name: Test content-stub-guard
-        run: node --test scripts/ci/content-stub-guard.test.mjs
+        run: node --test scripts/ci/content-stub-guard.test.mjs scripts/ci/grok-direct-push-guard.test.mjs
