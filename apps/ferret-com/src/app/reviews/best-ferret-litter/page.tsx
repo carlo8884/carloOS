@@ -145,6 +145,7 @@ export default function BestFerretLitterPage() {
                 { label: 'Pine & Cedar — The Phenol Problem', href: '#phenols' },
                 { label: 'Odor Control & Tracking', href: '#odor' },
                 { label: 'Litters That Meet the Criteria', href: '#picks' },
+                { label: 'Who should buy which litter', href: '#who' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -331,6 +332,43 @@ export default function BestFerretLitterPage() {
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="grass-pellet-litter"
           />
+
+          <h2 id="who">Who should buy which litter</h2>
+          <p>
+            All three are non-clumping and low-dust. The difference is odor, texture, and the wood caveat already on the cards. Do not switch to a clumping cat litter for smell.
+          </p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[32rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">Priority</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">A default that most ferrets accept</td>
+                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a></td>
+                  <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
+                  <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">Odor, and you will buy the heat-treated form only</td>
+                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a></td>
+                  <td className="p-3">Best for odor. Strong odor control. Price tier $</td>
+                  <td className="p-3">Never loose aromatic pine or cedar shavings. Harder underfoot than paper</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">A ferret that rejects paper or wood texture</td>
+                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a></td>
+                  <td className="p-3">Soft alternative. Low dust. Non-clumping. Price tier $$</td>
+                  <td className="p-3">Moderate odor, and the pellets break down faster when wet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

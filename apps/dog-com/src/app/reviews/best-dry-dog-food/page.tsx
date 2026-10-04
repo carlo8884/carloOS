@@ -243,6 +243,51 @@ export default function BestDogFoodPage() {
               ctaAffiliateProduct="orijen+dry+dog+food"
             />
 
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Each row restates the badge, price range, and tradeoff already on the card above. Editor scores on this page are not customer star ratings, and the prices are the ranges printed on those cards.
+              </p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If this is the dog</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">Already on the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Healthy dog, and you want the research standard</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Full WSAVA, AAFCO feeding trials. $55–110 / 30 lbs</td>
+                      <td className="p-3 text-brand-text-mid">Mid-premium, and the ingredient list is not a “natural” label</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Same scientific bar, lower spend</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Value. Full WSAVA. $45–90 / 30 lbs</td>
+                      <td className="p-3 text-brand-text-mid">Some formulas include artificial colors or preservatives</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A diagnosed condition the vet is managing with diet</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills" className="text-brand-primary">Hill&apos;s Science Diet</a></td>
+                      <td className="p-3 text-brand-text-mid">Best for Medical Conditions. Prescription line needs vet authorization. Science Diet $60–120 / 30 lbs</td>
+                      <td className="p-3 text-brand-text-mid">Non-prescription Science Diet is less differentiated; Prescription Diet is the clinical line</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Healthy dog, and ingredient sourcing is the priority</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#orijen" className="text-brand-primary">Orijen</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Premium Natural. 38%+ protein. Partial WSAVA. $90–150 / 25 lbs</td>
+                      <td className="p-3 text-brand-text-mid">This page does not recommend it for dogs with known health conditions</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
             {/* Key buying guidance */}
             <div className="mt-10 bg-brand-surface border border-brand-border rounded-lg p-7">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">The One Thing to Know</h2>

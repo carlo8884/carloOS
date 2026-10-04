@@ -82,6 +82,7 @@ export default function HorseInsurancePage() {
             { label: "Major Medical and Surgical", href: "#medical" },
             { label: "Loss of Use", href: "#lou" },
             { label: "Liability Cover", href: "#liability" },
+            { label: "Who should buy which cover", href: "#who" },
             { label: "Exclusions and Deciding", href: "#deciding" },
             { label: "Insurance paperwork", href: "#kit" },
             { label: "FAQ", href: "#faq" },
@@ -175,6 +176,47 @@ export default function HorseInsurancePage() {
             what-to-insure page beside mortality and
             medical, instead of being forgotten
             because the horse itself is low-value. </p>
+
+          <h2 id="who">Who should buy which cover</h2>
+          <p>These are cover types, not ranked insurers. This page does not publish a premium, a payout percentage, or a carrier score. Read the policy for exclusions before you rely on any of them.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[32rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If this is the risk</th>
+                  <th className="p-3 font-bold text-brand-dark">Look at</th>
+                  <th className="p-3 font-bold text-brand-dark">What this page already says</th>
+                  <th className="p-3 font-bold text-brand-dark">It does not do</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Losing a horse that would be expensive to replace</td>
+                  <td className="p-3 font-bold text-brand-dark">Mortality</td>
+                  <td className="p-3 text-brand-text-mid">Pays the agreed value on death or covered euthanasia. Often the base policy</td>
+                  <td className="p-3 text-brand-text-mid">Pay a vet bill while the horse is alive</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A colic surgery or a long treatment</td>
+                  <td className="p-3 font-bold text-brand-dark">Major medical and surgical</td>
+                  <td className="p-3 text-brand-text-mid">Usually added to mortality. Annual limit and deductible decide whether a surgery is covered in full</td>
+                  <td className="p-3 text-brand-text-mid">Replace the horse if it dies. That is mortality</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A competition horse that survives but cannot do the job</td>
+                  <td className="p-3 font-bold text-brand-dark">Loss of use</td>
+                  <td className="p-3 text-brand-text-mid">Typically a portion of insured value, with a strict definition of loss of use</td>
+                  <td className="p-3 text-brand-text-mid">Suit a low-value pleasure horse. The page calls it a costly add-on for higher-value performance horses</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">The horse injures a person or damages property</td>
+                  <td className="p-3 font-bold text-brand-dark">Liability</td>
+                  <td className="p-3 text-brand-text-mid">Relevant at any horse value. Sometimes sits in a membership, sometimes a separate policy</td>
+                  <td className="p-3 text-brand-text-mid">Pay the horse&apos;s own vet bill or death benefit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 id="deciding">Exclusions and Deciding</h2>
           <p>Every policy has exclusions and conditions -- pre-existing conditions, certain procedures, requirements to report illness and obtain prior approval for treatment, and limits per condition or per year -- and failing to follow them (such as not notifying the insurer promptly) can void a claim. Read the policy carefully, disclose the horse&apos;s history honestly, and understand the limits before relying on cover. The decision of what to insure comes down to the horse&apos;s value, the owner&apos;s ability to absorb a large bill, and how the premiums compare with self-insuring through savings.</p>

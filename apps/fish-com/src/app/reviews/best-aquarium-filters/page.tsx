@@ -196,6 +196,48 @@ export default function BestAquariumFiltersPage() {
               ctaAffiliateProduct="aqueon-quietflow-30"
             />
 
+            <div className="mt-10">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-3">Who should buy which filter</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">The type, tank size, and price below are the specs already on each card. This is not a new test.</p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">Tank</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">About 30–70 gallons, and you want refillable media</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a></td>
+                      <td className="p-3 text-brand-text-mid">Best HOB. 300 GPH. Up to 70 gallons. $45–70</td>
+                      <td className="p-3 text-brand-text-mid">Impeller needs cleaning every 3–4 months or flow drops</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">40–70 gallons with a high bioload, and cabinet space</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a></td>
+                      <td className="p-3 text-brand-text-mid">Best canister. 303 GPH. Near-silent. $120–160</td>
+                      <td className="p-3 text-brand-text-mid">Cleaning day is more involved than a hang-on-back</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Nano, shrimp, fry, or a hospital tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#sponge" className="text-brand-primary">Hikari Bacto-Surge</a></td>
+                      <td className="p-3 text-brand-text-mid">Best sponge. No intake. $10–20, plus an air pump sold separately</td>
+                      <td className="p-3 text-brand-text-mid">Not enough mechanical filtration to run a larger tank alone</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Up to 30 gallons, and you want the cheapest widely stocked HOB</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a></td>
+                      <td className="p-3 text-brand-text-mid">Best budget HOB. Under $35. Proprietary cartridge</td>
+                      <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </div>

@@ -113,6 +113,44 @@ export default function TelehealthPage() {
               </div>
             </div>
 
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should use which service</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Prices and limits are the ones on the cards. None of these replace an emergency visit. Pale gums, trouble breathing, collapse, suspected poisoning, or a cat that cannot urinate is an in-person emergency.
+              </p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Use</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Limit</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Video, a specialist, or a prescription where state rules allow</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="text-brand-primary">Vetster</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Video and chat. Pay per consult, $50–100. No monthly fee</td>
+                      <td className="p-3 text-brand-text-mid">Higher per visit than a subscription. Waits can stretch at peak hours</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Frequent chat questions, not a video exam</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#askvet" className="text-brand-primary">AskVet</a></td>
+                      <td className="p-3 text-brand-text-mid">Best subscription. $30/month unlimited chat. Typical wait under 5 minutes</td>
+                      <td className="p-3 text-brand-text-mid">Chat only. General practice. Prescriptions are limited</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">You already pay for Chewy+</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#chewy" className="text-brand-primary">Chewy Connect</a></td>
+                      <td className="p-3 text-brand-text-mid">Included with Chewy+ at $19.99/month. Pharmacy can fill the prescription</td>
+                      <td className="p-3 text-brand-text-mid">Weak value if you do not already want Chewy+. Fewer specialists than Vetster</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
           </div>

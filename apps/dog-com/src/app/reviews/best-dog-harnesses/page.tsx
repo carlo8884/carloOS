@@ -81,6 +81,44 @@ export default function BestDogHarnessesPage() {
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="julius+k9+idc+powerharness"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which harness</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                The three reviewed harnesses solve different jobs. The Sure-Fit puppy name in the picks strip is not a reviewed card on this page, so it is not in the table. Prices and limits are the ones already printed on each card.
+              </p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If the dog</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">Clip and price</th>
+                      <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Pulls on leash</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-walk" className="text-brand-primary">PetSafe Easy Walk</a></td>
+                      <td className="p-3 text-brand-text-mid">Front-clip. $20–30</td>
+                      <td className="p-3 text-brand-text-mid">Not for dogs with shoulder or elbow issues. Fit has to be right or it rotates</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Hikes or walks long enough that padding matters</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#ruffwear" className="text-brand-primary">Ruffwear Front Range</a></td>
+                      <td className="p-3 text-brand-text-mid">Front and back clips. $40–55</td>
+                      <td className="p-3 text-brand-text-mid">Bulkier and more expensive than a casual harness</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Backs out of or destroys harnesses</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a></td>
+                      <td className="p-3 text-brand-text-mid">Back-clip only. $40–70</td>
+                      <td className="p-3 text-brand-text-mid">Not a no-pull harness. Heavy for a small dog</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

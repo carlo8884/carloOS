@@ -202,6 +202,48 @@ export default function BestHeatersPage() {
               ctaAffiliateProduct="aqueon-pro-heater"
             />
 
+            <div className="mt-10">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-3">Who should buy which heater</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">Accuracy, housing, and price are copied from the cards. Wattage still comes from the tank, not from the brand name — use the wattage calculator before you buy.</p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The tightest published tolerance, and a recalibration dial</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. ±0.5°F. Auto shut-off out of water. $25–55 by wattage. 25W–300W</td>
+                      <td className="p-3 text-brand-text-mid">Glass. It can shatter if dropped</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a></td>
+                      <td className="p-3 text-brand-text-mid">Best flat design. ±0.5°F. Shatterproof plastic. $35–65</td>
+                      <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A canister filter, and no heater in the tank</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hydor" className="text-brand-primary">Hydor In-Line</a></td>
+                      <td className="p-3 text-brand-text-mid">Best inline. Sits on the canister return hose. $40–70</td>
+                      <td className="p-3 text-brand-text-mid">Does not work with a hang-on-back or a sponge filter</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A robust community tank and a low price</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon Pro</a></td>
+                      <td className="p-3 text-brand-text-mid">Best budget. Shatterproof. ±1–1.5°F. $18–30</td>
+                      <td className="p-3 text-brand-text-mid">Too loose for discus, cardinal tetras, and other tight-range species</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </div>

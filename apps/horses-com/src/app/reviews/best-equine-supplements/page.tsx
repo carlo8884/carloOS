@@ -361,6 +361,66 @@ export default function BestEquineSupplementsPage() {
               ctaAffiliateProduct="adams-plus-electrolyte"
             />
 
+            <h2>Who should buy which</h2>
+            <p>The category table above already names a top pick, an evidence note, and a monthly range. This block only says which reviewed product matches which job. It does not add a product that lacks a card, and it does not turn a supplement into a drug.</p>
+            <div className="overflow-x-auto my-6 max-w-full">
+              <table className="w-full text-xs border-collapse min-w-[36rem]">
+                <thead>
+                  <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                    <th className="p-3 font-bold text-brand-dark">Job</th>
+                    <th className="p-3 font-bold text-brand-dark">Reviewed pick</th>
+                    <th className="p-3 font-bold text-brand-dark">Why this page picks it</th>
+                    <th className="p-3 font-bold text-brand-dark">Do not expect</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Diagnosed osteoarthritis or heavy joint load</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a></td>
+                    <td className="p-3 text-brand-text-mid">Best joint evidence. ASU plus glucosamine and chondroitin. NASC sealed</td>
+                    <td className="p-3 text-brand-text-mid">A cure. The card is support evidence, and the first month costs more on a loading dose</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">One broad wellness product, after the ration is already balanced</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a></td>
+                    <td className="p-3 text-brand-text-mid">Best comprehensive. One daily top-dress. Category table lists $85–140/mo</td>
+                    <td className="p-3 text-brand-text-mid">Among the most expensive per month. The card says the same targets can be met more cheaply with a marine omega-3, vitamin E, and a balancer</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Gastric support beside veterinary care, not instead of it</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a></td>
+                    <td className="p-3 text-brand-text-mid">Best gastric adjunct. Category table: moderate buffer evidence, $35–80/mo</td>
+                    <td className="p-3 text-brand-text-mid">Treatment of active ulcers. The table says pharmacologic care is for active disease</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Marine DHA/EPA, not a plant-oil substitute</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a></td>
+                    <td className="p-3 text-brand-text-mid">Best marine omega-3. Category table: strong marine DHA/EPA evidence, $45–85/mo</td>
+                    <td className="p-3 text-brand-text-mid">A joint or gastric product. It is an oil, not those categories</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">A resveratrol pellet already reviewed on this page</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#equithrive" className="text-brand-primary">Equithrive Original</a></td>
+                    <td className="p-3 text-brand-text-mid">Best resveratrol. The card frames it as a complement to traditional joint ingredients, for mild inflammation or post-injection support</td>
+                    <td className="p-3 text-brand-text-mid">A standalone replacement for the ASU pick. The card says the evidence base is smaller</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Forage or a forage replacement, not a vitamin pellet</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#standlee" className="text-brand-primary">Standlee Premium Forage</a></td>
+                    <td className="p-3 text-brand-text-mid">Best forage products on this page</td>
+                    <td className="p-3 text-brand-text-mid">A complete ration by itself. Forage still has to match the horse</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Sweat replacement after work</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a></td>
+                    <td className="p-3 text-brand-text-mid">Best electrolyte. Category table: strong Na/Cl/K replacement, $20–40/mo</td>
+                    <td className="p-3 text-brand-text-mid">A daily wellness powder for a horse that is not sweating</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
+
             <h2>What to Avoid</h2>
             <p>The equine supplement market includes legitimate, evidence-backed products and a wide range of marketing-driven products that are best avoided. Common pitfalls:</p>
 
