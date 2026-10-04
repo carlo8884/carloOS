@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
@@ -192,6 +192,7 @@ export default function WhenToEnrollPage() {
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
       </ArticleLayout>
+      <RelatedReads siteId="vets-co" path="/insurance/when-to-enroll" />
     </>
   )
 }

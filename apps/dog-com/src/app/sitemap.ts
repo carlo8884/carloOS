@@ -211,6 +211,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/reviews/greenies-vs-whimzees-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/icrate-vs-impact-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/easy-walk-vs-front-range-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/reviews/royal-canin-vs-pro-plan-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/reviews/cosequin-vs-dasuquin-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/holiday-scraps-trash-can-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/holiday-chocolate-calculator-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dog-food-for-puppies', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

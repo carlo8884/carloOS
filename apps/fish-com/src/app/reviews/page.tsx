@@ -80,6 +80,18 @@ const REVIEWS = [
     badge: 'Essential',
   },
   {
+    title: 'Fluval 307 vs Eheim Classic',
+    desc: 'AquaStop and a quieter canister, or the Classic the canister review credits with a longer service life.',
+    href: '/reviews/fluval-307-vs-eheim-guide',
+    badge: 'Filtration',
+  },
+  {
+    title: 'Easy Green vs Seachem Flourish',
+    desc: 'One weekly all-in-one dose, or trace elements from a fish store. Doses are already on the fertilizer review.',
+    href: '/reviews/easy-green-vs-flourish-guide',
+    badge: 'Planted Tanks',
+  },
+  {
     title: 'Best Heater for a Display Tank',
     desc: 'Flat shatterproof heater versus glass versus an inline heater, from the heater review.',
     href: '/reviews/best-display-tank-heater-guide',

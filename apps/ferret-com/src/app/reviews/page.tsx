@@ -96,6 +96,22 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
       'A chain-store cage for one ferret with daily out-time, or the double unit for a pair.',
   },
   {
+    slug: 'kaytee-vs-prevue-guide',
+    href: '/reviews/kaytee-vs-prevue-guide',
+    eyebrow: 'Housing',
+    title: 'Kaytee vs Prevue',
+    description:
+      'A chain-store cage for one ferret, or the Prevue the cage review sizes for one or two.',
+  },
+  {
+    slug: 'wood-vs-grass-litter-guide',
+    href: '/reviews/wood-vs-grass-litter-guide',
+    eyebrow: 'Litter',
+    title: 'Wood vs Grass Pellet Litter',
+    description:
+      'Heat-treated wood pellets when odor matters, or a softer grass pellet. The wood caveat is already on the litter review.',
+  },
+  {
     slug: 'paper-vs-grass-litter-guide',
     href: '/reviews/paper-vs-grass-litter-guide',
     eyebrow: 'Litter',
