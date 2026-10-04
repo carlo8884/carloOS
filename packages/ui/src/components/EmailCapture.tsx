@@ -49,6 +49,11 @@ interface EmailCaptureProps {
   /** Link to the actual checklist / schedule / tool. */
   resourceHref?: string
   resourceLabel?: string
+  /**
+   * Store the address only. Shows the form on paused sites and does not
+   * claim a message is sent. Pages still pass a specific reason in title/subtitle.
+   */
+  addressOnly?: boolean
 }
 
 export function EmailCapture({
@@ -66,14 +71,16 @@ export function EmailCapture({
   resourceText,
   resourceHref,
   resourceLabel,
+  addressOnly = false,
 }: EmailCaptureProps) {
-  const resolvedCtaText = ctaText ?? buttonText ?? 'Send the notes'
+  const resolvedCtaText = ctaText ?? buttonText ?? (addressOnly ? 'Save my address' : 'Send the notes')
   const resolvedSource = source ?? tag ?? 'unknown'
   // Under-hero cash-register captures always render (no Vercel env write).
   // Other placements stay behind NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED.
+  // addressOnly is the guide update list: the form is the offer.
   const underHero = resolvedSource.endsWith('under-hero')
   const enabled =
-    underHero || process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true'
+    addressOnly || underHero || process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true'
 
   const id = useId()
   const [email, setEmail] = useState('')
@@ -127,7 +134,7 @@ export function EmailCapture({
     return null
   }
 
-  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId)) {
+  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId) && !addressOnly) {
     return (
       <OnPageMagnet
         variant={variant}
@@ -139,6 +146,31 @@ export function EmailCapture({
         resourceHref={resourceHref}
         resourceLabel={resourceLabel}
       />
+    )
+  }
+
+  if (addressOnly) {
+    if (status === 'success') {
+      return (
+        <div data-email-capture="inline" data-address-only="true" className="rounded-lg border border-brand-border bg-brand-surface p-4 my-6">
+          <p className="font-display text-base font-semibold text-brand-dark m-0">Address saved.</p>
+          <p className="text-sm text-brand-text-mid mt-1 mb-0 leading-relaxed">Stored for this page. You will not receive an email.</p>
+        </div>
+      )
+    }
+    return (
+      <div data-email-capture="inline" data-address-only="true" className="rounded-lg border border-brand-border bg-brand-surface p-4 my-6">
+        <p className="font-display text-base font-semibold text-brand-dark mb-1">{title}</p>
+        {subtitle && <p className="text-sm text-brand-text-mid leading-relaxed mb-3">{subtitle}</p>}
+        <Form id={id} email={email} setEmail={setEmail} onSubmit={handleSubmit}
+          ctaText={resolvedCtaText} placeholder={placeholder} status={status} errorMsg={errorMsg}
+          loadingText="Saving…"
+          wrapClass="flex gap-3 flex-wrap"
+          inputClass="flex-1 min-w-48 px-4 py-3 border border-brand-border rounded text-brand-dark text-sm outline-none focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-primary focus:border-brand-primary bg-brand-white"
+          btnClass="px-6 py-3 bg-brand-primary text-brand-white text-sm font-bold rounded cursor-pointer border-0 hover:bg-brand-primary-light transition-colors whitespace-nowrap"
+        />
+        <p className="text-xs text-brand-text-light mt-2 mb-0">The form stores the address for this page. It does not send you an email.</p>
+      </div>
     )
   }
 
@@ -401,12 +433,13 @@ interface FormProps {
   placeholder: string
   status: string
   errorMsg: string
+  loadingText?: string
   wrapClass?: string
   inputClass: string
   btnClass: string
 }
 
-function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, errorMsg, wrapClass, inputClass, btnClass }: FormProps) {
+function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, errorMsg, loadingText = 'Sending…', wrapClass, inputClass, btnClass }: FormProps) {
   return (
     <form onSubmit={onSubmit} noValidate>
       <input name="company_website" tabIndex={-1} autoComplete="off" className="hidden" aria-hidden="true" />
@@ -429,7 +462,7 @@ function Form({ id, email, setEmail, onSubmit, ctaText, placeholder, status, err
           disabled={status === 'loading'}
           className={btnClass}
         >
-          {status === 'loading' ? 'Sending…' : ctaText}
+          {status === 'loading' ? loadingText : ctaText}
         </button>
       </div>
       {errorMsg && <p role="alert" className="text-xs text-brand-danger mt-1.5">{errorMsg}</p>}

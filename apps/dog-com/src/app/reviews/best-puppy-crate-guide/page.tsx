@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -80,6 +80,16 @@ export default function BestPuppyCrateGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
         <p>The hop below is the same MidWest iCrate search already on the crate review. It is a search, not a promise of a single size or a sale price.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide">Browse MidWest iCrate dog crates on Amazon →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="House-training crate update list"
+          subtitle="Leave an address to be on the list for changes to the MidWest iCrate divider note on this page."
+          ctaText="Save my address"
+          source="reviews-best-puppy-crate-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

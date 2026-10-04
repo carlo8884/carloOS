@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -77,6 +77,16 @@ export default function PaperVsWoodLitterGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The hop is the paper-pellet search already on the litter review, the default pick.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide">Find paper pellet litter on Chewy →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Litter comparison update list"
+          subtitle="Leave an address to be on the list for changes to the paper-pellet versus wood note on this page."
+          ctaText="Save my address"
+          source="reviews-paper-vs-wood-litter-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

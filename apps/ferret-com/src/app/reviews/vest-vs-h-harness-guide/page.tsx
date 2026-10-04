@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -78,6 +78,16 @@ export default function VestVsHHarnessGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The hop is the vest search already on the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide">Find a ferret vest harness on Amazon →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Ferret harness update list"
+          subtitle="Leave an address to be on the list for changes to the vest versus H-style note on this page."
+          ctaText="Save my address"
+          source="reviews-vest-vs-h-harness-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
