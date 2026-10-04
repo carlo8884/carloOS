@@ -8,7 +8,7 @@ import { hubQueryMatches } from '../lib/hub-search'
  * JavaScript is off. A card is a `[data-hub-item]` with `data-title` and
  * `data-topic`. `data-hub-count="off"` still filters a duplicate link but
  * leaves it out of the count. A `[data-hub-group]` hides when every card
- * inside it is hidden.
+ * inside it is hidden. A `[data-hub-jump]` link hides with that group.
  */
 export function HubSearch({
   listId,
@@ -38,6 +38,11 @@ export function HubSearch({
     for (const group of Array.from(root.querySelectorAll<HTMLElement>('[data-hub-group]'))) {
       const groupItems = Array.from(group.querySelectorAll<HTMLElement>('[data-hub-item]'))
       setHubHidden(group, groupItems.length > 0 && groupItems.every((el) => el.hidden))
+    }
+    for (const jump of Array.from(root.querySelectorAll<HTMLElement>('[data-hub-jump]'))) {
+      const id = jump.getAttribute('data-hub-jump')
+      const group = id ? document.getElementById(id) : null
+      setHubHidden(jump, !group || group.hidden)
     }
     setVisible(shown)
   }, [query, listId])
@@ -78,6 +83,24 @@ function setHubHidden(el: HTMLElement, hide: boolean) {
   // `hidden` loses to utility classes such as `block` (display:block).
   if (hide) el.style.setProperty('display', 'none')
   else el.style.removeProperty('display')
+}
+
+/** Category jump links. Each `id` matches a `[data-hub-group]` section. */
+export function HubJumpNav({ groups }: { groups: { id: string; label: string }[] }) {
+  return (
+    <nav aria-label="On this page" className="mb-8 flex flex-wrap gap-2">
+      {groups.map((group) => (
+        <a
+          key={group.id}
+          href={`#${group.id}`}
+          data-hub-jump={group.id}
+          className="inline-flex items-center min-h-11 px-3 rounded-md border border-brand-border bg-brand-white text-sm font-semibold text-brand-dark no-underline hover:border-brand-primary"
+        >
+          {group.label}
+        </a>
+      ))}
+    </nav>
+  )
 }
 
 function plural(count: number, noun: string): string {

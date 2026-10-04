@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -19,75 +19,93 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
+const REVIEW_GROUPS = [
+  { id: 'horses-reviews-supplements', label: 'Supplements', intro: 'Joint, hoof, and gastric supplement pages, plus the comparisons that use those cards.' },
+  { id: 'horses-reviews-blankets', label: 'Blankets and winter', intro: 'Turnout and stable blanket pages, fill-weight notes, and the winter water page.' },
+  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison. It does not fix saddle fit.' },
+]
+
 const REVIEWS = [
   {
     slug: 'best-equine-supplements',
+    group: 'horses-reviews-supplements',
     title: 'Best Equine Supplements 2025',
     description:
       'Joint, hoof, and gastric supplements ranked against the published equine veterinary evidence.',
   },
   {
     slug: 'best-winter-horse-blankets',
+    group: 'horses-reviews-blankets',
     title: 'Best Winter Horse Blankets 2025',
     description:
       'Turnout and stable blankets compared for denier, fill weight, and fit — for clipped horses and harsh climates.',
   },
   {
     slug: 'rambo-vs-rhino-guide',
+    group: 'horses-reviews-blankets',
     title: 'Rambo vs Rhino Turnout',
     description:
       'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
   },
   {
     slug: 'weatherbeeta-vs-amigo-guide',
+    group: 'horses-reviews-blankets',
     title: 'Weatherbeeta vs Amigo',
     description:
       'A wither-relief mid-tier turnout, or Horseware’s value blanket. Denier and prices are already on those cards.',
   },
   {
     slug: 'rambo-vs-schneiders-guide',
+    group: 'horses-reviews-blankets',
     title: 'Rambo vs Schneiders',
     description:
       'Horseware’s premium mid-weight turnout, or Schneiders’ heavy fill for a northern winter. Denier and prices are already on the blanket review.',
   },
   {
     slug: 'cosequin-vs-equithrive-guide',
+    group: 'horses-reviews-supplements',
     title: 'Cosequin ASU vs Equithrive',
     description:
       'ASU with glucosamine, or a resveratrol pellet the supplement review treats as a complement. Monthly prices are already on that review.',
   },
   {
     slug: 'ker-eo3-vs-equithrive-guide',
+    group: 'horses-reviews-supplements',
     title: 'KER EO-3 vs Equithrive',
     description:
       'Marine omega-3 liquid, or a resveratrol pellet. Monthly prices are the ones on the supplement review.',
   },
   {
     slug: 'best-blanket-for-clipped-horse-guide',
+    group: 'horses-reviews-blankets',
     title: 'Best Blanket for a Clipped Horse',
     description:
       'The heavy-winter turnout the blanket review names for a clipped horse in a northern climate, and when it is too much blanket.',
   },
   {
     slug: 'cosequin-vs-platinum-guide',
+    group: 'horses-reviews-supplements',
     title: 'Cosequin ASU Plus vs Platinum CJ',
     description:
       'The ASU formula at $60–95 per 30 days, or the comprehensive tub at $130–180. Neither replaces joint injections.',
   },
   {
     slug: 'quilted-vs-sheepskin-pad-guide',
+    group: 'horses-reviews-tack',
     title: 'Quilted Pad vs Sheepskin Half Pad',
     description:
       'A washable everyday English pad, or a sheepskin half pad for friction. Neither fixes saddle fit.',
   },
   {
     slug: 'blanket-weight-by-temperature-guide',
+    group: 'horses-reviews-blankets',
     title: 'Blanket Weight by Temperature',
     description:
       'The fill bands already on the winter blanket review, and the Rambo hop for the medium band.',
   },
   {
     slug: 'winter-water-unfrozen-guide',
+    group: 'horses-reviews-blankets',
     title: 'Keep Horse Water Unfrozen',
     description:
       'Icy water and dry hay are the winter colic pattern already published. The hop is the heated bucket.',
@@ -139,23 +157,30 @@ export default function HorsesReviewsPage() {
 
       <div id="horses-reviews-list" className="px-container-sm sm:px-container py-12">
         <HubSearch listId="horses-reviews-list" total={REVIEWS.length} noun="reviews" />
-        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0">
-          {REVIEWS.map((r) => (
-            <li key={r.slug} data-hub-item data-title={r.title} data-topic={r.description}>
-              <Link
-                href={`/reviews/${r.slug}`}
-                className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
-              >
-                <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
-                  {r.title}
-                </div>
-                <p className="text-sm text-brand-text-mid leading-relaxed m-0">
-                  {r.description}
-                </p>
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <HubJumpNav groups={REVIEW_GROUPS} />
+        {REVIEW_GROUPS.map((group) => (
+          <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+            <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+            <ul className="grid grid-cols-1 sm:grid-cols-2 gap-5 list-none p-0">
+              {REVIEWS.filter((r) => r.group === group.id).map((r) => (
+                <li key={r.slug} data-hub-item data-title={r.title} data-topic={`${group.label} ${r.description}`}>
+                  <Link
+                    href={`/reviews/${r.slug}`}
+                    className="block py-5 px-6 rounded-lg border border-brand-border bg-brand-surface hover:border-brand-primary hover:bg-white no-underline transition"
+                  >
+                    <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">
+                      {r.title}
+                    </div>
+                    <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+                      {r.description}
+                    </p>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ))}
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">

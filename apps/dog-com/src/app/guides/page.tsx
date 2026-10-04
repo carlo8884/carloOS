@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
@@ -18,42 +18,54 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 
+const GUIDE_GROUPS = [
+  { id: 'dog-guides-foundational', label: 'Foundational', intro: 'Body condition and microchipping.' },
+  { id: 'dog-guides-health', label: 'Health decisions', intro: 'Spay and neuter timing from the cited research.' },
+  { id: 'dog-guides-reference', label: 'Reference', intro: 'Home vital signs, the wellness visit, and a first-aid kit.' },
+]
+
 const GUIDES = [
   {
     title: 'Dog Body Condition Score Explained',
     desc: 'How to assess your dog\'s weight using the 1-9 BCS scale, with breed adjustments and lifespan evidence.',
     href: '/guides/dog-body-condition-score',
     badge: 'Foundational',
+    group: 'dog-guides-foundational',
   },
   {
     title: 'Spay & Neuter Timing — What the Evidence Says',
     desc: 'When to spay or neuter by breed, sex, and health risk profile. Updated recommendations from current research.',
     href: '/guides/dog-spay-neuter-timing',
     badge: 'Health Decision',
+    group: 'dog-guides-health',
   },
   {
     title: "How to Take a Dog's Temperature & Vital Signs at Home",
     desc: 'Temperature, pulse, breathing rate, gum color and hydration — the normal reference ranges and the thresholds that mean call your vet.',
     href: '/guides/how-to-take-dogs-temperature',
     badge: 'Reference',
+    group: 'dog-guides-reference',
   },
   {
     title: 'Dog Microchipping Explained',
     desc: 'How microchips work, what they cost, ISO standards, the registration step most owners miss, and how chips differ from GPS trackers.',
     href: '/guides/dog-microchipping',
     badge: 'Foundational',
+    group: 'dog-guides-foundational',
   },
   {
     title: 'The Dog Wellness Exam — What to Expect',
     desc: 'What happens at a wellness visit, how often to go by life stage, how to choose a veterinarian, and the questions to ask.',
     href: '/guides/dog-wellness-exam',
     badge: 'Reference',
+    group: 'dog-guides-reference',
   },
   {
     title: 'Dog First Aid Kit & Emergency Preparedness',
     desc: 'What to put in a canine first aid kit, the emergency numbers to save in advance, and how to be ready for a medical emergency.',
     href: '/guides/dog-first-aid-kit',
     badge: 'Reference',
+    group: 'dog-guides-reference',
   },
 ]
 
@@ -128,24 +140,31 @@ export default function GuidesHubPage() {
 
       <div id="dog-guides-list" className="px-container-sm sm:px-container pb-14 max-w-container-wide mx-auto">
         <HubSearch listId="dog-guides-list" total={GUIDES.length} noun="guides" />
-        <div className="grid sm:grid-cols-2 gap-4">
-          {GUIDES.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              data-hub-item
-              data-title={item.title}
-              data-topic={`${item.badge} ${item.desc}`}
-              className="block bg-brand-white border border-brand-border rounded-lg p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
-            >
-              {item.badge && (
-                <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{item.badge}</div>
-              )}
-              <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">{item.title}</div>
-              <div className="text-sm text-brand-text-light leading-relaxed">{item.desc}</div>
-            </Link>
-          ))}
-        </div>
+        <HubJumpNav groups={GUIDE_GROUPS} />
+        {GUIDE_GROUPS.map((group) => (
+          <section key={group.id} id={group.id} data-hub-group className="mb-10 scroll-mt-24">
+            <h2 className="font-display font-bold text-brand-dark text-xl mb-2">{group.label}</h2>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-4 max-w-2xl">{group.intro}</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {GUIDES.filter((item) => item.group === group.id).map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  data-hub-item
+                  data-title={item.title}
+                  data-topic={`${item.badge} ${group.label} ${item.desc}`}
+                  className="block bg-brand-white border border-brand-border rounded-lg p-6 no-underline hover:border-brand-primary hover:shadow-card transition-all duration-200"
+                >
+                  {item.badge && (
+                    <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">{item.badge}</div>
+                  )}
+                  <div className="font-display font-bold text-brand-dark text-lg mb-2 leading-tight">{item.title}</div>
+                  <div className="text-sm text-brand-text-light leading-relaxed">{item.desc}</div>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ))}
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">

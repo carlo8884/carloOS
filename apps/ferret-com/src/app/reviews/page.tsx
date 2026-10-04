@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildItemListSchema, combineSchemas, SchemaScript, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubHero } from '../../components/HubHero'
 
@@ -21,11 +21,20 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 interface ReviewCardEntry {
   slug: string
+  group: string
   href: string
   eyebrow: string
   title: string
   description: string
 }
+
+const REVIEW_GROUPS = [
+  { id: 'ferret-reviews-housing', label: 'Housing', intro: 'Cage reviews and the cage comparisons.' },
+  { id: 'ferret-reviews-litter', label: 'Litter', intro: 'Litter reviews and the pellet comparisons.' },
+  { id: 'ferret-reviews-walking', label: 'Walking', intro: 'Harness reviews and the fit comparison.' },
+  { id: 'ferret-reviews-food', label: 'Food', intro: 'Kibble reviews. The food guide lives in the diet section.' },
+  { id: 'ferret-reviews-season', label: 'Season', intro: 'Seasonal grooming and harness-fit pages.' },
+]
 
 // The food guide is the existing diet/best-ferret-kibble page — it is already
 // an editorial food review, so we link it rather than duplicating it (CLAUDE.md
@@ -33,6 +42,7 @@ interface ReviewCardEntry {
 const REVIEW_CARDS: ReviewCardEntry[] = [
   {
     slug: 'best-ferret-cage',
+    group: 'ferret-reviews-housing',
     href: '/reviews/best-ferret-cage',
     eyebrow: 'Housing',
     title: 'Best Ferret Cage',
@@ -41,6 +51,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'best-ferret-litter',
+    group: 'ferret-reviews-litter',
     href: '/reviews/best-ferret-litter',
     eyebrow: 'Litter',
     title: 'Best Ferret Litter',
@@ -49,6 +60,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'best-ferret-harness',
+    group: 'ferret-reviews-walking',
     href: '/reviews/best-ferret-harness',
     eyebrow: 'Walking',
     title: 'Best Ferret Harness',
@@ -57,6 +69,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'best-ferret-kibble',
+    group: 'ferret-reviews-food',
     href: '/diet/best-ferret-kibble',
     eyebrow: 'Food',
     title: 'Best Ferret Food',
@@ -65,6 +78,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'paper-vs-wood-litter-guide',
+    group: 'ferret-reviews-litter',
     href: '/reviews/paper-vs-wood-litter-guide',
     eyebrow: 'Litter',
     title: 'Paper vs Wood Pellet Litter',
@@ -73,6 +87,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'vest-vs-h-harness-guide',
+    group: 'ferret-reviews-walking',
     href: '/reviews/vest-vs-h-harness-guide',
     eyebrow: 'Walking',
     title: 'Vest vs H-Style Harness',
@@ -81,6 +96,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'ferret-nation-vs-prevue-guide',
+    group: 'ferret-reviews-housing',
     href: '/reviews/ferret-nation-vs-prevue-guide',
     eyebrow: 'Housing',
     title: 'Ferret Nation vs Prevue',
@@ -89,6 +105,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'kaytee-vs-ferret-nation-guide',
+    group: 'ferret-reviews-housing',
     href: '/reviews/kaytee-vs-ferret-nation-guide',
     eyebrow: 'Housing',
     title: 'Kaytee vs Ferret Nation',
@@ -97,6 +114,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'kaytee-vs-prevue-guide',
+    group: 'ferret-reviews-housing',
     href: '/reviews/kaytee-vs-prevue-guide',
     eyebrow: 'Housing',
     title: 'Kaytee vs Prevue',
@@ -105,6 +123,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'wood-vs-grass-litter-guide',
+    group: 'ferret-reviews-litter',
     href: '/reviews/wood-vs-grass-litter-guide',
     eyebrow: 'Litter',
     title: 'Wood vs Grass Pellet Litter',
@@ -113,6 +132,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'paper-vs-grass-litter-guide',
+    group: 'ferret-reviews-litter',
     href: '/reviews/paper-vs-grass-litter-guide',
     eyebrow: 'Litter',
     title: 'Paper vs Grass Pellet Litter',
@@ -121,6 +141,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'wysong-vs-marshall-kibble-guide',
+    group: 'ferret-reviews-food',
     href: '/reviews/wysong-vs-marshall-kibble-guide',
     eyebrow: 'Food',
     title: 'Wysong vs Marshall Kibble',
@@ -129,6 +150,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'fall-molt-brush-guide',
+    group: 'ferret-reviews-season',
     href: '/reviews/fall-molt-brush-guide',
     eyebrow: 'Season',
     title: 'Fall Molt Brush',
@@ -137,6 +159,7 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
   },
   {
     slug: 'winter-harness-fit-guide',
+    group: 'ferret-reviews-season',
     href: '/reviews/winter-harness-fit-guide',
     eyebrow: 'Season',
     title: 'Recheck the Harness',
@@ -238,6 +261,11 @@ export default function ReviewsHubPage() {
       >
         <div id="ferret-reviews-list">
         <HubSearch listId="ferret-reviews-list" total={REVIEW_CARDS.length} noun="reviews" />
+        <HubJumpNav groups={REVIEW_GROUPS} />
+        {REVIEW_GROUPS.map((group) => (
+        <section key={group.id} id={group.id} data-hub-group style={{ marginBottom: '40px', scrollMarginTop: '96px' }}>
+        <h2 style={{ fontFamily: 'var(--font-display)', fontSize: '1.35rem', fontWeight: 800, color: 'var(--brand-text-dark)', margin: '0 0 8px' }}>{group.label}</h2>
+        <p style={{ fontSize: '0.95rem', lineHeight: 1.6, color: 'var(--brand-text-mid)', margin: '0 0 16px', maxWidth: '40rem' }}>{group.intro}</p>
         <ul
           style={{
             listStyle: 'none',
@@ -248,7 +276,7 @@ export default function ReviewsHubPage() {
             gap: '20px',
           }}
         >
-          {REVIEW_CARDS.map((card) => (
+          {REVIEW_CARDS.filter((card) => card.group === group.id).map((card) => (
             <li key={card.slug} data-hub-item data-title={card.title} data-topic={`${card.eyebrow} ${card.description}`}>
               <Link
                 href={card.href}
@@ -326,6 +354,8 @@ export default function ReviewsHubPage() {
             </li>
           ))}
         </ul>
+        </section>
+        ))}
         </div>
       </div>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
