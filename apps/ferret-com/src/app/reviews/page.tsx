@@ -88,6 +88,22 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
       'The double unit for one to four ferrets, or the Prevue Feisty Ferret when that cage is too big or too expensive.',
   },
   {
+    slug: 'kaytee-vs-ferret-nation-guide',
+    href: '/reviews/kaytee-vs-ferret-nation-guide',
+    eyebrow: 'Housing',
+    title: 'Kaytee vs Ferret Nation',
+    description:
+      'A chain-store cage for one ferret with daily out-time, or the double unit for a pair.',
+  },
+  {
+    slug: 'paper-vs-grass-litter-guide',
+    href: '/reviews/paper-vs-grass-litter-guide',
+    eyebrow: 'Litter',
+    title: 'Paper vs Grass Pellet Litter',
+    description:
+      'The default recycled-paper pellet, or a softer grass pellet when texture is the complaint.',
+  },
+  {
     slug: 'wysong-vs-marshall-kibble-guide',
     href: '/reviews/wysong-vs-marshall-kibble-guide',
     eyebrow: 'Food',

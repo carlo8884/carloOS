@@ -68,6 +68,18 @@ const REVIEWS = [
     badge: 'Filtration',
   },
   {
+    title: 'AquaClear 70 vs Fluval 307',
+    desc: 'The AquaClear 70 hang-on-back versus the Fluval 307 canister, using the flow and prices already in the filter review.',
+    href: '/reviews/aquaclear-70-vs-fluval-307-guide',
+    badge: 'Filtration',
+  },
+  {
+    title: 'Eheim Jager vs Cobalt Neo-Therm',
+    desc: 'Glass heater you can recalibrate, or a flat shatterproof heater for a display tank.',
+    href: '/reviews/eheim-vs-cobalt-heater-guide',
+    badge: 'Essential',
+  },
+  {
     title: 'Best Heater for a Display Tank',
     desc: 'Flat shatterproof heater versus glass versus an inline heater, from the heater review.',
     href: '/reviews/best-display-tank-heater-guide',

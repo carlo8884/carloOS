@@ -20,6 +20,8 @@ const REVIEWS = [
   { title: 'Trupanion vs Healthy Paws', desc: 'Direct vet payment versus fast reimbursement, using the figures already on the insurance review', href: '/reviews/trupanion-vs-healthy-paws-guide', badge: 'Insurance' },
   { title: 'Vetster vs AskVet', desc: 'Pay-per-visit video versus a chat subscription. Not a substitute for emergency care', href: '/reviews/vetster-vs-askvet-guide', badge: 'Telehealth' },
   { title: 'Trupanion vs Embrace', desc: 'Direct vet payment versus a wellness add-on. Card prices are not a quote', href: '/reviews/trupanion-vs-embrace-guide', badge: 'Insurance' },
+  { title: 'Healthy Paws vs Embrace', desc: 'Fast reimbursement versus a wellness add-on. Printed prices are not a quote', href: '/reviews/healthy-paws-vs-embrace-guide', badge: 'Insurance' },
+  { title: 'Vetster vs Chewy Connect', desc: 'Pay-per-visit video versus telehealth included with Chewy+. Not emergency care', href: '/reviews/vetster-vs-chewy-connect-guide', badge: 'Telehealth' },
   { title: 'Spot vs ManyPets', desc: 'Adjustable limits versus one comprehensive plan. Both prices are quote-based', href: '/reviews/spot-vs-manypets-guide', badge: 'Insurance' },
   { title: 'Holiday Leftovers and a Low-Fat Dog Food', desc: 'The pancreatitis page’s holiday surge. The food hop applies after a veterinarian says the dog is ready', href: '/reviews/holiday-leftovers-low-fat-guide', badge: 'Season' },
   { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The hop is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide', badge: 'Season' },
