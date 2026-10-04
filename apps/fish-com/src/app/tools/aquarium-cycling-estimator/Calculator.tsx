@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, cycleTestPick, numberFieldError } from '@carloOS/ui'
 import { FieldNumber, FieldSelect } from '../_components/CalcShell'
 
 type StarterMethod = 'fishless-ammonia' | 'bottled-bacteria' | 'used-media' | 'fish-in'
@@ -189,6 +189,7 @@ export default function Calculator() {
       <ResultMeaning>
         Those days are a planning range for this method and temperature. A test that reads zero ammonia and zero nitrite is what shows the tank has cycled.
       </ResultMeaning>
+      <ResultPick siteId="fish-com" pick={cycleTestPick(result.totalDays, METHODS[method].label)} />
       </>
       )}
 

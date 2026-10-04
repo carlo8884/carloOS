@@ -9,7 +9,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, calorieFoodPick, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -261,9 +261,18 @@ export default function DogCalorieCalculator() {
         </div>
       </div>
       {weightOk && (
+        <>
         <ResultMeaning>
           Daily energy is the maintenance estimate for this weight and life stage. It is a starting point, not a feeding prescription.
         </ResultMeaning>
+        <ResultPick
+          siteId="dog-com"
+          pick={calorieFoodPick(
+            LIFE_STAGES[stageIndex].label,
+            unit === 'lb' ? weightNum : weightNum * 2.2046,
+          )}
+        />
+        </>
       )}
 
       {/* Disclaimer */}

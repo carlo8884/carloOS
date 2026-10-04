@@ -15,9 +15,8 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, numberFieldError, pondLinerPick } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
-import { ResultCTA } from '../_components/ResultCTA'
 
 type Shape = 'rectangular' | 'circular' | 'oval'
 type Unit = 'ft' | 'm'
@@ -204,18 +203,7 @@ export default function PondVolumeCalculator() {
           <ResultMeaning>
             That gallon figure is the water in this shape at the average depth you entered. Size the liner, pump, and filter from it, and treat a contoured pond as smaller than the box.
           </ResultMeaning>
-          <ResultCTA
-            heading="Shop a liner, pump, and filter sized to this volume"
-            blurb={
-              <>
-                Volume sets liner area, pump GPH (about one turnover per hour), and filter / skimmer capacity. Condition tap
-                water before the first fill.
-              </>
-            }
-            query="epdm pond liner submersible pond pump"
-            cta="Browse pond liners and pumps on Amazon"
-            source="tools-pond-volume"
-          />
+          <ResultPick siteId="fish-com" pick={pondLinerPick(result.usGal)} />
         </>
       )}
     </div>

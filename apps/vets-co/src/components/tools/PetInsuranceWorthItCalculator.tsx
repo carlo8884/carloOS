@@ -29,7 +29,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, insuranceWorthPick, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 function dollars(n: number): string {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
@@ -297,6 +297,7 @@ export function PetInsuranceWorthItCalculator() {
       <ResultMeaning>
         The breakeven is the eligible-cost level where modeled reimbursement equals the annual premium. It is a planning estimate, not a guarantee of savings.
       </ResultMeaning>
+      <ResultPick siteId="vets-co" pick={insuranceWorthPick(result.netVsPremium, result.breakeven)} />
       </>
       )}
 

@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, blanketPick, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 
@@ -110,6 +110,7 @@ export default function HorseBlanketSizeCalculator() {
           <ResultMeaning>
             This is the US blanket size for that chest-to-tail length, rounded to the nearest 3-inch step.
           </ResultMeaning>
+          <ResultPick siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
         </div>
       ) : null}
 

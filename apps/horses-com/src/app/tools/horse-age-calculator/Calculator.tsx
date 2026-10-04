@@ -27,7 +27,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, horseAgePick, numberFieldError } from '@carloOS/ui'
 
 function humanYears(horse: number): number {
   if (horse <= 0) return 0
@@ -134,6 +134,7 @@ export default function HorseAgeCalculator() {
           <ResultMeaning>
             Human-equivalent age is a planning chart for this life stage, not a diagnosis.
           </ResultMeaning>
+          <ResultPick siteId="horses-com" pick={horseAgePick(result.stage.label)} />
         </div>
       ) : null}
 

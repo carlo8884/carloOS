@@ -7,7 +7,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { ResultMeaning } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, careSettingPick } from '@carloOS/ui'
 import {
   ASPCA_POISON,
   SIGNS,
@@ -222,6 +222,7 @@ export default function Calculator() {
             <ResultMeaning>
               This setting is the most urgent match among the signs you selected. It is a triage aid, not a diagnosis.
             </ResultMeaning>
+            <ResultPick siteId="vets-co" pick={careSettingPick(setting)} />
 
             {setting === 'er' ? (
               <div className="mt-4 flex flex-col gap-2">

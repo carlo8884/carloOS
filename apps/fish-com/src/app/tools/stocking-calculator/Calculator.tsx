@@ -1,7 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, filterFromGallons, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
 import {
   STYLES_FOR_WATER,
@@ -145,9 +145,19 @@ export default function StockingCalculator() {
         />
       )}
       {!inputError && result && result.slimInches > 0 && (
+        <>
         <ResultMeaning>
           Slim inches are a planning ceiling for waste and oxygen, not a count of fish you should buy.
         </ResultMeaning>
+        <ResultPick
+          siteId="fish-com"
+          pick={filterFromGallons(
+            parseFloat(tankGal) || 0,
+            style === 'cichlid' ? 'cichlid' : style === 'reef' ? 'reef' : style === 'planted' ? 'planted' : 'community',
+            'tools-stocking-calculator',
+          )}
+        />
+        </>
       )}
     </div>
   )

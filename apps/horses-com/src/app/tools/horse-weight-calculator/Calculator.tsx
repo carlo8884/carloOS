@@ -20,7 +20,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, blanketPick, numberFieldError, roundBlanketInches } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 type HorseType = 'pony' | 'riding' | 'draft' | 'youngstock'
@@ -254,23 +254,14 @@ export default function Calculator() {
       <p className="mt-4 text-sm text-brand-text-mid">{typeOption.note}</p>
 
       {result && (
-        <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5">
-          <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-            Next step
-          </p>
-          <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
-            Shop a horse weight tape
-          </p>
-          <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
-            Estimated {round(result.lb).toLocaleString()} lb ({round(result.kg).toLocaleString()} kg).
-            A dedicated equine weight tape makes the next girth-and-length reading match this one.
-          </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
-          <ShopCtas
-            amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator"
-            amazonLabel="Browse horse weight tapes on Amazon →"
-          />
-        </div>
+        <ResultPick
+          siteId="horses-com"
+          pick={blanketPick(
+            roundBlanketInches(unit === 'in' ? parseFloat(length) : parseFloat(length) / 2.54),
+            'tools-horse-weight-calculator',
+            'body-length',
+          )}
+        />
       )}
 
       {result && type !== 'youngstock' && (

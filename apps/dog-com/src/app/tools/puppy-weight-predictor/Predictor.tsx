@@ -19,7 +19,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ResultPick, ToolError, numberFieldError, puppyClassFoodPick } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -353,9 +353,12 @@ export default function PuppyWeightPredictor() {
           </div>
         )}
         {result && (
+          <>
           <ResultMeaning>
             That range estimates adult weight from the growth fraction for this size class, not a guarantee of adult size.
           </ResultMeaning>
+          <ResultPick siteId="dog-com" pick={puppyClassFoodPick(cls.key)} />
+          </>
         )}
       </div>
 
