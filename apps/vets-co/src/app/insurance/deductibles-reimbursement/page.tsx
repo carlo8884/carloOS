@@ -14,6 +14,7 @@ export default function DeductiblesPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-09-06"
         heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}

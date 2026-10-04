@@ -68,6 +68,7 @@ export default function VetsGoldenRetrieverHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
+      priceAsOf="2026-06-11"
       siteId="vets-co"
       contentType="breed"
       hero={{

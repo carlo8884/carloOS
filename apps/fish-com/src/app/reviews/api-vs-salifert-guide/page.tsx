@@ -64,7 +64,7 @@ export default function ApiVsSalifertGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-water-test-kits">water-test review</Link> already assigns the API Freshwater Master Test Kit to freshwater pH, ammonia, nitrite, and nitrate, and Salifert individual tests to reef alkalinity, calcium, and magnesium. Only the API card has a score and a price. This page does not invent either for Salifert.</p>
         <h2>What the API card already says</h2>

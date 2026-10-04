@@ -141,7 +141,7 @@ export default function FerretDIYEnrichmentPage() {
           { title: 'Exercise & Enrichment', href: '/care/exercise-and-enrichment' },
           { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
         ]}
->
+ priceAsOf="2026-06-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

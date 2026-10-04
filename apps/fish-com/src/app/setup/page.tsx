@@ -97,7 +97,7 @@ export default function AquariumSetupPage() {
       </section>
       {/* agent1-browse-all-end */}
 </>}
-    >
+     priceAsOf="2026-05-25">
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
 

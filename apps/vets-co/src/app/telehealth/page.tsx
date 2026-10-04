@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -43,6 +43,9 @@ export default function TelehealthPage() {
         primaryCta={{ href: '#vetster', label: 'See the top pick' }}
         secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <PriceAsOf date="2026-10-04" />
+      </div>
       <QuickPicks items={PICKS} />
       <Breadcrumb siteId="vets-co" items={[{ name: "Home", href: "/" }, { name: "Telehealth" }]} />
 

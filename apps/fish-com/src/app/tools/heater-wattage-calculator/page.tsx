@@ -154,7 +154,7 @@ export default function HeaterWattageCalculatorPage() {
 
         </>
       }
-    >
+     priceAsOf="2026-05-27">
       <div className="carloOS-article">
         <script
           type="application/ld+json"

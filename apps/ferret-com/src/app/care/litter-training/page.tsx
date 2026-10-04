@@ -167,7 +167,7 @@ export default function FerretLitterTrainingPage() {
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
           { title: 'Litter Planner', href: '/tools/litter-planner' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

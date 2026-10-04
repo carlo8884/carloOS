@@ -27,6 +27,7 @@ export default function HeartwormPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-06-04"
         hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease -- caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites -- is one of the most important preventable conditions in veterinary medicine. Prevention costs approximately $5-15/month. Treatment costs $1,000-3,000 and is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heartworm', href: '/health/heartworm-in-dogs' }]}
         relatedLinks={[

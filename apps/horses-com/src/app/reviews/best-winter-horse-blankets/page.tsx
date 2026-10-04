@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -57,6 +57,7 @@ export default function BestWinterBlanketsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Winter Horse Blankets 2026
         </h1>
+        <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability. The category-defining brands compared against the value-tier alternatives that actually compete with them.

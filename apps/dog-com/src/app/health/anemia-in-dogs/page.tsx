@@ -47,7 +47,7 @@ export default function DogAnemiaPage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-      >
+       priceAsOf="2026-05-30">
         <div className="carloOS-article">
 
           <h2>Regenerative vs Non-Regenerative — The Critical Distinction</h2>

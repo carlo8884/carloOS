@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-06-11"
         hero={{ title: 'How Much Does Pet Insurance Cost?', subtitle: 'Most dog accident-and-illness policies run roughly $30–$70 a month and cats $15–$40, but your price swings with species, breed, age, location, and the deductible, reimbursement rate, and limit you choose. Here is what actually moves the number.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '7 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Cost', href: '/insurance/questions/how-much-does-pet-insurance-cost' }]}
         sidebar={<>

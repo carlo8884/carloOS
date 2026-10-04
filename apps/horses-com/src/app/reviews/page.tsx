@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, CrossPortfolioCard, DirectoryPlacesCta, PriceAsOf } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -78,6 +78,9 @@ export default function HorsesReviewsPage() {
         title="Horses.com Reviews"
         subtitle="Editorial reviews of the gear and supplements equestrians actually buy, ranked using published veterinary evidence and rider reports — never paid placement."
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <PriceAsOf date="2026-10-04" />
+      </div>
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>

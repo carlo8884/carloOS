@@ -146,7 +146,7 @@ export default function FerretStressSignsPage() {
           { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
           { title: 'Signs of Pain', href: '/health/signs-of-pain' },
         ]}
->
+ priceAsOf="2026-06-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

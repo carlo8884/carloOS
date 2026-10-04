@@ -52,6 +52,7 @@ export default function GrainConcentratesPage() {
     <>
       <SchemaScript schema={articleSchema} />
       <ArticleLayout
+        priceAsOf="2026-06-12"
         siteId="horses-com"
         contentType="nutrition"
         relatedLinks={[

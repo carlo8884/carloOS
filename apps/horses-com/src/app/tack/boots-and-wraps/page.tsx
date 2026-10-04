@@ -52,6 +52,7 @@ export default function BootsWrapsPage() {
     <>
       <SchemaScript schema={articleSchema} />
       <ArticleLayout
+        priceAsOf="2026-06-01"
         siteId="horses-com"
         contentType="gear"
         relatedLinks={[

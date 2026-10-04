@@ -64,7 +64,7 @@ export default function GreeniesVsWhimzeesGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-dental-chews">dental-chew review</Link> filters on the Veterinary Oral Health Council seal, then lines up Greenies and Whimzees. Scores on those cards are editorial scores, not customer star ratings. Neither chew replaces toothbrushing.</p>
         <h2>What the Greenies card already says</h2>

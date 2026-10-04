@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec, PriceAsOf} from '@carloOS/ui'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,6 +124,7 @@ export default function FAQPage() {
           style={{ fontSize: 'clamp(30px, 4vw, 52px)' }}>
           Dog Health FAQ
         </h1>
+        <PriceAsOf date="2026-05-27" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           Answers to the most common dog health questions, drawn from current AVMA, ACVIM, and WSAVA guidance. Updated as guidelines change.
         </p>

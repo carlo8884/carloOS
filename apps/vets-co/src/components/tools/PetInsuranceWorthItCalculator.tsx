@@ -29,7 +29,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 function dollars(n: number): string {
   return n.toLocaleString('en-US', { style: 'currency', currency: 'USD', maximumFractionDigits: 0 })
@@ -126,6 +126,7 @@ export function PetInsuranceWorthItCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      <PriceAsOf date="2026-06-11" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="wi-premium" className="mb-2 block text-sm font-medium text-brand-text-mid">

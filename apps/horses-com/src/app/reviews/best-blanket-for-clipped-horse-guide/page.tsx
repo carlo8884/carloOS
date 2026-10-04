@@ -39,6 +39,7 @@ const FAQS = [
 export default function ClippedHorseBlanketGuidePage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-10-03"
       siteId="horses-com"
       schema={schema}
       hero={{

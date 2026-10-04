@@ -65,7 +65,7 @@ export default function DisplayTankHeaterGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-03">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-aquarium-heaters">heater review</Link> ranks four heaters. For a planted or display tank, the decision is whether a glass tube in the corner is acceptable. Wattage is a separate decision. Use the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the tank volume, then come back here for the body style. This page does not invent a wattage.</p>
         <h2>Flat and shatterproof: Cobalt Neo-Therm Pro</h2>

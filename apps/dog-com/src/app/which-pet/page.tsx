@@ -198,7 +198,7 @@ export default function WhichPetPage() {
           publishedAt: 'May 30, 2026',
           readTime: '3 min',
         }}
-      >
+       priceAsOf="2026-05-30">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2026-05-30T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
 
         {/* Intro */}

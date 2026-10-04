@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -25,6 +25,7 @@ export default function BestCanisterFiltersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
       </div>

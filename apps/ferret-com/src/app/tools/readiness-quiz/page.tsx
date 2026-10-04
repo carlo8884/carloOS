@@ -11,6 +11,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  PriceAsOf
 } from '@carloOS/ui'
 import Quiz from './Quiz'
 import ReadinessKit from './ReadinessKit'
@@ -140,6 +141,7 @@ export default function ReadinessQuizPage() {
           >
             Is a ferret the right animal for you?
           </h1>
+          <PriceAsOf date="2026-06-02" tone="dark" />
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             Ten honest questions about legality, daily time, budget, housing, and long-term commitment.
             Then pack a day-one kit — cage, litter, food, hammock, dig box, carrier — before a ferret

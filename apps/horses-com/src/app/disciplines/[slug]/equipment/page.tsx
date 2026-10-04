@@ -122,6 +122,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
+        priceAsOf="2026-05-29"
         siteId="horses-com"
         relatedLinks={[
           { title: 'Disciplines Hub', href: '/disciplines', category: 'Disciplines' },

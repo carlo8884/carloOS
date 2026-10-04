@@ -87,7 +87,7 @@ export default function ReadingFoodLabelsPage() {
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
           { title: 'Supplements & Vitamins', href: '/diet/supplements-and-vitamins' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, RelatedLinks, CrossPortfolioCard, ShopCtas, StockImage, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -32,6 +32,7 @@ export default function FrenchBulldogBreedPage() {
               <span className="text-2xs font-bold tracking-eyebrow uppercase px-3 py-1 rounded-pill bg-brand-danger/15 text-brand-danger">⚠ High Medical Complexity</span>
             </div>
             <h1 className="font-display font-black text-white tracking-tighter leading-none mb-3" style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}>French Bulldog</h1>
+            <PriceAsOf date="2026-09-07" tone="dark" />
             <p className="text-base font-light text-white/60 leading-relaxed max-w-sm">Charming, adaptable, and low-exercise — but one of the most medically complex breeds in the world. Requires informed ownership, pet insurance from day one, and active health management throughout life.</p>
           </div>
         </div>

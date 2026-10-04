@@ -18,6 +18,7 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
+  PriceAsOf
 } from '@carloOS/ui'
 import {
   STATES,
@@ -145,6 +146,7 @@ export default function CityHubPage({ params }: PageProps) {
         >
           {heading}
         </h1>
+        <PriceAsOf date="2026-05-30" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           {vets.length > 0
             ? `${vets.length} sample listing${vets.length === 1 ? '' : 's'} across ${presentSpecialties.size} specialt${presentSpecialties.size === 1 ? 'y' : 'ies'} in ${city.city}.`

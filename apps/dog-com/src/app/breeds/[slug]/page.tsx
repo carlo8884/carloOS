@@ -41,6 +41,7 @@ import {
   ShopCtas,
   StockImage,
   AffiliateDisclosure,
+  PriceAsOf
 } from '@carloOS/ui'
 import {
   Breeds,
@@ -571,6 +572,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
           >
             {breed.name}
           </h1>
+          <PriceAsOf date="2026-06-11" tone="dark" />
           <p className="text-base font-light text-white/70 leading-relaxed max-w-2xl" style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}>
             From {breed.originCountry}, originally {breed.originPurpose.charAt(0).toLowerCase() + breed.originPurpose.slice(1)}{' '}
             Adults typically weigh {formatRange(breed.weightRangeLb, 'lb')} with a lifespan of {formatRange(breed.lifespanYears, 'years')}.

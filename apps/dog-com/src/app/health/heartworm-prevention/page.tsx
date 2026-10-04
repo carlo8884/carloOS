@@ -49,7 +49,7 @@ export default function HeartwormPreventionPage() {
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
       </>}
-    >
+     priceAsOf="2026-06-11">
       <div className="carloOS-article">
 
         <h2>What Heartworm Disease Is</h2>

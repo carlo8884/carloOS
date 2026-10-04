@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-06-11"
         hero={{ title: 'Does Pet Insurance Cover Vaccines?', subtitle: 'Standard accident-and-illness pet insurance does not cover vaccines or other routine care. Vaccines are reimbursed only if you add an optional wellness plan — and whether that add-on is worth it comes down to simple arithmetic, not the marketing.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '6 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Vaccines', href: '/insurance/questions/does-pet-insurance-cover-vaccines' }]}
         sidebar={<>

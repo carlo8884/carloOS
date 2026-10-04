@@ -92,7 +92,7 @@ export default function WholePreyVsKibblePage() {
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
->
+ priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:diet-raw-vs-kibble"

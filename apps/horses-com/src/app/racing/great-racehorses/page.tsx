@@ -20,7 +20,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, PriceAsOf } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { greatRacehorses } from '@/data/great-racehorses'
 
@@ -71,6 +71,9 @@ export default function GreatRacehorsesHubPage() {
         subtitle="Career profiles of the Thoroughbreds whose names outlived their racing days: Triple Crown champions, a Depression-era hero, and the first millionaire of the turf. Educational heritage reference only — not a handicapping or wagering guide."
         alt="A Thoroughbred racehorse at full stride on a dirt track"
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <PriceAsOf date="2026-06-08" />
+      </div>
 
       {/* ── BREADCRUMB ─────────────────────────────────────────────── */}
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">

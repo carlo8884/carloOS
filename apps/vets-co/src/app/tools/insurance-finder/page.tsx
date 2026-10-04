@@ -118,6 +118,7 @@ const articleSchema = buildArticleSchema({
 export default function InsuranceFinderPage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-05-30"
       siteId="vets-co"
       hero={{
         title: 'Pet Insurance Coverage Finder',

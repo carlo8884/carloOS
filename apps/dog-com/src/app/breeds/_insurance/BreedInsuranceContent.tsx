@@ -32,6 +32,7 @@ import {
   SchemaScript,
   buildArticleSchema,
   combineSchemas,
+  PriceAsOf
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -228,6 +229,7 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
         >
           Is Pet Insurance Worth It for a {breed.name}?
         </h1>
+        <PriceAsOf date="2026-06-11" tone="dark" />
         <p className="text-base font-light text-white/70 leading-relaxed max-w-2xl">
           A breed-specific look at the {breed.name}&apos;s documented hereditary
           cost drivers, why enrollment timing matters, and what to check before

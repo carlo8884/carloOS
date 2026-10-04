@@ -44,7 +44,7 @@ export default function DogDiabetesPage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-      >
+       priceAsOf="2026-05-30">
         <div className="carloOS-article">
 
           <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />

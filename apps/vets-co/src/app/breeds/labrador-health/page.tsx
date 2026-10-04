@@ -51,6 +51,7 @@ export default function VetsLabradorHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
+      priceAsOf="2026-06-11"
       siteId="vets-co"
       contentType="breed"
       hero={{ title: 'Labrador Retriever Health — A Veterinarian\'s Perspective', subtitle: 'Labradors are among my highest-volume patients. Fantastic temperaments, but specific health predispositions require proactive management. Here\'s what I prioritize with every Lab owner.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}

@@ -51,7 +51,7 @@ export default function CushingDiseasePage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-      >
+       priceAsOf="2026-05-30">
         <div className="carloOS-article">
 
           <h2 id="signs">Signs — What Owners Notice</h2>

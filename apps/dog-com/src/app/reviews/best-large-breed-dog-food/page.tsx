@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks for 50+ lb Dogs | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function BestLargeBreedFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large breed dogs (50+ lbs) have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds.</p>
       </div>
       <QuickPicks items={PICKS} />

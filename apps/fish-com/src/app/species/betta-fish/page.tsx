@@ -162,7 +162,7 @@ export default function BettaFishPage() {
 
           </>
         }
-      >
+       priceAsOf="2026-05-28">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <StockImage manifestKey="fish-com:cornerstone-species-betta" aspect="16:9" variant="inline" caption="A betta (Betta splendens) displaying its fins in a planted aquarium." priority />

@@ -90,7 +90,7 @@ export default function FrenchBulldogHealthPage() {
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
       </>}
-    >
+     priceAsOf="2026-05-25">
       <div className="carloOS-article">
 
         <StockImage manifestKey="dog-com:breed-french-bulldog" alt="A French Bulldog in natural light" aspect="16:9" priority />

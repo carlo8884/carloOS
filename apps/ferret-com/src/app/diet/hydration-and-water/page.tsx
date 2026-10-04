@@ -87,7 +87,7 @@ export default function HydrationAndWaterPage() {
           { title: 'Safe Treats', href: '/diet/safe-treats' },
           { title: 'Ferret Diarrhea Causes', href: '/health/ferret-diarrhea-causes' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -193,7 +193,7 @@ export default function FerretAgingPage() {
           { title: 'Insulinoma', href: '/health/insulinoma' },
           { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-aging"

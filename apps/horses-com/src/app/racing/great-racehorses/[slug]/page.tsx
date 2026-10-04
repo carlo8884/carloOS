@@ -99,6 +99,7 @@ export default function GreatRacehorseSpokePage({ params }: { params: { slug: st
       />
 
       <ArticleLayout
+        priceAsOf="2026-06-08"
         siteId="horses-com"
         contentType="guide"
         relatedLinks={[

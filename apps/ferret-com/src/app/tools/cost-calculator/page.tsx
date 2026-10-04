@@ -11,6 +11,7 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
+  PriceAsOf
 } from '@carloOS/ui'
 import CostCalculator from './Calculator'
 
@@ -146,6 +147,7 @@ export default function CostCalculatorPage() {
           >
             Ferret Cost Calculator
           </h1>
+          <PriceAsOf date="2026-06-02" tone="dark" />
           <p className="text-lg text-white/55 leading-relaxed max-w-2xl">
             What does a ferret cost per month and in year one? Pick ferret count, housing, and
             food style, then edit the lines. A planning range — not a quote.

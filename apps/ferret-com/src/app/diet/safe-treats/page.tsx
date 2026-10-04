@@ -118,7 +118,7 @@ export default function SafeTreatsPage() {
           { title: 'Diet Basics', href: '/care/diet-basics' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

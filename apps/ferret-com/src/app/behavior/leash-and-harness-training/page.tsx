@@ -142,7 +142,7 @@ export default function LeashAndHarnessTrainingPage() {
           { title: 'Bonding With Your Ferret', href: '/behavior/bonding-with-your-ferret' },
           { title: 'Travel & Carriers', href: '/care/travel-and-carriers' },
         ]}
->
+ priceAsOf="2026-06-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

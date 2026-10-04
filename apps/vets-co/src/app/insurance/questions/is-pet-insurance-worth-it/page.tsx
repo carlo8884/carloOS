@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-06-11"
         hero={{ title: 'Is Pet Insurance Worth It?', subtitle: 'Pet insurance is protection against rare, large vet bills — not a way to save money on average. It is most worth it if you could not easily absorb a sudden five-figure emergency and you enroll while your pet is young. Here is the honest math, both sides.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }]}
         sidebar={<>

@@ -14,6 +14,7 @@ export default function HowPetInsuranceWorksPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-09-06"
         hero={{ title: 'How Pet Insurance Works', subtitle: 'Pet insurance is medical insurance for your dog or cat, and it works on a reimbursement model: you pay the vet, then the insurer pays you back a percentage of covered costs after a deductible. Four numbers — premium, deductible, reimbursement rate, and annual limit — define every policy. Once you understand how they interact, comparing plans becomes straightforward.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'How It Works', href: '/insurance/how-pet-insurance-works' }]}
         sidebar={<>

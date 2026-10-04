@@ -65,7 +65,7 @@ export default function FrontClipVsBackClipGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-03">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-dog-harnesses">harness review</Link> opens with the clip rule: a front-clip leash attaches at the chest, so a forward pull turns the dog aside. A back-clip leash attaches over the shoulders and allows that forward line to continue. For a dog that pulls, the review says front-clip only. For a dog that already walks well, a back clip is appropriate.</p>
         <h2>Front-clip: the Easy Walk</h2>

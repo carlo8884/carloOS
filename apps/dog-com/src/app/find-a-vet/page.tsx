@@ -6,7 +6,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, DirectoryPlacesCta, PriceAsOf} from '@carloOS/ui'
 import { buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
@@ -127,6 +127,7 @@ export default function FindAVetPage() {
           style={{ fontSize: 'clamp(32px, 5vw, 56px)' }}>
           Find a Veterinary Specialist
         </h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed mb-8">
           When your dog needs more than a general vet can provide, board-certified specialists deliver the expertise to make a difference. Find the right specialist for your dog's condition below.
         </p>

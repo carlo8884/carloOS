@@ -135,6 +135,7 @@ const schema = combineSchemas(howToSchema, breadcrumbSchema, articleSchema)
 export default function HorseCostCalculatorPage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-06-11"
       siteId="horses-com"
       relatedLinks={[
         { title: 'Cost of Owning a Horse (Guide)', href: '/ownership/cost-of-owning-a-horse', category: 'Ownership' },

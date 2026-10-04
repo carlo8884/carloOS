@@ -166,7 +166,7 @@ export default function FerretBathingGroomingPage() {
           { title: 'Nail Trimming', href: '/care/nail-trimming' },
           { title: 'Odor & Scent Control', href: '/care/odor-and-scent-control' },
         ]}
->
+ priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-grooming"

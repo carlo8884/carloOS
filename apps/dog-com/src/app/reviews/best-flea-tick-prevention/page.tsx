@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention 2026 — Bravecto, NexGard | Dog.com', description: 'Best flea and tick prevention for dogs — Bravecto, NexGard, and Simparica compared by coverage, duration, and safety profile. research-based.', path: '/reviews/best-flea-tick-prevention', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Flea & Tick Prevention for Dogs 2026', description: 'Bravecto, NexGard, and Simparica ranked by coverage and safety.', url: 'https://dog.com/reviews/best-flea-tick-prevention', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -22,6 +22,7 @@ export default function FleaTickPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · June 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Flea & Tick Prevention 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are widely regarded as among the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
       <QuickPicks items={PICKS} />

@@ -52,6 +52,7 @@ export default function HaltersLeadRopesPage() {
     <>
       <SchemaScript schema={articleSchema} />
       <ArticleLayout
+        priceAsOf="2026-10-04"
         siteId="horses-com"
         contentType="gear"
         relatedLinks={[

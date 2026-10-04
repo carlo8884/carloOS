@@ -64,7 +64,7 @@ export default function SaltwaterTankSetupPage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Clownfish Care', href: '/species/clownfish' }, { label: 'Best Water Test Kits', href: '/reviews/best-water-test-kits' }, { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }]} />
 
         </>}
-      >
+       priceAsOf="2026-05-25">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 

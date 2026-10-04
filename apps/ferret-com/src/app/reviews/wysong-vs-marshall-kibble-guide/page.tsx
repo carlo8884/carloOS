@@ -64,7 +64,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already scores Wysong Epigen 90 as the premium, lower-carb pick and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Scores on those cards are editorial scores, not customer star ratings. The percentages below are the ones printed on the cards.</p>
         <h2>What the Wysong card already says</h2>
