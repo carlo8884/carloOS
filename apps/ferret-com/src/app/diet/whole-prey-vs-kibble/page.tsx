@@ -39,7 +39,7 @@ export default function WholePreyVsKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Find Wysong Epigen 90' />}
+        heroHop={<PrimaryHop href='/go/wysong/ferret+epigen+90?s=diet-whole-prey-vs-kibble' label='Find Wysong Epigen 90' />}
         hero={{
           title: 'Whole-Prey vs Kibble for Ferrets',
           subtitle:

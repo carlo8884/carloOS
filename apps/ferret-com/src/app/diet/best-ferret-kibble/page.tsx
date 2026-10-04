@@ -119,7 +119,7 @@ export default function BestFerretKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-best-ferret-kibble' label='Find Wysong Epigen 90' />}
+        heroHop={<PrimaryHop href='/go/wysong/ferret+epigen+90?s=diet-best-ferret-kibble' label='Find Wysong Epigen 90' />}
         hero={{
           title: 'How to Choose a Ferret Kibble',
           subtitle:
