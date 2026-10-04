@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ReviewCard, QuickPicks, ScoreMethodology, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -39,6 +39,7 @@ export default function TelehealthPage() {
         manifestKey="vets-co:category-telehealth"
         fallbackKey="vets-co:hero"
         imageAlt="A laptop and notepad on a desk, set up for a remote consultation"
+        hop={<PrimaryHop href='/go/vetster/telehealth' label='Visit Vetster →' />}
         primaryCta={{ href: '#vetster', label: 'See the top pick' }}
         secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
       />

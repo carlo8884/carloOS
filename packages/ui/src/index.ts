@@ -23,6 +23,7 @@ export { Breadcrumb } from './components/Breadcrumb'
 // Content components
 export { ReviewCard, QuickPicks } from './components/ReviewCard'
 export { ShopCtas } from './components/ShopCtas'
+export { PrimaryHop } from './components/PrimaryHop'
 export { JourneyNext } from './components/JourneyNext'
 export { HubMoneyLinks } from './components/HubMoneyLinks'
 export type { JourneyNextProps } from './components/JourneyNext'

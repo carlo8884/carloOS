@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -60,6 +60,7 @@ export default function SaddlePadsPage() {
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
+        heroHop={<PrimaryHop href='/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads' label='Compare the quilted cotton pad at SmartPak →' />}
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:
