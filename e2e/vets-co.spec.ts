@@ -6,7 +6,7 @@ test('insurance review, then a carrier quote hop', async ({ page }) => {
   await page.goto('/reviews/best-pet-insurance')
   await expect(page.getByRole('heading', { name: /Best Pet Insurance/ })).toBeVisible()
 
-  const quote = page.locator('#trupanion').getByRole('link', { name: 'Get a Quote →' })
+  const quote = page.locator('#trupanion').getByRole('link', { name: 'Get a Trupanion quote' })
   await expect(quote).toHaveAttribute('href', '/go/trupanion/home?s=reviews-best-pet-insurance')
 
   await expectHop(page.request, '/go/trupanion/home?s=reviews-best-pet-insurance', [
