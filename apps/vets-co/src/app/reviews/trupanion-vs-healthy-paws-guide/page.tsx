@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -77,6 +77,16 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The hop is the Trupanion quote path already on the insurance review. A quote is not the range printed above.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide">Get a Trupanion quote →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Insurance comparison update list"
+          subtitle="Leave an address to be on the list for changes to the Trupanion versus Healthy Paws note on this page."
+          ctaText="Save my address"
+          source="reviews-trupanion-vs-healthy-paws-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

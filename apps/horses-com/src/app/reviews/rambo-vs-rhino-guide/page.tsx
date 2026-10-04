@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -77,6 +77,16 @@ export default function RamboVsRhinoGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The hop is the Rambo search already used on the blanket review, for the long-term turnout job.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Shop the Horseware Rambo Original at SmartPak →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Turnout blanket update list"
+          subtitle="Leave an address to be on the list for changes to the Rambo versus Rhino note on this page."
+          ctaText="Save my address"
+          source="reviews-rambo-vs-rhino-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

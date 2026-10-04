@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -79,6 +79,16 @@ export default function DisplayTankHeaterGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The hop is the Cobalt search already on the heater review, for the display-tank job.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-display-tank-heater-guide">Browse Cobalt Neo-Therm Pro heaters on Amazon →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Display-heater update list"
+          subtitle="Leave an address to be on the list for changes to the Cobalt Neo-Therm display-tank note on this page."
+          ctaText="Save my address"
+          source="reviews-best-display-tank-heater-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

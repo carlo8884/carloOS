@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -78,6 +78,16 @@ export default function HobVsCanisterGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The hop is the AquaClear 70 search already on the filter review, for the keeper whose tank matches the hang-on-back job.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide">Browse AquaClear 70 hang-on-back filters on Amazon →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Filter comparison update list"
+          subtitle="Leave an address to be on the list for changes to the AquaClear 70 versus Fluval 307 note on this page."
+          ctaText="Save my address"
+          source="reviews-hob-vs-canister-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

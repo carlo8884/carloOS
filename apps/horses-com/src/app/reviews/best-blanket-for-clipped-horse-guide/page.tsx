@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -78,6 +78,16 @@ export default function ClippedHorseBlanketGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The hop is the StormShield search already on the blanket review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide">Shop the Schneiders StormShield Euro →</a></p>
+        <h2>Update list</h2>
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Clipped-horse blanket update list"
+          subtitle="Leave an address to be on the list for changes to the StormShield fill note on this page."
+          ctaText="Save my address"
+          source="reviews-best-blanket-for-clipped-horse-guide"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
