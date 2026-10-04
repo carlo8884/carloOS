@@ -252,7 +252,7 @@ export default function SeniorFerretNutritionPage() {
             cons={['Premium price', 'Not a substitute for a dental exam']}
             price="$30–50 / 5 lb"
             ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/ferret+epigen+90?s=diet-senior-ferret-nutrition"
+            ctaHref="/go/wysong/epigen-90?s=diet-senior-ferret-nutrition"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />

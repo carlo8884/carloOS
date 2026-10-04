@@ -296,7 +296,7 @@ export default function FerretDietBasicsPage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/ferret+epigen+90?s=care-diet-basics"
+            ctaHref="/go/wysong/epigen-90?s=care-diet-basics"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
