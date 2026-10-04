@@ -35,7 +35,11 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
   return (
     <footer className="bg-brand-dark border-t border-white/10">
       {hideEmptyChewy ? (
-        <style>{`a[href*="/go/chewy"]{display:none!important}`}</style>
+        <style
+          dangerouslySetInnerHTML={{
+            __html: 'a[href*="/go/chewy"]{display:none!important}',
+          }}
+        />
       ) : null}
       {/* Main grid */}
       <div className="px-container-sm sm:px-container py-16">
