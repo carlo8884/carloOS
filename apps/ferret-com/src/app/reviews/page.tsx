@@ -95,6 +95,22 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     description:
       'The lower-carb premium bag, or the ferret-specific bag you can find in chain retail.',
   },
+  {
+    slug: 'fall-molt-brush-guide',
+    href: '/reviews/fall-molt-brush-guide',
+    eyebrow: 'Season',
+    title: 'Fall Molt Brush',
+    description:
+      'September through November is the fall molt already on the grooming page. The hop is the soft slicker.',
+  },
+  {
+    slug: 'winter-harness-fit-guide',
+    href: '/reviews/winter-harness-fit-guide',
+    eyebrow: 'Season',
+    title: 'Recheck the Harness',
+    description:
+      'Weight changes with the season. The vest hop is the one already on the harness review.',
+  },
 ]
 
 const itemListSchema = buildItemListSchema({

@@ -85,6 +85,18 @@ const REVIEWS = [
     href: '/reviews/api-vs-salifert-guide',
     badge: 'Water Quality',
   },
+  {
+    title: 'Heater Size for a Cold Room',
+    desc: 'The wattage calculator’s winter case, including the 25 percent headroom. The hop is the Eheim Jager.',
+    href: '/reviews/winter-heater-sizing-guide',
+    badge: 'Season',
+  },
+  {
+    title: 'Winter Light Hours for a Planted Tank',
+    desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The hop is the light timer.',
+    href: '/reviews/winter-photoperiod-guide',
+    badge: 'Season',
+  },
 ]
 
 const itemListSchema = {
