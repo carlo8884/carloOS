@@ -15,7 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type WeightUnit = 'lb' | 'kg'
 type AmountUnit = 'oz' | 'g'
@@ -174,15 +174,16 @@ export default function ChocolateToxicityMeter() {
   const [weight, setWeight] = useState<string>('30')
   const [weightUnit, setWeightUnit] = useState<WeightUnit>('lb')
 
-  const amountNum = parseFloat(amount) || 0
-  const weightNum = parseFloat(weight) || 0
   const type = CHOCOLATE_TYPES[typeIndex]
-  const isValid = amountNum > 0 && weightNum > 0
+  const amountMax = amountUnit === 'g' ? 28000 : 1000
+  const weightMax = weightUnit === 'lb' ? 250 : 113
+  const amountError = numberFieldError(amount, 'chocolate amount', 0.1, amountMax, amountUnit)
+  const weightError = numberFieldError(weight, 'body weight', 0.5, weightMax, weightUnit)
 
-  const result = useMemo(
-    () => (isValid ? compute(type, amountNum, amountUnit, weightNum, weightUnit) : null),
-    [isValid, type, amountNum, amountUnit, weightNum, weightUnit]
-  )
+  const result = useMemo(() => {
+    if (amountError || weightError) return null
+    return compute(type, Number(amount), amountUnit, Number(weight), weightUnit)
+  }, [amountError, weightError, type, amount, amountUnit, weight, weightUnit])
   const shop = result ? resultShop(result.tier.key) : null
 
   return (
@@ -219,10 +220,11 @@ export default function ChocolateToxicityMeter() {
               id="ct-amount"
               type="number"
               inputMode="decimal"
-              min={0.01}
-              max={1000}
+              min={0.1}
+              max={amountMax}
               step={0.1}
               value={amount}
+              aria-invalid={amountError ? true : undefined}
               onChange={(e) => setAmount(e.target.value)}
               className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
               placeholder="e.g. 2"
@@ -246,9 +248,13 @@ export default function ChocolateToxicityMeter() {
               ))}
             </div>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">
-            A standard chocolate bar is roughly 1.5 oz (43 g). Estimate generously if unsure.
-          </p>
+          {amountError ? (
+            <ToolError>{amountError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              A standard chocolate bar is roughly 1.5 oz (43 g). Estimate generously if unsure.
+            </p>
+          )}
         </div>
 
         {/* Dog weight */}
@@ -262,9 +268,10 @@ export default function ChocolateToxicityMeter() {
               type="number"
               inputMode="decimal"
               min={0.5}
-              max={300}
+              max={weightMax}
               step={0.1}
               value={weight}
+              aria-invalid={weightError ? true : undefined}
               onChange={(e) => setWeight(e.target.value)}
               className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
               placeholder="e.g. 30"
@@ -288,7 +295,11 @@ export default function ChocolateToxicityMeter() {
               ))}
             </div>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">Use your dog&apos;s actual current weight.</p>
+          {weightError ? (
+            <ToolError>{weightError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">Use your dog&apos;s actual current weight.</p>
+          )}
         </div>
       </div>
 
@@ -311,14 +322,7 @@ export default function ChocolateToxicityMeter() {
 
       {/* Results */}
       <div aria-live="polite" aria-atomic="true" className="mt-4">
-        {!isValid && (
-          <div className="rounded border border-brand-border bg-brand-white p-5 text-sm text-brand-text-mid">
-            Enter the chocolate type, amount eaten, and your dog&apos;s weight to estimate the theobromine
-            exposure to read to your vet or poison-control line.
-          </div>
-        )}
-
-        {isValid && result && (
+        {result && (
           <div
             className="rounded-xl p-5 sm:p-6"
             style={{ background: result.tier.bg, border: `2px solid ${result.tier.border}` }}
@@ -346,6 +350,9 @@ export default function ChocolateToxicityMeter() {
             </div>
 
             <p className="text-sm text-brand-text-mid leading-relaxed mb-4">{result.tier.summary}</p>
+            <ResultMeaning>
+              That mg/kg figure is an educational theobromine estimate from the chocolate type and amount, not a diagnosis.
+            </ResultMeaning>
 
             {/* Call-to-action repeated on the result itself, EVERY tier */}
             <div className="rounded-lg bg-brand-white border border-brand-border p-4">

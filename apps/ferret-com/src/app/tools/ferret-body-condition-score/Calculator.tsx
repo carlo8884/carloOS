@@ -15,7 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -222,6 +222,9 @@ export default function FerretBCSCalculator() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+          <ResultMeaning>
+            The score is the rounded average of the three checks on the 9-point scale. It is a hands-on estimate for an exotic-mammal veterinarian to confirm.
+          </ResultMeaning>
         </div>
       ) : null}
 

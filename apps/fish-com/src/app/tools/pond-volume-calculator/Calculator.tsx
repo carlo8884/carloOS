@@ -15,6 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -75,20 +76,33 @@ export default function PondVolumeCalculator() {
   const [depth, setDepth] = useState('2')
   const [irregular, setIrregular] = useState<'no' | 'yes'>('no')
 
-  const result = useMemo(
-    () =>
-      computePondVolume(
-        shape,
-        unit,
-        parseFloat(length) || 0,
-        parseFloat(width) || 0,
-        parseFloat(depth) || 0,
-        irregular === 'yes',
-      ),
-    [shape, unit, length, width, depth, irregular],
-  )
-
   const showWidth = shape !== 'circular'
+  const dimMax = unit === 'ft' ? 200 : 60
+  const depthMax = unit === 'ft' ? 30 : 10
+  const lengthError = numberFieldError(
+    length,
+    shape === 'circular' ? 'diameter' : 'length',
+    unit === 'ft' ? 0.5 : 0.2,
+    dimMax,
+    unit,
+  )
+  const widthError = showWidth
+    ? numberFieldError(width, 'width', unit === 'ft' ? 0.5 : 0.2, dimMax, unit)
+    : null
+  const depthError = numberFieldError(depth, 'average depth', unit === 'ft' ? 0.1 : 0.05, depthMax, unit)
+  const inputError = lengthError || widthError || depthError
+
+  const result = useMemo(() => {
+    if (inputError) return null
+    return computePondVolume(
+      shape,
+      unit,
+      parseFloat(length) || 0,
+      parseFloat(width) || 0,
+      parseFloat(depth) || 0,
+      irregular === 'yes',
+    )
+  }, [shape, unit, length, width, depth, irregular, inputError])
 
   return (
     <div>
@@ -121,8 +135,10 @@ export default function PondVolumeCalculator() {
             value={length}
             onChange={setLength}
             unit={unit}
-            min={0}
+            min={unit === 'ft' ? 0.5 : 0.2}
+            max={dimMax}
             step={0.1}
+            error={lengthError}
           />
 
           {showWidth && (
@@ -131,8 +147,10 @@ export default function PondVolumeCalculator() {
               value={width}
               onChange={setWidth}
               unit={unit}
-              min={0}
+              min={unit === 'ft' ? 0.5 : 0.2}
+              max={dimMax}
               step={0.1}
+              error={widthError}
             />
           )}
 
@@ -141,9 +159,11 @@ export default function PondVolumeCalculator() {
             value={depth}
             onChange={setDepth}
             unit={unit}
-            min={0}
+            min={unit === 'ft' ? 0.1 : 0.05}
+            max={depthMax}
             step={0.1}
             hint="Use average depth, not the deepest point, if the bottom is contoured."
+            error={depthError}
           />
 
           <FieldSelect
@@ -181,6 +201,9 @@ export default function PondVolumeCalculator() {
               </>
             }
           />
+          <ResultMeaning>
+            That gallon figure is the water in this shape at the average depth you entered. Size the liner, pump, and filter from it, and treat a contoured pond as smaller than the box.
+          </ResultMeaning>
           <ResultCTA
             heading="Shop a liner, pump, and filter sized to this volume"
             blurb={

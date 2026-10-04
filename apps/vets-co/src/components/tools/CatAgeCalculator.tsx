@@ -10,6 +10,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function humanYears(cat: number): number {
   if (cat <= 0) return 0
@@ -58,12 +59,14 @@ function lifeStage(cat: number): Stage {
 
 export default function CatAgeCalculator() {
   const [age, setAge] = useState('3')
+  const ageError = numberFieldError(age, 'cat age', 0, 30, 'years')
 
   const result = useMemo(() => {
+    if (ageError) return null
     const cat = parseFloat(age)
-    if (!isFinite(cat) || cat <= 0) return null
+    if (!isFinite(cat)) return null
     return { human: humanYears(cat), stage: lifeStage(cat) }
-  }, [age])
+  }, [age, ageError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -75,6 +78,7 @@ export default function CatAgeCalculator() {
           type="number"
           inputMode="decimal"
           min={0}
+          max={30}
           step={0.5}
           value={age}
           onChange={(e) => setAge(e.target.value)}
@@ -85,7 +89,9 @@ export default function CatAgeCalculator() {
         </span>
       </label>
 
-      {result ? (
+      {ageError && <ToolError>{ageError}</ToolError>}
+
+      {result && (
         <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
@@ -103,9 +109,10 @@ export default function CatAgeCalculator() {
             </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">{result.stage.care}</p>
+          <ResultMeaning>
+            Human-equivalent age is a planning chart for this life stage. It is an approximation, not a diagnosis.
+          </ResultMeaning>
         </div>
-      ) : (
-        <p className="text-sm text-brand-text-light">Enter your cat&apos;s age to see its human-equivalent age and life stage.</p>
       )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">

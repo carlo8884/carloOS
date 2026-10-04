@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { pickHeater, sizeHeater, type Insulation } from './wattage'
 
@@ -13,7 +14,13 @@ export default function HeaterWattageCalculator() {
   const [targetTemp, setTargetTemp] = useState('78')
   const [insulation, setInsulation] = useState<Insulation>('lid')
 
+  const galError = numberFieldError(gallons, 'tank volume', 1, 1000, 'US gal')
+  const roomError = numberFieldError(roomTemp, 'room temperature', tempUnit === 'F' ? 32 : 0, tempUnit === 'F' ? 104 : 40, `°${tempUnit}`)
+  const targetError = numberFieldError(targetTemp, 'target temperature', tempUnit === 'F' ? 40 : 4, tempUnit === 'F' ? 95 : 35, `°${tempUnit}`)
+  const inputError = galError || roomError || targetError
+
   const result = useMemo(() => {
+    if (inputError) return null
     const gal = parseFloat(gallons) || 0
     const room = parseFloat(roomTemp) || 0
     const target = parseFloat(targetTemp) || 0
@@ -33,7 +40,7 @@ export default function HeaterWattageCalculator() {
       deltaF,
       hint: 'heat' as const,
     }
-  }, [gallons, roomTemp, targetTemp, tempUnit, insulation])
+  }, [gallons, roomTemp, targetTemp, tempUnit, insulation, inputError])
 
   return (
     <div>
@@ -53,7 +60,9 @@ export default function HeaterWattageCalculator() {
             onChange={setGallons}
             unit="US gal"
             min={1}
+            max={1000}
             hint="Use net water volume."
+            error={galError}
           />
           <FieldSelect
             label="Room Insulation"
@@ -72,6 +81,7 @@ export default function HeaterWattageCalculator() {
             unit={`°${tempUnit}`}
             step={0.5}
             hint="Use your room's typical winter low, not the average."
+            error={roomError}
           />
           <FieldNumber
             label="Target Tank Temp"
@@ -80,11 +90,12 @@ export default function HeaterWattageCalculator() {
             unit={`°${tempUnit}`}
             step={0.5}
             hint={tempUnit === 'F' ? 'Tropical: 76–82°F · Discus: 84°F · Cold water: skip heater' : 'Tropical: 24–28°C · Discus: 29°C'}
+            error={targetError}
           />
         </div>
       </CalcCard>
 
-      {result && result.hint === 'cool' && (
+      {!inputError && result && result.hint === 'cool' && (
         <ResultPanel
           primary={{
             label: 'No heater needed',
@@ -95,7 +106,7 @@ export default function HeaterWattageCalculator() {
         />
       )}
 
-      {result && result.hint === 'heat' && result.watts > 0 && (
+      {!inputError && result && result.hint === 'heat' && result.watts > 0 && (
         <ResultPanel
           primary={{
             label: 'Recommended heater',
@@ -123,6 +134,11 @@ export default function HeaterWattageCalculator() {
             </>
           }
         />
+      )}
+      {!inputError && result && result.hint === 'heat' && result.watts > 0 && (
+        <ResultMeaning>
+          That wattage is the heater size for this temperature lift. It is not a guarantee the tank stays at the target if the room gets colder than the number you entered.
+        </ResultMeaning>
       )}
     </div>
   )

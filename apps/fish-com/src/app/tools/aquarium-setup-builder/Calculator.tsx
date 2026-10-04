@@ -12,7 +12,8 @@
  */
 
 import { useMemo, useState } from 'react'
-import { CalcCard, FieldNumber, FieldSelect } from '../_components/CalcShell'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
+import { CalcCard, FieldNumber, FieldSelect, UnitToggle } from '../_components/CalcShell'
 
 type SetupType = 'community' | 'planted' | 'betta' | 'goldfish' | 'nano'
 
@@ -152,27 +153,49 @@ function buildList(gallons: number, type: SetupType): Item[] {
 }
 
 export default function AquariumSetupBuilder() {
-  const [gallons, setGallons] = useState('20')
+  const [unit, setUnit] = useState<'gal' | 'L'>('gal')
+  const [volume, setVolume] = useState('20')
   const [type, setType] = useState<SetupType>('community')
 
+  const volMax = unit === 'gal' ? 1000 : 4000
+  const volumeError = numberFieldError(volume, 'tank size', 1, volMax, unit === 'gal' ? 'gal' : 'L')
+  const gallons = volumeError ? 0 : unit === 'L' ? (parseFloat(volume) || 0) / 3.78541 : parseFloat(volume) || 0
+
   const list = useMemo(() => {
-    const g = parseFloat(gallons) || 0
-    if (g <= 0) return null
-    return buildList(g, type)
-  }, [gallons, type])
+    if (volumeError || gallons <= 0) return null
+    return buildList(gallons, type)
+  }, [gallons, type, volumeError])
+
+  function switchUnit(next: 'gal' | 'L') {
+    if (next === unit) return
+    const n = parseFloat(volume)
+    if (n > 0) {
+      setVolume(next === 'L' ? (n * 3.78541).toFixed(1) : (n / 3.78541).toFixed(1))
+    }
+    setUnit(next)
+  }
 
   return (
     <div>
       <CalcCard>
+        <UnitToggle
+          value={unit}
+          onChange={(v) => switchUnit(v as 'gal' | 'L')}
+          options={[
+            { value: 'gal', label: 'US gallons' },
+            { value: 'L', label: 'Liters' },
+          ]}
+        />
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0">
           <FieldNumber
             label="Tank size"
-            value={gallons}
-            onChange={setGallons}
-            unit="gallons"
+            value={volume}
+            onChange={setVolume}
+            unit={unit === 'gal' ? 'gal' : 'L'}
             min={1}
+            max={volMax}
             step={1}
-            hint="If you have it in litres, divide by 3.785."
+            error={volumeError}
           />
           <FieldSelect
             label="Setup type"
@@ -189,7 +212,7 @@ export default function AquariumSetupBuilder() {
             Your starter-kit checklist
           </h3>
           <p className="text-2xs text-brand-text-light mb-4">
-            Sized to a {parseFloat(gallons) || 0}-gallon {SETUP_OPTIONS.find((o) => o.value === type)?.label.toLowerCase()} setup.
+            Sized to a {gallons.toFixed(0)}-gallon {SETUP_OPTIONS.find((o) => o.value === type)?.label.toLowerCase()} setup.
             Figures are guidelines — confirm fish-specific needs before stocking.
           </p>
           <ul className="space-y-4">
@@ -211,6 +234,9 @@ export default function AquariumSetupBuilder() {
               </li>
             ))}
           </ul>
+          <ResultMeaning>
+            This checklist is the gear that matches the tank size and setup you picked. Confirm each fish&apos;s needs before you buy livestock.
+          </ResultMeaning>
         </div>
       )}
     </div>

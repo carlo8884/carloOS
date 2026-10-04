@@ -14,6 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel, UnitToggle } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -129,20 +130,36 @@ export default function WaterChangeCalculator() {
   const [target, setTarget] = useState('20')
   const [sourceLevel, setSourceLevel] = useState('0')
 
+  const tankMax = unit === 'gal' ? 1000 : 4000
+  const tankError = numberFieldError(tankSize, 'tank volume', 1, tankMax, unit === 'gal' ? 'gal' : 'L')
+  const fillError = numberFieldError(fillPct, 'fill level', 1, 100, '%')
+  const changeError = numberFieldError(changePct, 'water-change amount', 1, 100, '%')
+  const volumeInputError = tankError || fillError || changeError
+
+  const galError = numberFieldError(tankGal, 'tank volume', 1, 1000, 'gal')
+  const currentError =
+    numberFieldError(current, 'current level', 0, 100000) ||
+    (Number(current) <= 0 ? 'Enter a current level above 0.' : null)
+  const targetError = numberFieldError(target, 'target level', 0, 100000)
+  const sourceError = numberFieldError(sourceLevel, 'source-water level', 0, 100000)
+  const dilutionInputError = galError || currentError || targetError || sourceError
+
   const volume = useMemo(() => {
+    if (volumeInputError) return null
     const tank = parseFloat(tankSize) || 0
     const fill = parseFloat(fillPct) || 0
     const change = parseFloat(changePct) || 0
     return computeVolume(tank, fill, change, unit)
-  }, [tankSize, fillPct, changePct, unit])
+  }, [tankSize, fillPct, changePct, unit, volumeInputError])
 
   const dilution: DilutionResult = useMemo(() => {
+    if (dilutionInputError) return null
     const gal = parseFloat(tankGal) || 0
     const c = parseFloat(current) || 0
     const t = parseFloat(target) || 0
     const s = parseFloat(sourceLevel) || 0
     return computeDilution(gal, c, t, s)
-  }, [tankGal, current, target, sourceLevel])
+  }, [tankGal, current, target, sourceLevel, dilutionInputError])
 
   const meta = PARAM_LABEL[param]
   const load = BIOLOAD[bioload]
@@ -195,7 +212,9 @@ export default function WaterChangeCalculator() {
                 onChange={setTankSize}
                 unit={unitLabel}
                 min={1}
+                max={tankMax}
                 hint="Labeled gallons, or net volume from the volume calculator."
+                error={tankError}
               />
               <FieldNumber
                 label="Current Fill"
@@ -203,7 +222,9 @@ export default function WaterChangeCalculator() {
                 onChange={setFillPct}
                 unit="%"
                 min={1}
+                max={100}
                 hint="100% if the tank is filled to the normal water line."
+                error={fillError}
               />
               <FieldNumber
                 label="Water Change"
@@ -211,7 +232,9 @@ export default function WaterChangeCalculator() {
                 onChange={setChangePct}
                 unit="%"
                 min={1}
+                max={100}
                 hint="Typical community change is 25%. Cap a single change at 50%."
+                error={changeError}
               />
               <FieldSelect
                 label="Bioload / stocking note"
@@ -234,7 +257,9 @@ export default function WaterChangeCalculator() {
               onChange={setTankGal}
               unit="US gal"
               min={1}
+              max={1000}
               hint="Use net water volume."
+              error={galError}
             />
             <FieldSelect
               label="Parameter to Reduce"
@@ -254,7 +279,9 @@ export default function WaterChangeCalculator() {
               onChange={setCurrent}
               unit={meta.unit}
               min={0}
+              max={100000}
               hint={meta.safe}
+              error={currentError}
             />
             <FieldNumber
               label={`Target ${meta.label}`}
@@ -262,6 +289,8 @@ export default function WaterChangeCalculator() {
               onChange={setTarget}
               unit={meta.unit}
               min={0}
+              max={100000}
+              error={targetError}
             />
             <FieldNumber
               label="Source Water Level"
@@ -269,7 +298,9 @@ export default function WaterChangeCalculator() {
               onChange={setSourceLevel}
               unit={meta.unit}
               min={0}
+              max={100000}
               hint="What's in your tap or RO water before going in. Most tap water has 0 ppm nitrate."
+              error={sourceError}
             />
           </div>
         )}
@@ -299,6 +330,12 @@ export default function WaterChangeCalculator() {
             </>
           }
         />
+      )}
+
+      {mode === 'volume' && volume && volume.kind === 'ok' && (
+        <ResultMeaning>
+          That volume is the water to siphon out and replace in this change. It is a maintenance amount, not a diagnosis of the water.
+        </ResultMeaning>
       )}
 
       {mode === 'volume' && volume && volume.kind === 'ok' && (
@@ -347,6 +384,12 @@ export default function WaterChangeCalculator() {
             )
           }
         />
+      )}
+
+      {mode === 'dilution' && dilution && dilution.kind === 'ok' && (
+        <ResultMeaning>
+          That percent is how much of the tank to replace to move this reading toward the target, if the source water stays at the level you entered.
+        </ResultMeaning>
       )}
 
       {mode === 'dilution' && dilution && dilution.kind === 'ok' && (

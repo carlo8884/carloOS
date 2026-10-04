@@ -18,6 +18,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 import { SIGNS, STYLES, MONITOR_ELIGIBLE, type Sign } from '../../../data/horse-symptom-signs'
 
 type Tier = 'go-now' | 'same-day' | 'monitor'
@@ -191,7 +192,8 @@ export default function TriageHelper() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">
               Your result will appear here
             </div>
-            <p className="text-sm text-brand-text-mid leading-relaxed m-0">
+            <ToolError>Check at least one sign to see an urgency read.</ToolError>
+            <p className="mt-3 text-sm text-brand-text-mid leading-relaxed m-0">
               Check the signs you are seeing and an urgency read will appear here. When in doubt, call your
               equine veterinarian or your nearest equine emergency clinic — this tool helps you decide
               how urgently to seek care, it does not diagnose your horse.
@@ -217,6 +219,9 @@ export default function TriageHelper() {
               {verdict.headline}
             </p>
             <p className="text-sm text-brand-text-mid leading-relaxed m-0">{verdict.lead}</p>
+            <ResultMeaning>
+              This urgency read follows the most serious sign you checked and helps you decide how fast to seek care, not a diagnosis.
+            </ResultMeaning>
 
             {/* Primary action on EVERY verdict */}
             <Link

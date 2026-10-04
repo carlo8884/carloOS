@@ -10,6 +10,7 @@
 
 import { useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning } from '@carloOS/ui'
 
 interface Choice {
   label: string
@@ -323,6 +324,9 @@ export default function Quiz() {
               {tier.label}
             </div>
             <p className="mb-6 text-base text-brand-text-mid leading-relaxed">{tier.summary}</p>
+            <ResultMeaning>
+              This tier summarizes how your answers line up with the time, housing, and cost of keeping a ferret. It is a self-check, not a purchase recommendation.
+            </ResultMeaning>
 
             <h3 className="mb-3 font-display text-base font-semibold text-brand-text-dark">What to do next</h3>
             <ul className="mb-6 space-y-2">

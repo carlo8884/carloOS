@@ -15,7 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type SizeCategory = 'small' | 'medium' | 'large' | 'giant'
 
@@ -89,13 +89,17 @@ export default function DogAgeCalculator() {
   const [ageStr, setAgeStr] = useState<string>('3')
   const [size, setSize]     = useState<SizeCategory>('medium')
 
-  const dogAge  = parseFloat(ageStr) || 0
+  const ageError = numberFieldError(ageStr, "dog's age", 0.1, 30, 'years')
+  const dogAge  = ageError ? 0 : parseFloat(ageStr)
   const sizeOpt = SIZES.find((s) => s.value === size) ?? SIZES[1]
-  const isValid = dogAge > 0
+  const isValid = !ageError
 
-  const humanAge  = useMemo(() => computeHumanAge(dogAge, sizeOpt.perYear), [dogAge, sizeOpt])
-  const lifeStage = useMemo(() => getLifeStage(dogAge, size),                [dogAge, size])
-  const shop = isValid ? resultShop(lifeStage) : null
+  const humanAge  = useMemo(
+    () => (isValid ? computeHumanAge(dogAge, sizeOpt.perYear) : null),
+    [isValid, dogAge, sizeOpt]
+  )
+  const lifeStage = useMemo(() => (isValid ? getLifeStage(dogAge, size) : null), [isValid, dogAge, size])
+  const shop = lifeStage ? resultShop(lifeStage) : null
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -110,17 +114,22 @@ export default function DogAgeCalculator() {
             id="da-age"
             type="number"
             inputMode="decimal"
-            min={0}
+            min={0.1}
             max={30}
             step={0.1}
             value={ageStr}
+            aria-invalid={ageError ? true : undefined}
             onChange={(e) => setAgeStr(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
             placeholder="e.g. 3"
           />
-          <p className="mt-1 text-2xs text-brand-text-light">
-            One decimal is fine (e.g. 1.5 for 18 months). Min 0, max 30.
-          </p>
+          {ageError ? (
+            <ToolError>{ageError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              One decimal is fine (e.g. 1.5 for 18 months).
+            </p>
+          )}
         </div>
 
         {/* Size category */}
@@ -147,17 +156,19 @@ export default function DogAgeCalculator() {
       </div>
 
       {/* Results */}
-      <div aria-live="polite" aria-atomic="true" className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
+      {isValid && humanAge != null && lifeStage && (
+      <div aria-live="polite" aria-atomic="true">
+      <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
         {/* Human age -- primary result */}
         <div className="sm:col-span-2 rounded border-2 border-brand-primary bg-brand-primary-pale p-5">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Estimated human-age equivalent
           </p>
           <p className="mt-2 font-display text-5xl font-bold text-brand-dark leading-none">
-            {isValid ? humanAge : '--'}
+            {humanAge}
           </p>
           <p className="mt-1 text-sm text-brand-text-mid">
-            {isValid ? 'human years (approximate)' : 'Enter an age to calculate'}
+            human years (approximate)
           </p>
         </div>
 
@@ -167,20 +178,23 @@ export default function DogAgeCalculator() {
             Life stage
           </p>
           <p className="mt-2 font-display text-2xl font-semibold text-brand-dark">
-            {isValid ? lifeStage : '--'}
+            {lifeStage}
           </p>
           <p className="mt-1 text-2xs text-brand-text-light">
             Qualitative label; varies by individual
           </p>
         </div>
       </div>
+      <ResultMeaning>
+        That human-year number is a size-banded estimate of equivalent age, not a health assessment.
+      </ResultMeaning>
 
       {/* Formula reference row */}
       <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">
         <div className="rounded border border-brand-border bg-brand-white p-3">
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">Dog age</p>
           <p className="mt-1 font-display text-lg text-brand-dark">
-            {isValid ? dogAge.toFixed(1) + ' yr' : '--'}
+            {dogAge.toFixed(1) + ' yr'}
           </p>
         </div>
         <div className="rounded border border-brand-border bg-brand-white p-3">
@@ -196,6 +210,8 @@ export default function DogAgeCalculator() {
           </p>
         </div>
       </div>
+      </div>
+      )}
 
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">

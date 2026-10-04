@@ -15,7 +15,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ShopCtas } from '@carloOS/ui'
 
 type Size = 'small' | 'medium' | 'large' | 'giant'
 type PickupAge = '8-weeks' | '10-12-weeks' | '4-6-months' | 'already-home'
@@ -644,6 +644,9 @@ export default function NewPuppyChecklist() {
             </div>
           )
         })}
+        <ResultMeaning>
+          This list is the staged gear and care items for the size, age, and home you selected, not a veterinary plan.
+        </ResultMeaning>
       </div>
 
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">

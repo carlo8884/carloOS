@@ -27,6 +27,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function humanYears(horse: number): number {
   if (horse <= 0) return 0
@@ -76,12 +77,16 @@ function lifeStage(horse: number): Stage {
 
 export default function HorseAgeCalculator() {
   const [age, setAge] = useState('8')
+  const ageError =
+    numberFieldError(age, 'horse age', 0, 45, 'years') ||
+    (Number(age) <= 0 ? 'Enter a horse age greater than 0.' : null)
 
   const result = useMemo(() => {
+    if (ageError) return null
     const horse = parseFloat(age)
     if (!isFinite(horse) || horse <= 0) return null
     return { human: humanYears(horse), stage: lifeStage(horse) }
-  }, [age])
+  }, [age, ageError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -97,6 +102,7 @@ export default function HorseAgeCalculator() {
           max={45}
           step={0.5}
           value={age}
+          aria-invalid={ageError ? true : undefined}
           onChange={(e) => setAge(e.target.value)}
           className="w-full max-w-[220px] rounded border border-brand-border bg-brand-white px-3 py-2.5 text-base text-brand-text-dark outline-none focus:border-brand-primary"
         />
@@ -104,6 +110,8 @@ export default function HorseAgeCalculator() {
           Use a decimal for foals (e.g. 0.5 for six months). Max 45.
         </span>
       </label>
+
+      {ageError && <ToolError>{ageError}</ToolError>}
 
       {result ? (
         <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
@@ -123,12 +131,11 @@ export default function HorseAgeCalculator() {
             </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">{result.stage.care}</p>
+          <ResultMeaning>
+            Human-equivalent age is a planning chart for this life stage, not a diagnosis.
+          </ResultMeaning>
         </div>
-      ) : (
-        <p className="text-sm text-brand-text-light">
-          Enter your horse&apos;s age to see a human-equivalent estimate and life stage.
-        </p>
-      )}
+      ) : null}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         Planning / life-stage reference only — not a diagnosis. Human-equivalent ages are a

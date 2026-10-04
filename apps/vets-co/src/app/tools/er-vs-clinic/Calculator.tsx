@@ -7,6 +7,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning } from '@carloOS/ui'
 import {
   ASPCA_POISON,
   SIGNS,
@@ -218,6 +219,9 @@ export default function Calculator() {
             <p className="text-sm text-brand-text-mid leading-relaxed m-0">
               {SETTING_COPY[setting].lead}
             </p>
+            <ResultMeaning>
+              This setting is the most urgent match among the signs you selected. It is a triage aid, not a diagnosis.
+            </ResultMeaning>
 
             {setting === 'er' ? (
               <div className="mt-4 flex flex-col gap-2">

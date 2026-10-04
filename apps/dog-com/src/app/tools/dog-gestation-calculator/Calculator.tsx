@@ -18,6 +18,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 
 const AVG_DAYS = 63
 const MIN_DAYS = 58
@@ -138,7 +139,17 @@ export default function DogGestationCalculator() {
   const [breedingStr, setBreedingStr] = useState<string>('')
 
   const breeding = useMemo(() => parseInputDate(breedingStr), [breedingStr])
-  const result = useMemo(() => (breeding ? compute(breeding) : null), [breeding])
+  const breedingError = (() => {
+    if (!breedingStr.trim()) return null
+    if (!breeding) return 'Enter the breeding date as a date.'
+    const year = breeding.getFullYear()
+    if (year < 1990 || year > 2100) return 'Enter a breeding date between 1990 and 2100.'
+    return null
+  })()
+  const result = useMemo(
+    () => (breeding && !breedingError ? compute(breeding) : null),
+    [breeding, breedingError],
+  )
   const daysUntilDue = result ? daysUntil(result.due) : null
 
   return (
@@ -152,6 +163,7 @@ export default function DogGestationCalculator() {
           id="gest-date"
           type="date"
           value={breedingStr}
+          aria-invalid={breedingError ? true : undefined}
           onChange={(e) => setBreedingStr(e.target.value)}
           className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
         />
@@ -164,7 +176,8 @@ export default function DogGestationCalculator() {
 
       {/* Results */}
       <div aria-live="polite" aria-atomic="true" className="mt-6">
-        {!result && (
+        {breedingError && <ToolError>{breedingError}</ToolError>}
+        {!result && !breedingError && (
           <div className="rounded border border-brand-border bg-brand-white p-5 text-sm text-brand-text-mid">
             Enter a breeding date to estimate the whelping (due) date and the normal 58-68 day window.
           </div>
@@ -196,6 +209,9 @@ export default function DogGestationCalculator() {
                 </p>
               </div>
             </div>
+            <ResultMeaning>
+              That date is the breeding date plus the 63-day average, not a confirmed whelping date.
+            </ResultMeaning>
 
             {/* Checkpoint dates */}
             <div className="mt-4 grid grid-cols-1 sm:grid-cols-3 gap-3">

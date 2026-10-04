@@ -20,7 +20,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning } from '@carloOS/ui'
 import { CARRIERS, getCarrierBySlug, type CarrierProfile } from '../../data/insurance-carriers'
 import {
   breedsForSpecies,
@@ -376,6 +376,9 @@ export function InsuranceCoverageFinder({ reviewsHref, campaignSku = 'insurance-
             ? 'No carrier matched every priority, so these are the closest matches — ordered by how many of your priorities each one covers.'
             : 'Ordered by how many of your selected priorities each one covers. This is a grouping, not a ranking of quality.'}
         </p>
+        <ResultMeaning>
+          These cards list carriers whose published options match the filters you set. The order is a grouping by how many priorities match, not a quality ranking.
+        </ResultMeaning>
       </div>
 
       {/* ── Disclosure ABOVE the carrier CTAs ──────────────────────────── */}

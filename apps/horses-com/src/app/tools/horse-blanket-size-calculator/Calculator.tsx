@@ -12,6 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'in' | 'cm'
 
@@ -31,8 +32,18 @@ function compute(value: number, unit: Unit) {
 export default function HorseBlanketSizeCalculator() {
   const [value, setValue] = useState('78')
   const [unit, setUnit] = useState<Unit>('in')
+  const lengthError = numberFieldError(
+    value,
+    'chest-to-tail length',
+    unit === 'in' ? 48 : 122,
+    unit === 'in' ? 90 : 229,
+    unit,
+  )
 
-  const r = useMemo(() => compute(parseFloat(value), unit), [value, unit])
+  const r = useMemo(
+    () => (lengthError ? null : compute(parseFloat(value), unit)),
+    [value, unit, lengthError],
+  )
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -47,6 +58,7 @@ export default function HorseBlanketSizeCalculator() {
             min={0}
             step={1}
             value={value}
+            aria-invalid={lengthError ? true : undefined}
             onChange={(e) => setValue(e.target.value)}
             className="w-full max-w-[180px] rounded border border-brand-border bg-brand-white px-3 py-2.5 text-base text-brand-text-dark outline-none focus:border-brand-primary"
           />
@@ -72,6 +84,8 @@ export default function HorseBlanketSizeCalculator() {
         </span>
       </label>
 
+      {lengthError && <ToolError>{lengthError}</ToolError>}
+
       {r ? (
         <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
           <div className="grid gap-5 sm:grid-cols-2">
@@ -93,10 +107,11 @@ export default function HorseBlanketSizeCalculator() {
             EU/UK cuts vary by brand, so treat the cm figure as a starting point and check the manufacturer&apos;s own
             size chart.
           </p>
+          <ResultMeaning>
+            This is the US blanket size for that chest-to-tail length, rounded to the nearest 3-inch step.
+          </ResultMeaning>
         </div>
-      ) : (
-        <p className="text-sm text-brand-text-light">Enter the chest-to-tail measurement to get the blanket size.</p>
-      )}
+      ) : null}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         US blanket sizing <em>is</em> the chest-to-tail measurement in inches, rounded to the nearest 3-inch standard

@@ -10,6 +10,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { CalcCard, FieldNumber, FieldSelect, ResultPanel } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -106,12 +107,15 @@ export default function FilterGphCalculator() {
   const [gallons, setGallons] = useState('20')
   const [style, setStyle] = useState<Style>('community')
 
+  const galError = numberFieldError(gallons, 'tank volume', 1, 1000, 'US gal')
+
   const result = useMemo(() => {
+    if (galError) return null
     const gal = parseFloat(gallons) || 0
     return compute(gal, style)
-  }, [gallons, style])
+  }, [gallons, style, galError])
 
-  const gal = parseFloat(gallons) || 0
+  const gal = galError ? 0 : parseFloat(gallons) || 0
   const band = TURNOVER[style]
   const shop = shopQuery(gal)
 
@@ -125,7 +129,9 @@ export default function FilterGphCalculator() {
             onChange={setGallons}
             unit="US gal"
             min={1}
+            max={1000}
             hint="Use net water volume from the volume calculator."
+            error={galError}
           />
           <FieldSelect
             label="Tank Style"
@@ -158,6 +164,11 @@ export default function FilterGphCalculator() {
             </>
           }
         />
+      )}
+      {result && gal > 0 && (
+        <ResultMeaning>
+          That GPH band is how much water the filter should move each hour for this tank style. It is not a species count.
+        </ResultMeaning>
       )}
 
       {result && gal > 0 && (

@@ -24,7 +24,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 import { Breeds } from '../../../data/breeds'
 
 type Unit = 'lb' | 'kg'
@@ -157,13 +157,18 @@ export default function DogIdealWeightCalculator() {
     return { low: fallback.low, high: fallback.high, source: fallback.label }
   }, [selectedBreed, fallback])
 
-  const weightNum = parseFloat(weight) || 0
+  const weightMax = unit === 'lb' ? 250 : 113
+  const weightError =
+    weight.trim() === ''
+      ? null
+      : numberFieldError(weight, 'body weight', 0.5, weightMax, unit === 'lb' ? 'lb' : 'kg')
+  const weightNum = weightError || weight.trim() === '' ? 0 : parseFloat(weight)
   const currentLb = weightNum > 0 ? toLb(weightNum, unit) : 0
   const bcsNum = bcs === '' ? null : parseInt(bcs, 10)
 
   const bcsResult = useMemo(
-    () => (currentLb > 0 && bcsNum != null ? bcsEstimate(currentLb, bcsNum) : null),
-    [currentLb, bcsNum]
+    () => (weightError || currentLb <= 0 || bcsNum == null ? null : bcsEstimate(currentLb, bcsNum)),
+    [weightError, currentLb, bcsNum]
   )
   const shop = resultShop(bcsResult?.band ?? null)
 
@@ -224,10 +229,11 @@ export default function DogIdealWeightCalculator() {
               id="iw-weight"
               type="number"
               inputMode="decimal"
-              min={0.1}
-              max={300}
+              min={0.5}
+              max={weightMax}
               step={0.1}
               value={weight}
+              aria-invalid={weightError ? true : undefined}
               onChange={(e) => setWeight(e.target.value)}
               className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
               placeholder="e.g. 85"
@@ -261,9 +267,13 @@ export default function DogIdealWeightCalculator() {
               </button>
             </div>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">
-            Add current weight + a body condition score for an estimated ideal weight.
-          </p>
+          {weightError ? (
+            <ToolError>{weightError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              Add current weight + a body condition score for an estimated ideal weight.
+            </p>
+          )}
         </div>
 
         {/* Body condition score (optional) */}
@@ -312,7 +322,7 @@ export default function DogIdealWeightCalculator() {
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">
             Estimated ideal weight (from BCS)
           </p>
-          {!bcsResult && (
+          {!bcsResult && !weightError && (
             <p className="mt-1 text-sm text-brand-text-mid">
               Enter current weight and a body condition score to estimate an ideal weight.
             </p>
@@ -335,6 +345,9 @@ export default function DogIdealWeightCalculator() {
           )}
         </div>
       </div>
+      <ResultMeaning>
+        That range is a typical adult weight for this breed size, not a diagnosis of whether this dog is overweight.
+      </ResultMeaning>
 
       {/* Disclaimer */}
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">

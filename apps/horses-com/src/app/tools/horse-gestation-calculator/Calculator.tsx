@@ -20,6 +20,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 const DEFAULT_GESTATION = 340
 const EARLY_DAYS = 320
@@ -66,11 +67,20 @@ function compute(breedingDate: string, gestation: number): Result | null {
 export default function Calculator() {
   const [breedingDate, setBreedingDate] = useState<string>('')
   const [gestation, setGestation] = useState<string>(String(DEFAULT_GESTATION))
+  const dateError = !breedingDate.trim()
+    ? 'Enter a breeding date.'
+    : Number.isNaN(new Date(`${breedingDate}T00:00:00`).getTime())
+      ? 'Enter the breeding date as a date.'
+      : null
+  const gestationError =
+    numberFieldError(gestation, 'gestation length', 280, 400, 'days') ||
+    (!Number.isInteger(Number(gestation)) ? 'Enter a whole number of days.' : null)
+  const inputError = dateError || gestationError
 
   const result = useMemo(() => {
-    const g = parseInt(gestation, 10)
-    return compute(breedingDate, Number.isNaN(g) ? DEFAULT_GESTATION : g)
-  }, [breedingDate, gestation])
+    if (inputError) return null
+    return compute(breedingDate, parseInt(gestation, 10))
+  }, [breedingDate, gestation, inputError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -90,6 +100,7 @@ export default function Calculator() {
             id="hg-date"
             type="date"
             value={breedingDate}
+            aria-invalid={dateError ? true : undefined}
             onChange={(e) => setBreedingDate(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
@@ -114,6 +125,7 @@ export default function Calculator() {
             max="400"
             step="1"
             value={gestation}
+            aria-invalid={gestationError ? true : undefined}
             onChange={(e) => setGestation(e.target.value)}
             placeholder={String(DEFAULT_GESTATION)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
@@ -121,8 +133,10 @@ export default function Calculator() {
         </div>
       </div>
 
+      {inputError && <ToolError>{inputError}</ToolError>}
+
       {/* Result */}
-      <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4">
+      {result && <div className="mt-6 rounded border border-brand-border bg-brand-surface p-4">
         <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
           Estimated foaling date
         </p>
@@ -134,7 +148,13 @@ export default function Calculator() {
             ? `Based on a ${result.gestationUsed}-day gestation`
             : 'Enter the breeding date'}
         </p>
-      </div>
+      </div>}
+
+      {result && (
+        <ResultMeaning>
+          That date is the breeding date plus the gestation length you entered, not a confirmed foaling date.
+        </ResultMeaning>
+      )}
 
       {result && (
         <div className="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2">

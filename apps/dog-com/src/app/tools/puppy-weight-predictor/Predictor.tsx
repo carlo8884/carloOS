@@ -19,6 +19,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -197,17 +198,15 @@ export default function PuppyWeightPredictor() {
   const [weight, setWeight] = useState<string>('20')
   const [unit, setUnit] = useState<Unit>('lb')
 
-  const ageNum = parseFloat(ageWeeks) || 0
-  const weightNum = parseFloat(weight) || 0
   const cls = SIZE_CLASSES[sizeIndex]
-  const currentWeightLb = toLb(Math.max(0.1, weightNum), unit)
+  const weightMax = unit === 'lb' ? 250 : 113
+  const ageError = numberFieldError(ageWeeks, 'puppy age', 4, 104, 'weeks')
+  const weightError = numberFieldError(weight, 'body weight', 0.5, weightMax, unit === 'lb' ? 'lb' : 'kg')
 
-  const isValid = ageNum >= 4 && ageNum <= 104 && weightNum > 0
-
-  const result = useMemo(
-    () => (isValid ? predict(cls, ageNum, currentWeightLb) : null),
-    [isValid, cls, ageNum, currentWeightLb]
-  )
+  const result = useMemo(() => {
+    if (ageError || weightError) return null
+    return predict(cls, Number(ageWeeks), toLb(Number(weight), unit))
+  }, [ageError, weightError, cls, ageWeeks, weight, unit])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -249,13 +248,18 @@ export default function PuppyWeightPredictor() {
             max={104}
             step={1}
             value={ageWeeks}
+            aria-invalid={ageError ? true : undefined}
             onChange={(e) => setAgeWeeks(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
             placeholder="e.g. 14"
           />
-          <p className="mt-1 text-2xs text-brand-text-light">
-            Months × 4.3 ≈ weeks. The method is most reliable from about 8–24 weeks.
-          </p>
+          {ageError ? (
+            <ToolError>{ageError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              Months × 4.3 ≈ weeks. The method is most reliable from about 8–24 weeks.
+            </p>
+          )}
         </div>
 
         {/* Current weight */}
@@ -268,10 +272,11 @@ export default function PuppyWeightPredictor() {
               id="pw-weight"
               type="number"
               inputMode="decimal"
-              min={0.1}
-              max={300}
+              min={0.5}
+              max={weightMax}
               step={0.1}
               value={weight}
+              aria-invalid={weightError ? true : undefined}
               onChange={(e) => setWeight(e.target.value)}
               className="w-full rounded border border-brand-border bg-brand-white px-3 py-2 text-brand-dark focus:outline-none focus:ring-2 focus:ring-brand-primary"
               placeholder="e.g. 20"
@@ -305,21 +310,19 @@ export default function PuppyWeightPredictor() {
               </button>
             </div>
           </div>
-          <p className="mt-1 text-2xs text-brand-text-light">
-            Weigh your puppy at home (hold puppy on a scale, then subtract your weight) or at the vet.
-          </p>
+          {weightError ? (
+            <ToolError>{weightError}</ToolError>
+          ) : (
+            <p className="mt-1 text-2xs text-brand-text-light">
+              Weigh your puppy at home (hold puppy on a scale, then subtract your weight) or at the vet.
+            </p>
+          )}
         </div>
       </div>
 
       {/* Results */}
       <div aria-live="polite" aria-atomic="true" className="mt-6">
-        {!isValid && (
-          <div className="rounded border border-brand-border bg-brand-white p-5 text-sm text-brand-text-mid">
-            Enter an age (4–104 weeks) and a current weight to see an estimated adult-weight range.
-          </div>
-        )}
-
-        {isValid && result && (
+        {result && (
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
             <div className="rounded border border-brand-border bg-brand-white p-4">
               <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-text-light">
@@ -329,7 +332,7 @@ export default function PuppyWeightPredictor() {
                 {Math.round(result.fraction * 100)}%
               </p>
               <p className="mt-0.5 text-2xs text-brand-text-light">
-                at {Math.round(ageNum)} weeks ({cls.label.split(' (')[0]})
+                at {Math.round(Number(ageWeeks))} weeks ({cls.label.split(' (')[0]})
               </p>
             </div>
             <div className="rounded border-2 border-brand-primary bg-brand-primary-pale p-4 sm:col-span-2">
@@ -348,6 +351,11 @@ export default function PuppyWeightPredictor() {
               </p>
             </div>
           </div>
+        )}
+        {result && (
+          <ResultMeaning>
+            That range estimates adult weight from the growth fraction for this size class, not a guarantee of adult size.
+          </ResultMeaning>
         )}
       </div>
 

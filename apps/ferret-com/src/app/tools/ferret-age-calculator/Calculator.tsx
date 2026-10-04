@@ -24,6 +24,7 @@
  */
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function humanYears(ferret: number): number {
   if (ferret <= 0) return 0
@@ -73,12 +74,14 @@ function lifeStage(ferret: number): Stage {
 
 export default function FerretAgeCalculator() {
   const [age, setAge] = useState('3')
+  const ageError = numberFieldError(age, 'ferret age', 0, 30, 'years')
 
   const result = useMemo(() => {
+    if (ageError) return null
     const ferret = parseFloat(age)
-    if (!isFinite(ferret) || ferret <= 0) return null
+    if (!isFinite(ferret)) return null
     return { human: humanYears(ferret), stage: lifeStage(ferret) }
-  }, [age])
+  }, [age, ageError])
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -91,18 +94,18 @@ export default function FerretAgeCalculator() {
           type="number"
           inputMode="decimal"
           min={0}
-          max={14}
+          max={30}
           step={0.5}
           value={age}
           onChange={(e) => setAge(e.target.value)}
           className="w-full max-w-[220px] rounded border border-brand-border bg-brand-white px-3 py-2.5 text-base text-brand-text-dark outline-none focus:border-brand-primary"
         />
         <span className="mt-1 block text-2xs text-brand-text-light">
-          Use a decimal for kits (e.g. 0.5 for six months). Max 14.
+          Use a decimal for kits (e.g. 0.5 for six months).
         </span>
       </label>
 
-      {result ? (
+      {result && (
         <div className="rounded-lg border border-brand-border bg-brand-white p-5 sm:p-6">
           <div className="grid gap-5 sm:grid-cols-2">
             <div>
@@ -120,12 +123,13 @@ export default function FerretAgeCalculator() {
             </div>
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">{result.stage.care}</p>
+          <ResultMeaning>
+            Human-equivalent age is a planning chart for this life stage. It is an approximation, not a biological clock.
+          </ResultMeaning>
         </div>
-      ) : (
-        <p className="text-sm text-brand-text-light">
-          Enter your ferret&apos;s age to see a human-equivalent estimate and life stage.
-        </p>
       )}
+
+      {ageError && <ToolError>{ageError}</ToolError>}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         Planning / life-stage reference only — not a diagnosis. Human-equivalent ages are a

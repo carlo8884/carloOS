@@ -25,6 +25,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
+import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -203,6 +204,9 @@ export default function FerretGrimaceScale() {
             </span>
           </div>
           <p className="mt-3 text-sm leading-relaxed text-brand-text-mid">{result.blurb}</p>
+          <ResultMeaning>
+            The total adds the five facial scores. It is an observation aid for deciding whether to call an exotic-mammal veterinarian, not a diagnosis.
+          </ResultMeaning>
           {result.pushTriage ? (
             <div className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link

@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning, ToolError } from '@carloOS/ui'
 import { CalcCard } from '../_components/CalcShell'
 import { ResultCTA } from '../_components/ResultCTA'
 
@@ -222,9 +223,7 @@ export default function Checker() {
       </CalcCard>
 
       {selected.length < 2 && (
-        <div className="rounded-lg border border-brand-border bg-brand-surface p-5 text-sm text-brand-text-mid">
-          Pick at least two species above to check their compatibility.
-        </div>
+        <ToolError>Pick at least two species to check their compatibility.</ToolError>
       )}
 
       {overall && (
@@ -244,6 +243,12 @@ export default function Checker() {
               'At least one pairing here is not recommended. See the per-pair notes — a coldwater/tropical clash, predator-and-prey sizing, or an aggressive species is usually the cause.'}
           </p>
         </div>
+      )}
+
+      {overall && (
+        <ResultMeaning>
+          That verdict is a pairing check for the species you selected. Tank size, group size, and water parameters still decide whether they can live together.
+        </ResultMeaning>
       )}
 
       {pairs.length > 0 && (

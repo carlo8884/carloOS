@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useMemo } from 'react'
+import { ResultMeaning, numberFieldError } from '@carloOS/ui'
 import { FieldNumber, FieldSelect } from '../_components/CalcShell'
 
 type StarterMethod = 'fishless-ammonia' | 'bottled-bacteria' | 'used-media' | 'fish-in'
@@ -122,8 +123,12 @@ function compute(method: StarterMethod, tempF: number): Result {
 export default function Calculator() {
   const [method, setMethod] = useState<StarterMethod>('bottled-bacteria')
   const [tempF, setTempF] = useState('78')
+  const tempError = numberFieldError(tempF, 'tank temperature', 50, 95, '°F')
 
-  const result = useMemo(() => compute(method, Number(tempF) || 78), [method, tempF])
+  const result = useMemo(
+    () => compute(method, tempError ? 78 : Number(tempF)),
+    [method, tempF, tempError],
+  )
 
   return (
     <div className="border border-brand-border rounded p-6 bg-brand-surface">
@@ -141,8 +146,10 @@ export default function Calculator() {
         onChange={setTempF}
         unit="°F"
         min={50}
+        max={95}
         step={1}
         hint="Tropical setup ~78°F is near-optimal. Cold-water tanks cycle noticeably slower."
+        error={tempError}
       />
 
       {result.warning && (
@@ -151,6 +158,8 @@ export default function Calculator() {
         </div>
       )}
 
+      {!tempError && (
+      <>
       <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-3">
         <div className="rounded border border-brand-border bg-brand-white p-3">
           <p className="text-xs font-semibold uppercase tracking-wide text-brand-text-light">Estimated cycle time</p>
@@ -177,6 +186,11 @@ export default function Calculator() {
           ))}
         </ul>
       </div>
+      <ResultMeaning>
+        Those days are a planning range for this method and temperature. A test that reads zero ammonia and zero nitrite is what shows the tank has cycled.
+      </ResultMeaning>
+      </>
+      )}
 
       <p className="mt-4 text-xs text-brand-text-light">
         Estimator only. Real cycling time depends on bacterial colonization rate, filter media surface area, and uncontrolled variables (e.g. residual cleaner residues in new tanks). The only ground-truth signal is a test kit reading 0 ppm ammonia and 0 ppm nitrite within 24 hours of a 4 ppm ammonia dose.

@@ -1,6 +1,7 @@
 'use client'
 
 import { useMemo, useState } from 'react'
+import { ResultMeaning } from '@carloOS/ui'
 
 // Henneke 1983 scale: 1 (poor) through 9 (extremely fat).
 // Each of six body areas scored 1-9 from observed + palpated condition;
@@ -216,6 +217,10 @@ export function BodyConditionScoreCalculator() {
           <p className="mt-1 text-xs text-brand-text-mid">{verdict.range}</p>
         </div>
       </div>
+
+      <ResultMeaning>
+        This number is the average of the six Henneke area scores, a husbandry estimate for your veterinarian to confirm.
+      </ResultMeaning>
 
       <div className={`mt-6 rounded border p-4 ${TONE_CLASSES[verdict.tone]}`}>
         <p className="text-sm font-semibold">{verdict.detail}</p>
