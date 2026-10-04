@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'How long should the light stay on?',
+    answer: 'Six to eight hours on an aquarium light timer, with a low-to-medium fixture. The low-tech page says that without injected CO2, extra light feeds algae, and that too much light is the usual failure.',
+  },
+  {
+    question: 'Should winter add hours because the sun sets earlier?',
+    answer: 'No. Neither the low-tech page nor the algae page adds hours because the sun sets earlier. They also do not publish a winter-only duration below six hours.',
+  },
+  {
+    question: 'What if the tank already has algae?',
+    answer: 'The algae page says to cut the photoperiod to 6 to 8 hours on a timer and keep the fixture off direct sun. Shorten toward that band. Do not leave the light on through the evening so the room feels less dark. A magnetic scraper does not replace a shorter photoperiod.',
+  },
+  {
+    question: 'What does this hop buy?',
+    answer: 'The aquarium light timer search already on the low-tech page. Fixture choice, PAR, and the Hygger versus Fluval comparison stay on the lighting review. This guide does not rank a light.',
+  },
+]
 
 export default function WinterPhotoperiodGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function WinterPhotoperiodGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The hop is the aquarium light timer search already on the low-tech page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquarium+light+timer?s=reviews-winter-photoperiod-guide">Browse aquarium light timers on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

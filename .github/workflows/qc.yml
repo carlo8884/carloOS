@@ -143,6 +143,18 @@ jobs:
       - name: Run hop-target
         run: node scripts/ci/hop-target.mjs
 
+  guide-faqs:
+    name: Round 7, 9, and 11 guide FAQs match their schema
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run guide-faqs
+        run: node scripts/ci/guide-faqs.mjs
+
   social-cards:
     name: Guide, tool, and comparison social cards
     runs-on: ubuntu-latest

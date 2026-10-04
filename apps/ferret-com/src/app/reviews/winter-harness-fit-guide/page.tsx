@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'How often should harness fit be rechecked?',
+    answer: 'Every few weeks. The training page says ferrets gain and lose noticeable weight with the seasons. Its example is a harness that fit in winter and may be loose by summer. Heading into colder months, the action is the same recheck, not a new size chart.',
+  },
+  {
+    question: 'Is the fit rule one finger or two?',
+    answer: 'The training page says two fingers should slide under the harness anywhere it touches the body. The vest guide restates the review rule as one finger of slack, checked before the walk. This page does not average those into a third rule. Use the review check on the review harness, and the training-page check when you are following that page.',
+  },
+  {
+    question: 'Which harness does this page hop?',
+    answer: 'The vest, the escape-resistance pick on the vest guide, scored 9.0. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing.',
+  },
+  {
+    question: 'Does the fall coat change the buckle?',
+    answer: 'No. A coat change is the fall molt guide. It does not change the buckle. Both the review and the training page say a loose harness is how a ferret backs out.',
+  },
+]
 
 export default function WinterHarnessFitGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function WinterHarnessFitGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The hop is the vest search already on the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find a ferret vest harness on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

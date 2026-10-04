@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'Is there a safe amount of holiday chocolate?',
+    answer: 'No. The calculator FAQ says there is no truly safe amount. Any ingestion warrants a call to a veterinarian or a poison-control hotline, with the product and the amount. Do not treat a round number on this guide as a clearance to wait.',
+  },
+  {
+    question: 'Why does the type of chocolate matter?',
+    answer: 'The calculator FAQ says theobromine signs are commonly reported from about 20 mg per kilogram of body weight, cardiac signs are possible around 40 to 60 mg/kg, and severe signs including seizures sit above roughly 60 mg/kg. A small amount of baking chocolate or cocoa powder can be far more dangerous than a larger amount of milk chocolate.',
+  },
+  {
+    question: 'What else is often in holiday baking?',
+    answer: 'The nutmeg entry says baked goods that contain nutmeg often also contain raisins, chocolate, or xylitol. Chocolate goes to the calculator. Xylitol, on its own foods entry, is described as an emergency measured in minutes. This guide does not merge those into one product.',
+  },
+  {
+    question: 'Does the first-aid kit treat poisoning?',
+    answer: 'No. The calculator page says activated charcoal and 3 percent hydrogen peroxide are vet-directed, and the Amazon searches are general supplies. They do not reverse chocolate poisoning. Call a veterinarian or poison control for an actual ingestion before you shop.',
+  },
+]
 
 export default function HolidayChocolateCalculatorGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function HolidayChocolateCalculatorGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
         <p>The hop is that first-aid kit search. Call a veterinarian or poison control for an actual ingestion before you shop.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/pet+first+aid+kit+dog?s=reviews-holiday-chocolate-calculator-guide">Browse pet first-aid kits on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'What wattage rule does the calculator publish?',
+    answer: 'The baseline is 3 watts per gallon per 10°F of lift: gallons times 3 times the temperature difference divided by 10. It then adds 25 percent headroom. The inputs are tank gallons, target temperature, and the coldest typical room temperature, not the average.',
+  },
+  {
+    question: 'What does the 20-gallon winter example use?',
+    answer: 'A 20-gallon tropical tank with a 10°F lift, room 68°F to a 78°F target, is about 60 watts, and a 75 or 100 watt heater is the standard pick. If the room drops to 60°F in winter, the same answer says step up to 150 watts.',
+  },
+  {
+    question: 'When is the 3-watt rule the wrong one?',
+    answer: 'A room at 60 to 65°F and tropical fish at 80°F is 5 to 7 watts per gallon, not the 3-watt rule, because that rule assumes about a 10°F lift. Enter the winter low you actually see. This page does not publish a third formula.',
+  },
+  {
+    question: 'When should the tank use two heaters?',
+    answer: 'On tanks of 40 gallons or larger, the calculator says to run two smaller heaters rather than one large one. A single 300 watt heater stuck on a 75-gallon tank can push the water to 90°F quickly. If one heater fails off, the second unit holds the tank within 2 to 4°F of target.',
+  },
+]
 
 export default function WinterHeaterSizingGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function WinterHeaterSizingGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The hop is that Eheim Jager search. Wattage still comes from the calculator, not from the brand name.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"
