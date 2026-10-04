@@ -16,6 +16,8 @@ const playfair = Playfair_Display({
   style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
+  // The phone LCP on long guides is the body lede, not this display face.
+  preload: false,
 })
 
 // Source Sans 3 — readable humanist sans for body + UI.

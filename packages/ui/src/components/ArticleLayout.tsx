@@ -130,7 +130,7 @@ export function ArticleLayout({
 
           {/* Subtitle — after the hop so a long lede cannot push the link below a phone screen. */}
           {hero.subtitle && (
-            <p className={`text-lg font-light text-white/60 leading-relaxed max-w-2xl ${heroHop ? 'mb-4' : 'mb-8'}`}>
+            <p className={`text-lg font-normal text-white/60 leading-relaxed max-w-2xl ${heroHop ? 'mb-4' : 'mb-8'}`}>
               {hero.subtitle}
             </p>
           )}
@@ -170,6 +170,10 @@ export function ArticleLayout({
           <img
             src={hero.image}
             alt={hero.imageAlt ?? hero.title}
+            width={1600}
+            height={900}
+            fetchPriority="high"
+            decoding="async"
             className="w-full h-full object-cover"
           />
         </div>

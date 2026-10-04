@@ -13,6 +13,8 @@ const playfair = Playfair_Display({
   style: ['normal', 'italic'],
   variable: '--font-playfair',
   display: 'swap',
+  // Long-guide LCP is the body lede. Don't preload this display face ahead of it.
+  preload: false,
 })
 
 const dmSans = DM_Sans({
@@ -33,6 +35,11 @@ export const metadata: Metadata = buildMetadata({
 
 const GA_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 
+// Content hash of Playfair's fallback subset (em dash and other punctuation
+// outside the preloaded latin slice). Preloading it keeps the hero lede from
+// shifting when that file arrives. Hash stays put until the font file changes.
+const PLAYFAIR_PUNCT_SUBSET = '/_next/static/media/eaead17c7dbfcd5d-s.woff2'
+
 const SKIMLINKS_SRC =
   'https://s.skimresources.com/js/303850X1791986.skimlinks.js'
 
@@ -51,7 +58,13 @@ export default function RootLayout({
           name="impact-site-verification"
           content="f06484a9-0400-4029-a0b5-f1f1014163fc"
         />
-
+        <link
+          rel="preload"
+          href={PLAYFAIR_PUNCT_SUBSET}
+          as="font"
+          type="font/woff2"
+          crossOrigin="anonymous"
+        />
       </head>
       <body>
         <a
