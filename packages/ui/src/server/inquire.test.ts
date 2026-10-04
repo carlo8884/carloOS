@@ -45,7 +45,10 @@ test('rejected inbox is not a success', async () => {
   const res = await handleInquirePost(post(note), {
     siteName: 'Vets.co',
     siteHost: 'vets.co',
-    env: { INQUIRE_EMAIL: 'inbox@example.com' },
+    env: {
+      INQUIRE_EMAIL: 'inbox@example.com',
+      NEXT_PUBLIC_VETS_INQUIRE_CAPTURE: 'true',
+    },
     fetchImpl: async () => new Response('nope', { status: 422 }),
   })
   const body = await res.json()
@@ -107,7 +110,10 @@ test('junk notes are not sent', async () => {
     {
       siteName: 'Dog.com',
       siteHost: 'dog.com',
-      env: { INQUIRE_EMAIL: 'inbox@example.com' },
+      env: {
+        INQUIRE_EMAIL: 'inbox@example.com',
+        NEXT_PUBLIC_DOG_INQUIRE_CAPTURE: 'true',
+      },
       fetchImpl: async () => {
         called = true
         return new Response('ok', { status: 200 })
@@ -144,6 +150,41 @@ test('a repeat IP is told to wait', async () => {
   assert.match(inquireFailureLead(429), /not sent/)
   assert.match(inquireFailureLead(429), /Wait a few minutes/)
   assert.doesNotMatch(inquireFailureLead(429), /Received/)
+})
+
+test('dog and vets stay closed until their flags are on', async () => {
+  let called = false
+  const fetchImpl = async () => {
+    called = true
+    return new Response('ok', { status: 200 })
+  }
+  const dog = await handleInquirePost(post(note, '203.0.113.61'), {
+    siteName: 'Dog.com',
+    siteHost: 'dog.com',
+    env: { INQUIRE_EMAIL: 'inbox@example.com' },
+    fetchImpl,
+  })
+  assert.equal(dog.status, 503)
+  assert.equal((await dog.json()).error, 'unconfigured')
+  const vets = await handleInquirePost(post(note, '203.0.113.62'), {
+    siteName: 'Vets.co',
+    siteHost: 'vets.co',
+    env: {},
+    fetchImpl,
+  })
+  assert.equal(vets.status, 503)
+  const vetsFlagged = await handleInquirePost(post(note, '203.0.113.63'), {
+    siteName: 'Vets.co',
+    siteHost: 'vets.co',
+    env: {
+      NEXT_PUBLIC_VETS_INQUIRE_CAPTURE: 'true',
+      INQUIRE_EMAIL: 'inbox@example.com',
+    },
+    fetchImpl: async () => new Response('nope', { status: 500 }),
+  })
+  assert.equal(vetsFlagged.status, 502)
+  assert.equal((await vetsFlagged.json()).error, 'rejected')
+  assert.equal(called, false)
 })
 
 test('earning-site routes use the shared handler', () => {

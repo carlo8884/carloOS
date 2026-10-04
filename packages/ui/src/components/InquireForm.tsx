@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { dogInquireFormVisible, vetsInquireFormVisible } from '@carloOS/config/capture-flags'
 import { isJunkEmail, isJunkLabel, isJunkMessage, isJunkOffer, isJunkPhone } from '@carloOS/config/form-guard'
 import { INQUIRE_FALLBACK_HREF, inquireFailureLead } from '../inquire-copy'
 
@@ -14,6 +15,7 @@ export function InquireForm({
   defaultCity,
   defaultMessage,
   defaultListing,
+  open,
 }: {
   siteName: string
   intent?: InquireIntent
@@ -22,12 +24,29 @@ export function InquireForm({
   defaultCity?: string
   defaultMessage?: string
   defaultListing?: string
+  /** Server passes this. Dog and vets stay closed unless the flag and inbox are set. */
+  open?: boolean
 }) {
   const [status, setStatus] = useState<'idle' | 'sending' | 'sent' | 'error'>('idle')
   const [errorMsg, setErrorMsg] = useState('')
   const [showFallback, setShowFallback] = useState(false)
   const isPro = intent === 'pro-application'
   const onCard = variant === 'card'
+  const formOpen = open ?? defaultInquireOpen(siteName)
+
+  if (!formOpen) {
+    const guide = closedGuide(siteName, isPro)
+    return (
+      <div className={onCard ? 'text-white text-center text-sm leading-relaxed py-4' : 'text-sm text-slate-800 leading-relaxed py-2'}>
+        <p className="m-0">This page is not collecting notes. Nothing is stored from here.</p>
+        <p className="mt-3 mb-0">
+          <a href={guide.href} className="underline font-semibold">{guide.label}</a>
+          {' · '}
+          <a href={INQUIRE_FALLBACK_HREF} className="underline font-semibold">Disclosure</a>
+        </p>
+      </div>
+    )
+  }
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -167,4 +186,21 @@ export function InquireForm({
       )}
     </form>
   )
+}
+
+function defaultInquireOpen(siteName: string): boolean {
+  if (siteName === 'Dog.com') return dogInquireFormVisible()
+  if (siteName === 'Vets.co') return vetsInquireFormVisible()
+  return true
+}
+
+function closedGuide(siteName: string, isPro: boolean): { href: string; label: string } {
+  if (siteName === 'Vets.co') {
+    return isPro
+      ? { href: '/find-a-vet', label: 'Find a vet' }
+      : { href: '/reviews/best-pet-insurance', label: 'Pet insurance comparison' }
+  }
+  return isPro
+    ? { href: '/training/trainer-credentials', label: 'Trainer credentials' }
+    : { href: '/reviews', label: 'Dog reviews' }
 }

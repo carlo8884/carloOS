@@ -41,6 +41,42 @@ describe('parseSubscribeBody', () => {
 })
 
 describe('handleSubscribePost', () => {
+  it('does not call the provider for fish until the flag and inbox are set', async () => {
+    let called = false
+    const req = new Request('https://fish.com/api/subscribe', {
+      method: 'POST',
+      body: JSON.stringify({ email: 'owner@example.com', source: 'tools-stocking-calculator-under-hero' }),
+    })
+    const closed = await handleSubscribePost(req, {
+      site: 'fish.com',
+      env: { INQUIRE_EMAIL: 'inbox@example.com' },
+      fetchImpl: async () => {
+        called = true
+        return new Response('{"success":"true"}', { status: 200 })
+      },
+    })
+    assert.equal(closed.status, 503)
+    assert.equal(called, false)
+    const rejected = await handleSubscribePost(
+      new Request('https://fish.com/api/subscribe', {
+        method: 'POST',
+        headers: { 'x-forwarded-for': '203.0.113.70' },
+        body: JSON.stringify({ email: 'owner@example.com', source: 'tools-stocking-calculator-under-hero' }),
+      }),
+      {
+        site: 'fish.com',
+        env: {
+          NEXT_PUBLIC_FISH_SUBSCRIBE_CAPTURE: 'true',
+          INQUIRE_EMAIL: 'inbox@example.com',
+        },
+        fetchImpl: async () => new Response('no', { status: 422 }),
+      },
+    )
+    assert.equal(rejected.status, 502)
+    assert.match(rejected.body.message || '', /Could not save/)
+    assert.doesNotMatch(rejected.body.message || '', /saved|subscribed|received/i)
+  })
+
   it('returns 503 when inbox env is empty — never fake success', async () => {
     const req = new Request('https://dog.com/api/subscribe', {
       method: 'POST',

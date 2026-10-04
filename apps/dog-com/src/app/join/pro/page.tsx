@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { directoryClaimPrefill } from '@carloOS/config'
+import { dogInquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
@@ -63,6 +64,7 @@ export default function JoinProPage({
             siteName="Dog.com"
             intent="pro-application"
             variant="page"
+            open={dogInquireCaptureEnabled()}
             defaultCity={prefill.city}
             defaultMessage={prefill.message}
             defaultListing={prefill.listing}
@@ -73,8 +75,7 @@ export default function JoinProPage({
           Owners looking for help now should start with{' '}
           <Link href="/training/trainer-credentials">credentials</Link>
           {' '}and{' '}
-          <Link href="/training/training-red-flags">red flags</Link>
-          {', not this form.'}
+          <Link href="/training/training-red-flags">red flags</Link>.
         </p>
 
         <h2>Owners: get a note when claimed pages exist</h2>

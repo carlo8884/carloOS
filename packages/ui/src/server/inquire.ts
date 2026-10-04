@@ -9,6 +9,7 @@ import {
   isJunkPhone,
   takeRateLimit,
 } from '@carloOS/config/form-guard'
+import { inquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { INQUIRE_FALLBACK_HREF } from '../inquire-copy'
 
 function clip(value: unknown, max: number): string {
@@ -41,6 +42,7 @@ export async function handleInquirePost(
   const env = opts.env ?? process.env
   const fetchImpl = opts.fetchImpl ?? fetch
   const inbox = env.INQUIRE_EMAIL || env.NEXT_PUBLIC_INQUIRE_EMAIL
+  if (!inquireCaptureEnabled(opts.siteHost, env)) return fail(503, 'unconfigured')
   if (!inbox) return fail(503, 'unconfigured')
 
   const body = await req.json().catch(() => null)

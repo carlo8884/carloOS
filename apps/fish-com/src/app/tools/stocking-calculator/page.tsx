@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { fishSubscribeDeliveryEnabled } from '@carloOS/config/capture-flags'
 import {
   buildArticleSchema,
   buildMetadata,
@@ -177,6 +178,7 @@ export default function StockingCalculatorPage() {
             <EmailCapture
               variant="inline"
               siteId="fish-com"
+              captureOpen={fishSubscribeDeliveryEnabled()}
               title="Save the stocking rules"
               subtitle="Planning ceiling, 60–80% headroom, and why inch-per-gallon fails."
               source="tools-stocking-calculator-under-hero"
