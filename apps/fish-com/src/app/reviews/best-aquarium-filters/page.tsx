@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -270,6 +270,7 @@ export default function BestAquariumFiltersPage() {
           </aside>
         </div>
       </div>
+      <RelatedReads siteId="fish-com" path="/reviews/best-aquarium-filters" />
     </>
   )
 }

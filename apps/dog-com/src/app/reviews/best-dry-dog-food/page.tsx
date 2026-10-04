@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
@@ -318,6 +318,7 @@ export default function BestDogFoodPage() {
         </div>
       </div>
       <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="footer" />
+      <RelatedReads siteId="dog-com" path="/reviews/best-dry-dog-food" />
     </>
   )
 }

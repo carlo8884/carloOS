@@ -18,6 +18,7 @@ import type { ReactNode } from 'react'
 import type { SiteId, ContentType } from '@carloOS/config'
 import { Breadcrumb } from './Breadcrumb'
 import { CrossPortfolioCard } from './CrossPortfolioCard'
+import { RelatedReads } from './RelatedReads'
 import { SchemaScript } from './SEOHead'
 
 interface ArticleHero {
@@ -88,6 +89,9 @@ export function ArticleLayout({
     }
     return isBreadcrumb(schema) ? undefined : schema
   })()
+
+  const lastCrumb = breadcrumbs && breadcrumbs.length > 0 ? breadcrumbs[breadcrumbs.length - 1] : undefined
+  const pagePath = lastCrumb?.href
 
   return (
     <>
@@ -199,6 +203,8 @@ export function ArticleLayout({
           )}
         </div>
       </div>
+
+      {pagePath && <RelatedReads siteId={siteId} path={pagePath} />}
 
       {/* Related links */}
       {relatedLinks && relatedLinks.length > 0 && (
