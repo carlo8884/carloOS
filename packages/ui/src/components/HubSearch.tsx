@@ -64,7 +64,7 @@ export function HubSearch({
         enterKeyHint="search"
         aria-controls={listId}
         aria-describedby={statusId}
-        className="w-full border border-brand-border rounded-md px-3 py-2 text-base text-brand-dark bg-brand-white"
+        className="w-full min-h-11 border border-brand-border rounded-md px-3 py-2 text-base text-brand-dark bg-brand-white"
       />
       <p id={statusId} aria-live="polite" className="text-sm text-brand-text-mid mt-2 m-0">
         {status}
