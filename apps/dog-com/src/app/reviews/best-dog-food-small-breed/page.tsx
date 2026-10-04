@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
@@ -22,7 +22,8 @@ export default function BestSmallBreedFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed' label='Check price of Royal Canin Small Adult on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -70,6 +71,50 @@ export default function BestSmallBreedFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+small+toy+breed"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Two foods have review cards. Other names in the sidebar do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A small-breed adult food, including dental support</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Small Adult</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.3. $45–65 / 14–17 lb</td>
+                      <td className="p-3 text-brand-text-mid">Chicken allergy. The card says it is chicken-based, and it costs more than a standard adult formula</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Higher protein for an active small or toy dog</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Small &amp; Toy Breed Adult</a></td>
+                      <td className="p-3 text-brand-text-mid">Best High-Protein. Score 9.2. 30% protein. $35–55 / 16 lb</td>
+                      <td className="p-3 text-brand-text-mid">You want the dental-specific formula. The card says this one is less dental-specific than Royal Canin</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which small-breed food fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which small-breed food does this page pick overall?',
+                  answer: 'Royal Canin Small Adult, scored 9.3 and marked Best Overall. The printed price is $45–65 for 14–17 lb. The card says it is chicken-based and more expensive than a standard adult formula.',
+                },
+                {
+                  question: 'Which small-breed food does this page pick for higher protein?',
+                  answer: 'Purina Pro Plan Small & Toy Breed Adult, scored 9.2 and marked Best High-Protein. The card lists 30% protein and a printed price of $35–55 for 16 lb. It is less dental-specific than Royal Canin.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

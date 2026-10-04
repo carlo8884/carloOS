@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -47,7 +47,8 @@ export default function BestJointSupplementsPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Joint Supplements for Dogs 2026
         </h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The pet supplement market is full of products with minimal evidence. We graded each major joint supplement category by the actual research — what works, what&apos;s promising, and what&apos;s expensive placebo.
         </p>
@@ -165,6 +166,66 @@ export default function BestJointSupplementsPage() {
               ctaText="Find a Vet to Discuss CBD →"
               ctaHref="/find-a-vet"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which supplement</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Four supplements have review cards. The CBD card does not print a price, and its button goes to the vet finder. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The supplement with the ASU evidence</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Evidence. Score 9.2. $40–70 for 84-count</td>
+                      <td className="p-3 text-brand-text-mid">Severe arthritis that needs an NSAID. The card says this does not replace that, and the effect takes 4–6 weeks</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">An omega-3 for inflammation</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Anti-Inflammatory. Score 9.3. $25–45</td>
+                      <td className="p-3 text-brand-text-mid">The dog refuses fish flavor, or you have not worked out the dose. The card says label suggestions are often too low</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A lower-priced glucosamine</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Budget Glucosamine. Score 8.8. $25–45 for 120-count</td>
+                      <td className="p-3 text-brand-text-mid">You want the ASU evidence. The card says Cosequin has less evidence than Dasuquin</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A CBD discussion with a vet</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cbd" className="text-brand-primary">CBD for dogs</a></td>
+                      <td className="p-3 text-brand-text-mid">Emerging Evidence. Score 8.4. No printed price. Button goes to the vet finder</td>
+                      <td className="p-3 text-brand-text-mid">You want a shop link. The card says market quality control is poor and a vet should pick the product and the dose</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which joint supplement fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which supplement does this page mark as the evidence pick?',
+                  answer: 'Nutramax Dasuquin with MSM, scored 9.2, marked Best Evidence, and marked the winner. The printed price is $40–70 for an 84-count. The card says it does not replace an NSAID in severe arthritis and the effect takes 4–6 weeks.',
+                },
+                {
+                  question: 'Which supplement does this page pick for inflammation?',
+                  answer: 'Nordic Naturals Omega-3 Pet, scored 9.3. The printed price is $25–45. The card says the dose has to be calculated because label suggestions are often too low.',
+                },
+                {
+                  question: 'Does the CBD card name a price or a shop?',
+                  answer: 'No. The CBD card scores 8.4, prints no price, and the button goes to the vet finder. The card says many products are misrepresented and a veterinarian should decide whether it fits.',
+                },
+              ]} />
+            </div>
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

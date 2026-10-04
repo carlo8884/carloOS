@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -106,6 +106,21 @@ export default function BestDogBedsPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which bed fits which dog</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which bed does this page pick for a large dog with arthritis?',
+                  answer: 'The Big Barker 7-inch Orthopedic bed, scored 9.5 and marked Best Orthopedic. The card lists a published trial, a 10-year no-flatten warranty, and a printed price of $279–399. The cover is spot-clean only, and the bed is heavy.',
+                },
+                {
+                  question: 'Which bed does this page pick when the cover has to be washed?',
+                  answer: 'The Casper Dog Bed, scored 9.1 and marked Best Premium. The card lists a machine-washable cover, memory foam over a support base, and a printed price of $125–175. It is not the more therapeutic pick for severe arthritis, and zippers can be chewed.',
+                },
+                {
+                  question: 'Why are Furhaven and the Best Friends bolster not in the table?',
+                  answer: 'They are named in the picks strip and the sidebar, and this page does not give them a scored review card or a reviewed price. The table only lines up the two beds that have cards.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

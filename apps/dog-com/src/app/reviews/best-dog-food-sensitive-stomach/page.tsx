@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -18,7 +18,8 @@ export default function SensitiveStomachFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' label='Check price of Purina Pro Plan Sensitive Skin & Stomach on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -47,6 +48,48 @@ export default function SensitiveStomachFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+sensitive+skin+stomach"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                One food has a review card. Hill&apos;s Sensitive Stomach &amp; Skin and Royal Canin Digestive Care are named in the picks strip and do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Mild GI sensitivity and a single animal protein</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Sensitive Skin &amp; Stomach</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.4. Salmon and rice. No corn, wheat, or soy. $55–75 / 30 lb</td>
+                      <td className="p-3 text-brand-text-mid">A fish or salmon allergy, or a true food-allergy diagnosis. The card says this is not a hydrolyzed diet</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which sensitive-stomach food is on the card</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which food does this page score for a sensitive stomach?',
+                  answer: 'Purina Pro Plan Sensitive Skin & Stomach, scored 9.4 and marked Best Overall. The card lists salmon as the single animal protein, no corn, wheat, or soy, live Bacillus coagulans, and a printed price of $55–75 for 30 lb.',
+                },
+                {
+                  question: 'When does the card say to skip that food?',
+                  answer: 'When the dog has a fish or salmon allergy, or when the question is a true food allergy. The card says this formula is not a hydrolyzed diet for that diagnosis.',
+                },
+                {
+                  question: 'Does this page print prices for Hill\'s or Royal Canin digestive foods?',
+                  answer: 'No. Those names are in the picks strip. Only Purina Pro Plan Sensitive Skin & Stomach has a review card and a printed price.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

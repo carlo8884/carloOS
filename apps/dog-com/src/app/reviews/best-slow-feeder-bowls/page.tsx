@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -22,6 +22,7 @@ export default function BestSlowFeederBowlsPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A slow feeder bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -118,6 +119,21 @@ export default function BestSlowFeederBowlsPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which feeder fits which meal</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which feeder does this page pick for a dog that gulps kibble?',
+                  answer: 'The Outward Hound Fun Feeder, scored 9.2 and marked Best Overall. The card lists maze ridges, five sizes, a top-rack dishwasher, and a printed price of $10–18. Kibble wedges in the ridges, and some dogs flip the bowl.',
+                },
+                {
+                  question: 'Which feeder does this page pick for foraging or a senior?',
+                  answer: 'The Northmate Green, scored 9.0 and marked Best Puzzle Feeder. The card says it is flat so it cannot tip, it works with wet food, and the printed price is $25–35. Kibble can stick deep in the grass segments.',
+                },
+                {
+                  question: 'Which feeder does this page pick before a stressful event?',
+                  answer: 'The LickiMat Splash, scored 8.9 and marked Best for Anxiety. The card says it takes wet or spreadable food only, is dishwasher safe and freezable, and the printed price is $10–15. It is not a kibble bowl.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

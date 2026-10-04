@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -22,6 +22,7 @@ export default function BestGPSTrackerPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -76,6 +77,60 @@ export default function BestGPSTrackerPage() {
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="tractive+gps+dog+tracker"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tracker</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Three trackers have review cards. Each card already prints a device price and a monthly fee. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The longest battery and escape alerts</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.4. $149 + $9.99/mo</td>
+                      <td className="p-3 text-brand-text-mid">You do not want a subscription or a higher device price. Collar bands are sold separately</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Health monitoring with the location</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#whistle" className="text-brand-primary">Whistle Go Explore</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Health Monitoring. Score 9.0. $79 + $9.95/mo</td>
+                      <td className="p-3 text-brand-text-mid">You want Fi&apos;s battery. The card says the battery is shorter, the collar is bulkier, and the health data needs interpretation</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The lowest printed device price and monthly fee</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#tractive" className="text-brand-primary">Tractive GPS</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Budget. Score 8.8. $49 + $5/mo. 175 countries</td>
+                      <td className="p-3 text-brand-text-mid">You do not want to charge every 2–5 days, or you want health monitoring. The card says there is none</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which tracker fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which tracker does this page pick overall?',
+                  answer: 'The Fi Series 3, scored 9.4 and marked Best Overall. The printed price is $149 plus $9.99 a month. The card says a subscription is required and collar bands are sold separately.',
+                },
+                {
+                  question: 'Which tracker does this page pick for health data?',
+                  answer: 'Whistle Go Explore, scored 9.0. The printed price is $79 plus $9.95 a month. The card says the battery is shorter than Fi and the health data needs interpretation.',
+                },
+                {
+                  question: 'Which tracker does this page pick at the lowest printed fee?',
+                  answer: 'Tractive, scored 8.8. The printed price is $49 plus $5 a month. The card lists a 2–5 day battery and no health monitoring.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
