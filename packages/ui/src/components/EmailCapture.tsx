@@ -89,7 +89,11 @@ export function EmailCapture({
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email || !email.includes('@')) return
+    if (!email || !email.includes('@')) {
+      setStatus('error')
+      setErrorMsg('Enter a valid email address')
+      return
+    }
 
     setStatus('loading')
     setErrorMsg('')
