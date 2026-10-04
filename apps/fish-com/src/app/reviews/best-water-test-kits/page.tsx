@@ -32,7 +32,7 @@ export default function BestWaterTestKitsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Water Test Kits 2026</h1>
-        <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Shop API Master Test Kit →' />
+        <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">You cannot manage water quality you do not measure. Ammonia and nitrite are invisible and lethal. Test at least weekly, always after adding new fish, and during any disease or behavior change.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -65,7 +65,7 @@ export default function BestWaterTestKitsPage() {
               pros={['800 tests — 2+ years supply', 'Most accurate affordable kit', 'Covers all 4 critical parameters', 'Industry standard — widely referenced']}
               cons={['Color matching can be tricky in certain lighting', 'Separate saltwater kit needed for marine tanks', 'No hardness (GH/KH) test included']}
               price="$28–35"
-              ctaText="Shop API Master Test Kit →"
+              ctaText="Check price of the API Freshwater Master Test Kit on Amazon"
               ctaHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="api-master-test-kit"

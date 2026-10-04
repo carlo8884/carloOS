@@ -76,7 +76,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <p>Buy Wysong Epigen 90 when the lower commercial carb load is the priority and you can order it or find it at a specialty shop. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight, and you have read the higher carbohydrate and the plant protein on that card. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The hop below is the same Wysong Epigen 90 link already on the kibble review. It is that product path, not a new search and not a sale price.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide">Find Wysong Epigen 90 →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide">Check price of Wysong Epigen 90 at Wysong</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

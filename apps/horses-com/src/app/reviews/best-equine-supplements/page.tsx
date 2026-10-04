@@ -98,7 +98,7 @@ export default function BestEquineSupplementsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Equine Supplements 2026
         </h1>
-        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Shop Cosequin ASU Plus at SmartPak →' />
+        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           A category-by-category buyer&apos;s guide to the equine supplement market — joint, gastric, hoof, calmer, electrolyte, weight gain, marine omega-3, and comprehensive wellness. Brands and products evaluated against the NASC Quality Seal, FEI/USEF prohibited-substance rules, and the peer-reviewed evidence base behind each category.
         </p>
@@ -185,7 +185,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Strongest peer-reviewed equine evidence in the category', 'NASC Quality Seal', 'Established pharmaceutical-grade manufacturer', 'Multiple formulations for life stage']}
               cons={['Higher price tier', 'Loading dose adds first-month cost', 'Pellet palatability variable across horses']}
               price="$80–110/mo"
-              ctaText="Shop at SmartPak →"
+              ctaText="Check price of Cosequin ASU Plus on SmartPak"
               ctaHref="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="cosequin-asu-plus"

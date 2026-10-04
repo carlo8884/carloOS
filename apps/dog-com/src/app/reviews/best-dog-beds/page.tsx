@@ -25,7 +25,7 @@ export default function BestDogBedsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Beds 2026</h1>
-        <PrimaryHop href='/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds' label='Shop Big Barker →' />
+        <PrimaryHop href='/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds' label='Check price of the Big Barker bed on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs sleep 12–14 hours a day. For large breeds and seniors with joint disease, the bed quality directly affects pain levels and mobility. Orthopedic foam is not a luxury for these dogs — it is a health investment.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -57,7 +57,7 @@ export default function BestDogBedsPage() {
               pros={['Among the few beds with a published arthritis trial', '10-year no-flatten warranty', 'American-made foam', 'Reported pain/stiffness reduction in arthritic dogs (manufacturer-funded study)']}
               cons={['Expensive ($279–399)', 'Cover is not machine washable (spot clean only)', 'Heavy — difficult to move']}
               price="$279–399"
-              ctaText="Shop Big Barker →"
+              ctaText="Check price of the Big Barker bed on Chewy"
               ctaHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="big+barker+orthopedic+dog+bed"

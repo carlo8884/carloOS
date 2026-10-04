@@ -60,7 +60,7 @@ export default function SaddlePadsPage() {
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
-        heroHop={<PrimaryHop href='/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads' label='Compare the quilted cotton pad at SmartPak →' />}
+        heroHop={<PrimaryHop href='/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads' label='Check price of the quilted all-purpose saddle pad on SmartPak' />}
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:
@@ -165,7 +165,7 @@ export default function SaddlePadsPage() {
             pros={['Inexpensive enough to keep several', 'Machine washable', 'Breathable everyday material']}
             cons={['No structural fit correction (none can)', 'Wears faster than wool or felt']}
             price="$20–45"
-            ctaText="Compare at SmartPak →"
+            ctaText="Check price of the quilted all-purpose saddle pad on SmartPak"
             ctaHref="/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="quilted-all-purpose-saddle-pad"

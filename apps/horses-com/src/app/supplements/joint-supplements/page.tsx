@@ -45,7 +45,7 @@ export default function JointSupplementsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Equine Joint Supplements — An Evidence Ladder
         </h1>
-        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' label='Compare Cosequin ASU Plus at SmartPak →' />
+        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The equine joint-supplement market is large, lightly regulated, and dominated by marketing claims that outpace the data. This guide grades each ingredient by what the peer-reviewed literature actually supports — plus the prohibited-substance footnote that every competitive rider needs to know.
         </p>
@@ -155,7 +155,7 @@ export default function JointSupplementsPage() {
               pros={['Strongest equine ingredient evidence (ASU)', 'NASC Quality Seal documented', 'Per-ingredient amounts disclosed', 'Long manufacturer track record']}
               cons={['Premium price per scoop', 'Not a substitute for IA or systemic chondroprotectant when indicated']}
               price="$60–95 per 30-day supply"
-              ctaText="Compare at SmartPak →"
+              ctaText="Check price of Cosequin ASU Plus on SmartPak"
               ctaHref="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="cosequin-asu-plus"

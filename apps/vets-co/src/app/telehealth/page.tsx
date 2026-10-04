@@ -76,7 +76,7 @@ export default function TelehealthPage() {
               specs={[{ label: 'Cost', value: 'Included with Chewy+', highlight: 'good' }, { label: 'Chewy Pharmacy', value: 'Direct integration', highlight: 'good' }, { label: 'Consultation Type', value: 'Video + chat' }, { label: 'Availability', value: 'Extended hours' }]}
               pros={['Included with Chewy+ membership', 'Direct Chewy pharmacy integration', 'Convenient for existing Chewy customers']}
               cons={['Only valuable if you already use Chewy+', 'Less specialist access than Vetster']}
-              price="Included with Chewy+ ($19.99/month)" ctaText="Check Price →" ctaHref="/go/chewy/connect?s=telehealth" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
+              price="Included with Chewy+ ($19.99/month)" ctaText="Check Chewy Connect price on Chewy" ctaHref="/go/chewy/connect?s=telehealth" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
 
             {/* Money path — live amazon-brand search hops (home-care prep kit).
                 ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

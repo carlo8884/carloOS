@@ -76,7 +76,7 @@ export default function RamboVsRhinoGuidePage() {
         <p>Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino. Buy the Rhino if you want Horseware&apos;s cut at the printed $180–260 band and you accept polymer hardware and a shorter warranty. Neither card is the heavy-winter specification. A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two. The <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse blanket guide</Link> stays on that card.</p>
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The hop is the Rambo search already used on the blanket review, for the long-term turnout job.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Shop the Horseware Rambo Original at SmartPak →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Check price of the Horseware Rambo Original on SmartPak</a></p>
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

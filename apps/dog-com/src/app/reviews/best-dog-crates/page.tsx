@@ -44,7 +44,7 @@ export default function BestDogCratesPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
-        <PrimaryHop href='/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' label='Shop MidWest iCrate →' />
+        <PrimaryHop href='/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' label='Check price of the MidWest iCrate on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
         </p>
@@ -102,7 +102,7 @@ export default function BestDogCratesPage() {
               cons={['Not escape-proof for determined dogs', 'Wire can feel industrial in living space']}
               price="$40–80"
               priceNote="By size"
-              ctaText="Shop MidWest iCrate →"
+              ctaText="Check price of the MidWest iCrate on Amazon"
               ctaHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="midwest+icrate+dog+crate"
