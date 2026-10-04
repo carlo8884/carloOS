@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -47,7 +47,12 @@ export default function BestDogCratesPage() {
           Best Dog Crates 2026 — Wire, Plastic, Heavy Duty & Furniture Style Ranked
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' label='Check price of the MidWest iCrate on Amazon' />
+        <ExperimentPrimaryHop
+          href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
+          experiment="crate_hop_label"
+          control="Check price of the MidWest iCrate on Amazon"
+          variant="View the MidWest iCrate price on Amazon"
+        />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
         </p>

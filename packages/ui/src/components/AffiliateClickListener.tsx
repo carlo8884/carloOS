@@ -3,9 +3,11 @@
 /**
  * One click listener for every /go hop. Shop buttons, review cards, and
  * plain anchors all record the same affiliate_click: site, source page
- * (`?s=`, or the path when a hop has no source), and partner (the vendor).
+ * (`?s=`, or the path when a hop has no source), partner (the vendor),
+ * and experiment plus variant when a test is on.
  */
 import { useEffect } from 'react'
+import { experimentEventParams } from '../lib/experiment-client'
 import { trackEvent } from '../lib/track-event'
 
 export function AffiliateClickListener({ site }: { site: string }) {
@@ -29,6 +31,7 @@ export function AffiliateClickListener({ site }: { site: string }) {
         source,
         partner: parts[1],
         link_url: `${url.pathname}${url.search}`,
+        ...experimentEventParams(),
       })
     }
     document.addEventListener('click', onClick, true)
