@@ -30,6 +30,11 @@ export function isPreviewHost(hostHeader: string | null | undefined): boolean {
 }
 
 export function isSiteIndexable(env: NodeJS.ProcessEnv = process.env): boolean {
+  // Direct member access when reading the real process.env so Next inlines
+  // SITE_INDEXABLE into the Edge middleware at build time. A later Vercel
+  // env change rebuilds with the new value. Callers that pass a plain object
+  // (unit tests) still read that object.
+  if (env === process.env) return process.env.SITE_INDEXABLE === 'true'
   return env.SITE_INDEXABLE === 'true'
 }
 

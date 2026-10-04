@@ -1,6 +1,6 @@
 import { describe, it } from 'node:test'
 import assert from 'node:assert/strict'
-import { isPreviewHost, robotsTagForHost, shouldIndexHost } from './indexing.ts'
+import { isPreviewHost, isSiteIndexable, robotsTagForHost, shouldIndexHost } from './indexing.ts'
 
 const off = { SITE_INDEXABLE: '' }
 const on = { SITE_INDEXABLE: 'true' }
@@ -38,5 +38,23 @@ describe('shouldIndexHost', () => {
   it('does not treat a lookalike host as vercel.app', () => {
     assert.equal(isPreviewHost('notvercel.app'), false)
     assert.equal(shouldIndexHost('notvercel.app', on), true)
+  })
+
+  it('reads process.env.SITE_INDEXABLE when no env object is passed', () => {
+    const prev = process.env.SITE_INDEXABLE
+    try {
+      delete process.env.SITE_INDEXABLE
+      assert.equal(isSiteIndexable(), false)
+      assert.equal(shouldIndexHost('dog.com'), false)
+      assert.equal(robotsTagForHost('dog.com'), 'noindex, nofollow')
+      process.env.SITE_INDEXABLE = 'true'
+      assert.equal(isSiteIndexable(), true)
+      assert.equal(shouldIndexHost('dog.com'), true)
+      assert.equal(robotsTagForHost('dog.com'), null)
+      assert.equal(shouldIndexHost('127.0.0.1:3840'), false)
+    } finally {
+      if (prev === undefined) delete process.env.SITE_INDEXABLE
+      else process.env.SITE_INDEXABLE = prev
+    }
   })
 })
