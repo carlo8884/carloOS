@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Pet Insurance Covers (and Doesn't) | Vets.co", description: "Accident and illness plans cover injuries, illness, surgery, diagnostics, and often hereditary conditions. Learn what is typically covered and what is excluded.", path: '/insurance/what-pet-insurance-covers', type: 'article' })
@@ -14,6 +14,7 @@ export default function WhatCoversPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' />}
         hero={{ title: "What Pet Insurance Covers (and Doesn't)", subtitle: 'Most pet insurance sold today is accident-and-illness coverage, which pays toward unexpected injuries and diseases — but every policy has exclusions, and the differences between plans live in the details. Knowing what is typically covered, what is usually excluded, and where plans diverge lets you choose coverage that fits your pet.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'What It Covers', href: '/insurance/what-pet-insurance-covers' }]}
         sidebar={<>

@@ -1,0 +1,28 @@
+import { visibleShopHref } from '@carloOS/config/affiliate-hop'
+
+/**
+ * The page's top-pick hop, in normal flow under the title.
+ * Disclosure sits above the link. Nothing is fixed or overlaid.
+ */
+export function PrimaryHop({ href, label }: { href: string; label: string }) {
+  const hop = visibleShopHref(href)
+  if (!hop) return null
+  const amazon = /\/go\/amazon/.test(hop)
+  const text = amazon && /chewy/i.test(href) ? label.replace(/\bon Chewy\b/i, 'on Amazon') : label
+  return (
+    <div className="mb-5" data-primary-hop="true">
+      <p className="text-xs text-white/80 mb-2">
+        {amazon
+          ? 'As an Amazon Associate we earn from qualifying purchases.'
+          : 'We may earn a commission from qualifying purchases.'}
+      </p>
+      <a
+        href={hop}
+        rel="sponsored noopener"
+        className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline"
+      >
+        {text}
+      </a>
+    </div>
+  )
+}

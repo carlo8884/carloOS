@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -95,6 +95,7 @@ export default function VetsPetInsurancePage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
+        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Across the 11 major pet insurance carriers, Trupanion is the only one
           that pays the practice directly at checkout, eliminating the

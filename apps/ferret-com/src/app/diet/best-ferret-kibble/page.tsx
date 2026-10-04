@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -119,6 +119,7 @@ export default function BestFerretKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-best-ferret-kibble' label='Find Wysong Epigen 90' />}
         hero={{
           title: 'How to Choose a Ferret Kibble',
           subtitle:

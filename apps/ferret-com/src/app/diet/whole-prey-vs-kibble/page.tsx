@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -39,6 +39,7 @@ export default function WholePreyVsKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Find Wysong Epigen 90' />}
         hero={{
           title: 'Whole-Prey vs Kibble for Ferrets',
           subtitle:

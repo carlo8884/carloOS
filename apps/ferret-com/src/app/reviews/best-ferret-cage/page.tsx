@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -125,6 +125,7 @@ export default function BestFerretCagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Find Ferret Nation / Critter Nation' />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:

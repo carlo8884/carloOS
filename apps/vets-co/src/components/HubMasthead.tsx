@@ -28,6 +28,7 @@
  * components/visual lane.
  */
 
+import type { ReactNode } from 'react'
 import Link from 'next/link'
 import { StockImage } from '@carloOS/ui'
 
@@ -78,6 +79,8 @@ export interface HubMastheadProps {
   primaryCta: HubMastheadCta
   /** Optional secondary action (ghost button). */
   secondaryCta?: HubMastheadCta
+  /** Commercial hop under the intro. Stays in flow so the title and intro stay visible. */
+  hop?: ReactNode
 }
 
 export function HubMasthead({
@@ -89,6 +92,7 @@ export function HubMasthead({
   imageAlt,
   primaryCta,
   secondaryCta,
+  hop,
 }: HubMastheadProps) {
   return (
     <section className="relative overflow-hidden bg-brand-dark">
@@ -157,6 +161,8 @@ export function HubMasthead({
           >
             {intro}
           </p>
+
+          {hop}
 
           <div className="flex flex-wrap items-center gap-3">
             <Link
