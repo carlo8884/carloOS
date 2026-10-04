@@ -1,0 +1,94 @@
+name: Weekly link monitor
+
+# Checks every /go target and outbound citation on the five earning sites.
+# One issue with the label link-monitor is opened or updated. A clean scan
+# closes that issue. This workflow does not assign, mention, or request
+# review from anyone.
+
+on:
+  schedule:
+    - cron: '0 13 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  issues: write
+
+concurrency:
+  group: link-monitor
+  cancel-in-progress: false
+
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - run: npm ci
+      - name: Check /go targets and outbound citations
+        id: scan
+        run: node --import tsx scripts/ci/weekly-link-monitor.mjs
+        continue-on-error: true
+
+      - name: Open or update the single tracking issue
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs')
+            const owner = context.repo.owner
+            const repo = context.repo.repo
+            let body
+            try {
+              body = fs.readFileSync('link-monitor-report.md', 'utf8')
+            } catch {
+              body = [
+                '# Link monitor',
+                '',
+                'The scan did not write a report. See the workflow log.',
+                'FAIL=1',
+                '',
+              ].join('\n')
+            }
+            body = body.slice(0, 60000)
+            const mention = new RegExp('(^|\\s)' + String.fromCharCode(64))
+            if (mention.test(body)) {
+              core.setFailed('report must not mention anyone')
+              return
+            }
+            const failed = /FAIL=1/.test(body)
+            const title = failed
+              ? 'Link monitor: failures on the five earning sites'
+              : 'Link monitor: latest scan is clean'
+            try {
+              await github.rest.issues.getLabel({ owner, repo, name: 'link-monitor' })
+            } catch {
+              await github.rest.issues.createLabel({ owner, repo, name: 'link-monitor', color: 'b60205' })
+            }
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner, repo, state: 'open', labels: 'link-monitor',
+            })
+            const issues = open.filter((issue) => !issue.pull_request).sort((a, b) => a.number - b.number)
+            if (!issues.length) {
+              if (!failed) return
+              await github.rest.issues.create({
+                owner, repo, title, body, labels: ['link-monitor'],
+              })
+              return
+            }
+            const [keep, ...extra] = issues
+            await github.rest.issues.update({
+              owner, repo, issue_number: keep.number, title, body,
+              state: failed ? 'open' : 'closed',
+            })
+            for (const issue of extra) {
+              await github.rest.issues.update({
+                owner, repo, issue_number: issue.number,
+                state: 'closed',
+              })
+            }
+            if (failed) core.setFailed('link monitor found failures')
