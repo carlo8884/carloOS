@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,8 +131,17 @@ export default function CostOfOwningAFerretPage() {
 
           <h2 id="surgery">The Big One: Disease & Surgery</h2>
           <p>
-            This is the line item that turns ferret ownership from inexpensive to genuinely costly, and the one new owners most often overlook. Middle-aged and older ferrets have a high incidence of conditions that require diagnostics, ongoing medication, or surgery — insulinoma and adrenal disease above all, plus lymphoma and dental disease (see the <a href="/health">Health</a> hub). Diagnostic workups, hormone implants, surgical procedures, and long-term medical management can each run into hundreds or thousands of dollars. Many experienced owners treat a dedicated veterinary savings fund — or exotic-pet insurance where available — as a non-optional part of ferret ownership. Planning for this is the difference between a hard situation and an impossible one.
+            This is the line item that turns ferret ownership from inexpensive to genuinely costly, and the one new owners most often overlook. Middle-aged and older ferrets have a high incidence of conditions that require diagnostics, ongoing medication, or surgery — insulinoma and adrenal disease above all, plus lymphoma and dental disease (see the <a href="/health">Health</a> hub). Diagnostic workups, hormone implants, surgical procedures, and long-term medical management can each run into hundreds or thousands of dollars. Many experienced owners treat a dedicated veterinary savings fund — or exotic-pet insurance where available — as a non-optional part of ferret ownership.             Planning for this is the difference between a hard situation and an impossible one.
           </p>
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="ferret-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            Vets.co explains why an emergency hospital bill costs more than a routine exam. That page is about hospital pricing, not an exotic-carrier comparison.
+          </CrossSiteHelp>
 
           <h2 id="legality">Legality Before You Spend</h2>
           <p>

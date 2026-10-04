@@ -11,8 +11,10 @@ import {
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
-  PriceAsOf
+  PriceAsOf,
+  CrossSiteHelp,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import CostCalculator from './Calculator'
 
 export const metadata: Metadata = buildMetadata({
@@ -312,6 +314,15 @@ export default function CostCalculatorPage() {
             .
           </p>
 
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="ferret-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            Illness care stays out of the monthly figure. Vets.co explains why an emergency hospital bill costs more than a routine exam. That page is not an exotic-carrier comparison.
+          </CrossSiteHelp>
           <h2 className="mb-4 mt-8 font-display text-2xl font-semibold text-brand-text-dark">Common questions</h2>
           <FAQAccordion items={FAQS} />
         </div>

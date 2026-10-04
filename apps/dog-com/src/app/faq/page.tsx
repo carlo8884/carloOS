@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, FAQAccordion, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec, PriceAsOf} from '@carloOS/ui'
+import { buildMetadata, CrossSiteHelp, FAQAccordion, SchemaScript, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, buildSpeakableSpec, PriceAsOf} from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import Link from 'next/link'
 
 export const metadata: Metadata = buildMetadata({
@@ -154,6 +155,16 @@ export default function FAQPage() {
             />
           </div>
         ))}
+
+        <CrossSiteHelp
+          href={crossSiteHref('vets-co', '/insurance/questions/is-pet-insurance-worth-it')}
+          label="Is pet insurance worth it?"
+          fromSite="dog-com"
+          toSite="vets-co"
+          topic="insurance"
+        >
+          The insurance answer above is the short version. Vets.co walks through when a dog or cat policy pays for itself and when it does not.
+        </CrossSiteHelp>
 
         {/* Bottom CTA */}
         <div className="mt-10 p-7 bg-brand-primary-pale border border-brand-border rounded-lg text-center">

@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -162,6 +163,15 @@ export default function CostOfOwningPage() {
 
           <h2 id="hidden">Hidden and Emergency Costs</h2>
           <p>The costs that catch owners out are the unpredictable ones. A colic surgery, a serious lameness workup with imaging, or a long course of treatment can run into thousands quickly, and emergencies do not wait for payday. Other less-obvious costs include lessons and training, competition fees and travel, supplements and special feeds for a horse with a condition, and the eventual costs of caring for an aging horse and, ultimately, end-of-life. A horse with no contingency fund behind it is a financial risk to its own welfare.</p>
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="horses-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            Vets.co explains why an emergency hospital bill runs higher than a routine call. That page is about hospital pricing, not an equine insurance comparison.
+          </CrossSiteHelp>
           
 
           <h2 id="budget">Budgeting Honestly</h2>

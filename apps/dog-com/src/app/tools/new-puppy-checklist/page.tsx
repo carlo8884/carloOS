@@ -9,11 +9,13 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
+  CrossSiteHelp,
   AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import Calculator from './Calculator'
 
 export const metadata: Metadata = buildMetadata({
@@ -283,6 +285,15 @@ export default function NewPuppyChecklistPage() {
           <div>
             <h2 className="mb-4 font-display text-2xl font-bold text-brand-dark">Frequently asked questions</h2>
             <FAQAccordion items={FAQS} />
+            <CrossSiteHelp
+              href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
+              label="Best pet insurance comparison"
+              fromSite="dog-com"
+              toSite="vets-co"
+              topic="insurance"
+            >
+              If you enroll while the puppy is healthy, Vets.co compares the major dog and cat carriers on direct-pay versus reimbursement, waiting periods, and pre-existing exclusions.
+            </CrossSiteHelp>
           </div>
         </div>
       </section>

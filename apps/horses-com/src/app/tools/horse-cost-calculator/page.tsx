@@ -16,7 +16,9 @@ import {
   AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
+  CrossSiteHelp,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import Calculator from './Calculator'
 import StartupKit from './StartupKit'
 
@@ -310,6 +312,15 @@ export default function HorseCostCalculatorPage() {
             <strong>One-time startup</strong> &mdash; tack and equipment, the <Link href="/ownership/pre-purchase-exam">pre-purchase exam</Link>, and the purchase price of the horse itself.
           </li>
         </ul>
+        <CrossSiteHelp
+          href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+          label="Emergency vet costs, explained"
+          fromSite="horses-com"
+          toSite="vets-co"
+          topic="vet-costs"
+        >
+          The optional insurance line is equine major-medical and mortality, not a dog or cat plan. Vets.co explains why the emergency hospital bill that cover is meant to offset costs more than a routine call.
+        </CrossSiteHelp>
 
         <h2 id="methodology">How it works &amp; limits</h2>
         <p>

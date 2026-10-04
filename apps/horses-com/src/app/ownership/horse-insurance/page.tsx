@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ComparisonFoot, PrimaryHop, AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -151,6 +152,15 @@ export default function HorseInsurancePage() {
             or feed bins already pinned on boarding
             and nutrition pages.
           </p>
+          <CrossSiteHelp
+            href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
+            label="Emergency vet costs, explained"
+            fromSite="horses-com"
+            toSite="vets-co"
+            topic="vet-costs"
+          >
+            Equine mortality and major-medical policies are not the dog and cat plans compared on Vets.co. That guide explains why a hospital bill for colic or a serious lameness runs higher than a routine call.
+          </CrossSiteHelp>
 
           <h2 id="lou">Loss of Use</h2>
           <p>Loss-of-use cover addresses the situation where a horse survives but can no longer perform its intended job -- for example, a competition horse rendered permanently unable to compete by injury. It typically pays a portion of the insured value and comes with significant conditions, definitions of what counts as loss of use, and exclusions. It is a specialized and often costly add-on relevant mainly to higher-value performance horses.</p>
