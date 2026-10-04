@@ -12,8 +12,6 @@ import { useMemo, useState } from 'react'
 import Link from 'next/link'
 import { getSiteConfig } from '@carloOS/config'
 import {
-import { PriceAsOf } from '@carloOS/ui'
-
   QUESTIONS,
   type Answers,
   type QuestionKey,
@@ -76,7 +74,6 @@ export function WhichPetWizard() {
 
   return (
     <div className="bg-brand-white border border-brand-border rounded-xl shadow-card p-5 sm:p-8">
-      <PriceAsOf date="2026-05-30" />
       {/* Progress */}
       <div className="mb-6">
         <div className="flex items-center justify-between mb-2">
