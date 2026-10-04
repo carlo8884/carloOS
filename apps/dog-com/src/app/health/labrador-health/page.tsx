@@ -3,6 +3,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Orthopedic Foundation for Animals (OFA): Labrador Retriever Hip and Elbow Dysplasia Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
   { label: 'Raffan E et al. A deletion in the canine POMC gene is associated with weight and appetite in obesity-prone Labrador Retriever dogs. Cell Metab. 2016;23(5):893-900.', publisher: 'Cell Metabolism' },
@@ -84,7 +86,7 @@ export default function LabradorHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Labrador Retriever Breed Profile', href: '/breeds/labrador-retriever' },
-          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food' },
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
         ]} />
@@ -94,7 +96,7 @@ export default function LabradorHealthPage() {
       relatedLinks={[
         { title: 'Labrador Breed Profile', href: '/breeds/labrador-retriever', category: 'Breed Guide' },
         { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Nutrition' },
-        { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Insurance' },
+        { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Insurance' },
       ]}
     >
       <div className="carloOS-article">

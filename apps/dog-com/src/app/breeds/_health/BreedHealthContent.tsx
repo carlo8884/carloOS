@@ -40,6 +40,8 @@ import {
   getBreedHealthBySlug,
   type IssueFrequency,
 } from '../../../data/breed-health'
+import { crossSiteHref } from '@carloOS/config'
+
 
 // ─── Frequency badge ─────────────────────────────────────────────────────────
 export const FREQ_STYLES: Record<
@@ -139,7 +141,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
             title={`More on the ${record.breedName}`}
             links={[
               { label: `${record.breedName} Breed Overview`, href: `/breeds/${record.slug}` },
-              { label: 'Best Pet Insurance 2026', href: 'https://vets.co/reviews/best-pet-insurance' },
+              { label: 'Best Pet Insurance 2026', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
               { label: 'Find a Vet', href: '/find-a-vet' },
             ]}
           />
@@ -286,7 +288,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
           diagnosis is the simplest way to keep these claim categories covered.
         </p>
         <Link
-          href="https://vets.co/reviews/best-pet-insurance"
+          href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
           className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
         >
           See our pet insurance comparison →
@@ -382,7 +384,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
       <p>{record.typicalInsuranceCostImplications}</p>
       <p>
         <Link
-          href="https://vets.co/reviews/best-pet-insurance"
+          href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
           className="text-brand-primary font-semibold no-underline hover:underline"
         >
           Compare pet insurance providers for {record.breedName}s →

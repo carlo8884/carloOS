@@ -36,6 +36,8 @@ import {
   type IssueFrequency,
 } from '../../../../data/breed-health'
 import { getBreedBySlug } from '../../../../data/breeds'
+import { crossSiteHref } from '@carloOS/config'
+
 
 // Static render — every health record is known at build time.
 export const dynamic = 'force-static'
@@ -389,7 +391,7 @@ export default async function BreedHealthPage({ params }: PageProps) {
             and equine-specialty practices.
           </p>
           <a
-            href="https://vets.co/find-a-vet"
+            href={crossSiteHref('vets-co', '/find-a-vet')}
             className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
           >
             Find an equine veterinarian on Vets.co →

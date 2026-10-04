@@ -13,6 +13,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -247,7 +249,7 @@ export default function CatCalorieCalculatorPage() {
             tool. Weight-loss cats should use a veterinarian-set target weight, not the current
             overweight number. The dog twin of this math lives on{' '}
             <a
-              href="https://dog.com/tools/dog-calorie-calculator"
+              href={crossSiteHref('dog-com', '/tools/dog-calorie-calculator')}
               className="text-brand-primary underline-offset-2 hover:underline"
             >
               Dog.com&apos;s dog calorie calculator
@@ -356,7 +358,7 @@ export default function CatCalorieCalculatorPage() {
               { label: 'Weight Management', href: '/health/weight-management', note: 'Safe loss rates; hepatic-lipidosis caution' },
               { label: 'Pet Insurance Review', href: '/reviews/best-pet-insurance', note: 'Educational coverage comparison, not a ranking' },
               { label: 'Insurance Coverage Finder', href: '/tools/insurance-finder', note: 'Filter published features — no carrier re-rank' },
-              { label: 'Dog Calorie Calculator', href: 'https://dog.com/tools/dog-calorie-calculator', note: 'The canine twin — dog MER factors, not feline DER' },
+              { label: 'Dog Calorie Calculator', href: crossSiteHref('dog-com', '/tools/dog-calorie-calculator'), note: 'The canine twin — dog MER factors, not feline DER' },
               { label: 'Talk to a vet (telehealth)', href: '/telehealth', note: 'Stable feeding questions, not an ER substitute' },
             ].map(item => (
               <Link

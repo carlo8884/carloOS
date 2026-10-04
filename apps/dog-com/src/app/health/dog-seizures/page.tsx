@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Podell M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. J Vet Intern Med. 2016;30(2):477-490.', publisher: 'JVIM / ACVIM' },
   { label: 'De Risio L et al. International veterinary epilepsy task force consensus proposal: diagnostic approach to epilepsy in dogs. BMC Vet Res. 2015;11:148.', publisher: 'BMC Vet Research' },
@@ -42,7 +44,7 @@ export default function DogSeizuresPage() {
             </ul>
           </div>
           <TableOfContents items={[{ label: 'What to Do During a Seizure', href: '#during' }, { label: 'Types of Seizures', href: '#types' }, { label: 'Cluster vs Status', href: '#cluster' }, { label: 'When to ER', href: '#er' }, { label: 'Causes', href: '#causes' }, { label: 'Diagnostic Workup', href: '#workup' }, { label: 'Anticonvulsants', href: '#meds' }, { label: 'Seizure Journal', href: '#journal' }, { label: 'Home Safety Kit', href: '#kit' }, { label: 'FAQ', href: '#faq' }]} />
-          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Emergency Symptoms Guide', href: '/health/dog-symptoms-guide' }, { label: 'Find a Vet', href: '/find-a-vet' }, { label: 'Toxic Foods', href: '/nutrition/toxic-foods' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}

@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Intervertebral Disk Disease in Dogs and Cats', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/intervertebral-disk-disease-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVS: American College of Veterinary Surgeons — Intervertebral Disc Disease', url: 'https://www.acvs.org/small-animal/intervertebral-disc-disease', publisher: 'ACVS' },
@@ -37,7 +39,7 @@ export default function IVDDPage() {
               {['Any hind limb weakness', 'Stumbling or ataxia', 'Inability to walk on hind limbs', 'Loss of bladder/bowel control', 'Dragging hind legs'].map(s => <li key={s} className="flex gap-2"><span className="text-brand-danger font-bold">→</span>{s}</li>)}
             </ul>
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Dachshund Breed Guide', href: '/breeds/dachshund' }, { label: 'French Bulldog Health', href: '/breeds/french-bulldog' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
@@ -78,10 +80,10 @@ export default function IVDDPage() {
 
           <h2>Rehabilitation After Surgery</h2>
           <p>Post-surgical rehabilitation significantly improves outcomes. Hydrotherapy (underwater treadmill — allows weight-bearing movement before the dog can walk on land), neuromuscular electrical stimulation, therapeutic exercises, and massage all contribute to faster recovery. A certified canine rehabilitation therapist (CCRP or CCRT) designs the protocol. Recovery timeline varies: Grade 2-3 dogs typically regain ambulation within 2–8 weeks post-surgery. Grade 4-5 dogs may take 3–6 months or longer. Bladder management (manual expression or catheterization for dogs that cannot urinate voluntarily) is a critical component of post-surgical care that owners must learn.</p>
-          <p>When a Grade 3–5 dog cannot walk yet, a dog wheelchair (mobility cart) lets the dog move without loading the healing spine. Ask the rehabilitation therapist whether a cart fits this recovery stage — it is a mobility aid, not a substitute for crate rest, surgery when indicated, or bladder care. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>.</p>
+          <p>When a Grade 3–5 dog cannot walk yet, a dog wheelchair (mobility cart) lets the dog move without loading the healing spine. Ask the rehabilitation therapist whether a cart fits this recovery stage — it is a mobility aid, not a substitute for crate rest, surgery when indicated, or bladder care. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>.</p>
 
           <h2 id="kit">Crate-rest mobility kit</h2>
-          <p>Everyday physical supplies that match the crate-rest and mobility copy above — a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a>. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the crate-rest and mobility copy above — a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

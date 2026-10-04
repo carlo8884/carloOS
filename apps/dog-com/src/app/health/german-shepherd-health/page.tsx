@@ -3,6 +3,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Orthopedic Foundation for Animals (OFA): Hip Dysplasia — German Shepherd Statistics', url: 'https://www.ofa.org/diseases/hip-dysplasia/', publisher: 'OFA' },
   { label: 'Merck Veterinary Manual: Degenerative Myelopathy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/degenerative-myelopathy-in-dogs', publisher: 'Merck Vet Manual' },
@@ -83,7 +85,7 @@ export default function GermanShepherdHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Find a Neurologist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

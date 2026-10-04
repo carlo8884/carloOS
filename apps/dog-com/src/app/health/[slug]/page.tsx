@@ -46,6 +46,8 @@ import {
   getDiseaseBySlug,
   type Disease,
 } from '../../../data/diseases'
+import { crossSiteHref } from '@carloOS/config'
+
 
 // All slugs are known at build time — force static.
 export const dynamic = 'force-static'
@@ -564,13 +566,13 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
                 directory.
               </p>
               <a
-                href="https://vets.co/find-a-vet"
+                href={crossSiteHref('vets-co', '/find-a-vet')}
                 className="inline-block bg-brand-primary text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
               >
                 Find a vet on Vets.co →
               </a>
               <a
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block mt-2 text-xs font-semibold text-brand-primary no-underline hover:underline"
               >
                 Non-emergency? Talk to a vet tonight →
@@ -592,7 +594,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               </p>
               <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →

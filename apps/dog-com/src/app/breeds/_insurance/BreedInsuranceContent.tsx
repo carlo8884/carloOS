@@ -42,9 +42,11 @@ import {
   type BreedInsuranceProfile,
   type InsuranceRiskTier,
 } from '../../../data/breeds'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SITE_URL = 'https://dog.com'
-const REVIEW_CTA = 'https://vets.co/reviews/best-pet-insurance'
+const REVIEW_CTA = crossSiteHref('vets-co', '/reviews/best-pet-insurance')
 const FUNNEL_CTA = '/pet-insurance'
 
 /** Plain-English label for the honest risk tier. */

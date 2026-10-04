@@ -132,11 +132,11 @@ export default function FindAVetPage() {
           When your dog needs more than a general vet can provide, board-certified specialists deliver the expertise to make a difference. Find the right specialist for your dog's condition below.
         </p>
         <div className="flex gap-4 flex-wrap">
-          <Link href="https://vets.co/reviews/best-pet-insurance"
+          <Link href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
             className="inline-flex items-center bg-brand-primary text-white font-semibold text-sm px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors">
             Compare Pet Insurance →
           </Link>
-          <a href="https://vets.co/telehealth"
+          <a href={crossSiteHref('vets-co', '/telehealth')}
             className="inline-flex items-center border border-white/20 text-white/80 font-medium text-sm px-6 py-3 rounded no-underline hover:border-white/40 transition-colors">
             Talk to a vet tonight (not an ER) →
           </a>
@@ -203,3 +203,5 @@ export default function FindAVetPage() {
 
 // Import FAQAccordion — needs to be client component in page context
 import { FAQAccordion } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+

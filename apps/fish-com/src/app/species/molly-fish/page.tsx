@@ -14,6 +14,8 @@ import { StockImage,
   AffiliateDisclosure,
   ArticleSourcesList,
 } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const SOURCES = [
   { label: "Poecilia sphenops — Seriously Fish species profile", url: "https://www.seriouslyfish.com/species/poecilia-sphenops/", publisher: "Seriously Fish" },
@@ -171,7 +173,7 @@ export default function MollyPage() {
                 { label: 'Guppy Care', href: '/species/guppy' },
                 { label: 'Swordtail Care', href: '/species/swordtail-fish' },
                 { label: 'Water Chemistry Guide', href: '/setup/water-chemistry-guide' },
-                { label: 'Find an Aquarium Vet (WAVMA)', href: 'https://vets.co/find-a-vet/aquarium' },
+                { label: 'Find an Aquarium Vet (WAVMA)', href: crossSiteHref('vets-co', '/find-a-vet/aquarium') },
               ]}
             />
             <CrossPortfolioCard currentSite="fish-com" contentType="species" variant="sidebar" />
@@ -412,7 +414,7 @@ export default function MollyPage() {
             For persistent or unexplained losses — particularly suspected
             mycobacterial infection — consult a vet who handles
             ornamental fish via the{' '}
-            <a href="https://vets.co/find-a-vet/aquarium">
+            <a href={crossSiteHref('vets-co', '/find-a-vet/aquarium')}>
               Vets.co aquarium vet finder
             </a>{' '}
             or the WAVMA practice referral directory.

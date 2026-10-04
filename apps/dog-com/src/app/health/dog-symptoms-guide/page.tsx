@@ -5,6 +5,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
   { label: 'Merck Veterinary Manual: Emergency and Critical Care Overview for Small Animals', url: 'https://www.merckvetmanual.com/emergency-medicine-and-critical-care/critical-care-medicine/overview-of-critical-care-medicine', publisher: 'Merck Vet Manual' },
@@ -90,7 +92,7 @@ export default function DogSymptomsGuidePage() {
         <RelatedLinks title="Related Guides" links={[
           { label: 'Is This a Dog Emergency? Triage Tool', href: '/tools/is-this-a-dog-emergency' },
           { label: 'Find an Emergency Vet', href: '/find-a-vet' },
-          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Senior Dog Care', href: '/health/senior-dog-care' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />

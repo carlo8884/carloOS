@@ -15,6 +15,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -271,13 +273,13 @@ export default function IsThisADogEmergencyPage() {
             <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
               >
                 Compare pet insurance plans →
               </Link>
               <a
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →

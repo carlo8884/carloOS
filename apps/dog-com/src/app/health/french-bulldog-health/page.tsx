@@ -3,6 +3,8 @@ import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfConten
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Brachycephalic Airway Syndrome', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/brachycephalic-airway-syndrome-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Brachycephalic Breeds and BOAS — Health Resources', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/brachycephalic-syndrome', publisher: 'AVMA' },
@@ -84,7 +86,7 @@ export default function FrenchBulldogHealthPage() {
         ]} />
         <RelatedLinks title="Related" links={[
           { label: 'Dog Symptom Guide', href: '/health/dog-symptoms-guide' },
-          { label: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance' },
+          { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') },
           { label: 'Find a Specialist', href: '/find-a-vet' },
         ]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
@@ -117,7 +119,7 @@ export default function FrenchBulldogHealthPage() {
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>⚠️ Emergency Risk</div>
           <p style={{ fontSize: '15px', color: '#4A2E18', margin: 0, lineHeight: 1.65 }}>Frenchies cannot cool themselves efficiently — their compromised airway severely limits panting, the primary cooling mechanism in dogs. Heatstroke can develop in French Bulldogs at temperatures that are comfortable for humans. <strong>Never leave a Frenchie in a car. Limit outdoor activity in warm weather. Always ensure cool environment access.</strong> Summer walks should happen before 8am or after 8pm. Heatstroke is fatal if not treated immediately.</p>
         </div>
-        <p>Everyday physical heat-care — not a treatment for heatstroke — includes a cooling mat the dog can lie on indoors and a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids so a Frenchie can rest on a cooler surface and wear evaporative cooling on a brief walk; they do not replace shade, water, or the &quot;never leave a Frenchie in a car&quot; rule, and they do not treat heatstroke. If heatstroke is suspected, wet the dog with cool (not ice-cold) water and go to an emergency veterinarian — first-aid cool-water towels and a digital thermometer live on the sister <a href="https://vets.co/health/heat-stroke-dogs">Vets.co heat-stroke</a> page. Ice packs stay off this kit: vasoconstriction can slow cooling. Ask your veterinarian whether a cooling mat or cooling vest fits this dog.</p>
+        <p>Everyday physical heat-care — not a treatment for heatstroke — includes a cooling mat the dog can lie on indoors and a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids so a Frenchie can rest on a cooler surface and wear evaporative cooling on a brief walk; they do not replace shade, water, or the &quot;never leave a Frenchie in a car&quot; rule, and they do not treat heatstroke. If heatstroke is suspected, wet the dog with cool (not ice-cold) water and go to an emergency veterinarian — first-aid cool-water towels and a digital thermometer live on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> page. Ice packs stay off this kit: vasoconstriction can slow cooling. Ask your veterinarian whether a cooling mat or cooling vest fits this dog.</p>
 
         <h2 id="ivdd">IVDD — Spinal Disc Disease</h2>
         <BreedHealthCard
@@ -161,7 +163,7 @@ export default function FrenchBulldogHealthPage() {
         </ul>
 
         <h2 id="kit">Heat-care kit</h2>
-        <p>Everyday physical supplies that match the heat-care copy above — a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href="https://vets.co/health/heat-stroke-dogs">Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
+        <p>Everyday physical supplies that match the heat-care copy above — a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

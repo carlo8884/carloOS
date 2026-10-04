@@ -13,6 +13,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import HorseGrimaceScale from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const URL = 'https://horses.com/tools/horse-grimace-scale'
 
@@ -286,13 +288,13 @@ export default function HorseGrimaceScalePage() {
             <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </Link>
               <Link
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -315,11 +317,11 @@ export default function HorseGrimaceScalePage() {
             strained nostrils with a flattened profile. Each is scored 0
             (absent), 1 (moderate or uncertain), or 2 (obvious), for a total
             between 0 and 10. The structure is the horse twin of the{' '}
-            <Link href="https://dog.com/tools/dog-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('dog-com', '/tools/dog-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               dog grimace scale
             </Link>{' '}
             and the{' '}
-            <Link href="https://vets.co/tools/cat-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/tools/cat-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               cat grimace scale
             </Link>
             . The descriptors are horse-specific and drawn from published
@@ -359,7 +361,7 @@ export default function HorseGrimaceScalePage() {
               equine first-aid kit guide
             </Link>
             . For a stable, non-emergency question, start at{' '}
-            <Link href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </Link>
             . If a sign is in front of you right now, the{' '}
@@ -437,7 +439,7 @@ export default function HorseGrimaceScalePage() {
               { label: 'Horse Cost Calculator', href: '/tools/horse-cost-calculator', note: 'Monthly and annual keeping cost' },
               { label: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', note: 'Foaling date from breeding date' },
               { label: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit', note: 'What to pack before you need it' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

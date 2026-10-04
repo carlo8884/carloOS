@@ -15,6 +15,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import TriageHelper from './TriageHelper'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -287,7 +289,7 @@ export default function IsThisAFerretEmergencyPage() {
                 Ferret insurance basics →
               </Link>
               <a
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -378,7 +380,7 @@ export default function IsThisAFerretEmergencyPage() {
               { label: 'Ferret Body Condition Score', href: '/tools/ferret-body-condition-score', note: '1–9 planning score from rib feel, waist, and belly — not a diagnosis' },
               { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale', note: 'Facial pain-watch, not a diagnosis' },
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the kit' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

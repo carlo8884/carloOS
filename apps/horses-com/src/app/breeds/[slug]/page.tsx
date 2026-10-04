@@ -49,6 +49,8 @@ import {
   type Breed,
 } from '../../../data/breeds'
 import { getBreedHealthBySlug } from '../../../data/breed-health'
+import { crossSiteHref } from '@carloOS/config'
+
 
 // Force static rendering — every breed slug we generate is known at build time.
 export const dynamic = 'force-static'
@@ -1295,7 +1297,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
             </p>
             <p>
               <a
-                href="https://vets.co/find-a-vet"
+                href={crossSiteHref('vets-co', '/find-a-vet')}
                 className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
               >
                 Find an equine vet on Vets.co →

@@ -14,6 +14,8 @@ import {
   JourneyNext,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -226,14 +228,14 @@ export default function DogCalorieCalculatorPage() {
             tool. Weight-loss dogs should use a veterinarian-set target weight, not the current
             overweight number. The cat twin of this math lives on{' '}
             <a
-              href="https://vets.co/tools/cat-calorie-calculator"
+              href={crossSiteHref('vets-co', '/tools/cat-calorie-calculator')}
               className="text-brand-primary underline-offset-2 hover:underline"
             >
               Vets.co&apos;s cat calorie calculator
             </a>
             . For how weight-related disease can change vet costs, read the educational{' '}
             <a
-              href="https://vets.co/reviews/best-pet-insurance"
+              href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
               className="text-brand-primary underline-offset-2 hover:underline"
             >
               pet insurance review
@@ -285,7 +287,7 @@ export default function DogCalorieCalculatorPage() {
             reference covers caloric restriction, body condition scoring, and veterinary supervision.
             This page is a planning / wellness reference, not a diagnosis or a diet plan. For a
             stable, non-emergency feeding question, start at{' '}
-            <a href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <a href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </a>
             .
@@ -305,13 +307,13 @@ export default function DogCalorieCalculatorPage() {
             </p>
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <a
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </a>
               <a
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -340,8 +342,8 @@ export default function DogCalorieCalculatorPage() {
               { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
               { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
               { label: 'Dog Body Condition Score', href: '/tools/dog-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
-              { label: 'Pet Insurance Review', href: 'https://vets.co/reviews/best-pet-insurance', note: 'Educational coverage comparison, not a ranking' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable feeding questions, not an ER substitute' },
+              { label: 'Pet Insurance Review', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), note: 'Educational coverage comparison, not a ranking' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable feeding questions, not an ER substitute' },
             ].map(item => (
               <Link
                 key={item.href}

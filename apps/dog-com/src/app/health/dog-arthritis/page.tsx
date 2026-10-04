@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, PullQuote, ArticleSourcesList } from '@carloOS/ui'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Arthritis in Dogs — Signs, Treatment | Dog.com', description: 'Arthritis affects 1 in 5 dogs. Signs owners miss, proven treatments (weight loss + NSAIDs + rehabilitation).', path: '/health/dog-arthritis', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Arthritis in Dogs', description: 'Signs, diagnosis, and multimodal treatment for canine osteoarthritis.', url: 'https://dog.com/health/dog-arthritis', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
@@ -32,7 +34,7 @@ export default function DogArthritisPage() {
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Arthritis + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Joint care adds up year over year</h3>
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifelong arthritis management — joint injections, surgery, daily medication — typically totals $5,000-$15,000+. Insurance covers it if you enroll before signs appear.</p>
-            <a href="https://vets.co/reviews/best-pet-insurance" className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
+            <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
@@ -85,7 +87,7 @@ export default function DogArthritisPage() {
           <p><strong>Adequan (polysulfated glycosaminoglycan):</strong> Injectable — administered by injection twice weekly for 4 weeks, then monthly. Inhibits cartilage-degrading enzymes and may support cartilage repair. Used as a disease-modifying treatment in early arthritis.</p>
 
           <h2 id="kit">Mobility kit</h2>
-          <p>Everyday physical supplies that match the mobility-and-comfort copy above — an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href="https://vets.co/health/arthritis-in-dogs">vets.co arthritis-in-dogs</a> page. This page does not claim hands-on testing.</p>
+          <p>Everyday physical supplies that match the mobility-and-comfort copy above — an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a> page. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 

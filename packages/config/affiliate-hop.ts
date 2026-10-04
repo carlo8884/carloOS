@@ -8,6 +8,8 @@
  * amazon-brand falls back to AFF_AMAZON_TAG when AFF_AMAZON_BRAND_TAG is empty.
  */
 
+import { crossSiteHref } from './site-origin'
+
 export interface AffiliateRoute {
   name: string
   template: string
@@ -23,7 +25,7 @@ export const PARTNER_HOME: Record<string, string> = {
 }
 
 /** Dog.com insurance Quote/Find CTAs go here. Do not re-rank carriers on Dog.com. */
-export const VETS_PET_INSURANCE_REVIEW = 'https://vets.co/reviews/best-pet-insurance'
+export const VETS_PET_INSURANCE_REVIEW = crossSiteHref('vets-co', '/reviews/best-pet-insurance')
 
 const CHEWY_TAG_KEYS = ['AFF_CHEWY_TAG', 'AFF_CHEWY_BRAND_TAG', 'AFF_CHEWY_PHARMACY_TAG'] as const
 

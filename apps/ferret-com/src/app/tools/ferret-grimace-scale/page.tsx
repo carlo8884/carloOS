@@ -13,6 +13,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import FerretGrimaceScale from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const URL = 'https://ferret.com/tools/ferret-grimace-scale'
 
@@ -282,13 +284,13 @@ export default function FerretGrimaceScalePage() {
             <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </Link>
               <Link
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -310,15 +312,15 @@ export default function FerretGrimaceScalePage() {
             scored 0 (absent), 1 (moderate or uncertain), or 2 (obvious),
             for a total between 0 and 10. The structure is the ferret twin
             of the{' '}
-            <Link href="https://dog.com/tools/dog-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('dog-com', '/tools/dog-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               dog grimace scale
             </Link>
             , the{' '}
-            <Link href="https://vets.co/tools/cat-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/tools/cat-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               cat grimace scale
             </Link>
             , and the{' '}
-            <Link href="https://horses.com/tools/horse-grimace-scale" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('horses-com', '/tools/horse-grimace-scale')} className="text-brand-primary underline-offset-2 hover:underline">
               horse grimace scale
             </Link>
             . The descriptors are mustelid-specific and drawn from published
@@ -349,7 +351,7 @@ export default function FerretGrimaceScalePage() {
               signs of pain in ferrets
             </Link>
             . For a stable, non-emergency question, start at{' '}
-            <Link href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </Link>
             . If a sign is in front of you right now, the{' '}
@@ -431,7 +433,7 @@ export default function FerretGrimaceScalePage() {
               { label: 'Find an Exotic Vet', href: '/find-an-exotic-vet', note: 'Line up ferret-capable care before a crisis' },
               { label: 'Ferret Cost Calculator', href: '/tools/cost-calculator', note: 'Monthly and first-year keeping cost' },
               { label: 'Aging Ferret Care', href: '/health/aging-ferret-care', note: 'Senior monitoring from around 4–5+' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a

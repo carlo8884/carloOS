@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
+import { crossSiteHref } from '@carloOS/config'
+
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2026 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
@@ -14,7 +16,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 
 
 const REVIEWS = [
-  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: 'https://vets.co/reviews/best-pet-insurance', badge: 'Most Important' },
+  { title: 'Best Pet Insurance 2026', desc: 'Trupanion, Healthy Paws, Embrace ranked by published coverage terms and exclusions', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), badge: 'Most Important' },
   { title: 'Best Dry Dog Food 2026', desc: 'Royal Canin, Purina Pro Plan, Hill\'s ranked by WSAVA compliance', href: '/reviews/best-dry-dog-food', badge: 'Nutrition' },
   { title: 'Best Flea & Tick Prevention 2026', desc: 'Simparica Trio, Bravecto, NexGard — efficacy and safety compared', href: '/reviews/best-flea-tick-prevention', badge: 'Prevention' },
   { title: 'Best Dog Beds 2026', desc: 'Orthopedic, elevated, and washable beds compared on foam quality, clinical data, and durability', href: '/reviews/best-dog-beds', badge: 'Comfort' },
@@ -109,7 +111,7 @@ export default function DogReviewsPage() {
         <Link key="best-heartworm-prevention" href="/reviews/best-heartworm-prevention" data-hub-item data-hub-count="off" data-title="Best Heartworm Prevention" data-topic="Best Heartworm Prevention for Dogs" className="text-sm text-brand-primary no-underline hover:underline">Best Heartworm Prevention</Link>
         <Link key="best-joint-supplements" href="/reviews/best-joint-supplements" data-hub-item data-hub-count="off" data-title="Best Joint Supplements" data-topic="Best Joint Supplements for Dogs" className="text-sm text-brand-primary no-underline hover:underline">Best Joint Supplements</Link>
         <Link key="best-large-breed-dog-food" href="/reviews/best-large-breed-dog-food" data-hub-item data-hub-count="off" data-title="Best Large Breed Dog Food" data-topic="Best Large Breed Dog Food" className="text-sm text-brand-primary no-underline hover:underline">Best Large Breed Dog Food</Link>
-        <Link key="best-pet-insurance" href="https://vets.co/reviews/best-pet-insurance" data-hub-item data-hub-count="off" data-title="Best Pet Insurance" data-topic="Most Important Best Pet Insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
+        <Link key="best-pet-insurance" href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} data-hub-item data-hub-count="off" data-title="Best Pet Insurance" data-topic="Most Important Best Pet Insurance" className="text-sm text-brand-primary no-underline hover:underline">Best Pet Insurance</Link>
         <Link key="best-slow-feeder-bowls" href="/reviews/best-slow-feeder-bowls" data-hub-item data-hub-count="off" data-title="Best Slow Feeder Bowls" data-topic="Best Slow Feeder Bowls for Dogs" className="text-sm text-brand-primary no-underline hover:underline">Best Slow Feeder Bowls</Link>
         <Link key="fresh-dog-food-worth-it" href="/reviews/fresh-dog-food-worth-it" data-hub-item data-hub-count="off" data-title="Fresh Dog Food Worth It" data-topic="Is Fresh Dog Food Worth It" className="text-sm text-brand-primary no-underline hover:underline">Fresh Dog Food Worth It</Link>
         </div>

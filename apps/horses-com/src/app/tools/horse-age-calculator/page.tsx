@@ -13,6 +13,8 @@ import {
   ShopCtas,
 } from '@carloOS/ui'
 import HorseAgeCalculator from './Calculator'
+import { crossSiteHref } from '@carloOS/config'
+
 
 const URL = 'https://horses.com/tools/horse-age-calculator'
 
@@ -240,13 +242,13 @@ export default function HorseAgeCalculatorPage() {
             <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
-                href="https://vets.co/reviews/best-pet-insurance"
+                href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
               >
                 Compare pet insurance →
               </Link>
               <Link
-                href="https://vets.co/telehealth"
+                href={crossSiteHref('vets-co', '/telehealth')}
                 className="inline-block border border-brand-border bg-brand-white text-brand-dark font-semibold text-sm px-4 py-2 rounded-md no-underline hover:border-brand-primary"
               >
                 Talk to a vet (telehealth) →
@@ -307,7 +309,7 @@ export default function HorseAgeCalculatorPage() {
               cost calculator
             </Link>
             . For a stable, non-emergency question, start at{' '}
-            <Link href="https://vets.co/telehealth" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href={crossSiteHref('vets-co', '/telehealth')} className="text-brand-primary underline-offset-2 hover:underline">
               telehealth
             </Link>
             . If a sign is in front of you right now, the{' '}
@@ -347,7 +349,7 @@ export default function HorseAgeCalculatorPage() {
               { label: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', note: 'Facial pain-watch for seniors and sore horses — not a diagnosis' },
               { label: 'Senior Horse Care', href: '/ownership/senior-horse-care', note: 'No fixed birthday — watch teeth, weight, joints' },
               { label: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses', note: 'Dental decline, senior feeds, PPID feeding' },
-              { label: 'Talk to a vet (telehealth)', href: 'https://vets.co/telehealth', note: 'Stable, non-emergency questions' },
+              { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable, non-emergency questions' },
             ].map((item) => (
               item.href.startsWith('http') ? (
                 <a
