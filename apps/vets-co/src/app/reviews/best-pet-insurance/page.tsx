@@ -193,6 +193,42 @@ export default function VetsPetInsurancePage() {
             <InsuranceWellnessShop source="reviews-best-pet-insurance" />
 
             <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which policy</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If this is you</th>
+                      <th className="p-3 font-bold text-brand-dark">Start here</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. 90% reimbursement. Unlimited payouts. Direct vet payment. $65–120/month</td>
+                      <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                      <td className="p-3 text-brand-text-mid">Fastest reimbursement. About 2 days. 80–90%. Unlimited payouts. $40–85/month</td>
+                      <td className="p-3 text-brand-text-mid">No direct vet payment. No wellness add-on. Deductible is annual</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                      <td className="p-3 text-brand-text-mid">Wellness add-on. 70–90% reimbursement. $45–95/month plus the add-on</td>
+                      <td className="p-3 text-brand-text-mid">6-month orthopedic waiting period. More plan options to read</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {

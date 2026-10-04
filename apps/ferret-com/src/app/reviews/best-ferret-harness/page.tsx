@@ -145,6 +145,7 @@ export default function BestFerretHarnessPage() {
                 { label: 'Sizing a No-Neck Body', href: '#sizing' },
                 { label: 'Material & Comfort', href: '#material' },
                 { label: 'Harnesses That Meet the Criteria', href: '#picks' },
+                { label: 'Who should buy which harness', href: '#who' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -330,6 +331,43 @@ export default function BestFerretHarnessPage() {
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-mesh-harness-leash-set"
           />
+
+          <h2 id="who">Who should buy which harness</h2>
+          <p>
+            Style and escape notes are already on the cards. Measure the ferret, fit to the one-finger rule, and do not leave a ferret in any of these unsupervised.
+          </p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[32rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">Ferret</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">Backs out of harnesses, or this is the first walker</td>
+                  <td className="p-3 font-bold"><a href="#jacket">Jacket / vest</a></td>
+                  <td className="p-3">Best escape resistance. Wide panel. Price tier $$</td>
+                  <td className="p-3">Needs a body measurement. Can run warm unless the panel is mesh</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">You will check the fit every outing</td>
+                  <td className="p-3 font-bold"><a href="#h-style">Adjustable H-style</a></td>
+                  <td className="p-3">Best adjustability. Light. Price tier $</td>
+                  <td className="p-3">The easiest style to escape if a loop is left loose</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">Warm weather, and you want a leash in the same package</td>
+                  <td className="p-3 font-bold"><a href="#mesh-h">Mesh H with leash</a></td>
+                  <td className="p-3">Entry bundle. Breathable mesh. Price tier $</td>
+                  <td className="p-3">Fewer adjustment points. Upgrade to a vest for a true escape artist</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

@@ -149,6 +149,7 @@ export default function BestFerretCagePage() {
                 { label: 'Ramp & Shelf Safety', href: '#ramps' },
                 { label: 'Doors, Pans & Cleaning', href: '#cleaning' },
                 { label: 'Cages That Meet the Criteria', href: '#picks' },
+                { label: 'Who should buy which cage', href: '#who' },
                 { label: 'FAQ', href: '#faq' },
                 { label: 'Sources', href: '#sources' },
               ]}
@@ -345,6 +346,43 @@ export default function BestFerretCagePage() {
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="kaytee-multi-level-ferret-home"
           />
+
+          <h2 id="who">Who should buy which cage</h2>
+          <p>
+            Bar spacing, footprint, and price tier are the specs already on the cards. Verify the spacing on the exact model, and cover wire shelves and ramps on all three.
+          </p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[32rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">Household</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
+                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a></td>
+                  <td className="p-3">Best overall. About 0.5 in bar spacing. Full-width doors. Price tier $$$</td>
+                  <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">One or two ferrets, and the double unit is too big or too expensive</td>
+                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a></td>
+                  <td className="p-3">Best value. Ferret-appropriate spacing. Mid price tier $$</td>
+                  <td className="p-3">Not expandable, and smaller than the double modular unit</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3">One ferret, with generous daily out-of-cage time</td>
+                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a></td>
+                  <td className="p-3">Entry pick. Spacing in range if you verify the model. Price tier $</td>
+                  <td className="p-3">Too tight for a pair living in it full-time</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

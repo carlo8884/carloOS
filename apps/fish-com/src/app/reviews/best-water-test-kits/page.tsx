@@ -72,12 +72,52 @@ export default function BestWaterTestKitsPage() {
             <div id="salifert" className="bg-brand-surface border border-brand-border rounded-xl p-6 mb-6">
               <h2 className="font-display font-bold text-brand-dark text-xl m-0 mb-3">Salifert Individual Tests — For Reef Tanks</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-3">Reef aquariums require testing beyond the freshwater basics: alkalinity (dKH), calcium (Ca), magnesium (Mg), phosphate, and precision nitrate. Salifert is the gold standard for reef-grade accuracy in these parameters — used as the reference by aquaculture professionals and serious reefers. More expensive per test than API but substantially more accurate for reef-critical parameters. Buy individual Salifert tests for each parameter rather than combo kits — individual tests maintain calibration better.</p>
-              <p className="text-sm text-brand-text-mid leading-relaxed m-0">For reef tanks, also consider ICP (Inductively Coupled Plasma) water testing — laboratory analysis services (ATI, Triton) test for 30+ elements for $30–50, providing a comprehensive baseline twice yearly alongside regular at-home testing.</p>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-3">For reef tanks, also consider ICP (Inductively Coupled Plasma) water testing — laboratory analysis services (ATI, Triton) test for 30+ elements for $30–50, providing a comprehensive baseline twice yearly alongside regular at-home testing.</p>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0"><strong>Honest limits.</strong> More accurate than API on reef alkalinity, calcium, and magnesium, and more expensive per test. Buy the individual parameter tests — this page says they hold calibration better than combo kits. This page does not publish a reagent count or a star rating for Salifert.</p>
+              <p className="mt-3 mb-0"><a href="/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits" className="text-sm font-semibold text-brand-primary">Browse Salifert aquarium tests on Amazon →</a></p>
             </div>
             <div id="digital" className="bg-brand-surface border border-brand-border rounded-xl p-6">
               <h2 className="font-display font-bold text-brand-dark text-xl m-0 mb-3">Digital Meters — When to Use Them</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-3">Digital pH meters (Bluelab, Milwaukee) are more precise than reagent tests for pH-critical applications — planted tanks with CO2 injection, discus tanks, and shrimp tanks where precise pH control matters. Require calibration with buffer solutions every 1–2 weeks. Not a replacement for ammonia/nitrite testing — no accurate digital meter exists for these parameters at hobbyist price points.</p>
-              <p className="text-sm text-brand-text-mid leading-relaxed m-0">TDS (total dissolved solids) meters are useful for RO/DI water purity verification and monitoring overall mineral content. Not specific enough to replace individual parameter testing but useful for water change consistency monitoring. Inexpensive ($10–20) and valuable for shrimp and discus keepers.</p>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-3">TDS (total dissolved solids) meters are useful for RO/DI water purity verification and monitoring overall mineral content. Not specific enough to replace individual parameter testing but useful for water change consistency monitoring. Inexpensive ($10–20) and valuable for shrimp and discus keepers.</p>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0"><strong>Honest limits.</strong> A digital pH meter needs buffer calibration every 1–2 weeks. No hobbyist-priced digital meter on this page replaces ammonia or nitrite reagent tests.</p>
+              <p className="mt-3 mb-0"><a href="/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits" className="text-sm font-semibold text-brand-primary">Browse Bluelab pH meters on Amazon →</a></p>
+            </div>
+            <div className="mt-10">
+              <h2 className="font-display font-bold text-brand-dark text-xl mb-3">Who should buy which kit</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">Only the API card has a full spec list and a price. Salifert and the meters stay in the table as the jobs this page already assigns them, without new numbers.</p>
+              <div className="overflow-x-auto max-w-full">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">Keeper</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">What this page already says</th>
+                      <th className="p-3 font-bold text-brand-dark">Does not replace</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Freshwater community</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#api" className="text-brand-primary">API Freshwater Master</a></td>
+                      <td className="p-3 text-brand-text-mid">pH, ammonia, nitrite, nitrate. About 800 tests. $28–35</td>
+                      <td className="p-3 text-brand-text-mid">Saltwater, GH/KH, or reef alkalinity</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Reef</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#salifert" className="text-brand-primary">Salifert individual tests</a></td>
+                      <td className="p-3 text-brand-text-mid">Alkalinity, calcium, magnesium, and other reef parameters. More expensive per test than API</td>
+                      <td className="p-3 text-brand-text-mid">A full freshwater master kit, or a combo that this page says holds calibration worse</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">CO2-injected plants, discus, or shrimp pH</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#digital" className="text-brand-primary">Bluelab or similar pH meter</a></td>
+                      <td className="p-3 text-brand-text-mid">More precise pH than a reagent drop. Calibrate every 1–2 weeks</td>
+                      <td className="p-3 text-brand-text-mid">Ammonia and nitrite. Keep the API kit for those</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>

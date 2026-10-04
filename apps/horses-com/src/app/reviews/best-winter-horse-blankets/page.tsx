@@ -310,6 +310,59 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="amigo-bravo-12-plus"
             />
 
+            <h2>Who should buy which blanket</h2>
+            <p>Denier, fill, neck, and hardware are already in the spec table. This block matches a horse and a climate to a reviewed blanket, using only the limits those cards already state. Measure the horse before you order — the fit section below is the sizing rule.</p>
+            <div className="overflow-x-auto my-6 max-w-full">
+              <table className="w-full text-xs border-collapse min-w-[36rem]">
+                <thead>
+                  <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                    <th className="p-3 font-bold text-brand-dark">If this is the horse</th>
+                    <th className="p-3 font-bold text-brand-dark">Buy</th>
+                    <th className="p-3 font-bold text-brand-dark">From the card</th>
+                    <th className="p-3 font-bold text-brand-dark">Tradeoff</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Long-term turnout, and you want the reference blanket</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rambo" className="text-brand-primary">Rambo Original</a></td>
+                    <td className="p-3 text-brand-text-mid">Best premium turnout. 1000D ballistic. Fill 0 / 100 / 200 / 400 g</td>
+                    <td className="p-3 text-brand-text-mid">The card says a new one costs 50–80% more than a value-tier equivalent</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Replacing a worn value blanket, and Rambo is more than you need</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Original</a></td>
+                    <td className="p-3 text-brand-text-mid">Best modern standard. 1200D ripstop. $180–260. Polymer hardware</td>
+                    <td className="p-3 text-brand-text-mid">Shorter warranty than the premium tier. Shoulder rub on some heavily built horses</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Clipped horse in a northern or sub-zero winter</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#schneiders" className="text-brand-primary">Schneiders StormShield Euro</a></td>
+                    <td className="p-3 text-brand-text-mid">Best heavy winter. 1680D. 300 g / 360 g fills. $300–460</td>
+                    <td className="p-3 text-brand-text-mid">Overkill in a mild climate, and heavy to handle when wet</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">First blanket, and you may need to exchange the fit</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a></td>
+                    <td className="p-3 text-brand-text-mid">Best house brand. 1200D. Fills include 180 / 220 / 360 g. $160–230. Return guarantee</td>
+                    <td className="p-3 text-brand-text-mid">Shorter track record than Horseware. Polymer hardware</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Wither rubs under a conventional turnout</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#weatherbeeta" className="text-brand-primary">Weatherbeeta ComFiTec Plus Dynamic II</a></td>
+                    <td className="p-3 text-brand-text-mid">Best mid-tier. Memory-foam wither panel. 1200D ripstop</td>
+                    <td className="p-3 text-brand-text-mid">UK sizing differs from Horseware. Measure, and use the retailer trial period</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Horseware shell durability at a lower price</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#amigo" className="text-brand-primary">Amigo Bravo 12 Plus</a></td>
+                    <td className="p-3 text-brand-text-mid">Best value. Same shell denier as the Rambo Original, per that card. $130–190. Polymer hardware</td>
+                    <td className="p-3 text-brand-text-mid">Polymer hardware is less durable than Rambo stainless. Standard neck can rub some shoulders</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
             <ul>

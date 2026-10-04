@@ -184,6 +184,48 @@ export default function BestDogCratesPage() {
             />
 
             <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which crate</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                The four cards above already name the job, the price band, and the limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">Job</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">House-training a puppy, or a calm adult who needs a fold-flat wire crate</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80. Under $60 for most sizes</td>
+                      <td className="p-3 text-brand-text-mid">The dog destroys wire crates</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Escape artist or severe separation anxiety</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a></td>
+                      <td className="p-3 text-brand-text-mid">Aircraft-grade aluminum. Lifetime warranty. $300–500</td>
+                      <td className="p-3 text-brand-text-mid">The dog is calm — the card calls this overkill, and the crate is heavy</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Airline cargo</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Airline Crate. IATA compliant. $40–120 by size</td>
+                      <td className="p-3 text-brand-text-mid">In-cabin travel, or an escape artist. Confirm the airline before you buy</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A crate-trained adult, and the crate has to look like furniture</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#frisco" className="text-brand-primary">Frisco Furniture Style</a></td>
+                      <td className="p-3 text-brand-text-mid">Doubles as an end table. $80–160</td>
+                      <td className="p-3 text-brand-text-mid">Puppies, chewers, or anxious dogs. Wood is not chew-resistant</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {

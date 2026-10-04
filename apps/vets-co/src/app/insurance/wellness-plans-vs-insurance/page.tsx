@@ -113,6 +113,41 @@ export default function WellnessVsInsurancePage() {
 
           <InsuranceWellnessShop source="insurance-wellness-plans-vs-insurance" />
 
+          <h2>Who should buy which</h2>
+          <p>The two cards are carriers that sell accident-and-illness insurance with an optional routine-care layer. The layer is a budget, not insurance. Prices are quote-based on both cards, so this table does not invent a premium.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[32rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If this is you</th>
+                  <th className="p-3 font-bold text-brand-dark">Start here</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Keep separate</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">You want one carrier for catastrophe cover plus a wellness allowance</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                  <td className="p-3 text-brand-text-mid">Accident and illness, optional Wellness Rewards, pay-then-claim</td>
+                  <td className="p-3 text-brand-text-mid">The rewards plan reimburses routine care. It is not the insurance</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">You want an optional preventive package beside the policy</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pumpkin" className="text-brand-primary">Pumpkin</a></td>
+                  <td className="p-3 text-brand-text-mid">Accident and illness, optional preventive essentials, pay-then-claim</td>
+                  <td className="p-3 text-brand-text-mid">Compare annual limit, reimbursement, and exclusions on the insurance itself</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">You can only pay for one</td>
+                  <td className="p-3 font-bold text-brand-dark">Accident-and-illness insurance</td>
+                  <td className="p-3 text-brand-text-mid">This page&apos;s advice: routine care is budgetable; a surgery or cancer bill is not</td>
+                  <td className="p-3 text-brand-text-mid">A wellness plan alone does not pay an emergency</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>
