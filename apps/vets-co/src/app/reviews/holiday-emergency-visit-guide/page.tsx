@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'Why does the cost guide include holidays?',
+    answer: 'An emergency hospital keeps veterinarians and technicians on duty overnight, on weekends, and on holidays, with oxygen, blood products, and monitoring ready. A holiday does not create a separate fee schedule on that page. It is already inside the round-the-clock sentence.',
+  },
+  {
+    question: 'Which problems should not wait on cost?',
+    answer: 'Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go. The costs guide says not to delay a real emergency over cost. Financial options are discussed once the pet is stable.',
+  },
+  {
+    question: 'What does that page say insurance covers?',
+    answer: 'Insurance bought before any condition arises covers much of an emergency after the deductible. A savings fund covers the deductible, the unreimbursed share, and the deposit. This guide does not reprint a dollar figure and does not invent one.',
+  },
+  {
+    question: 'Is the quote hop emergency care?',
+    answer: 'No. The hop is the Trupanion quote already on the insurance review. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.',
+  },
+]
 
 export default function HolidayEmergencyVisitGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function HolidayEmergencyVisitGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The hop is the Trupanion quote already on the insurance review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide">Get a Trupanion quote →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

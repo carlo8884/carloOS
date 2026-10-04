@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'When does the grooming page place the fall molt?',
+    answer: 'About September through November, over a two-to-four-week window, as the summer coat comes out and a denser winter undercoat grows. That is the same length of window the page gives the spring shed.',
+  },
+  {
+    question: 'What shedding is a reason to call a veterinarian?',
+    answer: 'Symmetric hair loss over the rump, tail base, or shoulders, or hair that does not grow back. Normal, on the grooming page, is diffuse shedding, an intact but thinner coat, and regrowth within weeks. Those abnormal patterns are not a reason to buy a different brush.',
+  },
+  {
+    question: 'How does the shedding page say to brush?',
+    answer: 'A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two. Daily brushing during the peak captures more hair. One warm-water bath can loosen a heavy shed. Do not repeat it. Frequent bathing strips skin oils.',
+  },
+  {
+    question: 'Why lift the loose coat before the ferret swallows it?',
+    answer: 'Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The shedding page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. This guide does not name a hairball-remedy brand.',
+  },
+]
 
 export default function FallMoltBrushGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function FallMoltBrushGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The hop is that soft slicker search.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide">Browse soft slicker brushes for small animals on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

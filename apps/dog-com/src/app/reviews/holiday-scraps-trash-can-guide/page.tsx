@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'Which holiday foods does the pancreatitis page name?',
+    answer: 'Turkey skin, ham fat, or another high-fat holiday scrap. The page calls that the most common presentation of acute pancreatitis: a previously healthy dog vomiting 12 to 24 hours after a high-fat meal, with abdominal pain and lethargy.',
+  },
+  {
+    question: 'Does a small piece still count?',
+    answer: 'The same page says the critical variable is fat content, not quantity alone. A small piece of very fatty meat, bacon fat or turkey skin, can trigger pancreatitis in a susceptible dog. A dog that has had pancreatitis once is at significantly higher risk from any dietary indiscretion.',
+  },
+  {
+    question: 'Does the locking can replace the no-scraps rule?',
+    answer: 'No. The page names a locking kitchen trash can and a walk-through pet gate, then says neither replaces the rule. The can keeps leftovers from becoming the garbage-ingestion trigger. It does not choose a low-fat diet, and the gate does not treat a dog that is already vomiting.',
+  },
+  {
+    question: 'When should the shop link wait?',
+    answer: 'If the dog is vomiting, painful, or unable to keep water down, the pancreatitis page hospitalization criteria are the next read, not a shopping link. Repeated vomiting, belly pain, lethargy, refusing food, and a rectal temperature above 102.5°F are signs that page already lists as reasons to go in.',
+  },
+]
 
 export default function HolidayScrapsTrashCanGuidePage() {
   return (
@@ -62,6 +81,8 @@ export default function HolidayScrapsTrashCanGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
         <p>The hop is the locking trash can search already on the pancreatitis page. The gate and the food-storage container stay on that page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/locking+kitchen+trash+can?s=reviews-holiday-scraps-trash-can-guide">Browse locking kitchen trash cans on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

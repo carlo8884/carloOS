@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'How much does an idle adult drink?',
+    answer: 'The water page says roughly 20 to 40 liters a day, about 5 to 10 gallons, in temperate conditions, with more in heat, work, dry forage, or lactation, and less on lush grass. The instruction is free-choice water that is available, unfrozen, and palatable, not a fixed bucket count.',
+  },
+  {
+    question: 'Why does winter raise impaction risk?',
+    answer: 'Icy water suppresses drinking just as the horse moves onto dry hay. The winter-care page says reduced intake plus dry winter forage is a leading cause of impaction colic.',
+  },
+  {
+    question: 'What does winter care say to offer?',
+    answer: 'Water that stays unfrozen, and slightly warmed water. Heat for the horse itself, on the same page, comes from more hay, because fiber fermentation in the hindgut produces heat. Grain is not the warmth plan.',
+  },
+  {
+    question: 'Which supply does this page hop?',
+    answer: 'The heated horse water bucket already linked on the water page. The tank heater stays on the winter-care page, and that page says the heater is not a treatment for impaction colic. This page does not publish a wattage or a thermostat setting.',
+  },
+]
 
 export default function WinterWaterUnfrozenGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function WinterWaterUnfrozenGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The hop is the heated bucket search already on the water page. The tank heater stays on the winter-care page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide">Browse heated horse water buckets on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

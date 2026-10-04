@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'What causes the holiday surge the health page describes?',
+    answer: 'Fatty leftovers. The pancreatitis page says owners should be especially careful around holidays, when fatty leftovers cause a predictable surge in cases. For a dog that has already had pancreatitis, prevention is a consistent low-fat diet and no fatty table scraps.',
+  },
+  {
+    question: 'When does the low-fat food hop apply?',
+    answer: 'Only after a veterinarian has confirmed the dog is ready for a home low-fat plan. The food is the same class of consistent recovery diet the page already names. It is not a leftover buffet and not a one-off bland meal. It does not treat an acute episode.',
+  },
+  {
+    question: 'Is that food a named prescription diet?',
+    answer: 'No. The page is explicit that these household foods are not Hill’s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription products.',
+  },
+  {
+    question: 'When do you go in instead of reordering food?',
+    answer: 'If vomiting, belly pain, or refusal to eat returns, the instruction is to go in, not to reorder food. Typical signs on that page also include lethargy and sometimes diarrhea or fever, and a veterinarian has to confirm the diagnosis.',
+  },
+]
 
 export default function HolidayLeftoversLowFatGuidePage() {
   return (
@@ -60,6 +79,8 @@ export default function HolidayLeftoversLowFatGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The hop is the low-fat digestive-care food search already on the pancreatitis page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide">Browse low-fat digestive-care dog foods on Amazon →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"

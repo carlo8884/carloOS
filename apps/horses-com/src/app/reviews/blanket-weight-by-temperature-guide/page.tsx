@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -20,6 +20,25 @@ const schema = buildArticleSchema({
   publishedAt: '2026-10-04T00:00:00Z',
   modifiedAt: '2026-10-04T00:00:00Z',
 })
+
+const FAQS = [
+  {
+    question: 'What fill is the medium band?',
+    answer: 'Medium-weight is 180 to 250 grams. The review calls that the workhorse of most US and UK climates, with an effective range of about −5 to +10°C (25 to 50°F) on most clipped horses. A later sentence names about 200 grams for most clipped horses in most US climates in that same range.',
+  },
+  {
+    question: 'When is heavyweight the wrong amount of fill?',
+    answer: 'Heavyweight is 300 to 400 grams and up, for sustained sub-zero temperatures and clipped horses in cold climates. The review says that much fill is often unnecessary in the mid-Atlantic and the southern United States, and standard in the Northeast, the Midwest, Canada, and northern Europe.',
+  },
+  {
+    question: 'Where does the Rambo sit on that map?',
+    answer: 'The comparison table lists the Horseware Rambo Original at 0, 100, 200, and 400 gram fills. The 200 gram option is the medium band. The hop is that Rambo search. A clipped horse in a northern sub-zero winter is the Schneiders StormShield job, not this one.',
+  },
+  {
+    question: 'Can a full winter coat skip a blanket?',
+    answer: 'The review says a healthy adult with a full winter coat, dry shelter, and enough forage tolerates about −15°C (5°F) without a blanket, citing Cymbaluk and Christison in the Canadian Veterinary Journal, 1989. Blanketing a horse that does not need one can suppress the winter coat.',
+  },
+]
 
 export default function BlanketWeightByTemperatureGuidePage() {
   return (
@@ -61,6 +80,8 @@ export default function BlanketWeightByTemperatureGuidePage() {
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The hop is the Rambo Original search already on the blanket review, for the medium-band turnout that table lists at 200 grams.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide">Check price of the Horseware Rambo Original on SmartPak →</a></p>
+        <h2>Questions</h2>
+        <FAQAccordion items={FAQS} />
         <h2>Update list</h2>
         <EmailCapture
           variant="inline"
