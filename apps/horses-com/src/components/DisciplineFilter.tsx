@@ -23,8 +23,30 @@ const DISCIPLINE_CHIPS: {
 export function DisciplineFilter() {
   return (
     <nav aria-label="Browse by discipline" className="mb-10 -mt-2">
-      <div className="text-2xs font-bold uppercase tracking-eyebrow mb-3" style={{ color: 'var(--brand-text-light)' }}>
-        For
+      <div className="mb-3 flex items-center justify-between gap-3 flex-wrap">
+        <div className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-text-light)' }}>
+          For
+        </div>
+        <Link
+          href="/disciplines"
+          className="group flex items-center gap-3 overflow-hidden rounded-md no-underline"
+          style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}
+        >
+          <span className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
+            <StockImage
+              manifestKey="horses-com:category-disciplines"
+              fallbackKey="horses-com:hero"
+              alt="A dressage horse and rider in competition"
+              aspect="4:3"
+              variant="inline"
+              subtleCredit
+            />
+          </span>
+          <span className="pr-3 py-2">
+            <span className="block font-display font-bold text-sm leading-tight" style={{ color: 'var(--brand-text-dark)' }}>All disciplines</span>
+            <span className="block text-xs mt-0.5" style={{ color: 'var(--brand-text-mid)' }}>English, Western, trail, racing.</span>
+          </span>
+        </Link>
       </div>
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {DISCIPLINE_CHIPS.map((chip) => (
