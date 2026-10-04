@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -111,7 +112,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Cage Size Calculator',
+  description: 'How big should the cage be? Enter ferret count, levels, and daily playtime. A planning L × W × H — not a clinical spec.',
+  url: 'https://ferret.com/tools/cage-size-calculator',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function CageSizeCalculatorPage() {
   return (

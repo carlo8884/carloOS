@@ -30,7 +30,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Treats Guide — How to Treat Without Wrecking the Diet',
+  title: 'Dog Treats Guide — Caloric Budget, Dental, Jerky Safety',
   description:
     'Caloric budgeting, treat categories, dental treats and the VOHC seal, jerky-treat safety, and label reading.',
   url: 'https://dog.com/nutrition/dog-treats-guide',

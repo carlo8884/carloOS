@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -106,6 +107,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Weight Calculator',
+  description: 'Estimate a horse’s bodyweight from heart girth and body length using the standard weight-tape formula. Instant lbs and kg, with pony, draft, and foal adjustments.',
+  url: 'https://horses.com/tools/horse-weight-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
 export default function HorseWeightCalculatorPage() {
   return (
     <ArticleLayout
@@ -133,7 +144,7 @@ export default function HorseWeightCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Horse Weight Calculator' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

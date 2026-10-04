@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -111,7 +112,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Cost Calculator',
+  description: 'What does a ferret cost per month and in year one? Pick ferret count, housing, and food style, then edit the lines. A planning range — not a quote.',
+  url: 'https://ferret.com/tools/cost-calculator',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function CostCalculatorPage() {
   return (

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -126,7 +127,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Grimace Scale',
+  description: 'Is your ferret in pain? Ferrets hide it — but the face leaks it. Score five facial signs (ears, eyes, nose, cheeks, whiskers) on this owner Ferret Grimace checklist. A planning / observation reference, not a diagnosis.',
+  url: 'https://ferret.com/tools/ferret-grimace-scale',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function FerretGrimaceScalePage() {
   return (

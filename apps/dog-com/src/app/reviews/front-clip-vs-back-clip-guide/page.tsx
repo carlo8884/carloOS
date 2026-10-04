@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Front-Clip vs Back-Clip Dog Harness',
+  title: 'Front-clip vs back-clip harness',
   description: 'Front-clip for pullers, back-clip for dogs that already walk well, from the harness review.',
   url: 'https://dog.com/reviews/front-clip-vs-back-clip-guide',
   imageUrl: '',

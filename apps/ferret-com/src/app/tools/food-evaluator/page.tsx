@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -107,6 +108,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Food Evaluator',
+  description: 'Paste the guaranteed analysis from any kibble bag. The evaluator scores it against published ferret nutrient targets and returns a clear verdict with per-nutrient notes.',
+  url: 'https://ferret.com/tools/food-evaluator',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+  publishedAt: '2026-05-01',
+  modifiedAt: '2026-05-01',
+})
 export default function FerretFoodEvaluatorPage() {
   return (
     <ArticleLayout
@@ -125,7 +136,7 @@ export default function FerretFoodEvaluatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Food Evaluator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

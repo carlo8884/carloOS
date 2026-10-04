@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -121,6 +122,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Body Condition Score Calculator',
+  description: 'Score six body areas to compute the standard Henneke 1-9 BCS. Returns condition narrative and feeding guidance per range.',
+  url: 'https://horses.com/tools/body-condition-score',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2025-05-01',
+  modifiedAt: '2026-09-03',
+})
 export default function BodyConditionScorePage() {
   return (
     <ArticleLayout
@@ -150,7 +161,7 @@ export default function BodyConditionScorePage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Body Condition Score' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

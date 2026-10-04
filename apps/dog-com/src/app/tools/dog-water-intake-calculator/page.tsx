@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -48,7 +49,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Dog.com', url: 'https://dog.com/' },
     { name: 'Tools', url: 'https://dog.com/tools' },
-    { name: 'Dog Water Intake Calculator', url: 'https://dog.com/tools/dog-water-intake-calculator' },
+    { name: 'Water Intake Calculator', url: 'https://dog.com/tools/dog-water-intake-calculator' },
   ],
 })
 
@@ -97,7 +98,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Water Intake Calculator',
+  description: 'How much water should your dog drink in a day? Enter their weight for a typical daily range — in ounces, millilitres, and cups — and the drinking changes that are worth a call to your vet.',
+  url: 'https://dog.com/tools/dog-water-intake-calculator',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function DogWaterIntakeCalculatorPage() {
   return (

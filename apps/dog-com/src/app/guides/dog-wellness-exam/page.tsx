@@ -30,7 +30,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Wellness Exam — What to Expect and How to Choose a Veterinarian',
+  title: 'The Dog Wellness Exam — What to Expect and How to Choose a Vet',
   description:
     'Owner reference to the canine wellness exam: the head-to-tail physical, life-stage visit frequency, choosing a veterinarian, and questions to ask.',
   url: 'https://dog.com/guides/dog-wellness-exam',

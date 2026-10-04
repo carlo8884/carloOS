@@ -121,7 +121,7 @@ const howToSchema = buildHowToSchema({
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Pregnancy Calculator & Whelping Calendar',
+  title: 'Dog Pregnancy & Whelping Calendar',
   description:
     'How to estimate a dog\'s whelping date from the breeding date using the 63-day canine gestation average and the normal 58–68 day window, plus a packable whelping-kit checklist.',
   url: 'https://dog.com/tools/dog-gestation-calculator',

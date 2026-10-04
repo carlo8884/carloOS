@@ -66,7 +66,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Dog.com', url: 'https://dog.com/' },
     { name: 'Tools', url: 'https://dog.com/tools' },
-    { name: 'Dog Chocolate Toxicity Calculator', url: 'https://dog.com/tools/dog-chocolate-toxicity-calculator' },
+    { name: 'Chocolate Toxicity', url: 'https://dog.com/tools/dog-chocolate-toxicity-calculator' },
   ],
 })
 
@@ -94,7 +94,7 @@ const medicalSchema = buildMedicalWebPageSchema({
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Chocolate Toxicity Calculator — Theobromine Meter',
+  title: 'Dog Chocolate Toxicity Calculator',
   description:
     'How to estimate a dog\'s theobromine exposure from chocolate, with a theobromine-by-type reference table and standard veterinary dose bands.',
   url: 'https://dog.com/tools/dog-chocolate-toxicity-calculator',

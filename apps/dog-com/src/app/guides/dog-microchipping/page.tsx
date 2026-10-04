@@ -30,7 +30,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Microchipping Explained — How It Works, Cost, and Registration',
+  title: 'Dog Microchipping Explained — How It Works and Why Registration Is Everything',
   description:
     'Owner reference on canine microchips: the implant procedure, ISO standards, the critical role of registration, and how chips compare to GPS trackers.',
   url: 'https://dog.com/guides/dog-microchipping',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -128,6 +129,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Planted Aquarium CO2 Calculator',
+  description: 'Tank gallons, plant density, and pressurized vs liquid carbon in — starting bubble rate, diffuser size, and drop-checker range out. Optional KH/pH mode estimates dissolved ppm.',
+  url: 'https://fish.com/tools/co2-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function CO2CalculatorPage() {
   return (
     <ArticleLayout
@@ -146,7 +155,7 @@ export default function CO2CalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'CO2 Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Planted Tank Setup', href: '/setup/planted-tank-setup', category: 'Tank Setup' },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -90,6 +91,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Volume Calculator',
+  description: 'Convert tank dimensions to US gallons, UK gallons, and liters. Supports rectangular, bow-front, cube, hexagonal, and cylinder tanks with realistic water-fill adjustment.',
+  url: 'https://fish.com/tools/aquarium-volume-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function VolumeCalculatorPage() {
   return (
     <ArticleLayout
@@ -107,7 +116,7 @@ export default function VolumeCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Aquarium Volume Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Setup Builder", href: "/tools/aquarium-setup-builder", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Heater Wattage Calculator", href: "/tools/heater-wattage-calculator", category: "Tools" }, { title: "Stocking Calculator", href: "/tools/stocking-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }]}
       sidebar={
         <>

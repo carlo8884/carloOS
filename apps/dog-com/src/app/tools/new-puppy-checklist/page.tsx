@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
@@ -103,7 +104,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'New Puppy Checklist',
+  description: 'What do you actually need before a puppy comes home? Pick adult size, age at pickup, indoor or outdoor, crate training, and budget — then check off a staged first-week list with a shoppable kit for every gear item.',
+  url: 'https://dog.com/tools/new-puppy-checklist',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 const PUPPY_CHECKLIST_TEXT = `New-puppy day-one checklist
 

@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Equine Vaccination Schedule — AAEP Guidelines',
+  title: 'Equine Vaccination Schedule',
   description:
     'Vaccination protocols for adult horses, foals, broodmares, performance horses, and seniors — aligned with current AAEP vaccination guidelines.',
   url: 'https://horses.com/guides/equine-vaccination-schedule',

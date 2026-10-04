@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet Visit & Cost-of-Care Guides | Vets.co', description: 'Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.', path: '/guides' })
 
@@ -32,7 +32,15 @@ const itemListSchema = {
   })),
 }
 
-const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Vet Visit & Cost-of-Care Guides',
+  description: 'Straight answers to the practical questions every pet owner faces: what care costs, how to pay for it, when a problem is an emergency, and how to get the most from every veterinary visit.',
+  url: 'https://vets.co/guides',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function VetsGuidesHubPage() {
   return (

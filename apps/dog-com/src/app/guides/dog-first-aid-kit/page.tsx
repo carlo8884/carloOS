@@ -32,7 +32,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog First Aid Kit and Emergency Preparedness — Owner Checklist',
+  title: 'Dog First Aid Kit & Emergency Preparedness — The Owner Checklist',
   description:
     'A practical reference for assembling a canine first aid kit, saving the right emergency contacts, and being ready for a dog medical emergency.',
   url: 'https://dog.com/guides/dog-first-aid-kit',

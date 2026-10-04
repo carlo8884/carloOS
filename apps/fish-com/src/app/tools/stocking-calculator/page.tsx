@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -95,6 +96,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Stocking Calculator',
+  description: 'A rough slim-inch / bioload ceiling from tank volume, surface area, filtration, and aquascape style — not a species count, and not the inch-per-gallon rule.',
+  url: 'https://fish.com/tools/stocking-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function StockingCalculatorPage() {
   return (
     <ArticleLayout
@@ -112,7 +121,7 @@ export default function StockingCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Stocking Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Species Hub", href: "/species", category: "Species" }, { title: "Water Chemistry Guide", href: "/setup/water-chemistry-guide", category: "Tank Setup" }]}
       sidebar={
         <>

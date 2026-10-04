@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -113,6 +114,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Water Change Calculator',
+  description: 'How much water should you siphon? Tank size, fill %, and change % in — gallons and liters to remove out, plus a weekly schedule tip by bioload.',
+  url: 'https://fish.com/tools/water-change-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function WaterChangeCalculatorPage() {
   return (
     <ArticleLayout
@@ -131,7 +140,7 @@ export default function WaterChangeCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Water Change Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },

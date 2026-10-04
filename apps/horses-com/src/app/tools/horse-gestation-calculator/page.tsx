@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -113,6 +114,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Gestation & Foaling Date Calculator',
+  description: 'Estimate a mare’s foaling date from her breeding date using the ~340-day average gestation, then pack the foaling-kit checklist before the early 320-day window.',
+  url: 'https://horses.com/tools/horse-gestation-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
 export default function HorseGestationCalculatorPage() {
   return (
     <ArticleLayout
@@ -140,7 +151,7 @@ export default function HorseGestationCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Horse Gestation Calculator' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

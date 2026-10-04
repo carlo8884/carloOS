@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -53,7 +54,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Dog.com', url: 'https://dog.com/' },
     { name: 'Tools', url: 'https://dog.com/tools' },
-    { name: 'Dog Exercise Calculator', url: 'https://dog.com/tools/dog-exercise-calculator' },
+    { name: 'Exercise Calculator', url: 'https://dog.com/tools/dog-exercise-calculator' },
   ],
 })
 
@@ -90,7 +91,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Exercise Calculator',
+  description: 'How much exercise does your dog really need? Get a daily target by life stage and energy level — including the joint-safe five-minute-per-month rule for puppies and gentler, low-impact guidance for seniors.',
+  url: 'https://dog.com/tools/dog-exercise-calculator',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function DogExerciseCalculatorPage() {
   return (

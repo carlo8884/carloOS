@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -111,6 +112,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Height Converter',
+  description: 'Convert horse height between hands, inches, and centimetres — with the hands.inches notation handled correctly (15.2hh = 62 in = 157.5 cm).',
+  url: 'https://horses.com/tools/horse-height-converter',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
 export default function HorseHeightConverterPage() {
   return (
     <ArticleLayout
@@ -135,7 +146,7 @@ export default function HorseHeightConverterPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Horse Height Converter' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

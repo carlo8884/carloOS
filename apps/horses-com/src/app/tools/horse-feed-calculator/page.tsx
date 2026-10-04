@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -106,6 +107,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Feed & Hay Calculator',
+  description: 'Estimate how much hay and feed a horse needs each day from bodyweight, workload, and keeper type — forage-first, using published NRC intake ranges.',
+  url: 'https://horses.com/tools/horse-feed-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
 export default function HorseFeedCalculatorPage() {
   return (
     <ArticleLayout
@@ -132,7 +143,7 @@ export default function HorseFeedCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Horse Feed & Hay Calculator' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

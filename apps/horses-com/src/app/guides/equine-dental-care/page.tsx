@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Equine Dental Care — Practical Reference for Owners',
+  title: 'Equine Dental Care',
   description:
     'Equine dental anatomy and annual care: sharp points, malocclusions, floats, wolf teeth, EOTRH, and signs of dental disease.',
   url: 'https://horses.com/guides/equine-dental-care',

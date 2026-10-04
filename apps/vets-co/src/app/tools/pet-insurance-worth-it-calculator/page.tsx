@@ -52,7 +52,7 @@ const SOURCES = [
 ]
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Is Pet Insurance Worth It? A Breakeven Calculator',
+  title: 'Is Pet Insurance Worth It?',
   description:
     'A breakeven calculator and honest framing for deciding whether pet insurance is worth it: it models annual premium vs. expected reimbursement and the eligible vet-cost level at which a policy pays for itself.',
   url: URL,

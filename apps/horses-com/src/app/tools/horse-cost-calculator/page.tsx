@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   buildBreadcrumbSchema,
@@ -119,7 +120,17 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-const schema = combineSchemas(howToSchema, breadcrumbSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Cost of Ownership Calculator',
+  description: 'Estimate the true monthly and annual cost of keeping a horse — board, feed, farrier, vet, dental, vaccines, insurance, and one-time startup — using realistic 2026 US ranges.',
+  url: 'https://horses.com/tools/horse-cost-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
+const schema = combineSchemas(howToSchema, breadcrumbSchema, articleSchema)
 
 export default function HorseCostCalculatorPage() {
   return (

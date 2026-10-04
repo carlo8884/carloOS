@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -104,7 +105,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Calorie Calculator',
+  description: 'Estimate your dog\'s daily calorie needs using the standard RER formula and WSAVA/AAHA-style life-stage factors. Enter weight, pick a life stage, and get kcal/day -- plus optional cups/day if you enter your food\'s calorie density.',
+  url: 'https://dog.com/tools/dog-calorie-calculator',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function DogCalorieCalculatorPage() {
   return (

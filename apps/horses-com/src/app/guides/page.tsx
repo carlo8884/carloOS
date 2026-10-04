@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
@@ -56,7 +56,15 @@ const itemListSchema = {
   })),
 }
 
-const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Equine Guides',
+  description: 'Practical owner guides on saddle fitting, preventive dental care, and vaccination schedules — each citing AAEP guidelines, veterinary clinical literature, and Society of Master Saddlers criteria.',
+  url: 'https://horses.com/guides',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function GuidesHubPage() {
   return (

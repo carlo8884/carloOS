@@ -90,7 +90,7 @@ const appSchema = {
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Ideal Weight Calculator: How Much Should My Dog Weigh?',
+  title: 'Dog Ideal Weight Calculator',
   description:
     'How to find a dog\'s healthy adult weight range by breed and estimate an ideal weight from the 9-point body condition score, with a worked example.',
   url: 'https://dog.com/tools/dog-ideal-weight-calculator',

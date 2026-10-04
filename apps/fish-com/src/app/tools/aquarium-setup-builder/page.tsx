@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -89,6 +90,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Setup Builder',
+  description: 'What do you actually need to start a fish tank? Enter your tank size and setup type and get a complete, sized starter-kit checklist — filter, heater, light, substrate, test kit, and more — with why each matters and where to learn or buy.',
+  url: 'https://fish.com/tools/aquarium-setup-builder',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function AquariumSetupBuilderPage() {
   return (
     <ArticleLayout
@@ -107,7 +116,7 @@ export default function AquariumSetupBuilderPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Aquarium Setup Builder' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Aquarium Setup Guide', href: '/setup', category: 'Setup' },

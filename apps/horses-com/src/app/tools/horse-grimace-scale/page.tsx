@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -126,7 +127,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Grimace Scale',
+  description: 'Is your horse in pain? Horses hide it — but the face leaks it. Score five facial signs (ears, eyes, brow, chewing muscles / mouth, nostrils) on this owner Equine Grimace checklist. A planning / observation reference, not a diagnosis.',
+  url: 'https://horses.com/tools/horse-grimace-scale',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function HorseGrimaceScalePage() {
   return (

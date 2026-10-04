@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -129,7 +130,15 @@ const howToSchema = buildHowToSchema({
 })
 
 // Exactly ONE BreadcrumbList across the page.
-const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Is This a Cat Emergency?',
+  description: 'Check the feline signs you are seeing and get a conservative urgency read — go now, same-day vet, or monitor closely — using emergency-vs-wait criteria from veterinary emergency medicine. This tool helps you decide how urgently to seek care. It does not diagnose your cat.',
+  url: 'https://vets.co/tools/is-this-a-cat-emergency',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema, articleSchema)
 
 export default function IsThisACatEmergencyPage() {
   return (

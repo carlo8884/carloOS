@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Best Blanket for a Clipped Horse',
+  title: 'Best blanket for a clipped horse',
   description: 'Schneiders StormShield for clipped horses in hard winters, from the blanket review only.',
   url: 'https://horses.com/reviews/best-blanket-for-clipped-horse-guide',
   imageUrl: '',

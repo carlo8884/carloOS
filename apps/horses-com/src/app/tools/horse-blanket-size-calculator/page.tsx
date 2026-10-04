@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -87,6 +88,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Blanket Size Calculator',
+  description: 'What size blanket does your horse need? Measure from the chest to the tail and get the standard US/UK blanket size, the approximate EU/cm equivalent, and a fit tip — because US blanket sizing simply is that body measurement in inches.',
+  url: 'https://horses.com/tools/horse-blanket-size-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-14',
+  modifiedAt: '2026-09-03',
+})
 export default function HorseBlanketSizeCalculatorPage() {
   return (
     <ArticleLayout
@@ -111,7 +122,7 @@ export default function HorseBlanketSizeCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Horse Blanket Size Calculator' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

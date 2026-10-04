@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Cat Age Calculator — Cat Years to Human Years & Life Stage',
+  title: 'Cat Age Calculator',
   description:
     'Convert a cat’s age to human-equivalent years and identify its AAFP/AAHA life stage and the veterinary care that stage calls for.',
   url: URL,

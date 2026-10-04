@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -97,6 +98,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Heater Wattage Calculator',
+  description: 'Size your aquarium heater correctly based on tank volume, room temperature, and target temperature. With redundancy guidance for large tanks.',
+  url: 'https://fish.com/tools/heater-wattage-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function HeaterWattageCalculatorPage() {
   return (
     <ArticleLayout
@@ -114,7 +123,7 @@ export default function HeaterWattageCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Heater Wattage Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[{ title: "Tools Hub", href: "/tools", category: "Tools" }, { title: "Aquarium Setup Builder", href: "/tools/aquarium-setup-builder", category: "Tools" }, { title: "Aquarium Volume Calculator", href: "/tools/aquarium-volume-calculator", category: "Tools" }, { title: "Substrate Calculator", href: "/tools/substrate-calculator", category: "Tools" }, { title: "Filter GPH Calculator", href: "/tools/filter-gph-calculator", category: "Tools" }, { title: "Water Change Calculator", href: "/tools/water-change-calculator", category: "Tools" }, { title: "Best Aquarium Heaters", href: "/reviews/best-aquarium-heaters", category: "Reviews" }]}
       sidebar={
         <>

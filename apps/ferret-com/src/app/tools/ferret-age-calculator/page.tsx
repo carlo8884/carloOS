@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -109,7 +110,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Age Calculator',
+  description: 'How old is your ferret in human years — and which life stage is it in? Enter age for a human-year estimate and a kit / young adult / mature / senior label. A planning reference, not a diagnosis, and not the multiply-by-seven rule.',
+  url: 'https://ferret.com/tools/ferret-age-calculator',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function FerretAgeCalculatorPage() {
   return (

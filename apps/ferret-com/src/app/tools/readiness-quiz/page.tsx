@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -72,7 +73,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Is a ferret the right animal for you?',
+  description: 'Ten honest questions about legality, daily time, budget, housing, and long-term commitment. Then pack a day-one kit — cage, litter, food, hammock, dig box, carrier — before a ferret comes home.',
+  url: 'https://ferret.com/tools/readiness-quiz',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const combinedSchema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 // FAQ content is drawn entirely from facts already stated on this page
 // (legality, daily-time, emergency conditions, the four tiers, the kit).

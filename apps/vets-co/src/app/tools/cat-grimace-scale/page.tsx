@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Cat Grimace Scale — Is My Cat in Pain?',
+  title: 'Cat Grimace Scale',
   description:
     'A guided owner self-assessment adapted from the validated Feline Grimace Scale: score five facial action units to gauge whether a cat may be in pain, with safe next steps.',
   url: URL,
