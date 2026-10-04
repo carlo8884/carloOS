@@ -199,6 +199,35 @@ export default function HowPetInsuranceWorksPage() {
             ctaAffiliateProduct="home"
           />
 
+          <h2 id="who">Who should quote which</h2>
+          <p>Both cards are quote-based. The payment model and the limit are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Quote</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Limit on the card</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">The clinic paid directly, with a per-condition deductible</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a></td>
+                  <td className="p-3 text-brand-text-mid">Direct-Pay Model. Pays participating vets. Unlimited payouts. No per-incident caps. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">Premiums can run higher. No wellness or preventive add-on</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">You pay the clinic, then file, and want a single plan</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                  <td className="p-3 text-brand-text-mid">Fast Reimbursement. One accident-and-illness plan. You choose deductible and rate. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">No wellness add-on, and no direct payment to the vet</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>

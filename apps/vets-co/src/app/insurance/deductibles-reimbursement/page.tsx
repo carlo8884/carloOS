@@ -201,6 +201,35 @@ export default function DeductiblesPage() {
             ctaAffiliateProduct="home"
           />
 
+          <h2 id="who">Who should quote which</h2>
+          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Quote</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Limit on the card</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">One accident-and-illness plan, and you set the deductible and rate</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                  <td className="p-3 text-brand-text-mid">Simple Levers. Single plan. Fast reimbursement. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">No wellness add-on. Confirm the annual-limit structure on the quote</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Several deductible and reimbursement combinations to compare</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a></td>
+                  <td className="p-3 text-brand-text-mid">Tiered Options. Multiple plan tiers. Pay-then-claim. Quote-based</td>
+                  <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. The card also notes no upper age limit</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
         </div>

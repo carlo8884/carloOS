@@ -72,6 +72,38 @@ export default function BestDogBedsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="casper+dog+bed"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which bed</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Only the two beds with review cards are in this table. The price and the limit are the ones on those cards. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A large or giant dog with arthritis, and you want the bed with a published trial</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#big-barker" className="text-brand-primary">Big Barker 7&quot; Orthopedic</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Orthopedic. 7-inch foam. 10-year no-flatten warranty. $279–399</td>
+                      <td className="p-3 text-brand-text-mid">You need a machine-washable cover, or the bed has to be easy to move. The card says spot-clean only, and it is heavy</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Everyday use for a medium or large dog, with a cover you can wash</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#casper" className="text-brand-primary">Casper Dog Bed</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Premium. Machine-washable cover. Memory foam over a support base. $125–175</td>
+                      <td className="p-3 text-brand-text-mid">Severe arthritis, where the card says Big Barker is the more therapeutic pick. Zippers can be chewed</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div id="by-dog-type" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">

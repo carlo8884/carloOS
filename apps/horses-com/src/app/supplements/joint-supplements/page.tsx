@@ -235,6 +235,47 @@ export default function JointSupplementsPage() {
               ctaAffiliateProduct="marine-omega-3"
             />
 
+            <h2 id="who">Who should buy which</h2>
+            <p>Ingredient, price per supply, and the limit are already on the four cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings. A lame horse still needs a veterinary exam before a supplement decision.</p>
+            <div className="overflow-x-auto my-6 max-w-full">
+              <table className="w-full text-xs border-collapse min-w-[36rem]">
+                <thead>
+                  <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                    <th className="p-3 font-bold text-brand-dark">If you need</th>
+                    <th className="p-3 font-bold text-brand-dark">Buy</th>
+                    <th className="p-3 font-bold text-brand-dark">From the card</th>
+                    <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">The ASU formula with disclosed amounts</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a></td>
+                    <td className="p-3 text-brand-text-mid">Best Evidence (ASU). NASC seal. $60–95 per 30-day supply</td>
+                    <td className="p-3 text-brand-text-mid">Active synovitis that the card says needs intra-articular or systemic treatment, not a scoop</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">One tub that covers joint inputs and the base ration extras</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum-cj" className="text-brand-primary">Platinum Performance CJ</a></td>
+                    <td className="p-3 text-brand-text-mid">Best Comprehensive. Glucosamine through omega-3 in one product. $130–180 per 30-day supply</td>
+                    <td className="p-3 text-brand-text-mid">You want the lower price. The card calls this the highest cost in the set, and some ingredients are weaker evidence</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">A senior horse on daily packs</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a></td>
+                    <td className="p-3 text-brand-text-mid">Best Senior. Glucosamine, chondroitin, MSM, HA. $45–65 per 28-day supply</td>
+                    <td className="p-3 text-brand-text-mid">You specifically want ASU. The card says this formula does not include it</td>
+                  </tr>
+                  <tr className="border-b border-brand-border">
+                    <td className="p-3 text-brand-text-mid">Marine EPA and DHA, not flax</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a></td>
+                    <td className="p-3 text-brand-text-mid">Reference ingredient. Fish oil or algal DHA/EPA. Card target 10–20 g combined. $25–60 per 30-day supply</td>
+                    <td className="p-3 text-brand-text-mid">The label only says omega-3 from flax. The card says equine conversion of ALA is poor</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
             <ol>

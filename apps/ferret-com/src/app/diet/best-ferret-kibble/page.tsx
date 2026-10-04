@@ -332,6 +332,41 @@ export default function BestFerretKibblePage() {
             ctaAffiliateProduct="ferret-diet"
           />
 
+          <h2 id="who">Who should buy which kibble</h2>
+          <p>Protein, carb notes, price, and the stocking limit are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">The lowest commercial carb load in wide ferret use</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a></td>
+                  <td className="p-3 text-brand-text-mid">Premium Tier. About 60% protein, 16% fat, carbs in the single digits. $30–50 / 5 lb</td>
+                  <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A ferret-specific bag you can find in chain retail</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a></td>
+                  <td className="p-3 text-brand-text-mid">Mid Tier. About 38% protein, 20% fat, carbs in the mid teens. $15–25 / 4 lb</td>
+                  <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. The card puts carbohydrate higher than the premium tier, and the panel includes plant protein</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A direct subscription with a published animal-first panel</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#carniwhole" className="text-brand-primary">Carniwhole</a></td>
+                  <td className="p-3 text-brand-text-mid">Direct-to-Consumer. Named meats. Subscription pricing. No retail backup</td>
+                  <td className="p-3 text-brand-text-mid">You need a store backup. The card also notes a shorter track record than Marshall or Wysong</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

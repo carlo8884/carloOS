@@ -233,6 +233,35 @@ export default function WholePreyVsKibblePage() {
             ctaAffiliateProduct="frozen-feeder-mice"
           />
 
+          <h2 id="who">Who should buy which</h2>
+          <p>The two cards already split shelf-stable kibble from frozen prey. Price and the handling limit are the ones on those cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A shelf-stable base a sitter can feed</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a></td>
+                  <td className="p-3 text-brand-text-mid">Kibble model. Starch-free. $30–50 / 5 lb</td>
+                  <td className="p-3 text-brand-text-mid">You want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Whole prey as the diet or as a supplement to kibble</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a></td>
+                  <td className="p-3 text-brand-text-mid">Whole-prey model. Intact bone for calcium balance. Price varies by size and quantity</td>
+                  <td className="p-3 text-brand-text-mid">No freezer, or you will not handle raw prey carefully. The card flags food safety and sourcing</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2 id="sources">Sources</h2>
           <p>
             Obligate-carnivore physiology and macronutrient targets are drawn from Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier), and Carpenter JW, <em>Exotic Animal Formulary</em>. Food-safety guidance reflects the American Veterinary Medical Association policy on raw or undercooked animal-source protein in pet food. The American Ferret Association maintains an owner-facing nutrition statement consistent with the high-protein, low-carbohydrate framework described here. Primary publications are best located by title, as URLs change over time.

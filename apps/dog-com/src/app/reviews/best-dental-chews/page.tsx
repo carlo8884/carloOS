@@ -65,6 +65,38 @@ export default function BestDentalChewsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="whimzees+dental+chews+dogs"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which chew</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Both chews already have VOHC notes, a price, and a limit on the cards. This table only lines those up. Scores are this page&apos;s editorial scores, not customer star ratings. Neither replaces toothbrushing.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A daily chew with VOHC acceptance for plaque and tartar</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#greenies" className="text-brand-primary">Greenies Original</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Pliable. Teenie through large. $25–35 / 27-count. 25–90 calories by size</td>
+                      <td className="p-3 text-brand-text-mid">Wheat sensitivity. The card says they contain wheat. Count the calories, and a dog that swallows them gets less dental contact</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A plant-based chew, or a longer chew than Greenies</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#whimzees" className="text-brand-primary">Whimzees</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Natural / Plant-Based. VOHC for plaque. $20–30 / 14-count</td>
+                      <td className="p-3 text-brand-text-mid">You need a tartar claim. The card says VOHC is for plaque only, and calories per chew are higher than Greenies</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

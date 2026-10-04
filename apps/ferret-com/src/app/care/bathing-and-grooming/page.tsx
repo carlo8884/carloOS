@@ -621,6 +621,41 @@ export default function FerretBathingGroomingPage() {
             ctaAffiliateProduct="small+pet+nail+clipper+styptic+powder"
           />
 
+          <h2 id="who">Who should buy which</h2>
+          <p>The three grooming cards already name the tool, the price, and what it does not treat. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A ferret shampoo without tea tree</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a></td>
+                  <td className="p-3 text-brand-text-mid">Shampoo Default. Original or fragrance-free. pH-balanced. $8–14</td>
+                  <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Routine ear wiping every 2–4 weeks</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-ear-cleaner" className="text-brand-primary">Pet ear cleaner</a></td>
+                  <td className="p-3 text-brand-text-mid">Ear Care. Cotton ball or gauze, not an in-canal swab. $10–20</td>
+                  <td className="p-3 text-brand-text-mid">Dark coffee-ground debris or colored discharge. The card says that needs a vet, not more cleaner</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Clippers sized for ferret nails, plus styptic</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-nail-kit" className="text-brand-primary">Small-pet clippers and styptic</a></td>
+                  <td className="p-3 text-brand-text-mid">Nail Care. Not human clippers. $10–18</td>
+                  <td className="p-3 text-brand-text-mid">The clippers are the cheapest dull pair. The card says mid-tier lasts, and the first trims are still stressful</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
