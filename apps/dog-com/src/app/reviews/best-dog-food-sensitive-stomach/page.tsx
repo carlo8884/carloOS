@@ -25,7 +25,7 @@ export default function SensitiveStomachFoodPage() {
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
-        <span className="text-brand-text-mid">Best Sensitive Stomach Dog Food</span>
+        <span className="text-brand-text-mid" aria-current="page">Best Dog Food for Sensitive Stomach 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14">

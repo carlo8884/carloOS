@@ -29,7 +29,7 @@ export default function BestSlowFeederBowlsPage() {
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
-        <span className="text-brand-text-mid">Best Slow Feeder Bowls</span>
+        <span className="text-brand-text-mid" aria-current="page">Best Slow Feeder Bowls for Dogs 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_260px] gap-14">
