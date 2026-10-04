@@ -45,7 +45,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
 
           {/* Brand column */}
           <div className="lg:col-span-1">
-            <Link href="/" className="no-underline block mb-4" aria-label={config.theme.siteName}>
+            <Link href="/" className="inline-flex min-h-11 min-w-11 items-center no-underline mb-4" aria-label={config.theme.siteName}>
               <Logo config={config} size="footer" color="var(--brand-white)" />
             </Link>
             <p className="text-sm text-white/60 leading-relaxed max-w-xs">
@@ -64,7 +64,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white/65 no-underline hover:text-white transition-colors duration-200"
+                      className="inline-flex min-h-11 min-w-11 items-center text-sm text-white/65 no-underline hover:text-white transition-colors duration-200"
                     >
                       {link.label}
                     </Link>
@@ -109,7 +109,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-white/75 no-underline hover:text-white transition-colors"
+                className="inline-flex min-h-11 min-w-11 items-center text-white/75 no-underline hover:text-white transition-colors"
               >
                 {link.label}
               </Link>
@@ -138,7 +138,7 @@ export function Footer({ siteId, showAffiliateDisclosure = true }: FooterProps) 
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-xs text-white/55 no-underline hover:text-white transition-colors"
+                className="inline-flex min-h-11 min-w-11 items-center text-xs text-white/55 no-underline hover:text-white transition-colors"
               >
                 {link.label}
               </Link>

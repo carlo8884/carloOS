@@ -118,7 +118,7 @@ export function AffiliateDisclosure({
         purchases.{' '}
         <Link
           href={href}
-          className="text-white/70 hover:text-white hover:underline no-underline font-medium"
+          className="inline-flex min-h-11 items-center text-white/70 hover:text-white hover:underline no-underline font-medium"
         >
           Disclosure &rarr;
         </Link>

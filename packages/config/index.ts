@@ -911,6 +911,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
       { label: 'Care', href: '/care' },
       { label: 'Nutrition', href: '/nutrition' },
       { label: 'Tack', href: '/tack' },
+      { label: 'Reviews', href: '/reviews' },
       { label: 'Tools', href: '/tools' },
     ],
     footerLinks: [

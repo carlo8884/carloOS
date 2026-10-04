@@ -6,7 +6,7 @@
  * mobile hamburger, and CTA highlight.
  */
 
-import { useState, useEffect } from 'react'
+import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react'
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { getSiteConfig } from '@carloOS/config'
@@ -22,6 +22,9 @@ export function Nav({ siteId, activePath }: NavProps) {
   const config = getSiteConfig(siteId)
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
+  const menuButtonRef = useRef<HTMLButtonElement>(null)
+  const menuRef = useRef<HTMLDivElement>(null)
+  const menuWasOpen = useRef(false)
 
   useEffect(() => {
     const handler = () => setScrolled(window.scrollY > 20)
@@ -29,12 +32,47 @@ export function Nav({ siteId, activePath }: NavProps) {
     return () => window.removeEventListener('scroll', handler)
   }, [])
 
-  // Close mobile menu on route change / escape
+  function closeMenu() {
+    setMobileOpen(false)
+  }
+
   useEffect(() => {
-    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setMobileOpen(false) }
+    if (!mobileOpen) {
+      if (menuWasOpen.current) menuButtonRef.current?.focus()
+      menuWasOpen.current = false
+      return
+    }
+    menuWasOpen.current = true
+    const frame = window.requestAnimationFrame(() => {
+      menuRef.current?.querySelector<HTMLElement>('a[href]')?.focus()
+    })
+    const onKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault()
+        setMobileOpen(false)
+      }
+    }
     window.addEventListener('keydown', onKey)
-    return () => window.removeEventListener('keydown', onKey)
-  }, [])
+    return () => {
+      window.cancelAnimationFrame(frame)
+      window.removeEventListener('keydown', onKey)
+    }
+  }, [mobileOpen])
+
+  function trapMenuTab(event: ReactKeyboardEvent<HTMLDivElement>) {
+    if (event.key !== 'Tab' || !menuRef.current) return
+    const items = Array.from(menuRef.current.querySelectorAll<HTMLElement>('a[href]'))
+    if (items.length === 0) return
+    const first = items[0]
+    const last = items[items.length - 1]
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault()
+      last.focus()
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault()
+      first.focus()
+    }
+  }
 
   return (
     <>
@@ -54,8 +92,8 @@ export function Nav({ siteId, activePath }: NavProps) {
         {/* Logo — $0 typographic wordmark with brand-primary TLD dot */}
         <Link
           href="/"
-          className="text-brand-dark no-underline"
-          onClick={() => setMobileOpen(false)}
+          className="inline-flex items-center min-h-11 text-brand-dark no-underline"
+          onClick={closeMenu}
         >
           <Logo config={config} size="nav" />
         </Link>
@@ -82,10 +120,13 @@ export function Nav({ siteId, activePath }: NavProps) {
 
         {/* Hamburger (mobile) */}
         <button
-          className="lg:hidden flex flex-col gap-1.5 p-2.5 cursor-pointer border-0 bg-transparent"
-          onClick={() => setMobileOpen(!mobileOpen)}
+          ref={menuButtonRef}
+          type="button"
+          className="lg:hidden inline-flex min-h-11 min-w-11 flex-col items-center justify-center gap-1.5 cursor-pointer border-0 bg-transparent"
+          onClick={() => setMobileOpen((open) => !open)}
           aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
           aria-expanded={mobileOpen}
+          aria-controls="site-menu"
         >
           <span className={[
             'block w-6 h-0.5 bg-brand-dark transition-all duration-200',
@@ -108,14 +149,18 @@ export function Nav({ siteId, activePath }: NavProps) {
           {/* Backdrop */}
           <div
             className="fixed inset-0 z-40 bg-black/30 lg:hidden"
-            onClick={() => setMobileOpen(false)}
+            onClick={closeMenu}
             aria-hidden="true"
           />
           {/* Menu */}
           <div
-            className="fixed top-nav left-0 right-0 z-50 bg-brand-white border-b border-brand-border shadow-nav lg:hidden"
+            ref={menuRef}
+            id="site-menu"
+            className="fixed top-nav left-0 right-0 z-50 max-h-[calc(100dvh-4.25rem)] overflow-y-auto bg-brand-white border-b border-brand-border shadow-nav lg:hidden"
             role="dialog"
+            aria-modal="true"
             aria-label="Mobile navigation"
+            onKeyDown={trapMenuTab}
           >
             <ul className="list-none m-0 p-0 flex flex-col" role="list">
               {config.nav.map((item) => (
@@ -123,12 +168,12 @@ export function Nav({ siteId, activePath }: NavProps) {
                   <Link
                     href={item.href}
                     className={[
-                      'block px-6 py-4 text-sm font-medium no-underline transition-colors',
+                      'flex min-h-11 items-center break-words px-6 py-3 text-sm font-medium no-underline transition-colors',
                       item.highlight
                         ? 'text-brand-primary font-semibold'
                         : 'text-brand-text-mid hover:text-brand-primary',
                     ].join(' ')}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={closeMenu}
                   >
                     {item.label}
                   </Link>
@@ -139,6 +184,16 @@ export function Nav({ siteId, activePath }: NavProps) {
         </>
       )}
 
+      <style>{`
+        @media (max-width: 1023px) {
+          a[data-hub-item]:not(.block) {
+            min-height: 44px;
+            min-width: 44px;
+            display: flex;
+            align-items: center;
+          }
+        }
+      `}</style>
       {/* Spacer to push content below fixed nav */}
       <div className="h-nav" aria-hidden="true" />
     </>
