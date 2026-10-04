@@ -99,7 +99,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Cardiology',
     boardCertificationOrg:
       'ACVIM (American College of Veterinary Internal Medicine) — Cardiology subspecialty. Diplomates use the credential "DACVIM (Cardiology)".',
-    boardCertificationDirectoryUrl: 'https://www.acvim.org/About/Find-a-Specialist',
+    boardCertificationDirectoryUrl: 'https://www.acvim.org/resources-tools/animal-owners',
     whenToSeeSummary:
       'New heart murmur, cough at rest, exercise intolerance, fainting, or pre-breeding clearance in breeds at hereditary risk.',
     whenToSee: [
@@ -212,7 +212,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Oncology',
     boardCertificationOrg:
       'ACVIM (American College of Veterinary Internal Medicine) — Oncology subspecialty. Diplomates use "DACVIM (Oncology)". Radiation oncology is a separate ACVR subspecialty.',
-    boardCertificationDirectoryUrl: 'https://www.acvim.org/About/Find-a-Specialist',
+    boardCertificationDirectoryUrl: 'https://www.acvim.org/resources-tools/animal-owners',
     whenToSeeSummary:
       'New cancer diagnosis, suspicious mass, lymphoma staging, or to design and supervise a chemotherapy or radiation protocol.',
     whenToSee: [
@@ -324,7 +324,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Dermatology',
     boardCertificationOrg:
       'ACVD (American College of Veterinary Dermatology). Diplomates use the credential "DACVD".',
-    boardCertificationDirectoryUrl: 'https://www.acvd.org/find-a-dermatologist',
+    boardCertificationDirectoryUrl: 'https://acvd.org/find-a-veterinary-dermatologist/',
     whenToSeeSummary:
       'Chronic itching, recurrent ear or skin infections, suspected food or environmental allergy, or non-responsive autoimmune skin disease.',
     whenToSee: [
@@ -436,7 +436,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Ophthalmology',
     boardCertificationOrg:
       'ACVO (American College of Veterinary Ophthalmologists). Diplomates use the credential "DACVO".',
-    boardCertificationDirectoryUrl: 'https://www.acvo.org/find-a-veterinary-ophthalmologist',
+    boardCertificationDirectoryUrl: 'https://www.acvo.org/ophthalmologist-search',
     whenToSeeSummary:
       'Painful or red eye, sudden vision change, cataracts, glaucoma, corneal ulcers that will not heal, or breed-screening for hereditary eye disease.',
     whenToSee: [
@@ -552,7 +552,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Neurology',
     boardCertificationOrg:
       'ACVIM (American College of Veterinary Internal Medicine) — Neurology subspecialty. Diplomates use "DACVIM (Neurology)".',
-    boardCertificationDirectoryUrl: 'https://www.acvim.org/About/Find-a-Specialist',
+    boardCertificationDirectoryUrl: 'https://www.acvim.org/resources-tools/animal-owners',
     whenToSeeSummary:
       'Seizures, sudden weakness or paralysis, suspected intervertebral disc disease, vestibular signs, or cognitive decline.',
     whenToSee: [
@@ -666,7 +666,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Dentistry',
     boardCertificationOrg:
       'AVDC (American Veterinary Dental College). Diplomates use the credential "DAVDC".',
-    boardCertificationDirectoryUrl: 'https://avdc.org/find-a-veterinary-dentist/',
+    boardCertificationDirectoryUrl: 'https://www.avdc-dms.org/dms/list/diplomates.cfm',
     whenToSeeSummary:
       'Complex extractions, oral surgery, jaw fractures, oral tumors, advanced periodontal disease, or persistent pain after a routine dental.',
     whenToSee: [
@@ -782,7 +782,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Internal Medicine',
     boardCertificationOrg:
       'ACVIM (American College of Veterinary Internal Medicine) — Small Animal Internal Medicine. Diplomates use "DACVIM (SAIM)".',
-    boardCertificationDirectoryUrl: 'https://www.acvim.org/About/Find-a-Specialist',
+    boardCertificationDirectoryUrl: 'https://www.acvim.org/resources-tools/animal-owners',
     whenToSeeSummary:
       'Complex chronic disease, unexplained bloodwork changes, suspected endocrine disease, autoimmune disease, or persistent GI signs.',
     whenToSee: [
@@ -1031,7 +1031,7 @@ export const Specialties: Specialty[] = [
     shortName: 'Emergency & Critical Care',
     boardCertificationOrg:
       'ACVECC (American College of Veterinary Emergency and Critical Care). Diplomates use "DACVECC".',
-    boardCertificationDirectoryUrl: 'https://acvecc.org/find-an-ecc-specialist/',
+    boardCertificationDirectoryUrl: 'https://acvecc.org/Find-an-ACVECC-Specialist',
     whenToSeeSummary:
       'Trauma, suspected poisoning, sudden collapse, breathing difficulty, bloat, or any pet that needs intensive monitoring or stabilization.',
     whenToSee: [

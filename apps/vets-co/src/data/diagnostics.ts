@@ -78,8 +78,8 @@ export interface Diagnostic {
 }
 
 // Shared institutional citation URLs.
-const ACVIM = 'https://www.acvim.org/Animal-Owners'
-const AAHA = 'https://www.aaha.org/your-pet/pet-owner-education/'
+const ACVIM = 'https://www.acvim.org/resources-tools/animal-owners'
+const AAHA = 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/'
 const ACVR = 'https://www.acvr.org/page/pet-owners'
 const ACVD = 'https://www.acvd.org/page/PetOwners'
 const MERCK = 'https://www.merckvetmanual.com/'

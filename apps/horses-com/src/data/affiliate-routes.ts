@@ -25,25 +25,25 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   smartpak: {
     // Network: ShareASale. Carlo-approved per policy §5 (equestrian).
     name: 'SmartPak',
-    template: 'https://smartpakequine.com/pt/{sku}?cm_mmc=PLACEHOLDER',
+    template: 'https://www.smartpakequine.com/search/search?SearchTerm={sku}&cm_mmc=PLACEHOLDER',
     requiresSku: true,
   },
   dover: {
     // Network: ShareASale. Carlo-approved per policy §5 (equestrian).
     name: 'Dover Saddlery',
-    template: 'https://doversaddlery.com/{sku}/p/?ref=PLACEHOLDER',
+    template: 'https://www.doversaddlery.com/search?q={sku}&ref=PLACEHOLDER',
     requiresSku: true,
   },
   schneider: {
     // Network: ShareASale or Direct. Carlo-approved per policy §5.
     name: 'Schneiders Saddlery',
-    template: 'https://sstack.com/{sku}.html?utm_source=carloOS&aff=PLACEHOLDER',
+    template: 'https://www.sstack.com/search?q={sku}&utm_source=carloOS&aff=PLACEHOLDER',
     requiresSku: true,
   },
   ridingwarehouse: {
     // Network: CJ Affiliate. Carlo-approved per policy §5.
     name: 'Riding Warehouse',
-    template: 'https://ridingwarehouse.com/{sku}.html?utm_source=carloOS&aff=PLACEHOLDER',
+    template: 'https://www.ridingwarehouse.com/search.html?query={sku}&utm_source=carloOS&aff=PLACEHOLDER',
     requiresSku: true,
   },
   greenhawk: {

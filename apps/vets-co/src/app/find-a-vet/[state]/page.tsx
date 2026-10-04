@@ -227,12 +227,12 @@ export default function StateVetFinderPage({ params }: PageProps) {
             Board-certified veterinary specialists are listed in their respective specialty college directories. When your GP refers, you can verify the specialist&apos;s credentials and find others practicing in {state.name} through these sources.
           </p>
           <ul className="space-y-2 text-sm text-brand-text-mid">
-            <li><a href="https://www.acvim.org/Find-a-Specialist" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVIM — Internal medicine, cardiology, neurology, oncology</a></li>
+            <li><a href="https://www.acvim.org/resources-tools/animal-owners" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVIM — Internal medicine, cardiology, neurology, oncology</a></li>
             <li><a href="https://www.acvs.org/find-a-surgeon" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVS — Veterinary surgeons</a></li>
-            <li><a href="https://www.acvo.org/find-a-veterinary-ophthalmologist" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVO — Veterinary ophthalmologists</a></li>
-            <li><a href="https://www.acvd.org/find-a-dermatologist" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVD — Veterinary dermatologists</a></li>
+            <li><a href="https://www.acvo.org/ophthalmologist-search" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVO — Veterinary ophthalmologists</a></li>
+            <li><a href="https://acvd.org/find-a-veterinary-dermatologist/" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVD — Veterinary dermatologists</a></li>
             <li><a href="https://acvecc.org/" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">ACVECC — Emergency and critical care</a></li>
-            <li><a href="https://www.aaha.org/your-pet/pet-owner-education/ask-aaha/find-a-hospital/" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">AAHA — Find an accredited hospital</a></li>
+            <li><a href="https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/" target="_blank" rel="noopener noreferrer" className="text-brand-primary font-bold hover:underline">AAHA — Find an accredited hospital</a></li>
           </ul>
         </section>
 

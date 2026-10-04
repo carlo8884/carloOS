@@ -327,10 +327,6 @@ export default function BestFerretKibblePage() {
             pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
             cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
             price="Subscription pricing"
-            ctaText="Visit Carniwhole"
-            ctaHref="/go/carniwhole/ferret-diet?s=diet-best-ferret-kibble"
-            ctaAffiliateProgram="carniwhole"
-            ctaAffiliateProduct="ferret-diet"
           />
 
           <h2 id="who">Who should buy which kibble</h2>

@@ -155,7 +155,7 @@ export default function DiagnosticsHubPage() {
           What {Diagnostics.length} common veterinary diagnostic tests measure, why a vet orders
           them, what results mean in plain language, and typical US cost ranges — sourced from{' '}
           <a
-            href="https://www.acvim.org/Animal-Owners"
+            href="https://www.acvim.org/resources-tools/animal-owners"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-primary hover:underline"
@@ -164,7 +164,7 @@ export default function DiagnosticsHubPage() {
           </a>
           ,{' '}
           <a
-            href="https://www.aaha.org/your-pet/pet-owner-education/"
+            href="https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-brand-primary hover:underline"

@@ -73,6 +73,18 @@ export function visibleShopHref(
 
 const DEFAULT_HOME = 'https://www.amazon.com'
 
+/** Vendors whose `/home` sku means the storefront, not a product slug. */
+const STOREFRONT_HOME = new Set([
+  'embark',
+  'wisdom-panel',
+  'smartpak',
+  'dover',
+  'schneider',
+  'ridingwarehouse',
+  'marshall',
+  'wysong',
+])
+
 /** Amazon and Chewy stay on the partner homepage until a tag and sku exist. */
 const RETAIL_VENDORS = new Set(['amazon', 'amazon-brand', 'chewy', 'chewy-brand', 'chewy-pharmacy'])
 
@@ -151,6 +163,12 @@ export function resolveAffiliateHop(opts: {
 
   if (!route) {
     return { target: DEFAULT_HOME, tagResolved, envVarName, vendor, sku }
+  }
+
+  // `/go/<vendor>/home` on these stores is the storefront, not a product
+  // named "home". A path like /products/home or /pt/home 404s.
+  if (STOREFRONT_HOME.has(vendor) && sku.toLowerCase() === 'home') {
+    return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
   }
 
   const retail = isRetailVendor(vendor)

@@ -36,9 +36,9 @@ export interface Symptom {
 }
 
 const AVMA_OWNER = 'https://www.avma.org/resources/pet-owners'
-const AAHA_OWNER = 'https://www.aaha.org/your-pet/pet-owner-education/'
+const AAHA_OWNER = 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/'
 const VECCS = 'https://veccs.org/'
-const ACVIM = 'https://www.acvim.org/Animal-Owners'
+const ACVIM = 'https://www.acvim.org/resources-tools/animal-owners'
 const MERCK = 'https://www.merckvetmanual.com/'
 const CORNELL_FELINE = 'https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center'
 

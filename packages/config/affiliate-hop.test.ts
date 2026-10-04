@@ -124,6 +124,29 @@ describe('resolveAffiliateHop', () => {
     )
   })
 
+  it('sends a storefront /home sku to the merchant origin', () => {
+    const routes = {
+      embark: {
+        name: 'Embark',
+        template: 'https://embarkvet.com/products/{sku}?refid=PLACEHOLDER',
+        requiresSku: true,
+      },
+      smartpak: {
+        name: 'SmartPak',
+        template: 'https://www.smartpakequine.com/search/search?SearchTerm={sku}&cm_mmc=PLACEHOLDER',
+        requiresSku: true,
+      },
+    }
+    assert.equal(
+      resolveAffiliateHop({ vendor: 'embark', sku: 'home', routes, env: {} }).target,
+      'https://embarkvet.com',
+    )
+    assert.equal(
+      resolveAffiliateHop({ vendor: 'smartpak', sku: 'home', routes, env: {} }).target,
+      'https://www.smartpakequine.com',
+    )
+  })
+
   it('sends an untagged insurance hop to the quote page', () => {
     const insurance = {
       trupanion: {
