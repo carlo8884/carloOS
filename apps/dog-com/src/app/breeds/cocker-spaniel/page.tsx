@@ -32,7 +32,7 @@ export default function CockerSpanielPage() {
           ))}
         </div>
         <RelatedLinks title="Insurance for This Breed" links={[{ label: 'Is pet insurance worth it for a Cocker Spaniel?', href: '/breeds/cocker-spaniel/insurance' }, { label: 'Pet insurance by breed', href: '/breeds/insurance' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Dog Skin Allergies', href: '/health/dog-skin-allergies' }, { label: 'Anemia in Dogs', href: '/health/anemia-in-dogs' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Dog Ear Infections', href: '/health/dog-ear-infections' }, { label: 'Dog Allergies', href: '/health/dog-allergies' }, { label: 'Anemia in Dogs', href: '/health/anemia-in-dogs' }]} />
         <RelatedLinks title="Breed Comparisons" links={[
           { label: 'Cavalier King Charles Spaniel vs Cocker Spaniel', href: '/compare/cavalier-king-charles-vs-cocker-spaniel' },
         ]} />

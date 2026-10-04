@@ -30,7 +30,7 @@
  *   /reviews, /reviews/best-dry-dog-food, /reviews/best-pet-insurance,
  *     /reviews/best-large-breed-dog-food, /reviews/best-flea-tick-prevention,
  *     /reviews/best-joint-supplements, /reviews/best-dental-chews
- *   /puppy-schedule (lead magnet)
+ *   /training/puppy-schedule (week-by-week schedule; /puppy-schedule 301s here)
  *   /guides/dog-body-condition-score, /guides/dog-spay-neuter-timing
  *   /find-a-vet, /disclosure, /editorial-standards
  *
@@ -106,7 +106,7 @@ const OWNER_PATHS = [
     eyebrow: 'I have a new puppy',
     title: 'Puppy First-Year Roadmap',
     desc: 'Vaccines, feeding, crate training, the 8-16 week plan.',
-    href: '/puppy-schedule',
+    href: '/training/puppy-schedule',
     cta: 'See the puppy roadmap',
     // Uses the populated breed-labrador key (a friendly young dog) so the
     // above-the-fold owner grid is fully real-photo NOW; swaps to a dedicated
@@ -217,7 +217,7 @@ const FOOD_TOOLS = [
 ]
 
 const TRAINING_DECISIONS = [
-  { title: 'Puppy schedule (8-16 weeks)', desc: 'Sleep, feeding, potty, socialization, vet visits by week.', href: '/puppy-schedule', badge: 'Free download' },
+  { title: 'Puppy schedule (8-16 weeks)', desc: 'Sleep, feeding, potty, socialization, vet visits by week.', href: '/training/puppy-schedule', badge: 'Free download' },
   { title: 'Socialization window', desc: 'The 3-14 week window that shapes adult temperament.', href: '/training/dog-socialization-window' },
   { title: 'All training methods', desc: 'Positive reinforcement, marker training, crate training, more.', href: '/training' },
 ]
@@ -458,7 +458,7 @@ export default function HomePage() {
           (Carlo review 2026-06-11: "too small + needs a puppy picture"). */}
       <section className="bg-brand-dark border-y border-brand-border px-container-sm sm:px-container py-8 sm:py-10">
         <div className="max-w-container mx-auto">
-          <Link href="/puppy-schedule" className="group grid sm:grid-cols-[220px_1fr] gap-6 sm:gap-8 items-center no-underline">
+          <Link href="/training/puppy-schedule" className="group grid sm:grid-cols-[220px_1fr] gap-6 sm:gap-8 items-center no-underline">
             <div className={`relative h-44 sm:h-40 rounded-xl overflow-hidden ring-1 ring-white/10 ${FILL_IMAGE} [&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none`}>
               <StockImage manifestKey="dog-com:breed-labrador-retriever" fallbackKey="dog-com:hero" alt="A young puppy" aspect="4:3" variant="inline" subtleCredit />
             </div>

@@ -16,6 +16,18 @@ import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } fr
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Puppy Schedule — Sleep, Feeding & Training Week by Week | Dog.com', description: 'Complete puppy schedule from 8 weeks. Sleep requirements, feeding times, potty schedule, training windows, and socialization checklist — week by week.', path: '/training/puppy-schedule', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Puppy Schedule — Week by Week', description: 'Complete puppy schedule: sleep, feeding, training, and socialization.', url: 'https://dog.com/training/puppy-schedule', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' })
 
+const WEEKLY_MILESTONES = [
+  { week: '8', focus: 'Settle in', milestones: 'Crate intro · Name recognition · Outdoor potty schedule · First vet visit' },
+  { week: '9', focus: 'Socialization #1', milestones: 'Handling practice · Sounds desensitization · Meet 3–5 new people (safely) · DAPP-1 due' },
+  { week: '10', focus: 'Foundation', milestones: 'Sit · Hand feeding · Brief alone-time · Body handling for vet care' },
+  { week: '11', focus: 'Confidence', milestones: 'New surfaces · Car rides · Sounds (vacuum, doorbell) · Bite-inhibition feedback' },
+  { week: '12', focus: 'Socialization #2', milestones: 'Puppy class (vaccinated environment) · Meet calm adult dogs · DAPP-2 due' },
+  { week: '13', focus: 'Recall + Stay', milestones: 'Begin name + come · 2-second stays · Loose-leash introduction in quiet places' },
+  { week: '14', focus: 'World exposure', milestones: 'Quiet city walks · Different floor surfaces · Brief separations · Vet-clinic visits for treats only' },
+  { week: '15', focus: 'Manners', milestones: 'Sit before doors · Crate as nap default · Solid recall in safe environments · DAPP-3 due' },
+  { week: '16', focus: 'Window closing', milestones: 'Final novel exposures · Adolescent prep (regression normal at 6–18 months) · Rabies due' },
+]
+
 const SAMPLE_SCHEDULE = [
   { time: '6:30am', activity: 'Wake up → Immediately outside for potty' },
   { time: '7:00am', activity: 'Breakfast (measure, do not free-feed)' },
@@ -63,7 +75,7 @@ export default function PuppySchedulePage() {
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Why Schedule Matters', href: '#why' }, { label: 'Sleep Requirements', href: '#sleep' }, { label: 'Sample Daily Schedule', href: '#schedule' }, { label: 'The Socialization Window', href: '#socialization' }, { label: 'Week-by-Week Milestones', href: '#milestones' }]} />
-        <RelatedLinks title="Related Guides" links={[{ label: 'Week-by-week puppy schedule (on-page)', href: '/puppy-schedule' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }]} />
+        <RelatedLinks title="Related Guides" links={[{ label: 'Critical socialization window', href: '/training/dog-socialization-window' }, { label: 'Crate Training Guide', href: '/training/crate-training' }, { label: 'House Training Guide', href: '/training/house-training' }, { label: 'Puppy Nutrition', href: '/nutrition/puppy-nutrition' }, { label: 'Pregnancy & Whelping Calendar', href: '/tools/dog-gestation-calculator' }]} />
         <RelatedLinks title="Feeding a Growing Puppy" links={[{ label: 'Best Dog Food for Puppies', href: '/reviews/best-dog-food-for-puppies' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="training" variant="sidebar" />
 
@@ -172,6 +184,29 @@ export default function PuppySchedulePage() {
           <li>Being left alone for increasing periods</li>
         </ul>
         <p><strong>Before full vaccination:</strong> Avoid dog parks, pet stores, and areas with unknown dog traffic. Carry puppies in high-risk areas. Puppy classes with vaccinated puppies are safe and excellent for socialization — the socialization benefit outweighs the (low) disease risk at a well-run puppy class.</p>
+
+        <h2 id="weeks">Week 8 to Week 16</h2>
+        <p>Focus and milestones for each week of the socialization window. Vaccination dates below are typical AAHA puppy-schedule reference points; your vet sets the actual dates from the puppy&apos;s history and local risk. Print this page from the browser if you want the table on the fridge.</p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr>
+                <th className="text-left p-3">Week</th>
+                <th className="text-left p-3">Focus</th>
+                <th className="text-left p-3">Key milestones</th>
+              </tr>
+            </thead>
+            <tbody>
+              {WEEKLY_MILESTONES.map((w) => (
+                <tr key={w.week}>
+                  <td className="p-3 font-semibold">{w.week}</td>
+                  <td className="p-3">{w.focus}</td>
+                  <td className="p-3">{w.milestones}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
 
         <h2 id="milestones">Week-by-Week Training Milestones</h2>
         <ul>

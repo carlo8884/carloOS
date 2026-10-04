@@ -150,7 +150,7 @@ export default function DogSocializationWindowPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
-                { label: 'Free Puppy Schedule (printable)', href: '/puppy-schedule' },
+                { label: 'Puppy schedule, week by week', href: '/training/puppy-schedule' },
                 { label: 'Puppy Biting', href: '/training/puppy-biting' },
                 { label: 'Crate Training', href: '/training/crate-training' },
                 { label: 'Positive Reinforcement', href: '/training/positive-reinforcement' },

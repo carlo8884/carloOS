@@ -522,7 +522,6 @@ export default function DogHealthHubPage() {
         <Link key="dog-obesity" href="/health/dog-obesity" className="text-sm text-brand-primary no-underline hover:underline">Dog Obesity</Link>
         <Link key="dog-pyoderma" href="/health/dog-pyoderma" className="text-sm text-brand-primary no-underline hover:underline">Dog Pyoderma</Link>
         <Link key="dog-seizures" href="/health/dog-seizures" className="text-sm text-brand-primary no-underline hover:underline">Dog Seizures</Link>
-        <Link key="dog-skin-allergies" href="/health/dog-skin-allergies" className="text-sm text-brand-primary no-underline hover:underline">Dog Skin Allergies</Link>
         <Link key="dog-symptoms-guide" href="/health/dog-symptoms-guide" className="text-sm text-brand-primary no-underline hover:underline">Dog Symptoms Guide</Link>
         <Link key="dog-vaccinations" href="/health/dog-vaccinations" className="text-sm text-brand-primary no-underline hover:underline">Dog Vaccinations</Link>
         <Link key="dog-vomiting" href="/health/dog-vomiting" className="text-sm text-brand-primary no-underline hover:underline">Dog Vomiting</Link>
@@ -536,7 +535,7 @@ export default function DogHealthHubPage() {
         <Link key="megaesophagus" href="/health/megaesophagus" className="text-sm text-brand-primary no-underline hover:underline">Megaesophagus</Link>
         <Link key="pancreatitis" href="/health/pancreatitis" className="text-sm text-brand-primary no-underline hover:underline">Pancreatitis</Link>
         <Link key="senior-dog-care" href="/health/senior-dog-care" className="text-sm text-brand-primary no-underline hover:underline">Senior Dog Care</Link>
-        <Link key="spay-neuter-guide" href="/health/spay-neuter-guide" className="text-sm text-brand-primary no-underline hover:underline">Spay Neuter Guide</Link>
+        <Link key="spay-neuter-guide" href="/guides/dog-spay-neuter-timing" className="text-sm text-brand-primary no-underline hover:underline">Spay/Neuter Timing</Link>
         </div>
       </section>
       {/* agent1-browse-all-end */}

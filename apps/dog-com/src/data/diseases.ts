@@ -417,7 +417,7 @@ export const Diseases: Disease[] = [
       'Not an emergency — schedule routine appointment',
       'Severe self-trauma with secondary bacterial infection',
     ],
-    commonHealthCrossLinks: ['/health/dog-mange', '/health/dog-skin-allergies'],
+    commonHealthCrossLinks: ['/health/dog-mange', '/health/dog-allergies'],
     citations: [
       'Moriello KA et al. Diagnosis and treatment of dermatophytosis — ACVD/WAVD consensus (2017)',
       'Merck Veterinary Manual — Dermatophytosis',
@@ -1785,7 +1785,7 @@ export const Diseases: Disease[] = [
       'Distended abdomen with severe lethargy in intact female',
       'Collapse, pale gums',
     ],
-    commonHealthCrossLinks: ['/health/spay-neuter-guide'],
+    commonHealthCrossLinks: ['/guides/dog-spay-neuter-timing'],
     citations: [
       'Hagman R. Pyometra in small animals — Vet Clin North Am (2018)',
       'Egenvall A et al. Breed-specific pyometra risk — JSAP',
@@ -1827,7 +1827,7 @@ export const Diseases: Disease[] = [
       'High fever with abdominal pain',
       'Collapse, pale gums (prostatic abscess rupture)',
     ],
-    commonHealthCrossLinks: ['/health/spay-neuter-guide'],
+    commonHealthCrossLinks: ['/guides/dog-spay-neuter-timing'],
     citations: [
       'Smith J. Canine prostatic disease — JSAP review',
       'Memon MA. Reproductive disorders — Vet Clin North Am',
@@ -1869,7 +1869,7 @@ export const Diseases: Disease[] = [
       'Severe pallor or collapse (paraneoplastic marrow failure)',
       'Acute testicular swelling with severe pain (torsion)',
     ],
-    commonHealthCrossLinks: ['/health/spay-neuter-guide', '/health/dog-cancer-signs'],
+    commonHealthCrossLinks: ['/guides/dog-spay-neuter-timing', '/health/dog-cancer-signs'],
     citations: [
       'Withrow & MacEwen\'s Small Animal Clinical Oncology (6th ed.)',
       'Hayes HM Jr et al. Cryptorchidism and testicular tumor — JAVMA',
@@ -1955,7 +1955,7 @@ export const Diseases: Disease[] = [
       'Severe secondary pyoderma',
       'Self-trauma causing significant skin damage',
     ],
-    commonHealthCrossLinks: ['/health/dog-mange', '/health/dog-skin-allergies'],
+    commonHealthCrossLinks: ['/health/dog-mange', '/health/dog-allergies'],
     citations: [
       'ACVD Treatment Guidelines',
       'Pin D. Sarcoptic mange in dogs — Vet Dermatol',
@@ -2258,7 +2258,7 @@ export const Diseases: Disease[] = [
       'Systemic illness (fever, lethargy)',
       'Severe self-mutilation',
     ],
-    commonHealthCrossLinks: ['/health/dog-hot-spots', '/health/dog-skin-allergies', '/health/dog-pyoderma'],
+    commonHealthCrossLinks: ['/health/dog-hot-spots', '/health/dog-allergies', '/health/dog-pyoderma'],
     citations: [
       'ACVD (American College of Veterinary Dermatology)',
       'Hnilica KA, Patterson AP. Small Animal Dermatology (4th ed.)',
@@ -2302,7 +2302,7 @@ export const Diseases: Disease[] = [
       'Severe secondary pyoderma with systemic illness',
       'Otitis externa with vestibular signs',
     ],
-    commonHealthCrossLinks: ['/health/dog-allergies', '/health/dog-skin-allergies', '/health/dog-ear-infections'],
+    commonHealthCrossLinks: ['/health/dog-allergies', '/health/dog-ear-infections'],
     citations: [
       'ICADA (International Committee on Allergic Diseases of Animals) Practice Guidelines',
       'Olivry T et al. Treatment of canine atopic dermatitis — 2015 update',
