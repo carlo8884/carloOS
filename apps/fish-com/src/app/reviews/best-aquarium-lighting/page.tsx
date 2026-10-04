@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
@@ -125,6 +125,21 @@ export default function BestAquariumLightingPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which light fits which tank</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which light does this page pick for a low-tech planted tank?',
+                  answer: 'The Hygger 957, scored 9.2 and marked Best Planted (Budget). The printed price is $45–65. The card says it is not enough for demanding high-light plants, and it has no app control.',
+                },
+                {
+                  question: 'Which light does this page pick for a high-tech planted tank?',
+                  answer: 'The Fluval Plant 3.0, scored 9.4 and marked Best Planted (Premium). The printed price is $150–200. The card says Bluetooth range is short and the fixture is overkill for a low-tech tank.',
+                },
+                {
+                  question: 'Which light does this page pick for a fish-only tank?',
+                  answer: 'The Nicrew Classic LED+, scored 8.5 and marked Best Fish-Only. The printed price is $20–35. The card says it is not for planted or reef tanks, and typical life is 2–3 years.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -25,7 +25,7 @@ export default function BestCanisterFiltersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
       </div>
@@ -75,6 +75,50 @@ export default function BestCanisterFiltersPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-classic-2215"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which filter</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Two canisters have review cards. Penn Plax Cascade is named in the picks strip and does not have a card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A quiet canister for about 40–70 gallons</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.4. $120–150</td>
+                      <td className="p-3 text-brand-text-mid">The primer button is finicky on first start. The card also says it costs more than Penn Plax</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A canister meant to run for years</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Classic 350</a></td>
+                      <td className="p-3 text-brand-text-mid">Most Reliable. Score 9.2. $100–130</td>
+                      <td className="p-3 text-brand-text-mid">You want AquaStop or quieter media baskets. The card says this older design has neither, and it is slightly louder than the Fluval 307</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which canister fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which canister does this page pick overall?',
+                  answer: 'The Fluval 307, scored 9.4 and marked Best Overall. The printed price is $120–150. The card says the primer button can be finicky on first start.',
+                },
+                {
+                  question: 'Which canister does this page pick for long-term reliability?',
+                  answer: 'The Eheim Classic 350, scored 9.2. The printed price is $100–130. The card says it has no AquaStop and is slightly louder than the Fluval 307.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

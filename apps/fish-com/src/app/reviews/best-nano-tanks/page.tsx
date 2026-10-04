@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -27,7 +27,7 @@ export default function BestNanoTanksPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Shop Fluval Spec V →' />
+        <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Nano tanks (5–20 gallons) are ideal for betta fish, shrimp colonies, planted tanks, and small community setups. Bigger is more forgiving — but these small tanks are manageable and rewarding when set up correctly.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -129,6 +129,21 @@ export default function BestNanoTanksPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which tank does this page pick for a 5-gallon betta or shrimp setup?',
+                  answer: 'The Fluval Spec V, scored 9.2 and marked Best 5 Gallon. The printed price is $75–95. The card says 5 gallons is the minimum, the flow needs baffling for a betta, and the space is tight for aquascaping.',
+                },
+                {
+                  question: 'Which tank does this page pick at the lowest printed price?',
+                  answer: 'The Aqueon 10-Gallon Standard, scored 9.0. The printed price is $20–30. The card says no equipment is included, so the filter, heater, and light are separate.',
+                },
+                {
+                  question: 'Which tank does this page pick as the overall nano?',
+                  answer: 'The Aqueon 20-Gallon Long, scored 9.4 and marked Best Overall Nano. The printed price is $30–50. The card says you still need a 20-gallon-rated filter, heater, and light.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
