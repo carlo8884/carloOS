@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { PrimaryHop, AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -60,6 +60,7 @@ export default function HorseInsurancePage() {
           { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
           { title: 'Equine Health Hub', href: '/health' },
         ]}
+        heroHop={<PrimaryHop href='/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance' label='Browse horse insurance policy document binders on Amazon →' />}
         hero={{
           title: "Horse Insurance Explained",
           subtitle:

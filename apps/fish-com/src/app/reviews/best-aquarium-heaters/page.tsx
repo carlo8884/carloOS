@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
+import { PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -67,6 +67,7 @@ export default function BestHeatersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
+        <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Shop Eheim Jager →' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           A heater that runs 6°F hot kills tropical fish. A heater that runs cold causes immune suppression and disease. We ranked 8 heaters using manufacturer-published accuracy specs and aggregated keeper reports. Here&apos;s what holds temperature best on the record.
         </p>
