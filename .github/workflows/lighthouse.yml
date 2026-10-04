@@ -1,0 +1,46 @@
+name: lighthouse
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+# Separate from verify so the existing build-and-Playwright job stays put.
+# One mobile Lighthouse run per money page, plus one retry if that run misses
+# a budget. Twenty-five pages, not three samples of each.
+concurrency:
+  group: lighthouse-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mobile-budgets:
+    name: Lighthouse mobile budgets
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: https://placeholder.supabase.co
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: placeholder-anon-key
+      NEXT_PUBLIC_GA_MEASUREMENT_ID: G-PLACEHOLDER
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+      - uses: actions/cache@v4
+        with:
+          path: node_modules/.cache/google-fonts
+          key: google-fonts-${{ runner.os }}-${{ hashFiles('apps/**/src/app/layout.tsx', 'scripts/ci/patch-google-font-fetch.cjs') }}
+          restore-keys: google-fonts-${{ runner.os }}-
+      - run: npm ci
+      - run: node --test scripts/ci/lighthouse-budgets.test.mjs
+      - name: Build earning sites
+        run: npx turbo build --filter=dog-com --filter=fish-com --filter=horses-com --filter=vets-co --filter=ferret-com
+        env:
+          TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
+          TURBO_TEAM: ${{ vars.TURBO_TEAM }}
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+      - name: Mobile Lighthouse, one run plus one retry
+        run: node scripts/ci/lighthouse-budgets.mjs
