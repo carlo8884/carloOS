@@ -6,11 +6,12 @@
  *   calculator_complete — site, tool
  *   guide_signup_submit — site, page, result (no address; form flag only)
  *   guide_checklist_copy / guide_checklist_print — site, page (no address)
- *   hop_view — site, page, hop, when the primary hop enters the viewport
+ *   hop_view — site, page, hop, plus experiment and variant when a test is on
  * affiliate_click stays on AffiliateClickListener.
  */
 import { useEffect } from 'react'
 import { usePathname } from 'next/navigation'
+import { experimentEventParams } from '../lib/experiment-client'
 import { trackEvent } from '../lib/track-event'
 
 export function JourneyEvents({ site }: { site: string }) {
@@ -42,7 +43,7 @@ export function JourneyEvents({ site }: { site: string }) {
         hopFired = true
         const anchor = el instanceof HTMLAnchorElement ? el : el.querySelector('a[href]')
         const hop = anchor instanceof HTMLAnchorElement ? anchor.getAttribute('href') || '' : ''
-        trackEvent('hop_view', { site, page, hop })
+        trackEvent('hop_view', { site, page, hop, ...experimentEventParams() })
         hopObserver?.disconnect()
       }, { threshold: 0.25 })
       hopObserver.observe(el)

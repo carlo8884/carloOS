@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Lock the funnel event names and their parameters.
- * calculator_complete (site, tool) → hop_view (site, page, hop) → affiliate_click.
+ * calculator_complete (site, tool) → hop_view (site, page, hop, experiment params) → affiliate_click.
  * guide_signup_submit (site, page, result) carries no address or email.
  * guide_checklist_copy / guide_checklist_print (site, page) replace that
  * form until NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE is exactly "true".
@@ -21,7 +21,7 @@ const EVENTS = [
   {
     name: 'hop_view',
     file: 'packages/ui/src/components/JourneyEvents.tsx',
-    call: /trackEvent\(\s*'hop_view'\s*,\s*\{\s*site\s*,\s*page\s*,\s*hop\s*\}\s*\)/,
+    call: /trackEvent\(\s*'hop_view'\s*,\s*\{\s*site\s*,\s*page\s*,\s*hop\s*,\s*\.\.\.experimentEventParams\(\)\s*\}\s*\)/,
   },
   {
     name: 'guide_signup_submit',
@@ -70,6 +70,11 @@ if (!/IntersectionObserver/.test(journey)) hits.push('hop_view does not use Inte
 if (!/querySelectorAll\('a\[href\*="\/go\/"\]'\)/.test(journey)) hits.push('single-hop pages are not observed')
 if (!/anchors\.length === 1/.test(journey)) hits.push('hop_view must ignore pages with several unmarked hops')
 if (!/trackEvent\(\s*'affiliate_click'/.test(click)) hits.push('affiliate_click missing from the click listener')
+if (!/\.\.\.experimentEventParams\(\)/.test(click)) hits.push('affiliate_click missing experiment params')
+const experiments = read('packages/ui/src/lib/experiments.ts')
+if (!/NEXT_PUBLIC_EXPERIMENT_CRATE_HOP_LABEL/.test(experiments)) hits.push('crate hop experiment flag is undocumented')
+if (!/return value === 'true'/.test(experiments)) hits.push('crate hop experiment must require the exact string true')
+if (/NEXT_PUBLIC_EXPERIMENT_CRATE_HOP_LABEL\s*=\s*['"]true['"]/.test(experiments)) hits.push('crate hop experiment must not be hardcoded on')
 
 const earning = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
 const apps = readdirSync(join(root, 'apps'))
