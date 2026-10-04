@@ -287,7 +287,7 @@ export default function DogWellnessExamPage() {
             sources={[
               { label: 'AAHA Canine Life Stage Guidelines', url: 'https://www.aaha.org/aaha-guidelines/life-stage-canine-2019/life-stage-canine-2019/', publisher: 'AAHA' },
               { label: 'Your Pet’s Annual Wellness Examination', url: 'https://www.avma.org/resources-tools/pet-owners/petcare', publisher: 'AVMA' },
-              { label: 'AAHA Accreditation — What It Means', url: 'https://www.aaha.org/your-pet/pet-owner-education/', publisher: 'AAHA' },
+              { label: 'AAHA Accreditation — What It Means', url: 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/', publisher: 'AAHA' },
               { label: 'Routine Health Care of Dogs', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-and-breeding-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Veterinary Manual' },
             ]}
           />

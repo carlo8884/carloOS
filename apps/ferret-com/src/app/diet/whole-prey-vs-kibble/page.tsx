@@ -205,7 +205,7 @@ export default function WholePreyVsKibblePage() {
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
             ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
+            ctaHref="/go/wysong/ferret+epigen+90?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />

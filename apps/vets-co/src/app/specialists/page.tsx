@@ -332,7 +332,7 @@ export default function SpecialistsHubPage() {
           <ul className="space-y-2 text-sm text-brand-text-mid list-none p-0">
             <li>
               <a
-                href="https://www.acvim.org/About/Find-a-Specialist"
+                href="https://www.acvim.org/resources-tools/animal-owners"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
@@ -343,7 +343,7 @@ export default function SpecialistsHubPage() {
             </li>
             <li>
               <a
-                href="https://www.acvd.org/find-a-dermatologist"
+                href="https://acvd.org/find-a-veterinary-dermatologist/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
@@ -353,7 +353,7 @@ export default function SpecialistsHubPage() {
             </li>
             <li>
               <a
-                href="https://www.acvo.org/find-a-veterinary-ophthalmologist"
+                href="https://www.acvo.org/ophthalmologist-search"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
@@ -363,7 +363,7 @@ export default function SpecialistsHubPage() {
             </li>
             <li>
               <a
-                href="https://acvecc.org/find-an-ecc-specialist/"
+                href="https://acvecc.org/Find-an-ACVECC-Specialist"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"
@@ -384,7 +384,7 @@ export default function SpecialistsHubPage() {
             </li>
             <li>
               <a
-                href="https://avdc.org/find-a-veterinary-dentist/"
+                href="https://www.avdc-dms.org/dms/list/diplomates.cfm"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"

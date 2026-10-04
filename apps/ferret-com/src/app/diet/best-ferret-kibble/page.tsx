@@ -280,7 +280,7 @@ export default function BestFerretKibblePage() {
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             ctaText="Find Wysong Epigen 90"
-            ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
+            ctaHref="/go/wysong/ferret+epigen+90?s=diet-best-ferret-kibble"
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
@@ -326,10 +326,6 @@ export default function BestFerretKibblePage() {
             pros={['Ingredient transparency', 'Fresh product', 'Animal-first panel', 'Direct support from a smaller brand']}
             cons={['Subscription logistics', 'No retail backup', 'Shorter community track record than Marshall or Wysong']}
             price="Subscription pricing"
-            ctaText="Visit Carniwhole"
-            ctaHref="/go/carniwhole/ferret-diet?s=diet-best-ferret-kibble"
-            ctaAffiliateProgram="carniwhole"
-            ctaAffiliateProduct="ferret-diet"
           />
 
           <h2 id="who">Who should buy which kibble</h2>

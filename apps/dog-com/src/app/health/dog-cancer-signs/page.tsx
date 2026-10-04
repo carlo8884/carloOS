@@ -6,7 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer Prevalence', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
   { label: 'AVMA: Cancer in Animals — Warning Signs and Risk Factors', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
-  { label: 'American College of Veterinary Internal Medicine (ACVIM): Oncology — Canine Cancer Resources', url: 'https://www.acvim.org/Specialties/Oncology', publisher: 'ACVIM Oncology' },
+  { label: 'American College of Veterinary Internal Medicine (ACVIM): Oncology — Canine Cancer Resources', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
   { label: 'Merck Veterinary Manual: Overview of Tumors of the Skin and Soft Tissues in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/tumors-of-the-skin-and-soft-tissues-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
 ]
 

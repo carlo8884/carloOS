@@ -16,7 +16,7 @@
  *
  * Sources for species suitability defaults:
  *   - AVMA Animal Welfare Division species-care guidelines
- *     https://www.avma.org/resources-tools/animal-health-welfare
+ *     https://www.avma.org/resources-tools/pet-owners
  *   - ASPCA species-care guides (dog / cat / fish / reptile / small mammal /
  *     bird / horse) https://www.aspca.org/pet-care
  *

@@ -5,7 +5,7 @@ import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 const SOURCES = [
   { label: 'AVDC: American Veterinary Dental College — Periodontal Disease in Dogs', url: 'https://afd.avdc.org', publisher: 'AVDC' },
-  { label: 'WSAVA Global Dental Guidelines — Home Care and Professional Dental Cleaning', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
+  { label: 'WSAVA Global Dental Guidelines — Home Care and Professional Dental Cleaning', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care-guidelines/dental-care-guidelines/', publisher: 'AAHA' },
   { label: 'Veterinary Oral Health Council (VOHC): Accepted Products for Plaque and Tartar Control in Dogs', url: 'http://www.vohc.org/pets.html', publisher: 'VOHC' },
 ]
@@ -54,7 +54,7 @@ export default function DogDentalCarePage() {
           <h2>The Hierarchy of Dental Care Effectiveness</h2>
           <DropCap>Not all dental interventions are equally effective. Evidence-based ranking from most to least effective:</DropCap>
           <ol>
-            <li><strong>Daily toothbrushing</strong> — the gold standard. A soft-bristled toothbrush and enzymatic toothpaste (CET Enzymatic, Vetradent — never human fluoride toothpaste) physically disrupts plaque before it mineralizes to tartar. Veterinary dental literature (<a href="https://afd.avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVDC</a>, <a href="https://wsava.org/global-guidelines/global-dental-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Dental Guidelines</a>) is consistent: daily brushing produces significantly better outcomes than any other home-care intervention. The enzymatic action continues after brushing.</li>
+            <li><strong>Daily toothbrushing</strong> — the gold standard. A soft-bristled toothbrush and enzymatic toothpaste (CET Enzymatic, Vetradent — never human fluoride toothpaste) physically disrupts plaque before it mineralizes to tartar. Veterinary dental literature (<a href="https://afd.avdc.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVDC</a>, <a href="https://wsava.org/global-guidelines/dental-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Dental Guidelines</a>) is consistent: daily brushing produces significantly better outcomes than any other home-care intervention. The enzymatic action continues after brushing.</li>
             <li><strong>VOHC-accepted dental chews</strong> — Greenies, Whimzees, and similar products carry the VOHC seal because they have published evidence of plaque or tartar reduction. They are meaningful supplements to brushing but not substitutes for it. Non-VOHC dental chews have no proven efficacy.</li>
             <li><strong>Water additives and dental gels</strong> — VOHC-accepted water additives provide some antimicrobial benefit. Convenient and easy to use as a supplement. Minimal effect used alone.</li>
             <li><strong>Dental diets</strong> — Hill's t/d (prescription) and other dental-formula foods use oversized kibble that the tooth sinks into, providing mechanical cleaning across a larger surface area. More effective than standard kibble for tartar control.</li>

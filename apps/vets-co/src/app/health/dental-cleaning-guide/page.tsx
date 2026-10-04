@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Vet
 const SOURCES = [
   { label: 'AVDC: Companion Animal Periodontal Disease', url: 'https://avdc.org/avdc-nomenclature/', publisher: 'American Veterinary Dental College' },
   { label: 'AAHA: Dental Care Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/dental-care/', publisher: 'AAHA' },
-  { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/global-dental-guidelines/', publisher: 'WSAVA' },
+  { label: 'WSAVA: Dental Assessment, Treatment and Prevention Guidelines', url: 'https://wsava.org/global-guidelines/dental-guidelines/', publisher: 'WSAVA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning Guide', description: 'Dental grading, anesthesia safety, and what to expect from professional dental cleaning.', url: 'https://vets.co/health/dental-cleaning-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,

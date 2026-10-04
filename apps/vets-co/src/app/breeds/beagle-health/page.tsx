@@ -384,7 +384,7 @@ export default function VetsBeagleHealthPage() {
             <li>Podell M, Volk HA, Berendt M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. <em>J Vet Intern Med.</em> 2016;30(2):477–490.</li>
             <li>Bader HL, Ruhe AL, Wang LW et al. An ADAMTSL2 founder mutation causes Musladin-Lueke Syndrome, a heritable disorder of beagle dogs, featuring stiff skin and joint contractures. <em>PLoS Genet.</em> 2010;6(9):e1001037.</li>
             <li>Fyfe JC, Hemker SL, Venta PJ et al. Selective intestinal cobalamin malabsorption with proteinuria (Imerslund-Gräsbeck syndrome) in juvenile Beagles. <em>J Vet Intern Med.</em> 2014;28(2):356–362.</li>
-            <li><a href="https://www.akcchf.org/canine-health/your-dogs-health/disease-information/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AKC Canine Health Foundation</a> — Beagle-funded research summaries.</li>
+            <li><a href="https://www.akcchf.org/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AKC Canine Health Foundation</a> — Beagle-funded research summaries.</li>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — hip, thyroid and eye registries.</li>
             <li><a href="https://www.wsava.org/global-guidelines/global-nutrition-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Nutrition Guidelines</a> — obesity as a disease.</li>
           </ul>

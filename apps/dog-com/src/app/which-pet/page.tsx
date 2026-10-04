@@ -66,7 +66,7 @@ const quizSchema = {
     {
       '@type': 'CreativeWork',
       name: 'AVMA Animal Welfare Division — Species Care Guidelines',
-      url: 'https://www.avma.org/resources-tools/animal-health-welfare',
+      url: 'https://www.avma.org/resources-tools/pet-owners',
       publisher: { '@type': 'Organization', name: 'American Veterinary Medical Association' },
     },
     {
@@ -209,7 +209,7 @@ export default function WhichPetPage() {
           This wizard asks ten questions about your living space, schedule, allergies, budget, and experience, then surfaces three species ranked against AVMA Animal Welfare Division and ASPCA species-suitability references. The quiz itself is ungated. Your answers never leave your browser.
         </p>
         <p className="text-sm leading-relaxed text-brand-text-light mb-8">
-          Built by Dog.com Editorial. Citations: <a href="https://www.avma.org/resources-tools/animal-health-welfare" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AVMA Animal Welfare Division</a> and <a href="https://www.aspca.org/pet-care" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">ASPCA Pet Care guides</a>. No paid placement of any species.
+          Built by Dog.com Editorial. Citations: <a href="https://www.avma.org/resources-tools/pet-owners" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">AVMA Animal Welfare Division</a> and <a href="https://www.aspca.org/pet-care" target="_blank" rel="noopener noreferrer" className="text-brand-primary hover:underline">ASPCA Pet Care guides</a>. No paid placement of any species.
         </p>
 
         {/* The wizard */}
@@ -447,7 +447,7 @@ export default function WhichPetPage() {
             <li>
               American Veterinary Medical Association — Animal Welfare Division.{' '}
               <a
-                href="https://www.avma.org/resources-tools/animal-health-welfare"
+                href="https://www.avma.org/resources-tools/pet-owners"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-brand-primary hover:underline"

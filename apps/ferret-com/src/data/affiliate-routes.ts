@@ -36,13 +36,13 @@ export const affiliateRoutes: Record<string, AffiliateRoute> = {
   marshall: {
     // Network: ShareASale or Direct. Carlo-approved per policy §5.
     name: 'Marshall Pet Products',
-    template: 'https://marshallpet.com/product/{sku}?ref=PLACEHOLDER',
+    template: 'https://www.marshallpet.com/search?q={sku}&ref=PLACEHOLDER',
     requiresSku: true,
   },
   wysong: {
     // Network: Direct. Carlo-approved per policy §5.
     name: 'Wysong',
-    template: 'https://wysong.net/product/{sku}?utm_source=carloOS&aff=PLACEHOLDER',
+    template: 'https://www.wysong.net/search?q={sku}&utm_source=carloOS&aff=PLACEHOLDER',
     requiresSku: true,
   },
   // ─── Round-1 wiring 2026-05-30 (policy §5 ferret-com row addition) ───
