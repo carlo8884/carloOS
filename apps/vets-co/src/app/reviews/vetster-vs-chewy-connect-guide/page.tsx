@@ -49,7 +49,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-chewy-connect-guide" label="Visit Vetster" />}
+      heroHop={<PrimaryHop href="/go/vetster/telehealth?s=reviews-vetster-vs-connect-guide" label="Visit Vetster" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
