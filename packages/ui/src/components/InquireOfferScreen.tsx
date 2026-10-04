@@ -1,5 +1,12 @@
+import { dogInquireCaptureEnabled, vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { StockImage } from './StockImage'
 import { InquireForm } from './InquireForm'
+
+function offerOpen(siteName: string): boolean {
+  if (siteName === 'Dog.com') return dogInquireCaptureEnabled()
+  if (siteName === 'Vets.co') return vetsInquireCaptureEnabled()
+  return true
+}
 
 export function InquireOfferScreen({
   siteName,
@@ -19,7 +26,7 @@ export function InquireOfferScreen({
         <h1 className="text-white text-center font-display font-bold italic text-3xl mb-5">
           Make an offer
         </h1>
-        <InquireForm siteName={siteName} />
+        <InquireForm siteName={siteName} open={offerOpen(siteName)} />
       </div>
     </section>
   )

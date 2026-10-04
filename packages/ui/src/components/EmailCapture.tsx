@@ -12,6 +12,7 @@
  */
 
 import { useState, useCallback, useId, useMemo } from 'react'
+import { fishSubscribeFormVisible } from '@carloOS/config/capture-flags'
 import { JUNK_EMAIL_MESSAGE, isJunkEmail } from '@carloOS/config/form-guard'
 import { guideAddressCaptureEnabled } from '../lib/guide-checklist'
 import { trackEvent } from '../lib/track-event'
@@ -53,6 +54,11 @@ interface EmailCaptureProps {
   resourceHref?: string
   resourceLabel?: string
   /**
+   * Server-computed fish subscribe switch. When omitted, the client uses
+   * the public flag and the public inbox marker so server HTML matches hydration.
+   */
+  captureOpen?: boolean
+  /**
    * Store the address only. The form stays in this file and posts to
    * /api/subscribe, but it renders only when
    * NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE is exactly "true".
@@ -77,6 +83,7 @@ export function EmailCapture({
   resourceText,
   resourceHref,
   resourceLabel,
+  captureOpen,
   addressOnly = false,
   checklist,
 }: EmailCaptureProps) {
@@ -157,7 +164,11 @@ export function EmailCapture({
     return null
   }
 
-  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId) && !addressOnly) {
+  const fishSubscribeOpen = siteId === 'fish-com' && !addressOnly
+    ? (captureOpen ?? fishSubscribeFormVisible())
+    : false
+
+  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId) && !addressOnly && !fishSubscribeOpen) {
     return (
       <OnPageMagnet
         variant={variant}

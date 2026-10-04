@@ -13,6 +13,7 @@
     "./directory": "./directory.ts",
     "./subscribe": "./subscribe.ts",
     "./form-guard": "./form-guard.ts",
+    "./capture-flags": "./capture-flags.ts",
     "./email-under-hero": "./email-under-hero.ts"
   }
 }

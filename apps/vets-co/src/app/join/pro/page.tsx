@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { directoryClaimPrefill } from '@carloOS/config'
+import { vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
@@ -45,6 +46,7 @@ export default function JoinProPage({
             siteName="Vets.co"
             intent="pro-application"
             variant="page"
+            open={vetsInquireCaptureEnabled()}
             defaultCity={prefill.city}
             defaultMessage={prefill.message}
             defaultListing={prefill.listing}
@@ -53,8 +55,8 @@ export default function JoinProPage({
 
         <h2>Owners: get a note when claimed pages exist</h2>
         <p>
-          The form above is for clinics applying for a page. One email when
-          accepted pages exist — no invented directory.
+          Clinic applications stay on this page only when the inbox is connected.
+          Owners looking for care should use the directory.
         </p>
       </div>
     </ArticleLayout>
