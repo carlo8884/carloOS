@@ -52,6 +52,7 @@ export default function ForageBasicsPage() {
     <>
       <SchemaScript schema={articleSchema} />
       <ArticleLayout
+        priceAsOf="2026-09-02"
         siteId="horses-com"
         contentType="nutrition"
         relatedLinks={[

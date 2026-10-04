@@ -129,6 +129,7 @@ export default function DiagnosticPage({ params }: PageProps) {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
+        priceAsOf="2026-05-30"
         siteId="vets-co"
         hero={{
           title: `${d.testName}`,

@@ -23,6 +23,7 @@ import {
   SchemaScript,
   StockImage,
   CrossPortfolioCard,
+  PriceAsOf
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../data/breeds'
 import {
@@ -141,6 +142,7 @@ export default function CompareHubPage() {
         >
           Compare Dog Breeds
         </h1>
+        <PriceAsOf date="2026-06-11" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           {hydrated.length} side-by-side comparisons covering the most common
           breed-vs-breed decisions, drawn from AKC breed-standard data, OFA

@@ -7,6 +7,7 @@ import {
   buildBreadcrumbSchema,
   AffiliateDisclosure,
   ShopCtas,
+  PriceAsOf
 } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -184,6 +185,7 @@ export default function EmergencyTriageCardPage() {
             Pet Emergency<br />
             <span className="text-brand-primary">Triage Guide.</span>
           </h1>
+          <PriceAsOf date="2026-05-28" tone="dark" />
           <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">When a pet symptom is ER-immediate, when it
             is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
             dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance. No email signup required.</p>

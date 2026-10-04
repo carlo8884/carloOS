@@ -190,7 +190,7 @@ export default function FerretLymphomaPage() {
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
           { title: 'Signs of Pain', href: '/health/signs-of-pain' },
         ]}
->
+ priceAsOf="2026-05-30">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

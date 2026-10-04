@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi, Whistle | Dog.com', description: 'Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi, Whistle, and Tractive GPS dog trackers ranked.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -19,6 +19,7 @@ export default function BestGPSTrackerPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
       <QuickPicks items={PICKS} />

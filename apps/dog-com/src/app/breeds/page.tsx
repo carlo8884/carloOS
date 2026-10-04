@@ -5,7 +5,7 @@
 
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, StockImage, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { Breeds, groupBreedsByAKCGroup, groupBreedsBySize, type SizeCategory } from '../../data/breeds'
 
@@ -191,6 +191,7 @@ export default async function BreedsPage() {
           >
             Dog Breed Guide
           </h1>
+          <PriceAsOf date="2026-06-11" tone="dark" />
           <p
             className="text-lg font-light text-white/85 max-w-xl leading-relaxed"
             style={{ textShadow: '0 1px 10px rgba(0,0,0,0.5)' }}

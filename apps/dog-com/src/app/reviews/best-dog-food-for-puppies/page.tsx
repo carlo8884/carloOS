@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,6 +45,7 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
+        <PriceAsOf date="2026-06-06" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The most important rule in puppy nutrition: large breeds (expected adult weight 50+ lbs) must eat a large breed puppy formula. We ranked by <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials, and whether the manufacturer employs board-certified veterinary nutritionists.
         </p>

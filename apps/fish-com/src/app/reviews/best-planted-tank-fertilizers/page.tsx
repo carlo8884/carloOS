@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -30,6 +30,7 @@ export default function BestPlantedFertilizersPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Plants need more than light and CO2. Macro and micronutrients drive growth, color, and health. The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.</p>
       </div>
       <QuickPicks items={PICKS} />

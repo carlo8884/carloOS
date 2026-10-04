@@ -12,7 +12,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 type Housing = 'starter' | 'multilevel' | 'room'
 type FoodStyle = 'kibble' | 'kibble-topper' | 'whole-prey'
@@ -224,6 +224,7 @@ export default function CostCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      <PriceAsOf date="2026-06-02" />
       <div className="mb-6">
         <p className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">Housing</p>
         <div className="flex flex-wrap rounded border border-brand-border overflow-hidden">

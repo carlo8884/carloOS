@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
@@ -22,6 +22,7 @@ export default function BestSmallBreedFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />

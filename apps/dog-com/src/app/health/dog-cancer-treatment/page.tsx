@@ -44,7 +44,7 @@ export default function DogCancerTreatmentPage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-      >
+       priceAsOf="2026-06-11">
         <div className="carloOS-article">
 
           <h2 id="chemo">Chemotherapy — Not What Most Owners Expect</h2>

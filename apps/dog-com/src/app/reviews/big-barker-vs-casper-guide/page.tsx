@@ -64,7 +64,7 @@ export default function BigBarkerVsCasperGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-dog-beds">bed review</Link> already splits this purchase. Big Barker is the orthopedic card. Casper is the premium washable card. Scores on those cards are editorial scores, not customer star ratings.</p>
         <h2>What the Big Barker card already says</h2>

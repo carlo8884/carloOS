@@ -44,6 +44,7 @@ export default function SaddleFitBasicsPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout
+        priceAsOf="2026-05-31"
         siteId="horses-com"
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },

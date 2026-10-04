@@ -13,7 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 interface BoardOption {
   value: string
@@ -179,6 +179,7 @@ export default function Calculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      <PriceAsOf date="2026-06-11" />
       {/* Board type */}
       <div className="mb-5">
         <label htmlFor="hc-board-type" className="mb-1 block text-sm font-medium text-brand-text-dark">

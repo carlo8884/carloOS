@@ -143,6 +143,20 @@ jobs:
       - name: Run hop-target
         run: node scripts/ci/hop-target.mjs
 
+  price-as-of:
+    name: Price figures carry their git as-of date
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run price-as-of
+        run: node scripts/ci/price-as-of.mjs
+
   how-we-pick:
     name: How we pick pages and comparison last-updated dates
     runs-on: ubuntu-latest

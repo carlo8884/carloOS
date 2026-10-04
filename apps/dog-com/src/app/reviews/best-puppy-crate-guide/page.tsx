@@ -65,7 +65,7 @@ export default function BestPuppyCrateGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-03">
       <div className="carloOS-article">
         <p>House-training a puppy is a floor-space problem before it is a brand problem. The crate has to be large enough for the adult dog the puppy will become, and small enough that the puppy cannot soil one end and sleep in the other. The <Link href="/reviews/best-dog-crates">crate review</Link> already names the tool for that job: the MidWest Homes iCrate, because the divider panel ships in the box.</p>
         <h2>What the wire crate already includes</h2>

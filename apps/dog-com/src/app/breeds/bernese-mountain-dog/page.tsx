@@ -40,7 +40,7 @@ export default function BerneseMountainDogPage() {
         <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="sidebar" />
 
       </>}
-    >
+     priceAsOf="2026-06-11">
       <div className="carloOS-article">
         <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2025-05-01T00:00:00Z" reviewedBy="Editorial team" />
 

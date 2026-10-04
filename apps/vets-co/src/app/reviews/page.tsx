@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, DirectoryPlacesCta, PriceAsOf } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -52,6 +52,9 @@ export default function VetsReviewsPage() {
         primaryCta={{ href: '/reviews/best-pet-insurance', label: 'Compare pet insurance' }}
         secondaryCta={{ href: '/telehealth', label: 'Compare telehealth' }}
       />
+      <div className="px-container-sm sm:px-container pt-6">
+        <PriceAsOf date="2026-06-06" />
+      </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <span className="text-brand-text-mid">Reviews</span>

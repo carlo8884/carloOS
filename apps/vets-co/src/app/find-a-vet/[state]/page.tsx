@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import Link from 'next/link'
-import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildArticleSchema, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
 import { listingsForState, normalizeStateSlug } from '@carloOS/config/directory'
 import { DirectoryPackEmpty } from '../../../components/DirectoryPackEmpty'
 import { States } from '../../../data/states'
@@ -94,6 +94,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(24px, 4vw, 48px)' }}>
           Find a Vet in {state.name}
         </h1>
+        <PriceAsOf date="2026-05-28" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           {hasImportedRows
             ? `How to choose a ${state.abbr} general-practice vet, a 24-hour emergency hospital, and a board-certified specialist. Unclaimed license-board stubs for ${state.name} are on the Vets.co directory.`

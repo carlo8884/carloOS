@@ -125,6 +125,7 @@ const articleSchema = buildArticleSchema({
 export default function InsuranceReimbursementEstimatorPage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-05-31"
       siteId="vets-co"
       hero={{
         title: 'Pet Insurance Reimbursement Estimator',

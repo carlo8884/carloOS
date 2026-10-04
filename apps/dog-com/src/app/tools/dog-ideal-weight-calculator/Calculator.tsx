@@ -24,7 +24,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 import { Breeds } from '../../../data/breeds'
 
 type Unit = 'lb' | 'kg'
@@ -174,6 +174,7 @@ export default function DogIdealWeightCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      <PriceAsOf date="2026-06-11" />
       <div className="grid gap-5 md:grid-cols-2">
         {/* Breed */}
         <div className="md:col-span-2">

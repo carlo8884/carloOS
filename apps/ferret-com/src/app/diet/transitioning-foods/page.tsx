@@ -86,7 +86,7 @@ export default function TransitioningFoodsPage() {
           { title: 'Whole Prey vs. Kibble', href: '/diet/whole-prey-vs-kibble' },
           { title: 'Kit vs. Adult Feeding', href: '/diet/kit-vs-adult-feeding' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

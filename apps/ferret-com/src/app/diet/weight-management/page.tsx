@@ -89,7 +89,7 @@ export default function WeightManagementPage() {
           { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
           { title: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

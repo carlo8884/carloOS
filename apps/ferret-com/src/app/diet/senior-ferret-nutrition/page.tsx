@@ -87,7 +87,7 @@ export default function SeniorFerretNutritionPage() {
           { title: 'Weight Management', href: '/diet/weight-management' },
           { title: 'Insulinoma', href: '/health/insulinoma' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

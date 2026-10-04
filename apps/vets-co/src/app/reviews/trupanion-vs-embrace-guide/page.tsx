@@ -39,6 +39,7 @@ const FAQS = [
 export default function TrupanionVsEmbraceGuidePage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-10-04"
       siteId="vets-co"
       schema={schema}
       hero={{

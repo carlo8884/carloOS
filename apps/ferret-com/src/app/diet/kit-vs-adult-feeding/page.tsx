@@ -87,7 +87,7 @@ export default function KitVsAdultFeedingPage() {
           { title: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition' },
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

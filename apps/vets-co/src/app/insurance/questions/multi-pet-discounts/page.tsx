@@ -18,6 +18,7 @@ export default function Page() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
+        priceAsOf="2026-06-11"
         hero={{ title: 'Are There Multi-Pet Pet Insurance Discounts?', subtitle: 'Most insurers offer a multi-pet discount of roughly 5–10% per additional pet on the same account. It is a real but modest saving — coverage terms, limits, and claim handling matter far more than the discount when you insure more than one pet.', category: 'Insurance Q&A', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '5 min' }}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Multi-Pet Discounts', href: '/insurance/questions/multi-pet-discounts' }]}
         sidebar={<>

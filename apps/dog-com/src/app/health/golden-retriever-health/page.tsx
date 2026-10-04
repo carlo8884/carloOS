@@ -101,7 +101,7 @@ export default function GoldenRetrieverHealthPage() {
         { title: 'Best Pet Insurance', href: 'https://vets.co/reviews/best-pet-insurance', category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
-    >
+     priceAsOf="2026-06-11">
       <div className="carloOS-article">
 
         <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />

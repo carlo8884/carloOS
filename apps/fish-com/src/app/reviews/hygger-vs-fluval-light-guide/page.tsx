@@ -64,7 +64,7 @@ export default function HyggerVsFluvalLightGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-aquarium-lighting">lighting review</Link> already names the Hygger 957 as the overall planted pick for most tanks, and the Fluval Plant 3.0 when the tank needs the higher published PAR and app control. Scores on those cards are editorial scores, not customer star ratings.</p>
         <h2>What the Hygger card already says</h2>

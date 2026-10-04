@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -22,6 +22,7 @@ export default function BestSlowFeederBowlsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A $15 bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />

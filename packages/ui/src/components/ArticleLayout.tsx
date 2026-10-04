@@ -20,6 +20,7 @@ import { Breadcrumb } from './Breadcrumb'
 import { CrossPortfolioCard } from './CrossPortfolioCard'
 import { RelatedReads } from './RelatedReads'
 import { SchemaScript } from './SEOHead'
+import { PriceAsOf } from './PriceAsOf'
 
 interface ArticleHero {
   title: string
@@ -53,6 +54,8 @@ interface ArticleLayoutProps {
   contentType?: ContentType
   /** Top-pick hop rendered under the subtitle, still inside the hero. */
   heroHop?: ReactNode
+  /** Git date of the newest dollar figure on the page. */
+  priceAsOf?: string
 }
 
 export function ArticleLayout({
@@ -65,6 +68,7 @@ export function ArticleLayout({
   relatedLinks,
   contentType,
   heroHop,
+  priceAsOf,
 }: ArticleLayoutProps) {
   // SINGLE SOURCE OF TRUTH for BreadcrumbList JSON-LD = the inner <Breadcrumb>
   // (rendered below), which emits exactly one BreadcrumbList from the same
@@ -192,6 +196,7 @@ export function ArticleLayout({
 
           {/* Article body */}
           <article className="carloOS-article min-w-0">
+            {priceAsOf ? <PriceAsOf date={priceAsOf} /> : null}
             {children}
           </article>
 

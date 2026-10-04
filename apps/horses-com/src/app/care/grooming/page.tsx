@@ -98,7 +98,7 @@ export default function GroomingPage() {
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
 
         </>}
-      >
+       priceAsOf="2026-06-07">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Horses.com Editorial"

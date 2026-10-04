@@ -87,6 +87,7 @@ export default function ClaimingRacesPage() {
       />
 
       <ArticleLayout
+        priceAsOf="2026-06-07"
         siteId="horses-com"
         contentType="training"
         relatedLinks={[

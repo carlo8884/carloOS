@@ -19,6 +19,7 @@ import {
   RelatedLinks,
   SchemaScript,
   buildMetadata,
+  PriceAsOf
 } from '@carloOS/ui'
 import {
   getBreedsWithInsuranceProfile,
@@ -95,6 +96,7 @@ export default function BreedInsuranceHubPage() {
         >
           Pet Insurance by Dog Breed
         </h1>
+        <PriceAsOf date="2026-06-11" tone="dark" />
         <p className="text-base font-light text-white/70 leading-relaxed max-w-2xl">
           Different breeds carry different hereditary risks — so the case for
           pet insurance, and what to look for in a policy, is breed-specific.

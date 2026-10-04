@@ -195,7 +195,7 @@ export default function FerretAdrenalDiseasePage() {
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
           { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-adrenal"

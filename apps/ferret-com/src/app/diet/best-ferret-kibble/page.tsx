@@ -171,7 +171,7 @@ export default function BestFerretKibblePage() {
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
->
+ priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

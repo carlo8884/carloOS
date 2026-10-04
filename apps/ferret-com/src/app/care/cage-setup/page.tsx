@@ -135,7 +135,7 @@ export default function FerretCageSetupPage() {
           { title: 'Cage Cleaning Routine', href: '/care/cage-cleaning-routine' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-cage-setup"

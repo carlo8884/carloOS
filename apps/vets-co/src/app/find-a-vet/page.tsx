@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, PriceAsOf} from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 import { DirectoryPackEmpty } from '../../components/DirectoryPackEmpty'
@@ -117,6 +117,7 @@ export default function FindAVetPage() {
             const inRegion = States.filter((s) => s.region === region).sort((a, b) => a.name.localeCompare(b.name))
             return (
               <div key={region} className="mb-6">
+                <PriceAsOf date="2026-05-25" />
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">{region}</div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                   {inRegion.map((s) => (

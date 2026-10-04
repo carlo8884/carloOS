@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -45,6 +45,7 @@ export default function BestJointSupplementsPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Joint Supplements for Dogs 2026
         </h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The pet supplement market is full of products with minimal evidence. We graded each major joint supplement category by the actual research — what works, what&apos;s promising, and what&apos;s expensive placebo.
         </p>

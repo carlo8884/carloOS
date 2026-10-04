@@ -121,7 +121,7 @@ export default function ProteinAndFatRequirementsPage() {
           { title: 'Raw Feeding Guide', href: '/diet/raw-feeding-guide' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
->
+ priceAsOf="2026-06-01">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

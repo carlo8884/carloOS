@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext } from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -18,6 +18,7 @@ export default function BestDentalChewsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2026</h1>
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Only chews with the VOHC (Veterinary Oral Health Council) seal have clinical evidence for plaque and tartar reduction. Look for the VOHC seal — not just "dental" marketing claims.</p>
       </div>

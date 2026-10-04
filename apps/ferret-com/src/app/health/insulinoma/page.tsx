@@ -198,7 +198,7 @@ export default function FerretInsulinomaPage() {
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Weight Management', href: '/diet/weight-management' },
         ]}
->
+ priceAsOf="2026-05-30">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:health-insulinoma"

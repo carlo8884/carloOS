@@ -186,7 +186,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
 
         </>
       }
-    >
+     priceAsOf="2026-06-13">
       <ArticleByline
         siteName="Dog.com Editorial — sourced from cited references"
         publishedAt="2026-05-29T00:00:00Z"

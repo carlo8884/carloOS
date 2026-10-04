@@ -39,6 +39,7 @@ const FAQS = [
 export default function VetsterVsAskvetGuidePage() {
   return (
     <ArticleLayout
+      priceAsOf="2026-10-03"
       siteId="vets-co"
       schema={schema}
       hero={{

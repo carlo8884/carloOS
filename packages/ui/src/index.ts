@@ -18,6 +18,7 @@ export {
 export { Nav } from './components/Nav'
 export { Footer } from './components/Footer'
 export { ArticleLayout } from './components/ArticleLayout'
+export { PriceAsOf } from './components/PriceAsOf'
 export { Breadcrumb } from './components/Breadcrumb'
 
 // Content components

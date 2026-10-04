@@ -9,6 +9,7 @@ import {
   FAQAccordion,
   SchemaScript,
   StockImage,
+  PriceAsOf
 } from '@carloOS/ui'
 import { Diagnostics, type Diagnostic, type DiagnosticCategory } from '../../data/diagnostics'
 
@@ -151,6 +152,7 @@ export default function DiagnosticsHubPage() {
         >
           Pet Diagnostic Tests
         </h1>
+        <PriceAsOf date="2026-06-14" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           What {Diagnostics.length} common veterinary diagnostic tests measure, why a vet orders
           them, what results mean in plain language, and typical US cost ranges — sourced from{' '}

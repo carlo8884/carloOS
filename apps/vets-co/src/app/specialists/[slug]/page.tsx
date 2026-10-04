@@ -156,6 +156,7 @@ export default function SpecialistPage({ params }: PageProps) {
 
   return (
     <ArticleLayout
+      priceAsOf="2026-05-30"
       siteId="vets-co"
       schema={combined}
       hero={{

@@ -91,6 +91,7 @@ export default function EquineDentalCarePage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout
+        priceAsOf="2026-05-28"
         siteId="horses-com"
         relatedLinks={[
           { title: 'Guides Hub', href: '/guides', category: 'Guides' },

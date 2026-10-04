@@ -142,7 +142,7 @@ export default function FerretDiggingBurrowingPage() {
           { title: 'Dooking & Vocalizations', href: '/behavior/dooking-and-vocalizations' },
           { title: 'Stress Signs', href: '/behavior/stress-signs' },
         ]}
->
+ priceAsOf="2026-06-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

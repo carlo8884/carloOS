@@ -90,6 +90,7 @@ export default function VetsYorkshireTerrierHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
+        priceAsOf="2026-05-28"
         siteId="vets-co"
         contentType="breed"
         hero={{

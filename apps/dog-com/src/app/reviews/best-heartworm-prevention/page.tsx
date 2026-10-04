@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard } from '@carloOS/ui'
+import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2026 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
@@ -24,6 +24,7 @@ export default function BestHeartwormPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Heartworm Prevention for Dogs 2026</h1>
+        <PriceAsOf date="2026-05-25" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Heartworm prevention costs $8–15/month. Treatment costs $1,000–2,000+ and requires months of strict rest. All options listed here require a prescription — your vet will recommend one based on your dog's risk profile and region.</p>
       </div>
       <QuickPicks items={PICKS} />

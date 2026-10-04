@@ -164,7 +164,7 @@ export default function FerretExerciseEnrichmentPage() {
           { title: 'Ferret-Proofing Your Home', href: '/care/ferret-proofing-your-home' },
           { title: 'Cage Setup', href: '/care/cage-setup' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-exercise"

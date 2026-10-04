@@ -163,7 +163,7 @@ export default function FerretToxicFoodsPage() {
           { title: 'Diet Basics', href: '/care/diet-basics' },
           { title: 'Gastrointestinal Blockage', href: '/health/gastrointestinal-blockage' },
         ]}
->
+ priceAsOf="2026-05-29">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

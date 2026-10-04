@@ -129,7 +129,7 @@ export default function DogMicrochippingPage() {
 
           </>
         }
-      >
+       priceAsOf="2026-06-11">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Dog.com Editorial"

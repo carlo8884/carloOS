@@ -151,7 +151,7 @@ export default function FerretDietBasicsPage() {
           { title: 'Toxic Foods', href: '/care/toxic-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
->
+ priceAsOf="2026-05-31">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:care-diet-basics"

@@ -186,7 +186,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
 
         </>
       }
-    >
+     priceAsOf="2026-05-29">
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-29T00:00:00Z" updatedAt="2026-05-29T00:00:00Z" reviewedBy="Editorial team" />
 

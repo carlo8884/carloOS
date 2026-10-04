@@ -65,7 +65,7 @@ export default function HobVsCanisterGuidePage() {
           ]}
         />
       }
-    >
+     priceAsOf="2026-10-03">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-aquarium-filters">filter review</Link> ranks a hang-on-back, a canister, a sponge, and a budget hang-on-back. The buying question that sends people to a second tab is narrower: AquaClear 70 or Fluval 307. The flow numbers on those two cards are close. The maintenance, the noise, the price, and the space under the tank are not.</p>
         <h2>Hang-on-back: AquaClear 70</h2>

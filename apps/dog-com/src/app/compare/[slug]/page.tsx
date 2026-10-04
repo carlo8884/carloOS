@@ -30,6 +30,7 @@ import {
   RelatedLinks,
   ShopCtas,
   StockImage,
+  PriceAsOf
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../../data/breeds'
 import {
@@ -456,6 +457,7 @@ export default async function ComparePage({ params }: PageProps) {
         >
           {a.name} vs {b.name}: Which is right for you?
         </h1>
+        <PriceAsOf date="2026-06-11" tone="dark" />
         <p className="text-base font-light text-white/65 leading-relaxed max-w-2xl">
           Side-by-side comparison drawn from AKC breed standards, OFA hereditary
           health prevalence data, and the published veterinary literature.
