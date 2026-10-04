@@ -43,8 +43,8 @@ export default function BestWaterTestKitsPage() {
         <span className="text-brand-text-mid">Best Water Test Kits</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_260px] gap-14 min-w-0">
+          <div className="min-w-0">
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
@@ -54,7 +54,7 @@ export default function BestWaterTestKitsPage() {
               siteId="fish-com"
               nextHref="/water-parameters"
               nextLabel="Read the weekly test-order table next"
-              nextBlurb="The callout is the kit pick — API Master for freshwater pH, ammonia, nitrite, and nitrate. The water-parameters table is the weekly order and the target ranges. The hop below is the same API Master Test Kit search already on this page."
+              nextBlurb="The callout is the kit pick — API Master for freshwater pH, ammonia, nitrite, and nitrate. The water-parameters table is the weekly order and the target ranges. The link below searches Amazon for the API Freshwater Master Test Kit, the same search as on this page."
               resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
               resourceLabel="Browse API Freshwater Master Test Kit on Amazon →"
             />

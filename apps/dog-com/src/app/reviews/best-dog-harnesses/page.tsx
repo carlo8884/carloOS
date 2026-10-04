@@ -34,8 +34,8 @@ export default function BestDogHarnessesPage() {
         <span className="text-brand-text-mid">Best Dog Harnesses</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_260px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Front-Clip vs Back-Clip</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Front-clip harnesses attach the leash at the dog's chest — when the dog pulls forward, the leash redirects them to the side, interrupting the pulling motion without pain. Back-clip harnesses attach at the back — they allow full forward movement and are appropriate for dogs that already walk well on leash. For pullers: front-clip only.</p>
@@ -44,7 +44,7 @@ export default function BestDogHarnessesPage() {
               siteId="dog-com"
               nextHref="/tools/harness-collar-size"
               nextLabel="Size the chest and neck before you pick a clip"
-              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The hop below is the same Julius-K9 search already on this page."
+              nextBlurb="The callout is the clip rule — front-clip for pullers, back-clip for dogs that already walk well. The harness-size calculator is the next step so the chest band actually sits where the clip can work. The link below searches Amazon for the Julius-K9 IDC Powerharness, the same search as on this page."
               resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
               resourceLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
             />

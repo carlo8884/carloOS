@@ -36,8 +36,8 @@ export default function BestDogBedsPage() {
         <span className="text-brand-text-mid">Best Dog Beds</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_260px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Orthopedic vs Everyday — Then Size the Sleep Space</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large and giant dogs with arthritis need 7-inch orthopedic foam. Medium and large dogs without severe joint disease do fine with washable everyday foam. Budget foam is the everyday pick when cost is the constraint. A crate pad that is too small bunches; one that is too large leaves extra floor a puppy can potty on. Size the crate first — stand, turn, lie down, no extra floor — then pick the bed that fits that footprint.</p>
@@ -46,7 +46,7 @@ export default function BestDogBedsPage() {
               siteId="dog-com"
               nextHref="/tools/dog-crate-size-calculator"
               nextLabel="Size the crate before you pick the foam"
-              nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, washable everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The hop below is the same Big Barker search already on this page."
+              nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, washable everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The link below searches for the Big Barker bed, the same search as on this page."
               resourceHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
               resourceLabel="Browse Big Barker orthopedic dog beds →"
             />
