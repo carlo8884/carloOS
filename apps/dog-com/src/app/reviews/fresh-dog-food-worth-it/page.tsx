@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas, PrimaryHop, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -52,11 +52,12 @@ export default function FreshDogFoodWorthItPage() {
       siteId="dog-com"
       contentType="review"
       hero={{ title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', subtitle: 'Fresh and gently-cooked dog food has grown into one of the fastest-rising categories in pet nutrition. Here is a calibrated buyer\'s guide: what "fresh" really means, how it compares to kibble and raw on nutrition, cost, convenience and safety, who benefits most, and how to judge a brand on substance instead of marketing.', category: 'Reviews', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min' }}
+      heroHop={<PrimaryHop href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" label="Check price of dry dog food on Amazon" />}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reviews', href: '/reviews' }, { name: 'Fresh Dog Food Worth It', href: '/reviews/fresh-dog-food-worth-it' }]}
       relatedLinks={[{ title: 'Dog Reviews Hub', href: '/reviews', category: 'Hub' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Reading a Dog Food Label', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Raw Diet Pros & Cons', href: '/nutrition/raw-diet-risks', category: 'Nutrition' }]}
       schema={schema}
       sidebar={<>
-        <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'What "Fresh" Means', href: '#what' }, { label: 'Fresh vs Kibble vs Raw', href: '#compare' }, { label: 'Who Benefits Most', href: '#who' }, { label: 'How to Evaluate a Brand', href: '#evaluate' }, { label: 'The Bottom Line', href: '#bottom' }]} />
+        <TableOfContents items={[{ label: 'The Short Answer', href: '#short' }, { label: 'What "Fresh" Means', href: '#what' }, { label: 'Fresh vs Kibble vs Raw', href: '#compare' }, { label: 'Who should buy which', href: '#who' }, { label: 'How to Evaluate a Brand', href: '#evaluate' }, { label: 'The Bottom Line', href: '#bottom' }]} />
         <RelatedLinks title="Related" links={[{ label: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained' }, { label: 'Reading a Dog Food Label', href: '/nutrition/reading-food-labels' }, { label: 'Raw Diet Risks', href: '/nutrition/raw-diet-risks' }, { label: 'Weight Management', href: '/nutrition/weight-management' }, { label: 'Dog DNA Tests Explained', href: '/nutrition/dog-dna-tests' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="review" variant="sidebar" />
 
@@ -89,7 +90,7 @@ export default function FreshDogFoodWorthItPage() {
         </ul>
         <p>One number worth knowing for any format is <strong>calorie density</strong> — kcal per gram or per serving. Higher-moisture fresh foods can be less calorie-dense by weight, so portioning by the old kibble habit can mislead. Use the food&apos;s stated kcal and our <a href="/tools/dog-calorie-calculator">calorie calculator</a> to portion accurately, and revisit <a href="/nutrition/weight-management">weight management</a> if your dog is carrying extra weight regardless of format.</p>
 
-        <h2 id="who">Who Benefits Most From Fresh Food</h2>
+        <h2 id="who">Who should buy which</h2>
         <p>Fresh food is not a universal upgrade, but some dogs and households are a stronger fit:</p>
         <ul>
           <li><strong>Picky eaters.</strong> Palatability is one of fresh food&apos;s clearest advantages — dogs who pick at kibble often eat fresh food readily.</li>
@@ -98,6 +99,35 @@ export default function FreshDogFoodWorthItPage() {
           <li><strong>Smaller dogs,</strong> where the per-day cost premium is far more manageable than for a large breed.</li>
         </ul>
         <p>Dogs with a diagnosed medical condition are a different case: a <a href="/nutrition/prescription-diets">veterinary therapeutic diet</a> may matter more than fresh-vs-kibble format, and any switch should go through your veterinarian. A healthy dog thriving on a quality kibble has no medical obligation to change.</p>
+        <div className="overflow-x-auto max-w-full mb-8 not-prose">
+          <table className="w-full text-xs border-collapse min-w-[36rem]">
+            <thead>
+              <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                <th className="p-3 font-bold text-brand-dark">If this is the dog</th>
+                <th className="p-3 font-bold text-brand-dark">The page points to</th>
+                <th className="p-3 font-bold text-brand-dark">Already on this page</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 text-brand-text-mid">Picky, drinks little, or the household wants ingredient transparency and can pay the premium</td>
+                <td className="p-3 font-bold text-brand-dark">Fresh, gently cooked</td>
+                <td className="p-3 text-brand-text-mid">The list above. No brand and no dollar price is printed</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 text-brand-text-mid">A healthy dog already thriving on kibble</td>
+                <td className="p-3 font-bold text-brand-dark">Stay on that kibble</td>
+                <td className="p-3 text-brand-text-mid">The page says there is no medical obligation to change. The button searches Amazon for dry dog food</td>
+              </tr>
+              <tr className="border-b border-brand-border">
+                <td className="p-3 text-brand-text-mid">A diagnosed medical condition</td>
+                <td className="p-3 font-bold text-brand-dark">A veterinary therapeutic diet</td>
+                <td className="p-3 text-brand-text-mid">Format matters less than the condition. The page says to talk to a veterinarian</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <ComparisonFoot updated="2026-10-04" />
 
         <h2 id="evaluate">How to Evaluate a Fresh Brand</h2>
         <p>Cut through the marketing with four checks — the same substance-over-packaging approach we apply to any food:</p>
@@ -139,7 +169,7 @@ export default function FreshDogFoodWorthItPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Check price of dry dog food on Amazon"
             />
           </div>
         </div>

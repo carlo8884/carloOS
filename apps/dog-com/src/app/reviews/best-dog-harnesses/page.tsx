@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -121,6 +121,21 @@ export default function BestDogHarnessesPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which harness fits which dog</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which harness does this page pick for a dog that pulls?',
+                  answer: 'The PetSafe Easy Walk, scored 9.3 and marked Best No-Pull. The card lists a front clip and a printed price of $20–30. It is not the pick for a dog with shoulder or elbow issues, and the fit has to be right or it rotates.',
+                },
+                {
+                  question: 'Which harness does this page pick for hiking?',
+                  answer: 'The Ruffwear Front Range, scored 9.2 and marked Best Outdoor. The card lists front and back clips and a printed price of $40–55. It is bulkier and more expensive than a casual harness.',
+                },
+                {
+                  question: 'Which harness does this page pick when a dog backs out?',
+                  answer: 'The Julius-K9 IDC Powerharness, scored 9.0 and marked Best Escape-Proof. The card lists a back clip only and a printed price of $40–70. It is not a no-pull harness, and it is heavy for a small dog.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

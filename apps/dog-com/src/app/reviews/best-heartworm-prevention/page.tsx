@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Heartworm Prevention for Dogs 2026 — Heartgard | Dog.com', description: 'Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.', path: '/reviews/best-heartworm-prevention', category: 'Preventive Care', type: 'article' })
@@ -24,7 +24,10 @@ export default function BestHeartwormPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">⚕️ Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Heartworm Prevention for Dogs 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <p className="mb-5">
+          <a href="/find-a-vet" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline">Ask a vet about Heartgard Plus</a>
+        </p>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Heartworm prevention costs $8–15/month. Treatment costs $1,000–2,000+ and requires months of strict rest. All options listed here require a prescription — your vet will recommend one based on your dog's risk profile and region.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -81,6 +84,66 @@ export default function BestHeartwormPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which preventive</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Four preventives have review cards. Every button goes to the vet finder. This page does not name a retailer. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Ask about</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Heartworm coverage on its own</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#heartgard" className="text-brand-primary">Heartgard Plus</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Standalone. Score 9.3. $35–55 / 6-month supply</td>
+                      <td className="p-3 text-brand-text-mid">You also need flea and tick coverage. The card says this does not include it</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">The broader intestinal-parasite list</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#interceptor" className="text-brand-primary">Interceptor Plus</a></td>
+                      <td className="p-3 text-brand-text-mid">Broadest GI spectrum. Score 9.2. $40–60 / 6-month supply</td>
+                      <td className="p-3 text-brand-text-mid">Flea tapeworm. The card says it does not cover Dipylidium, and it has no flea or tick coverage</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Heartworm plus flea and tick in one chew</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#simparica" className="text-brand-primary">Simparica Trio</a></td>
+                      <td className="p-3 text-brand-text-mid">Best All-in-One. Score 9.5. $50–80 / 3-month supply</td>
+                      <td className="p-3 text-brand-text-mid">An MDR1 herding breed, or a dog that does not need flea and tick coverage. The card calls it the most expensive per dose</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">One injection instead of a monthly dose</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#proheart" className="text-brand-primary">ProHeart 12</a></td>
+                      <td className="p-3 text-brand-text-mid">Best for Compliance. Score 9.0. $70–120 per injection</td>
+                      <td className="p-3 text-brand-text-mid">You need flea, tick, or intestinal coverage. A veterinarian gives the injection</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which heartworm preventive fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which preventive does this page pick for heartworm alone?',
+                  answer: 'Heartgard Plus, scored 9.3 and marked Best Standalone. The printed price is $35–55 for a 6-month supply. The card says it has no flea or tick coverage. The button goes to the vet finder.',
+                },
+                {
+                  question: 'Which preventive does this page pick when flea and tick coverage is in the same product?',
+                  answer: 'Simparica Trio, scored 9.5. The printed price is $50–80 for a 3-month supply. The card lists an MDR1 caution for herding breeds and calls it the most expensive per dose.',
+                },
+                {
+                  question: 'Which preventive does this page pick when monthly doses get missed?',
+                  answer: 'ProHeart 12, scored 9.0. The printed price is $70–120 per injection, given by a veterinarian. The card says it does not cover fleas, ticks, or intestinal parasites.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -24,7 +24,10 @@ export default function FleaTickPreventionPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">💊 Evidence-Based · June 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Flea & Tick Prevention 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <p className="mb-5">
+          <a href="/find-a-vet" className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline">Find a vet to discuss Bravecto</a>
+        </p>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Oral isoxazoline class preventives (Bravecto, NexGard, Simparica) are widely regarded as among the most effective flea and tick prevention available — they work systemically and kill parasites on contact with the dog's blood. Prescription required.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -61,6 +64,50 @@ export default function FleaTickPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which preventive</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Two preventives have review cards. Both buttons go to the vet finder. This page does not name a retailer. Simparica Trio is in the picks strip and does not have a scored card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Ask about</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Fewer doses, and coverage of 7 tick species</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#bravecto" className="text-brand-primary">Bravecto Chew</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.3. $50–60 per 12-week dose</td>
+                      <td className="p-3 text-brand-text-mid">A seizure history. The card lists isoxazoline seizure risk in predisposed dogs, and a prescription is required</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A monthly chew with the longer post-market record</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nexgard" className="text-brand-primary">NexGard Chew</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Monthly. Score 9.2. $20–25 per monthly dose. 5 tick species</td>
+                      <td className="p-3 text-brand-text-mid">You want the 12-week dose or the extra tick species. A prescription is still required</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which flea and tick preventive fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which preventive does this page pick for fewer doses?',
+                  answer: 'Bravecto, scored 9.3 and marked Best Overall. The card lists a 12-week dose, 7 tick species, and a printed price of $50–60 per dose. A prescription is required, and the card lists isoxazoline seizure risk in predisposed dogs. The button goes to the vet finder, not a shop.',
+                },
+                {
+                  question: 'Which preventive does this page pick for a monthly chew?',
+                  answer: 'NexGard, scored 9.2. The printed price is $20–25 per monthly dose. The card lists 5 tick species, against 7 on the Bravecto card, and a prescription is required.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div id="simparica" className="bg-brand-surface border border-brand-border rounded-xl p-5 scroll-mt-24">

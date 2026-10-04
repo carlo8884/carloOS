@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior.', path: '/reviews/best-dog-food-senior', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026', description: 'Senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -19,7 +19,8 @@ export default function BestSeniorDogFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2026</h1>
-        <PriceAsOf date="2026-05-25" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' label='Check price of Purina Pro Plan Bright Mind Adult 7+ on Chewy' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs are considered senior at 7+ years for most breeds (5-6 for giant breeds). Their nutritional needs shift — but "senior dog food" as a category is largely unregulated. <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-compliant formulas from research-backed manufacturers are the appropriate filter.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -67,6 +68,54 @@ export default function BestSeniorDogFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+senior+7"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Only the two foods with review cards are in this table. Royal Canin Aging Care is named in the picks strip and does not have a card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If you need</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Cognitive changes in a dog 7 or older</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#bright-mind" className="text-brand-primary">Purina Pro Plan Bright Mind Adult 7+</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.4. Published cognitive trial. $55–75 / 30 lb</td>
+                      <td className="p-3 text-brand-text-mid">Chicken allergy, or significant cognitive dysfunction that needs a vet. The card says chicken-based, and it is not sole management for significant CDS</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Antioxidant support and easy digestion for a less-active senior</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills" className="text-brand-primary">Hill&apos;s Science Diet Adult 7+</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Hill&apos;s. Score 9.1. Vitamin E, C, and beta-carotene. $55–70 / 30 lb</td>
+                      <td className="p-3 text-brand-text-mid">You want the cognitive trial. The card says this formula has no published cognitive clinical trial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which senior food fits which dog</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which senior food does this page pick for cognitive changes?',
+                  answer: 'Purina Pro Plan Bright Mind Adult 7+, scored 9.4 and marked Best Overall. The card cites a published cognitive trial and a printed price of $55–75 for 30 lb. It is chicken-based, and the card says it is not sole management for significant cognitive dysfunction.',
+                },
+                {
+                  question: 'Which senior food does this page pick for antioxidant support?',
+                  answer: "Hill's Science Diet Adult 7+, scored 9.1. The card lists vitamin E, vitamin C, and beta-carotene, easy-digest proteins, and a printed price of $55–70 for 30 lb. It does not have a published cognitive trial.",
+                },
+                {
+                  question: 'Does this page print a price for Royal Canin Aging Care?',
+                  answer: 'No. The picks strip names Royal Canin Aging Care. Only Bright Mind and Hill\'s Science Diet Adult 7+ have review cards and printed prices.',
+                },
+              ]} />
+            </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">

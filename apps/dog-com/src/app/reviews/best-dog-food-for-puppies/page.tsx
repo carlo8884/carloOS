@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -46,6 +46,7 @@ export default function BestPuppyFoodPage() {
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The most important rule in puppy nutrition: large breeds (expected adult weight 50+ lbs) must eat a large breed puppy formula. We ranked by <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials, and whether the manufacturer employs board-certified veterinary nutritionists.
         </p>
@@ -172,6 +173,66 @@ export default function BestPuppyFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="iams+proactive+health+puppy+large+breed"
             />
+            <div className="mt-10">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Four puppy foods have review cards. The giant-breed name in the sidebar does not have a card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
+              </p>
+              <div className="overflow-x-auto max-w-full mb-8">
+                <table className="w-full text-xs border-collapse min-w-[36rem]">
+                  <thead>
+                    <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                      <th className="p-3 font-bold text-brand-dark">If the adult weight</th>
+                      <th className="p-3 font-bold text-brand-dark">Buy</th>
+                      <th className="p-3 font-bold text-brand-dark">From the card</th>
+                      <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Expected adult weight over 50 lb, and you want the large-breed puppy formula</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Large Breed. Score 9.5. $65–90 per 30 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">The higher bag price is the limit. The card also says some dogs do not like the kibble shape, and you switch to the adult food at the right age</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A large-breed puppy food with a feeding trial, at a lower bag price</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#pro-plan" className="text-brand-primary">Purina Pro Plan Puppy Large Breed</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall Value. Score 9.3. $55–75 per 34 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">Chicken sensitivity. The card says chicken is the primary protein, and there is no breed-specific line</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">Expected adult weight under 25 lb</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small Paws</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Small Breed Puppy. Score 9.1. $55–80 per 28.5 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">A large-breed puppy. The card says to use the Hill&apos;s large-breed formula instead</td>
+                    </tr>
+                    <tr className="border-b border-brand-border">
+                      <td className="p-3 text-brand-text-mid">A lower bag price that is still a large-breed puppy formula</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams ProActive Health Smart Puppy</a></td>
+                      <td className="p-3 text-brand-text-mid">Best Budget. Score 8.7. $30–50 per 30 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">You want a feeding trial. The card says some lines are AAFCO formulation, not a feeding trial</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which puppy food does this page pick for a large-breed puppy?',
+                  answer: 'Royal Canin Large Breed Puppy, scored 9.5 and marked Best Large Breed. The printed price is $65–90 per 30 lb bag. The card says some dogs do not like the kibble shape, and the dog moves to the Royal Canin adult food at the right age.',
+                },
+                {
+                  question: 'Which puppy food does this page pick for a small-breed puppy?',
+                  answer: "Hill's Science Diet Puppy Small Paws, scored 9.1. The printed price is $55–80 per 28.5 lb bag. The card says it is not for large breeds.",
+                },
+                {
+                  question: 'Which puppy food does this page pick at the lowest printed price?',
+                  answer: 'Iams ProActive Health Smart Puppy, scored 8.7 and marked Best Budget. The printed price is $30–50 per 30 lb bag. The card says some lines meet AAFCO by formulation rather than a feeding trial.',
+                },
+              ]} />
+            </div>
           </div>
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

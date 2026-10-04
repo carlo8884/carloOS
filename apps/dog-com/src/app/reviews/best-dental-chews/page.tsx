@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -101,6 +101,21 @@ export default function BestDentalChewsPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which chew fits which dog</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which chew does this page pick for a VOHC plaque and tartar claim?',
+                  answer: 'Greenies Original, scored 9.2 and marked Best Overall. The card lists a pliable texture, sizes from teenie through large, a printed price of $25–35 for a 27-count, and 25–90 calories by size. It contains wheat. A dog that swallows the chew gets less dental contact.',
+                },
+                {
+                  question: 'Which chew does this page pick when you want a plant-based chew?',
+                  answer: 'Whimzees, scored 9.0 and marked Best Natural / Plant-Based. The card says VOHC acceptance is for plaque, not tartar, the printed price is $20–30 for a 14-count, and calories per chew are higher than Greenies.',
+                },
+                {
+                  question: 'Do these chews replace toothbrushing?',
+                  answer: 'No. The table on this page says neither chew replaces toothbrushing. The sidebar lists daily toothbrushing with CET paste ahead of VOHC chews.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
