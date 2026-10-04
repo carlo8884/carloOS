@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
   title: 'Aquarium Heater Size for a Cold Room | Fish.com',
-  description: 'Winter rooms use the wattage the heater calculator already publishes. The hop is the Eheim Jager search on the heater review.',
+  description: 'Winter rooms use the wattage the heater calculator already publishes. The shop link is the Eheim Jager search on the heater review.',
   path: '/reviews/winter-heater-sizing-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Aquarium heater size for a cold room',
-  description: 'The heater calculator wattage rule for a winter room, and the Eheim Jager hop already on the review.',
+  description: 'The heater calculator wattage rule for a winter room, and the Eheim Jager link already on the review.',
   url: 'https://fish.com/reviews/winter-heater-sizing-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -47,7 +47,7 @@ export default function WinterHeaterSizingGuidePage() {
       schema={schema}
       hero={{
         title: 'Aquarium heater size for a cold room',
-        subtitle: 'The wattage calculator already sizes a heater from tank volume and how cold the room gets. This guide only repeats that winter case. It does not add a watt chart.',
+        subtitle: 'The wattage calculator already sizes a heater from tank volume and how cold the room gets. The wattage below is the winter case the calculator already works.',
         category: 'Buyer guide',
         authorName: 'Fish.com Editorial',
         publishedAt: 'October 2026',
@@ -77,17 +77,17 @@ export default function WinterHeaterSizingGuidePage() {
         <h2>One heater or two</h2>
         <p>On tanks of 40 gallons or larger, the calculator says to run two smaller heaters rather than one large one. A heater stuck on can push a tank to 90°F and hotter; the page says a single 300 watt heater on a 75-gallon tank does that quickly, while two 150 watt heaters leave more time to notice. A heater that fails off lets the tank fall to room temperature; the second unit, the page says, holds the tank within 2 to 4°F of target. The <Link href="/reviews/best-aquarium-heaters">heater review</Link> adds the same idea in shorter form: buy slightly above the minimum, and split two heaters on a large tank. Pair either setup with a separate thermometer. The review&apos;s reference heater, and the calculator&apos;s reference search, is the Eheim Jager.</p>
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <p>The hop is that Eheim Jager search. Wattage still comes from the calculator, not from the brand name.</p>
+        <p>The link below searches for the Eheim Jager from the heater review. Wattage still comes from the calculator, not from the brand name.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="fish-com"
           addressOnly
-          title="Winter heater update list"
-          subtitle="Leave an address to be on the list for changes to the cold-room wattage note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-winter-heater-sizing-guide"
         />

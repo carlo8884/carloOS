@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Horse Blanket Weight by Temperature | Horses.com',
-  description: 'The fill-weight bands already on the winter blanket review, from a sheet to heavyweight, and the Rambo hop for the medium band that review already sells.',
+  description: 'The fill-weight bands already on the winter blanket review, from a sheet to heavyweight, and the Rambo link for the medium band that review already sells.',
   path: '/reviews/blanket-weight-by-temperature-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Horse blanket weight by temperature',
-  description: 'Fill weight by temperature from the winter blanket review, and the Rambo Original hop.',
+  description: 'Fill weight by temperature from the winter blanket review, and the Rambo Original link.',
   url: 'https://horses.com/reviews/blanket-weight-by-temperature-guide',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Where does the Rambo sit on that map?',
-    answer: 'The comparison table lists the Horseware Rambo Original at 0, 100, 200, and 400 gram fills. The 200 gram option is the medium band. The hop is that Rambo search. A clipped horse in a northern sub-zero winter is the Schneiders StormShield job, not this one.',
+    answer: 'The comparison table lists the Horseware Rambo Original at 0, 100, 200, and 400 gram fills. The 200 gram option is the medium band. The link is that Rambo search. A clipped horse in a northern sub-zero winter is the Schneiders StormShield job, not this one.',
   },
   {
     question: 'Can a full winter coat skip a blanket?',
@@ -47,7 +47,7 @@ export default function BlanketWeightByTemperatureGuidePage() {
       schema={schema}
       hero={{
         title: 'Horse blanket weight by temperature',
-        subtitle: 'The winter blanket review already maps fill weight to a temperature band. This page repeats that map. It does not add a new gram or a new degree.',
+        subtitle: 'The winter blanket review already maps fill weight to a temperature band. The gram and temperature bands below are the ones on that review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
         publishedAt: 'October 2026',
@@ -78,17 +78,17 @@ export default function BlanketWeightByTemperatureGuidePage() {
         <p>The comparison table lists the Horseware Rambo Original at 0, 100, 200, and 400 gram fills, in a 1000-denier ballistic shell. The 200 gram option is the medium band. The 400 gram option is the heavy band. The 0 and 100 gram options are the sheet and the light band. The review calls the Rambo the premium reference in the category, not the only blanket that makes those fills. A clipped horse in a northern sub-zero winter is the job the review gives the Schneiders StormShield, which is the <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse guide</Link>, not this one. Size is still the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link>. A heavy fill in the wrong length is a rub.</p>
         <p>The review also says a healthy adult with a full winter coat, dry shelter, and enough forage tolerates about −15°C (5°F) without a blanket, citing Cymbaluk and Christison in the Canadian Veterinary Journal, 1989. Blanketing a horse that does not need one can suppress the winter coat. That decision stays on the review.</p>
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        <p>The hop is the Rambo Original search already on the blanket review, for the medium-band turnout that table lists at 200 grams.</p>
+        <p>The link below is the Rambo Original from the blanket review, the turnout listed at 200 grams.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide">Check price of the Horseware Rambo Original on SmartPak →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="horses-com"
           addressOnly
-          title="Blanket weight update list"
-          subtitle="Leave an address to be on the list for changes to the fill-weight note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-blanket-weight-by-temperature-guide"
         />

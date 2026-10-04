@@ -5,7 +5,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Why a Holiday Emergency Visit Costs More | Vets.co',
-  description: 'Emergency hospitals already staff holidays. The quote hop is the Trupanion link on the insurance review, bought before a problem.',
+  description: 'Emergency hospitals already staff holidays. The quote link is Trupanion on the insurance review, bought before a problem.',
   path: '/reviews/holiday-emergency-visit-guide',
   type: 'article',
 })
@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Why a holiday emergency visit costs more',
-  description: 'Holiday staffing is already part of the emergency-cost explanation. The quote hop is the one on the insurance review.',
+  description: 'Holiday staffing is already part of the emergency-cost explanation. The quote link is the one on the insurance review.',
   url: 'https://vets.co/reviews/holiday-emergency-visit-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -35,8 +35,8 @@ const FAQS = [
     answer: 'Insurance bought before any condition arises covers much of an emergency after the deductible. A savings fund covers the deductible, the unreimbursed share, and the deposit. This guide does not reprint a dollar figure and does not invent one.',
   },
   {
-    question: 'Is the quote hop emergency care?',
-    answer: 'No. The hop is the Trupanion quote already on the insurance review. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.',
+    question: 'Is a quote link emergency care?',
+    answer: 'No. The link below opens the Trupanion quote from the insurance review. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.',
   },
 ]
 
@@ -47,7 +47,7 @@ export default function HolidayEmergencyVisitGuidePage() {
       schema={schema}
       hero={{
         title: 'Why a holiday emergency visit costs more',
-        subtitle: 'The emergency-cost guide already includes holidays in the reason an ER visit costs more than a daytime appointment. The insurance review’s primary quote is the only hop here.',
+        subtitle: 'The emergency-cost guide already includes holidays in the reason an ER visit costs more than a daytime appointment. The only shop link here is the Trupanion quote on the insurance review.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
@@ -75,19 +75,19 @@ export default function HolidayEmergencyVisitGuidePage() {
         <h2>What the page says to do first</h2>
         <p>The same guide tells owners not to delay a real emergency over cost. Difficulty breathing, severe bleeding, collapse, inability to urinate, or suspected bloat means go. Financial options are discussed once the pet is stable. For a case that is not immediately life-threatening, the page says the hospital provides a written plan and an estimate, often as a range, and that a deposit before treatment is standard. This guide does not reprint a dollar figure from any other page and does not invent one.</p>
         <h2>Where a quote fits</h2>
-        <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. This page does not add a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
+        <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The hop is the Trupanion quote already on the insurance review.</p>
+        <p>The link below opens the Trupanion quote from the insurance review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide">Get a Trupanion quote →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
-        <h2>Update list</h2>
+        <h2>Save an address</h2>
         <EmailCapture
           variant="inline"
           siteId="vets-co"
           addressOnly
-          title="Holiday emergency update list"
-          subtitle="Leave an address to be on the list for changes to the holiday emergency-cost note on this page."
+          title="Save an address with this guide"
+          subtitle="We store the address you enter. This form does not send email."
           ctaText="Save my address"
           source="reviews-holiday-emergency-visit-guide"
         />

@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which kit does the test review pick for a freshwater community tank?',
-    answer: 'The API Freshwater Master Test Kit, scored 9.3 and marked Best Overall. The card lists about 800 tests for pH, ammonia, nitrite, and nitrate, at $28–35. It does not cover saltwater, GH/KH, or reef alkalinity.',
+    answer: 'The API Freshwater Master Test Kit, scored 9.3 and marked Best Overall. It lists about 800 tests for pH, ammonia, nitrite, and nitrate, at $28–35. It does not cover saltwater, GH/KH, or reef alkalinity.',
   },
   {
     question: 'What does the review say about Salifert?',
@@ -43,7 +43,7 @@ export default function ApiVsSalifertGuidePage() {
       schema={schema}
       hero={{
         title: 'API Master Kit or Salifert tests',
-        subtitle: 'A freshwater community tank and a reef tank do not use the same tests. This guide only restates the test-kit review. It does not add a reagent count, a price, or a score.',
+        subtitle: 'A freshwater community tank and a reef tank do not use the same tests. The reagent count, price, and score below are the ones on the test-kit review.',
         category: 'Buyer guide',
         authorName: 'Fish.com Editorial',
         publishedAt: 'October 2026',
@@ -66,15 +66,15 @@ export default function ApiVsSalifertGuidePage() {
       }
      priceAsOf="2026-10-04">
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-water-test-kits">water-test review</Link> already assigns the API Freshwater Master Test Kit to freshwater pH, ammonia, nitrite, and nitrate, and Salifert individual tests to reef alkalinity, calcium, and magnesium. Only the API card has a score and a price. This page does not invent either for Salifert.</p>
-        <h2>What the API card already says</h2>
-        <p>The API Freshwater Master Test Kit is Best Overall, score 9.3, and the winner. It lists about 800 liquid-reagent tests, which the card calls roughly two or more years of weekly testing on one tank. Parameters are pH, ammonia, nitrite, and nitrate. The printed price is $28–35. The card says it is a freshwater kit: saltwater, GH/KH, and reef alkalinity are outside it. Color matching can be tricky in some lighting. Dip strips are not the substitute the card recommends for ammonia.</p>
+        <p>The <Link href="/reviews/best-water-test-kits">water-test review</Link> already assigns the API Freshwater Master Test Kit to freshwater pH, ammonia, nitrite, and nitrate, and Salifert individual tests to reef alkalinity, calcium, and magnesium. Only the API kit has a score and a price. Salifert is not given a score or a price here.</p>
+        <h2>What the review says about the API kit</h2>
+        <p>The API Freshwater Master Test Kit is Best Overall, score 9.3, and the winner. It lists about 800 liquid-reagent tests, which the review calls roughly two or more years of weekly testing on one tank. Parameters are pH, ammonia, nitrite, and nitrate. The printed price is $28–35. The review says it is a freshwater kit: saltwater, GH/KH, and reef alkalinity are outside it. Color matching can be tricky in some lighting. Dip strips are not the substitute the review recommends for ammonia.</p>
         <h2>What the Salifert section already says</h2>
-        <p>Salifert is the reef section, not a scored card. The page says the tests are more accurate than API on reef alkalinity, calcium, and magnesium, and more expensive per test. It tells you to buy individual parameter tests because they hold calibration better than combo kits. There is no reagent count and no star rating on that section. Do not treat this guide as if it added one.</p>
+        <p>Salifert is the reef section, not a scored product. The page says the tests are more accurate than API on reef alkalinity, calcium, and magnesium, and more expensive per test. It tells you to buy individual parameter tests because they hold calibration better than combo kits. There is no reagent count and no star rating on that section. Do not read a reagent count or a star rating into that section.</p>
         <h2>Who should buy which test</h2>
         <p>Buy the API kit for a freshwater community tank that needs pH, ammonia, nitrite, and nitrate. Buy Salifert individual tests when the job is reef alkalinity, calcium, or magnesium. Keep the API kit if you also need ammonia and nitrite. A digital pH meter, when the review mentions Bluelab, is an extra for pH-critical tanks. It does not retire the reagent kit.</p>
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
-        <p>The hop below is the same API Freshwater Master Test Kit search already on the test-kit review. It is a search, not a promise of a sale price.</p>
+        <p>The link below searches for the API Freshwater Master Test Kit, the same search as on the test-kit review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-api-vs-salifert-guide">Browse the API Freshwater Master Test Kit on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
