@@ -79,6 +79,22 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     description:
       'Which harness is harder for a ferret to back out of, and which one only works if you recheck the fit.',
   },
+  {
+    slug: 'ferret-nation-vs-prevue-guide',
+    href: '/reviews/ferret-nation-vs-prevue-guide',
+    eyebrow: 'Housing',
+    title: 'Ferret Nation vs Prevue',
+    description:
+      'The double unit for one to four ferrets, or the Prevue Feisty Ferret when that cage is too big or too expensive.',
+  },
+  {
+    slug: 'wysong-vs-marshall-kibble-guide',
+    href: '/reviews/wysong-vs-marshall-kibble-guide',
+    eyebrow: 'Food',
+    title: 'Wysong vs Marshall Kibble',
+    description:
+      'The lower-carb premium bag, or the ferret-specific bag you can find in chain retail.',
+  },
 ]
 
 const itemListSchema = buildItemListSchema({

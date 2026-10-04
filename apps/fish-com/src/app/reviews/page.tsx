@@ -73,6 +73,18 @@ const REVIEWS = [
     href: '/reviews/best-display-tank-heater-guide',
     badge: 'Essential',
   },
+  {
+    title: 'Hygger 957 vs Fluval Plant 3.0',
+    desc: 'Budget planted PAR versus the higher published PAR and app control on the lighting review.',
+    href: '/reviews/hygger-vs-fluval-light-guide',
+    badge: 'Lighting',
+  },
+  {
+    title: 'API Master Kit vs Salifert',
+    desc: 'Freshwater pH, ammonia, nitrite, and nitrate, or reef alkalinity, calcium, and magnesium.',
+    href: '/reviews/api-vs-salifert-guide',
+    badge: 'Water Quality',
+  },
 ]
 
 const itemListSchema = {

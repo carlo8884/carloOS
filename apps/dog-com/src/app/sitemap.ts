@@ -210,6 +210,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/reviews/best-dog-crates', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-puppy-crate-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/front-clip-vs-back-clip-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/reviews/big-barker-vs-casper-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://dog.com/reviews/greenies-vs-whimzees-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dog-food-for-puppies', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dog-food-senior', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
