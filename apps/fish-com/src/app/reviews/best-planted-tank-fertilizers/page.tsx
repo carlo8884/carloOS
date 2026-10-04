@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -31,6 +31,7 @@ export default function BestPlantedFertilizersPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
+        <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Easy Green on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Plants need more than light and CO2. Macro and micronutrients drive growth, color, and health. The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -132,6 +133,21 @@ export default function BestPlantedFertilizersPage() {
                 </table>
               </div>
               <ComparisonFoot updated="2026-10-04" />
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which fertilizer fits which tank</h2>
+              <FAQAccordion items={[
+                {
+                  question: 'Which fertilizer does this page pick for most planted tanks?',
+                  answer: 'Easy Green, scored 9.4 and marked Best Overall. The printed price is $15–25. The card says it is online only, and a high-tech CO2 tank may still need extra macros.',
+                },
+                {
+                  question: 'Which fertilizer does this page pick for trace elements?',
+                  answer: 'Seachem Flourish Comprehensive, scored 9.1. The printed price is $10–20. The card says it does not cover macros on its own and the dose is twice a week.',
+                },
+                {
+                  question: 'Which fertilizer does this page pick for a high-tech tank?',
+                  answer: 'NilocG Thrive, scored 9.2. The printed price is $12–22. The card says it is overkill for a low-tech tank and overdosing is an algae risk.',
+                },
+              ]} />
             </div>
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
