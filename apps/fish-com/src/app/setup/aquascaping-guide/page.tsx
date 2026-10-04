@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -102,6 +103,15 @@ export default function AquascapingGuidePage() {
 
         <ArticleSourcesList sources={SOURCES} />
       </div>
-    </ArticleLayout>
+          <HubMoneyLinks
+        hubHref="/setup"
+        hubLabel="Tank setup"
+        links={[
+          { href: '/reviews/best-aquarium-lighting', label: 'Best aquarium lighting' },
+          { href: '/reviews/best-aquarium-filters', label: 'Best aquarium filters' },
+          { href: '/reviews/best-planted-tank-fertilizers', label: 'Planted-tank fertilizers' },
+        ]}
+      />
+</ArticleLayout>
   )
 }

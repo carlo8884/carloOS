@@ -1,3 +1,4 @@
+import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
@@ -302,6 +303,15 @@ export default function FishDiseaseGuidePage() {
         </div>
         <ArticleSourcesList sources={SOURCES} />
       </div>
-    </ArticleLayout>
+          <HubMoneyLinks
+        hubHref="/health"
+        hubLabel="Fish health"
+        links={[
+          { href: '/reviews/best-water-test-kits', label: 'Best water test kits' },
+          { href: '/reviews/best-aquarium-filters', label: 'Best aquarium filters' },
+          { href: '/reviews/best-aquarium-heaters', label: 'Best aquarium heaters' },
+        ]}
+      />
+</ArticleLayout>
   )
 }
