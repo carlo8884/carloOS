@@ -172,7 +172,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/dog-cancer-signs',
       '/health/dog-arthritis',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/golden-retriever-health',
     ],
     originCountry: 'Scotland',
@@ -241,7 +241,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/french-bulldog-health',
       '/health/intervertebral-disc-disease',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'France',
     originPurpose:
@@ -314,7 +314,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/hypothyroidism',
       '/health/dog-bloat-gvd',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'Japan',
     originPurpose:
@@ -515,7 +515,7 @@ export const Breeds: Breed[] = [
     ],
     commonHealthCrossLinks: [
       '/health/cherry-eye',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/dog-arthritis',
     ],
     originCountry: 'England',
@@ -722,7 +722,7 @@ export const Breeds: Breed[] = [
     ],
     commonHealthCrossLinks: [
       '/health/dog-arthritis',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/dog-cancer-signs',
     ],
     originCountry: 'United States / Australia',
@@ -902,7 +902,7 @@ export const Breeds: Breed[] = [
       '/health/dog-arthritis',
       '/health/addisons-disease',
       '/health/dog-bloat-gvd',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/dog-luxating-patella',
     ],
     originCountry: 'Germany (refined in France)',
@@ -1009,7 +1009,7 @@ export const Breeds: Breed[] = [
     ],
     commonHealthCrossLinks: [
       '/health/dog-luxating-patella',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/hypothyroidism',
     ],
     originCountry: 'Japan',
@@ -1078,7 +1078,7 @@ export const Breeds: Breed[] = [
     ],
     commonHealthCrossLinks: [
       '/health/hypothyroidism',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'Russia (Siberia)',
     originPurpose:
@@ -1467,7 +1467,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/hypothyroidism',
       '/health/dog-arthritis',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'Scotland (Shetland Islands)',
     originPurpose:
@@ -1709,7 +1709,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/dog-bloat-gvd',
       '/health/dog-arthritis',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'Scotland',
     originPurpose:
@@ -1812,7 +1812,7 @@ export const Breeds: Breed[] = [
       'Globoid cell leukodystrophy',
     ],
     commonHealthCrossLinks: [
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/dog-luxating-patella',
     ],
     originCountry: 'Scotland',
@@ -1846,7 +1846,7 @@ export const Breeds: Breed[] = [
       'Dental disease',
     ],
     commonHealthCrossLinks: [
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
       '/health/dog-allergies',
       '/health/dog-luxating-patella',
       '/health/dog-dental-care',
@@ -2021,7 +2021,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/dog-arthritis',
       '/health/addisons-disease',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'Australia',
     originPurpose:
@@ -2055,7 +2055,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/dog-luxating-patella',
       '/health/dog-ear-infections',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'United States',
     originPurpose:
@@ -2123,7 +2123,7 @@ export const Breeds: Breed[] = [
     commonHealthCrossLinks: [
       '/health/dog-heart-disease',
       '/health/dog-luxating-patella',
-      '/health/dog-skin-allergies',
+      '/health/dog-allergies',
     ],
     originCountry: 'United States',
     originPurpose:

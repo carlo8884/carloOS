@@ -368,7 +368,7 @@ export default function DogGestationCalculatorPage() {
               puppy nutrition guide
             </Link>
             , and for the first-year plan, the{' '}
-            <Link href="/puppy-schedule" className="text-brand-primary underline-offset-2 hover:underline">
+            <Link href="/training/puppy-schedule" className="text-brand-primary underline-offset-2 hover:underline">
               puppy schedule
             </Link>
             .
@@ -396,7 +396,7 @@ export default function DogGestationCalculatorPage() {
               { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', note: 'Daily calories for the dam and pups' },
               { label: 'Puppy Nutrition Guide', href: '/nutrition/puppy-nutrition', note: 'Feeding the dam and a litter' },
               { label: 'Best Puppy Food 2026', href: '/reviews/best-dog-food-for-puppies', note: 'Large- and small-breed formulas' },
-              { label: 'Puppy Schedule', href: '/puppy-schedule', note: 'Week-by-week first-year plan' },
+              { label: 'Puppy Schedule', href: '/training/puppy-schedule', note: 'Week-by-week first-year plan' },
             ].map((item) => (
               <Link
                 key={item.href}

@@ -609,7 +609,7 @@ export const siteConfigs: Record<SiteId, SiteConfig> = {
           { label: 'Harness & Collar Size', href: '/tools/harness-collar-size' },
           { label: 'Compare Breeds', href: '/compare' },
           { label: 'Which Pet Quiz', href: '/which-pet' },
-          { label: 'Puppy Schedule', href: '/puppy-schedule' },
+          { label: 'Puppy Schedule', href: '/training/puppy-schedule' },
           { label: 'Care Guides', href: '/guides' },
           { label: 'Directory', href: '/directory' },
         ],

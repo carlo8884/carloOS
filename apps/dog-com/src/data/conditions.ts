@@ -633,7 +633,7 @@ export const CONDITIONS: Condition[] = [
     severity: 'chronic-manageable',
     briefDescription:
       'Reference covering allergic-pattern dermatitis, secondary pyoderma and Malassezia overgrowth, and the management algorithm for the itchy dog per ACVD International Committee on Allergic Diseases.',
-    learnMoreHref: '/health/dog-skin-allergies',
+    learnMoreHref: '/health/dog-allergies',
   },
   {
     slug: 'dog-hot-spots',
