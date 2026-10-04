@@ -12,6 +12,7 @@
  */
 
 import { useState, useCallback, useId, useMemo } from 'react'
+import { JUNK_EMAIL_MESSAGE, isJunkEmail } from '@carloOS/config/form-guard'
 import { trackEvent } from '../lib/track-event'
 
 type EmailCaptureVariant = 'inline' | 'sidebar' | 'section'
@@ -98,9 +99,9 @@ export function EmailCapture({
 
   const handleSubmit = useCallback(async (e: React.FormEvent) => {
     e.preventDefault()
-    if (!email || !email.includes('@')) {
+    if (!email || !email.includes('@') || isJunkEmail(email)) {
       setStatus('error')
-      setErrorMsg('Enter a valid email address')
+      setErrorMsg(JUNK_EMAIL_MESSAGE)
       reportGuideSignup('invalid')
       return
     }

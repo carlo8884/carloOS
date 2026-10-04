@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, FormEvent } from 'react'
+import { isJunkEmail, isJunkLabel, isJunkMessage, isJunkOffer, isJunkPhone } from '@carloOS/config/form-guard'
 import { INQUIRE_FALLBACK_HREF, inquireFailureLead } from '../inquire-copy'
 
 export type InquireIntent = 'offer' | 'pro-application'
@@ -40,6 +41,21 @@ export function InquireForm({
       setStatus('error')
       setShowFallback(false)
       setErrorMsg('Tick the box to confirm you are not a robot.')
+      return
+    }
+    const email = String(data.email || '')
+    const name = String(data.name || '')
+    const message = String(data.message || '')
+    if (
+      isJunkEmail(email) ||
+      isJunkLabel(name) ||
+      isJunkMessage(message) ||
+      isJunkPhone(String(data.phone || '')) ||
+      isJunkOffer(String(data.offer || ''))
+    ) {
+      setStatus('error')
+      setShowFallback(true)
+      setErrorMsg(inquireFailureLead(422))
       return
     }
     setStatus('sending')
