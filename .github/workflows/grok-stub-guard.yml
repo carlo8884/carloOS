@@ -1,0 +1,59 @@
+name: GROK stub guard
+
+# Pull requests fail this check when GROK.md is a stub. Direct pushes to
+# main already landed before any check can reject them, so the push job
+# restores the last passing GROK.md and stays red.
+#
+# Branch protection could not be read or updated from the integration
+# token (HTTP 403) and the repository ruleset list was empty. An admin
+# still has to mark the pull-request check "GROK.md stub guard" as
+# required before it can block the merge button.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: grok-stub-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  pull-request:
+    if: github.event_name == 'pull_request'
+    permissions:
+      contents: read
+    name: GROK.md stub guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Reject a stub GROK.md before merge
+        run: node scripts/ci/content-stub-guard.mjs
+      - name: Test the stub guard
+        run: node --test scripts/ci/content-stub-guard.test.mjs scripts/ci/grok-direct-push-guard.test.mjs
+
+  direct-push:
+    if: github.event_name == 'push'
+    name: GROK.md direct-push stub revert
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Restore GROK.md when a direct push stubs it
+        run: node scripts/ci/grok-direct-push-guard.mjs --restore
