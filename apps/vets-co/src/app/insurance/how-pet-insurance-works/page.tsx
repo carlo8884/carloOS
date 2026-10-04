@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { ComparisonFoot, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How Pet Insurance Works — A Plain-English Guide | Vets.co", description: "Pet insurance reimburses you for covered vet bills after a deductible. Learn how premiums, deductibles, reimbursement rates, and annual limits fit together.", path: '/insurance/how-pet-insurance-works', type: 'article' })
@@ -227,6 +227,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
+          <ComparisonFoot updated="2026-10-04" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

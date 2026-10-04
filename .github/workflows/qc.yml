@@ -143,6 +143,20 @@ jobs:
       - name: Run hop-target
         run: node scripts/ci/hop-target.mjs
 
+  how-we-pick:
+    name: How we pick pages and comparison last-updated dates
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run how-we-pick
+        run: node scripts/ci/how-we-pick.mjs
+
   new-guide-sitemap:
     name: Round 7–8 guides in apex sitemap (no 404 or redirect chain)
     runs-on: ubuntu-latest

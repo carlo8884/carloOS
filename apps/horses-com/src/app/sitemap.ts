@@ -70,6 +70,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/disciplines/western-pleasure', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://horses.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://horses.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
+    { url: 'https://horses.com/how-we-pick', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://horses.com/first-derby', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://horses.com/first-horse-roadmap', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://horses.com/glossary', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

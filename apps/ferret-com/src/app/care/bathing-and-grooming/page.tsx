@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import {
+import { ComparisonFoot,
   buildMetadata,
   ArticleLayout,
   StockImage,
@@ -655,6 +655,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
+          <ComparisonFoot updated="2026-10-04" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
