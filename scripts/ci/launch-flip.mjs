@@ -10,6 +10,7 @@
  * Does not set SITE_INDEXABLE on Vercel. Go-live stays that one env change.
  *
  *   LAUNCH_FLIP_SITES=dog-com node scripts/ci/launch-flip.mjs
+ *   LAUNCH_FLIP_SKIP_BUILD=1 reuses a build already made with the flag on.
  */
 import { spawn } from 'node:child_process'
 import { createRequire } from 'node:module'
@@ -173,6 +174,11 @@ function locs(xml) {
   return [...xml.matchAll(/<loc>\s*([^<\s]+)\s*<\/loc>/gi)].map((m) => m[1])
 }
 
+/** Homepage is the bare apex. Every other loc is apex + path. */
+function isApexUrl(loc, apex) {
+  return loc === apex || loc === `${apex}/` || loc.startsWith(`${apex}/`)
+}
+
 function assertNoPreview(text, label, failures) {
   for (const host of PREVIEW_HOSTS) {
     if (text.includes(host)) failures.push(`${label} contains preview host ${host}`)
@@ -208,7 +214,7 @@ async function checkSitemap(site, failures) {
   const seen = new Set([`${site.apex}/sitemap.xml`])
   const pending = [...xmlLocs]
   for (const loc of indexLocs) {
-    if (!loc.startsWith(`${site.apex}/`)) failures.push(`${site.id} sitemap loc is not apex: ${loc}`)
+    if (!isApexUrl(loc, site.apex)) failures.push(`${site.id} sitemap loc is not apex: ${loc}`)
   }
   let depth = 0
   while (pending.length && depth < 2) {
@@ -217,7 +223,7 @@ async function checkSitemap(site, failures) {
     for (const loc of batch) {
       if (seen.has(loc)) continue
       seen.add(loc)
-      if (!loc.startsWith(`${site.apex}/`)) {
+      if (!isApexUrl(loc, site.apex)) {
         failures.push(`${site.id} sitemap shard is not apex: ${loc}`)
         continue
       }
@@ -229,7 +235,7 @@ async function checkSitemap(site, failures) {
       }
       assertNoPreview(shard.body, `${site.id} ${shardPath}`, failures)
       for (const child of locs(shard.body)) {
-        if (!child.startsWith(`${site.apex}/`)) failures.push(`${site.id} sitemap loc is not apex: ${child}`)
+        if (!isApexUrl(child, site.apex)) failures.push(`${site.id} sitemap loc is not apex: ${child}`)
         if (child.endsWith('.xml') && !seen.has(child)) pending.push(child)
       }
     }
@@ -302,11 +308,15 @@ async function main() {
       SITE_INDEXABLE: 'true',
       VERCEL_ENV: 'production',
     }
-    console.log(`\n== build ${site.id} SITE_INDEXABLE=true apex ==`)
-    await run(process.execPath, [path.join(ROOT, 'scripts/ci/next-build.mjs')], {
-      cwd: appDir,
-      env: buildEnv,
-    })
+    if (process.env.LAUNCH_FLIP_SKIP_BUILD === '1') {
+      console.log(`\n== skip build ${site.id} (LAUNCH_FLIP_SKIP_BUILD=1) ==`)
+    } else {
+      console.log(`\n== build ${site.id} SITE_INDEXABLE=true apex ==`)
+      await run(process.execPath, [path.join(ROOT, 'scripts/ci/next-build.mjs')], {
+        cwd: appDir,
+        env: buildEnv,
+      })
+    }
 
     const startEnv = { ...process.env, SITE_INDEXABLE: 'true', VERCEL_ENV: 'production' }
     delete startEnv.NODE_OPTIONS
