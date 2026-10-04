@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -128,7 +129,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Cat Calorie Calculator',
+  description: 'Estimate your cat\'s daily calorie needs using the standard RER formula and WSAVA/AAHA-style feline DER factors — indoor vs outdoor, neuter status, and life stage. Enter weight, pick the matching option, and get kcal/day — plus optional cups/day if you enter your food\'s calorie density.',
+  url: 'https://vets.co/tools/cat-calorie-calculator',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function CatCalorieCalculatorPage() {
   return (

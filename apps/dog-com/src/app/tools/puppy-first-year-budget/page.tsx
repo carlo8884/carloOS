@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -102,7 +103,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Puppy First-Year Budget',
+  description: 'How much does a puppy cost in year one? Pick adult size and how the puppy arrives, then edit crate, food, vet, and training lines. A planning range — not a quote.',
+  url: 'https://dog.com/tools/puppy-first-year-budget',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function PuppyFirstYearBudgetPage() {
   return (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -86,9 +86,18 @@ const TOOLS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Veterinary-side tools, for owners.',
+  description: 'Free reference tools: a cat emergency sign-list triage, an ER vs clinic vs telehealth setting chooser, cat age / body-condition / grimace tools, a pet-insurance coverage finder and reimbursement estimator, plus the printable emergency triage card and the veterinary directory.',
+  url: 'https://vets.co/tools',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={articleSchema} />
       <SchemaScript schema={breadcrumbSchema} />
       <>
       <section className="bg-brand-dark px-container-sm sm:px-container py-section relative overflow-hidden">

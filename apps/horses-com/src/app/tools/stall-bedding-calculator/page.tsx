@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -106,6 +107,16 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Stall Bedding Calculator',
+  description: 'How many bags of shavings for a stall? Enter length, width, and depth to get cubic feet plus a bag or bale count for pine shavings, wood pellets, or straw.',
+  url: 'https://horses.com/tools/stall-bedding-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-09-03',
+  modifiedAt: '2026-09-03',
+})
 export default function StallBeddingCalculatorPage() {
   return (
     <ArticleLayout
@@ -131,7 +142,7 @@ export default function StallBeddingCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Stall Bedding Calculator' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

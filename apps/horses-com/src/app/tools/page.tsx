@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -99,7 +99,15 @@ const itemListSchema = {
   itemListElement: TOOLS.map((x, i) => ({ '@type': 'ListItem', position: i + 1, name: x.title, url: `https://horses.com${x.href}` })),
 }
 
-const schema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse husbandry math, at the rail.',
+  description: 'Free, source-cited horse-keeping calculators. Estimate bodyweight from a tape measure, plan daily hay and feed forage-first, and score body condition on the standard Henneke scale.',
+  url: 'https://horses.com/tools',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function ToolsHub() {
   return (

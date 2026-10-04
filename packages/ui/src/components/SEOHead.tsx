@@ -186,8 +186,10 @@ interface ArticleSchemaParams {
   url: string
   imageUrl: string
   authorName: string
-  publishedAt: string
-  modifiedAt: string
+  /** Omit when the page does not show a publication date. */
+  publishedAt?: string
+  /** Omit when the page does not show an updated date. */
+  modifiedAt?: string
   /**
    * When true, adds a SpeakableSpecification targeting `.carloOS-article`.
    * Use on Q&A spokes and FAQ-bearing guides where the article body
@@ -212,8 +214,8 @@ export function buildArticleSchema(params: ArticleSchemaParams) {
     description: params.description,
     url: params.url,
     image: params.imageUrl,
-    datePublished: params.publishedAt,
-    dateModified: params.modifiedAt,
+    ...(params.publishedAt ? { datePublished: params.publishedAt } : {}),
+    ...(params.modifiedAt ? { dateModified: params.modifiedAt } : {}),
     author: {
       '@type': 'Person',
       name: params.authorName,
@@ -258,12 +260,12 @@ export function buildFAQSchema(params: FAQSchemaParams) {
 }
 
 interface BreadcrumbSchemaParams {
-  items: Array<{ name: string; url: string }>
+  items: Array<{ name: string; url?: string }>
 }
 
 type BreadcrumbSchemaInput =
   | BreadcrumbSchemaParams
-  | Array<{ name: string; url: string }>
+  | Array<{ name: string; url?: string }>
 
 export function buildBreadcrumbSchema(input: BreadcrumbSchemaInput) {
   const items = Array.isArray(input) ? input : input.items
@@ -274,7 +276,7 @@ export function buildBreadcrumbSchema(input: BreadcrumbSchemaInput) {
       '@type': 'ListItem',
       position: i + 1,
       name: item.name,
-      item: item.url,
+      ...(item.url ? { item: item.url } : {}),
     })),
   }
 }

@@ -20,13 +20,15 @@ interface BreadcrumbProps {
 export function Breadcrumb({ items, siteId }: BreadcrumbProps) {
   const config = siteId ? getSiteConfig(siteId) : null
 
-  // BreadcrumbList schema only includes items that have a URL.
-  const schemaItems = items
-    .filter((item) => item.href)
-    .map((item) => ({
-      name: item.name,
-      url: config ? `${config.theme.siteUrl}${item.href}` : (item.href as string),
-    }))
+  // Every visible crumb is in the list, including the current page (no href).
+  // Linked crumbs keep their URL. The current page is name-only so the schema
+  // matches the trail on the page instead of dropping the last item.
+  const schemaItems = items.map((item) => ({
+    name: item.name,
+    ...(item.href
+      ? { url: config ? `${config.theme.siteUrl}${item.href}` : item.href }
+      : {}),
+  }))
 
   return (
     <>

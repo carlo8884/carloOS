@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -86,6 +87,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Fish Disease Symptom Checker',
+  description: 'Why is your fish sick? Tick the signs you can see and the checker ranks the conditions that fit — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide. It starts where most fish problems really start: your water.',
+  url: 'https://fish.com/tools/fish-disease-symptom-checker',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function FishDiseaseSymptomCheckerPage() {
   return (
     <ArticleLayout
@@ -104,7 +113,7 @@ export default function FishDiseaseSymptomCheckerPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Fish Disease Symptom Checker' },
       ]}
-      schema={howToSchema}
+      schema={[howToSchema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Disease Reference Library', href: '/health', category: 'Health' },

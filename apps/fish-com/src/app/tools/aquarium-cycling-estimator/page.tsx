@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -105,6 +106,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Cycling Time Estimator',
+  description: 'How long will my new tank take to cycle? Pick a method and temperature; the estimator returns days to completion and a phase-by-phase timeline.',
+  url: 'https://fish.com/tools/aquarium-cycling-estimator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function AquariumCyclingEstimatorPage() {
   return (
     <ArticleLayout
@@ -123,7 +132,7 @@ export default function AquariumCyclingEstimatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Cycling Estimator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Aquarium Cycling Guide', href: '/setup/aquarium-cycling-guide', category: 'Tank Setup' },

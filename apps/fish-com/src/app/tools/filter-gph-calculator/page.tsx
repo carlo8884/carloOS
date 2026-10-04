@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -108,6 +109,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium Filter GPH Calculator',
+  description: 'How much filter flow does your tank need? Gallons and tank style in, a GPH turnover range out — then buy one size up from the box rating.',
+  url: 'https://fish.com/tools/filter-gph-calculator',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function FilterGphCalculatorPage() {
   return (
     <ArticleLayout
@@ -126,7 +135,7 @@ export default function FilterGphCalculatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Filter GPH Calculator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       relatedLinks={[
         { title: 'Tools Hub', href: '/tools', category: 'Tools' },
         { title: 'Stocking Calculator', href: '/tools/stocking-calculator', category: 'Tools' },

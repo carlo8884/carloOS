@@ -131,6 +131,18 @@ jobs:
       - name: Run tool-schema-coverage
         run: node scripts/ci/tool-schema-coverage.mjs
 
+  guide-tool-schema:
+    name: Guide and tool Article + Breadcrumb schema
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run guide-tool-schema
+        run: node scripts/ci/guide-tool-schema.mjs
+
   vercel-ignore:
     name: Vercel build-cost wrapper (dir-014 regression)
     runs-on: ubuntu-latest

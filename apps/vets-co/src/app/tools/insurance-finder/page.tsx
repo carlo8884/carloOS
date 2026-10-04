@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -106,6 +107,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Pet Insurance Coverage Finder',
+  description: 'Filter carriers by the coverage features you care about and compare options that may fit your priorities. No quotes, no scores, no rankings — just published policy options, grouped.',
+  url: 'https://vets.co/tools/insurance-finder',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
 export default function InsuranceFinderPage() {
   return (
     <ArticleLayout
@@ -124,7 +133,7 @@ export default function InsuranceFinderPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Insurance Coverage Finder' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

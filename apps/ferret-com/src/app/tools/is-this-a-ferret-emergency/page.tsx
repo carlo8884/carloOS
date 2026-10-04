@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -129,7 +130,15 @@ const howToSchema = buildHowToSchema({
 })
 
 // Exactly ONE BreadcrumbList across the page.
-const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Is This a Ferret Emergency?',
+  description: 'Check the ferret signs you are seeing and get a conservative urgency read — go now, same-day vet, or monitor closely — using emergency-vs-wait criteria from exotic-mammal emergency medicine. This tool helps you decide how urgently to seek care. It does not diagnose your ferret.',
+  url: 'https://ferret.com/tools/is-this-a-ferret-emergency',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema, articleSchema)
 
 export default function IsThisAFerretEmergencyPage() {
   return (

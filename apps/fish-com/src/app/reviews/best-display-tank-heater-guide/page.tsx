@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Best Heater for a Display Tank',
+  title: 'Best heater for a display tank',
   description: 'Cobalt Neo-Therm for a display tank, Eheim Jager when glass is acceptable, Hydor when a canister can hide the heater.',
   url: 'https://fish.com/reviews/best-display-tank-heater-guide',
   imageUrl: '',

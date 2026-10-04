@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Saddle Fit Basics — 12-Point Framework',
+  title: 'Saddle Fit Basics — A 12-Point Framework',
   description:
     'Reference framework for evaluating English and Western saddle fit on the horse and under the rider.',
   url: 'https://horses.com/guides/saddle-fit-basics',

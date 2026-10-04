@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
-  title: 'Paper vs Wood Pellet Ferret Litter',
+  title: 'Paper pellets vs wood pellets',
   description: 'Paper pellets as the default. Heat-treated wood when odor is the priority. Never clumping litter or aromatic shavings.',
   url: 'https://ferret.com/reviews/paper-vs-wood-litter-guide',
   imageUrl: '',

@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Rambo vs Rhino Horse Blanket',
+  title: 'Rambo vs Rhino turnout',
   description: 'When the Rambo Original is the long-term turnout and when the Rhino is the step down.',
   url: 'https://horses.com/reviews/rambo-vs-rhino-guide',
   imageUrl: '',

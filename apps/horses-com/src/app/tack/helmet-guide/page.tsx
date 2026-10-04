@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Riding Helmet Guide — Standards, Fit, and When to Replace",
+  title: 'Riding Helmet Guide',
   description:
     "Reference guide to equestrian helmets: why they matter, safety standards and certification, correct fit, when to replace after a fall, and helmet care.",
   url: 'https://horses.com/tack/helmet-guide',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -103,7 +104,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Harness & Collar Size',
+  description: 'What size harness and collar does your dog need? Enter weight or size class plus neck and chest measurements for typical S–XL bands, fit tips, and when to size up. Starting sizes — not a brand guarantee.',
+  url: 'https://dog.com/tools/harness-collar-size',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function HarnessCollarSizePage() {
   return (

@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'horses-com',
-  title: "Horse Bits Explained — Snaffles, Curbs, and How Bits Work",
+  title: 'Horse Bits Explained',
   description:
     "Reference guide to horse bits: how a bit acts on the horse, snaffle vs curb (leverage) action, common mouthpieces, fit, and choosing humanely.",
   url: 'https://horses.com/tack/bits-guide',

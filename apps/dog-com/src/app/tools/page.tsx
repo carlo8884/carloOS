@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
@@ -137,7 +138,15 @@ const itemListSchema = {
   })),
 }
 
-const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog care calculators, source-cited.',
+  description: 'Free tools built on published veterinary guidelines -- not arbitrary numbers. Every formula is cited and labeled as an estimate; every result includes a reminder to confirm with your veterinarian.',
+  url: 'https://dog.com/tools',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function ToolsHub() {
   return (

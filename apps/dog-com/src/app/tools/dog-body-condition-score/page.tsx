@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -54,7 +55,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Dog.com', url: 'https://dog.com/' },
     { name: 'Tools', url: 'https://dog.com/tools' },
-    { name: 'Dog Body Condition Score Calculator', url: 'https://dog.com/tools/dog-body-condition-score' },
+    { name: 'Body Condition Score', url: 'https://dog.com/tools/dog-body-condition-score' },
   ],
 })
 
@@ -103,7 +104,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Body Condition Score',
+  description: 'Is your dog under or overweight? Answer three hands-on questions — feel the ribs, check the waist from above, and the belly tuck from the side — to estimate your dog\'s body condition score on the 1–9 scale, with what it means and what to do next.',
+  url: 'https://dog.com/tools/dog-body-condition-score',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function DogBodyConditionScorePage() {
   return (

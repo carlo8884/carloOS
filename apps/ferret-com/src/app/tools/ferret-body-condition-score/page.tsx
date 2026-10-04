@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -65,7 +66,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Ferret.com', url: 'https://ferret.com/' },
     { name: 'Tools', url: 'https://ferret.com/tools' },
-    { name: 'Ferret Body Condition Score', url: URL },
+    { name: 'Body Condition Score', url: URL },
   ],
 })
 
@@ -114,7 +115,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret Body Condition Score',
+  description: 'Is your ferret under or overweight — or just in a seasonal swing? Answer three hands-on checks — rib and spine feel, waist from above, belly from the side — for a 1–9 planning score. A planning reference, not a diagnosis.',
+  url: 'https://ferret.com/tools/ferret-body-condition-score',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function FerretBodyConditionScorePage() {
   return (

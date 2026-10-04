@@ -98,7 +98,7 @@ const appSchema = {
 
 const articleSchema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Puppy Weight Predictor — How Big Will My Puppy Get?',
+  title: 'Puppy Weight Predictor',
   description:
     'How to estimate a puppy\'s adult weight using the growth-percentage method and published size-class growth curves, with a worked example.',
   url: 'https://dog.com/tools/puppy-weight-predictor',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -124,7 +125,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, softwareApplicationSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'ER vs Clinic vs Telehealth',
+  description: 'Where should this go — emergency hospital now, clinic tomorrow, or a licensed vet on a screen? Select the signs. The tool returns the more urgent setting. It does not diagnose.',
+  url: 'https://vets.co/tools/er-vs-clinic',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, softwareApplicationSchema, howToSchema, articleSchema)
 
 export default function ErVsClinicPage() {
   return (

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 
 export const metadata: Metadata = buildMetadata({
@@ -70,7 +70,15 @@ const itemListSchema = {
   })),
 }
 
-const dogGuidesSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Care Guides',
+  description: 'In-depth, research-anchored guides on the foundational decisions every dog owner faces — body condition, weight management, spay/neuter timing, and more.',
+  url: 'https://dog.com/guides',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const dogGuidesSchema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function GuidesHubPage() {
   return (

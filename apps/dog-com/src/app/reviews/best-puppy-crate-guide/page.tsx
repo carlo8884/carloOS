@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Best Puppy Crate for House-Training',
+  title: 'Best crate for puppy house-training',
   description: 'The house-training crate is the wire model with a divider, sized to the adult dog.',
   url: 'https://dog.com/reviews/best-puppy-crate-guide',
   imageUrl: '',

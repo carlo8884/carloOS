@@ -22,7 +22,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Fish Disease Guide',
+  title: 'Aquarium Fish Disease Guide',
   description: 'Common aquarium fish diseases — symptoms, causes, and treatment.',
   url: 'https://fish.com/health/fish-disease-guide',
   imageUrl: '',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   EmailCapture,
   buildBreadcrumbSchema,
@@ -53,7 +54,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   items: [
     { name: 'Dog.com', url: 'https://dog.com/' },
     { name: 'Tools', url: 'https://dog.com/tools' },
-    { name: 'Dog Crate Size Calculator', url: 'https://dog.com/tools/dog-crate-size-calculator' },
+    { name: 'Crate Size Calculator', url: 'https://dog.com/tools/dog-crate-size-calculator' },
   ],
 })
 
@@ -102,7 +103,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Crate Size Calculator',
+  description: 'What size crate does your dog need? Enter two measurements — body length and standing height — and get the minimum internal crate dimensions plus the recommended standard crate size, so your dog can stand, turn, and stretch out comfortably.',
+  url: 'https://dog.com/tools/dog-crate-size-calculator',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 const CRATE_SIZE_TEXT = `Dog crate size — how to measure
 

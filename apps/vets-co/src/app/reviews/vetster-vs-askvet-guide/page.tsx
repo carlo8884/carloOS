@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Vetster vs AskVet Telehealth',
+  title: 'Vetster vs AskVet',
   description: 'Vetster for video and specialists. AskVet for unlimited chat. Not for emergencies.',
   url: 'https://vets.co/reviews/vetster-vs-askvet-guide',
   imageUrl: '',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -129,7 +130,15 @@ const howToSchema = buildHowToSchema({
 })
 
 // Exactly ONE BreadcrumbList across the page.
-const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Is This a Horse Emergency?',
+  description: 'Check the equine signs you are seeing and get a conservative urgency read — go now, same-day vet, or monitor closely — using emergency-vs-wait criteria from equine emergency medicine. This tool helps you decide how urgently to seek care. It does not diagnose your horse.',
+  url: 'https://horses.com/tools/is-this-a-horse-emergency',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, medicalSchema, howToSchema, articleSchema)
 
 export default function IsThisAHorseEmergencyPage() {
   return (

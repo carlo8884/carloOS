@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   buildBreadcrumbSchema,
@@ -116,7 +117,17 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-const schema = combineSchemas(howToSchema, breadcrumbSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Size for Rider Calculator',
+  description: 'What size horse should you ride? Estimate a suitable horse weight range and height band from your weight, height, and discipline — using the 15–20% carrying guideline.',
+  url: 'https://horses.com/tools/horse-size-for-rider',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+  publishedAt: '2026-06-11',
+  modifiedAt: '2026-09-03',
+})
+const schema = combineSchemas(howToSchema, breadcrumbSchema, articleSchema)
 
 export default function HorseSizeForRiderPage() {
   return (

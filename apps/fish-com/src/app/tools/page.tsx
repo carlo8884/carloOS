@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -115,9 +115,18 @@ const itemListSchema = {
   })),
 }
 
+const articleSchema = buildArticleSchema({
+  siteId: 'fish-com',
+  title: 'Aquarium math, done for you.',
+  description: 'Free calculators for the questions everyone Googles: how many gallons is my tank, what slim-inch bioload ceiling fits, what wattage heater do I need, and how much CO2 is in my planted tank. Mobile-friendly, no signup.',
+  url: 'https://fish.com/tools',
+  imageUrl: '',
+  authorName: 'Fish.com Editorial',
+})
 export default function ToolsHub() {
   return (
     <>
+      <SchemaScript schema={articleSchema} />
       <SchemaScript schema={breadcrumbSchema} />
       <SchemaScript schema={itemListSchema} />
       <>
@@ -131,6 +140,12 @@ export default function ToolsHub() {
         primaryCta={{ href: '/tools/stocking-calculator', label: 'Check your stocking' }}
         secondaryCta={{ href: '/tools/aquarium-volume-calculator', label: 'Calculate tank volume' }}
       />
+
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Home</Link>
+        <span>›</span>
+        <span className="text-brand-text-mid font-medium">Tools</span>
+      </nav>
 
       {/* TOOLS GRID */}
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">

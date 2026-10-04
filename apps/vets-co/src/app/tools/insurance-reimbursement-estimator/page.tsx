@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildHowToSchema,
   ArticleLayout,
@@ -113,6 +114,14 @@ const FAQS = [
   },
 ]
 
+const articleSchema = buildArticleSchema({
+  siteId: 'vets-co',
+  title: 'Pet Insurance Reimbursement Estimator',
+  description: 'Enter a carrier quote and your expected claims. Returns reimbursed amount, total annual cost with insurance, and net benefit vs. paying out-of-pocket.',
+  url: 'https://vets.co/tools/insurance-reimbursement-estimator',
+  imageUrl: '',
+  authorName: 'Vets.co Editorial',
+})
 export default function InsuranceReimbursementEstimatorPage() {
   return (
     <ArticleLayout
@@ -131,7 +140,7 @@ export default function InsuranceReimbursementEstimatorPage() {
         { name: 'Tools', href: '/tools' },
         { name: 'Insurance Reimbursement Estimator' },
       ]}
-      schema={schema}
+      schema={[schema, articleSchema]}
       sidebar={
         <>
           <TableOfContents

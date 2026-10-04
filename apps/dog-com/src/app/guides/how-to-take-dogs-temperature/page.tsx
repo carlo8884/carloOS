@@ -31,7 +31,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: "How to Take a Dog's Temperature and Vital Signs at Home",
+  title: 'How to Take a Dog\'s Temperature & Vital Signs at Home',
   description:
     "Owner's reference for checking a dog's temperature, pulse, respiratory rate, mucous membrane color, capillary refill time and hydration, with normal ranges.",
   url: 'https://dog.com/guides/how-to-take-dogs-temperature',

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -127,7 +128,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'dog-com',
+  title: 'Dog Grimace Scale',
+  description: 'Is your dog in pain? Dogs hide it — but the face leaks it. Score five facial signs (ears, eyes, muzzle, brow, head) on this owner pain-face checklist. A planning / observation reference, not a diagnosis.',
+  url: 'https://dog.com/tools/dog-grimace-scale',
+  imageUrl: '',
+  authorName: 'Dog.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function DogGrimaceScalePage() {
   return (

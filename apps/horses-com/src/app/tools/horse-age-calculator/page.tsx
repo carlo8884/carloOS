@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  buildArticleSchema,
   buildMetadata,
   buildBreadcrumbSchema,
   buildHowToSchema,
@@ -109,7 +110,15 @@ const howToSchema = buildHowToSchema({
   ],
 })
 
-const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'horses-com',
+  title: 'Horse Age Calculator',
+  description: 'How old is your horse in human years — and which life stage is it in? Enter age for a human-year estimate and a foal / young / adult / senior label. A planning reference, not a diagnosis, and not the multiply-by-seven rule.',
+  url: 'https://horses.com/tools/horse-age-calculator',
+  imageUrl: '',
+  authorName: 'Horses.com Editorial',
+})
+const schema = combineSchemas(breadcrumbSchema, appSchema, howToSchema, articleSchema)
 
 export default function HorseAgeCalculatorPage() {
   return (

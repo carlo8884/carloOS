@@ -29,7 +29,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'dog-com',
-  title: 'Dog Body Condition Score (BCS) — The 1–9 Scale Explained',
+  title: 'Dog Body Condition Score (BCS) — The 1–9 Scale, Step by Step',
   description:
     'Owner’s guide to scoring a dog on the WSAVA/AAHA 1–9 body condition scale, with breed-specific adjustments and lifespan evidence.',
   url: 'https://dog.com/guides/dog-body-condition-score',

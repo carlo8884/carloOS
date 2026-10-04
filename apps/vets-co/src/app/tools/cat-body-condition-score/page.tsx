@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
 
 const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Cat Body Condition Score — Is My Cat Overweight?',
+  title: 'Cat Body Condition Score',
   description:
     'A guided self-assessment that estimates a cat’s body condition score on the WSAVA 9-point scale from rib feel, waist, and the abdominal fat pad.',
   url: URL,

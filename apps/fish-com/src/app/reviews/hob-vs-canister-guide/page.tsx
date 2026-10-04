@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'HOB vs Canister Aquarium Filter',
+  title: 'HOB vs canister filter',
   description: 'When the AquaClear 70 hang-on-back is the pick, and when the Fluval 307 canister is.',
   url: 'https://fish.com/reviews/hob-vs-canister-guide',
   imageUrl: '',

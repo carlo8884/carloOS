@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
-  title: 'Vest vs H-Style Ferret Harness',
+  title: 'Vest harness vs H-style harness',
   description: 'Vest for escape resistance. H-style when you will check the fit every outing.',
   url: 'https://ferret.com/reviews/vest-vs-h-harness-guide',
   imageUrl: '',

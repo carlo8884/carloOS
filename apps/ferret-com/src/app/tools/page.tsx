@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -90,7 +90,15 @@ const itemListSchema = {
     },
   })),
 }
-const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema)
+const articleSchema = buildArticleSchema({
+  siteId: 'ferret-com',
+  title: 'Ferret husbandry math, at the bag.',
+  description: 'Free, source-cited ferret-keeping tools. Paste the guaranteed analysis from any food into the evaluator and get a clear verdict on whether it meets published ferret nutrient targets.',
+  url: 'https://ferret.com/tools',
+  imageUrl: '',
+  authorName: 'Ferret.com Editorial',
+})
+const combinedSchema = combineSchemas(breadcrumbSchema, itemListSchema, articleSchema)
 
 export default function ToolsHub() {
   return (
@@ -118,6 +126,12 @@ export default function ToolsHub() {
           </p>
         </div>
       </section>
+
+      <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">
+        <Link href="/" className="hover:text-brand-primary no-underline">Ferret.com</Link>
+        <span>›</span>
+        <span className="text-brand-text-mid font-medium">Tools</span>
+      </nav>
 
       <div className="px-container-sm sm:px-container pt-8">
         <StockImage manifestKey="ferret-com:tools-hero" aspect="16:9" variant="wide" priority />

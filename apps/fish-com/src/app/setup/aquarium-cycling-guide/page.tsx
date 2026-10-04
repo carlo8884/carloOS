@@ -55,7 +55,7 @@ const SOURCES = [
 ]
 const articleSchema = buildArticleSchema({
   siteId: 'fish-com',
-  title: 'Aquarium Cycling Guide',
+  title: 'Aquarium Cycling Guide — Fishless, Fish-in, Stalled',
   description:
     'The nitrogen cycle, fishless vs fish-in cycling, ammonia sources, test schedule, stalled-cycle troubleshooting, and bottled bacteria that actually work.',
   url: 'https://fish.com/setup/aquarium-cycling-guide',
