@@ -93,6 +93,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/diet/whole-prey-vs-kibble', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://ferret.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
+    { url: 'https://ferret.com/how-we-pick', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://ferret.com/ferret-starter-kit', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/find-an-exotic-vet', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://ferret.com/first-year-schedule', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

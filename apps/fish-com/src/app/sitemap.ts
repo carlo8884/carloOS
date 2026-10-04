@@ -37,6 +37,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://fish.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://fish.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://fish.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
+    { url: 'https://fish.com/how-we-pick', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://fish.com/equipment', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/health', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/health/bacterial-infections', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

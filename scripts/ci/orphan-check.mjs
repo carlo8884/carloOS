@@ -26,7 +26,7 @@
  *   - /admin and /dashboard — intentionally noindex, crawl-excluded
  *   - Redirect stubs (files that only call redirect(); no buildMetadata)
  *   - Legal/compliance utility pages:
- *       /legal/*, /disclosure, /editorial-standards, /data,
+ *       /legal/*, /disclosure, /editorial-standards, /how-we-pick, /data,
  *       /go/* (affiliate click-trackers), /llms.txt, /robots.ts, /sitemap.ts
  *   - noindex pages (noIndex: true / index: false in buildMetadata)
  *   - Route group directories (Next.js (group)/ folders map to the same URL)
@@ -87,6 +87,7 @@ const UTILITY_PREFIXES = [
 // Exact route matches that are additionally excluded (edge cases).
 const UTILITY_EXACT = new Set([
   '/',
+  '/how-we-pick',
 ])
 
 // ─── Helpers ────────────────────────────────────────────────────────────────
