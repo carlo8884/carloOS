@@ -209,7 +209,7 @@ export default function RationBalancersPage() {
             pros={['Fills gaps without adding calories', 'Small, economical serving', 'Very widely available']}
             cons={['Not a calorie source for hard keepers', 'Must match the forage type', 'Small serving needs accurate measuring']}
             price="$28–45 per 50 lb"
-            ctaText="Search on Amazon →"
+            ctaText="Search Purina Enrich Plus on Amazon →"
             ctaHref="/go/amazon-brand/purina+enrich+plus+ration+balancer?s=nutrition-ration-balancers"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="purina-enrich-plus"
@@ -233,7 +233,7 @@ export default function RationBalancersPage() {
             pros={['Low sugar and starch', 'Meets requirements on small calories', 'Suited to metabolic horses']}
             cons={['Use under veterinary / nutritionist guidance', 'Not a calorie source', 'Higher cost per bag than some balancers']}
             price="$35–55 per 50 lb"
-            ctaText="Search on Amazon →"
+            ctaText="Search Triple Crown 30% ration balancer on Amazon →"
             ctaHref="/go/amazon-brand/triple+crown+30+ration+balancer?s=nutrition-ration-balancers"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="triple-crown-30"
@@ -257,7 +257,7 @@ export default function RationBalancersPage() {
             pros={['Amino-acid-focused for topline', 'Low calorie load', 'Forage-diet gap filler']}
             cons={['Not a replacement for senior feed if chewing fails', 'Not a calorie source', 'Match to forage and horse']}
             price="$30–48 per 50 lb"
-            ctaText="Search on Amazon →"
+            ctaText="Search Nutrena Empower topline balancer on Amazon →"
             ctaHref="/go/amazon-brand/nutrena+empower+topline+balancer?s=nutrition-ration-balancers"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="nutrena-empower-topline"
