@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
- * Report-only. Lists printed prices on the five earning sites whose git
- * blame date is more than 45 days old. Homepages and funnels are out of
- * scope. Exit 0 even when prices are listed.
+ * Report-only. Lists exact dollar figures on the five earning sites whose
+ * git blame date is more than 45 days old. Ranges and historical citation
+ * lines (Citation's career earnings) are ignored. Homepages and funnels
+ * are out of scope. Exit 0 even when prices are listed.
  */
 import { execSync } from 'node:child_process'
 import { readdirSync, statSync } from 'node:fs'
@@ -34,6 +35,25 @@ function walk(dir, out = []) {
   return out
 }
 
+const RANGE_RE = [
+  /\$\s?\d[\d,]*(?:\.\d+)?\s*[kK]?\s*(?:–|—|-|&ndash;|&mdash;)\s*\$?\s?\d[\d,]*(?:\.\d+)?\s*[kK]?/g,
+  /from\s+\$\s?\d[\d,]*(?:\.\d+)?\s*[kK]?\s+to\s+\$?\s?\d[\d,]*(?:\.\d+)?\s*[kK]?/gi,
+]
+
+/** True when a dollar amount is not sitting inside a range. */
+export function hasExactDollar(code) {
+  let rest = code
+  for (const re of RANGE_RE) rest = rest.replace(re, ' ')
+  return priceRe.test(rest)
+}
+
+/** Citation's $1 million career earnings, and the same heritage sentences. */
+export function isHistoricalCitation(code) {
+  return /\bCitation\b/.test(code)
+    || /career earnings/i.test(code)
+    || /first (?:Thoroughbred|racehorse) to (?:reach|earn|surpass)/i.test(code)
+}
+
 export function stalePriceLines(blameText, cutoff) {
   const rows = []
   for (const line of blameText.split('\n')) {
@@ -44,6 +64,7 @@ export function stalePriceLines(blameText, cutoff) {
     const trimmed = code.trim()
     if (trimmed.startsWith('//') || trimmed.startsWith('*') || trimmed.startsWith('/*') || trimmed.startsWith('{/*')) continue
     if (!priceRe.test(code)) continue
+    if (!hasExactDollar(code) || isHistoricalCitation(code)) continue
     if (date < cutoff) rows.push({ date, code: trimmed.slice(0, 160) })
   }
   return rows
@@ -74,7 +95,7 @@ function main() {
     }
   }
   found.sort((a, b) => a.date.localeCompare(b.date) || a.rel.localeCompare(b.rel))
-  console.log(`Prices older than 45 days (before ${cutoff}): ${found.length}`)
+  console.log(`Exact prices older than 45 days (before ${cutoff}): ${found.length}`)
   console.log('Report only. This check does not fail the build.')
   const shown = found.slice(0, 80)
   for (const row of shown) console.log(`- ${row.date} ${row.rel} — ${row.code}`)
