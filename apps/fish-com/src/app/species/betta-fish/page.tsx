@@ -162,7 +162,7 @@ export default function BettaFishPage() {
 
           </>
         }
-       priceAsOf="2026-05-28">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
           <StockImage manifestKey="fish-com:cornerstone-species-betta" aspect="16:9" variant="inline" caption="A betta (Betta splendens) displaying its fins in a planted aquarium." priority />
@@ -349,7 +349,7 @@ export default function BettaFishPage() {
             <li>
               <strong>No filtration.</strong> Without a biofilter the ammonia produced by a
               feeding fish has nowhere to go. The fish breathes its own waste. Sponge filters
-              cost under $15 and run on an air pump.
+              cost about $10–15 and run on an air pump.
             </li>
             <li>
               <strong>Sharp decor.</strong> Plastic plants with stiff edges, rough resin caves,

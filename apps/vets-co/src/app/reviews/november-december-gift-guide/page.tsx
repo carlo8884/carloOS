@@ -31,7 +31,7 @@ const FAQS = [
   },
   {
     question: 'Which card prints the lower monthly band?',
-    answer: 'The telehealth page prints AskVet at $30 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month.',
+    answer: 'The telehealth page prints AskVet at $25–35 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month.',
   },
   {
     question: 'What about a holiday emergency visit?',
@@ -76,9 +76,9 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>People ask what to buy a pet in November and December. The reviews on this site are not toy reviews. They price insurance and remote visits. The <Link href="/reviews">reviews hub</Link> is where those cards live. This page groups the printed bands so a reader can see a monthly chat fee next to a monthly premium and a per-visit video fee. It does not enroll anyone, and it does not turn a band into a quote.</p>
         <p>Holiday leftovers and holiday emergency bills already have their own pages. Fatty leftovers stay on the <Link href="/reviews/holiday-leftovers-low-fat-guide">leftovers guide</Link>. Why a holiday emergency visit costs more stays on the <Link href="/reviews/holiday-emergency-visit-guide">emergency-visit guide</Link>. None of the links below is a substitute for an in-person emergency.</p>
         <h2>Printed monthly bands</h2>
-        <p>The telehealth page prints AskVet at $30 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month. Those are the bands on the cards. Your premium depends on the pet, the deductible, and the zip code. The quote button is how that number gets made. This page does not guess it.</p>
+        <p>The telehealth page prints AskVet at $25–35 a month for unlimited chat. The insurance review prints Healthy Paws at $40–85 a month, Embrace at $45–95 a month plus a wellness add-on, and Trupanion at $65–120 a month. Those are the bands on the cards. Your premium depends on the pet, the deductible, and the zip code. The quote button is how that number gets made. This page does not guess it.</p>
         <h2>Printed per-visit band</h2>
-        <p>The telehealth page prints Vetster at $50–100 per consultation, with no monthly fee on that card. That is a different shape of spending from a monthly premium. The same page prints Chewy Connect as included with Chewy+ at $19.99 a month. This page does not add a shop link for Chewy Connect. That hop stays off until a Chewy tag is set, which is the same rule as the telehealth card.</p>
+        <p>The telehealth page prints Vetster at $50–100 per consultation, with no monthly fee on that card. That is a different shape of spending from a monthly premium. The same page prints Chewy Connect as included with Chewy+ at $15–25 a month. This page does not add a shop link for Chewy Connect. That hop stays off until a Chewy tag is set, which is the same rule as the telehealth card.</p>
         <h2>Who should open which printed band</h2>
         <p>Open the AskVet card when the question is a chat subscription. Open Vetster when the question is a video visit paid per consult. Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy. Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
@@ -93,7 +93,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </thead>
             <tbody>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$30 a month</td>
+                <td className="p-3">$25–35 a month</td>
                 <td className="p-3 font-bold">AskVet<TableShopLink href={`/go/askvet/telehealth?s=${SOURCE}`} product="AskVet" /></td>
                 <td className="p-3"><Link href="/telehealth">Telehealth page</Link></td>
               </tr>

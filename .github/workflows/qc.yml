@@ -183,6 +183,20 @@ jobs:
       - name: Run price-as-of
         run: node scripts/ci/price-as-of.mjs
 
+  stale-price-report:
+    name: Prices older than 45 days (report-only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run stale-price-report
+        run: node scripts/ci/stale-price-report.mjs
+
   how-we-pick:
     name: How we pick pages and comparison last-updated dates
     runs-on: ubuntu-latest

@@ -228,7 +228,9 @@ export function resolveAffiliateHop(opts: {
     return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
   }
 
-  let target = route.template.split('{sku}').join(encodeURIComponent(sku))
+  // Path skus use + as a word separator (fi+series+3). encodeURIComponent
+  // would turn that into %2B, and Amazon then searches for the plus signs.
+  let target = route.template.split('{sku}').join(encodeURIComponent(sku.replaceAll('+', ' ')))
   if (tag) target = target.split('PLACEHOLDER').join(tag)
   target = stripPlaceholder(target)
   if (!target || target.includes('PLACEHOLDER')) {

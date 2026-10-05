@@ -97,7 +97,7 @@ export default function AquariumSetupPage() {
       </section>
       {/* agent1-browse-all-end */}
 </>}
-     priceAsOf="2026-05-25">
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-04T00:00:00Z" reviewedBy="Editorial team" />
 
@@ -122,7 +122,7 @@ export default function AquariumSetupPage() {
           <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common.</li>
           <li><strong>Thermometer</strong> — digital stick thermometer ($8–15). Verify heater accuracy on day one.</li>
           <li><strong>Dechlorinator (water conditioner)</strong> — Seachem Prime or API Stress Coat. Removes chlorine and chloramine from tap water. Use at every water change.</li>
-          <li><strong>Liquid test kit</strong> — API Master Test Kit ($30). Tests ammonia, nitrite, nitrate, and pH. This is how you know when your tank is cycled and when water changes are needed. Test strips are inaccurate.</li>
+          <li><strong>Liquid test kit</strong> — API Master Test Kit ($28–35, the band on the water-test review). Tests ammonia, nitrite, nitrate, and pH. This is how you know when your tank is cycled and when water changes are needed. Test strips are inaccurate.</li>
         </ul>
         <p><strong>Useful but not mandatory at setup:</strong> gravel vacuum, protein skimmer (saltwater only), CO2 system (planted tanks), UV sterilizer.</p>
         <p className="text-sm text-brand-text-mid">

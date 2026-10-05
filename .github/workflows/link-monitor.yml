@@ -1,6 +1,9 @@
 name: Weekly link monitor
 
 # Checks every /go target and outbound citation on the five earning sites.
+# Comparison-table and gift-guide shop links are checked again for a 404,
+# a redirect chain longer than one hop, a missing ?s= source, and an Amazon
+# search tag when that tag is set in the environment.
 # One issue with the label link-monitor is opened or updated. A clean scan
 # closes that issue. This workflow does not assign, mention, or request
 # review from anyone.

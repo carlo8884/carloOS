@@ -14,8 +14,10 @@
  */
 
 import { useState, useEffect, useRef, useCallback } from 'react'
+import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import type { SiteId } from '@carloOS/config'
+import { missedPage } from '../data/missed-page'
 
 interface SearchResult {
   title: string
@@ -235,13 +237,54 @@ export function SearchBar({ siteId, placeholder = 'Search…', className = '', f
         </div>
       )}
 
-      {/* No results */}
+      {/* No results — same guides and calculator as the empty /search page */}
       {open && !loading && results.length === 0 && query.length >= 2 && (
-        <div className="absolute top-full mt-1 left-0 right-0 bg-brand-white border border-brand-border rounded-xl shadow-card-hover z-50 px-4 py-5 text-center">
-          <div className="text-sm text-brand-text-light">No results for &ldquo;{query}&rdquo;</div>
-          <div className="text-xs text-brand-text-light mt-1">Try a different search term</div>
-        </div>
+        <EmptySearch query={query} siteId={siteId} onOpenSearch={() => {
+          router.push(`/search?q=${encodeURIComponent(query)}`)
+          setOpen(false)
+        }} />
       )}
+    </div>
+  )
+}
+
+function EmptySearch({
+  query,
+  siteId,
+  onOpenSearch,
+}: {
+  query: string
+  siteId: SiteId
+  onOpenSearch: () => void
+}) {
+  const page = missedPage(siteId)
+  return (
+    <div className="absolute top-full mt-1 left-0 right-0 bg-brand-white border border-brand-border rounded-xl shadow-card-hover z-50 px-4 py-4 text-left">
+      <p className="text-sm text-brand-dark m-0">No results for &ldquo;{query}&rdquo;</p>
+      <p className="text-sm text-brand-text-light mt-1 mb-3">Start with a guide or the calculator.</p>
+      {page ? (
+        <ul className="list-none m-0 p-0 flex flex-col gap-2">
+          {page.guides.map((guide) => (
+            <li key={guide.href}>
+              <Link href={guide.href} className="block text-sm font-semibold text-brand-dark no-underline hover:text-brand-primary">
+                {guide.title}
+              </Link>
+            </li>
+          ))}
+          <li>
+            <Link href={page.calculator.href} className="block text-sm font-semibold text-brand-dark no-underline hover:text-brand-primary">
+              {page.calculator.title}
+            </Link>
+          </li>
+        </ul>
+      ) : null}
+      <button
+        type="button"
+        onClick={onOpenSearch}
+        className="mt-3 w-full text-center py-2 text-xs font-bold text-brand-primary bg-brand-surface hover:bg-brand-primary-pale border border-brand-border rounded-md cursor-pointer"
+      >
+        Search these guides
+      </button>
     </div>
   )
 }

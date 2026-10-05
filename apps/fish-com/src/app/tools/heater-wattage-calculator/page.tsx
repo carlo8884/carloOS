@@ -154,7 +154,7 @@ export default function HeaterWattageCalculatorPage() {
 
         </>
       }
-     priceAsOf="2026-05-27">
+     priceAsOf="2026-10-04">
       <div className="carloOS-article">
         <script
           type="application/ld+json"
@@ -214,7 +214,7 @@ export default function HeaterWattageCalculatorPage() {
         <h2 id="controllers">External Controllers</h2>
         <p>
           For tanks over 75 gallons, sensitive species (discus, German rams, reef tanks), or breeding setups, add an external temperature controller.
-          The Inkbird ITC-308 (~$35) plugs into the wall and the heater plugs into it. It overrides the heater&apos;s built-in thermostat using a more accurate
+          The Inkbird ITC-308 ($30–40) plugs into the wall and the heater plugs into it. It overrides the heater&apos;s built-in thermostat using a more accurate
           probe and shuts off power if temperature exceeds a safety cutoff. This prevents the stuck-on failure mode entirely.
         </p>
         <p>

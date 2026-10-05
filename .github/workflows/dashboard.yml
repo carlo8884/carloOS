@@ -1,8 +1,10 @@
 name: dashboard-sync
 
 # Ruleset 24478557 blocks every direct push to main, including this
-# workflow's token. Page counts are committed to bot/dashboard-sync and
-# opened or updated as one pull request. They are not pushed to main.
+# workflow's token. Page counts are committed to bot/dashboard-sync.
+# The job opens or updates one pull request when Actions is allowed to,
+# and always uploads the files as an artifact. A refused PR create does
+# not fail the job. Nothing is pushed to main.
 
 on:
   push:
