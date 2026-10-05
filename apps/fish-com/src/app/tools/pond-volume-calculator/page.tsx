@@ -214,15 +214,15 @@ export default function PondVolumeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume"
-              amazonLabel="Browse epdm pond liner on Amazon →"
+              amazonLabel="Browse EPDM pond liners on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/submersible+pond+pump?s=tools-pond-volume"
-              amazonLabel="Browse submersible pond pump on Amazon →"
+              amazonLabel="Browse submersible pond pumps on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/pond+filter+skimmer+kit?s=tools-pond-volume"
-              amazonLabel="Browse pond filter skimmer kit on Amazon →"
+              amazonLabel="Browse pond filter and skimmer kits on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"
