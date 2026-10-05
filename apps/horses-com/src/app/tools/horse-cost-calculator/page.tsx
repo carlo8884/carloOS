@@ -233,7 +233,7 @@ export default function HorseCostCalculatorPage() {
           nextLabel="Walk the first 90 days before you buy"
           nextBlurb="The calculator is the monthly number. The first-horse roadmap is the sequence — tryout, PPE, first farrier, first week of handling — so the budget is attached to a plan. The day-one kit below is the husbandry starter, not a ranked list."
           resourceHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
-          resourceLabel="Browse horse halters and leads on Amazon →"
+          resourceLabel="Browse horse halters and lead ropes on Amazon →"
         />
         <p>
           Once you have a monthly number, pack the day-one kit that fills the one-time
@@ -255,7 +255,7 @@ export default function HorseCostCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
-              amazonLabel="Browse horse halters and leads on Amazon →"
+              amazonLabel="Browse horse halters and lead ropes on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+grooming+kit?s=tools-horse-cost-calculator"
