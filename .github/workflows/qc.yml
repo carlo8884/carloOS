@@ -122,7 +122,7 @@ jobs:
         run: node scripts/ci/kitchen-kit-ban.mjs
 
   hop-topic-match:
-    name: Amazon search matches page topic (report-only)
+    name: Amazon search matches page topic
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:

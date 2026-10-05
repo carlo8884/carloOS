@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import { isCrossSell, topicMismatches } from './hop-topic-match.mjs'
+import { CROSS_SELLS, isCrossSell, topicMismatches } from './hop-topic-match.mjs'
 
 function page({ path, title, description, body, href }) {
   return `export const metadata = buildMetadata({
@@ -123,11 +123,25 @@ test('a helmet search on a halters page is still a mismatch', () => {
   assert.equal(isCrossSell('/tack/halters-and-lead-ropes', 'equestrian riding helmet'), false)
 })
 
-test('the workflow job is report-only and the script exits 0', () => {
+test('the cross-sell allowlist is the documented set', () => {
+  assert.deepEqual(
+    CROSS_SELLS.map((row) => `${row.path} :: ${row.query}`).sort(),
+    [
+      '/first-horse-roadmap :: horse hoof pick',
+      '/tools :: horse hoof pick',
+      '/tools/horse-size-for-rider :: ASTM SEI horse riding helmet',
+      '/tools/horse-size-for-rider :: horse girth cinch',
+      '/tools/horse-size-for-rider :: horse stirrups',
+    ].sort(),
+  )
+})
+
+test('the workflow job fails the build on a mismatch', () => {
   const script = readFileSync(new URL('./hop-topic-match.mjs', import.meta.url), 'utf8')
   const yml = readFileSync(new URL('../../.github/workflows/qc.yml', import.meta.url), 'utf8')
   assert.match(script, /process\.exit\(0\)/)
-  assert.equal(/process\.exit\(1\)/.test(script), false)
-  assert.match(yml, /Amazon search matches page topic \(report-only\)/)
+  assert.match(script, /process\.exit\(1\)/)
+  assert.equal(yml.includes('Amazon search matches page topic (report-only)'), false)
+  assert.match(yml, /name: Amazon search matches page topic\n/)
   assert.match(yml, /node scripts\/ci\/hop-topic-match\.mjs/)
 })
