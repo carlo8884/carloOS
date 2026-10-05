@@ -206,7 +206,7 @@ export default function JointSupplementsPage() {
               pros={['Senior-dose ingredient amounts', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
               cons={['No ASU component', 'House-brand HA at oral dose has limited evidence', 'Auto-ship requires SmartPak account']}
               price="$45–65 per 28-day supply"
-              ctaText="Shop at SmartPak →"
+              ctaText="Shop SmartFlex Senior at SmartPak →"
               ctaHref="/go/smartpak/smartflex-senior?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="smartflex-senior"
@@ -231,7 +231,7 @@ export default function JointSupplementsPage() {
               pros={['Documented anti-inflammatory effects in horses', 'Synergizes with other joint inputs', 'Wide availability']}
               cons={['Flax-source ALA does not deliver equivalent benefit', 'Cold storage extends shelf life', 'Smell — some horses initially refuse']}
               price="$25–60 per 30-day supply"
-              ctaText="Compare at Riding Warehouse →"
+              ctaText="Compare marine-source omega-3 at Riding Warehouse →"
               ctaHref="/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"
               ctaAffiliateProgram="ridingwarehouse"
               ctaAffiliateProduct="marine-omega-3"
