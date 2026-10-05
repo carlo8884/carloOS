@@ -9,8 +9,39 @@
 import { useEffect, useRef, useState, type KeyboardEvent as ReactKeyboardEvent } from 'react'
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
-import { getSiteConfig } from '@carloOS/config'
+import { getSiteConfig, isEarningSiteId } from '@carloOS/config'
 import { Logo } from './Logo'
+
+function NavSearchField({ id, compact }: { id: string; compact?: boolean }) {
+  return (
+    <form
+      action="/search"
+      method="get"
+      role="search"
+      className={compact ? 'shrink-0' : 'px-6 py-3 border-b border-brand-border'}
+    >
+      <label htmlFor={id} className="sr-only">
+        Search guides, reviews, and tools
+      </label>
+      <input
+        id={id}
+        name="q"
+        type="search"
+        placeholder="Search"
+        autoComplete="off"
+        enterKeyHint="search"
+        className={
+          compact
+            ? 'h-9 w-32 border border-brand-border rounded-md px-2 text-sm text-brand-dark bg-brand-white'
+            : 'w-full min-h-11 border border-brand-border rounded-md px-3 text-base text-brand-dark bg-brand-white'
+        }
+      />
+      <button type="submit" className="sr-only">
+        Search
+      </button>
+    </form>
+  )
+}
 
 interface NavProps {
   siteId: SiteId
@@ -44,7 +75,7 @@ export function Nav({ siteId, activePath }: NavProps) {
     }
     menuWasOpen.current = true
     const frame = window.requestAnimationFrame(() => {
-      menuRef.current?.querySelector<HTMLElement>('a[href]')?.focus()
+      menuRef.current?.querySelector<HTMLElement>('input[type="search"], a[href]')?.focus()
     })
     const onKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -61,7 +92,9 @@ export function Nav({ siteId, activePath }: NavProps) {
 
   function trapMenuTab(event: ReactKeyboardEvent<HTMLDivElement>) {
     if (event.key !== 'Tab' || !menuRef.current) return
-    const items = Array.from(menuRef.current.querySelectorAll<HTMLElement>('a[href]'))
+    const items = Array.from(
+      menuRef.current.querySelectorAll<HTMLElement>('input[type="search"], button, a[href]'),
+    )
     if (items.length === 0) return
     const first = items[0]
     const last = items[items.length - 1]
@@ -98,8 +131,14 @@ export function Nav({ siteId, activePath }: NavProps) {
           <Logo config={config} size="nav" />
         </Link>
 
-        {/* Desktop links */}
-        <ul className="hidden lg:flex items-center gap-7 list-none m-0 p-0" role="list">
+        {/* Desktop links. Search sits with them at 1280px so the bar height and link spacing stay put. */}
+        <div className="hidden lg:flex items-center gap-4 min-w-0">
+          {isEarningSiteId(siteId) ? (
+            <div className="hidden xl:block">
+              <NavSearchField id="nav-search-desktop" compact />
+            </div>
+          ) : null}
+          <ul className="flex items-center gap-7 list-none m-0 p-0" role="list">
           {config.nav.map((item) => (
             <li key={item.href}>
               <Link
@@ -116,7 +155,8 @@ export function Nav({ siteId, activePath }: NavProps) {
               </Link>
             </li>
           ))}
-        </ul>
+          </ul>
+        </div>
 
         {/* Hamburger (mobile) */}
         <button
@@ -162,6 +202,7 @@ export function Nav({ siteId, activePath }: NavProps) {
             aria-label="Mobile navigation"
             onKeyDown={trapMenuTab}
           >
+            {isEarningSiteId(siteId) ? <NavSearchField id="nav-search-mobile" /> : null}
             <ul className="list-none m-0 p-0 flex flex-col" role="list">
               {config.nav.map((item) => (
                 <li key={item.href} className="border-b border-brand-border last:border-0">
