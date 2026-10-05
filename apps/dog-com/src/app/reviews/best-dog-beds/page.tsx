@@ -52,7 +52,7 @@ export default function BestDogBedsPage() {
               nextLabel="Size the crate before you pick the foam"
               nextBlurb="The callout is the foam rule — 7-inch orthopedic for arthritic large and giant dogs, washable everyday foam otherwise. The crate-size calculator is the next step so the bed actually fits the stand-turn-lie footprint. The link below searches for the Big Barker bed, the same search as on this page."
               resourceHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
-              resourceLabel="Browse Big Barker orthopedic dog beds →"
+              resourceLabel="Browse Big Barker orthopedic dog beds on Amazon →"
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
