@@ -104,7 +104,7 @@ export default function HowMuchToFeedPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-how-much"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dry dog food on Amazon →"
             />
           </div>
         </div>

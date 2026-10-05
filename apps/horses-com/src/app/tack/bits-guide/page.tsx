@@ -252,7 +252,7 @@ export default function BitsGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bits-guide"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse snaffle bit on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+bit+width+and+wrinkle+fit+question+card?s=bits-guide"

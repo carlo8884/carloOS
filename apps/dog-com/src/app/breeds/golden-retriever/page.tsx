@@ -201,7 +201,7 @@ export default function GoldenRetrieverBreedPage() {
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog crate on Amazon →"
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
@@ -209,7 +209,7 @@ export default function GoldenRetrieverBreedPage() {
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog crate on Amazon →"
                 />
               </div>
             </div>

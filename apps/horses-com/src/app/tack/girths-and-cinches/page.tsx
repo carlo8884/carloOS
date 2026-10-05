@@ -319,7 +319,7 @@ export default function GirthsCinchesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+martingale?s=girths-and-cinches"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse martingale on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+girth+buckle+elbow+clearance+question+card?s=girths-and-cinches"

@@ -139,7 +139,7 @@ export default function BestSmallDogsForApartmentsPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+crate?s=breeds-apartment-dogs"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog crate on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+apt+puzzle+feeder?s=breeds-apartment-dogs"

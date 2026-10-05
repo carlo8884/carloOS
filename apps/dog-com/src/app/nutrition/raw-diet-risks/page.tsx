@@ -149,7 +149,7 @@ export default function RawDietRisksPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-raw-risks"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dry dog food on Amazon →"
               />
           </div>
           </div>

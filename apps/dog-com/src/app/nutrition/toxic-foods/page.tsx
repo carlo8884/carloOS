@@ -251,7 +251,7 @@ export default function ToxicFoodsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+food?s=nutrition-toxic-foods"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog food on Amazon →"
               />
           </div>
           </div>

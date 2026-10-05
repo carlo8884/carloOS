@@ -294,7 +294,7 @@ export default function BootsWrapsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=boots-and-wraps"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+boot+impact+not+tendon+support+question+card?s=boots-and-wraps"

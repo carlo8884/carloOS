@@ -301,7 +301,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse digital pet thermometer on Amazon →"
             />
           </div>
         </div>

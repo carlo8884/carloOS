@@ -96,7 +96,7 @@ export default function PoodlePage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+crate?s=breed-poodle"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog crate on Amazon →"
             />
           </div>
         </div>

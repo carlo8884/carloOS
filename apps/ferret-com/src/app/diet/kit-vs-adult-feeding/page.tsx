@@ -148,7 +148,7 @@ export default function KitVsAdultFeedingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/marshall+ferret+food?s=kit-vs-adult-feeding"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Marshall ferret food on Amazon →"
               />
           </div>
           </div>

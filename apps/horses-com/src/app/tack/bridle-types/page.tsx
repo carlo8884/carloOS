@@ -247,7 +247,7 @@ export default function BridleTypesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bridle-types"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse snaffle bit on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+bridle+cheekpiece+length+fit+question+card?s=bridle-types"

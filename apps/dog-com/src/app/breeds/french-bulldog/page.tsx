@@ -85,7 +85,7 @@ export default function FrenchBulldogBreedPage() {
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+skin+fold+cleaner?s=breed-french-bulldog"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse dog skin fold cleaner on Amazon →"
                 />
           </div>
             </div>

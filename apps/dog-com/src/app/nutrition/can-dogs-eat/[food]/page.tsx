@@ -193,7 +193,7 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+food?s=can-dogs-eat-food"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog food on Amazon →"
             />
           </div>
         </div>
