@@ -120,7 +120,7 @@ export default function DogKidneyPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"
-                amazonLabel="Browse ceramic pet water bowls on Amazon →"
+                amazonLabel="Browse heavy ceramic water bowls on Amazon →"
               />
             </div>
           </div>
