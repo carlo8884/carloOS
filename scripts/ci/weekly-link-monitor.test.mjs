@@ -2,10 +2,14 @@ import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
 import {
+  amazonTagProblem,
   citationUrlsFromSource,
+  classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
+  missingShopSource,
   renderReport,
+  tableShopHrefs,
 } from './weekly-link-monitor-lib.mjs'
 
 test('go hrefs and outbound citations are collected without own-site or asset hosts', () => {
@@ -53,6 +57,71 @@ test('the report lists failures and does not mention anyone', () => {
   const clean = renderReport({ checkedAt: '2026-10-04T22:00Z', checked: 1, failures: [], blocked: [] })
   assert.match(clean, /FAIL=0/)
   assert.match(clean, /## Failures\nnone/)
+})
+
+test('one retailer redirect is allowed and a longer chain or a 404 fails', () => {
+  assert.equal(classifyRedirectChain([200]).kind, 'ok')
+  assert.equal(classifyRedirectChain([301, 200]).kind, 'ok')
+  assert.equal(classifyRedirectChain([302, 200]).kind, 'ok')
+  assert.equal(classifyRedirectChain([301, 503]).kind, 'blocked')
+  assert.equal(classifyRedirectChain([403]).kind, 'blocked')
+  assert.equal(classifyRedirectChain([404]).kind, 'fail')
+  assert.equal(classifyRedirectChain([301, 302, 200]).kind, 'fail')
+  assert.match(classifyRedirectChain([301, 302, 200]).detail, /redirect chain 2/)
+  assert.equal(classifyRedirectChain([], 'TimeoutError').kind, 'fail')
+})
+
+test('amazon search hops keep the tag only when the environment has one', () => {
+  const tagged = 'https://amazon.com/s?k=fi%20series%203&tag=boltonpets20-20ls'
+  assert.equal(amazonTagProblem(tagged, { AFF_AMAZON_TAG: 'boltonpets20-20ls' }), '')
+  assert.equal(amazonTagProblem('https://amazon.com/s?k=crate', { AFF_AMAZON_TAG: 'boltonpets20-20ls' }), 'amazon tag mismatch')
+  assert.equal(amazonTagProblem('https://amazon.com/s?k=crate', {}), '')
+  assert.equal(amazonTagProblem('https://www.amazon.com', { AFF_AMAZON_TAG: 'boltonpets20-20ls' }), '')
+  assert.equal(amazonTagProblem('https://amazon.com/s?k=x&tag=PLACEHOLDER', { AFF_AMAZON_TAG: 'boltonpets20-20ls' }), 'PLACEHOLDER')
+})
+
+test('table and gift-guide shop links keep a source and the new pages are included', () => {
+  const sample = `
+    <TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} />
+    <TableShopLink href={\`/go/chewy-brand/lickimat+splash?s=\${SOURCE}\`} product="LickiMat Splash" />
+    <TableShopLink href={"/go/chewy/connect?s=telehealth"} product={"Chewy Connect"} />
+  `
+  assert.deepEqual(tableShopHrefs(sample), [
+    '/go/trupanion/home?s=reviews-best-pet-insurance',
+    '/go/chewy-brand/lickimat+splash?s=${SOURCE}',
+    '/go/chewy/connect?s=telehealth',
+  ])
+  assert.equal(missingShopSource('/go/trupanion/home'), true)
+  assert.equal(missingShopSource('/go/trupanion/home?s=reviews-best-pet-insurance'), false)
+  for (const site of ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']) {
+    const gift = readFileSync(
+      new URL(`../../apps/${site}/src/app/reviews/november-december-gift-guide/page.tsx`, import.meta.url),
+      'utf8',
+    )
+    const hrefs = tableShopHrefs(gift)
+    assert.ok(hrefs.length >= 3, site)
+    assert.ok(hrefs.every((href) => !missingShopSource(href)), site)
+  }
+})
+
+test('the shop section is part of the report and does not mention anyone', () => {
+  const body = renderReport({
+    checkedAt: '2026-10-05T04:30Z',
+    checked: 4,
+    failures: [],
+    blocked: [],
+    shop: {
+      checked: 3,
+      hidden: 1,
+      failures: [{ url: 'https://example.com/missing', detail: 'HTTP 404', where: 'apps/dog-com/src/app/reviews/november-december-gift-guide/page.tsx' }],
+      blocked: [{ url: 'https://amazon.com/s?k=crate', detail: 'HTTP 503' }],
+    },
+  })
+  assert.match(body, /FAIL=1/)
+  assert.match(body, /## Comparison-table and gift-guide shop links/)
+  assert.match(body, /Hidden Chewy hops with no tag: 1/)
+  assert.match(body, /november-december-gift-guide/)
+  assert.equal(/(^|\s)@/.test(body), false)
 })
 
 test('the workflow files one issue and cannot assign or request review', () => {

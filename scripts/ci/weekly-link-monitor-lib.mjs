@@ -46,6 +46,55 @@ export function goHrefsFromSource(src) {
   return [...found]
 }
 
+/** Comparison-table and gift-guide shop links. Both use TableShopLink. */
+export function tableShopHrefs(src) {
+  const found = []
+  const re = /<TableShopLink\b[^>]*?\bhref=\{(?:"([^"]+)"|`([^`]+)`)}/g
+  for (const match of src.matchAll(re)) found.push(match[1] || match[2])
+  return found
+}
+
+export function missingShopSource(href) {
+  return !String(href).includes('?s=')
+}
+
+/**
+ * One redirect after the retailer URL is the store's own canonical or
+ * product hop. A longer chain is a failure. Bot walls stay blocked.
+ */
+export function classifyRedirectChain(statuses, error = '') {
+  if (error) return { kind: 'fail', detail: error }
+  if (!statuses?.length) return { kind: 'fail', detail: 'no response' }
+  const redirects = statuses.slice(0, -1).filter((status) => status >= 300 && status < 400).length
+  const status = statuses[statuses.length - 1]
+  if (redirects > 1) return { kind: 'fail', detail: `redirect chain ${redirects}` }
+  if (status === 404 || status === 410) return { kind: 'fail', detail: `HTTP ${status}` }
+  if (status >= 500 && status !== 503) return { kind: 'fail', detail: `HTTP ${status}` }
+  if (status === 401 || status === 403 || status === 405 || status === 429 || status === 503) {
+    return { kind: 'blocked', detail: `HTTP ${status}` }
+  }
+  if (status >= 200 && status < 400) return { kind: 'ok', detail: `HTTP ${status}` }
+  if (status === 0) return { kind: 'fail', detail: 'no response' }
+  return { kind: 'fail', detail: `HTTP ${status}` }
+}
+
+/** Amazon search hops must carry the tag when the environment has one. */
+export function amazonTagProblem(url, env = {}) {
+  if (String(url).includes('PLACEHOLDER')) return 'PLACEHOLDER'
+  let parsed
+  try {
+    parsed = new URL(url)
+  } catch {
+    return 'bad url'
+  }
+  const host = parsed.hostname.toLowerCase().replace(/^www\./, '')
+  if (host !== 'amazon.com' || !parsed.pathname.startsWith('/s')) return ''
+  const tag = env.AFF_AMAZON_TAG || env.AFF_AMAZON_BRAND_TAG || ''
+  if (!tag) return ''
+  if (parsed.searchParams.get('tag') !== tag) return 'amazon tag mismatch'
+  return ''
+}
+
 export function cleanUrl(raw) {
   return raw.replace(/[`'"\],.;)]+$/g, '')
 }
@@ -80,13 +129,14 @@ export function classifyStatus(status, error) {
   return 'fail'
 }
 
-export function renderReport({ checkedAt, checked, failures, blocked }) {
+export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
+  const shopFailures = shop?.failures?.length ?? 0
   const lines = [
     `# Link monitor — ${checkedAt}`,
     '',
     `Checked ${checked} unique /go targets and outbound citations on dog-com, fish-com, horses-com, vets-co, and ferret-com.`,
     'A failure is a 404, a 410, a server error other than 503, or a connection error. 401, 403, 405, 429, and 503 stay in the blocked list.',
-    `FAIL=${failures.length ? 1 : 0}`,
+    `FAIL=${failures.length || shopFailures ? 1 : 0}`,
     '',
     '## Failures',
   ]
@@ -104,6 +154,35 @@ export function renderReport({ checkedAt, checked, failures, blocked }) {
     if (blocked.length > shown.length) lines.push(`- ${blocked.length - shown.length} more blocked URLs omitted`)
   }
   lines.push('')
+  if (shop) {
+    lines.push('## Comparison-table and gift-guide shop links', '')
+    lines.push(
+      `Checked ${shop.checked} unique retailer targets from TableShopLink rows on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
+    )
+    lines.push(
+      `Hidden Chewy hops with no tag: ${shop.hidden}. Those rows do not render a shop link.`,
+    )
+    lines.push(
+      'A shop failure is a 404, a 410, a server error other than 503, a missing ?s= source, an Amazon search whose tag does not match the environment, or more than one redirect. One redirect is the retailer canonical or product hop.',
+    )
+    lines.push('', '### Shop failures', '')
+    if (!shop.failures.length) lines.push('none')
+    else {
+      for (const row of shop.failures) {
+        lines.push(`- ${row.url} — ${row.detail} — ${row.where}`)
+      }
+    }
+    lines.push('', '### Shop blocked', '')
+    if (!shop.blocked.length) lines.push('none')
+    else {
+      const shown = shop.blocked.slice(0, 20)
+      for (const row of shown) lines.push(`- ${row.url} — ${row.detail}`)
+      if (shop.blocked.length > shown.length) {
+        lines.push(`- ${shop.blocked.length - shown.length} more blocked shop URLs omitted`)
+      }
+    }
+    lines.push('')
+  }
   const body = lines.join('\n')
   if (/(^|\s)@/.test(body)) throw new Error('link monitor report must not mention anyone')
   return body
