@@ -7,7 +7,13 @@
  *
  * A helmet search on a halters or pads page is the case this exists to catch.
  * A product the article actually names still passes. Searches outside the
- * list are ignored, so breed pages and generic supply hops stay quiet.
+ * list are ignored, so a feed search on a breed page stays quiet.
+ *
+ * Dynamic templates are scanned too. A template-literal path such as
+ * `/breeds/${slug}` is read the same way as a static path. A generic hoof
+ * pick on any `/breeds/` page is reported even when the article mentions
+ * hoof angles, because that search is not a breed product. Hoof-care and
+ * grooming pages live outside `/breeds/` and still pass when they name a pick.
  *
  * CROSS_SELLS records the searches that are real products on purpose when
  * the article's product words do not overlap (a hoof pick on the first-horse
@@ -103,22 +109,33 @@ function articleText(src) {
   return chunks.join(' ')
 }
 
+function pagePath(block, file) {
+  const quoted = (block.match(/path:\s*'([^']+)'/) || [])[1]
+  const templated = (block.match(/path:\s*`([^`]*)`/) || [])[1]
+  let path = quoted || templated || ''
+  if (!path && file.includes('/src/app/')) {
+    path = `/${file.split('/src/app/')[1].replace(/\/page\.tsx$/, '')}`
+  }
+  return path.replace(/\$\{[^}]+\}/g, '').replace(/\[[^\]]+\]/g, '').replace(/\/+/g, '/')
+}
+
 /**
  * Mismatches in one page source. `file` is only used in the report row.
- * Returns [] when the page has no buildMetadata path, is dynamic, or names
- * no product from the closed list.
+ * Returns [] when the page has no buildMetadata path or names no product
+ * from the closed list. Dynamic `[slug]` templates are included.
  */
 export function topicMismatches(src, file = '') {
   const clean = stripComments(src)
-  const meta = clean.match(/buildMetadata\(\{([\s\S]*?)\n\}\)/)
+  const meta =
+    clean.match(/buildMetadata\(\{([\s\S]*?)\n\}\)/) ||
+    clean.match(/buildMetadata\(\{([\s\S]*?)\n\s*\}\)/)
   if (!meta) return []
   const block = meta[1]
   const title = (block.match(/title:\s*"([^"]+)"/) || [])[1] || ''
   const description = (block.match(/description:\s*\n?\s*"([^"]+)"/) || [])[1] || ''
-  const path = (block.match(/path:\s*'([^']+)'/) || [])[1]
-  if (!path || path.includes('[')) return []
+  const path = pagePath(block, file)
+  if (!path) return []
   const topic = groupsIn(`${path} ${title} ${description} ${articleText(clean)}`)
-  if (topic.size === 0) return []
   const queries = [...clean.matchAll(/\/go\/amazon(?:-brand)?\/([^"'?\s]+)/g)].map((m) =>
     decodeURIComponent(m[1]).replace(/\+/g, ' '),
   )
@@ -127,12 +144,14 @@ export function topicMismatches(src, file = '') {
     const queryGroups = groupsIn(query)
     if (queryGroups.size === 0) continue
     if (isCrossSell(path, query)) continue
-    if ([...queryGroups].some((group) => topic.has(group))) continue
+    const genericBreedHoofPick = path.startsWith('/breeds') && /\bhoof pick\b/i.test(query)
+    if (!genericBreedHoofPick && topic.size === 0) continue
+    if (!genericBreedHoofPick && [...queryGroups].some((group) => topic.has(group))) continue
     hits.push({
       file,
       path,
       query,
-      page: [...topic].join(', '),
+      page: [...topic].join(', ') || 'no listed product',
       search: [...queryGroups].join(', '),
     })
   }
