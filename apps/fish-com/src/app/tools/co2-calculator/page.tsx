@@ -249,19 +249,19 @@ export default function CO2CalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+regulator+solenoid?s=tools-co2-calculator"
-              amazonLabel="Browse aquarium co2 regulator solenoid on Amazon →"
+              amazonLabel="Browse solenoid CO2 regulators on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+diffuser?s=tools-co2-calculator"
-              amazonLabel="Browse aquarium co2 diffuser on Amazon →"
+              amazonLabel="Browse aquarium CO2 diffusers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator"
-              amazonLabel="Browse aquarium co2 drop checker on Amazon →"
+              amazonLabel="Browse aquarium CO2 drop checkers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+flourish+excel?s=tools-co2-calculator"
-              amazonLabel="Browse seachem flourish excel on Amazon →"
+              amazonLabel="Browse Seachem Flourish Excel on Amazon →"
             />
           </div>
         </div>
