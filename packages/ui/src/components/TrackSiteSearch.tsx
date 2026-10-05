@@ -9,6 +9,9 @@ export function TrackSiteSearch({ query, resultCount }: { query: string; resultC
     const search_term = query.trim()
     if (search_term.length < 2) return
     trackEvent('site_search', { search_term, result_count: resultCount })
+    if (resultCount === 0) {
+      trackEvent('site_search_no_results', { search_term, result_count: 0 })
+    }
   }, [query, resultCount])
   return null
 }
