@@ -141,7 +141,7 @@ export default function BarrelRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/barrel+racing+saddle?s=discipline-barrel-racing"
-                amazonLabel="Shop barrel saddles on Amazon"
+                amazonLabel="Browse barrel racing saddle on Amazon →"
               />
           </div>
           </div>

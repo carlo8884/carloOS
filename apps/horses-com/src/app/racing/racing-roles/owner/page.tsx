@@ -201,7 +201,7 @@ export default function OwnerRolePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-roles-owner"
-                amazonLabel="Shop jockey silks on Amazon"
+                amazonLabel="Browse jockey racing silks on Amazon →"
               />
           </div>
           </div>

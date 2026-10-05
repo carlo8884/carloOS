@@ -190,7 +190,7 @@ export default function SubstrateCalculatorPage() {
           nextLabel="Build the rest of the first-tank kit"
           nextBlurb="Bag weight is the bed, not the whole setup. Use the setup builder next so filter, heater, and substrate land in one kit before fill-day. The hop below is the same aquarium-gravel search already on this page."
           resourceHref="/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator"
-          resourceLabel="Shop aquarium gravel on Amazon →"
+          resourceLabel="Browse aquarium gravel on Amazon →"
         />
 
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -210,19 +210,19 @@ export default function SubstrateCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator"
-              amazonLabel="Shop aquarium gravel on Amazon →"
+              amazonLabel="Browse aquarium gravel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sand?s=tools-substrate-calculator"
-              amazonLabel="Shop aquarium sand on Amazon →"
+              amazonLabel="Browse aquarium sand on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+aqua+soil+planted+substrate?s=tools-substrate-calculator"
-              amazonLabel="Shop aqua soil on Amazon →"
+              amazonLabel="Browse aquarium aqua soil planted substrate on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+substrate+vacuum?s=tools-substrate-calculator"
-              amazonLabel="Shop substrate vacuums on Amazon →"
+              amazonLabel="Browse aquarium substrate vacuum on Amazon →"
             />
           </div>
         </div>

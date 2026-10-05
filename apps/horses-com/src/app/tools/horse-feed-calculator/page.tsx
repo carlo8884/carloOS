@@ -215,7 +215,7 @@ export default function HorseFeedCalculatorPage() {
           nextLabel="Read forage basics before you buy hay"
           nextBlurb="The pound range is a starting target. Forage basics is why the ration starts with hay, and hay types is the next page when you are choosing a cutting. The hop is the timothy-hay search already on this page."
           resourceHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"
-          resourceLabel="Shop timothy hay on Amazon →"
+          resourceLabel="Browse timothy hay horse on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (timothy hay / ration
@@ -231,23 +231,23 @@ export default function HorseFeedCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"
-              amazonLabel="Shop timothy hay on Amazon →"
+              amazonLabel="Browse timothy hay horse on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+ration+balancer?s=tools-horse-feed-calculator"
-              amazonLabel="Shop ration balancers on Amazon →"
+              amazonLabel="Browse horse ration balancer on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-feed-calculator"
-              amazonLabel="Shop feed scoops on Amazon →"
+              amazonLabel="Browse horse feed scoop scale on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-horse-feed-calculator"
-              amazonLabel="Shop slow-feeder hay nets on Amazon →"
+              amazonLabel="Browse slow feeder hay net horse on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/equine+salt+lick?s=tools-horse-feed-calculator"
-              amazonLabel="Shop equine salt licks on Amazon →"
+              amazonLabel="Browse equine salt lick on Amazon →"
             />
           </div>
         </div>

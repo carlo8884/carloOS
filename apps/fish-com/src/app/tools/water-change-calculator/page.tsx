@@ -199,7 +199,7 @@ export default function WaterChangeCalculatorPage() {
           nextLabel="Check the slim-inch ceiling before you raise the change percent"
           nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The hop below is the same API Master Test Kit search already on this page."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-          resourceLabel="Shop API Master Test Kit on Amazon →"
+          resourceLabel="Browse api freshwater master test kit on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (Python changer / gravel
@@ -216,19 +216,19 @@ export default function WaterChangeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=tools-water-change-calculator"
-              amazonLabel="Shop Python water changer on Amazon →"
+              amazonLabel="Browse python water changer on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
-              amazonLabel="Shop gravel vacuums on Amazon →"
+              amazonLabel="Browse aquarium gravel vacuum siphon on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"
-              amazonLabel="Shop water conditioner / dechlorinator on Amazon →"
+              amazonLabel="Browse seachem prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-              amazonLabel="Shop API Master Test Kit on Amazon →"
+              amazonLabel="Browse api freshwater master test kit on Amazon →"
             />
           </div>
         </div>

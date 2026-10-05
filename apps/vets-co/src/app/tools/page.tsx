@@ -224,7 +224,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+pet+scale?s=tools-hub"
-              amazonLabel="Shop a digital pet scale on Amazon"
+              amazonLabel="Browse digital pet scale on Amazon →"
             />
           </div>
         </div>

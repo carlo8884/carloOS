@@ -226,19 +226,19 @@ export default function StallBeddingCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/pine+shavings+horse+stall+bedding?s=tools-stall-bedding-calculator"
-              amazonLabel="Shop pine shavings on Amazon →"
+              amazonLabel="Browse pine shavings horse stall bedding on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/wood+pellet+horse+stall+bedding?s=tools-stall-bedding-calculator"
-              amazonLabel="Shop wood pellet bedding on Amazon →"
+              amazonLabel="Browse wood pellet horse stall bedding on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+stall+rubber+mats?s=tools-stall-bedding-calculator"
-              amazonLabel="Shop rubber stall mats on Amazon →"
+              amazonLabel="Browse horse stall rubber mats on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+stall+fork+manure+picker?s=tools-stall-bedding-calculator"
-              amazonLabel="Shop stall forks on Amazon →"
+              amazonLabel="Browse horse stall fork manure picker on Amazon →"
             />
           </div>
         </div>

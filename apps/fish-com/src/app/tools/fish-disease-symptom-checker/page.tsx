@@ -204,23 +204,23 @@ export default function FishDiseaseSymptomCheckerPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
-              amazonLabel="Shop aquarium multi-test kits on Amazon →"
+              amazonLabel="Browse api freshwater master test kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom"
-              amazonLabel="Shop ich / white-spot treatment on Amazon →"
+              amazonLabel="Browse ich white spot treatment aquarium on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom"
-              amazonLabel="Shop aquarium salt / disease treatment on Amazon →"
+              amazonLabel="Browse aquarium salt disease treatment on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom"
-              amazonLabel="Shop water conditioner / dechlorinator on Amazon →"
+              amazonLabel="Browse seachem prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"
-              amazonLabel="Shop quarantine hospital tanks and nets on Amazon →"
+              amazonLabel="Browse aquarium quarantine hospital tank net on Amazon →"
             />
           </div>
         </div>
