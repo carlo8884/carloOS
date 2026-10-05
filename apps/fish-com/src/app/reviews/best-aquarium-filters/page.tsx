@@ -201,8 +201,8 @@ export default function BestAquariumFiltersPage() {
             <div className="mt-10">
               <h2 className="font-display font-bold text-brand-dark text-xl mb-3">Who should buy which filter</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">The type, tank size, and price below are the specs already on each card. This is not a new test.</p>
-              <div className="overflow-x-auto max-w-full">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">Tank</th>

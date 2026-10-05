@@ -82,8 +82,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Who should open which printed band</h2>
         <p>Open the AskVet card when the question is a chat subscription. Open Vetster when the question is a video visit paid per consult. Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy. Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <div className="overflow-x-auto max-w-full">
-          <table className="w-full text-xs border-collapse min-w-[36rem]">
+        <div className="overflow-x-auto max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th className="p-3 font-bold text-brand-dark">Printed band</th>

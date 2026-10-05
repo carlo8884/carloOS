@@ -99,8 +99,8 @@ export default function FreshDogFoodWorthItPage() {
           <li><strong>Smaller dogs,</strong> where the per-day cost premium is far more manageable than for a large breed.</li>
         </ul>
         <p>Dogs with a diagnosed medical condition are a different case: a <a href="/nutrition/prescription-diets">veterinary therapeutic diet</a> may matter more than fresh-vs-kibble format, and any switch should go through your veterinarian. A healthy dog thriving on a quality kibble has no medical obligation to change.</p>
-        <div className="overflow-x-auto max-w-full mb-8 not-prose">
-          <table className="w-full text-xs border-collapse min-w-[36rem]">
+        <div className="overflow-x-auto max-w-full min-w-0 mb-8 not-prose">
+          <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th className="p-3 font-bold text-brand-dark">If this is the dog</th>
@@ -127,7 +127,7 @@ export default function FreshDogFoodWorthItPage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-04" />
+        <ComparisonFoot updated="2026-10-05" />
 
         <h2 id="evaluate">How to Evaluate a Fresh Brand</h2>
         <p>Cut through the marketing with four checks — the same substance-over-packaging approach we apply to any food:</p>

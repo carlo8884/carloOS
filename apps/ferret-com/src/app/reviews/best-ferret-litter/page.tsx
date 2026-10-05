@@ -339,7 +339,7 @@ export default function BestFerretLitterPage() {
             All three are non-clumping and low-dust. The difference is odor, texture, and the wood caveat already on the cards. Do not switch to a clumping cat litter for smell.
           </p>
           <div className="overflow-x-auto my-6 max-w-full">
-            <table className="w-full text-xs border-collapse min-w-[32rem]">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th className="p-3 font-bold text-brand-dark">Priority</th>

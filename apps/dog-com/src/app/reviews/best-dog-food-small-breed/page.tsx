@@ -37,8 +37,8 @@ export default function BestSmallBreedFoodPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Dog Food for Small Breeds 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Why Small Breed Formulas Matter</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Small dogs have faster metabolisms and higher calorie requirements per pound of body weight than large breeds. A 10-lb Yorkshre Terrier needs more calories per kg than a 70-lb Labrador. Small breed formulas provide higher calorie density and are sized for small mouths — large-breed kibble is too big for many small dogs to chew comfortably, contributing to dental disease by bypassing the mechanical cleaning action of chewing.</p>
@@ -80,8 +80,8 @@ export default function BestSmallBreedFoodPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Two foods have review cards. Other names in the sidebar do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

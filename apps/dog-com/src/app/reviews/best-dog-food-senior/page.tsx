@@ -34,8 +34,8 @@ export default function BestSeniorDogFoodPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Senior Dog Food 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Senior Food ≠ Low Protein</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Older advice recommended reducing protein in senior dogs. Current consensus is the opposite: aging dogs often need more protein per kg body weight to maintain muscle mass (sarcopenia prevention). Protein restriction is only appropriate with documented kidney disease. Choose senior foods with protein levels at or above adult maintenance levels.</p>
@@ -77,8 +77,8 @@ export default function BestSeniorDogFoodPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Only the two foods with review cards are in this table. Royal Canin Aging Care is named in the picks strip and does not have a card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

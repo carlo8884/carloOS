@@ -36,8 +36,8 @@ export default function BestSlowFeederBowlsPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Slow Feeder Bowls for Dogs 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_260px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bloat Risk and Fast Eating</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Feeding frequency and eating speed are modifiable GDV risk factors. Twice-daily feeding rather than once-daily reduces the single-meal volume that triggers distension. A slow feeder reduces air ingestion. Neither eliminates GDV risk — but both are low-cost, zero-downside interventions for at-risk breeds. See our full <Link href="/health/dog-bloat-gvd" className="text-brand-primary no-underline hover:underline">GDV guide</Link>.</p>
@@ -90,8 +90,8 @@ export default function BestSlowFeederBowlsPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Three feeders have review cards. The job, the price, and the food type are already on those cards. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

@@ -191,7 +191,7 @@ export default function HorseInsurancePage() {
           <h2 id="who">Who should buy which cover</h2>
           <p>These are cover types, not ranked insurers. This page does not publish a premium, a payout percentage, or a carrier score. Read the policy for exclusions before you rely on any of them.</p>
           <div className="overflow-x-auto my-6 max-w-full">
-            <table className="w-full text-xs border-collapse min-w-[32rem]">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th className="p-3 font-bold text-brand-dark">If this is the risk</th>
@@ -228,7 +228,7 @@ export default function HorseInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="deciding">Exclusions and Deciding</h2>
           <p>Every policy has exclusions and conditions -- pre-existing conditions, certain procedures, requirements to report illness and obtain prior approval for treatment, and limits per condition or per year -- and failing to follow them (such as not notifying the insurer promptly) can void a claim. Read the policy carefully, disclose the horse&apos;s history honestly, and understand the limits before relying on cover. The decision of what to insure comes down to the horse&apos;s value, the owner&apos;s ability to absorb a large bill, and how the premiums compare with self-insuring through savings.</p>

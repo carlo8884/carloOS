@@ -84,8 +84,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Who should get which printed band</h2>
         <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the hop already on that card, with this page named as the source.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-        <div className="overflow-x-auto max-w-full">
-          <table className="w-full text-xs border-collapse min-w-[36rem]">
+        <div className="overflow-x-auto max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th className="p-3 font-bold text-brand-dark">Printed band</th>

@@ -118,8 +118,8 @@ export default function BestEquineSupplementsPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Supplements Are Not a Substitute for Veterinary Care</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">
@@ -370,7 +370,7 @@ export default function BestEquineSupplementsPage() {
             <h2>Who should buy which</h2>
             <p>The category table above already names a top pick, an evidence note, and a monthly range. This block only says which reviewed product matches which job. It does not add a product that lacks a card, and it does not turn a supplement into a drug.</p>
             <div className="overflow-x-auto my-6 max-w-full">
-              <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>
                   <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                     <th className="p-3 font-bold text-brand-dark">Job</th>

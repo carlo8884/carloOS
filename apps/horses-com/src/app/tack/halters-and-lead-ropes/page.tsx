@@ -224,7 +224,7 @@ export default function HaltersLeadRopesPage() {
           <h2 id="who">Who should buy which</h2>
           <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
           <div className="overflow-x-auto my-6 max-w-full">
-            <table className="w-full text-xs border-collapse min-w-[36rem]">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th className="p-3 font-bold text-brand-dark">If you need</th>

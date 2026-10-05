@@ -119,7 +119,7 @@ export default function GoldenRetrieverBreedPage() {
 
       {/* Content */}
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_290px] gap-14">
+        <div className="grid lg:grid-cols-[1fr_290px] gap-14 min-w-0">
           <article className="carloOS-article min-w-0">
             <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 

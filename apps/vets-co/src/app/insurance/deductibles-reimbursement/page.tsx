@@ -206,7 +206,7 @@ export default function DeductiblesPage() {
           <h2 id="who">Who should quote which</h2>
           <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
           <div className="overflow-x-auto my-6 max-w-full">
-            <table className="w-full text-xs border-collapse min-w-[36rem]">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
                 <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                   <th className="p-3 font-bold text-brand-dark">If you need</th>
