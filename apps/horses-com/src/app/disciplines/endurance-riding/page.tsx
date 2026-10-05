@@ -141,6 +141,7 @@ export default function EnduranceRidingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+electrolytes?s=discipline-endurance"
+                amazonLabel="Browse horse electrolytes on Amazon →"
               />
           </div>
           </div>
