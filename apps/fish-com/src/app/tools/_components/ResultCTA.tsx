@@ -56,7 +56,7 @@ export function ResultCTA({ heading, blurb, query, cta, source, guideHref, guide
       <p className="mt-1 text-sm text-brand-text-mid leading-relaxed">{blurb}</p>
       {guideHref && guideLabel ? (
         <p className="mt-2 text-sm">
-          <a href={guideHref} className="font-semibold text-brand-primary underline underline-offset-2">{guideLabel} →</a>
+          <a href={guideHref} className="inline-block max-w-full whitespace-normal text-left font-semibold text-brand-primary underline underline-offset-2">{guideLabel} →</a>
         </p>
       ) : null}
       <AffiliateDisclosure variant="inline" className="my-3" />
