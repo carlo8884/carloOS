@@ -121,7 +121,7 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News paper pellet litter on Chewy"} />}
+        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News paper pellet litter on Amazon"} />}
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
           subtitle:
@@ -278,7 +278,7 @@ export default function BestFerretLitterPage() {
             pros={['Very low dust', 'Fully non-clumping', 'Soft and well accepted', 'No ingestion or inhalation hazard', 'Widely available']}
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
-            ctaText="Check price of Yesterday's News paper pellet litter on Chewy"
+            ctaText="Check price of Yesterday's News paper pellet litter on Amazon"
             ctaHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="paper-pellet-litter"

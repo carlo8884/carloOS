@@ -78,7 +78,7 @@ export default function PaperVsWoodLitterGuidePage() {
         <p>The link below searches for the paper-pellet litter from the review, the usual pick.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
-          amazonLabel="Find paper pellet litter on Chewy →"
+          amazonLabel="Find paper pellet litter on Amazon →"
         />
         <EmailCapture
           variant="inline"
@@ -92,7 +92,7 @@ export default function PaperVsWoodLitterGuidePage() {
             'Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent.',
             'Buy grass pellets only when the ferret refuses the other two textures.',
             'Do not “upgrade” any of them to a clumping, perfumed cat litter.',
-            'Find paper pellet litter on Chewy',
+            'Find paper pellet litter on Amazon',
           ]}
         />
         <h2>Questions</h2>
