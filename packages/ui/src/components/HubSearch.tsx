@@ -14,15 +14,18 @@ export function HubSearch({
   listId,
   total,
   noun = 'guides',
+  initialQuery = '',
 }: {
   listId: string
   total: number
   noun?: string
+  /** Prefill when the visitor arrived from an empty site search. */
+  initialQuery?: string
 }) {
   const reactId = useId()
   const inputId = `${reactId}-q`
   const statusId = `${reactId}-status`
-  const [query, setQuery] = useState('')
+  const [query, setQuery] = useState(initialQuery)
   const [visible, setVisible] = useState(total)
 
   useEffect(() => {
