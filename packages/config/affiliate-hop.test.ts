@@ -9,6 +9,8 @@ import {
   visibleChewyHref,
   amazonFallbackFromChewyHref,
   visibleShopHref,
+  partnerTagReady,
+  partnerNeededLabel,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 
@@ -209,5 +211,16 @@ describe('resolveAffiliateHop', () => {
       hop.target,
       'https://www.trupanion.com/enrollments/get-a-quote?refid=tru-live&campaign=home',
     )
+  })
+
+  it('holds Trupanion, Healthy Paws, and Embrace quotes until their tags are set', () => {
+    const href = '/go/trupanion/home?s=reviews-best-pet-insurance'
+    assert.equal(partnerTagReady(href, {}), false)
+    assert.equal(partnerTagReady(href, { AFF_TRUPANION_TAG: 'tru-live' }), true)
+    assert.equal(partnerTagReady('/go/healthy-paws/home?s=reviews-best-pet-insurance', {}), false)
+    assert.equal(partnerTagReady('/go/embrace/home?s=reviews-best-pet-insurance', { AFF_EMBRACE_TAG: 'emb-live' }), true)
+    assert.equal(partnerTagReady('/go/amazon-brand/horse+hoof+pick', {}), true)
+    assert.equal(partnerNeededLabel('Get a Trupanion quote →'), 'Get a Trupanion quote — partner ID needed')
+    assert.equal(resolveTag('trupanion', {}).tag, '')
   })
 })

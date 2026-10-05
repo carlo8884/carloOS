@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { isChewyHop, partnerNeededLabel, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 interface Spec {
   label: string
@@ -36,6 +36,8 @@ interface ReviewCardProps {
 
   ctaText?: string
   ctaHref?: string
+  /** Keep a Trupanion, Healthy Paws, or Embrace quote visible but disabled until its tag is set. */
+  holdWithoutPartnerId?: boolean
   ctaAffiliateProgram?: string
   ctaAffiliateProduct?: string
 
@@ -66,6 +68,7 @@ export function ReviewCard({
   priceNote,
   ctaText = 'Check Price →',
   ctaHref,
+  holdWithoutPartnerId = false,
   ctaAffiliateProgram,
   ctaAffiliateProduct,
   editorial,
@@ -73,7 +76,8 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const href = visibleShopHref(rawHref)
+  const held = holdWithoutPartnerId && !partnerTagReady(rawHref)
+  const href = held ? undefined : visibleShopHref(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
@@ -185,7 +189,7 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || href) && (
+      {(price || href || held) && (
         <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
           {price && (
             <div>
@@ -199,7 +203,15 @@ export function ReviewCard({
             </div>
           )}
 
-          {href && (
+          {held ? (
+            <button
+              type="button"
+              disabled
+              className="inline-flex items-center justify-center bg-brand-primary/50 text-brand-white text-sm font-bold px-6 py-3 rounded max-w-full text-center whitespace-normal cursor-not-allowed"
+            >
+              {partnerNeededLabel(label)}
+            </button>
+          ) : href ? (
             <a
               href={href}
               className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
@@ -210,7 +222,7 @@ export function ReviewCard({
             >
               {label}
             </a>
-          )}
+          ) : null}
         </div>
       )}
 
