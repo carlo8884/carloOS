@@ -3679,10 +3679,7 @@ const CALCULATORS = [
     id: 'horses · thoroughbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3698,10 +3695,7 @@ const CALCULATORS = [
     id: 'horses · arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3717,10 +3711,7 @@ const CALCULATORS = [
     id: 'horses · andalusian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3736,10 +3727,7 @@ const CALCULATORS = [
     id: 'horses · lusitano-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3755,10 +3743,7 @@ const CALCULATORS = [
     id: 'horses · lipizzaner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3774,10 +3759,7 @@ const CALCULATORS = [
     id: 'horses · friesian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3793,10 +3775,7 @@ const CALCULATORS = [
     id: 'horses · mustang-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3812,10 +3791,7 @@ const CALCULATORS = [
     id: 'horses · belgian-draft-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3831,10 +3807,7 @@ const CALCULATORS = [
     id: 'horses · percheron-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3850,10 +3823,7 @@ const CALCULATORS = [
     id: 'horses · shire-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3869,10 +3839,7 @@ const CALCULATORS = [
     id: 'horses · clydesdale-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3888,10 +3855,7 @@ const CALCULATORS = [
     id: 'horses · suffolk-punch-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3907,10 +3871,7 @@ const CALCULATORS = [
     id: 'horses · norwegian-fjord-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3926,10 +3887,7 @@ const CALCULATORS = [
     id: 'horses · welsh-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3945,10 +3903,7 @@ const CALCULATORS = [
     id: 'horses · shetland-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3964,10 +3919,7 @@ const CALCULATORS = [
     id: 'horses · pony-of-the-americas-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3983,10 +3935,7 @@ const CALCULATORS = [
     id: 'horses · connemara-pony-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4002,10 +3951,7 @@ const CALCULATORS = [
     id: 'horses · haflinger-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4021,10 +3967,7 @@ const CALCULATORS = [
     id: 'horses · morgan-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4040,10 +3983,7 @@ const CALCULATORS = [
     id: 'horses · hackney-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4059,10 +3999,7 @@ const CALCULATORS = [
     id: 'horses · akhal-teke-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4078,10 +4015,7 @@ const CALCULATORS = [
     id: 'horses · marwari-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4097,10 +4031,7 @@ const CALCULATORS = [
     id: 'horses · cleveland-bay-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4116,10 +4047,7 @@ const CALCULATORS = [
     id: 'horses · irish-sport-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4135,10 +4063,7 @@ const CALCULATORS = [
     id: 'horses · anglo-arabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4154,10 +4079,7 @@ const CALCULATORS = [
     id: 'horses · knabstrupper-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4173,10 +4095,7 @@ const CALCULATORS = [
     id: 'horses · gypsy-vanner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4192,10 +4111,7 @@ const CALCULATORS = [
     id: 'horses · rocky-mountain-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4211,10 +4127,7 @@ const CALCULATORS = [
     id: 'horses · warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4230,10 +4143,7 @@ const CALCULATORS = [
     id: 'horses · quarab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4249,10 +4159,7 @@ const CALCULATORS = [
     id: 'horses · anglo-arab-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4268,10 +4175,7 @@ const CALCULATORS = [
     id: 'horses · pintabian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4287,10 +4191,7 @@ const CALCULATORS = [
     id: 'horses · paint-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4306,10 +4207,7 @@ const CALCULATORS = [
     id: 'horses · appaloosa-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4325,10 +4223,7 @@ const CALCULATORS = [
     id: 'horses · american-saddlebred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4344,10 +4239,7 @@ const CALCULATORS = [
     id: 'horses · hanoverian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4363,10 +4255,7 @@ const CALCULATORS = [
     id: 'horses · holsteiner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4382,10 +4271,7 @@ const CALCULATORS = [
     id: 'horses · dutch-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4401,10 +4287,7 @@ const CALCULATORS = [
     id: 'horses · oldenburg-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4420,10 +4303,7 @@ const CALCULATORS = [
     id: 'horses · trakehner-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4439,10 +4319,7 @@ const CALCULATORS = [
     id: 'horses · selle-francais-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4458,10 +4335,7 @@ const CALCULATORS = [
     id: 'horses · westphalian-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4477,10 +4351,7 @@ const CALCULATORS = [
     id: 'horses · belgian-warmblood-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4496,10 +4367,7 @@ const CALCULATORS = [
     id: 'horses · tennessee-walking-horse-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4515,10 +4383,7 @@ const CALCULATORS = [
     id: 'horses · missouri-fox-trotter-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4534,10 +4399,7 @@ const CALCULATORS = [
     id: 'horses · paso-fino-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4553,10 +4415,7 @@ const CALCULATORS = [
     id: 'horses · peruvian-paso-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4572,10 +4431,7 @@ const CALCULATORS = [
     id: 'horses · standardbred-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4591,10 +4447,7 @@ const CALCULATORS = [
     id: 'horses · icelandic-breed',
     file: 'apps/horses-com/src/app/breeds/[slug]/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/buying-your-first-horse"/, label: 'first-horse buying guide, not a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

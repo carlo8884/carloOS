@@ -44,17 +44,52 @@ test('a saddle-pad search on the pads page is not a mismatch', () => {
   assert.equal(hits.length, 0)
 })
 
-test('a hoof pick the article names is not a mismatch', () => {
+test('a hoof pick the hoof-care article names is not a mismatch', () => {
   const hits = topicMismatches(
     page({
-      path: '/breeds/quarter-horse',
-      title: 'Quarter Horse',
-      description: 'A stock horse used under saddle.',
+      path: '/care/hoof-care-basics',
+      title: 'Hoof Care Basics',
+      description: 'How to use a hoof pick.',
       body: '<p>Daily care includes a hoof pick after the saddle comes off.</p>',
-      href: '/go/amazon-brand/horse+hoof+pick?s=quarter-horse',
+      href: '/go/amazon-brand/horse+hoof+pick?s=hoof-care',
     }),
   )
   assert.equal(hits.length, 0)
+})
+
+test('a dynamic breed template is scanned and a hoof pick is a mismatch', () => {
+  const src = `export async function generateMetadata() {
+  return buildMetadata({
+    title: "Thoroughbred",
+    description: "Breed guide.",
+    path: \`/breeds/\${slug}\`,
+  })
+}
+export default function Page() {
+  return <article>
+    <li>Is your farrier comfortable with this breed's typical hoof angles?</li>
+    <ShopCtas amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-thoroughbred" />
+    <ShopCtas amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=breed-thoroughbred" />
+  </article>
+}
+`
+  const hits = topicMismatches(src, 'apps/horses-com/src/app/breeds/[slug]/page.tsx')
+  assert.equal(hits.filter((hit) => hit.search === 'hoof').length, 1)
+  assert.equal(hits.filter((hit) => hit.search === 'helmet').length, 1)
+  assert.equal(hits[0].path, '/breeds/')
+})
+
+test('the breed template links the buying guide and has no hoof-pick hop', () => {
+  const src = readFileSync(
+    new URL('../../apps/horses-com/src/app/breeds/[slug]/page.tsx', import.meta.url),
+    'utf8',
+  )
+  assert.equal(src.includes('horse+hoof+pick'), false)
+  assert.match(src, /href="\/ownership\/buying-your-first-horse"/)
+  assert.equal(
+    topicMismatches(src, 'apps/horses-com/src/app/breeds/[slug]/page.tsx').length,
+    0,
+  )
 })
 
 test('a search outside the product list is ignored', () => {
