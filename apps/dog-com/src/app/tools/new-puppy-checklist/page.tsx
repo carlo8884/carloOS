@@ -243,7 +243,7 @@ export default function NewPuppyChecklistPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"
-                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+                amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
               />
           </div>
           </div>

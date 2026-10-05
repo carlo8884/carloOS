@@ -319,7 +319,7 @@ export default function FerretCageCleaningRoutinePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine"
-                amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+                amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine"

@@ -154,7 +154,7 @@ export default function PuppySchedulePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-puppy-schedule"
-              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

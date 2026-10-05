@@ -201,7 +201,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('enzymatic+pet+stain+odor+cleaner'),
-      shopLabel: 'Browse enzymatic pet cleaners on Amazon →',
+      shopLabel: 'Browse enzymatic stain and odor cleaner on Amazon →',
       links: [{ href: '/training/house-training', label: 'House-training guide' }],
     },
     {
