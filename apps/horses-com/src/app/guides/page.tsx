@@ -145,6 +145,7 @@ export default function GuidesHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+saddle?s=guides-hub"
+              amazonLabel="Browse horse saddles on Amazon →"
             />
           </div>
         </div>

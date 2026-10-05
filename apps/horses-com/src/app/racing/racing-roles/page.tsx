@@ -185,6 +185,7 @@ export default function RacingRolesHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+saddle?s=racing-roles-hub"
+              amazonLabel="Browse horse saddles on Amazon →"
             />
           </div>
         </div>

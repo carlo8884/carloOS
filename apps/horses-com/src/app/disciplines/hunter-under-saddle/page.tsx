@@ -141,6 +141,7 @@ export default function HunterUnderSaddlePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle?s=discipline-hunter-under-saddle"
+                amazonLabel="Browse horse saddles on Amazon →"
               />
           </div>
           </div>
