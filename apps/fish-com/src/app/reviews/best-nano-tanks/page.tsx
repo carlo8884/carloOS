@@ -64,7 +64,7 @@ export default function BestNanoTanksPage() {
               pros={['Complete kit — nothing to add', 'Rimless looks premium', 'Plant-capable LED', 'Baffled filtration zone']}
               cons={['5 gallons is minimum — less stable than 10+', 'Flow needs baffling for betta', 'Tight space for aquascaping']}
               price="$75–95"
-              ctaText="Shop Fluval Spec V →"
+              ctaText="Shop Fluval Spec V on Amazon →"
               ctaHref="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-spec-v"
@@ -75,7 +75,7 @@ export default function BestNanoTanksPage() {
               pros={['Affordable', 'Versatile — any equipment combination', 'Widely available', 'Easier to maintain than 5-gallon']}
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
-              ctaText="Shop Aqueon 10 Gallon →"
+              ctaText="Shop Aqueon 10 Gallon on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-10-gallon"
@@ -86,7 +86,7 @@ export default function BestNanoTanksPage() {
               pros={['Most forgiving beginner size', 'Community-capable', 'Long footprint excellent for planted', 'Affordable']}
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
-              ctaText="Shop 20-Gallon Long →"
+              ctaText="Shop 20-Gallon Long on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-20-long"
