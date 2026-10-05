@@ -41,6 +41,9 @@ export default function HowWePickPage() {
           <p>
             Affiliate links are added after the card is written. A commission does not decide which row wins. See the{' '}
             <Link href="/disclosure" className="text-brand-primary hover:underline">disclosure</Link>.
+            The editorial and affiliate policy is on the{' '}
+            <Link href="/editorial-standards" className="text-brand-primary hover:underline">editorial standards</Link> page.
+            What the site is, and how to report an error, is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
           </p>
         </div>
       </div>

@@ -32,6 +32,11 @@ export default function EditorialStandardsPage() {
       <p className="text-sm text-brand-text-light mb-10">How we create, source, and update content at Vets.co</p>
 
       <div className="carloOS-article">
+        <p>
+          This page is Vets.co&apos;s editorial and affiliate policy. How comparison tables are assembled is on{' '}
+          <Link href="/how-we-pick" className="text-brand-primary hover:underline">How we pick</Link>.
+          A short account of the site is on <Link href="/about" className="text-brand-primary hover:underline">About</Link>.
+        </p>
         <h2>What Vets.co Is</h2>
         <p>Vets.co is a consumer-facing reference site for pet owners — specialist directories, breed-health guides, preventive-care reference material, insurance comparisons, and telehealth overviews. Articles are written by the Vets.co editorial team and draw on publicly available sources: <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance; published peer-reviewed veterinary literature; specialist-college reference material; insurer disclosures and public payout data; and reputable industry reporting.</p>
         <p>Vets.co is <strong>not</strong> a veterinary practice. Our content is general reference, not individual veterinary advice for a specific animal. If you need diagnostic guidance for your pet, please consult your own veterinarian.</p>
@@ -54,7 +59,7 @@ export default function EditorialStandardsPage() {
         </ul>
 
         <h2>Corrections</h2>
-        <p>Veterinary recommendations evolve. If you find a factual error or out-of-date guidance, email us with the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
+        <p>Veterinary recommendations evolve. If you find a factual error or out-of-date guidance, email <a href="mailto:editorial@vets.co">editorial@vets.co</a> with the page address and the specific claim and, where possible, a source for the correction. We aim to review correction requests within 5 business days. Substantive corrections are noted on the article and the &quot;Updated&quot; date is revised.</p>
 
         <h2>Medical Emergency Notice</h2>
         <p>Vets.co content is not a substitute for veterinary care. If your pet is experiencing a medical emergency, contact your veterinarian or an emergency animal hospital immediately. In the United States, the ASPCA Animal Poison Control Center is available 24/7 at 888-426-4435 for suspected poisoning.</p>

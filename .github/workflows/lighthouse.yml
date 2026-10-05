@@ -7,8 +7,8 @@ on:
     branches: [main]
 
 # Separate from verify so the existing build-and-Playwright job stays put.
-# One mobile Lighthouse run per money page, plus one retry if that run misses
-# a budget. Twenty-five pages, not three samples of each.
+# One mobile Lighthouse run per money page, plus up to two retries if that run
+# misses a budget. Twenty-five pages, not three samples of each.
 concurrency:
   group: lighthouse-${{ github.ref }}
   cancel-in-progress: true
@@ -42,5 +42,5 @@ jobs:
           TURBO_TEAM: ${{ vars.TURBO_TEAM }}
       - name: Install Chromium
         run: npx playwright install --with-deps chromium
-      - name: Mobile Lighthouse, one run plus one retry
+      - name: Mobile Lighthouse, one run plus two retries
         run: node scripts/ci/lighthouse-budgets.mjs

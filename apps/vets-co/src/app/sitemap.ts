@@ -46,6 +46,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/diagnostics', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://vets.co/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
+    { url: 'https://vets.co/about', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://vets.co/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://vets.co/how-we-pick', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://vets.co/emergency-triage-card', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

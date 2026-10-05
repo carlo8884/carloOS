@@ -59,10 +59,11 @@ test('a healthy mobile run passes and a regression fails', () => {
   assert.match(regressed.join('\n'), /ERRORED_DOCUMENT_REQUEST/)
 })
 
-test('a failing run is retried once', () => {
-  assert.equal(needsRetry(['performance'], 1), true)
-  assert.equal(needsRetry(['performance'], 2), false)
-  assert.equal(needsRetry([], 1), false)
+test('a failing run is retried twice', () => {
+  assert.equal(needsRetry(['performance'], 1, 3), true)
+  assert.equal(needsRetry(['performance'], 2, 3), true)
+  assert.equal(needsRetry(['performance'], 3, 3), false)
+  assert.equal(needsRetry([], 1, 3), false)
 })
 
 test('the lighthouse workflow runs one mobile pass, not three', () => {

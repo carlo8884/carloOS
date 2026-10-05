@@ -128,6 +128,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/data', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/disclosure', lastModified: now, changeFrequency: 'weekly', priority: 0.30 },
     { url: 'https://dog.com/dna-testing', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
+    { url: 'https://dog.com/about', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://dog.com/editorial-standards', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://dog.com/how-we-pick', lastModified: now, changeFrequency: 'yearly', priority: 0.30 },
     { url: 'https://dog.com/faq', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },

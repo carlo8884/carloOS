@@ -217,6 +217,7 @@ const EXPECTED_CROSS_SITE_TITLE_DUPES = new Set([
   'Affiliate Disclosure Policy',
   'Editorial Standards',
   'Editorial Standards — How We Create Content',
+  'About',
 ])
 const crossSiteIssues = []
 for (const [base, occurrences] of crossSiteBaseTitles) {

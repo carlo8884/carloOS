@@ -91,20 +91,14 @@ export default function VetsPetInsurancePage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">
           Owner Reference · Updated Jun 2026
         </span>
-        <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl"
-          style={{ fontSize: 'clamp(26px, 4vw, 48px)' }}>
+        <h1 className="font-bold text-white tracking-tight mb-4 max-w-3xl"
+          style={{ fontSize: 'clamp(26px, 4vw, 48px)', lineHeight: 1.15, fontFamily: 'Georgia, "Times New Roman", serif' }}>
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' />
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          Across the 11 major pet insurance carriers, Trupanion is the only one
-          that pays the practice directly at checkout, eliminating the
-          submit-and-wait reimbursement gap that strands owners with a large
-          emergency bill. Healthy Paws is among the fastest for reimbursement (the
-          carrier cites an average of about two days, with no payout caps), and Embrace is the practical choice when
-          routine wellness coverage matters. Enroll before any vet visit — every
-          insurer permanently excludes conditions documented before the policy starts.
+        <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
+          Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
         </p>
         <div className="mt-4 text-xs text-white/80">Vets.co Editorial · Updated Jun 2026 · Affiliate disclosure applies</div>
       </div>
@@ -231,7 +225,7 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
