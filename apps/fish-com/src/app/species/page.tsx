@@ -172,6 +172,7 @@ export default async function SpeciesIndexPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter?s=species-hub"
+              amazonLabel="Browse aquarium filters on Amazon →"
             />
           </div>
         </div>
