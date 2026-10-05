@@ -78,7 +78,7 @@ export default function PaperVsWoodLitterGuidePage() {
         <p>The link below searches for the paper-pellet litter from the review, the usual pick.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
-          amazonLabel="Find paper pellet litter on Amazon →"
+          amazonLabel="Find Yesterday's News recycled paper pellet litter on Amazon →"
         />
         <EmailCapture
           variant="inline"
