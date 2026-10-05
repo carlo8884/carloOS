@@ -360,7 +360,7 @@ export default function FerretToxicFoodsPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods"
-                amazonLabel="Browse ceramic food bowls on Amazon →"
+                amazonLabel="Browse heavy ceramic food bowls on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+water+bottle?s=care-toxic-foods"
