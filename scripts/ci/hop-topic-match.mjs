@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 /**
- * Report-only. Lists a hard-coded Amazon search on a five-earning-site page
- * when both the search and the page name a product from a closed list
- * (helmet, halter, stirrup, saddle, pad, boot, blanket, girth, bridle, bit,
- * martingale, surcingle, hoof) and those products do not overlap.
+ * Fails the build when a hard-coded Amazon search on a five-earning-site
+ * page names a product from a closed list (helmet, halter, stirrup, saddle,
+ * pad, boot, blanket, girth, bridle, bit, martingale, surcingle, hoof) and
+ * the page names a different product from that list.
  *
  * A helmet search on a halters or pads page is the case this exists to catch.
  * A product the article actually names still passes. Searches outside the
@@ -15,11 +15,15 @@
  * hoof angles, because that search is not a breed product. Hoof-care and
  * grooming pages live outside `/breeds/` and still pass when they name a pick.
  *
- * CROSS_SELLS records the searches that are real products on purpose when
- * the article's product words do not overlap (a hoof pick on the first-horse
- * roadmap, the rider-size tack set). A helmet search on a halters page is
- * not in that list. The check exits 0 either way. Promote it to a hard gate
- * only after the report is empty.
+ * CROSS_SELLS is the allowlist. Those searches are real products on purpose
+ * when the article's product words do not overlap:
+ *   - /first-horse-roadmap — horse hoof pick
+ *   - /tools — horse hoof pick
+ *   - /tools/horse-size-for-rider — horse girth cinch, horse stirrups,
+ *     ASTM SEI horse riding helmet
+ * A helmet search on a halters page is not in that list. After the breed
+ * template and the age, cost, buying, health, and care hoof-pick cleanup,
+ * the live report is empty, so a remaining mismatch fails the build.
  */
 import { readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
@@ -184,13 +188,13 @@ function main() {
   }
   const noun = hits.length === 1 ? 'search does' : 'searches do'
   console.log(
-    `REPORT: ${hits.length} Amazon ${noun} not share a topic word with the page. Report only. This check does not fail the build.`,
+    `FAIL: ${hits.length} Amazon ${noun} not share a topic word with the page.`,
   )
   for (const hit of hits) {
     console.log(`  ${hit.file}`)
     console.log(`    ${hit.path} is about ${hit.page}; search "${hit.query}" is about ${hit.search}`)
   }
-  process.exit(0)
+  process.exit(1)
 }
 
 const invoked = process.argv[1] && process.argv[1].endsWith('hop-topic-match.mjs')
