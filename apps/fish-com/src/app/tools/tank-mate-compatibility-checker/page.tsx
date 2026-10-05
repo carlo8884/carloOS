@@ -274,7 +274,7 @@ export default function TankMateCompatibilityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse api freshwater master test kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"
