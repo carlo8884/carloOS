@@ -145,6 +145,28 @@ export function amazonAssociateTag(env: NodeJS.ProcessEnv = process.env): string
   return typeof tag === 'string' ? tag : ''
 }
 
+const PARTNER_ID_VENDORS = new Set(['trupanion', 'healthy-paws', 'embrace'])
+
+/**
+ * Trupanion, Healthy Paws, and Embrace quote buttons stay on the page, but
+ * they are not a working hop until that vendor's AFF_*_TAG is set. Other
+ * hrefs are unchanged. This does not invent an ID.
+ */
+export function partnerTagReady(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1] ?? ''
+  if (!PARTNER_ID_VENDORS.has(vendor)) return true
+  return resolveTag(vendor, env).tag.length > 0
+}
+
+export function partnerNeededLabel(label: string): string {
+  const base = label.replace(/\s*→\s*$/, '').trim()
+  return `${base} — partner ID needed`
+}
+
 export function resolveTag(
   vendor: string,
   env: NodeJS.ProcessEnv = process.env,

@@ -4,6 +4,8 @@ import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
 
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co',
@@ -96,7 +98,7 @@ export default function VetsPetInsurancePage() {
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' />
+        <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
           Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
         </p>
@@ -148,7 +150,7 @@ export default function VetsPetInsurancePage() {
               pros={['Only insurer paying vet directly at time of service', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
               cons={['Higher premiums', 'No wellness coverage']}
               price="$65–120/month"
-              ctaText="Get a Trupanion quote" ctaHref="/go/trupanion/home?s=reviews-best-pet-insurance"
+              ctaText="Get a Trupanion quote" ctaHref="/go/trupanion/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
 
@@ -165,7 +167,7 @@ export default function VetsPetInsurancePage() {
               pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'No payout limits', 'Good mobile app']}
               cons={['No direct vet payment', 'No wellness add-on']}
               price="$40–85/month"
-              ctaText="Get a Healthy Paws quote" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance"
+              ctaText="Get a Healthy Paws quote" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
 
@@ -182,7 +184,7 @@ export default function VetsPetInsurancePage() {
               pros={['Wellness add-on covers routine and preventive care', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
               cons={['6-month orthopedic waiting period', 'More complex plan options']}
               price="$45–95/month + wellness add-on"
-              ctaText="Get an Embrace quote" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance"
+              ctaText="Get an Embrace quote" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="embrace" ctaAffiliateProduct="pet-insurance"
             />
 
@@ -206,19 +208,19 @@ export default function VetsPetInsurancePage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. 90% reimbursement. Unlimited payouts. Direct vet payment. $65–120/month</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Fastest reimbursement. About 2 days. 80–90%. Unlimited payouts. $40–85/month</td>
                       <td className="p-3 text-brand-text-mid">No direct vet payment. No wellness add-on. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
                       <td className="p-3 text-brand-text-mid">Wellness add-on. 70–90% reimbursement. $45–95/month plus the add-on</td>
                       <td className="p-3 text-brand-text-mid">6-month orthopedic waiting period. More plan options to read</td>
                     </tr>
