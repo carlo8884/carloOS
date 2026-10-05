@@ -199,7 +199,7 @@ export default function WaterChangeCalculatorPage() {
           nextLabel="Check the slim-inch ceiling before you raise the change percent"
           nextBlurb="Gallons to remove is maintenance math, not a stocking license. If nitrate climbs between weekly changes, check the slim-inch bioload ceiling — not a species headcount — before you double the siphon. The hop below is the same API Master Test Kit search already on this page."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-          resourceLabel="Browse api freshwater master test kit on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (Python changer / gravel
@@ -216,7 +216,7 @@ export default function WaterChangeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=tools-water-change-calculator"
-              amazonLabel="Browse python water changer on Amazon →"
+              amazonLabel="Browse Python-style water changers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
@@ -228,7 +228,7 @@ export default function WaterChangeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
-              amazonLabel="Browse api freshwater master test kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
           </div>
         </div>
