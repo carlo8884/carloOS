@@ -10895,7 +10895,7 @@ const CALCULATORS = [
     id: 'horses · girths-and-cinches hops',
     file: 'apps/horses-com/src/app/tack/girths-and-cinches/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+martingale/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/anatomic\+english\+girth/, label: 'on-page anatomic English girth Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
