@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Trupanion or Figo',
-  description: 'The breed-risk page already scores Trupanion for unlimited payouts and Figo for high-limit plan tiers.',
+  description: 'Trupanion for unlimited payouts, or Figo for high-limit plan tiers. Scores are on the breed-risk page.',
   url: 'https://vets.co/reviews/trupanion-vs-figo-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Does this page publish a monthly premium?',
-    answer: 'No. Both cards say quote-based. Nothing here adds a premium or a waiting period the breed-risk page did not print.',
+    answer: 'No. Both cards say quote-based. A premium and a waiting period come from the carrier quote, using the terms the breed-risk page already names.',
   },
 ]
 
@@ -73,11 +73,11 @@ export default function TrupanionVsFigoGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/insurance/breed-specific-risk">breed-specific risk page</Link> already names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs. Other pairs on this hub compare Trupanion with Healthy Paws or Embrace. Figo was not in those guides. Scores below are editorial scores, not shopper star ratings. Neither card prints a monthly premium.</p>
+        <p>Scores below are the ones on the <Link href="/insurance/breed-specific-risk">breed-specific risk page</Link>. That page names Trupanion and Figo as two carriers to quote when a breed has predictable expensive needs. Other guides compare Trupanion with Healthy Paws or Embrace. Neither card prints a monthly premium.</p>
         <h2>What the page says about Trupanion</h2>
-        <p>Trupanion is Unlimited Payouts, score 9.0, and the winner on that page. The annual limit is unlimited, which the review ties to a major orthopedic or chronic-disease course that would exhaust a capped plan. Hereditary and congenital conditions are covered per policy terms. The deductible is a per-condition lifetime deductible. A direct-to-vet payment option is listed. Cons say premiums can run higher and there is no wellness add-on. The price line is quote-based. The page says to enroll as a puppy so breed-typical conditions are not later excluded as pre-existing. The button above opens the Trupanion quote already linked there.</p>
+        <p>Trupanion is Unlimited Payouts, score 9.0, and the winner on that page. The annual limit is unlimited, which the review ties to a major orthopedic or chronic-disease course that would exhaust a capped plan. Hereditary and congenital conditions are covered per policy terms. The deductible is a per-condition lifetime deductible. A direct-to-vet payment option is listed. Cons say premiums can run higher and there is no wellness add-on. The price line is quote-based. The page says to enroll as a puppy so breed-typical conditions are not later excluded as pre-existing. The link above opens the Trupanion quote from that page.</p>
         <h2>What the page says about Figo</h2>
-        <p>Figo is High-Limit Plans, score 8.3. The card says the carrier offers high and unlimited annual-limit tiers and app-based claims. The model is pay-then-claim. An optional wellness add-on is listed. Cons say to check orthopedic and bilateral terms, and that premiums scale with breed risk. The price line is quote-based. This page does not fill in a waiting-period length the breed-risk page left unread.</p>
+        <p>Figo is High-Limit Plans, score 8.3. The card says the carrier offers high and unlimited annual-limit tiers and app-based claims. The model is pay-then-claim. An optional wellness add-on is listed. Cons say to check orthopedic and bilateral terms, and that premiums scale with breed risk. The price line is quote-based. Waiting-period length stays whatever the breed-risk page and the sample policy say.</p>
         <p>The wider ranking of carriers that are not on this pair is the <Link href="/reviews/best-pet-insurance">insurance review</Link>. Early enrollment is the lever that page repeats. A quote still needs the pet’s age, breed, and medical history.</p>
         <h2>Who should quote which carrier</h2>
         <p>Start the Trupanion quote when an unlimited annual payout and direct-to-vet payment are the features you are comparing, and wellness coverage is not required. Start the Figo quote when you want high-limit tiers and an app claim flow, and you will read the orthopedic and bilateral language before you enroll. On both, confirm hereditary coverage in the sample policy rather than in a marketing line. Do not treat either quote-based line as a price from this page.</p>

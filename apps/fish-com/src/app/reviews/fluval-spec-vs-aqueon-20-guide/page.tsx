@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Fluval Spec or a 20-Gallon Long',
-  description: 'The nano-tank review already scores a 5-gallon all-in-one and a bare 20-gallon long.',
+  description: 'A 5-gallon all-in-one, or a bare 20-gallon long. Scores and prices are on the nano-tank review.',
   url: 'https://fish.com/reviews/fluval-spec-vs-aqueon-20-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -74,14 +74,14 @@ export default function FluvalSpecVsAqueonGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-nano-tanks">nano-tank review</Link> is the tanks group on the reviews hub, and it had no side-by-side guide. This page compares the Fluval Spec V with the Aqueon 20-gallon long. Scores are editorial scores, not shopper star ratings. Prices are the ranges printed on those cards. The 10-gallon bare tank stays on the review.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-nano-tanks">nano-tank review</Link>. This comparison is the Fluval Spec V against the Aqueon 20-gallon long. The 10-gallon bare tank stays on the review.</p>
         <h2>What the review says about the Fluval Spec V</h2>
         <p>The Fluval Spec V is Best 5 Gallon, score 9.2, and the card is marked the winner. Volume is 5 gallons. The design is rimless and all-in-one, with integrated three-stage filtration behind a honeycomb baffle and a low-profile LED the review calls capable of low-light plants such as Java fern, Anubias, and mosses. The card says to baffle the outlet for a betta, that 5 gallons is less stable than 10 gallons and up, and that aquascaping space is tight. The printed price is $75–95. Equipment is included. The review says to cycle the tank before fish go in.</p>
         <h2>What the review says about the 20-gallon long</h2>
         <p>The Aqueon 20-gallon long is Best Overall Nano, score 9.4. The footprint on the card is 30 by 12 by 12 inches. The review calls that long footprint better for territorial separation than a tall tank, and it calls this the most forgiving beginner size. The tank is bare. A filter rated for 20 gallons, a heater, and a light are separate purchases. The printed price is $30–50 for the tank itself. The cons are those missing pieces, not a defect in the glass.</p>
-        <p>Cycling is the next step either way. The <Link href="/setup/aquarium-cycling-guide">cycling guide</Link> is where ammonia and nitrite have to read zero before livestock. This page does not add a stocking count.</p>
+        <p>Cycling is the next step either way. The <Link href="/setup/aquarium-cycling-guide">cycling guide</Link> is where ammonia and nitrite have to read zero before livestock. How many fish the tank can hold is on the <Link href="/tools/stocking-calculator">stocking calculator</Link>.</p>
         <h2>Who should buy which tank</h2>
-        <p>Buy the Spec V when the job is a 5-gallon betta or shrimp desk tank that should arrive with filter and light, and the higher printed kit price is acceptable, including the flow baffle the card names. Buy the 20-gallon long when the job is a first community tank and you will add the filter, heater, and light. The review’s own next-step search is that 20-gallon long, which is the button above. The sale price can differ from the printed band, and the band does not include the equipment the card says is missing.</p>
+        <p>Buy the Spec V when the job is a 5-gallon betta or shrimp desk tank that should arrive with filter and light, and the higher printed kit price is acceptable, including the flow baffle the card names. Buy the 20-gallon long when the job is a first community tank and you will add the filter, heater, and light. The review’s own next-step search is that 20-gallon long, which is the link above. The sale price can differ from the printed band, and the band does not include the equipment the card says is missing.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

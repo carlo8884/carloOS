@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Wood pellets or grass pellets',
-  description: 'The litter review already scores heat-treated wood pellets for odor and grass pellets for a softer feel.',
+  description: 'Heat-treated wood pellets for odor, or grass pellets for a softer feel. Scores are on the litter review.',
   url: 'https://ferret.com/reviews/wood-vs-grass-litter-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -67,15 +67,15 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-ferret-litter">litter review</Link> already scores compressed wood pellets for odor and pelleted grass for ferrets that dislike a harder texture. Those scores are editorial scores, not shopper star ratings. Recycled paper is the overall winner on that page, and it is a separate comparison.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Compressed wood pellets are the odor pick. Pelleted grass is for ferrets that dislike a harder texture. Recycled paper is the overall winner on that page, and it is a separate comparison.</p>
         <h2>What the review says about wood pellets</h2>
         <p>Compressed wood pellet litter is Best for Odor, score 8.0. Dust is low once the fines are sifted. It does not clump. Odor control is the strongest of the safe options on that page. The caveat is the wood form: use only heat-treated, low-phenol compressed pellets. The review says aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so loose aromatic shavings are not this product. Wood is harder underfoot than paper. The price tier is the lowest of the three litters. The shop search is heat-treated, non-clumping compressed wood pellets.</p>
         <h2>What the review says about grass pellets</h2>
         <p>Pelleted grass is the soft alternative, score 7.8. Dust is low. It does not clump. The feel is soft, which the review says some ferrets prefer to wood. Odor control is moderate. Pellets can break down faster when wet, so the pan may need changing more often than wood. The price tier is the mid tier. The review calls it a paper-pellet alternative, useful mainly when texture is the complaint. The shop search is a non-clumping small-animal grass pellet.</p>
-        <p>The <Link href="/tools/litter-planner">litter planner</Link> uses the pan-change approach from that review. This page does not add a new scoop schedule.</p>
+        <p>Scoop timing is on the <Link href="/tools/litter-planner">litter planner</Link>, using the pan-change approach from that review.</p>
         <h2>Who should buy which litter</h2>
         <p>Buy heat-treated wood pellets when odor is the priority and you will reject loose cedar or pine shavings. Buy grass pellets when the ferret dislikes wood or paper underfoot and you will change the pan more often because wet pellets break down. Do not buy a clumping cat litter for either job. The default low-dust litter on the same review is recycled paper.</p>
-        <p>The button above searches Amazon for heat-treated wood pellet litter, the same search as on the litter review.</p>
+        <p>The link above searches Amazon for heat-treated wood pellet litter, the same search as on the litter review.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

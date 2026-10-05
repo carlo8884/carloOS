@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Vetster or Chewy Connect',
-  description: 'The telehealth page already scores Vetster for video visits and Chewy Connect for Chewy customers.',
+  description: 'Vetster for video visits, or Chewy Connect for people who already shop at Chewy. Scores are on the telehealth page.',
   url: 'https://vets.co/reviews/vetster-vs-chewy-connect-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -68,7 +68,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/telehealth">telehealth page</Link> already scores Vetster as the overall service and Chewy Connect with a Vet for people who already use Chewy. Those scores are editorial scores, not shopper star ratings. AskVet is a third service on that page, and it is a separate comparison.</p>
+        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. AskVet is a third service on that page, and it is a separate comparison.</p>
         <h2>What the page says about Vetster</h2>
         <p>Vetster is Best Overall, score 9.2, and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. A typical wait is under 15 minutes, and it can run longer at peak times. You pay per consult. The printed price is $50–100 per consultation, with no monthly fee. The page says that per-visit price is higher than a subscription.</p>
         <h2>What the page says about Chewy Connect</h2>
@@ -76,7 +76,7 @@ export default function VetsterVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open Vetster when you want a licensed veterinarian on video, possibly a specialist, and you do not want a monthly fee. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a video queue.</p>
-        <p>The button above opens Vetster, the same link as on the telehealth page. The price you see there is the service’s price, not a figure invented on this page.</p>
+        <p>The link above opens Vetster, the same link as on the telehealth page. The price you see there is the service’s price.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

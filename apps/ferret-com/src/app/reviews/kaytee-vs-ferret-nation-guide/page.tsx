@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Kaytee or Ferret Nation',
-  description: 'The cage review already scores the Kaytee Multi-Level for one ferret and the Ferret Nation double unit for a small group.',
+  description: 'The Kaytee Multi-Level for one ferret, or the Ferret Nation double unit for a small group. Scores are on the cage review.',
   url: 'https://ferret.com/reviews/kaytee-vs-ferret-nation-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Where does the Prevue cage fit?',
-    answer: 'The Prevue Feisty Ferret is a separate comparison, for one or two ferrets when the double unit is too big or too expensive. This page does not repeat that pair.',
+    answer: 'The Prevue Feisty Ferret is a separate comparison, for one or two ferrets when the double unit is too big or too expensive.',
   },
 ]
 
@@ -67,15 +67,15 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-ferret-cage">cage review</Link> already scores the Ferret Nation double unit as the overall cage and the Kaytee Multi-Level as the single-ferret starter. Those scores are editorial scores, not shopper star ratings. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
         <h2>What the review says about the Kaytee</h2>
         <p>The Kaytee Multi-Level Ferret Home is the entry cage, score 7.6. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>
         <h2>What the review says about Ferret Nation</h2>
         <p>The Ferret Nation or Critter Nation double unit is Best Overall, score 9.5, and the winner. Bar spacing is about half an inch. The front doors open the full width. Pans are deep and leak-proof. The unit stacks to a second level for a pair or trio, and the review lists a fit of 1–4 ferrets. The price tier is premium. It is heavy once assembled, and wire shelves and ramps still need a cover.</p>
-        <p>The <Link href="/tools/cage-size-calculator">cage-size calculator</Link> is the floor-space check for the number of ferrets. This page does not add a bar-spacing number the Kaytee review does not print.</p>
+        <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. Bar spacing stays the figure the Kaytee review prints.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Kaytee when you have one ferret, daily out-of-cage time, and you can confirm the bar spacing on the box in the store. Buy the Ferret Nation double unit when you have a pair or you expect to add one, and you can fit the assembled footprint. Cover the wire on either cage. The Prevue Feisty Ferret remains the mid-price cage for one or two, and it is not this pair.</p>
-        <p>The button above searches Amazon for the Ferret Nation double unit, the same search as on the cage review. The sale price can differ from the tier in that review.</p>
+        <p>The link above searches Amazon for the Ferret Nation double unit, the same search as on the cage review. The sale price can differ from the tier in that review.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

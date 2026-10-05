@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'AskVet or Chewy Connect',
-  description: 'The telehealth page already scores AskVet for a chat subscription and Chewy Connect for Chewy customers.',
+  description: 'AskVet for a chat subscription, or Chewy Connect for people who already shop at Chewy. Scores are on the telehealth page.',
   url: 'https://vets.co/reviews/askvet-vs-chewy-connect-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -68,7 +68,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/telehealth">telehealth page</Link> already scores AskVet as the subscription and Chewy Connect with a Vet for people who already use Chewy. Those scores are editorial scores, not shopper star ratings. Vetster is the overall service on that page, and it is a separate comparison.</p>
+        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. Vetster is the overall service on that page, and it is a separate comparison.</p>
         <h2>What the page says about AskVet</h2>
         <p>AskVet is Best Subscription, score 8.8. Consults are chat only, with no video exam. The printed price is $30 a month for unlimited consultations. A typical wait is under 5 minutes. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that chat limits how much of a physical problem can be assessed.</p>
         <h2>What the page says about Chewy Connect</h2>
@@ -76,7 +76,7 @@ export default function AskVetVsChewyConnectGuidePage() {
         <p>If you are deciding between a video visit, a clinic, and an emergency hospital, use the <Link href="/tools/er-vs-clinic">ER versus clinic tool</Link>. Neither service on this page replaces emergency care.</p>
         <h2>Who should open which service</h2>
         <p>Open AskVet when you want unlimited chat for a flat $30 and you do not need video. Open Chewy Connect when you already pay for Chewy+ and you want the pharmacy tied to that account. If the pet is in crisis, go to an emergency clinic. Do not wait on a chat queue.</p>
-        <p>The button above opens AskVet, the same link as on the telehealth page. The price you see there is the service’s price, not a figure invented on this page.</p>
+        <p>The link above opens AskVet, the same link as on the telehealth page. The price you see there is the service’s price.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Fi Series 3 or Tractive',
-  description: 'The GPS tracker review already scores Fi Series 3 and Tractive on battery, coverage, and the printed monthly fee.',
+  description: 'Fi Series 3 or Tractive, using the battery, coverage, and monthly fee on the GPS tracker review.',
   url: 'https://dog.com/reviews/fi-vs-tractive-guide',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -74,15 +74,15 @@ export default function FiVsTractiveGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-dog-gps-tracker">GPS tracker review</Link> already scores three collars. This page is the tracking gap on the reviews hub: Fi Series 3 against Tractive. Whistle Go Explore is the health-monitoring card on that same review and is not one of these two. Scores are editorial scores, not shopper star ratings. Device prices and monthly fees are the figures printed on the cards.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-dog-gps-tracker">GPS tracker review</Link>. This comparison is Fi Series 3 against Tractive. Whistle Go Explore is the health-monitoring collar on that review, and it is a different purchase.</p>
         <h2>What the review says about the Fi Series 3</h2>
         <p>Fi Series 3 is Best Overall, score 9.4, and the winner. The card lists a three-month battery, an LTE-M network for broader rural coverage than standard LTE, instant geofence alerts, and an IP68 water-resistance line. The tracker module snaps into a collar band, and the review says collar bands are sold separately. A subscription is required. The printed price is $149 plus $9.99 a month. Step and sleep tracking are on the card. The cons say the upfront price is higher and the subscription is required.</p>
-        <p>A registered microchip is a different product. The review points at <Link href="/guides/dog-microchipping">microchipping</Link> as the ID that still works when a battery dies. This page does not add an implant price.</p>
+        <p>A registered microchip is a different product. The review points at <Link href="/guides/dog-microchipping">microchipping</Link> as the ID that still works when a battery dies. The implant cost is on that guide.</p>
         <h2>What the review says about Tractive</h2>
         <p>Tractive is Best Budget, score 8.8. The printed price is $49 plus $5 a month. The card says that monthly fee is the lowest of the trackers on the page and that the device works in 175 countries. Battery life is 2–5 days depending on tracking frequency, so charging is regular. The app is described as simple. Health monitoring is listed as none. The cons say the battery needs frequent charging and the app is less sophisticated than Fi.</p>
         <h2>Who should buy which tracker</h2>
         <p>Buy the Fi Series 3 when the review’s long battery and escape alerts are the reason, and the higher printed device price plus the monthly fee are acceptable. Buy Tractive when the lower printed device price and the $5 monthly line are the reason, including travel across the countries the card lists, and charging every few days is acceptable. Neither card is a health monitor. Whistle is the card for lick and scratch data, and it is not priced on this page.</p>
-        <p>The button above opens the Fi Series 3 search already used on the GPS review. The sale price can differ from the printed band.</p>
+        <p>The link above searches Amazon for the Fi Series 3, the same search as on the GPS review. The sale price can differ from the printed band.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

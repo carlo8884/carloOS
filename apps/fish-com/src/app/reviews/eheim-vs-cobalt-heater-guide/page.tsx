@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Eheim Jager or Cobalt Neo-Therm',
-  description: 'The heater review already scores the Eheim Jager for accuracy and the Cobalt Neo-Therm Pro for a flat housing.',
+  description: 'The Eheim Jager for accuracy, or the Cobalt Neo-Therm Pro for a flat housing. Scores and prices are on the heater review.',
   url: 'https://fish.com/reviews/eheim-vs-cobalt-heater-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -68,7 +68,7 @@ export default function EheimVsCobaltGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-aquarium-heaters">heater review</Link> already scores the Eheim Jager TruTemp as the overall pick and the Cobalt Aquatics Neo-Therm Pro as the flat heater. Those scores are editorial scores, not shopper star ratings.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-heaters">heater review</Link>. The Eheim Jager TruTemp is the overall pick. The Cobalt Aquatics Neo-Therm Pro is the flat heater.</p>
         <h2>What the review says about the Eheim Jager</h2>
         <p>The Jager is Best Overall, score 9.4, and the winner. Published accuracy is ±0.5°F. A side dial recalibrates drift separately from the main dial. It shuts off when it is removed from water. The housing is glass, so it can shatter if dropped. Sizes in the review run from 25W to 300W. The printed price is $25–55 by wattage. The review also says the main dial is approximate until you calibrate it, and that the tube takes more space than a flat heater.</p>
         <p>Use the <Link href="/tools/heater-wattage-calculator">heater-wattage calculator</Link> for the watts this tank needs. If that result is above 300W, the Jager review does not list a matching size.</p>
@@ -76,7 +76,7 @@ export default function EheimVsCobaltGuidePage() {
         <p>The Neo-Therm Pro is Best Flat Design, score 9.1. The review says manufacturer-published accuracy is also ±0.5°F. The body is flat, so it hides better in a planted or display tank. An LED moves from blue while heating to white at temperature. The housing is shatterproof plastic. It is not recalibratable. The printed price is $35–65, and the review says that is higher than the Jager for the same accuracy.</p>
         <h2>Who should buy which heater</h2>
         <p>Buy the Jager when you want the recalibration dial, the out-of-water shut-off, and a wattage from 25W to 300W, and you can keep glass off the floor. Buy the Neo-Therm Pro when the tank is a display and you would rather have shatterproof plastic than a calibration dial. The Hydor on the same review is the inline heater, and it needs a canister. It is not this pair.</p>
-        <p>The button above searches Amazon for the Eheim Jager, the same search as on the heater review. Pick the wattage there. The sale price can differ from the band above.</p>
+        <p>The link above searches Amazon for the Eheim Jager, the same search as on the heater review. Pick the wattage there. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

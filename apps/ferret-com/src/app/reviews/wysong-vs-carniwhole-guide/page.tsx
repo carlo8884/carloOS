@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Wysong or Carniwhole',
-  description: 'The kibble review already scores Wysong Epigen 90 and the direct-to-consumer Carniwhole bag.',
+  description: 'Wysong Epigen 90 or the direct-to-consumer Carniwhole bag, using the scores on the kibble review.',
   url: 'https://ferret.com/reviews/wysong-vs-carniwhole-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Where is Marshall Premium?',
-    answer: 'On the Wysong-versus-Marshall guide. Marshall is the mid-tier card on the same kibble review. This page does not repeat that comparison.',
+    answer: 'On the Wysong-versus-Marshall guide. Marshall is the mid-tier card on the same kibble review.',
   },
 ]
 
@@ -74,12 +74,12 @@ export default function WysongVsCarniwholeGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> scores three dry diets and says the comparison uses published panels, not a hands-on test. Wysong against Marshall is already a guide. This page is the remaining card: Wysong Epigen 90 against Carniwhole. Scores are editorial scores, not shopper star ratings. Carniwhole’s card does not print a shop link, so the only hop here is the Wysong link already on the review.</p>
+        <p>Prices and scores below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. This comparison is Wysong Epigen 90 against Carniwhole. Carniwhole’s card has no shop link, so the link above is the Wysong link from that review.</p>
         <h2>What the review says about Wysong Epigen 90</h2>
-        <p>Wysong Epigen 90 is Premium Tier, score 9.3, and the winner. The card calls it the lowest-carbohydrate commercial kibble in wide ferret-keeping use, with named meats and organ meats and a starch-free system that puts carbohydrate by difference in the low single digits. Specs list about 60 percent protein and about 16 percent fat on a dry-matter basis, grain-free, sold direct and through specialty pet retail. Cons are the premium price and the chance it is not in a supermarket aisle. The printed price is $30–50 for 5 pounds. The button above is that product’s Wysong link.</p>
-        <p>Dry-matter math for a different label is the <Link href="/tools/label-calculator">label calculator</Link>, using the conversion already on the label guide. This page does not recalculate Wysong’s panel.</p>
+        <p>Wysong Epigen 90 is Premium Tier, score 9.3, and the winner. The card calls it the lowest-carbohydrate commercial kibble in wide ferret-keeping use, with named meats and organ meats and a starch-free system that puts carbohydrate by difference in the low single digits. Specs list about 60 percent protein and about 16 percent fat on a dry-matter basis, grain-free, sold direct and through specialty pet retail. Cons are the premium price and the chance it is not in a supermarket aisle. The printed price is $30–50 for 5 pounds. The link above opens that bag at Wysong.</p>
+        <p>Dry-matter math for a different label is the <Link href="/tools/label-calculator">label calculator</Link>, using the conversion on the label guide. Wysong’s panel stays the one printed above.</p>
         <h2>What the review says about Carniwhole</h2>
-        <p>Carniwhole is Direct-to-Consumer, score 8.2. The card says keepers choose it for a published ingredient and macronutrient panel and a fresher product than long-shelf-stable kibble. Protein source is listed as animal-first named meats. Distribution is direct only, with no retail backup. Shipping is a subscription. Smaller-batch sourcing is listed as yes. Cons are subscription logistics, the missing retail backup, and a shorter community track record than Marshall or Wysong. The price line says subscription pricing. This page does not turn that line into a dollar range the review did not print.</p>
+        <p>Carniwhole is Direct-to-Consumer, score 8.2. The card says keepers choose it for a published ingredient and macronutrient panel and a fresher product than long-shelf-stable kibble. Protein source is listed as animal-first named meats. Distribution is direct only, with no retail backup. Shipping is a subscription. Smaller-batch sourcing is listed as yes. Cons are subscription logistics, the missing retail backup, and a shorter community track record than Marshall or Wysong. The price line says subscription pricing. That is the price the review prints, not a dollar range.</p>
         <h2>Who should buy which food</h2>
         <p>Buy Wysong when the review’s single-digit carbohydrate line and specialty or direct stocking are what you want, and the printed bag price is acceptable. Buy Carniwhole when a subscription shipment and a direct-only panel are acceptable, including the chance you cannot pick the same bag up at a store. Marshall remains the mid-tier retail card on the other guide. Similar carbohydrate on an unknown label does not make that label into either of these bags.</p>
         <p>The sale price can differ from the printed Wysong band. Carniwhole’s price is whatever the subscription page shows, not a figure added here.</p>
