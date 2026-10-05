@@ -202,7 +202,7 @@ export default function RawFeedingGuidePage() {
             pros={['Pre-balanced — no ratio engineering', 'Natural calcium-to-phosphorus ratio', 'Cost-effective in bulk', 'Excellent dental abrasion']}
             cons={['Requires freezer space', 'Not for squeamish households', 'Must verify supplier handling standards']}
             price="Varies by size and quantity"
-            ctaText="Browse Frozen Feeder Prey"
+            ctaText="Browse Frozen Feeder Prey on Amazon"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-raw-feeding-guide"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"

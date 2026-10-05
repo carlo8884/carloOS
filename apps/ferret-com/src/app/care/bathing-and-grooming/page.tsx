@@ -610,7 +610,7 @@ export default function FerretBathingGroomingPage() {
             pros={['Right tool geometry for ferret nails', 'Quick-styptic stops accidents in seconds', 'One-time purchase, lasts years']}
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
             price="$10–18"
-            ctaText="Find small-pet nail clippers"
+            ctaText="Find small-pet nail clippers on Amazon"
             ctaHref="/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small+pet+nail+clipper+styptic+powder"
