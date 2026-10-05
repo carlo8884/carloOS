@@ -538,6 +538,11 @@ export default function FerretBathingGroomingPage() {
             A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. This is a documented-spec comparison drawing on widely-stocked products in US pet retail and the shampoo and ear-product categories referenced in standard exotic-pet practice; the page does not claim hands-on testing. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
           </p>
           <ScoreMethodology />
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <a href="/care/odor-and-scent-control" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Read the odor guide before you add a bath →
+            </a>
+          </p>
           <ReviewCard
             id="marshall-ferret-shampoo"
             badge="Shampoo Default"
@@ -580,6 +585,11 @@ export default function FerretBathingGroomingPage() {
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
           />
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <a href="/care/nail-trimming" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Read the nail-trim guide before you buy clippers →
+            </a>
+          </p>
           <ReviewCard
             id="pet-nail-kit"
             badge="Nail Care"
