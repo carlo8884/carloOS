@@ -105,7 +105,7 @@ export default function BestPuppyFoodPage() {
               pros={['Most research-intensive manufacturer', 'Breed-specific formulas available', 'Controlled calcium for safe large breed development', 'AAFCO feeding trial substantiated', 'EPA/DHA for brain development']}
               cons={['Higher price than Purina or Hill\'s', 'Some dogs do not like the kibble shape', 'Must transition to RC adult at appropriate age']}
               price="$65–90 per 30 lb bag"
-              ctaText="Shop Royal Canin on Amazon →"
+              ctaText="Shop Royal Canin large-breed puppy food on Amazon →"
               ctaHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="royal+canin+large+breed+puppy"
