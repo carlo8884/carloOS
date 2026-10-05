@@ -71,7 +71,7 @@ export default function AquascapingGuidePage() {
           nextLabel="Build the planted tank equipment and substrate next"
           nextBlurb="The scape is decided before plants go in — slope the substrate, set the hardscape, then plant in zones. The planted-tank setup guide is the filter, light, and substrate order. The hop below is the same Seiryu-stone search already on this page."
           resourceHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
-          resourceLabel="Browse aquarium Seiryu stone on Amazon →"
+          resourceLabel="Browse Seiryu stone on Amazon →"
         />
 
         <h2 id="kit">Aquascape hardscape kit</h2>
@@ -92,11 +92,11 @@ export default function AquascapingGuidePage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+seiryu+stone?s=setup-aquascaping-guide"
-              amazonLabel="Browse aquarium Seiryu stone on Amazon →"
+              amazonLabel="Browse Seiryu stone on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+spiderwood+driftwood?s=setup-aquascaping-guide"
-              amazonLabel="Browse aquarium spiderwood driftwood on Amazon →"
+              amazonLabel="Browse spiderwood driftwood on Amazon →"
             />
           </div>
         </div>
