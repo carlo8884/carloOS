@@ -139,20 +139,34 @@ export function isRetailVendor(vendor: string): boolean {
   return RETAIL_VENDORS.has(vendor)
 }
 
+/** Associates tag, copied from AFF_AMAZON_TAG with nothing appended and no built-in default. */
+export function amazonAssociateTag(env: NodeJS.ProcessEnv = process.env): string {
+  const tag = env.AFF_AMAZON_TAG
+  return typeof tag === 'string' ? tag : ''
+}
+
 export function resolveTag(
   vendor: string,
   env: NodeJS.ProcessEnv = process.env,
 ): { tag: string; envVarName: string } {
+  if (vendor === 'amazon' || vendor === 'amazon-brand') {
+    if (vendor === 'amazon-brand') {
+      const brand = env.AFF_AMAZON_BRAND_TAG
+      if (typeof brand === 'string' && brand.length > 0) {
+        return { tag: brand, envVarName: 'AFF_AMAZON_BRAND_TAG' }
+      }
+    }
+    const tag = amazonAssociateTag(env)
+    if (tag.length > 0) return { tag, envVarName: 'AFF_AMAZON_TAG' }
+    return {
+      tag: '',
+      envVarName: vendor === 'amazon' ? 'AFF_AMAZON_TAG' : 'AFF_AMAZON_BRAND_TAG',
+    }
+  }
   const primaryName = `AFF_${vendor.replace(/-/g, '_').toUpperCase()}_TAG`
   const primary = env[primaryName]
   if (typeof primary === 'string' && primary.length > 0) {
     return { tag: primary, envVarName: primaryName }
-  }
-  if (vendor === 'amazon-brand' || vendor === 'amazon') {
-    const fallback = env.AFF_AMAZON_TAG
-    if (typeof fallback === 'string' && fallback.length > 0) {
-      return { tag: fallback, envVarName: 'AFF_AMAZON_TAG' }
-    }
   }
   if (vendor === 'chewy-brand' || vendor === 'chewy-pharmacy') {
     const fallback = env.AFF_CHEWY_TAG
