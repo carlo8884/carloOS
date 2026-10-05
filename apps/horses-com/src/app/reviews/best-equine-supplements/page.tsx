@@ -276,7 +276,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Marine source — actual DHA/EPA, not ALA', 'Research-grade formulation', 'KER&apos;s published equine trials use this product', 'Strong palatability in most horses']}
               cons={['Liquid format messier than pellets in cold weather', 'Shelf life once opened is shorter than pellets', 'Premium pricing in the category']}
               price="$55–85/mo"
-              ctaText="Shop KER on Amazon →"
+              ctaText="Shop KER EO-3 on Amazon →"
               ctaHref="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ker-eo-3"
