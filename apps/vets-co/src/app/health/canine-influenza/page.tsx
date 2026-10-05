@@ -85,56 +85,6 @@ export default function CanineInfluenzaPage() {
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
-          {/* Money path — live amazon-brand search hops
-              (double-door wire dog crate /
-              pet-safe kennel disinfectant spray /
-              analog wall clock with second hand).
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer, #1069
-              wire+small+animal+single+story+cage /
-              non+slip+suction+bathtub+mat /
-              stainless+steel+small+animal+crock, #1068
-              extra+small+animal+travel+kennel /
-              scent+swap+fleece+sleep+pouch /
-              portable+small+animal+playpen, #1067
-              small+animal+rabies+certificate+holder /
-              top+loading+small+animal+carrier /
-              fleece+small+animal+bonding+pouch, #1066
-              carnivore-care / baby-food / silicone
-              dosing syringe, #1059
-              adjustable+sliding+dog+food+scoop /
-              reusable+dog+food+portion+cups /
-              dog+weight+log+book, #1058
-              digital+handheld+stopwatch /
-              waterproof+field+notebook /
-              foam+table+edge+bumper, #1057
-              automatic+timed+dog+feeder /
-              maze+slow+feed+dog+bowl /
-              indoor+dog+house+line, #1056
-              disposable+female+dog+diapers /
-              inflatable+dog+collar /
-              hard+sided+airline+dog+crate,
-              tick+remover, tick+removal+tool,
-              reusable+lint+roller,
-              fine+tooth+metal+comb,
-              pet+first+aid+kit, led+medical+penlight,
-              dog+recovery+crate,
-              soft+sided+dog+crate,
-              wire+dog+crate+with+divider+panel,
-              heavy+duty+dog+exercise+pen,
-              cool+mist+humidifier,
-              digital+pet+thermometer,
-              accelerated+hydrogen+peroxide+disinfectant.
-              Canine influenza vaccine, Tamiflu,
-              oseltamivir, Nobivac, and Rx ASINs are
-              not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop the dog-flu isolation kit

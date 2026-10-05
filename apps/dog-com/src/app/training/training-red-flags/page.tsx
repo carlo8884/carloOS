@@ -121,7 +121,7 @@ export default function TrainingRedFlagsPage() {
           aversive methods).&quot; This is not a fringe position — it is the consensus of the
           professional veterinary behavior community.
         </p>
-        
+
         {RED_FLAGS.map((r, i) => (
           <div
             key={r.flag}
@@ -159,25 +159,8 @@ export default function TrainingRedFlagsPage() {
           guide →</a>
         </p>
 
-
-
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-        {/* Shop leftover kit — unused vs #1152
-            laminated+dog+aggression+warning+signal+sequence+checklist /
-            dog+aggression+type+and+function+question+card /
-            dog+aggression+never+alpha+roll+watch+log+notebook, #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook, #1149
-            laminated+horse+snaffle+vs+curb+bit+checklist /
-            horse+bit+width+and+wrinkle+fit+question+card /
-            horse+bit+hand+severity+watch+log+notebook,
-            leash-reactivity / loose-leash front+clip+no+pull+dog+harness,
-            marker-training dog+training+treat+pouch+belt+clip / dog+training+clicker. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -188,7 +171,6 @@ export default function TrainingRedFlagsPage() {
               amazonHref="/go/amazon-brand/dog+harness?s=training-red-flags"
               amazonLabel="Browse dog harness on Amazon →"
             />
-
 
           </div>
         </div>

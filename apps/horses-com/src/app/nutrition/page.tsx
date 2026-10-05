@@ -177,56 +177,6 @@ export default function NutritionHubPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn forage-first chart /
-            horse stall-door ration card /
-            equine nutrition reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, #1122
-            airtight+labeled+horse+treat+canister /
-            nonslip+horse+barn+cutting+board /
-            nylon+horse+waist+treat+pouch, #1121
-            fine+mesh+horse+feed+colander /
-            long+handled+horse+feed+mixing+paddle /
-            silicone+horse+feed+tub+scraper, #1120
-            compact+digital+gram+scale+horse+feed /
-            molasses+free+chaff+horse /
-            small+rubber+horse+mixing+pan, #1119
-            horse+alfalfa+cubes /
-            soy+hull+pellets+horse+feed /
-            over+door+horse+feed+bucket, #1118
-            portable+horse+hay+flake+scale /
-            horse+hay+soaking+tub /
-            low+sugar+horse+treats, #1117
-            nylon+horse+hay+bag /
-            horse+feed+grade+vegetable+oil /
-            marked+horse+grain+scoop, #1116
-            horse+chopped+forage /
-            horse+feed+soaking+tub /
-            horse+corner+feeder, #1115
-            equine+toxic+plant+identification+field+guide /
-            horse+pasture+walk+weed+identification+handbook /
-            horse+paddock+tree+guard+fencing, #1114
-            flat+back+horse+water+bucket /
-            heated+horse+water+bucket /
-            electrolyte+for+horses, #1113
-            orchard+grass+hay+horse /
-            alfalfa+hay+bales+horse /
-            timothy+alfalfa+mixed+hay+horse, #1112
-            tabletop+digital+horse+grain+scale /
-            stackable+rubber+horse+feed+tubs /
-            rodent+proof+metal+horse+feed+bin, #1111
-            horse+hay+probe+moisture+tester /
-            equine+hay+core+sampler /
-            wall+mounted+horse+hay+rack, #1110
-            plain+white+horse+salt+block /
-            salt+first+horse+electrolyte+powder /
-            wide+mouth+horse+water+bucket. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

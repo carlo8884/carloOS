@@ -13,7 +13,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const GUIDES = [
   { category: 'The Basics', items: [{ title: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works', badge: 'Start Here' }, { title: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { title: 'Pre-Existing Conditions Explained', href: '/insurance/pre-existing-conditions' }] },
   { category: 'Choosing & Timing', items: [{ title: 'When to Enroll Your Pet', href: '/insurance/when-to-enroll' }, { title: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { title: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }] },
@@ -109,25 +108,11 @@ export default function VetsInsuranceHubPage() {
         ))}
       </div>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet insurance policy-map chart /
-            pet fridge insurance levers card /
-            veterinary insurance reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / enrollment ASIN hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+cat+calculator+tools+chart /
-            cat+fridge+measurement+card /
-            feline+calculator+reference+handbook
-            and child insurance four+column+accounting+pad /
-            letter+size+poly+envelope /
-            monthly+desk+pad+calendar hops. */}
               </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />

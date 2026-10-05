@@ -91,41 +91,11 @@ export default function PainSignsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
-          {/* Money path — live amazon-brand search hops
-              (egg-crate foam dog kennel pad /
-              carpeted wooden pet steps /
-              wide-platform veterinary floor scale).
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1074
-              wire+basket+dog+muzzle /
-              quilted+disposable+underpads /
-              handheld+aa+led+flashlight, #1073
-              double+door+wire+dog+crate /
-              pet+safe+kennel+disinfectant+spray /
-              analog+wall+clock+with+second+hand, #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer,
-              orthopedic+dog+bed, dog+ramp,
-              foam+dog+stairs,
-              dog+rear+support+harness,
-              digital+pet+scale,
-              analog+bathroom+scale,
-              pet+first+aid+kit, led+medical+penlight,
-              soft+dog+muzzle, dog+recovery+crate,
-              calming+dog+chews, lick+mat+dog,
-              joint+support+dog+treats.
-              NSAID, opioid, gabapentin, vaccine, and
-              Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/egg+crate+foam+dog+kennel+pad?s=health-pain-signs-dogs"

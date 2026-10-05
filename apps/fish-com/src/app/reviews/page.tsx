@@ -271,19 +271,6 @@ export default function FishReviewsPage() {
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated aquarium reviews buyer-guide
-            chart / aquarium rim reviews comparison
-            card / aquarist reviews reference
-            handbook). Educational stand searches only;
-            no Rx / child-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+aquarium+calculator+tools+chart /
-            aquarium+rim+measurement+card /
-            aquarist+calculator+reference+handbook
-            and child aquaclear+70 / fluval+307 /
-            eheim+jager / hygger+957 hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

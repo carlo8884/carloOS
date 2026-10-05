@@ -91,44 +91,6 @@ export default function PeriodontalDiseasePage() {
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
-          {/* Money path — live amazon-brand search hops
-              (pet toothbrush and enzymatic toothpaste kit /
-              VOHC dental chews for dogs /
-              VOHC-accepted dental water additive).
-              These are educational home-care tools, not a
-              ranked product list, not a substitute for
-              professional veterinary dental cleaning /
-              anesthesia dentistry, no Rx ASIN hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Category searches only —
-              unused vs #1075
-              egg+crate+foam+dog+kennel+pad /
-              carpeted+wooden+pet+steps /
-              wide+platform+veterinary+floor+scale, #1074
-              wire+basket+dog+muzzle /
-              quilted+disposable+underpads /
-              handheld+aa+led+flashlight, #1073
-              double+door+wire+dog+crate /
-              pet+safe+kennel+disinfectant+spray /
-              analog+wall+clock+with+second+hand, #1072
-              tick+removal+hook /
-              fine+tooth+flea+comb /
-              laminated+tick+identification+card, #1071
-              letter+size+expanding+file+organizer /
-              sterile+urine+specimen+cup /
-              12+hour+mechanical+kitchen+timer,
-              dental-cleaning-guide
-              soft+pet+toothbrush /
-              enzymatic+pet+toothpaste /
-              dental+chews+dog /
-              pet+dental+water+additive,
-              ferret dental-disease
-              finger+toothbrush+pet /
-              infant+toothbrush+soft+bristle /
-              pet+dental+wipes.
-              CET, Vetradent, Greenies, Whimzees,
-              clindamycin, anesthesia, dental-scaler,
-              and Rx ASINs are not shoppable hops. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

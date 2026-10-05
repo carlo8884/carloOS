@@ -226,50 +226,6 @@ export default function FirstAidKitPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (sterile saline wound flush horse /
-              nonstick wound dressing pads horse /
-              equine bandage scissors).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs emergency / grimace
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice /
-              horse+electrolytes, cost-calculator
-              horse+barn+first+aid+kit, gestation
-              digital+equine+thermometer, health hub
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook, #1123
-              laminated+horse+barn+treat+safety+chart /
-              lidded+horse+barn+treat+tote /
-              horse+barn+treat+prep+shears,
-              farrier-schedule
-              cordless+barn+flood+light,
-              dog first-aid
-              saline+wound+flush /
-              wound+care+gauze /
-              vetrap+cohesive+bandage,
-              vets.co
-              sterile+saline+eye+wash. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop first-aid supplies

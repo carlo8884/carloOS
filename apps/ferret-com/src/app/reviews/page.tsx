@@ -392,19 +392,6 @@ export default function ReviewsHubPage() {
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret reviews buyer-guide chart /
-            ferret fridge reviews comparison card /
-            mustelid reviews reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / cage-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+ferret+calculator+tools+chart /
-            ferret+fridge+measurement+card /
-            mustelid+calculator+reference+handbook
-            and child ferret+nation+critter+nation /
-            compressed+wood+pellet / vest+harness hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

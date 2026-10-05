@@ -110,7 +110,6 @@ export default function SeniorHorseCarePage() {
 
           <h2 id="when">When Is a Horse Old</h2>
           <p>There is no single age at which a horse becomes a senior -- much depends on the individual, the breed, and a lifetime of management. Many horses are considered geriatric somewhere from the late teens into the twenties, but a well-kept horse may be working soundly at twenty-five while another shows its age at fifteen. Rather than a birthday, the cue to shift into senior care is the appearance of age-related changes, which is why regular monitoring matters more than counting years.</p>
-          
 
           <h2 id="conditions">Common Age-Related Conditions</h2>
           <ul>
@@ -120,11 +119,9 @@ export default function SeniorHorseCarePage() {
             <li><strong>Weight change</strong> in either direction -- some seniors become hard keepers, others stay overweight, especially with PPID.</li>
             <li><strong>Reduced immunity</strong> and slower healing, raising infection and parasite vulnerability.</li>
           </ul>
-          
 
           <h2 id="feeding">Teeth and Feeding</h2>
           <p>Dental wear is the defining change of old age and drives much of senior feeding. As teeth wear out, a horse struggles to chew long-stem hay, leading to quidding, weight loss, and choke risk, and eventually needing forage in a chewable form -- soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds. Feeding must be tailored to the individual, fed up for a thin senior or carefully restricted for an overweight or PPID horse. See the feeding senior horses guide for detail.</p>
-          
 
           <h2 id="comfort">Comfort and Exercise</h2>
           <p>Gentle, consistent exercise keeps an older horse&apos;s joints mobile, muscles toned, and mind engaged; the arthritic senior generally does better with movement and turnout than with confinement. Adapt the work to the horse -- lighter, with thorough warm-ups -- and provide comfort: shelter, soft footing, protection from bullying by younger herdmates, body clipping for PPID horses that fail to shed, and attentive blanketing for those that struggle to keep warm. Small accommodations make a large difference to an old horse&apos;s comfort.</p>
@@ -132,97 +129,14 @@ export default function SeniorHorseCarePage() {
 
           <h2 id="monitoring">Veterinary Monitoring</h2>
           <p>Senior horses benefit from more frequent veterinary attention: regular dental exams, testing for PPID when signs appear, more careful parasite control given reduced immunity, attention to vaccination, and prompt investigation of weight loss or other changes. Because age-related conditions develop gradually and a thick or PPID coat hides weight change, regular hands-on checks and body condition scoring catch problems early, when they are most manageable.</p>
-          
 
           <h2 id="qol">Quality of Life</h2>
           <p>The hardest and most important part of senior care is honest assessment of quality of life. An old horse can be kept comfortable and happy for many years with good management, but there comes a point in some lives when pain, disease, or decline can no longer be managed well, and the kindest decision is to let the horse go before it suffers. Discussing quality of life openly with a trusted veterinarian, and prioritizing the horse&apos;s comfort over the owner&apos;s reluctance to say goodbye, is the final responsibility of good ownership.</p>
-          
 
           <h2 id="kit">Senior horse comfort supplies</h2>
-          
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated senior horse age-related
-              change checklist /
-              senior horse weight-and-joint watch
-              notebook /
-              senior horse quality-of-life score
-              card).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              feeding-senior-horses
-              horse+chopped+forage /
-              horse+feed+soaking+tub /
-              horse+corner+feeder /
-              complete+senior+horse+feed+soakable /
-              horse+topline+amino+acid+supplement+lysine,
-              cushings-ppid
-              stainless+horse+shedding+blade /
-              wicking+horse+anti+sweat+sheet /
-              automatic+horse+waterer,
-              body-clipping
-              horse+clippers /
-              horse+clipper+blades /
-              horse+fleece+cooler,
-              blanket-size calculator
-              winter+horse+blanket /
-              horse+turnout+sheet /
-              horse+stable+blanket,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice /
-              ice+boot+cold+therapy+wrap,
-              BCS
-              horse+body+condition+score+chart. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -4,7 +4,6 @@ import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchem
 import listings from '../../data/directory-listings.json'
 import { crossSiteHref } from '@carloOS/config'
 
-
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Product Reviews 2026 — Ranked & Compared | Dog.com', description: 'Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.', path: '/reviews' })
 
 const breadcrumbSchema = buildBreadcrumbSchema({
@@ -13,7 +12,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
     { name: 'Reviews', url: 'https://dog.com/reviews' },
   ],
 })
-
 
 const REVIEW_GROUPS = [
   { id: 'dog-reviews-food', label: 'Food', intro: 'Dry food, life-stage foods, the slow feeder bowl, and the fresh-versus-kibble page.' },
@@ -153,19 +151,6 @@ export default function DogReviewsPage() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog reviews buyer-guide chart /
-            dog fridge reviews comparison card /
-            canine reviews reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm ASIN hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+dog+calculator+tools+chart /
-            dog+fridge+measurement+card /
-            canine+calculator+reference+handbook,
-            child reviews wire+dog+crate /
-            dog+harness / dog+gps. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

@@ -146,7 +146,6 @@ export default function ResourceGuardingPage() {
             before biting is more dangerous than the dog that growls first. Punishing the behavior
             without changing the emotional trigger creates a dog that bites without warning.
           </p>
-          
 
           <h2>Assessing Severity</h2>
           <p>
@@ -192,7 +191,6 @@ export default function ResourceGuardingPage() {
               practice the trade game to ensure the behavior generalizes.
             </li>
           </ol>
-          
 
           <h2>Management During Training</h2>
           <p>
@@ -202,7 +200,6 @@ export default function ResourceGuardingPage() {
             gates to separate guarding contexts. Management is not a substitute for training, but it
             prevents practice of the guarding behavior during the training period.
           </p>
-
 
           <h2>When to Get Professional Help</h2>
           <p>
@@ -216,18 +213,6 @@ export default function ResourceGuardingPage() {
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-          {/* Shop leftover kit — unused vs #1150
-              laminated+dog+off+leash+recall+proofing+checklist /
-              dog+20+to+30+foot+long+line+question+card /
-              dog+recall+cue+never+punish+watch+log+notebook, #1149
-              laminated+horse+snaffle+vs+curb+bit+checklist /
-              horse+bit+width+and+wrinkle+fit+question+card /
-              horse+bit+hand+severity+watch+log+notebook,
-              basic-commands puppy+training+treats / dog+training+clicker / dog+long+line+leash,
-              bloat single+stainless+floor+dog+bowl,
-              obesity / calorie-calculator slow+feeder+dog+bowl,
-              new-puppy extra+tall+baby+gate,
-              pancreatitis walk+through+pet+gate. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop related supplies
@@ -238,7 +223,6 @@ export default function ResourceGuardingPage() {
                 amazonHref="/go/amazon-brand/dry+dog+food?s=training-resource-guarding"
                 amazonLabel="Browse dry dog food on Amazon →"
               />
-
 
           </div>
           </div>

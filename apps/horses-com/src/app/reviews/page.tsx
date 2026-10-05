@@ -214,19 +214,6 @@ export default function HorsesReviewsPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn reviews buyer-guide
-            chart / horse stall-door reviews comparison
-            card / equine reviews reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine / supplement-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+horse+barn+calculator+tools+chart /
-            horse+stall+door+measurement+card /
-            equine+calculator+reference+handbook
-            and child platinum+performance /
-            kentucky+equine+research hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
