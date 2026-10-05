@@ -54,7 +54,7 @@ export default function BestGPSTrackerPage() {
               pros={['3-month battery — best by far', 'LTE-M for rural coverage', 'Instant escape alerts', 'Replaces collar — no extra bulk', 'Step and sleep tracking']}
               cons={['More expensive upfront ($140–160)', 'Monthly subscription required', 'Collar bands sold separately']}
               price="$140–160 + $8–12/mo"
-              ctaText="Shop Fi Series 3 on Amazon →"
+              ctaText="Shop Fi Series 3 collar on Amazon →"
               ctaHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="fi+series+3+dog+collar"
