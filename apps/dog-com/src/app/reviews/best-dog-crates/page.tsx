@@ -139,7 +139,7 @@ export default function BestDogCratesPage() {
               pros={['Genuinely escape-proof', 'Aircraft-grade aluminum construction', 'Lifetime warranty', 'Preferred by professional trainers and K9 handlers']}
               cons={['Significant weight — not portable', 'Premium price point', 'Overkill for calm dogs']}
               price="$300–500"
-              ctaText="Shop Impact Crates on Amazon →"
+              ctaText="Shop Impact high-anxiety crates on Amazon →"
               ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="impact+high+anxiety+dog+crate"
