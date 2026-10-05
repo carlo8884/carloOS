@@ -166,7 +166,7 @@ export default function HarnessCollarSizePage() {
             nextLabel="Pack the day-one kit with the sized harness"
             nextBlurb="The calculator is a size band, not a brand. Add the harness to the new-puppy checklist, then size the crate for adult length. The hop below is the same Julius-K9 harness search already on this page."
             resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-            resourceLabel="Browse harnesses on Amazon →"
+            resourceLabel="Browse Julius-K9 harnesses on Amazon →"
           />
         </div>
       </section>
@@ -185,7 +185,7 @@ export default function HarnessCollarSizePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-                amazonLabel="Browse harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"

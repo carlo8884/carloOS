@@ -295,7 +295,7 @@ export default function WhichPetPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=which-pet"
-                amazonLabel="Browse harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+id+tag+collar?s=which-pet"
