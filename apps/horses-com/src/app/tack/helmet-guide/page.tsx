@@ -222,7 +222,11 @@ export default function HelmetGuidePage() {
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/tack/stirrups-and-safety" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Read stirrup safety before you ride in this helmet →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"
