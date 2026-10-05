@@ -224,7 +224,7 @@ export default function WaterChangeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"
-              amazonLabel="Browse Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
