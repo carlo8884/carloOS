@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -76,7 +76,10 @@ export default function GreeniesVsWhimzeesGuidePage() {
         <p>Buy Greenies when you want the chew that lists VOHC acceptance for plaque and tartar, and wheat is not a problem. Buy Whimzees when you want a plant-based chew or a longer chew, and you do not need a tartar claim. Skip both as a substitute for brushing.</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
         <p>The link below searches for Greenies, the same search as on the dental review. Pick the size for the dog. The sale price can differ from the band above.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-greenies-vs-whimzees-guide">Browse Greenies dental chews on Chewy →</a></p>
+        <ShopCtas
+          amazonHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-greenies-vs-whimzees-guide"
+          amazonLabel="Browse Greenies dental chews on Chewy →"
+        />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
