@@ -324,7 +324,7 @@ export default function FerretCageSetupPage() {
             pros={['Corner-shaped — fits ferret instinct', 'Low front lip for easy entry', 'High back wall reduces scatter', 'Widely available, inexpensive']}
             cons={['Smaller ferrets can sometimes push it out of corner', 'Needs daily spot-clean']}
             price="$5–12"
-            ctaText="Find Kaytee corner pans on Amazon"
+            ctaText="Find Kaytee corner ferret litter pans on Amazon"
             ctaHref="/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="kaytee+corner+ferret+litter+pan"
