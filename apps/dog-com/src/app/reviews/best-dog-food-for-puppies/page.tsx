@@ -172,7 +172,7 @@ export default function BestPuppyFoodPage() {
               pros={['Most affordable WSAVA-compliant option', 'Large breed formula available', 'Widely available', 'Adequate nutritional quality']}
               cons={['Less research investment than top 3', 'AAFCO formulation (not feeding trial) on some lines', 'Lower-quality protein sourcing than premium options']}
               price="$30–50 per 30 lb bag"
-              ctaText="Shop Iams on Amazon →"
+              ctaText="Shop Iams ProActive Health large-breed puppy food on Amazon →"
               ctaHref="/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="iams+proactive+health+puppy+large+breed"
