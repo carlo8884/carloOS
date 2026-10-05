@@ -198,7 +198,7 @@ export default function BeddingAndLitterTypesPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"
-                amazonLabel="Browse high-back corner litter pans on Amazon →"
+                amazonLabel="Browse high-back corner ferret litter pans on Amazon →"
               />
           </div>
             <p className="text-2xs text-brand-text-light mt-3">
