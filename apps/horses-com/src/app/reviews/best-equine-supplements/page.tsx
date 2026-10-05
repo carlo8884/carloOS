@@ -333,7 +333,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Consistent nutritional profile', 'Wide product range', 'Senior-horse soaking options', 'National distribution']}
               cons={['Cost-per-pound higher than local baled hay', 'Not a "supplement" in the marketing sense']}
               price="Varies by product"
-              ctaText="Shop Standlee on Amazon →"
+              ctaText="Shop Standlee forage pellets on Amazon →"
               ctaHref="/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="standlee-premium-forage"
