@@ -182,7 +182,7 @@ export default function BeddingAndLitterTypesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types"
-                amazonLabel="Browse ferret sleep sacks and cube beds on Amazon →"
+                amazonLabel="Browse fleece ferret sleep sacks on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types"

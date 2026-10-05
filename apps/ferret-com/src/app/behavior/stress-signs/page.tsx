@@ -333,7 +333,7 @@ export default function FerretStressSignsPage() {
             pros={['Enclosed darkness supports deep sleep', 'Washable fleece', 'Pairs well with a consistent sleep-and-play routine', 'Low cost']}
             cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
             price="$8–18"
-            ctaText="Find ferret sleep sacks on Amazon"
+            ctaText="Find fleece ferret sleep sacks on Amazon"
             ctaHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret+sleep+sack+fleece"
