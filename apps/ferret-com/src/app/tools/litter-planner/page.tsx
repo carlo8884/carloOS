@@ -207,7 +207,7 @@ export default function LitterPlannerPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"
-                amazonLabel="Browse high-back corner pans on Amazon →"
+                amazonLabel="Browse high-back corner ferret litter pans on Amazon →"
               />
           </div>
           </div>
