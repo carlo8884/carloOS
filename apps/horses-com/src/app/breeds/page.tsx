@@ -157,6 +157,7 @@ export default function BreedsIndexPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+saddle?s=breeds-hub"
+              amazonLabel="Browse horse saddles on Amazon →"
             />
           </div>
         </div>
