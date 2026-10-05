@@ -109,7 +109,7 @@ export default function HarlequinPage() {
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Harlequin Rasbora — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for harlequin rasbora care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <ShopCtas amazonHref="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" />
+            <ShopCtas amazonHref="/go/amazon-brand/harlequin%20rasbora%20tank%20setup?s=species-harlequin-rasbora" amazonLabel="Browse harlequin rasbora tank setups on Amazon →" />
           </div>
         </div>
 

@@ -434,7 +434,7 @@ export default function PlatyPage() {
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Platy Fish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for platy fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-            <ShopCtas amazonHref="/go/amazon-brand/platy%20fish%20tank%20setup?s=species-platy-fish" />
+            <ShopCtas amazonHref="/go/amazon-brand/platy%20fish%20tank%20setup?s=species-platy-fish" amazonLabel="Browse platy fish tank setups on Amazon →" />
           </div>
         </div>
 
