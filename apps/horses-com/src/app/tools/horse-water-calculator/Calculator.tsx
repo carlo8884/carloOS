@@ -29,6 +29,9 @@ export default function HorseWaterCalculator() {
           <ResultMeaning>
             That is about {result.lowL.toFixed(0)}–{result.highL.toFixed(0)} liters. It is the temperate idle band only. Offer water free-choice. A sudden drop in drinking is a reason to call a veterinarian.
           </ResultMeaning>
+          <p className="mt-3 text-sm">
+            <a href="/nutrition/water-requirements" className="font-semibold text-brand-primary underline underline-offset-2">Read the water requirements guide →</a>
+          </p>
           <ResultPick siteId="horses-com" pick={horseWaterPick(freezing, low, high)} />
         </div>
       ) : null}

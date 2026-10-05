@@ -262,6 +262,9 @@ export default function Calculator() {
         <ResultMeaning>
           This range is a daily dry-matter target from the bodyweight you entered, a forage-first planning figure rather than a weighed ration.
         </ResultMeaning>
+        <p className="mt-3 text-sm">
+          <a href="/nutrition/forage-basics" className="font-semibold text-brand-primary underline underline-offset-2">Read forage basics →</a>
+        </p>
         <ResultPick siteId="horses-com" pick={foragePick(`${fmt(result.forageMin)}+`, wl.label)} />
         </>
       )}
