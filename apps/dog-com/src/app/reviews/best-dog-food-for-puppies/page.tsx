@@ -128,7 +128,7 @@ export default function BestPuppyFoodPage() {
               pros={['400+ published studies', 'AAFCO feeding trial substantiated', 'Widely available', 'Good price-to-quality ratio', 'DHA from salmon oil']}
               cons={['No breed-specific lines (unlike Royal Canin)', 'Chicken as primary protein — not suitable for chicken-sensitive dogs']}
               price="$55–75 per 34 lb bag"
-              ctaText="Shop Purina Pro Plan on Amazon →"
+              ctaText="Shop Purina Pro Plan large-breed puppy food on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+puppy+large+breed"
