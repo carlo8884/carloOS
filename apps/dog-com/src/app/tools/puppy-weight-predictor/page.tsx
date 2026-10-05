@@ -260,7 +260,7 @@ export default function PuppyWeightPredictorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
           </div>
           </div>
