@@ -248,7 +248,7 @@ export default function PuppyWeightPredictorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse large-breed puppy food on Amazon →"
+                amazonLabel="Browse Royal Canin large-breed puppy food on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
