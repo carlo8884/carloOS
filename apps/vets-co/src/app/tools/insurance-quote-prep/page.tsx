@@ -309,7 +309,10 @@ export default function InsuranceQuotePrepPage() {
           This checklist does not open a carrier enrollment.
         </p>
         <p>
-          <Link href="/reviews/best-pet-insurance" className="font-semibold text-brand-primary">
+          <Link
+            href="/reviews/best-pet-insurance"
+            className="inline-block max-w-full bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark text-center"
+          >
             Compare quotes on the carrier comparison →
           </Link>
         </p>
