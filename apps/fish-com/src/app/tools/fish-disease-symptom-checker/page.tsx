@@ -220,7 +220,7 @@ export default function FishDiseaseSymptomCheckerPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"
-              amazonLabel="Browse quarantine nets on Amazon →"
+              amazonLabel="Browse hospital tank and quarantine nets on Amazon →"
             />
           </div>
         </div>
