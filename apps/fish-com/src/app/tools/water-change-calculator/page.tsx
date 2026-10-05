@@ -220,11 +220,11 @@ export default function WaterChangeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator"
-              amazonLabel="Browse aquarium gravel vacuum siphon on Amazon →"
+              amazonLabel="Browse gravel vacuums on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"
-              amazonLabel="Browse seachem prime water conditioner on Amazon →"
+              amazonLabel="Browse Seachem Prime on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator"
