@@ -216,7 +216,7 @@ export default function DogFirstAidKitPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/vetrap+cohesive+bandage?s=guides-first-aid-kit"
-                amazonLabel="Browse cohesive bandage wrap on Amazon →"
+                amazonLabel="Browse Vetrap cohesive bandage on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=guides-first-aid-kit"
