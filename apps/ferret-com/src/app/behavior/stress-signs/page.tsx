@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -308,6 +309,11 @@ export default function FerretStressSignsPage() {
             Comfort supplies do not treat adrenal disease, insulinoma, or other medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment.
           </p>
           <ScoreMethodology />
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Pair the sleep sack with an out-of-cage routine →
+            </Link>
+          </p>
           <ReviewCard
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
