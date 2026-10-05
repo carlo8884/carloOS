@@ -2491,10 +2491,7 @@ const CALCULATORS = [
     id: 'horses · trail-riding',
     file: 'apps/horses-com/src/app/disciplines/trail-riding/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/care\/hoof-care-basics"/, label: 'hoof-care guide instead of a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2605,10 +2602,7 @@ const CALCULATORS = [
     id: 'horses · reining',
     file: 'apps/horses-com/src/app/disciplines/reining/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/care\/hoof-care-basics"/, label: 'hoof-care guide instead of a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2919,10 +2913,7 @@ const CALCULATORS = [
     id: 'horses · racehorse-training-and-conditioning',
     file: 'apps/horses-com/src/app/racing/racehorse-training-and-conditioning/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/health\/equine-ulcers"/, label: 'EGUS guide instead of a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

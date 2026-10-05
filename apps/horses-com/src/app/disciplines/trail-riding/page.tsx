@@ -10,8 +10,6 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
-  ShopCtas,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -343,31 +341,17 @@ export default function TrailRidingPage() {
             <li>NATRC affiliated regional clubs. natrc.org/find-a-ride.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (laminated horse trail-etiquette chart /
-              horse stall-door NATRC pace card /
-              equine AERC endurance handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops
-              and no Easyboot kit hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs racing-hub /
-              salt-and-electrolytes hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=discipline-trail-riding"
-                amazonLabel="Shop on Amazon"
-              />
-          </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Barefoot, boots, and shoes are a farrier decision. Daily picking lives on the hoof-care guide. This page does not shop a hoof pick or a boot brand.</p>
+            <Link
+              href="/care/hoof-care-basics"
+              className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Read hoof-care basics →
+            </Link>
           </div>
         </div>
       </ArticleLayout>
