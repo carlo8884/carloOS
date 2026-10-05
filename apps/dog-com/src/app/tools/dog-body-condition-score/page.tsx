@@ -182,7 +182,7 @@ export default function DogBodyConditionScorePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs"
-                amazonLabel="Browse dog measuring tapes and BCS charts on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs"
