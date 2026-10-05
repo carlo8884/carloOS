@@ -251,7 +251,7 @@ export default function WhichPetPage() {
           nextLabel="Run the new-puppy checklist before you buy a crate"
           nextBlurb="If the wizard leans dog, the first-week kit is a divider crate, food, and a harness — size those against the checklist before you order. The hop below is the same wire crate with divider search already on this page."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (first-week starter kit).
@@ -287,7 +287,7 @@ export default function WhichPetPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=which-pet"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=which-pet"

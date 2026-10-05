@@ -113,7 +113,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('wire+dog+crate+with+divider+panel'),
-      shopLabel: 'Browse crates on Amazon →',
+      shopLabel: 'Browse wire crates with a divider panel on Amazon →',
       links: [
         { href: '/reviews/best-dog-crates', label: 'Best dog crates' },
         { href: '/tools/dog-crate-size-calculator', label: 'Crate size calculator' },
@@ -437,7 +437,7 @@ function resultShop(
       blurb:
         'The crate is the one item that is cheaper to buy once, sized to the adult dog. A wire crate with a divider is the same hop used on the crate-size calculator. This list is shopping guidance, not a training prescription — pair it with the crate-size calculator before you order.',
       href: amazonHop('wire+dog+crate+with+divider+panel'),
-      label: 'Browse crates on Amazon →',
+      label: 'Browse wire crates with a divider panel on Amazon →',
     }
   }
   if (setting === 'outdoor') {
