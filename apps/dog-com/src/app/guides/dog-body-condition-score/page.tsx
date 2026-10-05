@@ -374,7 +374,7 @@ export default function DogBodyConditionScorePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score"
-                amazonLabel="Browse dog BCS chart posters on Amazon →"
+                amazonLabel="Browse dog body condition score chart posters on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"
