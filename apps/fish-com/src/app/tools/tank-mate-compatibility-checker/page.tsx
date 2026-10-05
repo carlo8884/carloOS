@@ -218,7 +218,7 @@ export default function TankMateCompatibilityPage() {
           nextLabel="Quarantine a new fish before it joins the display"
           nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The hop below is the same quarantine/hospital search already in the shop list."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-          resourceLabel="Browse aquarium quarantine hospital tank on Amazon →"
+          resourceLabel="Browse quarantine tanks on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
@@ -258,19 +258,19 @@ export default function TankMateCompatibilityPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse aquarium tank divider on Amazon →"
+              amazonLabel="Browse tank dividers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse aquarium quarantine hospital tank on Amazon →"
+              amazonLabel="Browse quarantine tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse aquarium decorations caves hiding spots on Amazon →"
+              amazonLabel="Browse caves and hiding spots on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse tropical community fish food on Amazon →"
+              amazonLabel="Browse tropical fish food on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility"
@@ -278,7 +278,7 @@ export default function TankMateCompatibilityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse aquarium fish net acclimation kit on Amazon →"
+              amazonLabel="Browse fish nets and acclimation kits on Amazon →"
             />
           </div>
         </div>

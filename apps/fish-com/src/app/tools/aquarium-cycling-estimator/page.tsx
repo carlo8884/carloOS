@@ -227,11 +227,11 @@ export default function AquariumCyclingEstimatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Browse tetra safestart plus on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Browse dr tims ammonium chloride on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"
