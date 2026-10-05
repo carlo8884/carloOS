@@ -311,7 +311,7 @@ export default function InsuranceQuotePrepPage() {
         <p>
           <Link
             href="/reviews/best-pet-insurance"
-            className="inline-block max-w-full bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark text-center"
+            className="inline-block max-w-full whitespace-normal text-center bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
           >
             Compare quotes on the carrier comparison →
           </Link>
