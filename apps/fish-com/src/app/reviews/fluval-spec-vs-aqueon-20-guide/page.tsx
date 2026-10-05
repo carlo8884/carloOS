@@ -71,7 +71,7 @@ export default function FluvalSpecVsAqueonGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/reviews/best-nano-tanks">nano-tank review</Link>. This comparison is the Fluval Spec V against the Aqueon 20-gallon long. The 10-gallon bare tank stays on the review.</p>

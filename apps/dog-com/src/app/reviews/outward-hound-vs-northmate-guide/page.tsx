@@ -71,7 +71,7 @@ export default function OutwardHoundVsNorthmateGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/reviews/best-slow-feeder-bowls">slow-feeder review</Link>. This comparison is the Outward Hound Fun Feeder against the Northmate Green. Dry food and puppy food are separate comparisons on this hub.</p>

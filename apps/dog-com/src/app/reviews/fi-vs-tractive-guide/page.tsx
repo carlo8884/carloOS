@@ -71,7 +71,7 @@ export default function FiVsTractiveGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/reviews/best-dog-gps-tracker">GPS tracker review</Link>. This comparison is Fi Series 3 against Tractive. Whistle Go Explore is the health-monitoring collar on that review, and it is a different purchase.</p>
