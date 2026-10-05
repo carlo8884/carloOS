@@ -133,6 +133,11 @@ export default function StirrupsSafetyPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/tack/helmet-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Read the helmet guide before you buy stirrups →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+safety+stirrups?s=stirrups-and-safety"
