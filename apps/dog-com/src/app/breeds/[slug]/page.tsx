@@ -54,7 +54,7 @@ import {
   BREED_COMPARISON_PAIRS,
   pairSlug,
 } from '../../../data/breed-comparisons'
-import { crossSiteHref } from '@carloOS/config'
+import { crossSiteHref, visibleShopHref } from '@carloOS/config'
 
 
 // Force static rendering — every breed slug we generate is known at build time.
@@ -252,7 +252,7 @@ function buildGearForBreed(breed: Breed): GearPick[] {
     href: `/go/chewy-brand/${enc(
       large ? 'orthopedic large dog bed' : `${breed.sizeCategory.toLowerCase()} dog bed washable`,
     )}?s=${src}`,
-    cta: 'Shop beds',
+    cta: 'Shop beds on Amazon',
   })
 
   // ── Grooming — derived from grooming level. ──
@@ -288,7 +288,7 @@ function buildGearForBreed(breed: Breed): GearPick[] {
       title: 'Durable chew + puzzle toys',
       rationale: `High-drive ${breed.name}s need a mental and physical outlet — tough chew and food-puzzle toys curb boredom-driven behavior.`,
       href: `/go/chewy-brand/${enc('durable dog puzzle toy')}?s=${src}`,
-      cta: 'Shop toys',
+      cta: 'Shop toys on Amazon',
     })
   } else {
     picks.push({
@@ -444,7 +444,7 @@ function GearBlock({
               {p.rationale}
             </p>
             <Link
-              href={p.href}
+              href={visibleShopHref(p.href) ?? p.href}
               className="inline-block self-start bg-brand-primary text-white text-sm font-semibold px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"
             >
               {p.cta} →
