@@ -210,6 +210,7 @@ export default function PreaknessStakesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+blanket?s=triple-crown-preakness-stakes"
+                amazonLabel="Browse horse blankets on Amazon →"
               />
           </div>
           </div>
