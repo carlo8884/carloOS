@@ -199,7 +199,7 @@ export default function LitterPlannerPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
-                amazonLabel="Browse wood pellet litter on Amazon →"
+                amazonLabel="Browse heat-treated non-clumping wood pellets on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner"
