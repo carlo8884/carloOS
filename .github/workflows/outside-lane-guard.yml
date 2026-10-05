@@ -1,8 +1,11 @@
 name: Outside-lane branch guard
 
-# Every pull request to main. Fails grok/ head branches and a GROK.md
-# diff that only inserts an hour-log block. Does not run on push, so a
-# grok/ commit that already merged is left in place.
+# Every pull request to main. Job name must stay "Outside-lane branch guard"
+# (ruleset 24485782 requires that exact check). Fails grok/ head branches,
+# a GROK.md diff that only inserts an hour-log block, and a non-cursor/
+# non-bot/ branch whose diff is homepage/hero/eyebrow only (including a
+# photo chip) or whose title/body matches the CEO-lane pattern.
+# Does not run on push, so a commit that already merged is left in place.
 
 on:
   pull_request:
@@ -29,9 +32,11 @@ jobs:
           node-version: '20'
       - name: Test the outside-lane guard
         run: node --test scripts/ci/outside-lane-guard.test.mjs
-      - name: Reject grok branches and hour-log-only GROK.md edits
+      - name: Reject grok branches, hour-log-only GROK.md edits, and outside CEO homepage chips
         env:
           HEAD_REF: ${{ github.head_ref }}
           BASE_SHA: ${{ github.event.pull_request.base.sha }}
           HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+          PR_TITLE: ${{ github.event.pull_request.title }}
+          PR_BODY: ${{ github.event.pull_request.body }}
         run: node scripts/ci/outside-lane-guard.mjs

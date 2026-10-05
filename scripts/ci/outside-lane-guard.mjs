@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 /**
- * Fail a pull request to main when the outside hourly lane tries to land.
+ * Fail a pull request to main when an outside lane tries to land.
  * A head branch named grok/… is rejected. So is a GROK.md diff whose only
- * change is inserting one hour-log block. cursor/*, bot/*, and other
- * branch names pass when GROK.md is untouched or edited for real.
+ * change is inserting one hour-log block.
+ *
+ * A head branch that does not start with cursor/ or bot/ also fails when
+ * the diff only touches homepage, hero, or eyebrow files (including a
+ * homepage photo chip), or when the title or body matches the CEO-lane
+ * pattern (photo chip, eyebrow, "GROK.md left untouched",
+ * "outside-lane hour-log guard"). cursor/* and bot/* stay green.
  *
  *   HEAD_REF=grok/fish-species-eyebrow BASE_SHA=… HEAD_SHA=… node scripts/ci/outside-lane-guard.mjs
  */
@@ -60,8 +65,69 @@ export function hourLogProblems(before, after) {
   return []
 }
 
-export function guardProblems({ headRef, before, after }) {
-  return [...branchProblems(headRef), ...hourLogProblems(before, after)]
+const ALLOWED_LANE = /^(cursor|bot)\//i
+
+const CEO_COPY = [
+  /photo[\s-]?chip/i,
+  /\beyebrow\b/i,
+  /GROK\.md left untouched/i,
+  /outside-lane hour-log guard/i,
+]
+
+/** Homepage, hero, and eyebrow files. Nested route page.tsx files are not homepages. */
+export function isHomepageHeroEyebrowFile(file) {
+  const p = String(file ?? '').replaceAll('\\', '/')
+  if (/^apps\/[^/]+\/src\/app\/page\.tsx$/.test(p)) return true
+  return /(^|\/)[^/]*(home|hero|eyebrow)[^/]*$/i.test(p)
+}
+
+export function ceoCopyProblems(title, body) {
+  const text = `${title ?? ''}\n${body ?? ''}`
+  if (!CEO_COPY.some((re) => re.test(text))) return []
+  return ['title or body matches the CEO-lane pattern']
+}
+
+/** True when every changed file is a homepage, hero, or eyebrow file. */
+export function homepageOnlyDiff(files) {
+  if (!Array.isArray(files) || files.length === 0) return false
+  return files.every(isHomepageHeroEyebrowFile)
+}
+
+function patchAddsPhotoChip(patch) {
+  const added = String(patch ?? '')
+    .split('\n')
+    .filter((line) => line.startsWith('+') && !line.startsWith('+++'))
+    .join('\n')
+  return /<StockImage|photo[\s-]?chip/i.test(added)
+}
+
+/**
+ * Outside cursor/ and bot/: fail a homepage-only (or photo-chip) diff,
+ * or CEO-lane title/body. Those lanes stay green even when both match.
+ */
+export function ceoLaneProblems({ headRef, files, title, body, patch }) {
+  if (typeof headRef !== 'string' || headRef.length === 0) return []
+  if (ALLOWED_LANE.test(headRef)) return []
+  if (/^grok\//i.test(headRef)) return []
+  const reasons = []
+  if (homepageOnlyDiff(files)) {
+    reasons.push(
+      patchAddsPhotoChip(patch)
+        ? 'diff only adds a photo chip on a homepage, hero, or eyebrow file'
+        : 'diff only touches homepage, hero, or eyebrow files',
+    )
+  }
+  reasons.push(...ceoCopyProblems(title, body))
+  if (reasons.length === 0) return []
+  return [`head branch ${headRef} is outside cursor/ and bot/ (${reasons.join('; ')})`]
+}
+
+export function guardProblems({ headRef, before, after, files, title, body, patch }) {
+  return [
+    ...branchProblems(headRef),
+    ...hourLogProblems(before, after),
+    ...ceoLaneProblems({ headRef, files, title, body, patch }),
+  ]
 }
 
 function gitShow(sha) {
@@ -76,16 +142,40 @@ function gitShow(sha) {
   }
 }
 
+function gitDiff(args) {
+  try {
+    return execFileSync('git', args, {
+      cwd: ROOT,
+      encoding: 'utf8',
+      stdio: ['ignore', 'pipe', 'pipe'],
+    })
+  } catch {
+    return ''
+  }
+}
+
 function main() {
   const headRef = process.env.HEAD_REF ?? ''
   const baseSha = process.env.BASE_SHA ?? ''
   const headSha = process.env.HEAD_SHA ?? ''
   const before = baseSha ? gitShow(baseSha) : null
   const after = headSha ? gitShow(headSha) : null
+  const files =
+    baseSha && headSha
+      ? gitDiff(['diff', '--name-only', baseSha, headSha])
+          .split('\n')
+          .map((line) => line.trim())
+          .filter(Boolean)
+      : []
+  const patch = baseSha && headSha ? gitDiff(['diff', baseSha, headSha]) : ''
   const problems = guardProblems({
     headRef,
     before: before ?? '',
     after: after ?? before ?? '',
+    files,
+    patch,
+    title: process.env.PR_TITLE ?? '',
+    body: process.env.PR_BODY ?? '',
   })
   if (problems.length === 0) {
     console.log(`outside-lane-guard: pass (${headRef || 'no head ref'})`)
