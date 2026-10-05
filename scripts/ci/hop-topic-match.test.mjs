@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict'
 import { readFileSync } from 'node:fs'
 import { test } from 'node:test'
-import { topicMismatches } from './hop-topic-match.mjs'
+import { isCrossSell, topicMismatches } from './hop-topic-match.mjs'
 
 function page({ path, title, description, body, href }) {
   return `export const metadata = buildMetadata({
@@ -68,6 +68,24 @@ test('a search outside the product list is ignored', () => {
     }),
   )
   assert.equal(hits.length, 0)
+})
+
+test('a rider-size helmet search is an allowlisted cross-sell', () => {
+  assert.equal(isCrossSell('/tools/horse-size-for-rider', 'ASTM SEI horse riding helmet'), true)
+  const hits = topicMismatches(
+    page({
+      path: '/tools/horse-size-for-rider',
+      title: 'Horse Size for Rider',
+      description: 'Rider weight plus the saddle.',
+      body: '<p>Add the saddle before you divide.</p>',
+      href: '/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider',
+    }),
+  )
+  assert.equal(hits.length, 0)
+})
+
+test('a helmet search on a halters page is still a mismatch', () => {
+  assert.equal(isCrossSell('/tack/halters-and-lead-ropes', 'equestrian riding helmet'), false)
 })
 
 test('the workflow job is report-only and the script exits 0', () => {

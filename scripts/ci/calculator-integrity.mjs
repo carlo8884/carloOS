@@ -3659,8 +3659,8 @@ const CALCULATORS = [
     id: 'horses · quarter-horse-breed',
     file: 'apps/horses-com/src/app/breeds/quarter-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/full\+quarter\+horse\+bar\+western\+saddle/, label: 'on-page full quarter horse bar saddle Amazon search hop' },
+      { re: /amazon-brand\/full\+quarter\+horse\+bar\+western\+saddle/, label: 'on-page full quarter horse bar saddle Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10721,9 +10721,7 @@ const CALCULATORS = [
     id: 'horses · reading-body-language hops',
     file: 'apps/horses-com/src/app/ownership/reading-body-language/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /\/tools\/horse-grimace-scale/, label: 'grimace scale instead of a halter search' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
