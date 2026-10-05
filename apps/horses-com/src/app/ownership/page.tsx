@@ -161,6 +161,7 @@ export default function OwnershipHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+first+aid+kit?s=ownership-hub"
+              amazonLabel="Browse horse first-aid kits on Amazon →"
             />
           </div>
         </div>
