@@ -243,7 +243,7 @@ export default function ResourceGuardingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dry+dog+food?s=training-resource-guarding"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dry dog food on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+food+bowl+safety+question+card?s=training-resource-guarding"

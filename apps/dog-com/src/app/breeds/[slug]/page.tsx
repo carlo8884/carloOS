@@ -776,7 +776,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/no+pull+dog+harness?s=breed-profile"
-                  amazonLabel="Shop on Amazon"
+                  amazonLabel="Browse no-pull dog harness on Amazon →"
                 />
           </div>
             </div>

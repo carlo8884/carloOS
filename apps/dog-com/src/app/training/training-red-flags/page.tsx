@@ -204,7 +204,7 @@ export default function TrainingRedFlagsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=training-red-flags"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+force+free+trainer+interview+question+card?s=training-red-flags"

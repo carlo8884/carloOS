@@ -366,7 +366,7 @@ export default function DogTreatsGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/purina+dog+food?s=nutrition-treats"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse Purina dog food on Amazon →"
               />
           </div>
           </div>

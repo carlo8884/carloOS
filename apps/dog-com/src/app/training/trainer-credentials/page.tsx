@@ -155,7 +155,7 @@ export default function TrainerCredentialsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=training-trainer-credentials"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+cpdt+ka+hiring+interview+question+card?s=training-trainer-credentials"

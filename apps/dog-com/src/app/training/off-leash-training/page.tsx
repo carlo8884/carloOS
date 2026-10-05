@@ -225,7 +225,7 @@ export default function OffLeashTrainingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+harness?s=training-off-leash-training"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog harness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+20+to+30+foot+long+line+question+card?s=training-off-leash-training"

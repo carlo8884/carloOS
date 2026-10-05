@@ -91,7 +91,7 @@ export default function YorkiePage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=breed-yorkie"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
           </div>
         </div>

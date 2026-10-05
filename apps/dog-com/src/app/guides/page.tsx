@@ -192,7 +192,7 @@ export default function GuidesHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+first+aid+kit?s=guides-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog first aid kit on Amazon →"
             />
           </div>
         </div>

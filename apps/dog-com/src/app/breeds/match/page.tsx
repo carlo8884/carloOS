@@ -221,7 +221,7 @@ export default function BreedMatchPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+food?s=breed-match"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog food on Amazon →"
             />
           </div>
         </div>

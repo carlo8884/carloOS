@@ -74,7 +74,7 @@ export default function DachshundPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+harness?s=breed-dachshund"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog harness on Amazon →"
             />
           </div>
         </div>

@@ -210,7 +210,7 @@ export default function DogAggressionPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=training-dog-aggression"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+aggression+type+and+function+question+card?s=training-dog-aggression"

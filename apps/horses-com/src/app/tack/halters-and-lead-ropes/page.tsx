@@ -339,7 +339,7 @@ export default function HaltersLeadRopesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=halters-and-lead-ropes"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+rope+vs+flat+halter+task+question+card?s=halters-and-lead-ropes"

@@ -74,7 +74,7 @@ export default function AustralianShepherdPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+crate?s=breed-aussie"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog crate on Amazon →"
             />
           </div>
         </div>

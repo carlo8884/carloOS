@@ -67,7 +67,7 @@ export default function AkitaPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=breed-akita"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
           </div>
         </div>

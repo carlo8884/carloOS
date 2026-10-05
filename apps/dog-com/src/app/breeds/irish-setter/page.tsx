@@ -85,7 +85,7 @@ export default function IrishSetterPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+leash?s=breed-irish-setter"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog leash on Amazon →"
             />
           </div>
         </div>

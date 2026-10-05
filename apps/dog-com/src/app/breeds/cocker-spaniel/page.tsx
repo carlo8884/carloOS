@@ -75,7 +75,7 @@ export default function CockerSpanielPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+ear+cleaner?s=breed-cocker"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog ear cleaner on Amazon →"
             />
           </div>
         </div>

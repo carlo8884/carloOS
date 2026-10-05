@@ -233,7 +233,7 @@ export default function MartingalesBreastplatesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+martingale?s=martingales"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse horse martingale on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+breastplate+vs+breastgirth+fit+question+card?s=martingales"

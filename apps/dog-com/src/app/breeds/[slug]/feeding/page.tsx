@@ -438,7 +438,7 @@ export default async function BreedFeedingPage({ params }: PageProps) {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=breed-feeding"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dry dog food on Amazon →"
             />
           </div>
         </div>

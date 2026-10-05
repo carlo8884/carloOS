@@ -179,7 +179,7 @@ export default function TackHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+snaffle+bit?s=tack-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse horse snaffle bit on Amazon →"
             />
           </div>
         </div>

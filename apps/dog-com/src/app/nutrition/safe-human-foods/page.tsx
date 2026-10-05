@@ -107,7 +107,7 @@ export default function SafeHumanFoodsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/plain+boiled+chicken+for+dogs?s=nutrition-safe-foods"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse plain boiled chicken for dogs on Amazon →"
             />
           </div>
         </div>

@@ -180,7 +180,7 @@ export default function DogVaccinationsGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse collapsible silicone travel dog bowl on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"

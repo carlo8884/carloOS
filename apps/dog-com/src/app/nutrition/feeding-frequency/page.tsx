@@ -91,7 +91,7 @@ export default function FeedingFrequencyPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dry+dog+food?s=nutrition-frequency"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dry dog food on Amazon →"
             />
           </div>
         </div>

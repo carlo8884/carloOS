@@ -230,7 +230,7 @@ export default function BlanketWeightsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=blanket-weights"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+denier+vs+fill+question+card?s=blanket-weights"

@@ -121,7 +121,7 @@ export default function TickBornePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"
-                amazonLabel="Shop on Amazon"
+                amazonLabel="Browse dog flea and tick on Amazon →"
               />
           </div>
           </div>

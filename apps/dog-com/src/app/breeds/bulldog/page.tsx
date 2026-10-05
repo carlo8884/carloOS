@@ -76,7 +76,7 @@ export default function BulldogPage() {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/douxo+s3+wipes?s=breed-bulldog"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse Douxo S3 wipes on Amazon →"
             />
           </div>
         </div>

@@ -233,7 +233,7 @@ export default function VetsHealthHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+flea+and+tick?s=health-hub"
-              amazonLabel="Shop on Amazon"
+              amazonLabel="Browse dog flea and tick on Amazon →"
             />
           </div>
         </div>
