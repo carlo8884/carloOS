@@ -12,6 +12,8 @@ import { amazonButtonLabel } from '../lib/amazon-browse-label'
 
 const amazonStyle: CSSProperties = {
   display: 'inline-block',
+  maxWidth: '100%',
+  whiteSpace: 'normal',
   padding: '9px 16px',
   background: 'var(--brand-dark, #232f3e)',
   color: 'white',
