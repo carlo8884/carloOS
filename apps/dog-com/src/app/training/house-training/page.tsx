@@ -73,7 +73,7 @@ export default function HouseTrainingPage() {
           nextLabel="Put the schedule on a first-year timeline"
           nextBlurb="The schedule method is take them out after every meal, nap, play, drink, and crate. The puppy schedule is when those windows change by age. An enzymatic cleaner is for accidents that already happened — not a substitute for the schedule."
           resourceHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
-          resourceLabel="Browse enzymatic pet cleaners on Amazon →"
+          resourceLabel="Browse enzymatic stain and odor cleaner on Amazon →"
         />
 
         <h2 id="accidents">Accident Protocol</h2>
@@ -92,7 +92,7 @@ export default function HouseTrainingPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house"
-              amazonLabel="Browse enzymatic pet cleaners on Amazon →"
+              amazonLabel="Browse enzymatic stain and odor cleaner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-house"
