@@ -164,7 +164,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           nextLabel="Test ammonia and nitrite before you treat"
           nextBlurb="The checker ranks signs. Water comes first — new-tank ammonia and nitrite look like disease. Water-parameters is the next step: read the numbers, then treat only if the water is clean. The hop below is the same API Master test-kit search already on this page."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
-          resourceLabel="Browse API Freshwater Master test kits on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (test kit / ich / salt / conditioner / quarantine).
