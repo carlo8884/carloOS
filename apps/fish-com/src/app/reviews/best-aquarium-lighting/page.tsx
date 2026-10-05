@@ -29,7 +29,7 @@ export default function BestAquariumLightingPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Lights 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting' label='Check price of the Hygger 957 on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Lighting requirements vary dramatically: a planted tank needs high PAR at the right spectrum; a reef needs intense, programmable full-spectrum light; a fish-only tank needs the bare minimum. Rankings draw on published PAR meter readings.</p>
       </div>
@@ -68,19 +68,19 @@ export default function BestAquariumLightingPage() {
               specs={[{ label: 'PAR at 20"', value: '60–80+ (high setting)', highlight: 'good' }, { label: 'Control', value: 'Bluetooth app', highlight: 'good' }, { label: 'Spectrum', value: 'Best measured quality', highlight: 'good' }, { label: 'Best For', value: 'Medium-high tech planted' }, { label: 'Build Quality', value: 'Premium aluminum' }]}
               pros={['Among the highest published PAR output for planted tanks in this comparison', 'App control with natural lighting programs', 'Strong published spectrum quality', 'Premium aluminum construction', 'Storm/cloud effects']}
               cons={['$150–200 price point', 'Bluetooth only — short range', 'Overkill for low-tech setups']}
-              price="$150–200" ctaText="Shop Fluval Plant 3.0 →" ctaHref="/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="fluval-plant-3" />
+              price="$150–200" ctaText="Shop Fluval Plant 3.0 on Amazon →" ctaHref="/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="fluval-plant-3" />
             <ReviewCard id="kessil" badge="Best Reef" name="Kessil A360X Tuna Blue" subtitle="Dense Matrix LED · Shimmer effect · Established reef-growth track record · Wi-Fi" score={9.3}
               description={<p>Kessil's Dense Matrix LED technology produces the characteristic shimmering effect that mimics natural ocean light — important for reef aesthetics and observed to improve coral polyp extension. The A360X covers a 24" square footprint adequately at SPS-capable PAR levels (150–300+ PAR at 12" depth at moderate settings). Wi-Fi control with the Kessil app. The proprietary Dense Matrix design concentrates LED chips rather than spreading them, producing better color mixing and the shimmer effect. Premium price is justified for serious reef tanks; for fish-only-with-live-rock setups, the Nicrew is adequate at a fraction of the cost.</p>}
               specs={[{ label: 'PAR at 12"', value: '150–300+ (SPS capable)', highlight: 'good' }, { label: 'Technology', value: 'Dense Matrix LED', highlight: 'good' }, { label: 'Shimmer effect', value: 'Yes', highlight: 'good' }, { label: 'Control', value: 'Wi-Fi app' }, { label: 'Best For', value: 'Mixed reef, SPS coral' }]}
               pros={['Among the strongest shimmer effects in this comparison', 'SPS-capable PAR output', 'Excellent color rendering', 'Wi-Fi programmable', 'Established reef-growth track record among reefkeepers']}
               cons={['$400–500 price point', 'Single-point light (may need 2 for wider tanks)', 'Overkill for fish-only or LPS-only']}
-              price="$400–500" ctaText="Shop Kessil A360X →" ctaHref="/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="kessil-a360x" />
+              price="$400–500" ctaText="Shop Kessil A360X on Amazon →" ctaHref="/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="kessil-a360x" />
             <ReviewCard id="nicrew" badge="Best Fish-Only" name="Nicrew Classic LED+" subtitle="Fish-only tanks · Budget · Reliable · No plant growth needed" score={8.5}
               description={<p>For fish-only (FO) or fish-only-with-live-rock (FOWLR) setups where light is purely aesthetic — not for plant or coral growth — the Nicrew Classic LED+ delivers clean white and blue spectrum for fish display at the lowest price in the category. It makes fish colors pop (the blue channel specifically enhances fish coloration) without the cost of a planted or reef fixture. PAR output is low (~15–25 at 12") — adequate for display, not for photosynthetic organisms. Build quality is acceptable; unit lifespan typically 2–3 years, which is acceptable at its price point.</p>}
               specs={[{ label: 'PAR output', value: 'Low (display only)' }, { label: 'Price', value: 'Budget', highlight: 'good' }, { label: 'Best For', value: 'Fish-only, FOWLR' }, { label: 'Not For', value: 'Plants or corals', highlight: 'warn' }]}
               pros={['Lowest price of any recommended light', 'Good fish color rendering', 'Simple timer built-in', 'Adequate for fish-only display']}
               cons={['Not for planted or reef tanks', '2–3 year lifespan typical', 'No app control or programmability']}
-              price="$20–35" ctaText="Shop Nicrew LED →" ctaHref="/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="nicrew-led" />
+              price="$20–35" ctaText="Shop Nicrew LED on Amazon →" ctaHref="/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting" ctaAffiliateProgram="amazon" ctaAffiliateProduct="nicrew-led" />
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which light</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
