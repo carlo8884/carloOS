@@ -99,7 +99,7 @@ export default function BestJointSupplementsPage() {
               pros={['Best research support of any glucosamine product', 'ASU component with documented benefit', 'NASC quality certified', 'Nutramax research investment']}
               cons={['More expensive than basic glucosamine', 'Takes 4–6 weeks for effect — long evaluation window', 'Not a substitute for NSAIDs in severe arthritis']}
               price="$40–70 for 84-count"
-              ctaText="Shop Dasuquin on Amazon →"
+              ctaText="Shop Dasuquin with MSM on Amazon →"
               ctaHref="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="dasuquin+with+msm"
