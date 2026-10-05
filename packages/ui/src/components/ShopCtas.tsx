@@ -41,7 +41,10 @@ export function ShopCtas({
 }) {
   const amazon = visibleShopHref(amazonHref)
   const chewy = visibleChewyHref(chewyHref)
-  const label = amazonButtonLabel(amazonHref, amazonLabel)
+  let label = amazonButtonLabel(amazon ?? amazonHref, amazonLabel)
+  if (amazon && /\/go\/amazon/i.test(amazon) && /\bon Chewy\b/i.test(label)) {
+    label = label.replace(/\bon Chewy\b/gi, 'on Amazon')
+  }
   const amazonAssociate = Boolean(amazon && /\/go\/amazon/i.test(amazon))
   if (!amazon && !chewy) return null
   return (
