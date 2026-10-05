@@ -235,7 +235,7 @@ export default function AquariumCyclingEstimatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Browse aquarium sponge filter on Amazon →"
+              amazonLabel="Browse sponge filters on Amazon →"
             />
           </div>
         </div>

@@ -208,7 +208,7 @@ export default function FishDiseaseSymptomCheckerPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom"
-              amazonLabel="Browse ich white spot treatment aquarium on Amazon →"
+              amazonLabel="Browse ich white-spot treatment on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom"

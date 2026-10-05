@@ -169,7 +169,7 @@ export default function HeaterWattageCalculatorPage() {
           nextLabel="Read the heater review before you buy"
           nextBlurb="The wattage is the size. The review compares Eheim Jager, Cobalt, Hydor, and Aqueon on the same tanks. One search below is the Eheim Jager this page already uses as the reference heater."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=tools-heater-wattage-calculator"
-          resourceLabel="Browse Eheim jager heater on Amazon →"
+          resourceLabel="Browse Eheim Jager heaters on Amazon →"
         />
 
         <h2 id="chart">Quick Reference — Wattage by Tank Size</h2>
