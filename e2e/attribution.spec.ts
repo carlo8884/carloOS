@@ -5,7 +5,7 @@ import { AMAZON_TAG } from './tags'
 const pagePath: Record<string, string> = {
   'dog-com': '/reviews/best-puppy-crate-guide',
   'fish-com': '/reviews/hob-vs-canister-guide',
-  'horses-com': '/ownership/horse-insurance',
+  'horses-com': '/ownership/leasing-a-horse',
   'vets-co': '/reviews/trupanion-vs-healthy-paws-guide',
   'ferret-com': '/reviews/vest-vs-h-harness-guide',
 }
@@ -13,7 +13,7 @@ const pagePath: Record<string, string> = {
 const amazonHop: Record<string, string> = {
   'dog-com': '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide',
   'fish-com': '/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide',
-  'horses-com': '/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance',
+  'horses-com': '/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse',
   'vets-co': '/go/amazon-brand/pet+first+aid+kit?s=telehealth',
   'ferret-com': '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide',
 }
