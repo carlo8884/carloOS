@@ -153,6 +153,7 @@ export default function BoardingOptionsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hay?s=ownership-boarding-options"
+                amazonLabel="Browse horse hay on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+boarding+contract+document+binder?s=ownership-boarding-options"

@@ -129,6 +129,7 @@ export default function CanHorsesEatHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+hay?s=can-horses-eat-hub"
+              amazonLabel="Browse horse hay on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/lidded+horse+barn+treat+tote?s=can-horses-eat-hub"
