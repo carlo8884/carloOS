@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -208,15 +208,10 @@ export default function BodyLanguagePage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=ownership-reading-body-language"
-                amazonLabel="Shop horse halters and lead ropes on Amazon"
-              />
-              </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Pinned ears and a tight eye are on the horse grimace scale. That scale is the next page when the face is the question.</p>
+            <a href="/tools/horse-grimace-scale" className="text-sm font-semibold text-brand-primary">Score the pain face on the grimace scale →</a>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

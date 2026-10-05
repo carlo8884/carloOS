@@ -210,8 +210,8 @@ export default function QuarterHorseBreedPage() {
             <AffiliateDisclosure variant="inline" siteId="horses-com" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=breed-quarter-horse"
-                amazonLabel="Shop on Amazon"
+                amazonHref="/go/amazon-brand/full+quarter+horse+bar+western+saddle?s=breed-quarter-horse"
+                amazonLabel="Browse full quarter horse bar western saddles on Amazon →"
               />
           </div>
           </div>
