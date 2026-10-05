@@ -1,0 +1,37 @@
+name: Outside-lane branch guard
+
+# Every pull request to main. Fails grok/ head branches and a GROK.md
+# diff that only inserts an hour-log block. Does not run on push, so a
+# grok/ commit that already merged is left in place.
+
+on:
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: outside-lane-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  outside-lane:
+    name: Outside-lane branch guard
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Test the outside-lane guard
+        run: node --test scripts/ci/outside-lane-guard.test.mjs
+      - name: Reject grok branches and hour-log-only GROK.md edits
+        env:
+          HEAD_REF: ${{ github.head_ref }}
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: node scripts/ci/outside-lane-guard.mjs
