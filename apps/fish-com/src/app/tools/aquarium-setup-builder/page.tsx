@@ -170,7 +170,7 @@ export default function AquariumSetupBuilderPage() {
           nextLabel="Cycle the tank before any fish"
           nextBlurb="The builder sized the kit. A liquid master kit is how you watch ammonia and nitrite hit zero — that is the step that prevents new-tank syndrome. Stock later with a slim-inch bioload ceiling, not a species headcount."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
-          resourceLabel="Shop API Master Test Kit on Amazon →"
+          resourceLabel="Browse api freshwater master test kit on Amazon →"
         />
 
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -210,27 +210,27 @@ export default function AquariumSetupBuilderPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aqueon+quietflow+30?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop aquarium filters on Amazon →"
+              amazonLabel="Browse aqueon quietflow 30 on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim jager heater on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/nicrew+classic+led?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop aquarium lights on Amazon →"
+              amazonLabel="Browse nicrew classic led on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop API Master Test Kit on Amazon →"
+              amazonLabel="Browse api freshwater master test kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit+seachem+prime?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop Seachem Prime (water conditioner) on Amazon →"
+              amazonLabel="Browse api freshwater master test kit seachem prime on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel?s=tools-aquarium-setup-builder"
-              amazonLabel="Shop aquarium gravel on Amazon →"
+              amazonLabel="Browse aquarium gravel on Amazon →"
             />
           </div>
         </div>

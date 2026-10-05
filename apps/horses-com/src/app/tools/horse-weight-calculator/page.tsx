@@ -219,15 +219,15 @@ export default function HorseWeightCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator"
-              amazonLabel="Shop horse weight tapes on Amazon →"
+              amazonLabel="Browse horse weight tape on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-weight-calculator"
-              amazonLabel="Shop horse measuring tapes on Amazon →"
+              amazonLabel="Browse horse measuring tape on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/livestock+barn+scale?s=tools-horse-weight-calculator"
-              amazonLabel="Shop livestock barn scales on Amazon →"
+              amazonLabel="Browse livestock barn scale on Amazon →"
             />
           </div>
         </div>

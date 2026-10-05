@@ -160,7 +160,7 @@ export default function VolumeCalculatorPage() {
           nextLabel="Size the filter from those gallons"
           nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The hop below is the same filter-by-gallon search already on this page."
           resourceHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-          resourceLabel="Shop filters sized to gallons on Amazon →"
+          resourceLabel="Browse aquarium filter gallon on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
@@ -199,27 +199,27 @@ export default function VolumeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume"
-              amazonLabel="Shop glass tanks by gallon on Amazon →"
+              amazonLabel="Browse glass aquarium tank gallon on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume"
-              amazonLabel="Shop acrylic tanks on Amazon →"
+              amazonLabel="Browse acrylic aquarium tank on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume"
-              amazonLabel="Shop aquarium stands on Amazon →"
+              amazonLabel="Browse aquarium stand on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume"
-              amazonLabel="Shop substrate bags sized to volume on Amazon →"
+              amazonLabel="Browse aquarium substrate gravel bags on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"
-              amazonLabel="Shop heaters by tank size on Amazon →"
+              amazonLabel="Browse aquarium heater tank size on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-              amazonLabel="Shop filters sized to gallons on Amazon →"
+              amazonLabel="Browse aquarium filter gallon on Amazon →"
             />
           </div>
         </div>

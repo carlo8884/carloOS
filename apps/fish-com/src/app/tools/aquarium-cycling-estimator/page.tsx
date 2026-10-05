@@ -191,7 +191,7 @@ export default function AquariumCyclingEstimatorPage() {
           nextLabel="Sketch a slim-inch ceiling before you stock"
           nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The hop below is the same API Master Test Kit search already on this page."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-          resourceLabel="Shop API Master Test Kit on Amazon →"
+          resourceLabel="Browse api freshwater master test kit on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
@@ -223,19 +223,19 @@ export default function AquariumCyclingEstimatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop API Master Test Kit on Amazon →"
+              amazonLabel="Browse api freshwater master test kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop bottled bacteria starter on Amazon →"
+              amazonLabel="Browse tetra safestart plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse dr tims ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Shop sponge filters on Amazon →"
+              amazonLabel="Browse aquarium sponge filter on Amazon →"
             />
           </div>
         </div>

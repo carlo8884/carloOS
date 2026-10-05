@@ -201,7 +201,7 @@ export default function TrainerRolePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+feed?s=racing-roles-trainer"
-                amazonLabel="Shop horse feed on Amazon"
+                amazonLabel="Browse horse feed on Amazon →"
               />
           </div>
           </div>

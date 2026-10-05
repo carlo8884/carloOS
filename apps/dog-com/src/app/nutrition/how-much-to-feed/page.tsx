@@ -71,7 +71,7 @@ export default function HowMuchToFeedPage() {
           nextLabel="Run the calorie calculator for a starting scoop"
           nextBlurb="The RER formula is the napkin math. The calorie calculator applies weight, life stage, and activity so you can check the result against the BCS table above. The hop below is the same generic supplies search already on this page — not a new query."
           resourceHref="/go/amazon-brand/dry+dog+food?s=nutrition-how-much"
-          resourceLabel="Shop dog supplies on Amazon →"
+          resourceLabel="Browse dry dog food on Amazon →"
         />
 
         <h2 id="activity">Adjusting for Activity Level</h2>

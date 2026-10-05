@@ -191,7 +191,7 @@ export default function FilterGphCalculatorPage() {
           nextLabel="Size the heater for the same gallons"
           nextBlurb="The GPH range is flow, not temperature. Size the heater for this volume next so the same tank is not under-heated while the filter turns it over. The hop below is the same AquaClear HOB search already on this page."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
-          resourceLabel="Shop AquaClear HOB filters on Amazon →"
+          resourceLabel="Browse aquaclear 70 filter on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (HOB / canister / media /
@@ -207,23 +207,23 @@ export default function FilterGphCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop AquaClear HOB filters on Amazon →"
+              amazonLabel="Browse aquaclear 70 filter on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop Fluval canister filters on Amazon →"
+              amazonLabel="Browse fluval 307 canister filter on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter+media?s=tools-filter-gph-calculator"
-              amazonLabel="Shop filter media on Amazon →"
+              amazonLabel="Browse aquarium filter media on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=tools-filter-gph-calculator"
-              amazonLabel="Shop sponge filters on Amazon →"
+              amazonLabel="Browse aquarium sponge filter on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+powerhead?s=tools-filter-gph-calculator"
-              amazonLabel="Shop aquarium powerheads on Amazon →"
+              amazonLabel="Browse aquarium powerhead on Amazon →"
             />
           </div>
         </div>

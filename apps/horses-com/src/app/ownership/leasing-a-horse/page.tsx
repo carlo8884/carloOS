@@ -142,7 +142,7 @@ export default function LeasingHorsePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse"
-                amazonLabel="Shop equine supplements on Amazon"
+                amazonLabel="Browse equine supplement on Amazon →"
               />
               <Link
                 href="/tools/horse-cost-calculator"
