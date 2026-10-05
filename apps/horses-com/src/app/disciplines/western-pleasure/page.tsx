@@ -308,6 +308,7 @@ export default function WesternPleasurePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=discipline-western-pleasure"
+                amazonLabel="Browse horse saddle pads on Amazon →"
               />
           </div>
           </div>
