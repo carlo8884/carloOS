@@ -126,7 +126,7 @@ export default function PuppyBitingPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"
-              amazonLabel="Browse bitter sprays on Amazon →"
+              amazonLabel="Browse bitter apple spray on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">
