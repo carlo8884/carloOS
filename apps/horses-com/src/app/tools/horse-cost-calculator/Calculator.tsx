@@ -13,7 +13,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 interface BoardOption {
   value: string
@@ -262,6 +262,25 @@ export default function Calculator() {
       <ResultMeaning>
         These totals add the monthly amounts you entered into a planning budget, not a quote from a barn.
       </ResultMeaning>
+      <div className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5">
+        <p className="mb-1 text-xs font-bold uppercase tracking-wide text-brand-primary">Next step</p>
+        <p className="text-base font-semibold leading-snug">
+          <a href="/first-horse-roadmap" className="text-brand-primary underline underline-offset-2">
+            Walk the first 90 days before you buy →
+          </a>
+        </p>
+        <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
+          The monthly total is a planning budget. The first-horse roadmap is the sequence that budget pays for. The hop is the halter and lead already on this page.
+        </p>
+        <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+        <a
+          href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
+          rel="sponsored noopener"
+          className="inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2 whitespace-normal text-left"
+        >
+          Browse horse halters and leads on Amazon →
+        </a>
+      </div>
 
       {/* Breakdown table */}
       <div className="mt-4 overflow-hidden rounded border border-brand-border">
