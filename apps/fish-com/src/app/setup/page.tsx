@@ -195,7 +195,7 @@ export default function AquariumSetupPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium"
-              amazonLabel="Browse canister filters on Amazon →"
+              amazonLabel="Browse Fluval 307 canister filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=setup-aquarium"
