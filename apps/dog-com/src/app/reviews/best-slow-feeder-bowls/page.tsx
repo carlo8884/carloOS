@@ -58,7 +58,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['Strong mealtime extension among bowls compared here', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
-              ctaText="Shop Outward Hound →"
+              ctaText="Shop Outward Hound on Amazon →"
               ctaHref="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="outward+hound+fun+feeder"
@@ -80,7 +80,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['Calming licking behavior', 'Dishwasher safe', 'Works for enrichment during stressful events', 'Freezable for longer duration']}
               cons={['Wet food only — not for dry kibble feeders', 'Smaller capacity than bowl feeders']}
               price="$10–15"
-              ctaText="Shop LickiMat →"
+              ctaText="Shop LickiMat on Amazon →"
               ctaHref="/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="lickimat+splash"

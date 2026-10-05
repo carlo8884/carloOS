@@ -73,7 +73,7 @@ export default function BestDogBedsPage() {
               pros={['Machine washable cover', 'Good foam quality for price', 'Multiple size options', 'Reputable brand with warranty']}
               cons={['Less therapeutic than Big Barker for severe arthritis', 'Cover zippers can be chewed by destructive dogs']}
               price="$125–175"
-              ctaText="Shop Casper Dog Bed →"
+              ctaText="Shop Casper Dog Bed on Amazon →"
               ctaHref="/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="casper+dog+bed"

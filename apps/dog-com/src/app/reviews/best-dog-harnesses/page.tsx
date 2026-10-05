@@ -71,7 +71,7 @@ export default function BestDogHarnessesPage() {
               pros={['Two-clip versatility', 'Padded for long wear', 'Strong build quality', 'Reflective trim', 'Top outdoor pick in this comparison']}
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
-              ctaText="Shop Ruffwear Front Range →"
+              ctaText="Shop Ruffwear Front Range on Amazon →"
               ctaHref="/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="ruffwear+front+range+harness"
