@@ -191,12 +191,12 @@ const FAQS = [
   {
     question: 'Does this checklist produce a premium?',
     answer:
-      'No. It prepares the facts and the questions. Premiums depend on the pet and the quote. The three links at the end are the same tracked Trupanion, Healthy Paws, and Embrace quote paths already used on the carrier comparison.',
+      'No. It prepares the facts and the questions. Premiums depend on the pet and the quote. The three links at the end are the Trupanion, Healthy Paws, and Embrace quote paths on the carrier comparison.',
   },
   {
     question: 'Where do these facts come from?',
     answer:
-      'From Vets.co pages that already explain deductibles, pre-existing conditions, and the 11-carrier comparison, plus the NAIC consumer guide on pet insurance and the public quote pages those tracked links open. This page does not add a waiting-period length the comparison does not already record.',
+      'From the Vets.co pages on deductibles, pre-existing conditions, and the 11-carrier comparison, plus the NAIC consumer guide on pet insurance and the public quote pages those links open. Waiting-period lengths are the ones that comparison records.',
   },
 ]
 
@@ -290,8 +290,8 @@ export default function InsuranceQuotePrepPage() {
         <p>
           A pet insurance quote is only as useful as the facts you bring to it and the questions you ask before you enroll.
           This checklist is built from the reimbursement estimator, the deductibles guide, the pre-existing-conditions guide,
-          and the 11-carrier comparison already on Vets.co. It does not invent a premium, a score, or a waiting period those
-          pages do not already state. Picks on the comparison follow the published method on{' '}
+          and the 11-carrier comparison on Vets.co. Premiums, scores, and waiting periods stay the ones those
+          pages already state. Picks on the comparison follow the published method on{' '}
           <Link href="/how-we-pick" className="text-brand-primary">How we pick</Link>.
         </p>
 
@@ -306,7 +306,7 @@ export default function InsuranceQuotePrepPage() {
 
         <h2 id="quotes">Request a quote</h2>
         <p>
-          These three links are the tracked quote paths already used on the carrier comparison. A commission may be earned
+          These three links are the quote paths on the carrier comparison. A commission may be earned
           if you enroll through them. The commission does not decide the order, and this checklist does not rank the carriers.
           Read the sample policy on the quote, not only the marketing page.
         </p>

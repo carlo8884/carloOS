@@ -24,7 +24,7 @@ const articleSchema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Daily Cat Food Grams',
   description:
-    'Grams of cat food per day from body weight, the feline calorie factors already on the calorie calculator, and kcal per kg.',
+    'Grams of cat food per day from body weight, the feline calorie factors on the calorie calculator, and kcal per kg.',
   url: URL,
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -62,7 +62,7 @@ const FAQS = [
   {
     question: 'What does the result link to?',
     answer:
-      'A weight-loss stage links the kitchen gram scale already on the calorie page, because the smaller portion is the thing to weigh. A kitten stage links the measured-food search on that page. Other stages link the slow-feeder bowl search. None of those searches is a cat-food ranking. Vets.co does not publish a cat-food review.',
+      'A weight-loss stage links the kitchen gram scale on the calorie page, because the smaller portion is the thing to weigh. A kitten stage links the measured-food search on that page. Other stages link the slow-feeder bowl search. None of those searches is a cat-food ranking. Vets.co does not publish a cat-food review.',
   },
   {
     question: 'Is this a feeding prescription?',
@@ -103,7 +103,7 @@ export default function CatFoodAmountPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <p>
-          The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> already estimates daily kilocalories
+          The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> estimates daily kilocalories
           and can show cups from kcal per cup. Labels also print kcal per kilogram. This calculator keeps every feline
           factor on that page and converts the energy into grams. Neutered indoor adult is 1.2, intact indoor is 1.4,
           neutered outdoor is 1.4, intact outdoor is 1.6, weight loss is 0.8, weight gain is 1.3, kitten is 2.5, senior
@@ -122,7 +122,7 @@ export default function CatFoodAmountPage() {
         <p>
           Ribs, waist, and the belly tuck still matter more than one day’s grams. The{' '}
           <Link href="/tools/cat-body-condition-score">body condition score</Link> is the check on whether the portion should
-          move. This page does not name a disease from appetite, and it does not replace the calorie page. Editorial method
+          move. Appetite changes and disease belong with a veterinarian. Daily calories stay on the calorie page. Editorial method
           is on <Link href="/how-we-pick">How we pick</Link>.
         </p>
         <h2 id="faq">FAQ</h2>

@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Kessil A360X or Nicrew Classic',
-  description: 'The lighting review already scores a reef fixture and a fish-only display light.',
+  description: 'A reef fixture or a fish-only display light, using the scores and prices on the lighting review.',
   url: 'https://fish.com/reviews/kessil-vs-nicrew-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -32,7 +32,7 @@ const FAQS = [
   },
   {
     question: 'Does this replace the Hygger and Fluval comparison?',
-    answer: 'No. Hygger 957 and Fluval Plant 3.0 are the planted-tank pair already on this hub. This page is the reef card against the fish-only card on the same lighting review.',
+    answer: 'No. Hygger 957 and Fluval Plant 3.0 are the planted-tank pair on this hub. This comparison is the reef light against the fish-only light on the same lighting review.',
   },
 ]
 
@@ -74,15 +74,15 @@ export default function KessilVsNicrewGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-aquarium-lighting">lighting review</Link> scores four fixtures. Hygger against Fluval Plant 3.0 is already a guide for planted tanks. This page is the remaining pair: Kessil A360X for reef, and Nicrew Classic LED+ for fish-only display. Scores are editorial scores, not shopper star ratings. Prices are the ranges printed on those cards.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-lighting">lighting review</Link>. Hygger against Fluval Plant 3.0 is the planted-tank guide. This comparison is the Kessil A360X for a reef and the Nicrew Classic LED+ for a fish-only display.</p>
         <h2>What the review says about the Kessil A360X</h2>
-        <p>The Kessil A360X Tuna Blue is Best Reef, score 9.3. The card describes Dense Matrix LED, a shimmer effect, and Wi-Fi control in the Kessil app. PAR is listed as 150–300 or more at 12 inches of depth at moderate settings, which the review calls SPS-capable, over about a 24-inch square footprint. The cons say the printed price is $400–500, that a single point of light may need a second fixture on a wider tank, and that the light is overkill for fish-only or LPS-only. The button above is that product’s search from the lighting review.</p>
+        <p>The Kessil A360X Tuna Blue is Best Reef, score 9.3. The card describes Dense Matrix LED, a shimmer effect, and Wi-Fi control in the Kessil app. PAR is listed as 150–300 or more at 12 inches of depth at moderate settings, which the review calls SPS-capable, over about a 24-inch square footprint. The cons say the printed price is $400–500, that a single point of light may need a second fixture on a wider tank, and that the light is overkill for fish-only or LPS-only. The link above is that product’s search from the lighting review.</p>
         <h2>What the review says about the Nicrew Classic LED+</h2>
         <p>The Nicrew Classic LED+ is Best Fish-Only, score 8.5. The review says it is for fish-only or fish-only-with-live-rock, where light is aesthetic. PAR is described as low, about 15–25 at 12 inches, adequate for display and not for photosynthetic plants or coral. A blue channel is said to enhance fish color. A simple timer is built in. There is no app. The card lists a typical lifespan of 2–3 years at this price. The printed price is $20–35. The cons say it is not for planted or reef tanks.</p>
-        <p>Live rock weight is a separate question. The <Link href="/tools/live-rock-calculator">live-rock calculator</Link> uses the saltwater setup page’s pounds-per-gallon line. This page does not add a rock weight.</p>
+        <p>Live rock weight is a separate question. The <Link href="/tools/live-rock-calculator">live-rock calculator</Link> uses the saltwater setup page’s pounds-per-gallon line.</p>
         <h2>Who should buy which light</h2>
         <p>Buy the Kessil when the tank is a mixed reef or SPS and the printed premium is acceptable, including a second fixture if the tank is wider than the footprint on the card. Buy the Nicrew when the tank is fish-only or fish-only-with-live-rock and nothing in it needs photosynthetic light. A planted tank belongs on the Hygger and Fluval comparison, not on either of these two cards.</p>
-        <p>The sale price can differ from the printed band. PAR figures above are the ones the lighting review already prints. This page does not add a measurement of its own.</p>
+        <p>The sale price can differ from the printed band. PAR figures above are the ones the lighting review prints.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

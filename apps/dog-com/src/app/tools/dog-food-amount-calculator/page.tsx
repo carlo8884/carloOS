@@ -67,7 +67,7 @@ const FAQS = [
   {
     question: 'Does the gram result pick a brand?',
     answer:
-      'The closing link follows the same cards as the calorie calculator: large-breed puppy food when the stage is a puppy and the current weight is already 50 pounds or more, the senior food when the stage is senior, and the dry-food review’s adult card otherwise. The grams do not create a new brand.',
+      'The closing link follows the same cards as the calorie calculator: large-breed puppy food when the stage is a puppy and the current weight is 50 pounds or more, the senior food when the stage is senior, and the dry-food review’s adult card otherwise. The gram result does not name a different food.',
   },
 ]
 
@@ -103,7 +103,7 @@ export default function DogFoodAmountPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <p>
-          The <Link href="/tools/dog-calorie-calculator">calorie calculator</Link> already turns weight and life stage into
+          The <Link href="/tools/dog-calorie-calculator">calorie calculator</Link> turns weight and life stage into
           kilocalories, and it can show cups when the bag lists kcal per cup. This page answers the next question: how many
           grams that energy is when the label states kcal per kilogram. The factors are not new. Neutered adult is 1.6,
           intact adult is 1.8, weight loss is 1.0, weight gain is 1.7, light work is 2.0, a puppy under four months is 3.0,

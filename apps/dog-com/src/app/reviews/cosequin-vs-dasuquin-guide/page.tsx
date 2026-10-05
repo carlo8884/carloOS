@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'dog-com',
   title: 'Cosequin DS or Dasuquin',
-  description: 'The joint-supplement review already scores Dasuquin with MSM above Cosequin DS.',
+  description: 'Dasuquin with MSM or Cosequin DS, using the scores and bottle prices on the joint-supplement review.',
   url: 'https://dog.com/reviews/cosequin-vs-dasuquin-guide',
   imageUrl: '',
   authorName: 'Dog.com Editorial',
@@ -68,15 +68,15 @@ export default function CosequinVsDasuquinGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-joint-supplements">joint-supplement review</Link> already scores Nutramax Dasuquin with MSM above Cosequin DS Maximum Strength. Those scores are editorial scores, not shopper star ratings. Fish oil on that review is a different product, and it is not this comparison.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-joint-supplements">joint-supplement review</Link>. Dasuquin with MSM ranks above Cosequin DS Maximum Strength. Fish oil on that review is a different product.</p>
         <h2>What the review says about Dasuquin</h2>
         <p>Dasuquin with MSM is Best Evidence, score 9.2, and the winner. The active ingredients are avocado/soybean unsaponifiables, glucosamine, chondroitin, and MSM. The review lists an NASC seal, a published JAVMA force-plate study, chewables or sprinkle capsules, and an onset of 4–6 weeks. The printed price is $40–70 for an 84-count. The cons say it costs more than basic glucosamine, the wait for an effect is long, and it is not a substitute for NSAIDs in severe arthritis.</p>
         <h2>What the review says about Cosequin DS</h2>
         <p>Cosequin DS is Best Budget Glucosamine, score 8.8. The actives are glucosamine and chondroitin. It is NASC certified. Evidence is listed as moderate, and the review says the difference from Dasuquin is the missing ASU. The printed price is $25–45 for a 120-count. The review calls it a reasonable starting point, and says a dog with no visible improvement after 6 weeks can step up to Dasuquin.</p>
         <p>The same review says a dog that is limping needs a veterinary exam before either bottle. Supplements on that page do not replace pain medication.</p>
         <h2>Who should buy which bottle</h2>
-        <p>Buy Dasuquin when the review’s evidence ranking is the reason and the higher bottle price is acceptable. Buy Cosequin DS when the lower NASC price is the constraint, and plan the 6-week check the review already describes. Neither bottle is the fish-oil product on that page, and neither is a pain medication.</p>
-        <p>The button above searches Amazon for Dasuquin with MSM, the same search as on the joint review. The sale price can differ from the band above.</p>
+        <p>Buy Dasuquin when the review’s evidence ranking is the reason and the higher bottle price is acceptable. Buy Cosequin DS when the lower NASC price is the constraint, and plan the 6-week check the review describes. Neither bottle is the fish-oil product on that page, and neither is a pain medication.</p>
+        <p>The link above searches Amazon for Dasuquin with MSM, the same search as on the joint review. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

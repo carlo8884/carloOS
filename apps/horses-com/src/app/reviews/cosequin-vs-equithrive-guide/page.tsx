@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Cosequin ASU or Equithrive',
-  description: 'The supplement review already scores Cosequin ASU Plus for joint evidence and Equithrive for resveratrol.',
+  description: 'Cosequin ASU Plus for joint evidence, or Equithrive for resveratrol. Scores and prices are on the supplement review.',
   url: 'https://horses.com/reviews/cosequin-vs-equithrive-guide',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -68,14 +68,14 @@ export default function CosequinVsEquithriveGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-equine-supplements">supplement review</Link> already scores Cosequin ASU Plus for joint evidence and Equithrive Original Pellets for resveratrol. Those scores are editorial scores, not shopper star ratings. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Cosequin ASU Plus is the joint-evidence pick. Equithrive Original Pellets are the resveratrol pick. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
         <h2>What the review says about Cosequin ASU Plus</h2>
         <p>Cosequin ASU Plus is Best Joint Evidence, score 9.1, and the winner. The actives are ASU, glucosamine HCl, and chondroitin sulfate. The review lists an NASC seal, Nutramax manufacturing, and no prohibited ingredients for FEI or USEF. A loading dose of 4–6 weeks is recommended, and that loading dose raises the first-month cost. The printed price is $80–110 a month. The cons say the price is the higher tier and that pellet palatability varies.</p>
         <h2>What the review says about Equithrive</h2>
         <p>Equithrive Original Pellets are Best Resveratrol, score 8.5. The active is trans-resveratrol. The review lists an NASC seal, a pelleted format, no prohibited ingredients for FEI or USEF, and University of Kentucky equine trials. The printed price is $45–65 a month. The review frames resveratrol as a complement to traditional joint ingredients, not a substitute, and says the evidence base is smaller than ASU and glucosamine. The common use it names is mild joint inflammation or support after an injection.</p>
         <h2>Who should buy which product</h2>
         <p>Buy Cosequin ASU Plus when the horse has diagnosed osteoarthritis or significant work-related joint loading and you want the product the review ranks on published evidence. Buy Equithrive when you want the lower monthly band and you are adding resveratrol beside another joint product, not instead of one. A single broad wellness tub is Platinum Performance on the same review, not either product here.</p>
-        <p>The button above opens Cosequin ASU Plus on SmartPak, the same link as on the supplement review. The sale price can differ from the band above.</p>
+        <p>The link above opens Cosequin ASU Plus on SmartPak, the same link as on the supplement review. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

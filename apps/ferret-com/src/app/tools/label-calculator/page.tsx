@@ -103,7 +103,7 @@ export default function FerretLabelPage() {
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
         <p>
-          The <Link href="/diet/reading-food-labels">label guide</Link> already explains dry-matter conversion and
+          The <Link href="/diet/reading-food-labels">label guide</Link> explains dry-matter conversion and
           carbohydrate by difference. Guaranteed-analysis numbers are as-fed, so a moist food looks lower in protein
           than a kibble even when the dry matter is similar. This calculator does that arithmetic and then compares the
           carbohydrate result with the two cards on the{' '}
@@ -122,7 +122,7 @@ export default function FerretLabelPage() {
         <p>
           A label whose dry-matter carbohydrate is in the single digits is not automatically the Wysong bag, and a
           mid-teens result is not automatically Marshall. Those phrases are how the review describes the cards. The
-          closing link follows the phrase and leaves ingredient quality on the review. Nothing here is a feeding trial.
+          closing link follows the phrase and leaves ingredient quality on the review. The result is label arithmetic, not a feeding trial.
           The method for the product links is on <Link href="/how-we-pick">How we pick</Link>.
         </p>
         <h2 id="faq">FAQ</h2>

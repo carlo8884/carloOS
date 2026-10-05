@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'AquaClear 70 or Fluval 307',
-  description: 'The filter review already scores the AquaClear 70 as the hang-on-back and the Fluval 307 as the canister.',
+  description: 'The AquaClear 70 hang-on-back, or the Fluval 307 canister. Scores and prices are on the filter review.',
   url: 'https://fish.com/reviews/aquaclear-70-vs-fluval-307-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -68,7 +68,7 @@ export default function AquaclearVsFluvalGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-aquarium-filters">filter review</Link> already scores the AquaClear 70 as the hang-on-back and the Fluval 307 as the canister. Those scores are editorial scores, not shopper star ratings. The type difference is also on the <Link href="/reviews/hob-vs-canister-guide">HOB versus canister guide</Link>.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-filters">filter review</Link>. The AquaClear 70 is the hang-on-back. The Fluval 307 is the canister. The type difference is also on the <Link href="/reviews/hob-vs-canister-guide">HOB versus canister guide</Link>.</p>
         <h2>What the review says about the AquaClear 70</h2>
         <p>The AquaClear 70 is Best HOB Overall, score 9.4, and the winner. Flow is 300 GPH and adjustable. The tank size in the review is up to 70 gallons. The media basket has three chambers and takes mechanical foam, carbon, and BioMax rings, so you are not locked to a proprietary cartridge. The review says noise stays low when the water level is correct, and that the impeller needs cleaning every three to four months or flow drops. The printed price is $45–70.</p>
         <p>The <Link href="/tools/filter-gph-calculator">filter-GPH calculator</Link> turns tank gallons into a turnover range. Match that range to the 300 GPH and 303 GPH already printed for these two filters.</p>
@@ -76,7 +76,7 @@ export default function AquaclearVsFluvalGuidePage() {
         <p>The Fluval 307 is Best Canister, score 9.2. The review names it for tanks of 40–70 gallons that need high biological filtration. Flow is 303 GPH. Media volume is 780g. It self-primes with a button, runs near-silent, and the review says the cleaning interval is every 3–6 months because the media takes longer to clog. Cleaning day is more involved than a hang-on-back rinse, the price is higher, and it needs space under the cabinet. The printed price is $120–160.</p>
         <h2>Who should buy which filter</h2>
         <p>Buy the AquaClear 70 when you want a hang-on-back you can refill with your own media, on a tank up to 70 gallons. Buy the Fluval 307 when the tank is 40–70 gallons, you want the longer cleaning interval, and you have room under the stand. The Hikari sponge and the Aqueon QuietFlow 30 are other filters on that review, for nano tanks and for tanks up to 30 gallons. Neither of those is this pair.</p>
-        <p>The button above searches Amazon for the AquaClear 70, the same search as on the filter review. The sale price can differ from the band above.</p>
+        <p>The link above searches Amazon for the AquaClear 70, the same search as on the filter review. The sale price can differ from the band above.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
