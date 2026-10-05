@@ -70,7 +70,7 @@ export default function BestCanisterFiltersPage() {
               pros={['Legendary long-term reliability', 'Simple to maintain', 'German engineering quality', 'Runs for 10-15+ years']}
               cons={['Less sophisticated media separation than Fluval', 'Older design — no AquaStop', 'Slightly louder than Fluval 307']}
               price="$100–130"
-              ctaText="Shop Eheim Classic →"
+              ctaText="Shop Eheim Classic on Amazon →"
               ctaHref="/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="eheim-classic-2215"
