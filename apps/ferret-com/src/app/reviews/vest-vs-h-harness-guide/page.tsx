@@ -77,7 +77,7 @@ export default function VestVsHHarnessGuidePage() {
         <p>Buy the vest if the ferret has already backed out of a harness or this is the first walk and you want the more secure layout. Buy the H-style if you will measure, test the fit indoors, and recheck it. Buy the mesh bundle only as a warm-weather starter you are willing to replace.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The link below searches for the vest harness from the harness review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide">Find a ferret vest harness on Amazon →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide">Find an escape-proof jacket ferret harness on Amazon →</a></p>
         <EmailCapture
           variant="inline"
           siteId="ferret-com"

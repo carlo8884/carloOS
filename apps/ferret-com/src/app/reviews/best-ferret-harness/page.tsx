@@ -121,7 +121,7 @@ export default function BestFerretHarnessPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of a vest-style ferret harness on Amazon' />}
+        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof jacket ferret harness on Amazon' />}
         hero={{
           title: 'Best Ferret Harness: Escape Prevention and Fit',
           subtitle:
@@ -277,7 +277,7 @@ export default function BestFerretHarnessPage() {
             pros={['Hardest style to back out of', 'Spreads pressure over a wide area', 'Kind to thin ferret skin', 'Often includes a back D-ring']}
             cons={['Requires an accurate body measurement', 'Slightly fussier to put on', 'Can be warm in heat unless mesh-panelled']}
             price="$$"
-            ctaText="Check price of a vest-style ferret harness on Amazon"
+            ctaText="Check price of an escape-proof jacket ferret harness on Amazon"
             ctaHref="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-vest-harness"
