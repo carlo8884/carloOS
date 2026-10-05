@@ -117,20 +117,6 @@ export default function HorseInsurancePage() {
 
           <h2 id="mortality">Mortality Cover</h2>
           <p>Equine mortality insurance is, in effect, life insurance for the horse: it pays out the insured value if the horse dies (or, often, must be humanely euthanized for covered reasons). The horse is insured for an agreed value, premiums scale with that value, and the insurer may require a veterinary certificate or exam to establish health and worth. Mortality is the foundational policy to which other cover is often added, and it is most relevant for horses of meaningful financial or replacement value.</p>
-          <p>
-            The same horse mortality vs major-medical
-            decision worksheet is how mortality as the
-            foundational policy sits beside the
-            question of whether the horse&apos;s
-            agreed value justifies the premium — it
-            is not a horse veterinary history / VCPR
-            records folder (that lives on
-            choosing-a-vet), not a horse pre-purchase
-            exam records binder (that lives on
-            buying-your-first-horse), and not a
-            farrier log book (that lives on
-            farrier-schedule). This page does
-            not invent clinic listings. </p>
 
           <h2 id="medical">Major Medical and Surgical</h2>
           <p>Major medical and surgical cover, usually added to a mortality policy, contributes toward veterinary costs for illness, injury, and surgery up to an annual limit, after any deductible. This is the cover most relevant to the dreaded colic-surgery or serious-lameness bill. Owners should note the annual limit, the deductible, per-condition limits, and whether diagnostics and follow-up are included, since a low limit may not cover a major surgery in full.</p>
@@ -179,14 +165,6 @@ export default function HorseInsurancePage() {
 
           <h2 id="liability">Liability Cover</h2>
           <p>Personal horse-owner liability insurance protects the owner if their horse injures a person or damages property -- for example if the horse escapes and causes a road accident or injures someone. Given that horses are large and can cause serious harm, liability cover is a consideration for every owner regardless of the horse&apos;s value, and it is sometimes included in equestrian-organization membership or separate from the horse&apos;s own mortality and medical cover.</p>
-          <p>
-            The same horse mortality vs major-medical
-            decision worksheet is how liability —
-            sometimes in a membership, sometimes a
-            separate policy — stays on the decide-
-            what-to-insure page beside mortality and
-            medical, instead of being forgotten
-            because the horse itself is low-value. </p>
 
           <h2 id="who">Who should buy which cover</h2>
           <p>These are cover types, not ranked insurers. This page does not publish a premium, a payout percentage, or a carrier score. Read the policy for exclusions before you rely on any of them.</p>
@@ -306,10 +284,9 @@ export default function HorseInsurancePage() {
                 amazonHref="/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance"
                 amazonLabel="Browse horse insurance policy document binders on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+mortality+vs+major+medical+decision+worksheet?s=ownership-horse-insurance"
-                amazonLabel="Browse horse mortality vs major-medical decision worksheets on Amazon →"
-              />
+              <a href="/ownership/cost-of-owning-a-horse" className="text-sm font-semibold text-brand-primary">
+                See what ownership costs before choosing a policy →
+              </a>
           </div>
           </div>
 
