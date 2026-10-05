@@ -10486,8 +10486,10 @@ const CALCULATORS = [
     id: 'horses · cost-of-owning-a-horse hops',
     file: 'apps/horses-com/src/app/ownership/cost-of-owning-a-horse/page.tsx',
     mustInclude: [
-      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented budget worksheet or cost-log binder' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator next step' },
+      { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=ownership-cost-of-owning-a-horse/, label: 'feed scoop and scale, the measuring tool the feed section names' },
+      { re: /Browse horse feed scoops and scales on Amazon/, label: 'product and retailer on the feed button' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above the hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10495,8 +10497,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /cost log binder|budget worksheet|expense tracker notebook/, label: 'no invented binder, worksheet, or expense notebook' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete horse-ownership-budget-worksheet offer; every gear CTA is an amazon-brand category search matching on-page purchase-versus-upkeep / keep-feed-farrier recurring-cost / emergency-fund copy (a horse ownership monthly budget worksheet so purchase-price versus forever upkeep is written before anyone bids, an equine emergency fund expense tracker notebook so colic-surgery / lameness-workup contingency stays visible, a horse keep / feed / farrier cost log binder so board, hay, and the 6-to-8-week farrier cycle stay in one ledger), never a placeholder ASIN, a #1132 equine-vet interview / after-hours-cover / VCPR-folder hop, a #1131 first-horse tryout / buyer-notebook / PPE-records-binder hop, a #1130 boarding walkthrough / contract-binder / hay-tarp hop, a #1129 saline / pads / scissors hop, a #1128 calculator-tools-chart hop, a #1126 daily-care-chart hop, a farrier-log / clipboard hop, or a vaccine / prescription hop. Educational owner searches only — not a ranked product list, not a substitute for a veterinarian or accountant. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'The cost guide sends owners to the horse cost calculator and shops a feed scoop and scale, the measuring tool for the hay and grain the article already names. It does not shop a budget worksheet, expense notebook, or cost-log binder.',
   },
   {
     id: 'horses · horse-insurance hops',
