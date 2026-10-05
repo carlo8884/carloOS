@@ -69,7 +69,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['High enrichment value', 'Cannot tip over', 'Easy to clean', 'Works with wet food too', 'Calming effect from foraging']}
               cons={['More expensive than basic slow bowls', 'Kibble can get stuck deep in grass segments']}
               price="$25–35"
-              ctaText="Shop Northmate Green on Amazon →"
+              ctaText="Shop Northmate Green interactive feeder on Amazon →"
               ctaHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="northmate+green+interactive+feeder"
