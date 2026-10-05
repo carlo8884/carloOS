@@ -185,7 +185,7 @@ export default function BestDogFoodPage() {
                 'Not "clean label" for owners who prioritize ingredient aesthetics',
               ]}
               price="$45–90 / 30 lbs"
-              ctaText="Shop Pro Plan on Amazon →"
+              ctaText="Shop Purina Pro Plan dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+dry+dog+food"
