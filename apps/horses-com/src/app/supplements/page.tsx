@@ -122,6 +122,7 @@ export default function SupplementsHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/equine+supplement?s=supplements-hub"
+              amazonLabel="Browse equine supplements on Amazon →"
             />
           </div>
         </div>
