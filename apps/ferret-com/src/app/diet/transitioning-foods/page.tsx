@@ -244,7 +244,7 @@ export default function TransitioningFoodsPage() {
             pros={['Lends familiar meat aroma to new food', 'Sugar-free options widely available', 'Useful for medication and recovery feeding too']}
             cons={['Calorie-dense — portion carefully', 'Read the panel; many toppers are sweetened']}
             price="$5–12"
-            ctaText="Find a Meat-Based Topper"
+            ctaText="Find a Meat-Based Topper on Amazon"
             ctaHref="/go/chewy-brand/meat+based+food+topper+sugar+free?s=diet-transitioning-foods"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="meat-based-food-topper"

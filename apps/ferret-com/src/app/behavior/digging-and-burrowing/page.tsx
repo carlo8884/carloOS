@@ -356,7 +356,7 @@ export default function FerretDiggingBurrowingPage() {
             pros={['Low ingest risk', 'Ferrets enjoy the give and movement', 'Cheap and replaceable', 'Easy to wash']}
             cons={['Balls migrate outside the tote — keep near a sweep-friendly surface', 'No texture variety — best rotated with rice or rocks']}
             price="$10–20 / bag"
-            ctaText="Find ferret-safe ball pit balls"
+            ctaText="Find ferret-safe ball pit balls on Amazon"
             ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=behavior-digging-burrowing"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small-pet-ball-pit-balls"
