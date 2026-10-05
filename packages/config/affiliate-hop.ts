@@ -73,6 +73,51 @@ export function visibleShopHref(
   return amazonFallbackFromChewyHref(href)
 }
 
+/** Display names for a product-row shop link. Unknown vendors are not labeled. */
+const SHOP_RETAILER: Record<string, string> = {
+  amazon: 'Amazon',
+  'amazon-brand': 'Amazon',
+  chewy: 'Chewy',
+  'chewy-brand': 'Chewy',
+  'chewy-pharmacy': 'Chewy',
+  smartpak: 'SmartPak',
+  schneider: 'Schneiders',
+  ridingwarehouse: 'Riding Warehouse',
+  dover: 'Dover',
+  wysong: 'Wysong',
+  marshall: 'Marshall',
+  trupanion: 'Trupanion',
+  'healthy-paws': 'Healthy Paws',
+  embrace: 'Embrace',
+  'pets-best': 'Pets Best',
+  lemonade: 'Lemonade',
+  pumpkin: 'Pumpkin',
+  vetster: 'Vetster',
+  askvet: 'AskVet',
+}
+
+/**
+ * A comparison-table shop link built from an existing /go href.
+ * Chewy-brand search hops fall back to the same Amazon search.
+ * The ?s= attribution query is kept. /home stays /home.
+ */
+export function tableShopLink(
+  href: string,
+  product: string,
+  env: NodeJS.ProcessEnv = process.env,
+): { href: string; label: string } | null {
+  const visible = visibleShopHref(href, env)
+  if (!visible?.startsWith('/go/')) return null
+  const path = visible.split('?')[0].split('/')
+  const vendor = path[2] ?? ''
+  const sku = path[3] ?? ''
+  const retailer = SHOP_RETAILER[vendor]
+  if (!retailer || !product.trim()) return null
+  const sameName = product.trim().toLowerCase() === retailer.toLowerCase()
+  const label = sku === 'home' || sameName ? `${product} quote` : `${product} on ${retailer}`
+  return { href: visible, label }
+}
+
 const DEFAULT_HOME = 'https://www.amazon.com'
 
 /** Vendors whose `/home` sku means the storefront, not a product slug. */

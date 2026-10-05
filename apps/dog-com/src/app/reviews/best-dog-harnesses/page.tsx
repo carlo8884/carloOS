@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -105,26 +105,26 @@ export default function BestDogHarnessesPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Pulls on leash</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-walk" className="text-brand-primary">PetSafe Easy Walk</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-walk" className="text-brand-primary">PetSafe Easy Walk</a><TableShopLink href={"/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"} product={"PetSafe Easy Walk"} /></td>
                       <td className="p-3 text-brand-text-mid">Front-clip. $20–30</td>
                       <td className="p-3 text-brand-text-mid">Not for dogs with shoulder or elbow issues. Fit has to be right or it rotates</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Hikes or walks long enough that padding matters</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#ruffwear" className="text-brand-primary">Ruffwear Front Range</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#ruffwear" className="text-brand-primary">Ruffwear Front Range</a><TableShopLink href={"/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"} product={"Ruffwear Front Range"} /></td>
                       <td className="p-3 text-brand-text-mid">Front and back clips. $40–55</td>
                       <td className="p-3 text-brand-text-mid">Bulkier and more expensive than a casual harness</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Backs out of or destroys harnesses</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#julius" className="text-brand-primary">Julius-K9 IDC</a><TableShopLink href={"/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"} product={"Julius-K9 IDC"} /></td>
                       <td className="p-3 text-brand-text-mid">Back-clip only. $40–70</td>
                       <td className="p-3 text-brand-text-mid">Not a no-pull harness. Heavy for a small dog</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which harness fits which dog</h2>
               <FAQAccordion items={[
                 {

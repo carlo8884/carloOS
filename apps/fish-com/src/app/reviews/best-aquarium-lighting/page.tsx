@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
@@ -99,32 +99,32 @@ export default function BestAquariumLightingPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A low-to-medium tech planted tank, and a light at $45–65</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hygger" className="text-brand-primary">Hygger 957</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hygger" className="text-brand-primary">Hygger 957</a><TableShopLink href={"/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting"} product={"Hygger 957"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Planted (Budget). 7 channels. PAR 45–65 at 20&quot;. $45–65</td>
                       <td className="p-3 text-brand-text-mid">Demanding high-light plants. The card says step up to the Fluval 3.0. No app control</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Medium-to-high tech plants, including a CO2 tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval Plant 3.0</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval Plant 3.0</a><TableShopLink href={"/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting"} product={"Fluval Plant 3.0"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Planted (Premium). Bluetooth app. PAR 60–80+ at 20&quot; on the high setting. $150–200</td>
                       <td className="p-3 text-brand-text-mid">A low-tech tank. The card calls that overkill. Bluetooth range is short</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A mixed reef or SPS coral tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#kessil" className="text-brand-primary">Kessil A360X Tuna Blue</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#kessil" className="text-brand-primary">Kessil A360X Tuna Blue</a><TableShopLink href={"/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting"} product={"Kessil A360X Tuna Blue"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Reef. Dense Matrix. 150–300+ PAR at 12&quot;. Wi-Fi. $400–500</td>
                       <td className="p-3 text-brand-text-mid">Fish-only or a wide tank that needs more than one point source. The card says one fixture covers about a 24&quot; square</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Fish-only or fish-only-with-live-rock display light</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nicrew" className="text-brand-primary">Nicrew Classic LED+</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nicrew" className="text-brand-primary">Nicrew Classic LED+</a><TableShopLink href={"/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting"} product={"Nicrew Classic LED+"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Fish-Only. Display PAR about 15–25 at 12&quot;. $20–35</td>
                       <td className="p-3 text-brand-text-mid">Plants or corals. The card says it is not for photosynthetic growth, and typical life is 2–3 years</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which light fits which tank</h2>
               <FAQAccordion items={[
                 {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot,
+import { TableShopLink, ComparisonFoot,
   buildMetadata,
   ArticleLayout,
   StockImage,
@@ -636,7 +636,7 @@ export default function FerretBathingGroomingPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret shampoo without tea tree</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink href={"/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
                   <td className="p-3 text-brand-text-mid">Shampoo Default. Original or fragrance-free. pH-balanced. $8–14</td>
                   <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
                 </tr>
@@ -648,14 +648,14 @@ export default function FerretBathingGroomingPage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Clippers sized for ferret nails, plus styptic</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-nail-kit" className="text-brand-primary">Small-pet clippers and styptic</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pet-nail-kit" className="text-brand-primary">Small-pet clippers and styptic</a><TableShopLink href={"/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"} product={"Small-pet clippers and styptic"} /></td>
                   <td className="p-3 text-brand-text-mid">Nail Care. Not human clippers. $10–18</td>
                   <td className="p-3 text-brand-text-mid">The clippers are the cheapest dull pair. The card says mid-tier lasts, and the first trims are still stressful</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

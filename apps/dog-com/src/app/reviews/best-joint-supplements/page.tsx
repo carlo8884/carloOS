@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -188,19 +188,19 @@ export default function BestJointSupplementsPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The supplement with the ASU evidence</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a><TableShopLink href={"/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"} product={"Nutramax Dasuquin with MSM"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Evidence. Score 9.2. $40–70 for 84-count</td>
                       <td className="p-3 text-brand-text-mid">Severe arthritis that needs an NSAID. The card says this does not replace that, and the effect takes 4–6 weeks</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">An omega-3 for inflammation</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a><TableShopLink href={"/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"} product={"Nordic Naturals Omega-3 Pet"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Anti-Inflammatory. Score 9.3. $25–45</td>
                       <td className="p-3 text-brand-text-mid">The dog refuses fish flavor, or you have not worked out the dose. The card says label suggestions are often too low</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower-priced glucosamine</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a><TableShopLink href={"/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"} product={"Cosequin DS Maximum Strength"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget Glucosamine. Score 8.8. $25–45 for 120-count</td>
                       <td className="p-3 text-brand-text-mid">You want the ASU evidence. The card says Cosequin has less evidence than Dasuquin</td>
                     </tr>
@@ -213,7 +213,7 @@ export default function BestJointSupplementsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which joint supplement fits</h2>
               <FAQAccordion items={[
                 {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -235,26 +235,26 @@ export default function SaddlePadsPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A washable everyday English schooling pad</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-quilted-numnah" className="text-brand-primary">Quilted cotton all-purpose</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-quilted-numnah" className="text-brand-primary">Quilted cotton all-purpose</a><TableShopLink href={"/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads"} product={"Quilted cotton all-purpose"} /></td>
                   <td className="p-3 text-brand-text-mid">Everyday English. Machine washable. $20–45</td>
                   <td className="p-3 text-brand-text-mid">You want wool or felt durability. The card says cotton wears faster, and it does not correct fit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Less friction under a saddle that already fits</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#sheepskin-half-pad" className="text-brand-primary">Sheepskin half pad</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#sheepskin-half-pad" className="text-brand-primary">Sheepskin half pad</a><TableShopLink href={"/go/dover/sheepskin-half-pad?s=tack-saddle-pads"} product={"Sheepskin half pad"} /></td>
                   <td className="p-3 text-brand-text-mid">Half pad. Some have shim pockets. $60–160</td>
                   <td className="p-3 text-brand-text-mid">The saddle is the wrong width. The card says a half pad cannot fix that. Real sheepskin needs careful washing</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A heavier Western saddle on long rides</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#western-felt-pad" className="text-brand-primary">Wool-felt Western pad</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#western-felt-pad" className="text-brand-primary">Wool-felt Western pad</a><TableShopLink href={"/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads"} product={"Wool-felt Western pad"} /></td>
                   <td className="p-3 text-brand-text-mid">Western. Often layered under a woven blanket. $80–200</td>
                   <td className="p-3 text-brand-text-mid">You want a light English numnah. Felt is heavier, and it still cannot correct saddle fit</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           {/* Shop leftover kit — unused vs #1140
               laminated+riding+helmet+fit+and+replace+checklist /

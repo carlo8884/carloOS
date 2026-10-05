@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -109,26 +109,26 @@ export default function BestNanoTanksPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A complete 5-gallon for a betta or shrimp</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval-spec" className="text-brand-primary">Fluval Spec V</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval-spec" className="text-brand-primary">Fluval Spec V</a><TableShopLink href={"/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks"} product={"Fluval Spec V"} /></td>
                       <td className="p-3 text-brand-text-mid">Best 5 Gallon. Rimless all-in-one. Filter and low-light LED included. $75–95</td>
                       <td className="p-3 text-brand-text-mid">You want a more stable volume. The card calls 5 gallons the minimum. Baffle the flow for a betta</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A bare 10-gallon you will equip yourself</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a><TableShopLink href={"/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 10-gallon"} /></td>
                       <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20&quot; × 10&quot; × 12&quot;. No equipment in the box. $20–30</td>
                       <td className="p-3 text-brand-text-mid">You want a kit. Filter, heater, and light are separate purchases</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A first community or planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a><TableShopLink href={"/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 20-gallon long"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall Nano. 30&quot; × 12&quot; × 12&quot;. $30–50</td>
                       <td className="p-3 text-brand-text-mid">You want equipment in the box. The card says you still need a 20-gallon-rated filter, heater, and light</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
               <FAQAccordion items={[
                 {

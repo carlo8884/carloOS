@@ -34,6 +34,7 @@ export { ComparisonFoot } from './components/ComparisonFoot'
 export { RelatedReads } from './components/RelatedReads'
 export { ToolError, ResultMeaning, numberFieldError } from './components/ToolFeedback'
 export { ResultPick } from './components/ResultPick'
+export { TableShopLink } from './components/TableShopLink'
 export {
   icratePick,
   heaterFromGallons,

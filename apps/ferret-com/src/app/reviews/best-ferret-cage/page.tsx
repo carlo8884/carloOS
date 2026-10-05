@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -365,26 +365,26 @@ export default function BestFerretCagePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One to four ferrets, and the cage is the long-term home</td>
-                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a></td>
+                  <td className="p-3 font-bold"><a href="#ferret-nation">Ferret Nation / Critter Nation double</a><TableShopLink href={"/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage"} product={"Ferret Nation / Critter Nation double"} /></td>
                   <td className="p-3">Best overall. About 0.5 in bar spacing. Full-width doors. Price tier $$$</td>
                   <td className="p-3">Heavy, large, and the wire shelves still need covering</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One or two ferrets, and the double unit is too big or too expensive</td>
-                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a></td>
+                  <td className="p-3 font-bold"><a href="#prevue-feisty">Prevue Feisty Ferret</a><TableShopLink href={"/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"} product={"Prevue Feisty Ferret"} /></td>
                   <td className="p-3">Best value. Ferret-appropriate spacing. Mid price tier $$</td>
                   <td className="p-3">Not expandable, and smaller than the double modular unit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">One ferret, with generous daily out-of-cage time</td>
-                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a></td>
+                  <td className="p-3 font-bold"><a href="#kaytee-multilevel">Kaytee Multi-Level</a><TableShopLink href={"/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"} product={"Kaytee Multi-Level"} /></td>
                   <td className="p-3">Entry pick. Spacing in range if you verify the model. Price tier $</td>
                   <td className="p-3">Too tight for a pair living in it full-time</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -214,32 +214,32 @@ export default function BestDogCratesPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">House-training a puppy, or a calm adult who needs a fold-flat wire crate</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#midwest" className="text-brand-primary">MidWest iCrate</a><TableShopLink href={"/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"} product={"MidWest iCrate"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Wire Crate. Divider included. $40–80</td>
                       <td className="p-3 text-brand-text-mid">The dog destroys wire crates</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Escape artist or severe separation anxiety</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#impact" className="text-brand-primary">Impact High Anxiety</a><TableShopLink href={"/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"} product={"Impact High Anxiety"} /></td>
                       <td className="p-3 text-brand-text-mid">Aircraft-grade aluminum. Lifetime warranty. $300–500</td>
                       <td className="p-3 text-brand-text-mid">The dog is calm — the card calls this overkill, and the crate is heavy</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Airline cargo</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#petmate" className="text-brand-primary">Petmate Sky Kennel</a><TableShopLink href={"/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"} product={"Petmate Sky Kennel"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Airline Crate. IATA compliant. $40–120 by size</td>
                       <td className="p-3 text-brand-text-mid">In-cabin travel, or an escape artist. Confirm the airline before you buy</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A crate-trained adult, and the crate has to look like furniture</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#frisco" className="text-brand-primary">Frisco Furniture Style</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#frisco" className="text-brand-primary">Frisco Furniture Style</a><TableShopLink href={"/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"} product={"Frisco Furniture Style"} /></td>
                       <td className="p-3 text-brand-text-mid">Doubles as an end table. $80–160</td>
                       <td className="p-3 text-brand-text-mid">Puppies, chewers, or anxious dogs. Wood is not chew-resistant</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {

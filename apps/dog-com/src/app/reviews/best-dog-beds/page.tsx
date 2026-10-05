@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -96,20 +96,20 @@ export default function BestDogBedsPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A large or giant dog with arthritis, and you want the bed with a published trial</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#big-barker" className="text-brand-primary">Big Barker 7&quot; Orthopedic</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#big-barker" className="text-brand-primary">Big Barker 7&quot; Orthopedic</a><TableShopLink href={"/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"} product={"Big Barker 7&quot; Orthopedic"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Orthopedic. 7-inch foam. 10-year no-flatten warranty. $279–399</td>
                       <td className="p-3 text-brand-text-mid">You need a machine-washable cover, or the bed has to be easy to move. The card says spot-clean only, and it is heavy</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Everyday use for a medium or large dog, with a cover you can wash</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#casper" className="text-brand-primary">Casper Dog Bed</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#casper" className="text-brand-primary">Casper Dog Bed</a><TableShopLink href={"/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"} product={"Casper Dog Bed"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Premium. Machine-washable cover. Memory foam over a support base. $125–175</td>
                       <td className="p-3 text-brand-text-mid">Severe arthritis, where the card says Big Barker is the more therapeutic pick. Zippers can be chewed</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which bed fits which dog</h2>
               <FAQAccordion items={[
                 {

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How Pet Insurance Works — A Plain-English Guide | Vets.co", description: "Pet insurance reimburses you for covered vet bills after a deductible. Learn how premiums, deductibles, reimbursement rates, and annual limits fit together.", path: '/insurance/how-pet-insurance-works', type: 'article' })
@@ -215,13 +215,13 @@ export default function HowPetInsuranceWorksPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">The clinic paid directly, with a per-condition deductible</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=insurance-how-pet-insurance-works"} product={"Trupanion"} /></td>
                   <td className="p-3 text-brand-text-mid">Direct-Pay Model. Pays participating vets. Unlimited payouts. No per-incident caps. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">Premiums can run higher. No wellness or preventive add-on</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You pay the clinic, then file, and want a single plan</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-how-pet-insurance-works"} product={"Healthy Paws"} /></td>
                   <td className="p-3 text-brand-text-mid">Fast Reimbursement. One accident-and-illness plan. You choose deductible and rate. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on, and no direct payment to the vet</td>
                 </tr>

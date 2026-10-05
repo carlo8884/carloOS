@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -351,26 +351,26 @@ export default function BestFerretLitterPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A default that most ferrets accept</td>
-                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a></td>
+                  <td className="p-3 font-bold"><a href="#paper-pellet">Recycled paper pellets</a><TableShopLink href={"/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Recycled paper pellets"} /></td>
                   <td className="p-3">Best overall. Very low dust. Soft. Price tier $$</td>
                   <td className="p-3">Moderate odor control. Change the box rather than scoop and top up</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Odor, and you will buy the heat-treated form only</td>
-                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a></td>
+                  <td className="p-3 font-bold"><a href="#wood-pellet">Compressed wood pellets</a><TableShopLink href={"/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"} product={"Compressed wood pellets"} /></td>
                   <td className="p-3">Best for odor. Strong odor control. Price tier $</td>
                   <td className="p-3">Never loose aromatic pine or cedar shavings. Harder underfoot than paper</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">A ferret that rejects paper or wood texture</td>
-                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a></td>
+                  <td className="p-3 font-bold"><a href="#grass-pellet">Grass or plant-fiber pellets</a><TableShopLink href={"/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"} product={"Grass or plant-fiber pellets"} /></td>
                   <td className="p-3">Soft alternative. Low dust. Non-clumping. Price tier $$</td>
                   <td className="p-3">Moderate odor, and the pellets break down faster when wet</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

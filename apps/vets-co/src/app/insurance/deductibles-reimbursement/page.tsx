@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pet Insurance Deductibles & Reimbursement Explained | Vets.co", description: "Annual vs. per-condition deductibles, reimbursement rates, and annual limits all shape your real cost. Learn how to balance premium against out-of-pocket risk.", path: '/insurance/deductibles-reimbursement', type: 'article' })
@@ -218,13 +218,13 @@ export default function DeductiblesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">One accident-and-illness plan, and you set the deductible and rate</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} /></td>
                   <td className="p-3 text-brand-text-mid">Simple Levers. Single plan. Fast reimbursement. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on. Confirm the annual-limit structure on the quote</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Several deductible and reimbursement combinations to compare</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pets-best" className="text-brand-primary">Pets Best</a><TableShopLink href={"/go/pets-best/home?s=insurance-deductibles-reimbursement"} product={"Pets Best"} /></td>
                   <td className="p-3 text-brand-text-mid">Tiered Options. Multiple plan tiers. Pay-then-claim. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">More options to compare. Standard exclusions apply. The card also notes no upper age limit</td>
                 </tr>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -99,26 +99,26 @@ export default function BestGPSTrackerPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The longest battery and escape alerts</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3</a><TableShopLink href={"/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"} product={"Fi Series 3"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. Score 9.4. $149 + $9.99/mo</td>
                       <td className="p-3 text-brand-text-mid">You do not want a subscription or a higher device price. Collar bands are sold separately</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Health monitoring with the location</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#whistle" className="text-brand-primary">Whistle Go Explore</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#whistle" className="text-brand-primary">Whistle Go Explore</a><TableShopLink href={"/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker"} product={"Whistle Go Explore"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Health Monitoring. Score 9.0. $79 + $9.95/mo</td>
                       <td className="p-3 text-brand-text-mid">You want Fi&apos;s battery. The card says the battery is shorter, the collar is bulkier, and the health data needs interpretation</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The lowest printed device price and monthly fee</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#tractive" className="text-brand-primary">Tractive GPS</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#tractive" className="text-brand-primary">Tractive GPS</a><TableShopLink href={"/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"} product={"Tractive GPS"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget. Score 8.8. $49 + $5/mo. 175 countries</td>
                       <td className="p-3 text-brand-text-mid">You do not want to charge every 2–5 days, or you want health monitoring. The card says there is none</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which tracker fits</h2>
               <FAQAccordion items={[
                 {

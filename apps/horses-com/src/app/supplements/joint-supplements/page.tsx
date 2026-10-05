@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -252,32 +252,32 @@ export default function JointSupplementsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">The ASU formula with disclosed amounts</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink href={"/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements"} product={"Cosequin ASU Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best Evidence (ASU). NASC seal. $60–95 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">Active synovitis that the card says needs intra-articular or systemic treatment, not a scoop</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">One tub that covers joint inputs and the base ration extras</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum-cj" className="text-brand-primary">Platinum Performance CJ</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum-cj" className="text-brand-primary">Platinum Performance CJ</a><TableShopLink href={"/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements"} product={"Platinum Performance CJ"} /></td>
                     <td className="p-3 text-brand-text-mid">Best Comprehensive. Glucosamine through omega-3 in one product. $130–180 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">You want the lower price. The card calls this the highest cost in the set, and some ingredients are weaker evidence</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A senior horse on daily packs</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a><TableShopLink href={"/go/smartpak/smartflex-senior?s=supplements-joint-supplements"} product={"SmartFlex Senior"} /></td>
                     <td className="p-3 text-brand-text-mid">Best Senior. Glucosamine, chondroitin, MSM, HA. $45–65 per 28-day supply</td>
                     <td className="p-3 text-brand-text-mid">You specifically want ASU. The card says this formula does not include it</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine EPA and DHA, not flax</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a><TableShopLink href={"/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"} product={"Marine omega-3"} /></td>
                     <td className="p-3 text-brand-text-mid">Reference ingredient. Fish oil or algal DHA/EPA. Card target 10–20 g combined. $25–60 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">The label only says omega-3 from flax. The card says equine conversion of ALA is poor</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-04" />
+            <ComparisonFoot updated="2026-10-05" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
