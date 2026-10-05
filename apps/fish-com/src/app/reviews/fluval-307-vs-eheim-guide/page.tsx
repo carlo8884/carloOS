@@ -68,7 +68,7 @@ export default function FluvalVsEheimGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-canister-filters">canister review</Link>. The Fluval 307 is for a 40–70 gallon tank. The Eheim Classic 350 is for a filter meant to keep running for years. Penn Plax on that page is the budget canister, and it is a different comparison.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-canister-filters">canister review</Link>. This pair is two canisters. Hang-on-back versus canister is the <Link href="/reviews/hob-vs-canister-guide">AquaClear 70 versus Fluval 307</Link> page. The Fluval 307 is for a 40–70 gallon tank. The Eheim Classic 350 is for a filter meant to keep running for years. Penn Plax on that page is the budget canister, and it is a different comparison.</p>
         <h2>What the review says about the Fluval 307</h2>
         <p>The Fluval 307 is Best Overall, score 9.4, and the winner. Tank size is 40–70 gallons. Flow is 303 GPH, which the review calls an actual rate rather than an inflated one. Noise is near-silent. AquaStop lets you change media without disconnecting the hoses. Media is four separated baskets. The warranty is 5 years. The printed price is $120–150. The cons say the primer button can be finicky on the first start, and that it costs more than the Penn Plax on the same page.</p>
         <p>The <Link href="/tools/filter-gph-calculator">filter-GPH calculator</Link> applies the 4–6 times turnover rule from that review. Match the result to the flow the review already prints.</p>

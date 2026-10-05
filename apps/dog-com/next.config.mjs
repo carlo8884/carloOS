@@ -29,6 +29,11 @@ const nextConfig = {
         permanent: false,
       },
       // Browsers request these even when the page links /icon.svg and /apple-icon.
+      {
+        source: '/reviews/easy-walk-vs-front-range-guide',
+        destination: '/reviews/front-clip-vs-back-clip-guide',
+        permanent: true,
+      },
       { source: '/favicon.ico', destination: '/icon.svg', permanent: true },
       { source: '/favicon.png', destination: '/apple-icon', permanent: true },
       { source: '/apple-touch-icon.png', destination: '/apple-icon', permanent: true },

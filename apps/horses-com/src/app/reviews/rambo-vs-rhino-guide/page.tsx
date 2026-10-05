@@ -4,7 +4,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Rambo vs Rhino Horse Blanket | Horses.com',
+  title: 'Rambo vs Rhino, Same Brand | Horses.com',
   description: 'Horseware Rambo Original versus Rhino Original: denier, fill, hardware, and price already on the winter blanket review. No new specs.',
   path: '/reviews/rambo-vs-rhino-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Rambo vs Rhino turnout',
+  title: 'Rambo vs Rhino, same brand',
   description: 'When the Rambo Original is the long-term turnout and when the Rhino is the step down.',
   url: 'https://horses.com/reviews/rambo-vs-rhino-guide',
   imageUrl: '',
@@ -43,7 +43,7 @@ export default function RamboVsRhinoGuidePage() {
       siteId="horses-com"
       schema={schema}
       hero={{
-        title: 'Rambo vs Rhino turnout',
+        title: 'Rambo vs Rhino, same brand',
         subtitle: 'Both are Horseware. The blanket review already separates the ballistic reference blanket from the ripstop step down. Denier, fill, and price below are the ones on the blanket review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
@@ -68,7 +68,7 @@ export default function RamboVsRhinoGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the premium reference and the Horseware Rhino Original as the modern standard under it. They are not the same shell. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
+        <p>The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> treats the Horseware Rambo Original as the premium reference and the Horseware Rhino Original as the modern standard under it. They are not the same shell. <Link href="/reviews/rambo-vs-schneiders-guide">Rambo versus Schneiders</Link> is the heavy-winter comparison, not this same-brand step down. Measure the horse with the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> before either name matters. A blanket that is short in the shoulder rubs, whichever logo is on the neck.</p>
         <h2>Rambo Original</h2>
         <p>The Rambo listing, scored 9.4, specifies a 1000-denier ballistic nylon shell and fill weights of 0, 100, 200, and 400 grams. The review credits the leg-arch shoulder with the cut that defined the category, and it says owners report blankets still in service after many winters. The explicit tradeoff is price: a new Rambo retails 50 to 80 percent more than the equivalent fill from a value-tier brand. The listing&apos;s hardware contrast, repeated on the Rhino listing, is stainless on the Rambo versus polymer on the Rhino. Buy the Rambo when you expect to keep the horse long enough that replacing a blanket every couple of winters costs more than the premium.</p>
         <h2>Rhino Original</h2>

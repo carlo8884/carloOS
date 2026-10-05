@@ -39,13 +39,7 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
       { title: 'Dog crates', href: '/reviews/best-dog-crates', kind: 'Comparison' },
     ],
     '/reviews/best-dog-harnesses': [
-      { title: 'Easy Walk vs Front Range', href: '/reviews/easy-walk-vs-front-range-guide', kind: 'Guide' },
-      { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', kind: 'Guide' },
-      { title: 'Harness and collar size', href: '/tools/harness-collar-size', kind: 'Tool' },
-    ],
-    '/reviews/easy-walk-vs-front-range-guide': [
-      { title: 'Dog harnesses', href: '/reviews/best-dog-harnesses', kind: 'Comparison' },
-      { title: 'Front-clip vs back-clip', href: '/reviews/front-clip-vs-back-clip-guide', kind: 'Guide' },
+      { title: 'Easy Walk vs Front Range by clip', href: '/reviews/front-clip-vs-back-clip-guide', kind: 'Guide' },
       { title: 'Harness and collar size', href: '/tools/harness-collar-size', kind: 'Tool' },
     ],
     '/reviews/front-clip-vs-back-clip-guide': [
@@ -169,13 +163,7 @@ export const RELATED_READS: Partial<Record<SiteId, Record<string, RelatedRead[]>
   },
   'fish-com': {
     '/reviews/best-aquarium-filters': [
-      { title: 'AquaClear 70 vs Fluval 307', href: '/reviews/aquaclear-70-vs-fluval-307-guide', kind: 'Guide' },
-      { title: 'HOB vs canister', href: '/reviews/hob-vs-canister-guide', kind: 'Guide' },
-      { title: 'Filter GPH calculator', href: '/tools/filter-gph-calculator', kind: 'Tool' },
-    ],
-    '/reviews/aquaclear-70-vs-fluval-307-guide': [
-      { title: 'Aquarium filters', href: '/reviews/best-aquarium-filters', kind: 'Comparison' },
-      { title: 'HOB vs canister', href: '/reviews/hob-vs-canister-guide', kind: 'Guide' },
+      { title: 'AquaClear 70 vs Fluval 307', href: '/reviews/hob-vs-canister-guide', kind: 'Guide' },
       { title: 'Filter GPH calculator', href: '/tools/filter-gph-calculator', kind: 'Tool' },
     ],
     '/reviews/best-canister-filters': [

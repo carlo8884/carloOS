@@ -78,16 +78,9 @@ const REVIEWS = [
     badge: 'Planted Tanks',
   },
   {
-    title: 'HOB vs Canister Filter',
-    desc: 'AquaClear 70 versus Fluval 307 on flow, cleaning, noise, and the price already on the filter cards.',
+    title: 'HOB vs Canister: AquaClear or Fluval',
+    desc: 'The hang-on-back versus the canister, using the AquaClear 70 and the Fluval 307 on the filter review.',
     href: '/reviews/hob-vs-canister-guide',
-    group: 'fish-reviews-filters',
-    badge: 'Filtration',
-  },
-  {
-    title: 'AquaClear 70 vs Fluval 307',
-    desc: 'The AquaClear 70 hang-on-back versus the Fluval 307 canister, using the flow and prices already in the filter review.',
-    href: '/reviews/aquaclear-70-vs-fluval-307-guide',
     group: 'fish-reviews-filters',
     badge: 'Filtration',
   },

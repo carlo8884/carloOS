@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'Rambo vs Schneiders Turnout | Horses.com',
+  title: 'Rambo vs Schneiders Heavy Winter | Horses.com',
   description: 'The blanket review scores the Rambo Original 9.4 and the Schneiders StormShield 9.2. Mid-weight premium, or a heavy northern fill.',
   path: '/reviews/rambo-vs-schneiders-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'Rambo or Schneiders',
+  title: 'Rambo or Schneiders heavy winter',
   description: 'The Rambo Original or the Schneiders StormShield Euro. Scores and prices are on the winter blanket review.',
   url: 'https://horses.com/reviews/rambo-vs-schneiders-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function RamboVsSchneidersGuidePage() {
       siteId="horses-com"
       schema={schema}
       hero={{
-        title: 'Rambo or Schneiders',
+        title: 'Rambo or Schneiders heavy winter',
         subtitle: 'Horseware’s premium mid-weight turnout, or Schneiders’ heavy northern blanket. Denier, fill, and prices below are the ones on the blanket review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
@@ -68,7 +68,7 @@ export default function RamboVsSchneidersGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link>. The Horseware Rambo Original is the premium turnout. The Schneiders StormShield Euro is the heavy-winter blanket. The Rhino on that review is Horseware’s mid-tier, and it is a different comparison.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link>. The Horseware Rambo Original is the premium turnout. The Schneiders StormShield Euro is the heavy-winter blanket. <Link href="/reviews/rambo-vs-rhino-guide">Rambo versus Rhino</Link> is the same-brand step down, not this heavy-winter pair.</p>
         <h2>What the review says about the Rambo</h2>
         <p>The Rambo Original is Best Premium Turnout, score 9.4, and the winner. The shell is 1000-denier ballistic nylon. Fill options are 0 g, 100 g, 200 g, and 400 g. The neck is a V-front high neck with a leg arch. Hardware is a stainless surcingle and T-bar buckles. The warranty is Horseware’s lifetime tear and abrasion repair. The review lists typical multi-season use of 5–8 years. The printed price is $280–420. The cons say the price is the premium tier, shoulder room is less generous for a very wide horse, and the color range is smaller than the Rhino.</p>
         <p>Size the blanket with the <Link href="/tools/horse-blanket-size-calculator">blanket-size calculator</Link>. The inch measurement comes from that tool.</p>

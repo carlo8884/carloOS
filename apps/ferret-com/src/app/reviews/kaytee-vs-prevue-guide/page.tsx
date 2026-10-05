@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
-  title: 'Kaytee vs Prevue Ferret Cage | Ferret.com',
+  title: 'Kaytee vs Prevue for One or Two | Ferret.com',
   description: 'The cage review scores the Prevue Feisty Ferret 8.4 and the Kaytee Multi-Level 7.6. A pair-sized cage, or a single-ferret starter.',
   path: '/reviews/kaytee-vs-prevue-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
-  title: 'Kaytee or Prevue',
+  title: 'Kaytee or Prevue for one or two',
   description: 'The Prevue Feisty Ferret or the Kaytee Multi-Level, for one ferret or a pair. Scores are on the cage review.',
   url: 'https://ferret.com/reviews/kaytee-vs-prevue-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function KayteeVsPrevueGuidePage() {
       siteId="ferret-com"
       schema={schema}
       hero={{
-        title: 'Kaytee or Prevue',
+        title: 'Kaytee or Prevue for one or two',
         subtitle: 'A chain-store cage for one ferret, or the Prevue the review sizes for one or two. Spacing and fit below are the ones on the cage review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
@@ -67,7 +67,7 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Prevue Feisty Ferret ranks above the Kaytee Multi-Level. The Ferret Nation double unit on that review is the overall winner, and it is a separate comparison.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Prevue Feisty Ferret ranks above the Kaytee Multi-Level. <Link href="/reviews/kaytee-vs-ferret-nation-guide">Kaytee versus Ferret Nation</Link> is the group cage. The Ferret Nation double unit on that review is the overall winner, and it is a separate comparison.</p>
         <h2>What the review says about Prevue</h2>
         <p>The Prevue Pet Products Feisty Ferret Cage is Best Value, score 8.4. Bar spacing is listed as ferret-appropriate. It includes several shelves and ramps. The price tier is mid. The review says the floor suits one to two ferrets, and that wire shelves and ramps still need fleece or a solid cover. It is not expandable, and it is smaller than a double modular unit.</p>
         <h2>What the review says about Kaytee</h2>

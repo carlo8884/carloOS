@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Healthy Paws vs Embrace Pet Insurance | Vets.co',
+  title: 'Healthy Paws vs Embrace Wellness | Vets.co',
   description: 'Healthy Paws for fast reimbursement, or Embrace when you want a wellness add-on. Printed prices are not a quote.',
   path: '/reviews/healthy-paws-vs-embrace-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Healthy Paws or Embrace',
+  title: 'Healthy Paws or Embrace wellness',
   description: 'Healthy Paws for reimbursement speed, or Embrace for a wellness add-on. Scores are on the insurance review.',
   url: 'https://vets.co/reviews/healthy-paws-vs-embrace-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       siteId="vets-co"
       schema={schema}
       hero={{
-        title: 'Healthy Paws or Embrace',
+        title: 'Healthy Paws or Embrace wellness',
         subtitle: 'Fast reimbursement, or a wellness add-on. Prices and scores below are the ones on the insurance review, not a quote for your pet.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
@@ -68,7 +68,7 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Scores and monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. Those bands are not a quote for your pet.</p>
+        <p>Scores and monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
         <p>Healthy Paws is Fastest Reimbursement, score 9.1. Reimbursement is 80–90%. The review says the app claim and an average of about two days make the wait short. Payouts are unlimited. The deductible is annual. The printed price is $40–85 a month. It does not pay the clinic at checkout, and it has no wellness add-on. The review says it fits an owner who would rather pay the vet and be paid back quickly.</p>
         <h2>What the review says about Embrace</h2>

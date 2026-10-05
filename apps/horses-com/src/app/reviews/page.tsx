@@ -43,7 +43,7 @@ const REVIEWS = [
   {
     slug: 'rambo-vs-rhino-guide',
     group: 'horses-reviews-blankets',
-    title: 'Rambo vs Rhino Turnout',
+    title: 'Rambo vs Rhino, Same Brand',
     description:
       'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
   },
@@ -57,21 +57,21 @@ const REVIEWS = [
   {
     slug: 'rambo-vs-schneiders-guide',
     group: 'horses-reviews-blankets',
-    title: 'Rambo vs Schneiders',
+    title: 'Rambo vs Schneiders Heavy Winter',
     description:
       'Horseware’s premium mid-weight turnout, or Schneiders’ heavy fill for a northern winter. Denier and prices are already on the blanket review.',
   },
   {
     slug: 'cosequin-vs-equithrive-guide',
     group: 'horses-reviews-supplements',
-    title: 'Cosequin ASU vs Equithrive',
+    title: 'Cosequin vs Equithrive for Joints',
     description:
       'ASU with glucosamine, or a resveratrol pellet the supplement review treats as a complement. Monthly prices are already on that review.',
   },
   {
     slug: 'ker-eo3-vs-equithrive-guide',
     group: 'horses-reviews-supplements',
-    title: 'KER EO-3 vs Equithrive',
+    title: 'KER EO-3 vs Equithrive Omega-3',
     description:
       'Marine omega-3 liquid, or a resveratrol pellet. Monthly prices are the ones on the supplement review.',
   },

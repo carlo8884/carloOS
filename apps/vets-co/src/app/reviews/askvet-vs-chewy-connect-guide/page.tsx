@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'AskVet vs Chewy Connect | Vets.co',
+  title: 'AskVet Chat vs Chewy Connect | Vets.co',
   description: 'AskVet is a $30 chat subscription. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.',
   path: '/reviews/askvet-vs-chewy-connect-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'AskVet or Chewy Connect',
+  title: 'AskVet chat or Chewy Connect',
   description: 'AskVet for a chat subscription, or Chewy Connect for people who already shop at Chewy. Scores are on the telehealth page.',
   url: 'https://vets.co/reviews/askvet-vs-chewy-connect-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       siteId="vets-co"
       schema={schema}
       hero={{
-        title: 'AskVet or Chewy Connect',
+        title: 'AskVet chat or Chewy Connect',
         subtitle: 'Unlimited chat for a flat monthly fee, or telehealth included with a Chewy+ membership. Prices below are the ones on the telehealth page.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
@@ -68,7 +68,7 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. Vetster is the overall service on that page, and it is a separate comparison.</p>
+        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
         <h2>What the page says about AskVet</h2>
         <p>AskVet is Best Subscription, score 8.8. Consults are chat only, with no video exam. The printed price is $30 a month for unlimited consultations. A typical wait is under 5 minutes. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that chat limits how much of a physical problem can be assessed.</p>
         <h2>What the page says about Chewy Connect</h2>
