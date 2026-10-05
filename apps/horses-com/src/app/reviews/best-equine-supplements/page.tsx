@@ -218,7 +218,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Single-product approach simplifies daily ration', 'NASC sealed', 'Strong brand and veterinary presence', 'Marine-source omega-3 (not flax)']}
               cons={['Premium price tier', 'Same nutrient targets cheaper as separate products', 'Auto-ship lock-in pricing structure']}
               price="$95–140/mo"
-              ctaText="Shop Platinum on Amazon →"
+              ctaText="Shop Platinum Performance equine wellness on Amazon →"
               ctaHref="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="platinum-performance-equine"
