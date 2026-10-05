@@ -167,6 +167,15 @@ export function partnerNeededLabel(label: string): string {
   return `${base} — partner ID needed`
 }
 
+/** True when this href is a Trupanion, Healthy Paws, or Embrace quote and its tag is unset. */
+export function partnerQuoteHeld(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  return !partnerTagReady(href, env)
+}
+
 export function resolveTag(
   vendor: string,
   env: NodeJS.ProcessEnv = process.env,

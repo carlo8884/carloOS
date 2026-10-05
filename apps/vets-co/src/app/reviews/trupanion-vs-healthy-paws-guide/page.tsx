@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -76,8 +76,8 @@ export default function TrupanionVsHealthyPawsGuidePage() {
         <h2>Who should start where</h2>
         <p>Start with Trupanion if the reason you are shopping is a large emergency you do not want to finance yourself at the front desk. Start with Healthy Paws if you can pay the clinic and you want the faster reimbursement the review describes, at the lower printed range. If the missing piece is vaccines and wellness exams, neither of these policies is that product. The review sends that job to Embrace. A wellness plan is also not a substitute for either policy. That distinction is the <Link href="/insurance/wellness-plans-vs-insurance">wellness versus insurance</Link> page.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The link below opens the Trupanion quote from the insurance review. A quote is not the range printed above.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide">Get a Trupanion quote →</a></p>
+        <p>The quote button stays off until a partner ID is set. When that ID is set, it opens the Trupanion quote from the insurance review. A quote is not the range printed above.</p>
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-healthy-paws-guide" label="Get a Trupanion quote →" /></p>
         <EmailCapture
           variant="inline"
           siteId="vets-co"

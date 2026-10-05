@@ -1,10 +1,10 @@
-import { partnerNeededLabel, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 /**
  * The page's top-pick hop, in normal flow under the title.
  * Disclosure sits above the link. Nothing is fixed or overlaid.
- * holdWithoutPartnerId keeps a Trupanion, Healthy Paws, or Embrace quote
- * visible but disabled until that vendor tag is set.
+ * An unset Trupanion, Healthy Paws, or Embrace quote stays visible but
+ * disabled. holdWithoutPartnerId is the same hold for callers that opt in.
  */
 export function PrimaryHop({
   href,
@@ -15,7 +15,7 @@ export function PrimaryHop({
   label: string
   holdWithoutPartnerId?: boolean
 }) {
-  const held = holdWithoutPartnerId && !partnerTagReady(href)
+  const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
   if (held) {
     return (
       <div className="mb-5" data-primary-hop="true">
