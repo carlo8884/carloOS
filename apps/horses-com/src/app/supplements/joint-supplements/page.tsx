@@ -181,7 +181,7 @@ export default function JointSupplementsPage() {
               pros={['Comprehensive ingredient profile in one product', 'No need to stack multiple supplements', 'Premium quality control']}
               cons={['Significantly more expensive than category average', 'Some ingredients in the formula are Tier 3 evidence', 'Auto-ship lock-in']}
               price="$130–180 per 30-day supply"
-              ctaText="Visit Platinum Performance →"
+              ctaText="Visit Platinum Performance on Amazon →"
               ctaHref="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="platinum-cj"
