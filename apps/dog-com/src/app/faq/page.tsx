@@ -125,7 +125,7 @@ export default function FAQPage() {
           style={{ fontSize: 'clamp(30px, 4vw, 52px)' }}>
           Dog Health FAQ
         </h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-04" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           Answers to the most common dog health questions, drawn from current AVMA, ACVIM, and WSAVA guidance. Updated as guidelines change.
         </p>

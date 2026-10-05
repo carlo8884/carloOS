@@ -171,7 +171,7 @@ export default function FerretVetVisitPrepPage() {
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
         ]}
- priceAsOf="2026-10-05">
+ priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"

@@ -37,7 +37,7 @@ export default function DogHeartDiseasePage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-10-05">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
 
           <h2 id="mmvd">Myxomatous Mitral Valve Disease (MMVD)</h2>

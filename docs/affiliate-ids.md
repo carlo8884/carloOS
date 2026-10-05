@@ -20,3 +20,7 @@ Setting the variable switches that partner's `/go` hop to the tagged partner URL
 Fish, horses, and ferret do not register Trupanion, Healthy Paws, or Embrace. Do not put those three variables on `carlo-os-fish-com`, `horses-com`, or `ferret-com`.
 
 `/go` still records the page source from `?s=` on the hop. That source is separate from the partner id above.
+
+## Amazon Associates
+
+Other docs still name the tag `boltonpets20-20`. The live `AFF_AMAZON_TAG` value is `boltonpets20-20ls`, and Carlo needs to confirm it. The hop copies that env value as-is and appends nothing, so a correction is an env change only. Do not change the Vercel value from this repo.

@@ -92,7 +92,7 @@ export default function VetsPomeranianHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-10-05"
+        priceAsOf="2026-10-04"
         siteId="vets-co"
         contentType="breed"
         hero={{

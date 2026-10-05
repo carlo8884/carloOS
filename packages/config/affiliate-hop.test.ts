@@ -4,6 +4,7 @@ import {
   resolveAffiliateHop,
   stripPlaceholder,
   resolveTag,
+  amazonAssociateTag,
   isChewyHopLive,
   visibleChewyHref,
   amazonFallbackFromChewyHref,
@@ -53,6 +54,19 @@ describe('resolveAffiliateHop', () => {
     assert.equal(hop.target.includes('boltonpets20-20ls'), true)
     assert.equal(hop.target.includes('PLACEHOLDER'), false)
     assert.equal(hop.target.includes('ferret%20cage'), true)
+  })
+
+  it('copies AFF_AMAZON_TAG verbatim and appends nothing', () => {
+    assert.equal(amazonAssociateTag({ AFF_AMAZON_TAG: 'boltonpets20-20ls' }), 'boltonpets20-20ls')
+    assert.equal(amazonAssociateTag({ AFF_AMAZON_TAG: 'boltonpets20-20' }), 'boltonpets20-20')
+    assert.equal(amazonAssociateTag({}), '')
+    const hop = resolveAffiliateHop({
+      vendor: 'amazon',
+      sku: 'B00TESTASIN',
+      routes,
+      env: { AFF_AMAZON_TAG: 'boltonpets20-20' },
+    })
+    assert.equal(hop.target, 'https://amazon.com/dp/B00TESTASIN?tag=boltonpets20-20')
   })
 
   it('treats + in a search sku as a space so Amazon does not search for plus signs', () => {
