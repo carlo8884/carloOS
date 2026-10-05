@@ -13,7 +13,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const REVIEW_GROUPS = [
   { id: 'vets-reviews-insurance', label: 'Insurance', intro: 'Insurance comparisons. Printed prices are not a quote.' },
   { id: 'vets-reviews-telehealth', label: 'Telehealth', intro: 'Remote-vet comparisons. They are not emergency care.' },
@@ -129,28 +128,11 @@ export default function VetsReviewsPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet reviews buyer-guide chart /
-            pet fridge reviews comparison card /
-            veterinary reviews reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / enrollment hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+cat+calculator+tools+chart /
-            cat+fridge+measurement+card /
-            feline+calculator+reference+handbook,
-            insurance-hub
-            laminated+pet+insurance+policy+map+chart /
-            pet+fridge+insurance+levers+card /
-            veterinary+insurance+reference+handbook,
-            and child four+column+accounting+pad /
-            self+inking+date+stamp hops. */}
               </section>
 
       <DirectoryPlacesCta listings={listings} noun="licensed veterinarians" />

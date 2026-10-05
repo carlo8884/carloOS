@@ -130,12 +130,9 @@ export default function BootsWrapsPage() {
 
           <h2 id="dangers">The Dangers of Wrapping Wrong</h2>
           <p>A leg bandage applied too tightly, unevenly, or without adequate padding can cut off circulation and create pressure on the tendons -- in the worst case causing a bandage bow, lasting tendon damage. Bandages must be applied over sufficient even padding, with consistent, moderate tension, in the correct direction, and never left on too long or allowed to slip. Because of these risks, bandaging is a skill best learned hands-on from a knowledgeable horseperson or veterinarian rather than from a diagram alone.</p>
-          
 
           <h2 id="support">Do Boots Support Tendons?</h2>
           <p>Owners often assume boots meaningfully support the tendons and ligaments. In reality, the forces on a galloping or landing horse&apos;s tendons are enormous, and boots provide impact protection rather than genuine structural support against those loads. Their real value is preventing the cuts, knocks, and brushing injuries that come from strikes and interference. Choosing boots for protection, fitting them snugly but not tightly, and keeping them clean and dry inside (grit under a boot causes rubs) matters more than chasing support claims.</p>
-
-
 
           <h2 id="picks">Boot and Wrap Picks</h2>
           <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -217,73 +214,6 @@ export default function BootsWrapsPage() {
             ctaAffiliateProduct="standing-wraps-and-quilts"
           />
 
-          {/* Shop leftover kit — unused vs #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -294,7 +224,6 @@ export default function BootsWrapsPage() {
                 amazonHref="/go/amazon-brand/horse+brushing+boots?s=boots-and-wraps"
                 amazonLabel="Browse horse brushing boots on Amazon →"
               />
-
 
           </div>
           </div>

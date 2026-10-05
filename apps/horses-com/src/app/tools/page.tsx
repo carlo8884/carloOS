@@ -184,33 +184,6 @@ export default function ToolsHub() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn calculator-tools chart /
-            horse stall-door measurement card /
-            equine calculator reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1127
-            laminated+horse+barn+owner+guides+chart /
-            horse+stall+door+owner+guides+card /
-            equine+owner+guides+reference+handbook, #1126
-            laminated+horse+barn+daily+care+chart /
-            horse+stall+door+care+card /
-            equine+husbandry+reference+handbook, #1125
-            laminated+horse+barn+emergency+triage+chart /
-            horse+stall+door+vital+signs+card /
-            equine+health+reference+handbook, #1124
-            laminated+horse+barn+forage+first+chart /
-            horse+stall+door+ration+card /
-            equine+nutrition+reference+handbook, #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, tool children
-            horse+weight+tape / horse+measuring+stick /
-            horse+body+condition+score+chart /
-            horse+measuring+tape /
-            livestock+barn+scale. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

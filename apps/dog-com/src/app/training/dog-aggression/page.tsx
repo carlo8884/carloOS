@@ -111,7 +111,6 @@ export default function DogAggressionPage() {
           sequence and creates dogs that bite without warning. Growling is communication. It should be
           respected, not punished.
         </p>
-        
 
         <h2>Types of Aggression</h2>
         <p>
@@ -148,7 +147,6 @@ export default function DogAggressionPage() {
           generalized. History, context, and the specific presentation determine intervention.
         </p>
 
-
         <h2>What Dominance Theory Gets Wrong</h2>
         <p>
           The dominance theory of dog behavior — the idea that dogs are constantly trying to dominate
@@ -161,7 +159,6 @@ export default function DogAggressionPage() {
           increase anxiety, suppress warning signals, damage the human-dog relationship, and
           consistently make aggression more dangerous.
         </p>
-
 
         <h2>When Professional Help Is Required</h2>
         <p>
@@ -177,17 +174,6 @@ export default function DogAggressionPage() {
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-        {/* Shop leftover kit — unused vs #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook, #1149
-            laminated+horse+snaffle+vs+curb+bit+checklist /
-            horse+bit+width+and+wrinkle+fit+question+card /
-            horse+bit+hand+severity+watch+log+notebook,
-            basic-commands puppy+training+treats / dog+training+clicker / dog+long+line+leash. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -198,7 +184,6 @@ export default function DogAggressionPage() {
               amazonHref="/go/amazon-brand/dog+leash?s=training-dog-aggression"
               amazonLabel="Browse dog leash on Amazon →"
             />
-
 
           </div>
         </div>

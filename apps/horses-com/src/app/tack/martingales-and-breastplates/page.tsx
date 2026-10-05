@@ -111,7 +111,6 @@ export default function MartingalesBreastplatesPage() {
 
           <h2 id="standing-running">Standing vs Running</h2>
           <p>The two main types act differently. A standing martingale runs from the girth to the noseband and sets a fixed upper limit on head height regardless of the reins; it is common in hunting and some jumping. A running martingale runs from the girth and divides into two straps ending in rings through which the reins pass, applying downward pressure on the reins only when the horse raises its head beyond a certain point -- it acts through the reins rather than fixing the head. Each must be fitted to the correct length for its type.</p>
-          
 
           <h2 id="breastplates">Breastplates and Breastgirths</h2>
           <p>A breastplate (or breastgirth) attaches to the saddle and passes around the front of the chest to stop the saddle sliding backward, which matters on steep terrain, when jumping, and on horses whose conformation lets a saddle slip. Breastgirths are a simpler strap across the chest; hunting and jumping breastplates are more elaborate, sometimes with attachment points for a martingale. They are a security and safety aid, keeping the saddle in place, not a training device.</p>
@@ -124,105 +123,11 @@ export default function MartingalesBreastplatesPage() {
             <li><strong>Breastplate fit</strong> -- snug enough to stop the saddle slipping but not so tight it restricts the shoulders or presses the windpipe.</li>
           </ul>
 
-
           <h2 id="misuse">Use and Misuse</h2>
           <p>Martingales are sometimes reached for to force a horse&apos;s head down or to mask resistance, which is misuse -- a too-tight or wrongly fitted martingale restricts the horse, causes discomfort and tension, and can be dangerous if it limits the head when the horse needs to balance (for example over a fence or on landing). Head-carriage problems usually stem from training, pain, fit, or the rider&apos;s hands, and addressing those is the real fix. Used correctly and at the right length, a martingale is a safety limit, and a breastplate a security aid -- not substitutes for schooling.</p>
 
-
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Shop leftover kit — unused vs #1144
-              laminated+horse+turnout+vs+stable+rug+checklist /
-              horse+denier+vs+fill+question+card /
-              horse+over+rugging+sweat+shiver+watch+log+notebook, #1143
-              laminated+horse+turnout+halter+breakaway+checklist /
-              horse+rope+vs+flat+halter+task+question+card /
-              horse+quick+release+wither+height+tie+log+notebook, #1142
-              laminated+horse+leg+bandage+bow+technique+checklist /
-              horse+boot+impact+not+tendon+support+question+card /
-              horse+boot+grit+rub+clean+dry+log+notebook, #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              blanketing
-              horse+turnout+blanket /
-              horse+waterproof+sheet /
-              horse+lightweight+blanket /
-              horse+medium+weight+blanket /
-              horse+heavyweight+blanket,
-              blanket-size
-              winter+horse+blanket /
-              horse+turnout+sheet /
-              horse+stable+blanket /
-              horse+fleece+cooler,
-              fly-control
-              horse+fly+sheet,
-              cost-calculator
-              horse+halter+lead+rope,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps /
-              horse+trailer+ties,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -233,7 +138,6 @@ export default function MartingalesBreastplatesPage() {
                 amazonHref="/go/amazon-brand/horse+martingale?s=martingales"
                 amazonLabel="Browse horse martingale on Amazon →"
               />
-
 
           </div>
           </div>

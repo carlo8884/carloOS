@@ -82,7 +82,6 @@ export default function TrainerCredentialsPage() {
             </div>
           </div>
         ))}
-        
 
         <h2 id="red-flags">Red Flags to Walk Away From</h2>
         {RED_FLAGS.map(r => (
@@ -104,7 +103,6 @@ export default function TrainerCredentialsPage() {
         </ul>
         <p>A trainer who becomes defensive, evasive, or dismissive of these questions is not the right trainer for you. Qualified professionals welcome questions about their methods and credentials.</p>
 
-
         <h2 id="match">Matching Credential to Problem</h2>
         <ul>
           <li><strong>Puppy basics, obedience:</strong> CPDT-KA or CPDT-KSA</li>
@@ -114,22 +112,8 @@ export default function TrainerCredentialsPage() {
           <li><strong>Severe anxiety, aggression requiring medication:</strong> DACVB — the only behavior professional who can prescribe</li>
         </ul>
 
-
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-        {/* Shop leftover kit — unused vs #1153
-            laminated+dog+training+red+flags+checklist /
-            dog+force+free+trainer+interview+question+card /
-            dog+easy+walk+ruffwear+front+range+watch+log+notebook, #1152
-            laminated+dog+aggression+warning+signal+sequence+checklist /
-            dog+aggression+type+and+function+question+card /
-            dog+aggression+never+alpha+roll+watch+log+notebook, #1151
-            laminated+dog+resource+guarding+trade+game+checklist /
-            dog+food+bowl+safety+question+card /
-            dog+resource+guarding+never+punish+growl+watch+log+notebook, #1150
-            laminated+dog+off+leash+recall+proofing+checklist /
-            dog+20+to+30+foot+long+line+question+card /
-            dog+recall+cue+never+punish+watch+log+notebook. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop related supplies
@@ -140,7 +124,6 @@ export default function TrainerCredentialsPage() {
               amazonHref="/go/amazon-brand/dog+leash?s=training-trainer-credentials"
               amazonLabel="Browse dog leash on Amazon →"
             />
-
 
           </div>
         </div>

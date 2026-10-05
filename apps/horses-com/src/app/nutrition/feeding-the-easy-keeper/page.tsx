@@ -163,77 +163,11 @@ export default function EasyKeeperPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (portable horse hay flake scale /
-              horse hay soaking tub /
-              low sugar horse treats).
-              Educational barn searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1117
-              nylon+horse+hay+bag /
-              horse+feed+grade+vegetable+oil /
-              marked+horse+grain+scoop, #1116
-              horse+chopped+forage /
-              horse+feed+soaking+tub /
-              horse+corner+feeder, #1115
-              equine+toxic+plant+identification+field+guide /
-              horse+pasture+walk+weed+identification+handbook /
-              horse+paddock+tree+guard+fencing, #1114
-              flat+back+horse+water+bucket /
-              heated+horse+water+bucket /
-              electrolyte+for+horses, #1113
-              orchard+grass+hay+horse /
-              alfalfa+hay+bales+horse /
-              timothy+alfalfa+mixed+hay+horse, #1112
-              tabletop+digital+horse+grain+scale /
-              stackable+rubber+horse+feed+tubs /
-              rodent+proof+metal+horse+feed+bin, #1111
-              horse+hay+probe+moisture+tester /
-              equine+hay+core+sampler /
-              wall+mounted+horse+hay+rack, #1110
-              plain+white+horse+salt+block /
-              salt+first+horse+electrolyte+powder /
-              wide+mouth+horse+water+bucket, #1108
-              automatic+horse+waterer, #1105
-              digital+hanging+hay+bale+scale /
-              equine+forage+nsc+hay+test+kit /
-              portable+strip+grazing+step+in+posts,
-              horse+tank+heater
-              (winter-care),
-              color+coded+flat+back+horse+buckets
-              (strangles),
-              horse+electrolytes
-              (emergency / grimace-scale),
-              horse+electric+tape / horse+fence+mesh /
-              horse+electric+rope / electric+fence+tester
-              (fencing-safety),
-              horse+grazing+muzzle / soil+test+kit
-              (pasture-management),
-              portable+horse+paddock+panels
-              (osteoarthritis),
-              small+hole+slow+feeder+hay+net+horse /
-              low+nsc+ration+balancer+easy+keeper+horse
-              (kept on the ReviewCards below),
-              horse+hay+cubes / horse+mash
-              (dental),
-              lidded+5+gallon+feed+soaking+pail /
-              large+smooth+feed+tub+rocks
-              (choke),
-              horse+hay+soaking+bag / horse+hay+steamer
-              (heaves),
-              slow+feeder+hay+net+horse
-              (forage ReviewCard),
-              equine+slow+feeder+hay+box
-              (turnout),
-              molasses+free+beet+pulp+shreds+horse /
-              beet+pulp+pellets+horse+feed
-              (beet-pulp). */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
             </div>
-            
+
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper"

@@ -16,7 +16,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const GUIDES = [
   {
     category: 'Choosing Food',
@@ -235,22 +234,6 @@ export default function NutritionHubPage() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog nutrition feeding chart /
-            dog fridge WSAVA label card /
-            canine nutrition reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm ASIN hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools-hub
-            laminated+dog+calculator+tools+chart /
-            dog+fridge+measurement+card /
-            canine+calculator+reference+handbook,
-            reviews-hub laminated+dog+reviews+buyer+guide+chart /
-            dog+fridge+reviews+comparison+card /
-            canine+reviews+reference+handbook,
-            child nutrition large+breed+puppy+dry+dog+food+aafco /
-            senior+dog+dry+food+wsava+recommended. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

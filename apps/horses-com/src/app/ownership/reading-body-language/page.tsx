@@ -114,98 +114,24 @@ export default function BodyLanguagePage() {
 
           <h2 id="ears">The Ears</h2>
           <p>The ears are the most expressive part of the horse and the first thing to watch. Ears pricked sharply forward show attention or interest in something ahead; ears flicking and swiveling show the horse monitoring its surroundings (and often a relaxed, working attention, as in a ridden horse listening back to the rider); ears pinned flat back against the neck signal anger, threat, or pain and are a clear warning of a possible bite or kick; and ears lolling loosely to the side often indicate relaxation or dozing.</p>
-          
 
           <h2 id="face">Eyes and Muzzle</h2>
           <p>The eyes and muzzle add detail. A soft, relaxed eye with a calm expression signals contentment, while a wide eye showing the white (when not normal for that horse) and a tense, worried expression signal fear or stress. The muzzle and mouth speak too: tight, pinched nostrils and a clamped mouth indicate tension or pain, a drooping lower lip and soft muzzle show relaxation or dozing, and tension lines around the eyes and muzzle are increasingly used in equine pain scoring (the horse grimace scale).</p>
-          
 
           <h2 id="tail">The Tail</h2>
           <p>The tail reflects mood and can be a safety signal. A relaxed, gently swinging tail shows a calm horse; a clamped tail held tight to the buttocks indicates fear, tension, or cold; and a swishing or wringing tail signals irritation, annoyance, or discomfort -- a rapidly swishing tail under saddle can indicate the horse is unhappy or in pain. A high-carried tail shows excitement or alarm. Persistent tail swishing or clamping during handling or riding is worth investigating rather than ignoring.</p>
-          
 
           <h2 id="posture">Whole-Body Posture</h2>
           <p>Step back and read the whole horse. A relaxed horse stands with a soft topline, a lowered or level neck, a resting hind leg, and a loose, settled outline. A tense or frightened horse stands tall and rigid, head up, muscles tight, weight ready to move, often with a raised head and flared nostrils -- a horse coiled to flee. A horse rapidly shifting weight, pawing, or unable to settle is signaling distress or discomfort. The whole picture is more reliable than any single signal read in isolation.</p>
-          
 
           <h2 id="pain">Signs of Pain</h2>
           <p>Recognizing pain is one of the most important uses of body-language reading, because horses are stoic and often hide it. Pain shows in a tense, withdrawn expression with tight muzzle and eye lines (captured in equine grimace scales), reluctance to move or weight a limb, restlessness, lying down more than usual, dullness and disinterest, pinned ears or aggression when a sore area is touched, and changes in posture such as the colic or laminitis stances. Subtle, persistent changes in a horse&apos;s normal demeanor often signal pain before anything dramatic happens, and warrant a closer look or a veterinary call.</p>
           <p>This page does not hop first-aid saline / pads / scissors. This page does not hop grimace-scale comfort hops. This page does not claim hands-on testing.</p>
 
           <h2 id="kit">Body-language notes</h2>
-          
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse ear-eye-tail signal
-              checklist /
-              horse handler kick-zone safety
-              question card /
-              horse pain-demeanor change-log
-              notebook).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice /
-              ice+boot+cold+therapy+wrap,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Next step

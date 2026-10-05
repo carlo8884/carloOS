@@ -119,7 +119,6 @@ export default function BridleTypesPage() {
 
           <h2 id="english">English Bridles</h2>
           <p>The standard English bridle is the snaffle bridle, carrying a single bit and one pair of reins, used across most English disciplines and lower-level dressage. The double bridle carries two bits -- a small snaffle (bradoon) and a curb -- on two pairs of reins, used in upper-level dressage and showing to refine communication; it demands an educated, independent hand. Bridles vary in leather weight and styling, from heavy hunting bridles to fine, elegant show bridles.</p>
-          
 
           <h2 id="western">Western Headstalls</h2>
           <p>Western bridles, called headstalls, are typically simpler in appearance and often have no noseband. Common styles include the browband headstall and the one-ear or split-ear headstall (a loop around one ear in place of a browband). Western riding traditionally uses a curb bit ridden on a loose rein with neck-reining, so western headstalls are built around that style. Decorative tooling, silver, and rawhide reflect the western tradition.</p>
@@ -135,108 +134,11 @@ export default function BridleTypesPage() {
             <li><strong>Welfare note</strong> -- nosebands must not be over-tightened; research and many rules now require room for at least a couple of fingers under the band.</li>
           </ul>
 
-
           <h2 id="fit">Fit</h2>
           <p>A well-fitted bridle sits without pinching or rubbing: the browband does not pull the headpiece into the ears, the throatlatch is loose enough to allow flexion (roughly a hand&apos;s width), the bit sits at the correct height, and the noseband is positioned correctly and fitted loosely enough to allow chewing and comfort. Check for rubs behind the ears and at the corners of the mouth. Like all tack, a bridle that fits poorly causes pain and resistance no matter how good the riding.</p>
 
-
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Shop leftover kit — unused vs #1145
-              laminated+horse+standing+vs+running+martingale+checklist /
-              horse+breastplate+vs+breastgirth+fit+question+card /
-              horse+martingale+misuse+head+carriage+log+notebook, #1144
-              laminated+horse+turnout+vs+stable+rug+checklist /
-              horse+denier+vs+fill+question+card /
-              horse+over+rugging+sweat+shiver+watch+log+notebook, #1143
-              laminated+horse+turnout+halter+breakaway+checklist /
-              horse+rope+vs+flat+halter+task+question+card /
-              horse+quick+release+wither+height+tie+log+notebook, #1142
-              laminated+horse+leg+bandage+bow+technique+checklist /
-              horse+boot+impact+not+tendon+support+question+card /
-              horse+boot+grit+rub+clean+dry+log+notebook, #1141
-              laminated+saddle+pad+cannot+fix+fit+checklist /
-              saddle+pad+sweat+pattern+dry+spot+question+card /
-              saddle+pad+clean+dry+rotation+log+notebook, #1140
-              laminated+riding+helmet+fit+and+replace+checklist /
-              riding+helmet+certification+label+question+card /
-              riding+helmet+impact+retirement+log+notebook, #1139
-              laminated+first+horse+90+day+week+by+week+checklist /
-              first+horse+ground+manners+cue+card /
-              first+horse+tack+room+emergency+plan+card, #1138
-              laminated+senior+horse+age+related+change+checklist /
-              senior+horse+weight+and+joint+watch+notebook /
-              senior+horse+quality+of+life+score+card, #1137
-              laminated+horse+ear+eye+tail+signal+checklist /
-              horse+handler+kick+zone+safety+question+card /
-              horse+pain+demeanor+change+log+notebook, #1136
-              laminated+pre+purchase+exam+stage+walkthrough+checklist /
-              horse+pre+purchase+exam+findings+decision+worksheet /
-              horse+buyer+vet+briefing+question+card, #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors,
-              blanketing
-              horse+turnout+blanket /
-              horse+waterproof+sheet /
-              horse+lightweight+blanket /
-              horse+medium+weight+blanket /
-              horse+heavyweight+blanket,
-              blanket-size
-              winter+horse+blanket /
-              horse+turnout+sheet /
-              horse+stable+blanket /
-              horse+fleece+cooler,
-              fly-control
-              horse+fly+sheet,
-              cost-calculator
-              horse+halter+lead+rope,
-              trailering
-              horse+shipping+boots /
-              horse+shipping+wraps /
-              horse+trailer+ties,
-              saddle-fit-basics
-              horse+saddle+pad /
-              horse+sheepskin+half+pad /
-              horse+saddle+shims /
-              horse+girth+cinch,
-              horse-size-for-rider
-              ASTM+SEI+horse+riding+helmet,
-              grimace / first-aid
-              ice+boot+cold+therapy+wrap /
-              vet+wrap /
-              equine+first+aid+kit,
-              #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -247,7 +149,6 @@ export default function BridleTypesPage() {
                 amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bridle-types"
                 amazonLabel="Browse horse snaffle bit on Amazon →"
               />
-
 
           </div>
           </div>

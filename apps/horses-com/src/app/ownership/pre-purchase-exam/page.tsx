@@ -113,89 +113,21 @@ export default function PrePurchaseExamPage() {
 
           <h2 id="covers">What It Covers</h2>
           <p>A standard exam includes a thorough physical examination at rest -- eyes, heart, lungs, teeth, skin, conformation, and a hands-on check of the limbs and back -- followed by an evaluation of the horse in motion, in hand and often on the lunge, including flexion tests that stress the joints to reveal hidden lameness. The veterinarian assesses the horse&apos;s wind (breathing), demeanor, and overall condition. The aim is a rounded picture of how the horse is functioning now.</p>
-          
 
           <h2 id="levels">Basic vs Extensive</h2>
           <p>Pre-purchase exams come in tiers. A basic (sometimes called two-stage) exam covers the resting examination and seeing the horse walk and trot, suitable for a low-value or low-demand purchase. A more extensive (five-stage) exam adds strenuous exercise to stress the heart, lungs, and limbs, a period of rest and re-examination, and a final trot-up to catch lameness that only shows after work. The level should match the horse&apos;s value and intended job, decided with your veterinarian.</p>
-          
 
           <h2 id="radiographs">Radiographs and Extras</h2>
           <p>Beyond the clinical exam, buyers can request additional diagnostics: radiographs of the feet, hocks, and other areas to look for bony change; ultrasound of soft tissues; blood tests (including, by agreement, storing a sample to test later for medication that might mask problems); endoscopy of the airway; and tests appropriate to the discipline. These add cost and are chosen based on the horse&apos;s value, age, intended use, and any findings from the clinical exam.</p>
 
           <h2 id="whofor">Who the Vet Works For</h2>
           <p>A crucial principle is independence: the examining veterinarian should be acting for the buyer, not the seller, and ideally is not the horse&apos;s regular vet, to avoid any conflict of interest. The buyer should brief the vet on the intended use and budget. The vet&apos;s job is to report findings honestly and advise on their significance for that buyer&apos;s plans, not to talk the buyer into or out of the purchase.</p>
-          
 
           <h2 id="results">Using the Results</h2>
           <p>The exam produces findings, not a simple yes or no. Few horses are entirely without blemish, and the question is whether the findings matter for the intended use -- a minor issue may be irrelevant for light hacking but disqualifying for upper-level competition. The veterinarian explains the significance of each finding and the associated risk, and the buyer decides, possibly renegotiating the price, requesting further tests, or walking away. The exam is a tool for an informed decision, not a guarantee against all future problems.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated pre-purchase exam stage
-              walkthrough checklist /
-              horse pre-purchase exam findings
-              decision worksheet /
-              horse buyer vet briefing question
-              card).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1135
-              horse+lease+agreement+document+binder /
-              laminated+horse+lease+walkthrough+checklist /
-              horse+full+vs+partial+lease+cost+share+worksheet, #1134
-              horse+insurance+policy+document+binder /
-              laminated+horse+insurance+claims+checklist /
-              horse+mortality+vs+major+medical+decision+worksheet, #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Next step
