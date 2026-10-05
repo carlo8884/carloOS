@@ -46,7 +46,7 @@ export default function BestSeniorDogFoodPage() {
               nextLabel="Read the protein rule before you pick a senior bag"
               nextBlurb="The callout is the protein rule — aging dogs need more protein per kilogram unless kidney disease is documented. Senior-nutrition is the next step: when to switch, and what the senior label actually changes. The hop below is the same Purina Bright Mind search already on this page."
               resourceHref="/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior"
-              resourceLabel="Browse Purina Pro Plan Bright Mind senior food →"
+              resourceLabel="Browse Purina Pro Plan Bright Mind senior food on Amazon →"
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
