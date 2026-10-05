@@ -222,7 +222,7 @@ export default function DogGestationCalculatorPage() {
             nextLabel="Pack the new-puppy list once the due date is set"
             nextBlurb="The short answer is breeding date plus 63 days, with a 58–68 day window. After the due date, the new-puppy checklist is the crate, food, and first-week order. The hop below is the same digital puppy-scale search already on this page."
             resourceHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
-            resourceLabel="Browse puppy scales on Amazon →"
+            resourceLabel="Browse digital puppy scales on Amazon →"
           />
         </div>
       </section>
@@ -246,7 +246,7 @@ export default function DogGestationCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator"
-                amazonLabel="Browse puppy scales on Amazon →"
+                amazonLabel="Browse digital puppy scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-dog-gestation-calculator"
