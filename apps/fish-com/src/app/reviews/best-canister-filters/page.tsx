@@ -26,7 +26,7 @@ export default function BestCanisterFiltersPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 on Amazon' />
+        <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
       </div>
       <QuickPicks items={PICKS} />
