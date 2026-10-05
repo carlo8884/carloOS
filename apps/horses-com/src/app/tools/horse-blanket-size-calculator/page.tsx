@@ -185,23 +185,23 @@ export default function HorseBlanketSizeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/winter+horse+blanket?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Browse winter horse blanket on Amazon →"
+              amazonLabel="Browse winter horse blankets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+turnout+sheet?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Browse horse turnout sheet on Amazon →"
+              amazonLabel="Browse horse turnout sheets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+stable+blanket?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Browse horse stable blanket on Amazon →"
+              amazonLabel="Browse horse stable blankets on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+tape?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Browse horse measuring tape on Amazon →"
+              amazonLabel="Browse horse measuring tapes on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+fleece+cooler?s=tools-horse-blanket-size-calculator"
-              amazonLabel="Browse horse fleece cooler on Amazon →"
+              amazonLabel="Browse horse fleece coolers on Amazon →"
             />
           </div>
         </div>
