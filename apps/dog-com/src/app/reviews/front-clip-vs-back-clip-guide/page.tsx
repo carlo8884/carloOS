@@ -80,7 +80,7 @@ export default function FrontClipVsBackClipGuidePage() {
         <p>The link below is the Easy Walk search from the harness review, for a dog that pulls.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-front-clip-vs-back-clip-guide"
-          amazonLabel="Browse PetSafe Easy Walk harnesses on Chewy →"
+          amazonLabel="Browse PetSafe Easy Walk harnesses on Amazon →"
         />
         <EmailCapture
           variant="inline"
@@ -93,7 +93,7 @@ export default function FrontClipVsBackClipGuidePage() {
             'Buy the Easy Walk if the dog pulls and does not have a shoulder or elbow problem.',
             'Buy the Front Range if the walks are long enough that padding and a second clip matter.',
             'Buy the Julius-K9 if the dog escapes harnesses and you will train the pull separately.',
-            'Browse PetSafe Easy Walk harnesses on Chewy',
+            'Browse PetSafe Easy Walk harnesses on Amazon',
           ]}
         />
         <h2>Questions</h2>

@@ -66,7 +66,7 @@ export default function SeniorDogNutritionPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/chewy-brand/purina+pro+plan+senior+dry+dog+food?s=nutrition-senior"
-                amazonLabel="Browse purina pro plan senior dry dog food on Chewy →"
+                amazonLabel="Browse purina pro plan senior dry dog food on Amazon →"
               />
               <a href="/go/amazon-brand/senior+dog+dry+food+wsava+recommended?s=nutrition-senior" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex max-w-full items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline whitespace-normal text-left">
                 Shop WSAVA senior dog food on Amazon →
