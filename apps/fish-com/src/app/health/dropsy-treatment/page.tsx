@@ -85,7 +85,7 @@ export default function DropsyPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-dropsy"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-dropsy"

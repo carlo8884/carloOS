@@ -191,7 +191,7 @@ export default function AquariumSetupPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=setup-aquarium"
-              amazonLabel="Browse hang-on-back filters on Amazon →"
+              amazonLabel="Browse AquaClear 70 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=setup-aquarium"
@@ -199,7 +199,7 @@ export default function AquariumSetupPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=setup-aquarium"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=setup-aquarium"
