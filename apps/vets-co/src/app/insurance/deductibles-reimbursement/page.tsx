@@ -28,7 +28,7 @@ export default function DeductiblesPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Quote prep checklist', href: '/tools/insurance-quote-prep' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }, { label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }]} />
 
         </>}
       >
@@ -231,7 +231,7 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

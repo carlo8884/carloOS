@@ -29,7 +29,7 @@ export default function HowWePickPage() {
         </nav>
         <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-2">How we pick</h1>
         <p className="text-sm text-brand-text-light mb-10">
-          Last updated <time dateTime="2026-10-04">October 4, 2026</time>
+          Last updated <time dateTime="2026-10-05">October 5, 2026</time>
         </p>
         <div className="carloOS-article">
           <p>

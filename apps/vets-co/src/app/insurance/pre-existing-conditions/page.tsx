@@ -26,7 +26,7 @@ export default function PreExistingPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'When to Enroll', href: '/insurance/when-to-enroll' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Quote prep checklist', href: '/tools/insurance-quote-prep' }, { label: 'When to Enroll', href: '/insurance/when-to-enroll' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Reading the Fine Print', href: '/insurance/reading-the-fine-print' }]} />
 
         </>}
       >
