@@ -346,7 +346,7 @@ export default function Checker() {
             </>
           }
           query="aquarium quarantine hospital tank"
-          cta="Browse quarantine tanks on Amazon"
+          cta="Browse hospital and quarantine tanks on Amazon"
           source="tools-tank-mate-compatibility"
         />
       )}
