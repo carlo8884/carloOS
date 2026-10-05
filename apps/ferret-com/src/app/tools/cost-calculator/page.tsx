@@ -193,7 +193,7 @@ export default function CostCalculatorPage() {
             nextLabel="Read the kibble guide before you price food"
             nextBlurb="Food is one of the three lines in the first-year total. The kibble guide compares published panels, and the hop is the food search already on this page."
             resourceHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
-            resourceLabel="Browse ferret food on Amazon →"
+            resourceLabel="Browse high-protein ferret kibble on Amazon →"
           />
         </div>
       </section>
@@ -227,7 +227,7 @@ export default function CostCalculatorPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
-                amazonLabel="Browse ferret food on Amazon →"
+                amazonLabel="Browse high-protein ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-cost-calculator"

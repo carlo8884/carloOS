@@ -234,7 +234,7 @@ export default function ReadinessQuizPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
-                amazonLabel="Browse ferret food on Amazon →"
+                amazonLabel="Browse high-protein ferret kibble on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz"
