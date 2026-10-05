@@ -83,7 +83,7 @@ export default function DogAnxietyPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety"
-                amazonLabel="Browse pressure wraps on Amazon →"
+                amazonLabel="Browse anxiety wraps on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety"
