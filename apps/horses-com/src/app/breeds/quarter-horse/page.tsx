@@ -105,7 +105,7 @@ export default function QuarterHorseBreedPage() {
           <CrossPortfolioCard currentSite="horses-com" contentType="breed" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-10-05">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Horses.com Editorial"

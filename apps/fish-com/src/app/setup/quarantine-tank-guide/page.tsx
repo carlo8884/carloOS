@@ -64,7 +64,7 @@ export default function QuarantineGuidePage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }]} />
 
         </>}
-       priceAsOf="2026-10-05">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
