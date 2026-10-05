@@ -42,7 +42,7 @@ export default function WhatToExpectPage() {
           <p>Good visits start with preparation. If you are a new client, request your pet&apos;s prior records in advance. Make a list of current medications and supplements with doses, and write down the reason for the visit: when any signs began, how often they happen, and changes in appetite, thirst, urination, or behavior. For digestive or wellness visits, a fresh stool sample helps. Cats travel best in a secure carrier introduced calmly at home, and a short video of any intermittent problem is invaluable since pets rarely perform their symptoms on cue.</p>
 
           <h2>Check-In and History</h2>
-          <p>At check-in, a team member typically records your pet&apos;s weight — an important data point tracked over time — and gathers history: your concerns, your pet&apos;s diet, lifestyle, and any changes you have noticed. This conversation shapes the rest of the visit, directing the veterinarian&apos;s attention and informing which parts of the exam and which tests are most relevant. The same spiral notebook is what you read from here so the visit reason and current doses are spoken as written facts, not reconstructed under fluorescent lights. Being specific and honest here pays off in better care.</p>
+          <p>At check-in, a team member typically records your pet&apos;s weight — an important data point tracked over time — and gathers history: your concerns, your pet&apos;s diet, lifestyle, and any changes you have noticed. This conversation shapes the rest of the visit, directing the veterinarian&apos;s attention and informing which parts of the exam and which tests are most relevant. Being specific and honest here pays off in better care.</p>
 
           <h2>The Physical Exam</h2>
           <p>The heart of a wellness visit is the physical exam — a systematic, nose-to-tail assessment. The veterinarian checks body condition, listens to the heart and lungs, examines the eyes, ears, mouth, and teeth, palpates the abdomen and lymph nodes, evaluates skin and coat, and assesses joints and movement. This hands-on examination frequently uncovers issues owners have not noticed, from dental disease to heart murmurs to early masses, which is a major reason regular wellness visits matter even for seemingly healthy pets. A first-aid kit or digital pet thermometer is not part of this walkthrough; those hops already live elsewhere, and they do not replace the exam.</p>
@@ -54,31 +54,7 @@ export default function WhatToExpectPage() {
           <p>The visit ends with a discussion of findings and a plan: vaccines or preventives due, any treatments or medications, lifestyle or diet recommendations, and whether a recheck or referral is needed. This is the time to ask questions and confirm you understand the instructions, dosing, and what signs should prompt a call back. A clipboard with storage is how those visit findings, dosing instructions, and the follow-up plan stay one sheaf instead of loose papers in the car — it is not a weatherproof storage clipboard (that lives on horses.com influenza for barn quarantine temperatures), not a hardcover weekly appointment planner (that lives on pain-management-dogs), and not letter-size hanging file folders (that live on how-to-afford-vet-care). Leaving with a clear understanding of the plan — and how to reach the clinic with questions — is the mark of a productive visit.</p>
 
           <h2 id="kit">What-to-expect-at-the-vet kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            visit-prep, check-in, exam, and plan copy
-            on this page — a spiral notebook so the
-            visit reason and medication-and-dose list
-            stay a written page, a small soft cooler
-            bag so a fresh stool sample stays a
-            transported specimen, and a clipboard
-            with storage so visit findings, dosing
-            instructions, and the follow-up plan stay
-            one sheaf. These are educational
-            visit-prep / paperwork tools, not a
-            ranked product list, not a substitute
-            for veterinary care, and not a
-            treatment. Yellow legal pads and
-            letter-size hanging file folders already
-            live on how-to-afford-vet-care. Lined
-            telephone message pads and medium
-            hard-sided plastic pet carriers already
-            live on when-to-go-to-the-vet. Pocket
-            spiral memo pads already live on
-            vomiting-diarrhea-pets. Weatherproof
-            storage clipboards already live on
-            horses.com influenza. This page does not
-            claim hands-on testing. </p>
+          <p>These are educational visit-prep / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. Yellow legal pads and letter-size hanging file folders already live on how-to-afford-vet-care. Lined telephone message pads and medium hard-sided plastic pet carriers already live on when-to-go-to-the-vet. Pocket spiral memo pads already live on vomiting-diarrhea-pets. Weatherproof storage clipboards already live on horses.com influenza. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -138,11 +114,7 @@ export default function WhatToExpectPage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/spiral+notebook?s=guides-what-to-expect-at-the-vet"
-                amazonLabel="Browse spiral notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet"
                 amazonLabel="Browse small soft cooler bags on Amazon →"
               />

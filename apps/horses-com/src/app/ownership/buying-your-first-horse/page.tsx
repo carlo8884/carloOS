@@ -208,11 +208,7 @@ export default function BuyingFirstHorsePage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/first+horse+buyer+visit+field+notebook?s=ownership-buying-your-first-horse"
-                amazonLabel="Browse first-horse buyer visit field notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=ownership-buying-your-first-horse"
                 amazonLabel="Shop on Amazon"
               />

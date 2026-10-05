@@ -223,11 +223,7 @@ export default function ChoosingVetPage() {
             </div>
             
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+after+hours+emergency+cover+question+card?s=ownership-choosing-a-vet"
-                amazonLabel="Browse horse after-hours emergency-cover question cards on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/horse+veterinary+history+vcpr+records+folder?s=ownership-choosing-a-vet"
                 amazonLabel="Browse horse veterinary history / VCPR records folders on Amazon →"
               />

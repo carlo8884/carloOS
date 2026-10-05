@@ -176,16 +176,7 @@ export default function CostOfOwningPage() {
 
           <h2 id="budget">Budgeting Honestly</h2>
           <p>The responsible approach is to total the realistic monthly keep, feed, farrier, and routine veterinary costs for your area, then add a genuine emergency fund (or insurance) for the inevitable unexpected vet bill. Get real local figures from boarding facilities, farriers, and veterinarians rather than guessing, and budget for the worst year, not the best. Many experienced owners advise treating affordability as the first question in horse ownership, because a horse the owner cannot afford to keep well is a welfare problem waiting to happen.</p>
-          <p>
-            The same horse ownership monthly budget
-            worksheet is how those local keep, feed,
-            farrier, and routine veterinary figures are
-            totaled before the purchase — and the same
-            equine emergency fund expense tracker
-            notebook is how the worst-year contingency
-            sits beside that monthly total. Educational
-            owner budgeting tools only. They are not a
-            substitute for a veterinarian or accountant. </p>
+          <p>Educational owner budgeting tools only. They are not a substitute for a veterinarian or accountant.</p>
 
           <h2 id="kit">Ownership budget supplies</h2>
 
@@ -255,10 +246,6 @@ export default function CostOfOwningPage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+ownership+monthly+budget+worksheet?s=ownership-cost-of-owning-a-horse"
                 amazonLabel="Browse horse ownership monthly budget worksheets on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/equine+emergency+fund+expense+tracker+notebook?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse equine emergency fund expense tracker notebooks on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+keep+feed+farrier+cost+log+binder?s=ownership-cost-of-owning-a-horse"

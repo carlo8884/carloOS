@@ -269,11 +269,7 @@ export default function PrePurchaseExamPage() {
                 amazonHref="/go/amazon-brand/horse+pre+purchase+exam+findings+decision+worksheet?s=ownership-pre-purchase-exam"
                 amazonLabel="Browse horse pre-purchase exam findings decision worksheets on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+buyer+vet+briefing+question+card?s=ownership-pre-purchase-exam"
-                amazonLabel="Browse horse buyer vet briefing question cards on Amazon →"
-              />
-          </div>
+              </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

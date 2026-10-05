@@ -9092,7 +9092,6 @@ const CALCULATORS = [
     id: 'dog · dog-heart-disease hops',
     file: 'apps/dog-com/src/app/health/dog-heart-disease/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/resting\+respiratory\+rate\+notebook\?s=health-dog-heart-disease/, label: 'resting-respiratory-rate-notebook search hop (matches on-page weekly sleeping-breath log copy; unique vs pet+medical+records+binder and pet+vaccination+record+book)' },
       { re: /amazon-brand\/one\+minute\+kitchen\+timer\?s=health-dog-heart-disease/, label: 'one-minute kitchen-timer search hop (matches on-page count-breaths-for-one-minute copy; unused vs kitchen+gram+scale / kitchen+measuring+cup)' },
       { re: /amazon-brand\/step\+in\+padded\+dog\+harness\?s=health-dog-heart-disease/, label: 'step-in padded dog-harness search hop (matches on-page exercise-intolerance walk copy; unique vs Julius-K9 / front+clip+no+pull / rear-support / belly-support / Y-shaped harness hops)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9294,7 +9293,6 @@ const CALCULATORS = [
     file: 'apps/vets-co/src/app/health/seizures-in-dogs/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/digital\+handheld\+stopwatch\?s=health-seizures-in-dogs/, label: 'digital handheld-stopwatch search hop (matches on-page time-the-event / note-start-and-length copy; unique vs one+minute+kitchen+timer / aquarium+light+timer)' },
-      { re: /amazon-brand\/waterproof\+field\+notebook\?s=health-seizures-in-dogs/, label: 'waterproof field-notebook search hop (matches on-page seizure-diary / dates-durations-triggers copy; unique vs resting+respiratory+rate+notebook / pet+medical+records+binder / pet+vaccination+record+book)' },
       { re: /amazon-brand\/foam\+table\+edge\+bumper\?s=health-seizures-in-dogs/, label: 'foam table-edge-bumper search hop (matches on-page clear-hard-or-sharp-objects copy; unique vs interlocking+foam+floor+tiles / dog+crate+bumper+pads)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
@@ -9635,7 +9633,6 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/2\+liter\+plastic\+graduated\+pitcher\?s=health-cushing-disease-dogs/, label: '2-liter plastic graduated-pitcher search hop (matches on-page PU/PD water-intake / measured-pour copy; unique vs narrow+neck+glass+water+carafe / gallon+gravity+dog+waterer / kitchen+liquid+measuring+pitcher)' },
       { re: /amazon-brand\/extra\+large\+bolster\+dog\+lounge\?s=health-cushing-disease-dogs/, label: 'extra-large bolster dog-lounge search hop (matches on-page pot-belly / muscle-loss comfort copy; unique vs egg+crate+foam+dog+kennel+pad / orthopedic+dog+bed / self+warming+dog+mat)' },
-      { re: /amazon-brand\/a5\+hardcover\+dot\+grid\+notebook\?s=health-cushing-disease-dogs/, label: 'A5 hardcover dot-grid-notebook search hop (matches on-page symptom-log / ACTH-recheck observation copy; unique vs pocket+spiral+memo+pad / waterproof+field+notebook / dog+weight+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
     ],
     mustExclude: [
@@ -9757,7 +9754,6 @@ const CALCULATORS = [
     id: 'vets · diabetes-in-dogs-cats hops',
     file: 'apps/vets-co/src/app/health/diabetes-in-dogs-cats/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/digital\+pet\+glucose\+log\+notebook\?s=health-diabetes-in-dogs-cats/, label: 'digital pet glucose-log notebook search hop (matches on-page water-intake / appetite / weight / energy tracking copy; unique vs pet+glucometer / a5+hardcover+dot+grid+notebook / waterproof+field+notebook / dog+weight+log+book / pocket+spiral+memo+pad)' },
       { re: /amazon-brand\/insulated\+pet\+water\+bowl\?s=health-diabetes-in-dogs-cats/, label: 'insulated pet water-bowl search hop (matches on-page emptying-the-water-bowl-unusually-fast / PU/PD copy; unique vs heavy+ceramic+pet+water+bowl / gallon+gravity+dog+waterer / 2+liter+plastic+graduated+pitcher / narrow+neck+glass+water+carafe)' },
       { re: /amazon-brand\/airtight\+locking\+pet\+food\+bin\?s=health-diabetes-in-dogs-cats/, label: 'airtight locking pet-food-bin search hop (matches on-page consistent-measured-meals / minimize-table-scraps copy; unique vs kitchen+gram+scale / portion+control+food+scale+dog / elevated+slow+feeder+bowl+dog / reusable+dog+food+portion+cups)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -9957,7 +9953,6 @@ const CALCULATORS = [
     id: 'ferret · adrenal-disease hops',
     file: 'apps/ferret-com/src/app/health/adrenal-disease/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/ruled\+marble\+composition\+notebook\?s=health-adrenal-disease/, label: 'ruled marble composition-notebook search hop (matches on-page hair-thinning-date / vulvar-swelling / implant-cycle copy; unique vs waterproof+field+notebook / pocket+spiral+memo+pad / a5+hardcover+dot+grid+notebook / dog+weight+log+book / letter+size+expanding+file+organizer / pet+vaccination+record+book)' },
       { re: /amazon-brand\/soft\+cotton\+receiving\+blanket\?s=health-adrenal-disease/, label: 'soft cotton receiving-blanket search hop (matches on-page alopecia / thin-skin warmth copy; unique vs ferret+sleep+sack+fleece / ferret+hammock / ferret+fleece+liner / fleece+small+animal+bonding+pouch / pet+heating+pad+low / scent+swap+fleece+sleep+pouch)' },
       { re: /amazon-brand\/activated\+charcoal\+odor\+absorber\?s=health-adrenal-disease/, label: 'activated-charcoal odor-absorber search hop (matches on-page intensified musky-odor copy; unique vs enzymatic+pet+stain+odor+cleaner / small+animal+cage+cleaner / fragrance+free+laundry+detergent / 32+gallon+locking+animal+proof+trash+can)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -10620,7 +10615,7 @@ const CALCULATORS = [
     id: 'horses · buying-your-first-horse hops',
     file: 'apps/horses-com/src/app/ownership/buying-your-first-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/first\+horse\+buyer\+visit\+field\+notebook/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+records\+binder\?s=ownership-buying-your-first-horse/, label: 'horse pre-purchase exam records-binder search hop (matches on-page never-skip-the-vetting copy; unique vs horse+boarding+contract+document+binder / equine+farrier+log+book / weatherproof+storage+clipboard)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10638,7 +10633,7 @@ const CALCULATORS = [
     id: 'horses · choosing-a-vet hops',
     file: 'apps/horses-com/src/app/ownership/choosing-a-vet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+after\+hours\+emergency\+cover\+question\+card/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder\?s=ownership-choosing-a-vet/, label: 'horse veterinary-history / VCPR records-folder search hop (matches on-page keep-good-records / VCPR copy; unique vs horse+pre+purchase+exam+records+binder / horse+boarding+contract+document+binder / equine+farrier+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -10731,7 +10726,6 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+halter\+lead\+rope/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+pain\+demeanor\+change\+log\+notebook\?s=ownership-reading-body-language/, label: 'horse pain-demeanor change-log-notebook search hop (matches on-page subtle-persistent-changes / signs-of-pain copy; unique vs first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10749,7 +10743,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/senior-horse-care/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/senior\+horse\+weight\+and\+joint\+watch\+notebook\?s=ownership-senior-horse-care/, label: 'senior horse weight-and-joint watch-notebook search hop (matches on-page osteoarthritis / weight-change / hands-on-checks copy; unique vs horse+pain+demeanor+change+log+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook / equine+farrier+log+book)' },
       { re: /amazon-brand\/senior\+horse\+quality\+of\+life\+score\+card\?s=ownership-senior-horse-care/, label: 'senior horse quality-of-life score-card search hop (matches on-page honest-assessment / comfort-before-goodbye copy; unique vs horse+body+condition+score+chart / horse+handler+kick+zone+safety+question+card / horse+buyer+vet+briefing+question+card / horse+mortality+vs+major+medical+decision+worksheet)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -11264,7 +11257,6 @@ const CALCULATORS = [
     id: 'vets · what-to-expect-at-the-vet hops',
     file: 'apps/vets-co/src/app/guides/what-to-expect-at-the-vet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/spiral\+notebook\?s=guides-what-to-expect-at-the-vet/, label: 'spiral-notebook search hop (matches on-page visit-reason / medication-and-dose-list copy; unique vs yellow+legal+pad / lined+telephone+message+pad / pocket+spiral+memo+pad)' },
       { re: /amazon-brand\/small\+soft\+cooler\+bag\?s=guides-what-to-expect-at-the-vet/, label: 'small-soft-cooler-bag search hop (matches on-page fresh-stool-sample transport copy; unique vs soft+pet+carrier / medium+hard+sided+plastic+pet+carrier)' },
       { re: /amazon-brand\/clipboard\+with\+storage\?s=guides-what-to-expect-at-the-vet/, label: 'clipboard-with-storage search hop (matches on-page visit-findings / dosing / follow-up-plan paperwork copy; unique vs weatherproof+storage+clipboard / hardcover+weekly+appointment+planner / hanging+file+folders+letter+size)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
@@ -11302,7 +11294,6 @@ const CALCULATORS = [
     id: 'vets · choosing-a-veterinarian hops',
     file: 'apps/vets-co/src/app/guides/choosing-a-veterinarian/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/reporter\+notebook\?s=guides-choosing-a-veterinarian/, label: 'reporter-notebook search hop (matches on-page tour-impression / accreditation-note copy; unique vs spiral+notebook / yellow+legal+pad / ruled+index+cards)' },
       { re: /amazon-brand\/kraft\+two\+pocket\+folder\?s=guides-choosing-a-veterinarian/, label: 'kraft-two-pocket-folder search hop (matches on-page services / referral-scope comparison copy; unique vs hanging+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
@@ -11474,7 +11465,6 @@ const CALCULATORS = [
     id: 'vets · golden-retriever-health hops',
     file: 'apps/vets-co/src/app/breeds/golden-retriever-health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/dot\+grid\+notebook\?s=breeds-golden-retriever-health/, label: 'dot-grid-notebook search hop (matches on-page monthly jaw / shoulder / groin / behind-the-knee node-check copy; unique vs spiral+notebook / reporter+notebook / bound+composition+book / dog+lymph+node+anatomy+chart)' },
       { re: /amazon-brand\/paint\+chip\+sample\+cards\?s=breeds-golden-retriever-health/, label: 'paint-chip-sample-cards search hop (matches on-page gum-color baseline / pale-or-white-gums copy; unique vs round+color+coding+labels / assorted+highlighter+set / dog+gum+color+assessment+chart)' },
       { re: /amazon-brand\/18\+month\+wall\+calendar\?s=breeds-golden-retriever-health/, label: '18-month-wall-calendar search hop (matches on-page age-6 ultrasound / age-8 every-6-month visit copy; unique vs monthly+desk+pad+calendar / hardcover+weekly+appointment+planner / wall+mounted+magnetic+monthly+planner)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },

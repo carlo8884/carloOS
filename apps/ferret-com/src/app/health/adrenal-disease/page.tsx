@@ -292,21 +292,7 @@ export default function FerretAdrenalDiseasePage() {
             The signs are remarkably stereotyped across cases:
           </p>
           <ul>
-            <li>
-              <strong>Symmetrical hair loss starting at the tail base.</strong>{' '}
-              The earliest and most reliable sign. Hair thins on the tail,
-              progresses up the rump, and eventually involves the flanks and
-              shoulders. The pattern is bilateral and symmetrical — patchy or
-              unilateral hair loss is more suggestive of dermatophyte
-              infection or external parasites. Write the first thinning
-              date in a ruled marble composition notebook so the exotic-pet
-              vet can see the timeline at the hormone-panel visit — it is
-              not a waterproof field notebook, not a dog weight-log book,
-              and not a vaccination record book. Alopecic ferrets lose
-              insulation; a soft cotton receiving blanket is an extra
-              warm layer that is not a fleece sleep sack, not a hammock,
-              and not a bonding pouch.
-            </li>
+            <li>Symmetrical hair loss starting at the tail base.{' '} The earliest and most reliable sign. Hair thins on the tail, progresses up the rump, and eventually involves the flanks and shoulders. The pattern is bilateral and symmetrical — patchy or unilateral hair loss is more suggestive of dermatophyte infection or external parasites. Alopecic ferrets lose insulation; a soft cotton receiving blanket is an extra warm layer that is not a fleece sleep sack, not a hammock, and not a bonding pouch.</li>
             <li>
               <strong>Vulvar swelling in spayed females.</strong> A spayed jill
               should have a small, recessed vulva. Visible swelling that
@@ -484,18 +470,7 @@ export default function FerretAdrenalDiseasePage() {
             adrenal gland removed, the adrenal&apos;s sex-steroid output falls and
             clinical signs regress.
           </p>
-          <p>
-            Typical timeline of response: vulvar swelling resolves within
-            2-6 weeks, hair regrows over 2-4 months, behavioral signs
-            normalize within weeks. Most published series report median
-            duration of effect per implant of approximately{' '}
-            <strong>12-24 months</strong>, with substantial individual variation.
-            When signs return, a repeat implant is placed. Some ferrets receive
-            multiple implant cycles across the rest of their life with good
-            symptom control. Log each implant date and the first returning
-            sign in the same ruled marble composition notebook so the
-            12–24 month window is a written record, not a guess.
-          </p>
+          <p>Typical timeline of response: vulvar swelling resolves within 2-6 weeks, hair regrows over 2-4 months, behavioral signs normalize within weeks. Most published series report median duration of effect per implant of approximately{' '} 12-24 months, with substantial individual variation. When signs return, a repeat implant is placed. Some ferrets receive multiple implant cycles across the rest of their life with good symptom control.</p>
           <p>
             Limitations: deslorelin treats signs, not the tumor. The adrenal
             lesion continues to grow at its native rate, and a small fraction
@@ -627,38 +602,10 @@ export default function FerretAdrenalDiseasePage() {
           <p className="text-sm font-medium text-brand-primary mb-3">
             The products below are comfort and general-care items for ferrets living with adrenal disease — they do NOT treat adrenal disease. Adrenal disease requires diagnosis and a treatment plan from a veterinarian experienced with ferrets.
           </p>
-          <p>
-            A ruled marble composition notebook is how the first
-            hair-thinning date, vulvar-swelling start, and each
-            deslorelin implant date stay written down for the next
-            exotic-pet visit — it is not a waterproof field notebook
-            and not a dog weight-log book. A soft cotton receiving
-            blanket is an extra warm layer for an alopecic or
-            thin-skinned ferret — it is not a fleece sleep sack
-            (that Chewy comfort card stays below), not a hammock,
-            and not a heating pad. An activated-charcoal odor
-            absorber is a cage-side filter for the intensified
-            musky odor this page names — it is not an enzymatic
-            cleaner and not a fragrance spray. These are household
-            monitoring, comfort, and odor tools. They do not treat
-            adrenal disease, they do not replace deslorelin or
-            adrenalectomy, and they are not a ranked product list.
-          </p>
+          <p>A soft cotton receiving blanket is an extra warm layer for an alopecic or thin-skinned ferret — it is not a fleece sleep sack (that Chewy comfort card stays below), not a hammock, and not a heating pad. An activated-charcoal odor absorber is a cage-side filter for the intensified musky odor this page names — it is not an enzymatic cleaner and not a fragrance spray. These are household monitoring, comfort, and odor tools. They do not treat adrenal disease, they do not replace deslorelin or adrenalectomy, and they are not a ranked product list.</p>
 
           <h2 id="kit">Adrenal comfort kit</h2>
-          <p>
-            Everyday physical supplies that match the hair-loss
-            timeline, alopecia-warmth, and intensified-odor copy on
-            this page — a ruled marble composition notebook so the
-            first thinning date and each implant cycle are written
-            down, a soft cotton receiving blanket so an alopecic
-            ferret has an extra warm layer, and an
-            activated-charcoal odor absorber so the extra musk has
-            a cage-side filter. These are household comfort tools,
-            not treatments. They do not diagnose or treat adrenal
-            disease, they do not replace a deslorelin implant or
-            adrenalectomy, they do not set a hormone-panel number,
-            and they are not a ranked product list. This page does not claim hands-on testing. </p>
+          <p>These are household comfort tools, not treatments. They do not diagnose or treat adrenal disease, they do not replace a deslorelin implant or adrenalectomy, they do not set a hormone-panel number, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
@@ -702,11 +649,7 @@ export default function FerretAdrenalDiseasePage() {
             </div>
             
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/ruled+marble+composition+notebook?s=health-adrenal-disease"
-                amazonLabel="Browse ruled marble composition notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/soft+cotton+receiving+blanket?s=health-adrenal-disease"
                 amazonLabel="Browse soft cotton receiving blankets on Amazon →"
               />
