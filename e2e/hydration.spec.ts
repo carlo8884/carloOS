@@ -21,7 +21,7 @@ const moneyPaths: Record<string, string[]> = {
     '/tools',
     '/reviews/best-equine-supplements',
     '/reviews/best-winter-horse-blankets',
-    '/ownership/horse-insurance',
+    '/tools/horse-cost-calculator',
   ],
   'vets-co': [
     '/telehealth',

@@ -24,7 +24,7 @@ const PAGES = [
   'apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx',
   'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
   'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
-  'apps/horses-com/src/app/ownership/horse-insurance/page.tsx',
+  'apps/horses-com/src/app/tools/horse-cost-calculator/page.tsx',
   // Fish.com money pages
   'apps/fish-com/src/app/reviews/best-aquarium-filters/page.tsx',
   'apps/fish-com/src/app/reviews/best-aquarium-heaters/page.tsx',
