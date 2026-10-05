@@ -35,7 +35,7 @@ export default function WellnessVsInsurancePage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Quote prep checklist', href: '/tools/insurance-quote-prep' }, { label: 'What Pet Insurance Covers', href: '/insurance/what-pet-insurance-covers' }, { label: 'How Pet Insurance Works', href: '/insurance/how-pet-insurance-works' }, { label: 'Preventive Care Schedule', href: '/health/preventive-care-schedule' }]} />
 
         </>}
       >
@@ -155,7 +155,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

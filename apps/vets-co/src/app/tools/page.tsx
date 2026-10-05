@@ -67,6 +67,12 @@ const TOOLS = [
     tag: 'Finance',
   },
   {
+    href: '/tools/insurance-quote-prep',
+    title: 'Insurance Quote Prep Checklist',
+    desc: 'What to have ready before a quote — pet age, breed, ZIP, veterinary records, deductible structure, and reimbursement — and the questions to ask each carrier. Ends with the existing Trupanion, Healthy Paws, and Embrace quote links.',
+    tag: 'Finance',
+  },
+  {
     href: '/tools/insurance-reimbursement-estimator',
     title: 'Pet Insurance Reimbursement Estimator',
     desc: 'Enter the carrier quote (monthly premium, deductible, reimbursement %, annual cap) and your expected claims. Returns annual reimbursement, total cost with insurance, and net benefit vs. paying out-of-pocket.',

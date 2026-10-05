@@ -246,6 +246,7 @@ export default function VetsPetInsurancePage() {
 
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <RelatedLinks title="Related Guides" links={[
+              { label: 'Insurance quote prep checklist', href: '/tools/insurance-quote-prep' },
               { label: 'Is Pet Insurance Worth It? (calculator)', href: '/tools/pet-insurance-worth-it-calculator' },
               { label: 'ER vs Clinic vs Telehealth', href: '/tools/er-vs-clinic' },
               { label: 'Pet Insurance Education Hub', href: '/insurance' },
