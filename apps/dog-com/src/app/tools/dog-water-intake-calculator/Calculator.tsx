@@ -162,16 +162,19 @@ export default function DogWaterIntakeCalculator() {
       </div>
       )}
 
-      {shop && (
+      {result && shop && (
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
           Next step
         </p>
         <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
-          {shop.heading}
+          <a href="/tools/dog-calorie-calculator" className="text-brand-primary underline underline-offset-2">Pair the ounces with a daily portion →</a>
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <a href={shop.href} rel="sponsored noopener" className="inline-block font-semibold text-brand-primary underline underline-offset-2">
+          {shop.label}
+        </a>
       </div>
       )}
 

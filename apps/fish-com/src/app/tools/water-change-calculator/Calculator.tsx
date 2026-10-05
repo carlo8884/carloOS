@@ -341,6 +341,8 @@ export default function WaterChangeCalculator() {
       {mode === 'volume' && volume && volume.kind === 'ok' && (
         <ResultCTA
           heading={shop.heading}
+          guideHref="/setup/water-chemistry-guide"
+          guideLabel="Read the water chemistry guide"
           blurb={
             <>
               Same Amazon hops used on water-test and fin-rot maintenance pages — no invented SKUs.
@@ -395,6 +397,8 @@ export default function WaterChangeCalculator() {
       {mode === 'dilution' && dilution && dilution.kind === 'ok' && (
         <ResultCTA
           heading="Shop a liquid test kit before the next change"
+          guideHref="/setup/water-chemistry-guide"
+          guideLabel="Read the water chemistry guide"
           blurb={
             <>
               Dilution math is only as good as the reading. The same API Freshwater Master Test Kit hop used on the water-test review.

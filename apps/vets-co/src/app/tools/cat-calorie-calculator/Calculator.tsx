@@ -10,7 +10,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -62,6 +62,31 @@ function kcal(n: number): string {
   return Math.round(n).toLocaleString('en-US') + ' kcal'
 }
 
+function catCalorieNext(stageLabel: string): { guideHref: string; guideLabel: string; hopHref: string; hopLabel: string } {
+  if (stageLabel.startsWith('Weight loss') || stageLabel === 'Obese-prone indoor') {
+    return {
+      guideHref: '/health/weight-management',
+      guideLabel: 'Read the weight management guide',
+      hopHref: '/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator',
+      hopLabel: 'Browse kitchen gram scales on Amazon →',
+    }
+  }
+  if (stageLabel === 'Kitten') {
+    return {
+      guideHref: '/tools/cat-body-condition-score',
+      guideLabel: 'Check the number against body condition',
+      hopHref: '/go/amazon-brand/measured+cat+food?s=tools-cat-calorie-calculator',
+      hopLabel: 'Browse measured cat food on Amazon →',
+    }
+  }
+  return {
+    guideHref: '/tools/cat-body-condition-score',
+    guideLabel: 'Check the number against body condition',
+    hopHref: '/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-calorie-calculator',
+    hopLabel: 'Browse slow-feeder cat bowls on Amazon →',
+  }
+}
+
 export default function CatCalorieCalculator() {
   const [weight, setWeight] = useState<string>('10')
   const [unit, setUnit] = useState<Unit>('lb')
@@ -97,6 +122,7 @@ export default function CatCalorieCalculator() {
   const weightOk = !weightError && weightNum > 0
   const isValid = weightOk && !kcalError
   const isWeightLoss = LIFE_STAGES[stageIndex].label.startsWith('Weight loss')
+  const next = catCalorieNext(LIFE_STAGES[stageIndex].label)
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
@@ -263,9 +289,26 @@ export default function CatCalorieCalculator() {
         </div>
       </div>
       {weightOk && (
+        <>
         <ResultMeaning>
           Daily energy is the maintenance estimate for this weight and life stage. It is a starting point, not a feeding prescription.
         </ResultMeaning>
+        <div className="mt-4">
+          <p className="m-0 text-sm">
+            <a href={next.guideHref} className="font-semibold text-brand-primary underline underline-offset-2">
+              {next.guideLabel} →
+            </a>
+          </p>
+          <AffiliateDisclosure variant="inline" siteId="vets-co" className="my-3" />
+          <a
+            href={next.hopHref}
+            rel="sponsored noopener"
+            className="inline-block font-semibold text-brand-primary underline underline-offset-2"
+          >
+            {next.hopLabel}
+          </a>
+        </div>
+        </>
       )}
 
       {/* Disclaimer */}

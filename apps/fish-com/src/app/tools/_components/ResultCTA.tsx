@@ -14,6 +14,9 @@ interface ResultCTAProps {
   cta: string
   /** Source slug for click attribution, e.g. 'tools-heater-wattage'. */
   source: string
+  /** On-site guide that matches this result. Omitted when the page has no guide yet. */
+  guideHref?: string
+  guideLabel?: string
 }
 
 /**
@@ -25,7 +28,7 @@ interface ResultCTAProps {
  * the existing /go/amazon-brand click-tracker — no new routes, no affiliate IDs
  * inline. Not a math input; purely a downstream suggestion.
  */
-export function ResultCTA({ heading, blurb, query, cta, source }: ResultCTAProps) {
+export function ResultCTA({ heading, blurb, query, cta, source, guideHref, guideLabel }: ResultCTAProps) {
   const href = `/go/amazon-brand/${encodeURIComponent(query)}?s=${encodeURIComponent(source)}`
   return (
     <div className="mt-3 rounded-lg border border-brand-border bg-brand-surface p-5">
@@ -36,6 +39,11 @@ export function ResultCTA({ heading, blurb, query, cta, source }: ResultCTAProps
         {heading}
       </p>
       <p className="mt-1 text-sm text-brand-text-mid leading-relaxed">{blurb}</p>
+      {guideHref && guideLabel ? (
+        <p className="mt-2 text-sm">
+          <a href={guideHref} className="font-semibold text-brand-primary underline underline-offset-2">{guideLabel} →</a>
+        </p>
+      ) : null}
       <AffiliateDisclosure variant="inline" className="my-3" />
       <a
         href={href}

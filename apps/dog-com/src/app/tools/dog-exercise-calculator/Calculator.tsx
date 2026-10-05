@@ -26,6 +26,12 @@ const ENERGY_OPTIONS: { value: Energy; label: string; example: string; min: numb
 
 const SHOP_SOURCE = 'tools-dog-exercise'
 
+function resultGuide(stage: Stage): { href: string; label: string } {
+  if (stage === 'puppy') return { href: '/tools/new-puppy-checklist', label: 'Open the new puppy checklist' }
+  if (stage === 'senior') return { href: '/health/senior-dog-care', label: 'Read senior dog care' }
+  return { href: '/health/dog-obesity', label: 'Read the dog obesity guide' }
+}
+
 function resultShop(stage: Stage, energy: Energy): {
   heading: string
   blurb: string
@@ -104,6 +110,7 @@ export default function DogExerciseCalculator() {
   }, [stage, months, energy, monthsError])
 
   const shop = resultShop(stage, energy)
+  const guide = resultGuide(stage)
 
   const Toggle = ({ value, current, onClick, children }: { value: string; current: string; onClick: () => void; children: React.ReactNode }) => (
     <button
@@ -183,16 +190,21 @@ export default function DogExerciseCalculator() {
         </div>
       )}
 
+      {result && (
       <div className="mt-6 rounded-lg border border-brand-border bg-brand-white p-5">
         <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
           Next step
         </p>
         <p className="font-display text-base font-semibold leading-snug text-brand-text-dark">
-          {shop.heading}
+          <a href={guide.href} className="text-brand-primary underline underline-offset-2">{guide.label} →</a>
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <a href={shop.href} rel="sponsored noopener" className="inline-block font-semibold text-brand-primary underline underline-offset-2">
+          {shop.label}
+        </a>
       </div>
+      )}
 
       <p className="mt-4 text-2xs leading-snug text-brand-text-light">
         A guideline, not a prescription. Individual fitness, breed, weather (cut back in heat), and any heart, joint,
