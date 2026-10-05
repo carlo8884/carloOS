@@ -10470,10 +10470,7 @@ const CALCULATORS = [
     id: 'horses · choosing-a-vet hops',
     file: 'apps/horses-com/src/app/ownership/choosing-a-vet/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+veterinary\+history\+vcpr\+records\+folder\?s=ownership-choosing-a-vet/, label: 'horse veterinary-history / VCPR records-folder search hop (matches on-page keep-good-records / VCPR copy; unique vs horse+pre+purchase+exam+records+binder / horse+boarding+contract+document+binder / equine+farrier+log+book)' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/tools\/is-this-a-horse-emergency"/, label: 'emergency triage tool instead of an invented records folder' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10481,8 +10478,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /horse\+veterinary\+history\+vcpr\+records\+folder/, label: 'no invented records-folder hop' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete equine-vet-interview-checklist offer; every gear CTA is an amazon-brand category search matching on-page what-to-look-for / emergency-cover / keep-good-records copy (a laminated equine-vet interview checklist so the equine-focus / coverage-area / reputation / referral / communication questions are posted before the first call, a horse after-hours emergency-cover question card so 24-hour cover / who answers / response time / surgical-referral questions stay visible, a horse veterinary history / VCPR records folder so the exam history that establishes the relationship stays with the horse), never a placeholder ASIN, a #1131 first-horse tryout / buyer-notebook / PPE-records-binder hop, a #1130 boarding walkthrough / contract-binder / hay-tarp hop, a #1129 saline / pads / scissors hop, a #1128 calculator-tools-chart hop, a #1126 daily-care-chart hop, a farrier-log / clipboard hop, or a vaccine / prescription hop. Educational owner searches only — not a ranked product list, not a substitute for a veterinarian. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'The choosing-a-vet guide links the emergency triage tool. It does not shop a records folder.',
   },
   {
     id: 'horses · cost-of-owning-a-horse hops',
@@ -10504,11 +10502,7 @@ const CALCULATORS = [
     id: 'horses · horse-insurance hops',
     file: 'apps/horses-com/src/app/ownership/horse-insurance/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder\?s=ownership-horse-insurance/, label: 'horse insurance policy-document-binder search hop (matches on-page agreed-value / exclusions / deductible copy; unique vs horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
-      { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder/, label: 'on-page product Amazon search hop' },
-      { re: /\/ownership\/cost-of-owning-a-horse/, label: 'ownership cost guide instead of an invented mortality worksheet' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/ownership\/cost-of-owning-a-horse/, label: 'ownership cost guide instead of an invented policy binder' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10516,18 +10510,18 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /horse\+insurance\+policy\+document\+binder/, label: 'no invented policy-binder hop' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete horse-insurance-claims-checklist offer; every gear CTA is an amazon-brand category search matching on-page why-insure / mortality-versus-medical / exclusions-and-deciding copy (a horse insurance policy document binder so the agreed value / exclusions / deductibles / prior-approval conditions stay with the horse, a laminated horse insurance claims checklist so report-illness / prior-approval / honest-history steps stay visible before a claim is voided, a horse mortality vs major-medical decision worksheet so mortality / medical / loss-of-use / liability / self-insure stay on one page), never a placeholder ASIN, a #1133 monthly-budget / emergency-fund / keep-feed-farrier hop, a #1132 equine-vet interview / after-hours-cover / VCPR-folder hop, a #1131 first-horse tryout / buyer-notebook / PPE-records-binder hop, a #1130 boarding walkthrough / contract-binder / hay-tarp hop, a #1129 saline / pads / scissors hop, a #1128 calculator-tools-chart hop, a #1126 daily-care-chart hop, a farrier-log / clipboard hop, an insurance-carrier deep link, or a vaccine / prescription hop. Educational owner searches only — not a ranked product list, not a carrier quote, not a substitute for a licensed insurance broker or veterinarian. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'The horse-insurance guide links the cost-of-owning guide. It does not shop a policy binder.',
   },
   {
     id: 'horses · leasing-a-horse hops',
     file: 'apps/horses-com/src/app/ownership/leasing-a-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder\?s=ownership-leasing-a-horse/, label: 'horse lease agreement document-binder search hop (matches on-page put-it-in-writing / term-fee-use-vet-insurance copy; unique vs horse+boarding+contract+document+binder / horse+insurance+policy+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
-      { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder/, label: 'on-page product Amazon search hop' },
-      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented lease worksheet' },
+      { re: /amazon-brand\/equine\+supplement\?s=ownership-leasing-a-horse/, label: 'equine supplement search named in the lease cost split' },
+      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented lease binder' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above the supplement hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10535,8 +10529,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
+      { re: /horse\+lease\+agreement\+document\+binder/, label: 'no invented lease-binder hop' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete horse-lease-agreement-checklist offer; every gear CTA is an amazon-brand category search matching on-page what-a-lease-is / full-versus-partial / on-site-versus-off-site / written-agreement copy (a horse lease agreement document binder so the term / fee / cost split / permitted use / veterinary decisions / insurance / early-end conditions stay in writing, a laminated horse lease walkthrough checklist so term / fee / riding days / activity limits / who-pays-vet / early-end steps stay visible before anyone signs, a horse full vs partial lease cost-share worksheet so full-lease versus half-lease riding days and who pays board / farrier / routine vet stay on one page), never a placeholder ASIN, a #1134 insurance-policy-binder / claims-checklist / mortality-versus-medical hop, a #1133 monthly-budget / emergency-fund / keep-feed-farrier hop, a #1132 equine-vet interview / after-hours-cover / VCPR-folder hop, a #1131 first-horse tryout / buyer-notebook / PPE-records-binder hop, a #1130 boarding walkthrough / contract-binder / hay-tarp hop, a #1129 saline / pads / scissors hop, a #1128 calculator-tools-chart hop, a #1126 daily-care-chart hop, a farrier-log / clipboard hop, an insurance-carrier deep link, or a vaccine / prescription hop. Educational owner searches only — not a ranked product list, not a legal form for a specific state, not a substitute for a written agreement reviewed with an equine attorney. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'The lease page keeps the equine supplement hop named in the cost split and links the cost calculator. It does not shop a lease binder.',
   },
   {
     id: 'horses · pre-purchase-exam hops',

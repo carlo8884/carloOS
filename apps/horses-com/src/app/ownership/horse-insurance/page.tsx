@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import Link from 'next/link'
+import { ComparisonFoot, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -61,7 +62,6 @@ export default function HorseInsurancePage() {
           { title: 'The Pre-Purchase Exam', href: '/ownership/pre-purchase-exam' },
           { title: 'Equine Health Hub', href: '/health' },
         ]}
-        heroHop={<PrimaryHop href='/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance' label='Browse horse insurance policy document binders on Amazon →' />}
         hero={{
           title: "Horse Insurance Explained",
           subtitle:
@@ -86,7 +86,7 @@ export default function HorseInsurancePage() {
             { label: "Liability Cover", href: "#liability" },
             { label: "Who should buy which cover", href: "#who" },
             { label: "Exclusions and Deciding", href: "#deciding" },
-            { label: "Insurance paperwork", href: "#kit" },
+            { label: "Next step", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -120,24 +120,7 @@ export default function HorseInsurancePage() {
 
           <h2 id="medical">Major Medical and Surgical</h2>
           <p>Major medical and surgical cover, usually added to a mortality policy, contributes toward veterinary costs for illness, injury, and surgery up to an annual limit, after any deductible. This is the cover most relevant to the dreaded colic-surgery or serious-lameness bill. Owners should note the annual limit, the deductible, per-condition limits, and whether diagnostics and follow-up are included, since a low limit may not cover a major surgery in full.</p>
-          <p>
-            A horse insurance policy document binder
-            is how the annual limit, deductible,
-            per-condition caps, and whether
-            diagnostics are included stay with the
-            mortality-plus-medical policy instead of
-            living in a phone photo roll — it is not
-            a horse boarding contract document binder
-            (that lives on boarding-options), not a
-            horse keep / feed / farrier cost log
-            binder (that lives on
-            cost-of-owning-a-horse), and not a horse
-            pre-purchase exam records binder (that
-            lives on buying-your-first-horse). This
-            page does not hop hay tarps, hay racks,
-            or feed bins already pinned on boarding
-            and nutrition pages.
-          </p>
+          <p>This page does not shop a policy binder. Read what ownership costs before choosing a policy.</p>
           <CrossSiteHelp
             href={crossSiteHref('vets-co', '/guides/emergency-vet-costs')}
             label="Emergency vet costs, explained"
@@ -150,18 +133,6 @@ export default function HorseInsurancePage() {
 
           <h2 id="lou">Loss of Use</h2>
           <p>Loss-of-use cover addresses the situation where a horse survives but can no longer perform its intended job -- for example, a competition horse rendered permanently unable to compete by injury. It typically pays a portion of the insured value and comes with significant conditions, definitions of what counts as loss of use, and exclusions. It is a specialized and often costly add-on relevant mainly to higher-value performance horses.</p>
-          <p>
-            The same horse insurance policy document
-            binder is also how the loss-of-use
-            definition, the portion of insured value
-            that pays, and those specialized
-            exclusions stay with the policy packet —
-            without turning this page into a
-            performance-feed hop, a shipping-boots
-            hop, or an ASTM-helmet hop. Educational
-            owner policy records only. This page does
-            not claim hands-on testing.
-          </p>
 
           <h2 id="liability">Liability Cover</h2>
           <p>Personal horse-owner liability insurance protects the owner if their horse injures a person or damages property -- for example if the horse escapes and causes a road accident or injures someone. Given that horses are large and can cause serious harm, liability cover is a consideration for every owner regardless of the horse&apos;s value, and it is sometimes included in equestrian-organization membership or separate from the horse&apos;s own mortality and medical cover.</p>
@@ -212,82 +183,20 @@ export default function HorseInsurancePage() {
           <p>Every policy has exclusions and conditions -- pre-existing conditions, certain procedures, requirements to report illness and obtain prior approval for treatment, and limits per condition or per year -- and failing to follow them (such as not notifying the insurer promptly) can void a claim. Read the policy carefully, disclose the horse&apos;s history honestly, and understand the limits before relying on cover. The decision of what to insure comes down to the horse&apos;s value, the owner&apos;s ability to absorb a large bill, and how the premiums compare with self-insuring through savings.</p>
           
 
-          <h2 id="kit">Insurance paperwork</h2>
-          
-
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (horse insurance policy document binder /
-              laminated horse insurance claims checklist /
-              horse mortality vs major-medical decision
-              worksheet).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1133
-              horse+ownership+monthly+budget+worksheet /
-              equine+emergency+fund+expense+tracker+notebook /
-              horse+keep+feed+farrier+cost+log+binder, #1132
-              laminated+equine+vet+interview+checklist /
-              horse+after+hours+emergency+cover+question+card /
-              horse+veterinary+history+vcpr+records+folder, #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <h2 id="kit">Next step</h2>
+          <div id="insurance-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">The cost guide is the number to read before choosing a policy. This page does not shop a policy binder.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance"
-                amazonLabel="Browse horse insurance policy document binders on Amazon →"
-              />
-              <a href="/ownership/cost-of-owning-a-horse" className="text-sm font-semibold text-brand-primary">
+              <Link
+                href="/ownership/cost-of-owning-a-horse"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
                 See what ownership costs before choosing a policy →
-              </a>
-          </div>
+              </Link>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

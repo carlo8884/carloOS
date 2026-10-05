@@ -3,6 +3,11 @@ import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co", description: "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.", path: '/insurance/wellness-plans-vs-insurance', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Wellness Plans vs. Pet Insurance", description: 'The difference between wellness plans and insurance, and when each makes sense.', url: 'https://vets.co/insurance/wellness-plans-vs-insurance', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-06-01T00:00:00Z' })
 const FAQS = [

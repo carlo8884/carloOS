@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pet Insurance Deductibles & Reimbursement Explained | Vets.co", description: "Annual vs. per-condition deductibles, reimbursement rates, and annual limits all shape your real cost. Learn how to balance premium against out-of-pocket risk.", path: '/insurance/deductibles-reimbursement', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pet Insurance Deductibles and Reimbursement', description: 'How deductibles, reimbursement rates, and annual limits interact to determine your real cost.', url: 'https://vets.co/insurance/deductibles-reimbursement', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [

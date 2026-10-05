@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Trupanion vs Figo Pet Insurance | Vets.co',

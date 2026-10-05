@@ -2,6 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Why a Holiday Emergency Visit Costs More | Vets.co',
