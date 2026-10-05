@@ -145,7 +145,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('northmate+green+interactive+feeder'),
-      shopLabel: 'Browse slow-feeder bowls on Amazon →',
+      shopLabel: 'Browse Northmate Green interactive feeders on Amazon →',
       links: [{ href: '/reviews/best-slow-feeder-bowls', label: 'Best slow-feeder bowls' }],
     },
     {

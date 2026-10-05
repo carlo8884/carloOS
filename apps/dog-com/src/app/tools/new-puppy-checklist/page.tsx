@@ -227,7 +227,7 @@ export default function NewPuppyChecklistPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist"
-                amazonLabel="Browse slow-feeder bowls on Amazon →"
+                amazonLabel="Browse Northmate Green interactive feeders on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist"
