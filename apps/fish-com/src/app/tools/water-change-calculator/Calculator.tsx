@@ -111,7 +111,7 @@ function volumeShop(removeGal: number): { query: string; cta: string; heading: s
   }
   return {
     query: 'aquarium+gravel+vacuum+siphon',
-    cta: 'Browse gravel vacuums on Amazon',
+    cta: 'Browse gravel vacuum siphons on Amazon',
     heading: 'A gravel-vacuum siphon handles this change in one pass',
   }
 }

@@ -338,7 +338,7 @@ export default function WaterParametersHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/python+water+changer?s=water-parameters"
