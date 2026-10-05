@@ -353,7 +353,7 @@ export default function FerretDIYEnrichmentPage() {
             pros={['Mental enrichment in minutes', 'Works with treats already on hand', 'Compact and portable', 'Easy to wash']}
             cons={['Loose-loop mats can shed chewable pieces — inspect before each use', 'Ferrets finish the treats quickly; limited session length']}
             price="$10–20"
-            ctaText="Find snuffle mats for ferrets"
+            ctaText="Find snuffle mats for ferrets on Amazon"
             ctaHref="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="snuffle+mat+small+pet"

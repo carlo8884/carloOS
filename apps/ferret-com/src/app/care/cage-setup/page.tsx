@@ -261,7 +261,7 @@ export default function FerretCageSetupPage() {
             pros={['Bar spacing kit-safe out of the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
             price="$200–280"
-            ctaText="Find Critter Nation cages"
+            ctaText="Find Critter Nation cages on Amazon"
             ctaHref="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="midwest+critter+nation+double+unit"
