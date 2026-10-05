@@ -185,7 +185,7 @@ export default function BestDogFoodPage() {
                 'Not "clean label" for owners who prioritize ingredient aesthetics',
               ]}
               price="$45–90 / 30 lbs"
-              ctaText="Shop Pro Plan →"
+              ctaText="Shop Pro Plan on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+dry+dog+food"
@@ -219,7 +219,7 @@ export default function BestDogFoodPage() {
               ]}
               price="$60–120 / 30 lbs (Science Diet)"
               priceNote="Prescription Diet varies"
-              ctaText="Shop Hill's →"
+              ctaText="Shop Hill's on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+dry+dog+food"
@@ -245,7 +245,7 @@ export default function BestDogFoodPage() {
               pros={['Exceptional ingredient quality and sourcing transparency', 'High protein — good for active dogs', 'Regional ingredients with named suppliers']}
               cons={['Weaker WSAVA compliance than Royal Canin/Purina', 'Premium price', 'Not ideal for dogs with health conditions']}
               price="$90–150 / 25 lbs"
-              ctaText="Shop Orijen →"
+              ctaText="Shop Orijen on Amazon →"
               ctaHref="/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="orijen+dry+dog+food"

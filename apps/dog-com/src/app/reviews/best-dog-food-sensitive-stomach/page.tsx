@@ -47,7 +47,7 @@ export default function SensitiveStomachFoodPage() {
               pros={['WSAVA top-tier', 'Single novel protein (salmon)', 'Live probiotics', 'No corn/wheat/soy', 'Most vet-recommended sensitive stomach formula']}
               cons={['Not appropriate for fish/salmon allergies', 'Not a hydrolyzed diet for true food allergy diagnosis']}
               price="$55–75 / 30 lb"
-              ctaText="Shop Purina Pro Plan Sensitive →"
+              ctaText="Shop Purina Pro Plan Sensitive on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+sensitive+skin+stomach"
