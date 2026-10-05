@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import { missedPage } from '../data/missed-page'
+import { BelowFoldPhoto } from './BelowFoldPhoto'
 import { HubSearch } from './HubSearch'
 import { TrackPage404 } from './TrackPage404'
 
@@ -78,6 +79,7 @@ export function MissedPage({
         <Link href={page.hub.href} className="text-sm font-semibold text-brand-primary no-underline hover:underline">
           All {page.hub.title.toLowerCase()}
         </Link>
+        <BelowFoldPhoto siteId={siteId} />
       </div>
     </div>
   )

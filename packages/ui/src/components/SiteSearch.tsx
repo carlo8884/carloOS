@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
 import type { RankedSearchHit } from '../lib/site-search'
+import { BelowFoldPhoto } from './BelowFoldPhoto'
 import { MissedPage } from './MissedPage'
 import { TrackSiteSearch } from './TrackSiteSearch'
 
@@ -86,6 +87,7 @@ export function SiteSearch({
             </li>
           ))}
         </ul>
+        <BelowFoldPhoto siteId={siteId} />
       </div>
     </div>
   )

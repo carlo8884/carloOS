@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 /**
- * Mobile Lighthouse on each earning site's top five money pages.
+ * Mobile Lighthouse on each earning site's top five money pages, plus the
+ * gift guide, search page, and not-found document.
  * One run per URL. A URL that misses a budget is retried up to twice.
  * Start the production servers yourself with LH_ORIGIN_<SITE>, or let this
  * process start `next start` for each site (the apps must already be built).
@@ -16,6 +17,7 @@ import * as chromeLauncher from 'chrome-launcher'
 import {
   BUDGETS,
   EARNING_SITES,
+  LAYOUT_PAGES,
   MONEY_PAGES,
   SITE_PORTS,
   budgetProblems,
@@ -138,7 +140,7 @@ async function main() {
         await waitUntilUp(origin + '/', child)
       }
       try {
-        for (const slug of MONEY_PAGES[site]) {
+        for (const slug of [...MONEY_PAGES[site], ...LAYOUT_PAGES[site]]) {
           const url = pageUrl(origin, slug)
           const { metrics, problems } = await auditUrl(url, chrome.port)
           const line = [
@@ -169,7 +171,11 @@ async function main() {
     )
     process.exit(1)
   }
-  console.log(`\nAll ${EARNING_SITES.length * 5} money pages met the mobile budget`)
+  const pageCount = EARNING_SITES.reduce(
+    (count, site) => count + MONEY_PAGES[site].length + LAYOUT_PAGES[site].length,
+    0,
+  )
+  console.log(`\nAll ${pageCount} pages met the mobile budget`)
 }
 
 main().catch((error) => {
