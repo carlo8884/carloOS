@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -304,6 +305,11 @@ export default function LeashAndHarnessTrainingPage() {
             Two harness styles that fit ferret anatomy correctly — an H-style and a vest-style — both stocked through major pet retailers. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
           </p>
           <ScoreMethodology />
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <Link href="/behavior/stress-signs" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Read the stress signs before the first outdoor walk →
+            </Link>
+          </p>
           <ReviewCard
             id="marshall-ferret-harness"
             badge="H-Style"
