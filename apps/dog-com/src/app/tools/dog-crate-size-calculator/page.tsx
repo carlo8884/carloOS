@@ -73,7 +73,7 @@ const appSchema = {
     'Recommended standard crate size (18–48 inch line) with size class',
     'Inches or centimetres',
     'Puppy guidance: size to adult dimensions and use a divider',
-    'One next step: the crate review, plus a wire-crate-with-divider search',
+    'One next step: the crate review, plus a MidWest iCrate search',
   ],
   publisher: { '@type': 'Organization', name: 'Dog.com Editorial', url: 'https://dog.com' },
 }
@@ -173,9 +173,9 @@ export default function DogCrateSizeCalculatorPage() {
           siteId="dog-com"
           nextHref="/reviews/best-dog-crates"
           nextLabel="Compare wire, airline, and heavy-duty crates"
-          nextBlurb="The calculator is the internal size. The crate review ranks the wire, airline, and heavy-duty styles that meet it. One search below is a wire crate with a divider — the usual match for a growing puppy."
-          resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-dog-crate-size"
-          resourceLabel="Browse wire crates with a divider on Amazon →"
+          nextBlurb="The calculator is the internal size. The crate review ranks the wire, airline, and heavy-duty styles that meet it. One search below is the MidWest iCrate, the divider wire crate that review leads with."
+          resourceHref="/go/amazon-brand/midwest+icrate+dog+crate?s=tools-dog-crate-size"
+          resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
         />
         <div className="max-w-2xl mt-8">
           <EmailCapture
