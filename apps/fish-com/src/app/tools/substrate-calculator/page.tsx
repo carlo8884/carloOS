@@ -218,11 +218,11 @@ export default function SubstrateCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+aqua+soil+planted+substrate?s=tools-substrate-calculator"
-              amazonLabel="Browse aquarium aqua soil planted substrate on Amazon →"
+              amazonLabel="Browse planted aqua soil on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+substrate+vacuum?s=tools-substrate-calculator"
-              amazonLabel="Browse aquarium substrate vacuum on Amazon →"
+              amazonLabel="Browse substrate vacuums on Amazon →"
             />
           </div>
         </div>
