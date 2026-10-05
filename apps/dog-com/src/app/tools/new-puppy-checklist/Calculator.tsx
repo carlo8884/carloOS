@@ -379,7 +379,7 @@ function buildList(
       essential: size === 'small' || size === 'medium',
       gear: true,
       shopHref: amazonHop('soft+sided+pet+carrier'),
-      shopLabel: 'Browse pet carriers on Amazon →',
+      shopLabel: 'Browse soft-sided pet carriers on Amazon →',
       links: [],
     },
     {
