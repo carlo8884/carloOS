@@ -185,7 +185,7 @@ export default function SaddlePadsPage() {
             pros={['Excellent friction reduction', 'Good wicking at saddle edges', 'Shimmable versions aid fit tuning']}
             cons={['Cannot fix a wrong-width saddle', 'Real sheepskin needs careful washing', 'Premium versions are pricey']}
             price="$60–160"
-            ctaText="Compare at Dover Saddlery →"
+            ctaText="Compare a sheepskin half pad at Dover Saddlery →"
             ctaHref="/go/dover/sheepskin-half-pad?s=tack-saddle-pads"
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="sheepskin-half-pad"
@@ -209,7 +209,7 @@ export default function SaddlePadsPage() {
             pros={['Durable and breathable', 'Conforms to the back over time', 'Cushions heavier Western saddles']}
             cons={['Heavier and bulkier than English pads', 'Quality felt is more expensive', 'Still cannot correct saddle fit']}
             price="$80–200"
-            ctaText="Compare at SmartPak →"
+            ctaText="Compare a wool-felt western pad at SmartPak →"
             ctaHref="/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="wool-felt-western-pad"

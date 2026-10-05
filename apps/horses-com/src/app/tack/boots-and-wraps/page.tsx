@@ -160,7 +160,7 @@ export default function BootsWrapsPage() {
             pros={['Reliable interference protection', 'Washable and quick-drying', 'Widely available in all sizes']}
             cons={['No genuine tendon support (none provides it)', 'Trapped grit can cause rubs', 'Must be fitted correctly']}
             price="$25–70 per pair"
-            ctaText="Compare at Riding Warehouse →"
+            ctaText="Compare synthetic brushing boots at Riding Warehouse →"
             ctaHref="/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps"
             ctaAffiliateProgram="ridingwarehouse"
             ctaAffiliateProduct="synthetic-brushing-boots"
@@ -184,7 +184,7 @@ export default function BootsWrapsPage() {
             pros={['Prevents overreach and shoe-pulling injuries', 'Inexpensive insurance against lost shoes', 'Pull-on styles stay secure']}
             cons={['Pull-on styles are harder to put on', 'Can rub if oversized', 'Need cleaning after muddy work']}
             price="$12–35 per pair"
-            ctaText="Compare at SmartPak →"
+            ctaText="Compare pull-on bell boots at SmartPak →"
             ctaHref="/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="pull-on-bell-boots"
@@ -208,7 +208,7 @@ export default function BootsWrapsPage() {
             pros={['Versatile stable and travel protection', 'Quilted liner distributes pressure', 'Reusable and washable']}
             cons={['Wrapped wrong, can cause tendon damage', 'Requires learned technique', 'Time-consuming to apply correctly']}
             price="$15–40 per set"
-            ctaText="Compare at Dover Saddlery →"
+            ctaText="Compare standing wraps with quilted liners at Dover Saddlery →"
             ctaHref="/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps"
             ctaAffiliateProgram="dover"
             ctaAffiliateProduct="standing-wraps-and-quilts"
