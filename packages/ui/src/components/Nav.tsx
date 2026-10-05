@@ -12,13 +12,27 @@ import type { SiteId } from '@carloOS/config'
 import { getSiteConfig, isEarningSiteId } from '@carloOS/config'
 import { Logo } from './Logo'
 
-function NavSearchField({ id, compact }: { id: string; compact?: boolean }) {
+function NavSearchField({
+  id,
+  compact,
+  onEscape,
+}: {
+  id: string
+  compact?: boolean
+  onEscape?: () => void
+}) {
   return (
     <form
       action="/search"
       method="get"
       role="search"
+      aria-label="Site search"
       className={compact ? 'shrink-0' : 'px-6 py-3 border-b border-brand-border'}
+      onKeyDown={(event) => {
+        if (event.key !== 'Escape' || !onEscape) return
+        event.preventDefault()
+        onEscape()
+      }}
     >
       <label htmlFor={id} className="sr-only">
         Search guides, reviews, and tools
@@ -202,7 +216,7 @@ export function Nav({ siteId, activePath }: NavProps) {
             aria-label="Mobile navigation"
             onKeyDown={trapMenuTab}
           >
-            {isEarningSiteId(siteId) ? <NavSearchField id="nav-search-mobile" /> : null}
+            {isEarningSiteId(siteId) ? <NavSearchField id="nav-search-mobile" onEscape={closeMenu} /> : null}
             <ul className="list-none m-0 p-0 flex flex-col" role="list">
               {config.nav.map((item) => (
                 <li key={item.href} className="border-b border-brand-border last:border-0">

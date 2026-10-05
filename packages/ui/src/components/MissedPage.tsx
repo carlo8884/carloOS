@@ -58,7 +58,14 @@ export function MissedPage({
           </svg>
         ) : null}
         <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-3">{heading}</h1>
-        <p className="text-base text-brand-text-light leading-relaxed mb-8">{lead}</p>
+        <p
+          className="text-base text-brand-text-light leading-relaxed mb-8"
+          role={kind === 'search' ? 'status' : undefined}
+          aria-live={kind === 'search' ? 'polite' : undefined}
+          aria-atomic={kind === 'search' ? 'true' : undefined}
+        >
+          {lead}
+        </p>
         <HubSearch
           listId={listId}
           total={page.guides.length}
