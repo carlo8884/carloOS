@@ -128,7 +128,7 @@ export default function BestPuppyFoodPage() {
               pros={['400+ published studies', 'AAFCO feeding trial substantiated', 'Widely available', 'Good price-to-quality ratio', 'DHA from salmon oil']}
               cons={['No breed-specific lines (unlike Royal Canin)', 'Chicken as primary protein — not suitable for chicken-sensitive dogs']}
               price="$55–75 per 34 lb bag"
-              ctaText="Shop Purina Pro Plan →"
+              ctaText="Shop Purina Pro Plan on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="purina+pro+plan+puppy+large+breed"
@@ -150,7 +150,7 @@ export default function BestPuppyFoodPage() {
               pros={['Top-tier WSAVA compliance', 'AAFCO feeding trial substantiated', 'Appropriate kibble size for small breeds', 'Full-time veterinary nutritionists']}
               cons={['Premium price', 'Not for large breeds — use Hill\'s Large Breed formula instead']}
               price="$55–80 per 28.5 lb bag"
-              ctaText="Shop Hill's Science Diet →"
+              ctaText="Shop Hill's Science Diet on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+puppy+small+paws"
@@ -172,7 +172,7 @@ export default function BestPuppyFoodPage() {
               pros={['Most affordable WSAVA-compliant option', 'Large breed formula available', 'Widely available', 'Adequate nutritional quality']}
               cons={['Less research investment than top 3', 'AAFCO formulation (not feeding trial) on some lines', 'Lower-quality protein sourcing than premium options']}
               price="$30–50 per 30 lb bag"
-              ctaText="Shop Iams →"
+              ctaText="Shop Iams on Amazon →"
               ctaHref="/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="iams+proactive+health+puppy+large+breed"
