@@ -238,7 +238,7 @@ export default function HorseGestationCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator"
-              amazonLabel="Browse equine thermometers on Amazon →"
+              amazonLabel="Browse digital equine thermometers on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator"
