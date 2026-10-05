@@ -263,7 +263,7 @@ export default function SaddleFitBasicsPage() {
             pros={['Standard correction-pad in qualified-fitter practice', 'Sheepskin pressure distribution', 'Shimmable when a fitter has identified minor asymmetry', 'Long product life if washed correctly']}
             cons={['Premium price', 'Cannot correct structural fit problems — saddle work is the fix', 'Sheepskin care is more involved than a synthetic pad']}
             price="$180–350"
-            ctaText="Find Mattes sheepskin half-pads"
+            ctaText="Find Mattes sheepskin half-pads on SmartPak"
             ctaHref="/go/smartpak/mattes-sheepskin-half-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="mattes-sheepskin-half-pad"
@@ -286,7 +286,7 @@ export default function SaddleFitBasicsPage() {
             pros={['Standard daily tack', 'Cheap relative to other riding gear', 'Multiple-discipline shapes available', 'Washable']}
             cons={['Square (non-contoured) pads bridge the wither under most saddles — avoid', 'Cheap fleece linings pill and lose wickability after a season']}
             price="$30–80"
-            ctaText="Find contoured saddle pads"
+            ctaText="Find contoured saddle pads on SmartPak"
             ctaHref="/go/smartpak/contoured-all-purpose-pad?s=guides-saddle-fit-basics"
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="contoured-all-purpose-pad"
