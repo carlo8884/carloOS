@@ -5740,8 +5740,19 @@ const CALCULATORS = [
       { re: /\(c\s*-\s*t\)\s*\/\s*\(c\s*-\s*s\)/, label: 'dilution fraction = (current−target)/(current−source)' },
       { re: /const filled = tank \* \(fillPct \/ 100\)/, label: 'filled volume = tank × (fill% / 100)' },
       { re: /const remove = filled \* \(changePct \/ 100\)/, label: 'remove = filled × (change% / 100)' },
+      { re: /query: 'python\+water\+changer'/, label: 'large-change result uses the locked Python changer search' },
+      { re: /query: 'aquarium\+gravel\+vacuum\+siphon'/, label: 'small-change result uses the locked gravel-vacuum search, without a dechlorinator token' },
+      { re: /query="api\+freshwater\+master\+test\+kit"/, label: 'dilution result uses the locked API test-kit search' },
+      { re: /Browse Python-style water changers on Amazon/, label: 'Python result label matches the changer search' },
+      { re: /Browse gravel vacuums on Amazon/, label: 'gravel-vacuum result label matches the siphon search' },
+      { re: /Browse API Master Test Kit on Amazon/, label: 'test-kit result label matches the API search' },
     ],
-    why: 'Volume mode: gallons to remove = filled volume × change percent. Dilution mode: fraction = (current−target)/(current−sourceLevel).',
+    mustExclude: [
+      { re: /water dechlorinator/, label: 'gravel-vacuum result does not add a dechlorinator token' },
+      { re: /query: 'python water changer'/, label: 'do not pass a space-separated Python query' },
+      { re: /query="api freshwater master test kit"/, label: 'do not pass a space-separated test-kit query' },
+    ],
+    why: 'Volume mode: gallons to remove = filled volume × change percent. Dilution mode: fraction = (current−target)/(current−sourceLevel). Result searches are the locked plus-form hops (Python changer, gravel-vacuum siphon, API master test kit), and the button text names that search.',
   },
   {
     id: 'fish · water-change-calculator hops',
@@ -5765,6 +5776,20 @@ const CALCULATORS = [
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
     ],
     why: '2026-09-08 journeys: after the gallons-to-remove answer, next step is the stocking calculator (slim-inch ceiling) + the existing test-kit hop. Empty Keep-the-change-plan / Keep-the-math husks removed. Shop dump stays below. No invented kitchen hops.',
+  },
+  {
+    id: 'fish · ResultCTA amazon slug',
+    file: 'apps/fish-com/src/app/tools/_components/ResultCTA.tsx',
+    mustInclude: [
+      { re: /function amazonBrandSlug/, label: 'shared result CTA builds a plus-form slug' },
+      { re: /\.split\(\/\[\\s\+\]\+\/\)/, label: 'spaces and plus signs are token separators' },
+      { re: /\.join\('\+'\)/, label: 'brand search slug uses plus-form, not %20' },
+      { re: /amazonBrandSlug\(query\)/, label: 'href uses the plus-form slug' },
+    ],
+    mustExclude: [
+      { re: /encodeURIComponent\(query\)/, label: 'do not percent-encode the whole query (spaces become %20 and plus signs become %2B)' },
+    ],
+    why: 'Fish result CTAs must emit the same plus-form amazon-brand slug as the locked ShopCtas hops. Encoding the whole query turned water-change searches into %20 links and would turn a plus-form query into %2B.',
   },
   {
     id: 'horses · horse-height-converter',
