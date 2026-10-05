@@ -42,11 +42,17 @@ export function SiteSearch({
     <div className="min-h-[70vh] px-container-sm sm:px-container py-16">
       <div className="max-w-xl mx-auto">
         <TrackSiteSearch query={trimmed} resultCount={total} />
-        <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-3">
+        <h1 id="search-results-heading" className="font-display font-black text-brand-dark text-3xl tracking-tight mb-3">
           Results for “{trimmed}”
         </h1>
-        <p className="text-base text-brand-text-light leading-relaxed mb-6">
-          {total === 1 ? '1 page' : `${total} pages`}
+        <p
+          id="search-result-count"
+          role="status"
+          aria-live="polite"
+          aria-atomic="true"
+          className="text-base text-brand-text-light leading-relaxed mb-6"
+        >
+          {total === 1 ? '1 result' : `${total} results`}
           {shown < total ? `, showing ${shown}` : ''}
         </p>
         <form action="/search" method="get" role="search" className="mb-8">
@@ -69,7 +75,7 @@ export function SiteSearch({
             </button>
           </div>
         </form>
-        <ul className="list-none m-0 p-0 flex flex-col gap-3">
+        <ul aria-labelledby="search-results-heading" aria-describedby="search-result-count" className="list-none m-0 p-0 flex flex-col gap-3">
           {results.map((hit) => (
             <li key={hit.path}>
               <Link
