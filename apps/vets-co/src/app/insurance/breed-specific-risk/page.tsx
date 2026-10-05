@@ -2,6 +2,11 @@ import type { Metadata } from 'next'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
+
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Breed-Specific Insurance Risk — What to Know | Vets.co", description: "Breed predispositions to orthopedic, cardiac, and other conditions shape how — and how early — to insure. Learn how breed risk affects pet insurance decisions.", path: '/insurance/breed-specific-risk', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Breed-Specific Insurance Risk', description: 'How breed predispositions affect pet insurance decisions, waiting periods, and coverage choices.', url: 'https://vets.co/insurance/breed-specific-risk', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-06T00:00:00Z' })
 const FAQS = [
