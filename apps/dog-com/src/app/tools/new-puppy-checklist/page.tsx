@@ -190,7 +190,7 @@ export default function NewPuppyChecklistPage() {
           nextLabel="Size the crate before you buy"
           nextBlurb="The checklist is the day-one list. The crate-size calculator turns nose-to-tail and height into a standard crate length so you buy the adult size once — then use a divider while the puppy is small."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
         <div className="max-w-2xl mt-8">
           <EmailCapture
@@ -219,7 +219,7 @@ export default function NewPuppyChecklistPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist"

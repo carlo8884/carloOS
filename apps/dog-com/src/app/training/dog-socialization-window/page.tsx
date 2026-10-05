@@ -229,7 +229,7 @@ export default function DogSocializationWindowPage() {
             nextLabel="Put the 100+ exposures on a daily schedule"
             nextBlurb="The window is 3–14 weeks. The next useful page is the puppy schedule — short, food-paired sessions plus crate alone-time. The hop below is the same wire-crate-with-divider search already on this page."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
-            resourceLabel="Browse crates on Amazon →"
+            resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
 
           {/* Money path — live amazon-brand search hops (socialization-window kit).
@@ -291,7 +291,7 @@ export default function DogSocializationWindowPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/soft+dog+carrier?s=training-socialization-window"

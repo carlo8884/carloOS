@@ -75,7 +75,7 @@ export default function CrateTrainingPage() {
           nextLabel="Pair the crate with house training"
           nextBlurb="The protocol is the den. House training is why the crate is sized tight — dogs avoid soiling the sleeping end. Size first if you have not, then keep the divider on while the puppy grows."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (crate kit).
@@ -108,7 +108,7 @@ export default function CrateTrainingPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"
-              amazonLabel="Browse crates on Amazon →"
+              amazonLabel="Browse wire crates with a divider panel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+crate+pad?s=training-crate"

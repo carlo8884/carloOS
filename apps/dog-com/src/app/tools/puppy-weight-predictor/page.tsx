@@ -221,7 +221,7 @@ export default function PuppyWeightPredictorPage() {
             nextLabel="Size the crate once for adult length"
             nextBlurb="The predictor is a planning range, not a guaranteed adult weight. Size the crate for the high end of that range and use a divider while the puppy grows. The hop below is the same wire-crate-with-divider search already on this page."
             resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
-            resourceLabel="Browse crates on Amazon →"
+            resourceLabel="Browse wire crates with a divider panel on Amazon →"
           />
         </div>
       </section>
@@ -252,7 +252,7 @@ export default function PuppyWeightPredictorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse crates on Amazon →"
+                amazonLabel="Browse wire crates with a divider panel on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor"

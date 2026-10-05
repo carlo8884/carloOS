@@ -126,7 +126,7 @@ export default function SeparationAnxietyPage() {
           nextLabel="Set the crate as the alone-time room"
           nextBlurb="Boredom destruction is a management problem first. Use the crate-training guide next so unsupervised time has a sized crate and a divider before you lengthen absences. The hop below is the same divider-crate search already on this page."
           resourceHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
-          resourceLabel="Browse crates on Amazon →"
+          resourceLabel="Browse wire crates with a divider panel on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (alone-time kit).
@@ -177,7 +177,7 @@ export default function SeparationAnxietyPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-sep-anxiety"
-              amazonLabel="Browse crates on Amazon →"
+              amazonLabel="Browse wire crates with a divider panel on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"
