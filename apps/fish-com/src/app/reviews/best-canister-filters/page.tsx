@@ -59,7 +59,7 @@ export default function BestCanisterFiltersPage() {
               pros={['Near-silent', 'AquaStop for easy maintenance', 'Excellent media capacity', '5-year warranty', 'Accurate flow rate']}
               cons={['Primer button can be finicky on first start', 'More expensive than Penn Plax']}
               price="$120–150"
-              ctaText="Check price of the Fluval 307 on Amazon"
+              ctaText="Check price of the Fluval 307 canister filter on Amazon"
               ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
