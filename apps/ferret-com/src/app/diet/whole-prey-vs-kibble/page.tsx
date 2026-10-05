@@ -225,7 +225,7 @@ export default function WholePreyVsKibblePage() {
             pros={['Best biological match', 'Natural calcium-to-phosphorus ratio', 'Strong dental abrasion', 'Works as a supplement or a sole diet']}
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
-            ctaText="Check price of frozen feeder mice and chicks on Chewy"
+            ctaText="Check price of frozen feeder mice and chicks on Amazon"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
@@ -269,7 +269,7 @@ export default function WholePreyVsKibblePage() {
             },
             {
               question: 'Which option does this page pick for whole prey as the diet or as a supplement?',
-              answer: 'Frozen feeder mice and chicks, scored 8.4. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Chewy. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
+              answer: 'Frozen feeder mice and chicks, scored 8.4. The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required. The button goes to Amazon. Skip it with no freezer, or if you will not handle raw prey carefully. The card flags food safety and sourcing.',
             },
             {
               question: 'What does this page say premium low-carb kibble costs?',
