@@ -70,6 +70,7 @@ export default function ReadingFoodLabelsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Choosing a Ferret Kibble', href: '/diet/best-ferret-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Transitioning Foods', href: '/diet/transitioning-foods' },

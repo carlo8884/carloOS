@@ -135,6 +135,7 @@ export default function FerretDietBasicsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Insulinoma in Ferrets', href: '/health/insulinoma' },
                 { label: 'Cage Setup', href: '/care/cage-setup' },
               ]}

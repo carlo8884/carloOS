@@ -352,6 +352,7 @@ export default function CatCalorieCalculatorPage() {
           <h2 className="font-display text-lg font-bold text-brand-dark mb-4">Related Tools &amp; Reviews</h2>
           <div className="grid sm:grid-cols-2 gap-3">
             {[
+              { label: 'Daily cat food grams', href: '/tools/cat-food-amount-calculator', note: 'Turn the kcal result into grams from the label' },
               { label: 'Cat Body Condition Score', href: '/tools/cat-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
               { label: 'Cat Age Calculator', href: '/tools/cat-age-calculator', note: 'Match portions to AAFP/AAHA life stage' },
               { label: 'Cat Grimace Scale', href: '/tools/cat-grimace-scale', note: 'Facial pain-watch — not a diagnosis' },

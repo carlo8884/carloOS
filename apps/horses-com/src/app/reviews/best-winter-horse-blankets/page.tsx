@@ -456,6 +456,7 @@ export default function BestWinterBlanketsPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
                 { label: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
                 { label: 'Joint Supplements', href: '/supplements/joint-supplements' },
                 { label: 'Quarter Horse Guide', href: '/breeds/quarter-horse' },

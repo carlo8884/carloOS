@@ -152,6 +152,8 @@ export default function BestFerretKibblePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
+                { label: 'Label calculator', href: '/tools/label-calculator' },
                 { label: 'Whole-Prey vs Kibble', href: '/diet/whole-prey-vs-kibble' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
                 { label: 'Kit vs Adult Feeding', href: '/diet/kit-vs-adult-feeding' },

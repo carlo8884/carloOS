@@ -91,6 +91,7 @@ export default function ForageBasicsPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Hay Types Compared", href: "/nutrition/hay-types" },
               { label: "Grain and Concentrates", href: "/nutrition/grain-and-concentrates" },
               { label: "Equine Colic", href: "/health/colic" },

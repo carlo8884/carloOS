@@ -62,6 +62,7 @@ export default function HolidayEmergencyVisitGuidePage() {
         <RelatedLinks
           title="Related"
           links={[
+            { label: 'November and December costs', href: '/reviews/november-december-gift-guide' },
             { label: 'Reviews hub', href: '/reviews' },
             { label: 'Emergency vet costs', href: '/guides/emergency-vet-costs' },
             { label: 'Best pet insurance', href: '/reviews/best-pet-insurance' },

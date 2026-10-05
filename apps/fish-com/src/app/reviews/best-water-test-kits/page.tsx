@@ -136,7 +136,7 @@ export default function BestWaterTestKitsPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'November and December gifts', href: '/reviews/november-december-gift-guide' }, { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' }, { label: 'New Tank Syndrome', href: '/health/new-tank-syndrome' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
 
           </aside>
         </div>

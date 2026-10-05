@@ -132,7 +132,7 @@ export default function BestDentalChewsPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'All Dog Reviews', href: '/reviews' }, { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' }, { label: 'Dog Dental Care', href: '/health/dog-dental-care' }, { label: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance') }]} />
 
           </aside>
         </div>
