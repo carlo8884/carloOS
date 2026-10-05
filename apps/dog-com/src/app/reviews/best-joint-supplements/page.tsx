@@ -146,7 +146,7 @@ export default function BestJointSupplementsPage() {
               pros={['Most affordable NASC-certified glucosamine product', 'Widely available', 'Long track record of veterinary use', 'Reasonable starting point before Dasuquin']}
               cons={['Less evidence than Dasuquin (no ASU)', 'Significant non-response rate in some dogs']}
               price="$25–45 for 120-count"
-              ctaText="Shop Cosequin DS on Amazon →"
+              ctaText="Shop Cosequin DS Maximum Strength on Amazon →"
               ctaHref="/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="cosequin+ds+maximum+strength"
