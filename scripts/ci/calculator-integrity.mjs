@@ -12859,6 +12859,65 @@ const CALCULATORS = [
     ],
     why: 'Money path leftover after #1250: ferret litter review under-hero is on main. Preferred ferret / fish / vets / dog / horses Amazon leftovers are exhausted; this is the last remaining Amazon leftover (enrichment was deprioritized until now). Keep the existing sidebar capture, the already-hopped snuffle-mat Amazon search, and the existing Marshall tunnel hop; add under-hero capture with a concrete ferret enrichment-checklist offer matching on-page tunnel-first / no-rubber / forage / rotate-toys copy. Do not re-ship new queries. No new brand, no PLACEHOLDER. Chewy stays omitted so empty buttons stay hidden. Ferret aging stays held.',
   },
+  {
+    id: 'dog · food-amount grams',
+    file: 'apps/dog-com/src/app/tools/dog-food-amount-calculator/model.ts',
+    mustInclude: [
+      { re: /70 \* Math\.pow\(kg, 0\.75\)/, label: 'RER = 70 × kg^0.75' },
+      { re: /\(mer \* 1000\) \/ kcalPerKg/, label: 'grams = MER × 1000 / kcal per kg' },
+      { re: /factor: 1\.6/, label: 'neutered adult factor 1.6' },
+      { re: /factor: 3\.0/, label: 'young puppy factor 3.0' },
+    ],
+    mustExclude: [{ re: /12\.839/, label: 'unrelated CO2 coefficient' }],
+    why: 'Same life-stage factors as the dog calorie calculator. Grams come from the bag kcal/kg, not a new energy equation.',
+  },
+  {
+    id: 'vets · cat-food-amount grams',
+    file: 'apps/vets-co/src/app/tools/cat-food-amount-calculator/model.ts',
+    mustInclude: [
+      { re: /70 \* Math\.pow\(kg, 0\.75\)/, label: 'RER = 70 × kg^0.75' },
+      { re: /\(der \* 1000\) \/ kcalPerKg/, label: 'grams = DER × 1000 / kcal per kg' },
+      { re: /factor: 1\.2/, label: 'neutered indoor factor 1.2' },
+      { re: /factor: 2\.5/, label: 'kitten factor 2.5' },
+      { re: /factor: 0\.8/, label: 'weight-loss factor 0.8' },
+    ],
+    mustExclude: [{ re: /factor: 3\.0/, label: 'do not copy the dog puppy factor onto the cat tool' }],
+    why: 'Same feline factors as the cat calorie calculator.',
+  },
+  {
+    id: 'horses · water band',
+    file: 'apps/horses-com/src/app/tools/horse-water-calculator/model.ts',
+    mustInclude: [
+      { re: /GAL_PER_100_LB_LOW = 0\.5/, label: '0.5 gallon per 100 lb' },
+      { re: /GAL_PER_100_LB_HIGH = 1\b/, label: '1 gallon per 100 lb' },
+      { re: /\(weightLb \/ 100\) \* GAL_PER_100_LB_LOW/, label: 'low band scales with weight' },
+    ],
+    mustExclude: [{ re: /\* 2\b/, label: 'no invented heat multiplier' }],
+    why: 'A 1,000 lb horse is 5–10 gallons, the water page’s temperate idle line. No second coefficient.',
+  },
+  {
+    id: 'fish · live rock',
+    file: 'apps/fish-com/src/app/tools/live-rock-calculator/model.ts',
+    mustInclude: [
+      { re: /LB_PER_GAL_LOW = 1\b/, label: '1 lb per gallon' },
+      { re: /LB_PER_GAL_HIGH = 1\.5/, label: '1.5 lb per gallon' },
+      { re: /gallons \* LB_PER_GAL_LOW/, label: 'pounds scale with gallons' },
+    ],
+    mustExclude: [{ re: /inch per gallon/i, label: 'not the stocking rule' }],
+    why: 'Saltwater setup page: 1–1.5 lb live rock per gallon.',
+  },
+  {
+    id: 'ferret · label dry matter',
+    file: 'apps/ferret-com/src/app/tools/label-calculator/model.ts',
+    mustInclude: [
+      { re: /OMITTED_ASH = 7/, label: 'omitted ash midpoint of 6–8% is 7' },
+      { re: /100 - input\.protein - input\.fat - input\.fiber - input\.moisture - ashUsed/, label: 'carbohydrate by difference' },
+      { re: /\(asFed \/ dryMatterPercent\) \* 100/, label: 'dry-matter conversion' },
+      { re: /100 - input\.moisture/, label: 'dry-matter percent' },
+    ],
+    mustExclude: [{ re: /we tested/, label: 'no hands-on claim in the formula file' }],
+    why: 'Label page: dry-matter nutrient = as-fed ÷ dry-matter % × 100, and carbohydrate is the remainder. 36% protein at 10% moisture is 40% dry-matter protein.',
+  },
 
 ]
 

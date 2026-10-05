@@ -200,6 +200,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://horses.com/tools/horse-grimace-scale', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-cost-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-feed-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://horses.com/tools/horse-water-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-gestation-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/horse-height-converter', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://horses.com/tools/is-this-a-horse-emergency', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },

@@ -57,6 +57,12 @@ const TOOLS = [
     tag: 'Stocking',
   },
   {
+    href: '/tools/live-rock-calculator',
+    title: 'Live Rock Pounds per Gallon',
+    desc: 'Pounds of live rock from display gallons, using the saltwater setup page’s 1–1.5 pounds per gallon. The next link is that page’s starter-kit search.',
+    tag: 'Equipment',
+  },
+  {
     href: '/tools/heater-wattage-calculator',
     title: 'Heater Wattage Calculator',
     desc: 'Pick the right heater size for your tank, room temperature, and target water temperature — then shop a heater kit (Eheim Jager, Aqueon Pro) with a dual-heater split for tanks 40 gallons and up.',

@@ -207,7 +207,11 @@ export function harnessPick(chestBand: string): MatchedPick {
  * Small Paws under 25 lb expected adult weight, Giant Puppy at 90 lb or more.
  * This calculator's weight is current weight, so a puppy under 50 lb is not assigned a bag.
  */
-export function calorieFoodPick(stageLabel: string, weightLb: number): MatchedPick {
+export function calorieFoodPick(
+  stageLabel: string,
+  weightLb: number,
+  source = 'tools-dog-calorie-calculator',
+): MatchedPick {
   const puppy = stageLabel.startsWith('Puppy')
   if (puppy && weightLb >= 90) {
     return {
@@ -219,7 +223,7 @@ export function calorieFoodPick(stageLabel: string, weightLb: number): MatchedPi
   }
   if (puppy && weightLb >= 50) {
     return {
-      href: '/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-dog-calorie-calculator',
+      href: `/go/amazon-brand/royal+canin+large+breed+puppy?s=${source}`,
       label: 'Browse Royal Canin large-breed puppy food on Amazon',
       detail:
         'The puppy-food review says an expected adult weight of 50 lb or more needs a large-breed puppy formula. Royal Canin Large Breed Puppy is that card. This result is a puppy stage and the current weight is already at that line.',
@@ -235,13 +239,13 @@ export function calorieFoodPick(stageLabel: string, weightLb: number): MatchedPi
   }
   if (stageLabel.startsWith('Senior')) {
     return {
-      href: '/go/chewy-brand/hills+science+diet+senior+7?s=tools-dog-calorie-calculator',
+      href: `/go/chewy-brand/hills+science+diet+senior+7?s=${source}`,
       label: "Browse Hill's Science Diet Senior on Chewy",
       detail: "The senior-food review includes Hill's Science Diet Senior. This result is the senior life stage.",
     }
   }
   return {
-    href: '/go/chewy-brand/royal+canin+dry+dog+food?s=tools-dog-calorie-calculator',
+    href: `/go/chewy-brand/royal+canin+dry+dog+food?s=${source}`,
     label: 'Check price of Royal Canin dry dog food on Chewy',
     detail: 'The dry-food review ranks Royal Canin first for an adult dog. This result is an adult life stage.',
   }
@@ -388,6 +392,82 @@ export function horseAgePick(stageLabel: string): MatchedPick {
     href: '/reviews/best-equine-supplements',
     label: 'Read the equine supplement review',
     detail: `This result is the ${stageLabel.toLowerCase()} stage. The supplement review’s joint card is not assigned from this age alone.`,
+  }
+}
+
+/** Portioning searches already on the cat calorie page. The life stage changes which one. */
+export function catFoodAmountPick(stageLabel: string, grams: number): MatchedPick {
+  const rounded = Math.round(grams)
+  if (stageLabel.startsWith('Weight loss')) {
+    return {
+      href: '/go/amazon-brand/kitchen+gram+scale?s=tools-cat-food-amount',
+      label: 'Browse kitchen gram scales on Amazon',
+      detail: `This weight-loss stage is about ${rounded} grams a day. The calorie page's scale search is how that smaller portion is weighed. It is not a diagnosis and not a food brand.`,
+    }
+  }
+  if (stageLabel === 'Kitten') {
+    return {
+      href: '/go/amazon-brand/measured+cat+food?s=tools-cat-food-amount',
+      label: 'Browse measured cat food on Amazon',
+      detail: `This kitten stage is about ${rounded} grams a day. The calorie page's measured-food search is the portioning pick for that stage. It is not a kitten-food ranking.`,
+    }
+  }
+  return {
+    href: '/go/amazon-brand/slow+feeder+cat+bowl?s=tools-cat-food-amount',
+    label: 'Browse slow-feeder cat bowls on Amazon',
+    detail: `This ${stageLabel.toLowerCase()} stage is about ${rounded} grams a day. The calorie page's slow-feeder search is the portioning pick. It is not a food ranking.`,
+  }
+}
+
+/** Freezing uses the heated bucket. Temperate uses the flat-back bucket. The gallon band stays the same. */
+export function horseWaterPick(freezing: boolean, lowGal: string, highGal: string): MatchedPick {
+  if (freezing) {
+    return {
+      href: '/go/amazon-brand/heated+horse+water+bucket?s=tools-horse-water-calculator',
+      label: 'Browse heated horse water buckets on Amazon',
+      detail: `This temperate band is ${lowGal}–${highGal} gallons. The winter water guide uses the heated bucket already on the water page when the stall can freeze. Icy water is when horses drink less; this tool does not raise the band for cold.`,
+    }
+  }
+  return {
+    href: '/go/amazon-brand/flat+back+horse+water+bucket?s=tools-horse-water-calculator',
+    label: 'Browse flat-back horse water buckets on Amazon',
+    detail: `This temperate idle band is ${lowGal}–${highGal} gallons. The water page's everyday stall source is a flat-back bucket. Heat, work, lactation, and lush grass move intake off this band; the page does not publish a second coefficient.`,
+  }
+}
+
+/** One starter-kit search from the saltwater setup page. Gallons change the pound sentence. */
+export function liveRockPick(gallons: number, lowLb: string, highLb: string): MatchedPick {
+  return {
+    href: '/go/amazon-brand/saltwater+reef+tank+starter+kit?s=tools-live-rock-calculator',
+    label: 'Browse saltwater reef tank starter kits on Amazon',
+    detail: `This ${gallons}-gallon tank is ${lowLb}–${highLb} lb of live rock at the setup page's 1–1.5 lb per gallon line. That page's starter-kit search is the next step. The kit is not a weighed rock order.`,
+  }
+}
+
+/**
+ * Wysong's card says carbohydrate in the single digits. Marshall's card says mid teens.
+ * Other results stay on the review.
+ */
+export function ferretLabelPick(dmCarb: number): MatchedPick {
+  const carb = Math.round(dmCarb * 10) / 10
+  if (dmCarb < 10) {
+    return {
+      href: '/go/wysong/epigen-90?s=tools-label-calculator',
+      label: 'Check price of Wysong Epigen 90 at Wysong',
+      detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis, which is single digits. The kibble review's single-digit card is Wysong Epigen 90. The calculator did not test that food.`,
+    }
+  }
+  if (dmCarb >= 13 && dmCarb < 17) {
+    return {
+      href: '/go/marshall/premium-ferret-diet?s=tools-label-calculator',
+      label: 'Find Marshall Premium Ferret Diet',
+      detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis, which is the mid teens. The kibble review's mid-teens card is Marshall Premium. The calculator did not test that food.`,
+    }
+  }
+  return {
+    href: '/diet/best-ferret-kibble',
+    label: 'Read the ferret kibble review',
+    detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis. That is neither the single-digit Wysong card nor the mid-teens Marshall card.`,
   }
 }
 
