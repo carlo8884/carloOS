@@ -356,7 +356,7 @@ export default function FerretToxicFoodsPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/freeze+dried+raw+ferret+treats?s=care-toxic-foods"
-                amazonLabel="Browse freeze-dried meat treats on Amazon →"
+                amazonLabel="Browse freeze-dried raw ferret treats on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/heavy+ceramic+pet+food+bowl?s=care-toxic-foods"
