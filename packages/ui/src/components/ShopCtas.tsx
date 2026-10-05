@@ -41,7 +41,11 @@ export function ShopCtas({
 }) {
   const amazon = visibleShopHref(amazonHref)
   const chewy = visibleChewyHref(chewyHref)
-  const label = amazonButtonLabel(amazonHref, amazonLabel)
+  let label = amazonButtonLabel(amazon ?? amazonHref, amazonLabel)
+  if (amazon && /\/go\/amazon/i.test(amazon) && /\bon Chewy\b/i.test(label)) {
+    label = label.replace(/\bon Chewy\b/gi, 'on Amazon')
+  }
+  const amazonAssociate = Boolean(amazon && /\/go\/amazon/i.test(amazon))
   if (!amazon && !chewy) return null
   return (
     <div>
@@ -69,7 +73,7 @@ export function ShopCtas({
         data-affiliate-disclosure="hop"
         style={{ margin: '8px 0 0', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
       >
-        {amazon
+        {amazonAssociate
           ? 'As an Amazon Associate we earn from qualifying purchases.'
           : 'We may earn a commission from qualifying purchases.'}
       </p>
