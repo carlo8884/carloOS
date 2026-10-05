@@ -332,6 +332,7 @@ export default function FerretOdorScentControlPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=odor-and-scent-control"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

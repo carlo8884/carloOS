@@ -310,6 +310,7 @@ export default function CareHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+litter?s=care-hub"
+              amazonLabel="Browse ferret litter on Amazon →"
             />
           </div>
         </div>

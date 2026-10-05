@@ -296,12 +296,15 @@ export default function FerretDiggingBurrowingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=digging-and-burrowing"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
             </div>
           </div>

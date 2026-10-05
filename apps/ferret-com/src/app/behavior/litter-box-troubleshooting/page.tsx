@@ -289,6 +289,7 @@ export default function LitterBoxTroubleshootingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=litter-box-troubleshooting"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

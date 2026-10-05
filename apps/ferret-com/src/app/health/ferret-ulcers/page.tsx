@@ -322,6 +322,7 @@ export default function FerretUlcersPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=ferret-ulcers"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>

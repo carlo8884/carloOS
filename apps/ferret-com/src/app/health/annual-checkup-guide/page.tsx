@@ -348,6 +348,7 @@ export default function FerretAnnualCheckupGuidePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=annual-checkup-guide"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>
