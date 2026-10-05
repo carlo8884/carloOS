@@ -42,7 +42,7 @@ export function QuotePrepChecklist({ groups }: { groups: QuotePrepGroup[] }) {
                   <label className="flex min-h-11 cursor-pointer items-start gap-3 rounded-md px-1 py-2">
                     <input
                       type="checkbox"
-                      className="mt-1 h-5 w-5 shrink-0"
+                      className="mt-1 h-6 w-6 shrink-0"
                       checked={Boolean(checked[item.id])}
                       onChange={() => toggle(item.id)}
                     />
