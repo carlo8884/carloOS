@@ -189,7 +189,7 @@ export default function HarnessCollarSizePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"
-                amazonLabel="Browse collars on Amazon →"
+                amazonLabel="Browse flat buckle nylon collars on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size"
