@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -78,7 +78,10 @@ export default function ClippedHorseBlanketGuidePage() {
         <p>Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing. Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.</p>
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <p>The link below is the StormShield from the blanket review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide">Shop the Schneiders StormShield Euro →</a></p>
+        <ShopCtas
+          amazonHref="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide"
+          amazonLabel="Shop the Schneiders StormShield Euro →"
+        />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
