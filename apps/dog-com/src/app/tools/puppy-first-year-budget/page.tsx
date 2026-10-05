@@ -193,7 +193,7 @@ export default function PuppyFirstYearBudgetPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"

@@ -116,7 +116,7 @@ function resultShop(tone: Band['tone']): {
         blurb:
           'An underweight score is a reason to call your veterinarian before changing the diet — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
         href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-        label: 'Browse portion-control food scales on Amazon →',
+        label: 'Browse digital gram scales on Amazon →',
       }
     case 'good':
       return {

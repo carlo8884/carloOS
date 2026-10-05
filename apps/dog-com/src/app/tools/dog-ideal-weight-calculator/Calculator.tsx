@@ -111,7 +111,7 @@ function resultShop(band: BcsResult['band'] | null): {
       blurb:
         'An under-ideal estimate is a reason to call your veterinarian before adding calories — unexplained thinness can mean parasites, dental pain, or illness. A kitchen / pet scale lets you record what you are already feeding so the vet can review it. This tool does not set a target weight or diagnose a cause.',
       href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-      label: 'Browse kitchen / pet scales on Amazon →',
+      label: 'Browse digital gram scales on Amazon →',
     }
   }
   if (band === 'over') {
@@ -137,7 +137,7 @@ function resultShop(band: BcsResult['band'] | null): {
     blurb:
       'A breed range is a starting band, not a target your veterinarian set. A digital kitchen / pet scale is how you record current weight and meals so the BCS estimate is based on a real number. Ask your veterinarian for a target weight — this tool does not diagnose a weight problem.',
     href: `/go/amazon-brand/digital+gram+scale+kitchen+pet?s=${SHOP_SOURCE}`,
-    label: 'Browse kitchen / pet scales on Amazon →',
+    label: 'Browse digital gram scales on Amazon →',
   }
 }
 

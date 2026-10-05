@@ -240,7 +240,7 @@ export default function PuppyWeightPredictorPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor"

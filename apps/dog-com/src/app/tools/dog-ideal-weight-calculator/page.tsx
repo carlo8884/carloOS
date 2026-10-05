@@ -231,7 +231,7 @@ export default function DogIdealWeightCalculatorPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-dog-ideal-weight"
-                amazonLabel="Browse kitchen / pet scales on Amazon →"
+                amazonLabel="Browse digital gram scales on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-ideal-weight"
