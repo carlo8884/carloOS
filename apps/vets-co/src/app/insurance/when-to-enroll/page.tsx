@@ -72,10 +72,9 @@ export default function WhenToEnrollPage() {
             treatment. Four-column accounting pads,
             letter-size poly envelopes, and desktop
             receipt organizers already live on
-            how-pet-insurance-works. Reporter
-            notebooks, kraft two-pocket folders, and
-            pocket-size address books already live
-            on choosing-a-veterinarian. Hardcover
+            how-pet-insurance-works. Kraft two-pocket
+            folders and pocket-size address books
+            already live on choosing-a-veterinarian. Hardcover
             weekly appointment planners already live
             on pain-management-dogs. This page does
             not hop medications or insurance brands

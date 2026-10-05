@@ -264,8 +264,8 @@ export default function LamenessBasicsPage() {
               feed-pan / paper-pellet-bedding hop, they
               are not a #1097 color-coded-bucket /
               coverall / boot-dip-tub hop, they
-              are not a #1096 composition-notebook /
-              receiving-blanket / charcoal hop, they
+              are not a #1096 receiving-blanket /
+              charcoal hop, they
               are not a #1095 sponge-filter /
               nano-heater / water-jug hop, they
               are not a #1094 soaking-pail /

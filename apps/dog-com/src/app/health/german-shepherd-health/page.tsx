@@ -179,8 +179,7 @@ export default function GermanShepherdHealthPage() {
             EPI with powdered pancreatic enzymes, they do
             not prevent GDV, and they are not cyclosporine,
             tacrolimus, or a ranked clinical product list. Silicone dog grooming gloves, analog bathroom
-            scales, dog dental finger brushes, resting
-            respiratory rate notebooks, one-minute kitchen
+            scales, dog dental finger brushes, one-minute kitchen
             timers, step-in padded dog harnesses, pet
             medical records binders, AM/PM weekly pill
             organizers, digital hanging luggage scales,

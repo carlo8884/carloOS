@@ -110,17 +110,15 @@ export default function SeizuresPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
               These Amazon category searches match the
               on-page first-minutes and diary copy — a
-              digital handheld stopwatch, a waterproof
-              field notebook, and a foam table-edge
-              bumper. Everyday physical supplies only.
+              digital handheld stopwatch and a foam
+              table-edge bumper. Everyday physical supplies only.
               They are not a ranked product list, they
               are not an anticonvulsant or medication
               hop, they are not the #1028 throw-blanket
               / crate-bumper / foam-tile hops, they are
               not the #1057 timed-feeder / maze-bowl /
               house-line hops, they are not the #1047
-              respiratory-notebook / kitchen-timer /
-              harness hops, they are not first-aid-kit,
+              kitchen-timer / harness hops, they are not first-aid-kit,
               thermometer, penlight, stretcher, or
               medical-alert-tag hops, and they do not
               replace a veterinarian. Vets.co earns a

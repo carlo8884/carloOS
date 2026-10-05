@@ -75,9 +75,8 @@ export default function CanineInfluenzaPage() {
             airline crates, heavy-duty exercise pens,
             accelerated hydrogen-peroxide
             disinfectant, digital pet thermometers,
-            cool-mist humidifiers, handheld
-            stopwatches, and field notebooks already
-            live on other pages. This page does not
+            cool-mist humidifiers, and handheld
+            stopwatches already live on other pages. This page does not
             hop canine influenza vaccine, Tamiflu,
             oseltamivir, Nobivac, or other Rx ASINs.
             This page does not claim hands-on

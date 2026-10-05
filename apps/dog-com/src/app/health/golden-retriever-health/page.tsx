@@ -260,8 +260,7 @@ export default function GoldenRetrieverHealthPage() {
             list. Assisted-walking slings, hind-paw
             booties, hip braces, silicone dog grooming
             gloves, analog bathroom scales, dog dental
-            finger brushes, resting respiratory rate
-            notebooks, one-minute kitchen timers, step-in
+            finger brushes, one-minute kitchen timers, step-in
             padded dog harnesses, pet medical records
             binders, AM/PM weekly pill organizers,
             digital hanging luggage scales, LED medical

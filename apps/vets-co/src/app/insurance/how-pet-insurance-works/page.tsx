@@ -70,8 +70,7 @@ export default function HowPetInsuranceWorksPage() {
             educational insurance-education /
             paperwork tools, not a ranked product
             list, not a substitute for veterinary
-            care, and not a treatment. Reporter
-            notebooks, kraft two-pocket folders, and
+            care, and not a             treatment. Kraft two-pocket folders and
             pocket-size address books already live
             on choosing-a-veterinarian. Ruled index
             cards, 3x3 sticky notes, and letter-size

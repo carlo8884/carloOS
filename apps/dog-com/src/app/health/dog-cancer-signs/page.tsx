@@ -108,8 +108,7 @@ export default function DogCancerSignsPage() {
             treat lymphoma, hemangiosarcoma, osteosarcoma,
             or mast cell tumors, and they are not
             chemotherapy, Tanovea, or a ranked oncology
-            product list. Resting respiratory rate
-            notebooks, one-minute kitchen timers, step-in
+            product list. One-minute kitchen timers, step-in
             padded dog harnesses, pet medical records
             binders, AM/PM weekly pill organizers, digital
             hanging luggage scales, LED medical penlights,

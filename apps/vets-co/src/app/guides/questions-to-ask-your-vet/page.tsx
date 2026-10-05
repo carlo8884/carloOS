@@ -39,7 +39,7 @@ export default function QuestionsToAskPage() {
           </CalloutBox>
 
           <h2>Questions About the Diagnosis</h2>
-          <p>When your pet is diagnosed with a condition, seek to understand it fully. Ask what the condition is in plain language, what caused it, whether it is curable or something to be managed long-term, and what the expected outlook is. Ask how confident the diagnosis is and whether further testing would clarify it. Ruled index cards are how those diagnosis questions stay one card each so a rushed visit still gets through the stack — they are not a spiral notebook (that lives on what-to-expect-at-the-vet for the visit-reason and dose list), not a yellow legal pad (that lives on how-to-afford-vet-care for the ideal / middle / minimum cost talk), and not a pocket spiral memo pad (that lives on vomiting-diarrhea-pets). Understanding the diagnosis is the foundation for every subsequent decision, so it is worth taking the time to grasp it before moving to treatment.</p>
+          <p>When your pet is diagnosed with a condition, seek to understand it fully. Ask what the condition is in plain language, what caused it, whether it is curable or something to be managed long-term, and what the expected outlook is. Ask how confident the diagnosis is and whether further testing would clarify it. Ruled index cards are how those diagnosis questions stay one card each so a rushed visit still gets through the stack — they are not a yellow legal pad (that lives on how-to-afford-vet-care for the ideal / middle / minimum cost talk), and not a pocket spiral memo pad (that lives on vomiting-diarrhea-pets). Understanding the diagnosis is the foundation for every subsequent decision, so it is worth taking the time to grasp it before moving to treatment.</p>
 
           <h2>Questions About Treatment Options</h2>
           <p>Rarely is there only one path. Ask what the treatment options are, including the option of monitoring or doing nothing, and the benefits, risks, and likely outcomes of each. Ask what you would do if this were your own pet, and what the consequences of delaying treatment might be. 3x3 sticky notes flag the next options question on the index-card stack so it is asked instead of remembered in the parking lot — they are not a small magnetic dry-erase board (that lives on ER-vs-urgent-care) and they are not a hardcover weekly appointment planner (that lives on pain-management-dogs). Understanding the range of options — not just the first recommendation — lets you choose a plan that fits your pet, your circumstances, and your values.</p>
@@ -66,9 +66,8 @@ export default function QuestionsToAskPage() {
             questions / notes / follow-up tools, not
             a ranked product list, not a substitute
             for veterinary care, and not a
-            treatment. Spiral notebooks, small soft
-            cooler bags, and clipboards with storage
-            already live on
+            treatment. Small soft cooler bags and
+            clipboards with storage already live on
             what-to-expect-at-the-vet. Yellow legal
             pads and letter-size hanging file
             folders already live on
@@ -138,8 +137,7 @@ export default function QuestionsToAskPage() {
               notes / follow-up tools only. They are
               not a ranked product list, they are not
               a substitute for veterinary care, they
-              are not a #1165 spiral-notebook /
-              cooler-bag / clipboard hop, they are
+              are not a #1165 cooler-bag / clipboard hop, they are
               not a #1164 cash-envelope / legal-pad /
               hanging-file hop, they are not a #1163
               budget-workbook / checkbook-register /
