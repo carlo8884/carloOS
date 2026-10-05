@@ -210,15 +210,15 @@ export default function AquariumSetupBuilderPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aqueon+quietflow+30?s=tools-aquarium-setup-builder"
-              amazonLabel="Browse aqueon quietflow 30 on Amazon →"
+              amazonLabel="Browse Aqueon QuietFlow 30 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=tools-aquarium-setup-builder"
-              amazonLabel="Browse Eheim jager heater on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/nicrew+classic+led?s=tools-aquarium-setup-builder"
-              amazonLabel="Browse nicrew classic led on Amazon →"
+              amazonLabel="Browse Nicrew Classic LED lights on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
