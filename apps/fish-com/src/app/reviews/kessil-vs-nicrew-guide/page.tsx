@@ -71,7 +71,7 @@ export default function KessilVsNicrewGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/reviews/best-aquarium-lighting">lighting review</Link>. Hygger against Fluval Plant 3.0 is the planted-tank guide. This comparison is the Kessil A360X for a reef and the Nicrew Classic LED+ for a fish-only display.</p>

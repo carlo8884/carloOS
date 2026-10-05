@@ -71,7 +71,7 @@ export default function NylonVsBreakawayGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/tack/halters-and-lead-ropes">halter and lead page</Link>, which compares published specs. Saddle pads are a separate comparison. This one is the everyday nylon halter against the leather-crown breakaway.</p>

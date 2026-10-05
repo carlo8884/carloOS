@@ -1,11 +1,13 @@
 #!/usr/bin/env node
 /**
- * Direct pushes to main bypass pull-request checks. When GROK.md fails
- * the stub guard, restore the newest ancestor blob that still passes and
- * leave this process red so the stub push stays visible.
+ * Ruleset 24478557 blocks direct pushes to main, so the push workflow
+ * cannot restore GROK.md. It runs --report, prints a stub if one is
+ * present, and exits 0. Pull requests still fail in content-stub-guard.
+ * --restore still commits and pushes from a manual checkout; CI does not call it.
  *
- *   node scripts/ci/grok-direct-push-guard.mjs            # report only
- *   node scripts/ci/grok-direct-push-guard.mjs --restore  # commit + push the restore
+ *   node scripts/ci/grok-direct-push-guard.mjs            # print a stub and exit 1
+ *   node scripts/ci/grok-direct-push-guard.mjs --report   # print only; exit 0 (main push workflow)
+ *   node scripts/ci/grok-direct-push-guard.mjs --restore  # local commit + push; the workflow does not call this
  */
 
 import { execFileSync } from 'node:child_process'
@@ -71,6 +73,7 @@ function restoreFile(good) {
 
 function main() {
   const restore = process.argv.includes('--restore')
+  const report = process.argv.includes('--report')
   const grokPath = path.join(ROOT, 'GROK.md')
   const src = fs.existsSync(grokPath) ? fs.readFileSync(grokPath, 'utf8') : ''
   const problems = fs.existsSync(grokPath) ? checkGrok(src) : ['GROK.md is missing']
@@ -87,11 +90,20 @@ function main() {
     return
   }
 
+  const findings = [
+    ...problems.map((problem) => `  ${problem}`),
+    plan.reason || `A passing GROK.md is ${plan.sha}. This run does not push a restore.`,
+  ]
+
+  if (report) {
+    console.error('GROK.md STUB ON MAIN (report only; no restore push)')
+    for (const line of findings) console.error(line)
+    console.error('Ruleset 24478557 blocks a direct push, so this job stays green and only reports.')
+    return
+  }
+
   if (plan.action === 'fail' || !restore) {
-    loud([
-      ...problems.map((problem) => `  ${problem}`),
-      plan.reason || `Would restore GROK.md from ${plan.sha}. Re-run with --restore on the main push workflow.`,
-    ])
+    loud(findings)
     process.exit(1)
   }
 

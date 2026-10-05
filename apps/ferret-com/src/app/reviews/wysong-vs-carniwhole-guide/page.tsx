@@ -71,7 +71,7 @@ export default function WysongVsCarniwholeGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. This comparison is Wysong Epigen 90 against Carniwhole. Carniwhole’s card has no shop link, so the link above is the Wysong link from that review.</p>
