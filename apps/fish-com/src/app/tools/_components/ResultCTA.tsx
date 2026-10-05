@@ -63,7 +63,7 @@ export function ResultCTA({ heading, blurb, query, cta, source, guideHref, guide
       <a
         href={href}
         rel="sponsored noopener"
-        className="inline-block rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline hover:opacity-90"
+        className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline hover:opacity-90"
       >
         {cta} &rarr;
       </a>
