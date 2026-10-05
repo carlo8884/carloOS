@@ -71,7 +71,7 @@ export default function BestDogFoodPage() {
           Best Dry Dog Food 2026
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Chewy' />
+        <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
           The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
@@ -148,7 +148,7 @@ export default function BestDogFoodPage() {
               priceLabel="Price Range"
               price="$55–110 / 30 lbs"
               priceNote="Varies by formula and bag size"
-              ctaText="Check price of Royal Canin dry dog food on Chewy"
+              ctaText="Check price of Royal Canin dry dog food on Amazon"
               ctaHref="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+dry+dog+food"

@@ -28,7 +28,7 @@ export default function BestDogHarnessesPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐕 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Chewy' />
+        <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right harness depends on why you need it — pulling management, outdoor activity, or escape prevention. These are three fundamentally different tools.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -60,7 +60,7 @@ export default function BestDogHarnessesPage() {
               pros={['Immediate pulling reduction', 'Affordable', 'Widely available', 'Trainer and behaviorist recommended', 'No pain mechanism']}
               cons={['Not for dogs with shoulder issues', 'Can rotate on small barrel-chested breeds', 'Needs correct fit to work']}
               price="$20–30"
-              ctaText="Check price of the PetSafe Easy Walk harness on Chewy"
+              ctaText="Check price of the PetSafe Easy Walk harness on Amazon"
               ctaHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="petsafe+easy+walk+harness"

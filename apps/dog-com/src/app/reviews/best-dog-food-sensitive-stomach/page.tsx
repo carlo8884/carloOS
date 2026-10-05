@@ -23,7 +23,7 @@ export default function SensitiveStomachFoodPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' label='Check price of Purina Pro Plan Sensitive Skin & Stomach on Chewy' />
+        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' label='Check price of Purina Pro Plan Sensitive Skin & Stomach on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines.</p>
       </div>
       <QuickPicks items={PICKS} />

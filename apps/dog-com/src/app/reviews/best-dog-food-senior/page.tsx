@@ -24,7 +24,7 @@ export default function BestSeniorDogFoodPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' label='Check price of Purina Pro Plan Bright Mind Adult 7+ on Chewy' />
+        <PrimaryHop href='/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' label='Check price of Purina Pro Plan Bright Mind Adult 7+ on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Dogs are considered senior at 7+ years for most breeds (5-6 for giant breeds). Their nutritional needs shift — but "senior dog food" as a category is largely unregulated. <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-compliant formulas from research-backed manufacturers are the appropriate filter.</p>
       </div>
       <QuickPicks items={PICKS} />

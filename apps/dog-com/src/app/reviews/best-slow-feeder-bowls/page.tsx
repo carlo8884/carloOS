@@ -26,7 +26,7 @@ export default function BestSlowFeederBowlsPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🐾 Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Chewy' />
+        <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Fast eaters swallow air, which contributes to bloat risk in large breeds. Slow feeders extend mealtime 5–10x, reduce gulping, and provide mental stimulation. A slow feeder bowl can meaningfully reduce bloat risk.</p>
       </div>
       <QuickPicks items={PICKS} />
