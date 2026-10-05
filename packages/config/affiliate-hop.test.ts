@@ -55,6 +55,19 @@ describe('resolveAffiliateHop', () => {
     assert.equal(hop.target.includes('ferret%20cage'), true)
   })
 
+  it('treats + in a search sku as a space so Amazon does not search for plus signs', () => {
+    const hop = resolveAffiliateHop({
+      vendor: 'amazon-brand',
+      sku: 'fi+series+3+dog+collar',
+      routes,
+      env: { AFF_AMAZON_TAG: 'boltonpets20-20ls' },
+    })
+    assert.equal(
+      hop.target,
+      'https://amazon.com/s?k=fi%20series%203%20dog%20collar&tag=boltonpets20-20ls',
+    )
+  })
+
   it('keeps a working /go/amazon/{asin} hop', () => {
     const hop = resolveAffiliateHop({
       vendor: 'amazon',

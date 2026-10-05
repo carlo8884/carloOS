@@ -9,10 +9,14 @@ import { join, dirname, resolve } from 'node:path'
 import { fileURLToPath, pathToFileURL } from 'node:url'
 import {
   EARNING_SITES,
+  amazonTagProblem,
   citationUrlsFromSource,
+  classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
+  missingShopSource,
   renderReport,
+  tableShopHrefs,
 } from './weekly-link-monitor-lib.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
@@ -77,6 +81,83 @@ export async function collectChecks(repoRoot = root) {
   return [...checks.values()]
 }
 
+export async function collectShopChecks(repoRoot = root) {
+  const { resolveAffiliateHop, visibleShopHref } = await import('../../packages/config/affiliate-hop.ts')
+  const checks = new Map()
+  const problems = []
+  let hidden = 0
+
+  function add(url, where) {
+    const row = checks.get(url) || { url, where: [] }
+    if (row.where.length < 3) row.where.push(where)
+    checks.set(url, row)
+  }
+
+  for (const site of EARNING_SITES) {
+    const siteRoot = join(repoRoot, 'apps', site, 'src')
+    const routesUrl = pathToFileURL(join(siteRoot, 'data/affiliate-routes.ts')).href
+    const { affiliateRoutes } = await import(routesUrl)
+    for (const file of walk(siteRoot)) {
+      if (!file.endsWith('.tsx') && !file.endsWith('.ts')) continue
+      const src = readFileSync(file, 'utf8')
+      const where = file.replace(repoRoot + '/', '')
+      for (const href of tableShopHrefs(src)) {
+        if (missingShopSource(href)) {
+          problems.push({ url: href, detail: 'missing ?s= source', where })
+          continue
+        }
+        const visible = visibleShopHref(href)
+        if (!visible) {
+          hidden += 1
+          continue
+        }
+        const hop = hopFromHref(visible)
+        if (!hop) {
+          problems.push({ url: href, detail: 'shop href is not a /go hop', where })
+          continue
+        }
+        const resolved = resolveAffiliateHop({
+          vendor: hop.vendor,
+          sku: hop.sku,
+          routes: affiliateRoutes,
+        })
+        const tagProblem = amazonTagProblem(resolved.target, process.env)
+        if (tagProblem) {
+          problems.push({ url: resolved.target, detail: tagProblem, where: `${where} (${href})` })
+          continue
+        }
+        add(resolved.target, `${where} (${href})`)
+      }
+    }
+  }
+  return { checks: [...checks.values()], problems, hidden }
+}
+
+async function followChain(url) {
+  const headers = { 'user-agent': 'CarloOSLinkMonitor/1.0', accept: 'text/html' }
+  const statuses = []
+  let current = url
+  try {
+    for (let hop = 0; hop < 5; hop += 1) {
+      const response = await fetch(current, {
+        method: 'GET',
+        redirect: 'manual',
+        headers,
+        signal: AbortSignal.timeout(12000),
+      })
+      await response.body?.cancel()
+      statuses.push(response.status)
+      if (response.status < 300 || response.status >= 400) break
+      const next = response.headers.get('location')
+      if (!next) break
+      current = new URL(next, current).href
+    }
+    return { statuses, error: '' }
+  } catch (err) {
+    return { statuses, error: err instanceof Error ? err.name : 'error' }
+  }
+}
+
 async function probe(url) {
   const headers = { 'user-agent': 'CarloOSLinkMonitor/1.0', accept: 'text/html' }
   async function once(method) {
@@ -137,15 +218,39 @@ async function main() {
     url: row.url,
     detail: row.detail,
   }))
+  const shop = await collectShopChecks()
+  const shopProbed = await mapPool(shop.checks, 6, async (row) => {
+    const result = await followChain(row.url)
+    const verdict = classifyRedirectChain(result.statuses, result.error)
+    return { ...row, kind: verdict.kind, detail: verdict.detail }
+  })
+  const shopFailures = [
+    ...shop.problems,
+    ...shopProbed.filter((row) => row.kind === 'fail').map((row) => ({
+      url: row.url,
+      detail: row.detail,
+      where: row.where.join(', '),
+    })),
+  ]
+  const shopBlocked = shopProbed.filter((row) => row.kind === 'blocked').map((row) => ({
+    url: row.url,
+    detail: row.detail,
+  }))
   const body = renderReport({
     checkedAt: new Date().toISOString().slice(0, 16) + 'Z',
     checked: checks.length,
     failures,
     blocked,
+    shop: {
+      checked: shop.checks.length,
+      hidden: shop.hidden,
+      failures: shopFailures,
+      blocked: shopBlocked,
+    },
   })
   writeFileSync(reportPath, body)
   console.log(body.split('\n').slice(0, 8).join('\n'))
-  if (failures.length) process.exit(1)
+  if (failures.length || shopFailures.length) process.exit(1)
 }
 
 const invoked = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)
