@@ -327,7 +327,7 @@ export default function BestFerretHarnessPage() {
             pros={['Breathable mesh for warm weather', 'Matched leash included', 'Affordable starter bundle', 'Lightweight']}
             cons={['Fewer adjustment points', 'Lighter buckles than a dedicated H', 'May be outgrown by an escape artist']}
             price="$"
-            ctaText="Find Mesh Ferret Harness + Leash Set"
+            ctaText="Find Mesh Ferret Harness + Leash Set on Amazon"
             ctaHref="/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-best-ferret-harness"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-mesh-harness-leash-set"

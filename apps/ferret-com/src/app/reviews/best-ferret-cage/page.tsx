@@ -318,7 +318,7 @@ export default function BestFerretCagePage() {
             pros={['Purpose-built for ferrets', 'Several shelves and ramps included', 'Lower price than modular systems', 'Good single-or-pair footprint']}
             cons={['Smaller than a double modular unit', 'Wire shelves need covering', 'Not expandable']}
             price="$$"
-            ctaText="Find Prevue Feisty Ferret Cage"
+            ctaText="Find Prevue Feisty Ferret Cage on Amazon"
             ctaHref="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="prevue-feisty-ferret-cage"
@@ -342,7 +342,7 @@ export default function BestFerretCagePage() {
             pros={['Widely available', 'Affordable entry point', 'Multi-level layout', 'Good first cage for a single ferret']}
             cons={['Tighter footprint than the others', 'Confirm spacing per model', 'May be outgrown with a second ferret']}
             price="$"
-            ctaText="Find Kaytee Multi-Level Ferret Home"
+            ctaText="Find Kaytee Multi-Level Ferret Home on Amazon"
             ctaHref="/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="kaytee-multi-level-ferret-home"
