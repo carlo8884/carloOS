@@ -92,7 +92,7 @@ export default function VetsChihuahuaHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-05"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -298,7 +298,7 @@ export default function VetsChihuahuaHealthPage() {
           <p>
             Patellar luxation correction commonly runs $2,000–4,000 per knee; hydrocephalus shunting can
             exceed $5,000–8,000 at a referral center; lifetime MMVD medical management can total
-            $5,000–10,000; dental disease can easily exceed $5,000 across a normal Chihuahua lifespan.
+            $5,000–10,000; dental disease can easily run $4,000–$7,000 across a normal Chihuahua lifespan.
             Insurance bought before symptoms appear typically covers these as accident/illness with no
             breed exclusion. See our 2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>

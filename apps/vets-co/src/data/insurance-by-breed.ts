@@ -88,7 +88,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     alternateCarriers: ['healthy-paws', 'pumpkin-pet'],
     sampleMonthlyPremium: [50, 85],
     keyCoverageNeeds: [
-      'Unlimited annual payout (cancer treatment exceeds $10K limits)',
+      'Unlimited annual payout (cancer treatment exceeds $8,000–$15,000 limits)',
       'Hereditary and congenital condition coverage',
       'Short orthopedic waiting period (hip/elbow dysplasia common)',
       'Coverage for advanced diagnostics (CT, MRI, biopsy)',
@@ -113,7 +113,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Labs are the #1 breed for hip dysplasia claims and CCL rupture (~$4,500 per side). Pumpkin\'s 14-day orthopedic waiting period — vs. the industry-standard 6 months — means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
+      'Labs are the #1 breed for hip dysplasia claims and CCL rupture (~$3,500–$5,500 per side). Pumpkin\'s 14-day orthopedic waiting period — vs. the industry-standard 6 months — means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
     alternateCarriers: ['trupanion', 'spot'],
     sampleMonthlyPremium: [40, 75],
     keyCoverageNeeds: [
@@ -171,7 +171,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'GSDs have the highest hip dysplasia rate of any AKC breed and face bloat ($5,000+ emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
+      'GSDs have the highest hip dysplasia rate of any AKC breed and face bloat ($4,000–$6,000+ emergency surgery). Pumpkin\'s 14-day orthopedic wait covers a young GSD before screening films are even read, and the unlimited-payout option handles bloat plus subsequent DM care.',
     alternateCarriers: ['trupanion', 'embrace'],
     sampleMonthlyPremium: [45, 80],
     keyCoverageNeeds: [
@@ -522,7 +522,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Great Danes top the bloat-mortality list (~40% lifetime risk, $5,000+ emergency surgery) and have the highest osteosarcoma rate after Rottweilers. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter when this giant breed often files its first major claim before age 3.',
+      'Great Danes top the bloat-mortality list (~40% lifetime risk, $4,000–$6,000+ emergency surgery) and have the highest osteosarcoma rate after Rottweilers. Pumpkin\'s 14-day orthopedic wait and unlimited-payout tier matter when this giant breed often files its first major claim before age 3.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [60, 110],
     keyCoverageNeeds: [

@@ -306,7 +306,7 @@ export const CARRIERS: CarrierProfile[] = [
       'Owners who want the absolute lowest premium',
     ],
     pros: [
-      "Healthy Pet Deductible: $50 off your deductible each year you don't file an illness claim",
+      "Healthy Pet Deductible: $40–$60 off your deductible each year you don't file an illness claim",
       'Wellness Rewards add-on for routine care',
       'Exam fees + Rx food covered',
     ],
