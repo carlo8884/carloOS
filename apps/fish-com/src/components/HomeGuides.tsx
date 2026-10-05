@@ -102,7 +102,15 @@ export function HomeGuides() {
           <div>
             <div className="flex items-center gap-2.5 mb-3">
               <span className="w-6 h-0.5 bg-brand-primary" />
-              <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Calculators & Tools</span>
+              <Link
+                href="/tools"
+                className="group flex items-center gap-2.5 no-underline"
+              >
+                <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+                </span>
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Calculators & Tools</span>
+              </Link>
             </div>
             <h2 className="font-display font-bold text-white tracking-tight italic mb-3 max-w-3xl" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
               Get a number, not just an article.
