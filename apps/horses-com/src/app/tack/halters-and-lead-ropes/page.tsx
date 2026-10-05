@@ -90,6 +90,7 @@ export default function HaltersLeadRopesPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "November and December gifts", href: "/reviews/november-december-gift-guide" },
               { label: "Trailering and Transport", href: "/care/trailering" },
               { label: "Reading Body Language", href: "/ownership/reading-body-language" },
               { label: "Fencing and Safety", href: "/care/fencing-safety" },

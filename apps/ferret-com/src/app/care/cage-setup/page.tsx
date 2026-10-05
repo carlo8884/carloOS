@@ -117,6 +117,7 @@ export default function FerretCageSetupPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
                 { label: 'Cage Size Calculator', href: '/tools/cage-size-calculator' },
                 { label: 'Diet Basics', href: '/care/diet-basics' },
                 { label: 'Insulinoma', href: '/health/insulinoma' },

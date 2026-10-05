@@ -263,6 +263,7 @@ export default function BestAquariumFiltersPage() {
               ))}
             </div>
             <RelatedLinks title="Related Guides" links={[
+              { label: 'November and December gifts', href: '/reviews/november-december-gift-guide' },
               { label: 'Tank Setup Guide', href: '/setup' },
               { label: 'Nitrogen Cycle', href: '/health/nitrogen-cycle-explained' },
               { label: 'Water Chemistry', href: '/water-parameters' },

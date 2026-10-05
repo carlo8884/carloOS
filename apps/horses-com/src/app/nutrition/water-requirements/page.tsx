@@ -89,6 +89,7 @@ export default function WaterRequirementsPage() {
           <RelatedLinks
             title="Related Reading"
             links={[
+              { label: "Daily water calculator", href: "/tools/horse-water-calculator" },
               { label: "Equine Colic", href: "/health/colic" },
               { label: "Winter Care", href: "/care/winter-care" },
               { label: "Salt and Electrolytes", href: "/nutrition/salt-and-electrolytes" },

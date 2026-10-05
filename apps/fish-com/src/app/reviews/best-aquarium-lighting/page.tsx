@@ -152,7 +152,7 @@ export default function BestAquariumLightingPage() {
                 </div>
               ))}
             </div>
-            <RelatedLinks title="Related Guides" links={[{ label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
+            <RelatedLinks title="Related Guides" links={[{ label: 'November and December gifts', href: '/reviews/november-december-gift-guide' }, { label: 'Tank Setup Guide', href: '/setup' }, { label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Water Chemistry', href: '/water-parameters' }]} />
 
           </aside>
         </div>
