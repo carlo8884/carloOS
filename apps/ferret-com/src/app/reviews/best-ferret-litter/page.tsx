@@ -328,7 +328,7 @@ export default function BestFerretLitterPage() {
             pros={['Low dust', 'Non-clumping', 'Soft texture some ferrets prefer', 'Lighter tracking']}
             cons={['Moderate odor control', 'Breaks down faster when wet', 'May need more frequent changes']}
             price="$$"
-            ctaText="Find Grass Pellet Litter on Amazon"
+            ctaText="Find non-clumping grass pellet litter on Amazon"
             ctaHref="/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="grass-pellet-litter"
