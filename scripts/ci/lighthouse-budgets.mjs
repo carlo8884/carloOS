@@ -54,11 +54,15 @@ function metricsFromLhr(lhr) {
 }
 
 async function auditOnce(url, port) {
+  const missingPage = url.endsWith('/this-page-does-not-exist')
   const result = await lighthouse(url, {
     logLevel: 'error',
     port,
     onlyCategories: ['performance', 'accessibility'],
-  })
+  }, missingPage ? {
+    extends: 'lighthouse:default',
+    settings: { ignoreStatusCode: true },
+  } : undefined)
   const metrics = metricsFromLhr(result.lhr)
   return { metrics, problems: scoreProblems(metrics) }
 }

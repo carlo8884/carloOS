@@ -81,6 +81,12 @@ test('a failing run is retried twice', () => {
   assert.equal(needsRetry([], 1, 3), false)
 })
 
+test('a missing URL is still scored when the document is a 404', () => {
+  const runner = readFileSync(new URL('./lighthouse-budgets.mjs', import.meta.url), 'utf8')
+  assert.match(runner, /this-page-does-not-exist/)
+  assert.match(runner, /ignoreStatusCode: true/)
+})
+
 test('the lighthouse workflow runs one mobile pass, not three', () => {
   const workflow = readFileSync(new URL('../../.github/workflows/lighthouse.yml', import.meta.url), 'utf8')
   assert.match(workflow, /lighthouse-budgets\.mjs/)

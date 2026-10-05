@@ -39,13 +39,23 @@ export function MissedPage({
       <div className="max-w-xl mx-auto">
         {kind === 'missing' ? <TrackPage404 /> : null}
         {kind === 'missing' ? (
-          <p
-            className="font-display font-black text-brand-dark leading-none mb-2"
-            style={{ fontSize: 'clamp(64px, 10vw, 96px)', opacity: 0.08 }}
+          <svg
             aria-hidden="true"
+            viewBox="0 0 220 96"
+            className="mb-2 block text-brand-dark"
+            style={{ height: 'clamp(64px, 10vw, 96px)', width: 'auto' }}
           >
-            404
-          </p>
+            <text
+              x="0"
+              y="84"
+              fill="currentColor"
+              fillOpacity="0.08"
+              className="font-display"
+              style={{ fontSize: 96, fontWeight: 900 }}
+            >
+              404
+            </text>
+          </svg>
         ) : null}
         <h1 className="font-display font-black text-brand-dark text-3xl tracking-tight mb-3">{heading}</h1>
         <p className="text-base text-brand-text-light leading-relaxed mb-8">{lead}</p>
