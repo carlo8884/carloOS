@@ -207,7 +207,7 @@ export default function AquariumSetupPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=setup-aquarium"
-              amazonLabel="Browse dechlorinator / Seachem Prime on Amazon →"
+              amazonLabel="Browse Seachem Prime water conditioner on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=setup-aquarium"
