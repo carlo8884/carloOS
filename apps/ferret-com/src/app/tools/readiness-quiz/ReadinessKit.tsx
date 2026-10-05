@@ -53,7 +53,7 @@ const KIT: KitItem[] = [
     detail:
       'Fleece hammocks and sleep sacks are the usual sleeping spots — not loose shavings. Ferrets burrow; a washable sack on each level keeps them off wire floors and off aromatic wood chips.',
     amazonHref: `/go/amazon-brand/ferret+sleep+sack+fleece?s=${SOURCE}`,
-    amazonLabel: 'Browse hammocks and sleep sacks on Amazon →',
+    amazonLabel: 'Browse fleece ferret sleep sacks on Amazon →',
   },
   {
     id: 'dig-box',

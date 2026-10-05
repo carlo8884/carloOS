@@ -239,7 +239,7 @@ export default function CostCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"
-                amazonLabel="Browse ferret sleep sacks on Amazon →"
+                amazonLabel="Browse fleece ferret sleep sacks on Amazon →"
               />
           </div>
           </div>
