@@ -51,8 +51,83 @@ test('a real GROK.md edit is not treated as an hour log', () => {
 test('the workflow job is named Outside-lane branch guard and runs on every pull request', () => {
   const yml = readFileSync(new URL('../../.github/workflows/outside-lane-guard.yml', import.meta.url), 'utf8')
   assert.match(yml, /name: Outside-lane branch guard/)
+  assert.match(yml, /outside-lane:\n\s+name: Outside-lane branch guard/)
   assert.match(yml, /pull_request:/)
   assert.match(yml, /branches: \[main\]/)
   assert.doesNotMatch(yml, /paths:/)
   assert.match(yml, /outside-lane-guard\.mjs/)
+  assert.match(yml, /PR_TITLE:/)
+  assert.match(yml, /PR_BODY:/)
+})
+
+const CHIP_FILES = ['apps/fish-com/src/components/HomeGuides.tsx']
+const CHIP_PATCH = `diff --git a/apps/fish-com/src/components/HomeGuides.tsx b/apps/fish-com/src/components/HomeGuides.tsx
++                <span className="relative h-9 w-14">
++                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants" />
++                </span>
+`
+const CHIP_TITLE = 'fish: photo-chip the tank-planning eyebrow'
+const CHIP_BODY = 'GROK.md left untouched so the outside-lane hour-log guard does not fire.'
+
+test('a fish homepage photo chip fails, and cursor/ and bot/ stay green', () => {
+  const failed = guardProblems({
+    headRef: 'fish/tank-planning-eyebrow',
+    before: BEFORE,
+    after: BEFORE,
+    files: CHIP_FILES,
+    patch: CHIP_PATCH,
+    title: CHIP_TITLE,
+    body: CHIP_BODY,
+  })
+  assert.equal(failed.length, 1)
+  assert.match(failed[0], /outside cursor\/ and bot\//)
+  assert.match(failed[0], /photo chip/)
+  for (const headRef of ['cursor/ceo-lane-guard-6ba7', 'bot/dashboard-sync']) {
+    assert.deepEqual(
+      guardProblems({
+        headRef,
+        before: BEFORE,
+        after: BEFORE,
+        files: CHIP_FILES,
+        patch: CHIP_PATCH,
+        title: CHIP_TITLE,
+        body: CHIP_BODY,
+      }),
+      [],
+    )
+  }
+})
+
+test('a non-cursor branch fails on a homepage-only diff or on CEO-lane copy', () => {
+  const homepage = guardProblems({
+    headRef: 'fish/home-typo',
+    before: BEFORE,
+    after: BEFORE,
+    files: ['apps/fish-com/src/app/page.tsx'],
+    title: 'Fix a homepage typo',
+    body: 'No chip.',
+  })
+  assert.match(homepage[0], /homepage, hero, or eyebrow files/)
+
+  const copyOnly = guardProblems({
+    headRef: 'fish/tank-planning-eyebrow',
+    before: BEFORE,
+    after: BEFORE,
+    files: ['apps/fish-com/src/app/setup/planted-tank-setup/page.tsx'],
+    title: 'Setup notes',
+    body: 'GROK.md left untouched',
+  })
+  assert.match(copyOnly[0], /CEO-lane pattern/)
+
+  assert.deepEqual(
+    guardProblems({
+      headRef: 'feature/footer-fix',
+      before: BEFORE,
+      after: BEFORE,
+      files: ['apps/dog-com/src/app/nutrition/senior-dog-nutrition/page.tsx'],
+      title: 'Name the senior food button',
+      body: 'The label matches the search.',
+    }),
+    [],
+  )
 })
