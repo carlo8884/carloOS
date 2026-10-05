@@ -252,7 +252,6 @@ export default function TripleCrownPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+blanket?s=racing-triple-crown"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

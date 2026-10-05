@@ -417,7 +417,6 @@ export default function FirstHorseRoadmapPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=first-horse-roadmap"
-                amazonLabel="Shop on Amazon"
               />
               <a href="/ownership/buying-your-first-horse" className="text-sm font-semibold text-brand-primary">
                 Read the first-horse buying guide →

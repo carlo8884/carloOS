@@ -141,7 +141,6 @@ export default function CuttingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+reins?s=discipline-cutting"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

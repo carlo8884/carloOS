@@ -190,7 +190,6 @@ export default function OttbInEventingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+reins?s=ottb-in-eventing"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

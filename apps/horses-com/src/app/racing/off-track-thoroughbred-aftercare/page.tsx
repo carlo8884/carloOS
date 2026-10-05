@@ -210,7 +210,6 @@ export default function OttbAftercarePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle?s=racing-ottb-aftercare"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

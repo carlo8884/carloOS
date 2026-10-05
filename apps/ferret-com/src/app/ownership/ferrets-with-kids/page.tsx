@@ -134,7 +134,6 @@ export default function FerretsWithKidsPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=ferrets-with-kids"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

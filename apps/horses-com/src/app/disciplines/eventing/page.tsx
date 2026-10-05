@@ -312,7 +312,6 @@ export default function EventingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dressage+saddle?s=discipline-eventing"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

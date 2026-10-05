@@ -322,7 +322,6 @@ export default function ShowJumpingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/close+contact+saddle?s=discipline-show-jumping"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

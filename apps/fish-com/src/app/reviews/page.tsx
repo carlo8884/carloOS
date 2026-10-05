@@ -279,7 +279,6 @@ export default function FishReviewsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+aquarium+heater?s=reviews-hub"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

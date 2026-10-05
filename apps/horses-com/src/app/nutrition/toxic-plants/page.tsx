@@ -225,7 +225,6 @@ export default function ToxicPlantsPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+hay?s=nutrition-toxic-plants"
-                amazonLabel="Shop on Amazon"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"

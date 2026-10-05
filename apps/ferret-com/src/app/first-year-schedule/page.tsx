@@ -379,7 +379,6 @@ export default function FerretFirstYearSchedulePage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+kibble?s=first-year-schedule"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

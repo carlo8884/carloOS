@@ -145,7 +145,6 @@ export default function SeniorHorseCarePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/beet+pulp+horse+feed?s=ownership-senior-horse-care"
-                amazonLabel="Shop on Amazon"
               />
               <a href="/tools/body-condition-score" className="text-sm font-semibold text-brand-primary">
                 Score body condition before calling the change age →

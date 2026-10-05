@@ -604,7 +604,6 @@ export default function FerretAgingPage() {
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=health-aging"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

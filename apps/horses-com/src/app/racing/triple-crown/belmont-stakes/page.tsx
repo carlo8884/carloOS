@@ -210,7 +210,6 @@ export default function BelmontStakesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+blanket?s=triple-crown-belmont-stakes"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>
