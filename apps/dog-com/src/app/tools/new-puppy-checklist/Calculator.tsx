@@ -239,7 +239,7 @@ function buildList(
       essential: false,
       gear: true,
       shopHref: amazonHop('extra+tall+baby+gate+dog'),
-      shopLabel: 'Browse indoor dog gates on Amazon →',
+      shopLabel: 'Browse extra-tall baby gates on Amazon →',
       links: [],
     })
   }
