@@ -155,7 +155,7 @@ export default function HydrationAndWaterPage() {
             pros={['Lets a ferret drink in natural volume', 'Heavy base resists tipping', 'Easy to clean, no biofilm traps', 'No mechanical valve to clog']}
             cons={['Ferrets may still dig in it', 'Needs refreshing more than once a day']}
             price="$8–18"
-            ctaText="Find a Heavy Ceramic Bowl"
+            ctaText="Find a Heavy Ceramic Bowl on Amazon"
             ctaHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="heavy-ceramic-water-bowl"
@@ -178,7 +178,7 @@ export default function HydrationAndWaterPage() {
             pros={['Stays clean and spill-free', 'Good travel and backup option', 'Easy cage mounting']}
             cons={['Slow drop-by-drop delivery', 'Ball valve can clog or air-lock', 'Must be checked daily — not a sole source']}
             price="$6–12"
-            ctaText="Find a Sipper Water Bottle"
+            ctaText="Find a Sipper Water Bottle on Amazon"
             ctaHref="/go/amazon-brand/small+animal+sipper+water+bottle?s=diet-hydration-and-water"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="small-animal-water-bottle"
