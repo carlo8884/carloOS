@@ -146,6 +146,7 @@ export default function CombinedDrivingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+driving+harness?s=discipline-combined-driving"
+                amazonLabel="Browse driving harnesses on Amazon →"
               />
           </div>
           </div>
