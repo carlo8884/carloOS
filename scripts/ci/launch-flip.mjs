@@ -51,7 +51,7 @@ const SITES = [
     host: 'horses.com',
     apex: 'https://horses.com',
     port: 3842,
-    money: '/ownership/horse-insurance',
+    money: '/tools/horse-cost-calculator',
     cross: 'https://vets.co/guides/emergency-vet-costs',
   },
   {
