@@ -49,7 +49,7 @@ export default function FluvalVsEheimGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-fluval-307-vs-eheim-guide" label="Check price of the Fluval 307 on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-fluval-307-vs-eheim-guide" label="Check price of the Fluval 307 canister filter on Amazon" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
