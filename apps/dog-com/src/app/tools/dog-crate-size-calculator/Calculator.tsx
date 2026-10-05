@@ -184,6 +184,12 @@ export default function DogCrateSizeCalculator() {
           The recommended size is the smallest standard crate that clears both minimums, so the dog can stand, turn, and lie flat.
         </ResultMeaning>
         <ResultPick siteId="dog-com" pick={icratePick(result.crate ? result.crate.len : null)} />
+        <a
+          href="/reviews/best-dog-crates"
+          className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
+        >
+          Compare wire, airline, and heavy-duty crates
+        </a>
       </div>
       )}
 

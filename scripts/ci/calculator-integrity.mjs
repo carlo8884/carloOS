@@ -304,8 +304,9 @@ const CALCULATORS = [
     mustInclude: [
       { re: /ADD_INCHES\s*=\s*2/, label: '+2 in minimum clearance on each body measurement' },
       { re: /c\.len\s*>=\s*minLength\s*&&\s*c\.height\s*>=\s*minHeight/, label: 'pick smallest crate meeting both minimums' },
+      { re: /href="\/reviews\/best-dog-crates"/, label: 'result links the crate review next to the iCrate pick' },
     ],
-    why: 'Crate must let the dog stand/turn/lie flat: add ~2 in (standard 2–4 in, min) to length+height, pick smallest standard crate clearing both — aligns with manufacturer weight charts.',
+    why: 'Crate must let the dog stand/turn/lie flat: add ~2 in (standard 2–4 in, min) to length+height, pick smallest standard crate clearing both — aligns with manufacturer weight charts. The result also links the crate review beside the MidWest iCrate pick.',
   },
   {
     id: 'dog · dog-crate-size-calculator hops',
