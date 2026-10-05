@@ -82,7 +82,7 @@ export default function BestDogHarnessesPage() {
               pros={['Among the strongest escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
-              ctaText="Shop Julius-K9 →"
+              ctaText="Shop Julius-K9 on Amazon →"
               ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="julius+k9+idc+powerharness"
