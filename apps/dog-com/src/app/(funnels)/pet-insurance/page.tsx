@@ -202,6 +202,11 @@ export default function PetInsuranceHubPage() {
               Highest editorial score (9.2) in this comparison. Per-condition
               lifetime deductible, no payout caps, direct-pay at participating vets.
             </p>
+            {/* Monetization-lane exception: this hop stays live until Carlo
+                sets AFF_TRUPANION_TAG, AFF_HEALTHY_PAWS_TAG, and AFF_EMBRACE_TAG.
+                Editorial Vets.co quote buttons stay disabled until those tags
+                are set. Do not invent an ID and do not disable this button
+                without his say. See docs/affiliate-ids.md. */}
             <a
               href="/go/trupanion/home?s=pet-insurance-hub-best-overall"
               rel="sponsored nofollow noopener noreferrer"
