@@ -145,6 +145,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://ferret.com/reviews/kaytee-vs-ferret-nation-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/paper-vs-grass-litter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/kaytee-vs-prevue-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://ferret.com/reviews/november-december-gift-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/wood-vs-grass-litter-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/wysong-vs-marshall-kibble-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://ferret.com/reviews/wysong-vs-carniwhole-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

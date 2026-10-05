@@ -62,6 +62,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://fish.com/reviews', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://fish.com/reviews/best-aquarium-filters', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/hob-vs-canister-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://fish.com/reviews/november-december-gift-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/eheim-vs-cobalt-heater-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/fluval-307-vs-eheim-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://fish.com/reviews/easy-green-vs-flourish-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

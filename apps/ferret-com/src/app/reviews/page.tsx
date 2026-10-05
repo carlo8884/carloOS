@@ -184,6 +184,15 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     description:
       'Weight changes with the season. The vest hop is the one already on the harness review.',
   },
+  {
+    slug: 'november-december-gift-guide',
+    group: 'ferret-reviews-season',
+    href: '/reviews/november-december-gift-guide',
+    eyebrow: 'Season',
+    title: 'November and December Ferret Gifts',
+    description:
+      'Litter pan, shampoo, treats, food, and a double unit, using dollar bands already printed on those cards.',
+  },
 ]
 
 const itemListSchema = buildItemListSchema({
