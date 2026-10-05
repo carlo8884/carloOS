@@ -31,8 +31,8 @@ interface ReviewCardEntry {
 const REVIEW_GROUPS = [
   { id: 'ferret-reviews-housing', label: 'Housing', intro: 'Cage reviews and the cage comparisons.' },
   { id: 'ferret-reviews-litter', label: 'Litter', intro: 'Litter reviews and the pellet comparisons.' },
-  { id: 'ferret-reviews-walking', label: 'Walking', intro: 'Harness reviews and the fit comparison.' },
-  { id: 'ferret-reviews-food', label: 'Food', intro: 'Kibble reviews. The food guide lives in the diet section.' },
+  { id: 'ferret-reviews-walking', label: 'Walking', intro: 'Harness reviews, the vest comparison, and the H-style versus mesh comparison.' },
+  { id: 'ferret-reviews-food', label: 'Food', intro: 'Kibble reviews. The food guides use the diet review’s cards.' },
   { id: 'ferret-reviews-season', label: 'Season', intro: 'Seasonal grooming and harness-fit pages.' },
 ]
 
@@ -147,6 +147,24 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     title: 'Wysong vs Marshall Kibble',
     description:
       'The lower-carb premium bag, or the ferret-specific bag you can find in chain retail.',
+  },
+  {
+    slug: 'wysong-vs-carniwhole-guide',
+    group: 'ferret-reviews-food',
+    href: '/reviews/wysong-vs-carniwhole-guide',
+    eyebrow: 'Food',
+    title: 'Wysong vs Carniwhole',
+    description:
+      'The premium bag the kibble review scores first, or the direct-to-consumer subscription. Carniwhole has no separate shop link.',
+  },
+  {
+    slug: 'h-style-vs-mesh-harness-guide',
+    group: 'ferret-reviews-walking',
+    href: '/reviews/h-style-vs-mesh-harness-guide',
+    eyebrow: 'Walking',
+    title: 'H-Style vs Mesh Harness',
+    description:
+      'A dedicated adjustable H-style, or the mesh figure-H sold with a leash. The vest is a different comparison.',
   },
   {
     slug: 'fall-molt-brush-guide',

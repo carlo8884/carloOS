@@ -132,6 +132,8 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://vets.co/reviews/vetster-vs-chewy-connect-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/askvet-vs-chewy-connect-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/lemonade-vs-pets-best-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/reviews/healthy-paws-vs-pets-best-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
+    { url: 'https://vets.co/reviews/trupanion-vs-figo-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/spot-vs-manypets-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/holiday-leftovers-low-fat-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://vets.co/reviews/holiday-emergency-visit-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

@@ -23,7 +23,7 @@ const REVIEW_GROUPS = [
   { id: 'dog-reviews-comfort', label: 'Comfort', intro: 'Bed reviews and the orthopedic comparison.' },
   { id: 'dog-reviews-dental', label: 'Dental', intro: 'Dental chew pages. They do not replace brushing.' },
   { id: 'dog-reviews-joints', label: 'Joints', intro: 'Joint supplement pages and the Cosequin comparison.' },
-  { id: 'dog-reviews-tracking', label: 'Tracking', intro: 'The GPS tracker review.' },
+  { id: 'dog-reviews-tracking', label: 'Tracking', intro: 'The GPS tracker review and the Fi versus Tractive comparison.' },
   { id: 'dog-reviews-season', label: 'Season', intro: 'Holiday feeding pages that point at guides already on the site.' },
   { id: 'dog-reviews-insurance', label: 'Insurance', intro: 'The insurance comparison is on Vets.co.' },
 ]
@@ -54,6 +54,8 @@ const REVIEWS = [
   { title: 'Easy Walk vs Front Range', desc: 'Front-clip for pulling, or a padded two-clip harness for hiking', href: '/reviews/easy-walk-vs-front-range-guide', badge: 'Walking', group: 'dog-reviews-walking' },
   { title: 'Royal Canin vs Pro Plan', desc: 'Both meet the WSAVA bar on the dry-food review. Royal Canin is the research pick; Pro Plan is the lower bag price', href: '/reviews/royal-canin-vs-pro-plan-guide', badge: 'Nutrition', group: 'dog-reviews-food' },
   { title: 'Cosequin vs Dasuquin', desc: 'Glucosamine and chondroitin, or the same base plus ASU. Scores are the ones on the joint review', href: '/reviews/cosequin-vs-dasuquin-guide', badge: 'Joints', group: 'dog-reviews-joints' },
+  { title: 'Fi Series 3 vs Tractive', desc: 'Three-month battery and escape alerts, or the lowest printed monthly fee. Scores are the ones on the GPS review', href: '/reviews/fi-vs-tractive-guide', badge: 'Tracking', group: 'dog-reviews-tracking' },
+  { title: 'Outward Hound vs Northmate', desc: 'A maze slow bowl, or a flat grass feeder that cannot tip. Scores are the ones on the slow-feeder review', href: '/reviews/outward-hound-vs-northmate-guide', badge: 'Nutrition', group: 'dog-reviews-food' },
   { title: 'Holiday Scraps and a Locking Trash Can', desc: 'The pancreatitis page already names turkey skin and ham fat. The hop is the locking can on that page', href: '/reviews/holiday-scraps-trash-can-guide', badge: 'Season', group: 'dog-reviews-season' },
   { title: 'Holiday Chocolate and the Toxicity Calculator', desc: 'Any ingestion is a call. The hop is the first-aid kit the calculator page already links', href: '/reviews/holiday-chocolate-calculator-guide', badge: 'Season', group: 'dog-reviews-season' },
 ]

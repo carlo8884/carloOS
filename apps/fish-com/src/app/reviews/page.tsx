@@ -21,9 +21,9 @@ export const metadata: Metadata = buildMetadata({
 const REVIEW_GROUPS = [
   { id: 'fish-reviews-filters', label: 'Filters', intro: 'Hang-on-back and canister reviews, and the comparisons that use those cards.' },
   { id: 'fish-reviews-heat', label: 'Heat', intro: 'Heater reviews, including the cold-room sizing page.' },
-  { id: 'fish-reviews-lighting', label: 'Lighting', intro: 'Lighting reviews and the winter photoperiod page.' },
+  { id: 'fish-reviews-lighting', label: 'Lighting', intro: 'Lighting reviews, the planted-light comparison, and the reef versus fish-only comparison.' },
   { id: 'fish-reviews-water', label: 'Water tests', intro: 'Liquid test kits and the reef-kit comparison.' },
-  { id: 'fish-reviews-tanks', label: 'Tanks', intro: 'The nano tank review.' },
+  { id: 'fish-reviews-tanks', label: 'Tanks', intro: 'The nano tank review and the 5-gallon kit versus 20-gallon long comparison.' },
   { id: 'fish-reviews-planted', label: 'Planted tanks', intro: 'Fertilizer reviews and the all-in-one comparison.' },
 ]
 
@@ -125,6 +125,20 @@ const REVIEWS = [
     href: '/reviews/hygger-vs-fluval-light-guide',
     group: 'fish-reviews-lighting',
     badge: 'Lighting',
+  },
+  {
+    title: 'Kessil A360X vs Nicrew',
+    desc: 'Reef PAR and shimmer, or a fish-only display light. Scores are the ones on the lighting review.',
+    href: '/reviews/kessil-vs-nicrew-guide',
+    group: 'fish-reviews-lighting',
+    badge: 'Lighting',
+  },
+  {
+    title: 'Fluval Spec vs 20-Gallon Long',
+    desc: 'A 5-gallon all-in-one, or the bare beginner tank. Scores are the ones on the nano review.',
+    href: '/reviews/fluval-spec-vs-aqueon-20-guide',
+    group: 'fish-reviews-tanks',
+    badge: 'Tanks',
   },
   {
     title: 'API Master Kit vs Salifert',

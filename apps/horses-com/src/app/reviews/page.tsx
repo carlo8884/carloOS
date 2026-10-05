@@ -22,7 +22,7 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const REVIEW_GROUPS = [
   { id: 'horses-reviews-supplements', label: 'Supplements', intro: 'Joint, hoof, and gastric supplement pages, plus the comparisons that use those cards.' },
   { id: 'horses-reviews-blankets', label: 'Blankets and winter', intro: 'Turnout and stable blanket pages, fill-weight notes, and the winter water page.' },
-  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison. It does not fix saddle fit.' },
+  { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter and boot comparisons from the tack pages. None of them fix saddle fit.' },
 ]
 
 const REVIEWS = [
@@ -95,6 +95,20 @@ const REVIEWS = [
     title: 'Quilted Pad vs Sheepskin Half Pad',
     description:
       'A washable everyday English pad, or a sheepskin half pad for friction. Neither fixes saddle fit.',
+  },
+  {
+    slug: 'nylon-vs-breakaway-halter-guide',
+    group: 'horses-reviews-tack',
+    title: 'Nylon Halter vs Breakaway',
+    description:
+      'An everyday nylon halter for in-hand work, or a leather-crown breakaway when a horse is left haltered in turnout.',
+  },
+  {
+    slug: 'brushing-boots-vs-bell-boots-guide',
+    group: 'horses-reviews-tack',
+    title: 'Brushing Boots vs Bell Boots',
+    description:
+      'Interference protection for the cannon, or overreach protection for the heel. Neither supports a tendon.',
   },
   {
     slug: 'blanket-weight-by-temperature-guide',
