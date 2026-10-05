@@ -5343,6 +5343,7 @@ const CALCULATORS = [
       { re: /Rough planning estimate — not a species count/, label: 'output labeled as rough estimate, not species advice' },
       { re: /Species headcount/, label: 'species headcount explicitly not calculated' },
       { re: /useStockingWater\(\)/, label: 'water-type state shared with the shop block' },
+      { re: /href="\/reviews\/best-aquarium-filters"/, label: 'result links the filter review beside the matched filter hop' },
     ],
     mustExclude: [
       { re: /Angelfish/, label: 'no angelfish species-count tiles' },

@@ -157,6 +157,12 @@ export default function StockingCalculator() {
             'tools-stocking-calculator',
           )}
         />
+        <a
+          href="/reviews/best-aquarium-filters"
+          className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
+        >
+          Read the aquarium filter review
+        </a>
         </>
       )}
     </div>
