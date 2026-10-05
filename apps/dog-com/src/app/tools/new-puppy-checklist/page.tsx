@@ -231,7 +231,7 @@ export default function NewPuppyChecklistPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist"
-                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist"
