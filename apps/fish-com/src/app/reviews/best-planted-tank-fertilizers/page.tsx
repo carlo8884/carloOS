@@ -68,7 +68,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Simplest dosing regimen available', 'Covers macros and micros in one product', 'Designed by experienced planted tank hobbyists', 'Works for 90% of planted setups']}
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
-              ctaText="Shop Easy Green →"
+              ctaText="Shop Easy Green on Amazon →"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"
@@ -79,7 +79,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Universally available', 'Comprehensive micronutrient profile', 'Long track record', 'Works well for low-tech with good fish load']}
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
-              ctaText="Shop Seachem Flourish →"
+              ctaText="Shop Seachem Flourish on Amazon →"
               ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="seachem-flourish"
@@ -90,7 +90,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Higher concentration — better for high-tech', 'Cost-effective per dose at volume', 'Comprehensive macro + micro coverage', 'Popular in serious aquascaping community']}
               cons={['Overkill for low-tech / easy planted tanks', 'Algae risk if overdosed', 'Online ordering typically required']}
               price="$12–22"
-              ctaText="Shop NilocG Thrive →"
+              ctaText="Shop NilocG Thrive on Amazon →"
               ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
