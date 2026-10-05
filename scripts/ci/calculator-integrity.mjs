@@ -5528,6 +5528,7 @@ const CALCULATORS = [
       { re: /<JourneyNext/, label: 'journey next-step after the slim-inch estimate' },
       { re: /nextHref="\/reviews\/best-aquarium-filters"/, label: 'next step is the filter review, one money page' },
       { re: /resourceHref="\/go\/amazon-brand\/aquaclear\+70\+filter\?s=tools-stocking-calculator"/, label: 'journey hop reuses the existing AquaClear HOB search' },
+      { re: /resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"/, label: 'product and retailer on the filter button' },
       { re: /source="tools-stocking-calculator-under-hero"/, label: 'under-hero email capture source tag' },
       { re: /resourceLabel="Save the planning rules"/, label: 'real stocking-rules resource magnet, not inbox notes' },
       { re: /StockingWaterProvider/, label: 'calculator keeps shared water-type state' },

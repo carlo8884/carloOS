@@ -172,7 +172,7 @@ export default function StockingCalculatorPage() {
             nextLabel="Match a filter to this ceiling"
             nextBlurb="The number is a slim-inch bioload ceiling, not a species count. Filtration is one of the inputs, so the filter review is the next page. One search below is the AquaClear 70 hang-on-back filter that review leads with."
             resourceHref="/go/amazon-brand/aquaclear+70+filter?s=tools-stocking-calculator"
-            resourceLabel="Browse AquaClear 70 filters on Amazon →"
+            resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
           />
           <div className="mb-8">
             <EmailCapture
