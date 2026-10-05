@@ -64,12 +64,12 @@ export default function QuarantineGuidePage() {
           <RelatedLinks title="Related Guides" links={[{ label: 'Best Aquarium Filters', href: '/reviews/best-aquarium-filters' }, { label: 'Best Aquarium Heaters', href: '/reviews/best-aquarium-heaters' }, { label: 'Fish Disease Guide', href: '/health/fish-disease-guide' }, { label: 'Ich Treatment', href: '/health/ich-treatment' }]} />
 
         </>}
-       priceAsOf="2026-05-28">
+       priceAsOf="2026-10-05">
         <div className="carloOS-article">
           <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
 
           <h2>Why Most Aquarists Skip It — And Why They Regret It</h2>
-          <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $2,000 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
+          <DropCap>The logic for skipping quarantine: the fish looks healthy, setting up a separate tank is effort, and most fish survive the introduction. This logic holds until it doesn't — until a new fish introduces ich to a reef tank and wipes out $1,500–$2,500 in coral and fish, or a single columnaris-infected livebearer kills an entire community tank over 72 hours, or a new discus introduces Capillaria to a carefully maintained discus colony. The cost of one disease introduction reliably exceeds the cost of quarantine infrastructure by a significant margin.</DropCap>
           <p>The psychological barrier is effort and space. The practical solution: a single 10-gallon tank stored in a closet or garage, a sponge filter always running in the main tank to seed it, a heater and thermometer. Total space: 18 inches × 10 inches. Total ongoing effort when not in use: approximately zero. The infrastructure cost ($30–60) amortizes over every subsequent fish purchase for years.</p>
 
           <h2>The Seeded Sponge Filter — Solving the Cycle Problem</h2>

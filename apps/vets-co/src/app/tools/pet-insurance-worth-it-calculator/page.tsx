@@ -346,6 +346,7 @@ export default function PetInsuranceWorthItPage() {
         </div>
 
         <h2 id="example">A worked breakeven example</h2>
+        <p>These amounts are an example, not a live quote.</p>
         <p>
           Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>,{' '}
           <strong>80% reimbursement</strong>, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to

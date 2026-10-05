@@ -185,7 +185,7 @@ export default function EmergencyTriageCardPage() {
             Pet Emergency<br />
             <span className="text-brand-primary">Triage Guide.</span>
           </h1>
-          <PriceAsOf date="2026-05-28" tone="dark" />
+          <PriceAsOf date="2026-10-05" tone="dark" />
           <p className="text-lg font-light text-white/65 leading-relaxed max-w-xl mb-8">When a pet symptom is ER-immediate, when it
             is same-day vet, and when it is safe to monitor at home. Species-specific vitals for
             dogs, cats, ferrets, and rabbits. Built from AVMA, AAHA, and VECCS guidance. No email signup required.</p>
@@ -333,7 +333,7 @@ export default function EmergencyTriageCardPage() {
             None of the above is medical advice for your specific animal. When in doubt, call —
             ASPCA Animal Poison Control (888-426-4435) and Pet Poison Helpline (855-764-7661) are
             both available 24/7 for a fee, and a 10-minute call is dramatically cheaper than a
-            $900 unnecessary ER visit.
+            $700–$1,100 unnecessary ER visit.
           </p>
         </div>
       </section>

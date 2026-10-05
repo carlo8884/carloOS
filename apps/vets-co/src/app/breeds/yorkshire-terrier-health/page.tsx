@@ -92,7 +92,7 @@ export default function VetsYorkshireTerrierHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-05"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -293,7 +293,7 @@ export default function VetsYorkshireTerrierHealthPage() {
           <p>
             Surgical attenuation of a single extrahepatic shunt at a referral center commonly runs
             $4,500–8,000; patellar luxation correction $2,000–4,000 per knee; tracheal stenting
-            $4,500–7,500; lifetime dental care can easily exceed $6,000. Insurance bought before
+            $4,500–7,500; lifetime dental care can easily run $5,000–$8,000. Insurance bought before
             symptoms appear typically covers these as accident/illness with no breed exclusion. See our
             2026 comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>

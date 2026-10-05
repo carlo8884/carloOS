@@ -57,7 +57,7 @@ export default function GdvPage() {
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-09-05">
+       priceAsOf="2026-10-05">
         <div className="carloOS-article">
 
           <div style={{ background: 'rgba(200,74,42,0.06)', border: '1px solid rgba(200,74,42,0.25)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
@@ -89,7 +89,7 @@ export default function GdvPage() {
 
           <h2>Prevention — Prophylactic Gastropexy</h2>
           <p>Prophylactic gastropexy is a surgical procedure that permanently attaches the stomach to the abdominal wall, preventing the torsion (twisting) component of GDV. It does not prevent the stomach from dilating (the first stage) but eliminates the life-threatening second stage. It can be performed laparoscopically (minimally invasive) at the time of spay or neuter, adding $300–500 to the procedure cost.</p>
-          <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $400 prophylactic surgery versus a $10,000+ emergency procedure if GDV occurs.</p>
+          <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $300–$600 prophylactic surgery versus a $8,000–$12,000+ emergency procedure if GDV occurs.</p>
           <p>Ask your vet: <em>"Is my dog's breed a candidate for prophylactic gastropexy? Can it be performed with the spay/neuter?"</em></p>
           <p>Household feeding-management tools can sit alongside that gastropexy conversation after a veterinarian has talked through breed risk. A single stainless floor dog bowl keeps a deep-chested dog&rsquo;s meal at floor level instead of on a stand. A wobble dog food dispenser slows a fast eater without a maze bowl or a raised slow-feeder. A 30-minute sand hourglass timer keeps post-meal rest visible so activity stays off the half-hour after a meal. These are household tools, not treatments. They do not prevent simple gas bloating, they do not replace prophylactic gastropexy, they do not treat GDV, and they do not change the go-now emergency if the dog is retching without producing anything.</p>
 

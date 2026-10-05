@@ -140,7 +140,7 @@ export default function SpecialistsHubPage() {
         >
           Board-Certified Veterinary Specialists
         </h1>
-        <PriceAsOf date="2026-06-14" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <p className="text-lg font-light text-white/60 max-w-2xl leading-relaxed">
           Nine specialty deep-dives — when your primary vet refers, what to expect at the visit,
           typical US cost ranges, how pet insurance fits in, and how to verify board

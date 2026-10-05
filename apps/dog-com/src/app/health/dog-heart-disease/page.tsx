@@ -31,13 +31,13 @@ export default function DogHeartDiseasePage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Heart Disease + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cardiac care is a lifetime cost</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly exceed $8,000. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Lifetime cardiac medication + cardiology specialist visits commonly run $6,000–$12,000 or more. Insurance covers it — but only if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-05-30">
+       priceAsOf="2026-10-05">
         <div className="carloOS-article">
 
           <h2 id="mmvd">Myxomatous Mitral Valve Disease (MMVD)</h2>

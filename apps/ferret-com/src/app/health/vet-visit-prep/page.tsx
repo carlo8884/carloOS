@@ -171,7 +171,7 @@ export default function FerretVetVisitPrepPage() {
           { title: 'Find an Exotic Vet', href: '/find-an-exotic-vet' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
         ]}
- priceAsOf="2026-05-29">
+ priceAsOf="2026-10-05">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Ferret.com Editorial"
@@ -200,7 +200,7 @@ export default function FerretVetVisitPrepPage() {
             insulinoma bloodwork or per pre-anesthesia instructions.
             Expect cost ranges of $75-150 for a routine exam, $150-300
             for full bloodwork, $400-800 for dental work under
-            anesthesia, $1500+ for major ferret surgery. Annual visits
+            anesthesia, $1,500–$3,500 for major ferret surgery. Annual visits
             through age 3, every 6 months age 3-5, every 3-6 months
             beyond that.
           </p>

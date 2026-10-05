@@ -71,8 +71,8 @@ const FAQ_SECTIONS = [
       },
       {
         question: 'Is pet insurance worth it?',
-        answer: 'For most dogs, yes — particularly for breeds predisposed to expensive conditions (Golden Retrievers, French Bulldogs, German Shepherds, Labrador Retrievers). A single emergency surgery runs $3,000–8,000; cancer treatment can exceed $20,000. Pet insurance converts an unpredictable large expense into a predictable monthly cost. The key rule: enroll before any conditions develop, since pre-existing conditions are excluded. Trupanion and Healthy Paws are commonly named for direct-pay and unlimited coverage respectively.',
-        answerText: 'Yes for most dogs, especially predisposed breeds. A single surgery runs $3,000-8,000; cancer can exceed $20,000. Enroll before conditions develop — pre-existing conditions are excluded.',
+        answer: 'For most dogs, yes — particularly for breeds predisposed to expensive conditions (Golden Retrievers, French Bulldogs, German Shepherds, Labrador Retrievers). A single emergency surgery runs $3,000–8,000; cancer treatment can run $15,000–$25,000 or more. Pet insurance converts an unpredictable large expense into a predictable monthly cost. The key rule: enroll before any conditions develop, since pre-existing conditions are excluded. Trupanion and Healthy Paws are commonly named for direct-pay and unlimited coverage respectively.',
+        answerText: 'Yes for most dogs, especially predisposed breeds. A single surgery runs $3,000-8,000; cancer can run $15,000–$25,000 or more. Enroll before conditions develop — pre-existing conditions are excluded.',
       },
     ],
   },
@@ -125,7 +125,7 @@ export default function FAQPage() {
           style={{ fontSize: 'clamp(30px, 4vw, 52px)' }}>
           Dog Health FAQ
         </h1>
-        <PriceAsOf date="2026-05-27" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <p className="text-lg font-light text-white/55 max-w-xl leading-relaxed">
           Answers to the most common dog health questions, drawn from current AVMA, ACVIM, and WSAVA guidance. Updated as guidelines change.
         </p>

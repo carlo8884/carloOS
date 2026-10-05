@@ -84,7 +84,7 @@ const QUESTIONS: Question[] = [
     text: 'Can you set aside an emergency fund or carry exotic-pet insurance?',
     subtext: 'Adrenal disease, insulinoma, and gastrointestinal blockages are common in ferrets. Treatment often runs $1,000-$3,000+ per episode. This is not a rare edge case.',
     choices: [
-      { label: 'Yes, I can maintain a $1,500+ emergency fund or carry insurance', score: 3 },
+      { label: 'Yes, I can maintain a $1,000–$2,000+ emergency fund or carry insurance', score: 3 },
       { label: 'Possibly, with planning', score: 1 },
       { label: 'No, unexpected vet costs would be a serious problem', score: 0 },
     ],

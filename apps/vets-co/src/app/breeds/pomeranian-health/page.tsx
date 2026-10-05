@@ -92,7 +92,7 @@ export default function VetsPomeranianHealthPage() {
     <>
       <SchemaScript schema={combinedSchema} />
       <ArticleLayout
-        priceAsOf="2026-05-28"
+        priceAsOf="2026-10-05"
         siteId="vets-co"
         contentType="breed"
         hero={{
@@ -300,7 +300,7 @@ export default function VetsPomeranianHealthPage() {
             Pomeranians live long, which is wonderful — and which also means a long window for chronic disease
             costs to accumulate. Patellar luxation correction runs roughly $2,000–4,000 per knee; PDA closure
             $3,500–5,500; tracheal stenting at a referral center commonly $4,500–7,500; lifetime dental
-            care can easily exceed $5,000. Insurance bought before the first symptoms appear typically covers
+            care can easily run $4,000–$7,000. Insurance bought before the first symptoms appear typically covers
             these as accident/illness with no breed exclusion. See our 2026 comparison:{' '}
             <a href="/reviews/best-pet-insurance">best pet insurance →</a>.
           </p>

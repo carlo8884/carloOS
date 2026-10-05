@@ -1109,7 +1109,7 @@ export const Specialties: Specialty[] = [
       'Emergency and critical care is what most pet-insurance plans were designed to cover. Most accident-and-illness plans reimburse ER exam fees, hospitalization, surgery, and ICU care once the policy is active and any waiting period has passed. Annual maximum limits are the most important variable — a multi-day ICU stay for sepsis, GDV, or trauma can exhaust low-cap plans quickly. Plans with higher annual maximums (or no annual cap) protect best against catastrophic ER costs.',
     howToFindOne: [
       'Find and save the address and phone number of your nearest 24-hour emergency veterinary hospital before you need it — searching during a crisis costs time.',
-      'For toxin exposure, call ASPCA Animal Poison Control at 888-426-4435 ($75 consultation) or Pet Poison Helpline at 855-764-7661 before driving — they will tell you what to do en route.',
+      'For toxin exposure, call ASPCA Animal Poison Control at 888-426-4435 ($65–$95 consultation) or Pet Poison Helpline at 855-764-7661 before driving — they will tell you what to do en route.',
       'Use the ACVECC "Find an ECC Specialist" directory to identify specialty hospitals near you with board-certified critical care.',
       'Many ERs do not have board-certified DACVECC criticalists on every shift — for known-complex cases, ask which hours a criticalist is on duty.',
       'Verify "DACVECC" board certification for the criticalist who will be primary on a complex ICU case.',
