@@ -219,7 +219,7 @@ export default function BestDogFoodPage() {
               ]}
               price="$60–120 / 30 lbs (Science Diet)"
               priceNote="Prescription Diet varies"
-              ctaText="Shop Hill's on Amazon →"
+              ctaText="Shop Hill's Science Diet dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+dry+dog+food"
