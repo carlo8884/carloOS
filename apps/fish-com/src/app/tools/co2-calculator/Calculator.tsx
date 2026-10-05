@@ -333,14 +333,14 @@ export default function CO2Calculator() {
           </ResultMeaning>
           {method === 'pressurized' ? (
             <ResultCTA
-              heading="Shop the solenoid regulator for this bubble rate"
+              heading="Shop the diffuser sized for this tank"
               blurb={
                 <>
-                  This is the aquarium CO2 regulator and solenoid search already on this page. The diffuser and drop-checker searches stay in the shop section.
+                  This result names a diffuser size. The hop is the aquarium CO2 diffuser search already on this page.
                 </>
               }
-              query="aquarium+co2+regulator+solenoid"
-              cta="Browse aquarium CO2 regulator solenoids on Amazon"
+              query="aquarium+co2+diffuser"
+              cta="Browse aquarium CO2 diffusers on Amazon"
               source="tools-co2-calculator"
             />
           ) : (
