@@ -90,8 +90,7 @@ export default function HypothyroidismPage() {
             dog ear wipes, assisted-walking slings,
             hind-paw booties, hip braces, silicone dog
             grooming gloves, analog bathroom scales, dog
-            dental finger brushes, resting respiratory
-            rate notebooks, one-minute kitchen timers,
+            dental finger brushes, one-minute kitchen timers,
             step-in padded dog harnesses, pet medical
             records binders, AM/PM weekly pill
             organizers, digital hanging luggage scales,
@@ -175,7 +174,7 @@ export default function HypothyroidismPage() {
               #1049 sling / hind-paw-bootie / hip-brace
               hops, they are not the #1048 grooming-glove
               / analog-scale / finger-brush hops, they are
-              not the #1047 notebook / timer / harness
+              not the #1047 timer / harness
               hops, they are not the #1046 binder / AM-PM
               pill-organizer / luggage-scale hops, they
               are not the #1045 penlight / contact-card

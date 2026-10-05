@@ -139,10 +139,7 @@ export default function LeasingHorsePage() {
             forever keep, not a shared lease),
             not a horse mortality vs major-medical
             decision worksheet (that lives on
-            horse-insurance), and not an equine
-            emergency fund expense tracker
-            notebook (that lives on
-            cost-of-owning-a-horse). This page
+            horse-insurance). This page
             does not hop keep-feed-farrier cost
             logs, farrier log books, or VCPR
             records folders already pinned

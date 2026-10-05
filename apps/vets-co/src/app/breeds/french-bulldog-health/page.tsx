@@ -110,9 +110,9 @@ export default function VetsFrenchBulldogHealthPage() {
           a treatment. Top-bound steno pads,
           mechanical kitchen timers, and
           self-adhesive file-folder labels already
-          live on german-shepherd-health. Dot-grid
-          notebooks, paint-chip sample cards, and
-          18-month wall calendars already live on
+          live on german-shepherd-health. Paint-chip
+          sample cards and 18-month wall calendars
+          already live on
           golden-retriever-health. This page does
           not hop cooling mats, cooling vests,
           medications, or insurance brands as

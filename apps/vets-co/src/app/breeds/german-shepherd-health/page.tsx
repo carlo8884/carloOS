@@ -86,9 +86,9 @@ export default function GSHealthPage() {
           educational German-shepherd-health /
           paperwork tools, not a ranked product
           list, not a substitute for veterinary
-          care, and not a treatment. Dot-grid
-          notebooks, paint-chip sample cards, and
-          18-month wall calendars already live on
+          care, and not a treatment. Paint-chip
+          sample cards and 18-month wall calendars
+          already live on
           golden-retriever-health. Flexible sewing
           tape measures, bound composition books,
           and letter-size document frames already

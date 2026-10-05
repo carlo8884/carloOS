@@ -121,7 +121,7 @@ export default function FarrierSchedulePage() {
 
           <h2 id="working">Working With Your Farrier</h2>
           <ul>
-            <li><strong>Book ahead</strong> and keep a standing appointment rather than calling once the feet are already overgrown. An equine farrier log book is how the next 6-to-8-week date, the last interval, and any flaring notes stay written down instead of guessed from memory; it is not a notebook for seizures or a dog weight-log book.</li>
+            <li><strong>Book ahead</strong> and keep a standing appointment rather than calling once the feet are already overgrown. An equine farrier log book is how the next 6-to-8-week date, the last interval, and any flaring notes stay written down instead of guessed from memory.</li>
             <li><strong>Teach the horse to stand</strong> quietly and pick up its feet, which protects both horse and farrier. A portable farrier hoof stand is how a lifted foot stays supported while the farrier trims or resets a shoe — it is not a soaking boot and not a riding hoof boot.</li>
             <li><strong>Provide a clean, level, well-lit area</strong> and dry feet to work on. A cordless barn flood light is how that aisle or wash stall stays bright when the standing appointment lands before sunrise or in a dark barn; it is not a foaling headlamp and not a medical penlight.</li>
             <li><strong>Communicate</strong> about any lameness, footing changes, or the horse&apos;s workload so shoeing can be tailored.</li>
