@@ -5754,7 +5754,7 @@ const CALCULATORS = [
       { re: /query: 'aquarium\+gravel\+vacuum\+siphon'/, label: 'small-change result uses the locked gravel-vacuum search, without a dechlorinator token' },
       { re: /query="api\+freshwater\+master\+test\+kit"/, label: 'dilution result uses the locked API test-kit search' },
       { re: /Browse Python-style water changers on Amazon/, label: 'Python result label matches the changer search' },
-      { re: /Browse gravel vacuums on Amazon/, label: 'gravel-vacuum result label matches the siphon search' },
+      { re: /Browse gravel vacuum siphons on Amazon/, label: 'gravel-vacuum result label matches the siphon search' },
       { re: /Browse API Master Test Kit on Amazon/, label: 'test-kit result label matches the API search' },
     ],
     mustExclude: [

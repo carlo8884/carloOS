@@ -217,7 +217,7 @@ export default function EquipmentHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=equipment-hub"
-              amazonLabel="Browse gravel vacuums on Amazon →"
+              amazonLabel="Browse gravel vacuum siphons on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">
