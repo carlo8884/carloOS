@@ -250,7 +250,7 @@ export default function DogGestationCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+pet+thermometer?s=tools-dog-gestation-calculator"
-                amazonLabel="Browse pet thermometers on Amazon →"
+                amazonLabel="Browse digital pet thermometers on Amazon →"
               />
           </div>
           </div>
