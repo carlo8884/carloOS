@@ -23,7 +23,7 @@ export function PrimaryHop({
         <button
           type="button"
           disabled
-          className="inline-block max-w-full bg-white/70 text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md cursor-not-allowed"
+          className="inline-block max-w-full whitespace-normal text-left bg-white/70 text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md cursor-not-allowed"
         >
           {partnerNeededLabel(label)}
         </button>
