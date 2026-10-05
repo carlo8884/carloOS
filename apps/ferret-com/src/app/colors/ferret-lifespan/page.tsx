@@ -268,6 +268,7 @@ export default function FerretLifespanPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=ferret-lifespan"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>

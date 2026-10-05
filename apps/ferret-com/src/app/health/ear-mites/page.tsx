@@ -336,6 +336,7 @@ export default function FerretEarMitesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=ear-mites"
+                amazonLabel="Browse ferret cages on Amazon →"
               />
           </div>
           </div>
