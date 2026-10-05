@@ -151,7 +151,6 @@ export default function IsAFerretRightForYouPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=is-a-ferret-right-for-you"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

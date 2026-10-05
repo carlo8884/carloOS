@@ -358,7 +358,6 @@ export default function FerretGIBlockagePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=gastrointestinal-blockage"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

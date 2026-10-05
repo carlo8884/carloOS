@@ -532,7 +532,6 @@ export default function FerretVetVisitPrepPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier?s=vet-visit-prep"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

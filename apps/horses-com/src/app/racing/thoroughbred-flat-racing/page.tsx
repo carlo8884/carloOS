@@ -199,7 +199,6 @@ export default function ThoroughbredFlatRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+driving+harness?s=racing-thoroughbred-flat-racing"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

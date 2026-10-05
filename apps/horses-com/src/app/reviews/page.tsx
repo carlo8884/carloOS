@@ -222,7 +222,6 @@ export default function HorsesReviewsPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+blanket?s=reviews-hub"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

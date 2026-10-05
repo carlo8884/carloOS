@@ -518,7 +518,6 @@ export default function FerretExerciseEnrichmentPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

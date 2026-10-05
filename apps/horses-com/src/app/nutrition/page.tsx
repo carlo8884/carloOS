@@ -185,7 +185,6 @@ export default function NutritionHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/beet+pulp+horse+feed?s=nutrition-hub"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

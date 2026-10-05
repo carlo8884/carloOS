@@ -366,7 +366,6 @@ export default function FerretDiarrheaCausesPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+oral+electrolyte+solution?s=ferret-diarrhea-causes"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

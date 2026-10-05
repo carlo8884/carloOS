@@ -324,7 +324,6 @@ export default function DressagePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dressage+saddle?s=discipline-dressage"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

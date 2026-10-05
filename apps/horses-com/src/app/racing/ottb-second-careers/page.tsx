@@ -226,7 +226,6 @@ export default function OttbSecondCareersHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+reins?s=ottb-second-careers-hub"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

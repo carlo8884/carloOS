@@ -197,7 +197,6 @@ export default function HarnessRacingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+saddle+pad?s=racing-harness-racing"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

@@ -433,7 +433,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/albion+dressage+saddle?s=discipline-equipment-dressage"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>
@@ -452,7 +451,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/pessoa+close+contact+saddle?s=discipline-equipment-show-jumping"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>
@@ -471,7 +469,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/county+eventer+saddle?s=discipline-equipment-eventing"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>
@@ -490,7 +487,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/circle+y+western+show+saddle?s=discipline-equipment-western-pleasure"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>
@@ -509,7 +505,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/circle+y+reining+saddle?s=discipline-equipment-reining"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>
@@ -528,7 +523,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/wintec+trail+saddle?s=discipline-equipment-trail-riding"
-                    amazonLabel="Shop on Amazon"
                   />
 </div>
               </div>

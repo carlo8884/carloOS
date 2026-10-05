@@ -529,7 +529,6 @@ export default async function ParameterPage({ params }: PageProps) {
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter?s=water-param-spoke"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>

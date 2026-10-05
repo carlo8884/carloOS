@@ -562,7 +562,6 @@ export default function FerretTrainingBondingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=training-and-bonding"
-                amazonLabel="Shop on Amazon"
               />
           </div>
           </div>

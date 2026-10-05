@@ -305,7 +305,6 @@ export default function RacingHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+driving+harness?s=racing-hub"
-              amazonLabel="Shop on Amazon"
             />
           </div>
         </div>
