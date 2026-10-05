@@ -3558,7 +3558,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -3575,7 +3575,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -3592,7 +3592,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -3609,7 +3609,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -3626,7 +3626,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -3643,7 +3643,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/equipment/[slug]/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /amazonHref: '\/go\/amazon-brand\//, label: 'amazon-brand hop in the equipment shop map' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -10786,8 +10786,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/helmet-guide/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/troxel\+spirit\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/riding\+helmet\+certification\+label\+question\+card\?s=helmet-guide/, label: 'riding helmet certification-label question-card search hop (matches on-page ASTM/SEI / PAS 015 / VG1 / Snell inside-label copy; unique vs horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card / horse+after+hours+emergency+cover+question+card)' },
-      { re: /amazon-brand\/riding\+helmet\+impact\+retirement\+log\+notebook\?s=helmet-guide/, label: 'riding helmet impact-retirement-log-notebook search hop (matches on-page replace-after-impact / manufacturer-advised-interval copy; unique vs horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook / equine+emergency+fund+expense+tracker+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10805,8 +10803,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/saddle\+pad\+sweat\+pattern\+dry\+spot\+question\+card\?s=saddle-pads/, label: 'saddle-pad sweat-pattern dry-spot question-card search hop (matches on-page dry-patch / pressure-point / sweat-pattern copy; unique vs riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card / first+horse+tack+room+emergency+plan+card)' },
-      { re: /amazon-brand\/saddle\+pad\+clean\+dry\+rotation\+log\+notebook\?s=saddle-pads/, label: 'saddle-pad clean-dry rotation-log-notebook search hop (matches on-page keep-several-in-rotation / clean-dry-pad-always-available copy; unique vs riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook / first+horse+buyer+visit+field+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10824,8 +10820,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/boots-and-wraps/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+boot\+impact\+not\+tendon\+support\+question\+card\?s=boots-and-wraps/, label: 'horse-boot impact-not-tendon-support question-card search hop (matches on-page boots-protect-against-knocks-and-brushing / they-do-not-structurally-support-tendons copy; unique vs saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+buyer+vet+briefing+question+card / horse+handler+kick+zone+safety+question+card)' },
-      { re: /amazon-brand\/horse\+boot\+grit\+rub\+clean\+dry\+log\+notebook\?s=boots-and-wraps/, label: 'horse-boot grit-rub clean-dry-log-notebook search hop (matches on-page grit-under-a-boot-causes-rubs / clean-dry-inside copy; unique vs saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook / senior+horse+weight+and+joint+watch+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10843,8 +10837,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/halters-and-lead-ropes/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+rope\+vs\+flat\+halter\+task\+question\+card\?s=halters-and-lead-ropes/, label: 'horse rope-vs-flat-halter task question-card search hop (matches on-page rope-halters-for-skilled-groundwork / flat-halters-spread-pressure / rope-halters-generally-not-used-for-tying copy; unique vs horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card / horse+handler+kick+zone+safety+question+card)' },
-      { re: /amazon-brand\/horse\+quick\+release\+wither\+height\+tie\+log\+notebook\?s=halters-and-lead-ropes/, label: 'horse quick-release wither-height tie-log-notebook search hop (matches on-page quick-release-or-panic-snap / baler-twine-breakaway-loop / wither-height-and-short-enough-no-leg-over / fold-slack-never-wrap-the-hand copy; unique vs horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook / horse+pain+demeanor+change+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10862,8 +10854,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/blanket-weights/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+denier\+vs\+fill\+question\+card\?s=blanket-weights/, label: 'horse denier-vs-fill question-card search hop (matches on-page denier-is-durability / fill-is-warmth / high-denier-and-low-fill copy; unique vs horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card / riding+helmet+certification+label+question+card)' },
-      { re: /amazon-brand\/horse\+over\+rugging\+sweat\+shiver\+watch\+log\+notebook\?s=blanket-weights/, label: 'horse over-rugging sweat-shiver watch-log-notebook search hop (matches on-page match-fill-to-temperature-coat-clip / watch-the-horse-not-just-the-thermometer / neither-sweating-nor-shivering / over-rugging-as-harmful-as-under-rugging copy; unique vs horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook / riding+helmet+impact+retirement+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10881,8 +10871,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/martingales-and-breastplates/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+martingale/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+breastplate\+vs\+breastgirth\+fit\+question\+card\?s=martingales/, label: 'horse breastplate-vs-breastgirth fit question-card search hop (matches on-page breastplate-stops-saddle-sliding-back / breastgirths-are-a-simpler-chest-strap / snug-enough-not-so-tight-shoulders-or-windpipe copy; unique vs horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card / saddle+pad+sweat+pattern+dry+spot+question+card)' },
-      { re: /amazon-brand\/horse\+martingale\+misuse\+head\+carriage\+log\+notebook\?s=martingales/, label: 'horse martingale-misuse head-carriage log-notebook search hop (matches on-page does-not-teach-head-carriage / too-tight-or-wrongly-fitted-restricts / training-pain-fit-or-hands copy; unique vs horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook / saddle+pad+clean+dry+rotation+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10900,8 +10888,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/bridle-types/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+bridle\+cheekpiece\+length\+fit\+question\+card\?s=bridle-types/, label: 'horse bridle cheekpiece-length fit question-card search hop (matches on-page cheekpieces-run-down-each-side-to-attach-the-bit / the-bit-sits-at-the-correct-height / the-browband-does-not-pull-the-headpiece-into-the-ears copy; unique vs horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card / horse+boot+impact+not+tendon+support+question+card)' },
-      { re: /amazon-brand\/horse\+noseband\+two\+finger\+welfare\+log\+notebook\?s=bridle-types/, label: 'horse noseband two-finger welfare log-notebook search hop (matches on-page a-couple-of-fingers-under-the-band / over-tightened-nosebands-are-a-welfare-concern / the-horse-must-still-chew-and-move-its-jaw copy; unique vs horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook / horse+boot+grit+rub+clean+dry+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10919,8 +10905,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/girths-and-cinches/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+martingale/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+girth\+buckle\+elbow\+clearance\+question\+card\?s=girths-and-cinches/, label: 'horse girth buckle-elbow-clearance question-card search hop (matches on-page the-right-length-keeps-buckles-or-rings-clear-of-the-elbow / positioned-in-the-natural-girth-groove / not-dragged-forward-against-the-elbow copy; unique vs horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card / horse+rope+vs+flat+halter+task+question+card)' },
-      { re: /amazon-brand\/horse\+girth\+gall\+skin\+wrinkle\+log\+notebook\?s=girths-and-cinches/, label: 'horse girth-gall skin-wrinkle log-notebook search hop (matches on-page gradual-tightening / smooth-the-skin-under-the-girth / pull-the-forelegs-forward-to-remove-wrinkles copy; unique vs horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook / horse+quick+release+wither+height+tie+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10938,8 +10922,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/stirrups-and-safety/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+stirrup\+width\+inch\+clearance\+question\+card\?s=stirrups-and-safety/, label: 'horse stirrup width-inch-clearance question-card search hop (matches on-page about-an-inch-wider-than-the-widest-part-of-the-boot / enough-clearance-that-the-foot-is-not-pinched / not-so-wide-that-the-whole-foot-can-slide-through copy; unique vs horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card / horse+denier+vs+fill+question+card)' },
-      { re: /amazon-brand\/horse\+stirrup\+drag\+entrapment\+watch\+log\+notebook\?s=stirrups-and-safety/, label: 'horse stirrup drag-entrapment watch log-notebook search hop (matches on-page correctly-sized-stirrups-that-let-the-foot-release / riding-boots-with-a-heel-and-smooth-sole / ball-of-the-foot-on-the-tread-and-heels-down copy; unique vs horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook / horse+over+rugging+sweat+shiver+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10958,8 +10940,6 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/tack/bits-guide/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/horse\+snaffle\+bit/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+bit\+width\+and\+wrinkle\+fit\+question\+card\?s=bits-guide/, label: 'horse bit width-and-wrinkle fit question-card search hop (matches on-page the-right-width-sits-snugly-without-pinching-the-lips-or-sliding-through / a-slight-wrinkle-or-two-at-the-corners-of-the-lips / not-so-high-it-bangs-the-molars-or-so-low-it-hits-the-teeth copy; unique vs horse+stirrup+width+inch+clearance+question+card / horse+girth+buckle+elbow+clearance+question+card / horse+bridle+cheekpiece+length+fit+question+card / horse+breastplate+vs+breastgirth+fit+question+card)' },
-      { re: /amazon-brand\/horse\+bit\+hand\+severity\+watch\+log\+notebook\?s=bits-guide/, label: 'horse bit hand-severity watch log-notebook search hop (matches on-page severity-lives-in-the-hand-not-only-the-bit / a-mild-snaffle-can-be-cruel-in-rough-hands / reaching-for-a-stronger-bit-masks-the-root-cause and educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove copy; unique vs horse+stirrup+drag+entrapment+watch+log+notebook / horse+girth+gall+skin+wrinkle+log+notebook / horse+noseband+two+finger+welfare+log+notebook / horse+martingale+misuse+head+carriage+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10978,8 +10958,6 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/training/off-leash-training/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/dog\+20\+to\+30\+foot\+long\+line\+question\+card\?s=training-off-leash-training/, label: 'dog 20-to-30-foot long-line question-card search hop (matches on-page a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness / gather-the-line-hand-over-hand-no-jerking / long-line-first-in-every-new-environment copy; unique vs dog+long+line+leash / 6+ft+dog+leash / indoor+dog+house+line / 2+foot+nylon+traffic+lead)' },
-      { re: /amazon-brand\/dog\+recall\+cue\+never\+punish\+watch\+log\+notebook\?s=training-off-leash-training/, label: 'dog recall-cue never-punish watch log-notebook search hop (matches on-page never-use-the-recall-cue-for-anything-unpleasant / never-punish-a-dog-that-comes / the-recall-must-always-be-positive copy; unique vs horse+bit+hand+severity+watch+log+notebook / horse+stirrup+drag+entrapment+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10998,8 +10976,6 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/training/resource-guarding/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/dog\+food\+bowl\+safety\+question\+card\?s=training-resource-guarding/, label: 'dog food-bowl safety question-card search hop (matches on-page feed-the-dog-in-a-separate-room / pick-up-high-value-chews-when-guests-arrive / baby-gates-to-separate-guarding-contexts copy; unique vs single+stainless+floor+dog+bowl / heavy+ceramic+pet+food+bowl / slow+feeder+dog+bowl / extra+tall+baby+gate / walk+through+pet+gate)' },
-      { re: /amazon-brand\/dog\+resource\+guarding\+never\+punish\+growl\+watch\+log\+notebook\?s=training-resource-guarding/, label: 'dog resource-guarding never-punish-growl watch log-notebook search hop (matches on-page punishing-a-growl-removes-the-warning-signal / never-punish-growling / dog-that-stops-growling-before-biting-is-more-dangerous copy; unique vs dog+recall+cue+never+punish+watch+log+notebook / horse+bit+hand+severity+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -11018,8 +10994,6 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/training/dog-aggression/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/dog\+aggression\+type\+and\+function\+question\+card\?s=training-dog-aggression/, label: 'dog aggression type-and-function question-card search hop (matches on-page fear-based-aggression-is-the-most-common / redirected-aggression / rule-out-pain-first-in-any-new-onset-aggression copy; unique vs dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
-      { re: /amazon-brand\/dog\+aggression\+never\+alpha\+roll\+watch\+log\+notebook\?s=training-dog-aggression/, label: 'dog aggression never-alpha-roll watch log-notebook search hop (matches on-page dominance-theory-has-been-thoroughly-refuted / alpha-rolls / physical-corrections-consistently-make-aggression-more-dangerous copy; unique vs dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -11038,8 +11012,6 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/training/training-red-flags/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/dog\+force\+free\+trainer\+interview\+question\+card\?s=training-red-flags/, label: 'dog force-free trainer interview question-card search hop (matches on-page what-tools-do-you-use / what-do-you-do-when-a-dog-doesnt-respond / cpdt-ka-cpdt-ksa-cbcc-ka-or-caab copy; unique vs dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
-      { re: /amazon-brand\/dog\+easy\+walk\+ruffwear\+front\+range\+watch\+log\+notebook\?s=training-red-flags/, label: 'dog Easy Walk / Ruffwear Front Range watch log-notebook search hop (matches on-page front-clip-harnesses-petsafe-easy-walk-ruffwear-front-range / reduce-pulling-without-this-mechanism / force-free-methods copy; unique vs dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -11058,8 +11030,6 @@ const CALCULATORS = [
     file: 'apps/dog-com/src/app/training/trainer-credentials/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/dog\+cpdt\+ka\+hiring\+interview\+question\+card\?s=training-trainer-credentials/, label: 'dog CPDT-KA hiring interview question-card search hop (matches on-page what-credentials-do-you-hold / are-they-current / will-i-be-learning-to-train-my-dog copy; unique vs dog+force+free+trainer+interview+question+card / dog+aggression+type+and+function+question+card / dog+food+bowl+safety+question+card / dog+20+to+30+foot+long+line+question+card)' },
-      { re: /amazon-brand\/dog\+trainer\+session\+observation\+watch\+log\+notebook\?s=training-trainer-credentials/, label: 'dog trainer session-observation watch log-notebook search hop (matches on-page can-i-observe-a-session-with-another-client / training-the-dog-while-excluding-the-owner / veterinary-reference-required copy; unique vs dog+easy+walk+ruffwear+front+range+watch+log+notebook / dog+aggression+never+alpha+roll+watch+log+notebook / dog+resource+guarding+never+punish+growl+watch+log+notebook / dog+recall+cue+never+punish+watch+log+notebook)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
