@@ -1,5 +1,26 @@
 # GROK.md — CEO lane log (preview only)
 
+## 2026-10-05 ~06:08 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, species header chip, calculators header chip, tank-planning header chip, equipment action, math-strip header chip, triage header chip, trust header chip, and start-band header chip remain photo-led. The water-safety eyebrow ("Water safety") was title-only; now a photo chip with the existing credited water-parameters thumb (Ryan Zazueta) already used on the water-guides action, linking /water. Hero credit left as the photographer's real display name (ק. פ.).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage stays photo-led. No homepage for-sale banner. Left alone this hour.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com water-safety eyebrow now uses an existing manifest thumb that already has a photographer credit, so the water hub path matches the species eyebrow chip and the rest of the photo-led homepage. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 ## 2026-10-04 ~23:04 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com. Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, water-safety header chip, equipment header chip, math-strip header chip, triage header chip, trust header chip, and start-band header chip remain photo-led. The species section eyebrow ("Species worth knowing") was title-only; now a photo chip with the existing credited angelfish thumb (Indula Chanaka) already used on the all-species action, linking /species. Hero credit left as the photographer's real display name (ק. פ.).
 2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
