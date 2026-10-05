@@ -26,9 +26,12 @@ test('404 view tracking stays on the missing page', () => {
   const src = readFileSync(join(ROOT, 'packages/ui/src/components/MissedPage.tsx'), 'utf8')
   assert.match(src, /kind === 'missing' \? <TrackPage404/)
   assert.match(readFileSync(join(ROOT, 'packages/ui/src/components/TrackPage404.tsx'), 'utf8'), /page_404/)
+  const results = readFileSync(join(ROOT, 'packages/ui/src/components/SiteSearch.tsx'), 'utf8')
+  assert.match(results, /kind="search"/)
+  assert.equal(results.includes('page_404'), false)
   for (const site of SITES) {
     const search = readFileSync(join(ROOT, 'apps', site, 'src/app/search/page.tsx'), 'utf8')
-    assert.match(search, /kind="search"/)
+    assert.match(search, /SiteSearch/)
     assert.equal(search.includes('page_404'), false)
     assert.match(search, /noIndex: true/)
   }
