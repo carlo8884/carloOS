@@ -20,6 +20,24 @@ test('a price line older than the cutoff is listed and a newer band is not', () 
   assert.match(rows[0].code, /\$149/)
 })
 
+test('ranges and historical citation lines are ignored even when old', () => {
+  const blame = [
+    'abc1234 (carlo 2026-05-25 10) price="$149 + $9.99/mo"',
+    'abc1234 (carlo 2026-05-25 11) price="$140–160 + $8–12/mo"',
+    'abc1234 (carlo 2026-05-25 12) text="$1,000–$3,000"',
+    'abc1234 (carlo 2026-05-25 13) text="from $50 to $100"',
+    'abc1234 (carlo 2026-05-25 14) text="$5k–$10k"',
+    'abc1234 (carlo 2026-05-25 15) text="$20,000"',
+    'abc1234 (carlo 2026-05-25 16) text="Citation, the first Thoroughbred to reach $1 million in career earnings"',
+    'abc1234 (carlo 2026-05-25 17) text="Winning the 1948 Triple Crown and becoming the first racehorse to earn $1 million."',
+  ].join('\n')
+  const rows = stalePriceLines(blame, '2026-08-21')
+  assert.deepEqual(rows.map((row) => row.code), [
+    'price="$149 + $9.99/mo"',
+    'text="$20,000"',
+  ])
+})
+
 test('the workflow job is report-only and the script exits 0', () => {
   const script = readFileSync(new URL('./stale-price-report.mjs', import.meta.url), 'utf8')
   const yml = readFileSync(new URL('../../.github/workflows/qc.yml', import.meta.url), 'utf8')
