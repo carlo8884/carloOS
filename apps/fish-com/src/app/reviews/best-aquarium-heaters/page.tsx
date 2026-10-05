@@ -154,7 +154,7 @@ export default function BestHeatersPage() {
               pros={['Flat design — minimal visual intrusion', 'Shatterproof housing', 'LED visual status indicator', 'Matches Jager accuracy']}
               cons={['Higher price than Eheim Jager', 'Not recalibratable']}
               price="$35–65"
-              ctaText="Shop Cobalt Neo-Therm →"
+              ctaText="Shop Cobalt Neo-Therm on Amazon →"
               ctaHref="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="cobalt-neo-therm"
@@ -176,7 +176,7 @@ export default function BestHeatersPage() {
               pros={['No heater visible in the tank', 'Even temperature distribution', 'Longer lifespan (external)', 'Clean aesthetic for display tanks']}
               cons={['Requires canister filter', 'More expensive than in-tank', 'Not compatible with HOB filters']}
               price="$40–70"
-              ctaText="Shop Hydor Inline →"
+              ctaText="Shop Hydor Inline on Amazon →"
               ctaHref="/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hydor-inline"
@@ -198,7 +198,7 @@ export default function BestHeatersPage() {
               pros={['Best price of heaters compared', 'Shatterproof — beginner-safe', 'Widely available', 'Adequate for robust community fish']}
               cons={['Less accurate than premium options', 'Not suitable for temperature-sensitive species']}
               price="$18–30"
-              ctaText="Shop Aqueon Pro →"
+              ctaText="Shop Aqueon Pro on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-pro-heater"
