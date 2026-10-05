@@ -150,7 +150,7 @@ export default function BestPuppyFoodPage() {
               pros={['Top-tier WSAVA compliance', 'AAFCO feeding trial substantiated', 'Appropriate kibble size for small breeds', 'Full-time veterinary nutritionists']}
               cons={['Premium price', 'Not for large breeds — use Hill\'s Large Breed formula instead']}
               price="$55–80 per 28.5 lb bag"
-              ctaText="Shop Hill's Science Diet on Amazon →"
+              ctaText="Shop Hill's Science Diet Puppy Small Paws on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="hills+science+diet+puppy+small+paws"
