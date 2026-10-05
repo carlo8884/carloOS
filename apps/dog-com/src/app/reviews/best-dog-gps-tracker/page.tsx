@@ -76,7 +76,7 @@ export default function BestGPSTrackerPage() {
               pros={['Lowest monthly cost', 'Best international coverage', 'Simple reliable app', 'Lightweight']}
               cons={['2–5 day battery — frequent charging', 'No health monitoring', 'Less sophisticated app than Fi']}
               price="$40–60 + $4–6/mo"
-              ctaText="Shop Tractive GPS on Amazon →"
+              ctaText="Shop Tractive GPS tracker on Amazon →"
               ctaHref="/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="tractive+gps+dog+tracker"
