@@ -207,11 +207,11 @@ export default function VolumeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume"
-              amazonLabel="Browse aquarium stand on Amazon →"
+              amazonLabel="Browse aquarium stands on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume"
-              amazonLabel="Browse aquarium substrate gravel bags on Amazon →"
+              amazonLabel="Browse substrate gravel bags on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"

@@ -226,7 +226,7 @@ export default function PondVolumeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"
-              amazonLabel="Browse pond dechlorinator water conditioner on Amazon →"
+              amazonLabel="Browse pond dechlorinator on Amazon →"
             />
           </div>
         </div>
