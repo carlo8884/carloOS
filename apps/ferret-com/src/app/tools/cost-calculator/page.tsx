@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
   PriceAsOf,
   CrossSiteHelp,
@@ -186,6 +187,14 @@ export default function CostCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-5xl">
           <CostCalculator />
+          <JourneyNext
+            siteId="ferret-com"
+            nextHref="/diet/best-ferret-kibble"
+            nextLabel="Read the kibble guide before you price food"
+            nextBlurb="Food is one of the three lines in the first-year total. The kibble guide compares published panels, and the hop is the food search already on this page."
+            resourceHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-cost-calculator"
+            resourceLabel="Browse ferret food on Amazon →"
+          />
         </div>
       </section>
 

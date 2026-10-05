@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -202,6 +203,14 @@ export default function CatCalorieCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-10 sm:py-12">
         <div className="max-w-4xl">
           <Calculator />
+          <JourneyNext
+            siteId="vets-co"
+            nextHref="/tools/cat-body-condition-score"
+            nextLabel="Check the number against body condition"
+            nextBlurb="The calorie target is a starting scoop. Body condition is whether that scoop is right. The hop is the gram-scale search already on this page."
+            resourceHref="/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator"
+            resourceLabel="Browse kitchen gram scales on Amazon →"
+          />
         </div>
       </section>
 

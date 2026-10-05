@@ -10,6 +10,7 @@ import {
   FAQAccordion,
   AffiliateDisclosure,
   CrossPortfolioCard,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -151,6 +152,14 @@ export default function DogWaterIntakeCalculatorPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-5xl">
           <Calculator />
+          <JourneyNext
+            siteId="dog-com"
+            nextHref="/tools/dog-calorie-calculator"
+            nextLabel="Pair the ounces with a daily portion"
+            nextBlurb="Water and calories move together. The calorie calculator is the next number when drinking drifts with appetite or weight. The hop is the ceramic-bowl search already on this page."
+            resourceHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=tools-dog-water-intake"
+            resourceLabel="Browse ceramic pet water bowls on Amazon →"
+          />
         </div>
       </section>
 
