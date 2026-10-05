@@ -10836,7 +10836,7 @@ const CALCULATORS = [
     id: 'horses · halters-and-lead-ropes hops',
     file: 'apps/horses-com/src/app/tack/halters-and-lead-ropes/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/nylon\+horse\+halter/, label: 'on-page nylon halter Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
