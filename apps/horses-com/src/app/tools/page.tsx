@@ -48,6 +48,12 @@ const TOOLS = [
     tag: 'Tack',
   },
   {
+    href: '/tools/horse-water-calculator',
+    title: 'Horse Water Intake Calculator',
+    desc: 'Temperate idle drinking band from body weight: half a gallon to one gallon per 100 pounds, so a 1,000-pound horse matches the water page’s 5–10 gallons.',
+    tag: 'Calculator',
+  },
+  {
     href: '/tools/horse-feed-calculator',
     title: 'Horse Feed & Hay Calculator',
     desc: 'Estimate daily hay and feed from bodyweight, workload, and keeper type. Forage-first, using published NRC intake ranges, with a dry-matter vs. as-fed conversion.',

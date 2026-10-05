@@ -35,6 +35,12 @@ const TOOLS = [
     tag: 'Wellness',
   },
   {
+    href: '/tools/label-calculator',
+    title: 'Ferret Food Label Calculator',
+    desc: 'Dry-matter protein, fat, and carbohydrate by difference from the guaranteed analysis. Single-digit carbohydrate follows the Wysong card; mid teens follow Marshall.',
+    tag: 'Nutrition',
+  },
+  {
     href: '/tools/food-evaluator',
     title: 'Ferret Food Evaluator',
     desc: 'Score any kibble against published ferret nutrient targets (protein, fat, fiber, ash, first ingredient). Returns "appropriate / marginal / avoid" verdict with per-nutrient notes, then shop high-protein ferret kibble, freeze-dried raw treats, and salmon oil via Amazon category searches.',

@@ -138,6 +138,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://fish.com/tools/aquarium-volume-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/co2-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/heater-wattage-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
+    { url: 'https://fish.com/tools/live-rock-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/filter-gph-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/aquarium-setup-builder', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
     { url: 'https://fish.com/tools/fish-disease-symptom-checker', lastModified: now, changeFrequency: 'monthly', priority: 0.85 },

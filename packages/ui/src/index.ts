@@ -53,6 +53,10 @@ export {
   pondLinerPick,
   horseAgePick,
   foragePick,
+  catFoodAmountPick,
+  horseWaterPick,
+  liveRockPick,
+  ferretLabelPick,
 } from './lib/result-picks'
 export { FAQAccordion } from './components/FAQAccordion'
 export type { FAQItem } from './components/FAQAccordion'

@@ -251,6 +251,7 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/training/training-red-flags', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/tools', lastModified: now, changeFrequency: 'weekly', priority: 0.90 },
     { url: 'https://dog.com/tools/dog-calorie-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
+    { url: 'https://dog.com/tools/dog-food-amount-calculator', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/dog-body-condition-score', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/new-puppy-checklist', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },
     { url: 'https://dog.com/tools/puppy-first-year-budget', lastModified: now, changeFrequency: 'monthly', priority: 0.80 },

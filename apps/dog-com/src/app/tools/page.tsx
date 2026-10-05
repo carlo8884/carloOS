@@ -33,6 +33,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/dog-food-amount-calculator',
+    title: 'Daily Dog Food Grams',
+    desc: 'Grams per day from the calorie calculator’s life-stage factor and the kcal per kg on the bag. Same RER formula, weighed instead of scooped.',
+    tag: 'Nutrition',
+  },
+  {
     href: '/tools/dog-calorie-calculator',
     title: 'Dog Calorie Calculator',
     desc: 'Estimate your dog\'s daily calorie needs (kcal/day) using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Includes optional cups-per-day output from your food\'s calorie density.',

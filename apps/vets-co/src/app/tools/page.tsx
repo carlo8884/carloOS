@@ -43,6 +43,12 @@ const TOOLS = [
     tag: 'Health',
   },
   {
+    href: '/tools/cat-food-amount-calculator',
+    title: 'Daily Cat Food Grams',
+    desc: 'Grams per day from the feline calorie factors and the label’s kcal per kg. Weight-loss, kitten, and other stages keep the portioning searches already on the calorie page.',
+    tag: 'Health',
+  },
+  {
     href: '/tools/cat-calorie-calculator',
     title: 'Cat Calorie Calculator',
     desc: 'How many calories does your cat need each day? Estimate daily kcal from feline RER (70 × kg^0.75) and DER factors for indoor vs outdoor, neuter status, and life stage — then shop a portioning kit (measured cat food, kitchen gram scale, slow-feeder bowl, interactive feeder, low-calorie treats). Planning / wellness reference, not a diagnosis.',

@@ -15,6 +15,10 @@ import {
   insuranceWorthPick,
   puppyClassFoodPick,
   roundBlanketInches,
+  catFoodAmountPick,
+  horseWaterPick,
+  liveRockPick,
+  ferretLabelPick,
 } from './result-picks.ts'
 
 test('iCrate search follows each standard length, and stops past 48', () => {
@@ -166,6 +170,37 @@ test('horse age assigns the joint card only to the senior stage', () => {
   assert.equal(horseAgePick('Adult').href, '/reviews/best-equine-supplements')
   assert.equal(horseAgePick('Foal').href, '/reviews/best-equine-supplements')
   assert.match(horseAgePick('Young').detail, /young/)
+})
+
+test('cat food grams follow the calorie page searches', () => {
+  assert.match(catFoodAmountPick('Weight loss (vet-supervised)', 40).href, /kitchen\+gram\+scale/)
+  assert.match(catFoodAmountPick('Kitten', 80).href, /measured\+cat\+food/)
+  assert.match(catFoodAmountPick('Neutered indoor adult', 55).href, /slow\+feeder\+cat\+bowl/)
+  assert.match(catFoodAmountPick('Kitten', 80).detail, /80 grams/)
+})
+
+test('horse water switches bucket only when the stall can freeze', () => {
+  const open = horseWaterPick(false, '5.0', '10.0')
+  const frozen = horseWaterPick(true, '5.0', '10.0')
+  assert.match(open.href, /flat\+back\+horse\+water\+bucket/)
+  assert.match(frozen.href, /heated\+horse\+water\+bucket/)
+  assert.match(open.detail, /5\.0–10\.0/)
+  assert.match(frozen.detail, /does not raise the band/)
+})
+
+test('live rock keeps one starter kit and states the pounds', () => {
+  const pick = liveRockPick(40, '40', '60')
+  assert.match(pick.href, /saltwater\+reef\+tank\+starter\+kit\?s=tools-live-rock-calculator/)
+  assert.match(pick.detail, /40-gallon/)
+  assert.match(pick.detail, /40–60 lb/)
+})
+
+test('ferret label cards follow single digits and mid teens only', () => {
+  assert.match(ferretLabelPick(4.2).href, /\/go\/wysong\/epigen-90/)
+  assert.match(ferretLabelPick(14).href, /\/go\/marshall\/premium-ferret-diet/)
+  assert.equal(ferretLabelPick(11).href, '/diet/best-ferret-kibble')
+  assert.equal(ferretLabelPick(22).href, '/diet/best-ferret-kibble')
+  assert.match(ferretLabelPick(9.9).detail, /single digits/)
 })
 
 test('body-length blanket pick does not treat the weight as the size', () => {
