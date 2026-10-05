@@ -251,11 +251,11 @@ export default function NitrogenCyclePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=health-nitrogen-cycle"
-              amazonLabel="Browse fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=health-nitrogen-cycle"
-              amazonLabel="Browse bottled bacteria starter on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-nitrogen-cycle"

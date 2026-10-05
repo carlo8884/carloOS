@@ -149,11 +149,11 @@ export default function NewTankSyndromePage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome"
-              amazonLabel="Browse fishless-cycling ammonia on Amazon →"
+              amazonLabel="Browse Dr. Tim's ammonium chloride on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome"
-              amazonLabel="Browse bottled bacteria starter on Amazon →"
+              amazonLabel="Browse Tetra SafeStart Plus on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"
