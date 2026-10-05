@@ -109,8 +109,7 @@ export default function BitsGuidePage() {
 
           <h2 id="how">How a Bit Works</h2>
           <p>A bit communicates through pressure on sensitive structures of the head: the bars (the toothless gum between incisors and molars where the mouthpiece rests), the tongue, the lips and corners of the mouth, and -- with leverage bits -- the poll and chin groove. Rein pressure is transmitted through the bit to these points, and the horse learns to respond by yielding to and seeking relief from that pressure. Because these structures are sensitive, the bit must be matched to the horse and used with educated hands.</p>
-          <p>
-            A horse bit hand-severity watch log notebook is also how educated-hands-on-sensitive-bars-tongue-lips-poll-and-chin-groove stay written down when someone is tempted to &quot;fix&quot; a feel with a harsher mouthpiece — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety). </p>
+
 
           <StockImage manifestKey="horses-com:tack-bits" fallbackKey="horses-com:category-tack" aspect="16:9" />
 
@@ -130,13 +129,11 @@ export default function BitsGuidePage() {
 
           <h2 id="fit">Fit</h2>
           <p>A bit must be the right width -- sitting snugly without pinching the lips or sliding through the mouth -- and at the right height, so it rests on the bars and creates a slight wrinkle or two at the corners of the lips without being so high it bangs the molars or so low it hits the teeth. The mouthpiece thickness and shape must suit the individual horse&apos;s mouth conformation (tongue size, palate height, bar shape). A poorly fitted bit causes pain, rubs, and resistance regardless of how mild the design.</p>
-          <p>
-            A horse bit width-and-wrinkle fit question card is how &quot;the right width sits snugly without pinching the lips or sliding through, a slight wrinkle or two at the corners of the lips, and not so high it bangs the molars or so low it hits the teeth&quot; stays posted — it is not a horse stirrup width-inch-clearance question card (that lives on stirrups-and-safety), not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
+
 
           <h2 id="choosing">Choosing Humanely</h2>
           <p>The guiding principle is that severity lives in the hand, not only the bit -- a mild snaffle can be cruel in rough hands and a curb kind in educated ones. Many competition rules require or restrict particular bits by discipline and level (snaffles for lower-level dressage, for example), so check the rulebook. Reaching for a stronger bit to fix a problem is usually a mistake: training, fit, dental health, and rider hands address the root cause, whereas a harsher bit masks it and risks the horse&apos;s trust and comfort.</p>
-          <p>
-            A horse bit hand-severity watch log notebook is how severity-lives-in-the-hand-not-only-the-bit, a-mild-snaffle-can-be-cruel-in-rough-hands, and reaching-for-a-stronger-bit-masks-the-root-cause stay written down — it is not a horse stirrup drag-entrapment watch log notebook (that lives on stirrups-and-safety), not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
+
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -254,14 +251,8 @@ export default function BitsGuidePage() {
                 amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bits-guide"
                 amazonLabel="Browse horse snaffle bit on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+bit+width+and+wrinkle+fit+question+card?s=bits-guide"
-                amazonLabel="Browse horse bit width-and-wrinkle fit question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+bit+hand+severity+watch+log+notebook?s=bits-guide"
-                amazonLabel="Browse horse bit hand-severity watch log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

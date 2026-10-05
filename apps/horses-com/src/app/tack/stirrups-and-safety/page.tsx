@@ -111,8 +111,7 @@ export default function StirrupsSafetyPage() {
 
           <h2 id="sizing">Sizing to the Foot</h2>
           <p>Stirrup size is a safety-critical fit. The stirrup should be roughly an inch (about 2.5 cm) wider than the widest part of the rider&apos;s boot -- enough clearance that the foot is not pinched and can release in a fall, but not so wide that the whole foot can slide through and become trapped. Too small risks the foot jamming; too large risks the foot going through to the ankle. Children and adults need stirrups matched to their own footwear.</p>
-          <p>
-            A horse stirrup width-inch-clearance question card is how &quot;about an inch wider than the widest part of the boot, enough clearance that the foot is not pinched, and not so wide that the whole foot can slide through&quot; stays posted — it is not a horse girth buckle-elbow-clearance question card (that lives on girths-and-cinches), not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
+
 
           <h2 id="safety">Safety Stirrup Designs</h2>
           <ul>
@@ -128,8 +127,7 @@ export default function StirrupsSafetyPage() {
 
           <h2 id="dragged">Avoiding Being Dragged</h2>
           <p>Being dragged by a trapped foot after a fall can cause catastrophic injury, which is why every other point on this page exists. The defenses stack together: correctly sized stirrups that let the foot release, riding boots with a heel and smooth sole, safety or breakaway stirrup designs where appropriate (especially for children and beginners), riding with the ball of the foot on the tread and heels down, and never riding in unsuitable footwear. Together these dramatically reduce the chance of a foot being trapped in a fall.</p>
-          <p>
-            A horse stirrup drag-entrapment watch log notebook is how correctly-sized-stirrups-that-let-the-foot-release, riding-boots-with-a-heel-and-smooth-sole, and ball-of-the-foot-on-the-tread-and-heels-down stay written down — it is not a horse girth-gall skin-wrinkle log notebook (that lives on girths-and-cinches), not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
+
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -244,14 +242,8 @@ export default function StirrupsSafetyPage() {
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=stirrups-and-safety"
                 amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stirrup+width+inch+clearance+question+card?s=stirrups-and-safety"
-                amazonLabel="Browse horse stirrup width-inch-clearance question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+stirrup+drag+entrapment+watch+log+notebook?s=stirrups-and-safety"
-                amazonLabel="Browse horse stirrup drag-entrapment watch log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

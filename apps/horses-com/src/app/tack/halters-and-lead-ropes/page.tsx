@@ -121,8 +121,7 @@ export default function HaltersLeadRopesPage() {
 
           <h2 id="ropevsflat">Rope vs Flat Halters</h2>
           <p>Rope halters are thin and knotted, concentrating pressure on small points of the head, which makes them effective communication tools in skilled hands for groundwork and training. Flat (webbing or leather) halters spread pressure over a broader area and are gentler for everyday leading and tying. Rope halters are generally not left on or used for tying in the same way, because their thin material can cause injury under sudden force and many do not break. Match the halter to the task and the handler&apos;s skill.</p>
-          <p>
-            A horse rope-vs-flat-halter task question card is how &quot;rope halters are for skilled groundwork, flat halters spread pressure for everyday leading and tying, and rope halters are generally not used for tying&quot; stays posted — it is not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads), not a riding helmet certification-label question card (that lives on helmet-guide), and not a horse handler kick-zone safety question card (that lives on reading-body-language). This page does not invent clinic listings. </p>
+
 
           <h2 id="turnout">Turnout Halter Dangers</h2>
           <p>Turning a horse out in a strong, non-breakable halter is a recognized hazard: a halter can catch on a fence post, gate, branch, or the horse&apos;s own hoof when scratching, trapping the horse, which then panics and can suffer severe injury or death. The safest practice is to turn horses out without a halter where catching allows; where a halter must be left on, use a breakaway halter or one with a leather crownpiece that will give way under force. Never turn a horse out in a fixed nylon halter that cannot break.</p>
@@ -139,8 +138,7 @@ export default function HaltersLeadRopesPage() {
             <li><strong>Tie at the right height and length</strong> -- around wither height and short enough that the horse cannot get a leg over the rope.</li>
             <li><strong>Never tie by the bit or reins</strong> and never leave a tied horse unattended for long.</li>
           </ul>
-          <p>
-            A horse quick-release wither-height tie log notebook is how quick-release-or-panic-snap, baler-twine-breakaway-loop, wither-height-and-short-enough-that-the-horse-cannot-get-a-leg-over-the-rope, and fold-the-slack-never-wrap-the-lead-around-the-hand stay written down — it is not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads), not a riding helmet impact-retirement log notebook (that lives on helmet-guide), and not a horse pain-demeanor change-log notebook (that lives on reading-body-language). </p>
+
 
           <h2 id="picks">Halter and Lead Picks</h2>
           <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -341,14 +339,8 @@ export default function HaltersLeadRopesPage() {
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=halters-and-lead-ropes"
                 amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+rope+vs+flat+halter+task+question+card?s=halters-and-lead-ropes"
-                amazonLabel="Browse horse rope-vs-flat-halter task question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+quick+release+wither+height+tie+log+notebook?s=halters-and-lead-ropes"
-                amazonLabel="Browse horse quick-release wither-height tie log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

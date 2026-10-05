@@ -123,13 +123,11 @@ export default function MartingalesBreastplatesPage() {
             <li><strong>Rein stops</strong> -- always used with a running martingale so the rings cannot slide forward and catch on the bit or rein fittings.</li>
             <li><strong>Breastplate fit</strong> -- snug enough to stop the saddle slipping but not so tight it restricts the shoulders or presses the windpipe.</li>
           </ul>
-          <p>
-            A horse breastplate-vs-breastgirth fit question card is how &quot;a breastplate or breastgirth stops the saddle sliding back, breastgirths are a simpler chest strap, and fit is snug enough to stop slip but not so tight it restricts the shoulders or presses the windpipe&quot; stays posted — it is not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
+
 
           <h2 id="misuse">Use and Misuse</h2>
           <p>Martingales are sometimes reached for to force a horse&apos;s head down or to mask resistance, which is misuse -- a too-tight or wrongly fitted martingale restricts the horse, causes discomfort and tension, and can be dangerous if it limits the head when the horse needs to balance (for example over a fence or on landing). Head-carriage problems usually stem from training, pain, fit, or the rider&apos;s hands, and addressing those is the real fix. Used correctly and at the right length, a martingale is a safety limit, and a breastplate a security aid -- not substitutes for schooling.</p>
-          <p>
-            A horse martingale-misuse head-carriage log notebook is how a-martingale-does-not-teach-correct-head-carriage, too-tight-or-wrongly-fitted-restricts-and-can-be-dangerous, and head-carriage-problems-usually-stem-from-training-pain-fit-or-hands stay written down — it is not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
+
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -235,14 +233,8 @@ export default function MartingalesBreastplatesPage() {
                 amazonHref="/go/amazon-brand/horse+martingale?s=martingales"
                 amazonLabel="Browse horse martingale on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+breastplate+vs+breastgirth+fit+question+card?s=martingales"
-                amazonLabel="Browse horse breastplate-vs-breastgirth fit question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+martingale+misuse+head+carriage+log+notebook?s=martingales"
-                amazonLabel="Browse horse martingale-misuse head-carriage log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 
