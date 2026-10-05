@@ -25,6 +25,7 @@ const REVIEW_GROUPS = [
   { id: 'fish-reviews-water', label: 'Water tests', intro: 'Liquid test kits and the reef-kit comparison.' },
   { id: 'fish-reviews-tanks', label: 'Tanks', intro: 'The nano tank review and the 5-gallon kit versus 20-gallon long comparison.' },
   { id: 'fish-reviews-planted', label: 'Planted tanks', intro: 'Fertilizer reviews and the all-in-one comparison.' },
+  { id: 'fish-reviews-season', label: 'Season', intro: 'November and December gifts taken from price bands already on the equipment cards.' },
 ]
 
 const REVIEWS = [
@@ -152,6 +153,13 @@ const REVIEWS = [
     desc: 'Shorter days do not change the 6 to 8 hour photoperiod. The hop is the light timer.',
     href: '/reviews/winter-photoperiod-guide',
     group: 'fish-reviews-lighting',
+    badge: 'Season',
+  },
+  {
+    title: 'November and December Aquarium Gifts',
+    desc: 'Filters, heaters, lights, a test kit, and a nano tank, grouped by the price bands already on those cards.',
+    href: '/reviews/november-december-gift-guide',
+    group: 'fish-reviews-season',
     badge: 'Season',
   },
 ]

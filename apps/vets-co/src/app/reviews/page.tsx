@@ -49,6 +49,8 @@ const REVIEWS = [
     group: 'vets-reviews-season', badge: 'Season' },
   { title: 'Why a Holiday Emergency Visit Costs More', desc: 'Holidays are already inside the round-the-clock staffing explanation. The hop is the Trupanion quote', href: '/reviews/holiday-emergency-visit-guide',
     group: 'vets-reviews-season', badge: 'Season' },
+  { title: 'November and December Pet Care Costs', desc: 'Insurance and telehealth bands already printed on those cards. Not toys, and not a quote', href: '/reviews/november-december-gift-guide',
+    group: 'vets-reviews-season', badge: 'Season' },
 ]
 
 const itemListSchema = {

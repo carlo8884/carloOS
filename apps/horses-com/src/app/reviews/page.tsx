@@ -23,6 +23,7 @@ const REVIEW_GROUPS = [
   { id: 'horses-reviews-supplements', label: 'Supplements', intro: 'Joint, hoof, and gastric supplement pages, plus the comparisons that use those cards.' },
   { id: 'horses-reviews-blankets', label: 'Blankets and winter', intro: 'Turnout and stable blanket pages, fill-weight notes, and the winter water page.' },
   { id: 'horses-reviews-tack', label: 'Tack', intro: 'The saddle-pad comparison, plus halter and boot comparisons from the tack pages. None of them fix saddle fit.' },
+  { id: 'horses-reviews-season', label: 'Season', intro: 'November and December gifts taken from price bands already on the halter, boot, and blanket cards.' },
 ]
 
 const REVIEWS = [
@@ -123,6 +124,13 @@ const REVIEWS = [
     title: 'Keep Horse Water Unfrozen',
     description:
       'Icy water and dry hay are the winter colic pattern already published. The hop is the heated bucket.',
+  },
+  {
+    slug: 'november-december-gift-guide',
+    group: 'horses-reviews-season',
+    title: 'November and December Horse Gifts',
+    description:
+      'Leads, halters, boots, and turnout blankets, grouped by the price bands already on those cards.',
   },
 ]
 
