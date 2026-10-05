@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
+  AffiliateDisclosure,
   ArticleLayout,
   FAQAccordion,
   RelatedLinks,
@@ -112,6 +113,31 @@ export default function FerretLabelPage() {
         </p>
         <h2 id="calculator">Calculator</h2>
         <LabelCalculator />
+        <div id="kibble-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+            Next step
+          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
+            The kibble review is the matching guide. Its single-digit card is Wysong Epigen 90, and the price check opens that food at Wysong. The calculator did not test that food. A result outside the single digits stays on the review.
+          </p>
+          <div className="flex flex-col gap-3">
+            <Link
+              href="/diet/best-ferret-kibble"
+              className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+            >
+              Read the ferret kibble review →
+            </Link>
+            <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+            <a
+              id="wysong-hop"
+              href="/go/wysong/epigen-90?s=tools-label-calculator"
+              rel="sponsored noopener"
+              className="inline-block bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-md no-underline"
+            >
+              Check price of Wysong Epigen 90 at Wysong
+            </a>
+          </div>
+        </div>
         <h2>Worked conversion</h2>
         <p>
           The label page’s example is 36% crude protein and 10% moisture. Dry matter is 90%. Dry-matter protein is
