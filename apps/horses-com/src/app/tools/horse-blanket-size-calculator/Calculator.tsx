@@ -110,6 +110,11 @@ export default function HorseBlanketSizeCalculator() {
           <ResultMeaning>
             This is the US blanket size for that chest-to-tail length, rounded to the nearest 3-inch step.
           </ResultMeaning>
+          <p className="mt-4 text-sm font-semibold leading-snug">
+            <a href="/tack/blanket-weights" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Match the fill to this size before you buy →
+            </a>
+          </p>
           <ResultPick siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
         </div>
       ) : null}
