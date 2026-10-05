@@ -128,7 +128,7 @@ export default function LeashReactivityPage() {
           nextLabel="Size the front-clip harness before the next threshold walk"
           nextBlurb="CC/DS only works below threshold. Size the harness first so a pull turns the dog sideways instead of dragging you toward the trigger. The hop below is the same front-clip harness search already on this page."
           resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
-          resourceLabel="Browse no-pull harnesses on Amazon →"
+          resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (leash-reactivity kit).
@@ -143,7 +143,7 @@ export default function LeashReactivityPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-leash-reactivity"
-              amazonLabel="Browse no-pull harnesses on Amazon →"
+              amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/6+ft+dog+leash?s=training-leash-reactivity"

@@ -66,7 +66,7 @@ export default function LooseLeashPage() {
             nextLabel="Size the front-clip harness before the next walk"
             nextBlurb="Stop-and-wait only works if the leash is loose when the dog is beside you. Size the harness first, then use a front-clip so a pull turns the dog sideways instead of dragging you forward. The hop below is the same front-clip harness search already on this page."
             resourceHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
-            resourceLabel="Browse no-pull harnesses on Amazon →"
+            resourceLabel="Browse front-clip no-pull harnesses on Amazon →"
           />
 
           {/* Money path — live amazon-brand search hops (loose-leash kit).
@@ -81,7 +81,7 @@ export default function LooseLeashPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking"
-                amazonLabel="Browse no-pull harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/6+ft+dog+leash?s=training-loose-leash-walking"

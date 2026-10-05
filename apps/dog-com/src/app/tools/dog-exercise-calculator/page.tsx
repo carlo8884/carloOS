@@ -179,7 +179,7 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise"
-                amazonLabel="Browse no-pull harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise"
