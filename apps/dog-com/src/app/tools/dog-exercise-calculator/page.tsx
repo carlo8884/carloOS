@@ -175,7 +175,7 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-dog-exercise"
-                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-dog-exercise"
