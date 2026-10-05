@@ -20,6 +20,11 @@ const nextConfig = {
         destination: '/tools/stocking-calculator',
         permanent: true,
       },
+      {
+        source: '/reviews/aquaclear-70-vs-fluval-307-guide',
+        destination: '/reviews/hob-vs-canister-guide',
+        permanent: true,
+      },
       // Browsers request these even when the page links /icon.svg and /apple-icon.
       { source: '/favicon.ico', destination: '/icon.svg', permanent: true },
       { source: '/favicon.png', destination: '/apple-icon', permanent: true },

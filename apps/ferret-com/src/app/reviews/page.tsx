@@ -108,18 +108,18 @@ const REVIEW_CARDS: ReviewCardEntry[] = [
     group: 'ferret-reviews-housing',
     href: '/reviews/kaytee-vs-ferret-nation-guide',
     eyebrow: 'Housing',
-    title: 'Kaytee vs Ferret Nation',
+    title: 'Kaytee vs Ferret Nation for a Group',
     description:
-      'A chain-store cage for one ferret with daily out-time, or the double unit for a pair.',
+      'The double unit the cage review scores for a small group, against the Kaytee starter for one ferret.',
   },
   {
     slug: 'kaytee-vs-prevue-guide',
     group: 'ferret-reviews-housing',
     href: '/reviews/kaytee-vs-prevue-guide',
     eyebrow: 'Housing',
-    title: 'Kaytee vs Prevue',
+    title: 'Kaytee vs Prevue for One or Two',
     description:
-      'A chain-store cage for one ferret, or the Prevue the cage review sizes for one or two.',
+      'The smaller Prevue for one or two ferrets, when the Ferret Nation double unit is too big.',
   },
   {
     slug: 'wood-vs-grass-litter-guide',

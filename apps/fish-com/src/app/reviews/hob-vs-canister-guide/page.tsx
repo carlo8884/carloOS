@@ -4,7 +4,7 @@ import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, Related
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
-  title: 'HOB vs Canister Aquarium Filter | Fish.com',
+  title: 'HOB vs Canister: AquaClear or Fluval | Fish.com',
   description: 'Hang-on-back versus canister, using the AquaClear 70 and the Fluval 307: flow, tank size, noise, cleaning, and price already published.',
   path: '/reviews/hob-vs-canister-guide',
   type: 'article',
@@ -67,7 +67,7 @@ export default function HobVsCanisterGuidePage() {
       }
      priceAsOf="2026-10-04">
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-aquarium-filters">filter review</Link> ranks a hang-on-back, a canister, a sponge, and a budget hang-on-back. The choice is narrower: AquaClear 70 or Fluval 307. The flow numbers on those two products are close. The maintenance, the noise, the price, and the space under the tank are not.</p>
+        <p>The <Link href="/reviews/best-aquarium-filters">filter review</Link> ranks a hang-on-back, a canister, a sponge, and a budget hang-on-back. AquaClear 70 versus Fluval 307 is this page: one hang-on-back and one canister. Two canisters, the Fluval 307 against the Eheim Classic, are on the <Link href="/reviews/fluval-307-vs-eheim-guide">canister comparison</Link>. The flow numbers on the AquaClear and the Fluval are close. The maintenance, the noise, the price, and the space under the tank are not.</p>
         <h2>Hang-on-back: AquaClear 70</h2>
         <p>The AquaClear 70 is the best hang-on-back filter, scored 9.4. It lists 300 GPH, tanks up to 70 gallons, and a refillable basket with room for foam, carbon, and ceramic rings. You are not locked to a proprietary cartridge. The price is $45–70. Flow is adjustable. Noise is described as low when the water level is correct, and higher if the level drops. The impeller needs cleaning about every three to four months or the flow falls off. A monthly rinse of the sponge is the ordinary upkeep.</p>
         <p>Run the <Link href="/tools/filter-gph-calculator">filter GPH calculator</Link> before you treat “up to 70 gallons” as a promise. Turnover depends on the stocking, not only on the badge.</p>

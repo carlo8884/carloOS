@@ -32,7 +32,6 @@ const PAGES = {
     'reviews/best-planted-tank-fertilizers',
     'reviews/best-aquarium-lighting',
     'reviews/hob-vs-canister-guide',
-    'reviews/aquaclear-70-vs-fluval-307-guide',
     'reviews/eheim-vs-cobalt-heater-guide',
   ],
   'horses-com': [

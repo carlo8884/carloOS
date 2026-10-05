@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
-  title: 'KER EO-3 vs Equithrive | Horses.com',
+  title: 'KER EO-3 vs Equithrive Omega-3 | Horses.com',
   description: 'KER EO-3 is marine omega-3. Equithrive Original is trans-resveratrol. Scores and monthly prices are on the supplement review.',
   path: '/reviews/ker-eo3-vs-equithrive-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'horses-com',
-  title: 'KER EO-3 or Equithrive',
+  title: 'KER EO-3 or Equithrive omega-3',
   description: 'KER EO-3 for marine omega-3, or Equithrive Original for trans-resveratrol. Scores and prices are on the supplement review.',
   url: 'https://horses.com/reviews/ker-eo3-vs-equithrive-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function KerVsEquithriveGuidePage() {
       siteId="horses-com"
       schema={schema}
       hero={{
-        title: 'KER EO-3 or Equithrive',
+        title: 'KER EO-3 or Equithrive omega-3',
         subtitle: 'A marine omega-3 liquid, or a resveratrol pellet. Scores and monthly prices below are the ones on the supplement review.',
         category: 'Buyer guide',
         authorName: 'Horses.com Editorial',
@@ -68,7 +68,7 @@ export default function KerVsEquithriveGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>. KER EO-3 is the marine omega-3. Equithrive Original Pellets are the trans-resveratrol. Cosequin versus Platinum is a different pair, on the <Link href="/reviews/cosequin-vs-platinum-guide">Cosequin versus Platinum guide</Link>.</p>
+        <p>Prices and scores below are the ones on the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>. KER EO-3 is the marine omega-3. Equithrive Original Pellets are the trans-resveratrol. <Link href="/reviews/cosequin-vs-equithrive-guide">Cosequin versus Equithrive</Link> is the joint comparison, not this omega-3 pair. Cosequin versus Platinum is a different pair, on the <Link href="/reviews/cosequin-vs-platinum-guide">Cosequin versus Platinum guide</Link>.</p>
         <h2>What the review says about KER EO-3</h2>
         <p>EO-3 is Best Marine Omega-3, score 8.9. The source is marine fish oil, DHA and EPA, not plant ALA. The format is a liquid poured on the feed. The review says Kentucky Equine Research has published equine omega-3 work and that this is the formulation used in many of those trials. It lists tocopherol stabilization and no prohibited FEI or USEF ingredients. The printed price is $55–85 a month. The trade-off in the review is that the liquid gets thicker in cold weather and, once opened, does not keep as long as a pellet. The review says to buy the smallest unit you can finish inside the use-by window.</p>
         <p>Forage amount is on the <Link href="/tools/horse-feed-calculator">feed calculator</Link>. That result is not a supplement dose. The review does not print a bag size for EO-3.</p>

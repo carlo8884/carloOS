@@ -211,7 +211,6 @@ export default function sitemap(props?: { id?: number | string }): MetadataRoute
     { url: 'https://dog.com/reviews/big-barker-vs-casper-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/greenies-vs-whimzees-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/icrate-vs-impact-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
-    { url: 'https://dog.com/reviews/easy-walk-vs-front-range-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/royal-canin-vs-pro-plan-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/cosequin-vs-dasuquin-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },
     { url: 'https://dog.com/reviews/fi-vs-tractive-guide', lastModified: now, changeFrequency: 'monthly', priority: 0.70 },

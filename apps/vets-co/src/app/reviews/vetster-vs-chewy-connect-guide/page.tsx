@@ -4,7 +4,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
-  title: 'Vetster vs Chewy Connect | Vets.co',
+  title: 'Vetster Video vs Chewy Connect | Vets.co',
   description: 'Vetster is pay-per-visit video. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.',
   path: '/reviews/vetster-vs-chewy-connect-guide',
   type: 'article',
@@ -12,7 +12,7 @@ export const metadata: Metadata = buildMetadata({
 
 const schema = buildArticleSchema({
   siteId: 'vets-co',
-  title: 'Vetster or Chewy Connect',
+  title: 'Vetster video or Chewy Connect',
   description: 'Vetster for video visits, or Chewy Connect for people who already shop at Chewy. Scores are on the telehealth page.',
   url: 'https://vets.co/reviews/vetster-vs-chewy-connect-guide',
   imageUrl: '',
@@ -42,7 +42,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       siteId="vets-co"
       schema={schema}
       hero={{
-        title: 'Vetster or Chewy Connect',
+        title: 'Vetster video or Chewy Connect',
         subtitle: 'Pay per video visit, or telehealth included with a Chewy+ membership. Prices and limits below are the ones on the telehealth page.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
@@ -68,7 +68,7 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
-        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. AskVet is a third service on that page, and it is a separate comparison.</p>
+        <p>Scores below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
         <h2>What the page says about Vetster</h2>
         <p>Vetster is Best Overall, score 9.2, and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. A typical wait is under 15 minutes, and it can run longer at peak times. You pay per consult. The printed price is $50–100 per consultation, with no monthly fee. The page says that per-visit price is higher than a subscription.</p>
         <h2>What the page says about Chewy Connect</h2>
