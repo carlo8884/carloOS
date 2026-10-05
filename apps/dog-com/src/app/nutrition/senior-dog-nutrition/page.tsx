@@ -64,8 +64,8 @@ export default function SeniorDogNutritionPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Senior Dog Nutrition</div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Senior-specific formulas from Purina Pro Plan, Royal Canin, and Hill&apos;s Science Diet all use AAFCO feeding trials and veterinary nutritionist oversight. Glucosamine and omega-3 supplements are the two most commonly recommended additions for older dogs with joint or cognitive concerns.</p>
             <div className="flex flex-wrap gap-3">
-              <a href="/go/chewy-brand/purina+pro+plan+senior+dry+dog+food?s=nutrition-senior" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
-                Shop Senior Dog Food on Chewy →
+              <a href="/go/chewy-brand/purina+pro+plan+senior+dry+dog+food?s=nutrition-senior" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex max-w-full items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline whitespace-normal text-left">
+                Browse purina pro plan senior dry dog food on Chewy →
               </a>
               <a href="/go/amazon-brand/senior+dog+dry+food+wsava+recommended?s=nutrition-senior" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex max-w-full items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline whitespace-normal text-left">
                 Shop WSAVA senior dog food on Amazon →
