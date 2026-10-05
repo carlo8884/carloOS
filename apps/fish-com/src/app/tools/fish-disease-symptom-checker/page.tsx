@@ -212,7 +212,7 @@ export default function FishDiseaseSymptomCheckerPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom"
-              amazonLabel="Browse aquarium salt on Amazon →"
+              amazonLabel="Browse aquarium salt disease treatment on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom"
