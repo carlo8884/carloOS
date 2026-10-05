@@ -238,7 +238,7 @@ export default function StallBeddingCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+stall+fork+manure+picker?s=tools-stall-bedding-calculator"
-              amazonLabel="Browse stall manure forks on Amazon →"
+              amazonLabel="Browse stall forks and manure pickers on Amazon →"
             />
           </div>
         </div>
