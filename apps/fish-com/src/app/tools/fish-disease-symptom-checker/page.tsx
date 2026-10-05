@@ -204,7 +204,7 @@ export default function FishDiseaseSymptomCheckerPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom"
-              amazonLabel="Browse api freshwater master test kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom"

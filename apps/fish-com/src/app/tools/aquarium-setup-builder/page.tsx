@@ -170,7 +170,7 @@ export default function AquariumSetupBuilderPage() {
           nextLabel="Cycle the tank before any fish"
           nextBlurb="The builder sized the kit. A liquid master kit is how you watch ammonia and nitrite hit zero — that is the step that prevents new-tank syndrome. Stock later with a slim-inch bioload ceiling, not a species headcount."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
-          resourceLabel="Browse api freshwater master test kit on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -222,7 +222,7 @@ export default function AquariumSetupBuilderPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder"
-              amazonLabel="Browse api freshwater master test kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit+seachem+prime?s=tools-aquarium-setup-builder"

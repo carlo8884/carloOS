@@ -191,7 +191,7 @@ export default function AquariumCyclingEstimatorPage() {
           nextLabel="Sketch a slim-inch ceiling before you stock"
           nextBlurb="The week range is an estimate. Confirm 0/0 with a liquid kit before livestock, then use the stocking calculator as a slim-inch bioload ceiling — not a species headcount. The hop below is the same API Master Test Kit search already on this page."
           resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-          resourceLabel="Browse api freshwater master test kit on Amazon →"
+          resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
@@ -223,7 +223,7 @@ export default function AquariumCyclingEstimatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator"
-              amazonLabel="Browse api freshwater master test kit on Amazon →"
+              amazonLabel="Browse API Master Test Kit on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator"
