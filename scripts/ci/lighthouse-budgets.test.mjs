@@ -5,6 +5,7 @@ import {
   BUDGETS,
   EARNING_SITES,
   FLOORS,
+  LAYOUT_PAGES,
   MONEY_PAGES,
   budgetProblems,
   needsRetry,
@@ -22,6 +23,20 @@ test('each earning site audits its first five money pages', () => {
   for (const site of EARNING_SITES) {
     assert.equal(MONEY_PAGES[site].length, 5)
     assert.deepEqual(MONEY_PAGES[site], claimAuditFirstFive(site))
+  }
+})
+
+test('gift guides, search, and the not-found page are budgeted too', () => {
+  assert.deepEqual(Object.keys(LAYOUT_PAGES), EARNING_SITES)
+  for (const site of EARNING_SITES) {
+    assert.deepEqual(LAYOUT_PAGES[site], [
+      'reviews/november-december-gift-guide',
+      'search',
+      'this-page-does-not-exist',
+    ])
+    for (const slug of LAYOUT_PAGES[site]) {
+      assert.equal(MONEY_PAGES[site].includes(slug), false)
+    }
   }
 })
 
@@ -64,6 +79,12 @@ test('a failing run is retried twice', () => {
   assert.equal(needsRetry(['performance'], 2, 3), true)
   assert.equal(needsRetry(['performance'], 3, 3), false)
   assert.equal(needsRetry([], 1, 3), false)
+})
+
+test('a missing URL is still scored when the document is a 404', () => {
+  const runner = readFileSync(new URL('./lighthouse-budgets.mjs', import.meta.url), 'utf8')
+  assert.match(runner, /this-page-does-not-exist/)
+  assert.match(runner, /ignoreStatusCode: true/)
 })
 
 test('the lighthouse workflow runs one mobile pass, not three', () => {

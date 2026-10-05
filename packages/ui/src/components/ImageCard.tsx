@@ -37,6 +37,13 @@ export interface ImageCardProps {
   /** Optional priority load (hero images above the fold) */
   priority?: boolean
   /**
+   * Explicit pixel dimensions. When both are set, the image is not `fill`:
+   * width and height attributes reserve the box (no layout shift) and the
+   * request stays lazy unless `priority` is set.
+   */
+  width?: number
+  height?: number
+  /**
    * When true, the credit is NOT rendered in the <figcaption> below the
    * image. Instead it renders as a tiny absolutely-positioned overlay in
    * the image's bottom-right corner — unobtrusive but still present and
@@ -64,8 +71,11 @@ export function ImageCard({
   variant = 'inline',
   priority = false,
   subtleCredit = false,
+  width,
+  height,
 }: ImageCardProps) {
   const [errored, setErrored] = useState(false)
+  const intrinsic = typeof width === 'number' && typeof height === 'number' && width > 0 && height > 0
 
   const containerClass = [
     'my-8',
@@ -75,37 +85,65 @@ export function ImageCard({
     .filter(Boolean)
     .join(' ')
 
-  const wrapperStyle: CSSProperties = {
-    position: 'relative',
-    width: '100%',
-    maxWidth: '100%',
-    aspectRatio: ASPECT_RATIO[aspect],
-    overflow: 'hidden',
-    borderRadius: variant === 'full-bleed' ? 0 : 8,
-    backgroundColor: 'var(--brand-surface)',
-  }
+  const wrapperStyle: CSSProperties = intrinsic
+    ? {
+        position: 'relative',
+        width: '100%',
+        maxWidth: '100%',
+        overflow: 'hidden',
+        borderRadius: variant === 'full-bleed' ? 0 : 8,
+        backgroundColor: 'var(--brand-surface)',
+      }
+    : {
+        position: 'relative',
+        width: '100%',
+        maxWidth: '100%',
+        aspectRatio: ASPECT_RATIO[aspect],
+        overflow: 'hidden',
+        borderRadius: variant === 'full-bleed' ? 0 : 8,
+        backgroundColor: 'var(--brand-surface)',
+      }
 
   return (
     <figure className={containerClass}>
       <div style={wrapperStyle}>
-        <Image
-          src={src}
-          alt={alt}
-          fill
-          sizes={
-            variant === 'full-bleed'
-              ? '100vw'
-              : variant === 'wide'
-                ? '(min-width: 1024px) 900px, 100vw'
-                : '(min-width: 768px) 720px, 100vw'
-          }
-          priority={priority}
-          onError={() => setErrored(true)}
-          style={{
-            objectFit: 'cover',
-            opacity: errored ? 0 : 1,
-          }}
-        />
+        {intrinsic ? (
+          <Image
+            src={src}
+            alt={alt}
+            width={width}
+            height={height}
+            sizes="(min-width: 768px) 640px, 100vw"
+            priority={priority}
+            loading={priority ? 'eager' : 'lazy'}
+            onError={() => setErrored(true)}
+            style={{
+              width: '100%',
+              height: 'auto',
+              display: 'block',
+              opacity: errored ? 0 : 1,
+            }}
+          />
+        ) : (
+          <Image
+            src={src}
+            alt={alt}
+            fill
+            sizes={
+              variant === 'full-bleed'
+                ? '100vw'
+                : variant === 'wide'
+                  ? '(min-width: 1024px) 900px, 100vw'
+                  : '(min-width: 768px) 720px, 100vw'
+            }
+            priority={priority}
+            onError={() => setErrored(true)}
+            style={{
+              objectFit: 'cover',
+              opacity: errored ? 0 : 1,
+            }}
+          />
+        )}
 
         {/* Broken-image fallback. A dead or blocked image URL would otherwise
             leave a raw blank surface box (the manifest occasionally carries a
