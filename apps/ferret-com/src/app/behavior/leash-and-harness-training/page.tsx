@@ -353,7 +353,7 @@ export default function LeashAndHarnessTrainingPage() {
             pros={['Harder to back out of than H-style', 'Good for escape-artist ferrets', 'Distributes pressure well']}
             cons={['Takes longer to put on', 'Sizing varies by manufacturer — verify it cinches ferret-small']}
             price="$12–22"
-            ctaText="Find ferret vest harnesses"
+            ctaText="Find ferret vest harnesses on Amazon"
             ctaHref="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret+vest+harness"
