@@ -357,6 +357,7 @@ export default function FerretBitingNippingPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+crinkle+toy?s=biting-and-nipping"
+                amazonLabel="Browse ferret crinkle toys on Amazon →"
               />
           </div>
           </div>
