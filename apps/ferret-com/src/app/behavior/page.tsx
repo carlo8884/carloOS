@@ -384,6 +384,7 @@ export default function BehaviorHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+litter?s=behavior-hub"
+              amazonLabel="Browse ferret litter on Amazon →"
             />
           </div>
         </div>

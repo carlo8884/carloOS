@@ -163,6 +163,7 @@ export default function FirstWeekChecklistPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+litter?s=first-week-checklist"
+                amazonLabel="Browse ferret litter on Amazon →"
               />
           </div>
           </div>
