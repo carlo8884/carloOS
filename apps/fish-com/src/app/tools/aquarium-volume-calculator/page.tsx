@@ -160,7 +160,7 @@ export default function VolumeCalculatorPage() {
           nextLabel="Size the filter from those gallons"
           nextBlurb="Gross gallons are not a kit. Use the filter GPH calculator next so the hang-on-back or canister is rated 1.5–2× the net volume before you shop the stand. The hop below is the same filter-by-gallon search already on this page."
           resourceHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-          resourceLabel="Browse aquarium filter gallon on Amazon →"
+          resourceLabel="Browse aquarium filters on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
@@ -199,11 +199,11 @@ export default function VolumeCalculatorPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume"
-              amazonLabel="Browse glass aquarium tank gallon on Amazon →"
+              amazonLabel="Browse glass aquarium tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume"
-              amazonLabel="Browse acrylic aquarium tank on Amazon →"
+              amazonLabel="Browse acrylic aquarium tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume"
@@ -215,11 +215,11 @@ export default function VolumeCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"
-              amazonLabel="Browse aquarium heater tank size on Amazon →"
+              amazonLabel="Browse aquarium heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume"
-              amazonLabel="Browse aquarium filter gallon on Amazon →"
+              amazonLabel="Browse aquarium filters on Amazon →"
             />
           </div>
         </div>
