@@ -1,18 +1,19 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Weight Management — BCS Scoring, Calorie Math | Vets.co', description: 'How to assess your dog\'s body condition score, calculate calorie targets for weight loss, choose appropriate food, and when to use prescription weight…', path: '/health/weight-management', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats | Vets.co', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', path: '/health/weight-management', type: 'article' })
 const SOURCES = [
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
   { label: 'WSAVA: Global Nutrition Guidelines', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'Kealy RD et al. JAVMA 2002 — Effects of Diet Restriction on Life Span and Age-Related Changes', url: 'https://pubmed.ncbi.nlm.nih.gov/12420743/', publisher: 'Journal of the American Veterinary Medical Association' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Weight Management Guide', description: 'Body condition scoring, calorie calculation, and prescription diets for dog weight management.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cats use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-05T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Dog Weight Management', description: 'BCS scoring, calorie targets, and dietary management for overweight dogs.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Weight Management in Dogs and Cats', description: 'Dog body-condition scoring and a calorie example. Cat checks use the body condition score tool and the cat calorie calculator.', url: 'https://vets.co/health/weight-management', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
 const combined = combineSchemas(schema, med)
 
 export default function WeightManagementPage() {
@@ -20,11 +21,12 @@ export default function WeightManagementPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002).', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
+        hero={{ title: 'Weight Management in Dogs and Cats', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey). Excess weight is not a cosmetic issue — it is the leading modifiable risk factor for arthritis, diabetes, respiratory disease, cardiac stress, reduced mobility, and shortened lifespan in dogs. A dog at ideal body weight lives on average ~1.8 years longer than the same dog kept overweight (Kealy et al., Purina Lifespan Study, JAVMA 2002). That survey figure is for dogs. Cat checks are the tools linked below, not this dog example.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Weight Management', href: '/health/weight-management' }]}
         relatedLinks={[
           { title: 'Daily Cat Food Grams', href: '/tools/cat-food-amount-calculator', category: 'Tool' },
           { title: 'Cat Body Condition Score Tool', href: '/tools/cat-body-condition-score', category: 'Tool' },
+          { title: 'Cat Calorie Calculator', href: '/tools/cat-calorie-calculator', category: 'Tool' },
           { title: 'Health Conditions', href: '/health', category: 'Hub' },
           { title: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs', category: 'Veterinary Guide' },
           { title: 'Senior Dog Care', href: '/health/senior-pet-care', category: 'Veterinary Guide' },
@@ -40,7 +42,7 @@ export default function WeightManagementPage() {
               </div>
             ))}
           </div>
-          <RelatedLinks title="Related Guides" links={[{ label: 'Daily cat food grams', href: '/tools/cat-food-amount-calculator' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
+          <RelatedLinks title="Related Guides" links={[{ label: 'Cat body condition score', href: '/tools/cat-body-condition-score' }, { label: 'Cat calorie calculator', href: '/tools/cat-calorie-calculator' }, { label: 'Daily cat food grams', href: '/tools/cat-food-amount-calculator' }, { label: 'Arthritis in Dogs', href: '/health/arthritis-in-dogs' }, { label: 'Senior Dog Care', href: '/health/senior-pet-care' }, { label: 'Find a Vet', href: '/find-a-vet' }]} />
 
                   <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
 </>}
@@ -51,6 +53,22 @@ export default function WeightManagementPage() {
               Keep the kitchen-scale portioning notes
             </p>
 
+          </div>
+
+          <h2>Cats use different tools</h2>
+          <p>The scoring steps and the calorie example below are for a dog. A cat is not that example. The <Link href="/tools/cat-body-condition-score">cat body condition score</Link> tool uses rib, waist, and abdominal-pad checks on a 1–9 scale. The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> uses feline life-stage factors, not the dog formula on this page. That calculator says a rapid cut in an overweight cat can trigger hepatic lipidosis, so a veterinarian sets the target and the rate of change.</p>
+          <div id="cat-weight-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
+              Cat next step
+            </div>
+            <div className="flex flex-col gap-3">
+              <Link href="/tools/cat-body-condition-score" className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark">
+                Score a cat →
+              </Link>
+              <Link href="/tools/cat-calorie-calculator" className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark">
+                Estimate cat calories →
+              </Link>
+            </div>
           </div>
 
           <h2>Body Condition Score — Assess Your Dog Accurately</h2>
