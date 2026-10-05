@@ -86,7 +86,7 @@ export default function BestNanoTanksPage() {
               pros={['Most forgiving beginner size', 'Community-capable', 'Long footprint excellent for planted', 'Affordable']}
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
-              ctaText="Shop 20-Gallon Long on Amazon →"
+              ctaText="Shop Aqueon 20-gallon long aquariums on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-20-long"
