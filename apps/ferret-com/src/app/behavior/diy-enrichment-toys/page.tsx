@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -304,6 +305,11 @@ export default function FerretDIYEnrichmentPage() {
             Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
           </p>
           <ScoreMethodology />
+          <p className="mb-4 text-sm font-semibold leading-snug">
+            <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Pair these toys with an out-of-cage routine →
+            </Link>
+          </p>
           <ReviewCard
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
