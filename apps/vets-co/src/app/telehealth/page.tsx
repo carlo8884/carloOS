@@ -122,8 +122,8 @@ export default function TelehealthPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Prices and limits are the ones on the cards. None of these replace an emergency visit. Pale gums, trouble breathing, collapse, suspected poisoning, or a cat that cannot urinate is an in-person emergency.
               </p>
-              <div className="overflow-x-auto max-w-full">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

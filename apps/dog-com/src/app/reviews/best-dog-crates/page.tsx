@@ -201,8 +201,8 @@ export default function BestDogCratesPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 The four cards above already name the job, the price band, and the limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">Job</th>

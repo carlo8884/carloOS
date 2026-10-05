@@ -133,7 +133,7 @@ export default function BestWinterBlanketsPage() {
 
             <h2>Spec Comparison</h2>
             <div className="overflow-x-auto my-6 max-w-full">
-              <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>
                   <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                     <th className="p-3 font-bold text-brand-dark">Brand / Model</th>
@@ -319,7 +319,7 @@ export default function BestWinterBlanketsPage() {
             <h2>Who should buy which blanket</h2>
             <p>Denier, fill, neck, and hardware are already in the spec table. This block matches a horse and a climate to a reviewed blanket, using only the limits those cards already state. Measure the horse before you order — the fit section below is the sizing rule.</p>
             <div className="overflow-x-auto my-6 max-w-full">
-              <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>
                   <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                     <th className="p-3 font-bold text-brand-dark">If this is the horse</th>

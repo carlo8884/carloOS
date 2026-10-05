@@ -35,8 +35,8 @@ export default function BestDentalChewsPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Dental Chews for Dogs 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_260px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_260px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The VOHC Standard</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The Veterinary Oral Health Council awards its seal to products that demonstrate plaque or tartar reduction in controlled clinical studies. This is the correct filter for dental products — not ingredient claims, not packaging promises. The full VOHC-accepted product list is at vohc.org. Dental chews supplement toothbrushing — they do not replace it, and they do not substitute for professional cleaning.</p>
@@ -78,8 +78,8 @@ export default function BestDentalChewsPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Both chews already have VOHC notes, a price, and a limit on the cards. This table only lines those up. Scores are this page&apos;s editorial scores, not customer star ratings. Neither replaces toothbrushing.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

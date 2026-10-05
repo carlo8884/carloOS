@@ -34,8 +34,8 @@ export default function BestLargeBreedFoodPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Large Breed Dog Food 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Puppy vs Adult — Feed the Right Formula</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas. Large breed puppy formulas have controlled calcium and phosphorus and lower caloric density to slow growth rate, preventing the rapid growth that contributes to hip dysplasia and other developmental orthopedic diseases. Switch to an adult large-breed formula when the puppy food's feeding guide says growth is finished.</p>
@@ -77,8 +77,8 @@ export default function BestLargeBreedFoodPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Two foods have review cards. Prescription and giant-breed names in the sidebar do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>

@@ -93,8 +93,8 @@ export default function BestDogFoodPage() {
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_280px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_280px] gap-14 min-w-0">
+          <div className="min-w-0">
             <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
 
             {/* TL;DR */}
@@ -256,8 +256,8 @@ export default function BestDogFoodPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Each row restates the badge, price range, and tradeoff already on the card above. Editor scores on this page are not customer star ratings, and the prices are the ranges printed on those cards.
               </p>
-              <div className="overflow-x-auto max-w-full">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If this is the dog</th>

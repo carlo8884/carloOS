@@ -84,8 +84,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Who should get which printed band</h2>
         <p>Match the band on the card to the job the review already named. A slow bowl is for a dog that eats too fast. A dental chew does not replace brushing. A front-clip harness is for pulling, and it is the wrong harness for a dog with a shoulder or elbow problem. A wire crate is for house training when the dog does not already defeat wire.</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
-        <div className="overflow-x-auto max-w-full">
-          <table className="w-full text-xs border-collapse min-w-[36rem]">
+        <div className="overflow-x-auto max-w-full min-w-0">
+          <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
               <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                 <th className="p-3 font-bold text-brand-dark">Printed band</th>

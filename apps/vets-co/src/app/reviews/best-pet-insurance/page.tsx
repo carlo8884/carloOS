@@ -193,8 +193,8 @@ export default function VetsPetInsurancePage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Reimbursement, limits, and prices below are the figures already on each card. They are not a quote. Enroll before a condition is in the medical record — every card on this page is subject to that rule.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If this is you</th>

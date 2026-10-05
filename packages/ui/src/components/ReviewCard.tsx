@@ -104,7 +104,7 @@ export function ReviewCard({
               {badgeEmoji} {badge}
             </div>
           )}
-          <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1">
+          <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1 break-words">
             {name}
           </h2>
           {subtitle && (
@@ -247,14 +247,14 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
       <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">
         {title}
       </div>
-      <div className={embedded ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-2 lg:grid-cols-4 gap-3'}>
+      <div className={embedded ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3'}>
         {items.map((item) => (
           <a
             key={item.href}
             href={item.href}
             className="block bg-brand-white border border-brand-border rounded-lg p-3.5 no-underline hover:border-brand-primary transition-colors duration-200"
           >
-            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
             </div>
             <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

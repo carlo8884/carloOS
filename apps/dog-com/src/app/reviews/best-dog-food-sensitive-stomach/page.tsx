@@ -33,8 +33,8 @@ export default function SensitiveStomachFoodPage() {
         <span className="text-brand-text-mid" aria-current="page">Best Dog Food for Sensitive Stomach 2026</span>
       </nav>
       <div className="px-container-sm sm:px-container py-14">
-        <div className="grid lg:grid-cols-[1fr_270px] gap-14">
-          <div>
+        <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
+          <div className="min-w-0">
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When to See a Vet First</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Recurring vomiting, chronic diarrhea, blood in stool, significant weight loss, or GI symptoms that have not improved after a proper 8-12 week dietary trial require veterinary workup — not just food switching. A dietary change without diagnosis is guessing. Your vet can determine if the issue is diet, IBD, food allergy, parasites, or another condition requiring specific treatment.</p>
@@ -57,8 +57,8 @@ export default function SensitiveStomachFoodPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 One food has a review card. Hill&apos;s Sensitive Stomach &amp; Skin and Royal Canin Digestive Care are named in the picks strip and do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
               </p>
-              <div className="overflow-x-auto max-w-full mb-8">
-                <table className="w-full text-xs border-collapse min-w-[36rem]">
+              <div className="overflow-x-auto max-w-full min-w-0 mb-8">
+                <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                       <th className="p-3 font-bold text-brand-dark">If you need</th>
