@@ -59,7 +59,12 @@ export function HubSearch({
         : `Showing ${visible} of ${total}`
 
   return (
-    <form role="search" className="mb-6 max-w-md" onSubmit={(event) => event.preventDefault()}>
+    <form
+      role="search"
+      data-testid="hub-search"
+      className="mb-6 max-w-md"
+      onSubmit={(event) => event.preventDefault()}
+    >
       <label htmlFor={inputId} className="block text-sm font-semibold text-brand-dark mb-2">
         Search by title or topic
       </label>
