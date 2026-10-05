@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import Link from 'next/link'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -83,7 +84,7 @@ export default function ChoosingVetPage() {
             { label: "Emergency Cover", href: "#emergency" },
             { label: "The Vet-Client-Patient Relationship", href: "#vcpr" },
             { label: "Building the Relationship", href: "#building" },
-            { label: "Vet interview notes", href: "#kit" },
+            { label: "Next step", href: "#kit" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -128,106 +129,25 @@ export default function ChoosingVetPage() {
           
 
           <h2 id="vcpr">The Vet-Client-Patient Relationship</h2>
-          <p>A formal concept underpins veterinary care: the vet-client-patient relationship, or VCPR. It means a veterinarian has examined and become familiar with your horse and can therefore make informed decisions and legally prescribe medication for it. Many treatments and prescriptions require an established VCPR, which is one more reason to register with a vet and have them see your horse for routine care -- so that when something goes wrong, they already know the patient and can act.</p>
-          <p>
-            A horse veterinary history / VCPR records
-            folder is how the exam history that
-            establishes the relationship stays with the
-            horse instead of living in a phone photo
-            roll — it is not a horse pre-purchase exam
-            records binder (that lives on
-            buying-your-first-horse), not a horse boarding
-            contract document binder (that lives on
-            boarding-options), and not a farrier log book
-            (that lives on farrier-schedule). This page
-            does not hop weatherproof clipboards already
-            pinned on flu pages, and it does not hop
-            medications or vaccines.
-          </p>
+          <p>A formal concept underpins veterinary care: the vet-client-patient relationship, or VCPR. It means a veterinarian has examined and become familiar with your horse and can therefore make informed decisions and legally prescribe medication for it. Many treatments and prescriptions require an established VCPR, which is one more reason to register with a vet and have them see your horse for routine care -- so that when something goes wrong, they already know the patient and can act. This page does not shop a records folder.</p>
 
           <h2 id="building">Building the Relationship</h2>
           <p>Once you have chosen a vet, invest in the relationship through routine care -- vaccinations, dental checks, and wellness visits -- rather than only calling in crises. Keep good records, follow advice, ask questions, settle accounts promptly, and be a considerate client (a calm, prepared owner with the horse caught and the history ready makes the vet&apos;s job easier). A strong, trusting, two-way relationship pays off enormously when a real emergency comes, because the vet knows you and your horse and you trust their judgment.</p>
-          <p>
-            The same horse veterinary history / VCPR
-            records folder is also how a prepared owner
-            arrives with the history ready — vaccination
-            dates, dental notes, and prior findings —
-            without turning this page into a vaccine hop,
-            a dental-care hop, or a clinic-directory
-            listing. Educational owner records only.
-            This page does not claim hands-on testing.
-          </p>
 
-          <h2 id="kit">Vet interview notes</h2>
-
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (laminated equine-vet interview checklist /
-              horse after-hours emergency-cover question
-              card /
-              horse veterinary history / VCPR records
-              folder).
-              Educational owner searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1131
-              first+horse+buyer+visit+field+notebook /
-              laminated+first+horse+tryout+walkthrough+checklist /
-              horse+pre+purchase+exam+records+binder, #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook, #1123
-              laminated+horse+barn+treat+safety+chart /
-              lidded+horse+barn+treat+tote /
-              horse+barn+treat+prep+shears,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <h2 id="kit">Next step</h2>
+          <div id="vet-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Emergencies do not wait for the relationship to form. The triage tool is a conservative sign list. It does not diagnose, and this page does not shop a records folder.</p>
             <div className="flex flex-col gap-3">
-<ShopCtas
-                amazonHref="/go/amazon-brand/horse+veterinary+history+vcpr+records+folder?s=ownership-choosing-a-vet"
-                amazonLabel="Browse horse veterinary history / VCPR records folders on Amazon →"
-              />
-          </div>
+              <Link
+                href="/tools/is-this-a-horse-emergency"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Check whether it looks like an emergency →
+              </Link>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
