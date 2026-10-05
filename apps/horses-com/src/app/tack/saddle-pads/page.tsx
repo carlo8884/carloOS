@@ -256,6 +256,11 @@ export default function SaddlePadsPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="mb-4 text-sm font-semibold leading-snug">
+              <a href="/guides/saddle-fit-basics" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+                Check saddle fit before you buy a pad →
+              </a>
+            </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads"
