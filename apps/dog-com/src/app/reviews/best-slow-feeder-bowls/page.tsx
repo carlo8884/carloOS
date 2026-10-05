@@ -80,7 +80,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['Calming licking behavior', 'Dishwasher safe', 'Works for enrichment during stressful events', 'Freezable for longer duration']}
               cons={['Wet food only — not for dry kibble feeders', 'Smaller capacity than bowl feeders']}
               price="$10–15"
-              ctaText="Shop LickiMat on Amazon →"
+              ctaText="Shop LickiMat Splash on Amazon →"
               ctaHref="/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="lickimat+splash"
