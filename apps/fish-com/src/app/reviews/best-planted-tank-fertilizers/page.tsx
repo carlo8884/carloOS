@@ -31,7 +31,7 @@ export default function BestPlantedFertilizersPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Easy Green on Amazon' />
+        <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Plants need more than light and CO2. Macro and micronutrients drive growth, color, and health. The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.</p>
       </div>
       <QuickPicks items={PICKS} />
@@ -58,7 +58,7 @@ export default function BestPlantedFertilizersPage() {
               nextLabel="Size CO2 before you pick a high-tech dose"
               nextBlurb="The callout is the macro/micro rule — low-tech with fish waste usually needs micros; high-tech CO2 tanks burn macros faster. The CO2 calculator is the drop-checker target for the high-tech case. The hop below is the same Easy Green search already on this page."
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
-              resourceLabel="Browse Easy Green planted-tank fertilizer on Amazon →"
+              resourceLabel="Browse Aquarium Co-Op Easy Green planted-tank fertilizer on Amazon →"
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
@@ -68,7 +68,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Simplest dosing regimen available', 'Covers macros and micros in one product', 'Designed by experienced planted tank hobbyists', 'Works for 90% of planted setups']}
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
-              ctaText="Shop Easy Green on Amazon →"
+              ctaText="Shop Aquarium Co-Op Easy Green on Amazon →"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"

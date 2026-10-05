@@ -49,7 +49,7 @@ export default function EasyGreenVsFlourishGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-easy-green-vs-flourish-guide" label="Check price of Easy Green on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-easy-green-vs-flourish-guide" label="Check price of Aquarium Co-Op Easy Green on Amazon" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
