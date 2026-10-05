@@ -256,7 +256,7 @@ export default function PuppyWeightPredictorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor"
-                amazonLabel="Browse slow-feeder bowls on Amazon →"
+                amazonLabel="Browse Northmate Green interactive feeders on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"
