@@ -218,7 +218,7 @@ export default function TankMateCompatibilityPage() {
           nextLabel="Quarantine a new fish before it joins the display"
           nextBlurb="A Compatible verdict is temperament, not a green light to drop livestock in today. Run new fish in a bare-bottom quarantine tank for 4–6 weeks. The hop below is the same quarantine/hospital search already in the shop list."
           resourceHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-          resourceLabel="Browse quarantine tanks on Amazon →"
+          resourceLabel="Browse hospital and quarantine tanks on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
@@ -262,7 +262,7 @@ export default function TankMateCompatibilityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse quarantine tanks on Amazon →"
+              amazonLabel="Browse hospital and quarantine tanks on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility"
