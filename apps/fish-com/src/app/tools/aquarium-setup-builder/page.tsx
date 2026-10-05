@@ -226,7 +226,7 @@ export default function AquariumSetupBuilderPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit+seachem+prime?s=tools-aquarium-setup-builder"
-              amazonLabel="Browse api freshwater master test kit seachem prime on Amazon →"
+              amazonLabel="Browse API Master Test Kit and Seachem Prime on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+gravel?s=tools-aquarium-setup-builder"
