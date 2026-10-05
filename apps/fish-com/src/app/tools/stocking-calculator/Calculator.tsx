@@ -149,20 +149,24 @@ export default function StockingCalculator() {
         <ResultMeaning>
           Slim inches are a planning ceiling for waste and oxygen, not a count of fish you should buy.
         </ResultMeaning>
-        <ResultPick
-          siteId="fish-com"
-          pick={filterFromGallons(
-            parseFloat(tankGal) || 0,
-            style === 'cichlid' ? 'cichlid' : style === 'reef' ? 'reef' : style === 'planted' ? 'planted' : 'community',
-            'tools-stocking-calculator',
-          )}
-        />
-        <a
-          href="/reviews/best-aquarium-filters"
-          className="mt-3 inline-block max-w-full font-semibold text-brand-primary underline underline-offset-2"
-        >
-          Read the aquarium filter review
-        </a>
+        <p className="mt-4 text-sm font-semibold leading-snug">
+          <a
+            href="/reviews/best-aquarium-filters"
+            className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2"
+          >
+            Read the aquarium filter review
+          </a>
+        </p>
+        <div className="max-w-full [&_a]:max-w-full [&_a]:whitespace-normal">
+          <ResultPick
+            siteId="fish-com"
+            pick={filterFromGallons(
+              parseFloat(tankGal) || 0,
+              style === 'cichlid' ? 'cichlid' : style === 'reef' ? 'reef' : style === 'planted' ? 'planted' : 'community',
+              'tools-stocking-calculator',
+            )}
+          />
+        </div>
         </>
       )}
     </div>
