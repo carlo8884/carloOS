@@ -344,7 +344,7 @@ function buildList(
       essential: budget !== 'essentials',
       gear: true,
       shopHref: amazonHop('puppy+shampoo+nail+clippers+slicker+brush'),
-      shopLabel: 'Browse puppy grooming basics on Amazon →',
+      shopLabel: 'Browse puppy shampoo, nail clippers, and a slicker brush on Amazon →',
       links: [],
     },
     {
