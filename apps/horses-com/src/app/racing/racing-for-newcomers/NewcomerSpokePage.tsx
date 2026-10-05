@@ -174,6 +174,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/daily+racing+form?s=racing-for-newcomers-how-to-read-a-race-card"
+                    amazonLabel="Browse Daily Racing Form on Amazon →"
                   />
           </div>
               </div>
@@ -192,6 +193,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/horse+racing+binoculars?s=racing-for-newcomers-a-day-at-the-races"
+                    amazonLabel="Browse racing binoculars on Amazon →"
                   />
           </div>
               </div>
@@ -210,6 +212,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks"
+                    amazonLabel="Browse jockey silks on Amazon →"
                   />
           </div>
               </div>
