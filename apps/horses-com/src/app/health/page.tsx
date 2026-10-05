@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, CrossPortfolioCard, FAQAccordion } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -402,47 +402,20 @@ export default function HealthHubPage() {
         </div>
 
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
-          Related supplies
+          Next step
         </h2>
 
-        <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        </div>
-
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn emergency-triage chart /
-            horse stall-door vital-signs card /
-            equine health reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1124
-            laminated+horse+barn+forage+first+chart /
-            horse+stall+door+ration+card /
-            equine+nutrition+reference+handbook, #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, #1109 EGUS
-            email-only (no hops), emergency
-            equine+first+aid+kit /
-            digital+veterinary+thermometer, colic
-            equine+digital+rectal+thermometer /
-            large+animal+stethoscope, flu
-            weatherproof+storage+clipboard, farrier
-            equine+farrier+log+book, BCS
-            horse+weight+tape /
-            horse+body+condition+score+chart. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
+            Next step
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+hoof+pick?s=health-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Colic, choke, and a horse that will not get up are on the emergency tool. This hub does not shop a hoof pick.</p>
+          <Link
+            href="/tools/is-this-a-horse-emergency"
+            className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+          >
+            Open the emergency checker →
+          </Link>
         </div>
       </div>
 

@@ -11,7 +11,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { ShopCtas } from '@carloOS/ui'
+import Link from 'next/link'
 
 const SOURCE = 'tools-horse-cost-calculator'
 
@@ -19,8 +19,10 @@ interface KitItem {
   id: string
   name: string
   detail: string
-  amazonHref: string
-  amazonLabel: string
+  amazonHref?: string
+  amazonLabel?: string
+  guideHref?: string
+  guideLabel?: string
 }
 
 const KIT: KitItem[] = [
@@ -41,12 +43,12 @@ const KIT: KitItem[] = [
     amazonLabel: 'Browse horse grooming kits on Amazon →',
   },
   {
-    id: 'hoof-pick',
-    name: 'Hoof pick',
+    id: 'hoof-care',
+    name: 'Hoof care',
     detail:
-      'Pick the feet before and after work, and before you put the horse away. A basic hoof pick is the cheapest farrier-cycle line on this list: stones and packed mud are what turn a six-week trim into an abscess.',
-    amazonHref: `/go/amazon-brand/horse+hoof+pick?s=${SOURCE}`,
-    amazonLabel: 'Browse hoof picks on Amazon →',
+      'Pick the feet before and after work, and before you put the horse away. Stones and packed mud are what turn a six-week trim into an abscess. The how-to is the hoof-care guide.',
+    guideHref: '/care/hoof-care-basics',
+    guideLabel: 'Read hoof-care basics →',
   },
   {
     id: 'feed-scoop',
@@ -108,12 +110,10 @@ export default function StartupKit() {
         Shop the first-horse basics
       </h3>
       <p className="text-sm leading-relaxed text-brand-text-mid mb-4">
-        The calculator&rsquo;s one-time tack line is a dollar estimate. These six items are
-        the searchable, day-one kit that fills it: a halter and lead, a grooming kit, a
-        hoof pick, a feed scoop or scale, a barn first-aid kit, and a fly mask. Check
-        items off as you gather them. Amazon hops are search results for those categories
-        — not a ranked product list, and not a substitute for the tack your barn or
-        trainer specifies.
+        The calculator&rsquo;s one-time tack line is a dollar estimate. The day-one kit is
+        a halter and lead, a grooming kit, hoof care, a feed scoop or scale, a barn
+        first-aid kit, and a fly mask. Check items off as you gather them. The product
+        rows are category searches. Hoof care is the guide, not a shop search.
       </p>
       <p className="text-2xs text-brand-text-light mb-5" aria-live="polite">
         {summary}
@@ -141,6 +141,11 @@ export default function StartupKit() {
                   </span>
                 </span>
               </label>
+              {item.guideHref ? (
+                <Link href={item.guideHref} className="mt-2 ml-7 inline-block text-sm font-semibold text-brand-primary no-underline hover:underline">
+                  {item.guideLabel}
+                </Link>
+              ) : null}
             </li>
           )
         })}

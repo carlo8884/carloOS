@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { PremiumMasthead } from '../../components/PremiumMasthead'
 
 export const metadata: Metadata = buildMetadata({
@@ -178,45 +178,20 @@ export default function CareHubPage() {
         </ul>
 
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mt-12 mb-4 max-w-content-wide">
-          Related supplies
+          Next step
         </h2>
 
-        <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-        </div>
-
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn daily-care chart /
-            horse stall-door care card /
-            equine husbandry reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs #1125
-            laminated+horse+barn+emergency+triage+chart /
-            horse+stall+door+vital+signs+card /
-            equine+health+reference+handbook, #1124
-            laminated+horse+barn+forage+first+chart /
-            horse+stall+door+ration+card /
-            equine+nutrition+reference+handbook, #1123
-            laminated+horse+barn+treat+safety+chart /
-            lidded+horse+barn+treat+tote /
-            horse+barn+treat+prep+shears, care children
-            horse+curry+comb / horse+hoof+pick /
-            horse+clippers / horse+fly+mask /
-            horse+turnout+blanket /
-            equine+farrier+log+book. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-            Shop related supplies
+            Next step
           </div>
-          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/horse+hoof+pick?s=care-hub"
-              amazonLabel="Shop on Amazon"
-            />
-          </div>
+          <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Daily hoof picking lives on the hoof-care guide, where the hoof-pick search stays. This hub does not repeat that shop button.</p>
+          <Link
+            href="/care/hoof-care-basics"
+            className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+          >
+            Read hoof-care basics →
+          </Link>
         </div>
       </div>
 

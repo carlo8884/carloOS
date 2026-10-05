@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -208,10 +209,12 @@ export default function BuyingFirstHorsePage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-<ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=ownership-buying-your-first-horse"
-                amazonLabel="Shop on Amazon"
-              />
+              <Link
+                href="/tools/horse-cost-calculator"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Estimate the first year on the cost calculator →
+              </Link>
               <ShopCtas
                 amazonHref="/go/amazon-brand/horse+pre+purchase+exam+records+binder?s=ownership-buying-your-first-horse"
                 amazonLabel="Browse horse pre-purchase exam records binders on Amazon →"

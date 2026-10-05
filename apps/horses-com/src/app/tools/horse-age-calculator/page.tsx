@@ -213,10 +213,6 @@ export default function HorseAgeCalculatorPage() {
                 amazonHref="/go/amazon-brand/horse+fly+mask?s=tools-horse-age-calculator"
                 amazonLabel="Browse horse fly masks on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-horse-age-calculator"
-                amazonLabel="Browse horse hoof picks on Amazon →"
-              />
           </div>
           </div>
         </div>

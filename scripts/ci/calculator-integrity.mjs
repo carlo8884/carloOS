@@ -5677,7 +5677,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon-brand\/horse\+halter\+lead\+rope\?s=tools-horse-cost-calculator"/, label: 'journey hop reuses the existing halter search' },
       { re: /amazon-brand\/horse\+halter\+lead\+rope\?s=tools-horse-cost-calculator/, label: 'halter and lead search hop (same query as startup kit)' },
       { re: /amazon-brand\/horse\+grooming\+kit\?s=tools-horse-cost-calculator/, label: 'grooming kit search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick\?s=tools-horse-cost-calculator/, label: 'hoof pick search hop' },
+      { re: /href="\/care\/hoof-care-basics"/, label: 'hoof-care guide instead of a hoof-pick hop' },
       { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=tools-horse-cost-calculator/, label: 'feed scoop search hop (same query as horse-feed-calculator / BCS)' },
       { re: /amazon-brand\/horse\+barn\+first\+aid\+kit\?s=tools-horse-cost-calculator/, label: 'barn first-aid kit search hop' },
       { re: /amazon-brand\/horse\+fly\+mask\?s=tools-horse-cost-calculator/, label: 'fly mask search hop' },
@@ -7825,7 +7825,6 @@ const CALCULATORS = [
       { re: /amazon-brand\/senior\+horse\+feed\?s=tools-horse-age-calculator/, label: 'senior horse feed search hop' },
       { re: /amazon-brand\/horse\+weight\+tape\?s=tools-horse-age-calculator/, label: 'weight tape search hop' },
       { re: /amazon-brand\/horse\+fly\+mask\?s=tools-horse-age-calculator/, label: 'fly mask search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick\?s=tools-horse-age-calculator/, label: 'hoof pick search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /https:\/\/vets\.co\/telehealth|crossSiteHref\('vets-co', '\/telehealth'\)/, label: 'non-ER talk-to-a-vet points at vets.co/telehealth' },
       { re: /https:\/\/vets\.co\/reviews\/best-pet-insurance|crossSiteHref\('vets-co', '\/reviews\/best-pet-insurance'\)/, label: 'insurance CTA points at educational vets.co comparison' },
@@ -10360,10 +10359,7 @@ const CALCULATORS = [
     id: 'horses · health hub',
     file: 'apps/horses-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/tools\/is-this-a-horse-emergency"/, label: 'emergency checker instead of a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10378,10 +10374,7 @@ const CALCULATORS = [
     id: 'horses · care hub',
     file: 'apps/horses-com/src/app/care/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/care\/hoof-care-basics"/, label: 'hoof-care guide instead of a generic hoof-pick hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10470,7 +10463,7 @@ const CALCULATORS = [
     id: 'horses · buying-your-first-horse hops',
     file: 'apps/horses-com/src/app/ownership/buying-your-first-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /href="\/tools\/horse-cost-calculator"/, label: 'cost calculator instead of a generic hoof-pick hop' },
       { re: /amazon-brand\/horse\+pre\+purchase\+exam\+records\+binder\?s=ownership-buying-your-first-horse/, label: 'horse pre-purchase exam records-binder search hop (matches on-page never-skip-the-vetting copy; unique vs horse+boarding+contract+document+binder / equine+farrier+log+book / weatherproof+storage+clipboard)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
