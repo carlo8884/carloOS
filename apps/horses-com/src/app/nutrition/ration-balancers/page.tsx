@@ -209,7 +209,7 @@ export default function RationBalancersPage() {
             pros={['Fills gaps without adding calories', 'Small, economical serving', 'Very widely available']}
             cons={['Not a calorie source for hard keepers', 'Must match the forage type', 'Small serving needs accurate measuring']}
             price="$28–45 per 50 lb"
-            ctaText="Search Purina Enrich Plus on Amazon →"
+            ctaText="Search Purina Enrich Plus ration balancer on Amazon →"
             ctaHref="/go/amazon-brand/purina+enrich+plus+ration+balancer?s=nutrition-ration-balancers"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="purina-enrich-plus"
