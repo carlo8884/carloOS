@@ -69,7 +69,7 @@ const KIT: KitItem[] = [
     detail:
       'Needed on day one for the ride home and every vet trip after. A small hard-sided carrier with a secure latch is the usual pick; leave it out as a nap spot so it does not become a vet-only box.',
     amazonHref: `/go/amazon-brand/ferret+carrier+hard+sided?s=${SOURCE}`,
-    amazonLabel: 'Browse ferret carriers on Amazon →',
+    amazonLabel: 'Browse hard-sided ferret carriers on Amazon →',
   },
 ]
 

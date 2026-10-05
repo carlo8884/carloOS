@@ -242,7 +242,7 @@ export default function ReadinessQuizPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
-                amazonLabel="Browse ferret carriers on Amazon →"
+                amazonLabel="Browse hard-sided ferret carriers on Amazon →"
               />
           </div>
           </div>
