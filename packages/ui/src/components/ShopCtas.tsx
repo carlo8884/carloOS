@@ -4,9 +4,11 @@
  * Amazon + optional Chewy shop pair. Hides empty Chewy hops — never href="#".
  * Chewy-brand search queries fall back to amazon-brand until a Chewy tag is live.
  * Clicks are recorded by AffiliateClickListener (site, source, partner).
+ * A generic "Shop on Amazon" label is renamed from the search in amazonHref.
  */
 import type { CSSProperties } from 'react'
 import { visibleChewyHref, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { amazonButtonLabel } from '../lib/amazon-browse-label'
 
 const amazonStyle: CSSProperties = {
   display: 'inline-block',
@@ -37,6 +39,7 @@ export function ShopCtas({
 }) {
   const amazon = visibleShopHref(amazonHref)
   const chewy = visibleChewyHref(chewyHref)
+  const label = amazonButtonLabel(amazonHref, amazonLabel)
   if (!amazon && !chewy) return null
   return (
     <div>
@@ -47,7 +50,7 @@ export function ShopCtas({
             rel="sponsored noopener"
             style={amazonStyle}
           >
-            {amazonLabel}
+            {label}
           </a>
         ) : null}
         {chewy ? (
