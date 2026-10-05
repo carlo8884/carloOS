@@ -12695,6 +12695,17 @@ const CALCULATORS = [
     why: 'Saltwater setup page: 1–1.5 lb live rock per gallon.',
   },
   {
+    id: 'ferret · label-calculator hops',
+    file: 'apps/ferret-com/src/app/tools/label-calculator/page.tsx',
+    mustInclude: [
+      { re: /href="\/diet\/best-ferret-kibble"/, label: 'kibble review is the matching guide' },
+      { re: /\/go\/wysong\/epigen-90\?s=tools-label-calculator/, label: 'existing Wysong Epigen 90 hop, product and retailer named' },
+      { re: /AffiliateDisclosure/, label: 'disclosure above the hop' },
+    ],
+    mustExclude: [{ re: /we tested/, label: 'no hands-on claim' }],
+    why: 'The label calculator links the kibble review and the existing Wysong Epigen 90 hop. It does not invent a new food.',
+  },
+  {
     id: 'ferret · label dry matter',
     file: 'apps/ferret-com/src/app/tools/label-calculator/model.ts',
     mustInclude: [
