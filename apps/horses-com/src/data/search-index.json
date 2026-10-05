@@ -1,0 +1,214 @@
+{
+  "entries": [
+    {
+      "path": "/care/turnout-vs-stabling",
+      "title": "Turnout vs Stabling — Balancing Movement, Forage, and Management",
+      "description": "Reference guide to turnout versus stabling for horses: the welfare case for movement and forage, when stabling is justified, and finding a balanced routine.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/guides",
+      "title": "Equine Guides — Saddle Fit, Dental Care & Vaccinations | Horses.com",
+      "description": "Three equine owner guides: saddle fit basics, dental care, and AAEP core and risk-based vaccination schedules — cited from primary veterinary sources.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/equine-dental-care",
+      "title": "Equine Dental Care — Floats, Wolf Teeth, EOTRH, and Annual Care",
+      "description": "Equine dental anatomy, annual float schedule, signs of dental problems, wolf-tooth extraction, and EOTRH in seniors. Aligned with AAEP and AVDC guidance.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/equine-vaccination-schedule",
+      "title": "Equine Vaccination Schedule — AAEP Core & Risk-Based Vaccines",
+      "description": "AAEP-aligned vaccination schedule for horses. Core vaccines (tetanus, EEE/WEE, West Nile, rabies) and risk-based vaccines by life stage and discipline.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/saddle-fit-basics",
+      "title": "Saddle Fit Basics — 12-Point Framework for Horse Owners",
+      "description": "A 12-point framework for evaluating saddle fit: wither clearance, panel contact, tree angle, balance point, billet alignment, and dynamic checks.",
+      "category": "guides"
+    },
+    {
+      "path": "/reviews",
+      "title": "Horses.com Reviews — Supplements, Blankets, Tack | Horses.com",
+      "description": "Independent equine product reviews — joint supplements, winter blankets, and gear that performs. Citation-anchored against AAEP and breed-club references.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-blanket-for-clipped-horse-guide",
+      "title": "Best Blanket for a Clipped Horse | Horses.com",
+      "description": "The heavy-winter turnout the blanket review names for a clipped horse in a northern climate, and when that blanket is too much.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-equine-supplements",
+      "title": "Best Equine Supplements 2026 — Joint, Gastric, Hoof & Electrolyte",
+      "description": "Buyer&apos;s guide to equine supplements by category: Platinum Performance, Cosequin, SmartPak, KER, Equithrive. NASC Quality Seal and FEI rules explained.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-winter-horse-blankets",
+      "title": "Best Winter Horse Blankets 2026 — Turnout, Stable, Liners",
+      "description": "Winter blanket buyer&apos;s guide: denier, fill weight, neck shape, hardware. Horseware Rambo, Schneiders, SmartPak Ultimate, Weatherbeeta, Amigo.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/blanket-weight-by-temperature-guide",
+      "title": "Horse Blanket Weight by Temperature | Horses.com",
+      "description": "The fill-weight bands already on the winter blanket review, from a sheet to heavyweight, and the Rambo link for the medium band that review already sells.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/brushing-boots-vs-bell-boots-guide",
+      "title": "Brushing Boots vs Bell Boots | Horses.com",
+      "description": "The boots page scores synthetic brushing boots at 8.5 and pull-on bell boots at 8.4. Printed prices are $25–70 and $12–35 a pair.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/cosequin-vs-equithrive-guide",
+      "title": "Cosequin vs Equithrive for Joints | Horses.com",
+      "description": "The supplement review scores Cosequin ASU Plus 9.1 and Equithrive Original Pellets 8.5. ASU with glucosamine, or a resveratrol pellet.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/cosequin-vs-platinum-guide",
+      "title": "Cosequin ASU Plus vs Platinum CJ | Horses.com",
+      "description": "Which joint supplement to buy: Cosequin ASU Plus for the ASU formula, or Platinum CJ when you want one comprehensive tub.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/ker-eo3-vs-equithrive-guide",
+      "title": "KER EO-3 vs Equithrive Omega-3 | Horses.com",
+      "description": "KER EO-3 is marine omega-3. Equithrive Original is trans-resveratrol. Scores and monthly prices are on the supplement review.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/november-december-gift-guide",
+      "title": "November and December Horse Gifts | Horses.com",
+      "description": "November and December horse gifts grouped by the price bands already printed on the halter, boot, and winter blanket reviews.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/nylon-vs-breakaway-halter-guide",
+      "title": "Nylon Halter vs Breakaway | Horses.com",
+      "description": "The halter page scores a flat nylon halter at 8.2 and a leather-crown breakaway at 8.7. Printed prices are $10–25 and $25–55.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/quilted-vs-sheepskin-pad-guide",
+      "title": "Quilted Pad vs Sheepskin Half Pad | Horses.com",
+      "description": "Which English pad to buy: the washable quilted cotton pad, or a sheepskin half pad for friction. Neither fixes saddle fit.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/rambo-vs-rhino-guide",
+      "title": "Rambo vs Rhino, Same Brand | Horses.com",
+      "description": "Horseware Rambo Original versus Rhino Original: denier, fill, hardware, and price already on the winter blanket review. No new specs.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/rambo-vs-schneiders-guide",
+      "title": "Rambo vs Schneiders Heavy Winter | Horses.com",
+      "description": "The blanket review scores the Rambo Original 9.4 and the Schneiders StormShield 9.2. Mid-weight premium, or a heavy northern fill.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/weatherbeeta-vs-amigo-guide",
+      "title": "Weatherbeeta vs Amigo Turnout | Horses.com",
+      "description": "Weatherbeeta ComFiTec for wither rubs, or Horseware Amigo Bravo 12 at the value price. Specs are on the blanket review.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/winter-water-unfrozen-guide",
+      "title": "Keep Horse Water Unfrozen in Winter | Horses.com",
+      "description": "Icy water and dry hay are the winter colic pattern already on the water and winter-care pages. The shop link is the heated bucket those pages already use.",
+      "category": "reviews"
+    },
+    {
+      "path": "/tools",
+      "title": "Horse Calculators & Tools | Horses.com",
+      "description": "Free horse-keeping calculators: estimate weight from girth and length, plan daily hay and feed, and score body condition on the Henneke scale.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/body-condition-score",
+      "title": "Horse Body Condition Score Calculator (Henneke) | Horses.com",
+      "description": "Free Henneke body condition score (BCS 1-9) calculator. Score six body areas, get overall BCS, condition narrative, and feeding guidance per range.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-age-calculator",
+      "title": "Horse Age Calculator — Human Years & Life Stage | Horses.com",
+      "description": "Convert horse years to a human-year estimate and a foal / young / adult / senior label. A planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-blanket-size-calculator",
+      "title": "Horse Blanket Size Calculator — What Size Do I Need? | Horses.com",
+      "description": "What size blanket does your horse need? Measure chest to tail and get the standard US blanket size plus the approximate EU/cm equivalent, with fit tips.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-cost-calculator",
+      "title": "Horse Cost of Ownership Calculator | Horses.com",
+      "description": "Estimate the real cost of owning a horse: board, feed, farrier, vet, dental, vaccines, insurance, and startup. Free monthly + annual breakdown, 2026 US ranges.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-feed-calculator",
+      "title": "Horse Feed & Hay Calculator (Daily Intake) | Horses.com",
+      "description": "Estimate how much hay and feed a horse needs per day from bodyweight, workload, and keeper type. Free forage-first calculator using NRC intake ranges.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-gestation-calculator",
+      "title": "Horse Gestation & Foaling Date Calculator | Horses.com",
+      "description": "How long are horses pregnant? Enter a breeding date for the ~340-day due date, then pack a foaling-kit checklist.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-grimace-scale",
+      "title": "Horse Grimace Scale — Is My Horse in Pain? | Horses.com",
+      "description": "Score five horse facial signs — ears, eyes, brow, chewing muscles, nostrils — on this owner Equine Grimace checklist. Planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-height-converter",
+      "title": "Horse Height Converter: Hands, Inches & cm | Horses.com",
+      "description": "Convert horse height between hands, inches, and centimetres. Handles the hands.inches notation correctly (15.2hh = 62 in = 157.5 cm), with a reference table.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-size-for-rider",
+      "title": "Horse Size for Rider Calculator | Horses.com",
+      "description": "What size horse should you ride? Estimate a suitable horse weight range and height in hands from your weight, height, and discipline using the 15–20% guideline.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-water-calculator",
+      "title": "Horse Water Intake Calculator | Horses.com",
+      "description": "Scale the water page’s 5–10 gallon idle-adult band by body weight: half a gallon to one gallon per 100 pounds.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/horse-weight-calculator",
+      "title": "Horse Weight Calculator (Girth + Length) | Horses.com",
+      "description": "Estimate a horse’s weight from heart girth and body length using the standard weight-tape formula. Free, instant lbs + kg, pony / draft / foal adjustments.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/is-this-a-horse-emergency",
+      "title": "Is This a Horse Emergency? Symptom Triage | Horses.com",
+      "description": "Check horse signs against equine emergency criteria for a conservative urgency read: go now, same-day vet, or monitor. A triage aid, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/stall-bedding-calculator",
+      "title": "Stall Bedding Calculator — Bags of Shavings | Horses.com",
+      "description": "How many bags of shavings for a horse stall? Enter length, width, and depth to get cubic feet plus a bag or bale count for pine shavings, pellets, or straw.",
+      "category": "tools"
+    }
+  ]
+}

@@ -1,0 +1,322 @@
+{
+  "entries": [
+    {
+      "path": "/guides",
+      "title": "Dog Care Guides — Health, Vital Signs, First Aid & More | Dog.com",
+      "description": "In-depth dog care reference guides: body condition scoring, spay/neuter timing, home vital signs, microchipping, wellness exams, and first aid preparedness.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/dog-body-condition-score",
+      "title": "Dog Body Condition Score (BCS) — The 1–9 Scale | Dog.com",
+      "description": "Score your dog on the WSAVA/AAHA 1–9 body condition scale: rib palpation, waist and tuck checks, breed adjustments, and why BCS predicts lifespan.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/dog-first-aid-kit",
+      "title": "Dog First Aid Kit & Emergency Preparedness Checklist | Dog.com",
+      "description": "What to put in a dog first aid kit, the emergency numbers to save, and how to prepare for a canine medical emergency — a practical owner reference checklist.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/dog-microchipping",
+      "title": "Dog Microchipping Explained — How It Works & Registration | Dog.com",
+      "description": "How dog microchips work, what they cost, why registration matters more than the implant, ISO standards, and how microchips differ from GPS trackers.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/dog-spay-neuter-timing",
+      "title": "Dog Spay/Neuter Timing — Updated Science by Breed & Size | Dog.com",
+      "description": "When to spay or neuter your dog — current AAHA/ACVS guidance and UC Davis breed-specific research (Hart et al.) on timing by breed, sex, and lifestyle.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/dog-wellness-exam",
+      "title": "Dog Wellness Exam — What to Expect & How to Choose a Vet | Dog.com",
+      "description": "What happens at a dog wellness exam, how often to go by life stage, how to choose a veterinarian, and the questions to ask to get the most from every visit.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/how-to-take-dogs-temperature",
+      "title": "How to Take a Dog's Temperature & Vital Signs at Home | Dog.com",
+      "description": "How to check your dog's temperature, heart rate, breathing, gum color and hydration at home — normal reference ranges and when to call your vet.",
+      "category": "guides"
+    },
+    {
+      "path": "/reviews",
+      "title": "Dog Product Reviews 2026 — Ranked & Compared | Dog.com",
+      "description": "Dog product reviews with honest editorial criteria. Pet insurance, dog food, flea prevention, beds, crates — ranked with honest editorial criteria.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dental-chews",
+      "title": "Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com",
+      "description": "Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-beds",
+      "title": "Best Dog Beds 2026 — Orthopedic, Washable | Dog.com",
+      "description": "Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-crates",
+      "title": "Best Dog Crates 2026 — Wire, Plastic | Dog.com",
+      "description": "Wire, plastic airline-approved, heavy-duty, and furniture-style crates compared on durability, escape resistance, ventilation, and ease of assembly.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-food-for-puppies",
+      "title": "Best Puppy Food 2026 — Large Breed | Dog.com",
+      "description": "WSAVA-compliant puppy foods ranked for 2026. Royal Canin, Purina Pro Plan, Hill's Science Diet compared for large breed puppies, small breeds, and all sizes.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-food-senior",
+      "title": "Best Senior Dog Food 2026 — Top Formulas Compared | Dog.com",
+      "description": "Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill's Science Diet Senior.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-food-sensitive-stomach",
+      "title": "Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com",
+      "description": "Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill's Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-food-small-breed",
+      "title": "Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com",
+      "description": "Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill's Science Diet Small Paws ranked.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-gps-tracker",
+      "title": "Best Dog GPS Trackers 2026 — Fi, Whistle | Dog.com",
+      "description": "Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dog-harnesses",
+      "title": "Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com",
+      "description": "Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-dry-dog-food",
+      "title": "Best Dry Dog Food 2026 — Royal Canin, Hill's & Purina Ranked",
+      "description": "Dry dog foods ranked on published ingredient, adequacy, and WSAVA criteria. Royal Canin, Hill's Science Diet, and Purina Pro Plan.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-flea-tick-prevention",
+      "title": "Best Flea & Tick Prevention 2026 — Bravecto, NexGard | Dog.com",
+      "description": "Best flea and tick prevention for dogs — Bravecto, NexGard, and Simparica compared by coverage, duration, and safety profile. research-based.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-heartworm-prevention",
+      "title": "Best Heartworm Prevention for Dogs 2026 — Heartgard | Dog.com",
+      "description": "Heartgard Plus, Interceptor Plus, and Simparica Trio compared for heartworm prevention. Monthly vs injectable options, parasite spectrum coverage.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-joint-supplements",
+      "title": "Best Joint Supplements for Dogs 2026 — Cosequin | Dog.com",
+      "description": "Evidence-graded joint supplements for dogs. Dasuquin, Cosequin DS, fish oil, and CBD ranked by the research",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-large-breed-dog-food",
+      "title": "Best Large Breed Dog Food 2026 — WSAVA Picks | Dog.com",
+      "description": "Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-puppy-crate-guide",
+      "title": "Best Puppy Crate for House-Training | Dog.com",
+      "description": "Which crate to buy for puppy house-training: the wire crate with a divider, and when a heavy-duty or furniture crate is the wrong tool.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-slow-feeder-bowls",
+      "title": "Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com",
+      "description": "Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/big-barker-vs-casper-guide",
+      "title": "Big Barker vs Casper Dog Bed | Dog.com",
+      "description": "Which reviewed bed to buy: Big Barker 7-inch foam for large arthritic dogs, or Casper when you need a machine-washable cover.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/cosequin-vs-dasuquin-guide",
+      "title": "Cosequin DS vs Dasuquin | Dog.com",
+      "description": "The joint review scores Dasuquin with MSM 9.2 and Cosequin DS 8.8. ASU in the formula, or the lower glucosamine price.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/fi-vs-tractive-guide",
+      "title": "Fi Series 3 vs Tractive | Dog.com",
+      "description": "The GPS review scores Fi Series 3 at 9.4 and Tractive at 8.8. Printed prices are $140–160 plus $8–12 a month, or $40–60 plus $4–6.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/fresh-dog-food-worth-it",
+      "title": "Is Fresh Dog Food Worth It? Fresh vs Kibble (2026)",
+      "description": "Fresh dog food sales are up sharply, but is it worth the cost? Fresh vs kibble vs raw on nutrition, price, safety — and how to judge a brand.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/front-clip-vs-back-clip-guide",
+      "title": "Easy Walk vs Front Range by Clip | Dog.com",
+      "description": "Easy Walk is front-clip only. Front Range has both clips. Julius-K9 is back-clip only. The clip decides the harness.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/greenies-vs-whimzees-guide",
+      "title": "Greenies vs Whimzees Dental Chews | Dog.com",
+      "description": "Which VOHC chew to buy: Greenies for plaque and tartar, or Whimzees for a plant-based chew. Neither replaces toothbrushing.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/holiday-chocolate-calculator-guide",
+      "title": "Holiday Chocolate and the Toxicity Calculator | Dog.com",
+      "description": "Holiday baking often includes chocolate. Use the existing calculator. The first-aid kit link does not treat poisoning.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/holiday-scraps-trash-can-guide",
+      "title": "Holiday Scraps and a Locking Trash Can | Dog.com",
+      "description": "Thanksgiving and Christmas scraps are the pancreatitis trigger already described on the health page. The shop link is the locking trash can on that page.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/icrate-vs-impact-guide",
+      "title": "MidWest iCrate vs Impact Dog Crate | Dog.com",
+      "description": "The crate review scores the MidWest iCrate 9.3 and the Impact crate 9.4. Divider wire, or aluminum when wire has already failed.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/november-december-gift-guide",
+      "title": "November and December Dog Gifts | Dog.com",
+      "description": "November and December dog gifts grouped by the price bands already printed on the chew, bowl, harness, crate, bed, and tracker reviews.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/outward-hound-vs-northmate-guide",
+      "title": "Outward Hound vs Northmate | Dog.com",
+      "description": "The slow-feeder review scores the Fun Feeder 9.2 and the Northmate Green 9.0. Printed prices are $10–18 and $25–35.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/royal-canin-vs-pro-plan-guide",
+      "title": "Royal Canin vs Purina Pro Plan | Dog.com",
+      "description": "The dry-food review scores Royal Canin 9.5 and Purina Pro Plan 9.3. Both meet the WSAVA standard used on that page.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/tools",
+      "title": "Dog Tools & Calculators | Dog.com",
+      "description": "Free, source-cited dog care calculators. Start with the Dog Calorie Calculator: RER and daily intake estimates using WSAVA/AAHA-style life-stage factors.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-age-calculator",
+      "title": "Dog Age in Human Years Calculator | Dog.com",
+      "description": "Convert your dog's age to human years with the AVMA/AAHA-style banded model -- more accurate than the x7 rule. Enter age and size for an instant estimate.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-body-condition-score",
+      "title": "Dog Body Condition Score Calculator — Assess Your Dog’s BCS | Dog.com",
+      "description": "Is your dog under or overweight? Answer three hands-on questions to estimate your dog’s body condition score (1–9) on the WSAVA scale, with what to do next.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-calorie-calculator",
+      "title": "Dog Calorie Calculator — RER & Daily Intake | Dog.com",
+      "description": "Estimate your dog's daily calorie needs using the standard RER formula (70 x kg^0.75) and WSAVA/AAHA-style life-stage factors. Free, with cups-per-day output.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-chocolate-toxicity-calculator",
+      "title": "Dog Chocolate Toxicity Calculator — Theobromine Meter | Dog.com",
+      "description": "Estimate your dog's theobromine exposure from chocolate by type, amount, and body weight. Educational tool — call your vet or poison control right now.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-crate-size-calculator",
+      "title": "Dog Crate Size Calculator — What Size Crate Do I Need? | Dog.com",
+      "description": "What size crate does your dog need? Enter length and height to get the minimum crate dimensions and the recommended standard crate size.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-exercise-calculator",
+      "title": "Dog Exercise Calculator — How Much Does My Dog Need? | Dog.com",
+      "description": "How much exercise does your dog need? Get a daily target by life stage and energy level — with the 5-minute-per-month puppy rule and senior adjustments.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-food-amount-calculator",
+      "title": "Daily Dog Food Grams | Dog.com",
+      "description": "Turn body weight and activity into daily food grams using the same RER formula as the calorie calculator and the bag’s kcal per kg.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-gestation-calculator",
+      "title": "Dog Pregnancy Calculator & Whelping Calendar | Dog.com",
+      "description": "How long are dogs pregnant? Enter a breeding date for the 63-day due date, then pack a whelping-kit checklist.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-grimace-scale",
+      "title": "Dog Grimace Scale — Is My Dog in Pain? | Dog.com",
+      "description": "Score five dog facial signs — ears, eyes, muzzle, brow, head — on this owner pain-face checklist. Planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-ideal-weight-calculator",
+      "title": "Dog Ideal Weight Calculator: How Much Should My Dog Weigh? | Dog.com",
+      "description": "How much should my dog weigh? Get the healthy adult weight range by breed, plus an estimated ideal weight from your dog's body condition score (BCS). Free.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/dog-water-intake-calculator",
+      "title": "Dog Water Intake Calculator — How Much Should My Dog Drink? | Dog.com",
+      "description": "How much water should your dog drink? Enter body weight for a typical daily intake range in ounces, millilitres, and cups, plus the signs worth a vet call.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/harness-collar-size",
+      "title": "Dog Harness & Collar Size Calculator",
+      "description": "What size harness and collar does your dog need? Enter weight or size class plus neck and chest for typical S–XL bands and fit tips.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/is-this-a-dog-emergency",
+      "title": "Is This a Dog Emergency? Symptom Triage Tool | Dog.com",
+      "description": "Check your dog's symptoms against veterinary emergency criteria for a conservative urgency read: go now, same-day vet, or monitor. A triage aid, not diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/new-puppy-checklist",
+      "title": "New Puppy Checklist — First-Week Essentials | Dog.com",
+      "description": "Pick adult size, pickup age, indoor or outdoor, crate training, and budget for a checkable new-puppy list with Amazon shop hops. Free.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/puppy-first-year-budget",
+      "title": "Puppy First-Year Budget Calculator",
+      "description": "Estimate first-year puppy costs by adult size — crate, food, vet, and training ranges you can edit. Planning tool, not a quote.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/puppy-weight-predictor",
+      "title": "Puppy Weight Predictor — How Big Will My Puppy Get? | Dog.com",
+      "description": "Estimate your puppy's adult weight from its current age and weight using the standard growth-percentage method and published size-class growth curves. Free.",
+      "category": "tools"
+    }
+  ]
+}
