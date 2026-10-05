@@ -67,7 +67,7 @@ function foodHop(size: Size): { href: string; label: string } {
   if (size === 'large' || size === 'giant') {
     return {
       href: amazonHop('royal+canin+large+breed+puppy'),
-      label: 'Browse large-breed puppy food on Amazon →',
+      label: 'Browse Royal Canin large-breed puppy food on Amazon →',
     }
   }
   if (size === 'small') {
@@ -455,7 +455,7 @@ function resultShop(
       blurb:
         'Large and giant puppies do better on a large-breed puppy formula with controlled calcium. Keep the breeder or shelter food for the first days, then transition slowly. Ask your veterinarian which formula fits this dog — this tool does not rank brands.',
       href: amazonHop('royal+canin+large+breed+puppy'),
-      label: 'Browse large-breed puppy food on Amazon →',
+      label: 'Browse Royal Canin large-breed puppy food on Amazon →',
     }
   }
   return {
