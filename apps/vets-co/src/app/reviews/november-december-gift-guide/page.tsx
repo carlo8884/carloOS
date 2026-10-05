@@ -5,6 +5,10 @@ import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQ
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
 
+// Request-time env, same as the insurance comparison. A set partner tag
+// renders the quote link; an unset tag stays a disabled button.
+export const dynamic = 'force-dynamic'
+
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'November and December Pet Care Costs | Vets.co',
