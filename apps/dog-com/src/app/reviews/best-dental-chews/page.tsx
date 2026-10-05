@@ -68,7 +68,7 @@ export default function BestDentalChewsPage() {
               pros={['Plant-based — no animal protein', 'VOHC accepted', 'Longer chew duration', 'No artificial additives']}
               cons={['VOHC for plaque only (not tartar)', 'Higher calorie density than Greenies per chew']}
               price="$20–30 / 14-count"
-              ctaText="Shop Whimzees on Amazon →"
+              ctaText="Shop Whimzees dental chews on Amazon →"
               ctaHref="/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="whimzees+dental+chews+dogs"
