@@ -65,8 +65,8 @@ function kcal(n: number): string {
 function catCalorieNext(stageLabel: string): { guideHref: string; guideLabel: string; hopHref: string; hopLabel: string } {
   if (stageLabel.startsWith('Weight loss') || stageLabel === 'Obese-prone indoor') {
     return {
-      guideHref: '/health/weight-management',
-      guideLabel: 'Read the weight management guide',
+      guideHref: '/tools/cat-body-condition-score',
+      guideLabel: 'Score this cat before changing the portion',
       hopHref: '/go/amazon-brand/kitchen+gram+scale?s=tools-cat-calorie-calculator',
       hopLabel: 'Browse kitchen gram scales on Amazon →',
     }
