@@ -78,7 +78,7 @@ export default function BigBarkerVsCasperGuidePage() {
         <p>The link below searches for the Big Barker bed, the same search as on the bed review. Size and the sale price are on the retailer page.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-big-barker-vs-casper-guide"
-          amazonLabel="Browse Big Barker orthopedic dog beds on Chewy →"
+          amazonLabel="Browse Big Barker orthopedic dog beds on Amazon →"
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />

@@ -78,7 +78,7 @@ export default function GreeniesVsWhimzeesGuidePage() {
         <p>The link below searches for Greenies, the same search as on the dental review. Pick the size for the dog. The sale price can differ from the band above.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-greenies-vs-whimzees-guide"
-          amazonLabel="Browse Greenies dental chews on Chewy →"
+          amazonLabel="Browse Greenies dental chews on Amazon →"
         />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
