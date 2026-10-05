@@ -304,7 +304,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Veterinarian-founded brand', 'Trans-resveratrol with published equine trial data', 'Reasonable monthly cost']}
               cons={['Complement to other joint support, not a standalone', 'Evidence base smaller than ASU / glucosamine', 'Lower brand visibility than mainstream alternatives']}
               price="$45–65/mo"
-              ctaText="Shop Equithrive on Amazon →"
+              ctaText="Shop Equithrive resveratrol pellets on Amazon →"
               ctaHref="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="equithrive-original-pellets"
