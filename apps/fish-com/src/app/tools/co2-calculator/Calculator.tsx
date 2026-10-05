@@ -333,26 +333,26 @@ export default function CO2Calculator() {
           </ResultMeaning>
           {method === 'pressurized' ? (
             <ResultCTA
-              heading="Shop a regulator, diffuser, and drop checker"
+              heading="Shop the solenoid regulator for this bubble rate"
               blurb={
                 <>
-                  A solenoid regulator, a diffuser sized for this tank, and a 4 dKH drop checker are the three pieces that turn a starting bubble rate into a stable 15–35 ppm range.
+                  This is the aquarium CO2 regulator and solenoid search already on this page. The diffuser and drop-checker searches stay in the shop section.
                 </>
               }
-              query="aquarium co2 regulator diffuser drop checker"
-              cta="Browse pressurized CO2 kits on Amazon"
+              query="aquarium+co2+regulator+solenoid"
+              cta="Browse aquarium CO2 regulator solenoids on Amazon"
               source="tools-co2-calculator"
             />
           ) : (
             <ResultCTA
-              heading="Shop liquid carbon for a low-tech boost"
+              heading="Shop Seachem Flourish Excel for a low-tech boost"
               blurb={
                 <>
                   Liquid carbon is a daily dose, not a pressurized substitute. Pair it with easy plants and skip it if you keep sensitive vallisneria or heavy shrimp.
                 </>
               }
-              query="seachem flourish excel"
-              cta="Browse liquid carbon on Amazon"
+              query="seachem+flourish+excel"
+              cta="Browse Seachem Flourish Excel on Amazon"
               source="tools-co2-calculator"
             />
           )}
@@ -388,15 +388,15 @@ export default function CO2Calculator() {
           </ResultMeaning>
           {khph.tone === 'low' ? (
             <ResultCTA
-              heading="Shop a pressurized CO2 system to reach the planted-tank range"
+              heading="Shop the solenoid regulator to reach the planted-tank range"
               blurb={
                 <>
-                  To lift CO2 toward the 15&ndash;35 ppm target, a regulator, diffuser, and drop checker are the core components.
+                  To lift CO2 toward the 15–35 ppm target, this is the aquarium CO2 regulator and solenoid search already on this page.
                 </>
               }
-              query="aquarium co2 system regulator diffuser"
-              cta="Browse CO2 systems on Amazon"
-              source="tools-co2"
+              query="aquarium+co2+regulator+solenoid"
+              cta="Browse aquarium CO2 regulator solenoids on Amazon"
+              source="tools-co2-calculator"
             />
           ) : (
             <ResultCTA
@@ -406,9 +406,9 @@ export default function CO2Calculator() {
                   With CO2 this high, a drop checker with 4dKH reference solution is the safest way to confirm the real dissolved level before adjusting.
                 </>
               }
-              query="aquarium co2 drop checker"
-              cta="Browse drop checkers on Amazon"
-              source="tools-co2"
+              query="aquarium+co2+drop+checker"
+              cta="Browse aquarium CO2 drop checkers on Amazon"
+              source="tools-co2-calculator"
             />
           )}
         </>
