@@ -123,7 +123,7 @@ export default function BestJointSupplementsPage() {
               cons={['Dose calculation required — label suggestions are often too low', 'Some dogs refuse fish-flavored supplements', 'Blood thinner at very high doses — discuss with vet']}
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content"
-              ctaText="Shop Nordic Naturals on Amazon →"
+              ctaText="Shop Nordic Naturals omega pet on Amazon →"
               ctaHref="/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="nordic+naturals+omega+pet"
