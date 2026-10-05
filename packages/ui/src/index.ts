@@ -115,6 +115,9 @@ export { AnalyticsDashboard } from './components/AnalyticsDashboard'
 // Search
 export { SearchBar } from './components/SearchBar'
 export { MissedPage } from './components/MissedPage'
+export { SiteSearch } from './components/SiteSearch'
+export { rankSearch, searchApiBody } from './lib/site-search'
+export type { SearchEntry, RankedSearchHit, SearchCategory } from './lib/site-search'
 export { buildHowToSchema, buildMedicalWebPageSchema, buildOrganizationSchema, buildWebSiteSchema, combineSchemas, buildSpeakableSpec, buildCitationArray } from './components/SEOHead'
 export type { ArticleSourceForCitation } from './components/SEOHead'
 

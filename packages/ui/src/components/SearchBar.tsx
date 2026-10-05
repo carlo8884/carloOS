@@ -23,7 +23,7 @@ interface SearchResult {
   title: string
   excerpt: string
   path: string
-  type: 'article' | 'review' | 'breed' | 'guide' | 'faq' | 'location'
+  type: 'article' | 'review' | 'breed' | 'guide' | 'faq' | 'location' | 'comparison' | 'tool'
 }
 
 interface SearchBarProps {
@@ -41,6 +41,8 @@ const TYPE_LABELS: Record<string, string> = {
   guide: 'Guide',
   faq: 'FAQ',
   location: 'Find',
+  comparison: 'Comparison',
+  tool: 'Tool',
 }
 
 const TYPE_COLORS: Record<string, string> = {
@@ -50,6 +52,8 @@ const TYPE_COLORS: Record<string, string> = {
   guide: '#A07840',
   faq: '#0E6B8A',
   location: '#7A3AAA',
+  comparison: '#0E6B8A',
+  tool: '#E8622A',
 }
 
 export function SearchBar({ siteId, placeholder = 'Search…', className = '', fullWidth = false }: SearchBarProps) {

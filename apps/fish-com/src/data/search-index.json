@@ -1,0 +1,280 @@
+{
+  "entries": [
+    {
+      "path": "/reviews",
+      "title": "Best Aquarium Equipment Reviews 2026 — Ranked & Compared | Fish.com",
+      "description": "Aquarium equipment reviews with honest editorial criteria. Filters, heaters, lighting, nano tanks, fertilizers, and water test kits — ranked with real data.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/api-vs-salifert-guide",
+      "title": "API Master Kit vs Salifert Tests | Fish.com",
+      "description": "Which water test to buy: the API Freshwater Master Kit for community tanks, or Salifert tests for reef alkalinity, calcium, and magnesium.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/best-aquarium-filters",
+      "title": "Best Aquarium Filters 2026 — HOB, Canister | Fish.com",
+      "description": "Flow rate accuracy, biological filtration capacity, noise, and ease of maintenance compared across the major hang-on-back, canister, and sponge options.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-aquarium-heaters",
+      "title": "Best Aquarium Heaters 2026 — Ranked for Accuracy | Fish.com",
+      "description": "Eheim Jager, Fluval, Cobalt Neo-Therm, and Aqueon ranked using published spec sheets and aggregated keeper accuracy reports.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-aquarium-lighting",
+      "title": "Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com",
+      "description": "Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-canister-filters",
+      "title": "Best Canister Filters 2026 — Fluval, Eheim | Fish.com",
+      "description": "Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-display-tank-heater-guide",
+      "title": "Best Heater for a Display Tank | Fish.com",
+      "description": "A flat shatterproof heater versus a glass heater versus an inline heater, using only the accuracy, housing, and prices on the heater review.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-nano-tanks",
+      "title": "Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com",
+      "description": "Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-planted-tank-fertilizers",
+      "title": "Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com",
+      "description": "Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-water-test-kits",
+      "title": "Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com",
+      "description": "Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/easy-green-vs-flourish-guide",
+      "title": "Easy Green vs Seachem Flourish | Fish.com",
+      "description": "The fertilizer review scores Easy Green 9.4 and Seachem Flourish Comprehensive 9.1. One all-in-one bottle, or trace elements from a fish store.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/eheim-vs-cobalt-heater-guide",
+      "title": "Eheim Jager vs Cobalt Neo-Therm | Fish.com",
+      "description": "Eheim Jager is the glass heater. Cobalt Neo-Therm Pro is the flat one. Accuracy and prices are the ones on the heater review.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/fluval-307-vs-eheim-guide",
+      "title": "Fluval 307 vs Eheim Classic | Fish.com",
+      "description": "The canister review scores the Fluval 307 at 9.4 and the Eheim Classic 350 at 9.2. AquaStop and quiet, or a longer service life.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/fluval-spec-vs-aqueon-20-guide",
+      "title": "Fluval Spec vs Aqueon 20 Long | Fish.com",
+      "description": "The nano-tank review scores the Fluval Spec V at 9.2 and the Aqueon 20-gallon long at 9.4. Printed prices are $75–95 and $30–50.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/hob-vs-canister-guide",
+      "title": "HOB vs Canister: AquaClear or Fluval | Fish.com",
+      "description": "Hang-on-back versus canister, using the AquaClear 70 and the Fluval 307: flow, tank size, noise, cleaning, and price already published.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/hygger-vs-fluval-light-guide",
+      "title": "Hygger 957 vs Fluval Plant 3.0 | Fish.com",
+      "description": "Which planted light to buy: the Hygger 957 at $45–65, or the Fluval Plant 3.0 when the tank needs the higher published PAR.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/kessil-vs-nicrew-guide",
+      "title": "Kessil A360X vs Nicrew LED | Fish.com",
+      "description": "The lighting review scores the Kessil A360X at 9.3 and the Nicrew Classic LED+ at 8.5. Printed prices are $400–500 and $20–35.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/november-december-gift-guide",
+      "title": "November and December Aquarium Gifts | Fish.com",
+      "description": "November and December aquarium gifts grouped by the price bands already printed on the filter, heater, light, tank, and test-kit reviews.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/winter-heater-sizing-guide",
+      "title": "Aquarium Heater Size for a Cold Room | Fish.com",
+      "description": "Winter rooms use the wattage the heater calculator already publishes. The shop link is the Eheim Jager search on the heater review.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/winter-photoperiod-guide",
+      "title": "Winter Light Hours for a Planted Tank | Fish.com",
+      "description": "Shorter days outside do not change the 6 to 8 hour photoperiod on the low-tech and algae pages. The link is the light timer those pages use.",
+      "category": "reviews"
+    },
+    {
+      "path": "/setup",
+      "title": "Aquarium Setup Guide — First Tank Step by Step | Fish.com",
+      "description": "Everything you need to set up your first aquarium correctly. Tank size, filtration, cycling, substrate, stocking — in the order you actually do it.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/aquarium-algae-control",
+      "title": "Aquarium Algae Control — Identify and Beat Every Type | Fish.com",
+      "description": "How to identify and control aquarium algae: green spot, hair, black beard, diatoms, and cyanobacteria. Fix the root causes — light, nutrients, and CO2.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/aquarium-cycling-guide",
+      "title": "Aquarium Cycling Guide — Fishless, Fish-in, Stalled | Fish.com",
+      "description": "How to cycle a fish tank: nitrogen cycle explained, fishless vs fish-in cycling, ammonia source choices, test schedule, and stalled-cycle troubleshooting.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/aquascaping-guide",
+      "title": "Aquascaping Guide — Layout, Hardscape & Composition | Fish.com",
+      "description": "Aquascaping fundamentals: the rule of thirds, golden ratio, iwagumi and nature-style layouts, hardscape selection, and foreground-to-background planting.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/gh-kh-water-hardness",
+      "title": "GH and KH Explained — Aquarium Water Hardness Guide | Fish.com",
+      "description": "What GH and KH mean, why they differ, and how they affect pH stability and fish health. How to raise, lower, and match hardness to your species.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/low-tech-planted-tank",
+      "title": "Low-Tech Planted Tank — No CO2, Low Light, Low Effort | Fish.com",
+      "description": "How to run a thriving low-tech planted tank without pressurized CO2. Easy plants, modest light, light fertilization, and a slow, stable, beautiful balance.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/nano-tank-setup",
+      "title": "Nano Aquarium Setup Guide — Small Tanks Done Right | Fish.com",
+      "description": "How to set up a nano aquarium under 10 gallons. Stocking, stability, filtration, and the small-tank fish that actually thrive in compact setups.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/planted-tank-setup",
+      "title": "Planted Aquarium Setup Guide — Substrate, Lighting | Fish.com",
+      "description": "How to set up a planted freshwater aquarium. Substrate selection, lighting intensity for plant growth, CO2 injection, fertilization.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/pond-guide",
+      "title": "Backyard Pond Setup Guide — Size, Filtration & Liner | Fish.com",
+      "description": "How to build a backyard koi or goldfish pond. Minimum size for fish, liner selection, filtration sizing.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/quarantine-tank-guide",
+      "title": "Quarantine Tank Guide — Setup, Duration | Fish.com",
+      "description": "A quarantine tank prevents 80% of disease introductions to established aquariums. 4-6 week minimum, bare bottom, how to treat proactively.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/saltwater-tank-setup",
+      "title": "Saltwater Aquarium Setup Guide — FOWLR vs Reef | Fish.com",
+      "description": "How to set up a saltwater aquarium. FOWLR vs reef tank, salinity maintenance, live rock, protein skimmer, and the longer cycling process explained.",
+      "category": "guides"
+    },
+    {
+      "path": "/setup/water-chemistry-guide",
+      "title": "Aquarium Water Chemistry Guide — pH, GH, KH | Fish.com",
+      "description": "pH, GH (general hardness), KH (carbonate hardness), and TDS explained for aquarium fishkeeping. How each parameter affects fish and plants.",
+      "category": "guides"
+    },
+    {
+      "path": "/tools",
+      "title": "Aquarium Calculators — Volume, Stocking, Heater, CO2 | Fish.com",
+      "description": "Free aquarium calculators: tank volume, stocking, heater wattage, water-change math, and planted-tank CO2 dosing. Built by aquarists.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/aquarium-cycling-estimator",
+      "title": "Aquarium Cycling Time Estimator — How Long Will It Take? | Fish.com",
+      "description": "Estimate aquarium cycling time by method (fishless ammonia, bottled bacteria, used media, fish-in) and water temperature. Phase-by-phase timeline.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/aquarium-setup-builder",
+      "title": "Aquarium Setup Builder — What You Need to Start a Tank | Fish.com",
+      "description": "What do you need to start a fish tank? Enter tank size and setup type for a sized starter-kit checklist: filter, heater, light, test kit, and more.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/aquarium-volume-calculator",
+      "title": "Aquarium Volume Calculator — Gallons & Liters from L×W×H | Fish.com",
+      "description": "Free aquarium volume calculator. Convert L×W×H to US gallons, UK gallons, and liters. Supports rectangular, cube, bow-front, hexagonal, and cylinder tanks.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/co2-calculator",
+      "title": "Planted Aquarium CO2 Calculator — Dosing & KH/pH | Fish.com",
+      "description": "Size planted-tank CO2 from tank gallons, plant density, and pressurized vs liquid carbon. Get bubble rate, diffuser size, drop-checker range, plus KH/pH ppm.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/filter-gph-calculator",
+      "title": "Aquarium Filter GPH Calculator",
+      "description": "How much filter flow does your tank need? Enter gallons and tank style for a GPH turnover range — community, goldfish, cichlid, or reef.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/fish-disease-symptom-checker",
+      "title": "Fish Disease Symptom Checker — Why Is My Fish Sick? | Fish.com",
+      "description": "Why is your fish sick? Tick the signs you see to find the diseases that match — ich, velvet, fin rot, dropsy and more — each linked to a treatment guide.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/heater-wattage-calculator",
+      "title": "Aquarium Heater Wattage Calculator — Size Your Tank Heater | Fish.com",
+      "description": "Calculate the right wattage aquarium heater for your tank size, room temperature, and target temperature. Includes redundancy and controller recommendations.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/live-rock-calculator",
+      "title": "Live Rock Pounds per Gallon | Fish.com",
+      "description": "Convert display gallons to live-rock pounds using the saltwater setup page’s 1–1.5 pounds per gallon guideline.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/pond-volume-calculator",
+      "title": "Pond Volume Calculator — Koi Pond Gallons & Liters | Fish.com",
+      "description": "Calculate koi or garden pond volume in gallons and liters. Rectangular, circular, and oval ponds — then size a liner, pump, and filter kit.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/stocking-calculator",
+      "title": "Aquarium Stocking Calculator — Rough Bioload Estimate | Fish.com",
+      "description": "Rough aquarium stocking estimate from surface area, volume, and filtration — a slim-inch bioload ceiling, not a species count. Freshwater and saltwater.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/substrate-calculator",
+      "title": "Aquarium Substrate Calculator — Gravel & Sand Weight | Fish.com",
+      "description": "How much gravel or sand do you need? Enter tank length, width, and depth to get substrate volume in liters plus weight in lbs and kg, with a buy-10%-extra rule.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/tank-mate-compatibility-checker",
+      "title": "Aquarium Tank Mate Compatibility Checker | Fish.com",
+      "description": "Pick two or more freshwater fish and get a Compatible / Caution / Not-recommended verdict per pair, with the reason: temperament, temperature, fin-nipping.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/water-change-calculator",
+      "title": "Aquarium Water Change Calculator",
+      "description": "How much water should you change? Enter tank gallons or liters, fill %, and change % for gallons to remove — plus weekly schedule tips by bioload.",
+      "category": "tools"
+    }
+  ]
+}

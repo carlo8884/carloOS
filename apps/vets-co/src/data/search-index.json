@@ -1,0 +1,226 @@
+{
+  "entries": [
+    {
+      "path": "/guides",
+      "title": "Vet Visit & Cost-of-Care Guides | Vets.co",
+      "description": "Practical guides to the cost of veterinary care, what to expect at the vet, emergency vs. ER visits, and getting the most from every appointment.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/choosing-a-veterinarian",
+      "title": "How to Choose a Veterinarian — A Practical Guide | Vets.co",
+      "description": "Accreditation, communication, services, location, and emergency arrangements all matter when choosing a vet. Here is how to find the right clinic for your pet.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/cost-of-veterinary-care",
+      "title": "What Veterinary Care Really Costs — A Realistic Guide | Vets.co",
+      "description": "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/emergency-vet-costs",
+      "title": "Emergency Vet Costs Explained — Why ER Care Costs More | Vets.co",
+      "description": "Emergency veterinary care costs more than routine care for real reasons. Learn what drives ER pricing, how estimates work, and how to prepare financially.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/er-vs-urgent-care",
+      "title": "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co",
+      "description": "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/guides/how-to-afford-vet-care",
+      "title": "How to Afford Vet Care — Options That Actually Help | Vets.co",
+      "description": "Pet insurance, emergency funds, payment plans, charitable funds, and veterinary schools can all help cover vet bills. Here are realistic options to explore.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/questions-to-ask-your-vet",
+      "title": "Questions to Ask Your Vet — Get the Most From Every Visit | Vets.co",
+      "description": "The right questions turn a rushed appointment into clear, confident care. Use this list to ask about diagnosis, treatment options, costs, and follow-up.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/what-to-expect-at-the-vet",
+      "title": "What to Expect at the Vet — A Visit Walkthrough | Vets.co",
+      "description": "From check-in to physical exam to the treatment plan, here is what happens at a typical veterinary visit and how to prepare so your pet gets the best care.",
+      "category": "guides"
+    },
+    {
+      "path": "/guides/when-to-go-to-the-vet",
+      "title": "When to Take Your Pet to the Vet — A Decision Guide | Vets.co",
+      "description": "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.",
+      "category": "guides"
+    },
+    {
+      "path": "/insurance/wellness-plans-vs-insurance",
+      "title": "Wellness Plans vs. Pet Insurance — What's the Difference | Vets.co",
+      "description": "Wellness plans budget for routine care; insurance protects against unexpected bills. Learn the difference and when each makes sense for your pet.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews",
+      "title": "Pet Product Reviews — Honest Comparisons | Vets.co",
+      "description": "Pet product reviews from a veterinarian's perspective. Pet insurance, telehealth services ranked using public payout data and insurer disclosures.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/askvet-vs-chewy-connect-guide",
+      "title": "AskVet Chat vs Chewy Connect | Vets.co",
+      "description": "AskVet is a $30 chat subscription. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/best-pet-insurance",
+      "title": "Best Pet Insurance 2026 — How the 11 Major Carriers Compare | Vets.co",
+      "description": "Pet insurance compared on direct-pay vs reimbursement, payout speed, pre-existing exclusions, and waiting periods. Sourced from carrier contracts.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/healthy-paws-vs-embrace-guide",
+      "title": "Healthy Paws vs Embrace Wellness | Vets.co",
+      "description": "Healthy Paws for fast reimbursement, or Embrace when you want a wellness add-on. Printed prices are not a quote.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/healthy-paws-vs-pets-best-guide",
+      "title": "Healthy Paws vs Pets Best Tiers | Vets.co",
+      "description": "The deductible page scores Healthy Paws 8.7 for one plan and Pets Best 8.2 for several tiers. Both prices are quote-based.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/holiday-emergency-visit-guide",
+      "title": "Why a Holiday Emergency Visit Costs More | Vets.co",
+      "description": "Emergency hospitals already staff holidays. The quote link is Trupanion on the insurance review, bought before a problem.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/holiday-leftovers-low-fat-guide",
+      "title": "Holiday Leftovers and a Low-Fat Dog Food | Vets.co",
+      "description": "Holiday leftovers are the pancreatitis surge already on the health page. Buy the low-fat food only after a veterinarian says the dog is ready.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/lemonade-vs-pets-best-guide",
+      "title": "Lemonade vs Pets Best | Vets.co",
+      "description": "The enrollment page scores Lemonade 8.4 for young pets and Pets Best 8.2 for flexible plans. Both prices are quote-based.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/november-december-gift-guide",
+      "title": "November and December Pet Care Costs | Vets.co",
+      "description": "November and December costs from the insurance and telehealth reviews, grouped by the monthly and per-visit bands those cards already print.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/spot-vs-manypets-guide",
+      "title": "Spot vs ManyPets Pet Insurance | Vets.co",
+      "description": "Which sample policy to read: Spot for adjustable limits, or ManyPets for one comprehensive plan. Both prices are quote-based.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/trupanion-vs-embrace-guide",
+      "title": "Trupanion vs Embrace Pet Insurance | Vets.co",
+      "description": "Which policy to read first: Trupanion for direct vet pay, or Embrace when you want a wellness add-on. Printed prices are not a quote.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/trupanion-vs-figo-guide",
+      "title": "Trupanion vs Figo Pet Insurance | Vets.co",
+      "description": "The breed-risk page scores Trupanion 9.0 for unlimited payouts and Figo 8.3 for high-limit tiers. Both prices are quote-based.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/trupanion-vs-healthy-paws-guide",
+      "title": "Trupanion vs Healthy Paws | Vets.co",
+      "description": "Direct vet payment versus fast reimbursement. Figures are the ones on the pet insurance review, not a quote for your pet.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/vetster-vs-askvet-guide",
+      "title": "Vetster vs AskVet Telehealth | Vets.co",
+      "description": "Pay per video visit versus a $30 chat subscription. Prices and limits are the ones on the telehealth page. Neither replaces an emergency clinic.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/vetster-vs-chewy-connect-guide",
+      "title": "Vetster Video vs Chewy Connect | Vets.co",
+      "description": "Vetster is pay-per-visit video. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/tools",
+      "title": "Vets.co Tools — Insurance, Cat Health & ER Triage | Vets.co",
+      "description": "Free tools: cat emergency sign-list triage, ER vs clinic vs telehealth, cat age and grimace scales, plus insurance finder and reimbursement estimators.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cat-age-calculator",
+      "title": "Cat Age Calculator — Cat Years to Human Years & Life Stage | Vets.co",
+      "description": "How old is your cat in human years? Convert cat years to human years with the standard vet chart and see your cat’s life stage and the care it needs.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cat-body-condition-score",
+      "title": "Cat Body Condition Score — Is My Cat Overweight? | Vets.co",
+      "description": "Is your cat overweight? Answer three hands-on checks to estimate your cat’s body condition score on the 1–9 WSAVA scale, with safe next steps.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cat-calorie-calculator",
+      "title": "Cat Calorie Calculator — Daily kcal | Vets.co",
+      "description": "Estimate your cat’s daily calorie needs using feline RER (70 x kg^0.75) plus indoor, outdoor, and neuter factors. Free, with optional cups-per-day.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cat-food-amount-calculator",
+      "title": "Daily Cat Food Grams | Vets.co",
+      "description": "Estimate daily cat food grams from weight, the calorie calculator’s feline factor, and the label’s kcal per kg.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cat-grimace-scale",
+      "title": "Cat Grimace Scale — Is My Cat in Pain? | Vets.co",
+      "description": "Is your cat in pain? Score five facial signs — ears, eyes, muzzle, whiskers, head — with this owner guide to the validated Feline Grimace Scale.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/er-vs-clinic",
+      "title": "ER vs Clinic vs Telehealth — Where to Go | Vets.co",
+      "description": "Pick the signs you see. Get a conservative setting — ER now, clinic tomorrow, or telehealth. A triage aid, not a diagnosis.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/tools/insurance-finder",
+      "title": "Pet Insurance Coverage Finder — Compare Options That May Fit",
+      "description": "Filter pet insurance carriers by coverage priorities (exam fees, dental, wellness, unlimited limits) and compare published options. No quotes, scores, ranking.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/insurance-quote-prep",
+      "title": "Insurance Quote Prep Checklist | Vets.co",
+      "description": "Checklist of pet age, breed, records, deductible, and reimbursement choices, plus questions to ask before a pet insurance quote.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/insurance-reimbursement-estimator",
+      "title": "Pet Insurance Reimbursement Estimator | Vets.co",
+      "description": "Free pet insurance reimbursement estimator. Enter premium, deductible, reimbursement %, annual cap, and expected claims to see net annual benefit.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/is-this-a-cat-emergency",
+      "title": "Is This a Cat Emergency? Symptom Triage Tool | Vets.co",
+      "description": "Check cat signs against feline emergency criteria for a conservative urgency read: go now, same-day vet, or monitor. A triage aid, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/pet-insurance-worth-it-calculator",
+      "title": "Is Pet Insurance Worth It? Free Breakeven Calculator | Vets.co",
+      "description": "Free breakeven calculator: see the eligible vet-cost level where a pet insurance policy pays for itself, and weigh premiums against expected reimbursement.",
+      "category": "tools"
+    }
+  ]
+}

@@ -1,0 +1,304 @@
+{
+  "entries": [
+    {
+      "path": "/care",
+      "title": "Ferret Care — Diet, Housing, Grooming & Safety | Ferret.com",
+      "description": "Ferret care references: diet basics, cage setup, bathing and grooming, exercise, litter training, and toxic foods — grounded in obligate-carnivore physiology.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/bathing-and-grooming",
+      "title": "Ferret Bathing & Grooming — Why Less Is More | Ferret.com",
+      "description": "Why over-bathing makes ferrets smell worse, not better — bathing frequency, shampoo choice, ear cleaning, nail trimming, and seasonal coat changes.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/bedding-and-litter-types",
+      "title": "Ferret Bedding & Litter Types — Safe Materials | Ferret.com",
+      "description": "A guide to ferret bedding and litter: why fleece and sleep sacks beat loose shavings, which litters are safe, and the hazards to avoid.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/cage-cleaning-routine",
+      "title": "Ferret Cage Cleaning Routine — Daily & Weekly Schedule | Ferret.com",
+      "description": "A realistic ferret cage-cleaning schedule: daily litter and food tasks, weekly bedding, the monthly deep clean, and ferret-safe disinfectants.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/cage-setup",
+      "title": "Ferret Cage Setup — Size, Bedding, Litter, Enrichment | Ferret.com",
+      "description": "Ferrets are not cage animals. Minimum cage size, multi-level layout, hammocks, corner litter boxes, out-of-cage time, and ferret-proofing.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/diet-basics",
+      "title": "Ferret Diet Basics — Obligate Carnivore Feeding | Ferret.com",
+      "description": "Ferrets are strict obligate carnivores: 32–40% protein, 18–22% fat, under 3% carbs. Diet tiers, raw/whole-prey context, and insulinoma risk.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/ear-cleaning",
+      "title": "Ferret Ear Cleaning — Technique, Frequency & Ear Mites | Ferret.com",
+      "description": "How to clean a ferret’s ears safely: normal reddish-brown wax versus a problem, gentle technique, and telling ear mites from buildup.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/exercise-and-enrichment",
+      "title": "Ferret Exercise & Enrichment — Out-of-Cage Time | Ferret.com",
+      "description": "Ferrets need 4+ hours of out-of-cage time daily. Ferret-proofing, tunnels, dig boxes, ball pits, food puzzles, and toy rotation.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/ferret-proofing-your-home",
+      "title": "Ferret-Proofing Your Home — Room-by-Room Hazard Checklist | Ferret.com",
+      "description": "A room-by-room ferret-proofing guide: gap-blocking, recliner and appliance dangers, ingestion hazards, and building a safe free-roam space.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/heat-stroke-prevention",
+      "title": "Ferret Heat Stroke Prevention — Safe Temperatures | Ferret.com",
+      "description": "Ferrets overheat dangerously fast. Safe temperature ranges, why ferrets cannot sweat, early heat-stress signs, and emergency cooling steps.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/introducing-a-second-ferret",
+      "title": "Introducing a Second Ferret — Quarantine & Bonding | Ferret.com",
+      "description": "A step-by-step guide to introducing a second ferret: quarantine first, neutral-territory meetings, reading rough play vs aggression, and timeline.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/litter-training",
+      "title": "Ferret Litter Training — Corner Pans & Multi-Pan Strategy | Ferret.com",
+      "description": "How to litter-train a ferret: corner-pan placement, the multi-pan rule, paper-pellet substrate, kit timeline, and how to fix regression.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/multi-level-housing",
+      "title": "Multi-Level Ferret Housing — Ramps & Vertical Layout | Ferret.com",
+      "description": "How to plan a multi-level ferret cage: usable habitat per square foot, ramp safety and fall risk, level spacing, zoning food/litter/sleep, and connecting cages.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/nail-trimming",
+      "title": "Ferret Nail Trimming — Technique, Frequency & the Quick | Ferret.com",
+      "description": "How to trim a ferret’s nails safely: how often, finding the quick, the right tools, the distraction trick, and what to do if you cut too far.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/odor-and-scent-control",
+      "title": "Ferret Odor & Scent Control — What Actually Works | Ferret.com",
+      "description": "Where ferret odor comes from, why descenting and over-bathing don't fix it, and the husbandry that does: cage hygiene, diet, and litter management.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/seasonal-shedding",
+      "title": "Ferret Seasonal Shedding — Grooming & Hairball Risk | Ferret.com",
+      "description": "Ferrets blow their coat twice a year as daylight changes. What a normal shed looks like, how to groom through it, and the hairball risk.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/toxic-foods",
+      "title": "Toxic Foods for Ferrets — Chocolate, Onions, Sugar | Ferret.com",
+      "description": "Foods and substances toxic to ferrets: chocolate, onions/garlic, xylitol, grapes/raisins, sugar, dairy, and household toxins — plus what to do.",
+      "category": "guides"
+    },
+    {
+      "path": "/care/travel-and-carriers",
+      "title": "Traveling With a Ferret — Carriers & Car Trips | Ferret.com",
+      "description": "How to travel safely with a ferret: choosing a carrier, securing it in the car, temperature and water on the road, and reducing travel stress.",
+      "category": "guides"
+    },
+    {
+      "path": "/colors/male-vs-female-ferrets",
+      "title": "Male vs. Female Ferrets — Hobs vs. Jills | Ferret.com",
+      "description": "Male vs. female ferrets: size, temperament, and care differences between hobs and jills, why spaying and neutering matter, and which might suit your home.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/diet/kit-vs-adult-feeding",
+      "title": "Kit vs Adult Ferret Feeding — Imprinting & Life Stages | Ferret.com",
+      "description": "How ferret feeding changes by life stage: why the first six months set lifelong preferences, food imprinting and fixation, weaning, and senior feeding.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/diet/whole-prey-vs-kibble",
+      "title": "Whole-Prey vs Kibble for Ferrets — Which Diet Model? | Ferret.com",
+      "description": "The central ferret feeding decision compared: whole-prey/raw versus commercial kibble on biological fit, convenience, cost, dental wear, and food safety.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/ownership/adoption-vs-buying",
+      "title": "Adopting vs Buying a Ferret — Rescue, Breeder, Pet Store | Ferret.com",
+      "description": "Where to get a ferret compared: shelters and rescues, breeders, and farm-bred pet-store ferrets, on health, altering, descenting, and temperament.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews",
+      "title": "Best Ferret Gear: Buyer Guides & Reviews 2026 | Ferret.com",
+      "description": "Source-cited ferret buyer guides: the best ferret cage, litter, harness, and food, ranked against published husbandry and exotic-vet criteria.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-ferret-cage",
+      "title": "Best Ferret Cage 2026: Bar Spacing & Floor Space | Ferret.com",
+      "description": "How to choose a ferret cage in 2026: safe bar spacing, floor space per ferret, ramp and shelf safety, and three multi-level cages ranked against those criteria.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-ferret-harness",
+      "title": "Best Ferret Harness 2026: H-Style vs Jacket Picks | Ferret.com",
+      "description": "The best ferret harness in 2026: H-style vs jacket harnesses ranked on escape prevention, sizing for a no-neck body, fit adjustment, and material.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/best-ferret-litter",
+      "title": "Best Ferret Litter 2026: Dust-Safe, No-Clump Picks | Ferret.com",
+      "description": "The best ferret litter in 2026: paper-pellet vs other types ranked on dust and respiratory safety, why clumping cat litter is dangerous, plus odor notes.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/fall-molt-brush-guide",
+      "title": "Fall Molt: Brush the Winter Coat | Ferret.com",
+      "description": "The fall molt, about September through November, is already on the grooming and shedding pages. The shop link is the soft slicker brush those pages already use.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/ferret-nation-vs-prevue-guide",
+      "title": "Ferret Nation vs Prevue Cage | Ferret.com",
+      "description": "Which cage to buy: the Ferret Nation double for one to four ferrets, or the Prevue Feisty Ferret when the double unit is too big.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/h-style-vs-mesh-harness-guide",
+      "title": "H-Style vs Mesh Ferret Harness | Ferret.com",
+      "description": "The harness review scores an adjustable H-style at 8.3 and a mesh leash set at 7.5. The vest comparison is a different page.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/kaytee-vs-ferret-nation-guide",
+      "title": "Kaytee vs Ferret Nation for a Group | Ferret.com",
+      "description": "Kaytee for one ferret with daily out-time, or the Ferret Nation double unit for a pair. Specs are on the cage review.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/kaytee-vs-prevue-guide",
+      "title": "Kaytee vs Prevue for One or Two | Ferret.com",
+      "description": "The cage review scores the Prevue Feisty Ferret 8.4 and the Kaytee Multi-Level 7.6. A pair-sized cage, or a single-ferret starter.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/november-december-gift-guide",
+      "title": "November and December Ferret Gifts | Ferret.com",
+      "description": "November and December ferret gifts grouped by the dollar bands already printed on the treat, grooming, food, and cage-setup cards.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/paper-vs-grass-litter-guide",
+      "title": "Paper vs Grass Pellet Litter | Ferret.com",
+      "description": "Recycled paper pellets are the default. Grass pellets are the softer alternative. Both are non-clumping and low-dust.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/paper-vs-wood-litter-guide",
+      "title": "Paper vs Wood Pellet Ferret Litter | Ferret.com",
+      "description": "Recycled paper pellets versus heat-treated wood pellets for ferrets. Dust, clumping, odor, and the pine-and-cedar warning already on the litter review.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/vest-vs-h-harness-guide",
+      "title": "Vest vs H-Style Ferret Harness | Ferret.com",
+      "description": "A vest harness versus an H-style harness for a ferret. Escape notes, fit, and price tiers come from the harness review only.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/winter-harness-fit-guide",
+      "title": "Recheck a Ferret Harness as Weight Changes | Ferret.com",
+      "description": "Recheck harness fit as seasonal weight changes. The shop link is the vest already on the harness review.",
+      "category": "reviews"
+    },
+    {
+      "path": "/reviews/wood-vs-grass-litter-guide",
+      "title": "Wood vs Grass Pellet Litter | Ferret.com",
+      "description": "The litter review scores heat-treated wood pellets 8.0 and grass pellets 7.8. Stronger odor control, or a softer pellet.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/wysong-vs-carniwhole-guide",
+      "title": "Wysong vs Carniwhole | Ferret.com",
+      "description": "The kibble review scores Wysong Epigen 90 at 9.3 and Carniwhole at 8.2. Wysong’s printed price is $30–50 for 5 lb. Carniwhole is subscription pricing.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/reviews/wysong-vs-marshall-kibble-guide",
+      "title": "Wysong Epigen 90 vs Marshall Kibble | Ferret.com",
+      "description": "Which ferret kibble to buy: Wysong Epigen 90 for the lower carb load, or Marshall Premium when you need a bag from chain retail.",
+      "category": "comparisons"
+    },
+    {
+      "path": "/tools",
+      "title": "Ferret Tools — Food Evaluator | Ferret.com",
+      "description": "Free ferret-keeping calculators: paste the guaranteed analysis from any kibble and the evaluator scores it against published ferret nutrient targets.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cage-size-calculator",
+      "title": "Ferret Cage Size Calculator | Ferret.com",
+      "description": "How big should a ferret cage be? Enter ferret count, levels, and playtime for a minimum L×W×H footprint. Husbandry estimate — not a clinical spec.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/cost-calculator",
+      "title": "Ferret Cost Calculator — Monthly & First-Year | Ferret.com",
+      "description": "Estimate monthly and first-year ferret costs from count, housing, and food style. Editable setup, food, litter, and vet — a planning range, not a quote.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/ferret-age-calculator",
+      "title": "Ferret Age Calculator — Human Years & Life Stage | Ferret.com",
+      "description": "Convert ferret years to a human-year estimate and a kit / young adult / mature / senior label. A planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/ferret-body-condition-score",
+      "title": "Ferret Body Condition Score — 1–9 Planning Aid | Ferret.com",
+      "description": "Estimate a ferret’s body condition (1–9) from rib feel, waist, and belly. A planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/ferret-grimace-scale",
+      "title": "Ferret Grimace Scale — Is My Ferret in Pain? | Ferret.com",
+      "description": "Score five ferret facial signs — ears, eyes, nose, cheeks, whiskers — on this owner Ferret Grimace checklist. Planning reference, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/food-evaluator",
+      "title": "Ferret Food Evaluator — Is This Kibble Right for Ferrets? | Ferret.com",
+      "description": "Paste guaranteed analysis numbers from any kibble bag; the evaluator scores it against published ferret nutrient targets with per-nutrient notes.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/is-this-a-ferret-emergency",
+      "title": "Is This a Ferret Emergency? Symptom Triage | Ferret.com",
+      "description": "Check ferret signs against exotic-mammal emergency criteria for a conservative urgency read: go now, same-day vet, or monitor. A triage aid, not a diagnosis.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/label-calculator",
+      "title": "Ferret Food Label Calculator | Ferret.com",
+      "description": "Convert a ferret kibble label to dry-matter protein, fat, and carbohydrate by difference, then match the kibble review’s cards.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/litter-planner",
+      "title": "Ferret Litter Planner",
+      "description": "How much ferret litter do you need? Enter ferret count for corner-pan count and 30 lb bags per month. Paper pellet default — never clumping clay.",
+      "category": "tools"
+    },
+    {
+      "path": "/tools/readiness-quiz",
+      "title": "Ferret Readiness Quiz & New-Owner Kit | Ferret.com",
+      "description": "Ten honest questions on legality, time, budget, and housing — then a day-one kit checklist with Amazon hops for cage, litter, food, and carrier.",
+      "category": "tools"
+    }
+  ]
+}
