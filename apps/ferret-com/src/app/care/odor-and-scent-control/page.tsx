@@ -58,7 +58,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Why do ferrets smell?',
@@ -94,7 +93,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretOdorScentControlPage() {
   return (
@@ -142,7 +140,7 @@ export default function FerretOdorScentControlPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Bathing & Grooming', href: '/care/bathing-and-grooming' },
@@ -326,18 +324,6 @@ export default function FerretOdorScentControlPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret odor-source-map chart /
-              ferret fridge bedding-wash card /
-              mustelid odor-control handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              bathing / exercise kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

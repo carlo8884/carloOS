@@ -184,15 +184,6 @@ export default function RacingForNewcomersHubPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn newcomer race-card chart /
-            horse stall-door paddock parade card /
-            equine racing-silks literacy handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs jump-racing /
-            racing-hub hops. Do not
-            re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

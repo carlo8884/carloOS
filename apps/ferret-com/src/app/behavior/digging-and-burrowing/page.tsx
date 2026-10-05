@@ -60,7 +60,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Why does my ferret dig at the corner of the carpet?',
@@ -86,7 +85,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretDiggingBurrowingPage() {
   return (
@@ -135,7 +133,7 @@ export default function FerretDiggingBurrowingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'DIY Enrichment Toys', href: '/behavior/diy-enrichment-toys' },
@@ -290,16 +288,6 @@ export default function FerretDiggingBurrowingPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret dig-box chart /
-              ferret fridge dig-filler card /
-              mustelid dig-burrow reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              Existing Marshall tunnel + Chewy ball-pit
-              hops stay below. ShopCtas never href="#"
-              or PLACEHOLDER.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies

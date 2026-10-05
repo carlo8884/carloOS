@@ -75,7 +75,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-
 const FAQS = [
   {
     question: 'Is anesthesia riskier in ferrets than in dogs and cats?',
@@ -154,7 +153,7 @@ export default function FerretAnesthesiaRiskPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
@@ -318,19 +317,6 @@ export default function FerretAnesthesiaRiskPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret short-fast chart /
-              ferret fridge glucose-temp card /
-              mustelid anesthesia-clinic handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              signs-of-pain / ear-mites / heart-disease hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

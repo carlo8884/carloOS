@@ -184,17 +184,6 @@ export default function OptionalClaimingRacesPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse optional-claiming hybrid chart /
-              horse stall-door for-the-tag card /
-              equine field-fill handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs allowance /
-              claiming / maiden hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

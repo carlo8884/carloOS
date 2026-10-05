@@ -18,7 +18,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const TOOLS = [
   {
     href: '/tools/aquarium-cycling-estimator',
@@ -205,18 +204,6 @@ export default function ToolsHub() {
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated aquarium calculator-tools chart /
-            aquarium rim measurement card /
-            aquarist calculator reference handbook).
-            Educational stand searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#" or
-            PLACEHOLDER. Unused vs equipment-hub /
-            setup-aquarium aquaclear+70+filter /
-            fluval+307+canister+filter / eheim+jager+heater /
-            api+freshwater+master+test+kit /
-            seachem+prime+water+conditioner, stocking
-            aquarium+sand, volume aquarium+stand. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

@@ -163,17 +163,6 @@ export default function ReadingPedigreePage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse sire-dam-pedigree chart /
-              horse stall-door black-type card /
-              equine broodmare-distaff handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs /racing/bloodstock
-              / /bloodstock hub hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

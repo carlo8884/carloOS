@@ -85,17 +85,6 @@ export default function HowMuchToFeedPage() {
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog BCS-score chart /
-            dog fridge ideal-weight card /
-            canine RER-portion handbook).
-            No existing product hop to keep.
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / nsaid hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs safe-human-foods /
-            toxic-foods / can-dogs-eat hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

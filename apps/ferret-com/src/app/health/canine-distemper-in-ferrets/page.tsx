@@ -76,7 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-
 const FAQS = [
   {
     question: 'Can my indoor-only ferret get canine distemper?',
@@ -154,7 +153,7 @@ export default function FerretCanineDistemperPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Vaccinations', href: '/health/vaccinations' },
@@ -292,19 +291,6 @@ export default function FerretCanineDistemperPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret CDV-risk chart /
-              ferret fridge indoor-carry card /
-              mustelid distemper-risk handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              GI / emergency / vet-visit hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

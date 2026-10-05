@@ -76,7 +76,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-
 const FAQS = [
   {
     question: 'How can I tell ear mites from normal ferret ear wax?',
@@ -154,7 +153,7 @@ export default function FerretEarMitesPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
@@ -329,18 +328,6 @@ export default function FerretEarMitesPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret coffee-grounds chart /
-              ferret fridge household-treat card /
-              mustelid otodectes-swab handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              heart-disease / influenza / distemper hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

@@ -201,17 +201,6 @@ export default function KentuckyDerbyPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse Run-for-the-Roses chart /
-              horse stall-door Churchill-ten-furlong card /
-              equine Derby-points-prep handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs triple-crown hub /
-              ottb-in-trail-and-pleasure hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

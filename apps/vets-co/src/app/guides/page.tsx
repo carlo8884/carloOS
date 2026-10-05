@@ -11,7 +11,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const SECTIONS = [
   { id: 'vets-guides-cost', category: 'Cost of Care', intro: 'What care costs and how owners pay for it.', items: [{ title: 'What Vet Care Really Costs', href: '/guides/cost-of-veterinary-care', badge: 'Start Here' }, { title: 'How to Afford Vet Care', href: '/guides/how-to-afford-vet-care' }, { title: 'Emergency Vet Costs Explained', href: '/guides/emergency-vet-costs' }] },
   { id: 'vets-guides-visit', category: 'The Vet Visit', intro: 'What happens at an appointment and how to choose a clinic.', items: [{ title: 'What to Expect at the Vet', href: '/guides/what-to-expect-at-the-vet' }, { title: 'Questions to Ask Your Vet', href: '/guides/questions-to-ask-your-vet' }, { title: 'Choosing a Veterinarian', href: '/guides/choosing-a-veterinarian' }] },
@@ -95,23 +94,11 @@ export default function VetsGuidesHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet guides section-map chart /
-            pet fridge guides prep card /
-            veterinary guides reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health kitchen kits and child
-            spiral+notebook / household+budget+workbook
-            hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   </>

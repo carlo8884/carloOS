@@ -279,20 +279,6 @@ export default function ToolsHub() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog calculator-tools chart /
-            dog fridge measurement card /
-            canine calculator reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs health-hub
-            pet+first+aid+kit / digital+pet+thermometer /
-            soft+dog+carrier / dental+chews+dog /
-            orthopedic+dog+bed, tool children
-            wire+dog+crate+with+divider+panel /
-            dog+crate+pad / dog+crate+cover /
-            puppy+training+pads. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

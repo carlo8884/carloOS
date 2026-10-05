@@ -395,18 +395,6 @@ export default function OwnershipHubPage() {
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret ownership section-map chart /
-            ferret fridge ownership prep card /
-            mustelid ownership reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / aging hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care / behavior / health kitchen kits
-            and child finger+toothbrush / carnivore+care
-            hops.
-            Do not re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

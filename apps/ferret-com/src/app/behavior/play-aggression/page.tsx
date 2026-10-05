@@ -63,7 +63,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'My two ferrets look like they are fighting — should I break it up?',
@@ -89,7 +88,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretPlayAggressionPage() {
   return (
@@ -137,7 +135,7 @@ export default function FerretPlayAggressionPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Biting & Nipping', href: '/behavior/biting-and-nipping' },
@@ -301,18 +299,6 @@ export default function FerretPlayAggressionPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret play-vs-fight chart /
-              ferret fridge over-arousal card /
-              mustelid play-aggression reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              litter-box / dooking kitchen kits and child
-              sleep-sack / snuffle-mat hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

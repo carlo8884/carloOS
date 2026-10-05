@@ -63,7 +63,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'How long does it take to bond with a ferret?',
@@ -89,7 +88,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretBondingPage() {
   return (
@@ -137,7 +135,7 @@ export default function FerretBondingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
@@ -302,23 +300,8 @@ export default function FerretBondingPage() {
             a medical contributor and warrants an exotic-pet vet evaluation.
           </p>
 
-          
-
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bonding-week chart /
-              ferret fridge scent-trust card /
-              mustelid bonding reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              biting-and-nipping / male-vs-female kitchen
-              kits and child sleep-sack / snuffle-mat /
-              finger+toothbrush hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

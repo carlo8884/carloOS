@@ -494,21 +494,11 @@ export default function HealthHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret health triage chart /
-            ferret fridge health library card /
-            mustelid health reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / aging hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care / behavior kitchen kits and child
-            finger+toothbrush / carnivore+care hops. */}
               </section>
 
       {/* FAQ — grounded in on-page facts; FAQPage schema is injected via the combined

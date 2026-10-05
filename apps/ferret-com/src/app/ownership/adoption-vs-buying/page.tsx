@@ -79,7 +79,7 @@ export default function AdoptionVsBuyingPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
@@ -132,19 +132,6 @@ export default function AdoptionVsBuyingPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret source-compare chart /
-              ferret fridge rescue-vs-store card /
-              mustelid source-choice handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              first-week / cost / supplies kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="sources">Sources</h2>
           <p>
             Estrogen-toxicity risk in intact unbred jills, the role of altering, and discussion of early-altering and adrenal-disease associations are covered in Quesenberry KE and Carpenter JW (eds.), <em>Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery</em> (Saunders/Elsevier). Descenting and odor management reflect standard ferret-husbandry references and American Ferret Association guidance. Locate primary publications by title.

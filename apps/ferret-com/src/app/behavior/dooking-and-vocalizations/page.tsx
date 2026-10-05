@@ -58,7 +58,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'What is dooking?',
@@ -84,7 +83,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretVocalizationsPage() {
   return (
@@ -132,7 +130,7 @@ export default function FerretVocalizationsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Dead Sleep Explained', href: '/behavior/dead-sleep-explained' },
@@ -276,18 +274,6 @@ export default function FerretVocalizationsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret dook-sound chart /
-              ferret fridge hiss-scream card /
-              mustelid vocalization reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              dead-sleep / digging kitchen kits and child
-              sleep-sack / snuffle-mat hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

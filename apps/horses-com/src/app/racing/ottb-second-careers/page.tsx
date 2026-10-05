@@ -218,15 +218,6 @@ export default function OttbSecondCareersHubPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse OTTB discipline-ladder chart /
-            horse stall-door foundation-flatwork card /
-            equine letdown-to-restart handbook).
-            Educational barn searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs ottb-aftercare /
-            handicap hops. Do not
-            re-open #1165 / what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

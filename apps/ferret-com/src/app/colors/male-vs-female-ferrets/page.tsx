@@ -38,7 +38,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-06-01T00:00:00Z',
 })
 
-
 const FAQS = [
   {
     question: 'What is the difference between a male and female ferret?',
@@ -109,7 +108,7 @@ export default function MaleVsFemaleFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Spaying & Neutering', href: '/health/spaying-and-neutering' },
@@ -255,27 +254,6 @@ export default function MaleVsFemaleFerretsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret hob-jill size chart /
-              ferret fridge hob-vs-jill card /
-              mustelid hob-jill reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets /
-              chocolate-ferrets / black-ferrets /
-              silver-ferrets / panda-ferrets /
-              blaze-and-roan / choosing-healthy /
-              ferret-lifespan kitchen kits and child
-              finger+toothbrush / carnivore+care hops.
-              Directory import left untouched. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies

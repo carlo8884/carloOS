@@ -79,7 +79,7 @@ export default function TransitioningFoodsPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="diet" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Best Ferret Kibble', href: '/diet/best-ferret-kibble' },
@@ -200,19 +200,6 @@ export default function TransitioningFoodsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret food-transition chart /
-              ferret fridge mix-ratio card /
-              mustelid food-transition handbook).
-              Keep existing Chewy meat-topper review hop.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              safe-treats / kit-adult kitchen kits.
-              Directory import left untouched. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies

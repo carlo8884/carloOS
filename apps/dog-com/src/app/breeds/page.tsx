@@ -628,22 +628,11 @@ export default async function BreedsPage() {
       </section>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog breeds profile chart /
-            dog fridge breeds library card /
-            canine breeds reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training / guides kitchen kits
-            and child slicker+brush / rubber+curry hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
 
       <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />

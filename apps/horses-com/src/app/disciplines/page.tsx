@@ -255,19 +255,6 @@ export default function DisciplinesIndexPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn discipline section-map chart /
-            horse stall-door discipline prep card /
-            equine discipline reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / tack / nutrition / care /
-            health / guides / ownership / breeds kitchen
-            kits and child horse+curry+comb /
-            horse+hoof+pick hops. Directory import left
-            untouched. Do not re-open #1165 /
-            what-to-expect. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

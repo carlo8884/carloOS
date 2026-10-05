@@ -197,17 +197,6 @@ export default function ToolsHub() {
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret calculator-tools chart /
-            ferret fridge measurement card /
-            mustelid calculator reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine ASIN hops. ShopCtas hides empty
-            Chewy; never href="#" or PLACEHOLDER.
-            Unused vs child tools pet+first+aid+kit /
-            digital+pet+thermometer / ferret+hammock /
-            ferret+nation+critter+nation+double+unit /
-            compressed+wood+pellet+litter. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

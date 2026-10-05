@@ -65,7 +65,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Do all ferret bites hurt?',
@@ -91,7 +90,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretBitingNippingPage() {
   return (
@@ -139,7 +137,7 @@ export default function FerretBitingNippingPage() {
             <CrossPortfolioCard currentSite="ferret-com" contentType="behavior" variant="sidebar" />
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Behavior Hub', href: '/behavior' },
           { title: 'Training & Bonding', href: '/behavior/training-and-bonding' },
@@ -349,24 +347,8 @@ export default function FerretBitingNippingPage() {
             an exotic-pet vet visit.
           </p>
 
-          
-
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bite-inhibition chart /
-              ferret fridge bite-type card /
-              mustelid bite-inhibition reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs behavior-hub /
-              colors-hub / first-year-schedule /
-              male-vs-female / ferret-lifespan kitchen
-              kits and child sleep-sack / snuffle-mat /
-              finger+toothbrush / carnivore+care hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

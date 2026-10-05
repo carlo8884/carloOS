@@ -161,16 +161,6 @@ export default function TackHubPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn tack section-map
-            chart / horse stall-door tack fit card /
-            equine tack reference handbook).
-            Educational barn searches only; no Rx /
-            vaccine / child-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / nutrition / care kitchen kits
-            and child snaffle / helmet / girth hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-3xl">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies
