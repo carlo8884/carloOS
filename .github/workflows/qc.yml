@@ -121,6 +121,18 @@ jobs:
       - name: Run kitchen-kit-ban
         run: node scripts/ci/kitchen-kit-ban.mjs
 
+  hop-topic-match:
+    name: Amazon search matches page topic (report-only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run hop-topic-match
+        run: node scripts/ci/hop-topic-match.mjs && node --test scripts/ci/hop-topic-match.test.mjs
+
   tool-schema-coverage:
     name: Tool-page GEO schema coverage (SoftwareApplication + HowTo + FAQ)
     runs-on: ubuntu-latest
