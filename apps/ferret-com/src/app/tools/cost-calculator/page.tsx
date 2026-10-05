@@ -235,7 +235,7 @@ export default function CostCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-cost-calculator"
-                amazonLabel="Browse multi-level cages on Amazon →"
+                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=tools-cost-calculator"

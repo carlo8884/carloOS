@@ -230,7 +230,7 @@ export default function ReadinessQuizPage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz"
-                amazonLabel="Browse multi-level cages on Amazon →"
+                amazonLabel="Browse Ferret Nation / Critter Nation double units on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz"
