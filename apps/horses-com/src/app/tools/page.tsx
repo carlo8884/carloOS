@@ -192,6 +192,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+hoof+pick?s=tools-hub"
+              amazonLabel="Browse horse hoof picks on Amazon →"
             />
           </div>
         </div>
