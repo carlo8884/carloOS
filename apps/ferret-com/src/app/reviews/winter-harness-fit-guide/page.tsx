@@ -78,7 +78,7 @@ export default function WinterHarnessFitGuidePage() {
         <p>The vest is the escape-resistance pick on that guide, scored 9.0, a broad panel over the chest and shoulders. The review says it can overheat a ferret in warm weather unless the panel is mesh. That warning is about heat, not about October. The H-style is the lighter harness the guide says to buy only if you will measure and recheck every outing. The link on this page is the vest search from the harness review, the layout named when backing out is the problem. A coat change is the <Link href="/reviews/fall-molt-brush-guide">fall molt guide</Link>. It does not change the buckle.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The link below searches for the vest harness from the harness review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find a ferret vest harness on Amazon →</a></p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-winter-harness-fit-guide">Find an escape-proof jacket ferret harness on Amazon →</a></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <EmailCapture
