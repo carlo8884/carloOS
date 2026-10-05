@@ -313,10 +313,11 @@ const CALCULATORS = [
     mustInclude: [
       { re: /source="tools-dog-crate-size-under-hero"/, label: 'under-hero email capture source tag' },
       { re: /resourceLabel="Save the sizing steps"/, label: 'real crate-size resource magnet, not inbox notes' },
-      { re: /amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-dog-crate-size/, label: 'wire crate with divider search hop (same query as puppy-weight / new-puppy)' },
+      { re: /amazon-brand\/midwest\+icrate\+dog\+crate\?s=tools-dog-crate-size/, label: 'MidWest iCrate search hop, same product as the crate review' },
       { re: /<JourneyNext/, label: 'journey next-step after the size result' },
       { re: /nextHref="\/reviews\/best-dog-crates"/, label: 'next step is the crate review, one money page' },
-      { re: /resourceHref="\/go\/amazon-brand\/wire\+dog\+crate\+with\+divider\+panel\?s=tools-dog-crate-size"/, label: 'journey hop reuses the existing crate search' },
+      { re: /resourceHref="\/go\/amazon-brand\/midwest\+icrate\+dog\+crate\?s=tools-dog-crate-size"/, label: 'journey hop is the MidWest iCrate search' },
+      { re: /resourceLabel="Browse MidWest iCrate dog crates on Amazon →"/, label: 'product and retailer on the crate button' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -324,7 +325,7 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /dog\+crate\+pad|dog\+crate\+cover|puppy\+training\+pads/, label: 'one crate hop, not a stacked kit' },
     ],
-    why: 'After the size result, one next step: the crate review plus the existing wire-crate-with-divider search. No pad/cover/pad stack.',
+    why: 'After the size result, one next step: the crate review plus the MidWest iCrate search that review leads with. The button names the product and Amazon. No pad/cover/pad stack.',
   },
   {
     id: 'shared · JourneyNext',
