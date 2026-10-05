@@ -78,7 +78,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-05-29',
 })
 
-
 const FAQS = [
   {
     question: 'Do I need a special exotic-pet vet for a ferret?',
@@ -164,7 +163,7 @@ export default function FerretVetVisitPrepPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Annual Checkup Guide', href: '/health/annual-checkup-guide' },
@@ -525,19 +524,6 @@ export default function FerretVetVisitPrepPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bring-list chart /
-              ferret fridge carrier-prep card /
-              mustelid clinic-choice handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              checkup / insurance / travel-and-carriers
-              product hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

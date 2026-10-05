@@ -293,24 +293,11 @@ export default function ColorsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret colors palette chart /
-            ferret fridge color id card /
-            mustelid colors reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / aging hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care / behavior / health / ownership
-            kitchen kits and child finger+toothbrush /
-            carnivore+care hops. Directory import left
-            untouched.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
 
       {/* Email Capture */}

@@ -376,18 +376,6 @@ export default function BehaviorHubPage() {
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret behavior cue chart /
-            ferret fridge behavior card /
-            mustelid behavior reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / harness-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet / care kitchen kits and child
-            ferret+vest+harness / snuffle+mat hops.
-            Footer EmailCapture left as existing
-            source=behavior-hub (not under-hero). */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

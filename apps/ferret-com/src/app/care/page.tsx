@@ -302,17 +302,6 @@ export default function CareHubPage() {
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated ferret care routine chart /
-            ferret fridge care card /
-            mustelid care reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / cage-SKU hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            diet kitchen kits and child
-            midwest+critter+nation / ferret+sleep+sack
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

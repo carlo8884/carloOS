@@ -151,23 +151,11 @@ export default function BloodstockHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn bloodstock section-map chart /
-            horse stall-door bloodstock prep card /
-            equine bloodstock reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / tack / nutrition / care /
-            health / guides / ownership / breeds /
-            disciplines kitchen kits and child
-            horse+curry+comb / horse+hoof+pick hops. Do not
-            re-open #1165 / what-to-expect. */}
               </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}

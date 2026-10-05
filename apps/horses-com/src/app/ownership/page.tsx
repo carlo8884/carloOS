@@ -153,17 +153,6 @@ export default function OwnershipHubPage() {
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn ownership section-map chart /
-            horse stall-door ownership prep card /
-            equine ownership reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            supplements / tack / nutrition / care /
-            health / guides kitchen kits and child
-            ownership+monthly+budget / bandage+scissors
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

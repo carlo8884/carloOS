@@ -94,7 +94,6 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(schema, med, faqSchema)
 
-
 export default function FerretDietBasicsPage() {
   return (
     <>
@@ -144,7 +143,7 @@ export default function FerretDietBasicsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Ferret Diet Hub', href: '/diet' },
@@ -245,19 +244,6 @@ export default function FerretDietBasicsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret obligate-macro chart /
-              ferret fridge diet-ladder card /
-              mustelid diet-basics handbook).
-              Keep existing Wysong / Marshall /
-              Carniwhole review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs diet-hub /
-              protein-fat / kibble / odor kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

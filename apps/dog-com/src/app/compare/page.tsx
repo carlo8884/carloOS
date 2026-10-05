@@ -256,23 +256,11 @@ export default function CompareHubPage() {
         </Link>
       </section>
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-                
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog compare decision-axis chart /
-            dog fridge compare pair card /
-            canine compare reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training / guides / breeds /
-            conditions / symptoms kitchen kits and child
-            slicker+brush+dog+grooming hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
       <CrossPortfolioCard currentSite="dog-com" contentType="breed" variant="footer" />
     </>

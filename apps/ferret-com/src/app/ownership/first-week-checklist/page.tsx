@@ -79,7 +79,7 @@ export default function FirstWeekChecklistPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Ferret Supplies Checklist', href: '/ownership/ferret-supplies-checklist' },
@@ -155,18 +155,6 @@ export default function FirstWeekChecklistPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret first-week-map chart /
-              ferret fridge arrival-day card /
-              mustelid first-week handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              first-year / supplies / diet-basics kitchen
-              kits.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

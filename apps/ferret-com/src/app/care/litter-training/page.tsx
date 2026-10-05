@@ -69,7 +69,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'Can ferrets actually be litter-trained?',
@@ -105,7 +104,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretLitterTrainingPage() {
   return (
@@ -158,7 +156,7 @@ export default function FerretLitterTrainingPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Litter Box Troubleshooting', href: '/behavior/litter-box-troubleshooting' },
@@ -504,18 +502,6 @@ export default function FerretLitterTrainingPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret corner-pan-map chart /
-              ferret fridge paper-pellet card /
-              mustelid litter-training handbook).
-              Keep existing Marshall + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              litter-box / bathing kitchen kits. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

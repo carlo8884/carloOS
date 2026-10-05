@@ -70,7 +70,6 @@ const articleSchema = buildArticleSchema({
   citation: SOURCES,
 })
 
-
 const FAQS = [
   {
     question: 'How often should I bathe my ferret?',
@@ -106,7 +105,6 @@ const FAQS = [
 const faqSchema = buildFAQSchema({ questions: FAQS })
 
 const combined = combineSchemas(articleSchema, faqSchema)
-
 
 export default function FerretBathingGroomingPage() {
   return (
@@ -159,7 +157,7 @@ export default function FerretBathingGroomingPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Care Hub', href: '/care' },
           { title: 'Ear Cleaning', href: '/care/ear-cleaning' },
@@ -517,19 +515,6 @@ export default function FerretBathingGroomingPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret bath-less-frequency chart /
-              ferret fridge shampoo-choice card /
-              mustelid grooming-reference handbook).
-              Keep existing Marshall + Chewy review hops.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs care-hub /
-              supplies / seasonal-shedding kitchen kits.
-              Directory import left untouched. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop supplies

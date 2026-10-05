@@ -425,18 +425,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse plain-flap dressage-saddle chart /
-                  horse stall-door white-square-pad card /
-                  equine snaffle-eggbutt-bridle handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/dressage
-                  overview / how-thoroughbred-sales-work hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop dressage equipment
@@ -456,18 +444,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse close-contact forward-flap chart /
-                  horse stall-door shaped-jump-pad card /
-                  equine figure-eight-grackle-bridle handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/show-jumping
-                  overview / dressage-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop show-jumping equipment
@@ -487,18 +463,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse BETA-level-three-protector chart /
-                  horse stall-door medical-armband card /
-                  equine stud-kit-xc handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/eventing
-                  overview / show-jumping-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop eventing equipment
@@ -518,18 +482,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse silver-mounted show-saddle chart /
-                  horse stall-door wool-felt-show-blanket card /
-                  equine curb-shank-eight-five handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/western-pleasure
-                  overview / eventing-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop western pleasure equipment
@@ -549,18 +501,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse undercut-pommel reining-saddle chart /
-                  horse stall-door sliding-plate card /
-                  equine skid-boot-nrha handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/reining
-                  overview / western-pleasure-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop reining equipment
@@ -580,18 +520,6 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse flex-tree trail-saddle chart /
-                  horse stall-door halter-bridle-combo card /
-                  equine pommel-cantle-bag handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs /disciplines/trail-riding
-                  overview / reining-equipment hops.
-                  Directory import left untouched.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop trail-riding equipment

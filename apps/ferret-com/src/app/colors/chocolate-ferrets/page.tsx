@@ -39,7 +39,6 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-30T00:00:00Z',
 })
 
-
 const FAQS = [
   {
     question: 'What does a chocolate ferret look like?',
@@ -110,7 +109,7 @@ export default function ChocolateFerretsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Colors Hub', href: '/colors' },
           { title: 'Ferret Colors & Patterns', href: '/colors/ferret-colors-and-patterns' },
@@ -252,27 +251,8 @@ export default function ChocolateFerretsPage() {
             ferret will be labeled or how its coat will change with age and season.
           </p>
 
-          
-
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret chocolate milk-coat chart /
-              ferret fridge chocolate-vs-brown card /
-              mustelid chocolate reference handbook).
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs tools / reviews /
-              diet / care / behavior / health / ownership /
-              colors-hub / first-year-schedule /
-              colors-and-patterns / sable-ferrets /
-              albino-ferrets / dew-ferrets /
-              cinnamon-ferrets / champagne-ferrets kitchen
-              kits and child finger+toothbrush /
-              carnivore+care hops. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

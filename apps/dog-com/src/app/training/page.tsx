@@ -76,7 +76,6 @@ const FAQ_ITEMS: Array<{ question: string; answer: string }> = [
   },
 ]
 
-
 const SECTIONS = [
   {
     category: 'Fundamentals',
@@ -340,17 +339,6 @@ export default function TrainingHubPage() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog training session chart /
-            dog fridge training cue card /
-            canine training reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea / heartworm / shock-collar
-            ASIN hops. ShopCtas hides empty Chewy;
-            never href="#" or PLACEHOLDER. Unused vs
-            tools / reviews / nutrition kitchen kits
-            and child training crate / clicker / treat
-            / harness hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

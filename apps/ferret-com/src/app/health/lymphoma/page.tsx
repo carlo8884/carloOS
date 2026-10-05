@@ -44,7 +44,6 @@ import {
 } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
-
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Lymphoma in Ferrets — Signs, Chemotherapy & Prognosis | Ferret.com',
@@ -76,7 +75,6 @@ const medSchema = buildMedicalWebPageSchema({
   authorName: 'Ferret.com Editorial',
   lastReviewed: '2026-05-29',
 })
-
 
 const FAQS = [
   {
@@ -185,7 +183,7 @@ export default function FerretLymphomaPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Adrenal Disease', href: '/health/adrenal-disease' },
@@ -562,19 +560,6 @@ export default function FerretLymphomaPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret lump-weight chart /
-              ferret fridge senior-cbc card /
-              mustelid lymphoma-workup handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              anesthesia / signs-of-pain / ear-mites hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

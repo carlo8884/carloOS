@@ -178,17 +178,6 @@ export default function OttbInDressagePage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated horse OTTB rebalance-topline chart /
-              horse stall-door accepting-contact card /
-              equine OTTB collection-timeline handbook).
-              No existing product hop to keep.
-              Educational barn searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ottb-in-show-jumping /
-              disciplines-dressage hops.
-              Do not re-open #1165 / what-to-expect. */}
                   </div>
       </ArticleLayout>
     </>

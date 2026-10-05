@@ -80,7 +80,7 @@ export default function CostOfOwningAFerretPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Ferret Insurance Basics', href: '/ownership/ferret-insurance-basics' },
@@ -178,19 +178,6 @@ export default function CostOfOwningAFerretPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret startup-budget chart /
-              ferret fridge monthly-cost card /
-              mustelid cost-planning handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              first-week / supplies / cost-calculator
-              kitchen kits. Directory import left
-              untouched.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

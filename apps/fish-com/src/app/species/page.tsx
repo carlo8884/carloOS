@@ -18,7 +18,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const FEATURED = [
   { name: 'Betta Fish', sci: 'Betta splendens', type: 'Freshwater', diff: 'Beginner', slug: 'betta-fish', manifestKey: 'fish-com:species-thumb-betta' },
   { name: 'Neon Tetra', sci: 'Paracheirodon innesi', type: 'Freshwater', diff: 'Beginner', slug: 'neon-tetra', manifestKey: 'fish-com:species-thumb-neon-tetra' },
@@ -165,15 +164,6 @@ export default async function SpeciesIndexPage() {
           <AffiliateDisclosure variant="inline" siteId="fish-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated aquarium species profile chart /
-            aquarium rim species card /
-            aquarist species reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews
-            kitchen kits and child tank-setup hops.
-            Skip discus / kuhli / otocinclus children. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

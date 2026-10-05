@@ -75,7 +75,6 @@ const medSchema = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-
 const FAQS = [
   {
     question: 'What is the most common heart disease in ferrets?',
@@ -154,7 +153,7 @@ export default function FerretHeartDiseasePage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Health Hub', href: '/health' },
           { title: 'Aging Ferret Care', href: '/health/aging-ferret-care' },
@@ -334,19 +333,6 @@ export default function FerretHeartDiseasePage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret stamina-map chart /
-              ferret fridge breathing-rate card /
-              mustelid cardio-echo handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / heartworm / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs health-hub /
-              influenza / distemper / GI hops. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

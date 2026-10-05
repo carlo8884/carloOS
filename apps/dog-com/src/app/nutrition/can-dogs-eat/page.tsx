@@ -117,17 +117,6 @@ export default function CanDogsEatHubPage() {
         <div className="max-w-content-wide">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated dog chocolate-grape chart /
-              dog fridge xylitol-onion card /
-              canine food-safety handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / flea / heartworm / nsaid hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs nutrition-hub /
-              puppy-schedule / ferret can-ferrets-eat hops.
-              Do not re-open #1165 / what-to-expect. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies

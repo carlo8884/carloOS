@@ -422,23 +422,11 @@ export default function SymptomsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated pet symptoms triage chart /
-            pet fridge symptoms library card /
-            veterinary symptoms reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / insurance /
-            reviews / health / guides / breeds /
-            diagnostics kitchen kits and child
-            pet+first+aid+kit hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

@@ -79,7 +79,7 @@ export default function FerretInsuranceBasicsPage() {
 
           </>
         }
-      
+
         relatedLinks={[
           { title: 'Ferret Ownership Hub', href: '/ownership' },
           { title: 'Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret' },
@@ -210,20 +210,6 @@ export default function FerretInsuranceBasicsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
-          {/* Money path — live amazon-brand search hops
-              (laminated ferret cover-exclude chart /
-              ferret fridge waiting-period card /
-              mustelid vet-fund handbook).
-              No existing product hop to keep.
-              Educational kitchen searches only; no Rx /
-              vaccine / aging hops.
-              ShopCtas hides empty Chewy; never href="#"
-              or PLACEHOLDER. Unused vs ownership-hub /
-              travel / other-pets / kids kitchen kits.
-              Ferret.com does not sell insurance. Ferret
-              aging stays held.
-              Do not re-open #1165 / what-to-expect. */}
-          
           <h2 id="sources">Sources</h2>
           <p>
             Disease incidence in middle-aged and older ferrets — insulinoma,

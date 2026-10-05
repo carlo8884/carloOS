@@ -17,7 +17,6 @@ const breadcrumbSchema = buildBreadcrumbSchema({
   ],
 })
 
-
 const GUIDE_GROUPS = [
   { id: 'dog-guides-foundational', label: 'Foundational', intro: 'Body condition and microchipping.' },
   { id: 'dog-guides-health', label: 'Health decisions', intro: 'Spay and neuter timing from the cited research.' },
@@ -174,16 +173,6 @@ export default function GuidesHubPage() {
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog guides section-map chart /
-            dog fridge guides prep card /
-            canine guides reference handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training kitchen kits and child
-            wound+care+gauze / digital+pet+thermometer
-            hops. */}
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
             Shop related supplies

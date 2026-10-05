@@ -166,17 +166,6 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse race-card-field chart /
-                  horse stall-door form-line card /
-                  equine program-literacy handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs racing-for-newcomers
-                  hub / racing-bloodstock hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
@@ -196,17 +185,6 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse raceday-paddock-ring chart /
-                  horse stall-door call-to-post card /
-                  equine raceday-etiquette handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs how-to-read-a-race-card
-                  / racing-for-newcomers hub hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies
@@ -226,17 +204,6 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
             <>
               <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-              {/* Money path — live amazon-brand search hops
-                  (laminated horse owner-silks-pattern chart /
-                  horse stall-door saddlecloth-number card /
-                  equine racing-colours-register handbook).
-                  No existing product hop to keep.
-                  Educational barn searches only; no Rx /
-                  vaccine / flea / heartworm / nsaid hops.
-                  ShopCtas hides empty Chewy; never href="#"
-                  or PLACEHOLDER. Unused vs a-day-at-the-races
-                  / how-to-read-a-race-card / newcomers-hub hops.
-                  Do not re-open #1165 / what-to-expect. */}
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
                   Shop related supplies

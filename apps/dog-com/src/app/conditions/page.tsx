@@ -474,23 +474,11 @@ export default function ConditionsHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated dog conditions body-system chart /
-            dog fridge conditions library card /
-            canine conditions reference handbook).
-            Educational kitchen searches only; no Rx /
-            vaccine / flea hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs tools / reviews /
-            nutrition / training / guides / breeds kitchen
-            kits and child dog+cooling+mat /
-            pet+ear+cleaner hops.
-            Do not re-open #1165 / what-to-expect. */}
               </section>
     </>
   )

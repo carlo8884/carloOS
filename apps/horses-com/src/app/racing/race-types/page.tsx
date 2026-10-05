@@ -176,20 +176,11 @@ export default function RaceTypesHubPage() {
       </div>
 
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
-        
+
         <div className="max-w-content-wide mt-6">
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
         </div>
 
-        {/* Money path — live amazon-brand search hops
-            (laminated horse barn race-class ladder chart /
-            horse stall-door maiden-to-stakes card /
-            equine race-class index handbook).
-            Educational kitchen searches only; no Rx hops.
-            ShopCtas hides empty Chewy; never href="#"
-            or PLACEHOLDER. Unused vs racing-roles /
-            understanding-race-types / newcomers hops. Do not
-            re-open #1165 / what-to-expect. */}
               </section>
 
       {/* ── EMAIL CAPTURE ──────────────────────────────────────────── */}
