@@ -104,13 +104,13 @@ function computeDilution(gal: number, c: number, t: number, s: number): Dilution
 function volumeShop(removeGal: number): { query: string; cta: string; heading: string } {
   if (removeGal >= 20) {
     return {
-      query: 'python water changer',
+      query: 'python+water+changer',
       cta: 'Browse Python-style water changers on Amazon',
       heading: 'A hose-to-sink changer makes large weekly changes faster',
     }
   }
   return {
-    query: 'aquarium gravel vacuum siphon water dechlorinator',
+    query: 'aquarium+gravel+vacuum+siphon',
     cta: 'Browse gravel vacuums on Amazon',
     heading: 'A gravel-vacuum siphon handles this change in one pass',
   }
@@ -404,7 +404,7 @@ export default function WaterChangeCalculator() {
               Dilution math is only as good as the reading. The same API Freshwater Master Test Kit hop used on the water-test review.
             </>
           }
-          query="api freshwater master test kit"
+          query="api+freshwater+master+test+kit"
           cta="Browse API Master Test Kit on Amazon"
           source="tools-water-change-calculator"
         />
