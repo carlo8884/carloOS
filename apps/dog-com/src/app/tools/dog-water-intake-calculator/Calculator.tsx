@@ -80,7 +80,7 @@ function resultShop(highOz: number): {
     blurb:
       'The estimate is a typical daily range, not a quota to enforce. A heavy ceramic water bowl keeps fresh water available so you can see how much was offered versus what was left. Pair it with a measuring cup if you want the ounces and cups in numbers. This tool does not diagnose thirst — a marked, lasting change in drinking is worth a veterinary call.',
     href: `/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=${SHOP_SOURCE}`,
-    label: 'Browse ceramic pet water bowls on Amazon →',
+    label: 'Browse heavy ceramic pet water bowls on Amazon →',
   }
 }
 
