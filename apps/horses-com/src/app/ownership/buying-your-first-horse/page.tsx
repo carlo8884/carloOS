@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -132,94 +132,31 @@ export default function BuyingFirstHorsePage() {
           
 
           <h2 id="vetting">The Pre-Purchase Exam</h2>
-          <p>Never skip the pre-purchase (vetting) examination. An independent veterinarian -- ideally not the seller&apos;s vet -- examines the horse for soundness and health, identifying problems that affect its suitability and value. The exam does not guarantee a perfect horse, but it surfaces issues an inexperienced buyer would miss and informs the decision. Spending on a vet check before buying is far cheaper than discovering a serious problem afterward. See the dedicated pre-purchase exam guide.</p>
-          <p>
-            A horse pre-purchase exam records binder is how
-            the independent vet report stays with the
-            purchase file instead of living in a phone
-            photo roll — it is not a horse boarding
-            contract document binder (that lives on
-            boarding-options), not a farrier log book
-            (that lives on farrier-schedule), and not a
-            weatherproof storage clipboard (that lives
-            on flu pages). </p>
+          <p>Never skip the pre-purchase (vetting) examination. An independent veterinarian -- ideally not the seller&apos;s vet -- examines the horse for soundness and health, identifying problems that affect its suitability and value. The exam does not guarantee a perfect horse, but it surfaces issues an inexperienced buyer would miss and informs the decision. Spending on a vet check before buying is far cheaper than discovering a serious problem afterward. The <Link href="/ownership/pre-purchase-exam">pre-purchase exam guide</Link> is the checklist for what the exam covers and how to use the findings. This page does not shop a records binder.</p>
 
           <h2 id="help">Bring Experienced Help</h2>
           <p>Take a knowledgeable, trusted, and ideally independent horseperson -- your instructor or an experienced friend with no stake in the sale -- to view and try any horse. They will see things a first-timer cannot, ask the right questions, ride the horse, and provide a sober second opinion against the emotional pull of falling for a horse. Combined with an honest self-assessment, a temperament-first priority, and a proper vetting, experienced help is the best protection against a costly first-horse mistake.</p>
 
-          <h2 id="kit">First-horse buyer supplies</h2>
-          
-
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
-
-          {/* Money path — live amazon-brand search hops
-              (first-horse buyer visit field notebook /
-              laminated first-horse tryout walkthrough
-              checklist /
-              horse pre-purchase exam records binder).
-              Educational buyer searches only; no Rx /
-              vaccine ASIN hops. ShopCtas hides empty
-              Chewy; never href="#" or PLACEHOLDER.
-              Unused vs #1130
-              laminated+horse+boarding+facility+walkthrough+checklist /
-              horse+boarding+contract+document+binder /
-              waterproof+horse+hay+bale+storage+tarp, #1129
-              sterile+saline+wound+flush+horse /
-              nonstick+wound+dressing+pads+horse /
-              equine+bandage+scissors, #1128
-              laminated+horse+barn+calculator+tools+chart /
-              horse+stall+door+measurement+card /
-              equine+calculator+reference+handbook, #1127
-              laminated+horse+barn+owner+guides+chart /
-              horse+stall+door+owner+guides+card /
-              equine+owner+guides+reference+handbook, #1126
-              laminated+horse+barn+daily+care+chart /
-              horse+stall+door+care+card /
-              equine+husbandry+reference+handbook, #1125
-              laminated+horse+barn+emergency+triage+chart /
-              horse+stall+door+vital+signs+card /
-              equine+health+reference+handbook, #1124
-              laminated+horse+barn+forage+first+chart /
-              horse+stall+door+ration+card /
-              equine+nutrition+reference+handbook, #1123
-              laminated+horse+barn+treat+safety+chart /
-              lidded+horse+barn+treat+tote /
-              horse+barn+treat+prep+shears,
-              grimace / emergency
-              equine+first+aid+kit /
-              digital+veterinary+thermometer /
-              vet+wrap+bandage /
-              poultice,
-              cost-calculator
-              horse+barn+first+aid+kit /
-              horse+halter+lead+rope,
-              farrier-schedule
-              cordless+barn+flood+light /
-              equine+farrier+log+book,
-              flu
-              weatherproof+storage+clipboard,
-              trailering
-              horse+shipping+boots /
-              horse+trailer+ties,
-              helmet-guide
-              ASTM+SEI+horse+riding+helmet. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
+          <h2 id="kit">Next step</h2>
+          <div id="first-horse-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">The pre-purchase exam guide is the records checklist. This page does not shop a records binder.</p>
             <div className="flex flex-col gap-3">
+              <Link
+                href="/ownership/pre-purchase-exam"
+                className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
+              >
+                Read the pre-purchase exam guide →
+              </Link>
               <Link
                 href="/tools/horse-cost-calculator"
                 className="inline-block bg-brand-primary text-white font-semibold px-5 py-2.5 rounded-md no-underline hover:bg-brand-primary-dark"
               >
                 Estimate the first year on the cost calculator →
               </Link>
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+pre+purchase+exam+records+binder?s=ownership-buying-your-first-horse"
-                amazonLabel="Browse horse pre-purchase exam records binders on Amazon →"
-              />
-          </div>
+            </div>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

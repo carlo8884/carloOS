@@ -10455,9 +10455,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/buying-your-first-horse/page.tsx',
     mustInclude: [
       { re: /href="\/tools\/horse-cost-calculator"/, label: 'cost calculator instead of a generic hoof-pick hop' },
-      { re: /amazon-brand\/horse\+pre\+purchase\+exam\+records\+binder\?s=ownership-buying-your-first-horse/, label: 'horse pre-purchase exam records-binder search hop (matches on-page never-skip-the-vetting copy; unique vs horse+boarding+contract+document+binder / equine+farrier+log+book / weatherproof+storage+clipboard)' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /href="\/ownership\/pre-purchase-exam"/, label: 'pre-purchase exam guide instead of a records-binder shop hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10466,7 +10464,7 @@ const CALCULATORS = [
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /amazon-brand\/[^?"']*(laminated\+|fridge\+|stall\+door|mustelid\+|[^"'?]*handbook)/, label: 'never invent laminated / fridge-card / stall-door / handbook product hops' },
     ],
-    why: 'Money path: keep the existing sidebar capture; add under-hero capture with a concrete first-horse-buyer-checklist offer; every gear CTA is an amazon-brand category search matching on-page visit-more-than-once / trying-a-horse / never-skip-the-vetting copy (a first-horse buyer visit field notebook so each viewing records the seller, the horse, and what changed between visits, a laminated first-horse tryout walkthrough checklist so the handle-on-the-ground / see-it-ridden / load-and-hack protocol is posted before anyone mounts, a horse pre-purchase exam records binder so the independent vet report stays with the purchase file), never a placeholder ASIN, a #1130 boarding walkthrough / contract-binder / hay-tarp hop, a #1129 saline / pads / scissors hop, a #1128 calculator-tools-chart hop, a #1126 daily-care-chart hop, a farrier-log / clipboard hop, or a vaccine / prescription hop. Educational buyer searches only — not a ranked product list, not a substitute for a trainer or veterinarian. Chewy stays omitted so empty buttons stay hidden.',
+    why: 'The first-horse guide links the pre-purchase exam guide and the cost calculator. It does not shop a records binder. No invented notebook, laminated checklist, or binder hop.',
   },
   {
     id: 'horses · choosing-a-vet hops',
