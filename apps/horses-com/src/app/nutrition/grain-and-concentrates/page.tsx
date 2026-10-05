@@ -223,7 +223,7 @@ export default function GrainConcentratesPage() {
             pros={['Consistent nutrient delivery per serving', 'More balanced than plain grain', 'Widely available']}
             cons={['Shortchanges nutrients if underfed', 'Must be split into small meals', 'Overkill for idle horses — use a balancer instead']}
             price="$20–50 per 50 lb"
-            ctaText="Search on Amazon →"
+            ctaText="Search formulated complete pelleted horse feed on Amazon →"
             ctaHref="/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="complete-horse-feed"
@@ -247,7 +247,7 @@ export default function GrainConcentratesPage() {
             pros={['Lower starch and sugar than standard feeds', 'Supports condition in sensitive horses', 'Often softens well for seniors']}
             cons={['Use under veterinary or nutritionist guidance for metabolic horses', 'Not a replacement for forage', 'Higher cost per bag']}
             price="$30–60 per 50 lb"
-            ctaText="Search on Amazon →"
+            ctaText="Search low-starch senior horse feed on Amazon →"
             ctaHref="/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="low-starch-horse-feed"
