@@ -46,7 +46,7 @@ export default function BestLargeBreedFoodPage() {
               nextLabel="Read the large-breed puppy formula rule before you buy adult"
               nextBlurb="The callout is the bag rule — use a large-breed puppy formula until that bag's feeding guide says to switch, then the adult bag whose card lists 55–100 lb. Puppy-nutrition is the next step: schedule, amount, and when to switch. The hop below is the same Royal Canin Large Adult search already on this page."
               resourceHref="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"
-              resourceLabel="Browse Royal Canin Large Adult dog food →"
+              resourceLabel="Browse Royal Canin Large Adult dog food on Amazon →"
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
