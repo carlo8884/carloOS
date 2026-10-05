@@ -242,7 +242,7 @@ export default function HorseGestationCalculatorPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator"
-              amazonLabel="Browse foal navel dip on Amazon →"
+              amazonLabel="Browse iodine navel dip on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"
