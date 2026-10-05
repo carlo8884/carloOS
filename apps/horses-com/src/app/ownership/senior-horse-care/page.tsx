@@ -233,10 +233,9 @@ export default function SeniorHorseCarePage() {
                 amazonHref="/go/amazon-brand/beet+pulp+horse+feed?s=ownership-senior-horse-care"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/senior+horse+quality+of+life+score+card?s=ownership-senior-horse-care"
-                amazonLabel="Browse senior horse quality-of-life score cards on Amazon →"
-              />
+              <a href="/tools/body-condition-score" className="text-sm font-semibold text-brand-primary">
+                Score body condition before calling the change age →
+              </a>
           </div>
           </div>
 

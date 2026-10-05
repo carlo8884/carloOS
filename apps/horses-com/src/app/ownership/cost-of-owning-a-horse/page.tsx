@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -239,19 +239,12 @@ export default function CostOfOwningPage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+ownership+monthly+budget+worksheet?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse ownership monthly budget worksheets on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+keep+feed+farrier+cost+log+binder?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse keep / feed / farrier cost log binders on Amazon →"
-              />
-          </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Board, feed, and farrier are recurring costs. The calculator puts a monthly figure next to the ranges on this page.</p>
+            <a href="/tools/horse-cost-calculator" className="text-sm font-semibold text-brand-primary">
+              Estimate board, feed, and farrier cost →
+            </a>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

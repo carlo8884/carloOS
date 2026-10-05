@@ -306,10 +306,9 @@ export default function HorseInsurancePage() {
                 amazonHref="/go/amazon-brand/horse+insurance+policy+document+binder?s=ownership-horse-insurance"
                 amazonLabel="Browse horse insurance policy document binders on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+mortality+vs+major+medical+decision+worksheet?s=ownership-horse-insurance"
-                amazonLabel="Browse horse mortality vs major-medical decision worksheets on Amazon →"
-              />
+              <a href="/ownership/cost-of-owning-a-horse" className="text-sm font-semibold text-brand-primary">
+                See what ownership costs before choosing a policy →
+              </a>
           </div>
           </div>
 

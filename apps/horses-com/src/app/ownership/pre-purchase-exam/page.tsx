@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -261,15 +261,12 @@ export default function PrePurchaseExamPage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+pre+purchase+exam+findings+decision+worksheet?s=ownership-pre-purchase-exam"
-                amazonLabel="Browse horse pre-purchase exam findings decision worksheets on Amazon →"
-              />
-              </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Exam findings are a conversation with the veterinarian who works for the buyer. The buying guide covers what to do with that conversation.</p>
+            <a href="/ownership/buying-your-first-horse" className="text-sm font-semibold text-brand-primary">
+              Read the first-horse buying guide →
+            </a>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
