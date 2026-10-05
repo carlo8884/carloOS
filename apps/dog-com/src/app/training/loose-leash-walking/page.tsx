@@ -89,7 +89,7 @@ export default function LooseLeashPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-loose-leash-walking"
-                amazonLabel="Browse treat pouches on Amazon →"
+                amazonLabel="Browse belt-clip treat pouches on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-loose-leash-walking"

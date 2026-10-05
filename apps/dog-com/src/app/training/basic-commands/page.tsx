@@ -226,7 +226,7 @@ export default function BasicCommandsPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+clicker?s=training-basic-commands"

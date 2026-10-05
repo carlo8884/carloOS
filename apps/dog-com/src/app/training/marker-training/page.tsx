@@ -117,7 +117,7 @@ export default function MarkerTrainingPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"
-                amazonLabel="Browse treat pouches on Amazon →"
+                amazonLabel="Browse belt-clip treat pouches on Amazon →"
               />
           </div>
             <p className="text-2xs text-brand-text-light mt-3">

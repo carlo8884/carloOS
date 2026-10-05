@@ -186,7 +186,7 @@ export default function PositiveReinforcementPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">

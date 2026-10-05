@@ -151,7 +151,7 @@ export default function LeashReactivityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-leash-reactivity"
-              amazonLabel="Browse treat pouches on Amazon →"
+              amazonLabel="Browse belt-clip treat pouches on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-leash-reactivity"
