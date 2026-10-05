@@ -218,7 +218,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Single-product approach simplifies daily ration', 'NASC sealed', 'Strong brand and veterinary presence', 'Marine-source omega-3 (not flax)']}
               cons={['Premium price tier', 'Same nutrient targets cheaper as separate products', 'Auto-ship lock-in pricing structure']}
               price="$95–140/mo"
-              ctaText="Shop at Platinum →"
+              ctaText="Shop Platinum on Amazon →"
               ctaHref="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="platinum-performance-equine"
@@ -276,7 +276,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Marine source — actual DHA/EPA, not ALA', 'Research-grade formulation', 'KER&apos;s published equine trials use this product', 'Strong palatability in most horses']}
               cons={['Liquid format messier than pellets in cold weather', 'Shelf life once opened is shorter than pellets', 'Premium pricing in the category']}
               price="$55–85/mo"
-              ctaText="Shop at KER →"
+              ctaText="Shop KER on Amazon →"
               ctaHref="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="ker-eo-3"
@@ -304,7 +304,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Veterinarian-founded brand', 'Trans-resveratrol with published equine trial data', 'Reasonable monthly cost']}
               cons={['Complement to other joint support, not a standalone', 'Evidence base smaller than ASU / glucosamine', 'Lower brand visibility than mainstream alternatives']}
               price="$45–65/mo"
-              ctaText="Shop at Equithrive →"
+              ctaText="Shop Equithrive on Amazon →"
               ctaHref="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="equithrive-original-pellets"
@@ -333,7 +333,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Consistent nutritional profile', 'Wide product range', 'Senior-horse soaking options', 'National distribution']}
               cons={['Cost-per-pound higher than local baled hay', 'Not a "supplement" in the marketing sense']}
               price="Varies by product"
-              ctaText="Shop at Standlee →"
+              ctaText="Shop Standlee on Amazon →"
               ctaHref="/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="standlee-premium-forage"
