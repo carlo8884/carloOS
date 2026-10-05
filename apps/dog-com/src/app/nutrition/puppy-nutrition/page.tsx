@@ -52,8 +52,8 @@ export default function PuppyNutritionPage() {
             <a href="/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 bg-brand-primary text-white text-sm font-semibold rounded-lg hover:bg-brand-primary-dark transition-colors no-underline">
               Shop Puppy Food on Chewy →
             </a>
-            <a href="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline">
-              Shop on Amazon →
+            <a href="/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy" rel="sponsored nofollow noopener noreferrer" target="_blank" className="inline-flex max-w-full items-center gap-2 px-4 py-2.5 border border-brand-primary text-brand-primary text-sm font-semibold rounded-lg hover:bg-brand-primary-pale transition-colors no-underline whitespace-normal text-left">
+              Shop large-breed puppy food on Amazon →
             </a>
           </div>
           <p className="text-2xs text-brand-text-light mt-3">See also: <a href="/reviews/best-dog-food-for-puppies" className="text-brand-primary hover:underline no-underline">Best Dog Food for Puppies 2026</a></p>
