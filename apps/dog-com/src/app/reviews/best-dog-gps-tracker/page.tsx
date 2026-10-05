@@ -26,7 +26,7 @@ export default function BestGPSTrackerPage() {
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 on Amazon' />
+        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 collar on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
       <QuickPicks items={PICKS} />
