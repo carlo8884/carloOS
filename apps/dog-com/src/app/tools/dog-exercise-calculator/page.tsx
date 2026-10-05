@@ -191,7 +191,7 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/fi+series+3+dog+collar?s=tools-dog-exercise"
-                amazonLabel="Browse Fi activity / GPS collars on Amazon →"
+                amazonLabel="Browse Fi Series 3 activity / GPS collars on Amazon →"
               />
           </div>
           </div>
