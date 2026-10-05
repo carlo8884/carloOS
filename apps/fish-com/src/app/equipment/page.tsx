@@ -134,7 +134,7 @@ export default function EquipmentHubPage() {
           nextLabel="Size the filter for your gallons"
           nextBlurb="The six categories are the buyer map, not a sized kit. Use the filter GPH calculator next so the hang-on-back or canister is rated for the tank before you shop the rest. The hop below is the same AquaClear HOB search already on this page."
           resourceHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
-          resourceLabel="Browse hang-on-back filters on Amazon →"
+          resourceLabel="Browse AquaClear 70 filters on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (equipment kit).
@@ -193,7 +193,7 @@ export default function EquipmentHubPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"
-              amazonLabel="Browse hang-on-back filters on Amazon →"
+              amazonLabel="Browse AquaClear 70 filters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/fluval+307+canister+filter?s=equipment-hub"
@@ -201,7 +201,7 @@ export default function EquipmentHubPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=equipment-hub"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=equipment-hub"

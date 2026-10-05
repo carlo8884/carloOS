@@ -51,7 +51,7 @@ export default function IchTreatmentPage() {
           nextLabel="Rule out velvet before you stop treating"
           nextBlurb="Ich is salt-grain white spots. Velvet is a gold dust that needs a flashlight. The heat method still needs a heater you can hold at 82–86°F — the hop below is the same heater search already on this page."
           resourceHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
-          resourceLabel="Browse aquarium heaters on Amazon →"
+          resourceLabel="Browse Eheim Jager heaters on Amazon →"
         />
 
         <h2>Chemical Treatments</h2>
@@ -74,7 +74,7 @@ export default function IchTreatmentPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-ich"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+digital+thermometer?s=health-ich"

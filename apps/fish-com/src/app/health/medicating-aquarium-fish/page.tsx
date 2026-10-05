@@ -142,7 +142,7 @@ export default function MedicatingFishPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+jager+heater?s=health-medicating-fish"
-              amazonLabel="Browse aquarium heaters on Amazon →"
+              amazonLabel="Browse Eheim Jager heaters on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">
