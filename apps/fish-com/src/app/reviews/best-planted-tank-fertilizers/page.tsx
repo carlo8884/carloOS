@@ -79,7 +79,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Universally available', 'Comprehensive micronutrient profile', 'Long track record', 'Works well for low-tech with good fish load']}
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
-              ctaText="Shop Seachem Flourish on Amazon →"
+              ctaText="Shop Seachem Flourish Comprehensive on Amazon →"
               ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="seachem-flourish"
