@@ -1,32 +1,48 @@
 name: dashboard-sync
 
+# Ruleset 24478557 blocks every direct push to main, including this
+# workflow's token. Page counts are committed to bot/dashboard-sync and
+# opened or updated as one pull request. They are not pushed to main.
+
 on:
   push:
     branches: [main]
     paths:
       - 'apps/**/page.tsx'
       - 'scripts/dashboard.mjs'
+      - 'scripts/ci/dashboard-publish.sh'
       - '.github/workflows/dashboard.yml'
 
 permissions:
   contents: write
+  pull-requests: write
+
+concurrency:
+  group: dashboard-sync
+  cancel-in-progress: false
 
 jobs:
   sync:
     if: "!contains(github.event.head_commit.message, '[skip dashboard]')"
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
           node-version: '20'
-      - run: node scripts/dashboard.mjs
-      - name: Commit if changed
-        run: |
-          if [[ -n "$(git status --porcelain)" ]]; then
-            git config user.name "carloos-stabilizer"
-            git config user.email "stabilizer@carloos.local"
-            git add DASHBOARD.md README.md
-            git commit -m "chore(dashboard): sync page counts [skip dashboard]"
-            git push
-          fi
+      - name: Refresh page counts
+        run: node scripts/dashboard.mjs
+      - name: Publish counts on the bot branch
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash scripts/ci/dashboard-publish.sh
+      - name: Upload page-count files
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: dashboard-pagecounts
+          path: dashboard-artifact/
+          if-no-files-found: ignore
