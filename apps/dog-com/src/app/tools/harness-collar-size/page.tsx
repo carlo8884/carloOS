@@ -185,7 +185,7 @@ export default function HarnessCollarSizePage() {
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size"
-                amazonLabel="Browse Julius-K9 harnesses on Amazon →"
+                amazonLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size"
