@@ -21,11 +21,40 @@ const TYPE: Record<SearchCategory, RankedSearchHit['type']> = {
   tools: 'tool',
 }
 
+/** Obvious alternates. A synonym match scores below the word the visitor typed. */
+const SYNONYM_GROUPS: readonly (readonly string[])[] = [
+  ['crate', 'kennel'],
+  ['filter', 'filtration'],
+  ['tank', 'aquarium'],
+  ['halter', 'headcollar'],
+  ['insurance', 'coverage'],
+]
+
+function queryWords(query: string): { word: string; synonym: boolean }[] {
+  const typed = query.trim().toLowerCase().split(/\s+/).filter((word) => word.length > 1)
+  const out: { word: string; synonym: boolean }[] = []
+  const seen = new Set<string>()
+  for (const word of typed) {
+    if (!seen.has(word)) {
+      seen.add(word)
+      out.push({ word, synonym: false })
+    }
+    const group = SYNONYM_GROUPS.find((row) => row.includes(word))
+    if (!group) continue
+    for (const alt of group) {
+      if (seen.has(alt)) continue
+      seen.add(alt)
+      out.push({ word: alt, synonym: true })
+    }
+  }
+  return out
+}
+
 /** Rank guide, review, comparison, and tool pages. Queries shorter than two characters match nothing. */
 export function rankSearch(entries: readonly SearchEntry[], query: string): RankedSearchHit[] {
   const q = query.trim().toLowerCase()
   if (q.length < 2) return []
-  const words = q.split(/\s+/).filter((word) => word.length > 1)
+  const words = queryWords(q)
   const hits: { hit: RankedSearchHit; score: number }[] = []
   for (const entry of entries) {
     if (!TYPE[entry.category]) continue
@@ -35,11 +64,13 @@ export function rankSearch(entries: readonly SearchEntry[], query: string): Rank
     let score = 0
     if (title.includes(q)) score += 12
     if (description.includes(q)) score += 4
-    for (const word of words) {
-      if (title.includes(word)) score += 6
-      if (description.includes(word)) score += 2
+    for (const { word, synonym } of words) {
+      const titlePoints = synonym ? 4 : 6
+      const descriptionPoints = synonym ? 1 : 2
+      if (title.includes(word)) score += titlePoints
+      if (description.includes(word)) score += descriptionPoints
       if (path.includes(word)) score += 1
-      if (entry.category.includes(word)) score += 1
+      if (!synonym && entry.category.includes(word)) score += 1
     }
     if (score <= 0) continue
     hits.push({

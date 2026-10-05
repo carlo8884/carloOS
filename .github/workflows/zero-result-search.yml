@@ -1,0 +1,29 @@
+name: Zero-result search report
+
+# Lists site_search_no_results queries once an analytics export is present.
+# Until then the job prints a short note and exits 0.
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+concurrency:
+  group: zero-result-search
+  cancel-in-progress: false
+
+jobs:
+  report:
+    name: Zero-result site searches
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Report zero-result queries
+        run: node scripts/ci/zero-result-search-report.mjs

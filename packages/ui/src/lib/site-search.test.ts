@@ -29,6 +29,20 @@ test('a title match ranks above a description-only match', () => {
   assert.equal(hits.length, 2)
 })
 
+test('a typed word outranks its synonym, and kennel still finds crates', () => {
+  const entries: SearchEntry[] = [
+    { path: '/reviews/kennel', title: 'Kennel', description: 'a kennel', category: 'reviews' },
+    { path: '/reviews/best-dog-crates', title: 'Dog crates', description: 'wire crate', category: 'reviews' },
+  ]
+  const hits = rankSearch(entries, 'kennel')
+  assert.equal(hits[0]?.path, '/reviews/kennel')
+  assert.equal(hits[1]?.path, '/reviews/best-dog-crates')
+  const dog = JSON.parse(readFileSync(join(ROOT, 'apps/dog-com/src/data/search-index.json'), 'utf8'))
+  assert.equal(rankSearch(dog.entries, 'kennel').length > 0, true)
+  const horses = JSON.parse(readFileSync(join(ROOT, 'apps/horses-com/src/data/search-index.json'), 'utf8'))
+  assert.equal(rankSearch(horses.entries, 'headcollar').some((hit) => hit.path.includes('halter')), true)
+})
+
 test('queries shorter than two characters match nothing', () => {
   const entries: SearchEntry[] = [{ path: '/tools/food', title: 'Food grams', description: 'daily', category: 'tools' }]
   assert.equal(rankSearch(entries, 'f').length, 0)
@@ -64,7 +78,9 @@ test('committed indexes match the pages and include the known hubs', () => {
     assert.equal(index.entries.some((row: SearchEntry) => row.path === '/search'), false)
   }
   const track = readFileSync(join(ROOT, 'packages/ui/src/components/TrackSiteSearch.tsx'), 'utf8')
-  assert.match(track, /site_search/)
+  assert.match(track, /trackEvent\('site_search'/)
+  assert.match(track, /site_search_no_results/)
+  assert.match(track, /resultCount === 0/)
   assert.match(track, /search_term/)
   assert.match(track, /result_count/)
 })
