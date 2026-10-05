@@ -71,7 +71,7 @@ export default function BrushingBootsVsBellBootsGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-04"
     >
       <div className="carloOS-article">
         <p>Prices and scores below are the ones on the <Link href="/tack/boots-and-wraps">boots and wraps page</Link>, which compares published retail specs. Blankets and pads have their own guides. This comparison is brushing boots against bell boots.</p>
