@@ -139,7 +139,7 @@ export default function BestDogCratesPage() {
               pros={['Genuinely escape-proof', 'Aircraft-grade aluminum construction', 'Lifetime warranty', 'Preferred by professional trainers and K9 handlers']}
               cons={['Significant weight — not portable', 'Premium price point', 'Overkill for calm dogs']}
               price="$300–500"
-              ctaText="Shop Impact Crates →"
+              ctaText="Shop Impact Crates on Amazon →"
               ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="impact+high+anxiety+dog+crate"
@@ -165,7 +165,7 @@ export default function BestDogCratesPage() {
               cons={['Confirm with specific airline before travel', 'Heavier than soft-sided carriers', 'Not for cabin use (in-cabin requires soft-sided)']}
               price="$40–120"
               priceNote="By size"
-              ctaText="Shop Petmate Sky Kennel →"
+              ctaText="Shop Petmate Sky Kennel on Amazon →"
               ctaHref="/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="petmate+sky+kennel"
