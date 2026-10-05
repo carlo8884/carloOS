@@ -21,6 +21,12 @@ Fish, horses, and ferret do not register Trupanion, Healthy Paws, or Embrace. Do
 
 `/go` still records the page source from `?s=` on the hop. That source is separate from the partner id above.
 
+## Editorial quote buttons vs the Dog.com funnel
+
+Editorial Vets.co buttons for Trupanion, Healthy Paws, and Embrace stay disabled until `AFF_TRUPANION_TAG`, `AFF_HEALTHY_PAWS_TAG`, and `AFF_EMBRACE_TAG` are set. A tag set at runtime turns that partner’s quote link on. Do not invent an ID.
+
+The Dog.com `(funnels)/pet-insurance` Trupanion button is an explicit monetization-lane exception. It stays a live `/go/trupanion/home?s=pet-insurance-hub-best-overall` hop until Carlo sets those tags. Do not disable that funnel hop without his say.
+
 ## Amazon Associates
 
 Other docs still name the tag `boltonpets20-20`. The live `AFF_AMAZON_TAG` value is `boltonpets20-20ls`, and Carlo needs to confirm it. The hop copies that env value as-is and appends nothing, so a correction is an env change only. Do not change the Vercel value from this repo.
