@@ -411,6 +411,11 @@ export default function HarnessCollarSizeCalculator() {
         <ResultMeaning>
           Those letter sizes are typical retail bands for the neck and chest you entered, not a guarantee that a specific brand will fit.
         </ResultMeaning>
+        <p className="mt-4 text-sm font-semibold leading-snug">
+          <a href="/reviews/front-clip-vs-back-clip-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+            Read front-clip versus back-clip before you buy →
+          </a>
+        </p>
         <ResultPick siteId="dog-com" pick={harnessPick(result.harness.band.id)} />
       </div>
       )}
