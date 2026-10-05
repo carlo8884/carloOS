@@ -650,7 +650,7 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 * Preview SSO-gated; production dog pages confirmed without SSO historically.
 * Production pattern: *-com-carlo-tabibi-s-projects.vercel.app / stable review URLs (dog-com-three.vercel.app, carlo-os-fish-com.vercel.app, horses-com.vercel.app).
-* Dog / Fish / Horses production READY on latest main; Dog homepage client residual resolved (confirmed ~18:11 PDT Aug 31 through ~20:08 PDT Sep 2).
+* Dog / Fish / Horses production READY on latest main; Dog homepage client residual resolved (confirmed ~18:11 PDT Aug 31 through ~20:08 PDT Sep 2). Water-safety eyebrow chip is the 2026-10-05 ~10:03 PDT delta.
 * This hour merged to main: fish homepage water-safety header chip. Vercel preview follows main.
 
 ## Next planned priority
