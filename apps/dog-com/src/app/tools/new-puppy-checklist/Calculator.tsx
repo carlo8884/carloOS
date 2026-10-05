@@ -266,7 +266,7 @@ function buildList(
       essential: setting === 'outdoor',
       gear: true,
       shopHref: amazonHop('dog+shade+canopy+outdoor'),
-      shopLabel: 'Browse outdoor dog shade on Amazon →',
+      shopLabel: 'Browse shade canopies on Amazon →',
       links: [],
     })
   }
