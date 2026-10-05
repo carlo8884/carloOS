@@ -193,7 +193,7 @@ export default function HarnessCollarSizePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size"
-                amazonLabel="Browse measuring tapes on Amazon →"
+                amazonLabel="Browse dog measuring tapes and body condition charts on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+leash?s=tools-harness-collar-size"
