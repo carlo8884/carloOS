@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -78,8 +78,8 @@ export default function HolidayEmergencyVisitGuidePage() {
         <h2>Where a quote fits</h2>
         <p>Preparation on that page is insurance bought before any condition arises, which it says covers much of an emergency after the deductible, plus a savings fund for the deductible, the unreimbursed share, and the deposit. The <Link href="/reviews/best-pet-insurance">pet insurance review</Link> is where the plan comparison lives. Its primary quote link is Trupanion. Nothing here adds a premium, a reimbursement percentage, or a holiday exclusion. If a pet is already in crisis, the costs guide says go. A quote form is not emergency care.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The link below opens the Trupanion quote from the insurance review.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide">Get a Trupanion quote →</a></p>
+        <p>The quote button stays off until a partner ID is set. When that ID is set, it opens the Trupanion quote from the insurance review.</p>
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-holiday-emergency-visit-guide" label="Get a Trupanion quote →" /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <EmailCapture

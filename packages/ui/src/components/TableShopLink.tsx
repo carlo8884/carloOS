@@ -1,4 +1,4 @@
-import { partnerNeededLabel, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
 
 /** One product row's tracked shop link. The href is an existing /go target. */
 export function TableShopLink({
@@ -10,7 +10,7 @@ export function TableShopLink({
   product: string
   holdWithoutPartnerId?: boolean
 }) {
-  if (holdWithoutPartnerId && !partnerTagReady(href)) {
+  if (partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))) {
     return (
       <span className="mt-1 block font-semibold text-brand-text-light">
         {partnerNeededLabel(`${product} quote`)}

@@ -11,6 +11,7 @@ import {
   visibleShopHref,
   partnerTagReady,
   partnerNeededLabel,
+  partnerQuoteHeld,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 
@@ -221,6 +222,10 @@ describe('resolveAffiliateHop', () => {
     assert.equal(partnerTagReady('/go/embrace/home?s=reviews-best-pet-insurance', { AFF_EMBRACE_TAG: 'emb-live' }), true)
     assert.equal(partnerTagReady('/go/amazon-brand/horse+hoof+pick', {}), true)
     assert.equal(partnerNeededLabel('Get a Trupanion quote →'), 'Get a Trupanion quote — partner ID needed')
+    assert.equal(partnerQuoteHeld(href, {}), true)
+    assert.equal(partnerQuoteHeld(href, { AFF_TRUPANION_TAG: 'tru-live' }), false)
+    assert.equal(partnerQuoteHeld('/go/amazon-brand/horse+hoof+pick', {}), false)
+    assert.equal(partnerQuoteHeld(undefined, {}), false)
     assert.equal(resolveTag('trupanion', {}).tag, '')
   })
 })

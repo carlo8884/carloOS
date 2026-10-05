@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, partnerNeededLabel, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 interface Spec {
   label: string
@@ -76,7 +76,7 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const held = holdWithoutPartnerId && !partnerTagReady(rawHref)
+  const held = partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref))
   const href = held ? undefined : visibleShopHref(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta

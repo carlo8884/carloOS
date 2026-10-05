@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleLayout, FAQAccordion, InlinePartnerQuote, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -76,8 +76,8 @@ export default function TrupanionVsEmbraceGuidePage() {
         <h2>Who should read which policy</h2>
         <p>Open the Trupanion sample when direct payment at checkout, 90% reimbursement, and unlimited payouts are the terms you need to confirm, and you are not buying the policy for wellness. Open the Embrace sample when the wellness add-on is the reason, and read the 6-month orthopedic wait before you enroll. Enroll before a condition is in the record. The insurance review says a condition noted before enrollment can be excluded. Healthy Paws is another option on that review, for fast reimbursement, and it is not this comparison.</p>
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
-        <p>The link below opens the Trupanion quote from the insurance review. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide">Get a Trupanion quote →</a></p>
+        <p>The quote button stays off until a partner ID is set. When that ID is set, it opens the Trupanion quote from the insurance review. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
+        <p><InlinePartnerQuote href="/go/trupanion/home?s=reviews-trupanion-vs-embrace-guide" label="Get a Trupanion quote →" /></p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
