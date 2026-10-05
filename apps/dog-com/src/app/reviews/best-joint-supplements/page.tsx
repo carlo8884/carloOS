@@ -99,7 +99,7 @@ export default function BestJointSupplementsPage() {
               pros={['Best research support of any glucosamine product', 'ASU component with documented benefit', 'NASC quality certified', 'Nutramax research investment']}
               cons={['More expensive than basic glucosamine', 'Takes 4–6 weeks for effect — long evaluation window', 'Not a substitute for NSAIDs in severe arthritis']}
               price="$40–70 for 84-count"
-              ctaText="Shop Dasuquin →"
+              ctaText="Shop Dasuquin on Amazon →"
               ctaHref="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="dasuquin+with+msm"
@@ -123,7 +123,7 @@ export default function BestJointSupplementsPage() {
               cons={['Dose calculation required — label suggestions are often too low', 'Some dogs refuse fish-flavored supplements', 'Blood thinner at very high doses — discuss with vet']}
               price="$25–45"
               priceNote="Calculate dose by EPA+DHA content"
-              ctaText="Shop Nordic Naturals →"
+              ctaText="Shop Nordic Naturals on Amazon →"
               ctaHref="/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="nordic+naturals+omega+pet"
@@ -146,7 +146,7 @@ export default function BestJointSupplementsPage() {
               pros={['Most affordable NASC-certified glucosamine product', 'Widely available', 'Long track record of veterinary use', 'Reasonable starting point before Dasuquin']}
               cons={['Less evidence than Dasuquin (no ASU)', 'Significant non-response rate in some dogs']}
               price="$25–45 for 120-count"
-              ctaText="Shop Cosequin DS →"
+              ctaText="Shop Cosequin DS on Amazon →"
               ctaHref="/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="cosequin+ds+maximum+strength"
