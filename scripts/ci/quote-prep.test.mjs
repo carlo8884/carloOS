@@ -4,14 +4,15 @@ import test from 'node:test'
 
 const page = readFileSync('apps/vets-co/src/app/tools/insurance-quote-prep/page.tsx', 'utf8')
 
-test('quote prep uses the three existing home quote hops', () => {
-  for (const vendor of ['trupanion', 'healthy-paws', 'embrace']) {
-    assert.match(page, new RegExp(`/go/${vendor}/home\\?s=tools-insurance-quote-prep`))
-  }
+test('quote prep sends the next step to the carrier comparison', () => {
+  assert.match(page, /href="\/reviews\/best-pet-insurance"/)
+  assert.match(page, /Compare quotes on the carrier comparison/)
+  assert.doesNotMatch(page, /\/go\/trupanion/)
+  assert.doesNotMatch(page, /\/go\/healthy-paws/)
+  assert.doesNotMatch(page, /\/go\/embrace/)
   assert.match(page, /SoftwareApplication/)
   assert.match(page, /buildHowToSchema/)
   assert.match(page, /FAQAccordion/)
-  assert.match(page, /AffiliateDisclosure/)
   assert.doesNotMatch(page, /\bDVM\b/)
   assert.doesNotMatch(page, /we tested/i)
   assert.doesNotMatch(page, /in our lab/i)
