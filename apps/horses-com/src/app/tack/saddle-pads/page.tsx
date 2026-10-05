@@ -119,8 +119,7 @@ export default function SaddlePadsPage() {
             <li><strong>Half pad</strong> -- a shaped pad used under or over the numnah, sometimes with shimmable pockets to fine-tune fit between fittings.</li>
             <li><strong>Discipline shapes</strong> -- close-contact and jump pads, dressage pads, and shaped show pads.</li>
           </ul>
-          <p>
-            A saddle-pad clean-dry rotation log notebook is how several washable quilted cotton pads stay written down so a clean, dry pad is always available — keeping the pad clean and dry matters more for back health than any premium feature. It is not a riding helmet impact-retirement log notebook (that lives on helmet-guide), not a horse pain-demeanor change-log notebook (that lives on reading-body-language), not a senior horse weight-and-joint watch notebook (that lives on senior-horse-care), and not a first-horse buyer visit field notebook (that lives on buying-your-first-horse). </p>
+
 
           <h2 id="western">Western Pads and Blankets</h2>
           <p>Western riders use thicker pads and blankets because western saddles are heavier and rides are often long. Options range from traditional woven wool Navajo-style blankets to contoured felt and foam pads, frequently layered (a blanket over a felt pad). Wool and quality felt are valued for breathability, durability, and the way they conform to the back. The greater bulk reflects the weight of the saddle and the demands of long working rides.</p>
@@ -137,8 +136,7 @@ export default function SaddlePadsPage() {
           <h2 id="cannot">What a Pad Cannot Fix</h2>
           <p>The central truth about pads is that they cannot correct a saddle that does not fit. A saddle too narrow pinches, and adding a thick pad makes it tighter, like putting on an extra sock inside a tight shoe. A saddle too wide sits low on the withers, and padding it up only perches it and shifts pressure. Persistent back soreness, dry spots in the sweat pattern, white hairs, or behavioral resistance point to a fit problem that needs a saddle fitter and possibly a veterinarian -- not a new pad. Use pads to keep a well-fitting saddle clean and comfortable, not to paper over fit faults.</p>
           
-          <p>
-            A saddle-pad sweat-pattern dry-spot question card is how a dry patch in an otherwise even sweat pattern after a ride stays posted as a pressure-point check — it is not a riding helmet certification-label question card (that lives on helmet-guide), not a horse buyer vet-briefing question card (that lives on pre-purchase-exam), not a horse handler kick-zone safety question card (that lives on reading-body-language), and not a first-horse tack-room emergency-plan card (that lives on the first-horse-roadmap). This page does not invent clinic listings. </p>
+
 
           <h2 id="picks">Pad Picks</h2>
           <p>A few widely-stocked pad types covering the common English and Western needs. These support a correctly fitting saddle — none of them, as the section above makes clear, can correct a saddle that does not fit. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -323,14 +321,8 @@ export default function SaddlePadsPage() {
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=saddle-pads"
                 amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/saddle+pad+sweat+pattern+dry+spot+question+card?s=saddle-pads"
-                amazonLabel="Browse saddle-pad sweat-pattern dry-spot question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/saddle+pad+clean+dry+rotation+log+notebook?s=saddle-pads"
-                amazonLabel="Browse saddle-pad clean-dry rotation log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

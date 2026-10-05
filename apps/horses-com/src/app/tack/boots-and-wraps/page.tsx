@@ -134,10 +134,8 @@ export default function BootsWrapsPage() {
 
           <h2 id="support">Do Boots Support Tendons?</h2>
           <p>Owners often assume boots meaningfully support the tendons and ligaments. In reality, the forces on a galloping or landing horse&apos;s tendons are enormous, and boots provide impact protection rather than genuine structural support against those loads. Their real value is preventing the cuts, knocks, and brushing injuries that come from strikes and interference. Choosing boots for protection, fitting them snugly but not tightly, and keeping them clean and dry inside (grit under a boot causes rubs) matters more than chasing support claims.</p>
-          <p>
-            A horse-boot impact-not-tendon-support question card is how &quot;boots protect against knocks and brushing, they do not structurally support tendons&quot; stays posted — it is not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads), not a riding helmet certification-label question card (that lives on helmet-guide), not a horse buyer vet-briefing question card (that lives on pre-purchase-exam), and not a horse handler kick-zone safety question card (that lives on reading-body-language). This page does not invent clinic listings. </p>
-          <p>
-            A horse-boot grit-rub clean-dry log notebook is how grit-under-a-boot-causes-rubs and clean-dry-inside stay written down — it is not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads), not a riding helmet impact-retirement log notebook (that lives on helmet-guide), not a horse pain-demeanor change-log notebook (that lives on reading-body-language), and not a senior horse weight-and-joint watch notebook (that lives on senior-horse-care). </p>
+
+
 
           <h2 id="picks">Boot and Wrap Picks</h2>
           <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -296,14 +294,8 @@ export default function BootsWrapsPage() {
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=boots-and-wraps"
                 amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+boot+impact+not+tendon+support+question+card?s=boots-and-wraps"
-                amazonLabel="Browse horse-boot impact-not-tendon-support question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+boot+grit+rub+clean+dry+log+notebook?s=boots-and-wraps"
-                amazonLabel="Browse horse-boot grit-rub clean-dry log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

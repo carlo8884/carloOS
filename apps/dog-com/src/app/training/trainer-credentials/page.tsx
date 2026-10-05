@@ -103,16 +103,7 @@ export default function TrainerCredentialsPage() {
           <li>Will I be learning to train my dog, or are you training the dog for me?</li>
         </ul>
         <p>A trainer who becomes defensive, evasive, or dismissive of these questions is not the right trainer for you. Qualified professionals welcome questions about their methods and credentials.</p>
-        <p>
-          A dog CPDT-KA hiring interview question card is how what-credentials-do-you-hold,
-          are-they-current, and will-i-be-learning-to-train-my-dog stay posted — it is not a dog
-          force-free trainer interview question card (that lives on training-red-flags), not a dog
-          aggression type-and-function question card (that lives on dog-aggression), not a dog
-          food-bowl safety question card (that lives on resource-guarding), and not a dog
-          20-to-30-foot long-line question card (that lives on off-leash-training). This page does
-          not hop shock collars, e-collars, prong collars, choke chains, or alpha-roll gear, and it
-          does not hop invented ASINs.
-        </p>
+
 
         <h2 id="match">Matching Credential to Problem</h2>
         <ul>
@@ -122,15 +113,7 @@ export default function TrainerCredentialsPage() {
           <li><strong>Separation anxiety:</strong> Certified Separation Anxiety Trainer (CSAT) specialty credential — ask specifically; general trainers often lack SA-specific protocol training</li>
           <li><strong>Severe anxiety, aggression requiring medication:</strong> DACVB — the only behavior professional who can prescribe</li>
         </ul>
-        <p>
-          A dog trainer session-observation watch log notebook is how
-          can-i-observe-a-session-with-another-client, training-the-dog-while-excluding-the-owner,
-          and veterinary-reference-required stay written down — it is not a dog Easy Walk /
-          Ruffwear Front Range watch log notebook (that lives on training-red-flags), not a dog
-          aggression never-alpha-roll watch log notebook (that lives on dog-aggression), not a dog
-          resource-guarding never-punish-growl watch log notebook (that lives on resource-guarding),
-          and not a dog recall-cue never-punish watch log notebook (that lives on
-          off-leash-training). </p>
+
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -157,14 +140,8 @@ export default function TrainerCredentialsPage() {
               amazonHref="/go/amazon-brand/dog+leash?s=training-trainer-credentials"
               amazonLabel="Browse dog leash on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+cpdt+ka+hiring+interview+question+card?s=training-trainer-credentials"
-              amazonLabel="Browse dog CPDT-KA hiring interview question cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+trainer+session+observation+watch+log+notebook?s=training-trainer-credentials"
-              amazonLabel="Browse dog trainer session-observation watch log notebooks on Amazon →"
-            />
+
+
           </div>
         </div>
       </div>

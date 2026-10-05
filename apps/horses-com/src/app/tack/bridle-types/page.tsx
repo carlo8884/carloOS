@@ -134,13 +134,11 @@ export default function BridleTypesPage() {
             <li><strong>Drop and grackle (figure-eight)</strong> -- act lower on the nose, used to discourage the mouth gaping or crossing the jaw.</li>
             <li><strong>Welfare note</strong> -- nosebands must not be over-tightened; research and many rules now require room for at least a couple of fingers under the band.</li>
           </ul>
-          <p>
-            A horse noseband two-finger welfare log notebook is how a-couple-of-fingers-under-the-band, over-tightened-nosebands-are-a-welfare-concern, and the-horse-must-still-chew-and-move-its-jaw stay written down — it is not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
+
 
           <h2 id="fit">Fit</h2>
           <p>A well-fitted bridle sits without pinching or rubbing: the browband does not pull the headpiece into the ears, the throatlatch is loose enough to allow flexion (roughly a hand&apos;s width), the bit sits at the correct height, and the noseband is positioned correctly and fitted loosely enough to allow chewing and comfort. Check for rubs behind the ears and at the corners of the mouth. Like all tack, a bridle that fits poorly causes pain and resistance no matter how good the riding.</p>
-          <p>
-            A horse bridle cheekpiece-length fit question card is how &quot;cheekpieces run down each side to attach the bit, the bit sits at the correct height, and the browband does not pull the headpiece into the ears&quot; stays posted — it is not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
+
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -249,14 +247,8 @@ export default function BridleTypesPage() {
                 amazonHref="/go/amazon-brand/horse+snaffle+bit?s=bridle-types"
                 amazonLabel="Browse horse snaffle bit on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+bridle+cheekpiece+length+fit+question+card?s=bridle-types"
-                amazonLabel="Browse horse bridle cheekpiece-length fit question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+noseband+two+finger+welfare+log+notebook?s=bridle-types"
-                amazonLabel="Browse horse noseband two-finger welfare log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

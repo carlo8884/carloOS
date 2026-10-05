@@ -112,8 +112,7 @@ export default function BlanketWeightsPage() {
 
           <h2 id="denier">Denier and Fill</h2>
           <p>Two numbers describe a rug. Denier measures the toughness of the outer fabric -- a higher denier (for example 1200D versus 600D) is more tear- and abrasion-resistant, important for rough-and-tumble horses in the field. Fill (or filling) measures warmth, given in grams -- the weight of insulating material. Denier is about durability and waterproofing; fill is about warmth. A rug can be high-denier and low-fill (tough but light) or the reverse.</p>
-          <p>
-            A horse denier-vs-fill question card is how &quot;denier is about durability and waterproofing, fill is about warmth, and a rug can be high-denier and low-fill&quot; stays posted — it is not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads), and not a riding helmet certification-label question card (that lives on helmet-guide). This page does not invent clinic listings. </p>
+
 
           <h2 id="weights">Weight Categories</h2>
           <ul>
@@ -128,8 +127,7 @@ export default function BlanketWeightsPage() {
 
           <h2 id="choosing">Choosing the Weight</h2>
           <p>Match the fill to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a fully clipped horse in hard cold may need a heavyweight, while an unclipped, sheltered, well-fed horse may need only a no-fill waterproof or no rug at all. Watch the horse rather than the thermometer alone: a horse warm and dry under its rug, neither sweating nor shivering, is rugged about right. Over-rugging is as harmful as under-rugging, so check daily and adjust. See the blanketing guide for the broader decision of whether to rug at all.</p>
-          <p>
-            A horse over-rugging sweat-shiver watch log notebook is how match-fill-to-temperature-coat-condition-and-clipping, watch-the-horse-rather-than-the-thermometer-alone, warm-and-dry-neither-sweating-nor-shivering, and over-rugging-is-as-harmful-as-under-rugging stay written down — it is not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads), and not a riding helmet impact-retirement log notebook (that lives on helmet-guide). </p>
+
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
@@ -232,14 +230,8 @@ export default function BlanketWeightsPage() {
                 amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=blanket-weights"
                 amazonLabel="Browse equestrian riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+denier+vs+fill+question+card?s=blanket-weights"
-                amazonLabel="Browse horse denier-vs-fill question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+over+rugging+sweat+shiver+watch+log+notebook?s=blanket-weights"
-                amazonLabel="Browse horse over-rugging sweat-shiver watch log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

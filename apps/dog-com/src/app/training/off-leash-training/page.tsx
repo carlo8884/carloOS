@@ -166,13 +166,7 @@ export default function OffLeashTrainingPage() {
             consider off-leash. The long line phase in each new location takes minutes to hours, not days. It
             is the investment that prevents the dog from disappearing when you finally drop the leash.
           </p>
-          <p>
-            A dog 20-to-30-foot long-line question card is how
-            a-twenty-to-thirty-foot-long-line-on-a-back-clip-harness,
-            gather-the-line-hand-over-hand-no-jerking, and long-line-first-in-every-new-environment stay
-            posted — it is not a dog+long+line+leash hop (that lives on basic-commands), not a 6-ft dog leash
-            (that lives on loose-leash-walking), not an indoor dog house-line (that lives on dog-bloat-gvd),
-            and not a 2-foot nylon traffic lead (that lives on heartworm). </p>
+
 
           <h2>Breed Reality — Not All Dogs Can Be Off-Leash</h2>
           <p>
@@ -227,14 +221,8 @@ export default function OffLeashTrainingPage() {
                 amazonHref="/go/amazon-brand/dog+harness?s=training-off-leash-training"
                 amazonLabel="Browse dog harness on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+20+to+30+foot+long+line+question+card?s=training-off-leash-training"
-                amazonLabel="Browse dog 20-to-30-foot long-line question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+recall+cue+never+punish+watch+log+notebook?s=training-off-leash-training"
-                amazonLabel="Browse dog recall-cue never-punish watch log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
         </div>

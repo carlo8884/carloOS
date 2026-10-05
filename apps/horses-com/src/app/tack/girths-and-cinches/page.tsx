@@ -125,13 +125,11 @@ export default function GirthsCinchesPage() {
 
           <h2 id="fit">Fit and Tightening</h2>
           <p>A girth should be the right length so the buckles or rings sit clear of the elbow and skin, of a width and shape that suits the horse, and positioned in the natural girth groove rather than dragged forward against the elbow. Tighten gradually -- snug enough at the mounting block to keep the saddle stable, then check and adjust after walking on and warming up, rather than yanking it tight all at once. Always smooth the skin under the girth (or pull the forelegs forward) to remove wrinkles that cause rubs.</p>
-          <p>
-            A horse girth buckle-elbow-clearance question card is how &quot;the right length keeps buckles or rings clear of the elbow, the girth sits in the natural girth groove, and it is not dragged forward against the elbow&quot; stays posted — it is not a horse bridle cheekpiece-length fit question card (that lives on bridle-types), not a horse breastplate-vs-breastgirth fit question card (that lives on martingales-and-breastplates), not a horse denier-vs-fill question card (that lives on blanket-weights), not a horse rope-vs-flat-halter task question card (that lives on halters-and-lead-ropes), not a horse-boot impact-not-tendon-support question card (that lives on boots-and-wraps), and not a saddle-pad sweat-pattern dry-spot question card (that lives on saddle-pads). This page does not invent clinic listings. </p>
+
 
           <h2 id="galls">Girth Galls and Girthiness</h2>
           <p>Girth galls are painful sores or rubs in the girth area, caused by friction, dirt, a poorly fitting girth, or skin pinched in wrinkles. Prevent them with a clean girth and coat, correct fit, gradual tightening, and a girth shape suited to the horse. Girthiness -- the horse pinning its ears, biting, or tensing when girthed -- can be learned discomfort from past galls or rough girthing, but can also signal pain such as gastric ulcers, so persistent girthiness warrants checking fit and, if it continues, a veterinary look rather than just discipline.</p>
-          <p>
-            A horse girth-gall skin-wrinkle log notebook is how gradual-tightening, smooth-the-skin-under-the-girth, and pull-the-forelegs-forward-to-remove-wrinkles stay written down — it is not a horse noseband two-finger welfare log notebook (that lives on bridle-types), not a horse martingale-misuse head-carriage log notebook (that lives on martingales-and-breastplates), not a horse over-rugging sweat-shiver watch log notebook (that lives on blanket-weights), not a horse quick-release wither-height tie log notebook (that lives on halters-and-lead-ropes), not a horse-boot grit-rub clean-dry log notebook (that lives on boots-and-wraps), and not a saddle-pad clean-dry rotation log notebook (that lives on saddle-pads). </p>
+
 
           <h2 id="picks">Girth Picks</h2>
           <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
@@ -321,14 +319,8 @@ export default function GirthsCinchesPage() {
                 amazonHref="/go/amazon-brand/horse+martingale?s=girths-and-cinches"
                 amazonLabel="Browse horse martingale on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+girth+buckle+elbow+clearance+question+card?s=girths-and-cinches"
-                amazonLabel="Browse horse girth buckle-elbow-clearance question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+girth+gall+skin+wrinkle+log+notebook?s=girths-and-cinches"
-                amazonLabel="Browse horse girth-gall skin-wrinkle log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 

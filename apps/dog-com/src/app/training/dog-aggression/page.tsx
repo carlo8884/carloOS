@@ -147,13 +147,7 @@ export default function DogAggressionPage() {
           other dogs. May be selective (dog-sex specific, unfamiliar dogs only, same-household dogs) or
           generalized. History, context, and the specific presentation determine intervention.
         </p>
-        <p>
-          A dog aggression type-and-function question card is how
-          fear-based-aggression-is-the-most-common, redirected-aggression, and
-          rule-out-pain-first-in-any-new-onset-aggression stay posted — it is not a dog food-bowl
-          safety question card (that lives on resource-guarding), not a dog 20-to-30-foot long-line
-          question card (that lives on off-leash-training), and not a horse bit width-and-wrinkle fit
-          question card (that lives on bits-guide). </p>
+
 
         <h2>What Dominance Theory Gets Wrong</h2>
         <p>
@@ -167,15 +161,7 @@ export default function DogAggressionPage() {
           increase anxiety, suppress warning signals, damage the human-dog relationship, and
           consistently make aggression more dangerous.
         </p>
-        <p>
-          A dog aggression never-alpha-roll watch log notebook is how
-          dominance-theory-has-been-thoroughly-refuted, alpha-rolls, and
-          physical-corrections-consistently-make-aggression-more-dangerous stay written down — it is
-          not a dog resource-guarding never-punish-growl watch log notebook (that lives on
-          resource-guarding), not a dog recall-cue never-punish watch log notebook (that lives on
-          off-leash-training), and not a horse bit hand-severity watch log notebook (that lives on
-          bits-guide).
-        </p>
+
 
         <h2>When Professional Help Is Required</h2>
         <p>
@@ -212,14 +198,8 @@ export default function DogAggressionPage() {
               amazonHref="/go/amazon-brand/dog+leash?s=training-dog-aggression"
               amazonLabel="Browse dog leash on Amazon →"
             />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+aggression+type+and+function+question+card?s=training-dog-aggression"
-              amazonLabel="Browse dog aggression type-and-function question cards on Amazon →"
-            />
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dog+aggression+never+alpha+roll+watch+log+notebook?s=training-dog-aggression"
-              amazonLabel="Browse dog aggression never-alpha-roll watch log notebooks on Amazon →"
-            />
+
+
           </div>
         </div>
       </div>

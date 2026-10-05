@@ -202,14 +202,7 @@ export default function ResourceGuardingPage() {
             gates to separate guarding contexts. Management is not a substitute for training, but it
             prevents practice of the guarding behavior during the training period.
           </p>
-          <p>
-            A dog food-bowl safety question card is how feed-the-dog-in-a-separate-room,
-            pick-up-high-value-chews-when-guests-arrive, and baby-gates-to-separate-guarding-contexts
-            stay posted — it is not a single stainless floor dog bowl (that lives on dog-bloat-gvd),
-            not a heavy ceramic pet food bowl (that lives on ferret toxic-foods), not a slow-feeder
-            dog bowl (that lives on dog-obesity / calorie-calculator), not an extra-tall baby gate
-            (that lives on new-puppy-checklist), and not a walk-through pet gate (that lives on
-            pancreatitis). </p>
+
 
           <h2>When to Get Professional Help</h2>
           <p>
@@ -245,14 +238,8 @@ export default function ResourceGuardingPage() {
                 amazonHref="/go/amazon-brand/dry+dog+food?s=training-resource-guarding"
                 amazonLabel="Browse dry dog food on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+food+bowl+safety+question+card?s=training-resource-guarding"
-                amazonLabel="Browse dog food-bowl safety question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/dog+resource+guarding+never+punish+growl+watch+log+notebook?s=training-resource-guarding"
-                amazonLabel="Browse dog resource-guarding never-punish-growl watch log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
         </div>

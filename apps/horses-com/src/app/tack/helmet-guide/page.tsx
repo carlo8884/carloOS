@@ -116,31 +116,7 @@ export default function HelmetGuidePage() {
 
           <h2 id="standards">Safety Standards</h2>
           <p>A riding helmet must be certified to a recognized equestrian safety standard, not merely styled to look like one. Common certifications include ASTM/SEI (United States), PAS 015 and the kitemark and VG1 (United Kingdom and Europe), and Snell equestrian standards. These certifications mean the helmet has passed impact testing for equestrian use. Bicycle and other sport helmets are not substitutes -- they are tested for different impacts. Look for the certification label inside the helmet.</p>
-          <p>
-            A riding helmet certification-label
-            question card is how ASTM/SEI,
-            PAS 015, VG1, and Snell stay
-            posted as the inside-label check
-            before anyone buys on looks — it
-            is not an ASTM+SEI+horse+riding+helmet
-            hop (that lives on the horse-size-
-            for-rider tool and searches a
-            helmet, not a label-check card),
-            not a horse buyer vet-briefing
-            question card (that lives on
-            pre-purchase-exam), not a horse
-            handler kick-zone safety question
-            card (that lives on
-            reading-body-language), and not a
-            first-horse tack-room emergency-
-            plan card (that lives on the
-            first-horse-roadmap). This page
-            does not hop owner-guides cards,
-            calculator-tools cards, or
-            vital-signs cards already pinned
-            on those hubs. This page does not
-            invent clinic listings.
-          </p>
+
 
           <h2 id="fit">Correct Fit</h2>
           <ul>
@@ -154,32 +130,7 @@ export default function HelmetGuidePage() {
 
           <h2 id="replace">When to Replace</h2>
           <p>A helmet must be replaced after any significant impact, even if it looks undamaged, because the protective foam crushes to absorb energy and cannot do so again -- the protection may be spent invisibly. Helmets should also be replaced periodically as materials age (manufacturers commonly advise every few years, often around five, even without a fall), and immediately if cracked, deformed, or damaged. A helmet that has done its job in a fall has earned retirement.</p>
-          <p>
-            A riding helmet impact-retirement
-            log notebook is how a spent foam
-            after a fall and the manufacturer-
-            advised interval stay written down
-            so a helmet that has done its job
-            is retired — it is not a horse
-            pain-demeanor change-log notebook
-            (that lives on
-            reading-body-language), not a
-            senior horse weight-and-joint
-            watch notebook (that lives on
-            senior-horse-care), not a first-
-            horse buyer visit field notebook
-            (that lives on
-            buying-your-first-horse), and not
-            an equine emergency-fund expense
-            tracker notebook (that lives on
-            cost-of-owning-a-horse). This page
-            does not hop first-aid saline /
-            pads / scissors. This page does
-            not hop grimace-scale first-aid-
-            kit / poultice / ice-boot hops.
-            This page does not claim hands-on
-            testing.
-          </p>
+
 
           <h2 id="care">Care and Common Mistakes</h2>
           <ul>
@@ -334,14 +285,8 @@ export default function HelmetGuidePage() {
                 amazonHref="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"
                 amazonLabel="Browse Troxel Spirit riding helmet on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/riding+helmet+certification+label+question+card?s=helmet-guide"
-                amazonLabel="Browse riding helmet certification-label question cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/riding+helmet+impact+retirement+log+notebook?s=helmet-guide"
-                amazonLabel="Browse riding helmet impact-retirement log notebooks on Amazon →"
-              />
+
+
           </div>
           </div>
 
