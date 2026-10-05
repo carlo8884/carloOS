@@ -145,7 +145,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Near-silent operation', 'Superior biological capacity vs HOB', 'Self-priming button', 'Longer cleaning intervals', 'Fluval build quality']}
               cons={['More complex to clean than HOB', 'Higher price than equivalent HOB', 'Under-cabinet space required']}
               price="$120–160"
-              ctaText="Shop Fluval 307 on Amazon →"
+              ctaText="Shop Fluval 307 canister filter on Amazon →"
               ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-307"
