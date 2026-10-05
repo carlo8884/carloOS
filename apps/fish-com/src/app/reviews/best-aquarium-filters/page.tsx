@@ -169,7 +169,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Safe for shrimp and fry', 'Excellent biological surface area', 'Easy cleaning', 'Low cost', 'Quiet']}
               cons={['Requires separate air pump', 'Not suitable for larger tanks alone', 'Less mechanical filtration than HOB']}
               price="$10–20"
-              ctaText="Shop Hikari Sponge on Amazon →"
+              ctaText="Shop Hikari Bacto-Surge sponge filters on Amazon →"
               ctaHref="/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hikari-sponge"
