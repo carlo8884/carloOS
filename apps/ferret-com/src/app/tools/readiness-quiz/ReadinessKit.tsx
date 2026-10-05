@@ -37,7 +37,7 @@ const KIT: KitItem[] = [
     detail:
       'High-back corner pans plus paper or heat-treated wood pellets. Never clumping clay — dust and gut blockage risk. Plan one pan per ferret plus one extra; the litter planner turns headcount into pans and 30 lb bags.',
     amazonHref: `/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=${SOURCE}`,
-    amazonLabel: 'Browse wood pellet litter on Amazon →',
+    amazonLabel: 'Browse heat-treated non-clumping wood pellets on Amazon →',
   },
   {
     id: 'food',

@@ -238,7 +238,7 @@ export default function ReadinessQuizPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz"
-                amazonLabel="Browse wood pellet litter on Amazon →"
+                amazonLabel="Browse heat-treated non-clumping wood pellets on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"
