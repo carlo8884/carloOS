@@ -190,7 +190,7 @@ export default function BestDogCratesPage() {
               pros={['Integrates into living space aesthetically', 'Functions as furniture', 'Good for calm adult dogs']}
               cons={['Not chew-resistant', 'Less ventilation than wire', 'Not for escape artists or puppies', 'Harder to clean']}
               price="$80–160"
-              ctaText="Shop Frisco Furniture Crates →"
+              ctaText="Shop Frisco Furniture Crates on Amazon →"
               ctaHref="/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="frisco+furniture+style+dog+crate"
