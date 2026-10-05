@@ -2734,8 +2734,8 @@ const CALCULATORS = [
     id: 'horses · vaulting',
     file: 'apps/horses-com/src/app/disciplines/vaulting/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/vaulting\+surcingle/, label: 'on-page vaulting surcingle Amazon search hop' },
+      { re: /amazon-brand\/vaulting\+surcingle/, label: 'on-page vaulting surcingle Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10795,7 +10795,7 @@ const CALCULATORS = [
     id: 'horses · saddle-pads hops',
     file: 'apps/horses-com/src/app/tack/saddle-pads/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/quilted\+all\+purpose\+saddle\+pad/, label: 'on-page quilted saddle pad Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10812,7 +10812,7 @@ const CALCULATORS = [
     id: 'horses · boots-and-wraps hops',
     file: 'apps/horses-com/src/app/tack/boots-and-wraps/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+brushing\+boots/, label: 'on-page brushing boots Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10846,7 +10846,7 @@ const CALCULATORS = [
     id: 'horses · blanket-weights hops',
     file: 'apps/horses-com/src/app/tack/blanket-weights/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/waterproof\+horse\+turnout\+rug/, label: 'on-page waterproof turnout rug Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10914,7 +10914,7 @@ const CALCULATORS = [
     id: 'horses · stirrups-and-safety hops',
     file: 'apps/horses-com/src/app/tack/stirrups-and-safety/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/equestrian\+riding\+helmet/, label: 'on-page product Amazon search hop' },
+      { re: /amazon-brand\/horse\+safety\+stirrups/, label: 'on-page safety stirrups Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],

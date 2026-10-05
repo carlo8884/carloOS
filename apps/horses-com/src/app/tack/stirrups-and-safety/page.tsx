@@ -239,8 +239,8 @@ export default function StirrupsSafetyPage() {
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
-                amazonHref="/go/amazon-brand/equestrian+riding+helmet?s=stirrups-and-safety"
-                amazonLabel="Browse equestrian riding helmet on Amazon →"
+                amazonHref="/go/amazon-brand/horse+safety+stirrups?s=stirrups-and-safety"
+                amazonLabel="Browse horse safety stirrups on Amazon →"
               />
 
 
