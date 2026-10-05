@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -103,26 +103,26 @@ export default function BestSlowFeederBowlsPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A kibble bowl that slows a fast eater</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#outward-hound" className="text-brand-primary">Outward Hound Fun Feeder</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#outward-hound" className="text-brand-primary">Outward Hound Fun Feeder</a><TableShopLink href={"/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls"} product={"Outward Hound Fun Feeder"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. Maze ridges. 5 sizes. Dishwasher safe, top rack. $10–18</td>
                       <td className="p-3 text-brand-text-mid">You will not scrub the ridges. Kibble wedges in them. Some dogs flip the bowl</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Foraging enrichment, or a floor-level feeder a senior can use</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#northmate" className="text-brand-primary">Northmate Green</a><TableShopLink href={"/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"} product={"Northmate Green"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Puzzle Feeder. Flat, so it cannot tip. Works with wet food. $25–35</td>
                       <td className="p-3 text-brand-text-mid">You want the cheapest maze bowl. Kibble can stick deep in the grass segments</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lick mat before a stressful event, using a spreadable food</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#lickimat" className="text-brand-primary">LickiMat Splash</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#lickimat" className="text-brand-primary">LickiMat Splash</a><TableShopLink href={"/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"} product={"LickiMat Splash"} /></td>
                       <td className="p-3 text-brand-text-mid">Best for Anxiety. Wet or spreadable food only. Dishwasher safe. Freezable. $10–15</td>
                       <td className="p-3 text-brand-text-mid">The dog eats dry kibble. The card says it is not a kibble bowl, and the capacity is smaller</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which feeder fits which meal</h2>
               <FAQAccordion items={[
                 {

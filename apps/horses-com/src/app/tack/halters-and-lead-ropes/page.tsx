@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -236,26 +236,26 @@ export default function HaltersLeadRopesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Leading, grooming, and tying while someone is there</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a><TableShopLink href={"/go/smartpak/adjustable-nylon-halter?s=tack-halters"} product={"Adjustable flat nylon halter"} /></td>
                   <td className="p-3 text-brand-text-mid">Everyday. Adjustable crown and noseband. $10–25</td>
                   <td className="p-3 text-brand-text-mid">Turnout. The card says it does not break, so it is unsafe to leave on a horse alone</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A halter that has to stay on in the field</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a><TableShopLink href={"/go/dover/leather-crown-breakaway-halter?s=tack-halters"} product={"Leather-crown breakaway"} /></td>
                   <td className="p-3 text-brand-text-mid">Safer turnout. Leather crown or breakable tab. $25–55</td>
                   <td className="p-3 text-brand-text-mid">You will not replace the leather crown. The card says it wears and costs more than plain nylon</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A lead that is soft in the hand and long enough to tie</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a><TableShopLink href={"/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"} product={"Cotton lead with a bull snap"} /></td>
                   <td className="p-3 text-brand-text-mid">Lead rope. Trigger or bull snap. Fold the slack. $8–22</td>
                   <td className="p-3 text-brand-text-mid">The clip is a cheap one you have not checked. The card says those snaps can fail, and cotton frays over years</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           {/* Shop leftover kit — unused vs #1142
               laminated+horse+leg+bandage+bow+technique+checklist /

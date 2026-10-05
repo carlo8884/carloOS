@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -382,50 +382,50 @@ export default function BestEquineSupplementsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Diagnosed osteoarthritis or heavy joint load</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink href={"/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"} product={"Cosequin ASU Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best joint evidence. ASU plus glucosamine and chondroitin. NASC sealed</td>
                     <td className="p-3 text-brand-text-mid">A cure. The card is support evidence, and the first month costs more on a loading dose</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">One broad wellness product, after the ration is already balanced</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#platinum" className="text-brand-primary">Platinum Performance Equine</a><TableShopLink href={"/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"} product={"Platinum Performance Equine"} /></td>
                     <td className="p-3 text-brand-text-mid">Best comprehensive. One daily top-dress. Card price $95–140/mo</td>
                     <td className="p-3 text-brand-text-mid">Among the most expensive per month. The card says the same targets can be met more cheaply with a marine omega-3, vitamin E, and a balancer</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Gastric support beside veterinary care, not instead of it</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a><TableShopLink href={"/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"} product={"SmartGut Ultra"} /></td>
                     <td className="p-3 text-brand-text-mid">Best gastric adjunct. Card price $60–80/mo. The category row calls the buffer evidence moderate</td>
                     <td className="p-3 text-brand-text-mid">Treatment of active ulcers. The table says pharmacologic care is for active disease</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine DHA/EPA, not a plant-oil substitute</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#ker-eo3" className="text-brand-primary">KER EO-3</a><TableShopLink href={"/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"} product={"KER EO-3"} /></td>
                     <td className="p-3 text-brand-text-mid">Best marine omega-3. Card price $55–85/mo. The category row calls the marine DHA/EPA evidence strong</td>
                     <td className="p-3 text-brand-text-mid">A joint or gastric product. It is an oil, not those categories</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A resveratrol pellet already reviewed on this page</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#equithrive" className="text-brand-primary">Equithrive Original</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#equithrive" className="text-brand-primary">Equithrive Original</a><TableShopLink href={"/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"} product={"Equithrive Original"} /></td>
                     <td className="p-3 text-brand-text-mid">Best resveratrol. The card frames it as a complement to traditional joint ingredients, for mild inflammation or post-injection support</td>
                     <td className="p-3 text-brand-text-mid">A standalone replacement for the ASU pick. The card says the evidence base is smaller</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Forage or a forage replacement, not a vitamin pellet</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#standlee" className="text-brand-primary">Standlee Premium Forage</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#standlee" className="text-brand-primary">Standlee Premium Forage</a><TableShopLink href={"/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements"} product={"Standlee Premium Forage"} /></td>
                     <td className="p-3 text-brand-text-mid">Best forage products on this page</td>
                     <td className="p-3 text-brand-text-mid">A complete ration by itself. Forage still has to match the horse</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Sweat replacement after work</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a><TableShopLink href={"/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"} product={"Adams Plus Equine Electrolyte"} /></td>
                     <td className="p-3 text-brand-text-mid">Best electrolyte. Card price $20–35/mo. The category row calls Na/Cl/K replacement strong</td>
                     <td className="p-3 text-brand-text-mid">A daily wellness powder for a horse that is not sweating</td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-04" />
+            <ComparisonFoot updated="2026-10-05" />
             <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
 
             <h2>What to Avoid</h2>

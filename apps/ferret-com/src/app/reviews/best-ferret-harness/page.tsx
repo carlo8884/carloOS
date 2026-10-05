@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -350,26 +350,26 @@ export default function BestFerretHarnessPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Backs out of harnesses, or this is the first walker</td>
-                  <td className="p-3 font-bold"><a href="#jacket">Jacket / vest</a></td>
+                  <td className="p-3 font-bold"><a href="#jacket">Jacket / vest</a><TableShopLink href={"/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness"} product={"Jacket / vest"} /></td>
                   <td className="p-3">Best escape resistance. Wide panel. Price tier $$</td>
                   <td className="p-3">Needs a body measurement. Can run warm unless the panel is mesh</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">You will check the fit every outing</td>
-                  <td className="p-3 font-bold"><a href="#h-style">Adjustable H-style</a></td>
+                  <td className="p-3 font-bold"><a href="#h-style">Adjustable H-style</a><TableShopLink href={"/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"} product={"Adjustable H-style"} /></td>
                   <td className="p-3">Best adjustability. Light. Price tier $</td>
                   <td className="p-3">The easiest style to escape if a loop is left loose</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3">Warm weather, and you want a leash in the same package</td>
-                  <td className="p-3 font-bold"><a href="#mesh-h">Mesh H with leash</a></td>
+                  <td className="p-3 font-bold"><a href="#mesh-h">Mesh H with leash</a><TableShopLink href={"/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-best-ferret-harness"} product={"Mesh H with leash"} /></td>
                   <td className="p-3">Entry bundle. Breathable mesh. Price tier $</td>
                   <td className="p-3">Fewer adjustment points. Upgrade to a vest for a true escape artist</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

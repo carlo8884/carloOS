@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -220,32 +220,32 @@ export default function BestHeatersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The tightest published tolerance, and a recalibration dial</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. ±0.5°F. Auto shut-off out of water. $25–55 by wattage. 25W–300W</td>
                       <td className="p-3 text-brand-text-mid">Glass. It can shatter if dropped</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"} product={"Cobalt Neo-Therm Pro"} /></td>
                       <td className="p-3 text-brand-text-mid">Best flat design. ±0.5°F. Shatterproof plastic. $35–65</td>
                       <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A canister filter, and no heater in the tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hydor" className="text-brand-primary">Hydor In-Line</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hydor" className="text-brand-primary">Hydor In-Line</a><TableShopLink href={"/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"} product={"Hydor In-Line"} /></td>
                       <td className="p-3 text-brand-text-mid">Best inline. Sits on the canister return hose. $40–70</td>
                       <td className="p-3 text-brand-text-mid">Does not work with a hang-on-back or a sponge filter</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A robust community tank and a low price</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon Pro</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon Pro</a><TableShopLink href={"/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"} product={"Aqueon Pro"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget. Shatterproof. ±1–1.5°F. $18–30</td>
                       <td className="p-3 text-brand-text-mid">Too loose for discus, cardinal tetras, and other tight-range species</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

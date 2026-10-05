@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import Link from 'next/link'
 import { crossSiteHref } from '@carloOS/config'
@@ -269,32 +269,32 @@ export default function BestDogFoodPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Healthy dog, and you want the research standard</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin</a><TableShopLink href={"/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food"} product={"Royal Canin"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. Full WSAVA, AAFCO feeding trials. $55–110 / 30 lbs</td>
                       <td className="p-3 text-brand-text-mid">Mid-premium, and the ingredient list is not a “natural” label</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Same scientific bar, lower spend</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"} product={"Purina Pro Plan"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Value. Full WSAVA. $45–90 / 30 lbs</td>
                       <td className="p-3 text-brand-text-mid">Some formulas include artificial colors or preservatives</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A diagnosed condition the vet is managing with diet</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hills" className="text-brand-primary">Hill&apos;s Science Diet</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills" className="text-brand-primary">Hill&apos;s Science Diet</a><TableShopLink href={"/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"} product={"Hill&apos;s Science Diet"} /></td>
                       <td className="p-3 text-brand-text-mid">Best for Medical Conditions. Prescription line needs vet authorization. Science Diet $60–120 / 30 lbs</td>
                       <td className="p-3 text-brand-text-mid">Non-prescription Science Diet is less differentiated; Prescription Diet is the clinical line</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Healthy dog, and ingredient sourcing is the priority</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#orijen" className="text-brand-primary">Orijen</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#orijen" className="text-brand-primary">Orijen</a><TableShopLink href={"/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"} product={"Orijen"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Premium Natural. 38%+ protein. Partial WSAVA. $90–150 / 25 lbs</td>
                       <td className="p-3 text-brand-text-mid">This page does not recommend it for dogs with known health conditions</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
             </div>
 
             {/* Key buying guidance */}

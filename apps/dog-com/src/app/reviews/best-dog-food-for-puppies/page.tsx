@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -195,32 +195,32 @@ export default function BestPuppyFoodPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight over 50 lb, and you want the large-breed puppy formula</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a><TableShopLink href={"/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"} product={"Royal Canin Large Breed Puppy"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Large Breed. Score 9.5. $65–90 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">The higher bag price is the limit. The card also says some dogs do not like the kibble shape, and you switch to the adult food at the right age</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A large-breed puppy food with a feeding trial, at a lower bag price</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#pro-plan" className="text-brand-primary">Purina Pro Plan Puppy Large Breed</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#pro-plan" className="text-brand-primary">Purina Pro Plan Puppy Large Breed</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Purina Pro Plan Puppy Large Breed"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall Value. Score 9.3. $55–75 per 34 lb bag</td>
                       <td className="p-3 text-brand-text-mid">Chicken sensitivity. The card says chicken is the primary protein, and there is no breed-specific line</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight under 25 lb</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small Paws</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small Paws</a><TableShopLink href={"/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"} product={"Hill&apos;s Science Diet Puppy Small Paws"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Small Breed Puppy. Score 9.1. $55–80 per 28.5 lb bag</td>
                       <td className="p-3 text-brand-text-mid">A large-breed puppy. The card says to use the Hill&apos;s large-breed formula instead</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower bag price that is still a large-breed puppy formula</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams ProActive Health Smart Puppy</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams ProActive Health Smart Puppy</a><TableShopLink href={"/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Iams ProActive Health Smart Puppy"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Budget. Score 8.7. $30–50 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">You want a feeding trial. The card says some lines are AAFCO formulation, not a feeding trial</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
               <FAQAccordion items={[
                 {

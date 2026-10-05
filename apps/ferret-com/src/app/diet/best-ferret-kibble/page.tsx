@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -344,13 +344,13 @@ export default function BestFerretKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">The lowest commercial carb load in wide ferret use</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Premium Tier. About 60% protein, 16% fat, carbs in the single digits. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret-specific bag you can find in chain retail</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
                   <td className="p-3 text-brand-text-mid">Mid Tier. About 38% protein, 20% fat, carbs in the mid teens. $15–25 / 4 lb</td>
                   <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. The card puts carbohydrate higher than the premium tier, and the panel includes plant protein</td>
                 </tr>
@@ -363,7 +363,7 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

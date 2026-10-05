@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -113,26 +113,26 @@ export default function BestPlantedFertilizersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">One bottle for a low- or medium-tech planted tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#easy-green" className="text-brand-primary">Easy Green</a><TableShopLink href={"/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"Easy Green"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. 1 pump per 10 gallons weekly. Macros and micros. $15–25</td>
                       <td className="p-3 text-brand-text-mid">You need it from a local fish store. The card says Aquarium Co-Op online only. High-tech CO2 tanks may need extra macros</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Trace elements today, from a store that already stocks it</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#flourish" className="text-brand-primary">Seachem Flourish Comprehensive</a><TableShopLink href={"/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"} product={"Seachem Flourish Comprehensive"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Trace Elements. Micros, not a full macro bottle. 5 ml per 250 L twice weekly. $10–20</td>
                       <td className="p-3 text-brand-text-mid">The tank is short on nitrogen, phosphorus, or potassium. The card says those need separate Flourish bottles</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A CO2-injected high-tech tank with fast plants</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nilocg" className="text-brand-primary">NilocG Thrive</a><TableShopLink href={"/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"} product={"NilocG Thrive"} /></td>
                       <td className="p-3 text-brand-text-mid">Best for High-Tech. Higher NPK than Easy Green or Flourish. $12–22</td>
                       <td className="p-3 text-brand-text-mid">A low-tech tank. The card says the higher dose is an algae risk if you overfeed nutrients</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which fertilizer fits which tank</h2>
               <FAQAccordion items={[
                 {

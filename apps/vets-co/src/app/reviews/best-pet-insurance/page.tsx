@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -206,19 +206,19 @@ export default function VetsPetInsurancePage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. 90% reimbursement. Unlimited payouts. Direct vet payment. $65–120/month</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You can pay the clinic and want the reimbursement back fast</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=reviews-best-pet-insurance"} product={"Healthy Paws"} /></td>
                       <td className="p-3 text-brand-text-mid">Fastest reimbursement. About 2 days. 80–90%. Unlimited payouts. $40–85/month</td>
                       <td className="p-3 text-brand-text-mid">No direct vet payment. No wellness add-on. Deductible is annual</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You want routine care budgeted beside accident and illness</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=reviews-best-pet-insurance"} product={"Embrace"} /></td>
                       <td className="p-3 text-brand-text-mid">Wellness add-on. 70–90% reimbursement. $45–95/month plus the add-on</td>
                       <td className="p-3 text-brand-text-mid">6-month orthopedic waiting period. More plan options to read</td>
                     </tr>

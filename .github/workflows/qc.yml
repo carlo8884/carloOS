@@ -306,3 +306,15 @@ jobs:
         run: node scripts/ci/content-stub-guard.mjs
       - name: Test content-stub-guard
         run: node --test scripts/ci/content-stub-guard.test.mjs scripts/ci/grok-direct-push-guard.test.mjs
+
+  table-shop-links:
+    name: Comparison table rows link to the existing shop hop
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run table-shop-links
+        run: node scripts/ci/table-shop-links.mjs

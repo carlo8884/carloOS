@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -258,20 +258,20 @@ export default function WholePreyVsKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A shelf-stable base a sitter can feed</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Kibble model. Starch-free. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Whole prey as the diet or as a supplement to kibble</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#frozen-feeder-prey" className="text-brand-primary">Frozen feeder mice and chicks</a><TableShopLink href={"/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"} product={"Frozen feeder mice and chicks"} /></td>
                   <td className="p-3 text-brand-text-mid">Whole-prey model. Intact bone for calcium balance. Price varies by size and quantity</td>
                   <td className="p-3 text-brand-text-mid">No freezer, or you will not handle raw prey carefully. The card flags food safety and sourcing</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-04" />
+          <ComparisonFoot updated="2026-10-05" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={[

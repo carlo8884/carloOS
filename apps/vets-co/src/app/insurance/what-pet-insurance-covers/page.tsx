@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Pet Insurance Covers (and Doesn't) | Vets.co", description: "Accident and illness plans cover injuries, illness, surgery, diagnostics, and often hereditary conditions. Learn what is typically covered and what is excluded.", path: '/insurance/what-pet-insurance-covers', type: 'article' })
@@ -208,13 +208,13 @@ export default function WhatCoversPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Accident-and-illness plus an optional wellness rewards plan</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-what-pet-insurance-covers"} product={"Embrace"} /></td>
                   <td className="p-3 text-brand-text-mid">Wellness Add-On. Optional wellness plan. Diminishing deductible. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">The wellness add-on is a budgeted benefit, not insurance. Standard exclusions apply</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">App-based claims, with preventive packages kept separate</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#lemonade" className="text-brand-primary">Lemonade Pet</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#lemonade" className="text-brand-primary">Lemonade Pet</a><TableShopLink href={"/go/lemonade/home?s=insurance-what-pet-insurance-covers"} product={"Lemonade Pet"} /></td>
                   <td className="p-3 text-brand-text-mid">App-First. Optional preventive packages. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">Availability varies by state. The preventive package is not insurance</td>
                 </tr>

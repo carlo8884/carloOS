@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -214,32 +214,32 @@ export default function BestAquariumFiltersPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">About 30–70 gallons, and you want refillable media</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aquaclear" className="text-brand-primary">AquaClear 70</a><TableShopLink href={"/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"} product={"AquaClear 70"} /></td>
                       <td className="p-3 text-brand-text-mid">Best HOB. 300 GPH. Up to 70 gallons. $45–70</td>
                       <td className="p-3 text-brand-text-mid">Impeller needs cleaning every 3–4 months or flow drops</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">40–70 gallons with a high bioload, and cabinet space</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
                       <td className="p-3 text-brand-text-mid">Best canister. 303 GPH. Near-silent. $120–160</td>
                       <td className="p-3 text-brand-text-mid">Cleaning day is more involved than a hang-on-back</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Nano, shrimp, fry, or a hospital tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#sponge" className="text-brand-primary">Hikari Bacto-Surge</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#sponge" className="text-brand-primary">Hikari Bacto-Surge</a><TableShopLink href={"/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters"} product={"Hikari Bacto-Surge"} /></td>
                       <td className="p-3 text-brand-text-mid">Best sponge. No intake. $10–20, plus an air pump sold separately</td>
                       <td className="p-3 text-brand-text-mid">Not enough mechanical filtration to run a larger tank alone</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Up to 30 gallons, and you want the cheapest widely stocked HOB</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget HOB. $25–40. Proprietary cartridge</td>
                       <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

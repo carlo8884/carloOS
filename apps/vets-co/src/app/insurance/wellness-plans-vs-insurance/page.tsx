@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -136,13 +136,13 @@ export default function WellnessVsInsurancePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You want one carrier for catastrophe cover plus a wellness allowance</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-wellness-plans-vs-insurance"} product={"Embrace"} /></td>
                   <td className="p-3 text-brand-text-mid">Accident and illness, optional Wellness Rewards, pay-then-claim</td>
                   <td className="p-3 text-brand-text-mid">The rewards plan reimburses routine care. It is not the insurance</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You want an optional preventive package beside the policy</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#pumpkin" className="text-brand-primary">Pumpkin</a></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#pumpkin" className="text-brand-primary">Pumpkin</a><TableShopLink href={"/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance"} product={"Pumpkin"} /></td>
                   <td className="p-3 text-brand-text-mid">Accident and illness, optional preventive essentials, pay-then-claim</td>
                   <td className="p-3 text-brand-text-mid">Compare annual limit, reimbursement, and exclusions on the insurance itself</td>
                 </tr>

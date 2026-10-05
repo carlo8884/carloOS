@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -90,20 +90,20 @@ export default function BestLargeBreedFoodPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A large-breed adult food, about 55–100 lb</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Adult</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Adult</a><TableShopLink href={"/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"} product={"Royal Canin Large Adult"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. Score 9.3. $60–80 / 30 lb</td>
                       <td className="p-3 text-brand-text-mid">Chicken sensitivity. The card says it is chicken-based, and it is the more expensive of the two cards</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Higher protein, with some joint support, at a lower bag price</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Large Breed Adult</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Large Breed Adult</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"} product={"Purina Pro Plan Large Breed Adult"} /></td>
                       <td className="p-3 text-brand-text-mid">Best High-Protein. Score 9.2. $50–70 / 34 lb</td>
                       <td className="p-3 text-brand-text-mid">You want the higher glucosamine level. The card says glucosamine is not as high as Royal Canin</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which large-breed food fits</h2>
               <FAQAccordion items={[
                 {

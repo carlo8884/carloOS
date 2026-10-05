@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
@@ -93,20 +93,20 @@ export default function BestSmallBreedFoodPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A small-breed adult food, including dental support</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Small Adult</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Small Adult</a><TableShopLink href={"/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"} product={"Royal Canin Small Adult"} /></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. Score 9.3. $45–65 / 14–17 lb</td>
                       <td className="p-3 text-brand-text-mid">Chicken allergy. The card says it is chicken-based, and it costs more than a standard adult formula</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Higher protein for an active small or toy dog</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Small &amp; Toy Breed Adult</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Small &amp; Toy Breed Adult</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed"} product={"Purina Pro Plan Small &amp; Toy Breed Adult"} /></td>
                       <td className="p-3 text-brand-text-mid">Best High-Protein. Score 9.2. 30% protein. $35–55 / 16 lb</td>
                       <td className="p-3 text-brand-text-mid">You want the dental-specific formula. The card says this one is less dental-specific than Royal Canin</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-04" />
+              <ComparisonFoot updated="2026-10-05" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which small-breed food fits</h2>
               <FAQAccordion items={[
                 {
