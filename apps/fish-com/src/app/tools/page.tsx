@@ -212,6 +212,7 @@ export default function ToolsHub() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/eheim+aquarium+heater?s=tools-hub"
+              amazonLabel="Browse Eheim aquarium heaters on Amazon →"
             />
           </div>
         </div>
