@@ -247,7 +247,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Comprehensive gastric-adjunct formulation', 'SmartPak SmartPak pre-portioning available', 'Reasonable price relative to category']}
               cons={['Not a substitute for omeprazole in active disease', 'Some ingredients have modest evidence at best', 'Palatability variable in picky eaters']}
               price="$60–80/mo"
-              ctaText="Shop at SmartPak →"
+              ctaText="Shop SmartGut Ultra at SmartPak →"
               ctaHref="/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="smartgut-ultra"
@@ -361,7 +361,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Reliable category-standard formulation', 'Reasonable price', 'Wide availability']}
               cons={['Commoditized category — many similar alternatives', 'Powder format requires consistent water access to be effective']}
               price="$20–35/mo"
-              ctaText="Shop at SmartPak →"
+              ctaText="Shop Adams Plus electrolyte at SmartPak →"
               ctaHref="/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
               ctaAffiliateProduct="adams-plus-electrolyte"
