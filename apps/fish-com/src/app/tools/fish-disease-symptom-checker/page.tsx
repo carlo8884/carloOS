@@ -212,15 +212,15 @@ export default function FishDiseaseSymptomCheckerPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom"
-              amazonLabel="Browse aquarium salt disease treatment on Amazon →"
+              amazonLabel="Browse aquarium salt on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom"
-              amazonLabel="Browse seachem prime water conditioner on Amazon →"
+              amazonLabel="Browse Seachem Prime on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"
-              amazonLabel="Browse aquarium quarantine hospital tank net on Amazon →"
+              amazonLabel="Browse quarantine nets on Amazon →"
             />
           </div>
         </div>
