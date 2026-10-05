@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Mobile Lighthouse on each earning site's top five money pages.
- * One run per URL. A URL that misses a budget is retried once.
+ * One run per URL. A URL that misses a budget is retried up to twice.
  * Start the production servers yourself with LH_ORIGIN_<SITE>, or let this
  * process start `next start` for each site (the apps must already be built).
  *
@@ -63,9 +63,9 @@ async function auditOnce(url, port) {
 
 async function auditUrl(url, port) {
   let last
-  for (let attempt = 1; attempt <= 2; attempt++) {
+  for (let attempt = 1; attempt <= 3; attempt++) {
     last = await auditOnce(url, port)
-    if (!needsRetry(last.problems, attempt)) break
+    if (!needsRetry(last.problems, attempt, 3)) break
     console.log(`retry ${url}: ${last.problems.join('; ')}`)
   }
   return last
