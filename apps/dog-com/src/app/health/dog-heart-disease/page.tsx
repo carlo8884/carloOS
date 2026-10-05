@@ -94,27 +94,7 @@ export default function DogHeartDiseasePage() {
           <p>Advanced or refractory CHF may also include: torsemide (more potent diuretic), sildenafil (for pulmonary hypertension), digoxin (for rate control in atrial fibrillation), and in some cases thoracocentesis (draining pleural fluid) or abdominocentesis (draining ascites). A veterinary cardiologist is the appropriate specialist to guide CHF management — these medication combinations and their adjustments require cardiac expertise.</p>
 
           <h2 id="kit">A Simple Heart-Disease Home-Watch Kit</h2>
-          <p>
-            Three everyday physical supplies match the
-            resting-respiratory-rate, one-minute count, and
-            exercise-intolerance walk copy above: a resting
-            respiratory rate notebook so weekly sleeping-breath
-            counts stay in one log — a sustained rise above the
-            dog&apos;s usual baseline is an early warning of
-            decompensation before visible distress — a one-minute
-            kitchen timer so the count is a full minute while the
-            dog is sleeping or fully at rest (one rise and fall of
-            the chest is one breath; over 30 breaths per minute at
-            rest is abnormal), and a step-in padded dog harness for
-            short, controlled walks when exercise intolerance
-            shows up, so a collar does not press a coughing chest. These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace
-            echocardiography, they do not start pimobendan, they
-            do not replace a veterinarian-directed cardiac diet
-            (Hill&apos;s h/d, Royal Canin Cardiac), they do not
-            treat left-sided or right-sided CHF, and they are not
-            Vetmedin, furosemide, enalapril, or spironolactone. This page does
-            not hop medications. This page does not claim
-            hands-on testing. </p>
+          <p>These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace echocardiography, they do not start pimobendan, they do not replace a veterinarian-directed cardiac diet (Hill&apos;s h/d, Royal Canin Cardiac), they do not treat left-sided or right-sided CHF, and they are not Vetmedin, furosemide, enalapril, or spironolactone. This page does not hop medications. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
@@ -147,11 +127,7 @@ export default function DogHeartDiseasePage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/resting+respiratory+rate+notebook?s=health-dog-heart-disease"
-                amazonLabel="Browse resting respiratory rate notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease"
                 amazonLabel="Browse one-minute kitchen timers on Amazon →"
               />

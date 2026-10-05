@@ -79,39 +79,13 @@ export default function CushingsPage() {
             The 2012 ACVIM Consensus Statement on canine hyperadrenocorticism cites the LDDS test as the recommended first-line screening test, with approximately 85-95% sensitivity for PDH. Post-ACTH cortisol monitoring targets for trilostane therapy are 1-5 microg/dL at 4-6 hours post-pill; values below 1 microg/dL indicate overdosing risk and values above 9 microg/dL indicate inadequate control.
           </CalloutBox>
 
-          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Between those clinic visits, a 2-liter plastic graduated pitcher is how PU/PD stays a number — fill the bowl from the marked pitcher once and you can see whether overnight drinking jumped instead of guessing from a refilled bowl. It is not a narrow-neck glass water carafe, not a gallon gravity dog-waterer, and not a kitchen liquid-measuring pitcher. It does not treat Cushing&apos;s and it does not replace an LDDS or ACTH stimulation test. An A5 hardcover dot-grid notebook is how those pours, plus panting, pot-belly shape, and energy, stay dated observations you can hand the veterinarian at the next recheck — not a pocket spiral memo pad and not a waterproof field notebook. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
+          <p>Monitoring: ACTH stimulation test 10-14 days after starting or dose adjusting, then every 3-6 months when stable. Pre-pill cortisol (measured just before the morning trilostane dose) is an increasingly used monitoring approach. Between those clinic visits, a 2-liter plastic graduated pitcher is how PU/PD stays a number — fill the bowl from the marked pitcher once and you can see whether overnight drinking jumped instead of guessing from a refilled bowl. It is not a narrow-neck glass water carafe, not a gallon gravity dog-waterer, and not a kitchen liquid-measuring pitcher. It does not treat Cushing&apos;s and it does not replace an LDDS or ACTH stimulation test. Signs of adrenal crisis from trilostane overdose — vomiting, diarrhea, lethargy, weakness, shaking — are a medical emergency requiring IV fluids and steroid supplementation.</p>
 
           <h2>Iatrogenic Cushing's — Steroid-Induced</h2>
           <p>Chronic administration of corticosteroids (prednisone, dexamethasone, methylprednisolone — including long-acting injections) suppresses the hypothalamic-pituitary-adrenal axis and can produce all the classic Cushing's signs — PU/PD, pot belly, panting, hair loss, thin skin — indistinguishable from natural Cushing's. The ALP elevation on chemistry from corticosteroids (steroid-induced ALP) is often the first laboratory clue. Treatment: gradual corticosteroid tapering under veterinary guidance (never stop abruptly — the adrenals have become suppressed and need time to recover). LDDS and ACTH stimulation results will be abnormal while corticosteroids are being tapered — testing during taper is unreliable for diagnosis of natural Cushing's. Muscle wasting plus fat redistribution is why the pot belly looks like weight gain while the legs thin. An extra-large bolster dog lounge is comfort for that shape — a low-sided lounge they can sink into without climbing, not an egg-crate foam kennel pad and not an orthopedic dog bed. It does not treat hyperadrenocorticism.</p>
 
           <h2 id="kit">Home monitoring kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            PU/PD water-intake, pot-belly comfort, and
-            symptom-log copy on this page — a 2-liter
-            plastic graduated pitcher so excessive
-            drinking is a measured pour, an extra-large
-            bolster dog lounge so pot-belly and
-            muscle-loss dogs can rest without climbing,
-            and an A5 hardcover dot-grid notebook so
-            thirst, panting, and energy stay dated
-            observations for the next ACTH recheck.
-            These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for Cushing&apos;s,
-            adrenal crisis, or iatrogenic steroid
-            excess. Trilostane, Vetoryl, mitotane,
-            Lysodren, and human steroids are not
-            shoppable hops. Narrow-neck glass water
-            carafes, 2-quart stainless saucepans, and
-            pocket spiral memo pads already live on
-            vomiting-diarrhea-pets. Gallon gravity
-            dog-waterers, extra-large disposable pee
-            pads, and cooling bandanas already live on
-            dog.com Cushing&apos;s. This page does not
-            claim hands-on testing.
-          </p>
+          <p>These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for Cushing&apos;s, adrenal crisis, or iatrogenic steroid excess. Trilostane, Vetoryl, mitotane, Lysodren, and human steroids are not shoppable hops. Narrow-neck glass water carafes, 2-quart stainless saucepans, and pocket spiral memo pads already live on vomiting-diarrhea-pets. Gallon gravity dog-waterers, extra-large disposable pee pads, and cooling bandanas already live on dog.com Cushing&apos;s. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -168,11 +142,7 @@ export default function CushingsPage() {
                 amazonHref="/go/amazon-brand/extra+large+bolster+dog+lounge?s=health-cushing-disease-dogs"
                 amazonLabel="Browse extra-large bolster dog lounges on Amazon →"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/a5+hardcover+dot+grid+notebook?s=health-cushing-disease-dogs"
-                amazonLabel="Browse A5 hardcover dot-grid notebooks on Amazon →"
-              />
-          </div>
+              </div>
           </div>
 
           <h2>FAQ</h2>

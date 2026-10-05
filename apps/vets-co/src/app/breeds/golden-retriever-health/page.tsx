@@ -135,7 +135,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           <li><strong>Annual wellness from year 1–5:</strong> Full physical, vaccines as indicated, annual bloodwork from year 3</li>
           <li><strong>From age 6:</strong> Annual abdominal ultrasound added — the most impactful change in monitoring for hemangiosarcoma. Annual echocardiogram if any murmur detected. Full bloodwork including chemistry, CBC, urinalysis.</li>
           <li><strong>From age 8:</strong> Every 6 months for everything. Goldens change faster than annual monitoring captures in the senior years. Blood pressure measurement added. An 18-month wall calendar is how that age-6 ultrasound and these every-6-month senior visits stay written on one longer horizon — it is not a monthly desk pad calendar (that lives on when-to-enroll), not a hardcover weekly appointment planner, and not a wall-mounted magnetic monthly planner.</li>
-          <li><strong>Monthly at home:</strong> Lymph node check, gum color baseline awareness, body weight, body condition scoring. A dot-grid notebook is how the jaw, shoulder, groin, and behind-the-knee node check stays a four-site monthly map — it is not a spiral notebook (that lives on what-to-expect-at-the-vet), not a reporter notebook (that lives on choosing-a-veterinarian), not a bound composition book (that lives on labrador-health), and not a dog-com lymph-node anatomy chart. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels (that live on breed-specific-risk), not an assorted highlighter set (that lives on what-pet-insurance-covers), and not a dog-com gum-color assessment chart.</li>
+          <li>Monthly at home: Lymph node check, gum color baseline awareness, body weight, body condition scoring. Paint-chip sample cards are how the gum-color baseline stays a pink-versus-pale comparison — they are not round color-coding labels (that live on breed-specific-risk), not an assorted highlighter set (that lives on what-pet-insurance-covers), and not a dog-com gum-color assessment chart.</li>
         </ul>
 
         <h2 id="specialist">When to Refer to a Specialist</h2>
@@ -153,24 +153,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fast claims processing per the carrier, no payout limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
         <h2 id="kit">Golden-retriever-health kit</h2>
-        <p>
-          Everyday physical supplies that match the
-          lymphoma, hemangiosarcoma, and
-          life-stage-monitoring copy on this page
-          — a dot-grid notebook so the monthly
-          jaw, shoulder, groin, and behind-the-
-          knee node check stays a four-site map,
-          paint-chip sample cards so the gum-
-          color baseline stays a pink-versus-pale
-          comparison, and an 18-month wall
-          calendar so the age-6 ultrasound and
-          age-8 every-6-month visits stay written
-          on one longer horizon. These are
-          educational Golden-retriever-health /
-          paperwork tools, not a ranked product
-          list, not a substitute for veterinary
-          care, and not a treatment. This page does not
-          claim hands-on testing. </p>
+        <p>These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. This page does not claim hands-on testing.</p>
 
         <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -207,11 +190,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
           <div className="flex flex-col gap-3">
-            <ShopCtas
-              amazonHref="/go/amazon-brand/dot+grid+notebook?s=breeds-golden-retriever-health"
-              amazonLabel="Browse dot-grid notebooks on Amazon →"
-            />
-            <ShopCtas
+<ShopCtas
               amazonHref="/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health"
               amazonLabel="Browse paint-chip sample cards on Amazon →"
             />

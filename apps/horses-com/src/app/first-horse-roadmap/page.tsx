@@ -181,7 +181,7 @@ const CATEGORIES = [
   {
     title: 'Ground manners',
     body:
-      'Leading, respecting personal space, picking up feet, standing tied, accepting handling for the vet and farrier. The five short cues every first-horse owner drills until they are reflex: whoa, walk on, back, over, stand. A first-horse ground-manners cue card is how those five cues stay posted in the aisle before anyone leads out — it is not a laminated horse ear-eye-tail signal checklist (that lives on reading-body-language), not a horse handler kick-zone safety question card, and not a first-horse buyer visit field notebook.',
+      'Leading, respecting personal space, picking up feet, standing tied, accepting handling for the vet and farrier. The five short cues every first-horse owner drills until they are reflex: whoa, walk on, back, over, stand.',
   },
   {
     title: 'Tack fit',
@@ -191,7 +191,7 @@ const CATEGORIES = [
   {
     title: 'First-aid + emergency plan',
     body:
-      'The itemized kit, the normal vital ranges (HR 28–44, RR 8–16, temp 99–101.5°F), the written emergency plan that lives on the tack-room wall, and the difference between "call the vet now" and "monitor and call in the morning". A first-horse tack-room emergency-plan card is how that written plan stays on the wall — it is not a laminated horse barn emergency-triage chart (that lives on the health hub), not a horse after-hours emergency-cover question card (that lives on choosing-a-vet), and not a sterile-saline / dressing-pads / bandage-scissors hop (those live on first-aid-kit).',
+      'The itemized kit, the normal vital ranges (HR 28–44, RR 8–16, temp 99–101.5°F), the written emergency plan that lives on the tack-room wall, and the difference between "call the vet now" and "monitor and call in the morning".',
   },
 ]
 

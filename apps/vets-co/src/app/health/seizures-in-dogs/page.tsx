@@ -69,39 +69,13 @@ export default function SeizuresPage() {
 
           <h2>Managing Epilepsy</h2>
           <p>When seizures are frequent or severe enough to warrant treatment, the aim is control rather than cure. Anti-seizure medication, with the specific drug and dose determined and monitored by your veterinarian, reduces the frequency and severity of seizures to an acceptable level. Owners help by giving medication consistently, keeping a seizure diary of dates, durations, and possible triggers, and reporting changes. Many dogs with well-managed epilepsy enjoy a normal quality of life. Sudden discontinuation of seizure medication can be dangerous, so changes are always made under veterinary guidance.</p>
-          <p>A waterproof field notebook is how that seizure diary stays in one place — dates, stopwatch durations, and possible triggers — so the next clinic visit has a written log instead of a remembered guess. It is not a medical-records binder, not a vaccination record book, and not a resting-respiratory-rate notebook. It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
+          <p>It does not replace bloodwork, it does not replace medication, and it is not a ranked product. Ask your veterinarian what to record.</p>
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <h2 id="kit">Seizure observation kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            first-minutes and diary copy on this page —
-            a digital handheld stopwatch so start and
-            length are timed, a waterproof field
-            notebook so the seizure diary of dates,
-            durations, and possible triggers stays
-            writable after a messy event, and a foam
-            table-edge bumper so hard or sharp
-            furniture is padded before the next
-            seizure. These are household tools, not
-            treatments. They do not treat epilepsy,
-            they do not replace a veterinarian or
-            anti-seizure medication, and they are not
-            a ranked product list. Soft throw
-            blankets, crate bumper pads, interlocking
-            foam floor tiles, one-minute kitchen
-            timers, resting-respiratory-rate
-            notebooks, pet medical-records binders,
-            vaccination record books, first-aid kits,
-            emergency-contact cards, folding
-            stretchers, LED penlights, and
-            medical-alert collar tags already live on
-            other pages. This page does not hop
-            medications. This page does not claim
-            hands-on testing.
-          </p>
+          <p>These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list. This page does not hop medications. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -157,10 +131,6 @@ export default function SeizuresPage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs"
                 amazonLabel="Browse digital handheld stopwatches on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/waterproof+field+notebook?s=health-seizures-in-dogs"
-                amazonLabel="Browse waterproof field notebooks on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"

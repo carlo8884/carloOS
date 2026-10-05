@@ -128,26 +128,7 @@ export default function SeniorHorseCarePage() {
 
           <h2 id="comfort">Comfort and Exercise</h2>
           <p>Gentle, consistent exercise keeps an older horse&apos;s joints mobile, muscles toned, and mind engaged; the arthritic senior generally does better with movement and turnout than with confinement. Adapt the work to the horse -- lighter, with thorough warm-ups -- and provide comfort: shelter, soft footing, protection from bullying by younger herdmates, body clipping for PPID horses that fail to shed, and attentive blanketing for those that struggle to keep warm. Small accommodations make a large difference to an old horse&apos;s comfort.</p>
-          <p>
-            A senior horse weight-and-joint
-            watch notebook is how “stiffer
-            after a night in, lighter work
-            after a warm-up, bullied off
-            hay” stays written down so
-            turnout and work adapt before
-            confinement makes the joints
-            worse — it is not a winter
-            horse-blanket / turnout-sheet /
-            stable-blanket hop (those live
-            on the blanket-size calculator),
-            not a horse-clippers / clipper-
-            blades hop (those live on
-            body-clipping), not a portable
-            3-sided run-in shelter hop
-            (that lives on rain-rot), and
-            not a horse stall-rubber-mat
-            hop. This page does
-            not hop medications. </p>
+          <p>This page does not hop medications.</p>
 
           <h2 id="monitoring">Veterinary Monitoring</h2>
           <p>Senior horses benefit from more frequent veterinary attention: regular dental exams, testing for PPID when signs appear, more careful parasite control given reduced immunity, attention to vaccination, and prompt investigation of weight loss or other changes. Because age-related conditions develop gradually and a thick or PPID coat hides weight change, regular hands-on checks and body condition scoring catch problems early, when they are most manageable.</p>
@@ -251,10 +232,6 @@ export default function SeniorHorseCarePage() {
               <ShopCtas
                 amazonHref="/go/amazon-brand/beet+pulp+horse+feed?s=ownership-senior-horse-care"
                 amazonLabel="Shop on Amazon"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/senior+horse+weight+and+joint+watch+notebook?s=ownership-senior-horse-care"
-                amazonLabel="Browse senior horse weight-and-joint watch notebooks on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/senior+horse+quality+of+life+score+card?s=ownership-senior-horse-care"

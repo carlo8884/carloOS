@@ -84,33 +84,13 @@ export default function DiabetesPage() {
           </CalloutBox>
 
           <h2>Monitoring at Home and at the Clinic</h2>
-          <p>Good control depends on monitoring. Continuous glucose monitors and periodic glucose curves let the veterinary team see how glucose rises and falls through the day and adjust insulin accordingly. Owners track water intake, appetite, weight, and energy. The goal is not a perfect glucose number but resolution of clinical signs with no episodes of dangerous low blood sugar. Signs of hypoglycemia — weakness, wobbliness, tremors, disorientation, or seizures — require immediate action: offer food or rub corn syrup on the gums and contact a veterinarian. A digital pet glucose-log notebook is how those water-intake, appetite, weight, and energy notes stay dated for the next curve — it is not a pet glucometer (that lives on dog.com diabetes), not an A5 hardcover dot-grid notebook (that lives on Cushing&apos;s), not a waterproof field notebook, and not a dog weight-log book. It does not read a glucose number and it is not a FreeStyle Libre or Dexcom hop. Light corn syrup already lives on dog.com diabetes.</p>
+          <p>Good control depends on monitoring. Continuous glucose monitors and periodic glucose curves let the veterinary team see how glucose rises and falls through the day and adjust insulin accordingly. Owners track water intake, appetite, weight, and energy. The goal is not a perfect glucose number but resolution of clinical signs with no episodes of dangerous low blood sugar. Signs of hypoglycemia — weakness, wobbliness, tremors, disorientation, or seizures — require immediate action: offer food or rub corn syrup on the gums and contact a veterinarian.</p>
 
           <h2>Prognosis</h2>
-          <p>With committed daily care, most diabetic dogs and cats live well for years. Cats may achieve remission with early, aggressive management. The disease is demanding for owners — daily injections, scheduled feeding, and regular rechecks — but the payoff is a comfortable pet with a normal quality of life. The pets that do poorly are usually those diagnosed late, with uncontrolled concurrent disease, or where treatment is inconsistent. The notebook, water bowl, and food bin are household consistency tools. They do not replace the veterinarian who chooses the insulin and reads the next curve.</p>
+          <p>With committed daily care, most diabetic dogs and cats live well for years. Cats may achieve remission with early, aggressive management. The disease is demanding for owners — daily injections, scheduled feeding, and regular rechecks — but the payoff is a comfortable pet with a normal quality of life. The pets that do poorly are usually those diagnosed late, with uncontrolled concurrent disease, or where treatment is inconsistent.</p>
 
           <h2 id="kit">Home-care kit</h2>
-          <p>
-            Everyday physical supplies that match the
-            water-bowl, measured-meal, and
-            owner-tracking copy on this page — a
-            digital pet glucose-log notebook so water
-            intake, appetite, weight, and energy stay
-            dated observations between clinic curves,
-            an insulated pet water bowl so emptying
-            the bowl unusually fast is a seen refill,
-            and an airtight locking pet-food bin so
-            twice-daily measured meals stay the same
-            food. These are educational home-care and
-            monitoring tools, not a ranked product
-            list, not a substitute for veterinary
-            care, and not a treatment for diabetes. Vetsulin, NPH, ProZinc, glargine,
-            syringes, FreeStyle Libre, Dexcom, and
-            prescription diabetic diets are not
-            shoppable hops. Soft-sided
-            vet-visit carriers already live on
-            dog.com heartworm-prevention. This page
-            does not claim hands-on testing. </p>
+          <p>These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for diabetes. Vetsulin, NPH, ProZinc, glargine, syringes, FreeStyle Libre, Dexcom, and prescription diabetic diets are not shoppable hops. Soft-sided vet-visit carriers already live on dog.com heartworm-prevention. This page does not claim hands-on testing.</p>
 
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
@@ -167,11 +147,7 @@ export default function DiabetesPage() {
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
             <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/digital+pet+glucose+log+notebook?s=health-diabetes-in-dogs-cats"
-                amazonLabel="Browse digital pet glucose-log notebooks on Amazon →"
-              />
-              <ShopCtas
+<ShopCtas
                 amazonHref="/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats"
                 amazonLabel="Browse insulated pet water bowls on Amazon →"
               />
