@@ -47,7 +47,7 @@ export default function BestDentalChewsPage() {
               nextLabel="Subtract the chew calories before you add a daily Greenie"
               nextBlurb="The callout is the VOHC filter — seal first, then count the 25–90 kcal on the bag so the chew does not become a hidden meal. The calorie calculator is the next step: daily energy, then subtract one chew. The hop below is the same Greenies search already on this page."
               resourceHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
-              resourceLabel="Browse Greenies dental chews →"
+              resourceLabel="Browse Greenies dental chews on Amazon →"
             />
             <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
