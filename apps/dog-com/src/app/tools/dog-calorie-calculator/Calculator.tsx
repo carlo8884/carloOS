@@ -265,6 +265,11 @@ export default function DogCalorieCalculator() {
         <ResultMeaning>
           Daily energy is the maintenance estimate for this weight and life stage. It is a starting point, not a feeding prescription.
         </ResultMeaning>
+        <p className="mt-4 text-sm font-semibold leading-snug">
+          <a href="/tools/dog-body-condition-score" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+            Score body condition before you change the food →
+          </a>
+        </p>
         <ResultPick
           siteId="dog-com"
           pick={calorieFoodPick(
