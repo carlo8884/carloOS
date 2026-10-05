@@ -57,7 +57,7 @@ const FAQS = [
   {
     question: 'How much does it cost to microchip a dog?',
     answer:
-      'The implant itself is inexpensive — commonly around $25 to $60 when done at a veterinary clinic, and often less or free at shelter and community microchip clinics. Many dogs adopted from shelters or rescues are already microchipped, with the cost included in the adoption fee. The chip itself involves no ongoing fee. Some registry databases charge a one-time or annual fee to maintain or update your contact details, though several major registries allow free basic registration and updates.',
+      'The implant itself is inexpensive — commonly around $25–60 when done at a veterinary clinic, and often less or free at shelter and community microchip clinics. Many dogs adopted from shelters or rescues are already microchipped, with the cost included in the adoption fee. The chip itself involves no ongoing fee. Some registry databases charge a one-time or annual fee to maintain or update your contact details, though several major registries allow free basic registration and updates.',
   },
   {
     question: 'Is microchipping painful for my dog?',
@@ -129,7 +129,7 @@ export default function DogMicrochippingPage() {
 
           </>
         }
-       priceAsOf="2026-06-11">
+       priceAsOf="2026-10-04">
         <div className="carloOS-article">
           <ArticleByline
             siteName="Dog.com Editorial"

@@ -104,7 +104,7 @@ export default function FindAVetPage() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-brand-danger/20">
-              <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $75 consultation fee)</div>
+              <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $70–100 consultation fee)</div>
             </div>
           </div>
           <Link href="/health/emergency-signs" className="text-brand-primary text-sm font-bold no-underline hover:underline">→ Full emergency signs guide (14 signs to know)</Link>
@@ -117,7 +117,7 @@ export default function FindAVetPage() {
             const inRegion = States.filter((s) => s.region === region).sort((a, b) => a.name.localeCompare(b.name))
             return (
               <div key={region} className="mb-6">
-                <PriceAsOf date="2026-05-25" />
+                <PriceAsOf date="2026-10-04" />
                 <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">{region}</div>
                 <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-2">
                   {inRegion.map((s) => (
