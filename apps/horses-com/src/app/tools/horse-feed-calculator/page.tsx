@@ -12,6 +12,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   AffiliateDisclosure,
+  JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -208,6 +209,14 @@ export default function HorseFeedCalculatorPage() {
           <Link href="/tools/horse-weight-calculator">horse weight calculator</Link>.
         </p>
         <Calculator />
+        <JourneyNext
+          siteId="horses-com"
+          nextHref="/nutrition/forage-basics"
+          nextLabel="Read forage basics before you buy hay"
+          nextBlurb="The pound range is a starting target. Forage basics is why the ration starts with hay, and hay types is the next page when you are choosing a cutting. The hop is the timothy-hay search already on this page."
+          resourceHref="/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator"
+          resourceLabel="Shop timothy hay on Amazon →"
+        />
 
         {/* Money path — live amazon-brand search hops (timothy hay / ration
             balancer / feed scoop / slow-feeder net / salt lick). ShopCtas
