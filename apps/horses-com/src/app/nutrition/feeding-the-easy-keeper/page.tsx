@@ -232,7 +232,7 @@ export default function EasyKeeperPage() {
             pros={['Fills nutrition gaps without calories', 'Low sugar and starch for metabolic horses', 'Small serving is economical']}
             cons={['Use under veterinary guidance for metabolic horses', 'Not a calorie source for hard keepers', 'Match to forage type']}
             price="$30–55 per 25–30 lb"
-            ctaText="Search a low-NSC ration balancer on Amazon →"
+            ctaText="Search a low-NSC easy-keeper ration balancer on Amazon →"
             ctaHref="/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="low-calorie-balancer"
