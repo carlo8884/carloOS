@@ -169,7 +169,7 @@ function buildList(
       essential: true,
       gear: true,
       shopHref: amazonHop('julius+k9+idc+powerharness'),
-      shopLabel: 'Browse harnesses on Amazon →',
+      shopLabel: 'Browse Julius-K9 harnesses on Amazon →',
       links: [
         { href: '/reviews/best-dog-harnesses', label: 'Best dog harnesses' },
         { href: '/tools/harness-collar-size', label: 'Harness & collar size' },
@@ -463,7 +463,7 @@ function resultShop(
     blurb:
       'A flat collar is for the ID tag; a well-fitted harness is for walks. Size it with the harness calculator and use the same Julius-K9 search already used on the harness tool. This list is not a training plan.',
     href: amazonHop('julius+k9+idc+powerharness'),
-    label: 'Browse harnesses on Amazon →',
+    label: 'Browse Julius-K9 harnesses on Amazon →',
   }
 }
 
