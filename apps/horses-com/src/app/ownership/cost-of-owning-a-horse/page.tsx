@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -109,38 +109,12 @@ export default function CostOfOwningPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
-          <div className="mb-8">
-            <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-              Keep the horse-ownership budget worksheet
-            </p>
-            <h2 className="mb-2 font-display text-xl font-bold text-brand-dark">
-              Horse-ownership budget worksheet
-            </h2>
-
-          </div>
-
           <h2 id="purchase">Purchase vs Upkeep</h2>
           <p>The purchase price of a horse ranges from free or a few hundred for an unbroke or older horse to many thousands or far more for a trained competition prospect. But the purchase is a one-time cost, while upkeep is forever. The annual cost of keeping a horse routinely exceeds the purchase price of an ordinary horse within the first year, and a low or zero purchase price often signals a horse that will cost more in training, rehabilitation, or veterinary care. Budget for the keeping, not the buying.</p>
           
 
           <h2 id="recurring">The Big Recurring Costs</h2>
           <p>The largest ongoing expense is usually keep -- either board (paying a facility to house and care for the horse) or, if you keep the horse at home, the combined cost of land, fencing, shelter, hay, bedding, and your labor. Feed and forage are a major year-round cost, rising in winter when hay does the work that grass does in summer. Together, keep and feed dominate the monthly budget, which is why the choice of how to keep a horse is the single biggest financial decision after buying.</p>
-          <p>
-            A horse keep / feed / farrier cost log binder
-            is how board or home-keep, hay and forage,
-            and the recurring farrier cycle stay in one
-            ledger instead of three separate receipts —
-            it is not an equine farrier log book (that
-            lives on farrier-schedule and records trim
-            dates, not dollar amounts), not a horse
-            boarding contract document binder (that lives
-            on boarding-options), and not a horse
-            pre-purchase exam records binder (that lives
-            on buying-your-first-horse). This page does
-            not hop hay tarps, hay racks, or feed bins
-            already pinned on boarding and nutrition
-            pages.
-          </p>
 
           <h2 id="routine">Routine Health and Farrier</h2>
           <ul>
@@ -239,19 +213,12 @@ export default function CostOfOwningPage() {
               ASTM+SEI+horse+riding+helmet. */}
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
+              Next step
             </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-            <div className="flex flex-col gap-3">
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+ownership+monthly+budget+worksheet?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse ownership monthly budget worksheets on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+keep+feed+farrier+cost+log+binder?s=ownership-cost-of-owning-a-horse"
-                amazonLabel="Browse horse keep / feed / farrier cost log binders on Amazon →"
-              />
-          </div>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Board, feed, and farrier are recurring costs. The calculator puts a monthly figure next to the ranges on this page.</p>
+            <a href="/tools/horse-cost-calculator" className="text-sm font-semibold text-brand-primary">
+              Estimate board, feed, and farrier cost →
+            </a>
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>

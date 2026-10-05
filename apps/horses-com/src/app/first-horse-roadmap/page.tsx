@@ -475,14 +475,9 @@ export default function FirstHorseRoadmapPage() {
                 amazonHref="/go/amazon-brand/horse+hoof+pick?s=first-horse-roadmap"
                 amazonLabel="Shop on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/first+horse+ground+manners+cue+card?s=first-horse-roadmap"
-                amazonLabel="Browse first-horse ground-manners cue cards on Amazon →"
-              />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/first+horse+tack+room+emergency+plan+card?s=first-horse-roadmap"
-                amazonLabel="Browse first-horse tack-room emergency-plan cards on Amazon →"
-              />
+              <a href="/ownership/buying-your-first-horse" className="text-sm font-semibold text-brand-primary">
+                Read the first-horse buying guide →
+              </a>
 </div>
           </div>
         </div>

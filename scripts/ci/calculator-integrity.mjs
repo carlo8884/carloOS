@@ -10651,8 +10651,7 @@ const CALCULATORS = [
     id: 'horses · cost-of-owning-a-horse hops',
     file: 'apps/horses-com/src/app/ownership/cost-of-owning-a-horse/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+keep\+feed\+farrier\+cost\+log\+binder\?s=ownership-cost-of-owning-a-horse/, label: 'horse keep-feed-farrier cost-log-binder search hop (matches on-page keep+feed+farrier recurring-cost copy; unique vs equine+farrier+log+book / horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder)' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented budget worksheet or cost-log binder' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -10670,7 +10669,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder\?s=ownership-horse-insurance/, label: 'horse insurance policy-document-binder search hop (matches on-page agreed-value / exclusions / deductible copy; unique vs horse+boarding+contract+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
       { re: /amazon-brand\/horse\+insurance\+policy\+document\+binder/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+mortality\+vs\+major\+medical\+decision\+worksheet\?s=ownership-horse-insurance/, label: 'horse mortality-vs-major-medical decision-worksheet search hop (matches on-page decide-what-to-insure copy; unique vs horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook / horse+veterinary+history+vcpr+records+folder)' },
+      { re: /\/ownership\/cost-of-owning-a-horse/, label: 'ownership cost guide instead of an invented mortality worksheet' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10689,7 +10688,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder\?s=ownership-leasing-a-horse/, label: 'horse lease agreement document-binder search hop (matches on-page put-it-in-writing / term-fee-use-vet-insurance copy; unique vs horse+boarding+contract+document+binder / horse+insurance+policy+document+binder / horse+pre+purchase+exam+records+binder / horse+keep+feed+farrier+cost+log+binder)' },
       { re: /amazon-brand\/horse\+lease\+agreement\+document\+binder/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+full\+vs\+partial\+lease\+cost\+share\+worksheet\?s=ownership-leasing-a-horse/, label: 'horse full-vs-partial lease cost-share-worksheet search hop (matches on-page full-versus-half-lease riding-days / who-pays-board-farrier-vet copy; unique vs horse+mortality+vs+major+medical+decision+worksheet / horse+ownership+monthly+budget+worksheet / equine+emergency+fund+expense+tracker+notebook)' },
+      { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented lease worksheet' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10706,9 +10705,7 @@ const CALCULATORS = [
     id: 'horses · pre-purchase-exam hops',
     file: 'apps/horses-com/src/app/ownership/pre-purchase-exam/page.tsx',
     mustInclude: [
-      { re: /amazon-brand\/horse\+pre\+purchase\+exam\+findings\+decision\+worksheet/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/horse\+pre\+purchase\+exam\+findings\+decision\+worksheet\?s=ownership-pre-purchase-exam/, label: 'horse pre-purchase exam findings-decision-worksheet search hop (matches on-page using-findings / not-pass-or-fail / radiographs-as-extras copy; unique vs horse+pre+purchase+exam+records+binder / horse+mortality+vs+major+medical+decision+worksheet / horse+full+vs+partial+lease+cost+share+worksheet / horse+ownership+monthly+budget+worksheet)' },
-      { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
+      { re: /\/ownership\/buying-your-first-horse/, label: 'first-horse buying guide instead of an invented findings worksheet' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
     mustExclude: [
@@ -10743,7 +10740,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/senior-horse-care/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
-      { re: /amazon-brand\/senior\+horse\+quality\+of\+life\+score\+card\?s=ownership-senior-horse-care/, label: 'senior horse quality-of-life score-card search hop (matches on-page honest-assessment / comfort-before-goodbye copy; unique vs horse+body+condition+score+chart / horse+handler+kick+zone+safety+question+card / horse+buyer+vet+briefing+question+card / horse+mortality+vs+major+medical+decision+worksheet)' },
+      { re: /\/tools\/body-condition-score/, label: 'body-condition tool instead of an invented quality-of-life score card' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],
@@ -10762,6 +10759,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /Jump to the roadmap/, label: 'on-page roadmap is available without email' },
       { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
+      { re: /\/ownership\/buying-your-first-horse/, label: 'first-horse buying guide instead of an invented cue card' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
     ],

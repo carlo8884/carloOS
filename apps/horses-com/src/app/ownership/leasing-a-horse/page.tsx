@@ -127,26 +127,6 @@ export default function LeasingHorsePage() {
 
           <h2 id="types">Full vs Partial Lease</h2>
           <p>The two broad types differ by how much of the horse the lessee gets. In a full lease, the lessee has the horse essentially to themselves and typically covers all or most of its costs -- board, farrier, routine vet, and so on -- almost like temporary ownership. In a partial or share lease (often a half lease), the lessee rides on certain days and shares the costs proportionally with the owner or other sharers. Partial leases suit riders wanting regular riding at a fraction of full cost.</p>
-          <p>
-            A horse full vs partial lease
-            cost-share worksheet is how full-lease
-            versus half-lease riding days and who
-            pays board, farrier, and routine vet
-            stay on one page before anyone
-            commits — it is not a horse ownership
-            monthly budget worksheet (that lives
-            on cost-of-owning-a-horse and totals
-            forever keep, not a shared lease),
-            not a horse mortality vs major-medical
-            decision worksheet (that lives on
-            horse-insurance), and not an equine
-            emergency fund expense tracker
-            notebook (that lives on
-            cost-of-owning-a-horse). This page
-            does not hop keep-feed-farrier cost
-            logs, farrier log books, or VCPR
-            records folders already pinned
-            elsewhere. </p>
 
           <h2 id="location">On-Site vs Off-Site</h2>
           <p>Leases also differ by where the horse stays. In an on-site lease the horse remains at its current barn, which is common for partial leases and keeps the owner close and the routine stable. In an off-site lease the lessee moves the horse to their own yard, more typical of a full lease and giving more independence but also more responsibility. The location affects cost, oversight, and how much the owner stays involved in the horse&apos;s daily life.</p>
@@ -260,10 +240,9 @@ export default function LeasingHorsePage() {
                 amazonHref="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse"
                 amazonLabel="Shop equine supplements on Amazon"
               />
-              <ShopCtas
-                amazonHref="/go/amazon-brand/horse+full+vs+partial+lease+cost+share+worksheet?s=ownership-leasing-a-horse"
-                amazonLabel="Browse horse full vs partial lease cost-share worksheets on Amazon →"
-              />
+              <a href="/tools/horse-cost-calculator" className="text-sm font-semibold text-brand-primary">
+                Estimate the costs a lease still has to cover →
+              </a>
           </div>
           </div>
 
