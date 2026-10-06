@@ -152,25 +152,25 @@ export default function HorseInsurancePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Losing a horse that would be expensive to replace</td>
-                  <td className="p-3 font-bold text-brand-dark">Mortality</td>
+                  <td className="p-3 font-bold text-brand-dark">Mortality<a href="/ownership/cost-of-owning-a-horse" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Ownership cost guide</a></td>
                   <td className="p-3 text-brand-text-mid">Described as paying an agreed value on death or covered euthanasia. Often discussed as the base policy. This page does not quote that value.</td>
                   <td className="p-3 text-brand-text-mid">Pay a vet bill while the horse is alive</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A colic surgery or a long treatment</td>
-                  <td className="p-3 font-bold text-brand-dark">Major medical and surgical</td>
+                  <td className="p-3 font-bold text-brand-dark">Major medical and surgical<a href="/ownership/cost-of-owning-a-horse" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Ownership cost guide</a></td>
                   <td className="p-3 text-brand-text-mid">Commonly described as an add-on to mortality. The policy&apos;s limit and deductible decide what is paid. This page does not quote them.</td>
                   <td className="p-3 text-brand-text-mid">Replace the horse if it dies. That is mortality</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A competition horse that survives but cannot do the job</td>
-                  <td className="p-3 font-bold text-brand-dark">Loss of use</td>
+                  <td className="p-3 font-bold text-brand-dark">Loss of use<a href="/ownership/cost-of-owning-a-horse" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Ownership cost guide</a></td>
                   <td className="p-3 text-brand-text-mid">Described as a portion of insured value, with a strict definition. This page does not quote that portion.</td>
                   <td className="p-3 text-brand-text-mid">Name a price, or recommend it for a low-value pleasure horse</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">The horse injures a person or damages property</td>
-                  <td className="p-3 font-bold text-brand-dark">Liability</td>
+                  <td className="p-3 font-bold text-brand-dark">Liability<a href="/ownership/cost-of-owning-a-horse" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Ownership cost guide</a></td>
                   <td className="p-3 text-brand-text-mid">Relevant at any horse value. Sometimes described as part of a membership, sometimes as its own policy. This page does not check a membership.</td>
                   <td className="p-3 text-brand-text-mid">Pay the horse&apos;s own vet bill or death benefit</td>
                 </tr>
