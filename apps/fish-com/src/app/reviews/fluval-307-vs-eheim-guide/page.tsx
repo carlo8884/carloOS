@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -68,6 +68,22 @@ export default function FluvalVsEheimGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-fluval-307-vs-eheim-guide"
+          checklist={[
+            "The primer can be finicky on the first start.",
+            "When decades of runtime matter more than AquaStop.",
+            "The Eheim Classic 350 is for a filter meant to keep running for years.",
+            "Penn Plax on that page is the budget canister, and it is a different comparison.",
+            "The Fluval 307 is Best Overall and the winner.",
+            "Flow is 303 GPH, which the review calls an actual rate rather than an inflated one.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-canister-filters">canister review</Link>. This pair is two canisters. Hang-on-back versus canister is the <Link href="/reviews/hob-vs-canister-guide">AquaClear 70 versus Fluval 307</Link> page. The Fluval 307 is for a 40–70 gallon tank. The Eheim Classic 350 is for a filter meant to keep running for years. Penn Plax on that page is the budget canister, and it is a different comparison.</p>
         <h2>What the review says about the Fluval 307</h2>
         <p>The Fluval 307 is Best Overall and the winner. Tank size is 40–70 gallons. Flow is 303 GPH, which the review calls an actual rate rather than an inflated one. Noise is near-silent. AquaStop lets you change media without disconnecting the hoses. Media is four separated baskets. The warranty is 5 years. The printed price is $120–150. The cons say the primer button can be finicky on the first start, and that it costs more than the Penn Plax on the same page.</p>

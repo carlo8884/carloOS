@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -68,6 +68,22 @@ export default function EheimVsCobaltGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-eheim-vs-cobalt-heater-guide"
+          checklist={[
+            "The Eheim Jager TruTemp, marked Best Overall.",
+            "When you want a flat heater that is less visible in a display tank.",
+            "It is not recalibratable, and the review says it costs more than the Jager for the same accuracy.",
+            "The heater review stops the Eheim size list at 300W.",
+            "The heater-wattage calculator can print a higher stock figure.",
+            "That figure is not an Eheim size on the review.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-aquarium-heaters">heater review</Link>. The Eheim Jager TruTemp is the overall pick. The Cobalt Aquatics Neo-Therm Pro is the flat heater.</p>
         <h2>What the review says about the Eheim Jager</h2>
         <p>The Jager is Best Overall and the winner. Published accuracy is ±0.5°F. A side dial recalibrates drift separately from the main dial. It shuts off when it is removed from water. The housing is glass, so it can shatter if dropped. Sizes in the review run from 25W to 300W. The printed price is $25–55 by wattage. The review also says the main dial is approximate until you calibrate it, and that the tube takes more space than a flat heater.</p>
