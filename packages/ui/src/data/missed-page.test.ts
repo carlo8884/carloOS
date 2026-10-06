@@ -3,16 +3,21 @@ import { existsSync, readFileSync } from 'node:fs'
 import { join } from 'node:path'
 import { test } from 'node:test'
 import { fileURLToPath } from 'node:url'
+import { MONEY_PAGES } from '../../../../scripts/ci/lighthouse-budgets-lib.mjs'
 import { MISSED_PAGES } from './missed-page.ts'
 
 const ROOT = join(fileURLToPath(new URL('.', import.meta.url)), '../../../..')
 const SITES = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'] as const
 
-test('each earning site offers three real guides, a hub, and a calculator', () => {
+test('each earning site 404 links its five money pages, a hub, and a calculator', () => {
   for (const site of SITES) {
     const page = MISSED_PAGES[site]
     assert.ok(page, site)
-    assert.equal(page.guides.length, 3)
+    assert.equal(page.guides.length, 5)
+    assert.deepEqual(
+      page.guides.map((guide) => guide.href),
+      MONEY_PAGES[site].map((path: string) => `/${path}`),
+    )
     const hrefs = [page.hub.href, page.calculator.href, ...page.guides.map((guide) => guide.href)]
     for (const href of hrefs) {
       assert.equal(href.includes('dog-age-calculator'), false, href)

@@ -7,7 +7,7 @@ import { TrackPage404 } from './TrackPage404'
 
 /**
  * Plain recovery for a missing URL or an empty search. Hub search filters
- * the three guides. The calculator stays visible when the filter hides them.
+ * the buying pages. The calculator stays visible when the filter hides them.
  */
 export function MissedPage({
   siteId,
@@ -31,8 +31,8 @@ export function MissedPage({
         : 'Search'
   const lead =
     kind === 'missing'
-      ? 'This page does not exist or may have moved. Search these guides, or open the calculator.'
-      : 'Nothing matched that search. These guides and the calculator are a place to start.'
+      ? 'This page does not exist or may have moved. These buying pages are a place to start, or open the calculator.'
+      : 'Nothing matched that search. These buying pages and the calculator are a place to start.'
 
   return (
     <div className="min-h-[70vh] px-container-sm sm:px-container py-16">

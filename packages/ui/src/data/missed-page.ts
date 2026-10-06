@@ -11,33 +11,44 @@ export interface MissedLink {
 export interface MissedPageContent {
   noun: string
   hub: MissedLink
-  guides: readonly [MissedLink, MissedLink, MissedLink]
+  guides: readonly [MissedLink, MissedLink, MissedLink, MissedLink, MissedLink]
   calculator: MissedLink
 }
 
 /**
- * Top three guides from each earning site's hub, plus that site's daily
- * calculator. Fish has no /guides hub; the setup hub is the guide list.
+ * The five money pages from each earning site's lighthouse budget, plus
+ * that site's hub and daily calculator. Fish has no /guides hub; the setup
+ * hub is the guide list.
  */
 export const MISSED_PAGES: Partial<Record<SiteId, MissedPageContent>> = {
   'dog-com': {
-    noun: 'guides',
+    noun: 'pages',
     hub: { href: '/guides', title: 'Care guides', topic: 'dog care' },
     guides: [
       {
-        href: '/guides/dog-body-condition-score',
-        title: 'Dog body condition score',
-        topic: 'Weight scale and how to read it',
+        href: '/reviews/best-dog-crates',
+        title: 'Best dog crates',
+        topic: 'Wire, plastic, heavy-duty, and furniture-style',
       },
       {
-        href: '/guides/dog-spay-neuter-timing',
-        title: 'Spay and neuter timing',
-        topic: 'What the cited research says about scheduling',
+        href: '/reviews/best-dry-dog-food',
+        title: 'Best dry dog food',
+        topic: 'Life-stage dry formulas compared',
       },
       {
-        href: '/guides/how-to-take-dogs-temperature',
-        title: "How to take a dog's temperature",
-        topic: 'Home vital signs and the ranges to know',
+        href: '/reviews/best-dog-harnesses',
+        title: 'Best dog harnesses',
+        topic: 'Front-clip, back-clip, and escape-proof',
+      },
+      {
+        href: '/reviews/best-dog-food-for-puppies',
+        title: 'Best puppy food',
+        topic: 'Large-breed and small-breed formulas',
+      },
+      {
+        href: '/reviews/best-dog-gps-tracker',
+        title: 'Best dog GPS trackers',
+        topic: 'Fi, Whistle, and Tractive',
       },
     ],
     calculator: {
@@ -47,23 +58,33 @@ export const MISSED_PAGES: Partial<Record<SiteId, MissedPageContent>> = {
     },
   },
   'fish-com': {
-    noun: 'guides',
+    noun: 'pages',
     hub: { href: '/setup', title: 'Setup guides', topic: 'aquarium setup' },
     guides: [
       {
-        href: '/setup/aquarium-cycling-guide',
-        title: 'Aquarium cycling guide',
-        topic: 'Nitrogen cycle before fish go in',
+        href: '/reviews/best-aquarium-filters',
+        title: 'Best aquarium filters',
+        topic: 'Hang-on-back, canister, and sponge',
       },
       {
-        href: '/setup/water-chemistry-guide',
-        title: 'Water chemistry guide',
-        topic: 'Ammonia, nitrite, nitrate, and pH',
+        href: '/reviews/best-aquarium-heaters',
+        title: 'Best aquarium heaters',
+        topic: 'Eheim, Hydor, and Aqueon',
       },
       {
-        href: '/setup/planted-tank-setup',
-        title: 'Planted tank setup',
-        topic: 'Low-tech plants, light, and substrate',
+        href: '/reviews/best-water-test-kits',
+        title: 'Best water test kits',
+        topic: 'API, Salifert, and meters',
+      },
+      {
+        href: '/reviews/best-nano-tanks',
+        title: 'Best nano tanks',
+        topic: 'Fluval Spec and Aqueon kits',
+      },
+      {
+        href: '/reviews/best-canister-filters',
+        title: 'Best canister filters',
+        topic: 'Fluval 307 and Eheim Classic',
       },
     ],
     calculator: {
@@ -73,23 +94,33 @@ export const MISSED_PAGES: Partial<Record<SiteId, MissedPageContent>> = {
     },
   },
   'horses-com': {
-    noun: 'guides',
+    noun: 'pages',
     hub: { href: '/guides', title: 'Horse guides', topic: 'equine care' },
     guides: [
       {
-        href: '/guides/saddle-fit-basics',
-        title: 'Saddle fit basics',
-        topic: 'Tree, panels, and the ridden check',
+        href: '/reviews/best-equine-supplements',
+        title: 'Best equine supplements',
+        topic: 'Joint, gastric, hoof, and electrolyte',
       },
       {
-        href: '/guides/equine-dental-care',
-        title: 'Equine dental care',
-        topic: 'Floating, wolf teeth, and exam timing',
+        href: '/reviews/best-winter-horse-blankets',
+        title: 'Best winter horse blankets',
+        topic: 'Turnout blankets by weight and denier',
       },
       {
-        href: '/guides/equine-vaccination-schedule',
-        title: 'Vaccination schedule',
-        topic: 'AAEP core and risk-based vaccines',
+        href: '/tack/saddle-pads',
+        title: 'Saddle pads',
+        topic: 'Quilted, sheepskin, and felt',
+      },
+      {
+        href: '/tack/helmet-guide',
+        title: 'Helmet guide',
+        topic: 'Safety-rated riding helmets',
+      },
+      {
+        href: '/tack/boots-and-wraps',
+        title: 'Boots and wraps',
+        topic: 'Brushing boots, bell boots, and standing wraps',
       },
     ],
     calculator: {
@@ -99,23 +130,33 @@ export const MISSED_PAGES: Partial<Record<SiteId, MissedPageContent>> = {
     },
   },
   'vets-co': {
-    noun: 'guides',
+    noun: 'pages',
     hub: { href: '/guides', title: 'Care guides', topic: 'vet care' },
     guides: [
       {
-        href: '/guides/cost-of-veterinary-care',
-        title: 'What vet care costs',
-        topic: 'Typical fees for routine and urgent visits',
+        href: '/reviews/best-pet-insurance',
+        title: 'Best pet insurance',
+        topic: 'Trupanion, Healthy Paws, and Embrace',
       },
       {
-        href: '/guides/how-to-afford-vet-care',
-        title: 'How to afford vet care',
-        topic: 'Payment options owners actually use',
+        href: '/telehealth',
+        title: 'Pet telehealth',
+        topic: 'Vetster, AskVet, and Chewy Connect',
       },
       {
-        href: '/guides/emergency-vet-costs',
-        title: 'Emergency vet costs',
-        topic: 'After-hours and ER fee ranges',
+        href: '/insurance/deductibles-reimbursement',
+        title: 'Deductibles and reimbursement',
+        topic: 'How the three levers change a quote',
+      },
+      {
+        href: '/insurance/how-pet-insurance-works',
+        title: 'How pet insurance works',
+        topic: 'Premiums, claims, and limits',
+      },
+      {
+        href: '/insurance/what-pet-insurance-covers',
+        title: 'What pet insurance covers',
+        topic: 'Covered conditions and common exclusions',
       },
     ],
     calculator: {
@@ -125,23 +166,33 @@ export const MISSED_PAGES: Partial<Record<SiteId, MissedPageContent>> = {
     },
   },
   'ferret-com': {
-    noun: 'guides',
+    noun: 'pages',
     hub: { href: '/care', title: 'Care guides', topic: 'ferret care' },
     guides: [
       {
-        href: '/care/diet-basics',
-        title: 'Diet basics',
-        topic: 'Protein, fat, and carbohydrate limits',
+        href: '/reviews/best-ferret-cage',
+        title: 'Best ferret cage',
+        topic: 'Bar spacing and floor space',
       },
       {
-        href: '/care/cage-setup',
-        title: 'Cage setup',
-        topic: 'Size, levels, bedding, and litter',
+        href: '/reviews/best-ferret-litter',
+        title: 'Best ferret litter',
+        topic: 'Paper, wood, and grass pellets',
       },
       {
-        href: '/care/exercise-and-enrichment',
-        title: 'Exercise and enrichment',
-        topic: 'Out-of-cage time and ferret-proofing',
+        href: '/reviews/best-ferret-harness',
+        title: 'Best ferret harness',
+        topic: 'Vest, H-style, and mesh',
+      },
+      {
+        href: '/diet/best-ferret-kibble',
+        title: 'Best ferret kibble',
+        topic: 'Wysong and Marshall',
+      },
+      {
+        href: '/care/bedding-and-litter-types',
+        title: 'Bedding and litter types',
+        topic: 'Fleece, hammocks, and litter pans',
       },
     ],
     calculator: {
