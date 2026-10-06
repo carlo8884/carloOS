@@ -255,7 +255,7 @@ Use the calculator on this page for the estimate.
         </ul>
         <p>
           Treat the result as a <strong>ceiling</strong>. Plan around 60–80% of it so parameters stay stable when something goes wrong. Confirm the load with a water test as you add fish.
-         <a href="/reviews/best-water-test-kits">The water test kit guide</a> is the kit for that check.</p>
+         Test kits for that check are compared in the <a href="/reviews/best-water-test-kits" className="text-brand-primary underline">water test kit review</a>.</p>
 
         <h2 id="by-size">Planning Bands by Tank Size</h2>
         <p>
