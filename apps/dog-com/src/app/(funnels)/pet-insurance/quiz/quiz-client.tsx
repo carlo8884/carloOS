@@ -66,7 +66,8 @@ function recommend(answers: Answers): {
 } {
   // Heuristic scoring based on answers.
   const scored = CARRIERS.map((c) => {
-    let score = c.editorialScore
+    // Start at zero. Carrier order on the hub is the table columns, not a stored score.
+    let score = 0
 
     // Age fit
     if (answers.ageStage === 'senior') {
