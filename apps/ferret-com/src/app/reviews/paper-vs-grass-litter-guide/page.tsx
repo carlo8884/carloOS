@@ -49,7 +49,7 @@ export default function PaperVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Check price of Yesterday's News paper pellet litter on Amazon" />}
+      heroHop={<PrimaryHop href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-grass-litter-guide" label="Check price of Yesterday's News recycled paper pellet litter on Amazon" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
