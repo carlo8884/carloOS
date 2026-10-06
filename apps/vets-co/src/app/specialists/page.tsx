@@ -55,6 +55,7 @@ const HUB_FAQS = [
   {
     question: 'How much does a veterinary specialist visit cost?',
     answer:
+      'Ranges on this answer are dated 2026-10-04. ' +
       'An initial specialist consultation commonly runs about $150–500 in the United States, depending on the discipline — emergency and dentistry consultations tend to start lower, while most internal-medicine subspecialties start near $200–500. The consultation is only the entry point: advanced diagnostics (echocardiograms, MRI, CT, biopsy) and any procedure or surgery are billed separately and can reach several thousand dollars. The reference table on this page lists the typical initial-consultation range for each of the nine specialties. All figures are typical US ranges and are not guaranteed.',
   },
   {
