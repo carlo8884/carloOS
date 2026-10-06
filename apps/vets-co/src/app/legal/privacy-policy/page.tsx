@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
         <p>No newsletter is currently sent. Addresses submitted to forms are used only to reply. We do not sell, rent, or share your email address with third parties for their marketing purposes.</p>
 
         <h2>Affiliate Links</h2>
-        <p>Vets.co participates in affiliate programs including Trupanion, Healthy Paws, Embrace, Chewy, and telehealth services including Vetster. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
+        <p>Vets.co participates in affiliate programs including Chewy and telehealth services including Vetster. Trupanion, Healthy Paws, and Embrace are not currently connected. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
 
         <h2>Analytics</h2>
         <p>Google Analytics is not currently connected.</p>

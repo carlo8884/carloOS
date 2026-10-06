@@ -30,7 +30,7 @@ export default function AffiliateDisclosurePage() {
       <p className="text-sm text-brand-text-light mb-10">Last updated: May 2025</p>
       <div className="carloOS-article">
         <h2>FTC Required Statement</h2>
-        <p>Dog.com participates in affiliate programs including Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
+        <p>Dog.com participates in affiliate programs including Amazon Associates and Chewy. Trupanion, Healthy Paws, and Embrace are not currently connected. When you click a product link on this site and make a qualifying purchase, we may earn a commission at no additional cost to you. As an Amazon Associate we earn from qualifying purchases. This relationship is disclosed in compliance with the U.S. Federal Trade Commission&apos;s 16 CFR Part 255 guidance on endorsements and testimonials.</p>
 
         <h2>How It Works</h2>
         <ul>
@@ -49,7 +49,7 @@ export default function AffiliateDisclosurePage() {
         </ul>
 
         <h2>Programs We Participate In</h2>
-        <p>Dog.com is a participant in the following affiliate programs: Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. We may add or remove programs over time and will update this page accordingly. Adding a new affiliate program never retroactively changes existing rankings.</p>
+        <p>Dog.com is a participant in Amazon Associates and Chewy. Trupanion, Healthy Paws, and Embrace are not currently connected. We may add or remove programs over time and will update this page accordingly. Adding a new affiliate program never retroactively changes existing rankings.</p>
 
         <h2>Questions</h2>
         <p>If you spot a missing disclosure, an outdated affiliate link, or anything that looks like editorial bias toward a specific product or brand, please email legal@dog.com.</p>
