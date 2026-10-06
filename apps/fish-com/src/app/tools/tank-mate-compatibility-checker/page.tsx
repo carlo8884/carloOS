@@ -266,7 +266,7 @@ export default function TankMateCompatibilityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse caves and hiding spots on Amazon →"
+              amazonLabel="Browse aquarium decorations, caves, and hiding spots on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility"
