@@ -106,7 +106,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet' },
+  { label: 'Best Overall', name: 'Recycled Paper Pellet', subtitle: 'Low-dust · Non-clumping · Soft', href: '#paper-pellet', pickHop: '/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' },
   { label: 'Best for Odor', name: 'Heat-Treated Wood Pellet', subtitle: 'Phenol-free · Strong odor control', href: '#wood-pellet' },
   { label: 'Soft Alternative', name: 'Grass / Plant-Fiber Pellet', subtitle: 'Low-dust · Lighter tracking', href: '#grass-pellet' },
 ]
@@ -119,6 +119,11 @@ export default function BestFerretLitterPage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News recycled paper pellet litter on Amazon"} />}
+        heroExtra={
+          <div className="[&_.text-brand-primary]:!text-brand-dark">
+            <QuickPicks items={QUICK_PICKS} embedded />
+          </div>
+        }
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
           subtitle:
@@ -180,8 +185,6 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-
-          <QuickPicks items={QUICK_PICKS} />
 
           <p>
             Choosing ferret litter is one of the few pet-store decisions where the obvious default is the wrong answer.
