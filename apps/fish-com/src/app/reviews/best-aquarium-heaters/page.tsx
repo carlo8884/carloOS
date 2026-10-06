@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -67,6 +67,23 @@ export default function BestHeatersPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-aquarium-heaters"
+          checklist={[
+            "Buy slightly above the minimum \u2014 an undersized heater running continuously at maximum output wears out faster.",
+            "On larger tanks, two smaller heaters split across opposite ends also provide redundancy if one fails.",
+            "The Jager adds a recalibration dial to compensate for drift over time.",
+            "Every heater dial is an approximation, and even the best heaters can drift or fail.",
+            "Always verify actual water temperature with a separate calibrated thermometer \u2014 set the heater, confirm with the thermometer, and adjust as needed.",
+            "Check the temperature daily for the first week after installation, then weekly.",
+          ]}
+        />
+
         <div className="[&_.text-brand-primary]:!text-brand-dark">
           <QuickPicks items={PICKS} embedded />
         </div>

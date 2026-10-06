@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +61,23 @@ export default function BestAquariumFiltersPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-aquarium-filters"
+          checklist={[
+            "Hang-on-back (HOB) filters suit 10\u201375 gallon tanks and are the easiest to maintain \u2014 the most common choice for beginners and intermediate keepers.",
+            "Canister filters suit 50+ gallon tanks with superior biological capacity and near-silent operation, at a higher price and a more involved cleaning day.",
+            "An HOB like the AquaClear 70 needs a monthly media rinse and a quarterly impeller cleaning, or flow drops noticeably.",
+            "A canister like the Fluval 307 typically goes 3\u20136 months between cleanings because the larger media volume takes longer to clog.",
+            "Sponge filters get a monthly squeeze \u2014 always in old tank water, never tap water, which kills the beneficial bacteria the filter exists to house.",
+            "That combination is why sponge filters are also the standard choice for hospital and quarantine tanks.",
+          ]}
+        />
+
         <div className="[&_.text-brand-primary]:!text-brand-dark">
           <QuickPicks items={PICKS} embedded />
         </div>
