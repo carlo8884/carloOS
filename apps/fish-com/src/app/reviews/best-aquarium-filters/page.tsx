@@ -239,7 +239,7 @@ export default function BestAquariumFiltersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
