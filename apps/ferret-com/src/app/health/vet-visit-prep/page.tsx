@@ -189,6 +189,7 @@ export default function FerretVetVisitPrepPage() {
             useful but secondary to that first choice.
           </DropCap>
 
+          <p>The exam, bloodwork, dental, and surgery figures below are typical US exotic-pet clinic ranges dated 2026-10-04.</p>
           <h2 id="tldr">TL;DR</h2>
           <p>
             Use an exotic-pet vet, ideally an AEMV member or an ABVP
@@ -422,6 +423,7 @@ export default function FerretVetVisitPrepPage() {
             </li>
           </ul>
 
+          <p>The service bands in the table below are those same clinic ranges, dated 2026-10-04.</p>
           <h2 id="cost">Typical Cost Ranges</h2>
           <p>
             US exotic-pet practice cost ranges as of 2026, with
@@ -538,6 +540,7 @@ export default function FerretVetVisitPrepPage() {
           </div>
 
           <h2 id="faq">FAQ</h2>
+          <p>The cost question below repeats those same clinic ranges, dated 2026-10-04.</p>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />

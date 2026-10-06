@@ -174,6 +174,7 @@ export default function FerretAdrenalDiseasePage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Those surgery and implant figures are typical US clinic ranges dated 2026-05-31.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
                 Adrenal surgery runs $1,500–$3,500; deslorelin implants add
                 $400-600/year. Exotic-pet insurance covers it — but ONLY if
@@ -343,6 +344,7 @@ export default function FerretAdrenalDiseasePage() {
             </p>
           </CalloutBox>
 
+          <p>The implant and adrenalectomy figures in the table below are typical US clinic ranges dated 2026-05-31.</p>
           <h2 id="quickref">Quick Reference</h2>
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">

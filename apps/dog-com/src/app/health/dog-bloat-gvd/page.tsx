@@ -85,6 +85,7 @@ export default function GdvPage() {
 
           <h2>Treatment</h2>
           <p>Emergency stabilization: IV fluids, pain management, gastric decompression (passing a tube to release gas or trocharization through the body wall). Emergency surgery: the stomach is repositioned and sutured to the body wall to prevent re-rotation (gastropexy). Non-viable stomach tissue is resected if blood supply was compromised long enough to cause necrosis. The spleen may require removal if compromised.</p>
+          <p>The emergency surgery figures in this section and the next are typical US clinic ranges dated 2026-10-04.</p>
           <p>Survival rates with prompt treatment at well-equipped emergency facilities: 80–95%. Survival rates with delayed treatment or compromised stomach tissue: significantly lower. Cost: $5,000–15,000+ depending on severity and institution.</p>
 
           <h2>Prevention — Prophylactic Gastropexy</h2>
@@ -174,6 +175,7 @@ export default function GdvPage() {
           </div>
 
           <h2 id="faq">FAQ</h2>
+          <p>The prevention question below repeats those same clinic ranges, dated 2026-10-04.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
