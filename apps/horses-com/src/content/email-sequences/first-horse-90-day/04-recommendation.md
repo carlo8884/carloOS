@@ -10,27 +10,27 @@ Most "new horse owner shopping list" articles ship 30+ items. By week 12 you'll 
 
 **1. A halter that fits — and a backup.** Leather break-away for turnout, flat nylon for the trailer. The leather one will save a face if a turnout-out horse gets caught on a fence. Worth every dollar.
 
-[Get a leather break-away halter at SmartPak →](https://horses.com/go/smartpak/leather-breakaway-halter)
+[Get a leather break-away halter at SmartPak →](https://horses.com/go/smartpak/leather-breakaway-halter?s=email-first-horse-90-day)
 
 **2. Two cotton lead ropes.** 9-ft minimum. Skip the chain shanks until your horse needs one — and most don't.
 
-[Get cotton lead ropes at Dover →](https://horses.com/go/dover/cotton+lead+rope)
+[Get cotton lead ropes at Dover →](https://horses.com/go/dover/cotton+lead+rope?s=email-first-horse-90-day)
 
 **3. A proper grooming kit.** Body brush, dandy brush, hoof pick, curry comb (rubber, not plastic), mane comb, sweat scraper. The whole kit comes in under $40.
 
-[Get a grooming set at SmartPak →](https://horses.com/go/smartpak/grooming+set)
+[Get a grooming set at SmartPak →](https://horses.com/go/smartpak/grooming+set?s=email-first-horse-90-day)
 
 **4. A good thermometer and a horse-specific first-aid kit.** Vetrap, stable wraps, Betadine, sterile saline, a digital thermometer (write your horse's normal range inside the lid), a banamine syringe if your vet has prescribed it.
 
-[Get an equine first-aid kit at SmartPak →](https://horses.com/go/smartpak/equine-first-aid-kit)
+[Get an equine first-aid kit at SmartPak →](https://horses.com/go/smartpak/equine-first-aid-kit?s=email-first-horse-90-day)
 
 **5. A schooling bridle in the right size.** Plain snaffle, plain noseband. Whatever the previous owner used in is the starting point.
 
-[Get a schooling bridle at Dover →](https://horses.com/go/dover/schooling-bridle-cob)
+[Get a schooling bridle at Dover →](https://horses.com/go/dover/schooling-bridle-cob?s=email-first-horse-90-day)
 
 **6. A safety-rated helmet for you.** ASTM/SEI certified. Replace every 5 years or after any fall.
 
-[Get a safety-rated riding helmet at SmartPak →](https://horses.com/go/smartpak/riding+helmet)
+[Get a safety-rated riding helmet at SmartPak →](https://horses.com/go/smartpak/riding+helmet?s=email-first-horse-90-day)
 
 **7. Insurance** (covered Wednesday — same Lemonade / Pumpkin shortlist).
 

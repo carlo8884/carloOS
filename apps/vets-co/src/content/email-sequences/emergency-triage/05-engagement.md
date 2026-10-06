@@ -29,7 +29,7 @@ Tell us which one would help you most, or send a new one we haven't covered.
 
 **P.S.** Two reader-supported things we offer that you may find useful:
 
-- **24/7 vet chat via Vetster.** Licensed veterinarians available for video consultation when your clinic is closed. Useful for the yellow-flag scenarios where you want a second opinion before driving to the ER. [Start a Vetster consultation →](https://vets.co/go/vetster/telehealth)
+- **24/7 vet chat via Vetster.** Licensed veterinarians available for video consultation when your clinic is closed. Useful for the yellow-flag scenarios where you want a second opinion before driving to the ER. [Start a Vetster consultation →](https://vets.co/go/vetster/telehealth?s=email-emergency-triage)
 - **Our newsletter**, where the next emergency cards drop free. You're already subscribed; this is just the heads-up.
 
 *This P.S. contains affiliate links — we may earn a small commission when you buy through them, at no extra cost to you.*
