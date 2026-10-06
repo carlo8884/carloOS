@@ -19,7 +19,6 @@ export default function DeductiblesPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-09-06"
         heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
@@ -56,7 +55,7 @@ export default function DeductiblesPage() {
 
           <h2>How They Interact</h2>
           <p>Those figures are typical US ranges dated 2026-09-06.</p>
-          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical $5,000 bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances. A quad-ruled graph pad is how that $5,000 bill, the deductible, the reimbursement rate, and the leftover limit stay plotted combinations — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a yellow legal pad (that lives on how-to-afford-vet-care), and not ruled index cards (that live on questions-to-ask-your-vet).</p>
+          <p>These three settings trade off against your premium. Lowering the deductible, raising the reimbursement rate, or raising the annual limit each increases the premium; doing the opposite reduces it. The art is balancing predictable monthly cost against your exposure when a claim hits. Working an example through — pick a hypothetical five-thousand-dollar bill and calculate your out-of-pocket under different combinations — quickly reveals which structure fits your finances. A quad-ruled graph pad is how that five-thousand-dollar bill, the deductible, the reimbursement rate, and the leftover limit stay plotted combinations — it is not a four-column accounting pad (that lives on how-pet-insurance-works), not a yellow legal pad (that lives on how-to-afford-vet-care), and not ruled index cards (that live on questions-to-ask-your-vet).</p>
 
           <h2>Choosing Your Settings</h2>
           <p>Start from your cash reality. If you keep an emergency fund and want catastrophe protection, choose a high annual limit, a moderate reimbursement rate, and a higher deductible to keep the premium down. If even moderate bills strain your budget, lean toward a lower deductible and higher reimbursement rate, accepting a higher premium for smoother costs. Either way, avoid sacrificing the annual limit, since that is the protection you are really buying.</p>

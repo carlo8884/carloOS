@@ -19,7 +19,6 @@ export default function HowPetInsuranceWorksPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-09-06"
         hero={{ title: 'How Pet Insurance Works', subtitle: 'Pet insurance is medical insurance for your dog or cat, and it works on a reimbursement model: you pay the vet, then the insurer pays you back a percentage of covered costs after a deductible. Four numbers — premium, deductible, reimbursement rate, and annual limit — define every policy. Once you understand how they interact, comparing plans becomes straightforward.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'How It Works', href: '/insurance/how-pet-insurance-works' }]}
         sidebar={<>
@@ -52,14 +51,14 @@ export default function HowPetInsuranceWorksPage() {
 
           <h2>A Worked Example</h2>
           <p>Those figures are typical US ranges dated 2026-09-06.</p>
-          <p>Suppose your dog needs a $4,000 surgery and your policy has a $500 annual deductible, an 80% reimbursement rate, and a generous annual limit. You pay the clinic $4,000. You then submit a claim. After subtracting the $500 deductible, $3,500 remains as covered cost; the insurer reimburses 80% of that, or $2,800. Your net out-of-pocket is $1,200 plus your monthly premiums. The same four-column accounting pad is where that $4,000 / $500 / 80% / leftover-limit arithmetic stays a written row. If you had chosen a 90% rate, you would have received more back but paid a higher premium all year.</p>
+          <p>Suppose your dog needs a four-thousand-dollar surgery and your policy has a five-hundred-dollar annual deductible, an 80% reimbursement rate, and a generous annual limit. You pay the clinic four thousand dollars. You then submit a claim. After subtracting the five-hundred-dollar deductible, three thousand five hundred dollars remain as covered cost; the insurer reimburses 80% of that, or two thousand eight hundred dollars. Your net out-of-pocket is one thousand two hundred dollars plus your monthly premiums. The same four-column accounting pad is where that four-thousand-dollar / five-hundred-dollar / 80% / leftover-limit arithmetic stays a written row. If you had chosen a 90% rate, you would have received more back but paid a higher premium all year.</p>
 
           <h2>What Affects Your Premium</h2>
           <p>Premiums are priced on the pet&apos;s species, breed, age, and location, plus your chosen deductible, reimbursement rate, and limit. Older pets and breeds with known hereditary risks cost more to insure. Premiums also tend to rise as a pet ages, since the likelihood of claims increases — an important reason many people enroll while pets are young, when premiums are lowest and few conditions are excluded.</p>
 
           <h2>Choosing a Structure</h2>
           <p>Those figures are typical US ranges dated 2026-09-06.</p>
-          <p>There is no single best plan; the right structure depends on your budget and risk tolerance. If you could comfortably absorb a few thousand dollars but not a $10,000 catastrophe, a higher deductible with a high or unlimited annual limit gives strong protection at a lower premium. If cash flow is tight even for moderate bills, a lower deductible and higher reimbursement rate smooth costs but raise the premium. A desktop receipt organizer is how paid clinic invoices stay filed until reimbursement lands — it is not a cash envelope budget system (that lives on how-to-afford-vet-care), not a locking cash box with a key (that lives on emergency-vet-costs), and not a pocket-size address book (that lives on choosing-a-veterinarian). Understanding the four levers lets you build a plan that matches your situation rather than chasing the cheapest or most expensive option.</p>
+          <p>There is no single best plan; the right structure depends on your budget and risk tolerance. If you could comfortably absorb a few thousand dollars but not a ten-thousand-dollar catastrophe, a higher deductible with a high or unlimited annual limit gives strong protection at a lower premium. If cash flow is tight even for moderate bills, a lower deductible and higher reimbursement rate smooth costs but raise the premium. A desktop receipt organizer is how paid clinic invoices stay filed until reimbursement lands — it is not a cash envelope budget system (that lives on how-to-afford-vet-care), not a locking cash box with a key (that lives on emergency-vet-costs), and not a pocket-size address book (that lives on choosing-a-veterinarian). Understanding the four levers lets you build a plan that matches your situation rather than chasing the cheapest or most expensive option.</p>
 
           <h2 id="kit">How-pet-insurance-works kit</h2>
           <p>
