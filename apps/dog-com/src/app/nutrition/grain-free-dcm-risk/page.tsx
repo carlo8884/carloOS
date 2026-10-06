@@ -101,7 +101,7 @@ export default function GrainFreeDCMPage() {
 
         <h2>Should I Stop Feeding Grain-Free Dog Food?</h2>
         <p>The grain-free market was built primarily on marketing rather than nutritional science — the premise that dogs cannot digest grain or that grain-free is inherently more &quot;natural&quot; lacks scientific support. The subsequent FDA investigation revealing a potential link to serious cardiac disease is a significant concern that warrants caution.</p>
-        <p>Our recommendation: choose a WSAVA-compliant food from a company that employs veterinary nutritionists and conducts feeding trials. See our <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for ranked options.</p>
+        <p>A cautious next step is a diet from a company that employs veterinary nutritionists, conducts feeding trials, and publishes research. Royal Canin, Purina Pro Plan, Hill&apos;s Science Diet, and Iams are examples of that pattern, not a ranking. Which diet fits a specific dog is a question for a veterinarian. See the <a href="/reviews/best-dry-dog-food">Best Dry Dog Food guide</a> for the comparison.</p>
 
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
