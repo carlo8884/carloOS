@@ -95,7 +95,7 @@ export default function BestHeatersPage() {
 
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Critical: Always Verify with a Separate Thermometer</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Every heater dial is an approximation. Even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer (Govee H5053 recommended). Set your heater, verify with the thermometer, adjust if needed. Check temperature daily for the first week, then weekly.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Every heater dial is an approximation. Even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer (Govee H5053 recommended). Set your heater, verify with the thermometer, adjust if needed. Check temperature daily for the first week, then weekly. A hospital tank holds treatment temperature with one of these heaters, which is the setup on the <a href="/health/medicating-aquarium-fish" className="text-brand-primary underline">medicating fish guide</a>.</p>
             </div>
             <JourneyNext
               siteId="fish-com"

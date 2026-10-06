@@ -48,7 +48,7 @@ export default function BestWaterTestKitsPage() {
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater keepers the <strong>API Freshwater Master Kit</strong> is our overall pick — liquid reagents (more accurate than strips), around 800 tests, covering pH, ammonia, nitrite, and nitrate. Reef keepers should add <strong>Salifert</strong> individual tests for reef-grade alkalinity, calcium, and magnesium accuracy. For reagent-free convenience, <strong>Apogee or Bluelab</strong> digital pH/TDS meters.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">For most freshwater keepers the <strong>API Freshwater Master Kit</strong> is our overall pick — liquid reagents (more accurate than strips), around 800 tests, covering pH, ammonia, nitrite, and nitrate. Reef keepers should add <strong>Salifert</strong> individual tests for reef-grade alkalinity, calcium, and magnesium accuracy. For reagent-free convenience, <strong>Apogee or Bluelab</strong> digital pH/TDS meters. The stocking calculator uses these ammonia and nitrite readings as the load check: <a href="/tools/stocking-calculator" className="text-brand-primary underline">stocking calculator</a>.</p>
             </div>
             <JourneyNext
               siteId="fish-com"

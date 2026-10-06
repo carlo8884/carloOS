@@ -27,7 +27,7 @@ export default function BestCanisterFiltersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
-        <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard.</p>
+        <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">Canister filters sit outside the tank, hold more media than HOB filters, and run quietly. For planted tanks, heavily stocked tanks, and aquariums 40+ gallons — canister filters are the standard. How that compares with a hang-on-back is on the <a href="/reviews/hob-vs-canister-guide" className="underline text-white">HOB versus canister guide</a>.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
