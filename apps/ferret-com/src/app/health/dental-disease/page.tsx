@@ -441,7 +441,7 @@ export default function FerretDentalDiseasePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/infant+toothbrush+soft+bristle?s=health-dental-disease"
-                amazonLabel="Browse soft infant toothbrushes on Amazon →"
+                amazonLabel="Browse soft-bristle infant toothbrushes on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+dental+wipes?s=health-dental-disease"
