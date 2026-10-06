@@ -221,7 +221,7 @@ describe('resolveAffiliateHop', () => {
     assert.equal(partnerTagReady('/go/healthy-paws/home?s=reviews-best-pet-insurance', {}), false)
     assert.equal(partnerTagReady('/go/embrace/home?s=reviews-best-pet-insurance', { AFF_EMBRACE_TAG: 'emb-live' }), true)
     assert.equal(partnerTagReady('/go/amazon-brand/horse+hoof+pick', {}), true)
-    assert.equal(partnerNeededLabel('Get a Trupanion quote →'), 'Get a Trupanion quote — partner ID needed')
+    assert.equal(partnerNeededLabel('Get a Trupanion quote →'), 'Quotes not available here yet')
     assert.equal(partnerQuoteHeld(href, {}), true)
     assert.equal(partnerQuoteHeld(href, { AFF_TRUPANION_TAG: 'tru-live' }), false)
     assert.equal(partnerQuoteHeld('/go/amazon-brand/horse+hoof+pick', {}), false)

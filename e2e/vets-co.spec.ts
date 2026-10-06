@@ -8,8 +8,8 @@ test('insurance review, then a carrier quote hop', async ({ page }) => {
 
   const quote = page.locator('#trupanion').getByRole('link', { name: 'Get a Trupanion quote' })
   await expect(quote).toHaveAttribute('href', '/go/trupanion/home?s=reviews-best-pet-insurance')
-  await expect(page.locator('#healthy-paws').getByRole('button', { name: 'Get a Healthy Paws quote — partner ID needed' })).toBeDisabled()
-  await expect(page.locator('#embrace').getByRole('button', { name: 'Get an Embrace quote — partner ID needed' })).toBeDisabled()
+  await expect(page.locator('#healthy-paws').getByRole('button', { name: 'Quotes not available here yet' })).toBeDisabled()
+  await expect(page.locator('#embrace').getByRole('button', { name: 'Quotes not available here yet' })).toBeDisabled()
 
   await expectHop(page.request, '/go/trupanion/home?s=reviews-best-pet-insurance', [
     'https://www.trupanion.com/enrollments/get-a-quote',

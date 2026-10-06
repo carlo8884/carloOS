@@ -164,7 +164,7 @@ export function partnerTagReady(
 
 export function partnerNeededLabel(label: string): string {
   const base = label.replace(/\s*→\s*$/, '').trim()
-  return `${base} — partner ID needed`
+  return base ? 'Quotes not available here yet' : 'Quotes not available here yet'
 }
 
 /** True when this href is a Trupanion, Healthy Paws, or Embrace quote and its tag is unset. */
