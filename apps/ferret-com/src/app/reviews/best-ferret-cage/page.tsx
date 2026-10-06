@@ -122,6 +122,7 @@ export default function BestFerretCagePage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />}
+        heroExtra={<QuickPicks items={QUICK_PICKS} embedded />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:
@@ -183,8 +184,6 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-
-          <QuickPicks items={QUICK_PICKS} embedded />
 
           <p>
             More than any other ferret purchase, the cage is where specifications are safety. A ferret is a long,
