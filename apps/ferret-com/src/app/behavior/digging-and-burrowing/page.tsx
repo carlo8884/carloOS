@@ -355,7 +355,7 @@ export default function FerretDiggingBurrowingPage() {
             price="$10–20 / bag"
             priceNote="dated 2026-06-04."
             ctaText="Find ferret-safe ball pit balls on Amazon"
-            ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=behavior-digging-burrowing"
+            ctaHref="/go/chewy-brand/small+pet+ball+pit+balls?s=behavior-digging-burrowing"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="small-pet-ball-pit-balls"
           />
