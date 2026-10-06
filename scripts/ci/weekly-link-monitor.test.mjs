@@ -8,7 +8,9 @@ import {
   classifyStatus,
   goHrefsFromSource,
   cardShopHrefs,
+  citationProbeReadsBody,
   isEmptySearchHtml,
+  isRetailerSearchUrl,
   missingShopSource,
   shopSearchVerdict,
   renderReport,
@@ -150,6 +152,25 @@ test('the shop probe fails a real empty search and keeps 503 and 429 blocked', (
   assert.equal(shopSearchVerdict([429], '', empty).kind, 'blocked')
   assert.equal(shopSearchVerdict([403], '', empty).kind, 'blocked')
   assert.equal(shopSearchVerdict([200], '', '<title>Robot Check</title>No results for your search query').kind, 'ok')
+})
+
+test('citation probe body-reads retailer searches the shop probe does not already cover', () => {
+  const search = 'https://www.amazon.com/s?k=atc+refractometer&tag=test-20'
+  const product = 'https://www.amazon.com/dp/B000000000'
+  const article = 'https://avma.org/resources/pet-owners'
+  assert.equal(isRetailerSearchUrl(search), true)
+  assert.equal(isRetailerSearchUrl(product), false)
+  assert.equal(isRetailerSearchUrl(article), false)
+  assert.equal(isRetailerSearchUrl('https://www.chewy.com/s?query=dog+harness'), true)
+  assert.equal(isRetailerSearchUrl('https://www.smartpakequine.com/search/search?SearchTerm=halter'), true)
+  const covered = new Set([search])
+  assert.equal(citationProbeReadsBody(search, covered), false)
+  assert.equal(citationProbeReadsBody('https://www.amazon.com/s?k=tropic+marin+classic+salt&tag=test-20', covered), true)
+  assert.equal(citationProbeReadsBody(product, covered), false)
+  const empty = '<span>No results for your search query. </span>'
+  assert.equal(shopSearchVerdict([200], '', empty).detail, 'empty search')
+  assert.equal(shopSearchVerdict([503], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([429], '', empty).kind, 'blocked')
 })
 
 test('an empty Amazon search is not a rate-limit page', () => {
