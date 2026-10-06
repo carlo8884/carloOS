@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -50,6 +51,7 @@ export default function WoodVsGrassLitterGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" label="Check price of compressed heat-treated wood pellet litter on Amazon" />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
