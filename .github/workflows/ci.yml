@@ -32,6 +32,8 @@ jobs:
         run: node scripts/ci/content-stub-guard.mjs && node --test scripts/ci/content-stub-guard.test.mjs scripts/ci/grok-direct-push-guard.test.mjs
       - name: Amazon ASIN hop guard
         run: node scripts/ci/amazon-asin-guard.mjs && node --test scripts/ci/amazon-asin-guard.test.mjs
+      - name: Chewy product-id hop guard
+        run: node scripts/ci/chewy-id-guard.mjs && node --test scripts/ci/chewy-id-guard.test.mjs
       - uses: actions/cache@v4
         with:
           path: .turbo
