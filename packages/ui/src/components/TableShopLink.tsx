@@ -1,4 +1,5 @@
 import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
 
 /** One product row's tracked shop link. The href is an existing /go target. */
 export function TableShopLink({
@@ -12,8 +13,9 @@ export function TableShopLink({
 }) {
   if (partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))) {
     return (
-      <span className="mt-1 block font-semibold text-brand-text-light">
-        {partnerNeededLabel(`${product} quote`)}
+      <span className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1">
+        <span className="font-semibold text-brand-text-light">{partnerNeededLabel(`${product} quote`)}</span>
+        <HeldQuoteNext />
       </span>
     )
   }

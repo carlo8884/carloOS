@@ -2,6 +2,7 @@ import type { SiteId } from '@carloOS/config'
 import { partnerNeededLabel, partnerQuoteHeld, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import type { MatchedPick } from '../lib/result-picks'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
+import { HeldQuoteNext } from './HeldQuoteNext'
 
 /** One closing recommendation under a calculator result. Disclosure sits above a shop link. */
 export function ResultPick({
@@ -25,13 +26,16 @@ export function ResultPick({
       <p className="m-0 text-sm leading-relaxed text-brand-text-mid">{pick.detail}</p>
       {shop ? <AffiliateDisclosure variant="inline" siteId={siteId} className="my-3" /> : null}
       {held ? (
-        <button
-          type="button"
-          disabled
-          className="inline-block border-0 bg-transparent p-0 text-left font-semibold text-brand-text-light cursor-not-allowed"
-        >
-          {partnerNeededLabel(pick.label)}
-        </button>
+        <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
+          <button
+            type="button"
+            disabled
+            className="inline-block border-0 bg-transparent p-0 text-left font-semibold text-brand-text-light cursor-not-allowed"
+          >
+            {partnerNeededLabel(pick.label)}
+          </button>
+          <HeldQuoteNext />
+        </span>
       ) : (
         <a
           href={href}
