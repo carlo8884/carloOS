@@ -1,11 +1,11 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
+const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fluvalaquatics.com', imageUrl: '' })
+const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
 const PICKS = [
   { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec' },
@@ -26,7 +26,7 @@ export default function BestNanoTanksPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Nano tanks (5–20 gallons) are ideal for betta fish, shrimp colonies, planted tanks, and small community setups. Bigger is more forgiving — but these small tanks are manageable and rewarding when set up correctly.</p>
       </div>
@@ -56,9 +56,8 @@ export default function BestNanoTanksPage() {
               resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               resourceLabel="Browse Aqueon 20-gallon long aquariums on Amazon →"
             />
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" score={9.2} winner
+            <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" winner
               description={<p>The Fluval Spec V is the standard recommendation for a betta tank or shrimp tank at 5 gallons. The integrated filtration is hidden behind a honeycomb baffle, the LED is plant-capable (adequate for low-light plants like Java fern, Anubias, mosses), and the rimless design looks clean on a desk or shelf. The flow from the filter should be baffled (rubber band a filter sponge over the outlet) to reduce current for betta fish. Comes complete — just add fish, substrate, and cycle the tank.</p>}
               specs={[{ label: 'Volume', value: '5 gallons' }, { label: 'Design', value: 'Rimless, all-in-one' }, { label: 'Filter', value: 'Integrated — 3-stage' }, { label: 'Light', value: 'LED — low-light plant capable', highlight: 'good' }, { label: 'Best for', value: 'Betta, shrimp, planted' }]}
               pros={['Complete kit — nothing to add', 'Rimless looks premium', 'Plant-capable LED', 'Baffled filtration zone']}
@@ -69,7 +68,7 @@ export default function BestNanoTanksPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="fluval-spec-v"
             />
-            <ReviewCard id="aqueon-10" badge="Best 10 Gallon" name="Aqueon 10-Gallon Standard Aquarium" subtitle="Bare tank · Add your own equipment · Most versatile nano size" score={9.0}
+            <ReviewCard id="aqueon-10" badge="Best 10 Gallon" name="Aqueon 10-Gallon Standard Aquarium" subtitle="Bare tank · Add your own equipment · Most versatile nano size"
               description={<p>The bare 10-gallon glass aquarium is the most versatile and cost-effective nano tank — pair it with your choice of filter (sponge filter for shrimp, HOB for community fish), heater, and light for a customizable setup. The 10-gallon long footprint (20"×10"×12") gives enough horizontal space for a small community (5 neon tetras + 3 corydoras, or a betta + tankmates). Available everywhere, easily replaced if broken, and cheap enough that damage is not a crisis.</p>}
               specs={[{ label: 'Volume', value: '10 gallons' }, { label: 'Type', value: 'Bare tank — add your equipment' }, { label: 'Footprint', value: '20" × 10" × 12"' }, { label: 'Best for', value: 'First fish tank, betta, small community' }]}
               pros={['Affordable', 'Versatile — any equipment combination', 'Widely available', 'Easier to maintain than 5-gallon']}
@@ -80,7 +79,7 @@ export default function BestNanoTanksPage() {
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-10-gallon"
             />
-            <ReviewCard id="aqueon-20" badge="Best Overall Nano" name="Aqueon 20-Gallon Long" subtitle="Best beginner community tank size · Long footprint · Widely available" score={9.4}
+            <ReviewCard id="aqueon-20" badge="Best Overall Nano" name="Aqueon 20-Gallon Long" subtitle="Best beginner community tank size · Long footprint · Widely available"
               description={<p>The 20-gallon long (30"×12"×12") is the best starter aquarium size — large enough for a proper community (8 neon tetras, 6 Corydoras, a centerpiece fish), stable enough to forgive beginner water quality mistakes, and affordable enough to equip completely without breaking the budget. The long footprint provides territorial separation that tall tanks do not. If someone asks what tank they should buy as their first, the answer is almost always the 20-gallon long.</p>}
               specs={[{ label: 'Volume', value: '20 gallons' }, { label: 'Footprint', value: '30" × 12" × 12" (long)' }, { label: 'Best for', value: 'First community tank, planted tank' }, { label: 'Stability', value: 'Most forgiving nano size', highlight: 'good' }]}
               pros={['Most forgiving beginner size', 'Community-capable', 'Long footprint excellent for planted', 'Affordable']}
@@ -94,7 +93,7 @@ export default function BestNanoTanksPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tank</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Volume, what is included, and the price are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Volume, what is included, and the price are already on the three cards. This table only lines those facts up.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -128,20 +127,20 @@ export default function BestNanoTanksPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which tank does this page pick for a 5-gallon betta or shrimp setup?',
-                  answer: 'The Fluval Spec V, scored 9.2 and marked Best 5 Gallon. The printed price is $75–95. The card says 5 gallons is the minimum, the flow needs baffling for a betta, and the space is tight for aquascaping.',
+                  answer: 'The Fluval Spec V, marked Best 5 Gallon. The printed price is $75–95. The card says 5 gallons is the minimum, the flow needs baffling for a betta, and the space is tight for aquascaping.',
                 },
                 {
                   question: 'Which tank does this page pick at the lowest printed price?',
-                  answer: 'The Aqueon 10-Gallon Standard, scored 9.0. The printed price is $20–30. The card says no equipment is included, so the filter, heater, and light are separate.',
+                  answer: 'The Aqueon 10-Gallon Standard. The printed price is $20–30. The card says no equipment is included, so the filter, heater, and light are separate.',
                 },
                 {
                   question: 'Which tank does this page pick as the overall nano?',
-                  answer: 'The Aqueon 20-Gallon Long, scored 9.4 and marked Best Overall Nano. The printed price is $30–50. The card says you still need a 20-gallon-rated filter, heater, and light.',
+                  answer: 'The Aqueon 20-Gallon Long, marked Best Overall Nano. The printed price is $30–50. The card says you still need a 20-gallon-rated filter, heater, and light.',
                 },
               ]} />
             </div>
