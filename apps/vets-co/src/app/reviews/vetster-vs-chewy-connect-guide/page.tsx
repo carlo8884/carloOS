@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -68,6 +68,22 @@ export default function VetsterVsChewyConnectGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-vetster-vs-connect-guide"
+          checklist={[
+            "The page says it is less useful if you do not already want Chewy+.",
+            "The telehealth page says a crisis needs an emergency clinic, not a video appointment.",
+            "Use the ER versus clinic tool if you are unsure which setting fits.",
+            "Chewy Connect with a Vet is for people who already use Chewy.",
+            "A typical wait is under 15 minutes, and it can run longer at peak times.",
+            "The page says that per-visit price is higher than a subscription.",
+          ]}
+        />
         <p>The notes below are the ones on the <Link href="/telehealth">telehealth page</Link>. Vetster is the overall service. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/askvet-vs-chewy-connect-guide">AskVet versus Chewy Connect</Link> is the chat-subscription comparison, not this video visit.</p>
         <h2>What the page says about Vetster</h2>
         <p>Vetster is Best Overall and the winner. Consults are video and chat. The page says veterinarians are licensed where the owner is located, so a prescription can be valid, and that specialists are available, including behavior, dermatology, and internal medicine. A typical wait is under 15 minutes, and it can run longer at peak times. You pay per consult. The printed price is $50–100 per consultation, with no monthly fee. The page says that per-visit price is higher than a subscription.</p>

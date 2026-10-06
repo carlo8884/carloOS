@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 // Request-time env, same as the insurance comparison. A set partner tag
 // renders the quote link; an unset tag stays a disabled button.
@@ -77,6 +77,22 @@ export default function HealthyPawsVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-healthy-paws-vs-pets-best-guide"
+          checklist={[
+            "The review lists one accident-and-illness plan, a deductible and reimbursement rate you set, and fast reimbursement.",
+            "When you want several plan tiers and a wider set of deductible and reimbursement combinations.",
+            "The review lists multiple tiers, a pay-then-claim model, and no upper age limit.",
+            "The premium, reimbursement percent, and annual limit are on the carrier quote, which is where the deductible page leaves them.",
+            "That page puts Healthy Paws and Pets Best side by side as two ways to set the same levers.",
+            "Trupanion, Lemonade, and Spot have their own guides.",
+          ]}
+        />
         <p>The notes below are the ones on the <Link href="/insurance/deductibles-reimbursement">deductible and reimbursement page</Link>. That page puts Healthy Paws and Pets Best side by side as two ways to set the same levers. <Link href="/reviews/healthy-paws-vs-embrace-guide">Healthy Paws versus Embrace</Link> is the wellness-add-on comparison. Trupanion, Lemonade, and Spot have their own guides. Neither card prints a monthly premium.</p>
         <h2>What the page says about Healthy Paws</h2>
         <p>Healthy Paws is Simple Levers and the winner. The card describes a single accident-and-illness plan where you choose the deductible and the reimbursement rate. Reimbursement is listed as fast, on a pay-then-claim model. The cons say there is no wellness add-on and that you should confirm the annual-limit structure on the quote, because that limit is the catastrophe protection. The price line is quote-based. The link above opens the Healthy Paws quote from that page.</p>

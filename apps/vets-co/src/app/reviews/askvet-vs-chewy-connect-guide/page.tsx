@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -68,6 +68,22 @@ export default function AskVetVsChewyConnectGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-askvet-vs-connect-guide"
+          checklist={[
+            "The page says it is less useful if you do not already want Chewy+.",
+            "The telehealth page says a crisis needs an emergency clinic, not a video or chat appointment.",
+            "Vetster, the overall pick on that page, is a separate comparison.",
+            "Chewy Connect with a Vet is for people who already use Chewy.",
+            "Chewy Connect with a Vet is Best for Chewy Customers.",
+            "Consults are video and chat, during extended hours.",
+          ]}
+        />
         <p>The notes below are the ones on the <Link href="/telehealth">telehealth page</Link>. AskVet is the subscription. Chewy Connect with a Vet is for people who already use Chewy. <Link href="/reviews/vetster-vs-chewy-connect-guide">Vetster versus Chewy Connect</Link> is the video-visit comparison, not this chat subscription.</p>
         <h2>What the page says about AskVet</h2>
         <p>AskVet is Best Subscription. Consults are chat only, with no video exam. The printed price is $30 a month for unlimited consultations. A typical wait is under 5 minutes. Specialists are general practice only. Prescriptions are limited. The page says the subscription fits frequent questions, such as a new puppy, a senior pet, several pets, or a chronic condition, and that chat limits how much of a physical problem can be assessed.</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 // Request-time env, same as the insurance comparison. A set partner tag
 // renders the quote link; an unset tag stays a disabled button.
@@ -80,6 +80,22 @@ export default function LemonadeVsPetsBestGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-lemonade-vs-pets-best-guide"
+          checklist={[
+            "The review lists app-based claims, availability that varies by state, and an optional preventive package.",
+            "When you want several plan tiers, including for an older adopted pet.",
+            "The review lists multiple plan tiers, no upper age limit on enrollment, and a pay-then-claim model.",
+            "The premium, reimbursement percent, and waiting period are the ones the enrollment page prints, or the ones on the carrier quote.",
+            "Lemonade Pet is Young-Pet Value and the winner on that page.",
+            "A preventive package is optional, and the review says that package is not insurance.",
+          ]}
+        />
         <p>The notes below are the ones on the <Link href="/insurance/when-to-enroll">enrollment page</Link>. That page puts Lemonade and Pets Best side by side as two carriers to quote early, and it points to the <Link href="/reviews/best-pet-insurance">insurance review</Link> for the wider comparison. Neither product prints a monthly premium.</p>
         <h2>What the review says about Lemonade</h2>
         <p>Lemonade Pet is Young-Pet Value and the winner on that page. The review says the app-first accident-and-illness coverage often prices competitively for young, healthy pets, which is the window where premiums are lowest and few conditions are excluded. Claims are app-based. Availability varies by state. A preventive package is optional, and the review says that package is not insurance. The price line is quote-based.</p>
