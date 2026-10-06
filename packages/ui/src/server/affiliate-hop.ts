@@ -9,6 +9,7 @@ import {
   resolveAffiliateHop,
   type AffiliateRoute,
 } from '@carloOS/config/affiliate-hop'
+import { emailLandingCollectUrl } from '../lib/affiliate-click'
 
 export type GoRouteParams = {
   params: { vendor: string; sku?: string | string[] }
@@ -51,20 +52,43 @@ async function logAffiliateClick(
   // Vercel Web Analytics custom event. `site` and `source` (`?s=`) travel
   // with the event. Does not block the redirect for long: on Vercel, track()
   // registers waitUntil and returns. Web Analytics must be enabled.
+  // A direct email /go hit never runs the page, so that one case also sends
+  // the same GA4 event. Same-site navigations already fired gtag.
+  const fetchSite = request.headers.get('sec-fetch-site')
+  const clientAlreadyFired = fetchSite === 'same-origin' || fetchSite === 'same-site'
+  const collect =
+    clientAlreadyFired
+      ? null
+      : emailLandingCollectUrl(process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID, {
+          site: fields.site,
+          page: new URL(request.url).pathname,
+          source: fields.source,
+          partner: fields.vendor,
+          product: fields.sku.replace(/\+/g, ' '),
+          clientId: crypto.randomUUID(),
+        })
+  const ga = collect
+    ? fetch(collect, { method: 'POST' }).catch((err) => {
+        console.error('[affiliate-click] ga4 collect failed', err)
+      })
+    : Promise.resolve()
   await Promise.race([
-    track(
-      'affiliate_click',
-      {
-        site: clip(fields.site),
-        vendor: clip(fields.vendor || 'unknown'),
-        sku: clip(fields.sku || 'none'),
-        source: clip(fields.source || 'none'),
-        tagged: fields.tagResolved ? 'yes' : 'no',
-      },
-      { request },
-    ).catch((err) => {
-      console.error('[affiliate-click] analytics track failed', err)
-    }),
+    Promise.all([
+      track(
+        'affiliate_click',
+        {
+          site: clip(fields.site),
+          vendor: clip(fields.vendor || 'unknown'),
+          sku: clip(fields.sku || 'none'),
+          source: clip(fields.source || 'none'),
+          tagged: fields.tagResolved ? 'yes' : 'no',
+        },
+        { request },
+      ).catch((err) => {
+        console.error('[affiliate-click] analytics track failed', err)
+      }),
+      ga,
+    ]),
     new Promise((resolve) => setTimeout(resolve, 800)),
   ])
 }

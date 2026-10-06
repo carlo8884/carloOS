@@ -3,7 +3,7 @@
 /**
  * Amazon + optional Chewy shop pair. Hides empty Chewy hops — never href="#".
  * Chewy-brand search queries fall back to amazon-brand until a Chewy tag is live.
- * Clicks are recorded by AffiliateClickListener (site, source, partner).
+ * Clicks are recorded by AffiliateClickListener (site, page, partner, product, placement).
  * A generic "Shop on Amazon" label is renamed from the search in amazonHref.
  */
 import type { CSSProperties } from 'react'
@@ -55,6 +55,7 @@ export function ShopCtas({
         {amazon ? (
           <a
             href={amazon}
+            data-shop-placement="card"
             rel="sponsored noopener"
             style={amazonStyle}
           >
@@ -64,6 +65,7 @@ export function ShopCtas({
         {chewy ? (
           <a
             href={chewy}
+            data-shop-placement="card"
             rel="sponsored noopener"
             style={chewyStyle}
           >

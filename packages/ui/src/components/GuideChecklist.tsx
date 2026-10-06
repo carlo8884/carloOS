@@ -94,7 +94,7 @@ export function GuideChecklist({
           return (
             <li key={label} className="mb-1">
               {href ? (
-                <a href={href} rel="sponsored noopener" className="font-semibold text-brand-dark underline underline-offset-2">
+                <a href={href} data-shop-placement="card" rel="sponsored noopener" className="font-semibold text-brand-dark underline underline-offset-2">
                   {label}
                 </a>
               ) : label}
