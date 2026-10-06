@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Outward Hound Fun Feeder', 'Northmate Green']
 const itemList = buildItemListSchema({
   name: 'Outward Hound or Northmate',
-  items: RANKED.map((name) => ({ name, url: 'https://dog.com/reviews/outward-hound-vs-northmate-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Northmate Green': 'https://dog.com/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide' }[name] ?? 'https://dog.com/reviews/outward-hound-vs-northmate-guide') })),
 })
 
 export default function OutwardHoundVsNorthmateGuidePage() {
