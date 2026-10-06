@@ -230,7 +230,7 @@ export default function SeniorFeedingPage() {
             pros={['Amino-acid-targeted for topline', 'Low calorie load', 'Easy to add to existing feed']}
             cons={['Not a substitute for calories if horse is genuinely underweight', 'Does not replace PPID diagnosis and treatment', 'Match to overall ration']}
             price="$30–55 per 5–10 lb"
-            ctaText="Search a horse topline amino acid supplement on Amazon →"
+            ctaText="Search a horse topline amino acid supplement with lysine on Amazon →"
             ctaHref="/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="senior-topline-supplement"
