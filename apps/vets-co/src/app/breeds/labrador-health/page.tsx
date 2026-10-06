@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -178,6 +179,7 @@ export default function VetsLabradorHealthPage() {
         >
           The Dog.com Labrador Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
+        <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
         <h2>FAQ</h2>
         <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <FAQAccordion

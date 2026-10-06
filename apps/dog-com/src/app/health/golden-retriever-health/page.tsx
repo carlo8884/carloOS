@@ -343,6 +343,7 @@ export default function GoldenRetrieverHealthPage() {
           </div>
           </div>
 
+        <p>Joint supplements for this breed are compared in the <Link href="/reviews/best-joint-supplements">joint supplement review</Link>.</p>
         <h2 id="faq">FAQ</h2>
         <p>The insurance question below repeats those same clinic ranges, dated 2026-10-05.</p>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
