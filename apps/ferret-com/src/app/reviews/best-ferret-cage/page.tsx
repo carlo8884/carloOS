@@ -125,7 +125,7 @@ export default function BestFerretCagePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation double unit on Amazon' />}
+        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:
