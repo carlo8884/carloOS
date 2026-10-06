@@ -130,6 +130,11 @@ export default function HorseWeightCalculatorPage() {
         { title: 'Horse Grimace Scale', href: '/tools/horse-grimace-scale', category: 'Tools' },
         { title: 'Horse Height Converter', href: '/tools/horse-height-converter', category: 'Tools' },
       ]}
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Horse Weight Calculator',
         subtitle:
@@ -196,13 +201,12 @@ export default function HorseWeightCalculatorPage() {
           (about 456&nbsp;kg). Use a divisor of 299 for a pony and 301 for a draft horse.
         </p>
 
-        <h2 id="calculator">The calculator</h2>
+        <h2>The calculator</h2>
         <p>
           Enter the heart-girth circumference and the body length, choose your unit and horse
           type, and the calculator returns an estimated bodyweight in both pounds and
           kilograms. Switching the horse type swaps the published divisor.
         </p>
-        <Calculator />
 
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">

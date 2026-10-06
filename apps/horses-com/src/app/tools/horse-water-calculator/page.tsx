@@ -75,6 +75,11 @@ export default function HorseWaterPage() {
   return (
     <ArticleLayout
       siteId="horses-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <HorseWaterCalculator />
+        </div>
+      }
       hero={{
         title: 'Horse Water Intake Calculator',
         subtitle: 'The water page’s 5–10 gallon idle band, scaled by body weight.',
@@ -110,8 +115,6 @@ export default function HorseWaterPage() {
           push it down. The hay calculator covers forage. This one covers the drinking band the water page
           states, scaled so the 1,000-pound horse matches 5 to 10 gallons.
         </p>
-        <h2 id="calculator">Calculator</h2>
-        <HorseWaterCalculator />
         <h2>What the band is not</h2>
         <p>
           Half a gallon to one gallon per 100 pounds is the arithmetic that reproduces the page at about 1,000 pounds.

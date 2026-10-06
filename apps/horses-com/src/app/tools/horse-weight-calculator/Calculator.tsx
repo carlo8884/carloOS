@@ -118,8 +118,17 @@ export default function Calculator() {
 
   const unitLabel = unit === 'in' ? 'inches' : 'cm'
 
+  const blanket = result
+    ? blanketPick(
+        roundBlanketInches(unit === 'in' ? parseFloat(length) : parseFloat(length) / 2.54),
+        'tools-horse-weight-calculator',
+        'body-length',
+      )
+    : null
+
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {blanket ? <ResultPick linkFirst siteId="horses-com" pick={blanket} /> : null}
       {/* Unit toggle */}
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <span className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
@@ -252,17 +261,6 @@ export default function Calculator() {
       )}
 
       <p className="mt-4 text-sm text-brand-text-mid">{typeOption.note}</p>
-
-      {result && (
-        <ResultPick
-          siteId="horses-com"
-          pick={blanketPick(
-            roundBlanketInches(unit === 'in' ? parseFloat(length) : parseFloat(length) / 2.54),
-            'tools-horse-weight-calculator',
-            'body-length',
-          )}
-        />
-      )}
 
       {result && type !== 'youngstock' && (
         <p className="mt-2 text-sm text-brand-text-mid">
