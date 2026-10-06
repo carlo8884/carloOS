@@ -39,6 +39,7 @@ export function ResultPick({
   ) : (
     <a
       href={href}
+      data-shop-placement={shop || href?.startsWith('http') ? 'card' : undefined}
       rel={shop ? 'sponsored noopener' : undefined}
       className="inline-block font-semibold text-brand-primary underline underline-offset-2"
     >

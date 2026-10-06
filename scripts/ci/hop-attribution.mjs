@@ -87,7 +87,7 @@ for (const site of SITES) {
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
 if (!/trackEvent\(\s*'affiliate_click'/.test(listener)) hits.push('AffiliateClickListener does not fire affiliate_click')
-for (const field of ['site', 'source', 'partner']) {
+for (const field of ['site:', 'page:', 'source:', 'partner:', 'product:', 'placement:']) {
   if (!listener.includes(field)) hits.push(`AffiliateClickListener event is missing ${field}`)
 }
 

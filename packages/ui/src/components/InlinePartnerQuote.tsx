@@ -33,7 +33,7 @@ export function InlinePartnerQuote({
   const hop = visibleShopHref(href)
   if (!hop) return null
   return (
-    <a className="font-semibold text-brand-primary" href={hop} rel="sponsored noopener">
+    <a className="font-semibold text-brand-primary" href={hop} data-shop-placement="card" rel="sponsored noopener">
       {label}
     </a>
   )

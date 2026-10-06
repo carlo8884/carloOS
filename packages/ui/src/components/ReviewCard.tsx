@@ -20,6 +20,7 @@ function QuickPickShopLink({ href, name }: { href?: string; name: string }) {
   return (
     <a
       href={built.href}
+      data-shop-placement="quick-pick"
       rel="sponsored noopener"
       className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
     >
@@ -250,6 +251,7 @@ export function ReviewCard({
           ) : href ? (
             <a
               href={href}
+              data-shop-placement={!editorial && (href.startsWith('/go/') || href.startsWith('http')) ? 'card' : undefined}
               className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
               data-program={editorial || plain ? undefined : program}
               data-product={editorial || plain ? undefined : ctaAffiliateProduct}

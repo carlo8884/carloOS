@@ -24,6 +24,7 @@ export function TableShopLink({
     return (
       <a
         href={consult.href}
+        data-shop-placement="table"
         rel="nofollow noopener"
         target="_blank"
         className="mt-1 block font-semibold text-brand-primary underline underline-offset-2"
@@ -37,6 +38,7 @@ export function TableShopLink({
   return (
     <a
       href={link.href}
+      data-shop-placement="table"
       rel="sponsored noopener"
       className="mt-1 block font-semibold text-brand-primary underline underline-offset-2"
     >

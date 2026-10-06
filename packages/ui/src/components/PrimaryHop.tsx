@@ -48,6 +48,7 @@ export function PrimaryHop({
       ) : null}
       <a
         href={hop}
+        data-shop-placement="hero"
         rel={plain ? 'nofollow noopener' : 'sponsored noopener'}
         target={plain ? '_blank' : undefined}
         className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline"
