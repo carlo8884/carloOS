@@ -7,6 +7,7 @@ import {
   classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
+  isEmptySearchHtml,
   missingShopSource,
   renderReport,
   tableShopHrefs,
@@ -122,6 +123,19 @@ test('the shop section is part of the report and does not mention anyone', () =>
   assert.match(body, /Hidden Chewy hops with no tag: 1/)
   assert.match(body, /november-december-gift-guide/)
   assert.equal(/(^|\s)@/.test(body), false)
+})
+
+test('an empty Amazon search is not a rate-limit page', () => {
+  assert.equal(
+    isEmptySearchHtml('<span>No results for your search query. </span>', 2),
+    true,
+  )
+  assert.equal(
+    isEmptySearchHtml('<span>No results for your search query. </span>' + 'data-asin="B00"'.repeat(8), 8),
+    false,
+  )
+  assert.equal(isEmptySearchHtml('HTTP 503 Service Unavailable', 0), false)
+  assert.equal(isEmptySearchHtml('<title>Robot Check</title>No results for your search query', 0), false)
 })
 
 test('the workflow files one issue and cannot assign or request review', () => {
