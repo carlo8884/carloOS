@@ -46,7 +46,7 @@ const FAQS = [
   {
     question: 'How long do harlequin rasboras live?',
     answer:
-      'Five to eight years — a substantial lifespan compared with the 2–3 years of many nano species. Hardiness across a range of water conditions is part of why they rank among the most recommended community schooling fish.',
+      'Five to eight years — a substantial lifespan compared with the 2–3 years of many nano species. They stay hardy across a range of water conditions, which is why they are a common community schooling fish.',
     answerText:
       '5-8 years, notably longer than the 2-3 years typical of many nano species.',
   },
@@ -83,7 +83,7 @@ export default function HarlequinPage() {
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
         <StockImage manifestKey="fish-com:species-harlequin-rasbora" fallbackKey="fish-com:category-species" aspect="16:9" variant="inline" caption="A harlequin rasbora in a home aquarium." priority />
         <h2>Why Harlequins Are the Benchmark Community Schooler</h2>
-        <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras consistently rank as one of the most recommended because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>
+        <p>Among the dozens of small schooling fish available to aquarists, harlequin rasboras are a common community schooler because they combine everything a community tank needs: genuine peacefulness (no fin-nipping, no aggression toward any other species), hardiness across a range of water conditions (adaptable from soft acidic Southeast Asian parameters to standard community tap water), a substantial lifespan (5–8 years versus the 2–3 years of many nano species), and the visual impact of their distinctive black triangle against a warm copper-orange body that becomes more vivid as the school grows.</p>
         <p>A single harlequin rasbora is unremarkable. Eight harlequin rasboras are pleasant. Twenty harlequin rasboras moving as a cohesive school through a planted midground is one of the most satisfying things in the freshwater hobby — the school rotates and banks together, each fish's patch catching the light differently as they turn.</p>
 
         <h2>Water and Care</h2>
