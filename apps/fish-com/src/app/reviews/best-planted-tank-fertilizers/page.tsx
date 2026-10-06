@@ -10,7 +10,7 @@ const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', de
 const allSchemas = combineSchemas(schema, easyGreen, flourish)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green' },
+  { label: 'Best Overall', name: 'Easy Green (Aquarium Co-Op)', subtitle: 'All-in-one · Simple dosing · Works for most setups', href: '#easy-green', pickHop: '/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' },
   { label: 'Best Trace Elements', name: 'Seachem Flourish', subtitle: 'Comprehensive micronutrients · Widely available', href: '#flourish' },
   { label: 'Best for High-Tech', name: 'NilocG Thrive', subtitle: 'High-dose · CO2 setups · Serious planted tanks', href: '#nilocg' },
   { label: 'Best Root Tabs', name: 'Aquarium Co-Op Easy Root Tabs', subtitle: 'Heavy root feeders · Substrate nutrients', href: '#root-tabs' },

@@ -11,6 +11,23 @@ import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
+/** Existing product hop beside a Best Overall quick pick. Same line as the method link. */
+function QuickPickShopLink({ label, href }: { label?: string; href?: string }) {
+  if (label !== 'Best Overall' || !href) return null
+  if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
+  const hop = visibleShopHref(href)
+  if (!hop) return null
+  return (
+    <a
+      href={hop}
+      rel="sponsored noopener"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2 whitespace-nowrap"
+    >
+      Check price
+    </a>
+  )
+}
+
 /** Small method link beside a Best Overall label. Same line as the badge so the shop row does not move down. */
 function HowWePickLink({ label }: { label?: string }) {
   if (label !== 'Best Overall') return null
@@ -261,6 +278,8 @@ interface QuickPickItem {
   name: string
   subtitle?: string
   href: string
+  /** Existing product hop for the Best Overall card. Other labels ignore it. */
+  pickHop?: string
 }
 
 interface QuickPicksProps {
@@ -286,6 +305,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
+              <QuickPickShopLink label={item.label} href={item.pickHop} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

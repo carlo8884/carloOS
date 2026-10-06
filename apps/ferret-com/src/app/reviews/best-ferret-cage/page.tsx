@@ -109,7 +109,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Half-inch bars · Modular · Full-front doors', href: '#ferret-nation' },
+  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Half-inch bars · Modular · Full-front doors', href: '#ferret-nation', pickHop: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
   { label: 'Best Value', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
   { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
@@ -122,6 +122,7 @@ export default function BestFerretCagePage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />}
+        heroExtra={<QuickPicks items={QUICK_PICKS} embedded />}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:
@@ -183,8 +184,6 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-
-          <QuickPicks items={QUICK_PICKS} embedded />
 
           <p>
             More than any other ferret purchase, the cage is where specifications are safety. A ferret is a long,
