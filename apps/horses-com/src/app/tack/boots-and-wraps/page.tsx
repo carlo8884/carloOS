@@ -169,7 +169,7 @@ export default function BootsWrapsPage() {
             subtitle="Protects the heel bulbs and shoes from overreaching"
             description={<>
               <p>Bell boots protect the heel bulbs and coronet from overreach injuries — when a hind foot strikes the back of a front foot — and help prevent a horse from pulling a front shoe. Pull-on styles stay secure; hook-and-loop styles are easier to fit but can come loose in deep footing.</p>
-              <p>Most relevant for horses that overreach, forge, or repeatedly pull front shoes, and for jumping and fast work where overreach risk is higher.</p>
+              <p>Most relevant for horses that overreach, forge, or repeatedly pull front shoes, and for jumping and fast work where overreach risk is higher. Ringbone care that uses this overreach bell boot so a hind foot does not strike the pastern is in the <a href="/health/ringbone" className="text-brand-primary underline">ringbone guide</a>.</p>
             </>}
             specs={[
               { label: 'Protection', value: 'Heel bulbs, coronet, front shoes' },

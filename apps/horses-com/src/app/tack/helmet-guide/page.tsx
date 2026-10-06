@@ -114,7 +114,7 @@ export default function HelmetGuidePage() {
           <StockImage manifestKey="horses-com:tack-helmet" aspect="16:9" />
 
           <h2 id="standards">Safety Standards</h2>
-          <p>A riding helmet must be certified to a recognized equestrian safety standard, not merely styled to look like one. Common certifications include ASTM/SEI (United States), PAS 015 and the kitemark and VG1 (United Kingdom and Europe), and Snell equestrian standards. These certifications mean the helmet has passed impact testing for equestrian use. Bicycle and other sport helmets are not substitutes -- they are tested for different impacts. Look for the certification label inside the helmet.</p>
+          <p>A riding helmet must be certified to a recognized equestrian safety standard, not merely styled to look like one. Common certifications include ASTM/SEI (United States), PAS 015 and the kitemark and VG1 (United Kingdom and Europe), and Snell equestrian standards. These certifications mean the helmet has passed impact testing for equestrian use. Bicycle and other sport helmets are not substitutes -- they are tested for different impacts. Look for the certification label inside the helmet. Recreational trail rides that treat an ASTM/SEI label as mandatory are in the <a href="/disciplines/trail-riding" className="text-brand-primary underline">trail-riding guide</a>.</p>
 
           <h2 id="fit">Correct Fit</h2>
           <ul>
