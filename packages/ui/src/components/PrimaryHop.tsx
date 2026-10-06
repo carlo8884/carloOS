@@ -1,4 +1,4 @@
-import { consultLink, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, hopCommissionReady, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
@@ -39,7 +39,7 @@ export function PrimaryHop({
   const text = plain ? label : shopCtaLabel(href, label)
   return (
     <div className="mb-5" data-primary-hop="true">
-      {hop.startsWith('/go/') ? (
+      {hop.startsWith('/go/') && hopCommissionReady(hop) ? (
         <p className="text-xs text-white/80 mb-2">
           {amazon
             ? 'As an Amazon Associate we earn from qualifying purchases.'

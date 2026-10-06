@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { consultLink, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, hopCommissionReady, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -263,7 +263,7 @@ export function ReviewCard({
       )}
 
       {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
-      {href && !editorial && href.startsWith('/go/') && (
+      {href && !editorial && href.startsWith('/go/') && hopCommissionReady(href) && (
         <p className="text-2xs text-brand-text-light mt-2">
           We earn a commission if you purchase — no extra cost to you.
         </p>

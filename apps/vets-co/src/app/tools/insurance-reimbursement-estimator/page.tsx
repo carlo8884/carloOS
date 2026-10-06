@@ -14,6 +14,7 @@ import {
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
+import { consultLink } from '@carloOS/config/affiliate-hop'
 
 const URL = 'https://vets.co/tools/insurance-reimbursement-estimator'
 
@@ -123,6 +124,10 @@ const articleSchema = buildArticleSchema({
   authorName: 'Vets.co Editorial',
 })
 export default function InsuranceReimbursementEstimatorPage() {
+  const lemonadeHref = '/go/lemonade/estimator?s=insurance-reimbursement-estimator'
+  const lemonade = consultLink(lemonadeHref)
+  const lemonadePlain = Boolean(lemonade && !lemonade.attributed)
+  const lemonadeLink = lemonade?.href ?? lemonadeHref
   return (
     <ArticleLayout
       priceAsOf="2026-05-31"
@@ -198,7 +203,9 @@ export default function InsuranceReimbursementEstimatorPage() {
             optional quote path is an affiliate /go link, disclosed subtly and
             framed as a visit to the carrier page, never "buy the best" or a quote this calculator generates. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
+          {lemonadePlain ? null : (
+            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
+          )}
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have an estimate — now check it against real policies.
@@ -214,18 +221,25 @@ export default function InsuranceReimbursementEstimatorPage() {
               Compare plans on published terms →
             </Link>
             <Link
-              href="/go/lemonade/estimator?s=insurance-reimbursement-estimator"
+              href={lemonadeLink}
               className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
-              rel="sponsored nofollow"
+              rel={lemonadePlain ? 'nofollow noopener' : 'sponsored nofollow'}
+              target={lemonadePlain ? '_blank' : undefined}
             >
               Visit Lemonade Pet
             </Link>
           </div>
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">
-            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. &ldquo;Visit Lemonade Pet&rdquo; is an affiliate link. This calculator does not generate a quote. We may earn a commission at no extra cost to you.{' '}
-            <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
-              Disclosure →
-            </Link>
+            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. This calculator does not generate a quote.
+            {lemonadePlain ? null : (
+              <>
+                {' '}
+                &ldquo;Visit Lemonade Pet&rdquo; is an affiliate link. We may earn a commission at no extra cost to you.{' '}
+                <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
+                  Disclosure →
+                </Link>
+              </>
+            )}
           </p>
         </div>
 

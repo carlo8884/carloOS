@@ -5,6 +5,7 @@ import assert from 'node:assert/strict'
 import { fileURLToPath } from 'node:url'
 import {
   consultLink,
+  hopCommissionReady,
   resolveAffiliateHop,
   stripPlaceholder,
   resolveTag,
@@ -308,5 +309,40 @@ describe('resolveAffiliateHop', () => {
     assert.match(src, /https:\/\/vetster\.com\/\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/askvet\.app\/\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/chewy\.com\/connect-with-a-vet\?refid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/lemonade\.com\/pet\?affid=PLACEHOLDER&offer=\{sku\}/)
+    assert.match(src, /https:\/\/get\.pumpkin\.care\/quote\?refid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/www\.petsbest\.com\/enroll\?affid=PLACEHOLDER&campaign=\{sku\}/)
+  })
+
+  it('keeps unset Lemonade, Pumpkin, and Pets Best quotes as plain links', () => {
+    const lemonade = consultLink('/go/lemonade/home?s=insurance-when-to-enroll', {})
+    assert.equal(lemonade?.attributed, false)
+    assert.equal(lemonade?.href, 'https://lemonade.com/pet?offer=home')
+    assert.equal(lemonade?.href.includes('PLACEHOLDER'), false)
+    const pumpkin = consultLink('/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance', {})
+    assert.equal(pumpkin?.href, 'https://get.pumpkin.care/quote?campaign=home')
+    const pets = consultLink('/go/pets-best/home?s=insurance-deductibles-reimbursement', {})
+    assert.equal(pets?.href, 'https://www.petsbest.com/enroll?campaign=home')
+    assert.equal(pets?.href.includes('PLACEHOLDER'), false)
+    const estimator = consultLink('/go/lemonade/estimator?s=insurance-reimbursement-estimator', {})
+    assert.equal(estimator?.href, 'https://lemonade.com/pet?offer=estimator')
+  })
+
+  it('switches a quote hop back to /go once that carrier tag is set', () => {
+    const href = '/go/lemonade/home?s=insurance-when-to-enroll'
+    assert.equal(consultLink(href, { AFF_LEMONADE_TAG: 'lem-live' })?.attributed, true)
+    assert.equal(consultLink(href, { AFF_LEMONADE_TAG: 'lem-live' })?.href, href)
+    assert.equal(consultLink('/go/pumpkin/home?s=x', { AFF_PUMPKIN_TAG: 'pum-live' })?.href, '/go/pumpkin/home?s=x')
+    assert.equal(consultLink('/go/pets-best/home?s=x', { AFF_PETS_BEST_TAG: 'pb-live' })?.href, '/go/pets-best/home?s=x')
+  })
+
+  it('hides a commission claim when the hop tag is unset', () => {
+    assert.equal(hopCommissionReady('/go/lemonade/home?s=x', {}), false)
+    assert.equal(hopCommissionReady('/go/amazon-brand/pet+first+aid+kit', {}), false)
+    assert.equal(hopCommissionReady('/go/amazon-brand/pet+first+aid+kit', { AFF_AMAZON_TAG: 'carloos-ci-20' }), true)
+    assert.equal(hopCommissionReady('/go/spot/home?s=x', {}), false)
+    assert.equal(hopCommissionReady('/go/spot/home?s=x', { AFF_SPOT_TAG: 'spot-live' }), true)
+    assert.equal(hopCommissionReady('https://lemonade.com/pet?offer=home', {}), false)
+    assert.equal(hopCommissionReady('/go/trupanion/home?s=x', {}), false)
   })
 })

@@ -43,6 +43,11 @@ export function ShopCtas({
   const chewy = visibleChewyHref(chewyHref)
   const label = shopCtaLabel(amazonHref, amazonButtonLabel(amazon ?? amazonHref, amazonLabel))
   const amazonAssociate = Boolean(amazon && /\/go\/amazon/i.test(amazon))
+  // Static env reads so the client bundle matches the server render.
+  const amazonTag = process.env.AFF_AMAZON_TAG || process.env.AFF_AMAZON_BRAND_TAG || ''
+  const chewyTag = process.env.AFF_CHEWY_TAG || process.env.AFF_CHEWY_BRAND_TAG || process.env.AFF_CHEWY_PHARMACY_TAG || ''
+  const amazonEarns = Boolean(amazonAssociate && amazonTag)
+  const chewyEarns = Boolean(chewy && /\/go\/chewy/i.test(chewy) && chewyTag)
   if (!amazon && !chewy) return null
   return (
     <div>
@@ -66,14 +71,16 @@ export function ShopCtas({
           </a>
         ) : null}
       </div>
+      {amazonEarns || chewyEarns ? (
       <p
         data-affiliate-disclosure="hop"
         style={{ margin: '8px 0 0', fontSize: '12px', lineHeight: 1.45, color: 'var(--brand-text-mid, #5c6570)' }}
       >
-        {amazonAssociate
+        {amazonEarns
           ? 'As an Amazon Associate we earn from qualifying purchases.'
           : 'We may earn a commission from qualifying purchases.'}
       </p>
+      ) : null}
     </div>
   )
 }
