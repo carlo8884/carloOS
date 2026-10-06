@@ -1,15 +1,6 @@
-import { captureInbox, dogInquireCaptureEnabled, vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
+import { inquireOfferOpen } from '@carloOS/config/capture-flags'
 import { StockImage } from './StockImage'
 import { InquireForm } from './InquireForm'
-
-function offerOpen(siteName: string): boolean {
-  if (siteName === 'Dog.com') return dogInquireCaptureEnabled()
-  if (siteName === 'Vets.co') return vetsInquireCaptureEnabled()
-  // Reopens on the next deploy once INQUIRE_EMAIL or NEXT_PUBLIC_INQUIRE_EMAIL is set.
-  // Fish and horses stay open: an inbox is already set and the provider rejects the send.
-  if (siteName === 'Ferret.com') return Boolean(captureInbox())
-  return true
-}
 
 export function InquireOfferScreen({
   siteName,
@@ -29,7 +20,7 @@ export function InquireOfferScreen({
         <h1 className="text-white text-center font-display font-bold italic text-3xl mb-5">
           Make an offer
         </h1>
-        <InquireForm siteName={siteName} open={offerOpen(siteName)} />
+        <InquireForm siteName={siteName} open={inquireOfferOpen(siteName)} />
       </div>
     </section>
   )
