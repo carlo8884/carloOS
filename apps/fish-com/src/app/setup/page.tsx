@@ -117,6 +117,7 @@ export default function AquariumSetupPage() {
 
         <h2 id="equipment">Step 2 — Equipment You Actually Need</h2>
         <p><strong>Non-negotiable:</strong></p>
+        <p>The thermometer and liquid test-kit prices in this list are dated 2026-10-04.</p>
         <ul>
           <li><strong>Filter</strong> — a hang-on-back or canister filter rated for at least the tank size (ideally 1.5–2x). This is where beneficial bacteria live. Never skip this.</li>
           <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common. <a href="/reviews/best-aquarium-heaters">The heater guide</a> compares heaters sized with that buffer.</li>

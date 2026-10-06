@@ -86,6 +86,7 @@ export default function DiscusPage() {
 
         <h2>Why Discus Are Advanced</h2>
         <DropCap>Discus are sensitive to water quality in a way that most fish are not — they show stress responses at nitrate levels that most community fish handle easily, they are susceptible to pathogens that hardy fish resist, and they require water parameters (soft, warm, acidic) that require active management in most US households with hard tap water. The daily or every-other-day water changes required to maintain discus — large volume, temperature-matched — represent a significant time commitment. A discus keeper does water changes the way a planted tank keeper doses fertilizers: consistently, on schedule, without exception.</DropCap>
+        <p>These livestock ranges are dated 2026-05-25.</p>
         <p>The cost: quality wild-caught discus run $60–150+ per fish. Tank-bred discus from quality breeders run $30–80+. A group of 6 discus in an appropriate tank represents $200–600+ in fish alone before any equipment is purchased. If they die from inadequate water quality, that loss is significant. Research thoroughly before purchasing.</p>
 
         <h2>Water — The Critical Foundation</h2>
