@@ -52,7 +52,7 @@ export default function VetsFrenchBulldogHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-05"
       siteId="vets-co"
       contentType="breed"
       hero={{ title: 'French Bulldog Health — A Veterinarian\'s Perspective', subtitle: 'French Bulldogs have the highest per-dog veterinary costs of any breed. The conditions are largely predictable, many are manageable, and some are preventable with early intervention. Here\'s what every Frenchie owner needs to know.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '10 min',}}
@@ -91,7 +91,8 @@ export default function VetsFrenchBulldogHealthPage() {
         <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer (that lives on german-shepherd-health), not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet), and not a dog-com cooling-mat or cooling-vest hop. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health).</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>
-        <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years. Insurance with no breed exclusions for brachycephalic conditions (Trupanion, Healthy Paws) and enrollment before symptoms appear is the difference between being able to treat these conditions and facing impossible decisions. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
+        <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years.</p>
+        <p>Enroll before symptoms appear and compare hereditary and spinal terms on the quote itself. This page does not name a carrier. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
 
         <h2 id="kit">French-bulldog-health kit</h2>
         <p>
