@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -32,9 +32,9 @@ const PICKS = [
   { label: 'Emerging', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://nutramax.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://nordicnaturals.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://nutramax.com', imageUrl: '', ratingValue: 8.8, reviewCount: 1 })
+const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://nutramax.com', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://nordicnaturals.com', imageUrl: '' })
+const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://nutramax.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
 const itemList = buildItemListSchema({
@@ -51,7 +51,7 @@ export default function BestJointSupplementsPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Joint Supplements for Dogs 2026
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The pet supplement market is full of products with minimal evidence. We graded each major joint supplement category by the actual research — what works, what&apos;s promising, and what&apos;s expensive placebo.
@@ -76,14 +76,12 @@ export default function BestJointSupplementsPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
               name="Nutramax Dasuquin with MSM"
               subtitle="Avocado/Soybean Unsaponifiables (ASU) + Glucosamine + Chondroitin + MSM"
-              score={9.2}
               winner
               description={<div>
                 <p>Dasuquin is the most evidence-supported joint supplement for dogs. The key differentiator from basic glucosamine products is the addition of Avocado/Soybean Unsaponifiables (ASU) — a plant extract with documented cartilage protection and anti-inflammatory effects in human and canine clinical trials. The <a href="https://nasc.cc" rel="noopener" target="_blank" className="text-brand-primary hover:underline">NASC</a> quality seal confirms manufacturing standards. Made by Nutramax, which has the most robust research investment of any pet supplement company.</p>
@@ -110,7 +108,6 @@ export default function BestJointSupplementsPage() {
               badge="Best Anti-Inflammatory"
               name="Nordic Naturals Omega-3 Pet"
               subtitle="Marine EPA + DHA · Anti-inflammatory · Skin, coat, cognitive benefit"
-              score={9.3}
               description={<p>Fish oil (EPA and DHA omega-3 fatty acids) has among the strongest published evidence of any joint supplement (Roush et al., JAVMA 2010; multiple ACVS-cited reviews) — for joint inflammation, skin and coat, cardiovascular support, and emerging cognitive benefit in senior dogs. The anti-inflammatory mechanism of EPA and DHA is well-established and clinically relevant for osteoarthritis management. Nordic Naturals publishes third-party heavy-metal testing and is widely recommended for pet omega-3 supplementation. Published therapeutic ranges for joint benefit fall around 20–55 mg combined EPA/DHA per kg body weight daily — often more than label suggestions — but confirm the right dose with your veterinarian and calculate from EPA/DHA content, not total fish oil volume.</p>}
               specs={[
                 { label: 'Active Ingredients', value: 'EPA + DHA (marine)', highlight: 'good' },
@@ -134,7 +131,6 @@ export default function BestJointSupplementsPage() {
               badge="Best Budget Glucosamine"
               name="Cosequin DS Maximum Strength"
               subtitle="Glucosamine + Chondroitin · NASC certified · Widely available"
-              score={8.8}
               description={<p>Cosequin DS is a widely used glucosamine-chondroitin supplement in veterinary practice — it has the NASC quality seal, has been on the market long enough to have clinical feedback, and is significantly more affordable than Dasuquin. Clinical evidence for plain glucosamine-chondroitin (without ASU) is moderate — some dogs show meaningful improvement, others do not respond. The 4–6 week trial is warranted for any dog with joint disease. If Cosequin DS does not produce visible improvement after 6 weeks, stepping up to Dasuquin (with ASU) is a reasonable next step.</p>}
               specs={[
                 { label: 'Active Ingredients', value: 'Glucosamine + Chondroitin' },
@@ -157,7 +153,6 @@ export default function BestJointSupplementsPage() {
               badge="Emerging Evidence"
               name="CBD for Dogs (Vetri-CBD, ElleVet)"
               subtitle="2018 Cornell study · Pain reduction in arthritic dogs · Use vet-formulated brands"
-              score={8.4}
               description={<p>A 2018 Cornell University study (JAVMA) showed statistically significant reduction in pain and improvement in mobility in arthritic dogs given CBD versus placebo — measured by force plate analysis and pain scoring. The evidence base is early but the 2018 Cornell study is the most rigorous clinical trial in the field to date. The major caveat: the CBD market has minimal quality control — many products contain significantly less CBD than labeled, or contain THC (toxic to dogs). CBD is not a substitute for veterinary care; if you are considering it, use products with a Certificate of Analysis from a third-party lab, use dog-specific formulations, and have your veterinarian determine whether it is appropriate and at what dose. Do not use human CBD products on dogs.</p>}
               specs={[
                 { label: 'Evidence Level', value: 'Emerging — Cornell 2018 study', highlight: 'good' },
@@ -173,7 +168,7 @@ export default function BestJointSupplementsPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which supplement</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Four supplements have review cards. The CBD card does not print a price, and its button goes to the vet finder. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Four supplements have review cards. The CBD card does not print a price, and its button goes to the vet finder.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -189,44 +184,44 @@ export default function BestJointSupplementsPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The supplement with the ASU evidence</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#dasuquin" className="text-brand-primary">Nutramax Dasuquin with MSM</a><TableShopLink href={"/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements"} product={"Nutramax Dasuquin with MSM"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Evidence. Score 9.2. $40–70 for 84-count</td>
+                      <td className="p-3 text-brand-text-mid">Best Evidence. $40–70 for 84-count</td>
                       <td className="p-3 text-brand-text-mid">Severe arthritis that needs an NSAID. The card says this does not replace that, and the effect takes 4–6 weeks</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">An omega-3 for inflammation</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#fish-oil" className="text-brand-primary">Nordic Naturals Omega-3 Pet</a><TableShopLink href={"/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements"} product={"Nordic Naturals Omega-3 Pet"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Anti-Inflammatory. Score 9.3. $25–45</td>
+                      <td className="p-3 text-brand-text-mid">Best Anti-Inflammatory. $25–45</td>
                       <td className="p-3 text-brand-text-mid">The dog refuses fish flavor, or you have not worked out the dose. The card says label suggestions are often too low</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower-priced glucosamine</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#cosequin" className="text-brand-primary">Cosequin DS Maximum Strength</a><TableShopLink href={"/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"} product={"Cosequin DS Maximum Strength"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Budget Glucosamine. Score 8.8. $25–45 for 120-count</td>
+                      <td className="p-3 text-brand-text-mid">Best Budget Glucosamine. $25–45 for 120-count</td>
                       <td className="p-3 text-brand-text-mid">You want the ASU evidence. The card says Cosequin has less evidence than Dasuquin</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A CBD discussion with a vet</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#cbd" className="text-brand-primary">CBD for dogs</a></td>
-                      <td className="p-3 text-brand-text-mid">Emerging Evidence. Score 8.4. No printed price. Button goes to the vet finder</td>
+                      <td className="p-3 text-brand-text-mid">Emerging Evidence. No printed price. Button goes to the vet finder</td>
                       <td className="p-3 text-brand-text-mid">You want a shop link. The card says market quality control is poor and a vet should pick the product and the dose</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which joint supplement fits</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which supplement does this page mark as the evidence pick?',
-                  answer: 'Nutramax Dasuquin with MSM, scored 9.2, marked Best Evidence, and marked the winner. The printed price is $40–70 for an 84-count. The card says it does not replace an NSAID in severe arthritis and the effect takes 4–6 weeks.',
+                  answer: 'Nutramax Dasuquin with MSM, marked Best Evidence, and marked the winner. The printed price is $40–70 for an 84-count. The card says it does not replace an NSAID in severe arthritis and the effect takes 4–6 weeks.',
                 },
                 {
                   question: 'Which supplement does this page pick for inflammation?',
-                  answer: 'Nordic Naturals Omega-3 Pet, scored 9.3. The printed price is $25–45. The card says the dose has to be calculated because label suggestions are often too low.',
+                  answer: 'Nordic Naturals Omega-3 Pet. The printed price is $25–45. The card says the dose has to be calculated because label suggestions are often too low.',
                 },
                 {
                   question: 'Does the CBD card name a price or a shop?',
-                  answer: 'No. The CBD card scores 8.4, prints no price, and the button goes to the vet finder. The card says many products are misrepresented and a veterinarian should decide whether it fits.',
+                  answer: 'No. The CBD card prints no price, and the button goes to the vet finder. The card says many products are misrepresented and a veterinarian should decide whether it fits.',
                 },
               ]} />
             </div>

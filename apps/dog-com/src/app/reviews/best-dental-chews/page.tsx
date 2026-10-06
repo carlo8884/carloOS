@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies' },
@@ -24,7 +24,7 @@ export default function BestDentalChewsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Only chews with the VOHC (Veterinary Oral Health Council) seal have clinical evidence for plaque and tartar reduction. Look for the VOHC seal — not just "dental" marketing claims.</p>
       </div>
@@ -49,9 +49,8 @@ export default function BestDentalChewsPage() {
               resourceHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               resourceLabel="Browse Greenies dental chews on Amazon →"
             />
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="greenies" badge="Best Overall" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" score={9.2} winner
+            <ReviewCard id="greenies" badge="Best Overall" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" winner
               description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
               pros={['VOHC accepted (plaque + tartar)', 'Often used by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
@@ -62,7 +61,7 @@ export default function BestDentalChewsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="greenies+dental+chews+dogs"
             />
-            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies" score={9.0}
+            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies"
               description={<p>Whimzees are made from plant-based ingredients — potato starch, glycerin, and cellulose — with no artificial colors, preservatives, or animal products. VOHC accepted for plaque reduction. The texture is slightly firmer than Greenies but still pliable and tooth-safe. Many owners report their dogs spend longer chewing Whimzees than Greenies — more time chewing means more tooth surface contact and more mechanical plaque removal. Good choice for dogs with animal protein sensitivities or owners preferring plant-based options. Available in several fun shapes (toothbrush, hedgehog, crocodile) that all achieve similar dental effect.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque reduction', highlight: 'good' }, { label: 'Ingredients', value: 'Plant-based — no artificial additives', highlight: 'good' }, { label: 'Chew time', value: 'Longer than Greenies', highlight: 'good' }, { label: 'Best for', value: 'Dogs with protein sensitivities' }]}
               pros={['Plant-based — no animal protein', 'VOHC accepted', 'Longer chew duration', 'No artificial additives']}
@@ -76,7 +75,7 @@ export default function BestDentalChewsPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which chew</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Both chews already have VOHC notes, a price, and a limit on the cards. This table only lines those up. Scores are this page&apos;s editorial scores, not customer star ratings. Neither replaces toothbrushing.
+                Both chews already have VOHC notes, a price, and a limit on the cards. This table only lines those up. Neither replaces toothbrushing.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -104,16 +103,16 @@ export default function BestDentalChewsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which chew fits which dog</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which chew does this page pick for a VOHC plaque and tartar claim?',
-                  answer: 'Greenies Original, scored 9.2 and marked Best Overall. The card lists a pliable texture, sizes from teenie through large, a printed price of $25–35 for a 27-count, and 25–90 calories by size. It contains wheat. A dog that swallows the chew gets less dental contact.',
+                  answer: 'Greenies Original, marked Best Overall. The card lists a pliable texture, sizes from teenie through large, a printed price of $25–35 for a 27-count, and 25–90 calories by size. It contains wheat. A dog that swallows the chew gets less dental contact.',
                 },
                 {
                   question: 'Which chew does this page pick when you want a plant-based chew?',
-                  answer: 'Whimzees, scored 9.0 and marked Best Natural / Plant-Based. The card says VOHC acceptance is for plaque, not tartar, the printed price is $20–30 for a 14-count, and calories per chew are higher than Greenies.',
+                  answer: 'Whimzees, marked Best Natural / Plant-Based. The card says VOHC acceptance is for plaque, not tartar, the printed price is $20–30 for a 14-count, and calories per chew are higher than Greenies.',
                 },
                 {
                   question: 'Do these chews replace toothbrushing?',

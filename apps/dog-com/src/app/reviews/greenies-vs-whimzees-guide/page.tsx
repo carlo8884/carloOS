@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which chew does the dental review pick overall?',
-    answer: 'Greenies Original, scored 9.2 and marked Best Overall. The review says VOHC acceptance covers plaque and tartar, sizes run from teenie through large, and the price band is $25–35 for a 27-count.',
+    answer: 'Greenies Original, marked Best Overall. The review says VOHC acceptance covers plaque and tartar, sizes run from teenie through large, and the price band is $25–35 for a 27-count.',
   },
   {
     question: 'When does the review point to Whimzees instead?',
-    answer: 'When you want a plant-based chew or a longer chew than Greenies. Whimzees score 9.0. The review says VOHC acceptance is for plaque only, not tartar, and the price band is $20–30 for a 14-count.',
+    answer: 'When you want a plant-based chew or a longer chew than Greenies. Whimzees. The review says VOHC acceptance is for plaque only, not tartar, and the price band is $20–30 for a 14-count.',
   },
   {
     question: 'Do either of these replace brushing?',
@@ -43,7 +43,7 @@ export default function GreeniesVsWhimzeesGuidePage() {
       schema={schema}
       hero={{
         title: 'Greenies or Whimzees',
-        subtitle: 'Both chews already have a VOHC note on the dental review. Calories, prices, and scores below are the ones on the dental review.',
+        subtitle: 'Both chews already have a VOHC note on the dental review. Calories and prices below are the ones on the dental review.',
         category: 'Buyer guide',
         authorName: 'Dog.com Editorial',
         publishedAt: 'October 2026',
@@ -64,14 +64,14 @@ export default function GreeniesVsWhimzeesGuidePage() {
           ]}
         />
       }
-     priceAsOf="2026-10-04">
+     priceAsOf="2026-10-05">
       <div className="carloOS-article">
-        <p>The <Link href="/reviews/best-dental-chews">dental-chew review</Link> filters on the Veterinary Oral Health Council seal, then lines up Greenies and Whimzees. Those scores are editorial scores, not shopper star ratings. Neither chew replaces toothbrushing.</p>
+        <p>The <Link href="/reviews/best-dental-chews">dental-chew review</Link> filters on the Veterinary Oral Health Council seal, then lines up Greenies and Whimzees. Neither chew replaces toothbrushing.</p>
         <h2>What the review says about Greenies</h2>
-        <p>Greenies Original is Best Overall, score 9.2, and the winner. VOHC acceptance is for plaque and tartar. Texture is pliable. Sizes run from teenie, for 5–15 lb dogs, through large, for 50–100 lb dogs. Calories are 25–90 per chew depending on size. The printed price is $25–35 for a 27-count. The review says they contain wheat, so they are the wrong chew for a dog with wheat sensitivity, and a dog that swallows them gets less dental contact.</p>
+        <p>Greenies Original is Best Overall and the winner. VOHC acceptance is for plaque and tartar. Texture is pliable. Sizes run from teenie, for 5–15 lb dogs, through large, for 50–100 lb dogs. Calories are 25–90 per chew depending on size. The printed price is $25–35 for a 27-count. The review says they contain wheat, so they are the wrong chew for a dog with wheat sensitivity, and a dog that swallows them gets less dental contact.</p>
         <p>Count those calories before you add a daily chew. The <Link href="/tools/dog-calorie-calculator">calorie calculator</Link> is the next step. Count the chew against that total before you make it a daily habit.</p>
         <h2>What the review says about Whimzees</h2>
-        <p>Whimzees are Best Natural / Plant-Based, score 9.0. Ingredients are plant-based. VOHC acceptance is for plaque reduction, not tartar. The review says chew time is longer than Greenies, and calorie density per chew is higher than Greenies. The printed price is $20–30 for a 14-count.</p>
+        <p>Whimzees are Best Natural / Plant-Based. Ingredients are plant-based. VOHC acceptance is for plaque reduction, not tartar. The review says chew time is longer than Greenies, and calorie density per chew is higher than Greenies. The printed price is $20–30 for a 14-count.</p>
         <h2>Who should buy which chew</h2>
         <p>Buy Greenies when you want the chew that lists VOHC acceptance for plaque and tartar, and wheat is not a problem. Buy Whimzees when you want a plant-based chew or a longer chew, and you do not need a tartar claim. Skip both as a substitute for brushing.</p>
         <AffiliateDisclosure variant="inline" siteId="dog-com" />
