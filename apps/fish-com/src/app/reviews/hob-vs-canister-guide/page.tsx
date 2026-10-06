@@ -86,11 +86,14 @@ export default function HobVsCanisterGuidePage() {
           ctaText="Save my address"
           source="reviews-hob-vs-canister-guide"
           checklist={[
+            {
+              label: 'Browse AquaClear 70 hang-on-back filters on Amazon',
+              href: '/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide',
+            },
             'Buy the AquaClear 70 for a community tank in that 30 to 70 gallon band when you want refillable media and a simpler cleaning day.',
             'Buy the Fluval 307 when the bioload is high, you want the longer service interval and the quieter box, and you have cabinet space.',
             'Buy the Aqueon QuietFlow 30 at $25–40 only for a tank up to 30 gallons where a proprietary cartridge is acceptable.',
             'Buy the sponge, not either of these, for shrimp, fry, or a nano under the sizes those listings claim.',
-            'Browse AquaClear 70 hang-on-back filters on Amazon',
           ]}
         />
         <h2>Questions</h2>
