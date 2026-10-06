@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,9 +23,9 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-07T00:00:00Z',
 })
 
-const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewCount: 1 })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large Breed', description: 'veterinarian-formulated large breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://royalcanin.com', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://purina.com', imageUrl: '' })
+const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large Breed', description: 'veterinarian-formulated large breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://hillspet.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
@@ -49,7 +49,7 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The most important rule in puppy nutrition: large breeds (expected adult weight 50+ lbs) must eat a large breed puppy formula. We ranked by <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> compliance, <a href="https://aafco.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAFCO</a> feeding trials, and whether the manufacturer employs board-certified veterinary nutritionists.
@@ -82,14 +82,12 @@ export default function BestPuppyFoodPage() {
               resourceLabel="Browse Royal Canin large-breed puppy food on Amazon →"
             />
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
               name="Royal Canin Large Breed Puppy"
               subtitle="Most researched puppy formula · Breed-specific lines · 600+ scientists"
-              score={9.5}
               winner
               description={<div>
                 <p>Royal Canin is the most research-intensive pet food manufacturer — 600+ scientists including board-certified veterinary nutritionists, continuous feeding trial programs, and breed-specific formula lines developed from morphological and metabolic research on individual breeds. The Large Breed Puppy formula has a precisely controlled calcium level (1.0–1.3% DM) within the safe range for large breed skeletal development, EPA and DHA for brain and vision development, and an antioxidant complex supporting immune development.</p>
@@ -116,7 +114,6 @@ export default function BestPuppyFoodPage() {
               badge="Best Overall Value"
               name="Purina Pro Plan Puppy Large Breed"
               subtitle="400+ published studies · AAFCO feeding trial · DHA from salmon oil"
-              score={9.3}
               description={<p>Purina Pro Plan has more published peer-reviewed nutritional research than any other pet food brand — 400+ studies — and conducts AAFCO feeding trials across their product line. The Large Breed Puppy formula uses chicken as the primary protein, DHA from salmon oil for brain and vision development, and controlled calcium/phosphorus ratios appropriate for large breed puppy development. The kibble size is larger than standard puppy food, designed for large breed jaw size. Available at Chewy, Amazon, and most pet stores — easier to find than Royal Canin breed-specific lines. Comparable quality at a slightly lower price point.</p>}
               specs={[
                 { label: 'WSAVA Compliant', value: 'Yes — top tier', highlight: 'good' },
@@ -139,7 +136,6 @@ export default function BestPuppyFoodPage() {
               badge="Best Small Breed Puppy"
               name="Hill's Science Diet Puppy Small Paws"
               subtitle="Small breed puppy formula · DHA for brain · Hill's nutritionist team"
-              score={9.1}
               description={<p>Hill&apos;s Science Diet is the third member of the WSAVA top-tier alongside Royal Canin and Purina Pro Plan — full-time veterinary nutritionists, AAFCO feeding trials, and strong research investment. Small Paws is formulated for puppies expected to weigh under 25 lbs as adults, with a small kibble size and the energy density appropriate for higher small-breed metabolic rates. For large breed puppies, use Hill&apos;s Science Diet Puppy Large Breed instead — same manufacturer quality standards, different formula.</p>}
               specs={[
                 { label: 'Best For', value: 'Small breeds (adult weight under 25 lbs)' },
@@ -161,7 +157,6 @@ export default function BestPuppyFoodPage() {
               badge="Best Budget"
               name="Iams ProActive Health Smart Puppy"
               subtitle="WSAVA-compliant · Budget price · AAFCO meeting standard"
-              score={8.7}
               description={<p>Iams meets WSAVA compliance standards — they employ qualified nutritionists and conduct AAFCO testing — at a significantly lower price than Royal Canin, Purina Pro Plan, or Hill&apos;s. For large breed puppies, use Iams ProActive Health Smart Puppy Large Breed specifically. The research investment is less extensive than the top three brands, but the nutritional quality is meaningfully better than non-WSAVA-compliant alternatives. A good option for budget-constrained owners who still want WSAVA-compliant nutrition.</p>}
               specs={[
                 { label: 'WSAVA Compliant', value: 'Yes', highlight: 'good' },
@@ -180,7 +175,7 @@ export default function BestPuppyFoodPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Four puppy foods have review cards. The giant-breed name in the sidebar does not have a card or a printed price here. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Four puppy foods have review cards. The giant-breed name in the sidebar does not have a card or a printed price here.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -196,44 +191,44 @@ export default function BestPuppyFoodPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight over 50 lb, and you want the large-breed puppy formula</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Large Breed Puppy</a><TableShopLink href={"/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies"} product={"Royal Canin Large Breed Puppy"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Large Breed. Score 9.5. $65–90 per 30 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">Best Large Breed. $65–90 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">The higher bag price is the limit. The card also says some dogs do not like the kibble shape, and you switch to the adult food at the right age</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A large-breed puppy food with a feeding trial, at a lower bag price</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#pro-plan" className="text-brand-primary">Purina Pro Plan Puppy Large Breed</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Purina Pro Plan Puppy Large Breed"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall Value. Score 9.3. $55–75 per 34 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">Best Overall Value. $55–75 per 34 lb bag</td>
                       <td className="p-3 text-brand-text-mid">Chicken sensitivity. The card says chicken is the primary protein, and there is no breed-specific line</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Expected adult weight under 25 lb</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#hills-small" className="text-brand-primary">Hill&apos;s Science Diet Puppy Small Paws</a><TableShopLink href={"/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies"} product={"Hill&apos;s Science Diet Puppy Small Paws"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Small Breed Puppy. Score 9.1. $55–80 per 28.5 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">Best Small Breed Puppy. $55–80 per 28.5 lb bag</td>
                       <td className="p-3 text-brand-text-mid">A large-breed puppy. The card says to use the Hill&apos;s large-breed formula instead</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A lower bag price that is still a large-breed puppy formula</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#iams" className="text-brand-primary">Iams ProActive Health Smart Puppy</a><TableShopLink href={"/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"} product={"Iams ProActive Health Smart Puppy"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Budget. Score 8.7. $30–50 per 30 lb bag</td>
+                      <td className="p-3 text-brand-text-mid">Best Budget. $30–50 per 30 lb bag</td>
                       <td className="p-3 text-brand-text-mid">You want a feeding trial. The card says some lines are AAFCO formulation, not a feeding trial</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which puppy food does this page pick for a large-breed puppy?',
-                  answer: 'Royal Canin Large Breed Puppy, scored 9.5 and marked Best Large Breed. The printed price is $65–90 per 30 lb bag. The card says some dogs do not like the kibble shape, and the dog moves to the Royal Canin adult food at the right age.',
+                  answer: 'Royal Canin Large Breed Puppy, marked Best Large Breed. The printed price is $65–90 per 30 lb bag. The card says some dogs do not like the kibble shape, and the dog moves to the Royal Canin adult food at the right age.',
                 },
                 {
                   question: 'Which puppy food does this page pick for a small-breed puppy?',
-                  answer: "Hill's Science Diet Puppy Small Paws, scored 9.1. The printed price is $55–80 per 28.5 lb bag. The card says it is not for large breeds.",
+                  answer: "Hill's Science Diet Puppy Small Paws. The printed price is $55–80 per 28.5 lb bag. The card says it is not for large breeds.",
                 },
                 {
                   question: 'Which puppy food does this page pick at the lowest printed price?',
-                  answer: 'Iams ProActive Health Smart Puppy, scored 8.7 and marked Best Budget. The printed price is $30–50 per 30 lb bag. The card says some lines meet AAFCO by formulation rather than a feeding trial.',
+                  answer: 'Iams ProActive Health Smart Puppy, marked Best Budget. The printed price is $30–50 per 30 lb bag. The card says some lines meet AAFCO by formulation rather than a feeding trial.',
                 },
               ]} />
             </div>

@@ -1,12 +1,12 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://royalcanin.com', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://purina.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 
 const PICKS = [
@@ -26,7 +26,7 @@ export default function BestSmallBreedFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2026</h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed' label='Check price of Royal Canin Small Adult on Amazon' />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Small breeds have different nutritional needs — higher calorie density per pound, kibble sized for small mouths, and formulas that support dental health (small dogs are disproportionately prone to dental disease). All picks below meet WSAVA nutritional guidelines.</p>
       </div>
@@ -51,9 +51,8 @@ export default function BestSmallBreedFoodPage() {
               resourceHref="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"
               resourceLabel="Browse Royal Canin Small Adult dog food on Amazon →"
             />
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            <ReviewCard id="royal-canin" badge="Best Overall" name="Royal Canin Small Adult" subtitle="Kibble-size engineered · Dental health formula · WSAVA top tier" score={9.3} winner
+            <ReviewCard id="royal-canin" badge="Best Overall" name="Royal Canin Small Adult" subtitle="Kibble-size engineered · Dental health formula · WSAVA top tier" winner
               description={<p>Royal Canin's small breed line is purpose-built in a way that competitors don't fully replicate — the kibble shape, size, and texture are engineered specifically for small-mouth dental health. The Small Adult formula (for dogs 9–22 lbs) has a specific kibble architecture that encourages the dog to chew rather than gulp, increasing the mechanical dental cleaning effect. Royal Canin is one of the three WSAVA-recommended manufacturers with full veterinary nutritionist oversight, multiple feeding trial protocols, and published nutritional research. The Small Adult provides appropriate caloric density for small breed metabolisms without excess fat. Widely recommended by veterinary dentists specifically for dental health support.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Kibble design', value: 'Small mouth optimized — dental benefit', highlight: 'good' }, { label: 'Size range', value: 'Dogs 9–22 lbs (Small Adult)' }, { label: 'Caloric density', value: 'Appropriate for small breed metabolism' }]}
               pros={['Kibble engineered for small-mouth dental health', 'WSAVA top-tier compliance', 'Veterinary dentist-recommended for dental support', 'Multiple formulas for different small breed needs']}
@@ -64,7 +63,7 @@ export default function BestSmallBreedFoodPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="royal+canin+small+adult"
             />
-            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Small & Toy Breed Adult" subtitle="30% protein · Live probiotics · Commonly veterinarian-recommended brand" score={9.2}
+            <ReviewCard id="purina" badge="Best High-Protein" name="Purina Pro Plan Small & Toy Breed Adult" subtitle="30% protein · Live probiotics · Commonly veterinarian-recommended brand"
               description={<p>Purina Pro Plan is among the commonly veterinarian-recommended dog food brands — a reflection of both its WSAVA compliance and its extensive research backing. The Small & Toy Breed Adult formula provides 30% protein (higher than most small breed formulas) to support the lean muscle mass that small breeds need to maintain healthy metabolism. Includes live probiotics (Bacillus coagulans) for digestive health — one of the few dog foods with a clinically studied probiotic strain at an effective inclusion rate. Available in chicken and beef formulas. The "salmon & rice" variant is appropriate for dogs with chicken sensitivity.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '30% — high for a small breed formula', highlight: 'good' }, { label: 'Probiotic', value: 'Live B. coagulans — clinically studied', highlight: 'good' }, { label: 'Formulas', value: 'Chicken, beef, salmon variants' }]}
               pros={['30% protein — supports lean muscle', 'Live clinically-studied probiotic', 'Commonly recommended by veterinarians', 'Multiple protein options']}
@@ -78,7 +77,7 @@ export default function BestSmallBreedFoodPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Two foods have review cards. Other names in the sidebar do not have cards or printed prices here. Scores are this page&apos;s editorial scores, not customer star ratings.
+                Two foods have review cards. Other names in the sidebar do not have cards or printed prices here.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -94,28 +93,28 @@ export default function BestSmallBreedFoodPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A small-breed adult food, including dental support</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#royal-canin" className="text-brand-primary">Royal Canin Small Adult</a><TableShopLink href={"/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"} product={"Royal Canin Small Adult"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. Score 9.3. $45–65 / 14–17 lb</td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. $45–65 / 14–17 lb</td>
                       <td className="p-3 text-brand-text-mid">Chicken allergy. The card says it is chicken-based, and it costs more than a standard adult formula</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Higher protein for an active small or toy dog</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Small &amp; Toy Breed Adult</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed"} product={"Purina Pro Plan Small &amp; Toy Breed Adult"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best High-Protein. Score 9.2. 30% protein. $35–55 / 16 lb</td>
+                      <td className="p-3 text-brand-text-mid">Best High-Protein. 30% protein. $35–55 / 16 lb</td>
                       <td className="p-3 text-brand-text-mid">You want the dental-specific formula. The card says this one is less dental-specific than Royal Canin</td>
                     </tr>
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which small-breed food fits</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which small-breed food does this page pick overall?',
-                  answer: 'Royal Canin Small Adult, scored 9.3 and marked Best Overall. The printed price is $45–65 for 14–17 lb. The card says it is chicken-based and more expensive than a standard adult formula.',
+                  answer: 'Royal Canin Small Adult, marked Best Overall. The printed price is $45–65 for 14–17 lb. The card says it is chicken-based and more expensive than a standard adult formula.',
                 },
                 {
                   question: 'Which small-breed food does this page pick for higher protein?',
-                  answer: 'Purina Pro Plan Small & Toy Breed Adult, scored 9.2 and marked Best High-Protein. The card lists 30% protein and a printed price of $35–55 for 16 lb. It is less dental-specific than Royal Canin.',
+                  answer: 'Purina Pro Plan Small & Toy Breed Adult, marked Best High-Protein. The card lists 30% protein and a printed price of $35–55 for 16 lb. It is less dental-specific than Royal Canin.',
                 },
               ]} />
             </div>
