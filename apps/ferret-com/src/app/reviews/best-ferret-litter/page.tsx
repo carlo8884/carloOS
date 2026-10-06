@@ -121,7 +121,7 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News paper pellet litter on Amazon"} />}
+        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News recycled paper pellet litter on Amazon"} />}
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
           subtitle:
