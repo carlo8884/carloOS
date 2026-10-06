@@ -121,7 +121,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
-              ctaText="Check price of the AquaClear 70 on Amazon"
+              ctaText="Check price of the AquaClear 70 filter on Amazon"
               ctaHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aquaclear-70"
