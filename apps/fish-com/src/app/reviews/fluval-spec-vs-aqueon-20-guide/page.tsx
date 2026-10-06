@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Aqueon 20-Gallon Long', 'Fluval Spec V']
 const itemList = buildItemListSchema({
   name: 'Fluval Spec or a 20-Gallon Long',
-  items: RANKED.map((name) => ({ name, url: 'https://fish.com/reviews/fluval-spec-vs-aqueon-20-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Aqueon 20-Gallon Long': 'https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide' }[name] ?? 'https://fish.com/reviews/fluval-spec-vs-aqueon-20-guide') })),
 })
 
 export default function FluvalSpecVsAqueonGuidePage() {

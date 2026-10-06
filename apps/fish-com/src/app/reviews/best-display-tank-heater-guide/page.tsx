@@ -43,7 +43,7 @@ const RANKED = [
 ]
 const itemList = buildItemListSchema({
   name: 'Best heater for a display tank',
-  items: RANKED.map((name) => ({ name, url: 'https://fish.com/reviews/best-display-tank-heater-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Eheim Jager': 'https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-display-tank-heater-guide' }[name] ?? 'https://fish.com/reviews/best-display-tank-heater-guide') })),
 })
 
 export default function DisplayTankHeaterGuidePage() {
