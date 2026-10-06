@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -243,13 +243,11 @@ export default function SaddleFitBasicsPage() {
           </div>
           </div>
 
-          <ScoreMethodology />
           <ReviewCard
             id="mattes-sheepskin-half-pad"
             badge="Half-Pad"
             name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
             subtitle="Cushioning + correction-pocket shims for minor asymmetries"
-            score={8.6}
             winner
             description={
               <p>The reference sheepskin half-pad in international saddle-fitting practice. Sheepskin distributes pressure under a correctly fitting saddle and adds a thin cushioning layer between the saddle panels and the horse's back. The "correction" variant has front and rear pockets that accept thin shims — useful for the minor asymmetries a qualified fitter has identified, NOT for forcing fit on a structurally wrong saddle. The article above is explicit: pads are a between-fitting tool, not a fix.</p>
@@ -273,7 +271,6 @@ export default function SaddleFitBasicsPage() {
             badge="Daily Pad"
             name="Contoured All-Purpose Saddle Pad"
             subtitle="Standard daily-use saddle pad — contoured to the horse's back"
-            score={8.0}
             description={
               <p>The everyday saddle pad sitting between a correctly fitting saddle and the horse — contoured (cut-back at the wither, shaped to the spine) so it does not bridge the gullet or press into the withers. Brand choice matters less than getting a contoured shape that does not flatten under the saddle and a wickable lining that does not trap heat. Toklat, ECP, Roma, and several mid-tier brands cover this category at the $30–80 price point.</p>
             }

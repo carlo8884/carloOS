@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -185,14 +185,12 @@ export default function BeetPulpPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="beet-pulp-shreds-mf"
             badge="Molasses-Free Shreds"
             name="Molasses-Free Beet Pulp Shreds"
             subtitle="Low-sugar super-fiber for hard keepers, seniors, and metabolic horses"
-            score={8.8}
             winner
             description={<>
               <p>Molasses-free beet pulp shreds are the go-to form for horses on low-sugar diets -- the molasses coating is omitted so the natural low-sugar profile of the fiber is preserved, making it suitable for many easy keepers and metabolic horses as a calorie source. Shreds soak up quickly (about 30 minutes) into a palatable mash and are easy for seniors with worn teeth to eat. A very widely used general fiber supplement for adding safe condition-building calories without starch.</p>
@@ -217,7 +215,6 @@ export default function BeetPulpPage() {
             badge="Pellet Format"
             name="Beet Pulp Pellets"
             subtitle="Convenient pellet form of beet pulp for horses on a super-fiber program"
-            score={8.4}
             description={<>
               <p>Beet pulp pellets deliver the same high-digestibility super-fiber as shreds in a denser, easier-to-store pellet form. They take longer to soak than shreds (typically 45 minutes to 1 hour to fully expand) but are convenient for stable management and travel. Available with or without molasses; choose molasses-free for horses on low-sugar protocols. Use as a fiber and calorie supplement alongside forage and a complete mineral source.</p>
               <p>General nutrition support for: the same horses as shreds, particularly where storage convenience and consistent pellet-form serving matter.</p>

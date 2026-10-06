@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -188,14 +188,12 @@ export default function RationBalancersPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="grass-forage-balancer"
             badge="Grass-Forage Diets"
             name="Purina Enrich Plus Ration Balancer"
             subtitle="Concentrated protein, vitamins, and minerals for forage-based diets"
-            score={8.7}
             winner
             description={<>
               <p>Purina Enrich Plus is one of the most widely-stocked ration balancers in US feed retail, designed to supply concentrated protein, vitamins, and minerals to a forage-based diet without the calories of a full feed. The small serving fills the trace-mineral and amino-acid gaps left by grass hay and pasture in horses that do not need the calories of a fortified grain.</p>
@@ -220,7 +218,6 @@ export default function RationBalancersPage() {
             badge="Metabolic / Low-Starch"
             name="Triple Crown 30% Ration Balancer"
             subtitle="Low-NSC option for metabolic and easy-keeper horses"
-            score={8.6}
             description={<>
               <p>Triple Crown 30% is a low-sugar, low-starch (low-NSC) ration balancer formulated for horses that need tight control of non-structural carbohydrates — including easy keepers and horses with metabolic considerations — while still meeting protein, vitamin, and mineral requirements. As the section above notes, build the specifics with your veterinarian or an equine nutritionist for any metabolic horse.</p>
               <p>Most relevant for metabolic, insulin-dysregulated, or easy-keeper horses whose diets must stay low in sugar and starch.</p>
@@ -244,7 +241,6 @@ export default function RationBalancersPage() {
             badge="Senior Forage Diets"
             name="Nutrena Empower Topline Balancer"
             subtitle="Amino-acid-focused balancer to support topline on forage"
-            score={8.4}
             description={<>
               <p>Nutrena Empower Topline Balancer emphasizes quality amino acids (lysine, methionine) alongside vitamins and minerals to support topline and muscle maintenance in horses kept primarily on forage. It suits older horses or those whose topline has slipped on a forage-only diet but who do not need the calories of a senior feed.</p>
               <p>Most relevant for aging or topline-poor horses on a forage base that still chew and digest hay adequately, as a gap-filler rather than a calorie feed.</p>

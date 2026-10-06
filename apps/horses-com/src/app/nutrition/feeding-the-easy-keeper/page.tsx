@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -187,14 +187,12 @@ export default function EasyKeeperPage() {
           <h2 id="picks">Product Picks — Slow-Feed and Weight-Management Supports</h2>
           <p>Two widely-used general management tools for easy keepers: slow-feeder hay nets to extend eating time without long fasts, and a low-calorie ration balancer to fill nutrition gaps in a restricted diet. These are management aids, not treatments for laminitis, metabolic syndrome, or any diagnosed condition. For metabolic horses coordinate the full plan with your veterinarian. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="slow-feeder-hay-net"
             badge="Slow-Feed Management"
             name="Small-Hole Slow-Feeder Hay Net"
             subtitle="Extends eating time to prevent long fasts on a restricted ration"
-            score={8.7}
             winner
             description={<>
               <p>Small-hole slow-feeder hay nets are one of the most practically useful tools for managing easy keepers. By making the horse work slightly harder for each bite, they can extend a measured hay ration from one or two hours of eating to six or more, preventing the long fasts that cause ulcers and stress behaviors in a calorie-restricted horse. The horse stays occupied and trickle-feeding while total intake remains controlled. A straightforward, inexpensive general management aid.</p>
@@ -219,7 +217,6 @@ export default function EasyKeeperPage() {
             badge="Nutrient Balance on Restriction"
             name="Low-Calorie Ration Balancer"
             subtitle="Fills vitamin and mineral gaps in a low-calorie easy-keeper diet"
-            score={8.6}
             description={<>
               <p>A low-calorie, low-sugar ration balancer supplies protein, vitamins, and minerals in a tiny daily serving -- exactly what an easy keeper on a restricted, soaked, or low-quality hay ration needs to stay nutritionally complete without adding calories. Look for a balancer labeled low-NSC (non-structural carbohydrate) or specifically formulated for easy keepers or metabolic horses. Feed at the label rate; choose appropriately for the forage type. Coordinate with your veterinarian, especially for insulin-dysregulated or PPID horses.</p>
               <p>General nutrition support for: easy keepers and metabolic horses on forage-only or calorie-restricted diets needing balanced micronutrition in a low-calorie serving.</p>
