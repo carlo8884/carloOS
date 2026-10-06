@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -54,8 +54,6 @@ const trupanionSchema = buildProductSchema({
   description: 'Only insurer that pays the veterinary practice directly at checkout. 90% reimbursement, unlimited payouts, per-condition deductible.',
   url: 'https://vets.co/reviews/best-pet-insurance#trupanion',
   imageUrl: '',
-  ratingValue: 9.4,
-  reviewCount: 1,
 })
 
 const healthyPawsSchema = buildProductSchema({
@@ -63,8 +61,6 @@ const healthyPawsSchema = buildProductSchema({
   description: 'Fast claims processing (per the carrier\'s stated ~2-day average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
   url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
   imageUrl: '',
-  ratingValue: 9.1,
-  reviewCount: 1,
 })
 
 const embraceSchema = buildProductSchema({
@@ -73,8 +69,6 @@ const embraceSchema = buildProductSchema({
   // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
   url: 'https://vets.co/reviews/best-pet-insurance#embrace',
   imageUrl: '',
-  ratingValue: 8.8,
-  reviewCount: 1,
 })
 
 const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
@@ -135,10 +129,8 @@ export default function VetsPetInsurancePage() {
               Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios. Still deciding whether to buy at all? The <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary underline">&ldquo;is pet insurance worth it?&rdquo; calculator</Link> shows the breakeven cost level at which a policy pays for itself.
             </CalloutBox>
 
-            <ScoreMethodology />
             <ReviewCard id="trupanion" badge="Best Overall" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
-              score={9.4}
               description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts make them the standard recommendation for high-risk breeds.</p>}
               specs={[
                 { label: 'Reimbursement', value: '90%', highlight: 'good' },
@@ -156,7 +148,6 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="healthy-paws" badge="Fastest Reimbursement" name="Healthy Paws"
               subtitle="~2 day claims processing · Strong customer satisfaction reputation"
-              score={9.1}
               description={<p>Healthy Paws is consistently well-regarded for customer satisfaction — their mobile app claim submission and average 2-day processing make the reimbursement experience notably smooth. No annual or per-incident limits. Slightly lower premiums than Trupanion at comparable coverage levels. Best for owners who prefer to pay the vet and be reimbursed quickly rather than wait for direct payment integration.</p>}
               specs={[
                 { label: 'Reimbursement', value: '80–90%', highlight: 'good' },
@@ -173,7 +164,6 @@ export default function VetsPetInsurancePage() {
 
             <ReviewCard id="embrace" badge="Wellness Included" name="Embrace"
               subtitle="Wellness add-on · Diminishing deductible · Customizable"
-              score={8.8}
               description={<p>Embrace is the best choice for owners who want routine and preventive care covered alongside illness and accident insurance. Their wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The diminishing deductible reduces by $50 each claim-free year. Among the more customizable plan structures of the major insurers — adjust reimbursement, deductible, and annual limit to fit your budget.</p>}
               specs={[
                 { label: 'Wellness', value: 'Add-on available', highlight: 'good' },
@@ -227,20 +217,16 @@ export default function VetsPetInsurancePage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which carrier is the top pick on this page?',
-                  answer: 'Trupanion, with an editor score of 9.4. The card highlights direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, scored 9.1, for reimbursement speed.',
+                  answer: 'Trupanion is the Best Overall card. It highlights direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, for reimbursement speed.',
                 },
                 {
                   question: 'Which plan on this page covers routine care?',
-                  answer: 'Embrace, scored 8.8, is the card for owners who want a wellness add-on beside accident and illness coverage. The page notes a 6-month orthopedic waiting period on that plan.',
-                },
-                {
-                  question: 'Does an editor score here mean a star rating from customers?',
-                  answer: 'No. Each score is this page\'s editorial assessment of published contract terms. It is not an average of customer reviews, and it is not a quote.',
+                  answer: 'Embrace is the card for owners who want a wellness add-on beside accident and illness coverage. The page notes a 6-month orthopedic waiting period on that plan.',
                 },
               ]} />
             </div>
