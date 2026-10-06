@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -39,6 +39,23 @@ export default function WhatCoversPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-what-pet-insurance-covers"
+            checklist={[
+              "These are predictable, budgetable costs, and insurance is designed for unexpected expenses.",
+              "This is a meaningful difference between plans, especially for purebred dogs with known genetic risks.",
+              "Always confirm in the policy wording, because coverage of hereditary conditions and the associated waiting periods vary by insurer.",
+              "Routine cleanings are usually excluded unless you add a wellness rider.",
+              "Because dental coverage is one of the most inconsistent areas across insurers, it is worth reading the specific policy language carefully.",
+              "Pet insurance comes in three broad forms.",
+            ]}
+          />
+
 
           <CalloutBox variant="info" title="Read the policy, not the marketing">
             Two plans advertised as comprehensive can differ enormously in waiting periods, hereditary-condition coverage, dental rules, and exam-fee handling. The marketing page tells you what is covered in broad strokes; the policy document tells you what is actually covered. Always read the sample policy before enrolling.

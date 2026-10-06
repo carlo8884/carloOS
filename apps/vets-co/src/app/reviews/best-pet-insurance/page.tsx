@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf } from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -93,6 +93,23 @@ export default function VetsPetInsurancePage() {
         </h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-pet-insurance"
+          checklist={[
+            "Trupanion is the card for direct pay at checkout rather than pay-and-wait reimbursement.",
+            "Healthy Paws is the next card, for reimbursement speed.",
+            "Embrace is the card for owners who want a wellness add-on beside accident and illness coverage.",
+            "The page notes a 6-month orthopedic waiting period on that plan.",
+            "Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.",
+            "Every condition noted in records before enrollment may be classified as pre-existing and excluded.",
+          ]}
+        />
+
         <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
           Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
         </p>

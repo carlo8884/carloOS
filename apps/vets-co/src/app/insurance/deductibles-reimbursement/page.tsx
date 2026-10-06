@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -39,6 +39,23 @@ export default function DeductiblesPage() {
         <div className="carloOS-article">
 
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-deductibles-reimbursement"
+            checklist={[
+              "An annual deductible is paid once per policy year, after which all covered claims for the rest of the year are reimbursed without further deductible.",
+              "Annual deductibles are simpler and common; per-condition deductibles can favor pets with long-term chronic diseases.",
+              "Which is better depends on whether your pet faces many small problems or one ongoing condition.",
+              "A higher deductible lowers your monthly premium, but it raises the amount you pay out of pocket before reimbursement begins.",
+              "If your pet has frequent moderate expenses, a lower deductible may cost less in total despite the higher premium.",
+              "The right choice depends on your cash reserves and how you expect to use the policy.",
+            ]}
+          />
+
 
           <CalloutBox variant="info" title="Optimize for the worst case, not the average">
             Because the purpose of insurance is to protect against rare catastrophic bills, it usually pays to prioritize a high annual limit and an acceptable reimbursement rate, then set the deductible at whatever level keeps the premium affordable. Skimping on the limit to lower the premium defeats the point.
