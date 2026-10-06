@@ -1,4 +1,4 @@
-import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
+import { consultLink, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, tableShopLink } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /** One product row's tracked shop link. The href is an existing /go target. */
@@ -17,6 +17,19 @@ export function TableShopLink({
         <span className="font-semibold text-brand-text-light">{partnerNeededLabel(`${product} quote`)}</span>
         <HeldQuoteNext />
       </span>
+    )
+  }
+  const consult = consultLink(href)
+  if (consult && !consult.attributed) {
+    return (
+      <a
+        href={consult.href}
+        rel="nofollow noopener"
+        target="_blank"
+        className="mt-1 block font-semibold text-brand-primary underline underline-offset-2"
+      >
+        Visit {product}
+      </a>
     )
   }
   const link = tableShopLink(href, product)

@@ -11,6 +11,7 @@ import {
   SchemaScript,
   AffiliateDisclosure
 } from '@carloOS/ui'
+import { consultLink } from '@carloOS/config/affiliate-hop'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
 
 interface PageProps {
@@ -150,6 +151,8 @@ export default function SymptomPage({ params }: PageProps) {
   const tier = TIER_STYLE[s.urgencyTriage]
   const isER = s.urgencyTriage === 'ER NOW'
   const faqs = faqsFor(s)
+  const talk = consultLink(`/go/vetster/telehealth?s=symptoms-${s.slug}`)
+  const talkRel = talk?.attributed ? 'sponsored noopener' : 'nofollow noopener'
 
   const articleSchema = buildArticleSchema({
     siteId: 'vets-co',
@@ -355,8 +358,6 @@ export default function SymptomPage({ params }: PageProps) {
             </Link>
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
-
           <div className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-2">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
               {isER ? 'Not Sure It Is an Emergency?' : 'Not Sure What to Do Next?'}
@@ -379,8 +380,9 @@ export default function SymptomPage({ params }: PageProps) {
                     Find an emergency vet →
                   </Link>
                   <a
-                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
-                    rel="sponsored nofollow"
+                    href={talk?.href}
+                    rel={talkRel}
+                    target={talk?.attributed ? undefined : '_blank'}
                     className="inline-block bg-brand-surface border border-brand-border text-brand-dark font-bold text-sm px-5 py-3 rounded-lg no-underline hover:border-brand-primary"
                   >
                     Or ask a vet online →
@@ -389,8 +391,9 @@ export default function SymptomPage({ params }: PageProps) {
               ) : (
                 <>
                   <a
-                    href={`/go/vetster/telehealth?s=symptoms-${s.slug}`}
-                    rel="sponsored nofollow"
+                    href={talk?.href}
+                    rel={talkRel}
+                    target={talk?.attributed ? undefined : '_blank'}
                     className="inline-block bg-brand-primary text-white font-bold text-sm px-5 py-3 rounded-lg no-underline hover:opacity-90"
                   >
                     Talk to a vet now →

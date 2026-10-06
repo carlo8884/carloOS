@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -111,7 +111,9 @@ export function ReviewCard({
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
   const held = partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref))
-  const href = held ? undefined : visibleShopHref(rawHref)
+  const consult = rawHref ? consultLink(rawHref) : null
+  const plain = Boolean(consult && !consult.attributed)
+  const href = held ? undefined : plain ? consult!.href : visibleShopHref(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
@@ -249,9 +251,9 @@ export function ReviewCard({
             <a
               href={href}
               className="inline-flex items-center justify-center bg-brand-primary text-brand-white text-sm font-bold px-6 py-3 rounded no-underline hover:bg-brand-primary-light transition-colors duration-200 max-w-full text-center whitespace-normal"
-              data-program={editorial ? undefined : program}
-              data-product={editorial ? undefined : ctaAffiliateProduct}
-              rel={editorial ? undefined : 'nofollow sponsored'}
+              data-program={editorial || plain ? undefined : program}
+              data-product={editorial || plain ? undefined : ctaAffiliateProduct}
+              rel={editorial ? undefined : plain ? 'nofollow noopener' : 'nofollow sponsored'}
               target={editorial ? undefined : '_blank'}
             >
               {label}
