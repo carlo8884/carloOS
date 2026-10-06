@@ -169,7 +169,7 @@ export default async function BreedInsurancePage({
   const faqs = [
     {
       question: `Which pet insurance is a good fit for ${b.breedName}s?`,
-      answer: `${recommended.name} is our editorial pick for ${b.breedName}s. ${b.recommendedReason} See sample premiums of $${b.sampleMonthlyPremium[0]}–$${b.sampleMonthlyPremium[1]}/mo and full coverage details below.`,
+      answer: `${recommended.name} — ${b.recommendedReason} See sample premiums of $${b.sampleMonthlyPremium[0]}–$${b.sampleMonthlyPremium[1]}/mo and full coverage details below.`,
     },
     {
       question: `What hereditary conditions affect ${b.breedName}s?`,
@@ -202,8 +202,7 @@ export default async function BreedInsurancePage({
         </h1>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           {b.breedName}s face {b.keyConditions.length} key hereditary
-          conditions. Our editorial pick for the right carrier is{' '}
-          {recommended.name} — {b.recommendedReason}
+          conditions. {recommended.name} — {b.recommendedReason}
         </p>
       </div>
 
