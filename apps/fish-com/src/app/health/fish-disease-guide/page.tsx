@@ -212,7 +212,7 @@ export default function FishDiseaseGuidePage() {
 
         <div id="hospital-tank" className="bg-brand-surface border border-brand-border rounded-xl p-6 mt-4">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-3 mt-0">The Hospital Tank — Essential Equipment</h2>
-          <p className="text-sm text-brand-text-mid leading-relaxed m-0">A dedicated hospital/quarantine tank is the single best investment for fish health. It serves as a 4-week quarantine for new arrivals (preventing disease introduction to your display tank) and as a treatment space for sick fish (allowing targeted medication without medicating your entire display tank or disturbing beneficial bacteria). Minimum: a spare 10-gallon tank with a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
+          <p className="text-sm text-brand-text-mid leading-relaxed m-0">A spare 10-gallon hospital tank is the setup for a 4-week quarantine of new arrivals and for treating sick fish away from the display. It keeps new arrivals from introducing disease to the display tank, and it lets you medicate one fish without treating the whole tank or its bacteria. Use a cycled sponge filter (seed the sponge in your main tank), a heater, and a lid. Keep it ready. You will need it.</p>
         </div>
         <JourneyNext
           siteId="fish-com"
