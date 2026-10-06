@@ -145,6 +145,9 @@ export default function FAQPage() {
             <h2 className="font-display text-2xl font-bold text-brand-dark mb-5 pb-3 border-b border-brand-border">
               {section.heading}
             </h2>
+            {section.items.some((item) => /\$\s?\d/.test(`${item.answer} ${item.answerText ?? ""}`)) ? (
+              <p>Those figures are typical US ranges dated 2026-10-04.</p>
+            ) : null}
             <FAQAccordion
               items={section.items.map(item => ({
                 question: item.question,

@@ -96,6 +96,7 @@ export default function VetsLabradorHealthPage() {
         </ul>
 
         <h2>Pet Insurance — Start Early</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>Orthopedic surgery for hip dysplasia runs $3,500–7,000 per joint. Bilateral (both hips): $7,000–14,000. Total hip replacement: $6,000–10,000 per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
 
         <h2 id="kit">Labrador-health kit</h2>
@@ -178,6 +179,7 @@ export default function VetsLabradorHealthPage() {
           The Dog.com Labrador Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2>FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple

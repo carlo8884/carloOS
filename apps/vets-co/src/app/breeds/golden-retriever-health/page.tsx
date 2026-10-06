@@ -148,6 +148,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <p>Use the <Link href="/find-a-vet">specialist finder</Link> to locate board-certified specialists near you.</p>
 
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
         <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
@@ -211,6 +212,7 @@ export default function VetsGoldenRetrieverHealthPage() {
           The Dog.com Golden Retriever page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2 id="faq">FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple

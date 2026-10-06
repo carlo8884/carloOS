@@ -250,6 +250,7 @@ export default function Quiz() {
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
       <PriceAsOf date="2026-06-02" />
+      <p className="mb-4 text-sm text-brand-text-mid">Those figures are typical US ranges dated 2026-06-02.</p>
       {!submitted ? (
         <>
           <div className="mb-6 flex items-center gap-3">

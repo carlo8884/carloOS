@@ -290,6 +290,7 @@ export default function VetsYorkshireTerrierHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Yorkshire Terrier</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Surgical attenuation of a single extrahepatic shunt at a referral center commonly runs
             $4,500–8,000; patellar luxation correction $2,000–4,000 per knee; tracheal stenting

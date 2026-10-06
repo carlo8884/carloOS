@@ -333,6 +333,7 @@ export default function EquineDentalCarePage() {
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>Those figures are typical US ranges dated 2026-05-28.</p>
           <FAQAccordion items={FAQS} />
 
           <h2 id="references">References</h2>

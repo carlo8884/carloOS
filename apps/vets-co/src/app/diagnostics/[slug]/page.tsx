@@ -255,6 +255,7 @@ export default function DiagnosticPage({ params }: PageProps) {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
                 Pet Insurance & Diagnostic Costs
               </div>
+              <p>Those figures are typical US ranges dated 2026-05-30.</p>
               <div className="font-display font-bold text-brand-dark text-lg mb-2">
                 Diagnostic workups commonly run $300-2,000
               </div>

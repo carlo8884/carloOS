@@ -23,6 +23,7 @@ export default function Page() {
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Questions', href: '/insurance/questions' }, { name: 'Worth It?', href: '/insurance/questions/is-pet-insurance-worth-it' }]}
         sidebar={<>
           <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
+            <p>Those figures are typical US ranges dated 2026-06-11.</p>
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">The Honest Frame</div>
             {[['Most worth it', 'If a $5k–$10k bill would hurt'], ['Least useful', 'For recouping routine costs'], ['Real product', 'Risk transfer, not savings'], ['Best move', 'Run your own breakeven']].map(([p, d]) => (
               <div key={p} className="py-2 border-b border-brand-border last:border-0">
@@ -38,6 +39,7 @@ export default function Page() {
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-11T00:00:00Z" updatedAt="2026-06-11T00:00:00Z" reviewedBy="Editorial team" />
 
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <CalloutBox variant="info" title="The short answer">
             Pet insurance is <strong>protection against rare, large vet bills — not a way to save money on average.</strong> It is most worth it when you could not comfortably absorb a sudden $5,000–$10,000 emergency from savings and you enroll while your pet is young and healthy. It is least useful as a way to recoup predictable routine costs. The honest answer is to run the breakeven for your own situation rather than rely on a blanket yes or no.
           </CalloutBox>
@@ -47,6 +49,7 @@ export default function Page() {
           <p>Seen that way, the real product is peace of mind and the avoidance of what veterinary teams sometimes call &ldquo;economic euthanasia&rdquo; — having to decline treatment for a pet that could be saved because the cost is out of reach. For many owners, removing that scenario is worth more than the expected-value arithmetic suggests.</p>
 
           <h2>The Case For</h2>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p>Insurance makes the most sense when a single large bill would genuinely strain your finances. Emergency surgery, cancer treatment, or the management of a serious chronic condition can run from several thousand dollars into five figures. If absorbing a $5,000–$10,000 bill from savings would force a hard choice, insurance does exactly what it is designed to do: it caps your exposure to that worst case at a known monthly cost. The case is strongest when you also enroll early, locking in coverage before any condition becomes a pre-existing exclusion.</p>
 
           <h2>The Case Against</h2>
@@ -77,6 +80,7 @@ export default function Page() {
           </div>
 
           <h2>FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
 
           <ArticleSourcesList sources={[

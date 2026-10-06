@@ -209,6 +209,24 @@ jobs:
       - name: Run stale-price-report
         run: node scripts/ci/stale-price-report.mjs
 
+
+  cost-date-nearby:
+    name: New care-cost sentences show their as-of date
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run cost-date-nearby
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha || github.event.before || '' }}
+        run: node scripts/ci/cost-date-nearby.mjs && node --test scripts/ci/cost-date-nearby.test.mjs
+
+
   how-we-pick:
     name: How we pick pages and comparison last-updated dates
     runs-on: ubuntu-latest

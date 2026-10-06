@@ -44,6 +44,7 @@ export default function Page() {
 
           <h2>Why the Core Policy Excludes Vaccines</h2>
           <p>The product most owners buy is an accident-and-illness (A&amp;I) policy, and it is built around one idea: insuring against the unexpected. A broken leg, a swallowed sock, a cancer diagnosis, a sudden infection — these are unpredictable, potentially expensive events, which is exactly what insurance exists to cover. Vaccines do not fit that definition. They are scheduled, predictable, and relatively inexpensive, which is why every standard policy excludes them by design.</p>
+          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p>This is not a loophole or a gap an insurer forgot to close. Insuring a known, recurring cost cannot make that cost cheaper; it can only add an administrative layer on top of it. If a policy reimbursed a $30 vaccine, the premium would simply have to rise by at least $30 to fund it, plus the insurer&apos;s overhead. Excluding predictable care is what keeps the premium attached to genuine risk, which is the whole point of the product.</p>
 
           <h2>What a Wellness Add-On Actually Does</h2>

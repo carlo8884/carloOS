@@ -309,6 +309,7 @@ export default function VetsHuskyHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Siberian Husky</h2>
+          <p>Those figures are typical US ranges dated 2026-05-28.</p>
           <p>
             Bilateral phacoemulsification for cataracts at a referral hospital commonly runs $3,500–6,000;
             emergency GDV surgery $5,000–8,000; lifelong oral zinc and dermatology management for

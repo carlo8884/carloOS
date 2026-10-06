@@ -313,6 +313,7 @@ export default function CostCalculator() {
         </ResultMeaning>
       )}
 
+      <p>Those figures are typical US ranges dated 2026-06-02.</p>
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">Budget for illness separately.</span> This estimate covers routine
         ownership only. Ferrets are prone to conditions whose treatment is not optional — adrenal disease,

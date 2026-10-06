@@ -573,6 +573,7 @@ export default function FerretExerciseEnrichmentPage() {
           />
 
           <h2 id="faq">FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-05-31.</p>
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />

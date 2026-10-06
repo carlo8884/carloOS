@@ -275,6 +275,7 @@ export function BreedHealthContent({ slug }: { slug: string }) {
       {/* ── Mid-page pet insurance CTA ────────────────────────────────────── */}
       <div className="not-prose my-8 rounded-xl p-6 border-2"
         style={{ borderColor: '#E8622A', background: 'linear-gradient(135deg, rgba(232,98,42,0.08) 0%, rgba(232,98,42,0.02) 100%)' }}>
+        <p>Those figures are typical US ranges dated 2026-06-13.</p>
         <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
           Cost reality check
         </div>

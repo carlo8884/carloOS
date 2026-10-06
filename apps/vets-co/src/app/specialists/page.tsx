@@ -170,7 +170,7 @@ export default function SpecialistsHubPage() {
             thousand dollars. Most accident-and-illness pet insurance plans reimburse specialist
             care once the policy is active and waiting periods clear — but pre-existing conditions
             are excluded. Verify any specialist in the relevant college&apos;s public directory.
-            All cost figures are typical US ranges and are not guaranteed.
+            All cost figures are typical US ranges dated 2026-10-04 and are not guaranteed.
           </p>
         </section>
 
@@ -305,6 +305,7 @@ export default function SpecialistsHubPage() {
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
               Pet Insurance & Specialist Care
             </div>
+            <p>Those figures are typical US ranges dated 2026-10-04.</p>
             <div className="font-display font-bold text-brand-dark text-lg mb-2">
               Chronic specialist visits can cost $3,000–15,000 annually
             </div>
@@ -418,6 +419,7 @@ export default function SpecialistsHubPage() {
           >
             Common questions about veterinary specialists
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <FAQAccordion items={HUB_FAQS} includeSchema={false} />
           <p className="text-xs text-brand-text-light mt-4 leading-relaxed max-w-3xl">
             For the tests a specialist commonly orders, see the{' '}
