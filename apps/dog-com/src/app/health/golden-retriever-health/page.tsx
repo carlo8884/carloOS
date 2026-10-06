@@ -103,7 +103,7 @@ export default function GoldenRetrieverHealthPage() {
         { title: 'Best Pet Insurance', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), category: 'Insurance' },
         { title: 'Find a Veterinary Oncologist', href: '/find-a-vet', category: 'Specialist Care' },
       ]}
-     priceAsOf="2026-06-11">
+     priceAsOf="2026-10-05">
       <div className="carloOS-article">
 
         <StockImage manifestKey="dog-com:breed-golden-retriever" alt="A Golden Retriever in natural light" aspect="16:9" priority />
@@ -218,7 +218,8 @@ export default function GoldenRetrieverHealthPage() {
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
 
-        <p>For Goldens specifically, we recommend <strong>Trupanion</strong> (direct vet payment, unlimited payouts, 90% reimbursement) or <strong>Healthy Paws</strong> (fast claims processing per the carrier, no payout limits, lower premiums). Both handle cancer treatment without per-incident caps — which matters when hemangiosarcoma treatment runs $5,000–12,000.</p>
+        <p>This page does not name a recommended carrier. Compare direct-pay and reimbursement terms on the policy itself.</p>
+        <p>Hemangiosarcoma treatment runs $5,000–12,000.</p>
 
         <div style={{ marginTop: '8px' }}>
           <Link href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

@@ -150,7 +150,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <h2 id="insurance">Pet Insurance — My Honest Recommendation</h2>
         <p>Pet insurance is widely recommended for new Golden Retriever owners for one reason: with a 60%+ lifetime cancer rate, the expected value calculation is unambiguous. Hemangiosarcoma treatment runs $8,000–18,000. Lymphoma chemotherapy runs $5,000–15,000. Orthopedic surgery for hip dysplasia: $3,500–7,000 per joint.</p>
         <p>The non-negotiable rule: <strong>enroll before the first appointment.</strong> Any condition noted in records before enrollment becomes a pre-existing condition and is excluded. A puppy with a murmur noted at the first exam has a cardiac exclusion for life on most policies. Enroll the week you get the dog, before the first vet visit.</p>
-        <p>For Goldens specifically, well-rated picks include Trupanion (direct vet payment, no per-incident limits, 90% reimbursement) or Healthy Paws (fast claims processing per the carrier, no payout limits). See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
+        <p>This page does not name a recommended carrier. See the <Link href="/reviews/best-pet-insurance">full comparison →</Link></p>
 
         <h2 id="kit">Golden-retriever-health kit</h2>
         <p>These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. This page does not claim hands-on testing.</p>
