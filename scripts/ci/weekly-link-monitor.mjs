@@ -14,6 +14,7 @@ import {
   classifyStatus,
   goHrefsFromSource,
   cardShopHrefs,
+  citationProbeReadsBody,
   missingShopSource,
   renderReport,
   shopSearchVerdict,
@@ -235,7 +236,14 @@ async function main() {
     console.log(`unique targets: ${checks.length}`)
     return
   }
+  const shop = await collectShopChecks()
+  const shopUrls = new Set(shop.checks.map((row) => row.url))
   const probed = await mapPool(checks, 8, async (row) => {
+    if (citationProbeReadsBody(row.url, shopUrls)) {
+      const result = await followChain(row.url, true)
+      const verdict = shopSearchVerdict(result.statuses, result.error, result.html)
+      return { ...row, kind: verdict.kind, detail: verdict.detail }
+    }
     const result = await probe(row.url)
     const kind = classifyStatus(result.status, result.error)
     const detail = result.error || `HTTP ${result.status}`
@@ -250,7 +258,6 @@ async function main() {
     url: row.url,
     detail: row.detail,
   }))
-  const shop = await collectShopChecks()
   const shopProbed = await mapPool(shop.checks, 6, async (row) => {
     const result = await followChain(row.url, true)
     const verdict = shopSearchVerdict(result.statuses, result.error, result.html)

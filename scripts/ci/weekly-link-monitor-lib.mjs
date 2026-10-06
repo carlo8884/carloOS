@@ -165,6 +165,43 @@ export function shopSearchVerdict(statuses, error = '', html = '') {
   return verdict
 }
 
+const RETAILER_SEARCH_HOSTS = new Set([
+  'amazon.com',
+  'chewy.com',
+  'smartpakequine.com',
+  'doversaddlery.com',
+  'sstack.com',
+  'ridingwarehouse.com',
+  'marshallpet.com',
+  'wysong.net',
+])
+
+/** Resolved retailer search URL. Product pages and homepages are not searches. */
+export function isRetailerSearchUrl(url) {
+  let parsed
+  try {
+    parsed = new URL(url)
+  } catch {
+    return false
+  }
+  const host = parsed.hostname.toLowerCase().replace(/^www\./, '')
+  if (!RETAILER_SEARCH_HOSTS.has(host)) return false
+  const path = parsed.pathname.toLowerCase()
+  if (host === 'amazon.com' || host === 'chewy.com') return path === '/s' || path.startsWith('/s/')
+  return path === '/search' || path.startsWith('/search/') || path.endsWith('/search.html')
+}
+
+/**
+ * Citation probe body-read. Shop-link URLs are already read there.
+ * 503 and 429 stay blocked inside shopSearchVerdict, and the download
+ * cap stays 250KB in the shared reader.
+ */
+export function citationProbeReadsBody(url, shopUrls) {
+  if (!isRetailerSearchUrl(url)) return false
+  if (shopUrls && typeof shopUrls.has === 'function' && shopUrls.has(url)) return false
+  return true
+}
+
 export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   const shopFailures = shop?.failures?.length ?? 0
   const lines = [
