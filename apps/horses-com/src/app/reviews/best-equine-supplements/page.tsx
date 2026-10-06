@@ -34,7 +34,7 @@ const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', 
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema, adamsSchema)
 
 const PICKS = [
-  { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · NASC sealed · Equine-specific trials', href: '#cosequin-asu' },
+  { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · NASC sealed · Equine-specific trials', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },
   { label: 'Best Comprehensive Wellness', emoji: '◎', name: 'Platinum Performance Equine', subtitle: 'Omega-3, antioxidants, amino acids · Senior &amp; performance dosing', href: '#platinum' },
   { label: 'Best Gastric Support', emoji: '🐴', name: 'SmartPak SmartGut Ultra', subtitle: 'Calcium &amp; magnesium buffering · NASC sealed · SmartPak auto-ship', href: '#smartgut' },
   { label: 'Best Marine Omega-3', emoji: '🐟', name: 'KER EO-3', subtitle: 'Marine DHA/EPA · Strongest equine omega-3 evidence', href: '#ker-eo3' },
