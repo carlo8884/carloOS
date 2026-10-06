@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear' },
+  { label: 'Best HOB', name: 'Aquaclear 70', subtitle: 'Most biological capacity · Quiet · Refillable', href: '#aquaclear', pickHop: '/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' },
   { label: 'Best Canister', name: 'Fluval 307', subtitle: 'Best for 50–70 gal · Near-silent', href: '#fluval' },
   { label: 'Best Sponge', name: 'Hikari Bacto-Surge', subtitle: 'Nano tanks · Breeding · Shrimp', href: '#sponge' },
   { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
