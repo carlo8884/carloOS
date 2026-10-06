@@ -140,7 +140,7 @@ export default function BestHeatersPage() {
               badge="Best Flat Design"
               name="Cobalt Aquatics Neo-Therm Pro"
               subtitle="Slim flat design · LED color indicator · ±0.5°F accuracy"
-              description={<p>The Neo-Therm Pro matches the Eheim Jager in accuracy (±0.5°F per manufacturer-published accuracy) in a flat form factor that is significantly less obtrusive in planted tanks or display aquariums where a traditional cylindrical heater disrupts the aesthetic. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance.</p>}
+              description={<p>The Neo-Therm Pro matches the Eheim Jager in accuracy (±0.5°F per manufacturer-published accuracy) in a flat form factor that is significantly less obtrusive in planted tanks or display aquariums where a traditional cylindrical heater disrupts the aesthetic. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</p>}
               specs={[
                 { label: 'Accuracy', value: '±0.5°F', highlight: 'good' },
                 { label: 'Design', value: 'Flat / slim profile', highlight: 'good' },
@@ -226,7 +226,7 @@ export default function BestHeatersPage() {
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
                       <td className="p-3 text-brand-text-mid">Best flat design. ±0.5°F. Shatterproof plastic. $35–65</td>
-                      <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable</td>
+                      <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A canister filter, and no heater in the tank</td>
