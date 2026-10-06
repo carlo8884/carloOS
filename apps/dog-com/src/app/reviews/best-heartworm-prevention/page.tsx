@@ -105,25 +105,25 @@ export default function BestHeartwormPreventionPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Heartworm coverage on its own</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#heartgard" className="text-brand-primary">Heartgard Plus</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#heartgard" className="text-brand-primary">Heartgard Plus</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Best Standalone. $35–55 / 6-month supply</td>
                       <td className="p-3 text-brand-text-mid">You also need flea and tick coverage. The card says this does not include it</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The broader intestinal-parasite list</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#interceptor" className="text-brand-primary">Interceptor Plus</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#interceptor" className="text-brand-primary">Interceptor Plus</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Broadest GI spectrum. $40–60 / 6-month supply</td>
                       <td className="p-3 text-brand-text-mid">Flea tapeworm. The card says it does not cover Dipylidium, and it has no flea or tick coverage</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Heartworm plus flea and tick in one chew</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#simparica" className="text-brand-primary">Simparica Trio</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#simparica" className="text-brand-primary">Simparica Trio</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Best All-in-One. $50–80 / 3-month supply</td>
                       <td className="p-3 text-brand-text-mid">An MDR1 herding breed, or a dog that does not need flea and tick coverage. The card calls it the most expensive per dose</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">One injection instead of a monthly dose</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#proheart" className="text-brand-primary">ProHeart 12</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#proheart" className="text-brand-primary">ProHeart 12</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Best for Compliance. $70–120 per injection</td>
                       <td className="p-3 text-brand-text-mid">You need flea, tick, or intestinal coverage. A veterinarian gives the injection</td>
                     </tr>
