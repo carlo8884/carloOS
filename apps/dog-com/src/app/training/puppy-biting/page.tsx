@@ -71,7 +71,7 @@ export default function PuppyBitingPage() {
           nextLabel="Put the 90-minute awake window on the puppy schedule"
           nextBlurb="Ouch-and-pause only works if the puppy can still regulate. After 90 minutes awake, crate for a nap before the next play bout. The hop below is the same stuffable Kong search already on this page."
           resourceHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
-          resourceLabel="Browse stuffable Kong toys on Amazon →"
+          resourceLabel="Browse stuffable Kong classic toys on Amazon →"
         />
 
         {/* Money path — live amazon-brand search hops (nipping / teething kit).
@@ -122,7 +122,7 @@ export default function PuppyBitingPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-puppy-biting"
-              amazonLabel="Browse stuffable Kong toys on Amazon →"
+              amazonLabel="Browse stuffable Kong classic toys on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bitter+apple+spray+dog?s=training-puppy-biting"
