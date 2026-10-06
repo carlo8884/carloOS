@@ -284,6 +284,7 @@ export default function NewPuppyChecklistPage() {
 
           <div>
             <h2 className="mb-4 font-display text-2xl font-bold text-brand-dark">Frequently asked questions</h2>
+            <p>Puppy foods for the day-one list are compared in the <Link href="/reviews/best-dog-food-for-puppies">puppy food review</Link>.</p>
             <FAQAccordion items={FAQS} />
             <CrossSiteHelp
               href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}

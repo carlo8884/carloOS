@@ -289,6 +289,7 @@ export default function SaddleFitBasicsPage() {
             ctaAffiliateProduct="contoured-all-purpose-pad"
           />
 
+          <p>Sheepskin and quilted pads are compared in the <Link href="/reviews/quilted-vs-sheepskin-pad-guide">quilted versus sheepskin pad guide</Link>.</p>
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
             <li>Society of Master Saddlers. &ldquo;Saddle Fitting — A Guide for Riders and Owners,&rdquo; current edition. mastersaddlers.co.uk.</li>

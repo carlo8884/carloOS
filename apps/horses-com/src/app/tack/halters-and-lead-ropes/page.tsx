@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -268,6 +269,7 @@ export default function HaltersLeadRopesPage() {
           </div>
           </div>
 
+          <p>Nylon and breakaway halters are compared in the <Link href="/reviews/nylon-vs-breakaway-halter-guide">nylon versus breakaway halter guide</Link>.</p>
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
 

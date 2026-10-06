@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
@@ -216,6 +217,7 @@ export default function MultiLevelHousingPage() {
           </div>
           </div>
 
+          <p>Multi-level cages are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>

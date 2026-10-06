@@ -369,6 +369,7 @@ export default function FerretCageCleaningRoutinePage() {
             <a href="/care/odor-and-scent-control">odor and scent control guide</a>.
           </p>
 
+          <p>The cages this cleaning routine fits are compared in the <Link href="/reviews/best-ferret-cage">ferret cage review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

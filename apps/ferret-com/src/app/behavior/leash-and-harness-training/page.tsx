@@ -355,6 +355,7 @@ export default function LeashAndHarnessTrainingPage() {
             ctaAffiliateProduct="ferret+vest+harness"
           />
 
+          <p>Harness styles for this training are compared in the <Link href="/reviews/best-ferret-harness">ferret harness review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -268,6 +269,7 @@ export default function LitterBoxTroubleshootingPage() {
             </p>
           </CalloutBox>
 
+          <p>If the box problem is the litter itself, the options are in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

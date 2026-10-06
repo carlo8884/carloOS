@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -199,6 +200,7 @@ export default function SeniorDogCarePage() {
           </div>
         </div>
 
+        <p>Senior diets are compared in the <Link href="/reviews/best-dog-food-senior">senior dog food review</Link>.</p>
         <h2 id="faq">Frequently Asked Questions</h2>
         <FAQAccordion items={FAQ_ITEMS} allowMultiple />
 

@@ -236,6 +236,7 @@ export default function BeddingAndLitterTypesPage() {
             Litter pans want a daily spot-clean and a full empty-and-wipe weekly. Ferrets are fastidious about their corners; a pan left dirty is the fastest way to teach a ferret to eliminate beside it instead. For the placement and multi-pan strategy that makes litter actually work, see <a href="/care/litter-training">litter training</a>, and for how bedding and litter zones fit a tall cage, our <a href="/care/multi-level-housing">multi-level housing</a> guide.
           </p>
 
+          <p>The litter materials above are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <ArticleSourcesList sources={SOURCES} />
         </div>
       </ArticleLayout>
