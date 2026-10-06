@@ -7,7 +7,7 @@ const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Wa
 const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api' },
+  { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api', pickHop: '/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' },
   { label: 'Best Reef', name: 'Salifert Individual Tests', subtitle: 'Reef-grade accuracy · Alk, Ca, Mg, nitrate', href: '#salifert' },
   { label: 'Best Digital', name: 'Apogee or Bluelab Meters', subtitle: 'pH/TDS digital meters — no reagents', href: '#digital' },
 ]

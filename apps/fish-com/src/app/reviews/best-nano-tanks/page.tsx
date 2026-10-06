@@ -8,7 +8,7 @@ const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', descri
 const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
 const PICKS = [
-  { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec' },
+  { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' },
   { label: 'Best 10 Gallon', name: 'Aqueon 10 Standard', subtitle: 'Most versatile · Widely available · Add-your-own equipment', href: '#aqueon-10' },
   { label: 'Best 20 Gallon', name: 'Aqueon 20 Long', subtitle: 'Best community starter · Long footprint · Affordable', href: '#aqueon-20' },
   { label: 'Best Nano Reef', name: 'Innovative Marine Nuvo 10', subtitle: 'AIO saltwater · Hidden filtration · Reef-ready', href: '#IM-nuvo' },

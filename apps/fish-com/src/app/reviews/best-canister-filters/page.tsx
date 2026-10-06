@@ -8,7 +8,7 @@ const fluvalSchema = buildProductSchema({ name: 'Fluval 307 Performance Canister
 const eheimSchema = buildProductSchema({ name: 'Eheim Classic 350 Canister Filter', description: 'German-engineered classic canister filter — bulletproof reliability for 40-92 gallons.', url: 'https://eheim.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, eheimSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval' },
+  { label: 'Best Overall', name: 'Fluval 307', subtitle: 'Near-silent · AquaStop · 40-70 gal', href: '#fluval', pickHop: '/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' },
   { label: 'Most Reliable', name: 'Eheim Classic 350', subtitle: 'German engineering · Runs forever', href: '#eheim' },
   { label: 'Best Budget', name: 'Penn Plax Cascade 1000', subtitle: 'Good value · 100 gal · Lower cost', href: '#penn-plax' },
 ]
