@@ -303,7 +303,15 @@ export function HomeGuides() {
               <div>
                 <div className="flex items-center gap-2.5 mb-3">
                   <span className="w-6 h-0.5 bg-brand-primary" />
-                  <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">Product guides</span>
+                  <Link
+                    href="/reviews"
+                    className="group flex items-center gap-2.5 no-underline"
+                  >
+                    <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
+                    </span>
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Product guides</span>
+                  </Link>
                 </div>
                 <h2 className="font-display font-bold text-white tracking-tight text-3xl italic">Compared, not ranked by ad spend.</h2>
               </div>
