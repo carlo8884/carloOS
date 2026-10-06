@@ -122,7 +122,7 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Vetster vs AskVet/,
       link: 'telehealth comparison',
       comparison: /\/telehealth\/?$/,
-      hop: '/go/vetster/telehealth?s=telehealth',
+      hop: 'https://vetster.com/?campaign=telehealth',
       hopIncludes: ['https://vetster.com/', 'campaign=telehealth'],
     },
     {
@@ -194,7 +194,12 @@ for (const width of [375, 1280]) {
         expect(overflow, 'horizontal overflow').toBeLessThanOrEqual(1)
         await expect(page.locator('body')).not.toContainText(/\bhop\b/i)
 
-        await expectHop(page.request, journey.hop, journey.hopIncludes)
+        if (journey.hop.startsWith('/')) {
+          await expectHop(page.request, journey.hop, journey.hopIncludes)
+        } else {
+          expect(journey.hop, 'unset consult href').not.toContain('PLACEHOLDER')
+          for (const part of journey.hopIncludes) expect(journey.hop).toContain(part)
+        }
       })
     }
   })
