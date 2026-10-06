@@ -181,7 +181,7 @@ export default function HardKeeperPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/soy+hull+pellets+horse+feed?s=nutrition-feeding-the-hard-keeper"
-                amazonLabel="Browse soy hull pellets for horses on Amazon →"
+                amazonLabel="Browse soy hull pellet horse feed on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/over+door+horse+feed+bucket?s=nutrition-feeding-the-hard-keeper"
