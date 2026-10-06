@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -139,14 +139,12 @@ export default function BootsWrapsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="brushing-boots"
             badge="Everyday Protection"
             name="Synthetic Brushing / Splint Boots"
             subtitle="Impact and interference protection for schooling"
-            score={8.5}
             winner
             description={<>
               <p>Synthetic brushing (splint) boots are the everyday workhorse for protecting the lower leg from interference strikes during schooling and turnout. Modern neoprene-lined or perforated designs are washable and dry quickly, which matters because grit trapped under a boot causes rubs.</p>
@@ -171,7 +169,6 @@ export default function BootsWrapsPage() {
             badge="Overreach Protection"
             name="Pull-On Bell Boots"
             subtitle="Protects the heel bulbs and shoes from overreaching"
-            score={8.4}
             description={<>
               <p>Bell boots protect the heel bulbs and coronet from overreach injuries — when a hind foot strikes the back of a front foot — and help prevent a horse from pulling a front shoe. Pull-on styles stay secure; hook-and-loop styles are easier to fit but can come loose in deep footing.</p>
               <p>Most relevant for horses that overreach, forge, or repeatedly pull front shoes, and for jumping and fast work where overreach risk is higher.</p>
@@ -195,7 +192,6 @@ export default function BootsWrapsPage() {
             badge="Stable Wraps"
             name="Standing Wraps with Quilted Liners"
             subtitle="Stable bandaging — only with correct technique"
-            score={8.0}
             description={<>
               <p>Standing wraps over quilted liners (no-bow style) are used for stable support, mild swelling management, and protecting the lower leg in the stall or trailer. The critical caveat from the section above applies: incorrect wrapping can cause real tendon damage, so technique matters more than the product. Even tension, correct direction, and appropriate padding are non-negotiable.</p>
               <p>Most relevant for owners who have been taught correct wrapping technique. If you are not confident wrapping, learn hands-on from a professional before relying on standing wraps.</p>

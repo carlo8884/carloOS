@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -140,14 +140,12 @@ export default function SaddlePadsPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="cotton-quilted-numnah"
             badge="Everyday English"
             name="Quilted Cotton All-Purpose Pad"
             subtitle="Washable everyday numnah for schooling"
-            score={8.3}
             winner
             description={<>
               <p>A quilted cotton all-purpose or dressage-cut pad is the everyday English workhorse: washable, breathable, and inexpensive enough to keep several in rotation so a clean, dry pad is always available. Keeping the pad clean and dry matters more for back health than any premium feature.</p>
@@ -172,7 +170,6 @@ export default function SaddlePadsPage() {
             badge="Half Pad"
             name="Sheepskin Half Pad"
             subtitle="Friction reduction and wicking under a fitting saddle"
-            score={8.5}
             description={<>
               <p>A sheepskin (or quality synthetic-fleece) half pad sits under or over the numnah to reduce friction and wick moisture at the saddle edges. Some include shimmable pockets to fine-tune balance between professional fittings — a legitimate use, but not a substitute for a fitter when the saddle is genuinely the wrong width.</p>
               <p>Most relevant for a rider managing minor balance refinement under guidance from a saddle fitter, or for added comfort under a correctly fitting saddle.</p>
@@ -196,7 +193,6 @@ export default function SaddlePadsPage() {
             badge="Western"
             name="Wool-Felt Western Pad"
             subtitle="Cushion and durability for heavier saddles and long rides"
-            score={8.7}
             description={<>
               <p>A wool-felt Western pad cushions the heavier Western saddle over the long rides typical of the discipline. Wool felt is valued for breathability, durability, and the way it conforms to the back. Many riders layer a woven blanket over the felt for tradition and additional protection.</p>
               <p>Most relevant for trail, ranch, and Western performance riders whose saddles are heavier and rides longer than typical English work.</p>
@@ -216,7 +212,7 @@ export default function SaddlePadsPage() {
           />
 
           <h2 id="who">Who should buy which pad</h2>
-          <p>Material, price, and the limit are already on the three cards. None of them corrects a saddle that does not fit. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Material, price, and the limit are already on the three cards. None of them corrects a saddle that does not fit.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -249,7 +245,7 @@ export default function SaddlePadsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
