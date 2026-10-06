@@ -287,7 +287,7 @@ interface QuickPickItem {
   subtitle?: string
   href: string
   /** Existing product hop for the Best Overall card. Other labels ignore it. */
-  shopHref?: string
+  pickHop?: string
 }
 
 interface QuickPicksProps {
@@ -313,7 +313,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
-              <QuickPickShopLink label={item.label} href={item.shopHref} />
+              <QuickPickShopLink label={item.label} href={item.pickHop} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

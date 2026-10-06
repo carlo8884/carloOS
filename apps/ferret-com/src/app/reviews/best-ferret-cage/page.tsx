@@ -109,7 +109,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Half-inch bars · Modular · Full-front doors', href: '#ferret-nation', shopHref: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
+  { label: 'Best Overall', name: 'Ferret Nation Double Unit', subtitle: 'Half-inch bars · Modular · Full-front doors', href: '#ferret-nation', pickHop: '/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
   { label: 'Best Value', name: 'Prevue Feisty Ferret', subtitle: 'Ferret-spaced · Shelves + ramps', href: '#prevue-feisty' },
   { label: 'Entry / Single Ferret', name: 'Kaytee Multi-Level', subtitle: 'Widely stocked · One ferret + out-time', href: '#kaytee-multilevel' },
 ]
