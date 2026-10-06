@@ -72,6 +72,9 @@ export default function BestDogFoodPage() {
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
+        <div className="mt-5 [&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} title="Jump to Your Pick" embedded />
+        </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed mb-5">
           The dog food market is full of marketing. We cut through it: 12 foods compared on <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary underline underline-offset-2">WSAVA</a> compliance, nutritional research investment, manufacturing standards, and ingredient quality — based on published specs and stated criteria, not front-of-bag claims.
         </p>
@@ -80,8 +83,6 @@ export default function BestDogFoodPage() {
           <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
         </div>
       </div>
-
-      <QuickPicks items={PICKS} title="Jump to Your Pick" />
 
       {/* Breadcrumb */}
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
