@@ -219,7 +219,7 @@ export default function PetInsuranceHubPage() {
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <div className="border border-brand-border rounded-xl p-6">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
-              🏆 Editorial pick — best overall
+              Per-condition deductible, no payout cap, direct pay
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Trupanion</h3>
             <p className="text-sm text-brand-text-mid mb-3">
