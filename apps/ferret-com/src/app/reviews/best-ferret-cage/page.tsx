@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -23,7 +23,7 @@ const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
   description:
-    'A criteria-led buyer guide to multi-level ferret cages — bar spacing, usable floor space per ferret, ramp and shelf safety — with three editorial picks scored against those standards.',
+    'A criteria-led buyer guide to multi-level ferret cages — bar spacing, usable floor space per ferret, ramp and shelf safety — with three editorial picks compared on those standards.',
   url: PAGE_URL,
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -42,9 +42,8 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 })
 
 // GEO: ItemList of the three cages that meet the criteria + an editorial
-// Product/Review per pick. reviewRating maps each card's on-page disclosed
-// editorial score (via ScoreMethodology); name + reviewBody come only from this
-// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+// Product/Review per pick. No numeric rating. Name + reviewBody come only from
+// this page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
@@ -59,7 +58,6 @@ const products = [
     name: 'Ferret Nation / Critter Nation Double Unit',
     description: 'Half-inch bar spacing, full-width front doors, deep pans, expandable two-storey footprint',
     url: `${PAGE_URL}#ferret-nation`,
-    ratingValue: 9.5,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The reference multi-ferret cage in the keeping community. Half-inch wire spacing, full-width double doors that open the entire front for cleaning and handling, deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint — but on the safety criteria it is the clearest pick.',
   }),
@@ -67,7 +65,6 @@ const products = [
     name: 'Prevue Pet Products Feisty Ferret Cage',
     description: 'Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price',
     url: `${PAGE_URL}#prevue-feisty`,
-    ratingValue: 8.4,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A purpose-built ferret cage with appropriate wire spacing, several solid shelves and ramps, and a price below the modular systems. Floor space suits one to two ferrets comfortably; the wire shelf edges benefit from fleece or linoleum covering. A strong value pick where the larger modular units are out of budget or out of room.',
   }),
@@ -75,7 +72,6 @@ const products = [
     name: 'Kaytee Multi-Level Ferret Home',
     description: 'Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time',
     url: `${PAGE_URL}#kaytee-multilevel`,
-    ratingValue: 7.6,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. The most likely appropriate cage to find at a chain store at short notice; verify the spacing on the specific model before buying.',
   }),
@@ -271,7 +267,6 @@ export default function BestFerretCagePage() {
             and shelter communities, not a hands-on durability test. Verify the bar spacing on the exact model you buy,
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
-          <ScoreMethodology />
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <ReviewCard
@@ -279,7 +274,6 @@ export default function BestFerretCagePage() {
             badge="Best Overall"
             name="Ferret Nation / Critter Nation Double Unit"
             subtitle="Half-inch bar spacing, full-width front doors, deep pans, expandable two-storey footprint"
-            score={9.5}
             winner
             description={
               <p>The reference multi-ferret cage in the keeping community. Half-inch wire spacing, full-width double doors that open the entire front for cleaning and handling, deep leak-proof pans, and a modular design that stacks to a second storey for a pair or trio. The trade-offs are price, weight, and the assembly footprint — but on every safety criterion it is the clearest pick, which is why it dominates shelter and breeder setups.</p>
@@ -305,7 +299,6 @@ export default function BestFerretCagePage() {
             badge="Best Value"
             name="Prevue Pet Products Feisty Ferret Cage"
             subtitle="Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price"
-            score={8.4}
             description={
               <p>A purpose-built ferret cage with appropriate wire spacing, several shelves and ramps, and a price well below the modular systems. The floor space suits one to two ferrets comfortably, and the included shelves give vertical usable area; as with any wire cage, the shelf edges and ramps benefit from fleece or linoleum covering. A strong value pick when the larger modular units are out of budget or out of room.</p>
             }
@@ -329,7 +322,6 @@ export default function BestFerretCagePage() {
             badge="Entry / Single Ferret"
             name="Kaytee Multi-Level Ferret Home"
             subtitle="Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time"
-            score={7.6}
             description={
               <p>A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. It is the most likely appropriate cage to find at a chain store at short notice — verify the spacing on the specific model, and treat it as a starter cage you may outgrow if you add a second ferret.</p>
             }
