@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -34,6 +34,23 @@ export default function BestWaterTestKitsPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Aquarium Water Test Kits 2026</h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' label='Check price of the API Freshwater Master Test Kit on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-water-test-kits"
+          checklist={[
+            "For freshwater tanks, the four that matter most for fish health are pH, ammonia, nitrite, and nitrate \u2014 all covered by the API Freshwater Master Test Kit.",
+            "Shrimp keepers should add GH/KH and a TDS meter.",
+            "Test at least weekly, always after adding new fish, and during any disease outbreak or behavior change.",
+            "Ammonia and nitrite are invisible and lethal \u2014 you cannot manage water quality you do not measure.",
+            "Reef keepers can supplement at-home testing with laboratory ICP analysis (ATI, Triton) once or twice a year for a 30+ element baseline.",
+            "Liquid reagent tests are significantly more accurate than dip-strip tests \u2014 do not rely on strips for critical parameters like ammonia.",
+          ]}
+        />
+
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">You cannot manage water quality you do not measure. Ammonia and nitrite are invisible and lethal. Test at least weekly, always after adding new fish, and during any disease or behavior change.</p>
       </div>
       <QuickPicks items={PICKS} />
