@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf, AffiliateDisclosure, ShopCtas} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -47,7 +47,7 @@ export default function FleaTickPreventionPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Isoxazolines and Seizure Risk</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fact-sheet-pet-owners-and-veterinarians-about-potential-adverse-events-associated-isoxazoline-flea" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> has issued a warning that isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) may cause neurological adverse events including muscle tremors, ataxia, and seizures in some dogs. This is rare — but dogs with a history of seizures or neurological conditions should use these products only under close veterinary supervision. Discuss with your vet before starting any isoxazoline product.</p>
             </div>
-            <p className="text-sm text-brand-text-mid leading-relaxed mb-8">Prices on the cards are clinic ranges from a veterinary visit, not a shelf price. Every button opens the vet finder.</p>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-8">Prices on the cards are clinic ranges from a veterinary visit, not a shelf price. The buttons on the prescription cards open the vet finder.</p>
             <ReviewCard id="bravecto" badge="Best Overall" name="Bravecto Chew (Fluralaner)" subtitle="12-week duration · Covers 7 tick species · Single dose convenience" winner
               description={<p>Bravecto's 12-week duration is its defining advantage — 4 doses per year versus 12 for monthly products. Fewer doses means fewer opportunities for compliance lapses (the most common reason prevention fails). A single chew provides 3 months of protection against fleas and 7 tick species including Deer tick (Lyme disease vector), American dog tick, Brown dog tick, Black-legged tick, Gulf Coast tick, Lone Star tick, and Serrano tick. Blood levels remain therapeutic throughout the 12-week window — unlike some monthly products that have efficacy gaps in the final week. Prescription required.</p>}
               specs={[{ label: 'Duration', value: '12 weeks per dose', highlight: 'good' }, { label: 'Tick species', value: '7 — broadest coverage', highlight: 'good' }, { label: 'Class', value: 'Isoxazoline (fluralaner)' }, { label: 'Requires Rx', value: 'Yes' }]}
@@ -68,10 +68,21 @@ export default function FleaTickPreventionPage() {
               ctaHref="/find-a-vet"
               editorial
             />
+            <div className="mt-10 border border-brand-border rounded-xl p-5">
+              <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Over-the-counter options</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
+                Bravecto, NexGard, and Simparica need a veterinarian&apos;s prescription. They are not what the link below sells. That link is an Amazon search for over-the-counter dog flea and tick products.
+              </p>
+              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <ShopCtas
+                amazonHref="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention"
+                amazonLabel="Browse over-the-counter dog flea and tick products on Amazon →"
+              />
+            </div>
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which preventive</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Two preventives have review cards. The prices are clinic ranges, not a shelf price. Both buttons go to the vet finder. This page does not name a retailer. Simparica Trio is in the picks strip and does not have a scored card or a printed price here.
+                Two preventives have review cards. The prices are clinic ranges, not a shelf price. Both buttons on those cards go to the vet finder. The prescription cards do not name a retailer. The over-the-counter block above is a separate Amazon search, and it is not Bravecto, NexGard, or Simparica. Simparica Trio is in the picks strip and does not have a scored card or a printed price here.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
