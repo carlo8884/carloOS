@@ -49,7 +49,7 @@ const schema = combineSchemas(articleSchema, howToSchema)
 
 const FAQS = [
   { question: 'How long does aquarium cycling take?', answer: 'A fishless cycle typically takes 4–8 weeks. Using established filter media can reduce this to 1–2 weeks. A fish-in cycle takes 4–6 weeks with careful daily water testing and water changes to keep ammonia and nitrite below 0.5 ppm.', answerText: '' },
-  { question: 'What size tank is best for a beginner?', answer: 'A 20-gallon long is our recommendation for a first tank. Counterintuitively, larger tanks are actually easier to maintain than smaller ones — water parameters are more stable, errors are more forgiving, and you have more species options. The 5-gallon "starter" tanks sold as beginner kits are harder to maintain, not easier.', answerText: '' },
+  { question: 'What size tank is best for a beginner?', answer: 'Common guidance for a first tank is a 20-gallon long. Larger tanks are easier to maintain than smaller ones because the extra water volume keeps parameters more stable, so small mistakes are buffered, and you have more species options. The 5-gallon tanks sold as beginner kits are harder to maintain.', answerText: '' },
   { question: 'Do I need live plants?', answer: 'No — but they help. Live plants consume ammonia and nitrite, compete with algae for nutrients, and provide behavioral enrichment for fish. Low-tech plants (java fern, anubias, amazon sword) are nearly indestructible and don\'t require CO2 injection or special lighting. If you\'re not ready for live plants, silk plants are a better choice than plastic ones that can tear fish fins.', answerText: '' },
   { question: 'What is a good community fish for a beginner?', answer: 'The classic beginner community: neon tetras (school of 6–10), corydoras catfish (4–6), a centerpiece fish like a single gourami, and a cleanup crew of snails. All are peaceful, easy to feed, tolerant of beginner water conditions (once cycled), and widely available. Avoid cichlids, large carnivores, and any fish labeled "aggressive" for your first tank.', answerText: '' },
 ]
@@ -104,11 +104,11 @@ export default function AquariumSetupPage() {
         <StockImage manifestKey="fish-com:category-setup" aspect="16:9" variant="inline" caption="A healthy, fully cycled planted aquarium — the goal of a careful setup." priority />
 
         <h2 id="size">Step 1 — Choose the Right Tank Size</h2>
-        <p>The most common beginner mistake is starting with a small tank. Small tanks are harder to maintain, not easier — water parameters swing more dramatically, small errors have larger consequences, and you have fewer species options. Our recommendation: start with at least 20 gallons.</p>
+        <p>The most common beginner mistake is starting with a small tank. Small tanks are harder to maintain, not easier — water parameters swing more dramatically, small errors have larger consequences, and you have fewer species options. Common guidance is to start with at least 20 gallons, because the extra water volume buffers those swings.</p>
         <ul>
           <li><strong>5 gallons</strong> — betta fish only, experienced keeper. Not recommended for beginners despite being sold as "starter" tanks.</li>
           <li><strong>10 gallons</strong> — appropriate for a small community (neon tetras, corydoras). Manageable for beginners who are willing to test water weekly.</li>
-          <li><strong>20 gallons long</strong> — the beginner recommendation. Stable water parameters, good species options, forgiving of minor errors.</li>
+          <li><strong>20 gallons long</strong> — a common starting size. Stable water parameters, good species options, and more water volume to buffer minor errors.</li>
           <li><strong>40+ gallons</strong> — easiest to maintain, widest species selection, most stable parameters. If space allows, start here.</li>
         </ul>
         <p className="text-sm text-brand-text-mid">
