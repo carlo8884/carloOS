@@ -22,11 +22,11 @@ A complete fishless-cycle toolkit, with the specific SKUs we've personally cross
 
 **4. (Saltwater only) A refractometer, not a hydrometer.** Hydrometers drift by ~0.002 SG which is enough to crash invertebrates. A $30 refractometer pays for itself the first month.
 
-[Get a calibrated refractometer →](https://fish.com/go/marinedepot/refractometer-atc)
+[Get a calibrated refractometer →](https://fish.com/go/amazon-brand/atc+refractometer?s=email-cycling-guide)
 
 **5. (Saltwater only) Pre-mixed salt or a reef salt mix.** Tropic Marin and Red Sea are the two we've matched against published reef-keeper benchmarks. Avoid the cheapest big-box brand — calcium and KH are often off by 30%.
 
-[Get Tropic Marin salt mix →](https://fish.com/go/marinedepot/tropic-marin-classic)
+[Get Tropic Marin salt mix →](https://fish.com/go/amazon-brand/tropic+marin+classic+salt?s=email-cycling-guide)
 
 **6. A starter beneficial bacteria culture** to seed the colony. Dr. Tim's One & Only or Fritz TurboStart 700. These don't *replace* cycling — they shorten it from 4–6 weeks to 2–3 weeks if dosed correctly.
 
