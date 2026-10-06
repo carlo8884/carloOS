@@ -7,6 +7,7 @@
 
 import type { ReactNode } from 'react'
 import { hiddenChewyReplacement, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
 
 interface Spec {
   label: string
@@ -208,13 +209,16 @@ export function ReviewCard({
           )}
 
           {held ? (
-            <button
-              type="button"
-              disabled
-              className="inline-flex items-center justify-center bg-brand-primary/50 text-brand-white text-sm font-bold px-6 py-3 rounded max-w-full text-center whitespace-normal cursor-not-allowed"
-            >
-              {partnerNeededLabel(label)}
-            </button>
+            <span className="inline-flex flex-wrap items-center gap-3">
+              <button
+                type="button"
+                disabled
+                className="inline-flex items-center justify-center bg-brand-primary/50 text-brand-white text-sm font-bold px-6 py-3 rounded max-w-full text-center whitespace-normal cursor-not-allowed"
+              >
+                {partnerNeededLabel(label)}
+              </button>
+              <HeldQuoteNext />
+            </span>
           ) : href ? (
             <a
               href={href}

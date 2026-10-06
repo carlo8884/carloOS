@@ -47,6 +47,7 @@ test('a new page fails on each forbidden pattern', () => {
     ['ratingValue', 'ratingValue: 9.1,'],
     ['scored N.N', 'scored 9.1 and marked Best'],
     ['N.N/10', 'Editorial score 9.1/10'],
+    ['editorialScore template', 'Score: {t.editorialScore}/10'],
   ]
   for (const [name, line] of samples) {
     const hits = findingsIn(file, line)
@@ -59,4 +60,12 @@ test('funnels are not exempt', () => {
   const file = 'apps/dog-com/src/app/(funnels)/pet-insurance/page.tsx'
   assert.equal(isAllowed(file), false)
   assert.equal(findingsIn(file, 'score={9.2}').length, 1)
+  assert.equal(findingsIn(file, 'Score: {c.editorialScore}/10').length, 1)
+})
+
+test('stored editorialScore fields and clinical totals are not template scores', () => {
+  const file = 'apps/dog-com/src/data/insurance-carriers.ts'
+  assert.equal(findingsIn(file, 'editorialScore: 9.2,').length, 0)
+  assert.equal(findingsIn(file, 'b.editorialScore - a.editorialScore').length, 0)
+  assert.equal(findingsIn('apps/dog-com/src/app/tools/dog-grimace-scale/page.tsx', 'about 4/10').length, 0)
 })

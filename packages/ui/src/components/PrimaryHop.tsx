@@ -1,4 +1,5 @@
 import { hiddenChewyReplacement, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
  * The page's top-pick hop, in normal flow under the title.
@@ -18,7 +19,7 @@ export function PrimaryHop({
   const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
   if (held) {
     return (
-      <div className="mb-5" data-primary-hop="true">
+      <div className="mb-5 flex flex-wrap items-center gap-3" data-primary-hop="true">
         <button
           type="button"
           disabled
@@ -26,6 +27,7 @@ export function PrimaryHop({
         >
           {partnerNeededLabel(label)}
         </button>
+        <HeldQuoteNext tone="on-color" />
       </div>
     )
   }
