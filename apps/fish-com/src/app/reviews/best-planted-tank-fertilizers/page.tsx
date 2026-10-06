@@ -90,7 +90,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Higher concentration — better for high-tech', 'Cost-effective per dose at volume', 'Comprehensive macro + micro coverage', 'Popular in serious aquascaping community']}
               cons={['Overkill for low-tech / easy planted tanks', 'Algae risk if overdosed', 'Online ordering typically required']}
               price="$12–22"
-              ctaText="Shop NilocG Thrive on Amazon →"
+              ctaText="Shop NilocG Thrive fertilizer on Amazon →"
               ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="nilocg-thrive"
