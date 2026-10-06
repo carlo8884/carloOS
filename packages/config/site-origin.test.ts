@@ -75,4 +75,14 @@ describe('site origins', () => {
       }
     }
   })
+
+  it('keeps a missing page out of the index and on the apex', () => {
+    for (const [site, apex] of Object.entries(APEXES)) {
+      const src = readFileSync(join(ROOT, 'apps', site, 'src/app/not-found.tsx'), 'utf8')
+      assert.equal(src.includes('vercel.app'), false, site)
+      assert.match(src, /index:\s*false/)
+      assert.match(src, new RegExp(`canonical: '${apex.replace('.', '\\.')}/'`))
+    }
+  })
+
 })
