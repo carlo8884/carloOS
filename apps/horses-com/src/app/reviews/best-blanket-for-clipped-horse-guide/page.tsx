@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which blanket does the review assign to a hard northern winter?',
-    answer: 'The Schneiders StormShield Euro turnout. The review lists a 1680-denier ballistic shell, fills of 300 and 360 grams, a full neck, stainless hardware with a double belly surcingle, a price of $300–460, and a score of 9.2.',
+    answer: 'The Schneiders StormShield Euro turnout. The review lists a 1680-denier ballistic shell, fills of 300 and 360 grams, a full neck, stainless hardware with a double belly surcingle, a price of $300–460.',
   },
   {
     question: 'Is that blanket right for a mild climate?',
@@ -39,7 +39,7 @@ const FAQS = [
 export default function ClippedHorseBlanketGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-05"
       siteId="horses-com"
       schema={schema}
       hero={{
@@ -70,7 +70,7 @@ export default function ClippedHorseBlanketGuidePage() {
       <div className="carloOS-article">
         <p>A clipped horse in January does not wear the same turnout as a hairy horse in a mild winter. The <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link> puts the heavy specification on the Schneiders StormShield Euro, and it tells milder climates to leave that blanket on the shelf. Size still comes first. A heavy blanket that pulls on the shoulder is a rub, not warmth. Use the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link> and the fit notes on the review.</p>
         <h2>The heavy blanket</h2>
-        <p>The StormShield listing, scored 9.2, lists a 1680-denier ballistic shell, heavier than the Rambo Original&apos;s 1000-denier shell, and fills of 300 and 360 grams. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The price in the review is $300–460. The review assigns it to New England, the Upper Midwest, the Mountain West, and Canadian winters, and to clipped competition horses in sustained cold. It does not publish a temperature cutoff beyond the climates and the “sub-zero” phrasing already on that listing.</p>
+        <p>The StormShield card lists a 1680-denier ballistic shell, heavier than the Rambo Original&apos;s 1000-denier shell, and fills of 300 and 360 grams. The neck is a full neck with a deep shoulder gusset. Hardware is stainless, with a double belly surcingle. The price in the review is $300–460. The review assigns it to New England, the Upper Midwest, the Mountain West, and Canadian winters, and to clipped competition horses in sustained cold. It does not publish a temperature cutoff beyond the climates and the “sub-zero” phrasing already on that listing.</p>
         <h2>When the heavy blanket is the wrong buy</h2>
         <p>The same review says the blanket is overkill in a milder climate and heavy to handle once it is wet. The review points mid-Atlantic and southern barns at the lighter Horseware and Weatherbeeta turnouts. If you are choosing between the Rambo Original and the Rhino Original, that comparison is the <Link href="/reviews/rambo-vs-rhino-guide">Rambo versus Rhino guide</Link>, not this one. Those are mid-weight Horseware blankets. They are not the 300-gram StormShield.</p>
         <h2>Layering, if the horse changes climates</h2>
