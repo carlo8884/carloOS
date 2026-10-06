@@ -538,6 +538,7 @@ export default function FerretLitterTrainingPage() {
             pros={['Matches corner-elimination behaviour', 'Low entry for unsteady or senior ferrets', 'Splash containment', 'Multiple sizes', 'Widely stocked in US pet retail']}
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
             price="$10–18"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall Lock-N-Litter pans"
             ctaHref="/go/marshall/lock-n-litter-pan?s=care-litter-training"
             ctaAffiliateProgram="marshall"
@@ -561,6 +562,7 @@ export default function FerretLitterTrainingPage() {
             pros={['Lowest dust profile in widely-stocked litters', 'No ingestion-obstruction risk', 'No respiratory-irritant aromatics', 'Strong odour control', 'Available in most US chain pet retail']}
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="$12–25 / 15-30 lb"
+            priceNote="dated 2026-05-31."
             ctaText="Find Yesterday's News paper-pellet litter on Amazon"
             ctaHref="/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"
             ctaAffiliateProgram="chewy-brand"

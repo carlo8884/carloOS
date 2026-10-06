@@ -260,6 +260,7 @@ export default function FerretCageSetupPage() {
             pros={['Bar spacing kit-safe out of the box', 'Excellent door access', 'Casters for moving', 'Solid floor — no wire-floor injuries', 'Modular — add a single-unit on top']}
             cons={['Heavy and large — measure before buying', 'Assembly is non-trivial', 'Ramp can be slippery without fleece cover']}
             price="$200–280"
+            priceNote="dated 2026-05-31."
             ctaText="Find Midwest Critter Nation double unit cages on Amazon"
             ctaHref="/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup"
             ctaAffiliateProgram="amazon-brand"
@@ -283,6 +284,7 @@ export default function FerretCageSetupPage() {
             pros={['Ferret-appropriate bar spacing', 'Ships with starter accessories', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
             price="$140–200"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall ferret cages"
             ctaHref="/go/marshall/designer-ferret-cage?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
@@ -304,6 +306,7 @@ export default function FerretCageSetupPage() {
             pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}
             price="$10–20"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall hammocks & sacks"
             ctaHref="/go/marshall/ferret-sleep-sack?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
@@ -320,6 +323,7 @@ export default function FerretCageSetupPage() {
             pros={['Corner-shaped — fits ferret instinct', 'Low front lip for easy entry', 'High back wall reduces scatter', 'Widely available, inexpensive']}
             cons={['Smaller ferrets can sometimes push it out of corner', 'Needs daily spot-clean']}
             price="$5–12"
+            priceNote="dated 2026-05-31."
             ctaText="Find Kaytee corner ferret litter pans on Amazon"
             ctaHref="/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"
             ctaAffiliateProgram="chewy-brand"

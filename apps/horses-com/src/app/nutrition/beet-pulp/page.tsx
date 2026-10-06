@@ -204,6 +204,7 @@ export default function BeetPulpPage() {
             pros={['Low sugar — suits metabolic horses', 'Soaks quickly into palatable mash', 'Safe calorie addition without starch', 'Good hydration vehicle']}
             cons={['Must be soaked before feeding', 'Not a complete feed', 'Some horses initially reluctant']}
             price="$18–35 per 40–50 lb"
+            priceNote="dated 2026-06-12."
             ctaText="Search molasses-free beet pulp shreds on Amazon →"
             ctaHref="/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp"
             ctaAffiliateProgram="amazon"
@@ -227,6 +228,7 @@ export default function BeetPulpPage() {
             pros={['Convenient to store and measure', 'Same fiber benefits as shreds', 'Suits horses that prefer pellet texture']}
             cons={['Longer soaking time than shreds', 'Must still be fully soaked', 'Check for molasses if low-sugar diet needed']}
             price="$18–32 per 40–50 lb"
+            priceNote="dated 2026-06-12."
             ctaText="Search beet pulp pellet horse feed on Amazon →"
             ctaHref="/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"
             ctaAffiliateProgram="amazon"

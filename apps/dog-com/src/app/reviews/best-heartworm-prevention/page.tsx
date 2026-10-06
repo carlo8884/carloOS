@@ -54,6 +54,7 @@ export default function BestHeartwormPreventionPage() {
               pros={['Commonly used — established safety record', 'Safe for MDR1-positive herding breeds at standard dose', 'High palatability', 'Affordable']}
               cons={['No flea/tick coverage', 'Monthly compliance required', 'Separate product needed for complete parasite coverage']}
               price="$35–55 / 6-month supply"
+              priceNote="dated 2026-10-05."
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
               editorial
@@ -64,6 +65,7 @@ export default function BestHeartwormPreventionPage() {
               pros={['Broadest intestinal parasite coverage', 'MDR1-safe at standard dose', 'Good for outdoor/hunting dogs', 'One product covers GI parasite prevention']}
               cons={['No flea/tick coverage', 'Does not cover Dipylidium tapeworm (flea tapeworm — cover fleas separately)', 'Monthly compliance']}
               price="$40–60 / 6-month supply"
+              priceNote="dated 2026-10-05."
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
               editorial
@@ -74,6 +76,7 @@ export default function BestHeartwormPreventionPage() {
               pros={['Replaces two separate monthly products', 'Rapid flea kill per labeled data (98% in 3 hours)', 'Broad tick species coverage', 'One chew covers HW, fleas, ticks, and GI parasites']}
               cons={['MDR1 caution for herding breeds', 'Most expensive per dose', 'Not necessary if flea/tick prevention not needed']}
               price="$50–80 / 3-month supply"
+              priceNote="dated 2026-10-05."
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
               editorial
@@ -84,6 +87,7 @@ export default function BestHeartwormPreventionPage() {
               pros={['No monthly compliance required', 'Annual protection from one injection', 'Perfect for owners who miss monthly doses', 'Given at wellness visit']}
               cons={['Does not cover flea/tick or intestinal parasites', 'More expensive upfront', 'Administered by vet only — requires appointment']}
               price="$70–120 per injection"
+              priceNote="dated 2026-10-05."
               ctaText="Ask Your Vet →"
               ctaHref="/find-a-vet"
               editorial

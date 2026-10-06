@@ -56,6 +56,7 @@ export default function BestDentalChewsPage() {
               pros={['VOHC accepted (plaque + tartar)', 'Often used by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
               cons={['Must count calories', 'Some dogs wolf them down too fast for dental benefit', 'Not ideal for dogs with wheat sensitivity (contains wheat)']}
               price="$25–35 / 27-count"
+              priceNote="dated 2026-10-05."
               ctaText="Check price of Greenies dental chews on Amazon"
               ctaHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               ctaAffiliateProgram="chewy-brand"
@@ -67,6 +68,7 @@ export default function BestDentalChewsPage() {
               pros={['Plant-based — no animal protein', 'VOHC accepted', 'Longer chew duration', 'No artificial additives']}
               cons={['VOHC for plaque only (not tartar)', 'Higher calorie density than Greenies per chew']}
               price="$20–30 / 14-count"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Whimzees dental chews on Amazon →"
               ctaHref="/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"
               ctaAffiliateProgram="chewy-brand"

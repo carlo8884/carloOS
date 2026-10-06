@@ -55,6 +55,7 @@ export default function BestSeniorDogFoodPage() {
               pros={['Among the few senior foods with published cognitive trial data', 'Top WSAVA compliance', 'High protein — supports muscle maintenance', 'Available in large breed version']}
               cons={['Not appropriate as sole management for significant CDS — consult vet', 'Chicken-based — not for chicken-allergic dogs']}
               price="$55–75 / 30 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Purina Pro Plan Bright Mind on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior"
               ctaAffiliateProgram="chewy-brand"
@@ -66,6 +67,7 @@ export default function BestSeniorDogFoodPage() {
               pros={['WSAVA compliant', 'Antioxidant blend for immune support', 'Easy digestion', 'Widely available', 'Multiple proteins available']}
               cons={['Less cognitive-specific than Bright Mind', 'No published cognitive clinical trial']}
               price="$55–70 / 30 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Hill's Science Diet Senior on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+senior+7?s=reviews-best-dog-food-senior"
               ctaAffiliateProgram="chewy-brand"

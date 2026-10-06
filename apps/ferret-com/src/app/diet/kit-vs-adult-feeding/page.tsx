@@ -162,6 +162,7 @@ export default function KitVsAdultFeedingPage() {
             pros={['Ferret-specific formulation', 'Works across life stages', 'Widely available for rotation', 'Affordable per pound']}
             cons={['Higher carb than premium tier', 'Plant protein in ingredient list — rotate with a premium diet']}
             price="$15–25 / 4 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=diet-kit-vs-adult-feeding"
             ctaAffiliateProgram="marshall"

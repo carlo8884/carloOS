@@ -155,6 +155,7 @@ export default function JointSupplementsPage() {
               pros={['Strongest equine ingredient evidence (ASU)', 'NASC Quality Seal documented', 'Per-ingredient amounts disclosed', 'Long manufacturer track record']}
               cons={['Premium price per scoop', 'Not a substitute for IA or systemic chondroprotectant when indicated']}
               price="$60–95 per 30-day supply"
+              priceNote="dated 2026-10-04."
               ctaText="Check price of Cosequin ASU Plus on SmartPak"
               ctaHref="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
@@ -179,6 +180,7 @@ export default function JointSupplementsPage() {
               pros={['Comprehensive ingredient profile in one product', 'No need to stack multiple supplements', 'Premium quality control']}
               cons={['Significantly more expensive than category average', 'Some ingredients in the formula are Tier 3 evidence', 'Auto-ship lock-in']}
               price="$130–180 per 30-day supply"
+              priceNote="dated 2026-10-04."
               ctaText="Visit Platinum Performance CJ on Amazon →"
               ctaHref="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements"
               ctaAffiliateProgram="amazon"
@@ -203,6 +205,7 @@ export default function JointSupplementsPage() {
               pros={['Senior-dose ingredient amounts', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
               cons={['No ASU component', 'House-brand HA at oral dose has limited evidence', 'Auto-ship requires SmartPak account']}
               price="$45–65 per 28-day supply"
+              priceNote="dated 2026-10-04."
               ctaText="Shop SmartFlex Senior at SmartPak →"
               ctaHref="/go/smartpak/smartflex-senior?s=supplements-joint-supplements"
               ctaAffiliateProgram="smartpak"
@@ -227,6 +230,7 @@ export default function JointSupplementsPage() {
               pros={['Documented anti-inflammatory effects in horses', 'Synergizes with other joint inputs', 'Wide availability']}
               cons={['Flax-source ALA does not deliver equivalent benefit', 'Cold storage extends shelf life', 'Smell — some horses initially refuse']}
               price="$25–60 per 30-day supply"
+              priceNote="dated 2026-10-04."
               ctaText="Compare marine-source omega-3 at Riding Warehouse →"
               ctaHref="/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"
               ctaAffiliateProgram="ridingwarehouse"

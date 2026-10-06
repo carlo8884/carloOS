@@ -142,6 +142,7 @@ export default function ForageBasicsPage() {
             pros={['Keeps forage in front of the horse longer', 'Helps prevent ulcer-causing fasts', 'Useful on a measured ration']}
             cons={['Introduce gradually', 'Hole size matters for intake rate', 'Not a substitute for adequate forage']}
             price="$20–40"
+            priceNote="dated 2026-09-02."
             ctaText="Search slow-feeder hay nets on Amazon →"
             ctaHref="/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics"
             ctaAffiliateProgram="amazon"

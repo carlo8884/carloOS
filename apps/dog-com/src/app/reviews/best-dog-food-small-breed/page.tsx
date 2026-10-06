@@ -60,6 +60,7 @@ export default function BestSmallBreedFoodPage() {
               pros={['Kibble engineered for small-mouth dental health', 'WSAVA top-tier compliance', 'Veterinary dentist-recommended for dental support', 'Multiple formulas for different small breed needs']}
               cons={['More expensive than standard adult formulas', 'Chicken-based — not for chicken-allergic dogs', 'Grain-inclusive (positive from WSAVA standpoint)']}
               price="$45–65 / 14-17 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Royal Canin Small Adult on Amazon →"
               ctaHref="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"
               ctaAffiliateProgram="chewy-brand"
@@ -71,6 +72,7 @@ export default function BestSmallBreedFoodPage() {
               pros={['30% protein — supports lean muscle', 'Live clinically-studied probiotic', 'Commonly recommended by veterinarians', 'Multiple protein options']}
               cons={['Less dental-specific than Royal Canin', 'Not breed-specific (Small & Toy is a size category, not breed-targeted)']}
               price="$35–55 / 16 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Purina Pro Plan Small & Toy on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed"
               ctaAffiliateProgram="chewy-brand"

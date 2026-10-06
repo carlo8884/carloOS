@@ -188,6 +188,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Strongest peer-reviewed equine evidence in the category', 'NASC Quality Seal', 'Established pharmaceutical-grade manufacturer', 'Multiple formulations for life stage']}
               cons={['Higher price tier', 'Loading dose adds first-month cost', 'Pellet palatability variable across horses']}
               price="$80–110/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Check price of Cosequin ASU Plus on SmartPak"
               ctaHref="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
@@ -215,6 +216,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Single-product approach simplifies daily ration', 'NASC sealed', 'Strong brand and veterinary presence', 'Marine-source omega-3 (not flax)']}
               cons={['Premium price tier', 'Same nutrient targets cheaper as separate products', 'Auto-ship lock-in pricing structure']}
               price="$95–140/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Platinum Performance equine wellness on Amazon →"
               ctaHref="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
@@ -243,6 +245,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Comprehensive gastric-adjunct formulation', 'SmartPak SmartPak pre-portioning available', 'Reasonable price relative to category']}
               cons={['Not a substitute for omeprazole in active disease', 'Some ingredients have modest evidence at best', 'Palatability variable in picky eaters']}
               price="$60–80/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Shop SmartGut Ultra at SmartPak →"
               ctaHref="/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"
@@ -271,6 +274,7 @@ export default function BestEquineSupplementsPage() {
               pros={['Marine source — actual DHA/EPA, not ALA', 'Research-grade formulation', 'KER&apos;s published equine trials use this product', 'Strong palatability in most horses']}
               cons={['Liquid format messier than pellets in cold weather', 'Shelf life once opened is shorter than pellets', 'Premium pricing in the category']}
               price="$55–85/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Shop KER EO-3 on Amazon →"
               ctaHref="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
@@ -298,6 +302,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Veterinarian-founded brand', 'Trans-resveratrol with published equine trial data', 'Reasonable monthly cost']}
               cons={['Complement to other joint support, not a standalone', 'Evidence base smaller than ASU / glucosamine', 'Lower brand visibility than mainstream alternatives']}
               price="$45–65/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Equithrive resveratrol pellets on Amazon →"
               ctaHref="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="amazon"
@@ -353,6 +358,7 @@ export default function BestEquineSupplementsPage() {
               pros={['NASC sealed', 'Reliable category-standard formulation', 'Reasonable price', 'Wide availability']}
               cons={['Commoditized category — many similar alternatives', 'Powder format requires consistent water access to be effective']}
               price="$20–35/mo"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Adams Plus electrolyte at SmartPak →"
               ctaHref="/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"
               ctaAffiliateProgram="smartpak"

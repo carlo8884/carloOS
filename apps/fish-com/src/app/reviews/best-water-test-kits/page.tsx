@@ -65,6 +65,7 @@ export default function BestWaterTestKitsPage() {
               pros={['800 tests — 2+ years supply', 'Most accurate affordable kit', 'Covers all 4 critical parameters', 'Industry standard — widely referenced']}
               cons={['Color matching can be tricky in certain lighting', 'Separate saltwater kit needed for marine tanks', 'No hardness (GH/KH) test included']}
               price="$28–35"
+              priceNote="dated 2026-10-03."
               ctaText="Check price of the API Freshwater Master Test Kit on Amazon"
               ctaHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
               ctaAffiliateProgram="amazon"

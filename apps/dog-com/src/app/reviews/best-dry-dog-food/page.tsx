@@ -146,7 +146,7 @@ export default function BestDogFoodPage() {
               ]}
               priceLabel="Price Range"
               price="$55–110 / 30 lbs"
-              priceNote="Varies by formula and bag size"
+              priceNote="Varies by formula and bag size dated 2026-10-03."
               ctaText="Check price of Royal Canin dry dog food on Amazon"
               ctaHref="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
@@ -183,6 +183,7 @@ export default function BestDogFoodPage() {
                 'Not "clean label" for owners who prioritize ingredient aesthetics',
               ]}
               price="$45–90 / 30 lbs"
+              priceNote="dated 2026-10-03."
               ctaText="Shop Purina Pro Plan dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
@@ -215,7 +216,7 @@ export default function BestDogFoodPage() {
                 'Premium pricing',
               ]}
               price="$60–120 / 30 lbs (Science Diet)"
-              priceNote="Prescription Diet varies"
+              priceNote="Prescription Diet varies dated 2026-10-03."
               ctaText="Shop Hill's Science Diet dry dog food on Amazon →"
               ctaHref="/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"
@@ -241,6 +242,7 @@ export default function BestDogFoodPage() {
               pros={['Exceptional ingredient quality and sourcing transparency', 'High protein — good for active dogs', 'Regional ingredients with named suppliers']}
               cons={['Weaker WSAVA compliance than Royal Canin/Purina', 'Premium price', 'Not ideal for dogs with health conditions']}
               price="$90–150 / 25 lbs"
+              priceNote="dated 2026-10-03."
               ctaText="Shop Orijen on Amazon →"
               ctaHref="/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"
               ctaAffiliateProgram="chewy-brand"

@@ -562,6 +562,7 @@ export default function FerretBathingGroomingPage() {
             pros={['Ferret-specific formulation', 'pH-balanced', 'Original / fragrance-free SKUs available', 'Widely stocked']}
             cons={['Marshall also sells tea-tree variants — read the label every time', 'Bottle is small for the price']}
             price="$8–14"
+            priceNote="dated 2026-10-04."
             ctaText="Find Marshall ferret shampoo"
             ctaHref="/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"
             ctaAffiliateProgram="marshall"
@@ -583,6 +584,7 @@ export default function FerretBathingGroomingPage() {
             pros={['Used in exotic-pet practice for ferret ear cleaning', 'Gentle on ferret canal', 'Available without prescription on most pet retailers']}
             cons={['Not a treatment for ear mites or infection — those need a vet', 'Bottle is small relative to long-term use']}
             price="$10–20"
+            priceNote="dated 2026-10-04."
           />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/nail-trimming" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
@@ -605,6 +607,7 @@ export default function FerretBathingGroomingPage() {
             pros={['Right tool geometry for ferret nails', 'Quick-styptic stops accidents in seconds', 'One-time purchase, lasts years']}
             cons={['Cheap clippers go dull quickly — buy reasonable mid-tier', 'First few trims with a new ferret are stressful regardless of tool']}
             price="$10–18"
+            priceNote="dated 2026-10-04."
             ctaText="Find small-pet nail clippers and styptic powder on Amazon"
             ctaHref="/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"
             ctaAffiliateProgram="chewy-brand"

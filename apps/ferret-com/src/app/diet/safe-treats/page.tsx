@@ -203,6 +203,7 @@ export default function SafeTreatsPage() {
             pros={['Single-ingredient animal protein', 'No added sugar or grain', 'High-value training reward', 'Long shelf life']}
             cons={['Pricier per ounce than bulk treats', 'Still calorie-dense — portion carefully']}
             price="$8–15 / pack"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Freeze-Dried Treats"
             ctaHref="/go/wysong/freeze-dried-treats?s=diet-safe-treats"
             ctaAffiliateProgram="wysong"

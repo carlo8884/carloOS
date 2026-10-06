@@ -201,6 +201,7 @@ export default function WholePreyVsKibblePage() {
             pros={['Lowest commercial carb load in wide ferret use', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Good base for the middle path']}
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-10-05."
             ctaText="Check price of Wysong Epigen 90 from Wysong"
             ctaHref="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="wysong"

@@ -274,6 +274,7 @@ export default function BestFerretKibblePage() {
             pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-10-04."
             ctaText="Check price of Wysong Epigen 90 at Wysong"
             ctaHref="/go/wysong/epigen-90?s=diet-best-ferret-kibble"
             ctaAffiliateProgram="wysong"
@@ -297,6 +298,7 @@ export default function BestFerretKibblePage() {
             pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
             cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
             price="$15–25 / 4 lb"
+            priceNote="dated 2026-10-04."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"
             ctaAffiliateProgram="marshall"

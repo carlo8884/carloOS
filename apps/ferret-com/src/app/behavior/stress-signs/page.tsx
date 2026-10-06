@@ -330,6 +330,7 @@ export default function FerretStressSignsPage() {
             pros={['Enclosed darkness supports deep sleep', 'Washable fleece', 'Pairs well with a consistent sleep-and-play routine', 'Low cost']}
             cons={['Some ferrets prefer open hammocks — try both to see what your ferret uses', 'Fleece attracts hair — wash weekly']}
             price="$8–18"
+            priceNote="dated 2026-06-04."
             ctaText="Find fleece ferret sleep sacks on Amazon"
             ctaHref="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs"
             ctaAffiliateProgram="amazon-brand"
@@ -352,6 +353,7 @@ export default function FerretStressSignsPage() {
             pros={['Addresses under-stimulation directly', 'Highest enrichment value per dollar for most ferrets', 'Washable', 'Chainable for longer circuits']}
             cons={['Does not address social loneliness — a tunnel is not a companion', 'Fabric wears in heavy-chewer households']}
             price="$15–30"
+            priceNote="dated 2026-06-04."
             ctaText="Find Marshall Pop-N-Play tunnels"
             ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"
             ctaAffiliateProgram="marshall"

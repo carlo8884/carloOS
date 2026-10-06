@@ -327,6 +327,7 @@ export default function FerretDIYEnrichmentPage() {
             pros={['Correct ferret body diameter', 'Chainable for longer courses', 'Machine washable', 'Compact storage']}
             cons={['Fabric wears in heavy-chewer households — inspect the internal wire periodically']}
             price="$15–30"
+            priceNote="dated 2026-06-04."
             ctaText="Find Marshall Pop-N-Play tunnels"
             ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-diy-enrichment"
             ctaAffiliateProgram="marshall"
@@ -349,6 +350,7 @@ export default function FerretDIYEnrichmentPage() {
             pros={['Mental enrichment in minutes', 'Works with treats already on hand', 'Compact and portable', 'Easy to wash']}
             cons={['Loose-loop mats can shed chewable pieces — inspect before each use', 'Ferrets finish the treats quickly; limited session length']}
             price="$10–20"
+            priceNote="dated 2026-06-04."
             ctaText="Find snuffle mats for ferrets on Amazon"
             ctaHref="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"
             ctaAffiliateProgram="amazon-brand"

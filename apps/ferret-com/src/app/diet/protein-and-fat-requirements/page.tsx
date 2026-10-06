@@ -202,6 +202,7 @@ export default function ProteinAndFatRequirementsPage() {
             pros={['Lands inside the target macro window', 'Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"
             ctaAffiliateProgram="wysong"

@@ -57,6 +57,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['Strong mealtime extension among bowls compared here', '5 sizes for all breeds', 'Dishwasher safe', 'Affordable', 'Durable']}
               cons={['Tight ridges can trap kibble — requires scrubbing', 'Some dogs flip the bowl (use a mat under it)']}
               price="$10–18"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Outward Hound Fun Feeder on Amazon →"
               ctaHref="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"
@@ -68,6 +69,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['High enrichment value', 'Cannot tip over', 'Easy to clean', 'Works with wet food too', 'Calming effect from foraging']}
               cons={['More expensive than basic slow bowls', 'Kibble can get stuck deep in grass segments']}
               price="$25–35"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Northmate Green interactive feeder on Amazon →"
               ctaHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="amazon-brand"
@@ -79,6 +81,7 @@ export default function BestSlowFeederBowlsPage() {
               pros={['Calming licking behavior', 'Dishwasher safe', 'Works for enrichment during stressful events', 'Freezable for longer duration']}
               cons={['Wet food only — not for dry kibble feeders', 'Smaller capacity than bowl feeders']}
               price="$10–15"
+              priceNote="dated 2026-10-05."
               ctaText="Shop LickiMat Splash on Amazon →"
               ctaHref="/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"
               ctaAffiliateProgram="chewy-brand"

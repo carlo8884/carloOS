@@ -327,6 +327,7 @@ export default function LeashAndHarnessTrainingPage() {
             pros={['Ferret-specific sizing', 'Adjustable for seasonal fit changes', 'Chest-pressure geometry', 'Leash included', 'Widely available']}
             cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
             price="$10–18"
+            priceNote="dated 2026-06-04."
             ctaText="Find Marshall Ferret Harness"
             ctaHref="/go/marshall/ferret-harness-leash?s=behavior-leash-harness"
             ctaAffiliateProgram="marshall"
@@ -349,6 +350,7 @@ export default function LeashAndHarnessTrainingPage() {
             pros={['Harder to back out of than H-style', 'Good for escape-artist ferrets', 'Distributes pressure well']}
             cons={['Takes longer to put on', 'Sizing varies by manufacturer — verify it cinches ferret-small']}
             price="$12–22"
+            priceNote="dated 2026-06-04."
             ctaText="Find ferret vest harnesses on Amazon"
             ctaHref="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"
             ctaAffiliateProgram="amazon-brand"

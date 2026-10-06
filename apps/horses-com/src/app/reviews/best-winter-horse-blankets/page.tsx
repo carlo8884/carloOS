@@ -178,6 +178,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Multi-season durability (5–8 years typical)', 'V-front cut reduces shoulder rub', 'Stainless hardware tolerates ice and cold', 'Lifetime tear-repair program', 'Resells well used']}
               cons={['Premium price tier', 'Less generous shoulder room than some competitors for very wide horses', 'Color/pattern range smaller than Rhino']}
               price="$280–420"
+              priceNote="dated 2026-10-03."
               ctaText="Check price of the Horseware Rambo Original on SmartPak"
               ctaHref="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="smartpak"
@@ -203,6 +204,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Strong durability for the price', 'Wide size range', 'Established brand reputation', 'Resells well used']}
               cons={['Polymer hardware less durable than Rambo stainless', 'Shorter warranty than premium tier', 'Some shoulder rub on heavily-built horses']}
               price="$180–260"
+              priceNote="dated 2026-10-03."
               ctaText="Shop the Horseware Rhino Original at Dover Saddlery →"
               ctaHref="/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="dover"
@@ -228,6 +230,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Heaviest mainstream specification available', 'Built for sub-zero sustained cold', 'Full neck cut reduces draft', 'Double belly surcingle stays in place', 'Reputable US-based brand']}
               cons={['Overkill for milder climates', 'Heavy to handle wet', 'Higher price tier']}
               price="$300–460"
+              priceNote="dated 2026-10-03."
               ctaText="Shop the Schneiders StormShield Euro at Schneiders →"
               ctaHref="/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="schneider"
@@ -253,6 +256,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Strong house-brand value', 'SmartPak return / exchange guarantee', 'Wide fill-weight range', 'Available with SmartPak auto-ship blanket-pack programs']}
               cons={['Newer brand, less long-term track record than Horseware', 'Polymer hardware', 'Fewer V-front options']}
               price="$160–230"
+              priceNote="dated 2026-10-03."
               ctaText="Shop the SmartPak Ultimate Turnout at SmartPak →"
               ctaHref="/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="smartpak"
@@ -278,6 +282,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Memory-foam wither relief is a genuine differentiator', 'Wide fill-weight range', 'Established UK brand with US distribution', 'Competitive price point']}
               cons={['Snap-front hardware less robust than T-bar in ice', 'Sizing runs differently from Horseware (verify size)', 'Some color/pattern combinations marked up significantly']}
               price="$170–280"
+              priceNote="dated 2026-10-03."
               ctaText="Shop the Weatherbeeta ComFiTec Plus Dynamic II at Dover Saddlery →"
               ctaHref="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="dover"
@@ -303,6 +308,7 @@ export default function BestWinterBlanketsPage() {
               pros={['Horseware build at value pricing', 'Same shell denier as Rambo Original', 'Wide availability', 'Resells well used']}
               cons={['Polymer hardware not as durable as Rambo stainless', 'Less padded interior than premium tier', 'Standard neck cut may produce shoulder rub on some horses']}
               price="$130–190"
+              priceNote="dated 2026-10-03."
               ctaText="Shop the Horseware Amigo Bravo 12 Plus at Riding Warehouse →"
               ctaHref="/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"
               ctaAffiliateProgram="ridingwarehouse"

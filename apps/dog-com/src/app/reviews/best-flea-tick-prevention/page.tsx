@@ -54,6 +54,7 @@ export default function FleaTickPreventionPage() {
               pros={['12-week duration — fewest doses', 'Broadest tick species coverage', 'Consistent efficacy throughout window', 'Beef-flavored — most dogs take readily']}
               cons={['Prescription required', 'More expensive per dose (but similar annual cost)', 'Isoxazoline seizure risk in predisposed dogs']}
               price="$50–60 per 12-week dose"
+              priceNote="dated 2026-10-05."
               ctaText="Find a Vet to Discuss Bravecto →"
               ctaHref="/find-a-vet"
               editorial
@@ -64,6 +65,7 @@ export default function FleaTickPreventionPage() {
               pros={['Longest safety track record in class', 'Widely available', 'Kills fleas before egg laying', 'Monthly predictability']}
               cons={['Monthly dosing — 12 doses/year', '5 tick species vs Bravecto\'s 7', 'Prescription required']}
               price="$20–25 per monthly dose"
+              priceNote="dated 2026-10-05."
               ctaText="Find a Vet to Discuss NexGard →"
               ctaHref="/find-a-vet"
               editorial
