@@ -1,6 +1,6 @@
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, StockImage, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -84,6 +84,7 @@ export default function HelmetGuidePage() {
             { label: "When to Replace", href: "#replace" },
             { label: "Care and Common Mistakes", href: "#care" },
             { label: "Certified Helmet Picks", href: "#picks" },
+            { label: "Who should buy which helmet", href: "#who" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -210,6 +211,42 @@ export default function HelmetGuidePage() {
             ctaAffiliateProduct="charles-owen-ayr8-plus-helmet"
           />
 
+          <h2 id="who">Who should buy which helmet</h2>
+          <p>Who each helmet is for is already on the three cards. Certification and a current fit matter more than the tier, and every helmet here is retired after a significant impact.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A certified schooling helmet for a new rider, a growing rider, or a lesson-barn spare</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#troxel-spirit" className="text-brand-primary">Troxel Spirit</a><TableShopLink href={"/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide"} product={"Troxel Spirit"} /></td>
+                  <td className="p-3 text-brand-text-mid">ASTM/SEI. Dial-fit. Schooling, new riders, and spares. Fewer shape options for hard-to-fit heads</td>
+                  <td className="p-3 text-brand-text-mid">You need a show helmet, or the entry fit range does not match the head. An entry price does not change the fit requirement</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">An all-purpose helmet with more ventilation and a wider fit range than an entry model</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#ovation-deluxe" className="text-brand-primary">Ovation Deluxe Schooler</a><TableShopLink href={"/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide"} product={"Ovation Deluxe Schooler"} /></td>
+                  <td className="p-3 text-brand-text-mid">Certified all-purpose. More ventilation and a wider fit range. For the established amateur who schools across disciplines</td>
+                  <td className="p-3 text-brand-text-mid">You only want a lesson-barn spare you will replace after every fall, or you need a show-tier helmet</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">A multi-standard show helmet for a rider who shows regularly</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#charles-owen-ayr8" className="text-brand-primary">Charles Owen AYR8 Plus</a><TableShopLink href={"/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide"} product={"Charles Owen AYR8 Plus"} /></td>
+                  <td className="p-3 text-brand-text-mid">Multi-standard, commonly PAS 015, VG1, and ASTM/SEI by variant. Showing and competitive riders. Still single-use after a real impact</td>
+                  <td className="p-3 text-brand-text-mid">You want the lowest replacement cost after a fall. Professional fitting is strongly advised, and it is retired after any significant impact</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-06" />
+
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -227,6 +264,22 @@ export default function HelmetGuidePage() {
 
           </div>
           </div>
+
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            addressOnly
+            title="Save an address with this guide"
+            ctaText="Save my address"
+            source="tack-helmet-guide"
+            checklist={[
+              'A riding helmet must be certified to a recognized equestrian safety standard, not merely styled to look like one.',
+              'Replace a helmet after any significant impact, even if it looks undamaged, because the protective foam crushes once.',
+              'The Troxel Spirit is the ASTM/SEI schooling helmet for a new rider, a growing rider, or a lesson-barn spare.',
+              'The Ovation Deluxe Schooler is the all-purpose helmet with more ventilation and a wider fit range than an entry model.',
+              'The Charles Owen AYR8 Plus is the multi-standard show helmet. Retire it after any significant impact.',
+            ]}
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
