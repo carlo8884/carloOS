@@ -116,7 +116,7 @@ const QUARTERS = [
     weeks: 'Weeks 1–13',
     title: 'Acclimation and Vaccine Series',
     bullets: [
-      'Ferret-proof — gap-block any opening over 1 inch; remove rubber/foam items (the #1 ferret surgery cause)',
+      'Ferret-proof — gap-block any opening over 1 inch; remove rubber/foam items (a common cause of ferret surgery)',
       'First exotic-pet vet visit — meet-and-greet ideal before vaccinations',
       'Canine distemper series — boosters at 6–8, 10–12, and 14–16 weeks (AFA / AEMV)',
       'Rabies vaccine — single dose at 12+ weeks, USDA-licensed product',
