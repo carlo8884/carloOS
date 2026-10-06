@@ -159,8 +159,7 @@ export default function DisclosurePage() {
             Vets.co does not accept on-site editorial sponsorship.
           </li>
           <li>
-            Display advertising via a third-party ad network. Ads are served
-            programmatically and the editorial team has no involvement.
+            No display ads are currently served.
           </li>
         </ol>
 

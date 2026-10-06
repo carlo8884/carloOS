@@ -141,9 +141,7 @@ export default function DisclosurePage() {
             We do not accept sponsors for on-site editorial pages.
           </li>
           <li>
-            Display advertising via a third-party ad network. Ads are served
-            programmatically; we have no direct relationship with the
-            individual brands shown.
+            No display ads are currently served.
           </li>
         </ol>
 
