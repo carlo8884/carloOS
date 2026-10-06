@@ -103,7 +103,7 @@ export default function DnaTestingHub() {
             >
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
                 {t.species.includes('dog') ? '🐕 ' : ''}{t.species.includes('cat') ? '🐈 ' : ''}
-                Score: {t.editorialScore}/10
+                {t.species.includes('dog') ? 'Dog' : 'Cat'} test
               </div>
               <h3 className="font-display text-xl font-bold mb-1">{t.name}</h3>
               <p className="text-sm text-brand-text-mid mb-4 flex-grow">{t.tagline}</p>

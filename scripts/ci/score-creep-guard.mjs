@@ -2,7 +2,8 @@
 /**
  * Editor scores stay off the five earning sites.
  *
- * Fails when app source adds score={}, ratingValue, "scored N.N", or "N.N/10".
+ * Fails when app source adds score={}, ratingValue, "scored N.N", "N.N/10",
+ * or an {editorialScore}/10-style template.
  * Parked aquarium lighting stays allowlisted, including the Nicrew Classic card
  * (its score and the price/cta line share that file). Clinical body-condition
  * and grimace scales stay allowlisted. Funnels are not exempt.
@@ -25,6 +26,7 @@ export const PATTERNS = [
   { name: 'ratingValue', re: /ratingValue/ },
   { name: 'scored N.N', re: /scored\s+\d+\.\d+/ },
   { name: 'N.N/10', re: /\d+\.\d+\/10/ },
+  { name: 'editorialScore template', re: /\{[^}\n]*editorialScore[^}\n]*\}|editorialScore\s*\/\s*10/ },
 ]
 
 export function isAllowed(rel) {
