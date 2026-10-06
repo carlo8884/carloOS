@@ -11,11 +11,11 @@ import {
   EARNING_SITES,
   amazonTagProblem,
   citationUrlsFromSource,
-  classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
   missingShopSource,
   renderReport,
+  shopSearchVerdict,
   tableShopHrefs,
 } from './weekly-link-monitor-lib.mjs'
 
@@ -133,10 +133,35 @@ export async function collectShopChecks(repoRoot = root) {
   return { checks: [...checks.values()], problems, hidden }
 }
 
-async function followChain(url) {
+async function readCapped(body, cap = 250000) {
+  if (!body) return ''
+  const reader = body.getReader()
+  const chunks = []
+  let size = 0
+  try {
+    while (size < cap) {
+      const { done, value } = await reader.read()
+      if (done || !value) break
+      chunks.push(value)
+      size += value.byteLength
+    }
+  } finally {
+    await reader.cancel().catch(() => {})
+  }
+  const merged = new Uint8Array(chunks.reduce((sum, chunk) => sum + chunk.byteLength, 0))
+  let offset = 0
+  for (const chunk of chunks) {
+    merged.set(chunk, offset)
+    offset += chunk.byteLength
+  }
+  return new TextDecoder().decode(merged)
+}
+
+async function followChain(url, readBody = false) {
   const headers = { 'user-agent': 'CarloOSLinkMonitor/1.0', accept: 'text/html' }
   const statuses = []
   let current = url
+  let html = ''
   try {
     for (let hop = 0; hop < 5; hop += 1) {
       const response = await fetch(current, {
@@ -145,16 +170,22 @@ async function followChain(url) {
         headers,
         signal: AbortSignal.timeout(12000),
       })
-      await response.body?.cancel()
       statuses.push(response.status)
-      if (response.status < 300 || response.status >= 400) break
-      const next = response.headers.get('location')
-      if (!next) break
-      current = new URL(next, current).href
+      const finished = response.status < 300 || response.status >= 400
+      if (!finished) {
+        await response.body?.cancel()
+        const next = response.headers.get('location')
+        if (!next) break
+        current = new URL(next, current).href
+        continue
+      }
+      if (readBody && response.status >= 200 && response.status < 300) html = await readCapped(response.body)
+      else await response.body?.cancel()
+      break
     }
-    return { statuses, error: '' }
+    return { statuses, error: '', html }
   } catch (err) {
-    return { statuses, error: err instanceof Error ? err.name : 'error' }
+    return { statuses, error: err instanceof Error ? err.name : 'error', html }
   }
 }
 
@@ -220,8 +251,8 @@ async function main() {
   }))
   const shop = await collectShopChecks()
   const shopProbed = await mapPool(shop.checks, 6, async (row) => {
-    const result = await followChain(row.url)
-    const verdict = classifyRedirectChain(result.statuses, result.error)
+    const result = await followChain(row.url, true)
+    const verdict = shopSearchVerdict(result.statuses, result.error, result.html)
     return { ...row, kind: verdict.kind, detail: verdict.detail }
   })
   const shopFailures = [

@@ -144,6 +144,19 @@ export function isEmptySearchHtml(html, asinCount = 0) {
   return saysEmpty && asinCount < 4
 }
 
+/**
+ * Shop-link probe only. A 200 page that says the search is empty fails.
+ * 401, 403, 405, 429, and 503 stay blocked, including when the body
+ * also contains an empty-search phrase.
+ */
+export function shopSearchVerdict(statuses, error = '', html = '') {
+  const verdict = classifyRedirectChain(statuses, error)
+  if (verdict.kind !== 'ok') return verdict
+  const asinCount = (String(html).match(/data-asin="[A-Z0-9]/gi) || []).length
+  if (isEmptySearchHtml(html, asinCount)) return { kind: 'fail', detail: 'empty search' }
+  return verdict
+}
+
 export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   const shopFailures = shop?.failures?.length ?? 0
   const lines = [
@@ -178,7 +191,7 @@ export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
       `Hidden Chewy hops with no tag: ${shop.hidden}. Those rows do not render a shop link.`,
     )
     lines.push(
-      'A shop failure is a 404, a 410, a server error other than 503, a missing ?s= source, an Amazon search whose tag does not match the environment, or more than one redirect. One redirect is the retailer canonical or product hop.',
+      'A shop failure is a 404, a 410, a server error other than 503, a missing ?s= source, an Amazon search whose tag does not match the environment, more than one redirect, or an empty retailer search. One redirect is the retailer canonical or product hop. 401, 403, 405, 429, and 503 stay blocked.',
     )
     lines.push('', '### Shop failures', '')
     if (!shop.failures.length) lines.push('none')

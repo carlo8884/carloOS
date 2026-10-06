@@ -9,6 +9,7 @@ import {
   goHrefsFromSource,
   isEmptySearchHtml,
   missingShopSource,
+  shopSearchVerdict,
   renderReport,
   tableShopHrefs,
 } from './weekly-link-monitor-lib.mjs'
@@ -123,6 +124,17 @@ test('the shop section is part of the report and does not mention anyone', () =>
   assert.match(body, /Hidden Chewy hops with no tag: 1/)
   assert.match(body, /november-december-gift-guide/)
   assert.equal(/(^|\s)@/.test(body), false)
+})
+
+test('the shop probe fails a real empty search and keeps 503 and 429 blocked', () => {
+  const empty = '<span>No results for your search query. </span>'
+  assert.equal(shopSearchVerdict([200], '', empty).kind, 'fail')
+  assert.equal(shopSearchVerdict([200], '', empty).detail, 'empty search')
+  assert.equal(shopSearchVerdict([301, 200], '', empty + 'data-asin="B00TEST01"'.repeat(8)).kind, 'ok')
+  assert.equal(shopSearchVerdict([503], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([429], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([403], '', empty).kind, 'blocked')
+  assert.equal(shopSearchVerdict([200], '', '<title>Robot Check</title>No results for your search query').kind, 'ok')
 })
 
 test('an empty Amazon search is not a rate-limit page', () => {
