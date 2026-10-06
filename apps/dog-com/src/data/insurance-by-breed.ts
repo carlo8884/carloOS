@@ -104,7 +104,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'pumpkin-pet',
     recommendedReason:
-      'Labs are the #1 breed for hip dysplasia claims and CCL rupture (~$3,500–$5,500 per side). Pumpkin\'s 14-day orthopedic waiting period — vs. the industry-standard 6 months — means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
+      'Labs are a common breed in hip dysplasia claims and CCL rupture (~$3,500–$5,500 per side). Pumpkin\'s 14-day orthopedic waiting period — vs. the industry-standard 6 months — means a Lab with early hip signs is covered before symptoms escalate. Critical when buying for a Lab puppy.',
     alternateCarriers: ['trupanion', 'spot'],
     sampleMonthlyPremium: [40, 75],
     keyCoverageNeeds: [
