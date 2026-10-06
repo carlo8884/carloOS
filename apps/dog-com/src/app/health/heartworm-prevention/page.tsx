@@ -54,6 +54,8 @@ export default function HeartwormPreventionPage() {
      priceAsOf="2026-06-11">
       <div className="carloOS-article">
 
+        <p>Prices on this page are typical US clinic ranges dated 2026-06-11. They are not a quote for one dog, and a clinic can bill outside that range.</p>
+
         <h2>What Heartworm Disease Is</h2>
         <p>Dirofilaria immitis — heartworms — are parasitic worms that live in the heart, lungs, and associated blood vessels of dogs. Transmitted by mosquitoes. A single infected mosquito bite can transmit larvae; larvae mature into worms over 6 months; adult worms live for 5–7 years and can reach 12 inches in length. Untreated heavy infections cause heart failure, lung disease, and death.</p>
         <p>Heartworm disease is present in all 50 US states and is endemic in warm, humid regions (Southeast, Gulf Coast, Mississippi River Valley, Atlantic Coast). All dogs in the continental US should be on year-round prevention — mosquitoes can be present even in colder months in heated indoor environments, and climate patterns make year-round prevention simpler and safer than seasonal.</p>
@@ -73,6 +75,7 @@ export default function HeartwormPreventionPage() {
         <p>The heartworm antigen test is a blood test performed in-clinic (results in 10 minutes) or sent to a laboratory. It detects adult female worms. A dog cannot begin a new heartworm preventive if it has been more than 2 months since the last dose without a negative heartworm test — starting preventive in an infected dog without treatment can cause a life-threatening reaction.</p>
 
         <h2>Treatment If Positive</h2>
+        <p>The medication and monitoring figures in the next paragraph are those same clinic ranges, dated 2026-06-11.</p>
         <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
 
         <h2 id="kit">A Simple Mosquito-and-Compliance Kit</h2>
@@ -131,6 +134,8 @@ export default function HeartwormPreventionPage() {
               />
           </div>
           </div>
+
+        <p>The cost question below repeats those same clinic ranges, dated 2026-06-11.</p>
 
         <h2 id="faq">FAQ</h2>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
