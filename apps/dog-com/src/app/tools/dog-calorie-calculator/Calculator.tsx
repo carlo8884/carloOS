@@ -96,8 +96,20 @@ export default function DogCalorieCalculator() {
   const weightOk = !weightError && weightNum > 0
   const isValid = weightOk && !kcalError
 
+  const foodPick = (
+    <ResultPick
+      linkFirst
+      siteId="dog-com"
+      pick={calorieFoodPick(
+        LIFE_STAGES[stageIndex].label,
+        unit === 'lb' ? weightNum : weightNum * 2.2046,
+      )}
+    />
+  )
+
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {weightOk ? foodPick : null}
       {/* Inputs */}
       <div className="grid gap-5 md:grid-cols-2">
         {/* Size class — optional weight starter, not a breed calorie table */}
@@ -270,13 +282,6 @@ export default function DogCalorieCalculator() {
             Score body condition before you change the food →
           </a>
         </p>
-        <ResultPick
-          siteId="dog-com"
-          pick={calorieFoodPick(
-            LIFE_STAGES[stageIndex].label,
-            unit === 'lb' ? weightNum : weightNum * 2.2046,
-          )}
-        />
         </>
       )}
 
