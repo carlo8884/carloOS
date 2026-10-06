@@ -1,10 +1,13 @@
-import { dogInquireCaptureEnabled, vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
+import { captureInbox, dogInquireCaptureEnabled, vetsInquireCaptureEnabled } from '@carloOS/config/capture-flags'
 import { StockImage } from './StockImage'
 import { InquireForm } from './InquireForm'
 
 function offerOpen(siteName: string): boolean {
   if (siteName === 'Dog.com') return dogInquireCaptureEnabled()
   if (siteName === 'Vets.co') return vetsInquireCaptureEnabled()
+  // Reopens on the next deploy once INQUIRE_EMAIL or NEXT_PUBLIC_INQUIRE_EMAIL is set.
+  // Fish and horses stay open: an inbox is already set and the provider rejects the send.
+  if (siteName === 'Ferret.com') return Boolean(captureInbox())
   return true
 }
 
