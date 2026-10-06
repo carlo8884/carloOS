@@ -200,6 +200,11 @@ function closedGuide(siteName: string, isPro: boolean): { href: string; label: s
       ? { href: '/find-a-vet', label: 'Find a vet' }
       : { href: '/reviews/best-pet-insurance', label: 'Pet insurance comparison' }
   }
+  if (siteName === 'Ferret.com') {
+    return isPro
+      ? { href: '/ownership/ferret-supplies-checklist', label: 'Ferret supplies checklist' }
+      : { href: '/ownership/first-week-checklist', label: 'First-week checklist' }
+  }
   return isPro
     ? { href: '/training/trainer-credentials', label: 'Trainer credentials' }
     : { href: '/reviews', label: 'Dog reviews' }
