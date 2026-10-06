@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -184,6 +184,23 @@ export default function BestFerretCagePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="reviews-best-ferret-cage"
+            checklist={[
+              "The cage is for sleeping, eating, litter, and water \u2014 not for living full-time.",
+              "Bar spacing of roughly half an inch (~0.5 in on the Ferret Nation card) is the target used on this page.",
+              "Spacing wider than about an inch risks both escape and a limb or head becoming trapped.",
+              "Always confirm the spacing on the exact model, as a \"small animal\" cage marketed for rabbits or guinea pigs often has bars too far apart.",
+              "Bare wire floors and shelves can cause foot and hock irritation and, over time, sores.",
+              "Most experienced keepers line every wire level for this reason.",
+            ]}
+          />
+
 
           <p>
             More than any other ferret purchase, the cage is where specifications are safety. A ferret is a long,
