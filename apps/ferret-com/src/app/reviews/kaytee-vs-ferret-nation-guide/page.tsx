@@ -49,7 +49,7 @@ export default function KayteeVsFerretNationGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation double unit on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-kaytee-vs-ferret-nation-guide" label="Check price of the Ferret Nation / Critter Nation double unit on Amazon" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
