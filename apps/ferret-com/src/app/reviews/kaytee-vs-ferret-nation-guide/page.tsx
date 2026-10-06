@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Kaytee or Ferret Nation for a group',
-  description: 'The Kaytee Multi-Level for one ferret, or the Ferret Nation double unit for a small group. Scores are on the cage review.',
+  description: 'The Kaytee Multi-Level for one ferret, or the Ferret Nation double unit for a small group. The notes are on the cage review.',
   url: 'https://ferret.com/reviews/kaytee-vs-ferret-nation-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which cage does the review pick overall?',
-    answer: 'The Ferret Nation or Critter Nation double unit, scored 9.5. The review lists about half-inch bar spacing, full-width front doors, deep leak-proof pans, a stackable second level, and a fit of 1–4 ferrets. The price tier is premium. Wire shelves still need a cover.',
+    answer: 'The Ferret Nation or Critter Nation double unit is the long-term cage. The review lists about half-inch bar spacing, full-width front doors, deep leak-proof pans, a stackable second level, and a fit of 1–4 ferrets. The price tier is premium. Wire shelves still need a cover.',
   },
   {
     question: 'When does the review point to the Kaytee?',
-    answer: 'For one ferret that gets generous daily time out of the cage. The Kaytee Multi-Level Ferret Home scores 7.6. The review lists multi-level shelves, chain-store availability, and an entry price tier. It says to confirm bar spacing on the exact model, and that a second ferret can outgrow it.',
+    answer: 'For one ferret that gets generous daily time out of the cage. The review lists multi-level shelves, chain-store availability, and an entry price tier. It says to confirm bar spacing on the exact model, and that a second ferret can outgrow it.',
   },
   {
     question: 'Where does the Prevue cage fit?',
@@ -43,7 +43,7 @@ export default function KayteeVsFerretNationGuidePage() {
       schema={schema}
       hero={{
         title: 'Kaytee or Ferret Nation for a group',
-        subtitle: 'A chain-store cage for one ferret, or the double unit the review scores for a small group. Specs below are the ones on the cage review.',
+        subtitle: 'A chain-store cage for one ferret, or the double unit the review lists for a small group. Specs below are the ones on the cage review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
@@ -67,11 +67,11 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. <Link href="/reviews/kaytee-vs-prevue-guide">Kaytee versus Prevue</Link> is the one-or-two ferret cage when the double unit is too big. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
+        <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. <Link href="/reviews/kaytee-vs-prevue-guide">Kaytee versus Prevue</Link> is the one-or-two ferret cage when the double unit is too big. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
         <h2>What the review says about the Kaytee</h2>
-        <p>The Kaytee Multi-Level Ferret Home is the entry cage, score 7.6. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>
+        <p>The Kaytee Multi-Level Ferret Home is the entry cage. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>
         <h2>What the review says about Ferret Nation</h2>
-        <p>The Ferret Nation or Critter Nation double unit is Best Overall, score 9.5, and the winner. Bar spacing is about half an inch. The front doors open the full width. Pans are deep and leak-proof. The unit stacks to a second level for a pair or trio, and the review lists a fit of 1–4 ferrets. The price tier is premium. It is heavy once assembled, and wire shelves and ramps still need a cover.</p>
+        <p>The Ferret Nation or Critter Nation double unit is Best Overall and the winner. Bar spacing is about half an inch. The front doors open the full width. Pans are deep and leak-proof. The unit stacks to a second level for a pair or trio, and the review lists a fit of 1–4 ferrets. The price tier is premium. It is heavy once assembled, and wire shelves and ramps still need a cover.</p>
         <p>Floor space for the number of ferrets is on the <Link href="/tools/cage-size-calculator">cage-size calculator</Link>. Bar spacing stays the figure the Kaytee review prints.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Kaytee when you have one ferret, daily out-of-cage time, and you can confirm the bar spacing on the box in the store. Buy the Ferret Nation double unit when you have a pair or you expect to add one, and you can fit the assembled footprint. Cover the wire on either cage. The Prevue Feisty Ferret remains the mid-price cage for one or two, and it is not this pair.</p>
