@@ -176,7 +176,7 @@ export default function BestHeatersPage() {
               pros={['No heater visible in the tank', 'Even temperature distribution', 'Longer lifespan (external)', 'Clean aesthetic for display tanks']}
               cons={['Requires canister filter', 'More expensive than in-tank', 'Not compatible with HOB filters']}
               price="$40–70"
-              ctaText="Shop Hydor Inline on Amazon →"
+              ctaText="Shop Hydor Inline heater on Amazon →"
               ctaHref="/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="hydor-inline"
