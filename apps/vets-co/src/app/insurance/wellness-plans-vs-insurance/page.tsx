@@ -18,8 +18,8 @@ const FAQS = [
 const itemList = buildItemListSchema({
   name: "Wellness Plans vs. Pet Insurance",
   items: [
-    { name: "Embrace", url: "https://vets.co/insurance/wellness-plans-vs-insurance#embrace" },
-    { name: "Pumpkin Pet Insurance", url: "https://vets.co/insurance/wellness-plans-vs-insurance#pumpkin" },
+    { name: "Embrace", url: "https://vets.co/go/embrace/home?s=insurance-wellness-plans-vs-insurance" },
+    { name: "Pumpkin Pet Insurance", url: "https://vets.co/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance" },
   ],
 })
 export default function WellnessVsInsurancePage() {
