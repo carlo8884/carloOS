@@ -1,10 +1,10 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
+const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api' },
@@ -58,9 +58,8 @@ export default function BestWaterTestKitsPage() {
               resourceHref="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits"
               resourceLabel="Browse API Freshwater Master Test Kit on Amazon →"
             />
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
-            <ReviewCard id="api" badge="Best Overall" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" score={9.3} winner
+            <ReviewCard id="api" badge="Best Overall" name="API Freshwater Master Test Kit" subtitle="800 tests · pH, ammonia, nitrite, nitrate · Most used kit in the hobby" winner
               description={<p>The API Freshwater Master Test Kit is the standard hobbyist water testing solution — used by more aquarists than any other kit. It covers the four parameters that matter most for fish health: pH, ammonia (NH3/NH4+), nitrite (NO2-), and nitrate (NO3-). 800 total tests provides approximately 2+ years of weekly testing for a single tank. Liquid reagent tests are significantly more accurate than dip-strip tests — do not use dip strips for critical parameters like ammonia. Color comparison can be challenging in some lighting conditions, but the ammonia, nitrite, and nitrate tests are reliable and consistent. Essential for every freshwater hobbyist.</p>}
               specs={[{ label: 'Tests', value: '800 total', highlight: 'good' }, { label: 'Parameters', value: 'pH, ammonia, nitrite, nitrate', highlight: 'good' }, { label: 'Format', value: 'Liquid reagent — more accurate than strips', highlight: 'good' }, { label: 'Tank type', value: 'Freshwater' }]}
               pros={['800 tests — 2+ years supply', 'Most accurate affordable kit', 'Covers all 4 critical parameters', 'Industry standard — widely referenced']}
@@ -120,7 +119,7 @@ export default function BestWaterTestKitsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
             </div>
 
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
