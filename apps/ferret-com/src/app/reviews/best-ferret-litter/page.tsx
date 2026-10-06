@@ -303,7 +303,7 @@ export default function BestFerretLitterPage() {
             pros={['Best natural odor control of the safe options', 'Low dust once fines are removed', 'Economical', 'Non-clumping']}
             cons={['Must be heat-treated / low-phenol', 'Never use loose aromatic shavings', 'Harder underfoot than paper']}
             price="$"
-            ctaText="Find heat-treated non-clumping wood pellet litter on Amazon"
+            ctaText="Find compressed heat-treated non-clumping wood pellet litter on Amazon"
             ctaHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="compressed-wood-pellet-litter"
