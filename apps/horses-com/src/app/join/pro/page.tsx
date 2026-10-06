@@ -54,7 +54,7 @@ export default function JoinProPage({
 
         <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. No directory
+          Applications are closed on this page. Nothing is stored from here. No directory
           is invented here. Owners comparing barns can start with{' '}
           <Link href="/ownership/boarding-options">boarding options</Link>.
         </p>

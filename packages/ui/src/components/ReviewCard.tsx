@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { hiddenChewyReplacement, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
@@ -112,21 +112,13 @@ export function ReviewCard({
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
   const held = partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref))
   const href = held ? undefined : visibleShopHref(rawHref)
-  const chewyReplacement = hiddenChewyReplacement(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
     : href?.includes('/go/amazon')
       ? 'amazon'
       : ctaAffiliateProgram
-  // Same honesty rule as PrimaryHop: a Chewy hop that falls back to Amazon
-  // must not keep an "on Chewy" label.
-  const label =
-    chewyReplacement && href === chewyReplacement.href
-      ? chewyReplacement.label
-      : /\/go\/amazon/.test(href ?? '') && /chewy/i.test(rawHref ?? '')
-        ? ctaText.replace(/\bon Chewy\b/i, 'on Amazon')
-        : ctaText
+  const label = shopCtaLabel(rawHref, ctaText)
   return (
     <div
       id={id}

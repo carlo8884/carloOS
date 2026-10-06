@@ -85,13 +85,13 @@ export default function FleaTickPreventionPage() {
                   <tbody>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Fewer doses, and coverage of 7 tick species</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#bravecto" className="text-brand-primary">Bravecto Chew</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#bravecto" className="text-brand-primary">Bravecto Chew</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Best Overall. $50–60 per 12-week dose</td>
                       <td className="p-3 text-brand-text-mid">A seizure history. The card lists isoxazoline seizure risk in predisposed dogs, and a prescription is required</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A monthly chew with the longer post-market record</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#nexgard" className="text-brand-primary">NexGard Chew</a></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#nexgard" className="text-brand-primary">NexGard Chew</a><a href="/find-a-vet" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Find a clinic</a></td>
                       <td className="p-3 text-brand-text-mid">Best Monthly. $20–25 per monthly dose. 5 tick species</td>
                       <td className="p-3 text-brand-text-mid">You want the 12-week dose or the extra tick species. A prescription is still required</td>
                     </tr>

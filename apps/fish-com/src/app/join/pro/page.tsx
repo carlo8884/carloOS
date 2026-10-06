@@ -54,7 +54,7 @@ export default function JoinProPage({
 
         <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. No directory
+          Applications are closed on this page. Nothing is stored from here. No directory
           is invented here. Owners planning a tank can start with the{' '}
           <Link href="/tools/stocking-calculator">stocking calculator</Link>.
         </p>

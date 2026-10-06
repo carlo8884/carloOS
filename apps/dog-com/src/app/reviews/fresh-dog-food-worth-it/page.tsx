@@ -111,23 +111,23 @@ export default function FreshDogFoodWorthItPage() {
             <tbody>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">Picky, drinks little, or the household wants ingredient transparency and can pay the premium</td>
-                <td className="p-3 font-bold text-brand-dark">Fresh, gently cooked</td>
+                <td className="p-3 font-bold text-brand-dark">Fresh, gently cooked<a href="/nutrition/reading-food-labels" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Read the AAFCO statement</a></td>
                 <td className="p-3 text-brand-text-mid">The list above. No brand and no dollar price is printed</td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">A healthy dog already thriving on kibble</td>
-                <td className="p-3 font-bold text-brand-dark">Stay on that kibble</td>
+                <td className="p-3 font-bold text-brand-dark">Stay on that kibble<a href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" rel="sponsored noopener" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Check price of dry dog food on Amazon</a></td>
                 <td className="p-3 text-brand-text-mid">The page says there is no medical obligation to change. The button searches Amazon for dry dog food</td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3 text-brand-text-mid">A diagnosed medical condition</td>
-                <td className="p-3 font-bold text-brand-dark">A veterinary therapeutic diet</td>
+                <td className="p-3 font-bold text-brand-dark">A veterinary therapeutic diet<a href="/nutrition/prescription-diets" className="mt-1 block text-xs font-semibold text-brand-primary underline underline-offset-2">Prescription diets</a></td>
                 <td className="p-3 text-brand-text-mid">Format matters less than the condition. The page says to talk to a veterinarian</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-06" />
 
         <h2 id="evaluate">How to Evaluate a Fresh Brand</h2>
         <p>Cut through the marketing with four checks — the same substance-over-packaging approach we apply to any food:</p>

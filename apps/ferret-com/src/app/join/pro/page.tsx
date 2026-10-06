@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import { directoryClaimPrefill } from '@carloOS/config'
-import { captureInbox } from '@carloOS/config/capture-flags'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
@@ -46,7 +45,6 @@ export default function JoinProPage({
             siteName="Ferret.com"
             intent="pro-application"
             variant="page"
-            open={Boolean(captureInbox())}
             defaultCity={prefill.city}
             defaultMessage={prefill.message}
             defaultListing={prefill.listing}
@@ -55,7 +53,7 @@ export default function JoinProPage({
 
         <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. No directory
+          Applications are closed on this page. Nothing is stored from here. No directory
           is invented here.
         </p>
       </div>
