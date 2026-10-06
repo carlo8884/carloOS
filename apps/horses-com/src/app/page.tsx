@@ -359,7 +359,12 @@ export default function HomePage() {
             <div>
               <div className="flex items-center gap-3 mb-3">
                 <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-                <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Cornerstone Articles</span>
+                <Link href="/health/equine-ulcers" className="group flex items-center gap-2.5 no-underline">
+                  <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                    <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
+                  </span>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>Cornerstone Articles</span>
+                </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Reference, maintained</h2>
             </div>
