@@ -24,15 +24,15 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which style does the harness review call hardest to escape?',
-    answer: 'The jacket or vest. The review lists the highest escape resistance, a wide panel that spreads pressure, a need to measure the body, a $$ price tier, and an editorial score of 9.0. It can run warm unless the panel is mesh.',
+    answer: 'The jacket or vest. The review lists the highest escape resistance, a wide panel that spreads pressure, a need to measure the body, a $$ price tier. It can run warm unless the panel is mesh.',
   },
   {
     question: 'When is the H-style the right harness?',
-    answer: 'When you will adjust it and recheck it. The review lists multi-point adjustment, a light weight, a $ price tier, and a score of 8.3. The same listing says a loose H-style is the easiest harness to back out of.',
+    answer: 'When you will adjust it and recheck it. The review lists multi-point adjustment, a light weight, a $ price tier. The same listing says a loose H-style is the easiest harness to back out of.',
   },
   {
     question: 'Is a mesh harness-and-leash bundle the same as a vest?',
-    answer: 'No. The mesh figure-H harness is the entry bundle, scored 7.5, with fewer adjustment points. The review says it is a starter and that an escape artist may need the vest instead.',
+    answer: 'No. The mesh figure-H harness is the entry bundle, with fewer adjustment points. The review says it is a starter and that an escape artist may need the vest instead.',
   },
 ]
 
@@ -69,11 +69,11 @@ export default function VestVsHHarnessGuidePage() {
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-ferret-harness">harness review</Link> compares a vest, an adjustable H-style, and a mesh H sold with a leash. The split that matters in the aisle is vest versus H. A ferret can reverse out of a loose loop because there is no real neck to hold it. The review&apos;s fit rule is one finger of slack, checked before the walk, and no unsupervised time in any harness on this page.</p>
         <h2>Vest or jacket</h2>
-        <p>The vest is the escape-resistance pick, scored 9.0. A broad panel wraps the chest and shoulders and closes on the back. Pressure spreads across that panel instead of two thin cords, which the review says matters because ferret skin is thin. The price tier is $$. You need a body measurement, and the harness is slightly fussier to put on. In warm weather it can overheat the ferret unless the panel is mesh. The review names this style for a determined escape artist and for a first walker who wants the harder layout to back out of.</p>
+        <p>The vest is the escape-resistance pick. A broad panel wraps the chest and shoulders and closes on the back. Pressure spreads across that panel instead of two thin cords, which the review says matters because ferret skin is thin. The price tier is $$. You need a body measurement, and the harness is slightly fussier to put on. In warm weather it can overheat the ferret unless the panel is mesh. The review names this style for a determined escape artist and for a first walker who wants the harder layout to back out of.</p>
         <h2>H-style</h2>
-        <p>The adjustable H-style harness, scored 8.3, is a neck loop and a girth loop joined by a back strap. Several adjustment points are how you fit an animal with no neck. It is light, quick, and the $ price tier. The warning is the whole comparison: left even slightly loose, this is the easiest style to escape. Thin straps also spread less pressure than a vest. Buy it when you will dial the fit indoors and check it every outing, not when you want a harness that forgives a rushed buckle.</p>
+        <p>The adjustable H-style harness is a neck loop and a girth loop joined by a back strap. Several adjustment points are how you fit an animal with no neck. It is light, quick, and the $ price tier. The warning is the whole comparison: left even slightly loose, this is the easiest style to escape. Thin straps also spread less pressure than a vest. Buy it when you will dial the fit indoors and check it every outing, not when you want a harness that forgives a rushed buckle.</p>
         <h2>The bundle is a third thing</h2>
-        <p>The mesh figure-H with a leash, scored 7.5, is the entry bundle. Mesh helps in the heat, and the leash is in the package. Adjustment points are fewer and the buckles are lighter. The review calls it a starter, with an upgrade to the vest if the ferret is a true escape artist. It is not the vest, and it is not the fully adjustable H.</p>
+        <p>The mesh figure-H with a leash, is the entry bundle. Mesh helps in the heat, and the leash is in the package. Adjustment points are fewer and the buckles are lighter. The review calls it a starter, with an upgrade to the vest if the ferret is a true escape artist. It is not the vest, and it is not the fully adjustable H.</p>
         <p>Buy the vest if the ferret has already backed out of a harness or this is the first walk and you want the more secure layout. Buy the H-style if you will measure, test the fit indoors, and recheck it. Buy the mesh bundle only as a warm-weather starter you are willing to replace.</p>
         <AffiliateDisclosure variant="inline" siteId="ferret-com" />
         <p>The link below searches for the vest harness from the harness review.</p>
