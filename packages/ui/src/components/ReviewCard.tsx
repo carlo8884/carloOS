@@ -6,24 +6,24 @@
  */
 
 import type { ReactNode } from 'react'
-import { consultLink, hopCommissionReady, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, hopCommissionReady, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
-/** Existing product hop on the quick pick that sets pickHop. */
-function QuickPickShopLink({ href }: { href?: string }) {
-  if (!href) return null
+/** Names the product and the retailer the pick hop actually opens. */
+function QuickPickShopLink({ href, name }: { href?: string; name: string }) {
+  if (!href || !name.trim()) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
-  const hop = visibleShopHref(href)
-  if (!hop) return null
+  const built = tableShopLink(href, name.trim())
+  if (!built) return null
   return (
     <a
-      href={hop}
+      href={built.href}
       rel="sponsored noopener"
-      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2 whitespace-nowrap"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2"
     >
-      Check price
+      {`Check price of ${built.label}`}
     </a>
   )
 }
@@ -307,7 +307,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
-              <QuickPickShopLink href={item.pickHop} />
+              <QuickPickShopLink href={item.pickHop} name={item.name} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
