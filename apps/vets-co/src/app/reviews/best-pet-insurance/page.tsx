@@ -74,7 +74,7 @@ const embraceSchema = buildProductSchema({
 const pageSchema = combineSchemas(schema, breadcrumbSchema, insurerListSchema, trupanionSchema, healthyPawsSchema, embraceSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
+  { label: 'Pays the vet directly', name: 'Trupanion', subtitle: 'Only insurer that pays the vet directly', href: '#trupanion' },
   { label: 'Fastest Reimbursement', name: 'Healthy Paws', subtitle: '~2 day claims · No limits', href: '#healthy-paws' },
   { label: 'Wellness Included', name: 'Embrace', subtitle: 'Routine care add-on available', href: '#embrace' },
 ]
@@ -91,7 +91,7 @@ export default function VetsPetInsurancePage() {
           style={{ fontSize: 'clamp(26px, 4vw, 48px)', lineHeight: 1.15, fontFamily: 'Georgia, "Times New Roman", serif' }}>
           Best Pet Insurance 2026 — How the 11 Major Carriers Compare
         </h1>
-        <PriceAsOf date="2026-10-03" tone="dark" />
+        <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
         <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
           Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
@@ -129,9 +129,9 @@ export default function VetsPetInsurancePage() {
               Every insurer&apos;s pre-existing condition definition, bilateral exclusion, and waiting-period language differs in ways that materially affect what is paid. Before purchase, read the sample policy document — not just the marketing page — and confirm orthopedic waiting periods, hereditary-condition exclusions, and how the insurer defines &ldquo;curable&rdquo; vs. &ldquo;chronic&rdquo;. Want to model what a given policy actually pays on a real bill? Use the <Link href="/tools/insurance-reimbursement-estimator" className="text-brand-primary underline">insurance reimbursement estimator</Link> — plug in deductible, reimbursement %, and annual cap to see net out-of-pocket on representative scenarios. Still deciding whether to buy at all? The <Link href="/tools/pet-insurance-worth-it-calculator" className="text-brand-primary underline">&ldquo;is pet insurance worth it?&rdquo; calculator</Link> shows the breakeven cost level at which a policy pays for itself.
             </CalloutBox>
 
-            <ReviewCard id="trupanion" badge="Best Overall" name="Trupanion" winner
+            <ReviewCard id="trupanion" badge="Pays the vet directly" name="Trupanion" winner
               subtitle="Pays the vet directly · 90% reimbursement · No payout limits"
-              description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts make them the standard recommendation for high-risk breeds.</p>}
+              description={<p>Trupanion is the only insurer integrated with veterinary practice management software to pay the clinic directly at checkout — no claim form for you, no waiting for reimbursement. From the vet side, this is genuinely significant: it removes the financial barrier to needed care in the moment it matters most. Their 90% reimbursement rate and unlimited payouts are the coverage numbers on this card.</p>}
               specs={[
                 { label: 'Reimbursement', value: '90%', highlight: 'good' },
                 { label: 'Payout Limit', value: 'Unlimited', highlight: 'good' },
@@ -199,7 +199,7 @@ export default function VetsPetInsurancePage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">You need the clinic paid at checkout</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=reviews-best-pet-insurance"} product={"Trupanion"} holdWithoutPartnerId /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. 90% reimbursement. Unlimited payouts. Direct vet payment. $65–120/month</td>
+                      <td className="p-3 text-brand-text-mid">Pays the vet directly. 90% reimbursement. Unlimited payouts. $65–120/month</td>
                       <td className="p-3 text-brand-text-mid">Higher premiums. Wellness is not included. Deductible is per condition</td>
                     </tr>
                     <tr className="border-b border-brand-border">
@@ -221,8 +221,8 @@ export default function VetsPetInsurancePage() {
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Questions this comparison answers</h2>
               <FAQAccordion items={[
                 {
-                  question: 'Which carrier is the top pick on this page?',
-                  answer: 'Trupanion is the Best Overall card. It highlights direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, for reimbursement speed.',
+                  question: 'Which carrier pays the clinic at checkout?',
+                  answer: 'Trupanion is the card for direct pay at checkout rather than pay-and-wait reimbursement. Healthy Paws is the next card, for reimbursement speed.',
                 },
                 {
                   question: 'Which plan on this page covers routine care?',
