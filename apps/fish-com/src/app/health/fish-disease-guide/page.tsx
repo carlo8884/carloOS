@@ -140,8 +140,9 @@ export default function FishDiseaseGuidePage() {
       relatedLinks={[{ title: "Fish Health Hub", href: "/health", category: "Fish Health" }, { title: "Ich Treatment Guide", href: "/health/ich-treatment", category: "Fish Health" }, { title: "Velvet Disease", href: "/health/velvet-disease", category: "Fish Health" }, { title: "New Tank Syndrome", href: "/health/new-tank-syndrome", category: "Fish Health" }]}
       sidebar={<>
         <div className="bg-brand-primary-pale border border-brand-border rounded-xl p-4">
-          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">The #1 Prevention</div>
-          <p className="text-xs text-brand-text-mid leading-relaxed m-0">4-week quarantine of all new fish. Most disease enters tanks via new arrivals. A hospital/quarantine tank is the best investment in fish health you can make.</p>
+          <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Quarantine new arrivals</div>
+          <p className="text-xs text-brand-text-mid leading-relaxed m-0">4-week quarantine of all new fish. Most disease enters tanks via new arrivals. A spare hospital tank is where that quarantine happens.</p>
+          <p className="text-xs mt-2 mb-0"><Link href="/setup/quarantine-tank-guide" className="text-brand-primary underline underline-offset-2">Quarantine tank setup →</Link></p>
         </div>
         <TableOfContents items={[
           ...DISEASES.map(d => ({ label: d.name, href: `#${d.name.toLowerCase().replace(/[\s()\/]/g, '-').replace(/-+/g, '-')}` })),
