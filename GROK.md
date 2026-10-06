@@ -769,7 +769,7 @@ Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
 
 ## Currently underway
 
-* Priority 1–4 satisfied. Horses under-hero trust eyebrow is now a photo chip with the existing credited hero thumb (Wolfgang Hasselmann), linking /editorial-standards.
+* Priority 1–4 satisfied. Horses discipline-filter eyebrow is now a photo chip with the existing credited category-disciplines thumb (Mikayla Storms), linking /disciplines.
 * Dog /join/pro and /trainers shells left alone (claimed-only, no fake listings).
 * Horses /inquire left alone (shared offer form). Fish homepage left matched to dog.com hero.
 * Shared footer inquire left alone.
