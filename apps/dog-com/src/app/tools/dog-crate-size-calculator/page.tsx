@@ -129,7 +129,7 @@ export default function DogCrateSizeCalculatorPage() {
     <>
       <SchemaScript schema={schema} />
 
-      <section className="bg-brand-dark px-container-sm sm:px-container py-10 sm:py-14 relative overflow-hidden">
+      <section className="bg-brand-dark px-container-sm sm:px-container pt-10 pb-4 sm:py-14 relative overflow-hidden">
         <div
           className="absolute inset-0 opacity-10"
           style={{ backgroundImage: 'radial-gradient(ellipse at 30% 50%, rgba(90, 110, 140, 0.5) 0%, transparent 60%)' }}
@@ -165,7 +165,7 @@ export default function DogCrateSizeCalculatorPage() {
       </nav>
 
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-0 pb-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>

@@ -157,7 +157,7 @@ export default function PuppyFirstYearBudgetPage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Puppy First-Year Budget</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-3 pb-section">
         <div className="max-w-5xl">
           <Calculator />
           <JourneyNext

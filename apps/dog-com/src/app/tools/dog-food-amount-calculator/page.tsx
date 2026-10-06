@@ -102,6 +102,8 @@ export default function DogFoodAmountPage() {
     >
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
+        <h2 id="calculator" className="sr-only">Calculator</h2>
+        <DogFoodAmountCalculator />
         <p>
           The <Link href="/tools/dog-calorie-calculator">calorie calculator</Link> turns weight and life stage into
           kilocalories, and it can show cups when the bag lists kcal per cup. This page answers the next question: how many
@@ -109,8 +111,6 @@ export default function DogFoodAmountPage() {
           intact adult is 1.8, weight loss is 1.0, weight gain is 1.7, light work is 2.0, a puppy under four months is 3.0,
           a puppy from four to twelve months is 2.0, and a less active senior is 1.4.
         </p>
-        <h2 id="calculator">Calculator</h2>
-        <DogFoodAmountCalculator />
         <h2>Worked example</h2>
         <p>
           A 30-pound neutered adult is about 13.6 kilograms. Resting energy is 70 times that weight to the power of 0.75.
