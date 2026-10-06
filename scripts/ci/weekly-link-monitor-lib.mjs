@@ -39,6 +39,25 @@ const SKIP_HOSTS = new Set([
   '127.0.0.1',
 ])
 
+/** Email markdown hops, including the ?s= query goHrefsFromSource stops before. */
+export function emailShopHrefs(src) {
+  const found = []
+  const re = /\/go\/[a-z0-9-]+\/[^\s)"']+/gi
+  for (const match of src.matchAll(re)) found.push(match[0])
+  return found
+}
+
+export const EMAIL_SEARCH_VENDORS = new Set([
+  'amazon-brand',
+  'chewy-brand',
+  'smartpak',
+  'dover',
+  'schneider',
+  'ridingwarehouse',
+  'marshall',
+  'wysong',
+])
+
 export function goHrefsFromSource(src) {
   const found = new Set()
   const re = /\/go\/[a-z0-9-]+(?:\/[^"'\\\s?#)]+)?/gi
@@ -230,7 +249,7 @@ export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   if (shop) {
     lines.push('## Comparison-table and gift-guide shop links', '')
     lines.push(
-      `Checked ${shop.checked} unique retailer targets from TableShopLink, ReviewCard, and ShopCtas hops on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
+      `Checked ${shop.checked} unique retailer targets from TableShopLink, ReviewCard, and ShopCtas hops, plus email retailer searches, on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
     )
     lines.push(
       `Hidden Chewy hops with no tag: ${shop.hidden}. Those rows do not render a shop link.`,

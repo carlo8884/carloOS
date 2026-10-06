@@ -15,6 +15,8 @@ import {
   goHrefsFromSource,
   cardShopHrefs,
   citationProbeReadsBody,
+  EMAIL_SEARCH_VENDORS,
+  emailShopHrefs,
   missingShopSource,
   renderReport,
   shopSearchVerdict,
@@ -100,10 +102,13 @@ export async function collectShopChecks(repoRoot = root) {
     const routesUrl = pathToFileURL(join(siteRoot, 'data/affiliate-routes.ts')).href
     const { affiliateRoutes } = await import(routesUrl)
     for (const file of walk(siteRoot)) {
-      if (!file.endsWith('.tsx') && !file.endsWith('.ts')) continue
+      const email = file.endsWith('.md') && file.includes('/email-sequences/')
+      if (!file.endsWith('.tsx') && !file.endsWith('.ts') && !email) continue
       const src = readFileSync(file, 'utf8')
       const where = file.replace(repoRoot + '/', '')
-      for (const href of [...tableShopHrefs(src), ...cardShopHrefs(src)]) {
+      const hrefs = email ? emailShopHrefs(src) : [...tableShopHrefs(src), ...cardShopHrefs(src)]
+      for (const href of hrefs) {
+        if (email && !EMAIL_SEARCH_VENDORS.has(hopFromHref(href)?.vendor)) continue
         if (missingShopSource(href)) {
           problems.push({ url: href, detail: 'missing ?s= source', where })
           continue
@@ -118,6 +123,7 @@ export async function collectShopChecks(repoRoot = root) {
           problems.push({ url: href, detail: 'shop href is not a /go hop', where })
           continue
         }
+        if (email && !EMAIL_SEARCH_VENDORS.has(hop.vendor)) continue
         const resolved = resolveAffiliateHop({
           vendor: hop.vendor,
           sku: hop.sku,
