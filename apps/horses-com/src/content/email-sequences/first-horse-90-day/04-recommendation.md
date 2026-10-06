@@ -14,11 +14,11 @@ Most "new horse owner shopping list" articles ship 30+ items. By week 12 you'll 
 
 **2. Two cotton lead ropes.** 9-ft minimum. Skip the chain shanks until your horse needs one — and most don't.
 
-[Get cotton lead ropes at Dover →](https://horses.com/go/dover/cotton-lead-rope-9ft)
+[Get cotton lead ropes at Dover →](https://horses.com/go/dover/cotton+lead+rope)
 
 **3. A proper grooming kit.** Body brush, dandy brush, hoof pick, curry comb (rubber, not plastic), mane comb, sweat scraper. The whole kit comes in under $40.
 
-[Get a starter grooming kit at SmartPak →](https://horses.com/go/smartpak/grooming-kit-starter)
+[Get a grooming set at SmartPak →](https://horses.com/go/smartpak/grooming+set)
 
 **4. A good thermometer and a horse-specific first-aid kit.** Vetrap, stable wraps, Betadine, sterile saline, a digital thermometer (write your horse's normal range inside the lid), a banamine syringe if your vet has prescribed it.
 
@@ -30,7 +30,7 @@ Most "new horse owner shopping list" articles ship 30+ items. By week 12 you'll 
 
 **6. A safety-rated helmet for you.** ASTM/SEI certified. Replace every 5 years or after any fall.
 
-[Get a safety-rated helmet at SmartPak →](https://horses.com/go/smartpak/charles-owen-jr8-helmet)
+[Get a safety-rated riding helmet at SmartPak →](https://horses.com/go/smartpak/riding+helmet)
 
 **7. Insurance** (covered Wednesday — same Lemonade / Pumpkin shortlist).
 
