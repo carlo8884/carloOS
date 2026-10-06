@@ -10,7 +10,7 @@ A complete fishless-cycle toolkit, with the specific products named below. Total
 
 **1. API Freshwater Master Test Kit.** Reads ammonia, nitrite, nitrate, pH, and KH. Strips will not do this job.
 
-[Get on Amazon →](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)
+[Get the API Freshwater Master Kit on Amazon →](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)
 
 **2. Pure ammonia (no surfactants, no perfumes).** Dr. Tim's Ammonium Chloride is the reef-keeper standard — it's dilute, so dosing math is forgiving. Avoid hardware-store "janitorial" ammonia; many contain surfactants that foul biofilm.
 
