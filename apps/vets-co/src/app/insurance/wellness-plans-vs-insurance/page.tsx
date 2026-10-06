@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -46,6 +46,22 @@ export default function WellnessVsInsurancePage() {
       >
         <div className="carloOS-article">
           <ArticleByline siteName="Vets.co Editorial" publishedAt="2026-06-01T00:00:00Z" updatedAt="2026-06-01T00:00:00Z" reviewedBy="Editorial team" />
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-wellness-plans-vs-insurance"
+            checklist={[
+              "Pet insurance covers unexpected, large expenses from accidents and illness.",
+              "They solve different problems: wellness plans spread the cost of care you know is coming, while insurance protects against costs you cannot predict.",
+              "Many owners use both, or use insurance plus a personal savings plan for routine care.",
+              "Generally, a wellness plan returns roughly what you pay into it over a year, sometimes a little more with bundled discounts.",
+              "They are not a way to come out significantly ahead financially.",
+              "Most veterinary and financial advisers suggest prioritizing accident-and-illness insurance over a wellness plan.",
+            ]}
+          />
           <div className="mb-8">
             <p className="mb-1 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Keep the distinction

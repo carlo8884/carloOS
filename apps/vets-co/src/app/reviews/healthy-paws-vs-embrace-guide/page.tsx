@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 // Request-time env, same as the insurance comparison. A set partner tag
 // renders the quote link; an unset tag stays a disabled button.
@@ -72,6 +72,22 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="vets-co"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-healthy-paws-vs-embrace-guide"
+          checklist={[
+            "It does not pay the clinic directly, and it has no wellness add-on.",
+            "They are the price bands printed on the insurance review.",
+            "A quote depends on the pet, the ZIP code, and the plan options.",
+            "Trupanion is a different comparison on that review.",
+            "Healthy Paws is the reimbursement-speed pick.",
+            "Embrace is for owners who want routine care on an add-on.",
+          ]}
+        />
         <p>Monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
         <p>Healthy Paws is Fastest Reimbursement. Reimbursement is 80–90%. The review says the app claim and an average of about two days make the wait short. Payouts are unlimited. The deductible is annual. The printed price is $40–85 a month. It does not pay the clinic at checkout, and it has no wellness add-on. The review says it fits an owner who would rather pay the vet and be paid back quickly.</p>
