@@ -231,7 +231,7 @@ export default function FerretDietBasicsPage() {
             Insulinoma — a functional tumor of the pancreatic beta cells that produces inappropriate insulin — is the single most common neoplasm reported in middle-aged and older domestic ferrets. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate load drives sustained insulin secretion, which over years contributes to beta-cell hyperplasia and eventually insulinoma formation. The evidence is associational rather than experimentally established, but the recommendation is consistent across exotic-vet sources: minimize dietary carbohydrate from kithood onward.
           </p>
           <p>
-            Practical consequence: low-carb commercial kibble plus raw/whole-prey supplementation is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>.
+            Practical consequence: low-carb commercial kibble plus raw/whole-prey supplementation is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>. <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the low-carb kibble in that pattern.
           </p>
 
           <h2 id="water">Water, Treats, and Feeding Mechanics</h2>

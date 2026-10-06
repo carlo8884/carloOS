@@ -231,7 +231,7 @@ export default function PuppyFirstYearBudgetPage() {
             it before the first birthday. Buying an adult-size crate once (with a divider) is cheaper
             than replacing crates as the puppy grows. Spay or neuter timing is a veterinary decision —
             budget for it in year one unless your veterinarian has a documented reason to wait.
-          </p>
+           <a href="/reviews/best-dog-crates">The crate guide</a> compares that adult-size crate.</p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             The{' '}
             <Link href="/breeds" className="text-brand-primary underline-offset-2 hover:underline">

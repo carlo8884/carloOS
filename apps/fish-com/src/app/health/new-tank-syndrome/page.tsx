@@ -55,7 +55,7 @@ export default function NewTankSyndromePage() {
           <li>Cycle is complete when: ammonia added to 2 ppm drops to 0 within 24 hours, AND nitrite drops to 0 within 24 hours simultaneously</li>
           <li>Do a large water change to reduce nitrate, then add fish</li>
         </ol>
-        <p>Timeline: 4–8 weeks without seeding, 1–3 weeks with quality bottled bacteria. Seeded media from an established tank (a sponge filter, substrate, or filter media moved from a cycled tank to the new one) dramatically accelerates the cycle — sometimes to days rather than weeks.</p>
+        <p>Timeline: 4–8 weeks without seeding, 1–3 weeks with quality bottled bacteria. Seeded media from an established tank (a sponge filter, substrate, or filter media moved from a cycled tank to the new one) dramatically accelerates the cycle — sometimes to days rather than weeks. <a href="/reviews/best-aquarium-filters">The filter guide</a> is the sponge or media you seed from.</p>
 
         <h2>Fish-In Cycling — Emergency Protocol</h2>
         <p>Already added fish before reading this? The fish-in emergency protocol buys time while the cycle establishes:</p>

@@ -42,7 +42,7 @@ export default function Page() {
           </CalloutBox>
 
           <h2>The Reimbursement Model</h2>
-          <p>The single most important thing to understand about pet insurance claims is that the model is reimbursement, not direct billing. Unlike human health insurance, where the provider usually bills the insurer, the standard pet insurance flow has you pay your veterinarian the full amount at the time of care and then seek reimbursement afterward. This means you need access to the funds to cover the bill upfront, even for a large emergency — a practical reality worth planning for before you ever file a claim.</p>
+          <p>The single most important thing to understand about pet insurance claims is that the model is reimbursement, not direct billing. Unlike human health insurance, where the provider usually bills the insurer, the standard pet insurance flow has you pay your veterinarian the full amount at the time of care and then seek reimbursement afterward. This means you need access to the funds to cover the bill upfront, even for a large emergency — a practical reality worth planning for before you ever file a claim. <a href="/insurance/how-pet-insurance-works">How pet insurance works</a> walks through that pay-then-reimburse flow.</p>
           <p>A small and growing number of insurers, working with select clinics, support direct payment so you only owe your portion at checkout. That is convenient when available, but it remains the exception. Assume you will pay first and be reimbursed later unless your insurer and your clinic explicitly support direct pay.</p>
 
           <h2>The Steps, in Order</h2>

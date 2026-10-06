@@ -269,7 +269,7 @@ export default function NewPuppyChecklistPage() {
                 , and running the{' '}
                 <Link href="/tools/puppy-first-year-budget" className="text-brand-primary underline-offset-2 hover:underline">first-year budget planner</Link>{' '}
                 from the start are the easiest ways to avoid early mistakes.
-              </p>
+               <a href="/reviews/best-dog-crates">The crate guide</a> compares the first crate on that list.</p>
               <p>
                 Everything else — chews and toys, grooming tools, a first-aid kit — can follow in the
                 first week while you focus on what actually shapes the dog: socialisation,

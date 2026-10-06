@@ -474,7 +474,7 @@ export default function CyclingGuidePage() {
             mature canister, or a colonized bioball brings the actual bacterial colony, not a
             slurry hoping to grow into one. With seeded media a new tank can be ready to stock
             in 24–72 hours.
-          </p>
+           <a href="/reviews/best-canister-filters">The canister filter guide</a> is that mature canister.</p>
 
           <h2>When Your Tank Is Cycled — The Exact Reads</h2>
           <p>The cycle is complete when all three of the following hold for two consecutive doses:</p>

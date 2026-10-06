@@ -290,7 +290,7 @@ export default function ErVsClinicPage() {
             <Link href="/emergency-triage-card" className="text-brand-primary underline-offset-2 hover:underline">
               emergency triage card
             </Link>
-            , plus a third bucket for licensed telehealth when the pet is stable.
+            , plus a third bucket for licensed telehealth when the pet is stable. <a href="/telehealth">The telehealth guide</a> is that licensed-vet bucket.
           </p>
           <p className="mb-4 text-base leading-relaxed text-brand-text-mid">
             For a cat-specific sign-list urgency read (go now / same-day / monitor), use{' '}

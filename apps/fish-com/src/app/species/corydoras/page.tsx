@@ -320,7 +320,7 @@ export default function CorydorasPage() {
               <strong>Filtration:</strong> Standard tropical filtration
               (sponge filter, hang-on-back, or canister). Corydoras
               appreciate moderate water flow with calm zones.
-            </li>
+             <a href="/reviews/best-aquarium-filters">The filter guide</a> compares the sponge, hang-on-back, and canister named here.</li>
             <li>
               <strong>Plants and decor:</strong> Broad-leaved plants
               (Anubias, Java fern, Amazon sword) for cover, some

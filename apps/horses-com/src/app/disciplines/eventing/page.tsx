@@ -255,7 +255,7 @@ export default function EventingPage() {
           <p>BETA Level 3 (purple-tag) body protector is mandatory for cross-country at every USEA and FEI level. Air vests worn over (never instead of) a Level 3 body protector are increasingly common; they inflate when the rider is separated from the horse via a lanyard. Air vests are not a substitute for the foam-shell Level 3 vest.</p>
 
           <h3>Boots and protective gear</h3>
-          <p>Cross-country boots are typically substantial wraparound boots that protect the cannon, fetlock, and (for hind boots) the pastern. Common types include cross-country specific boots from manufacturers such as Woof, Eskadron, LeMieux, or Premier Equine; the design specifications are full coverage of the cannon and fetlock, durable shell, and (often) moisture-wicking liner. Bell boots over the hooves prevent overreach injuries.</p>
+          <p>Cross-country boots are typically substantial wraparound boots that protect the cannon, fetlock, and (for hind boots) the pastern. Common types include cross-country specific boots from manufacturers such as Woof, Eskadron, LeMieux, or Premier Equine; the design specifications are full coverage of the cannon and fetlock, durable shell, and (often) moisture-wicking liner. Bell boots over the hooves prevent overreach injuries. <a href="/tack/boots-and-wraps">The boots and wraps guide</a> compares those cross-country boots.</p>
 
           <h2 id="safety">Safety Evolution</h2>
 

@@ -84,7 +84,7 @@ export default function NitrogenCyclePage() {
 
         <h2 id="what">What the Nitrogen Cycle Is</h2>
         <p>Fish produce ammonia — through their gills, waste, and urine — continuously. Ammonia is acutely toxic: fish exposed to ammonia develop gill damage, immune suppression, neurological harm, and death at concentrations as low as 0.25 ppm over time, and 2+ ppm causes rapid mortality.</p>
-        <p>The nitrogen cycle is the biological process by which ammonia is converted — first to nitrite (also toxic), then to nitrate (far less toxic at moderate levels) — by two groups of beneficial bacteria that colonize filter media and substrate. Without these bacteria, ammonia accumulates and kills fish. With them, a tank becomes self-regulating.</p>
+        <p>The nitrogen cycle is the biological process by which ammonia is converted — first to nitrite (also toxic), then to nitrate (far less toxic at moderate levels) — by two groups of beneficial bacteria that colonize filter media and substrate. Without these bacteria, ammonia accumulates and kills fish. With them, a tank becomes self-regulating. <a href="/reviews/best-aquarium-filters">The aquarium filter guide</a> compares the filter media those bacteria colonize.</p>
         <p>The process: <strong>Fish waste → Ammonia (NH₃) → Nitrite (NO₂⁻) → Nitrate (NO₃⁻)</strong></p>
         <p>Nitrobacter and Nitrospira bacteria handle the second conversion. Nitrosomonas handle the first. These bacteria are not present in tap water — they must be grown in your tank. This growth takes 4–8 weeks. During this time, the tank is unsafe for fish.</p>
 

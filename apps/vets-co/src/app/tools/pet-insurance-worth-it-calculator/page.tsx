@@ -353,7 +353,7 @@ export default function PetInsuranceWorthItPage() {
           Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>,{' '}
           <strong>80% reimbursement</strong>, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to
           costs above the deductible, at 80%, so the policy pays for itself at the eligible-cost level where:
-        </p>
+         <a href="/insurance/deductibles-reimbursement">Deductibles and reimbursement</a> explains the deductible and rate this estimate uses.</p>
         <ul>
           <li><strong>breakeven</strong> = deductible + (annual premium ÷ reimbursement %)</li>
           <li>= $250 + ($540 ÷ 0.80)</li>

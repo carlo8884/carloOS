@@ -120,7 +120,7 @@ export default function BlanketingPage() {
           </ul>
 
           <h2 id="weight">Choosing a Weight</h2>
-          <p>Turnout rugs are rated by fill weight: lightweight (little or no fill, mainly waterproofing), medium (around 150 to 250 grams of fill), and heavyweight (300 grams and up). Match the weight to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a clipped horse in hard winter weather may need a heavyweight, while a fluffy unclipped horse may need only a light waterproof sheet to stay dry. See the blanket weights guide for the temperature ranges. Over-rugging is as much a welfare issue as under-rugging, since a sweating horse under a heavy rug gets chilled.</p>
+          <p>Turnout rugs are rated by fill weight: lightweight (little or no fill, mainly waterproofing), medium (around 150 to 250 grams of fill), and heavyweight (300 grams and up). Match the weight to the temperature, the horse&apos;s coat and condition, and whether it is clipped -- a clipped horse in hard winter weather may need a heavyweight, while a fluffy unclipped horse may need only a light waterproof sheet to stay dry. See the blanket weights guide for the temperature ranges. Over-rugging is as much a welfare issue as under-rugging, since a sweating horse under a heavy rug gets chilled. <a href="/reviews/best-winter-horse-blankets">The winter blanket guide</a> compares the fills this weight choice uses.</p>
 
           <h2 id="fit">Fit and Safety</h2>
           <ul>
