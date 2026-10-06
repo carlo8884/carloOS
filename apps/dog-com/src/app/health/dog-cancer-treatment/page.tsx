@@ -40,7 +40,7 @@ export default function DogCancerTreatmentPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cancer + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cover treatment costs before diagnosis</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Those treatment ranges are typical US clinic figures dated 2026-06-11.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those treatment ranges are typical US clinic figures dated 2026-06-11.</p>
             <p className="text-xs text-white/60 mb-3 leading-relaxed">Canine cancer treatment ranges $3,000-$15,000+ depending on stage and modality. Insurance covers it — but only if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
@@ -74,7 +74,7 @@ export default function DogCancerTreatmentPage() {
 
           <h2 id="oncologist">The Role of the Veterinary Oncologist</h2>
           <p>A board-certified veterinary oncologist (<a href="https://www.acvim.org/resources-tools/animal-owners" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVIM Oncology</a>) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
-          <p>The consultation, chemotherapy, radiation, and surgery figures in the next paragraph are typical US clinic ranges dated 2026-06-11.</p>
+          <p>Typical range, not a quote. The consultation, chemotherapy, radiation, and surgery figures in the next paragraph are typical US clinic ranges dated 2026-06-11.</p>
           <p>Cost reality: consultation with a veterinary oncologist: $200–500. Chemotherapy per cycle: $200–1,500 depending on protocol. Radiation therapy course: $8,000–20,000. Surgery: $2,000–15,000+ depending on procedure complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
 
           <h2 id="kit">A Simple Cancer-Treatment Home-Care Kit</h2>

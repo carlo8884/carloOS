@@ -48,11 +48,11 @@ export default function AustralianShepherdPage() {
 
         <p>The working story starts in the American West: Basque herding dogs that arrived via Australia were reshaped into today&apos;s Aussie — that 10-hour mountain-herd history is why a household Australian Shepherd still needs 1.5–2+ hours of vigorous work, not a crate-only afternoon. Australian Shepherds are typically first-time-owner friendly — YES-typically — when the household accepts the MDR1 DNA test before any listed drug, the 2-hour work floor, and heel-nipping management around children.</p>
 
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-10-04.</p>
         <BreedHealthCard name="MDR1 Gene Mutation (Drug Sensitivity)" riskLevel="high"
           description="The MDR1 (ABCB1) gene mutation affects approximately 50% of Australian Shepherds and causes sensitivity to multiple drugs that are safe in dogs without the mutation. The MDR1 protein (P-glycoprotein) normally pumps drugs out of the brain — dogs with two mutant copies of the gene lack this protective mechanism, allowing normal doses of certain drugs to accumulate to toxic levels in the brain. The classic example: ivermectin at the low doses used for routine heartworm prevention is safe in all dogs; at the higher doses used in some parasite treatments, MDR1-affected dogs suffer neurological toxicity and death. This affects dozens of drugs including loperamide (Imodium), certain anesthetic agents, and some chemotherapy drugs."
           signs={['Drug-specific: ataxia, blindness, seizures, coma after exposure to affected drugs', 'Signs appear within hours of drug administration']}
           management="DNA test (Washington State University College of Veterinary Medicine or commercial labs) costs about $60–80 and provides lifelong information. All Aussies should be tested before any medication that carries MDR1 concern. The vet must know the MDR1 status before prescribing. A complete list of MDR1-affected drugs is maintained at vcpl.vetmed.wsu.edu." />
-        <p>Those figures are typical US ranges dated 2026-10-04.</p>
 
         <h2>Exercise — The Non-Negotiable</h2>
         <p>Australian Shepherds were bred to work 10-hour days herding livestock in mountain terrain. Their exercise requirements reflect this heritage. A 30-minute walk twice daily is insufficient — Aussies need 1.5–2+ hours of vigorous activity daily, ideally including running, fetch, agility, disc work, or structured training that combines physical and mental effort. The good news: Aussies are capable of almost any dog sport and excel at many. Frisbee/disc, agility, flyball, herding trials, dock diving, and obedience competition are all activities that match the breed's capability level.</p>
@@ -81,7 +81,7 @@ export default function AustralianShepherdPage() {
         </div>
 
         <h2>Frequently Asked Questions</h2>
-        <p>Those figures are typical US ranges dated 2026-10-04.</p>
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-10-04.</p>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -50,6 +51,7 @@ export default function IcrateVsImpactGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-icrate-vs-impact-guide" label="Check price of the MidWest iCrate on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-icrate-vs-impact-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

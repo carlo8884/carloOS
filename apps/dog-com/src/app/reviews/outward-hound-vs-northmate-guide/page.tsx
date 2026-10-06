@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -56,6 +57,7 @@ export default function OutwardHoundVsNorthmateGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide" label="Browse Northmate Green interactive feeders on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-outward-hound-vs-northmate-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

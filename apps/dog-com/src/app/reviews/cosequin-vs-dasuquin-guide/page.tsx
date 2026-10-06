@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -50,6 +51,7 @@ export default function CosequinVsDasuquinGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/dasuquin+with+msm?s=reviews-cosequin-vs-dasuquin-guide" label="Check price of Dasuquin with MSM on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-cosequin-vs-dasuquin-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

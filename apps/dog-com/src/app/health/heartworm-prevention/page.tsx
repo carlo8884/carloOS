@@ -42,6 +42,7 @@ export default function HeartwormPreventionPage() {
       siteId="dog-com"
       contentType="health"
       hero={{ title: 'Heartworm Prevention for Dogs', subtitle: 'Heartworm disease is preventable with a monthly chew that costs $8–15/month. Treatment when disease is established costs $1,000–2,000 and requires months of strict rest. Prevention is not optional.', category: 'Preventive Care', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '7 min',}}
+      heroExtra={<p className="text-xs text-white/80 mb-3 leading-relaxed">Typical range, not a quote.</p>}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Dog Health', href: '/health' }, { name: 'Heartworm Prevention', href: '/health/heartworm-prevention' }]}
       relatedLinks={[{ title: 'Dog Health Hub', href: '/health', category: 'Hub' }, { title: 'Dog Vaccinations', href: '/health/dog-vaccinations', category: 'Dog Health' }, { title: 'Best Heartworm Prevention', href: '/reviews/best-heartworm-prevention', category: 'Related' }, { title: 'Best Flea & Tick Prevention', href: '/reviews/best-flea-tick-prevention', category: 'Related' }]}
       schema={schema}
@@ -75,7 +76,7 @@ export default function HeartwormPreventionPage() {
         <p>The heartworm antigen test is a blood test performed in-clinic (results in 10 minutes) or sent to a laboratory. It detects adult female worms. A dog cannot begin a new heartworm preventive if it has been more than 2 months since the last dose without a negative heartworm test — starting preventive in an infected dog without treatment can cause a life-threatening reaction.</p>
 
         <h2>Treatment If Positive</h2>
-        <p>The medication and monitoring figures in the next paragraph are those same clinic ranges, dated 2026-06-11.</p>
+        <p>Typical range, not a quote. The medication and monitoring figures in the next paragraph are those same clinic ranges, dated 2026-06-11.</p>
         <p>Heartworm treatment (melarsomine — an arsenic-based compound) kills adult worms. The protocol requires strict exercise restriction for 4–6 months — the dying worms must be broken down and absorbed without the increased blood flow from exercise causing them to lodge in the lungs. Treatment is $500–1,500 for the medication; total treatment costs with monitoring reach $1,000–2,000+. Severe infections may require additional hospitalization. Immiticide is in intermittent shortage — availability varies. Prevention is the correct approach.</p>
 
         <h2 id="kit">A Simple Mosquito-and-Compliance Kit</h2>

@@ -66,7 +66,7 @@ export default function BerneseMountainDogPage() {
         <p>Bernese Mountain Dogs have high rates of hip and elbow dysplasia — compounded by their significant body weight. <a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">OFA</a> clearances on both parents are a minimum baseline for responsible breeding. Elbow dysplasia in Berners is particularly common — the elbows should be radiographed and OFA-evaluated in addition to hips. Management follows the standard protocol for large breed joint disease: lean weight, fish oil, joint supplementation, NSAIDs when symptomatic, surgical options for severe cases.</p>
 
         <h2>Pet Insurance — Get It at 8 Weeks</h2>
-        <p>Those figures are typical US ranges dated 2026-06-11.</p>
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-06-11.</p>
         <p>Pet insurance for Bernese Mountain Dogs should be purchased before the dog is 8 weeks old — ideally before any wellness visit that might create a pre-existing condition record. Given the breed's cancer predisposition and short lifespan, the cost-benefit calculation on pet insurance is strongly positive. A histiocytic sarcoma workup, treatment, and oncology visits can cost $5,000–20,000. Insurance that covers this — purchased before any condition develops — changes the financial reality of managing a breed-specific cancer. Compare policies specifically for cancer coverage, specialist referral coverage, and oncology treatment limits.</p>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
@@ -84,7 +84,7 @@ export default function BerneseMountainDogPage() {
         </div>
 
         <h2>Frequently Asked Questions</h2>
-        <p>Those figures are typical US ranges dated 2026-06-11.</p>
+        <p>Typical range, not a quote. Those figures are typical US ranges dated 2026-06-11.</p>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
       </div>
     </ArticleLayout>

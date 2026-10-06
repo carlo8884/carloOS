@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -50,6 +51,7 @@ export default function RoyalCaninVsProPlanGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-royal-canin-vs-pro-plan-guide" label="Check price of Royal Canin dry dog food on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-royal-canin-vs-pro-plan-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
