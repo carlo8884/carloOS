@@ -87,6 +87,7 @@ const FAQS = [
   {
     question: 'How much does a ferret vet visit cost?',
     answer:
+      "Ranges on this answer are dated 2026-10-04. " +
       "Costs vary substantially by region and clinic but ballpark figures for US exotic-pet practice as of 2026: routine annual exam $75-150, full senior bloodwork (CBC + chemistry + fasting glucose) $150-300, abdominal ultrasound $250-500, dental cleaning under anesthesia $400-800, ferret surgery (insulinoma or adrenalectomy) $1500-3500. Emergency exotic-vet visits at non-routine hours start around $200-400 before any diagnostics. Pet insurance for exotics exists but with significant coverage gaps; check pre-existing condition rules carefully.",
   },
   {

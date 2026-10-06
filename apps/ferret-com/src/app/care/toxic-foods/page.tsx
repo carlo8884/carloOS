@@ -544,6 +544,7 @@ export default function FerretToxicFoodsPage() {
               of 2026). They will give species-specific guidance,
               answer questions about decontamination, and provide a
               case number that downstream vets can reference.
+              Those helpline fees are dated 2026-05-29.
             </li>
             <li>
               <strong>Transport to an exotic-pet capable emergency
