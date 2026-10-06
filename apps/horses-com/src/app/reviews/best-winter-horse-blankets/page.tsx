@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,12 +24,12 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout', description: 'Waterproof and breathable turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
-const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://www.sstack.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
-const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.7, reviewCount: 1 })
-const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://www.doversaddlery.com', imageUrl: '', ratingValue: 8.6, reviewCount: 1 })
-const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://www.doversaddlery.com', imageUrl: '', ratingValue: 8.5, reviewCount: 1 })
+const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout', description: 'Waterproof and breathable turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://www.sstack.com', imageUrl: '' })
+const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://www.doversaddlery.com', imageUrl: '' })
+const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://www.doversaddlery.com', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, ramboSchema, rhinoSchema, schneidersSchema, smartpakSchema, weatherbeetaSchema, amigoSchema)
 
 const PICKS = [
@@ -86,7 +86,6 @@ export default function BestWinterBlanketsPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>The Blanket Categories</h2>
@@ -164,7 +163,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best Premium Turnout"
               name="Horseware Rambo Original Turnout"
               subtitle="1000-denier ballistic · Leg-arch shoulder · Premium build standard"
-              score={9.4}
               winner
               description={<>
                 <p>The Rambo Original is the established premium reference in the category. Horseware (Ireland) introduced the design that defined the modern turnout blanket — the V-front leg-arch shoulder gusset that allows free movement without producing the shoulder rub that wrecks lesser blankets. The 1000-denier ballistic nylon shell is among the most durable in the standard mid-weight market; multi-season use in active pasture turnout is commonly reported, with many owners reporting Rambo Originals still in service after 7+ winters.</p>
@@ -191,7 +189,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best Modern Standard"
               name="Horseware Rhino Original Turnout"
               subtitle="1200-denier ripstop · Modern Horseware design · Strong mainstream choice"
-              score={9.0}
               description={<>
                 <p>The Rhino Original is Horseware&apos;s mid-tier turnout — the same brand engineering as the Rambo Original at a lower price point, using a 1200D ripstop shell instead of the 1000D ballistic. Ripstop is genuinely strong (the perpendicular ripstop weave resists tear propagation), and in practice Rhino blankets last 3–5 seasons in active turnout. The neck cut is the modern Horseware standard with optional V-front; the hardware is polymer rather than stainless on most models.</p>
                 <p>For most owners replacing a worn-out value-tier blanket, the Rhino sits at the cost-quality sweet spot — meaningfully better than the budget brands, meaningfully cheaper than the Rambo.</p>
@@ -217,7 +214,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best Heavy Winter"
               name="Schneiders StormShield Euro Turnout"
               subtitle="1680-denier ballistic · 300+ g heavy fill · Harsh-winter specification"
-              score={9.2}
               description={<>
                 <p>Schneiders (Ohio, US) built its reputation on heavyweight winter blankets for the Midwest and Northeast climates that demand more than the standard mid-weight specification. The StormShield Euro turnout uses a 1680D ballistic shell — heavier than the Rambo Original — and a deep, full-neck cut with extended gussets. Available with very heavy fills (300 g, 360 g, and beyond) appropriate for the most clipped horses in sub-zero conditions.</p>
                 <p>For mid-Atlantic and Southern US riders, this much blanket is genuine overkill — the lighter Horseware and Weatherbeeta options handle the climate. For New England, Upper Midwest, Mountain West, and Canadian riders managing clipped competition horses in winter, the StormShield specification matches the climate.</p>
@@ -243,7 +239,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best House Brand"
               name="SmartPak Ultimate Turnout"
               subtitle="1200-denier ripstop · Shoulder gussets · SmartPak quality at house-brand pricing"
-              score={8.7}
               description={<>
                 <p>SmartPak&apos;s house-brand Ultimate Turnout has matured over multiple generations into a credible competitor to the mainstream Horseware Rhino. The 1200D ripstop shell is the same denier as the Rhino; the shoulder-gusset design borrows the leg-arch principle; the fill weights run 180 g, 220 g, and 360 g across the line.</p>
                 <p>The SmartPak advantage is the SmartPak return policy — house-brand blankets can be returned and exchanged through their guarantee program in a way that brand-name blankets cannot, which is genuinely useful for the first-blanket buyer who doesn&apos;t yet know exactly what fit the horse needs.</p>
@@ -269,7 +264,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best Mid-Tier"
               name="Weatherbeeta ComFiTec Plus Dynamic II"
               subtitle="1200-denier ripstop · Memory-foam wither relief · Strong feature set"
-              score={8.6}
               description={<>
                 <p>Weatherbeeta (UK) is the broadest-line mid-tier blanket manufacturer, with the ComFiTec line as its mainstream turnout offering. The Plus Dynamic II adds a memory-foam wither-relief panel — a genuinely useful feature for horses whose conformation produces wither rubs under conventional turnouts — and a deep tail flap for additional rear coverage. Multiple fill options across the line.</p>
                 <p>Weatherbeeta sizing runs slightly different from Horseware (UK sizing convention), and the brand carries a heavier hand than Rambo of the same denier — measure carefully and consider the trial period at the retailer.</p>
@@ -295,7 +289,6 @@ export default function BestWinterBlanketsPage() {
               badge="Best Value"
               name="Horseware Amigo Bravo 12 Plus Turnout"
               subtitle="1000-denier ballistic · Horseware build at the value tier"
-              score={8.5}
               description={<>
                 <p>The Amigo line is Horseware&apos;s value sub-brand — same factory and design lineage as Rambo and Rhino at a lower price point, using simpler hardware and a less premium liner. The Bravo 12 Plus uses a 1000D ballistic shell (matching the Rambo Original&apos;s shell denier) with polymer hardware, a less-padded interior lining, and standard neck cut. Real-world durability runs 2–4 seasons in active pasture turnout, occasionally longer.</p>
                 <p>For the price-conscious owner who wants the Horseware engineering without the premium tag, the Amigo line is the most defensible value-tier choice in the category. For the owner who keeps horses for decades, the Rambo total-cost-per-season math wins despite the higher up-front cost.</p>
@@ -368,7 +361,7 @@ export default function BestWinterBlanketsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-05" />
+            <ComparisonFoot updated="2026-10-06" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
@@ -422,15 +415,11 @@ export default function BestWinterBlanketsPage() {
               <FAQAccordion items={[
                 {
                   question: 'Which turnout does this page pick for a harsh winter?',
-                  answer: 'Schneiders StormShield Euro, scored 9.2. The card calls it a heavyweight ballistic blanket. Horseware Rambo Original, scored 9.4, is the premium multi-season turnout, not the heavy-winter specialist.',
+                  answer: 'Schneiders StormShield Euro is the harsh-winter card. The card calls it a heavyweight ballistic blanket. Horseware Rambo Original is the premium multi-season turnout.',
                 },
                 {
                   question: 'What is the value pick on this page?',
-                  answer: 'Horseware Amigo Bravo 12 Plus, scored 8.5. The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.',
-                },
-                {
-                  question: 'Do the scores on this page come from customer reviews?',
-                  answer: 'No. Each number is this page\'s editorial score for denier, fill, neck shape, and hardware. It is not an average of owner ratings.',
+                  answer: 'Horseware Amigo Bravo 12 Plus is the value card. The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.',
                 },
               ]} />
             </div>
