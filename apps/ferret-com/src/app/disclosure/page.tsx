@@ -139,8 +139,7 @@ export default function DisclosurePage() {
             through and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; sponsors have no input on editorial content.
+            No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
             Display advertising via a third-party ad network.

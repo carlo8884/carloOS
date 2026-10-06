@@ -136,8 +136,7 @@ export default function DisclosurePage() {
 
         <h2>How We Make Money</h2>
         <p>
-          Dog.com&apos;s revenue today comes from three sources, in
-          approximate order of size:
+          Dog.com accounts for money on this page as follows:
         </p>
         <ol>
           <li>
@@ -145,11 +144,8 @@ export default function DisclosurePage() {
             when readers click through to a retailer and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. When we accept a sponsor for the Dog.com
-            newsletter, the sponsorship is labeled clearly as a sponsorship
-            inside the newsletter, and the sponsor has no input on the
-            surrounding editorial content. We do not accept sponsors for
-            on-site editorial pages.
+            No newsletter is currently sent, so there is no sponsored newsletter.
+            We do not accept sponsors for on-site editorial pages.
           </li>
           <li>
             Display advertising via a third-party ad network. Ads are served
@@ -179,8 +175,7 @@ export default function DisclosurePage() {
           <li>
             <strong>We do not run sponsored editorial.</strong> If you are
             reading editorial content on Dog.com, no brand paid for that
-            placement. Sponsored content lives in our newsletter and is
-            labeled.
+            placement. No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
             <strong>We do not invent credentials.</strong> Articles on Dog.com

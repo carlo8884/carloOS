@@ -15,7 +15,7 @@ import { visibleShopHref } from '@carloOS/config/affiliate-hop'
  * generic confirmation. Each should have a dedicated thank-you page
  * with affiliate recommendations."
  *
- * Each lead magnet (Mailchimp tag) maps to its thank-you content here.
+ * Each lead magnet maps to its thank-you content here.
  * After signup, redirect to /thanks/<magnet>.
  *
  * Architect S20 (Lead Magnet Library).

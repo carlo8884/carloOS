@@ -138,8 +138,7 @@ export default function DisclosurePage() {
             commissions are higher than the typical pet-supply baseline.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; sponsors have no input on editorial.
+            No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
             Display advertising via a third-party ad network.

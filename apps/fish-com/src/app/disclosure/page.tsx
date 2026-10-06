@@ -129,8 +129,7 @@ export default function DisclosurePage() {
 
         <h2>How We Make Money</h2>
         <p>
-          Fish.com&apos;s revenue today comes from three sources, in
-          approximate order of size:
+          Fish.com accounts for money on this page as follows:
         </p>
         <ol>
           <li>
@@ -138,10 +137,8 @@ export default function DisclosurePage() {
             when readers click through to a retailer and complete a purchase.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; the sponsor has no input on the surrounding
-            editorial content. We do not accept sponsors for on-site
-            editorial pages.
+            No newsletter is currently sent, so there is no sponsored newsletter.
+            We do not accept sponsors for on-site editorial pages.
           </li>
           <li>
             Display advertising via a third-party ad network. Ads are served
