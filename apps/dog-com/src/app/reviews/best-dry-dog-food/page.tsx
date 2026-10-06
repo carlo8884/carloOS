@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin' },
+  { label: 'Best Overall', name: 'Royal Canin', subtitle: 'WSAVA · Breed-specific · Research-backed', href: '#royal-canin', shopHref: '/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' },
   { label: 'Best Value', name: 'Purina Pro Plan', subtitle: 'Science-backed · Widely available', href: '#purina' },
   { label: 'Prescription/Medical', name: "Hill's Science Diet", subtitle: 'Vet recommended · Life stage formulas', href: '#hills' },
   { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },

@@ -10,7 +10,7 @@ const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', descriptio
 const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://whistle.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fiSchema, whistleSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi' },
+  { label: 'Best Overall', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi', shopHref: '/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' },
   { label: 'Best with Health Data', name: 'Whistle Go Explore', subtitle: 'GPS + activity + health monitoring', href: '#whistle' },
   { label: 'Best Budget', name: 'Tractive GPS', subtitle: 'Lowest monthly fee · Works globally', href: '#tractive' },
 ]
