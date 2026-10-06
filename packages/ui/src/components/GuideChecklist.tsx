@@ -1,7 +1,8 @@
 'use client'
 
 import { useState } from 'react'
-import { checklistCopyText } from '../lib/guide-checklist'
+import { visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { checklistCopyText, checklistLabel, type ChecklistLine } from '../lib/guide-checklist'
 import { trackEvent } from '../lib/track-event'
 
 function escapeHtml(value: string): string {
@@ -21,7 +22,7 @@ export function GuideChecklist({
   items,
 }: {
   siteId: string
-  items: readonly string[]
+  items: readonly ChecklistLine[]
 }) {
   const [copied, setCopied] = useState(false)
   const text = checklistCopyText(items)
@@ -67,7 +68,7 @@ export function GuideChecklist({
     document.body.appendChild(frame)
     const doc = frame.contentDocument
     if (doc) {
-      const lines = items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')
+      const lines = items.map((item) => `<li>${escapeHtml(checklistLabel(item))}</li>`).join('')
       doc.open()
       doc.write(
         `<!doctype html><html><head><title>Shopping checklist</title></head><body><h1>Shopping checklist</h1><ul>${lines}</ul></body></html>`,
@@ -87,9 +88,19 @@ export function GuideChecklist({
     <section data-guide-checklist className="my-6 rounded-lg border border-brand-border bg-brand-surface p-4">
       <h2 className="font-display text-base font-semibold text-brand-dark mt-0 mb-3">Shopping checklist</h2>
       <ul className="m-0 pl-5 text-sm text-brand-text-mid leading-relaxed">
-        {items.map((item) => (
-          <li key={item} className="mb-1">{item}</li>
-        ))}
+        {items.map((item) => {
+          const label = checklistLabel(item)
+          const href = typeof item === 'string' ? undefined : visibleShopHref(item.href)
+          return (
+            <li key={label} className="mb-1">
+              {href ? (
+                <a href={href} rel="sponsored noopener" className="font-semibold text-brand-dark underline underline-offset-2">
+                  {label}
+                </a>
+              ) : label}
+            </li>
+          )
+        })}
       </ul>
       <div className="flex gap-3 flex-wrap mt-4">
         <button

@@ -55,8 +55,8 @@ interface EmailCaptureProps {
    * NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE is exactly "true".
    */
   addressOnly?: boolean
-  /** Sentences already on the guide. Shown when address capture is off. */
-  checklist?: readonly string[]
+  /** Sentences already on the guide. A hop object is the existing shop link. */
+  checklist?: readonly import('../lib/guide-checklist').ChecklistLine[]
 }
 
 export function EmailCapture({
