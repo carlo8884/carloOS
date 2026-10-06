@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -55,7 +55,6 @@ export default function Page() {
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Because coverage fit matters more than the discount, the most useful next step is to compare carriers on terms and claim handling, then check which of your front-runners offers multi-pet pricing.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Compare carriers on limits, exclusions, and claim handling in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>
             <li>Narrow the field by the features each pet needs with the <a href="/tools/insurance-finder">pet insurance coverage finder</a>.</li>

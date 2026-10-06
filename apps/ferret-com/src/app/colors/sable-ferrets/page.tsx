@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -249,7 +248,6 @@ export default function SableFerretsPage() {
             exotic-mammal vet visit.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
                   </div>
       </ArticleLayout>

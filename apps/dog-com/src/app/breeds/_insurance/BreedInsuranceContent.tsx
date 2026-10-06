@@ -26,13 +26,12 @@ import Link from 'next/link'
 import {
   Breadcrumb,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
   SchemaScript,
   buildArticleSchema,
   combineSchemas,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
 import {
@@ -351,9 +350,6 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
             </ul>
 
             {/* Affiliate disclosure ABOVE the commercial CTAs (QC §1) */}
-            <div className="not-prose my-8">
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            </div>
 
             {/* CTAs */}
             <section className="not-prose my-8 border border-brand-border rounded-xl p-6 bg-brand-surface">
@@ -388,12 +384,7 @@ export function BreedInsuranceContent({ slug }: { slug: string }) {
                 vs the dog breeds hub + vets insurance-hub
                 kitchens. Educational only — never a
                 product hop, never an Rx hop. */}
-            <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop related supplies
-              </div>
-                            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            </div>
+            
 
             {/* FAQ — FAQAccordion emits FAQPage schema */}
             <h2>Frequently Asked Questions</h2>

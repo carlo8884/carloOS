@@ -34,7 +34,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -476,7 +475,6 @@ export default function ConditionsHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
               </section>

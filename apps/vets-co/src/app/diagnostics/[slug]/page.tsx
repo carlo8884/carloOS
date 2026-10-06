@@ -11,7 +11,6 @@ import {
   ArticleLayout,
   CalloutBox,
   RelatedLinks,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import {
   Diagnostics,
@@ -326,7 +325,6 @@ export default function DiagnosticPage({ params }: PageProps) {
             interpretation supersedes any general guidance here.
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
           {/* FAQs */}
           <h2>Frequently asked questions</h2>

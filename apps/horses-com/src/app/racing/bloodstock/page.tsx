@@ -19,7 +19,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -180,7 +179,6 @@ export default function BloodstockPage() {
             <li>Thoroughbred Owners and Breeders Association (TOBA). Owner and breeder education. toba.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>

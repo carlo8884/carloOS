@@ -17,7 +17,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -161,7 +160,6 @@ export default function ReadingPedigreePage() {
             <li>The Jockey Club Information Systems. Pedigree and produce records. jockeyclub.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>

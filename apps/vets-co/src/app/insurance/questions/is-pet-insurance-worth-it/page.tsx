@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -60,7 +60,6 @@ export default function Page() {
 
           <h2 id="next-steps">Run Your Own Breakeven</h2>
           <p>Because the right answer depends on your finances, your pet, and a quote you have in hand, the most useful next step is to model it rather than accept a blanket verdict.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Run the <a href="/tools/pet-insurance-worth-it-calculator">&ldquo;is pet insurance worth it?&rdquo; calculator</a> — it turns a quote into the breakeven cost level at which a policy pays for itself.</li>
             <li>If you decide to buy, compare carriers in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>

@@ -497,7 +497,7 @@ const CALCULATORS = [
     id: 'vets · insurance hub',
     file: 'apps/vets-co/src/app/insurance/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -600,7 +600,7 @@ const CALCULATORS = [
     id: 'vets · reviews hub',
     file: 'apps/vets-co/src/app/reviews/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -683,7 +683,7 @@ const CALCULATORS = [
     id: 'vets · guides hub',
     file: 'apps/vets-co/src/app/guides/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Vet\ Visit\ \&\ Cost\-of\-Care\ Guides/, label: 'page heading stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -715,7 +715,7 @@ const CALCULATORS = [
     id: 'ferret · health hub',
     file: 'apps/ferret-com/src/app/health/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -765,7 +765,7 @@ const CALCULATORS = [
     id: 'vets · breeds hub',
     file: 'apps/vets-co/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Breed\-Specific\ Health\ Guides/, label: 'page heading stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -780,7 +780,7 @@ const CALCULATORS = [
     id: 'dog · breeds hub',
     file: 'apps/dog-com/src/app/breeds/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Dog\ Breed\ Guide/, label: 'page heading stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -830,7 +830,7 @@ const CALCULATORS = [
     id: 'dog · conditions hub',
     file: 'apps/dog-com/src/app/conditions/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -845,7 +845,7 @@ const CALCULATORS = [
     id: 'dog · symptoms hub',
     file: 'apps/dog-com/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -860,7 +860,7 @@ const CALCULATORS = [
     id: 'dog · compare hub',
     file: 'apps/dog-com/src/app/compare/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Compare\ Dog\ Breeds/, label: 'page heading stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -875,7 +875,7 @@ const CALCULATORS = [
     id: 'vets · diagnostics hub',
     file: 'apps/vets-co/src/app/diagnostics/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -890,7 +890,7 @@ const CALCULATORS = [
     id: 'vets · symptoms hub',
     file: 'apps/vets-co/src/app/symptoms/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -905,7 +905,7 @@ const CALCULATORS = [
     id: 'vets · medications hub',
     file: 'apps/vets-co/src/app/medications/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -920,7 +920,7 @@ const CALCULATORS = [
     id: 'vets · specialists hub',
     file: 'apps/vets-co/src/app/specialists/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -953,7 +953,7 @@ const CALCULATORS = [
     id: 'horses · bloodstock hub',
     file: 'apps/horses-com/src/app/bloodstock/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1017,7 +1017,7 @@ const CALCULATORS = [
     id: 'ferret · colors hub',
     file: 'apps/ferret-com/src/app/colors/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1051,7 +1051,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-colors-and-patterns',
     file: 'apps/ferret-com/src/app/colors/ferret-colors-and-patterns/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1066,7 +1066,7 @@ const CALCULATORS = [
     id: 'ferret · sable-ferrets',
     file: 'apps/ferret-com/src/app/colors/sable-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1081,7 +1081,7 @@ const CALCULATORS = [
     id: 'ferret · albino-ferrets',
     file: 'apps/ferret-com/src/app/colors/albino-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1096,7 +1096,7 @@ const CALCULATORS = [
     id: 'ferret · dark-eyed-white-ferrets',
     file: 'apps/ferret-com/src/app/colors/dark-eyed-white-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1128,7 +1128,7 @@ const CALCULATORS = [
     id: 'ferret · champagne-ferrets',
     file: 'apps/ferret-com/src/app/colors/champagne-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1143,7 +1143,7 @@ const CALCULATORS = [
     id: 'ferret · chocolate-ferrets',
     file: 'apps/ferret-com/src/app/colors/chocolate-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1158,7 +1158,7 @@ const CALCULATORS = [
     id: 'ferret · black-ferrets',
     file: 'apps/ferret-com/src/app/colors/black-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1173,7 +1173,7 @@ const CALCULATORS = [
     id: 'ferret · silver-ferrets',
     file: 'apps/ferret-com/src/app/colors/silver-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1188,7 +1188,7 @@ const CALCULATORS = [
     id: 'ferret · panda-ferrets',
     file: 'apps/ferret-com/src/app/colors/panda-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1203,7 +1203,7 @@ const CALCULATORS = [
     id: 'ferret · blaze-and-roan-patterns',
     file: 'apps/ferret-com/src/app/colors/blaze-and-roan-patterns/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1252,7 +1252,7 @@ const CALCULATORS = [
     id: 'ferret · male-vs-female-ferrets',
     file: 'apps/ferret-com/src/app/colors/male-vs-female-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1337,7 +1337,7 @@ const CALCULATORS = [
     id: 'ferret · dooking-and-vocalizations',
     file: 'apps/ferret-com/src/app/behavior/dooking-and-vocalizations/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1750,7 +1750,7 @@ const CALCULATORS = [
     id: 'ferret · adoption-vs-buying',
     file: 'apps/ferret-com/src/app/ownership/adoption-vs-buying/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1838,7 +1838,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-insurance-basics',
     file: 'apps/ferret-com/src/app/ownership/ferret-insurance-basics/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1890,7 +1890,7 @@ const CALCULATORS = [
     id: 'ferret · emergency-warning-signs',
     file: 'apps/ferret-com/src/app/health/emergency-warning-signs/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1924,7 +1924,7 @@ const CALCULATORS = [
     id: 'ferret · canine-distemper',
     file: 'apps/ferret-com/src/app/health/canine-distemper-in-ferrets/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1940,7 +1940,7 @@ const CALCULATORS = [
     id: 'ferret · ferret-influenza',
     file: 'apps/ferret-com/src/app/health/ferret-influenza/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1956,7 +1956,7 @@ const CALCULATORS = [
     id: 'ferret · heart-disease',
     file: 'apps/ferret-com/src/app/health/heart-disease/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1990,7 +1990,7 @@ const CALCULATORS = [
     id: 'ferret · signs-of-pain',
     file: 'apps/ferret-com/src/app/health/signs-of-pain/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2006,7 +2006,7 @@ const CALCULATORS = [
     id: 'ferret · anesthesia-and-surgery-risk',
     file: 'apps/ferret-com/src/app/health/anesthesia-and-surgery-risk/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2022,7 +2022,7 @@ const CALCULATORS = [
     id: 'ferret · lymphoma',
     file: 'apps/ferret-com/src/app/health/lymphoma/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2056,7 +2056,7 @@ const CALCULATORS = [
     id: 'ferret · spaying-and-neutering',
     file: 'apps/ferret-com/src/app/health/spaying-and-neutering/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2724,7 +2724,7 @@ const CALCULATORS = [
     id: 'horses · ranch-riding',
     file: 'apps/horses-com/src/app/disciplines/ranch-riding/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Disciplines\ Hub/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2816,7 +2816,7 @@ const CALCULATORS = [
     id: 'horses · jump-racing',
     file: 'apps/horses-com/src/app/racing/jump-racing/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Jump\ Racing\ \-\-\ Steeplechase,\ Hurdles\ \&\ Timber\ Explained/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2889,7 +2889,7 @@ const CALCULATORS = [
     id: 'horses · breeders-cup',
     file: 'apps/horses-com/src/app/racing/breeders-cup/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /The\ Triple\ Crown/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3016,7 +3016,7 @@ const CALCULATORS = [
     id: 'horses · racing-roles-official',
     file: 'apps/horses-com/src/app/racing/racing-roles/racing-official/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Racing\ Officials\ \&\ Stewards\ \-\-\ Who\ Keeps\ a\ Race\ Fair/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3051,7 +3051,7 @@ const CALCULATORS = [
     id: 'horses · race-types-hub',
     file: 'apps/horses-com/src/app/racing/race-types/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /buildMetadata/, label: 'page metadata stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3067,7 +3067,7 @@ const CALCULATORS = [
     id: 'horses · race-types-maiden',
     file: 'apps/horses-com/src/app/racing/race-types/maiden-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Maiden\ Races\ Explained\ \-\-\ The\ Starting\ Point\ of\ a\ Racing\ Career/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3083,7 +3083,7 @@ const CALCULATORS = [
     id: 'horses · race-types-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/claiming-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Claiming\ Races\ Explained\ \-\-\ How\ the\ "For\ Sale"\ Race\ Works/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3099,7 +3099,7 @@ const CALCULATORS = [
     id: 'horses · race-types-allowance',
     file: 'apps/horses-com/src/app/racing/race-types/allowance-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Allowance\ Races\ Explained\ \-\-\ The\ Step\ Between\ Maiden\ and\ Stakes/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3115,7 +3115,7 @@ const CALCULATORS = [
     id: 'horses · race-types-optional-claiming',
     file: 'apps/horses-com/src/app/racing/race-types/optional-claiming-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3131,7 +3131,7 @@ const CALCULATORS = [
     id: 'horses · race-types-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/stakes-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Stakes\ Races\ Explained\ \-\-\ The\ Top\ Class\ and\ the\ Power\ of\ Black\ Type/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3147,7 +3147,7 @@ const CALCULATORS = [
     id: 'horses · race-types-graded-stakes',
     file: 'apps/horses-com/src/app/racing/race-types/graded-stakes-races/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Graded\ Stakes\ Races\ Explained\ \-\-\ Grade\ 1,\ 2\ \&\ 3\ and\ the\ Group\ System/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3220,7 +3220,7 @@ const CALCULATORS = [
     id: 'horses · ottb-in-show-jumping',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-show-jumping/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /The\ OTTB\ in\ Show\ Jumping\ \-\-\ Retraining\ the\ Off\-Track\ Thoroughbred/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3236,7 +3236,7 @@ const CALCULATORS = [
     id: 'horses · ottb-in-dressage',
     file: 'apps/horses-com/src/app/racing/ottb-second-careers/ottb-in-dressage/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /The\ OTTB\ in\ Dressage\ \-\-\ Retraining\ the\ Off\-Track\ Thoroughbred/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3271,7 +3271,7 @@ const CALCULATORS = [
     id: 'horses · kentucky-derby',
     file: 'apps/horses-com/src/app/racing/triple-crown/kentucky-derby/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /The\ Kentucky\ Derby\ Explained\ \-\-\ Churchill\ Downs\ \&\ the\ First\ Leg/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3325,7 +3325,7 @@ const CALCULATORS = [
     id: 'horses · racing-bloodstock',
     file: 'apps/horses-com/src/app/racing/bloodstock/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Bloodstock\ Basics\ \-\-\ The\ Business\ of\ Breeding\ \&\ Selling\ Racehorses/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3398,7 +3398,7 @@ const CALCULATORS = [
     id: 'horses · reading-a-pedigree',
     file: 'apps/horses-com/src/app/bloodstock/reading-a-pedigree/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /How\ to\ Read\ a\ Thoroughbred\ Pedigree\ \-\-\ Sire,\ Dam\ \&\ the\ Page/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3414,7 +3414,7 @@ const CALCULATORS = [
     id: 'horses · what-is-bloodstock',
     file: 'apps/horses-com/src/app/bloodstock/what-is-bloodstock/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3430,7 +3430,7 @@ const CALCULATORS = [
     id: 'horses · how-thoroughbred-sales-work',
     file: 'apps/horses-com/src/app/bloodstock/how-thoroughbred-sales-work/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /How\ Thoroughbred\ Sales\ Work\ \-\-\ Yearlings,\ Breeze\-Ups\ \&\ the\ Ring/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5169,7 +5169,7 @@ const CALCULATORS = [
     id: 'vets · diagnostics-spoke template',
     file: 'apps/vets-co/src/app/diagnostics/[slug]/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5185,7 +5185,7 @@ const CALCULATORS = [
     id: 'vets · specialists-spoke template',
     file: 'apps/vets-co/src/app/specialists/[slug]/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5201,7 +5201,7 @@ const CALCULATORS = [
     id: 'vets · medications-spoke template',
     file: 'apps/vets-co/src/app/medications/[slug]/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5217,7 +5217,7 @@ const CALCULATORS = [
     id: 'vets · can-i-give hub',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5233,7 +5233,7 @@ const CALCULATORS = [
     id: 'vets · can-i-give-spoke template',
     file: 'apps/vets-co/src/app/medications/can-i-give-my-dog/[med]/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5249,7 +5249,8 @@ const CALCULATORS = [
     id: 'vets · symptoms-spoke template',
     file: 'apps/vets-co/src/app/symptoms/[slug]/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /consultLink\(/, label: 'consult path stays on the symptom spoke' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays on the symptom spoke' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5299,7 +5300,7 @@ const CALCULATORS = [
     id: 'dog · breed-insurance hub',
     file: 'apps/dog-com/src/app/breeds/insurance/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above compare CTAs and added above hops' },
+      { re: /Pet\ Insurance\ by\ Dog\ Breed/, label: 'page heading stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5333,7 +5334,7 @@ const CALCULATORS = [
     id: 'dog · breed-health template',
     file: 'apps/dog-com/src/app/breeds/_health/BreedHealthContent.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /\/find-a-vet/, label: 'vet-finder path stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10578,7 +10579,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/pre-purchase-exam/page.tsx',
     mustInclude: [
       { re: /\/ownership\/buying-your-first-horse/, label: 'first-horse buying guide instead of an invented findings worksheet' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Ownership\ Hub/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10594,7 +10595,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/ownership/reading-body-language/page.tsx',
     mustInclude: [
       { re: /\/tools\/horse-grimace-scale/, label: 'grimace scale instead of a halter search' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /Ownership\ Hub/, label: 'page title stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11050,7 +11051,7 @@ const CALCULATORS = [
     id: 'vets · er-vs-urgent-care hops',
     file: 'apps/vets-co/src/app/guides/er-vs-urgent-care/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /ArticleLayout/, label: 'editorial layout stays; no affiliate disclosure without a hop' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

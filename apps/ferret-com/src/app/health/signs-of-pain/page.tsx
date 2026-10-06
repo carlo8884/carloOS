@@ -10,7 +10,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 
 const SOURCES = [
@@ -356,7 +355,6 @@ export default function FerretSignsOfPainPage() {
             specific ferret and its diagnosis.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

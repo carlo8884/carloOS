@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -56,7 +56,6 @@ export default function Page() {
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Dental is one of several places where the preventive-versus-unexpected line decides coverage. Understanding it alongside the cost and worth-it questions gives you the full picture before you buy.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>See how preventive care is handled in <a href="/insurance/questions/does-pet-insurance-cover-vaccines">does pet insurance cover vaccines</a>.</li>
             <li>Compare carriers and their dental clauses in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>

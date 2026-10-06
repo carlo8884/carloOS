@@ -22,7 +22,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -198,7 +197,6 @@ export default function BreedersCupPage() {
             <li>International Federation of Horseracing Authorities (IFHA). Grade/Group race classification. horseracingintfed.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>

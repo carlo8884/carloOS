@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -85,7 +85,6 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The telehealth page prints Vetster at $50–100 per consultation, with no monthly fee on that card. That is a different shape of spending from a monthly premium. The same page prints Chewy Connect as included with Chewy+ at $15–25 a month. This page does not add a Chewy Connect button. The telehealth page opens that service directly.</p>
         <h2>Who should open which printed band</h2>
         <p>Open the AskVet card when the question is a chat subscription. Open Vetster when the question is a video visit paid per consult. Open Healthy Paws, Embrace, or Trupanion when the question is an accident-and-illness policy. Read the waiting period and the deductible on the insurance review before you treat any of those bands as the price you will pay.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>

@@ -10,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   CrossPortfolioCard,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import { Medications, MedicationsBySlug, type Medication } from '../../../data/medications'
 
@@ -403,7 +402,6 @@ export default function MedicationPage({ params }: PageProps) {
             monitoring / FDA-CVM-Plumb's copy. Unique vs
             the medications hub kitchen. Educational
             only — never a dose, never an Rx product. */}
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Cross-portfolio recommendations */}
         <div className="not-prose mt-10">

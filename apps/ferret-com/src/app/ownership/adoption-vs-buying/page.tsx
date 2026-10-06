@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,7 +130,6 @@ export default function AdoptionVsBuyingPage() {
             A reasonable default: if you are open to an adult and want to support ferret welfare, start with a rescue. If you specifically want a kit with known parentage and are willing to vet a breeder carefully, a reputable breeder is a strong choice. A pet store is the most convenient and often the cheapest entry point, with the least background information. Across all three, plan for the real cost of the years ahead — the veterinary line item dominates the lifetime total (see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>).
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
           <h2 id="sources">Sources</h2>
           <p>

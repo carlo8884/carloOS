@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "ER vs. Urgent Care vs. Regular Vet — Where to Go | Vets.co", description: "Knowing whether to go to the emergency hospital, an urgent care clinic, or your regular vet saves time, money, and sometimes lives. Here is how to decide.", path: '/guides/er-vs-urgent-care', type: 'article' })
@@ -81,7 +81,6 @@ export default function ERvsUrgentPage() {
             emergency-signs. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
           {/* Money path — live amazon-brand search hops
               (credit-card-size laminating pouches /
@@ -122,12 +121,7 @@ export default function ERvsUrgentPage() {
               First-aid kits, digital pet
               thermometers, and prescriptions
               are not shoppable hops. */}
-          <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-            <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-              Shop related supplies
-            </div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
-          </div>
+          
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

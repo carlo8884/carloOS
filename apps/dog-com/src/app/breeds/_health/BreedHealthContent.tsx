@@ -23,7 +23,6 @@
 
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   ArticleLayout,
   ArticleByline,
   CalloutBox,
@@ -397,7 +396,6 @@ export function BreedHealthContent({ slug }: { slug: string }) {
           the health-spoke + breeds-hub kitchens.
           Educational only — never a vaccine hop,
           never an Rx hop. */}
-      <AffiliateDisclosure variant="inline" siteId="dog-com" />
 
       {/* ── Section: FAQs ─────────────────────────────────────────────────── */}
       <h2 id="faqs">Frequently Asked Questions</h2>

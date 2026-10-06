@@ -17,7 +17,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -163,7 +162,6 @@ export default function WhatIsBloodstockPage() {
             <li>International Federation of Horseracing Authorities (IFHA). International breeding and the global Thoroughbred. horseracingintfed.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>

@@ -17,7 +17,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   SchemaScript,
 } from '@carloOS/ui'
@@ -161,7 +160,6 @@ export default function HowSalesWorkPage() {
             <li>International Federation of Horseracing Authorities (IFHA). International sales and breeding overview. horseracingintfed.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>
