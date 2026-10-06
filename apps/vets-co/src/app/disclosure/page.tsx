@@ -10,7 +10,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
   title: 'Affiliate Disclosure',
   description:
-    'How Vets.co makes money: Amazon Associates, pet insurance referrals, and veterinary telehealth. We do not accept payment for favorable reviews.',
+    'How Vets.co makes money: Amazon Associates and veterinary telehealth. Trupanion, Healthy Paws, and Embrace are not currently connected.',
   path: '/disclosure',
   type: 'article',
 })
@@ -19,7 +19,7 @@ const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Affiliate Disclosure',
   description:
-    'Affiliate disclosure for Vets.co: Amazon Associates, pet insurance referrals, and veterinary telehealth.',
+    'Affiliate disclosure for Vets.co: Amazon Associates and veterinary telehealth. Trupanion, Healthy Paws, and Embrace are not currently connected.',
   url: 'https://vets.co/disclosure',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -34,7 +34,7 @@ export default function DisclosurePage() {
       hero={{
         title: 'Affiliate Disclosure',
         subtitle:
-          'How Vets.co makes money. We earn from Amazon Associates, pet insurance referrals, and veterinary telehealth. We do not accept payment for a favorable review.',
+          'How Vets.co makes money. We earn from Amazon Associates and veterinary telehealth. Trupanion, Healthy Paws, and Embrace are not currently connected. We do not accept payment for a favorable review.',
         category: 'Legal & Transparency',
         authorName: 'Vets.co Editorial — last updated 2026-05-29',
         publishedAt: 'May 2026',
@@ -53,10 +53,11 @@ export default function DisclosurePage() {
         <p>
           Vets.co earns a commission when a reader buys through some of the
           links on this site. As an Amazon Associate we earn from qualifying
-          purchases. We also earn referral fees from pet insurance carriers
-          and from veterinary telehealth services. The price you pay is the
-          same as if you went to that company directly. We do not accept
-          payment for a favorable review or a higher ranking.
+          purchases. Trupanion, Healthy Paws, and Embrace are not currently
+          connected. We may earn referral fees from veterinary telehealth
+          services. The price you pay is the same as if you went to that
+          company directly. We do not accept payment for a favorable review
+          or a higher ranking.
         </p>
         <p>
           If something on this page disagrees with a link on the site, email{' '}
@@ -80,15 +81,14 @@ export default function DisclosurePage() {
 
         <h2>Programs We Participate In</h2>
         <p>
-          Vets.co participates in three kinds of programs. First, Amazon
-          Associates. As an Amazon Associate we earn from qualifying
-          purchases. Second, pet insurance carriers, including Trupanion,
-          Healthy Paws, Embrace, Lemonade Pet, and other carriers. Third,
-          veterinary telehealth services that connect pet owners with a
-          licensed veterinarian: Vetster, AskVet, and Chewy&apos;s Connect
-          with a Vet. We may add or remove partners as those relationships
-          change. Adding a partner does not change coverage we have already
-          published.
+          Vets.co is a participant in Amazon Associates and telehealth
+          services including Vetster. As an Amazon Associate we earn from
+          qualifying purchases. Trupanion, Healthy Paws, and Embrace are not
+          currently connected. Veterinary telehealth services that connect
+          pet owners with a licensed veterinarian include Vetster, AskVet, and
+          Chewy&apos;s Connect with a Vet. We may add or remove partners as
+          those relationships change. Adding a partner does not change
+          coverage we have already published.
         </p>
 
         <h2>What We Explicitly Do NOT Do</h2>
@@ -146,13 +146,13 @@ export default function DisclosurePage() {
             Amazon Associates commissions on qualifying purchases.
           </li>
           <li>
-            Pet insurance referral fees from the carriers listed above.
+            Trupanion, Healthy Paws, and Embrace are not currently connected.
           </li>
           <li>
             Veterinary telehealth referral fees from Vetster, AskVet, and
-            Chewy&apos;s Connect with a Vet when a reader starts a consult. As
-            with insurance, these are referral fees and never change our
-            editorial guidance about when and why to see a vet.
+            Chewy&apos;s Connect with a Vet when a reader starts a consult.
+            These are referral fees and never change our editorial guidance
+            about when and why to see a vet.
           </li>
           <li>
             No newsletter is currently sent, so there is no sponsored newsletter.

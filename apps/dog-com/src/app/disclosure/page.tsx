@@ -11,7 +11,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
   title: 'Affiliate Disclosure',
   description:
-    'How Dog.com makes money: affiliate programs (Amazon, Chewy, pet insurance), what we never do (paid reviews), and editorial-integrity policy.',
+    'How Dog.com makes money: Amazon Associates and Chewy. Trupanion, Healthy Paws, and Embrace are not currently connected.',
   path: '/disclosure',
   type: 'article',
 })
@@ -98,8 +98,8 @@ export default function DisclosurePage() {
 
         <h2>Programs We Participate In</h2>
         <p>
-          Dog.com is a participant in or actively pursuing membership in the
-          following affiliate programs:
+          Dog.com is a participant in Amazon Associates and Chewy. Trupanion,
+          Healthy Paws, and Embrace are not currently connected.
         </p>
         <ul>
           <li>
@@ -118,10 +118,9 @@ export default function DisclosurePage() {
             you are.
           </li>
           <li>
-            <strong>Pet insurance affiliate networks</strong> — including
-            Impact Radius and Awin, which administer affiliate relationships
-            for Trupanion, Healthy Paws, Embrace, Lemonade Pet, and others.
-            Pet insurance commissions are typically structured as cost-per-
+            <strong>Pet insurance.</strong> Trupanion, Healthy Paws, and
+            Embrace are not currently connected. When a pet insurance program
+            is connected, commissions are typically structured as cost-per-
             acquisition (CPA) flat payments rather than percentage-of-sale,
             because insurance is a subscription product.
           </li>
