@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +104,23 @@ export default function BestEquineSupplementsPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-equine-supplements"
+          checklist={[
+            "The National Animal Supplement Council (NASC) is an industry self-regulatory body for animal supplements.",
+            "Look for the seal on the front of the package; it is a reasonable minimum standard for any supplement you feed.",
+            "CBD products for horses are unregulated in the US, with widely variable purity, potency, and label accuracy.",
+            "CBD is currently on the FEI prohibited-substances list (banned in competition) and on the USEF prohibited list \u2014 competition horses must not receive CBD.",
+            "Most CBD products marketed for horses make claims that exceed the published evidence.",
+            "Riders competing under FEI or USEF rules must check every supplement against the current prohibited list and observe published withdrawal times.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           A category-by-category buyer&apos;s guide to the equine supplement market — joint, gastric, hoof, calmer, electrolyte, weight gain, marine omega-3, and comprehensive wellness. Brands and products evaluated against the NASC Quality Seal, FEI/USEF prohibited-substance rules, and the peer-reviewed evidence base behind each category.
         </p>

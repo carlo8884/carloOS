@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -63,6 +63,23 @@ export default function BestWinterBlanketsPage() {
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-winter-horse-blankets"
+          checklist={[
+            "Schneiders StormShield Euro is the harsh-winter card.",
+            "The card calls it a heavyweight ballistic blanket.",
+            "Horseware Rambo Original is the premium multi-season turnout.",
+            "Horseware Amigo Bravo 12 Plus is the value card.",
+            "The page describes it as a 1000-denier Horseware blanket at a lower price than the Rambo Original.",
+            "Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           Turnout, stable, and liner-system blankets ranked by denier, fill weight, neck shape, and hardware durability. The category-defining brands compared against the value-tier alternatives that actually compete with them.
         </p>
