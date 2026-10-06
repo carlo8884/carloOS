@@ -108,6 +108,11 @@ export default function HorseBlanketSizeCalculatorPage() {
         { title: 'Horse Weight Calculator', href: '/tools/horse-weight-calculator', category: 'Tools' },
         { title: 'Tack Guide', href: '/tack', category: 'Tack' },
       ]}
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Horse Blanket Size Calculator',
         subtitle:
@@ -157,13 +162,10 @@ export default function HorseBlanketSizeCalculatorPage() {
           tail), in inches — round that to the nearest standard 3-inch size and you have the blanket size. A horse that
           measures 78 inches takes a 78-inch blanket (about 155 cm in European sizing).
         </p>
-
-        <h2 id="calculator">The calculator</h2>
         <p>
           Enter your chest-to-tail measurement in inches or centimetres. The calculator rounds to the nearest standard
           US/UK size and gives the approximate EU/cm equivalent and the size category.
         </p>
-        <Calculator />
         <JourneyNext
           siteId="horses-com"
           nextHref="/tack/blanket-weights"

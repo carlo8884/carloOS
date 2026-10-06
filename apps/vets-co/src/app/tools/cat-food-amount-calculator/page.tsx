@@ -102,6 +102,8 @@ export default function CatFoodAmountPage() {
     >
       <div className="carloOS-article">
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }} />
+        <h2 id="calculator" className="sr-only">Calculator</h2>
+        <CatFoodAmountCalculator />
         <p>
           The <Link href="/tools/cat-calorie-calculator">cat calorie calculator</Link> estimates daily kilocalories
           and can show cups from kcal per cup. Labels also print kcal per kilogram. This calculator keeps every feline
@@ -109,8 +111,6 @@ export default function CatFoodAmountPage() {
           neutered outdoor is 1.4, intact outdoor is 1.6, weight loss is 0.8, weight gain is 1.3, kitten is 2.5, senior
           indoor is 1.1, and obese-prone indoor is 1.0.
         </p>
-        <h2 id="calculator">Calculator</h2>
-        <CatFoodAmountCalculator />
         <h2>How to read the grams</h2>
         <p>
           Divide the daily energy by the label density. A higher kcal-per-kg food is a smaller pile of grams for the same

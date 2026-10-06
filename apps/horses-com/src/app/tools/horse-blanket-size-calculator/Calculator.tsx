@@ -47,6 +47,9 @@ export default function HorseBlanketSizeCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {r ? (
+        <ResultPick linkFirst siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
+      ) : null}
       <label className="block mb-4">
         <span className="block text-xs font-bold uppercase tracking-eyebrow text-brand-text-light mb-1.5">
           Chest-to-tail measurement
@@ -115,7 +118,6 @@ export default function HorseBlanketSizeCalculator() {
               Match the fill to this size before you buy →
             </a>
           </p>
-          <ResultPick siteId="horses-com" pick={blanketPick(r.us, 'tools-horse-blanket-size-calculator')} />
         </div>
       ) : null}
 
