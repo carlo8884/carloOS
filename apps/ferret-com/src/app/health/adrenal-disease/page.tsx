@@ -677,7 +677,7 @@ export default function FerretAdrenalDiseasePage() {
             pros={['Warmth for ferrets with alopecia-reduced coat', 'Satisfies burrowing instinct', 'Machine washable', 'Low cost per unit']}
             cons={['Not a treatment — see your exotic vet', 'Some ferrets chew fleece', 'Replace regularly as fabric thins']}
             price="$10–18"
-            ctaText="Find ferret fleece sleep sacks on Amazon"
+            ctaText="Find ferret fleece sleep sack hammocks on Amazon"
             ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="ferret+fleece+sleep+sack+hammock"
