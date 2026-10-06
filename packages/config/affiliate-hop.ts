@@ -289,16 +289,12 @@ export function stripPlaceholder(url: string): string {
  * AFF_PETS_BEST_TAG, AFF_SPOT_TAG, AFF_MANYPETS_TAG, AFF_FIGO_TAG, or
  * AFF_ASPCA_TAG is set, the same button switches back to the /go hop and the
  * redirect fills that tag. Trupanion, Healthy Paws, and Embrace stay held.
- * Vetster, AskVet, and the quote templates match apps/vets-co/src/data/affiliate-routes.ts.
- * Chewy Connect's untagged page does not: that route template 404s. Do not invent an ID.
+ * These strings match apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
  */
-/** Confirmed HTTP 200. chewy.com/connect-with-a-vet returns 404, so untagged buttons use this page. */
-const CHEWY_CONNECT_PLAIN = 'https://www.chewy.com/pethealth/connect-with-a-vet'
-
 const CONSULT_TEMPLATE: Record<string, string> = {
   vetster: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',
   askvet: 'https://askvet.app/?refid=PLACEHOLDER&campaign={sku}',
-  chewy: CHEWY_CONNECT_PLAIN,
+  chewy: 'https://www.chewy.com/pethealth/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
   lemonade: 'https://lemonade.com/pet?affid=PLACEHOLDER&offer={sku}',
   pumpkin: 'https://get.pumpkin.care/quote?refid=PLACEHOLDER&campaign={sku}',
   'pets-best': 'https://www.petsbest.com/enroll?affid=PLACEHOLDER&campaign={sku}',
@@ -382,12 +378,9 @@ export function resolveAffiliateHop(opts: {
   }
 
   const retail = isRetailVendor(vendor)
-  // Untagged Chewy Connect must not 302 to the dead connect-with-a-vet path.
-  // A set AFF_CHEWY_TAG still fills the route template through /go/chewy/connect.
+  // Chewy Connect is the live /pethealth/connect-with-a-vet page in the route
+  // template. An unset tag still opens that path with refid removed.
   const chewyConnect = vendor === 'chewy' && sku.toLowerCase() === 'connect'
-  if (chewyConnect && !tagResolved) {
-    return { target: CHEWY_CONNECT_PLAIN, tagResolved, envVarName, vendor, sku }
-  }
   // Retail: no sku or no tag → homepage. Never an untagged Amazon/Chewy URL.
   if (retail && !chewyConnect && (!sku || !tagResolved)) {
     return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }

@@ -271,7 +271,7 @@ describe('resolveAffiliateHop', () => {
     const askvet = consultLink('/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide', {})
     assert.equal(askvet?.href, 'https://askvet.app/?campaign=telehealth')
     const chewy = consultLink('/go/chewy/connect?s=telehealth', {})
-    assert.equal(chewy?.href, 'https://www.chewy.com/pethealth/connect-with-a-vet')
+    assert.equal(chewy?.href, 'https://www.chewy.com/pethealth/connect-with-a-vet?campaign=connect')
     assert.equal(chewy?.href.includes('PLACEHOLDER'), false)
     assert.equal(consultLink('/go/amazon-brand/pet+first+aid+kit', {}), null)
   })
@@ -285,7 +285,7 @@ describe('resolveAffiliateHop', () => {
     const routes = {
       chewy: {
         name: 'Chewy Connect',
-        template: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+        template: 'https://www.chewy.com/pethealth/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
         requiresSku: false,
       },
       vetster: {
@@ -295,7 +295,11 @@ describe('resolveAffiliateHop', () => {
       },
     }
     const plain = resolveAffiliateHop({ vendor: 'chewy', sku: 'connect', routes, env: {} })
-    assert.equal(plain.target, 'https://www.chewy.com/pethealth/connect-with-a-vet')
+    assert.equal(plain.target, 'https://www.chewy.com/pethealth/connect-with-a-vet?campaign=connect')
+    const taggedConnect = resolveAffiliateHop({ vendor: 'chewy', sku: 'connect', routes, env: { AFF_CHEWY_TAG: 'chewy-live' } })
+    assert.equal(taggedConnect.target, 'https://www.chewy.com/pethealth/connect-with-a-vet?refid=chewy-live&campaign=connect')
+    assert.equal(new URL(plain.target).pathname, new URL(taggedConnect.target).pathname)
+    assert.equal(new URL(plain.target).pathname, '/pethealth/connect-with-a-vet')
     assert.equal(plain.target.includes('PLACEHOLDER'), false)
     const tagged = resolveAffiliateHop({ vendor: 'vetster', sku: 'telehealth', routes, env: { AFF_VETSTER_TAG: 'vet-live' } })
     assert.equal(tagged.target, 'https://vetster.com/?refid=vet-live&campaign=telehealth')
@@ -308,7 +312,7 @@ describe('resolveAffiliateHop', () => {
     const src = readFileSync(join(root, 'apps/vets-co/src/data/affiliate-routes.ts'), 'utf8')
     assert.match(src, /https:\/\/vetster\.com\/\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/askvet\.app\/\?refid=PLACEHOLDER&campaign=\{sku\}/)
-    assert.match(src, /https:\/\/chewy\.com\/connect-with-a-vet\?refid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/www\.chewy\.com\/pethealth\/connect-with-a-vet\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/lemonade\.com\/pet\?affid=PLACEHOLDER&offer=\{sku\}/)
     assert.match(src, /https:\/\/get\.pumpkin\.care\/quote\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/www\.petsbest\.com\/enroll\?affid=PLACEHOLDER&campaign=\{sku\}/)
