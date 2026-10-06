@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -31,8 +31,8 @@ const PICKS = [
   { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://midwesthomes4pets.com', imageUrl: '', ratingValue: 9.3, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://impactdogcrates.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
+const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://midwesthomes4pets.com', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://impactdogcrates.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
@@ -90,14 +90,12 @@ export default function BestDogCratesPage() {
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
               name="MidWest Homes iCrate"
               subtitle="Divider panel included · Fold-flat · Double door · Best value wire"
-              score={9.3}
               winner
               description={
                 <p>The MidWest iCrate is the default recommendation for house training, travel, and general crating — for good reason. It ships with a divider panel (essential for puppies — use the divider and expand as the puppy grows), folds flat for storage or travel, has both front and side doors, and comes in sizes from 18" to 54". The printed price is $40–80. The value-to-quality ratio is hard to beat among wire crates. Not escape-proof for determined dogs — step up to Impact for that use case.</p>
@@ -125,7 +123,6 @@ export default function BestDogCratesPage() {
               badge="Best Heavy Duty — Escape Artists"
               name="Impact High Anxiety Dog Crate"
               subtitle="Aircraft-grade aluminum · Escape-proof · Lifetime warranty"
-              score={9.4}
               description={
                 <p>For dogs with severe separation anxiety or Houdini-level escape skills, the Impact crate is the best answer. Aircraft-grade aluminum construction, welded joints, reinforced latches — dogs that have destroyed wire crates, plastic crates, and standard heavy-duty options stay contained. Impact backs this with a lifetime warranty. The investment ($300–500) is significant, but it&apos;s frequently the last crate an escape-artist dog owner ever buys. Also used by professional trainers, law enforcement K9 units, and sport dog competitors.</p>
               }
@@ -150,7 +147,6 @@ export default function BestDogCratesPage() {
               badge="Best Airline Crate"
               name="Petmate Sky Kennel"
               subtitle="IATA compliant · Live Animal ventilation · Most airlines accept"
-              score={9.0}
               description={
                 <p>For air travel with a dog in cargo, the Petmate Sky Kennel is a widely accepted airline-approved crate. It meets IATA (International Air Transport Association) Live Animals Regulations, has the required 360° ventilation, and includes the required food and water dishes that attach inside the door. Check your specific airline&apos;s requirements before travel — most follow IATA standards but some have additional requirements. Comes with &quot;Live Animal&quot; stickers and assembly hardware required by most carriers.</p>
               }
@@ -176,7 +172,6 @@ export default function BestDogCratesPage() {
               badge="Best Furniture Style"
               name="Frisco Furniture Style Dog Crate"
               subtitle="Doubles as end table · Wooden exterior · Calm dogs only"
-              score={8.3}
               description={
                 <p>Furniture-style crates blend into living spaces in a way wire crates never will — the Frisco model has a wooden exterior that functions as a side table or TV stand. The trade-off is ventilation (less than wire) and structural strength (not for dogs who chew or push against crate walls). Best suited for calm, crate-trained dogs in homes where aesthetics matter. Not appropriate for puppies, escape artists, or dogs with separation anxiety. A dog that&apos;s content in their crate and not actively trying to escape will be fine — any other situation calls for wire or heavy duty.</p>
               }
@@ -239,20 +234,20 @@ export default function BestDogCratesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {
                   question: 'Which crate does this page pick for house-training a puppy?',
-                  answer: 'The MidWest iCrate, scored 9.3, because it includes a divider. Size the crate to the adult dog and close the divider down while the puppy is small.',
+                  answer: 'The MidWest iCrate, because it includes a divider. Size the crate to the adult dog and close the divider down while the puppy is small.',
                 },
                 {
                   question: 'Which crate does this page pick for airline cargo?',
-                  answer: 'The Petmate Sky Kennel, scored 9.0. The card calls it IATA compliant. It is not the pick for an escape artist.',
+                  answer: 'The Petmate Sky Kennel. The card calls it IATA compliant. It is not the pick for an escape artist.',
                 },
                 {
                   question: 'Which crate does this page pick for an escape artist?',
-                  answer: 'The Impact aluminum crate, scored 9.4. The furniture-style Frisco crate, scored 8.3, is the living-room pick and is not described as chew-resistant.',
+                  answer: 'The Impact aluminum crate. The furniture-style Frisco crate is the living-room pick and is not described as chew-resistant.',
                 },
               ]} />
             </div>
