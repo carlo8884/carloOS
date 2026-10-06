@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Fi Series 3', 'Tractive']
 const itemList = buildItemListSchema({
   name: 'Fi Series 3 or Tractive',
-  items: RANKED.map((name) => ({ name, url: 'https://dog.com/reviews/fi-vs-tractive-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Fi Series 3': 'https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-fi-vs-tractive-guide' }[name] ?? 'https://dog.com/reviews/fi-vs-tractive-guide') })),
 })
 
 export default function FiVsTractiveGuidePage() {
