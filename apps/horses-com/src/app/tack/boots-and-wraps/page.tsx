@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -83,6 +83,7 @@ export default function BootsWrapsPage() {
             { label: "The Dangers of Wrapping Wrong", href: "#dangers" },
             { label: "Do Boots Support Tendons?", href: "#support" },
             { label: "Boot and Wrap Picks", href: "#picks" },
+            { label: "Who should buy which", href: "#who" },
             { label: "FAQ", href: "#faq" },
             { label: "References", href: "#references" },
           ]} />
@@ -206,6 +207,42 @@ export default function BootsWrapsPage() {
             ctaAffiliateProduct="standing-wraps-and-quilts"
           />
 
+          <h2 id="who">Who should buy which</h2>
+          <p>What each option protects, and what it does not, is already on the three cards. Boots stop a strike. They do not brace a tendon.</p>
+          <div className="overflow-x-auto my-6 max-w-full">
+            <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
+              <thead>
+                <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
+                  <th className="p-3 font-bold text-brand-dark">If you need</th>
+                  <th className="p-3 font-bold text-brand-dark">Buy</th>
+                  <th className="p-3 font-bold text-brand-dark">From the card</th>
+                  <th className="p-3 font-bold text-brand-dark">Skip it when</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Everyday protection from interference strikes in schooling</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#brushing-boots" className="text-brand-primary">Synthetic brushing boots</a><TableShopLink href={"/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps"} product={"Synthetic brushing boots"} /></td>
+                  <td className="p-3 text-brand-text-mid">Washable interference protection for flatwork, lunging, and schooling. No genuine tendon support</td>
+                  <td className="p-3 text-brand-text-mid">You need overreach protection for the heels, or you are buying them to brace a tendon. The card says none provides that</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Protection for the heel bulbs when a horse overreaches or pulls a front shoe</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#bell-boots" className="text-brand-primary">Pull-on bell boots</a><TableShopLink href={"/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps"} product={"Pull-on bell boots"} /></td>
+                  <td className="p-3 text-brand-text-mid">Overreach and shoe-pulling protection for jumping and fast work, where overreach risk is higher</td>
+                  <td className="p-3 text-brand-text-mid">The horse does not overreach or pull shoes. Oversized bells can rub, and they need cleaning after muddy work</td>
+                </tr>
+                <tr className="border-b border-brand-border">
+                  <td className="p-3 text-brand-text-mid">Stable or trailer wraps, and you already know how to wrap</td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#standing-wraps" className="text-brand-primary">Standing wraps with quilted liners</a><TableShopLink href={"/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps"} product={"Standing wraps with quilted liners"} /></td>
+                  <td className="p-3 text-brand-text-mid">Stall, travel, and mild swelling. Quilted liner. Only with correct technique</td>
+                  <td className="p-3 text-brand-text-mid">You have not been taught to wrap. Wrapped wrong, they can injure a tendon. Learn hands-on before relying on them</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <ComparisonFoot updated="2026-10-06" />
+
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop related supplies
@@ -224,6 +261,22 @@ export default function BootsWrapsPage() {
 
           </div>
           </div>
+
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            addressOnly
+            title="Save an address with this guide"
+            ctaText="Save my address"
+            source="tack-boots-and-wraps"
+            checklist={[
+              'Boots provide impact protection rather than genuine structural support.',
+              'Synthetic brushing boots are the everyday protection against interference strikes during schooling. Fit them snugly, not tightly, and clean them after each use.',
+              'Bell boots protect the heel bulbs from overreach and help keep a front shoe on.',
+              'Standing wraps are for the stall or trailer, and only after correct wrapping technique is learned hands-on.',
+              'A bandage applied too tightly, unevenly, or without adequate padding can cause a bandage bow.',
+            ]}
+          />
 
           <h2 id="faq">Frequently Asked Questions</h2>
           <FAQAccordion items={FAQS} />
