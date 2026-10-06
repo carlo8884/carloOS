@@ -282,17 +282,23 @@ export function stripPlaceholder(url: string): string {
 }
 
 /**
- * Vetster, AskVet, and Chewy Connect stay live while their tags are unset.
- * The page renders the template with refid=PLACEHOLDER removed. When
- * AFF_VETSTER_TAG, AFF_ASKVET_TAG, or AFF_CHEWY_TAG is set, the same button
- * switches back to the /go hop and the redirect fills that tag.
+ * Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, and Pets Best stay live
+ * while their tags are unset. The page renders the template with the
+ * placeholder id removed. When AFF_VETSTER_TAG, AFF_ASKVET_TAG, AFF_CHEWY_TAG,
+ * AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG, or AFF_PETS_BEST_TAG is set, the same
+ * button switches back to the /go hop and the redirect fills that tag.
  * These strings match apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
  */
 const CONSULT_TEMPLATE: Record<string, string> = {
   vetster: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',
   askvet: 'https://askvet.app/?refid=PLACEHOLDER&campaign={sku}',
   chewy: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+  lemonade: 'https://lemonade.com/pet?affid=PLACEHOLDER&offer={sku}',
+  pumpkin: 'https://get.pumpkin.care/quote?refid=PLACEHOLDER&campaign={sku}',
+  'pets-best': 'https://www.petsbest.com/enroll?affid=PLACEHOLDER&campaign={sku}',
 }
+
+const PLAIN_UNTIL_TAG = new Set(['vetster', 'askvet', 'lemonade', 'pumpkin', 'pets-best'])
 
 export function consultLink(
   href: string,
@@ -303,7 +309,7 @@ export function consultLink(
   const vendor = match[1].toLowerCase()
   const sku = decodeURIComponent(match[2] || '')
   const consult =
-    vendor === 'vetster' || vendor === 'askvet' || (vendor === 'chewy' && sku.toLowerCase() === 'connect')
+    PLAIN_UNTIL_TAG.has(vendor) || (vendor === 'chewy' && sku.toLowerCase() === 'connect')
   if (!consult) return null
   const { tag } = resolveTag(vendor, env)
   if (tag.length > 0) return { href, attributed: true }
@@ -311,6 +317,17 @@ export function consultLink(
   const target = stripPlaceholder(template.split('{sku}').join(encodeURIComponent(sku.replaceAll('+', ' '))))
   if (!target || target.includes('PLACEHOLDER')) return null
   return { href: target, attributed: false }
+}
+
+/** True only when this rendered hop is still /go and that vendor's tag is set. */
+export function hopCommissionReady(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href?.startsWith('/go/')) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1]?.toLowerCase() ?? ''
+  if (!vendor) return false
+  return resolveTag(vendor, env).tag.length > 0
 }
 
 export interface HopResult {
