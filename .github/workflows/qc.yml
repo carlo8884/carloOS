@@ -223,6 +223,18 @@ jobs:
       - name: Run how-we-pick
         run: node scripts/ci/how-we-pick.mjs
 
+  score-creep:
+    name: Editor score creep guard (five earning sites)
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run score-creep guard
+        run: node scripts/ci/score-creep-guard.mjs && node --test scripts/ci/score-creep-guard.test.mjs
+
   new-guide-sitemap:
     name: Round 7–8 guides in apex sitemap (no 404 or redirect chain)
     runs-on: ubuntu-latest
