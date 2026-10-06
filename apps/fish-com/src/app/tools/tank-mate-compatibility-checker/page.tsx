@@ -270,7 +270,7 @@ export default function TankMateCompatibilityPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility"
-              amazonLabel="Browse tropical fish food on Amazon →"
+              amazonLabel="Browse tropical community fish food on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility"
