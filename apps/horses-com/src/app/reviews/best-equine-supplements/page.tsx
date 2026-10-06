@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, ScoreMethodology, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,13 +24,13 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 9.1, reviewCount: 1 })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://www.platinumperformance.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
-const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.6, reviewCount: 1 })
-const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://ker.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1 })
-const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://equithrive.com', imageUrl: '', ratingValue: 8.5, reviewCount: 1 })
-const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://standleeforage.com', imageUrl: '', ratingValue: 8.7, reviewCount: 1 })
-const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', description: 'Sodium-chloride-balanced electrolyte powder for performance and travel.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.3, reviewCount: 1 })
+const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://www.platinumperformance.com', imageUrl: '' })
+const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://ker.com', imageUrl: '' })
+const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://equithrive.com', imageUrl: '' })
+const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://standleeforage.com', imageUrl: '' })
+const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', description: 'Sodium-chloride-balanced electrolyte powder for performance and travel.', url: 'https://www.smartpakequine.com', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema, adamsSchema)
 
 const PICKS = [
@@ -127,7 +127,6 @@ export default function BestEquineSupplementsPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
             <h2>How to Read the Equine Supplement Aisle</h2>
@@ -174,7 +173,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Joint Evidence"
               name="Cosequin ASU Plus (Nutramax)"
               subtitle="Avocado-soybean unsaponifiables + glucosamine + chondroitin · NASC sealed"
-              score={9.1}
               winner
               description={<>
                 <p>Cosequin from Nutramax is among the most-studied equine joint supplement brands. Its ASU formulations have some of the strongest published equine clinical-trial evidence of any oral joint supplement, with chondroprotective effects demonstrated in induced-osteoarthritis models (Kawcak CE et al., <em>American Journal of Veterinary Research</em>, 2007). Nutramax is NASC-sealed and runs its own pharmaceutical-grade manufacturing.</p>
@@ -203,7 +201,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Comprehensive"
               name="Platinum Performance Equine"
               subtitle="Omega-3 + antioxidants + amino acids · Veterinary distribution model"
-              score={9.0}
               description={<>
                 <p>Platinum Performance Equine is the broad-spectrum wellness formulation that the brand built its reputation on. The product combines marine-source omega-3 (DHA + EPA), antioxidant vitamins (E, C), amino acids (lysine, methionine), trace minerals, and joint precursors in a single daily ration top-dress. Platinum&apos;s veterinary-distribution model and its long-standing visibility in upper-level performance barns have established the brand as a default for horses where one comprehensive product is preferred to a stack of single-purpose supplements.</p>
                 <p>The trade-off: Platinum Performance is among the most expensive equine supplements per month, and many of the same nutrient targets can be met more cheaply by combining a marine omega-3, a vitamin E supplement, and a balancer feed. For owners who value the simplicity of one product and the brand&apos;s veterinary positioning, the premium is defensible.</p>
@@ -232,7 +229,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Gastric Adjunct"
               name="SmartPak SmartGut Ultra"
               subtitle="Calcium &amp; magnesium buffering · Glutamine · Sea buckthorn · NASC sealed"
-              score={8.6}
               description={<>
                 <p>SmartGut Ultra is SmartPak&apos;s most comprehensive gastric-support pellet, combining calcium and magnesium (buffering), L-glutamine (mucosal substrate), sea buckthorn berry (modest equine evidence — Huff NK et al., <em>Equine Veterinary Journal</em>, 2012), and additional mucosal-support ingredients. The product is most usefully positioned as an adjunct during high-risk periods (shipping, show seasons, training intensification) or as part of a long-term prevention stack alongside forage-first management.</p>
                 <p>The honest framing: SmartGut Ultra is not a substitute for GastroGard in an actively ulcerated horse. For a horse with diagnosed ulcers, omeprazole is the standard. For a horse at risk who is already on omeprazole or who is in a maintenance phase, SmartGut is a reasonable adjunct.</p>
@@ -261,7 +257,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Marine Omega-3"
               name="KER EO-3 (Kentucky Equine Research)"
               subtitle="Marine DHA + EPA · Equine-research-backed formulation · Liquid"
-              score={8.9}
               description={<>
                 <p>EO-3 from Kentucky Equine Research is the marine omega-3 supplement most often cited in the equine performance and research literature. KER has published extensively on omega-3 metabolism in horses, and the EO-3 product is the formulation used in many of their internal trials. The product is a liquid (top-dressed on the feed) with documented DHA and EPA content per serving.</p>
                 <p>The trade-off: liquid omega-3 products can be messy in winter (viscosity increases at low temperatures) and have a shorter shelf life once opened than pelleted products. Buy in the smallest unit you can use within the recommended use-by window.</p>
@@ -289,7 +284,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Resveratrol"
               name="Equithrive Original Pellets"
               subtitle="Trans-resveratrol · Anti-inflammatory and joint support"
-              score={8.5}
               description={<>
                 <p>Equithrive&apos;s Original Pellets are built around trans-resveratrol, a polyphenol antioxidant that has shown anti-inflammatory effects in equine studies (Watts AE et al., <em>Equine Veterinary Journal</em>, multiple). The brand was founded by a veterinarian at the University of Kentucky and has been one of the more research-active US equine supplement companies. Equithrive products are NASC sealed.</p>
                 <p>Resveratrol is more usefully framed as a complement to (rather than substitute for) traditional joint-supplement ingredients. Horses with mild joint inflammation or post-injection support needs are the most common use case.</p>
@@ -318,7 +312,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Forage Products"
               name="Standlee Premium Forage"
               subtitle="Premium alfalfa, timothy, orchard grass · Pelleted, cubed, and baled"
-              score={8.7}
               description={<>
                 <p>Standlee Premium Forage is a widely-stocked US brand for shelf-stable, consistent-quality forage products — pelleted alfalfa, alfalfa-orchard blends, timothy pellets and cubes, beet pulp, and various forage-extender products. The product line is most useful for horses needing soaked forage (senior horses with dental compromise, post-colic recovery, travel where local hay quality is unpredictable) and for owners using alfalfa as a pre-exercise gastric buffer.</p>
                 <p>Standlee is not a "supplement" in the traditional sense, but it earns mention here because the forage stack is the foundation of all equine nutrition decisions, and standardized commercial forage products solve real ration consistency problems that no pelleted supplement can address.</p>
@@ -346,7 +339,6 @@ export default function BestEquineSupplementsPage() {
               badge="Best Electrolyte"
               name="Adams Plus Equine Electrolyte"
               subtitle="Sodium chloride balanced with potassium · For performance and travel"
-              score={8.3}
               description={<>
                 <p>Electrolyte replacement is the most evidence-grounded supplement category — the science is straightforward sodium, chloride, and potassium replacement to match sweat losses during work, travel, or heat stress. Adams Plus Equine Electrolyte is a reliable, NASC-sealed, sodium-chloride-balanced product with potassium adjustment that suits routine performance and travel use.</p>
                 <p>The category is largely commoditized — most established brands deliver the same basic ingredients at similar prices. The product to avoid is the high-sugar "energy drink" style equine electrolyte, which delivers more dextrose than electrolyte and can produce paradoxical gastric injury when given as paste on dry mucosa.</p>
@@ -425,7 +417,7 @@ export default function BestEquineSupplementsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-05" />
+            <ComparisonFoot updated="2026-10-06" />
             <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
 
             <h2>What to Avoid</h2>
