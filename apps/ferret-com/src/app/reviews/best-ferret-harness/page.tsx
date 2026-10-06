@@ -106,7 +106,7 @@ const faqSchema = buildFAQSchema({ questions: FAQS })
 const combined = combineSchemas(schema, breadcrumbSchema, itemList, faqSchema, ...products)
 
 const QUICK_PICKS = [
-  { label: 'Best Escape Resistance', name: 'Jacket / Vest Harness', subtitle: 'Wide panel · Hardest to back out of', href: '#jacket' },
+  { label: 'Best Escape Resistance', name: 'Jacket / Vest Harness', subtitle: 'Wide panel · Hardest to back out of', href: '#jacket', pickHop: '/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' },
   { label: 'Best Adjustability', name: 'Adjustable H-Style', subtitle: 'Multi-point fit · Lightweight', href: '#h-style' },
   { label: 'Entry / Bundle', name: 'Mesh H + Leash Set', subtitle: 'Breathable · Leash included', href: '#mesh-h' },
 ]
@@ -119,6 +119,11 @@ export default function BestFerretHarnessPage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof vest jacket ferret harness on Amazon' />}
+        heroExtra={
+          <div className="[&_.text-brand-primary]:!text-brand-dark">
+            <QuickPicks items={QUICK_PICKS} embedded />
+          </div>
+        }
         hero={{
           title: 'Best Ferret Harness: Escape Prevention and Fit',
           subtitle:
@@ -178,8 +183,6 @@ export default function BestFerretHarnessPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
-
-          <QuickPicks items={QUICK_PICKS} />
 
           <p>
             A ferret harness is unusual among pet gear in that nearly everything about choosing one reduces to a single

@@ -34,7 +34,7 @@ const eheimSchema = buildProductSchema({
 const schema = combineSchemas(articleSchema, eheimSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim' },
+  { label: 'Best Overall', name: 'Eheim Jager', subtitle: 'Most accurate · Recalibratable', href: '#eheim', pickHop: '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' },
   { label: 'Best Flat Design', name: 'Cobalt Neo-Therm', subtitle: 'Slim profile · LED indicator', href: '#cobalt' },
   { label: 'Best Canister Inline', name: 'Hydor Inline', subtitle: 'No heater in tank · For canister setups', href: '#hydor' },
   { label: 'Best Budget', name: 'Aqueon Pro', subtitle: 'Shatterproof · $18–30', href: '#aqueon' },
