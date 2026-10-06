@@ -11,9 +11,9 @@ import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
-/** Existing product hop beside a Best Overall quick pick. Same line as the method link. */
-function QuickPickShopLink({ label, href }: { label?: string; href?: string }) {
-  if (label !== 'Best Overall' || !href) return null
+/** Existing product hop on the quick pick that sets pickHop. */
+function QuickPickShopLink({ href }: { href?: string }) {
+  if (!href) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
   const hop = visibleShopHref(href)
   if (!hop) return null
@@ -305,7 +305,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
-              <QuickPickShopLink label={item.label} href={item.pickHop} />
+              <QuickPickShopLink href={item.pickHop} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

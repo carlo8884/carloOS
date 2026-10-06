@@ -10,7 +10,7 @@ const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness'
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
 
 const PICKS = [
-  { label: 'Best No-Pull', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk' },
+  { label: 'Best No-Pull', name: 'PetSafe Easy Walk', subtitle: 'Front-clip · Redirects pulling · No pain', href: '#easy-walk', pickHop: '/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' },
   { label: 'Best Outdoor', name: 'Ruffwear Front Range', subtitle: 'Two-clip · Padded · Hiking-rated', href: '#ruffwear' },
   { label: 'Best Escape-Proof', name: 'Julius-K9 IDC Powerharness', subtitle: 'Heavy-duty · Escape-resistant · Velcro patches', href: '#julius' },
   { label: 'Best for Puppies', name: 'PetSafe Sure-Fit', subtitle: 'Adjustable · Grows with puppy', href: '#puppy' },

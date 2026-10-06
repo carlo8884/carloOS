@@ -9,7 +9,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews
 const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies' },
+  { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies', pickHop: '/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' },
   { label: 'Best Natural', name: 'Whimzees', subtitle: 'Plant-based · VOHC accepted · Longer chew time', href: '#whimzees' },
   { label: 'Best Enzymatic', name: 'Virbac CET Enzymatic', subtitle: 'Dual enzyme system · Vet brand · Rawhide-based', href: '#virbac' },
 ]

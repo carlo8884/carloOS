@@ -8,7 +8,7 @@ const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Bright Mind Adult 7
 const hillsSchema = buildProductSchema({ name: "Hill's Science Diet Adult 7+ Senior", description: 'veterinarian-formulated senior formula with antioxidant blend and easy-to-digest proteins.', url: 'https://hillspet.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, ppSchema, hillsSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Purina Pro Plan Bright Mind 7+', subtitle: 'Clinical trial data · Cognitive support · WSAVA', href: '#bright-mind' },
+  { label: 'Best Overall', name: 'Purina Pro Plan Bright Mind 7+', subtitle: 'Clinical trial data · Cognitive support · WSAVA', href: '#bright-mind', pickHop: '/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' },
   { label: "Best Hill's", name: "Hill's Science Diet Senior 7+", subtitle: 'Antioxidant blend · veterinarian-formulated · Widely available', href: '#hills' },
   { label: 'Best Royal Canin', name: 'Royal Canin Aging Care', subtitle: 'Research-backed · Small/medium/large versions', href: '#royal-canin' },
 ]

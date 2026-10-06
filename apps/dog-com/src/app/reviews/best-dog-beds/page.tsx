@@ -13,7 +13,7 @@ const furhavenSchema = buildProductSchema({ name: 'Furhaven Orthopedic Dog Bed',
 const bestFriendsSchema = buildProductSchema({ name: 'Best Friends by Sheri OrthoComfort Bolster Bed', description: 'Donut-shape bolster dog bed with washable design, suited to dogs that prefer to curl up.', imageUrl: '' })
 const allSchemas = combineSchemas(schema, bigBarkerSchema, casperSchema, furhavenSchema, bestFriendsSchema)
 const PICKS = [
-  { label: 'Best Orthopedic', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker' },
+  { label: 'Best Orthopedic', name: 'Big Barker 7" Orthopedic', subtitle: 'Clinical data · Large/giant breeds · 10-year warranty', href: '#big-barker', pickHop: '/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds' },
   { label: 'Best Premium', name: 'Casper Dog Bed', subtitle: 'Washable cover · Durable foam · All sizes', href: '#casper' },
   { label: 'Best Budget', name: 'Furhaven Orthopedic', subtitle: 'Multiple sizes · Affordable · Decent foam', href: '#by-dog-type' },
   { label: 'Best Bolster', name: 'Best Friends by Sheri OrthoComfort', subtitle: 'Donut shape · Anxiety reduction · Washable', href: '#by-dog-type' },
