@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'fish-com',
   title: 'Best heater for a display tank',
-  description: 'Cobalt Neo-Therm for a display tank, Eheim Jager when glass is acceptable, Hydor when a canister can hide the heater.',
+  description: 'The review ranks the Cobalt Neo-Therm for a display tank. The shop link searches for the Eheim Jager. Hydor stays out of sight when a canister can hide the heater.',
   url: 'https://fish.com/reviews/best-display-tank-heater-guide',
   imageUrl: '',
   authorName: 'Fish.com Editorial',
@@ -24,7 +24,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which heater does the review pick when the tank is a display?',
-    answer: 'The Cobalt Aquatics Neo-Therm Pro, the best flat heater. It lists ±0.5°F, a shatterproof plastic housing, an LED that moves from blue to white, and a price of $35–65. It is not recalibratable.',
+    answer: 'The review ranks the Cobalt Aquatics Neo-Therm Pro as the best flat heater. It lists ±0.5°F, a shatterproof plastic housing, an LED that moves from blue to white, and a price of $35–65. It is not recalibratable. The shop link on this page searches for the Eheim Jager, because a Cobalt Neo-Therm Pro search returned no products.',
   },
   {
     question: 'Does the glass heater match that accuracy?',
@@ -75,7 +75,7 @@ export default function DisplayTankHeaterGuidePage() {
           ]}
         />
       }
-     priceAsOf="2026-10-05">
+     priceAsOf="2026-10-06">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-aquarium-heaters">heater review</Link> ranks four heaters. For a planted or display tank, the decision is whether a glass tube in the corner is acceptable. Wattage is a separate decision. Use the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the tank volume, then come back here for the body style. Choose the wattage in the calculator, then come back for the heater shape.</p>
         <h2>Flat and shatterproof: Cobalt Neo-Therm Pro</h2>
@@ -85,7 +85,7 @@ export default function DisplayTankHeaterGuidePage() {
         <h2>No heater in the scape: Hydor inline</h2>
         <p>If the tank already has a canister, the Hydor inline heater is the way to keep the heater out of the picture. It heats water on the return hose, at $40–70. The review says temperature spreads from the filter return, and that the heater is incompatible with a hang-on-back or a sponge. Do not buy it for a tank that only has an AquaClear.</p>
         <h2>Who should buy which</h2>
-        <p>Buy the Cobalt if the tank is a display and you want the published ±0.5°F figure without glass. Buy the Eheim if you want that figure plus a recalibration dial and you accept glass. Buy the Hydor only with a canister. The Aqueon Pro, at $18–30, is shatterproof and widely stocked, but the review quotes ±1–1.5°F and says it is the wrong heater for discus, cardinal tetras, and other tight-range animals. A display of those species is not the budget heater.</p>
+        <p>The review ranks the Cobalt for a display when you want the published ±0.5°F figure without glass. Buy the Eheim if you want that figure plus a recalibration dial and you accept glass. Buy the Hydor only with a canister. The Aqueon Pro, at $18–30, is shatterproof and widely stocked, but the review quotes ±1–1.5°F and says it is the wrong heater for discus, cardinal tetras, and other tight-range animals. A display of those species is not the budget heater.</p>
         <AffiliateDisclosure variant="inline" siteId="fish-com" />
         <p>The link below searches for the Eheim Jager, the glass heater the review ranks best overall.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-display-tank-heater-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
