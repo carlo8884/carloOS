@@ -10,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   ShopCtas,
   CrossPortfolioCard,
@@ -563,13 +562,11 @@ export default function FerretAgingPage() {
           <p>
             Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less. This is a documented-spec comparison; the page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="floor-level-hammock"
             badge="Senior Comfort"
             name="Floor-Level Fleece Sleep Sack / Low Hammock"
             subtitle="Soft, low-entry sleep setup so an arthritic senior does not have to climb"
-            score={8.5}
             winner
             description={
               <p>Most ferrets sleep in elevated hammocks throughout their adult lives. Arthritic and frail seniors often stop being able to climb into them comfortably and either give up sleeping in the hammock (and sleep on hard cage floor) or fall when trying. A floor-level soft sleep sack — a fleece "cube" or pillow-style bed — fixes the comfort problem. Multiple sleeping spots at floor level around the home and inside the cage is one of the highest-impact husbandry changes a senior-ferret keeper can make.</p>

@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -219,13 +219,11 @@ export default function ReadingFoodLabelsPage() {
           <p>
             To see what a panel that passes all the checks above looks like, here is one commercial diet whose published ingredient list reads as named animal proteins with no grain or plant-protein filler. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="wysong-epigen-90"
             badge="Clean Panel"
             name="Wysong Epigen 90"
             subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
-            score={9.1}
             winner
             description={
               <p>A worked example of a panel that survives every check on this page: animal proteins lead, there is no grain or plant-protein concentrate splitting the list, no added sugar, and the carbohydrate-by-difference estimate lands in the single digits. Read it as a template for what a good ferret panel looks like, then hold any other bag to the same standard using the method above.</p>

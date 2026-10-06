@@ -10,7 +10,6 @@ import { TableShopLink, ComparisonFoot,
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
@@ -540,7 +539,6 @@ export default function FerretBathingGroomingPage() {
           <p>
             A minimal kit that covers occasional bathing, monthly ear cleaning, and every-2–3-week nail trims. This is a documented-spec comparison drawing on widely-stocked products in US pet retail and the shampoo and ear-product categories referenced in standard exotic-pet practice; the page does not claim hands-on testing. Avoid any shampoo containing tea tree oil — it is toxic to ferrets.
           </p>
-          <ScoreMethodology />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <a href="/care/odor-and-scent-control" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
               Read the odor guide before you add a bath →
@@ -551,7 +549,6 @@ export default function FerretBathingGroomingPage() {
             badge="Shampoo Default"
             name="Marshall Ferret Shampoo (Original / Fragrance-Free)"
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
-            score={8.5}
             winner
             description={
               <p>Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free SKUs and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
@@ -575,7 +572,6 @@ export default function FerretBathingGroomingPage() {
             badge="Ear Care"
             name="Vet-Approved Pet Ear Cleaner (Epi-Otic style)"
             subtitle="Gentle pet ear cleaner used in exotic-pet practice"
-            score={8.4}
             description={
               <p>A standard veterinary ear cleaner is the right tool for routine ferret ear cleaning every 2–4 weeks. Apply to a cotton ball or gauze pad — never directly into the canal — and wipe the visible ear flap and canal entrance. Do not use human ear products, alcohol, or hydrogen peroxide. If you see dark coffee-ground debris (possible ear mites) or coloured discharge, stop and book an exotic-pet vet visit before continuing home cleaning.</p>
             }
@@ -598,7 +594,6 @@ export default function FerretBathingGroomingPage() {
             badge="Nail Care"
             name="Small-Pet Nail Clippers + Styptic Powder"
             subtitle="Small clippers sized for ferret nails plus styptic for accidents"
-            score={8.0}
             description={
               <p>Ferret nails are non-retractable and grow continuously — every 2–3 weeks is the standard trim cadence. Use small pet nail clippers (not human clippers; the geometry is wrong). Keep styptic powder (Kwik Stop or equivalent) on hand for the occasional quick — apply a small amount to the bleeding end and bleeding stops within seconds. The belly-treat two-person method described in the nail-trim section above keeps the ferret cooperative.</p>
             }
@@ -617,7 +612,7 @@ export default function FerretBathingGroomingPage() {
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>The three grooming cards already name the tool, the price, and what it does not treat. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>The three grooming cards already name the tool, the price, and what it does not treat. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -650,7 +645,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

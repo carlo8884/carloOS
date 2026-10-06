@@ -10,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
@@ -304,7 +303,6 @@ export default function FerretDIYEnrichmentPage() {
           <p>
             Most enrichment is best built at home, but the two items below are worth buying: ferret-specific tunnels that fit the body diameter correctly, and a snuffle mat for foraging. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
               Pair these toys with an out-of-cage routine →
@@ -315,7 +313,6 @@ export default function FerretDIYEnrichmentPage() {
             badge="Tunnel Set"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
-            score={8.6}
             winner
             description={
               <p>DIY tunnels (dryer hose, cardboard tubes) are genuinely good, but the Marshall set earns its place because the fabric diameter is designed for ferret bodies, it chains to itself for longer circuits, and it folds flat when not in use. A length of dryer hose and a cardboard tunnel box are excellent supplements; the Pop-N-Play is the better primary tunnel for consistent daily use.</p>
@@ -340,7 +337,6 @@ export default function FerretDIYEnrichmentPage() {
             badge="Foraging"
             name="Snuffle Mat (Dog/Small-Pet)"
             subtitle="Rubber-backed fabric mat with pockets for hiding treats — nose-work puzzle"
-            score={7.8}
             description={
               <p>A snuffle mat — the kind sold for dogs — works well for ferrets as a foraging puzzle. Tuck small, high-protein treat pieces into the fabric pockets; the ferret roots them out by scent. Mental exercise in five minutes. Avoid mats with loose rubber loops or stringy fabric the ferret can chew off and swallow. Look for a mat with dense, firmly attached fabric strips and a solid rubber base.</p>
             }

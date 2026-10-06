@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,13 +134,11 @@ export default function WeightManagementPage() {
           <p>
             Tracking weight in grams is far more sensitive than judging by eye, and it turns a vague impression into a trend line that flags a meaningful change early. A small digital kitchen or pet scale with a gram readout and a tare function is all you need. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="digital-gram-scale"
             badge="Tracking Tool"
             name="Digital Gram Scale (Kitchen / Small-Pet)"
             subtitle="Gram-precision weighing with tare — catches trends a hand cannot"
-            score={8.7}
             winner
             description={
               <p>A compact digital scale that reads in grams lets you weigh a ferret every week or two and log the trend. A tare function lets you zero out a small container or towel so a wriggly ferret stays put on the platform. For a senior ferret or one with a known condition, this is one of the cheapest and most useful monitoring tools an owner has — steady seasonal curves look very different from a sudden drop.</p>

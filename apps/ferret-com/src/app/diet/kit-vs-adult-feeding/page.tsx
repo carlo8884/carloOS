@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -145,13 +145,11 @@ export default function KitVsAdultFeedingPage() {
           <p>
             Whichever life stage your ferret is in, a ferret-specific kibble that hits the macronutrient window is a sound foundation — and rotating two or three such diets from kithood is the best defense against food fixation. The pick below is one widely stocked option; pair it with a second appropriate brand for variety. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="marshall-premium-diet"
             badge="Ferret-Specific Diet"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
-            score={8.0}
             description={
               <p>Formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a sensible component of the two-to-three-brand rotation this page recommends to prevent food fixation. The ingredient panel is imperfect (some plant protein) but acceptable for healthy animals, and it is widely available at short notice.</p>
             }

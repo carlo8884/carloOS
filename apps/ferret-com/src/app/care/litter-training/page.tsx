@@ -9,7 +9,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
@@ -519,13 +518,11 @@ export default function FerretLitterTrainingPage() {
           <p>
             Two staples that line up with the substrate and pan-shape recommendations above. This is a documented-spec comparison drawing on widely-stocked products in US pet retail; this page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="marshall-corner-pan"
             badge="Pan Shape Default"
             name="Marshall Lock-N-Litter Corner Pan"
             subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
-            score={8.8}
             winner
             description={
               <p>The reference ferret corner pan in US pet retail. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
@@ -550,7 +547,6 @@ export default function FerretLitterTrainingPage() {
             badge="Substrate Default"
             name="Yesterday's News Recycled Paper-Pellet Litter"
             subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
-            score={9.0}
             description={
               <p>The default substrate recommended across exotic-pet veterinary practice and ferret-keeper communities. Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Slightly more expensive per pound than kiln-dried wood pellets, but ferret tolerance and household odour control are both notably better.</p>
             }

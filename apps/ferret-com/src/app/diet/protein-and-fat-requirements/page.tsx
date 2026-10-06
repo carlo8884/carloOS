@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -184,13 +184,11 @@ export default function ProteinAndFatRequirementsPage() {
           <p>
             The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble whose published panel lands close to the high-protein, very-low-carbohydrate target — included on its documented spec, not a hands-on test. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="wysong-epigen-90"
             badge="Hits the Window"
             name="Wysong Epigen 90"
             subtitle="Animal-first, starch-free — protein high, carbohydrate in single digits"
-            score={9.2}
             winner
             description={
               <p>A worked example of the target window in a real product: protein well above the 32–40% floor, animal-sourced throughout, and carbohydrate by difference driven into the low single digits by a starch-free system. It illustrates what the abstract targets on this page look like on an actual ingredient panel, and it is the default low-carb choice when insulinoma risk is the priority.</p>
