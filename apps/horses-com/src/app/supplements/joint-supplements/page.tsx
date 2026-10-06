@@ -30,7 +30,7 @@ const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', 
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
 
 const PICKS = [
-  { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · Best-studied combination', href: '#cosequin-asu' },
+  { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · Best-studied combination', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },
   { label: 'Best Comprehensive', emoji: '◎', name: 'Platinum Performance CJ', subtitle: 'Whole-system formula · Auto-ship subscription', href: '#platinum-cj' },
   { label: 'Best Senior', emoji: '🐴', name: 'SmartFlex Senior', subtitle: 'Glucosamine + chondroitin + MSM + HA · Senior dosing', href: '#smartflex' },
   { label: 'Reference: Omega-3', emoji: '🐟', name: 'Marine-source DHA/EPA', subtitle: 'Flax is not equivalent · Marine source matters', href: '#omega-3' },
@@ -47,6 +47,9 @@ export default function JointSupplementsPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
+        <div className="[&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} embedded />
+        </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The equine joint-supplement market is large, lightly regulated, and dominated by marketing claims that outpace the data. This guide grades each ingredient by what the peer-reviewed literature actually supports — plus the prohibited-substance footnote that every competitive rider needs to know.
         </p>
@@ -63,8 +66,6 @@ export default function JointSupplementsPage() {
           priority
         />
       </div>
-
-      <QuickPicks items={PICKS} />
 
       <nav className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
