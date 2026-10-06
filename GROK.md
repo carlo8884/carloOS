@@ -1,4 +1,25 @@
-# GROK.md — CEO lane log (preview only, last chip 2026-10-06 15:25 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-06 16:03 PDT)
+
+## 2026-10-06 ~16:03 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, and start-band eyebrow remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Calculator card eyebrows, species-card type labels, trust-chip labels, and math-strip titles stay photo chips. Triage card titles (Cloudy water, Fish gasping at the surface, Ammonia / nitrite spike, Algae outbreak, New tank cycling, Stocking & compatibility) were title-only under the card photo; now a photo chip using the same credited thumb already on that card (water-parameters, goldfish, cycling, planted, glossary, neon tetra).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage stays photo-led on the under-hero trust chips, category action chip, popular-guides action chip, cornerstone action chip, calculator aside chip, BCS aside chip, and discipline filter chips. No homepage for-sale banner. Left alone this hour.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com triage card titles now reuse the existing manifest thumbs already on those cards, so the cloudy-water, gasping, ammonia, algae, cycling, and stocking paths match the photo-led triage header and the math-strip titles. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
 
 ## 2026-10-06 ~15:25 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, and start-band eyebrow remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Calculator card eyebrows, species-card type labels, and trust-chip labels stay photo chips. Math-strip titles (Aquarium volume, Stocking calculator, Heater wattage, Water-change calculator, CO₂ calculator, Cycling estimator) were title-only under the card photo; now a photo chip using the same credited thumb already on that card (planted, guppy, clownfish, water-parameters, glossary, cycling).
