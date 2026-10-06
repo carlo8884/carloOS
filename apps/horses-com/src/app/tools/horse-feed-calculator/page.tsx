@@ -130,6 +130,11 @@ export default function HorseFeedCalculatorPage() {
         { title: 'Horse Gestation Calculator', href: '/tools/horse-gestation-calculator', category: 'Tools' },
         { title: 'Forage Basics', href: '/nutrition/forage-basics' },
       ]}
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Horse Feed & Hay Calculator',
         subtitle:
@@ -201,14 +206,13 @@ export default function HorseFeedCalculatorPage() {
           ration on forage and add concentrates only to fill the gap.
         </p>
 
-        <h2 id="calculator">The calculator</h2>
+        <h2>The calculator</h2>
         <p>
           Enter the horse&rsquo;s bodyweight, choose its workload and keeper type, and the calculator
           returns a total daily dry-matter range plus a forage baseline. Don&rsquo;t have a weight?
           Estimate it first with the{' '}
           <Link href="/tools/horse-weight-calculator">horse weight calculator</Link>.
         </p>
-        <Calculator />
         <JourneyNext
           siteId="horses-com"
           nextHref="/nutrition/forage-basics"

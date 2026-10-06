@@ -13,7 +13,10 @@ export default function HorseWaterCalculator() {
   const high = result ? result.highGal.toFixed(1) : ''
 
   return (
-    <form className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+    <form className="not-prose mt-0 mb-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+      {result ? (
+        <ResultPick linkFirst siteId="horses-com" pick={horseWaterPick(freezing, low, high)} />
+      ) : null}
       <label className="block text-sm font-semibold text-brand-dark">
         Body weight (lb)
         <input className="mt-1 min-h-11 w-full rounded-md border border-brand-border px-3" inputMode="decimal" value={weight} onChange={(e) => setWeight(e.target.value)} />
@@ -32,7 +35,6 @@ export default function HorseWaterCalculator() {
           <p className="mt-3 text-sm">
             <a href="/nutrition/water-requirements" className="font-semibold text-brand-primary underline underline-offset-2">Read the water requirements guide →</a>
           </p>
-          <ResultPick siteId="horses-com" pick={horseWaterPick(freezing, low, high)} />
         </div>
       ) : null}
     </form>

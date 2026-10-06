@@ -136,6 +136,9 @@ export default function Calculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {result ? (
+        <ResultPick linkFirst siteId="horses-com" pick={foragePick(`${fmt(result.forageMin)}+`, wl.label)} />
+      ) : null}
       {/* Unit toggle */}
       <div className="mb-6 flex flex-wrap items-center gap-2">
         <span className="text-xs font-semibold uppercase tracking-wide text-brand-text-mid">
@@ -265,7 +268,6 @@ export default function Calculator() {
         <p className="mt-3 text-sm">
           <a href="/nutrition/forage-basics" className="font-semibold text-brand-primary underline underline-offset-2">Read forage basics →</a>
         </p>
-        <ResultPick siteId="horses-com" pick={foragePick(`${fmt(result.forageMin)}+`, wl.label)} />
         </>
       )}
 
