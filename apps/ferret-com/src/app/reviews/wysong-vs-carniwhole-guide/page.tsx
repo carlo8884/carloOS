@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Wysong Epigen 90', 'Carniwhole']
 const itemList = buildItemListSchema({
   name: 'Wysong or Carniwhole',
-  items: RANKED.map((name) => ({ name, url: 'https://ferret.com/reviews/wysong-vs-carniwhole-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Wysong Epigen 90': 'https://ferret.com/go/wysong/epigen-90?s=reviews-wysong-vs-carniwhole-guide' }[name] ?? 'https://ferret.com/reviews/wysong-vs-carniwhole-guide') })),
 })
 
 export default function WysongVsCarniwholeGuidePage() {

@@ -43,7 +43,7 @@ const FAQS = [
 const RANKED = ['Trupanion', 'Figo']
 const itemList = buildItemListSchema({
   name: 'Trupanion or Figo',
-  items: RANKED.map((name) => ({ name, url: 'https://vets.co/reviews/trupanion-vs-figo-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Trupanion': 'https://vets.co/go/trupanion/home?s=reviews-trupanion-vs-figo-guide' }[name] ?? 'https://vets.co/reviews/trupanion-vs-figo-guide') })),
 })
 
 export default function TrupanionVsFigoGuidePage() {

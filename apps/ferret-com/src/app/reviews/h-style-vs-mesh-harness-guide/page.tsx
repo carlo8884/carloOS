@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Adjustable H-Style Harness', 'Figure-H Mesh Harness']
 const itemList = buildItemListSchema({
   name: 'H-Style or Mesh Harness',
-  items: RANKED.map((name) => ({ name, url: 'https://ferret.com/reviews/h-style-vs-mesh-harness-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Adjustable H-Style Harness': 'https://ferret.com/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-h-style-vs-mesh-harness-guide' }[name] ?? 'https://ferret.com/reviews/h-style-vs-mesh-harness-guide') })),
 })
 
 export default function HStyleVsMeshGuidePage() {

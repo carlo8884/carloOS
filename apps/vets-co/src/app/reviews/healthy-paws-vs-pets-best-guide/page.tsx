@@ -43,7 +43,7 @@ const FAQS = [
 const RANKED = ['Healthy Paws', 'Pets Best']
 const itemList = buildItemListSchema({
   name: 'Healthy Paws or Pets Best',
-  items: RANKED.map((name) => ({ name, url: 'https://vets.co/reviews/healthy-paws-vs-pets-best-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Healthy Paws': 'https://vets.co/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide' }[name] ?? 'https://vets.co/reviews/healthy-paws-vs-pets-best-guide') })),
 })
 
 export default function HealthyPawsVsPetsBestGuidePage() {
