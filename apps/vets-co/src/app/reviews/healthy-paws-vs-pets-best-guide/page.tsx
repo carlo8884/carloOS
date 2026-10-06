@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 // Request-time env, same as the insurance comparison. A set partner tag
 // renders the quote link; an unset tag stays a disabled button.
@@ -60,6 +61,7 @@ export default function HealthyPawsVsPetsBestGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />}
+      heroExtra={<HopDisclosure siteId="vets-co" href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-pets-best-guide" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
