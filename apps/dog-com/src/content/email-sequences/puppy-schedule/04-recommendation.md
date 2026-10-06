@@ -22,9 +22,7 @@ Most "puppy starter kit" lists run 30 items. Most of those 30 things gather dust
 
 **7. Pet insurance, signed up before the first vet visit.** Most policies exclude anything diagnosed before enrollment. We've covered the comparison in detail; the short version is Lemonade and Pumpkin both score well for new puppy owners.
 
-We've put the whole kit into a single curated bundle on Chewy with our current top picks for each slot:
-
-[Get the Dog.com Puppy Starter Kit on Chewy →](https://dog.com/go/chewy/puppy-starter-kit)
+The supplies above are the kit. Dog.com does not sell them as one Chewy bundle. The [new puppy checklist](https://dog.com/tools/new-puppy-checklist) lists the same jobs on the site.
 
 And for the insurance piece:
 
