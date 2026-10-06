@@ -289,7 +289,7 @@ export default function EquineDentalCarePage() {
           <p>The deciduous premolars (&ldquo;caps&rdquo;) should shed as the permanent premolars erupt beneath them. Retained caps can cause pain, malocclusion, and bit resistance in young horses. Removal at routine dental examination is straightforward.</p>
 
           <h2 id="cost">Cost &amp; Choosing a Practitioner</h2>
-          <p>Approximate US costs for routine equine dentistry (regional variation; includes farm call):</p>
+          <p>Approximate US costs for routine equine dentistry (regional variation; includes farm call). These ranges are dated 2026-05-28:</p>
           <ul>
             <li><strong>Sedated annual float, no complications:</strong> $150–300.</li>
             <li><strong>Wolf-tooth extraction (added to a routine visit):</strong> $50–150 total.</li>
