@@ -169,7 +169,7 @@ export default function SeparationAnxietyPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=training-sep-anxiety"
-              amazonLabel="Browse stuffable Kong toys on Amazon →"
+              amazonLabel="Browse stuffable Kong classic toys on Amazon →"
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/snuffle+mat+dog+enrichment?s=training-sep-anxiety"
