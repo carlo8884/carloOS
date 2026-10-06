@@ -282,11 +282,13 @@ export function stripPlaceholder(url: string): string {
 }
 
 /**
- * Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, and Pets Best stay live
- * while their tags are unset. The page renders the template with the
- * placeholder id removed. When AFF_VETSTER_TAG, AFF_ASKVET_TAG, AFF_CHEWY_TAG,
- * AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG, or AFF_PETS_BEST_TAG is set, the same
- * button switches back to the /go hop and the redirect fills that tag.
+ * Vetster, AskVet, Chewy Connect, Lemonade, Pumpkin, Pets Best, Spot,
+ * ManyPets, Figo, and ASPCA stay live while their tags are unset. The page
+ * renders the template with the placeholder id removed. When AFF_VETSTER_TAG,
+ * AFF_ASKVET_TAG, AFF_CHEWY_TAG, AFF_LEMONADE_TAG, AFF_PUMPKIN_TAG,
+ * AFF_PETS_BEST_TAG, AFF_SPOT_TAG, AFF_MANYPETS_TAG, AFF_FIGO_TAG, or
+ * AFF_ASPCA_TAG is set, the same button switches back to the /go hop and the
+ * redirect fills that tag. Trupanion, Healthy Paws, and Embrace stay held.
  * These strings match apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
  */
 const CONSULT_TEMPLATE: Record<string, string> = {
@@ -296,9 +298,23 @@ const CONSULT_TEMPLATE: Record<string, string> = {
   lemonade: 'https://lemonade.com/pet?affid=PLACEHOLDER&offer={sku}',
   pumpkin: 'https://get.pumpkin.care/quote?refid=PLACEHOLDER&campaign={sku}',
   'pets-best': 'https://www.petsbest.com/enroll?affid=PLACEHOLDER&campaign={sku}',
+  spot: 'https://quote.spotpet.com/?refid=PLACEHOLDER&offer={sku}',
+  manypets: 'https://manypets.com/us/?affid=PLACEHOLDER&campaign={sku}',
+  figo: 'https://figopetinsurance.com/get-started?refid=PLACEHOLDER&campaign={sku}',
+  aspca: 'https://www.aspcapetinsurance.com/quote/?refid=PLACEHOLDER&campaign={sku}',
 }
 
-const PLAIN_UNTIL_TAG = new Set(['vetster', 'askvet', 'lemonade', 'pumpkin', 'pets-best'])
+const PLAIN_UNTIL_TAG = new Set([
+  'vetster',
+  'askvet',
+  'lemonade',
+  'pumpkin',
+  'pets-best',
+  'spot',
+  'manypets',
+  'figo',
+  'aspca',
+])
 
 export function consultLink(
   href: string,

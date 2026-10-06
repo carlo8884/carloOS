@@ -312,6 +312,10 @@ describe('resolveAffiliateHop', () => {
     assert.match(src, /https:\/\/lemonade\.com\/pet\?affid=PLACEHOLDER&offer=\{sku\}/)
     assert.match(src, /https:\/\/get\.pumpkin\.care\/quote\?refid=PLACEHOLDER&campaign=\{sku\}/)
     assert.match(src, /https:\/\/www\.petsbest\.com\/enroll\?affid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/quote\.spotpet\.com\/\?refid=PLACEHOLDER&offer=\{sku\}/)
+    assert.match(src, /https:\/\/manypets\.com\/us\/\?affid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/figopetinsurance\.com\/get-started\?refid=PLACEHOLDER&campaign=\{sku\}/)
+    assert.match(src, /https:\/\/www\.aspcapetinsurance\.com\/quote\/\?refid=PLACEHOLDER&campaign=\{sku\}/)
   })
 
   it('keeps unset Lemonade, Pumpkin, and Pets Best quotes as plain links', () => {
@@ -334,6 +338,27 @@ describe('resolveAffiliateHop', () => {
     assert.equal(consultLink(href, { AFF_LEMONADE_TAG: 'lem-live' })?.href, href)
     assert.equal(consultLink('/go/pumpkin/home?s=x', { AFF_PUMPKIN_TAG: 'pum-live' })?.href, '/go/pumpkin/home?s=x')
     assert.equal(consultLink('/go/pets-best/home?s=x', { AFF_PETS_BEST_TAG: 'pb-live' })?.href, '/go/pets-best/home?s=x')
+    assert.equal(consultLink('/go/spot/home?s=x', { AFF_SPOT_TAG: 'spot-live' })?.href, '/go/spot/home?s=x')
+    assert.equal(consultLink('/go/manypets/home?s=x', { AFF_MANYPETS_TAG: 'mp-live' })?.href, '/go/manypets/home?s=x')
+    assert.equal(consultLink('/go/figo/home?s=x', { AFF_FIGO_TAG: 'figo-live' })?.href, '/go/figo/home?s=x')
+    assert.equal(consultLink('/go/aspca/home?s=x', { AFF_ASPCA_TAG: 'aspca-live' })?.href, '/go/aspca/home?s=x')
+  })
+
+  it('keeps unset Spot, ManyPets, Figo, and ASPCA quotes as plain links', () => {
+    const spot = consultLink('/go/spot/home?s=reviews-spot-vs-manypets-guide', {})
+    assert.equal(spot?.attributed, false)
+    assert.equal(spot?.href, 'https://quote.spotpet.com/?offer=home')
+    assert.equal(spot?.href.includes('PLACEHOLDER'), false)
+    const manypets = consultLink('/go/manypets/home?s=insurance-reading-the-fine-print', {})
+    assert.equal(manypets?.href, 'https://manypets.com/us/?campaign=home')
+    const figo = consultLink('/go/figo/home?s=insurance-breed-specific-risk', {})
+    assert.equal(figo?.href, 'https://figopetinsurance.com/get-started?campaign=home')
+    const aspca = consultLink('/go/aspca/home?s=insurance-pre-existing-conditions', {})
+    assert.equal(aspca?.href, 'https://www.aspcapetinsurance.com/quote/?campaign=home')
+    assert.equal(aspca?.href.includes('PLACEHOLDER'), false)
+    assert.equal(consultLink('/go/trupanion/home?s=x', {}), null)
+    assert.equal(consultLink('/go/healthy-paws/home?s=x', {}), null)
+    assert.equal(consultLink('/go/embrace/home?s=x', {}), null)
   })
 
   it('hides a commission claim when the hop tag is unset', () => {
