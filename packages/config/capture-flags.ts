@@ -55,3 +55,52 @@ export function inquireCaptureEnabled(siteHost: string, env: NodeJS.ProcessEnv =
   if (siteHost === 'vets.co') return vetsInquireCaptureEnabled(env)
   return true
 }
+
+const PAUSED_EMAIL_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
+
+/**
+ * What an EmailCapture block renders while FormSubmit is down.
+ * Under-hero sources on the five earning sites stay an on-page magnet.
+ * Fish subscribe stays a form only when its flag and inbox are both set.
+ */
+export function emailCaptureSurface(opts: {
+  siteId: string
+  source: string
+  addressOnly?: boolean
+  captureOpen?: boolean
+  hasResource?: boolean
+  hasChecklist?: boolean
+  emailCaptureEnabled?: boolean
+  guideAddress?: boolean
+  env?: NodeJS.ProcessEnv
+}): 'hidden' | 'magnet' | 'form' | 'checklist' {
+  const underHero = opts.source.endsWith('under-hero')
+  const enabled = Boolean(opts.addressOnly) || underHero || opts.emailCaptureEnabled === true
+  if (!enabled) return 'hidden'
+  const fishOpen = opts.siteId === 'fish-com' && !opts.addressOnly
+    ? (opts.captureOpen ?? fishSubscribeFormVisible(opts.env))
+    : false
+  if (PAUSED_EMAIL_SITES.has(opts.siteId) && !opts.addressOnly && !fishOpen) {
+    return opts.hasResource ? 'magnet' : 'hidden'
+  }
+  if (opts.addressOnly && !opts.guideAddress) {
+    return opts.hasChecklist ? 'checklist' : 'hidden'
+  }
+  return 'form'
+}
+
+/** Server inquire screens. Fish, horses, and ferret stay closed while FormSubmit is down. */
+export function inquireOfferOpen(siteName: string, env: NodeJS.ProcessEnv = process.env): boolean {
+  if (siteName === 'Dog.com') return dogInquireCaptureEnabled(env)
+  if (siteName === 'Vets.co') return vetsInquireCaptureEnabled(env)
+  if (siteName === 'Fish.com' || siteName === 'Horses.com' || siteName === 'Ferret.com') return false
+  return true
+}
+
+/** Client default when a page does not pass `open`. Dog and vets use the public flag. */
+export function inquireFormDefaultOpen(siteName: string, env: NodeJS.ProcessEnv = process.env): boolean {
+  if (siteName === 'Dog.com') return dogInquireFormVisible(env)
+  if (siteName === 'Vets.co') return vetsInquireFormVisible(env)
+  if (siteName === 'Fish.com' || siteName === 'Horses.com' || siteName === 'Ferret.com') return false
+  return true
+}

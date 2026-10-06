@@ -53,7 +53,8 @@ else if (/email|address|phone/i.test(signup[0])) hits.push('guide_signup_submit 
 if (!/if \(!addressOnly\) return/.test(capture)) hits.push('guide_signup_submit must stay on the guide address form')
 if (!/guideAddressCaptureEnabled\(/.test(capture)) hits.push('guide address form must stay behind NEXT_PUBLIC_GUIDE_ADDRESS_CAPTURE')
 if (!/fetch\('\/api\/subscribe'/.test(capture)) hits.push('address storage must stay ready')
-if (!/addressOnly && !guideAddressCaptureEnabled\(\)/.test(capture)) hits.push('address form must hide when the flag is off')
+if (!/emailCaptureSurface\(/.test(capture)) hits.push('paused sites must use emailCaptureSurface')
+if (!/guideAddress: guideAddressCaptureEnabled\(\)/.test(capture)) hits.push('address form must hide when the flag is off')
 
 for (const name of ['guide_checklist_copy', 'guide_checklist_print']) {
   const call = checklist.match(new RegExp(`trackEvent\\(\\s*'${name}'\\s*,\\s*\\{[^}]*\\}\\s*\\)`))

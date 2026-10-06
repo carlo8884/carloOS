@@ -12,22 +12,13 @@
  */
 
 import { useState, useCallback, useId, useMemo } from 'react'
-import { fishSubscribeFormVisible } from '@carloOS/config/capture-flags'
+import { emailCaptureSurface } from '@carloOS/config/capture-flags'
 import { JUNK_EMAIL_MESSAGE, isJunkEmail } from '@carloOS/config/form-guard'
 import { guideAddressCaptureEnabled } from '../lib/guide-checklist'
 import { trackEvent } from '../lib/track-event'
 import { GuideChecklist } from './GuideChecklist'
 
 type EmailCaptureVariant = 'inline' | 'sidebar' | 'section'
-
-/** FormSubmit magnets are not delivered on these live sites. Leave other brands alone. */
-const EMAIL_MAGNET_DELIVERY_PAUSED = new Set([
-  'dog-com',
-  'fish-com',
-  'horses-com',
-  'vets-co',
-  'ferret-com',
-])
 
 interface EmailCaptureProps {
   variant?: EmailCaptureVariant
@@ -89,12 +80,17 @@ export function EmailCapture({
 }: EmailCaptureProps) {
   const resolvedCtaText = ctaText ?? buttonText ?? (addressOnly ? 'Save my address' : 'Send the notes')
   const resolvedSource = source ?? tag ?? 'unknown'
-  // Under-hero cash-register captures always render (no Vercel env write).
-  // Other placements stay behind NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED.
-  // The guide address form is a separate flag, off until an email provider exists.
-  const underHero = resolvedSource.endsWith('under-hero')
-  const enabled =
-    addressOnly || underHero || process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true'
+  const hasResource = Boolean(resourceText?.trim() || resourceHref?.trim())
+  const surface = emailCaptureSurface({
+    siteId,
+    source: resolvedSource,
+    addressOnly,
+    captureOpen,
+    hasResource,
+    hasChecklist: Boolean(checklist && checklist.length > 0),
+    emailCaptureEnabled: process.env.NEXT_PUBLIC_EMAIL_CAPTURE_ENABLED === 'true',
+    guideAddress: guideAddressCaptureEnabled(),
+  })
 
   const id = useId()
   const [email, setEmail] = useState('')
@@ -160,15 +156,9 @@ export function EmailCapture({
     }
   }, [email, siteId, resolvedSource, reportGuideSignup])
 
-  if (!enabled) {
-    return null
-  }
+  if (surface === 'hidden') return null
 
-  const fishSubscribeOpen = siteId === 'fish-com' && !addressOnly
-    ? (captureOpen ?? fishSubscribeFormVisible())
-    : false
-
-  if (EMAIL_MAGNET_DELIVERY_PAUSED.has(siteId) && !addressOnly && !fishSubscribeOpen) {
+  if (surface === 'magnet') {
     return (
       <OnPageMagnet
         variant={variant}
@@ -183,9 +173,8 @@ export function EmailCapture({
     )
   }
 
-  if (addressOnly && !guideAddressCaptureEnabled()) {
-    if (!checklist || checklist.length === 0) return null
-    return <GuideChecklist siteId={siteId} items={checklist} />
+  if (surface === 'checklist') {
+    return <GuideChecklist siteId={siteId} items={checklist ?? []} />
   }
 
   if (addressOnly) {
