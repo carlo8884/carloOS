@@ -24,7 +24,7 @@ A complete fishless-cycle toolkit, with the specific products named below. Total
 
 [Get a calibrated refractometer →](https://fish.com/go/amazon-brand/atc+refractometer?s=email-cycling-guide)
 
-**5. (Saltwater only) Pre-mixed salt or a reef salt mix.** Tropic Marin and Red Sea are two mixes keepers compare with published reef-parameter targets. Avoid the cheapest big-box brand — calcium and KH are often off by 30%.
+**5. (Saltwater only) Pre-mixed salt or a reef salt mix.** Tropic Marin and Red Sea are two mixes keepers compare with published reef-parameter targets. Avoid the cheapest big-box brand.
 
 [Get Tropic Marin salt mix →](https://fish.com/go/amazon-brand/tropic+marin+classic+salt?s=email-cycling-guide)
 
