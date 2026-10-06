@@ -201,7 +201,7 @@ export default function HarnessCollarSizePage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"
-                amazonLabel="Browse front-clip harnesses on Amazon →"
+                amazonLabel="Browse front-clip no-pull harnesses on Amazon →"
               />
           </div>
           </div>
