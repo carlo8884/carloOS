@@ -276,6 +276,11 @@ export default function DogGestationCalculator() {
                 })}
               </ol>
             </div>
+            <p className="mt-4 text-sm">
+              <a href="/tools/new-puppy-checklist" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+                Next: new puppy checklist
+              </a>
+            </p>
           </>
         )}
       </div>

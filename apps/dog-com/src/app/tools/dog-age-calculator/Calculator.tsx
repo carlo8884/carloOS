@@ -230,6 +230,13 @@ export default function DogAgeCalculator() {
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
           <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+          <a
+            href={shop.href}
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {shop.label}
+          </a>
         </div>
       ) : null}
 

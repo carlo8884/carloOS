@@ -375,6 +375,23 @@ export default function Calculator() {
             )}
           </p>
           <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <a
+            href={
+              discipline === 'western'
+                ? '/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider'
+                : discipline === 'english'
+                  ? '/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider'
+                  : '/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider'
+            }
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {discipline === 'western'
+              ? 'Browse Western saddles on Amazon →'
+              : discipline === 'english'
+                ? 'Browse English saddles on Amazon →'
+                : 'Browse ASTM/SEI riding helmets on Amazon →'}
+          </a>
         </div>
       )}
 

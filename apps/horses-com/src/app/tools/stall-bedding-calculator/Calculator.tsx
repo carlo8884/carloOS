@@ -285,6 +285,23 @@ export default function Calculator() {
             , then about {result.unitsWeekly} {weeklyWord} a week to replace what you pick out.
           </p>
           <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <a
+            href={
+              type === 'pellets'
+                ? '/go/amazon-brand/wood+pellet+horse+stall+bedding?s=tools-stall-bedding-calculator'
+                : type === 'straw'
+                  ? '/go/amazon-brand/horse+stall+fork+manure+picker?s=tools-stall-bedding-calculator'
+                  : '/go/amazon-brand/pine+shavings+horse+stall+bedding?s=tools-stall-bedding-calculator'
+            }
+            rel="sponsored noopener"
+            className="inline-block max-w-full whitespace-normal text-left rounded bg-brand-dark px-4 py-2.5 text-sm font-bold text-white no-underline"
+          >
+            {type === 'pellets'
+              ? 'Browse wood-pellet stall bedding on Amazon →'
+              : type === 'straw'
+                ? 'Browse a stall manure picker on Amazon →'
+                : 'Browse pine-shavings stall bedding on Amazon →'}
+          </a>
         </div>
       )}
 
