@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, StockImage, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -24,9 +24,9 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.9, reviewCount: 1 })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://www.platinumperformance.com', imageUrl: '', ratingValue: 9.0, reviewCount: 1 })
-const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'Glucosamine, chondroitin, MSM, and hyaluronic acid for senior horses.', url: 'https://www.smartpakequine.com', imageUrl: '', ratingValue: 8.5, reviewCount: 1 })
+const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://www.platinumperformance.com', imageUrl: '' })
+const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'Glucosamine, chondroitin, MSM, and hyaluronic acid for senior horses.', url: 'https://www.smartpakequine.com', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
 
 const PICKS = [
@@ -82,7 +82,6 @@ export default function JointSupplementsPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
 
             <h2>Evidence Ladder — How Joint Ingredients Stack Up</h2>
             <p>The following ranking summarizes peer-reviewed equine and (where equine data is thin) extrapolated mammalian data on each ingredient. Inclusion of an ingredient in a high-grossing branded product is not the same thing as that ingredient having evidence; commercial popularity and evidence base often disagree.</p>
@@ -141,7 +140,6 @@ export default function JointSupplementsPage() {
               badge="Best Evidence (ASU)"
               name="Nutramax Cosequin ASU Plus"
               subtitle="Avocado/Soybean Unsaponifiables + Glucosamine + Chondroitin"
-              score={8.9}
               winner
               description={<>
                 <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU has among the strongest peer-reviewed equine evidence of the common joint-supplement ingredients. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
@@ -167,7 +165,6 @@ export default function JointSupplementsPage() {
               badge="Best Comprehensive"
               name="Platinum Performance CJ"
               subtitle="Whole-system formula with joint-targeted CJ blend"
-              score={9.0}
               description={<>
                 <p>Platinum Performance CJ adds a joint-targeted supplement matrix (glucosamine, chondroitin, MSM, HA, ASU, cetyl myristoleate) onto the Platinum Performance Equine Wellness Formula base — a whole-ration supplement that addresses fatty-acid balance, antioxidant, and trace-mineral support in addition to joint inputs. The advantage is dose-coordination across the supplement profile (no stacking redundant glucosamine, no antagonistic mineral interactions). The disadvantage is cost — Platinum is the highest-AOV premium supplement in the category.</p>
                 <p>Most relevant for the performance horse in active competition where the owner is willing to pay for the auto-ship subscription convenience and the integrated formulation.</p>
@@ -192,7 +189,6 @@ export default function JointSupplementsPage() {
               badge="Best Senior"
               name="SmartPak SmartFlex Senior"
               subtitle="Glucosamine + chondroitin + MSM + HA at senior-targeted dosing"
-              score={8.5}
               description={<>
                 <p>SmartFlex Senior is SmartPak&apos;s house-brand senior-horse joint supplement, formulated at higher glucosamine and MSM doses than the standard SmartFlex Maintenance product and including HA. Practical choice for older horses with established joint maintenance needs, especially when used with the SmartPak auto-shipped daily-dose Smart Packs that prevent dose-counting errors.</p>
                 <p>The dose-per-scoop is in the clinically-relevant range, NASC Quality Seal documented, and the per-day cost is competitive with branded equivalents at the same ingredient level.</p>
@@ -217,7 +213,6 @@ export default function JointSupplementsPage() {
               badge="Reference Ingredient"
               name="Marine-Source Omega-3 (DHA/EPA)"
               subtitle="Algal or fish-oil source — flax is not equivalent"
-              score={8.6}
               description={<>
                 <p>Marine-source omega-3 is the ingredient most commonly stocked from non-equine-targeted retailers (Riding Warehouse, Dover, and Amazon all carry equine-formulated marine omega-3 in both fish-oil and algal varieties). The category here is not a branded product but the ingredient itself — the evidence for marine-source EPA/DHA in equine inflammation is solid enough that the supplement is reasonable to add to most performance-horse rations.</p>
                 <p>Critically: a product that lists &ldquo;omega-3&rdquo; without specifying the form is usually flax (ALA). Equine ALA → EPA/DHA conversion is poor; if you are paying for omega-3 for joint or inflammation support, confirm the label says fish oil or algal DHA/EPA, not flax.</p>
@@ -238,7 +233,7 @@ export default function JointSupplementsPage() {
             />
 
             <h2 id="who">Who should buy which</h2>
-            <p>Ingredient, price per supply, and the limit are already on the four cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings. A lame horse still needs a veterinary exam before a supplement decision.</p>
+            <p>Ingredient, price per supply, and the limit are already on the four cards. This table only lines those facts up. A lame horse still needs a veterinary exam before a supplement decision.</p>
             <div className="overflow-x-auto my-6 max-w-full">
               <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>
@@ -277,7 +272,7 @@ export default function JointSupplementsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-05" />
+            <ComparisonFoot updated="2026-10-06" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>

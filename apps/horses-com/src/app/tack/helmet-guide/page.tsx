@@ -1,6 +1,6 @@
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, StockImage } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -143,14 +143,12 @@ export default function HelmetGuidePage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="troxel-spirit"
             badge="Best Value"
             name="Troxel Spirit"
             subtitle="ASTM/SEI-certified schooling helmet at an entry price"
-            score={8.4}
             winner
             description={<>
               <p>The Troxel Spirit is one of the most widely-stocked entry-tier schooling helmets in US equestrian retail. It carries ASTM/SEI certification — the floor requirement for any riding helmet — at a price point that makes replacing a helmet after a fall financially painless, which matters because a spent helmet must be retired regardless of cost.</p>
@@ -175,7 +173,6 @@ export default function HelmetGuidePage() {
             badge="Best Mid-Range"
             name="Ovation Deluxe Schooler"
             subtitle="Certified all-purpose helmet with broader fit range"
-            score={8.6}
             description={<>
               <p>The Ovation Deluxe Schooler sits in the mid price tier and is a common all-purpose choice for riders who school across disciplines. It carries the required equestrian certification and offers more ventilation and a wider fit range than entry models, making it easier to fit a broader set of head shapes.</p>
               <p>Most relevant for the established amateur rider who wants better ventilation and fit refinement than an entry helmet without moving to a show-tier price.</p>
@@ -199,7 +196,6 @@ export default function HelmetGuidePage() {
             badge="Premium / Show"
             name="Charles Owen AYR8 Plus"
             subtitle="Multi-standard certified show helmet"
-            score={9.1}
             description={<>
               <p>The Charles Owen AYR8 Plus is a long-standing premium show helmet certified to multiple equestrian standards (commonly PAS 015, VG1, and ASTM/SEI depending on model variant). Riders choose it for the refined fit, ventilation, and show-appropriate appearance — but the protective value still comes from certification and correct fit, not the price.</p>
               <p>Most relevant for the competitive rider who shows regularly and wants a multi-standard-certified helmet. As with every helmet, retire it after any significant impact.</p>

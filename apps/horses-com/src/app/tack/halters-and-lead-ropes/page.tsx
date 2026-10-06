@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -142,14 +142,12 @@ export default function HaltersLeadRopesPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="flat-nylon-halter"
             badge="Everyday"
             name="Adjustable Flat Nylon Halter"
             subtitle="The inexpensive, durable barn workhorse"
-            score={8.2}
             description={<>
               <p>An adjustable flat nylon halter is the standard everyday halter: strong, washable, inexpensive, and available in every size from foal to draft. Its strength is the point for leading and tying in hand — but that same strength is why it should never be left on a turned-out horse (see the turnout section above).</p>
               <p>Reasonable choice for: in-hand leading, grooming, and tying under supervision. Keep an adjustable throat and noseband for a correct fit.</p>
@@ -173,7 +171,6 @@ export default function HaltersLeadRopesPage() {
             badge="Safer Turnout"
             name="Leather-Crown Breakaway Halter"
             subtitle="Designed to give way if the horse is caught"
-            score={8.7}
             winner
             description={<>
               <p>A breakaway halter pairs a strong nylon body with a leather crownpiece or a breakable tab that gives way under force, so a horse that catches the halter on a post or hoof can free itself rather than panic and injure itself. It is the sensible compromise when a horse must be left haltered in turnout.</p>
@@ -198,7 +195,6 @@ export default function HaltersLeadRopesPage() {
             badge="Lead Rope"
             name="Cotton Lead Rope with Bull Snap"
             subtitle="Soft on the hands, strong at the clip"
-            score={8.3}
             description={<>
               <p>A soft cotton or poly lead rope with a strong trigger or bull snap is long enough to handle and tie safely and soft enough not to burn the hands. Fold the slack rather than wrapping it around your hand so a spooking horse cannot trap you (see the lead-rope section above).</p>
               <p>Most relevant as the everyday lead for every halter in the barn; keep a spare on the stable door.</p>
@@ -218,7 +214,7 @@ export default function HaltersLeadRopesPage() {
           />
 
           <h2 id="who">Who should buy which</h2>
-          <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>The three cards already name the job, the price, and the turnout limit. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -251,7 +247,7 @@ export default function HaltersLeadRopesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

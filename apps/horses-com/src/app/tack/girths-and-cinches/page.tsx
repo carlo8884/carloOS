@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -133,14 +133,12 @@ export default function GirthsCinchesPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="anatomic-english-girth"
             badge="English Everyday"
             name="Anatomic / Shaped English Girth"
             subtitle="Contoured shape to relieve the elbow and reduce galls"
-            score={8.6}
             winner
             description={<>
               <p>A shaped or anatomic English girth is cut back behind the elbow to reduce pinching and rubbing in the girth groove — a common upgrade for horses prone to galls or girthiness from a straight girth. Synthetic and leather versions both work; the key is a clean surface, the right size, and gradual tightening.</p>
@@ -165,7 +163,6 @@ export default function GirthsCinchesPage() {
             badge="Western"
             name="Mohair / Roper Western Cinch"
             subtitle="Breathable natural-fiber cinch for long rides"
-            score={8.5}
             description={<>
               <p>A mohair (or mohair-blend) roper cinch is a traditional Western choice valued for breathability and the way natural fibers wick moisture and resist galling on long working rides. Straight or roper cuts suit most working horses; correct width and gradual tightening matter as much as material.</p>
               <p>Most relevant for trail, ranch, and Western performance riders who want a breathable natural-fiber cinch for extended time in the saddle.</p>
@@ -189,7 +186,6 @@ export default function GirthsCinchesPage() {
             badge="Gall Prevention"
             name="Sheepskin / Fleece Girth Cover"
             subtitle="Cushioning sleeve to reduce friction on sensitive horses"
-            score={8.1}
             description={<>
               <p>A sheepskin or fleece girth cover slips over an existing girth to add a soft, friction-reducing layer for horses with thin skin or a history of galls. It is a supportive measure, not a fix for a wrong-size or dirty girth — keep both the cover and the coat clean, since trapped dirt under fleece can itself cause rubs.</p>
               <p>Most relevant for gall-prone or thin-skinned horses already in a correctly sized girth that still shows minor friction.</p>
