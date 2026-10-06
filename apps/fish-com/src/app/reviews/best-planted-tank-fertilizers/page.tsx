@@ -68,7 +68,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Simplest dosing regimen available', 'Covers macros and micros in one product', 'Designed by experienced planted tank hobbyists', 'Works for 90% of planted setups']}
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
-              ctaText="Shop Aquarium Co-Op Easy Green on Amazon →"
+              ctaText="Shop Aquarium Co-Op Easy Green fertilizer on Amazon →"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="easy-green-fertilizer"
