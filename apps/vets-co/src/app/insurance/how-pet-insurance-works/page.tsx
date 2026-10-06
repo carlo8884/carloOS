@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -156,7 +156,24 @@ export default function HowPetInsuranceWorksPage() {
           </div>
           </div>
 
-          <h2 id="quote">Compare a Couple of Insurers</h2>
+          
+          <EmailCapture
+            variant="inline"
+            siteId="vets-co"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="insurance-how-pet-insurance-works"
+            checklist={[
+              "This reimbursement model is different from most human health insurance.",
+              "Budgeting for that upfront cost is part of using pet insurance effectively.",
+              "After you meet your deductible, the insurer pays a set percentage of the remaining covered costs \u2014 commonly 70%, 80%, or 90% \u2014 and you cover the rest.",
+              "This percentage is the reimbursement rate.",
+              "A higher reimbursement rate means lower out-of-pocket costs per claim but a higher monthly premium.",
+              "Choosing a reimbursement rate is a trade-off between predictable monthly cost and exposure during an expensive claim.",
+            ]}
+          />
+<h2 id="quote">Compare a Couple of Insurers</h2>
           <p>Once the four levers make sense, the next step is to price your own pet on a couple of carriers and compare the premium against the deductible, reimbursement rate, and annual limit. The two below illustrate different models; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
           <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ReviewCard

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, Breadcrumb, AffiliateDisclosure, FAQAccordion, ShopCtas, PriceAsOf } from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -43,6 +43,23 @@ export default function TelehealthPage() {
         primaryCta={{ href: '#vetster', label: 'See the video consult' }}
         secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
       />
+      <EmailCapture
+        variant="inline"
+        siteId="vets-co"
+        addressOnly
+        title="Shopping checklist"
+        ctaText="Copy checklist"
+        source="telehealth"
+        checklist={[
+          "A minority of states permit establishing a VCPR remotely.",
+          "For refills of existing prescriptions, your regular clinic is usually the faster route.",
+          "It cannot replace a physical exam, blood work, imaging, surgery, or emergency care.",
+          "Some retail memberships (such as Chewy+) include telehealth access as a bundled benefit.",
+          "Check your policy's exam-fee and telehealth language before assuming a consult is reimbursable \u2014 wellness-only plans typically exclude it.",
+          "Chewy Connect makes sense mainly if you already hold a Chewy+ membership.",
+        ]}
+      />
+
       <div className="px-container-sm sm:px-container pt-6">
         <PriceAsOf date="2026-10-05" />
       </div>
