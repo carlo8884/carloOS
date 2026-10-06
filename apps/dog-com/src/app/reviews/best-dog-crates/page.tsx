@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -57,6 +57,23 @@ export default function BestDogCratesPage() {
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dog-crates"
+          checklist={[
+            "The MidWest iCrate, because it includes a divider.",
+            "Size the crate to the adult dog and close the divider down while the puppy is small.",
+            "It is not the pick for an escape artist.",
+            "The furniture-style Frisco crate is the living-room pick and is not described as chew-resistant.",
+            "The right crate depends on your dog's size, temperament, and how you're using it.",
+            "A crate for house training is different from one for a separation anxiety escape artist or airline travel.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel. A covered crate used as a hiding space is the setup on the <a href="/health/dog-anxiety" className="underline text-white">dog anxiety guide</a>.
         </p>
