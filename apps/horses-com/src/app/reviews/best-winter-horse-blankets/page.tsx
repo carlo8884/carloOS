@@ -117,7 +117,7 @@ export default function BestWinterBlanketsPage() {
             </ul>
 
             <h3>Fill weight</h3>
-            <p>Insulation is graded by grams per square meter of fill material — usually a polyester batting. The standard system: 0 g (sheet), 100 g (light), 200–220 g (medium), 300–400+ g (heavy). Fill weight is not a temperature rating in itself — what matters is fill weight plus horse&apos;s coat condition (full, body-clipped, trace-clipped) plus shelter availability plus the individual horse&apos;s thermoregulation. The most reliable real-world guide: medium-weight (200 g) is the right answer for most clipped horses in most US climates between approximately −5 and +10&deg;C.</p>
+            <p>Insulation is graded by grams per square meter of fill material — usually a polyester batting. The standard system: 0 g (sheet), 100 g (light), 200–220 g (medium), 300–400+ g (heavy). Fill weight is not a temperature rating in itself — what matters is fill weight plus horse&apos;s coat condition (full, body-clipped, trace-clipped) plus shelter availability plus the individual horse&apos;s thermoregulation. The most reliable real-world guide: medium-weight (200 g) is the right answer for most clipped horses in most US climates between approximately −5 and +10&deg;C. Gram fill for that range is walked through in the <a href="/tack/blanket-weights" className="text-brand-primary underline">blanket-weights guide</a>.</p>
 
             <h3>Neck shape</h3>
             <p>Three common neck designs, each suiting different horse conformations:</p>
