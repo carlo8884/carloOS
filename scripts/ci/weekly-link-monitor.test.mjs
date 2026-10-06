@@ -9,6 +9,8 @@ import {
   goHrefsFromSource,
   cardShopHrefs,
   citationProbeReadsBody,
+  emailShopHrefs,
+  EMAIL_SEARCH_VENDORS,
   isEmptySearchHtml,
   isRetailerSearchUrl,
   missingShopSource,
@@ -184,6 +186,19 @@ test('an empty Amazon search is not a rate-limit page', () => {
   )
   assert.equal(isEmptySearchHtml('HTTP 503 Service Unavailable', 0), false)
   assert.equal(isEmptySearchHtml('<title>Robot Check</title>No results for your search query', 0), false)
+})
+
+test('email retailer searches keep the source query', () => {
+  const hrefs = emailShopHrefs(
+    '[Get it](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)\n[Skip](https://dog.com/go/chewy/connect)',
+  )
+  assert.deepEqual(hrefs, [
+    '/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide',
+    '/go/chewy/connect',
+  ])
+  assert.equal(EMAIL_SEARCH_VENDORS.has('amazon-brand'), true)
+  assert.equal(EMAIL_SEARCH_VENDORS.has('chewy'), false)
+  assert.equal(missingShopSource(hrefs[0]), false)
 })
 
 test('the workflow files one issue and cannot assign or request review', () => {
