@@ -357,6 +357,7 @@ export default function BestFerretKibblePage() {
           </div>
           <ComparisonFoot updated="2026-10-06" />
 
+          <p>Wysong and Marshall, the two kibbles on this page, are compared in the <Link href="/reviews/wysong-vs-marshall-kibble-guide">Wysong versus Marshall guide</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

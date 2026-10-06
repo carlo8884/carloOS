@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import {
   buildMetadata,
   ArticleLayout,
@@ -566,6 +567,7 @@ export default function FerretLitterTrainingPage() {
             ctaAffiliateProduct="yesterdays+news+paper+pellet+litter"
           />
 
+          <p>The litters in this routine are compared in the <Link href="/reviews/best-ferret-litter">ferret litter review</Link>.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
 

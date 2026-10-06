@@ -45,6 +45,7 @@ export default function IchTreatmentPage() {
 
         <h2>The Heat Method</h2>
         <p>Raising temperature to 82-86°F (if the species tolerates it) accelerates the ich life cycle dramatically — the entire cycle from trophont to theront is completed in 3-4 days rather than 10-14 days, and the theront's viability window at high temperature is reduced. Maintain the elevated temperature for a minimum of 10 days after the last visible spot to ensure all life cycle stages are complete. Increase aeration — warmer water holds less oxygen. Not appropriate for cold-water fish (goldfish, white clouds) or temperature-sensitive species (discus tolerate high temps; delicate species may not).</p>
+        <p>Heaters that hold a treatment temperature are compared in the <Link href="/reviews/best-aquarium-heaters">aquarium heater review</Link>.</p>
         <JourneyNext
           siteId="fish-com"
           nextHref="/health/velvet-disease"

@@ -273,6 +273,7 @@ export default function JointSupplementsPage() {
                 </tbody>
               </table>
             </div>
+            <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
             <ComparisonFoot updated="2026-10-06" />
 
             <h2>How to Choose</h2>
