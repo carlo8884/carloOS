@@ -263,7 +263,7 @@ export default function FerretLitterTrainingPage() {
             occupy more floor area; a small cat pan turned with its short
             side against the wall is a workable alternative. High-walled
             covered pans are not recommended — they trap odor and many
-            ferrets refuse them.
+            ferrets refuse them. <a href="/reviews/best-ferret-litter">The ferret litter guide</a> compares the litter that goes in that corner pan.
           </p>
 
           <CalloutBox variant="tip" title="The corner test">

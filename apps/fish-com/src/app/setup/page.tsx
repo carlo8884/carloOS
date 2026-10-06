@@ -119,7 +119,7 @@ export default function AquariumSetupPage() {
         <p><strong>Non-negotiable:</strong></p>
         <ul>
           <li><strong>Filter</strong> — a hang-on-back or canister filter rated for at least the tank size (ideally 1.5–2x). This is where beneficial bacteria live. Never skip this.</li>
-          <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common.</li>
+          <li><strong>Heater</strong> — for tropical fish (most common aquarium fish require 76–82°F). Get one rated for your tank size + 20% buffer. A heater that fails cold is common. <a href="/reviews/best-aquarium-heaters">The heater guide</a> compares heaters sized with that buffer.</li>
           <li><strong>Thermometer</strong> — digital stick thermometer ($8–15). Verify heater accuracy on day one.</li>
           <li><strong>Dechlorinator (water conditioner)</strong> — Seachem Prime or API Stress Coat. Removes chlorine and chloramine from tap water. Use at every water change.</li>
           <li><strong>Liquid test kit</strong> — API Master Test Kit ($28–35, the band on the water-test review). Tests ammonia, nitrite, nitrate, and pH. This is how you know when your tank is cycled and when water changes are needed. Test strips are inaccurate.</li>

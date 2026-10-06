@@ -68,7 +68,7 @@ export default function FreshDogFoodWorthItPage() {
 
         <h2 id="short">The Short Answer</h2>
         <p>Fresh, gently-cooked dog food is one of the fastest-growing categories in pet nutrition — fresh-food sales have grown sharply since the early 2020s as more owners look for higher-moisture, less-processed options. But growth is not the same as necessity. <strong>For most healthy dogs, fresh food is a reasonable upgrade in palatability and transparency, not a medical requirement.</strong> A complete-and-balanced fresh diet and a quality kibble from a <a href="/nutrition/wsava-explained">WSAVA-aligned manufacturer</a> can both meet a dog&apos;s nutritional needs.</p>
-        <p>The real question is not &ldquo;fresh or kibble&rdquo; in the abstract — it is whether <em>this</em> fresh product is complete and balanced, made by a company with real nutritional oversight, and worth its ongoing cost for <em>your</em> dog. This guide walks through how to answer that.</p>
+        <p>The real question is not &ldquo;fresh or kibble&rdquo; in the abstract — it is whether <em>this</em> fresh product is complete and balanced, made by a company with real nutritional oversight, and worth its ongoing cost for <em>your</em> dog. This guide walks through how to answer that. <a href="/reviews/best-dry-dog-food">The dry dog food guide</a> is the kibble side of that question.</p>
 
         <h2 id="what">What &ldquo;Fresh&rdquo; and &ldquo;Gently Cooked&rdquo; Actually Mean</h2>
         <p>&ldquo;Fresh&rdquo; and &ldquo;gently cooked&rdquo; are marketing descriptors, not regulated nutrition categories. In practice they usually describe:</p>

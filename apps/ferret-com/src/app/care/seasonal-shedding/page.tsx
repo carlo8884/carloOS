@@ -202,7 +202,7 @@ export default function FerretSeasonalSheddingPage() {
               more or less evenly. You can often pull a gentle tuft free with
               your fingers, and loose fur appears on bedding, clothing, and any
               surface the ferret rests on.
-            </li>
+             <a href="/care/bedding-and-litter-types">Bedding and litter types</a> is the bedding that fur is landing on.</li>
             <li>
               <strong>A short, intense window.</strong> The heaviest shedding
               concentrates into roughly one to three weeks, then tapers as the

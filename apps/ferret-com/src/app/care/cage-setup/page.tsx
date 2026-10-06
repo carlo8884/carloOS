@@ -193,7 +193,7 @@ export default function FerretCageSetupPage() {
           <ul>
             <li><strong>Use corner-shaped litter boxes</strong> (triangular, raised back walls). Marshall and Kaytee both sell ferret-appropriate models.</li>
             <li><strong>Multiple boxes — one per cage level, plus one or two in each room</strong> the ferret has free access to. A ferret 20 feet from the nearest box will not return to the cage to use it.</li>
-            <li><strong>No clumping clay litter.</strong> Sodium bentonite is dangerous if ingested. Use paper-pellet litter (Yesterday’s News, CareFresh) or non-aromatic wood pellets.</li>
+            <li><strong>No clumping clay litter.</strong> Sodium bentonite is dangerous if ingested. Use paper-pellet litter (Yesterday’s News, CareFresh) or non-aromatic wood pellets. <a href="/reviews/best-ferret-litter">The ferret litter guide</a> compares the paper and wood pellets named here.</li>
             <li><strong>Spot-clean daily, full-replace weekly.</strong> A ferret unhappy with the box will eliminate immediately outside it.</li>
             <li><strong>Reinforce, do not punish.</strong> Treat (high-protein, not sugary) when the box is used. On misses, clean with enzymatic cleaner and move the soiled paper into the box — the scent cue teaches the location.</li>
           </ul>

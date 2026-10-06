@@ -275,7 +275,7 @@ export default function TrailRidingPage() {
           <h2 id="safety">Safety</h2>
 
           <CalloutBox variant="warning" title="Helmets are non-negotiable">
-            <p>An ASTM/SEI-certified helmet is mandatory on any ride at any speed. AERC and NATRC require helmets on all competitive rides. Trail riding takes place in unpredictable terrain with footing variations, wildlife encounters, and other trail users — falls happen even on calm horses. Helmet use on recreational trail rides is the single most-impactful personal safety decision a trail rider can make.</p>
+            <p>An ASTM/SEI-certified helmet is mandatory on any ride at any speed. AERC and NATRC require helmets on all competitive rides. Trail riding takes place in unpredictable terrain with footing variations, wildlife encounters, and other trail users — falls happen even on calm horses. Helmet use on recreational trail rides is the single most-impactful personal safety decision a trail rider can make. <a href="/tack/helmet-guide">The helmet guide</a> compares the ASTM/SEI helmets this ride requires.</p>
           </CalloutBox>
 
           <h3>What to carry</h3>

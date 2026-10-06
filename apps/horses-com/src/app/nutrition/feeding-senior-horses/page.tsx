@@ -183,7 +183,7 @@ export default function SeniorFeedingPage() {
           </div>
 
           <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
-          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares that topline supplement.</p>
 
 
           <ReviewCard

@@ -196,7 +196,7 @@ export default function FerretExerciseEnrichmentPage() {
             soft rubber, gap-block at floor level, and toxic houseplants are
             the highest-risk items. Multi-ferret households need less
             human-supplied enrichment because much of the play happens
-            ferret-to-ferret.
+            ferret-to-ferret. <a href="/reviews/best-ferret-cage">The ferret cage guide</a> compares the cage those out-of-cage hours start from.
           </p>
 
           <h2 id="out-of-cage">Out-of-Cage Time — Non-Negotiable</h2>

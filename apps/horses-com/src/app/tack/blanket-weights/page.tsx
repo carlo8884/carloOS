@@ -110,7 +110,7 @@ export default function BlanketWeightsPage() {
           <p>The first distinction is turnout versus stable. Turnout rugs are waterproof and tough, built for the field and the weather. Stable rugs are not waterproof, made for use indoors over a clean horse. Using a stable rug outside leaves a horse soaked, and a turnout rug indoors can be unnecessarily heavy and harder-wearing than needed. Many horses have both, plus liners that add warmth to a shell.</p>
 
           <h2 id="denier">Denier and Fill</h2>
-          <p>Two numbers describe a rug. Denier measures the toughness of the outer fabric -- a higher denier (for example 1200D versus 600D) is more tear- and abrasion-resistant, important for rough-and-tumble horses in the field. Fill (or filling) measures warmth, given in grams -- the weight of insulating material. Denier is about durability and waterproofing; fill is about warmth. A rug can be high-denier and low-fill (tough but light) or the reverse.</p>
+          <p>Two numbers describe a rug. Denier measures the toughness of the outer fabric -- a higher denier (for example 1200D versus 600D) is more tear- and abrasion-resistant, important for rough-and-tumble horses in the field. Fill (or filling) measures warmth, given in grams -- the weight of insulating material. Denier is about durability and waterproofing; fill is about warmth. A rug can be high-denier and low-fill (tough but light) or the reverse. <a href="/reviews/best-winter-horse-blankets">The winter blanket guide</a> compares the fills those gram weights describe.</p>
 
           <h2 id="weights">Weight Categories</h2>
           <ul>

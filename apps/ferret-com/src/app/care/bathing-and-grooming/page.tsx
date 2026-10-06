@@ -283,7 +283,7 @@ export default function FerretBathingGroomingPage() {
             alter coat smell). The smell load in a ferret household is
             mostly from accumulated oils in bedding, not from the
             ferret itself.
-          </p>
+           <a href="/care/bedding-and-litter-types">Bedding and litter types</a> is the bedding in that weekly wash.</p>
 
           <h2 id="how">How to Bathe Safely</h2>
           <ol>

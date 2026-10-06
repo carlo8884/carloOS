@@ -279,7 +279,7 @@ export default function BettaFishPage() {
               hang-on-back with the flow baffled by a pre-filter sponge, replicates the still
               water bettas evolved for. Strong canister output across the surface tears at long
               fins and exhausts the fish.
-            </li>
+             <a href="/reviews/best-aquarium-filters">The filter guide</a> compares that low-flow sponge and hang-on-back.</li>
             <li>
               <strong>Leaf litter.</strong> Indian almond leaves (Terminalia catappa), oak leaves,
               and magnolia leaves on the substrate decompose slowly, release tannins, and host

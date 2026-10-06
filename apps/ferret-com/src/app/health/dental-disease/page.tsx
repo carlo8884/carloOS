@@ -205,7 +205,7 @@ export default function FerretDentalDiseasePage() {
             Ignored periodontal disease progresses through gingivitis to
             periodontitis to tooth loss, and root abscesses can become
             systemic infections in older ferrets.
-          </p>
+           <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the kibble this tartar pattern comes from.</p>
 
           <h2 id="why-ferrets">Why Ferrets in Particular</h2>
           <p>

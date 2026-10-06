@@ -191,7 +191,7 @@ export default function HardKeeperPage() {
           </div>
 
           <h2 id="picks">Product Picks — Calorie Supports for Hard Keepers</h2>
-          <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
+          <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares those calorie supports.</p>
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
