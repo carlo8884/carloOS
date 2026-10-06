@@ -302,7 +302,7 @@ export default function BestFerretHarnessPage() {
             pros={['Highly adjustable for a no-neck body', 'Lightweight and quick to fit', 'Inexpensive', 'Widely available']}
             cons={['Easiest style to escape if left loose', 'Thin straps spread less pressure', 'Fit must be checked every outing']}
             price="$"
-            ctaText="Find H-Style Ferret Harness on Amazon"
+            ctaText="Find an adjustable H-style ferret harness on Amazon"
             ctaHref="/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret-h-style-harness"
