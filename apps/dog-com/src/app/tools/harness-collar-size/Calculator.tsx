@@ -274,7 +274,7 @@ export default function HarnessCollarSizeCalculator() {
   }
 
   return (
-    <div className="rounded-lg border border-brand-border bg-brand-surface px-6 pb-6 pt-2 sm:px-8 sm:pb-8 sm:pt-4">
+    <div className="rounded-lg border border-brand-border bg-brand-surface px-6 pb-6 pt-0 sm:px-8 sm:pb-8 sm:pt-2">
       {result ? (
         <ResultPick linkFirst siteId="dog-com" pick={harnessPick(result.harness.band.id)} />
       ) : null}
