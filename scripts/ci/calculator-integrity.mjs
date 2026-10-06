@@ -11531,7 +11531,6 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/heater-wattage-calculator"/, label: 'next step is heater-wattage, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters"/, label: 'journey hop reuses the existing Eheim Jager search' },
       { re: /amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'existing Cobalt-Neo-Therm amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+pro\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
       { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
@@ -11542,8 +11541,9 @@ const CALCULATORS = [
       { re: /chewyHref|chewy-brand|\/go\/chewy/, label: 'omit Chewy so empty hops stay hidden' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
       { re: /laminated\+|fridge\+|handbook/, label: 'no invented kitchen hops on the journey strip' },
+      { re: /amazon-brand\/cobalt\+neo-therm\+pro\?s=reviews-best-aquarium-heaters/, label: 'empty Cobalt Neo-Therm search stays off this page' },
     ],
-    why: '2026-09-08 journeys: after the right-size wattage rule, next step is heater-wattage + the existing Eheim Jager hop. Review cards stay below. No invented kitchen hops. No new Amazon query.',
+    why: '2026-09-08 journeys: after the right-size wattage rule, next step is heater-wattage + the existing Eheim Jager hop. The Cobalt Neo-Therm search is empty, so that card and row use the Eheim search already on the page. Hydor and Aqueon stay. No new Amazon query.',
   },
   {
     id: 'fish · best-aquarium-lighting hops',

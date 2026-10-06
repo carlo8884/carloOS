@@ -152,10 +152,10 @@ export default function BestHeatersPage() {
               cons={['Higher price than Eheim Jager', 'Not recalibratable']}
               price="$35–65"
               priceNote="dated 2026-10-04."
-              ctaText="Shop Cobalt Neo-Therm on Amazon →"
-              ctaHref="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"
+              ctaText="Check price of the Eheim Jager heater on Amazon"
+              ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
-              ctaAffiliateProduct="cobalt-neo-therm"
+              ctaAffiliateProduct="eheim-jager"
             />
 
             <ReviewCard
@@ -224,7 +224,7 @@ export default function BestHeatersPage() {
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"} product={"Cobalt Neo-Therm Pro"} /></td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
                       <td className="p-3 text-brand-text-mid">Best flat design. ±0.5°F. Shatterproof plastic. $35–65</td>
                       <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable</td>
                     </tr>
