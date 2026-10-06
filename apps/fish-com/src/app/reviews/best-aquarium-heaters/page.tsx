@@ -198,7 +198,7 @@ export default function BestHeatersPage() {
               pros={['Best price of heaters compared', 'Shatterproof — beginner-safe', 'Widely available', 'Adequate for robust community fish']}
               cons={['Less accurate than premium options', 'Not suitable for temperature-sensitive species']}
               price="$18–30"
-              ctaText="Shop Aqueon Pro on Amazon →"
+              ctaText="Shop Aqueon Pro heater on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
               ctaAffiliateProduct="aqueon-pro-heater"
