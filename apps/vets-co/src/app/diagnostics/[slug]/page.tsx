@@ -231,7 +231,7 @@ export default function DiagnosticPage({ params }: PageProps) {
           <h2>Typical cost</h2>
           <p>
             Cost varies by region, hospital, and complexity. The figures below are{' '}
-            <strong>typical US ranges</strong>, never guaranteed — your individual quote may fall
+            <strong>typical US ranges</strong> dated 2026-05-30, never guaranteed — your individual quote may fall
             outside the range based on local pricing and whether the test is bundled with other
             diagnostics.
           </p>
