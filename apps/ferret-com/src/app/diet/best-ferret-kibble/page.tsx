@@ -203,7 +203,7 @@ export default function BestFerretKibblePage() {
             Commercial options sort into three broad tiers. The goal is to land on a formulation whose panel matches the obligate-carnivore profile, then stay consistent.
           </p>
           <p>
-            <strong>Premium — animal-first, low-carb, grain-free.</strong> Starch-free or near-starch-free formulas whose panels read as named meats and organ meats, with carbohydrate by difference in the low single digits. The default choice when insulinoma risk is a concern (see <a href="/health/insulinoma">insulinoma in ferrets</a>). Higher price point and not always stocked in chain pet aisles.
+            <strong>Premium — animal-first, low-carb, grain-free.</strong> Starch-free or near-starch-free formulas whose panels read as named meats and organ meats, with carbohydrate by difference in the low single digits. The default choice when insulinoma risk is a concern (see <a href="/health/insulinoma">insulinoma in ferrets</a>). Higher price point and not always stocked in chain pet aisles. How that low-carb kibble fits the rest of the diet is in the <a href="/care/diet-basics" className="text-brand-primary underline">diet basics guide</a>.
           </p>
           <p>
             <strong>Mid — ferret-specific, mostly acceptable.</strong> Diets formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Panels are imperfect — some plant protein, some grain — but acceptable for healthy adults, affordable, and widely stocked.
