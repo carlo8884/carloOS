@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -74,6 +74,22 @@ export default function FluvalSpecVsAqueonGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-fluval-spec-vs-aqueon-20-guide"
+          checklist={[
+            "The Aqueon 20-gallon long, badged Best Overall Nano.",
+            "The card says the tank is bare, so a filter, heater, and light are separate, and the footprint is 30 by 12 by 12 inches.",
+            "For a 5-gallon betta or shrimp tank that arrives as a kit.",
+            "The Spec V is badged Best 5 Gallon, and is marked the winner on that card.",
+            "The card says the filter flow should be baffled for a betta and that 5 gallons is less stable than a larger tank.",
+            "The nano review also covers an Aqueon 10-gallon standard.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-nano-tanks">nano-tank review</Link>. This comparison is the Fluval Spec V against the Aqueon 20-gallon long. The 10-gallon bare tank stays on the review.</p>
         <h2>What the review says about the Fluval Spec V</h2>
         <p>The Fluval Spec V is Best 5 Gallon and the card is marked the winner. Volume is 5 gallons. The design is rimless and all-in-one, with integrated three-stage filtration behind a honeycomb baffle and a low-profile LED the review calls capable of low-light plants such as Java fern, Anubias, and mosses. The card says to baffle the outlet for a betta, that 5 gallons is less stable than 10 gallons and up, and that aquascaping space is tight. The printed price is $75–95. Equipment is included. The review says to cycle the tank before fish go in.</p>

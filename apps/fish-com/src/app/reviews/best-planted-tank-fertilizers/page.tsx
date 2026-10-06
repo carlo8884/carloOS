@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -32,6 +32,22 @@ export default function BestPlantedFertilizersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="fish-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-planted-tank-fertilizers"
+          checklist={[
+            "The card says it is online only, and a high-tech CO2 tank may still need extra macros.",
+            "The card says it does not cover macros on its own and the dose is twice a week.",
+            "The card says it is overkill for a low-tech tank and overdosing is an algae risk.",
+            "Macro and micronutrients drive growth, color, and health.",
+            "The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.",
+            "Macros (NPK — nitrogen, phosphorus, potassium) drive bulk growth.",
+          ]}
+        />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Plants need more than light and CO2. Macro and micronutrients drive growth, color, and health. The right fertilizer depends on your setup — low-tech, high-tech, and heavy root feeders all have different needs.</p>
       </div>
       <QuickPicks items={PICKS} />
