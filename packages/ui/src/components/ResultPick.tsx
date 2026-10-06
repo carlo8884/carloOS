@@ -1,5 +1,5 @@
 import type { SiteId } from '@carloOS/config'
-import { partnerNeededLabel, partnerQuoteHeld, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { partnerNeededLabel, partnerQuoteHeld, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import type { MatchedPick } from '../lib/result-picks'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { HeldQuoteNext } from './HeldQuoteNext'
@@ -17,10 +17,7 @@ export function ResultPick({
   const href = held ? undefined : pick.href.startsWith('/go/') ? visibleShopHref(pick.href) : pick.href
   if (!href && !held) return null
   const shop = Boolean(href?.startsWith('/go/'))
-  const label =
-    shop && href && /\/go\/amazon/.test(href) && /chewy/i.test(pick.href)
-      ? pick.label.replace(/\bon Chewy\b/i, 'on Amazon')
-      : pick.label
+  const label = shop && href ? shopCtaLabel(pick.href, pick.label) : pick.label
   return (
     <div data-result-pick className="mt-4 rounded-lg border border-brand-border bg-brand-surface p-4">
       <p className="m-0 text-sm leading-relaxed text-brand-text-mid">{pick.detail}</p>
