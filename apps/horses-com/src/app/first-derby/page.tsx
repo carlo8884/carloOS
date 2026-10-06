@@ -330,7 +330,7 @@ export default function FirstDerbyPage() {
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/jockey+racing+silks?s=first-derby"
-              amazonLabel="Browse jockey silks on Amazon →"
+              amazonLabel="Browse jockey racing silks on Amazon →"
             />
           </div>
         </div>
