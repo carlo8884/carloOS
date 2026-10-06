@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { AffiliateDisclosure, buildMetadata, ArticleLayout, FAQAccordion, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
@@ -78,6 +79,9 @@ export default function DachshundPage() {
             />
           </div>
         </div>
+
+        <p>Harnesses for this breed are compared in the <Link href="/reviews/best-dog-harnesses">dog harness review</Link>.</p>
+        <p>Dog beds for this breed are compared in the <Link href="/reviews/best-dog-beds">dog bed review</Link>.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

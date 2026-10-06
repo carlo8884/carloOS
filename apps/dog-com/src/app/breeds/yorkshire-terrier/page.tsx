@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { AffiliateDisclosure, buildMetadata, ArticleLayout, BreedHealthCard, RelatedLinks, ShopCtas, CrossPortfolioCard , ArticleByline, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -95,6 +96,9 @@ export default function YorkiePage() {
             />
           </div>
         </div>
+
+        <p>Harnesses for this breed are compared in the <Link href="/reviews/best-dog-harnesses">dog harness review</Link>.</p>
+        <p>Dental chews for this breed are compared in the <Link href="/reviews/best-dental-chews">dental chew review</Link>.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion
