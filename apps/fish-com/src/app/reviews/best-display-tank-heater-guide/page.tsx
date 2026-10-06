@@ -75,13 +75,13 @@ export default function DisplayTankHeaterGuidePage() {
           ]}
         />
       }
-     priceAsOf="2026-10-04">
+     priceAsOf="2026-10-05">
       <div className="carloOS-article">
         <p>The <Link href="/reviews/best-aquarium-heaters">heater review</Link> ranks four heaters. For a planted or display tank, the decision is whether a glass tube in the corner is acceptable. Wattage is a separate decision. Use the <Link href="/tools/heater-wattage-calculator">heater wattage calculator</Link> for the tank volume, then come back here for the body style. Choose the wattage in the calculator, then come back for the heater shape.</p>
         <h2>Flat and shatterproof: Cobalt Neo-Therm Pro</h2>
-        <p>The Neo-Therm Pro is the best flat heater, scored 9.1. It lists the same ±0.5°F figure the review quotes for the Eheim, in a slim housing that sits against the glass instead of standing as a cylinder. The LED moves from blue while heating to white at temperature. The housing is shatterproof plastic. The price is $35–65. The tradeoff is price and the lack of a recalibration dial.</p>
+        <p>The Neo-Therm Pro is the best flat heater. It lists the same ±0.5°F figure the review quotes for the Eheim, in a slim housing that sits against the glass instead of standing as a cylinder. The LED moves from blue while heating to white at temperature. The housing is shatterproof plastic. The price is $35–65. The tradeoff is price and the lack of a recalibration dial.</p>
         <h2>Glass, and the tighter service story: Eheim Jager</h2>
-        <p>The Eheim Jager is the best overall pick, scored 9.4. The review quotes manufacturer accuracy of ±0.5°F and a separate recalibration wheel for drift. It shuts off when lifted out of the water. Sizes run from 25W to 300W, at $25–55 depending on wattage. The housing is glass. The review says it can shatter if dropped, and that the main dial is approximate until you calibrate it. Buy this when you want the recalibration dial and you will handle glass carefully. It is a weaker display pick because the tube is the thing you are trying not to look at.</p>
+        <p>The Eheim Jager is the best overall pick. The review quotes manufacturer accuracy of ±0.5°F and a separate recalibration wheel for drift. It shuts off when lifted out of the water. Sizes run from 25W to 300W, at $25–55 depending on wattage. The housing is glass. The review says it can shatter if dropped, and that the main dial is approximate until you calibrate it. Buy this when you want the recalibration dial and you will handle glass carefully. It is a weaker display pick because the tube is the thing you are trying not to look at.</p>
         <h2>No heater in the scape: Hydor inline</h2>
         <p>If the tank already has a canister, the Hydor inline heater is the way to keep the heater out of the picture. It heats water on the return hose, at $40–70. The review says temperature spreads from the filter return, and that the heater is incompatible with a hang-on-back or a sponge. Do not buy it for a tank that only has an AquaClear.</p>
         <h2>Who should buy which</h2>
