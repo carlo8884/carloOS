@@ -9,6 +9,7 @@ import {
   visibleChewyHref,
   amazonFallbackFromChewyHref,
   visibleShopHref,
+  shopCtaLabel,
   partnerTagReady,
   partnerNeededLabel,
   partnerQuoteHeld,
@@ -147,6 +148,28 @@ describe('resolveAffiliateHop', () => {
     )
     assert.equal(visibleShopHref('/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters', {}), '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters')
     assert.equal(visibleShopHref('#', {}), undefined)
+  })
+
+  it('names the retailer the Chewy-brand hop actually opens', () => {
+    const href = '/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food'
+    const amazonLabel = 'Check price of Royal Canin dry dog food on Amazon'
+    assert.equal(shopCtaLabel(href, amazonLabel, {}), amazonLabel)
+    assert.equal(
+      shopCtaLabel(href, amazonLabel, { AFF_CHEWY_BRAND_TAG: 'live' }),
+      'Check price of Royal Canin dry dog food on Chewy',
+    )
+    assert.equal(
+      shopCtaLabel(href, 'Check price of Royal Canin dry dog food on Chewy', {}),
+      amazonLabel,
+    )
+    assert.equal(
+      shopCtaLabel('/go/amazon-brand/fi+series+3+dog+collar', 'Check price of the Fi Series 3 collar on Amazon', {}),
+      'Check price of the Fi Series 3 collar on Amazon',
+    )
+    assert.equal(
+      shopCtaLabel('/go/chewy/connect?s=telehealth', 'Check Chewy Connect price on Chewy', {}),
+      'Visit AskVet →',
+    )
   })
 
   it('keeps Dog insurance quotes on the Vets.co review', () => {

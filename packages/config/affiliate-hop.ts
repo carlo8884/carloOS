@@ -98,6 +98,29 @@ export function visibleShopHref(
   return amazonFallbackFromChewyHref(href) ?? hiddenChewyReplacement(href, env)?.href
 }
 
+/**
+ * Hero and card labels name the retailer the visitor actually opens.
+ * A Chewy-brand hop says Amazon while the tag is unset, and Chewy once it is set.
+ * Connect and pharmacy keep the AskVet or vet-finder label from hiddenChewyReplacement.
+ */
+export function shopCtaLabel(
+  rawHref: string | undefined,
+  label: string,
+  env: NodeJS.ProcessEnv = process.env,
+): string {
+  const visible = visibleShopHref(rawHref, env)
+  const replacement = hiddenChewyReplacement(rawHref, env)
+  if (replacement && visible === replacement.href) return replacement.label
+  if (!visible || !label) return label
+  if (/\/go\/amazon/.test(visible) && /\bon Chewy\b/i.test(label)) {
+    return label.replace(/\bon Chewy\b/gi, 'on Amazon')
+  }
+  if (/\/go\/chewy/.test(visible) && rawHref && isChewyHop(rawHref) && /\bon Amazon\b/i.test(label)) {
+    return label.replace(/\bon Amazon\b/gi, 'on Chewy')
+  }
+  return label
+}
+
 /** Display names for a product-row shop link. Unknown vendors are not labeled. */
 const SHOP_RETAILER: Record<string, string> = {
   amazon: 'Amazon',
