@@ -11,7 +11,7 @@ const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Best Pet Teleheal
 // ReviewCard scores (no AggregateRating; see buildProductSchema contract).
 const vetsterSchema = buildProductSchema({ name: 'Vetster', description: 'Pet telehealth platform — video and chat consultations with licensed veterinarians, including specialists. Pay per consultation.', url: 'https://vetster.com', imageUrl: '', priceRange: '50-100' })
 const askVetSchema = buildProductSchema({ name: 'AskVet', description: 'Subscription pet telehealth — unlimited chat consultations with licensed veterinarians for a flat monthly fee.', imageUrl: '', priceRange: '25-35' })
-const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet', description: 'Telehealth service included with Chewy+ membership, with direct integration into the Chewy pharmacy for prescriptions.', url: 'https://chewy.com', imageUrl: '' })
+const chewyConnectSchema = buildProductSchema({ name: 'Chewy Connect with a Vet', description: 'Telehealth service included with Chewy+ membership, with direct integration into the Chewy pharmacy for prescriptions.', url: 'https://www.chewy.com/pethealth/connect-with-a-vet', imageUrl: '' })
 const combinedSchema = combineSchemas(schema, vetsterSchema, askVetSchema, chewyConnectSchema)
 
 const FAQS = [
