@@ -214,6 +214,7 @@ export default function GoldenRetrieverHealthPage() {
 
         <h2 id="insurance">Pet Insurance — Why It Matters More for Goldens</h2>
 
+        <p>The cancer-treatment figures in this section are typical US clinic ranges dated 2026-10-05. They are not a quote for one dog.</p>
         <p>The financial case for pet insurance is stronger for Golden Retrievers than almost any other breed. With a 60%+ lifetime cancer rate and real costs of $8,000–25,000 for cancer treatment, the expected value calculation is different than for lower-risk breeds.</p>
 
         <p>The single most important rule: <strong>enroll before your first vet visit</strong>. Any condition documented in records before enrollment is classified as pre-existing and excluded. A Golden diagnosed with a murmur at their first puppy exam has a cardiac exclusion for life in most policies.</p>
@@ -343,6 +344,7 @@ export default function GoldenRetrieverHealthPage() {
           </div>
 
         <h2 id="faq">FAQ</h2>
+        <p>The insurance question below repeats those same clinic ranges, dated 2026-10-05.</p>
         <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 
           <ArticleSourcesList sources={SOURCES} />
