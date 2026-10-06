@@ -121,7 +121,7 @@ export default function BestFerretHarnessPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof jacket ferret harness on Amazon' />}
+        heroHop={<PrimaryHop href='/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' label='Check price of an escape-proof vest jacket ferret harness on Amazon' />}
         hero={{
           title: 'Best Ferret Harness: Escape Prevention and Fit',
           subtitle:
