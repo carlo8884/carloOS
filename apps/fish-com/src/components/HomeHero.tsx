@@ -5,6 +5,8 @@ import { HomeEmailCapture } from './HomeEmailCapture'
 const HERO_FILL =
   '[&_figure]:!my-0 [&_figure]:!h-full [&_figure]:!w-full [&_figure>div]:!absolute [&_figure>div]:!inset-0 [&_figure>div]:!rounded-none'
 
+const FILL_IMAGE = '[&>figure]:my-0 [&>div]:my-0 [&_figure]:my-0'
+
 function IconArrowRight({ className }: { className?: string }) {
   return (
     <svg className={className} width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -44,9 +46,17 @@ export function HomeHero() {
       <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh] px-container-sm sm:px-container pt-16 pb-8 sm:pb-12">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">
-            Fish.com &mdash; Tank control center
-          </span>
+          <Link
+            href="/health/fish-disease-guide"
+            className="group flex items-center gap-2.5 no-underline"
+          >
+            <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+              <StockImage manifestKey="fish-com:hero" alt="A planted freshwater aquarium with warm internal lighting" aspect="4:3" subtleCredit />
+            </span>
+            <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">
+              Fish.com &mdash; Tank control center
+            </span>
+          </Link>
         </div>
         <h1
           className="font-display font-bold text-white tracking-tight leading-[1.04] italic mb-4 max-w-3xl"
