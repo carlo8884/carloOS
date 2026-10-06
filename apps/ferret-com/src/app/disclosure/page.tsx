@@ -142,7 +142,7 @@ export default function DisclosurePage() {
             No newsletter is currently sent, so there is no sponsored newsletter.
           </li>
           <li>
-            Display advertising via a third-party ad network.
+            No display ads are currently served.
           </li>
         </ol>
 
