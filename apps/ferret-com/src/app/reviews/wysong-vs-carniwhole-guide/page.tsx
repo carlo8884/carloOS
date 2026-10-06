@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -56,6 +57,7 @@ export default function WysongVsCarniwholeGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/wysong/epigen-90?s=reviews-wysong-vs-carniwhole-guide" label="Check price of Wysong Epigen 90 at Wysong" />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/wysong/epigen-90?s=reviews-wysong-vs-carniwhole-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

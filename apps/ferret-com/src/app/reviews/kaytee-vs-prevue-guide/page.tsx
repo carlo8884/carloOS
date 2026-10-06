@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -50,6 +51,7 @@ export default function KayteeVsPrevueGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-kaytee-vs-prevue-guide" label="Check price of the Prevue Feisty Ferret cage on Amazon" />}
+      heroExtra={<HopDisclosure siteId="ferret-com" href="/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-kaytee-vs-prevue-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
