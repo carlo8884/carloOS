@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
         <p>No newsletter is currently sent. Addresses submitted to forms are used only to reply. We do not sell, rent, or share your email address with third parties for their marketing purposes.</p>
 
         <h2>Affiliate Links</h2>
-        <p>Dog.com participates in affiliate programs including Amazon Associates, Chewy, Trupanion, Healthy Paws, and others. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
+        <p>Dog.com participates in affiliate programs including Amazon Associates and Chewy. Trupanion, Healthy Paws, and Embrace are not currently connected. When you click a link labeled with our affiliate disclosure and make a purchase, we earn a commission at no additional cost to you. Affiliate links do not affect our editorial rankings — see our <Link href="/editorial-standards">Editorial Standards</Link> for our independence policy and our <Link href="/legal/affiliate-disclosure">Affiliate Disclosure</Link> for the FTC-required statement.</p>
 
         <h2>Analytics</h2>
         <p>Google Analytics is not currently connected.</p>
