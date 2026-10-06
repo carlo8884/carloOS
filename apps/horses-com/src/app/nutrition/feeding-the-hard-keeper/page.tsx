@@ -216,7 +216,7 @@ export default function HardKeeperPage() {
             pros={['Dense, slow-burning calories', 'Low starch — gut-safe', 'Widely available', 'Palatable addition to existing feed']}
             cons={['Not a complete feed — use alongside forage and balancer', 'Introduce gradually', 'Some horses find the fat off-putting initially']}
             price="$25–45 per 25–30 lb"
-            ctaText="Search stabilized rice bran on Amazon →"
+            ctaText="Search stabilized rice bran horse supplement on Amazon →"
             ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+supplement?s=nutrition-hard-keeper"
             ctaAffiliateProgram="amazon"
             ctaAffiliateProduct="stabilized-rice-bran"
