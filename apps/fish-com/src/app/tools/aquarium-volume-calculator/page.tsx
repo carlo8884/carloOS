@@ -103,6 +103,11 @@ export default function VolumeCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Aquarium Volume Calculator',
         subtitle: 'Convert tank dimensions to US gallons, UK gallons, and liters. Supports rectangular, bow-front, cube, hexagonal, and cylinder tanks with realistic water-fill adjustment.',
@@ -152,8 +157,6 @@ export default function VolumeCalculatorPage() {
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
 
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/tools/filter-gph-calculator"

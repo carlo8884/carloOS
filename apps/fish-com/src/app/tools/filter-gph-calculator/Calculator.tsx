@@ -97,6 +97,9 @@ export default function FilterGphCalculator() {
 
   return (
     <div>
+      {result && gal > 0 ? (
+        <ResultPick linkFirst siteId="fish-com" pick={filterFromGallons(gal, style)} />
+      ) : null}
       <CalcCard>
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0">
           <FieldNumber
@@ -147,9 +150,6 @@ export default function FilterGphCalculator() {
         </ResultMeaning>
       )}
 
-      {result && gal > 0 && (
-        <ResultPick siteId="fish-com" pick={filterFromGallons(gal, style)} />
-      )}
     </div>
   )
 }

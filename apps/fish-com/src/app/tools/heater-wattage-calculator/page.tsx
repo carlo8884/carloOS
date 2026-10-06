@@ -110,6 +110,11 @@ export default function HeaterWattageCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Aquarium Heater Wattage Calculator',
         subtitle: 'Size your aquarium heater correctly based on tank volume, room temperature, and target temperature. With redundancy guidance for large tanks.',
@@ -161,8 +166,6 @@ export default function HeaterWattageCalculatorPage() {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareApplicationSchema) }}
         />
         <ArticleByline siteName="Fish.com Editorial" publishedAt="2026-05-01T00:00:00Z" updatedAt="2026-09-03T00:00:00Z" reviewedBy="Editorial team" />
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/reviews/best-aquarium-heaters"

@@ -50,6 +50,19 @@ export default function StockingCalculator() {
 
   return (
     <div>
+      {!inputError && result && result.slimInches > 0 ? (
+        <div className="max-w-full [&_a]:max-w-full [&_a]:whitespace-normal">
+          <ResultPick
+            linkFirst
+            siteId="fish-com"
+            pick={filterFromGallons(
+              parseFloat(tankGal) || 0,
+              style === 'cichlid' ? 'cichlid' : style === 'reef' ? 'reef' : style === 'planted' ? 'planted' : 'community',
+              'tools-stocking-calculator',
+            )}
+          />
+        </div>
+      ) : null}
       <CalcCard>
         <div className="grid sm:grid-cols-2 gap-x-6 gap-y-0">
           <FieldNumber
@@ -157,16 +170,6 @@ export default function StockingCalculator() {
             Read the aquarium filter review
           </a>
         </p>
-        <div className="max-w-full [&_a]:max-w-full [&_a]:whitespace-normal">
-          <ResultPick
-            siteId="fish-com"
-            pick={filterFromGallons(
-              parseFloat(tankGal) || 0,
-              style === 'cichlid' ? 'cichlid' : style === 'reef' ? 'reef' : style === 'planted' ? 'planted' : 'community',
-              'tools-stocking-calculator',
-            )}
-          />
-        </div>
         </>
       )}
     </div>

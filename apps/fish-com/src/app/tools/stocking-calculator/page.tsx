@@ -109,6 +109,13 @@ export default function StockingCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <StockingWaterProvider>
+            <Calculator />
+          </StockingWaterProvider>
+        </div>
+      }
       hero={{
         title: 'Aquarium Stocking Calculator',
         subtitle: 'A rough slim-inch / bioload ceiling from tank volume, surface area, filtration, and aquascape style — not a species count, and not the inch-per-gallon rule.',
@@ -164,8 +171,6 @@ export default function StockingCalculatorPage() {
 
 
         <StockingWaterProvider>
-          <h2 id="calculator">The Calculator</h2>
-          <Calculator />
           <JourneyNext
             siteId="fish-com"
             nextHref="/reviews/best-aquarium-filters"
