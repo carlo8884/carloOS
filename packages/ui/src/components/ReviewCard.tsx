@@ -9,6 +9,22 @@ import type { ReactNode } from 'react'
 import { hiddenChewyReplacement, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
+const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
+
+/** Small method link beside a Best Overall label. Same line as the badge so the shop row does not move down. */
+function HowWePickLink({ label }: { label?: string }) {
+  if (label !== 'Best Overall') return null
+  if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
+  return (
+    <a
+      href="/how-we-pick"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light underline underline-offset-2 whitespace-nowrap"
+    >
+      How we pick
+    </a>
+  )
+}
+
 interface Spec {
   label: string
   value: string
@@ -108,8 +124,9 @@ export function ReviewCard({
       <div className="flex items-start justify-between gap-5 mb-5">
         <div className="flex-1 min-w-0">
           {badge && (
-            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">
+            <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2 break-words">
               {badgeEmoji} {badge}
+              <HowWePickLink label={badge} />
             </div>
           )}
           <h2 className="font-display text-2xl font-black text-brand-dark tracking-tight mb-1 break-words">
@@ -269,19 +286,22 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
       </div>
       <div className={embedded ? 'grid grid-cols-1 gap-3' : 'grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3'}>
         {items.map((item) => (
-          <a
+          <div
             key={item.href}
-            href={item.href}
-            className="block bg-brand-white border border-brand-border rounded-lg p-3.5 no-underline hover:border-brand-primary transition-colors duration-200"
+            className="relative block bg-brand-white border border-brand-border rounded-lg p-3.5 hover:border-brand-primary transition-colors duration-200"
           >
+            <a href={item.href} aria-label={`${item.label}: ${item.name}`} className="absolute inset-0 rounded-lg" />
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
+              <HowWePickLink label={item.label} />
             </div>
-            <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
-            {item.subtitle && (
-              <div className="text-xs text-brand-text-light">{item.subtitle}</div>
-            )}
-          </a>
+            <div className="pointer-events-none">
+              <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>
+              {item.subtitle && (
+                <div className="text-xs text-brand-text-light">{item.subtitle}</div>
+              )}
+            </div>
+          </div>
         ))}
       </div>
     </div>
