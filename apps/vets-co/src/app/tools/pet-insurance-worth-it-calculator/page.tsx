@@ -122,6 +122,7 @@ const FAQS = [
   {
     question: 'Is pet insurance worth it?',
     answer:
+      'Ranges on this answer are dated 2026-06-11. ' +
       'It depends on three things: your pet\'s breed and age risk profile, your cash buffer for an emergency, and your tolerance for a low-probability large bill. Mathematically, like all insurance, pet insurance has a negative expected value at the average claim level — that is how carriers stay solvent — so in a typical low-cost year a policy does not pay for itself. Its value is risk protection: it converts a rare $5,000–$15,000 emergency or chronic-condition course into a predictable monthly cost. If you could comfortably absorb a five-figure vet bill from savings, self-insuring is a defensible choice; if that bill would force a hard decision about your pet\'s care, insurance is doing exactly the job it is designed for. Use the breakeven line above to see, for a specific quote, the eligible-cost level at which the policy pays for itself.',
   },
   {
@@ -147,6 +148,7 @@ const FAQS = [
   {
     question: 'What is a realistic expected vet-cost number to enter?',
     answer:
+      'Ranges on this answer are dated 2026-06-11. ' +
       'Enter only eligible illness and accident costs — routine wellness is usually excluded. For a healthy mid-life dog or cat with no chronic conditions, a few hundred dollars a year is typical. A single non-routine workup (imaging, bloodwork, a treatment course) can run $1,000–$2,000. One major incident — a foreign-body surgery, a cruciate repair, a serious illness — commonly lands in the $3,000–$8,000 range, and cancer care or emergency hospitalization can exceed $10,000–$15,000. Because the catastrophic scenarios are rare but ruinous, the decision to insure is mostly about the right tail, not the average. The scenario presets above span that range.',
   },
 ]
