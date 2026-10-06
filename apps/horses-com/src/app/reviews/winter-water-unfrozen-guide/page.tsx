@@ -89,12 +89,15 @@ export default function WinterWaterUnfrozenGuidePage() {
           ctaText="Save my address"
           source="reviews-winter-water-unfrozen-guide"
           checklist={[
+            {
+              label: 'Browse heated horse water buckets on Amazon',
+              href: '/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide',
+            },
             'The instruction is free-choice water that is available, unfrozen, and palatable, not a fixed bucket count.',
             'Keeping water unfrozen, and offering slightly warmed water, is one of the most important winter tasks on that page.',
             'The water page links a heated horse water bucket for the stall, next to a flat-back bucket and an electrolyte search.',
             'The winter-care kit links a horse tank heater for troughs that freeze, and it says that heater is not a treatment for impaction colic.',
             'Neither product replaces walking out and checking that the water is actually open.',
-            'Browse heated horse water buckets on Amazon',
           ]}
         />
       </div>

@@ -97,12 +97,15 @@ export default function DisplayTankHeaterGuidePage() {
           ctaText="Save my address"
           source="reviews-best-display-tank-heater-guide"
           checklist={[
+            {
+              label: 'Browse Cobalt Neo-Therm Pro heaters on Amazon',
+              href: '/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-display-tank-heater-guide',
+            },
             'Buy the Cobalt if the tank is a display and you want the published ±0.5°F figure without glass.',
             'Buy the Eheim if you want that figure plus a recalibration dial and you accept glass.',
             'Buy the Hydor only with a canister.',
             'The Aqueon Pro, at $18–30, is shatterproof and widely stocked, but the review quotes ±1–1.5°F and says it is the wrong heater for discus, cardinal tetras, and other tight-range animals.',
             'A display of those species is not the budget heater.',
-            'Browse Cobalt Neo-Therm Pro heaters on Amazon',
           ]}
         />
         <h2>Questions</h2>
