@@ -60,7 +60,7 @@ export default function BestAquariumFiltersPage() {
           Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 on Amazon' />
+        <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
           The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
         </p>
