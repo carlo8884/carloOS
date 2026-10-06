@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -29,8 +29,8 @@ const PICKS = [
   { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.4, reviewCount: 1 })
-const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fluvalaquatics.com', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fluvalaquatics.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 // GEO: ItemList of the ranked picks. Names + URLs come only from this page's
@@ -97,14 +97,12 @@ export default function BestAquariumFiltersPage() {
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="fish-com" />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
               name="AquaClear 70 Power Filter"
               subtitle="Refillable media basket · Most biological capacity in HOB class · Quiet"
-              score={9.4}
               winner
               description={<div>
                 <p>The AquaClear 70 is widely considered the benchmark HOB filter for a reason: its media basket is among the largest in the hang-on-back class — 3 separate chambers for mechanical (foam), chemical (carbon), and biological (BioMax ceramic rings) filtration. The refillable design means you control the media rather than paying for proprietary cartridges. The sponge alone provides exceptional biological filtration surface area.</p>
@@ -132,7 +130,6 @@ export default function BestAquariumFiltersPage() {
               badge="Best Canister"
               name="Fluval 307 Canister Filter"
               subtitle="Near-silent · Excellent biological capacity · Self-priming"
-              score={9.2}
               description={<p>The Fluval 307 is the correct choice for tanks 40–70 gallons requiring high biological filtration. At 303 GPH with a media volume of 780g, it outperforms most HOB filters at this tank size. The self-priming mechanism (push-button) makes startup and post-maintenance restart simple. Near-silent operation — the 307 runs quieter than most HOBs. The maintenance cycle is longer (every 3–6 months vs monthly for HOBs) because the large media volume takes longer to clog. The tradeoff: cleaning day is more involved.</p>}
               specs={[
                 { label: 'Type', value: 'Canister' },
@@ -156,7 +153,6 @@ export default function BestAquariumFiltersPage() {
               badge="Best Sponge Filter"
               name="Hikari Bacto-Surge Sponge Filter"
               subtitle="Nano tanks · Shrimp · Breeding setups · Safe for fry"
-              score={9.0}
               description={<p>Sponge filters are the correct choice for: shrimp tanks (no intake risk), breeding setups (fry cannot be sucked in), nano tanks under 20 gallons, and hospital/quarantine tanks. The Hikari Bacto-Surge has excellent sponge surface area for biological filtration and runs off an air pump (sold separately). The gentle flow is ideal for low-flow species (bettas, small tetras) and shrimp. Cleaning is the easiest of any filter type: squeeze the sponge in old tank water, reinstall. Never use tap water — it kills the beneficial bacteria.</p>}
               specs={[
                 { label: 'Type', value: 'Sponge (air-driven)' },
@@ -180,7 +176,6 @@ export default function BestAquariumFiltersPage() {
               badge="Best Budget HOB"
               name="Aqueon QuietFlow 30"
               subtitle="$25–40 · LED indicator light · Widely available"
-              score={8.3}
               description={<p>The Aqueon QuietFlow 30 is the most widely available budget HOB filter — found at every pet store, reliable, and functional for smaller tanks. The LED indicator light that signals when the cartridge needs replacement is a useful feature for beginners. Main limitation: the proprietary cartridge system requires purchasing Aqueon replacement cartridges rather than custom media. For beginners who prefer a simpler maintenance workflow, this is a minor concern. For keepers who want to optimize biological filtration, upgrade to the AquaClear.</p>}
               specs={[
                 { label: 'Price', value: '$25–40', highlight: 'good' },
