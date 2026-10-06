@@ -111,7 +111,7 @@ export default function BestDogCratesPage() {
               pros={['Divider included — grows with puppy', 'Fold-flat for easy storage', 'Double door access', 'Best price-to-quality in wire category', 'Easy to clean']}
               cons={['Not escape-proof for determined dogs', 'Wire can feel industrial in living space']}
               price="$40–80"
-              priceNote="By size"
+              priceNote="By size dated 2026-10-04."
               ctaText="Check price of the MidWest iCrate on Amazon"
               ctaHref="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
@@ -136,6 +136,7 @@ export default function BestDogCratesPage() {
               pros={['Genuinely escape-proof', 'Aircraft-grade aluminum construction', 'Lifetime warranty', 'Preferred by professional trainers and K9 handlers']}
               cons={['Significant weight — not portable', 'Premium price point', 'Overkill for calm dogs']}
               price="$300–500"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Impact high-anxiety crates on Amazon →"
               ctaHref="/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
@@ -160,7 +161,7 @@ export default function BestDogCratesPage() {
               pros={['IATA compliant', 'Accepted by most major airlines', 'Includes required dishes and hardware', 'Secure fastening system', 'Good ventilation']}
               cons={['Confirm with specific airline before travel', 'Heavier than soft-sided carriers', 'Not for cabin use (in-cabin requires soft-sided)']}
               price="$40–120"
-              priceNote="By size"
+              priceNote="By size dated 2026-10-04."
               ctaText="Shop Petmate Sky Kennel on Amazon →"
               ctaHref="/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates"
               ctaAffiliateProgram="amazon-brand"
@@ -185,6 +186,7 @@ export default function BestDogCratesPage() {
               pros={['Integrates into living space aesthetically', 'Functions as furniture', 'Good for calm adult dogs']}
               cons={['Not chew-resistant', 'Less ventilation than wire', 'Not for escape artists or puppies', 'Harder to clean']}
               price="$80–160"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Frisco Furniture Crates on Amazon →"
               ctaHref="/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"
               ctaAffiliateProgram="chewy-brand"

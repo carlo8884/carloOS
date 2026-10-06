@@ -162,6 +162,7 @@ export default function HelmetGuidePage() {
             pros={['ASTM/SEI certified', 'Low replacement cost after a fall', 'Dial-fit adjustability', 'Very widely stocked']}
             cons={['Heavier and less ventilated than premium helmets', 'Fewer shape options for hard-to-fit heads']}
             price="$40–60"
+            priceNote="dated 2026-06-01."
             ctaText="Compare the Troxel Spirit helmet at Riding Warehouse →"
             ctaHref="/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide"
             ctaAffiliateProgram="ridingwarehouse"
@@ -185,6 +186,7 @@ export default function HelmetGuidePage() {
             pros={['Certified for equestrian use', 'Better ventilation than entry tier', 'Wider fit range', 'Moderate price']}
             cons={['Not a show-ring aesthetic', 'Still requires individual fitting']}
             price="$70–110"
+            priceNote="dated 2026-06-01."
             ctaText="Compare the Ovation Deluxe Schooler at Dover Saddlery →"
             ctaHref="/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide"
             ctaAffiliateProgram="dover"
@@ -208,6 +210,7 @@ export default function HelmetGuidePage() {
             pros={['Multiple safety-standard certifications', 'Refined fit and ventilation', 'Show-appropriate appearance', 'Long manufacturer track record']}
             cons={['Premium price', 'Still single-use after a real impact', 'Professional fitting strongly advised']}
             price="$280–400"
+            priceNote="dated 2026-06-01."
             ctaText="Compare the Charles Owen AYR8 Plus at Riding Warehouse →"
             ctaHref="/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide"
             ctaAffiliateProgram="ridingwarehouse"

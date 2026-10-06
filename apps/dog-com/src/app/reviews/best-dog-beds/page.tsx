@@ -61,6 +61,7 @@ export default function BestDogBedsPage() {
               pros={['Among the few beds with a published arthritis trial', '10-year no-flatten warranty', 'American-made foam', 'Reported pain/stiffness reduction in arthritic dogs (manufacturer-funded study)']}
               cons={['Expensive ($279–399)', 'Cover is not machine washable (spot clean only)', 'Heavy — difficult to move']}
               price="$279–399"
+              priceNote="dated 2026-10-05."
               ctaText="Check price of the Big Barker orthopedic bed on Amazon"
               ctaHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
               ctaAffiliateProgram="chewy-brand"
@@ -72,6 +73,7 @@ export default function BestDogBedsPage() {
               pros={['Machine washable cover', 'Good foam quality for price', 'Multiple size options', 'Reputable brand with warranty']}
               cons={['Less therapeutic than Big Barker for severe arthritis', 'Cover zippers can be chewed by destructive dogs']}
               price="$125–175"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Casper Dog Bed on Amazon →"
               ctaHref="/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"
               ctaAffiliateProgram="chewy-brand"

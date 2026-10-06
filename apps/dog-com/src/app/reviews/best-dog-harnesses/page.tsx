@@ -59,6 +59,7 @@ export default function BestDogHarnessesPage() {
               pros={['Immediate pulling reduction', 'Affordable', 'Widely available', 'Trainer and behaviorist recommended', 'No pain mechanism']}
               cons={['Not for dogs with shoulder issues', 'Can rotate on small barrel-chested breeds', 'Needs correct fit to work']}
               price="$20–30"
+              priceNote="dated 2026-10-05."
               ctaText="Check price of the PetSafe Easy Walk harness on Amazon"
               ctaHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
@@ -70,6 +71,7 @@ export default function BestDogHarnessesPage() {
               pros={['Two-clip versatility', 'Padded for long wear', 'Strong build quality', 'Reflective trim', 'Top outdoor pick in this comparison']}
               cons={['Expensive ($40-55)', 'Overkill for casual walkers', 'Bulkier than minimalist options']}
               price="$40–55"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Ruffwear Front Range harness on Amazon →"
               ctaHref="/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="chewy-brand"
@@ -81,6 +83,7 @@ export default function BestDogHarnessesPage() {
               pros={['Among the strongest escape resistance available', 'Working-dog durability', 'Multiple adjustment points', 'ID patch capability', 'Handle on back']}
               cons={['Back-clip only — not for pullers', 'Heavy and bulky for small dogs', 'More expensive than casual alternatives']}
               price="$40–70"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Julius-K9 IDC Powerharness on Amazon →"
               ctaHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
               ctaAffiliateProgram="amazon-brand"

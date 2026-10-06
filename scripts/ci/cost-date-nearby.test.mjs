@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict'
 import test from 'node:test'
-import { addedCostLines, datedNearby, isCostSentence, stampOf } from './cost-date-nearby.mjs'
+import { addedCardPriceLines, addedCostLines, datedNearby, isCardPrice, isCostSentence, stampOf } from './cost-date-nearby.mjs'
 
 test('a care-cost sentence is in scope and a product price attribute is not', () => {
   assert.equal(isCostSentence('<p>Surgery commonly runs $3,000 at the clinic.</p>'), true)
@@ -37,4 +37,22 @@ test('added cost lines are read from a zero-context diff', () => {
   assert.equal(added.length, 1)
   assert.equal(added[0].file, 'apps/vets-co/src/app/insurance/page.tsx')
   assert.equal(added[0].line, 11)
+})
+
+test('a new review-card price needs the page date nearby', () => {
+  assert.equal(isCardPrice('price="$30–50 / 5 lb"'), true)
+  assert.equal(isCostSentence('price="$30–50 / 5 lb"'), false)
+  assert.equal(isCardPrice('priceNote="dated 2026-10-05."'), false)
+  const diff = [
+    'diff --git a/apps/dog-com/src/app/reviews/x/page.tsx b/apps/dog-com/src/app/reviews/x/page.tsx',
+    '@@ -4,0 +5 @@',
+    '+              price="$30"',
+  ].join('\n')
+  const added = addedCardPriceLines(diff)
+  assert.equal(added.length, 1)
+  assert.equal(added[0].line, 5)
+  const bare = ['<PriceAsOf date="2026-10-05" />', 'price="$30"']
+  assert.equal(datedNearby(bare, 1, '2026-10-05'), false)
+  const dated = ['<PriceAsOf date="2026-10-05" />', 'price="$30"', 'priceNote="dated 2026-10-05."']
+  assert.equal(datedNearby(dated, 1, '2026-10-05'), true)
 })

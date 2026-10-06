@@ -57,6 +57,7 @@ export default function BestLargeBreedFoodPage() {
               pros={['WSAVA top-tier compliance', 'Meaningful glucosamine and chondroitin levels', 'EPA from fish oil', 'Kibble size tailored for large breeds']}
               cons={['More expensive', 'Chicken-based — not for chicken-sensitive dogs']}
               price="$60–80 / 30 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Royal Canin Large Adult on Amazon →"
               ctaHref="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food"
               ctaAffiliateProgram="chewy-brand"
@@ -68,6 +69,7 @@ export default function BestLargeBreedFoodPage() {
               pros={['WSAVA compliant', 'Real chicken first ingredient', 'Live probiotics', 'EPA and glucosamine joint support', 'Multiple protein options']}
               cons={['Glucosamine levels not as high as Royal Canin']}
               price="$50–70 / 34 lb"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Purina Pro Plan Large Breed on Amazon →"
               ctaHref="/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"
               ctaAffiliateProgram="chewy-brand"

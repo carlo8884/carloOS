@@ -237,6 +237,7 @@ export default function SeniorFerretNutritionPage() {
             pros={['Keeps senior protein high', 'Softens cleanly for sore mouths', 'Low-carb — suits insulinoma-prone seniors', 'Animal-first panel']}
             cons={['Premium price', 'Not a substitute for a dental exam']}
             price="$30–50 / 5 lb"
+            priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-senior-ferret-nutrition"
             ctaAffiliateProgram="wysong"

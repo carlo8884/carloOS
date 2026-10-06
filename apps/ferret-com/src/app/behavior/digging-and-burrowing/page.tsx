@@ -331,6 +331,7 @@ export default function FerretDiggingBurrowingPage() {
             pros={['Highest enrichment value per dollar for tunnelling ferrets', 'Chainable for longer circuits', 'Machine washable', 'Pop-up + foldable storage']}
             cons={['Fabric wears in heavy-chewer households', 'Internal wire is a defect risk if exposed — inspect periodically']}
             price="$15–30"
+            priceNote="dated 2026-06-04."
             ctaText="Find Marshall Pop-N-Play tunnels"
             ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-digging-burrowing"
             ctaAffiliateProgram="marshall"
@@ -352,6 +353,7 @@ export default function FerretDiggingBurrowingPage() {
             pros={['Low ingest risk', 'Ferrets enjoy the give and movement', 'Cheap and replaceable', 'Easy to wash']}
             cons={['Balls migrate outside the tote — keep near a sweep-friendly surface', 'No texture variety — best rotated with rice or rocks']}
             price="$10–20 / bag"
+            priceNote="dated 2026-06-04."
             ctaText="Find ferret-safe ball pit balls on Amazon"
             ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=behavior-digging-burrowing"
             ctaAffiliateProgram="chewy-brand"

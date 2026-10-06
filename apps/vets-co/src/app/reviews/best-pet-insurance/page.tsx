@@ -141,6 +141,7 @@ export default function VetsPetInsurancePage() {
               pros={['Only insurer paying vet directly at time of service', '90% reimbursement', 'Unlimited payouts', 'Per-condition deductible favors chronic disease']}
               cons={['Higher premiums', 'No wellness coverage']}
               price="$65–120/month"
+              priceNote="dated 2026-10-05."
               ctaText="Get a Trupanion quote" ctaHref="/go/trupanion/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="trupanion" ctaAffiliateProduct="pet-insurance"
             />
@@ -157,6 +158,7 @@ export default function VetsPetInsurancePage() {
               pros={['Among the fastest claims processing of major carriers', 'Consistently strong customer satisfaction reputation', 'No payout limits', 'Good mobile app']}
               cons={['No direct vet payment', 'No wellness add-on']}
               price="$40–85/month"
+              priceNote="dated 2026-10-05."
               ctaText="Get a Healthy Paws quote" ctaHref="/go/healthy-paws/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="healthy-paws" ctaAffiliateProduct="pet-insurance"
             />
@@ -173,6 +175,7 @@ export default function VetsPetInsurancePage() {
               pros={['Wellness add-on covers routine and preventive care', 'Diminishing deductible rewards claim-free years', 'Highly customizable']}
               cons={['6-month orthopedic waiting period', 'More complex plan options']}
               price="$45–95/month + wellness add-on"
+              priceNote="dated 2026-10-05."
               ctaText="Get an Embrace quote" ctaHref="/go/embrace/home?s=reviews-best-pet-insurance" holdWithoutPartnerId
               ctaAffiliateProgram="embrace" ctaAffiliateProduct="pet-insurance"
             />

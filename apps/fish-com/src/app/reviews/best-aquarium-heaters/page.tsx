@@ -128,7 +128,7 @@ export default function BestHeatersPage() {
               pros={['Most accurate on published spec (±0.5°F)', 'Recalibratable — compensates for drift', 'Auto shut-off prevents burn-out', 'Long track record of reliability', 'Full wattage range available']}
               cons={['Glass construction — can shatter', 'Dial is approximate (calibration required)', 'Larger footprint than flat heaters']}
               price="$25–55"
-              priceNote="By wattage"
+              priceNote="By wattage dated 2026-10-04."
               ctaText="Check price of the Eheim Jager heater on Amazon"
               ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
@@ -151,6 +151,7 @@ export default function BestHeatersPage() {
               pros={['Flat design — minimal visual intrusion', 'Shatterproof housing', 'LED visual status indicator', 'Matches Jager accuracy']}
               cons={['Higher price than Eheim Jager', 'Not recalibratable']}
               price="$35–65"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Cobalt Neo-Therm on Amazon →"
               ctaHref="/go/amazon-brand/cobalt+neo-therm+pro?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
@@ -172,6 +173,7 @@ export default function BestHeatersPage() {
               pros={['No heater visible in the tank', 'Even temperature distribution', 'Longer lifespan (external)', 'Clean aesthetic for display tanks']}
               cons={['Requires canister filter', 'More expensive than in-tank', 'Not compatible with HOB filters']}
               price="$40–70"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Hydor Inline heater on Amazon →"
               ctaHref="/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"
@@ -193,6 +195,7 @@ export default function BestHeatersPage() {
               pros={['Best price of heaters compared', 'Shatterproof — beginner-safe', 'Widely available', 'Adequate for robust community fish']}
               cons={['Less accurate than premium options', 'Not suitable for temperature-sensitive species']}
               price="$18–30"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Aqueon Pro heater on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"
               ctaAffiliateProgram="amazon"

@@ -67,18 +67,21 @@ export default function TelehealthPage() {
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
               pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'No monthly commitment', 'Prescription capability']}
               cons={['Higher per-consult cost than subscription services', 'Wait times can extend during peak hours']}
+              priceNote="dated 2026-10-05."
               price="$50–100 per consultation" ctaText="Visit Vetster →" ctaHref="/go/vetster/telehealth?s=telehealth" ctaAffiliateProgram="vetster" ctaAffiliateProduct="telehealth" />
             <ReviewCard id="askvet" badge="Best Subscription" name="AskVet" subtitle="Unlimited monthly consultations · $25–35/month"
               description={<p>AskVet offers an unlimited monthly subscription model — $25–35/month for unlimited chat consultations with licensed veterinarians. For pet owners who have frequent questions (new puppy, senior pet, multiple pets, chronic conditions), the subscription model represents excellent value compared to per-consult pricing. Chat-only (no video) limits the depth of physical assessment, but the convenience and value are genuine for appropriate use cases.</p>}
               specs={[{ label: 'Consultation Type', value: 'Chat only' }, { label: 'Monthly Cost', value: '$25–35/month unlimited', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'General practice only' }, { label: 'Prescriptions', value: 'Limited' }]}
               pros={['Unlimited consultations for $25–35/month', 'Good for frequent questions']}
               cons={['Chat only — no video examination', 'Limited specialist access', 'Less comprehensive than Vetster for complex cases']}
+              priceNote="dated 2026-10-05."
               price="$25–35/month unlimited" ctaText="Visit AskVet →" ctaHref="/go/askvet/telehealth?s=telehealth" ctaAffiliateProgram="askvet" ctaAffiliateProduct="telehealth" />
             <ReviewCard id="chewy" badge="Best for Chewy Customers" name="Chewy Connect with a Vet" subtitle="Integrated with Chewy pharmacy · Free with Chewy+ membership"
               description={<p>Chewy Connect with a Vet is included with Chewy+ membership ($15–25/month, which also provides free shipping and other benefits). The integration with Chewy&apos;s pharmacy is the standout feature — prescriptions from Connect consultations can be filled directly through Chewy and shipped to your door. Best suited for Chewy customers who already have the membership for shipping benefits; the telehealth access is a meaningful bonus rather than the primary value proposition.</p>}
               specs={[{ label: 'Cost', value: 'Included with Chewy+', highlight: 'good' }, { label: 'Chewy Pharmacy', value: 'Direct integration', highlight: 'good' }, { label: 'Consultation Type', value: 'Video + chat' }, { label: 'Availability', value: 'Extended hours' }]}
               pros={['Included with Chewy+ membership', 'Direct Chewy pharmacy integration', 'Convenient for existing Chewy customers']}
               cons={['Only valuable if you already use Chewy+', 'Less specialist access than Vetster']}
+              priceNote="dated 2026-10-05."
               price="Included with Chewy+ ($15–25/month)" ctaText="Check Chewy Connect price on Chewy" ctaHref="/go/chewy/connect?s=telehealth" ctaAffiliateProgram="chewy" ctaAffiliateProduct="connect" />
 
             {/* Money path — live amazon-brand search hops (home-care prep kit).

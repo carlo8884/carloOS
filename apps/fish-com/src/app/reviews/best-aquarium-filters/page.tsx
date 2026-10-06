@@ -121,6 +121,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Among the largest media baskets in its class', 'Refillable — no proprietary cartridge lock-in', 'Excellent biological capacity', 'Adjustable flow', 'Proven 30+ year track record']}
               cons={['Impeller needs quarterly cleaning', 'Noisier if water level drops', 'Larger footprint than competitors']}
               price="$45–70"
+              priceNote="dated 2026-10-04."
               ctaText="Check price of the AquaClear 70 filter on Amazon"
               ctaHref="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
@@ -144,6 +145,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Near-silent operation', 'Superior biological capacity vs HOB', 'Self-priming button', 'Longer cleaning intervals', 'Fluval build quality']}
               cons={['More complex to clean than HOB', 'Higher price than equivalent HOB', 'Under-cabinet space required']}
               price="$120–160"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Fluval 307 canister filter on Amazon →"
               ctaHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
@@ -167,6 +169,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Safe for shrimp and fry', 'Excellent biological surface area', 'Easy cleaning', 'Low cost', 'Quiet']}
               cons={['Requires separate air pump', 'Not suitable for larger tanks alone', 'Less mechanical filtration than HOB']}
               price="$10–20"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Hikari Bacto-Surge sponge filters on Amazon →"
               ctaHref="/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"
@@ -189,6 +192,7 @@ export default function BestAquariumFiltersPage() {
               pros={['Lowest price of the HOBs in this comparison', 'Widely available', 'LED maintenance indicator', 'Simple setup']}
               cons={['Proprietary cartridge lock-in', 'Lower biological capacity than AquaClear', 'Can be noisy if impeller collects debris']}
               price="$25–40"
+              priceNote="dated 2026-10-04."
               ctaText="Shop Aqueon QuietFlow on Amazon →"
               ctaHref="/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"
               ctaAffiliateProgram="amazon"

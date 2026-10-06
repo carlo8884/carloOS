@@ -53,6 +53,7 @@ export default function BestGPSTrackerPage() {
               pros={['3-month battery — best by far', 'LTE-M for rural coverage', 'Instant escape alerts', 'Replaces collar — no extra bulk', 'Step and sleep tracking']}
               cons={['More expensive upfront ($140–160)', 'Monthly subscription required', 'Collar bands sold separately']}
               price="$140–160 + $8–12/mo"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Fi Series 3 collar on Amazon →"
               ctaHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
@@ -64,6 +65,7 @@ export default function BestGPSTrackerPage() {
               pros={['Health behavior monitoring (licking, scratching)', 'Good GPS accuracy', '20-day battery', 'Vet alert integration']}
               cons={['Shorter battery than Fi', 'Health data requires interpretation', 'Bulkier than Fi']}
               price="$70–90 + $8–12/mo"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Whistle Go Explore on Amazon →"
               ctaHref="/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
@@ -75,6 +77,7 @@ export default function BestGPSTrackerPage() {
               pros={['Lowest monthly cost', 'Best international coverage', 'Simple reliable app', 'Lightweight']}
               cons={['2–5 day battery — frequent charging', 'No health monitoring', 'Less sophisticated app than Fi']}
               price="$40–60 + $4–6/mo"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Tractive GPS tracker on Amazon →"
               ctaHref="/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"

@@ -580,6 +580,7 @@ export default function FerretAgingPage() {
             pros={['Eliminates climbing requirement for arthritic seniors', 'Soft on bony pressure points (common in weight-losing seniors)', 'Multiple cheap units mean spots in every room', 'Machine washable']}
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
             price="$10–25 each"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall ferret floor sleep sacks"
             ctaHref="/go/marshall/ferret-floor-sleep-sack?s=health-aging-ferret-care"
             ctaAffiliateProgram="marshall"

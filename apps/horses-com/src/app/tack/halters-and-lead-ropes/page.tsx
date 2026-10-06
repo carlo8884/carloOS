@@ -161,6 +161,7 @@ export default function HaltersLeadRopesPage() {
             pros={['Inexpensive and very durable', 'Washable, available in all sizes', 'Strong for in-hand handling']}
             cons={['Does not break — unsafe for turnout', 'Hardware can rub if poorly fitted']}
             price="$10–25"
+            priceNote="dated 2026-10-04."
             ctaText="Compare an adjustable nylon halter at SmartPak →"
             ctaHref="/go/smartpak/adjustable-nylon-halter?s=tack-halters"
             ctaAffiliateProgram="smartpak"
@@ -185,6 +186,7 @@ export default function HaltersLeadRopesPage() {
             pros={['Breaks under force to free a caught horse', 'Much safer than fixed nylon in turnout', 'Replaceable crownpieces on many models']}
             cons={['Leather crown needs periodic replacement', 'Pricier than a plain nylon halter']}
             price="$25–55"
+            priceNote="dated 2026-10-04."
             ctaText="Compare a leather-crown breakaway halter at Dover Saddlery →"
             ctaHref="/go/dover/leather-crown-breakaway-halter?s=tack-halters"
             ctaAffiliateProgram="dover"
@@ -208,6 +210,7 @@ export default function HaltersLeadRopesPage() {
             pros={['Soft enough to avoid rope burn', 'Strong, reliable snap', 'Long enough to tie safely']}
             cons={['Cotton frays over years of use', 'Cheap snaps can fail — check the clip']}
             price="$8–22"
+            priceNote="dated 2026-10-04."
             ctaText="Compare a cotton lead rope with bull snap at SmartPak →"
             ctaHref="/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"
             ctaAffiliateProgram="smartpak"

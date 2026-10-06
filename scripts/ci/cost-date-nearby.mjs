@@ -1,8 +1,9 @@
 #!/usr/bin/env node
 /**
- * A new care or insurance cost sentence on a five-site page that already
- * carries priceAsOf (or <PriceAsOf date>) must show that same date within
- * 12 lines ("dated YYYY-MM-DD" or "last updated YYYY-MM-DD").
+ * A new care or insurance cost sentence, or a new review-card price,
+ * on a five-site page that already carries priceAsOf (or <PriceAsOf date>)
+ * must show that same date within 12 lines ("dated YYYY-MM-DD" or
+ * "last updated YYYY-MM-DD").
  *
  * Existing undated sentences are not failed here. With no base revision
  * the job warns and exits 0.
@@ -45,7 +46,14 @@ function inScope(file) {
   return file.endsWith('.tsx') || file.endsWith('.ts')
 }
 
-export function addedCostLines(diff) {
+export function isCardPrice(line) {
+  const s = line.trim()
+  if (s.startsWith('//') || s.startsWith('*') || s.startsWith('/*') || s.startsWith('{/*')) return false
+  if (!/price="[^"]*\$\s?\d/.test(s) && !/price=\{['"]\$\s?\d/.test(s)) return false
+  return true
+}
+
+function addedMatchingLines(diff, predicate) {
   /** @type {{file:string,line:number,text:string}[]} */
   const found = []
   let file = null
@@ -65,11 +73,19 @@ export function addedCostLines(diff) {
     if (!inFile) continue
     if (raw.startsWith('+') && !raw.startsWith('+++')) {
       const text = raw.slice(1)
-      if (isCostSentence(text)) found.push({ file, line: newLine, text })
+      if (predicate(text)) found.push({ file, line: newLine, text })
       newLine += 1
     }
   }
   return found
+}
+
+export function addedCostLines(diff) {
+  return addedMatchingLines(diff, isCostSentence)
+}
+
+export function addedCardPriceLines(diff) {
+  return addedMatchingLines(diff, isCardPrice)
 }
 
 function main() {
@@ -90,7 +106,11 @@ function main() {
     process.exit(0)
   }
   const failures = []
-  for (const added of addedCostLines(diff)) {
+  const checks = [
+    ...addedCostLines(diff).map((row) => ({ ...row, kind: 'cost sentence' })),
+    ...addedCardPriceLines(diff).map((row) => ({ ...row, kind: 'review-card price' })),
+  ]
+  for (const added of checks) {
     if (!fs.existsSync(added.file)) continue
     const text = fs.readFileSync(added.file, 'utf8')
     const stamp = stampOf(text)
@@ -98,21 +118,21 @@ function main() {
     const lines = text.split('\n')
     const index = added.line - 1
     if (index < 0 || index >= lines.length) {
-      failures.push(`${added.file}:${added.line} new cost sentence could not be mapped`)
+      failures.push(`${added.file}:${added.line} new ${added.kind} could not be mapped`)
       continue
     }
     if (!datedNearby(lines, index, stamp)) {
       failures.push(
-        `${added.file}:${added.line} new cost sentence is missing "dated ${stamp}" within 12 lines`,
+        `${added.file}:${added.line} new ${added.kind} is missing "dated ${stamp}" within 12 lines`,
       )
     }
   }
   if (failures.length) {
-    console.error(`cost-date-nearby: ${failures.length} new cost sentence(s) omit the page date`)
+    console.error(`cost-date-nearby: ${failures.length} new cost line(s) omit the page date`)
     for (const failure of failures) console.error(`  ${failure}`)
     process.exit(1)
   }
-  console.log('cost-date-nearby: new care and insurance cost sentences show the page date.')
+  console.log('cost-date-nearby: new care-cost sentences and review-card prices show the page date.')
 }
 
 const entry = process.argv[1] || ''

@@ -188,6 +188,7 @@ export default function GroomingPage() {
             pros={['Lifts mud and loose hair effectively', 'Stimulates circulation', 'Inexpensive and durable']}
             cons={['Not for the face or bony areas', 'Soft versions wear faster in heavy mud']}
             price="$6–18"
+            priceNote="dated 2026-06-07."
             ctaText="Compare a rubber curry comb at SmartPak →"
             ctaHref="/go/smartpak/rubber-curry-comb?s=care-grooming"
             ctaAffiliateProgram="smartpak"
@@ -211,6 +212,7 @@ export default function GroomingPage() {
             pros={['Covers two routine steps', 'Body brush is face-safe', 'Lays the coat for a clean finish']}
             cons={['Natural-bristle versions cost more', 'Dandy brush too stiff for sensitive skin']}
             price="$15–40"
+            priceNote="dated 2026-06-07."
             ctaText="Compare a dandy and body brush set at Dover Saddlery →"
             ctaHref="/go/dover/dandy-body-brush-set?s=care-grooming"
             ctaAffiliateProgram="dover"
@@ -234,6 +236,7 @@ export default function GroomingPage() {
             pros={['Brush clears the sole for inspection', 'Inexpensive and essential', 'Surfaces thrush and stones early']}
             cons={['Plastic handles can snap under hard use', 'Easy to misplace — keep a spare']}
             price="$5–15"
+            priceNote="dated 2026-06-07."
             ctaText="Compare a hoof pick with brush at SmartPak →"
             ctaHref="/go/smartpak/hoof-pick-with-brush?s=care-grooming"
             ctaAffiliateProgram="smartpak"

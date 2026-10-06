@@ -67,6 +67,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Simplest dosing regimen available', 'Covers macros and micros in one product', 'Designed by experienced planted tank hobbyists', 'Works for 90% of planted setups']}
               cons={['Online only (Aquarium Co-Op)', 'High-tech CO2 setups may need supplemental macros', 'Not available in local fish stores']}
               price="$15–25"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Aquarium Co-Op Easy Green fertilizer on Amazon →"
               ctaHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
@@ -78,6 +79,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Universally available', 'Comprehensive micronutrient profile', 'Long track record', 'Works well for low-tech with good fish load']}
               cons={['Does not cover macros adequately alone', 'Multi-bottle system needed for full NPK coverage', 'Twice-weekly dosing']}
               price="$10–20"
+              priceNote="dated 2026-10-05."
               ctaText="Shop Seachem Flourish Comprehensive on Amazon →"
               ctaHref="/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"
@@ -89,6 +91,7 @@ export default function BestPlantedFertilizersPage() {
               pros={['Higher concentration — better for high-tech', 'Cost-effective per dose at volume', 'Comprehensive macro + micro coverage', 'Popular in serious aquascaping community']}
               cons={['Overkill for low-tech / easy planted tanks', 'Algae risk if overdosed', 'Online ordering typically required']}
               price="$12–22"
+              priceNote="dated 2026-10-05."
               ctaText="Shop NilocG Thrive fertilizer on Amazon →"
               ctaHref="/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"
               ctaAffiliateProgram="amazon"

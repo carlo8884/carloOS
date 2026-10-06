@@ -545,6 +545,7 @@ export default function FerretExerciseEnrichmentPage() {
             pros={['Highest enrichment value per dollar in most ferret households', 'Pop-up + foldable for storage', 'Connects to itself for circuits', 'Machine washable']}
             cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
             price="$15–30"
+            priceNote="dated 2026-05-31."
             ctaText="Find Marshall Pop-N-Play tunnels"
             ctaHref="/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="marshall"
@@ -566,6 +567,7 @@ export default function FerretExerciseEnrichmentPage() {
             pros={['Satisfies the strongest natural drive in a controlled way', 'Cheap and durable container', 'Fill is rotatable for novelty without buying new toys']}
             cons={['Fill spills are inevitable — keep near a vacuum-friendly surface', 'Rice fill needs replacement when it cracks down to dust']}
             price="$10–25 starter"
+            priceNote="dated 2026-05-31."
             ctaText="Find ferret-safe ball-pit fill on Amazon"
             ctaHref="/go/chewy-brand/small-pet-ball-pit-balls?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="chewy-brand"
