@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -28,6 +29,7 @@ export default function WellnessVsInsurancePage() {
       <SchemaScript schema={combineSchemas(schema, itemList)} />
       <ArticleLayout siteId="vets-co"
         heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' holdWithoutPartnerId />}
+        heroExtra={<HopDisclosure siteId="vets-co" noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80" href={['/go/embrace/home?s=insurance-wellness-plans-vs-insurance', '/go/pumpkin/home?s=insurance-wellness-plans-vs-insurance']} />}
         hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Wellness vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }]}
         sidebar={<>

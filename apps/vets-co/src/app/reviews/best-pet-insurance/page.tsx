@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CalloutBox, PullQuote, ArticleByline, FAQAccordion, PriceAsOf } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import Link from 'next/link'
@@ -93,6 +94,15 @@ export default function VetsPetInsurancePage() {
         </h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/trupanion/home?s=reviews-best-pet-insurance' label='Get a Trupanion quote →' holdWithoutPartnerId />
+        <HopDisclosure
+          siteId="vets-co"
+          noteClassName="mt-3 mb-0 text-xs leading-relaxed text-white/80"
+          href={[
+            '/go/trupanion/home?s=reviews-best-pet-insurance',
+            '/go/healthy-paws/home?s=reviews-best-pet-insurance',
+            '/go/embrace/home?s=reviews-best-pet-insurance',
+          ]}
+        />
         <EmailCapture
           variant="inline"
           siteId="vets-co"
@@ -113,7 +123,7 @@ export default function VetsPetInsurancePage() {
         <p className="text-lg text-white/55 max-w-2xl" style={{ lineHeight: 1.6, fontFamily: 'ui-sans-serif, system-ui, sans-serif' }}>
           Trupanion is the only one of the 11 major carriers that pays the practice directly at checkout.
         </p>
-        <div className="mt-4 text-xs text-white/80">Vets.co Editorial · Updated Jun 2026 · Affiliate disclosure applies</div>
+        <div className="mt-4 text-xs text-white/80">Vets.co Editorial · Updated Jun 2026</div>
       </div>
 
       <QuickPicks items={PICKS} />
