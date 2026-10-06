@@ -166,7 +166,7 @@ export default function LitterPlannerPage() {
         </div>
       </section>
 
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-4 pb-section">
         <div className="max-w-5xl">
           <Calculator />
         </div>
