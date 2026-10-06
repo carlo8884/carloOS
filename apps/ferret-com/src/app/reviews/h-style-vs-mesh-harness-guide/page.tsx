@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -73,6 +73,22 @@ export default function HStyleVsMeshGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-h-style-vs-mesh-harness-guide"
+          checklist={[
+            "The adjustable H-style, marked Best Adjustability.",
+            "The card lists multi-point adjustment for a body with almost no neck, a light weight, and a higher escape risk if the fit is loose.",
+            "As an entry bundle, the figure-H mesh harness with a leash.",
+            "The card says the mesh is breathable, a matched leash is included, and there are fewer adjustment points and lighter buckles than a dedicated H-style.",
+            "On the vest-versus-H guide and on the harness review, where the jacket style is the pick for escape resistance.",
+            "The vest is a different purchase from these two.",
+          ]}
+        />
         <p>The notes below are the ones on the <Link href="/reviews/best-ferret-harness">harness review</Link>, which ranks styles from manufacturer specifications. Vest against H-style is a separate guide. This comparison is the dedicated adjustable H-style and the figure-H mesh set sold with a leash. The cards print a price mark, not a dollar amount.</p>
         <h2>What the review says about the adjustable H-style</h2>
         <p>The adjustable H-style is Best Adjustability. The card describes a neck loop and a girth loop joined by a back strap. Multiple adjustment points are how it fits a ferret that has effectively no neck, and a snug girth loop is what stops a backout. It is lightweight and quick to fit. The cons say an H-harness left even slightly loose is the easiest style to escape, thin straps spread less pressure than a vest, and the fit has to be checked every outing. The link above is that card’s Amazon search.</p>

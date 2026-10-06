@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -115,6 +115,22 @@ export default function WholePreyVsKibblePage() {
             publishedAt="2026-06-01"
             updatedAt="2026-06-01"
             reviewedBy="Editorial team"
+          />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="diet-whole-prey-vs-kibble"
+            checklist={[
+              "Skip it when you want the dental abrasion of whole prey.",
+              "The card says kibble gives less of that, and the price is premium.",
+              "Frozen feeder mice and chicks are the whole-prey pick.",
+              "The card says the price varies by size and quantity, intact bone covers calcium balance, and a freezer is required.",
+              "Skip it with no freezer, or if you will not handle raw prey carefully.",
+              "Whole-prey cost is not a fixed figure on this page.",
+            ]}
           />
 
           <h2 id="models">The Two Models</h2>

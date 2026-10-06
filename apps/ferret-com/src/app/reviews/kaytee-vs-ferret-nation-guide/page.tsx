@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -67,6 +67,22 @@ export default function KayteeVsFerretNationGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-kaytee-vs-ferret-nation-guide"
+          checklist={[
+            "The Ferret Nation or Critter Nation double unit is the long-term cage.",
+            "For one ferret that gets generous daily time out of the cage.",
+            "The review lists multi-level shelves, chain-store availability, and an entry price tier.",
+            "It says to confirm bar spacing on the exact model, and that a second ferret can outgrow it.",
+            "The Prevue Feisty Ferret is a separate comparison, for one or two ferrets when the double unit is too big or too expensive.",
+            "The Ferret Nation double unit is the overall cage.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Ferret Nation double unit is the overall cage. The Kaytee Multi-Level is the single-ferret starter. <Link href="/reviews/kaytee-vs-prevue-guide">Kaytee versus Prevue</Link> is the one-or-two ferret cage when the double unit is too big. Ferret Nation versus Prevue is a different pair, on the <Link href="/reviews/ferret-nation-vs-prevue-guide">Ferret Nation versus Prevue guide</Link>.</p>
         <h2>What the review says about the Kaytee</h2>
         <p>The Kaytee Multi-Level Ferret Home is the entry cage. It is widely stocked, multi-level, and the review says the footprint suits one ferret that gets generous daily time outside the cage, not a pair living in it full time. Bar spacing is listed as in range, with a warning to check the exact model. The price tier in the review is the entry tier. A second ferret can outgrow it.</p>

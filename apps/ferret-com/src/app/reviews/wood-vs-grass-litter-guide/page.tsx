@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -67,6 +67,22 @@ export default function WoodVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-wood-vs-grass-litter-guide"
+          checklist={[
+            "Compressed wood pellet litter, marked Best for Odor.",
+            "The review lists low dust once fines are sifted, no clumping, strong odor control, and a requirement that the pellets be heat-treated and low-phenol.",
+            "The price tier is the lowest of the three litters.",
+            "The review lists low dust, no clumping, a soft feel, moderate odor control, and faster breakdown when wet.",
+            "It is for a ferret that dislikes paper or wood underfoot.",
+            "The litter review says all three safe options are non-clumping and low-dust, and not to switch to a clumping cat litter for smell.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Compressed wood pellets are the odor pick. Pelleted grass is for ferrets that dislike a harder texture. Recycled paper is the overall winner on that page, and it is a separate comparison.</p>
         <h2>What the review says about wood pellets</h2>
         <p>Compressed wood pellet litter is Best for Odor. Dust is low once the fines are sifted. It does not clump. Odor control is the strongest of the safe options on that page. The caveat is the wood form: use only heat-treated, low-phenol compressed pellets. The review says aromatic raw cedar and pine shavings release phenols implicated in respiratory irritation, so loose aromatic shavings are not this product. Wood is harder underfoot than paper. The price tier is the lowest of the three litters. The shop search is heat-treated, non-clumping compressed wood pellets.</p>
