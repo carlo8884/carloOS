@@ -19,7 +19,7 @@ export function InsuranceWellnessShop({
     <div>
       <div className="mt-4 mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
         <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
-          Shop wellness prep
+          Next step
         </div>
         <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Insurance covers the unexpected bill. A first-aid kit, a digital thermometer, and an
           engraved ID tag are the prep items on the{' '}
