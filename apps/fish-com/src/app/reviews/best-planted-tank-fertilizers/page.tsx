@@ -132,7 +132,7 @@ export default function BestPlantedFertilizersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which fertilizer fits which tank</h2>
               <FAQAccordion items={[
                 {
