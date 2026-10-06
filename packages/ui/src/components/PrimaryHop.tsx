@@ -36,7 +36,7 @@ export function PrimaryHop({
   const hop = plain ? consult!.href : visibleShopHref(href)
   if (!hop) return null
   const amazon = /\/go\/amazon/.test(hop)
-  const text = shopCtaLabel(href, label)
+  const text = plain ? label : shopCtaLabel(href, label)
   return (
     <div className="mb-5" data-primary-hop="true">
       {hop.startsWith('/go/') ? (

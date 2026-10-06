@@ -120,7 +120,7 @@ export function ReviewCard({
     : href?.includes('/go/amazon')
       ? 'amazon'
       : ctaAffiliateProgram
-  const label = shopCtaLabel(rawHref, ctaText)
+  const label = plain ? ctaText : shopCtaLabel(rawHref, ctaText)
   return (
     <div
       id={id}

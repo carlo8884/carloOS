@@ -139,7 +139,7 @@ describe('resolveAffiliateHop', () => {
     )
     assert.equal(amazonFallbackFromChewyHref('/go/chewy/connect'), undefined)
     assert.equal(visibleShopHref('/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', {}), '/go/amazon-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food')
-    assert.equal(visibleShopHref('/go/chewy/connect', {}), '/go/askvet/telehealth?s=telehealth')
+    assert.equal(visibleShopHref('/go/chewy/connect', {}), undefined)
     assert.equal(visibleShopHref('/go/chewy/connect', { AFF_CHEWY_TAG: 'live' }), '/go/chewy/connect')
     assert.equal(visibleShopHref('/go/chewy-pharmacy/heartgard?s=rx', {}), '/find-a-vet')
     assert.equal(
@@ -172,7 +172,7 @@ describe('resolveAffiliateHop', () => {
     )
     assert.equal(
       shopCtaLabel('/go/chewy/connect?s=telehealth', 'Check Chewy Connect price on Chewy', {}),
-      'Visit AskVet →',
+      'Check Chewy Connect price on Chewy',
     )
   })
 

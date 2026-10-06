@@ -52,8 +52,8 @@ export function visibleChewyHref(
 
 /**
  * Chewy-brand search hops can earn on Amazon until Carlo sets a Chewy tag.
- * Only `/go/chewy-brand/{query}` rewrites. Connect and pharmacy are not
- * Amazon searches; they use hiddenChewyReplacement instead.
+ * Only `/go/chewy-brand/{query}` rewrites. Pharmacy uses hiddenChewyReplacement.
+ * Chewy Connect stays a live consult (see consultLink), not an AskVet swap.
  */
 export function amazonFallbackFromChewyHref(href: string): string | undefined {
   const match = href.match(/^(\/go\/)chewy-brand\/([^?#]+)([?#].*)?$/i)
@@ -62,7 +62,8 @@ export function amazonFallbackFromChewyHref(href: string): string | undefined {
 }
 
 /**
- * Connect and pharmacy hops disappear when no Chewy tag is set.
+ * Pharmacy hops disappear when no Chewy tag is set.
+ * Chewy Connect is a consult and is not rewritten here.
  * Show a link that already exists on Vets.co, and return nothing once a tag
  * is set so the original /go href comes back.
  */
@@ -72,9 +73,6 @@ export function hiddenChewyReplacement(
 ): { href: string; label: string } | undefined {
   if (!href || href === '#' || isChewyHopLive(env) || !isChewyHop(href)) return undefined
   const path = href.split('?')[0].toLowerCase()
-  if (path === '/go/chewy/connect') {
-    return { href: '/go/askvet/telehealth?s=telehealth', label: 'Visit AskVet →' }
-  }
   if (
     path === '/go/chewy-pharmacy' ||
     path.startsWith('/go/chewy-pharmacy/') ||
@@ -101,7 +99,8 @@ export function visibleShopHref(
 /**
  * Hero and card labels name the retailer the visitor actually opens.
  * A Chewy-brand hop says Amazon while the tag is unset, and Chewy once it is set.
- * Connect and pharmacy keep the AskVet or vet-finder label from hiddenChewyReplacement.
+ * Pharmacy keeps the vet-finder label from hiddenChewyReplacement.
+ * Chewy Connect keeps the page label; consultLink owns that href.
  */
 export function shopCtaLabel(
   rawHref: string | undefined,
