@@ -1,4 +1,26 @@
-# GROK.md — CEO lane log (preview only, last chip 2026-10-06 10:03 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-06 11:16 PDT)
+
+## 2026-10-06 ~11:16 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, and start-band eyebrow remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Left alone this hour.
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage stays photo-led on the under-hero trust chips, category action chip, popular-guides action chip, cornerstone action chip, calculator aside chip, BCS aside chip, and discipline filter chips. No homepage for-sale banner. The discipline-filter eyebrow ("For") was title-only beside the photo action chip; now a photo chip with the existing credited horses-com:category-disciplines thumb (Mikayla Storms) already used on that action and the racing chip, linking /disciplines.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Horses.com discipline-filter eyebrow now uses an existing manifest thumb that already has a photographer credit, so the disciplines path matches the action chip beside it and the rest of the photo-led homepage. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
+
 
 ## 2026-10-06 ~10:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, and start-band eyebrow remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Left alone this hour.
