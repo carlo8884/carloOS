@@ -1,4 +1,5 @@
 import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
  * A body-copy quote for Trupanion, Healthy Paws, or Embrace.
@@ -17,13 +18,16 @@ export function InlinePartnerQuote({
   const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
   if (held) {
     return (
-      <button
-        type="button"
-        disabled
-        className="border-0 bg-transparent p-0 text-left font-semibold text-brand-text-light cursor-not-allowed"
-      >
-        {partnerNeededLabel(label)}
-      </button>
+      <span className="inline-flex flex-wrap items-center gap-x-3 gap-y-1">
+        <button
+          type="button"
+          disabled
+          className="border-0 bg-transparent p-0 text-left font-semibold text-brand-text-light cursor-not-allowed"
+        >
+          {partnerNeededLabel(label)}
+        </button>
+        <HeldQuoteNext />
+      </span>
     )
   }
   const hop = visibleShopHref(href)
