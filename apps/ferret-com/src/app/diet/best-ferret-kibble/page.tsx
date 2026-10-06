@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -183,6 +183,23 @@ export default function BestFerretKibblePage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="diet-best-ferret-kibble"
+            checklist={[
+              "Read the panel, not the marketing on the front of the bag.",
+              "Chicken meal is rendered, water-removed chicken and is actually more protein-dense by weight than fresh chicken, which is roughly 70% water.",
+              "A panel reading \"chicken, chicken meal, turkey meal, chicken fat\" is a good sign.",
+              "The red flags are grains or plant-protein concentrates (corn gluten meal, pea protein, soybean meal) at the top of the panel.",
+              "Ferrets imprint on the textures and smells of food during their first six months and become reluctant to accept anything unfamiliar afterward.",
+              "The defense is rotating among two or three acceptable brands from kithood.",
+            ]}
+          />
+
 
 
           <h2 id="panel">Read the Panel First</h2>

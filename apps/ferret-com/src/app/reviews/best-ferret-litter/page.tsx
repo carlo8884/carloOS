@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -185,6 +185,23 @@ export default function BestFerretLitterPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="reviews-best-ferret-litter"
+            checklist={[
+              "Recycled paper-pellet litter is the most widely recommended choice.",
+              "It is low-dust, non-clumping, absorbent, and soft on the feet, with no clumping agents to swallow and no fine respiratory dust.",
+              "Heat-treated compressed wood pellets and pelleted plant-fiber litters are good alternatives.",
+              "The unifying rule is: a pelleted, low-dust, non-clumping litter \u2014 not a clay or fine-grain cat litter.",
+              "Clumping clay litters form a solid mass when wet, which is the hazard.",
+              "Ferrets dig, nose into the litter, and groom \u2014 and ingested or inhaled clumping agent can swell in the airway or digestive tract.",
+            ]}
+          />
+
 
           <p>
             Choosing ferret litter is one of the few pet-store decisions where the obvious default is the wrong answer.

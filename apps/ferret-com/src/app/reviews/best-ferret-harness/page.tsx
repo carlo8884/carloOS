@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -183,6 +183,23 @@ export default function BestFerretHarnessPage() {
             updatedAt="2026-06-11"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="ferret-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="reviews-best-ferret-harness"
+            checklist={[
+              "The two suitable styles are the jacket (vest) harness and the H-style harness.",
+              "A simple collar is not a substitute \u2014 ferrets slip collars easily.",
+              "The single best choice is whichever you can fit snugly, because fit prevents escape more than style does.",
+              "Snug enough that you can just slide one finger between the strap and the body, and no more.",
+              "Because a ferret has no real neck and a tapered, flexible body, anything looser lets it back out or twist free.",
+              "After fitting, do a supervised test indoors: if the ferret can reverse out, tighten the girth loop.",
+            ]}
+          />
+
 
           <p>
             A ferret harness is unusual among pet gear in that nearly everything about choosing one reduces to a single
