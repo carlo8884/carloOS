@@ -177,7 +177,12 @@ export default function HomePage() {
           <div className="flex items-end justify-between gap-4 flex-wrap mb-4">
             <div className="flex items-center gap-3">
               <span aria-hidden="true" className="h-px w-8" style={{ background: 'var(--brand-accent)' }} />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+              <Link href="/editorial-standards" className="group flex items-center gap-2.5 no-underline">
+                <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                  <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
+                </span>
+                <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+              </Link>
             </div>
             <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
               <span className={`relative h-14 w-20 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
