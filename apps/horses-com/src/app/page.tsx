@@ -307,7 +307,12 @@ export default function HomePage() {
                 <div className="flex items-end justify-between gap-3 flex-wrap mb-3">
                   <div className="flex items-center gap-2.5">
                     <span className="w-6 h-0.5 bg-brand-primary" />
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">Try it · Henneke body condition score</span>
+                    <Link href="/tools/body-condition-score" className="group flex items-center gap-2.5 no-underline">
+                      <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                        <StockImage manifestKey="horses-com:tool-bcs-calculator" fallbackKey="horses-com:hero" alt="A horse standing square for body condition assessment" aspect="4:3" variant="inline" subtleCredit />
+                      </span>
+                      <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:underline">Try it · Henneke body condition score</span>
+                    </Link>
                   </div>
                   <Link href="/tools/body-condition-score" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)' }}>
                     <span className={`relative h-12 w-16 shrink-0 overflow-hidden ${FILL_IMAGE}`}>
