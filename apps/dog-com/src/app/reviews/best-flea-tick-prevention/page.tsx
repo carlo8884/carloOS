@@ -47,6 +47,7 @@ export default function FleaTickPreventionPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Isoxazolines and Seizure Risk</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">The <a href="https://www.fda.gov/animal-veterinary/animal-health-literacy/fact-sheet-pet-owners-and-veterinarians-about-potential-adverse-events-associated-isoxazoline-flea" rel="noopener" target="_blank" className="text-brand-primary hover:underline">FDA</a> has issued a warning that isoxazoline-class products (Bravecto, NexGard, Simparica, Credelio) may cause neurological adverse events including muscle tremors, ataxia, and seizures in some dogs. This is rare — but dogs with a history of seizures or neurological conditions should use these products only under close veterinary supervision. Discuss with your vet before starting any isoxazoline product.</p>
             </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-8">Prices on the cards are clinic ranges from a veterinary visit, not a shelf price. Every button opens the vet finder.</p>
             <ReviewCard id="bravecto" badge="Best Overall" name="Bravecto Chew (Fluralaner)" subtitle="12-week duration · Covers 7 tick species · Single dose convenience" winner
               description={<p>Bravecto's 12-week duration is its defining advantage — 4 doses per year versus 12 for monthly products. Fewer doses means fewer opportunities for compliance lapses (the most common reason prevention fails). A single chew provides 3 months of protection against fleas and 7 tick species including Deer tick (Lyme disease vector), American dog tick, Brown dog tick, Black-legged tick, Gulf Coast tick, Lone Star tick, and Serrano tick. Blood levels remain therapeutic throughout the 12-week window — unlike some monthly products that have efficacy gaps in the final week. Prescription required.</p>}
               specs={[{ label: 'Duration', value: '12 weeks per dose', highlight: 'good' }, { label: 'Tick species', value: '7 — broadest coverage', highlight: 'good' }, { label: 'Class', value: 'Isoxazoline (fluralaner)' }, { label: 'Requires Rx', value: 'Yes' }]}
@@ -70,7 +71,7 @@ export default function FleaTickPreventionPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which preventive</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Two preventives have review cards. Both buttons go to the vet finder. This page does not name a retailer. Simparica Trio is in the picks strip and does not have a scored card or a printed price here.
+                Two preventives have review cards. The prices are clinic ranges, not a shelf price. Both buttons go to the vet finder. This page does not name a retailer. Simparica Trio is in the picks strip and does not have a scored card or a printed price here.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
