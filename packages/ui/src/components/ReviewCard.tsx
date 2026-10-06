@@ -21,7 +21,7 @@ function QuickPickShopLink({ label, href }: { label?: string; href?: string }) {
     <a
       href={hop}
       rel="sponsored noopener"
-      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-primary underline underline-offset-2 whitespace-nowrap"
+      className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-dark underline underline-offset-2 whitespace-nowrap"
     >
       Check price
     </a>
