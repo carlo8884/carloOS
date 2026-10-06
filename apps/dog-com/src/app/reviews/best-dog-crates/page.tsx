@@ -194,7 +194,7 @@ export default function BestDogCratesPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which crate</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                The four cards above already name the job, the price band, and the limit. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.
+                The four cards above already name the job, the price band, and the limit. This table only lines those facts up. 
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
