@@ -105,7 +105,7 @@ const combined = combineSchemas(schema, med, itemList, faqSchema, ...products)
 // Near-top jump links — fed by the SAME three picks as the ItemList schema
 // above (same names, same anchors). Labels mirror each ReviewCard's badge.
 const QUICK_PICKS = [
-  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Starch-free · Lowest carb load', href: '#wysong-epigen-90' },
+  { label: 'Premium Tier', name: 'Wysong Epigen 90', subtitle: 'Starch-free · Lowest carb load', href: '#wysong-epigen-90', pickHop: '/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
   { label: 'Mid Tier', name: 'Marshall Premium Ferret Diet', subtitle: 'Ferret-specific · Widely stocked', href: '#marshall-premium-diet' },
   { label: 'Direct-to-Consumer', name: 'Carniwhole Ferret Food', subtitle: 'Published macros · Subscription', href: '#carniwhole' },
 ]
@@ -117,6 +117,11 @@ export default function BestFerretKibblePage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-best-ferret-kibble' label='Check price of Wysong Epigen 90 at Wysong' />}
+        heroExtra={
+          <div className="[&_.text-brand-primary]:!text-brand-dark">
+            <QuickPicks items={QUICK_PICKS} embedded />
+          </div>
+        }
         hero={{
           title: 'How to Choose a Ferret Kibble',
           subtitle:
@@ -179,7 +184,6 @@ export default function BestFerretKibblePage() {
             reviewedBy="Editorial team"
           />
 
-          <QuickPicks items={QUICK_PICKS} />
 
           <h2 id="panel">Read the Panel First</h2>
           <p>

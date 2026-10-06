@@ -33,7 +33,7 @@ const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', 
 const allSchemas = combineSchemas(articleSchema, ramboSchema, rhinoSchema, schneidersSchema, smartpakSchema, weatherbeetaSchema, amigoSchema)
 
 const PICKS = [
-  { label: 'Best Premium Turnout', emoji: '🏆', name: 'Horseware Rambo Original', subtitle: '1000-denier ballistic · Leg-arch design · Built to last seasons', href: '#rambo' },
+  { label: 'Best Premium Turnout', emoji: '🏆', name: 'Horseware Rambo Original', subtitle: '1000-denier ballistic · Leg-arch design · Built to last seasons', href: '#rambo', pickHop: '/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' },
   { label: 'Best Heavy Winter', emoji: '❄', name: 'Schneiders StormShield Euro', subtitle: '1680-denier · Heavyweight fill · Harsh-winter specification', href: '#schneiders' },
   { label: 'Best Value', emoji: '◎', name: 'Amigo Bravo 12 Plus', subtitle: '1000-denier ballistic · Horseware build at value tier', href: '#amigo' },
   { label: 'Best Mid-Tier', emoji: '⭐', name: 'Weatherbeeta ComFiTec Plus', subtitle: 'Memory-foam wither · 1200-denier · Strong mid-price option', href: '#weatherbeeta' },
