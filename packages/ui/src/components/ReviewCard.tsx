@@ -21,8 +21,8 @@ interface ReviewCardProps {
   name: string
   subtitle?: string
 
-  /** Score out of 10 */
-  score: number
+  /** Score out of 10. Omit when the page does not publish a score. */
+  score?: number
 
   description: ReactNode
 
@@ -116,13 +116,14 @@ export function ReviewCard({
           )}
         </div>
 
-        {/* Score */}
-        <div className="text-center bg-brand-surface rounded-lg px-4 py-3 flex-shrink-0">
-          <span className="font-display text-4xl font-bold text-brand-primary leading-none block">
-            {score.toFixed(1)}
-          </span>
-          <span className="text-2xs text-brand-text-light mt-1 block">Editor Score</span>
-        </div>
+        {score != null && (
+          <div className="text-center bg-brand-surface rounded-lg px-4 py-3 flex-shrink-0">
+            <span className="font-display text-4xl font-bold text-brand-primary leading-none block">
+              {score.toFixed(1)}
+            </span>
+            <span className="text-2xs text-brand-text-light mt-1 block">Editor Score</span>
+          </div>
+        )}
       </div>
 
       {/* Description */}
