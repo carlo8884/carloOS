@@ -210,9 +210,9 @@ export function HomeTriage() {
                     <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                       <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
                     </span>
-                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
+                    <span className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
                       {item.label}
-                    </div>
+                    </span>
                   </div>
                   <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
                 </div>
