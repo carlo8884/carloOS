@@ -83,7 +83,7 @@ const MAGNETS: Record<string, MagnetContent> = {
       },
       {
         headline: 'See the Dog.com comparison table',
-        body: 'Editorial scores and sample premiums stay on Dog.com. Quote buttons go to the Vets.co review.',
+        body: 'Sample premiums stay on Dog.com. Quote buttons go to the Vets.co review.',
         cta: { label: 'Open the comparison →', href: '/pet-insurance' },
       },
     ],

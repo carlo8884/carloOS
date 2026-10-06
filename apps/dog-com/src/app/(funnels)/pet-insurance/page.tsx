@@ -111,7 +111,7 @@ export default function PetInsuranceHubPage() {
       <div className="px-container sm:px-container-sm py-14 max-w-6xl mx-auto">
         {/* TL;DR — what AI engines should quote */}
         <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-          <strong className="not-italic">TL;DR.</strong> Trupanion carries the highest editorial score (9.2) in this comparison — per-condition lifetime deductible, no payout caps, and direct-pay at participating vets. Pumpkin (9.0) is the next-highest score for broad base coverage with no per-incident caps and no upper age limit at enrollment. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
+          <strong className="not-italic">TL;DR.</strong> Trupanion is listed first in this comparison for a per-condition lifetime deductible, no payout caps, and direct-pay at participating vets. Pumpkin is listed next for broad base coverage with no per-incident caps and no upper age limit at enrollment. Lemonade is the budget-conscious pick. Across all nine carriers, the details that most often decide claims are the orthopedic waiting period and exam-fee coverage — compare those two columns first.
         </p>
 
         {/* How we picked */}
@@ -145,7 +145,6 @@ export default function PetInsuranceHubPage() {
                 <th className="text-left py-3 pr-4 font-semibold">Reimbursement</th>
                 <th className="text-left py-3 pr-4 font-semibold">Annual limit</th>
                 <th className="text-left py-3 pr-4 font-semibold">Exam fees</th>
-                <th className="text-left py-3 pr-4 font-semibold">Score</th>
                 <th className="text-left py-3 font-semibold">Quote</th>
               </tr>
             </thead>
@@ -170,7 +169,6 @@ export default function PetInsuranceHubPage() {
                         ? 'Add-on'
                         : '—'}
                   </td>
-                  <td className="py-3 pr-4 font-semibold">{c.editorialScore}</td>
                   <td className="py-3">
                     <a
               href={VETS_PET_INSURANCE_REVIEW}
@@ -199,8 +197,7 @@ export default function PetInsuranceHubPage() {
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Trupanion</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Highest editorial score (9.2) in this comparison. Per-condition
-              lifetime deductible, no payout caps, direct-pay at participating vets.
+              Per-condition lifetime deductible, no payout caps, direct-pay at participating vets.
             </p>
             {/* Monetization-lane exception: this hop stays live until Carlo
                 sets AFF_TRUPANION_TAG, AFF_HEALTHY_PAWS_TAG, and AFF_EMBRACE_TAG.
@@ -222,8 +219,7 @@ export default function PetInsuranceHubPage() {
             </div>
             <h3 className="font-display text-xl font-bold mb-1">Pumpkin Pet Insurance</h3>
             <p className="text-sm text-brand-text-mid mb-3">
-              Next-highest editorial score (9.0) for broad base coverage with no
-              per-incident caps. No upper age limit at enrollment.
+              Broad base coverage with no per-incident caps. No upper age limit at enrollment.
             </p>
             <a
               href={VETS_PET_INSURANCE_REVIEW}
@@ -372,7 +368,7 @@ export default function PetInsuranceHubPage() {
           </h3>
           <p className="text-sm text-brand-text-mid leading-relaxed mb-3">
             Dog.com rankings are independent of affiliate relationships.
-            Editorial scores are based on policy structure, not commission. We
+            Order follows policy structure, not commission. We
             disclose affiliate links on every page where they appear. See our
             full{' '}
             <Link href="/editorial-standards" className="text-brand-primary underline">

@@ -186,7 +186,7 @@ export default async function BreedDnaPage({
               <div className="font-display text-lg font-bold mb-1">{a.name}</div>
               <div className="text-sm text-brand-text-mid mb-2">{a.tagline}</div>
               <div className="text-xs text-brand-primary font-semibold">
-                Score: {a.editorialScore}/10 →
+                See this test →
               </div>
             </Link>
           ))}
