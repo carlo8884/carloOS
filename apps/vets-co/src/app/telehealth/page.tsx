@@ -23,7 +23,7 @@ const FAQS = [
 ]
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
+  { label: 'Video and chat', name: 'Vetster', subtitle: 'Video + chat · Licensed DVMs', href: '#vetster' },
   { label: 'Best Subscription', name: 'AskVet', subtitle: 'Unlimited monthly · $25–35/mo', href: '#askvet' },
   { label: 'Chewy Integration', name: 'Chewy Connect', subtitle: 'Linked to Chewy Rx', href: '#chewy' },
 ]
@@ -40,7 +40,7 @@ export default function TelehealthPage() {
         fallbackKey="vets-co:hero"
         imageAlt="A laptop and notepad on a desk, set up for a remote consultation"
         hop={<PrimaryHop href='/go/vetster/telehealth?s=telehealth' label='Visit Vetster →' />}
-        primaryCta={{ href: '#vetster', label: 'See the top pick' }}
+        primaryCta={{ href: '#vetster', label: 'See the video consult' }}
         secondaryCta={{ href: '/find-a-vet', label: 'Find an in-person vet' }}
       />
       <div className="px-container-sm sm:px-container pt-6">
@@ -54,14 +54,14 @@ export default function TelehealthPage() {
           <div className="min-w-0">
             {/* TL;DR — what AI engines should quote */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
-              <strong className="not-italic">TL;DR.</strong> Vetster is our recommended overall pick for 2026 — video and chat consultations with licensed vets (including specialists), no monthly commitment, and rigorous state-level licensing that makes prescriptions valid where state rules allow. AskVet is the value pick for frequent questions at $25–35/month for unlimited chat. Chewy Connect makes sense mainly if you already hold a Chewy+ membership. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
+              <strong className="not-italic">TL;DR.</strong> Vetster is the video-and-chat consult on this page — licensed vets (including specialists), no monthly commitment, and state-level licensing that makes prescriptions valid where state rules allow. AskVet is the chat subscription for frequent questions at $25–35/month for unlimited chat. Chewy Connect makes sense mainly if you already hold a Chewy+ membership. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
             </p>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-lg p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment. Unsure which setting fits? Use the <Link href="/tools/er-vs-clinic" className="text-brand-primary font-medium hover:underline">ER vs clinic vs telehealth</Link> tool.</p>
             </div>
             <AffiliateDisclosure variant="inline" siteId="vets-co" />
-            <ReviewCard id="vetster" badge="Best Overall" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
+            <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
               description={<p>Vetster is a comprehensive pet telehealth platform — licensed veterinarians available by video or chat. This page does not publish a wait time. Their credentialing standards are described as rigorous: all vets are licensed in the jurisdiction where the pet owner is located, making prescriptions legally valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). Pay per consultation — no monthly commitment required.</p>}
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
               pros={['Specialists available (behaviorists, dermatologists)', 'Rigorous licensing standards', 'No monthly commitment', 'Prescription capability']}
@@ -135,7 +135,7 @@ export default function TelehealthPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Video, a specialist, or a prescription where state rules allow</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#vetster" className="text-brand-primary">Vetster</a><TableShopLink href={"/go/vetster/telehealth?s=telehealth"} product={"Vetster"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. Video and chat. Pay per consult, $50–100. No monthly fee</td>
+                      <td className="p-3 text-brand-text-mid">Video and chat. Pay per consult, $50–100. No monthly fee</td>
                       <td className="p-3 text-brand-text-mid">Higher per visit than a subscription. Waits can stretch at peak hours</td>
                     </tr>
                     <tr className="border-b border-brand-border">
