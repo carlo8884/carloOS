@@ -85,10 +85,11 @@ export default function GdvPage() {
 
           <h2>Treatment</h2>
           <p>Emergency stabilization: IV fluids, pain management, gastric decompression (passing a tube to release gas or trocharization through the body wall). Emergency surgery: the stomach is repositioned and sutured to the body wall to prevent re-rotation (gastropexy). Non-viable stomach tissue is resected if blood supply was compromised long enough to cause necrosis. The spleen may require removal if compromised.</p>
-          <p>The emergency surgery figures in this section and the next are typical US clinic ranges dated 2026-10-04.</p>
+          <p>Typical range, not a quote. The emergency surgery figures in this section and the next are typical US clinic ranges dated 2026-10-04.</p>
           <p>Survival rates with prompt treatment at well-equipped emergency facilities: 80–95%. Survival rates with delayed treatment or compromised stomach tissue: significantly lower. Cost: $5,000–15,000+ depending on severity and institution.</p>
 
           <h2>Prevention — Prophylactic Gastropexy</h2>
+          <p>Typical range, not a quote. The add-on and emergency figures in the next two paragraphs are those same clinic ranges, dated 2026-10-04.</p>
           <p>Prophylactic gastropexy is a surgical procedure that permanently attaches the stomach to the abdominal wall, preventing the torsion (twisting) component of GDV. It does not prevent the stomach from dilating (the first stage) but eliminates the life-threatening second stage. It can be performed laparoscopically (minimally invasive) at the time of spay or neuter, adding $300–500 to the procedure cost.</p>
           <p>For any large or giant breed dog — particularly Great Danes, Standard Poodles, Setters, Weimaraners, and German Shepherds — the conversation about prophylactic gastropexy should happen at the spay/neuter appointment. The cost-benefit calculation strongly favors the procedure for high-risk breeds: a $300–$600 prophylactic surgery versus a $8,000–$12,000+ emergency procedure if GDV occurs.</p>
           <p>Ask your vet: <em>"Is my dog's breed a candidate for prophylactic gastropexy? Can it be performed with the spay/neuter?"</em></p>
