@@ -24,8 +24,6 @@ The second question is, in our experience, the harder one. A $4,000 ER bill at 2
 
 **A pet first-aid kit pre-stocked for transport.** Vetrap, sterile saline, a muzzle (even friendly pets bite when in pain), a clean towel large enough to wrap a small dog or cat, a thermometer. Kept in the car.
 
-[Get a transport-ready pet first-aid kit on Chewy →](https://vets.co/go/chewy/pet-emergency-first-aid-kit)
-
 **Pre-saved phone numbers** in your phone, today: your day-shift clinic, your nearest 24-hour ER, ASPCA Animal Poison Control (1-888-426-4435), Pet Poison Helpline (1-855-764-7661). Both poison lines have a consult fee. Both are worth it.
 
 The triage card tells you *whether* to drive. The insurance tells you *how* to pay when you arrive. Both belong on the fridge.
