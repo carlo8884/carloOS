@@ -62,7 +62,6 @@ export interface CarrierProfile {
   notIdealFor: string[]
   pros: string[]
   cons: string[]
-  editorialScore: number      // /10
   editorialNote: string       // one-line
 
   // Where they're licensed
@@ -118,7 +117,6 @@ export const CARRIERS: CarrierProfile[] = [
       'No alternative therapy coverage',
       '6-month orthopedic waiting period (industry standard but worth noting)',
     ],
-    editorialScore: 8.5,
     editorialNote: 'Best fit for digital-native owners; weakest if you want everything-included coverage.',
     states: 'most',
     hasApp: true,
@@ -167,7 +165,6 @@ export const CARRIERS: CarrierProfile[] = [
       'Premium higher than tech-first alternatives',
       'Only 90% reimbursement (no 80% option to lower premium)',
     ],
-    editorialScore: 9.0,
     editorialNote: 'Most comprehensive carrier in the market; weak point is the premium.',
     states: 'all-50',
     hasApp: true,
@@ -216,7 +213,6 @@ export const CARRIERS: CarrierProfile[] = [
       'No wellness add-on',
       'Only two deductible options',
     ],
-    editorialScore: 8.8,
     editorialNote: 'Strongest pre-existing condition stance in the market.',
     states: 'most',
     hasApp: true,
@@ -266,7 +262,6 @@ export const CARRIERS: CarrierProfile[] = [
       'No exam fee coverage',
       'No wellness coverage available',
     ],
-    editorialScore: 9.2,
     editorialNote: 'Best-in-class for serious medical situations and chronic conditions; premium is the entry barrier.',
     states: 'all-50',
     hasApp: true,
@@ -314,7 +309,6 @@ export const CARRIERS: CarrierProfile[] = [
       '6-month orthopedic waiting period (waivable with exam form)',
       'Age cap on enrollment',
     ],
-    editorialScore: 8.6,
     editorialNote: 'Best overall balance of coverage breadth and wellness add-on.',
     states: 'all-50',
     hasApp: true,
@@ -365,7 +359,6 @@ export const CARRIERS: CarrierProfile[] = [
       '12-month orthopedic waiting period (longer than industry norm)',
       'No behavioral coverage',
     ],
-    editorialScore: 8.4,
     editorialNote: 'Best for owners who hate decision fatigue and want unlimited coverage.',
     states: 'all-50',
     hasApp: true,
@@ -413,7 +406,6 @@ export const CARRIERS: CarrierProfile[] = [
       'Underwriting from younger insurer (less track record)',
       'Customer service mixed reviews vs. legacy carriers',
     ],
-    editorialScore: 8.3,
     editorialNote: 'Best plan flexibility in the category at mid-tier premium.',
     states: 'all-50',
     hasApp: true,
@@ -460,7 +452,6 @@ export const CARRIERS: CarrierProfile[] = [
       '6-month orthopedic waiting period',
       'Dental restricted to illness only',
     ],
-    editorialScore: 8.2,
     editorialNote: 'Only carrier offering true 100% reimbursement; premium reflects it.',
     states: 'all-50',
     hasApp: true,
@@ -510,7 +501,6 @@ export const CARRIERS: CarrierProfile[] = [
       'Age cap at enrollment',
       '6-month orthopedic waiting period',
     ],
-    editorialScore: 8.5,
     editorialNote: 'Best for dental-heavy breeds (small dogs, brachycephalic).',
     states: 'all-50',
     hasApp: true,
