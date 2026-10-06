@@ -196,7 +196,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             as a standalone affiliate box. Trust-first: the primary path is the
             neutral, no-carrier-picked comparison (no disclosure needed); the
             optional quote path is an affiliate /go link, disclosed subtly and
-            framed as "run a live quote," never "buy the best." */}
+            framed as a visit to the carrier page, never "buy the best" or a quote this calculator generates. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
           <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
@@ -218,11 +218,11 @@ export default function InsuranceReimbursementEstimatorPage() {
               className="inline-block shrink-0 px-5 py-2.5 border border-brand-border text-brand-text-dark text-sm font-semibold rounded hover:border-brand-primary transition-colors text-center"
               rel="sponsored nofollow"
             >
-              Run a live quote
+              Visit Lemonade Pet
             </Link>
           </div>
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">
-            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. &ldquo;Run a live quote&rdquo; is an affiliate link; we may earn a commission at no extra cost to you.{' '}
+            Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. &ldquo;Visit Lemonade Pet&rdquo; is an affiliate link. This calculator does not generate a quote. We may earn a commission at no extra cost to you.{' '}
             <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
               Disclosure →
             </Link>
