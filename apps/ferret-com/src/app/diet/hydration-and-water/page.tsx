@@ -155,7 +155,7 @@ export default function HydrationAndWaterPage() {
             pros={['Lets a ferret drink in natural volume', 'Heavy base resists tipping', 'Easy to clean, no biofilm traps', 'No mechanical valve to clog']}
             cons={['Ferrets may still dig in it', 'Needs refreshing more than once a day']}
             price="$8–18"
-            ctaText="Find a Heavy Ceramic Bowl on Amazon"
+            ctaText="Find a heavy ceramic water bowl on Amazon"
             ctaHref="/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water"
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="heavy-ceramic-water-bowl"
