@@ -58,7 +58,7 @@ export default function BestDogCratesPage() {
           variant="View the MidWest iCrate price on Amazon"
         />
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
-          The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel.
+          The right crate depends on your dog&apos;s size, temperament, and how you&apos;re using it. A crate for house training is different from one for a separation anxiety escape artist or airline travel. A covered crate used as a hiding space is the setup on the <a href="/health/dog-anxiety" className="underline text-white">dog anxiety guide</a>.
         </p>
       </div>
 

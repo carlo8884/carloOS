@@ -46,7 +46,7 @@ export default function BestNanoTanksPage() {
             </div>
             <div className="bg-brand-primary-pale border-l-4 border-brand-primary rounded-r-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bigger Is More Forgiving</div>
-              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Smaller tanks are less stable — ammonia spikes faster, temperature swings are larger, and mistakes have less margin. A 10-gallon is significantly easier to maintain than a 5-gallon. A 20-gallon long is the ideal beginner tank size. If budget allows, go bigger.</p>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Smaller tanks are less stable — ammonia spikes faster, temperature swings are larger, and mistakes have less margin. A 10-gallon is significantly easier to maintain than a 5-gallon. A 20-gallon long is the ideal beginner tank size. If budget allows, go bigger. The steps for a tank in this size are on the <a href="/setup/nano-tank-setup" className="text-brand-primary underline">nano tank setup guide</a>.</p>
             </div>
             <JourneyNext
               siteId="fish-com"

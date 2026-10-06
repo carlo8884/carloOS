@@ -196,7 +196,7 @@ export default function BestDogFoodPage() {
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
               description={
-                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend, and the clinical evidence behind these formulas is extensive.</p>
+                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend, and the clinical evidence behind these formulas is extensive. Weighing the kibble in a weight-management formula is the habit on the <a href="/health/dog-obesity" className="text-brand-primary underline">dog obesity guide</a>.</p>
               }
               specs={[
                 { label: 'WSAVA Compliance', value: 'Full', highlight: 'good' },

@@ -65,7 +65,7 @@ export default function BestAquariumFiltersPage() {
           <QuickPicks items={PICKS} embedded />
         </div>
         <p className="text-lg font-normal text-white/55 max-w-2xl leading-relaxed">
-          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
+          The filter is where your beneficial bacteria live — it is the most important piece of equipment in your tank. The bacteria that colonize that media are the subject of the <a href="/health/nitrogen-cycle-explained" className="underline text-white">nitrogen cycle guide</a>. The picks below compare biological capacity, flow accuracy, and long-term reliability across the major hang-on-back, canister, and sponge options.
         </p>
       </div>
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2">

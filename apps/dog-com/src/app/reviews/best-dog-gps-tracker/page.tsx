@@ -86,7 +86,7 @@ export default function BestGPSTrackerPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tracker</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Three trackers have review cards. Each card already prints a device price and a monthly fee.
+                Three trackers have review cards. Each card already prints a device price and a monthly fee. A microchip is not a live location; that difference is on the <a href="/guides/dog-microchipping" className="text-brand-primary underline">microchipping guide</a>.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
