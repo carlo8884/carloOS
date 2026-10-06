@@ -366,7 +366,7 @@ export default function Quiz() {
                 Retake the quiz
               </button>
               <span className="text-brand-border">|</span>
-              <span className="text-xs text-brand-text-light">Score: {score} / 30</span>
+              <span className="text-xs text-brand-text-light">{score} of 30 checklist points ready</span>
             </div>
 
             <p className="mt-6 text-xs text-brand-text-light leading-relaxed">
