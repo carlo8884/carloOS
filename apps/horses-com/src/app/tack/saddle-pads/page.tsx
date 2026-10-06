@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -108,6 +108,23 @@ export default function SaddlePadsPage() {
             updatedAt="2026-09-06"
             reviewedBy="Editorial team"
           />
+          <EmailCapture
+            variant="inline"
+            siteId="horses-com"
+            addressOnly
+            title="Shopping checklist"
+            ctaText="Copy checklist"
+            source="tack-saddle-pads"
+            checklist={[
+              "Fit problems need a saddle fitter and possibly a veterinarian, not a new pad.",
+              "They are frequently layered, such as a woven blanket over a felt pad, with wool and felt valued for breathability and durability.",
+              "Dry spots, white hairs, soreness, or behavioral resistance warrant a saddle-fit assessment and possibly a veterinary check rather than a change of pad.",
+              "A correctly fitting saddle on a healthy back needs only a clean, appropriate pad.",
+              "The pad is a supporting player, not the thing that determines whether the saddle fits.",
+              "Western riders use thicker pads and blankets because western saddles are heavier and rides are often long.",
+            ]}
+          />
+
 
           <h2 id="what">What a Pad Does</h2>
           <p>The primary jobs of a saddle pad are simple: to absorb sweat and protect the underside of the saddle from it, to provide a thin, clean, comfortable interface between saddle and back, and to wick moisture. A correctly fitting saddle on a healthy back needs only a clean, appropriate pad. The pad is a supporting player, not the thing that determines whether the saddle fits.</p>
