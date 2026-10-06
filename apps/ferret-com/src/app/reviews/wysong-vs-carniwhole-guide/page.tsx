@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -74,6 +74,22 @@ export default function WysongVsCarniwholeGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-wysong-vs-carniwhole-guide"
+          checklist={[
+            "Wysong Epigen 90, marked Premium Tier and the winner.",
+            "When the keeper wants a direct-to-consumer bag with a published panel and a subscription shipment.",
+            "The card says there is no retail backup and a shorter community track record than Wysong or Marshall.",
+            "The price line is subscription pricing, not a dollar range.",
+            "Marshall is the mid-tier card on the same kibble review.",
+            "This comparison is Wysong Epigen 90 against Carniwhole.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. This comparison is Wysong Epigen 90 against Carniwhole. Carniwhole’s card has no shop link, so the link above is the Wysong link from that review.</p>
         <h2>What the review says about Wysong Epigen 90</h2>
         <p>Wysong Epigen 90 is Premium Tier and the winner. The card calls it the lowest-carbohydrate commercial kibble in wide ferret-keeping use, with named meats and organ meats and a starch-free system that puts carbohydrate by difference in the low single digits. Specs list about 60 percent protein and about 16 percent fat on a dry-matter basis, grain-free, sold direct and through specialty pet retail. Cons are the premium price and the chance it is not in a supermarket aisle. The printed price is $30–50 for 5 pounds. The link above opens that bag at Wysong.</p>

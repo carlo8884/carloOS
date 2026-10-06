@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -67,6 +67,22 @@ export default function KayteeVsPrevueGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-kaytee-vs-prevue-guide"
+          checklist={[
+            "The Prevue Pet Products Feisty Ferret Cage, marked Best Value.",
+            "The review lists ferret-appropriate bar spacing, several shelves and ramps, a mid price tier, and a fit of one to two ferrets.",
+            "It is not expandable, and wire shelves still need a cover.",
+            "As the entry cage for one ferret with daily out-of-cage time.",
+            "The review lists bar spacing that is in range if you verify the model, a multi-level layout, national chain retail, and the lowest price tier of the three cages.",
+            "It may be outgrown if you add a second ferret.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-cage">cage review</Link>. The Prevue Feisty Ferret ranks above the Kaytee Multi-Level. <Link href="/reviews/kaytee-vs-ferret-nation-guide">Kaytee versus Ferret Nation</Link> is the group cage. The Ferret Nation double unit on that review is the overall winner, and it is a separate comparison.</p>
         <h2>What the review says about Prevue</h2>
         <p>The Prevue Pet Products Feisty Ferret Cage is Best Value. Bar spacing is listed as ferret-appropriate. It includes several shelves and ramps. The price tier is mid. The review says the floor suits one to two ferrets, and that wire shelves and ramps still need fleece or a solid cover. It is not expandable, and it is smaller than a double modular unit.</p>

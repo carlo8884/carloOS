@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -67,6 +67,22 @@ export default function PaperVsGrassLitterGuidePage() {
       }
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="ferret-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-paper-vs-grass-litter-guide"
+          checklist={[
+            "Recycled paper pellet litter is the paper pick.",
+            "The review lists very low dust, no clumping, a soft feel underfoot, moderate odor control, and a mid price tier.",
+            "You change the pan rather than scoop and top it up.",
+            "When a ferret dislikes the feel of paper or wood.",
+            "The review lists low dust, no clumping, a soft texture, moderate odor control, and a mid price tier.",
+            "Wet pellets break down faster, so the pan may need changing more often than wood.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-ferret-litter">litter review</Link>. Recycled paper pellets are the default. Pelleted grass is the softer alternative. Paper versus heat-treated wood is a different pair, on the <Link href="/reviews/paper-vs-wood-litter-guide">paper versus wood guide</Link>.</p>
         <h2>What the review says about paper pellets</h2>
         <p>Recycled paper pellet litter is Best Overall and the winner. Dust is very low. It does not clump. The review says it is soft enough that ferrets accept it, with no clumping agent to swallow and no fine respiratory dust. Odor control is moderate compared with a perfumed cat litter. You change the pan rather than scoop and top it up. Lighter pellets can scatter. The price tier in the review is the mid tier. The review’s shop search is Yesterday’s News recycled paper pellets.</p>
