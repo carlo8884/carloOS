@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest' },
+  { label: 'Best Wire', name: 'MidWest iCrate', subtitle: 'Best overall wire crate · Divider included', href: '#midwest', pickHop: '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates' },
   { label: 'Best Heavy Duty', name: 'Impact Dog Crate', subtitle: 'Escape-proof aluminum · Lifetime warranty', href: '#impact' },
   { label: 'Best Airline', name: 'Petmate Sky Kennel', subtitle: 'IATA compliant · Vet recommended', href: '#petmate' },
   { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },

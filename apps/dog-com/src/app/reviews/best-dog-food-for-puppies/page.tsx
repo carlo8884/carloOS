@@ -29,7 +29,7 @@ const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
-  { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin' },
+  { label: 'Best Large Breed', name: 'Royal Canin Large Breed Puppy', subtitle: 'Most researched · Controlled calcium · Breed-specific', href: '#royal-canin', pickHop: '/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' },
   { label: 'Best Overall Value', name: 'Purina Pro Plan Puppy Large Breed', subtitle: 'AAFCO feeding trials · 400+ studies · Widely available', href: '#pro-plan' },
   { label: 'Best Small Breed', name: 'Hill\'s Science Diet Small Paws', subtitle: 'Small breed puppy · veterinarian-formulated', href: '#hills-small' },
   { label: 'Best Budget', name: 'Iams ProActive Health Puppy', subtitle: 'WSAVA-compliant · $30–50 per 30 lb bag', href: '#iams' },
