@@ -129,6 +129,21 @@ export function classifyStatus(status, error) {
   return 'fail'
 }
 
+/**
+ * A retailer search document is empty only when the page says so and it
+ * does not also contain a normal result list. Rate-limit and captcha
+ * pages are not empty searches.
+ */
+export function isEmptySearchHtml(html, asinCount = 0) {
+  const text = String(html || '').toLowerCase()
+  if (!text) return false
+  if (text.includes('captcha') || text.includes('robot check') || text.includes('service unavailable')) return false
+  const saysEmpty =
+    text.includes('no results for your search query') ||
+    text.includes('did not match any products')
+  return saysEmpty && asinCount < 4
+}
+
 export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   const shopFailures = shop?.failures?.length ?? 0
   const lines = [
