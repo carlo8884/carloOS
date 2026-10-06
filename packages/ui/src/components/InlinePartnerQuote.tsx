@@ -1,11 +1,21 @@
-import { partnerNeededLabel, partnerQuoteHeld, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 
 /**
  * A body-copy quote for Trupanion, Healthy Paws, or Embrace.
  * Unset tags render a disabled control. A set tag keeps the /go link.
+ * holdWithoutPartnerId is the same hold for callers that opt in.
  */
-export function InlinePartnerQuote({ href, label }: { href: string; label: string }) {
-  if (partnerQuoteHeld(href)) {
+export function InlinePartnerQuote({
+  href,
+  label,
+  holdWithoutPartnerId = false,
+}: {
+  href: string
+  label: string
+  holdWithoutPartnerId?: boolean
+}) {
+  const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
+  if (held) {
     return (
       <button
         type="button"
