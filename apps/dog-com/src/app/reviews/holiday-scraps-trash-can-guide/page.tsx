@@ -91,11 +91,14 @@ export default function HolidayScrapsTrashCanGuidePage() {
           ctaText="Save my address"
           source="reviews-holiday-scraps-trash-can-guide"
           checklist={[
+            {
+              label: 'Browse locking kitchen trash cans on Amazon',
+              href: '/go/amazon-brand/locking+kitchen+trash+can?s=reviews-holiday-scraps-trash-can-guide',
+            },
             'A locking kitchen trash can keeps leftovers from becoming the garbage-ingestion trigger.',
             'A walk-through pet gate keeps the dog out of the kitchen while scraps sit on the counter.',
             'If the dog is vomiting, painful, or unable to keep water down, the pancreatitis page\'s hospitalization criteria are the next read, not a shopping link.',
             'Those are reasons to go to a clinic.',
-            'Browse locking kitchen trash cans on Amazon',
           ]}
         />
       </div>

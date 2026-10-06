@@ -88,11 +88,14 @@ export default function BestPuppyCrateGuidePage() {
           ctaText="Save my address"
           source="reviews-best-puppy-crate-guide"
           checklist={[
+            {
+              label: 'Browse MidWest iCrate dog crates on Amazon',
+              href: '/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide',
+            },
             'Buy the iCrate if you are house-training and the dog is not already an escape artist.',
             'Buy Impact if wire has already failed.',
             'Buy the Sky Kennel only when the trip is airline cargo, and confirm the airline before you pay.',
             'Leave the furniture crate until the dog is calm and crate-trained.',
-            'Browse MidWest iCrate dog crates on Amazon',
           ]}
         />
         <h2>Questions</h2>

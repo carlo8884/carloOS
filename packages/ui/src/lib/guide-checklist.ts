@@ -9,10 +9,16 @@ export function guideAddressCaptureEnabled(
   return env === 'true'
 }
 
+export type ChecklistLine = string | { label: string; href: string }
+
+export function checklistLabel(item: ChecklistLine): string {
+  return typeof item === 'string' ? item : item.label
+}
+
 /** Plain-text copy of the checklist. No address, email, or phone field. */
-export function checklistCopyText(items: readonly string[]): string {
+export function checklistCopyText(items: readonly ChecklistLine[]): string {
   return items
-    .map((item) => item.trim())
+    .map((item) => checklistLabel(item).trim())
     .filter((item) => item.length > 0)
     .map((item) => `- ${item}`)
     .join('\n')
