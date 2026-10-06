@@ -62,7 +62,7 @@ export default function SeniorDogNutritionPage() {
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Senior Dog Nutrition</div>
-            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Senior-specific formulas from Purina Pro Plan, Royal Canin, and Hill&apos;s Science Diet all use AAFCO feeding trials and veterinary nutritionist oversight. Glucosamine and omega-3 supplements are the two most commonly recommended additions for older dogs with joint or cognitive concerns.</p>
+            <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Senior-specific formulas from Purina Pro Plan, Royal Canin, and Hill&apos;s Science Diet all use AAFCO feeding trials and veterinary nutritionist oversight. Glucosamine and omega-3 supplements are sometimes discussed for older dogs with joint or cognitive concerns. This page does not treat them as the usual additions; ask a veterinarian before adding either.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/chewy-brand/purina+pro+plan+senior+dry+dog+food?s=nutrition-senior"

@@ -40,7 +40,7 @@ const FAQS = [
   {
     question: 'When should I get pet insurance for a French Bulldog?',
     answer:
-      'Before any symptoms develop, before the first veterinary visit. Several insurers have breed exclusions for BOAS-related conditions if the dog is enrolled after symptoms appear, and BOAS surgery ($2,500–5,000) and IVDD decompression ($5,000–10,000) are common outcomes in this breed within the first 5 years — not rare worst-case scenarios.',
+      'Before any symptoms develop, before the first veterinary visit. Read the hereditary and pre-existing terms on the quote itself — this page does not state which insurers exclude BOAS. BOAS surgery ($2,500–5,000) and IVDD decompression ($5,000–10,000) are costs owners of this breed often plan for.',
   },
 ]
 
@@ -70,7 +70,7 @@ export default function VetsFrenchBulldogHealthPage() {
 
         <div style={{ background: 'rgba(200,74,42,0.05)', border: '1px solid rgba(200,74,42,0.18)', borderRadius: '10px', padding: '16px 20px', marginBottom: '24px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', color: '#C84A2A', marginBottom: '8px' }}>Insurance Note</div>
-          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Several insurers have breed exclusions for BOAS-related conditions if enrolled after symptoms appear. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>
+          <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', margin: 0, lineHeight: 1.65 }}>French Bulldogs are the most expensive breed to insure — and the one that most needs it. Read each policy&apos;s hereditary and pre-existing terms — this page does not state which insurers exclude BOAS. Enroll before any symptoms develop, before the first veterinary visit. Do not delay.</p>
         </div>
 
         <BreedHealthCard name="BOAS — Brachycephalic Obstructive Airway Syndrome" riskLevel="very-high" description="BOAS is not a disease — it is the anatomical consequence of breeding for extreme flat-faced features. Stenotic nares (narrow nostrils), elongated soft palate, hypoplastic trachea, and everted laryngeal saccules collectively obstruct airflow. Most French Bulldogs have some degree of BOAS. Many are living in a state of chronic respiratory compromise that owners normalize because it has always been present." signs={['Noisy breathing at rest', 'Snoring', 'Exercise intolerance — tires quickly, heavy breathing after minimal exertion', 'Blue-tinged gums during exertion (emergency)', 'Retching, gagging, vomiting regurgitated food']} management="BOAS grading assessment (BOAS grade 0–III) by a specialist. Grade II–III: strongly consider surgical correction (nostril widening, soft palate shortening, saccule removal). Surgery before 2 years produces the best outcomes. Weight management is also critical — every pound of extra weight makes breathing harder. Never allow a French Bulldog to exercise in heat." guideHref="/find-a-vet" guideLabel="Find a soft tissue surgery specialist →" />
