@@ -210,6 +210,7 @@ export default function PuppyWeightPredictor() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {result ? <ResultPick linkFirst siteId="dog-com" pick={puppyClassFoodPick(cls.key)} /> : null}
       {/* Inputs */}
       <div className="grid gap-5 md:grid-cols-2">
         {/* Size class */}
@@ -353,12 +354,9 @@ export default function PuppyWeightPredictor() {
           </div>
         )}
         {result && (
-          <>
           <ResultMeaning>
             That range estimates adult weight from the growth fraction for this size class, not a guarantee of adult size.
           </ResultMeaning>
-          <ResultPick siteId="dog-com" pick={puppyClassFoodPick(cls.key)} />
-          </>
         )}
       </div>
 

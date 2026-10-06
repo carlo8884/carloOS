@@ -180,7 +180,14 @@ export default function PuppyWeightPredictorPage() {
         <span>&#8250;</span>
         <span className="text-brand-text-mid font-medium">Puppy Weight Predictor</span>
       </nav>
-      {/* GEO: extractable answer + worked example, ABOVE the tool */}
+      {/* Tool — default result and its shop link stay on the first screen. */}
+      <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
+        <div className="max-w-4xl">
+          <Predictor />
+        </div>
+      </section>
+
+      {/* GEO: extractable answer + worked example */}
       <section className="bg-brand-surface px-container-sm sm:px-container pt-section pb-2">
         <div className="max-w-2xl">
           <div className="rounded-xl border border-brand-border bg-brand-white p-5 sm:p-6">
@@ -211,10 +218,8 @@ export default function PuppyWeightPredictorPage() {
         </div>
       </section>
 
-      {/* Tool */}
-      <section className="bg-brand-surface px-container-sm sm:px-container py-8 sm:py-10">
+      <section className="bg-brand-surface px-container-sm sm:px-container pb-8 sm:pb-10">
         <div className="max-w-4xl">
-          <Predictor />
           <JourneyNext
             siteId="dog-com"
             nextHref="/tools/dog-crate-size-calculator"

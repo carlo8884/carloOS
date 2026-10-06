@@ -42,6 +42,7 @@ export default function LitterPlanner() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {result ? <ResultPick linkFirst siteId="ferret-com" pick={paperLitterPick(ferrets)} /> : null}
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <label htmlFor="lp-ferrets" className="mb-2 block text-xs font-medium text-brand-text-mid">
@@ -123,7 +124,6 @@ export default function LitterPlanner() {
         <ResultMeaning>
           Corner pans and bag counts are a starter-kit plan for this number of ferrets. They use the 7-week midpoint for a 30 lb bag, not a store quote.
         </ResultMeaning>
-        <ResultPick siteId="ferret-com" pick={paperLitterPick(ferrets)} />
       </div>
       )}
 
