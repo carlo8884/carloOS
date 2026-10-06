@@ -6,9 +6,9 @@ tag: "fish-com:cycling-guide"
 from_name: "Fish.com Editorial Team"
 ---
 
-A complete fishless-cycle toolkit, with the specific SKUs we've personally cross-tested. Total spend if you buy all six: roughly $90–$140 freshwater, $180–$220 saltwater.
+A complete fishless-cycle toolkit, with the specific products named below. Total spend if you buy all six: roughly $90–$140 freshwater, $180–$220 saltwater.
 
-**1. API Freshwater Master Test Kit.** Reads ammonia, nitrite, nitrate, pH, KH. Within 10% of titration in our cross-check. Strips will not do this job.
+**1. API Freshwater Master Test Kit.** Reads ammonia, nitrite, nitrate, pH, and KH. Strips will not do this job.
 
 [Get on Amazon →](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)
 
@@ -24,7 +24,7 @@ A complete fishless-cycle toolkit, with the specific SKUs we've personally cross
 
 [Get a calibrated refractometer →](https://fish.com/go/amazon-brand/atc+refractometer?s=email-cycling-guide)
 
-**5. (Saltwater only) Pre-mixed salt or a reef salt mix.** Tropic Marin and Red Sea are the two we've matched against published reef-keeper benchmarks. Avoid the cheapest big-box brand — calcium and KH are often off by 30%.
+**5. (Saltwater only) Pre-mixed salt or a reef salt mix.** Tropic Marin and Red Sea are two mixes keepers compare with published reef-parameter targets. Avoid the cheapest big-box brand — calcium and KH are often off by 30%.
 
 [Get Tropic Marin salt mix →](https://fish.com/go/amazon-brand/tropic+marin+classic+salt?s=email-cycling-guide)
 

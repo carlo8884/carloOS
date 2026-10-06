@@ -20,7 +20,7 @@ The PDF tells you to wait. This email tells you why — and the three things tha
 
 **3. Chlorine in the top-off water.** If you've been topping off with untreated tap, the chlorine is killing the colony as it forms. Dechlorinate every drop of water that touches the tank.
 
-**The one product you actually need to diagnose this** is an accurate liquid test kit. Strips are too imprecise for cycling — they round to half a ppm in a range where 0.25 ppm matters. The API Freshwater Master Test Kit is the long-standing reference; we've cross-checked it against lab titration twice and it reads within 10%.
+**The one product you actually need to diagnose this** is an accurate liquid test kit. Strips are too imprecise for cycling — they round to half a ppm in a range where 0.25 ppm matters. The API Freshwater Master Test Kit is the long-standing reference liquid kit for that job.
 
 [Get the API Freshwater Master Kit on Amazon →](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)
 
