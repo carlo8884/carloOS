@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import { directoryClaimPrefill } from '@carloOS/config'
+import { captureInbox } from '@carloOS/config/capture-flags'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
 
@@ -45,16 +46,17 @@ export default function JoinProPage({
             siteName="Ferret.com"
             intent="pro-application"
             variant="page"
+            open={Boolean(captureInbox())}
             defaultCity={prefill.city}
             defaultMessage={prefill.message}
             defaultListing={prefill.listing}
           />
         </div>
 
-        <h2>Owners: get a note when claimed pages exist</h2>
+        <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. One email
-          when accepted pages exist — no invented directory.
+          The form above is for professionals applying for a page. No directory
+          is invented here.
         </p>
       </div>
     </ArticleLayout>
