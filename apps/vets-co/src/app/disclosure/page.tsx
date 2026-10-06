@@ -155,8 +155,7 @@ export default function DisclosurePage() {
             editorial guidance about when and why to see a vet.
           </li>
           <li>
-            Newsletter sponsorships. Sponsorships are clearly labeled inside
-            the newsletter; sponsors have no input on editorial content.
+            No newsletter is currently sent, so there is no sponsored newsletter.
             Vets.co does not accept on-site editorial sponsorship.
           </li>
           <li>
