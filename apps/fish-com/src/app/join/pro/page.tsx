@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { directoryClaimPrefill } from '@carloOS/config'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
@@ -54,7 +55,8 @@ export default function JoinProPage({
         <h2>Claimed pages</h2>
         <p>
           The form above is for professionals applying for a page. No directory
-          is invented here.
+          is invented here. Owners planning a tank can start with the{' '}
+          <Link href="/tools/stocking-calculator">stocking calculator</Link>.
         </p>
       </div>
     </ArticleLayout>
