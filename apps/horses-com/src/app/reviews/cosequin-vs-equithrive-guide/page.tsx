@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -68,6 +68,22 @@ export default function CosequinVsEquithriveGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-cosequin-vs-equithrive-guide"
+          checklist={[
+            "As a resveratrol pellet beside other joint support, not as a replacement for it.",
+            "The evidence base is smaller than ASU and glucosamine.",
+            "Both figures are the monthly bands printed on the supplement review.",
+            "Platinum Performance on that review is a different, broader product.",
+            "Cosequin ASU Plus is the joint-evidence pick.",
+            "Equithrive Original Pellets are the resveratrol pick.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-equine-supplements">supplement review</Link>. Cosequin ASU Plus is the joint-evidence pick. Equithrive Original Pellets are the resveratrol pick. <Link href="/reviews/ker-eo3-vs-equithrive-guide">KER EO-3 versus Equithrive</Link> is the omega-3 comparison, not this joint pair. The <Link href="/supplements/joint-supplements">joint-supplement guide</Link> is the ingredient ladder behind the Cosequin ranking.</p>
         <h2>What the review says about Cosequin ASU Plus</h2>
         <p>Cosequin ASU Plus is Best Joint Evidence and the winner. The actives are ASU, glucosamine HCl, and chondroitin sulfate. The review lists an NASC seal, Nutramax manufacturing, and no prohibited ingredients for FEI or USEF. A loading dose of 4–6 weeks is recommended, and that loading dose raises the first-month cost. The printed price is $80–110 a month. The cons say the price is the higher tier and that pellet palatability varies.</p>

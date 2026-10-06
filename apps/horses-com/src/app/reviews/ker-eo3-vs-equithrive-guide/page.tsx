@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -68,6 +68,22 @@ export default function KerVsEquithriveGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-ker-eo3-vs-equithrive-guide"
+          checklist={[
+            "It also says the liquid thickens in the cold and has a shorter life once opened than a pellet.",
+            "For trans-resveratrol, not as a replacement for a joint formula.",
+            "It says the evidence base is smaller than ASU or glucosamine.",
+            "Cosequin ASU Plus versus Platinum Performance is a separate comparison.",
+            "The supplement review frames Equithrive as a complement to traditional joint ingredients, and EO-3 as a marine omega-3, not as a joint tub.",
+            "Equithrive Original Pellets are the trans-resveratrol.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>. KER EO-3 is the marine omega-3. Equithrive Original Pellets are the trans-resveratrol. <Link href="/reviews/cosequin-vs-equithrive-guide">Cosequin versus Equithrive</Link> is the joint comparison, not this omega-3 pair. Cosequin versus Platinum is a different pair, on the <Link href="/reviews/cosequin-vs-platinum-guide">Cosequin versus Platinum guide</Link>.</p>
         <h2>What the review says about KER EO-3</h2>
         <p>EO-3 is Best Marine Omega-3. The source is marine fish oil, DHA and EPA, not plant ALA. The format is a liquid poured on the feed. The review says Kentucky Equine Research has published equine omega-3 work and that this is the formulation used in many of those trials. It lists tocopherol stabilization and no prohibited FEI or USEF ingredients. The printed price is $55–85 a month. The trade-off in the review is that the liquid gets thicker in cold weather and, once opened, does not keep as long as a pellet. The review says to buy the smallest unit you can finish inside the use-by window.</p>

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -74,6 +74,22 @@ export default function NylonVsBreakawayGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-nylon-vs-breakaway-halter-guide"
+          checklist={[
+            "The leather-crown breakaway, marked Safer Turnout and the winner.",
+            "The card says a leather crown or breakable tab gives way if the horse is caught, and that the crown needs periodic replacement.",
+            "For leading, grooming, and tying under supervision.",
+            "The adjustable flat nylon halter is badged Everyday.",
+            "The card says it does not break and is unsafe to leave on a turned-out horse.",
+            "Lead ropes and tying stay on the halter page, including rope prices and the quick-release knot.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/tack/halters-and-lead-ropes">halter and lead page</Link>, which compares published specs. Saddle pads are a separate comparison. This one is the everyday nylon halter against the leather-crown breakaway.</p>
         <h2>What the page says about flat nylon</h2>
         <p>The adjustable flat nylon halter is Everyday. The card calls it the standard barn halter: strong, washable, inexpensive, and sized from foal to draft. Fit is an adjustable crown and noseband. The same strength is why the card says it should never be left on a turned-out horse. Hardware can rub if the fit is poor. The printed price is $10–25. Reasonable uses on the card are in-hand leading, grooming, and tying under supervision.</p>
