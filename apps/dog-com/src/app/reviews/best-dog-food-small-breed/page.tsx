@@ -10,7 +10,7 @@ const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed A
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Royal Canin Small Adult', subtitle: 'Kibble-size designed · Dental formula · WSAVA top tier', href: '#royal-canin' },
+  { label: 'Best Overall', name: 'Royal Canin Small Adult', subtitle: 'Kibble-size designed · Dental formula · WSAVA top tier', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed' },
   { label: 'Best High-Protein', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Widely recommended', href: '#purina' },
   { label: "Best Hill's", name: "Hill's Science Diet Small Paws", subtitle: 'Antioxidant blend · Easy digestion · Widely available', href: '#hills' },
 ]
