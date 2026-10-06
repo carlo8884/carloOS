@@ -7,7 +7,7 @@ const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Sensitive Skin & Stomach', description: 'Single salmon protein, no corn/wheat/soy, live probiotics — the standard vet recommendation for sensitive stomachs.', url: 'https://purina.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, ppSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Purina Pro Plan Sensitive Skin & Stomach', subtitle: 'Salmon protein · No corn/wheat/soy · Live probiotics', href: '#purina' },
+  { label: 'Best Overall', name: 'Purina Pro Plan Sensitive Skin & Stomach', subtitle: 'Salmon protein · No corn/wheat/soy · Live probiotics', href: '#purina', pickHop: '/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' },
   { label: "Best Hill's", name: "Hill's Science Diet Sensitive Stomach & Skin", subtitle: 'Chicken & barley · Prebiotic fiber · WSAVA', href: '#hills' },
   { label: 'Best Royal Canin', name: 'Royal Canin Digestive Care', subtitle: 'Highly digestible proteins · Fiber blend · Research-backed', href: '#rc' },
 ]
@@ -24,9 +24,11 @@ export default function SensitiveStomachFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' label='Check price of Purina Pro Plan Sensitive Skin & Stomach on Amazon' />
+        <div className="[&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} embedded />
+        </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">A "sensitive stomach" is not a diagnosis — it is a description. Chronic vomiting, diarrhea, and GI upset require veterinary workup to identify the actual cause. That said, switching to a highly digestible, limited-ingredient, or novel-protein food helps many dogs with GI sensitivity. All picks below meet <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines.</p>
       </div>
-      <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>

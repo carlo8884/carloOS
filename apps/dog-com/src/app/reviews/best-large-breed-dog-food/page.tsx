@@ -8,7 +8,7 @@ const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', descripti
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://purina.com', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin' },
+  { label: 'Best Overall', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' },
   { label: 'Best High-Protein', name: 'Purina Pro Plan Large Breed', subtitle: 'EPA + glucosamine · Live probiotics · Widely recommended', href: '#purina' },
   { label: "Best Hill's", name: "Hill's Science Diet Large Breed", subtitle: 'Glucosamine · Natural ingredients · Antioxidant blend', href: '#hills' },
 ]
@@ -25,9 +25,11 @@ export default function BestLargeBreedFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' label='Check price of Royal Canin Large Adult on Amazon' />
+        <div className="[&_.text-brand-primary]:!text-brand-dark">
+          <QuickPicks items={PICKS} embedded />
+        </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">Large-breed adults have specific nutritional needs — controlled calorie density during growth to prevent orthopedic issues, joint support ingredients in adulthood, and appropriate protein-to-fat ratios for their slower metabolism compared to small breeds. Royal Canin Large Adult on this page is for dogs 55–100 lb, and Giant Adult is for dogs over 100 lb.</p>
       </div>
-      <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>

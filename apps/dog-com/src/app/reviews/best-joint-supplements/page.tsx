@@ -26,7 +26,7 @@ const schema = buildArticleSchema({
 })
 
 const PICKS = [
-  { label: 'Best Evidence', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin' },
+  { label: 'Best Evidence', name: 'Dasuquin with MSM', subtitle: 'ASU + glucosamine + MSM · Best study support', href: '#dasuquin', pickHop: '/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' },
   { label: 'Best Fish Oil', name: 'Nordic Naturals Omega-3', subtitle: 'Marine EPA/DHA · Anti-inflammatory', href: '#fish-oil' },
   { label: 'Best Budget', name: 'Cosequin DS', subtitle: 'Widely available · NASC certified', href: '#cosequin' },
   { label: 'Emerging', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },

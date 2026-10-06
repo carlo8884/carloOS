@@ -9,7 +9,7 @@ const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo B
 const allSchemas = combineSchemas(schema, outwardSchema)
 
 const PICKS = [
-  { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound' },
+  { label: 'Best Overall', name: 'Outward Hound Fun Feeder', subtitle: 'Ridge pattern · 10x slower · Easy clean · All sizes', href: '#outward-hound', pickHop: '/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' },
   { label: 'Best Puzzle', name: 'Northmate Green Interactive', subtitle: 'Grass-pattern · Scatter feeding · Enrichment', href: '#northmate' },
   { label: 'Best for Large Breeds', name: 'LickiMat Splash', subtitle: 'Spread food · Calm eating · Anti-anxiety', href: '#lickimat' },
 ]
