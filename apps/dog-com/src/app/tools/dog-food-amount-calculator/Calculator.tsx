@@ -24,7 +24,10 @@ export default function DogFoodAmountCalculator() {
   const weightLb = unit === 'lb' ? Number(weight) : Number(weight) * 2.2046
 
   return (
-    <form className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+    <form className="not-prose mt-0 mb-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+      {result ? (
+        <ResultPick linkFirst siteId="dog-com" pick={calorieFoodPick(stage.label, weightLb, 'tools-dog-food-amount')} />
+      ) : null}
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-semibold text-brand-dark">
           Weight
@@ -56,7 +59,6 @@ export default function DogFoodAmountCalculator() {
           <ResultMeaning>
             Resting energy is {Math.round(result.rer).toLocaleString('en-US')} kcal. This {stage.label.toLowerCase()} stage multiplies that by {stage.factor}, then divides by the bag&apos;s kcal per kg. A measuring cup is not this gram figure.
           </ResultMeaning>
-          <ResultPick siteId="dog-com" pick={calorieFoodPick(stage.label, weightLb, 'tools-dog-food-amount')} />
         </div>
       ) : null}
     </form>

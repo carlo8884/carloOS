@@ -148,7 +148,10 @@ export default function PuppyFirstYearBudget() {
   }
 
   return (
-    <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+    <div className="rounded-lg border border-brand-border bg-brand-surface px-6 pb-6 pt-3 sm:px-8 sm:pb-8 sm:pt-4">
+      {result ? (
+        <ResultPick linkFirst siteId="dog-com" pick={puppyClassFoodPick(size, 'tools-puppy-first-year-budget')} />
+      ) : null}
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <p className="mb-2 text-xs font-medium text-brand-text-mid">Expected adult size</p>
@@ -262,7 +265,6 @@ export default function PuppyFirstYearBudget() {
         <ResultMeaning>
           That total adds the gear, food, vet, training, and arrival lines you entered, and it is a planning figure rather than a quote.
         </ResultMeaning>
-        <ResultPick siteId="dog-com" pick={puppyClassFoodPick(size, 'tools-puppy-first-year-budget')} />
       </div>
       )}
 
