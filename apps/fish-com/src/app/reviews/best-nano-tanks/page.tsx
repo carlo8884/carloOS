@@ -4,8 +4,8 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata,
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fluvalaquatics.com', imageUrl: '' })
-const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://aqueon.com', imageUrl: '' })
+const fluvalSchema = buildProductSchema({ name: 'Fluval Spec V 5-Gallon', description: 'Rimless nano aquarium with integrated filtration and LED lighting for betta and shrimp.', url: 'https://fish.com/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks', imageUrl: '' })
+const aqueonSchema = buildProductSchema({ name: 'Aqueon 20-Gallon Long Aquarium Kit', description: 'Complete 20-gallon long starter kit — the ideal nano community tank.', url: 'https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fluvalSchema, aqueonSchema)
 const PICKS = [
   { label: 'Best 5 Gallon', name: 'Fluval Spec V', subtitle: 'Rimless · Planted-ready · Betta/shrimp', href: '#fluval-spec', pickHop: '/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' },
@@ -17,7 +17,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Nano Aquariums 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-nano-tanks${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Fluval Spec V": "https://fish.com/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks", "Aqueon 10 Standard": "https://fish.com/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks", "Aqueon 20 Long": "https://fish.com/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks" }[p.name] ?? `https://fish.com/reviews/best-nano-tanks${p.href}`) })),
 })
 export default function BestNanoTanksPage() {
   return (

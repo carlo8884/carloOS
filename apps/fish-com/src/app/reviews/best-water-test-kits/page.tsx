@@ -4,7 +4,7 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata,
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026 — API Master Kit | Fish.com', description: 'Best aquarium water test kits ranked. API Master Test Kit for accuracy and value. Salifert individual tests for reef tanks. Digital meters for pH and TDS.', path: '/reviews/best-water-test-kits', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Water Test Kits 2026', description: 'API Master Test Kit, Salifert, and digital meters ranked for aquarium water testing.', url: 'https://fish.com/reviews/best-water-test-kits', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://apifishcare.com', imageUrl: '' })
+const apiSchema = buildProductSchema({ name: 'API Freshwater Master Test Kit', description: '800 tests for pH, ammonia, nitrite, nitrate — the standard hobbyist kit.', url: 'https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits', imageUrl: '' })
 const allSchemas = combineSchemas(schema, apiSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'API Freshwater Master Kit', subtitle: '800 tests · Ammonia+nitrite+nitrate+pH · Best value', href: '#api', pickHop: '/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits' },
@@ -15,7 +15,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Water Test Kits 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-water-test-kits${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "API Freshwater Master Kit": "https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-best-water-test-kits", "Salifert Individual Tests": "https://fish.com/go/amazon-brand/salifert+aquarium+test+kit?s=reviews-best-water-test-kits", "Apogee or Bluelab Meters": "https://fish.com/go/amazon-brand/bluelab+ph+meter?s=reviews-best-water-test-kits" }[p.name] ?? `https://fish.com/reviews/best-water-test-kits${p.href}`) })),
 })
 // FAQ content derived from this page's testing guidance only.
 const FAQS = [

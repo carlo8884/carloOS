@@ -47,9 +47,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Multi-Level Ferret Cages That Meet the Criteria',
   items: [
-    { name: 'Ferret Nation / Critter Nation Double Unit', url: `${PAGE_URL}#ferret-nation` },
-    { name: 'Prevue Pet Products Feisty Ferret Cage', url: `${PAGE_URL}#prevue-feisty` },
-    { name: 'Kaytee Multi-Level Ferret Home', url: `${PAGE_URL}#kaytee-multilevel` },
+    { name: 'Ferret Nation / Critter Nation Double Unit', url: 'https://ferret.com/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' },
+    { name: 'Prevue Pet Products Feisty Ferret Cage', url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage' },
+    { name: 'Kaytee Multi-Level Ferret Home', url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage' },
   ],
 })
 
@@ -57,21 +57,21 @@ const products = [
   buildProductSchema({
     name: 'Ferret Nation / Critter Nation Double Unit',
     description: 'Half-inch bar spacing, full-width front doors, deep pans, expandable two-storey footprint',
-    url: `${PAGE_URL}#ferret-nation`,
+    url: 'https://ferret.com/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The reference multi-ferret cage in the keeping community. Half-inch wire spacing, full-width double doors that open the entire front for cleaning and handling, deep leak-proof pans, and a modular design that stacks to a second storey. The trade-offs are price, weight, and the assembly footprint — but on the safety criteria it is the clearest pick.',
   }),
   buildProductSchema({
     name: 'Prevue Pet Products Feisty Ferret Cage',
     description: 'Ferret-appropriate bar spacing, multiple solid shelves and ramps, mid-tier price',
-    url: `${PAGE_URL}#prevue-feisty`,
+    url: 'https://ferret.com/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A purpose-built ferret cage with appropriate wire spacing, several solid shelves and ramps, and a price below the modular systems. Floor space suits one to two ferrets comfortably; the wire shelf edges benefit from fleece or linoleum covering. A strong value pick where the larger modular units are out of budget or out of room.',
   }),
   buildProductSchema({
     name: 'Kaytee Multi-Level Ferret Home',
     description: 'Entry-level multi-level cage, widely stocked, suited to a single ferret with daily out-time',
-    url: `${PAGE_URL}#kaytee-multilevel`,
+    url: 'https://ferret.com/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A widely stocked entry-level multi-level cage. Bar spacing is in range and it carries shelves and ramps, but the footprint suits a single ferret with generous daily out-of-cage time rather than a pair living in it full-time. The most likely appropriate cage to find at a chain store at short notice; verify the spacing on the specific model before buying.',
   }),

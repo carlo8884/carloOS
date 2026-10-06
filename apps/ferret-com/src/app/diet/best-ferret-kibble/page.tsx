@@ -41,8 +41,8 @@ const med = buildMedicalWebPageSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Kibbles That Fit the Profile',
   items: [
-    { name: 'Wysong Epigen 90', url: `${PAGE_URL}#wysong-epigen-90` },
-    { name: 'Marshall Premium Ferret Diet', url: `${PAGE_URL}#marshall-premium-diet` },
+    { name: 'Wysong Epigen 90', url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble' },
+    { name: 'Marshall Premium Ferret Diet', url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble' },
     { name: 'Carniwhole Ferret Food', url: `${PAGE_URL}#carniwhole` },
   ],
 })
@@ -51,14 +51,14 @@ const products = [
   buildProductSchema({
     name: 'Wysong Epigen 90',
     description: 'Starch-free, animal-first, lowest commercial carb load in wide ferret use',
-    url: `${PAGE_URL}#wysong-epigen-90`,
+    url: 'https://ferret.com/go/wysong/epigen-90?s=diet-best-ferret-kibble',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits — the default choice when insulinoma risk is the priority. Premium price and not always stocked in chain pet aisles.',
   }),
   buildProductSchema({
     name: 'Marshall Premium Ferret Diet',
     description: 'Ferret-specific formulation, widely stocked, in-range macros',
-    url: `${PAGE_URL}#marshall-premium-diet`,
+    url: 'https://ferret.com/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets, with protein and fat in the working ferret range. The panel is imperfect (some plant protein) but acceptable for healthy adults, and it is the most likely appropriate brand to find on a chain shelf at short notice.',
   }),

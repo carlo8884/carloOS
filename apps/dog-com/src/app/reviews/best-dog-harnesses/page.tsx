@@ -5,8 +5,8 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026', description: 'Front-clip, back-clip, and escape-proof harnesses ranked.', url: 'https://dog.com/reviews/best-dog-harnesses', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://petsafe.net', imageUrl: '' })
-const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://ruffwear.com', imageUrl: '' })
+const easyWalkSchema = buildProductSchema({ name: 'PetSafe Easy Walk Harness', description: 'Front-clip harness that redirects pullers without pain. Best no-pull harness.', url: 'https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses', imageUrl: '' })
+const ruffwearSchema = buildProductSchema({ name: 'Ruffwear Front Range Harness', description: 'Premium two-clip hiking and outdoor harness with padded chest piece.', url: 'https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses', imageUrl: '' })
 const allSchemas = combineSchemas(schema, easyWalkSchema, ruffwearSchema)
 
 const PICKS = [
@@ -18,7 +18,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dog Harnesses 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-harnesses${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "PetSafe Easy Walk": "https://dog.com/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "Ruffwear Front Range": "https://dog.com/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "Julius-K9 IDC Powerharness": "https://dog.com/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses" }[pick.name] ?? `https://dog.com/reviews/best-dog-harnesses${pick.href}`) })),
 })
 export default function BestDogHarnessesPage() {
   return (

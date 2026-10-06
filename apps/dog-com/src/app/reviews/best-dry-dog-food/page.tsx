@@ -31,10 +31,10 @@ const PICKS = [
   { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://royalcanin.com', imageUrl: '', reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
-const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://purina.com', imageUrl: '', reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
-const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://hillspet.com', imageUrl: '', reviewBody: 'Leads this page on prescription and life-stage formulas.' })
-const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page places it below the WSAVA-compliant picks.', imageUrl: '', reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
+const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://dog.com/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
+const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
+const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Leads this page on prescription and life-stage formulas.' })
+const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page places it below the WSAVA-compliant picks.', url: 'https://dog.com/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food', imageUrl: '', reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2, productSchema3)
 
 const FOOD_FAQS = [
@@ -54,7 +54,7 @@ const FOOD_FAQS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dry Dog Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dry-dog-food${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin": "https://dog.com/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food", "Purina Pro Plan": "https://dog.com/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food", "Orijen": "https://dog.com/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food" }[pick.name] ?? `https://dog.com/reviews/best-dry-dog-food${pick.href}`) })),
 })
 export default function BestDogFoodPage() {
   return (
