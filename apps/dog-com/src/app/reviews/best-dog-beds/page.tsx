@@ -4,8 +4,8 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata,
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const bigBarkerSchema = buildProductSchema({ name: 'Big Barker 7" Orthopedic Dog Bed', description: 'Therapeutic memory foam bed for large and giant breeds — clinically shown to reduce joint pain.', url: 'https://bigbarker.com', imageUrl: '' })
-const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: 'Premium foam dog bed with removable washable cover for medium to large breeds.', url: 'https://casper.com', imageUrl: '' })
+const bigBarkerSchema = buildProductSchema({ name: 'Big Barker 7" Orthopedic Dog Bed', description: 'Therapeutic memory foam bed for large and giant breeds — clinically shown to reduce joint pain.', url: 'https://dog.com/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds', imageUrl: '' })
+const casperSchema = buildProductSchema({ name: 'Casper Dog Bed', description: 'Premium foam dog bed with removable washable cover for medium to large breeds.', url: 'https://dog.com/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds', imageUrl: '' })
 // Furhaven and the Best Friends bolster are Quick Picks on this page but have
 // no scored ReviewCards yet, so their schemas carry no editorial rating
 // (per buildProductSchema contract).
@@ -20,7 +20,7 @@ const PICKS = [
 ]
 const itemList = buildItemListSchema({
   name: "Best Dog Beds 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-beds${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Big Barker 7" Orthopedic': 'https://dog.com/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds', 'Casper Dog Bed': 'https://dog.com/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds' }[pick.name] ?? `https://dog.com/reviews/best-dog-beds${pick.href}`) })),
 })
 export default function BestDogBedsPage() {
   return (

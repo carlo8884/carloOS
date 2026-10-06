@@ -4,7 +4,7 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata,
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Sensitive Skin & Stomach', description: 'Single salmon protein, no corn/wheat/soy, live probiotics — the standard vet recommendation for sensitive stomachs.', url: 'https://purina.com', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Sensitive Skin & Stomach', description: 'Single salmon protein, no corn/wheat/soy, live probiotics — the standard vet recommendation for sensitive stomachs.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach', imageUrl: '' })
 const allSchemas = combineSchemas(schema, ppSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Purina Pro Plan Sensitive Skin & Stomach', subtitle: 'Salmon protein · No corn/wheat/soy · Live probiotics', href: '#purina', pickHop: '/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' },
@@ -13,7 +13,7 @@ const PICKS = [
 ]
 const itemList = buildItemListSchema({
   name: "Best Dog Food for Sensitive Stomach 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-food-sensitive-stomach${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Purina Pro Plan Sensitive Skin & Stomach': 'https://dog.com/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' }[pick.name] ?? `https://dog.com/reviews/best-dog-food-sensitive-stomach${pick.href}`) })),
 })
 export default function SensitiveStomachFoodPage() {
   return (

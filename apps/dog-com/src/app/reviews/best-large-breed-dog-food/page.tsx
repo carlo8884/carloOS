@@ -4,8 +4,8 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata,
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', description: 'Glucosamine and chondroitin joint support formula for large breed adult dogs.', url: 'https://royalcanin.com', imageUrl: '' })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://purina.com', imageUrl: '' })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Large Adult', description: 'Glucosamine and chondroitin joint support formula for large breed adult dogs.', url: 'https://dog.com/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Large Breed Adult', description: 'Real chicken and rice with EPA and glucosamine for large breed joint health.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Royal Canin Large Adult', subtitle: 'Glucosamine + chondroitin · Joint focus · WSAVA', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' },
@@ -14,7 +14,7 @@ const PICKS = [
 ]
 const itemList = buildItemListSchema({
   name: "Best Large Breed Dog Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-large-breed-dog-food${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Royal Canin Large Adult': 'https://dog.com/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food', 'Purina Pro Plan Large Breed': 'https://dog.com/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food' }[pick.name] ?? `https://dog.com/reviews/best-large-breed-dog-food${pick.href}`) })),
 })
 export default function BestLargeBreedFoodPage() {
   return (

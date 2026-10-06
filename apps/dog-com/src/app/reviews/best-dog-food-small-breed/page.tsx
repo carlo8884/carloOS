@@ -5,8 +5,8 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://royalcanin.com', imageUrl: '' })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://purina.com', imageUrl: '' })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://dog.com/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 
 const PICKS = [
@@ -17,7 +17,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Dog Food for Small Breeds 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-food-small-breed${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Royal Canin Small Adult': 'https://dog.com/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed', 'Purina Pro Plan Small & Toy': 'https://dog.com/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed' }[pick.name] ?? `https://dog.com/reviews/best-dog-food-small-breed${pick.href}`) })),
 })
 export default function BestSmallBreedFoodPage() {
   return (

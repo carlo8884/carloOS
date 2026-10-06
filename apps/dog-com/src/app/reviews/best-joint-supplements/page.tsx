@@ -32,14 +32,14 @@ const PICKS = [
   { label: 'Emerging', name: 'CBD (Vetri-CBD)', subtitle: 'Promising evidence · Vet-formulated', href: '#cbd' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://nutramax.com', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://nordicnaturals.com', imageUrl: '' })
-const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://nutramax.com', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'Nutramax Dasuquin with MSM', description: 'Glucosamine, chondroitin, ASU and MSM joint supplement for dogs.', url: 'https://dog.com/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Nordic Naturals Omega-3 Pet', description: 'Marine EPA and DHA omega-3 supplement for dogs.', url: 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', imageUrl: '' })
+const productSchema2 = buildProductSchema({ name: 'Cosequin DS Maximum Strength', description: 'NASC-certified glucosamine and chondroitin supplement for dogs.', url: 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2)
 
 const itemList = buildItemListSchema({
   name: "Best Joint Supplements for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-joint-supplements${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Dasuquin with MSM': 'https://dog.com/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements', 'Nordic Naturals Omega-3': 'https://dog.com/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements', 'Cosequin DS': 'https://dog.com/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements' }[pick.name] ?? `https://dog.com/reviews/best-joint-supplements${pick.href}`) })),
 })
 export default function BestJointSupplementsPage() {
   return (
