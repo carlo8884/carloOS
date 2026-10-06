@@ -141,7 +141,6 @@ export default function FinePrintPage() {
             badge="Customizable"
             name="Spot Pet Insurance"
             subtitle="Adjustable limits and an optional preventive add-on"
-            score={8.2}
             winner
             description={
               <p>Offers a range of annual-limit and deductible combinations plus an optional preventive-care add-on, which gives you several policy structures to read side by side. Use the fine-print checklist above — waiting periods, exam-fee coverage, exclusions — to compare its sample policy against another carrier before enrolling.</p>
@@ -164,7 +163,6 @@ export default function FinePrintPage() {
             badge="Straightforward Terms"
             name="ManyPets"
             subtitle="Single comprehensive plan, clearer fine print"
-            score={8.0}
             description={
               <p>Built around a single comprehensive plan rather than a tier maze, which can make the fine print easier to read and compare. Still apply the checklist — confirm waiting periods, bilateral and hereditary terms, and the annual limit. A clear sample policy is exactly what you want when learning to read coverage documents.</p>
             }

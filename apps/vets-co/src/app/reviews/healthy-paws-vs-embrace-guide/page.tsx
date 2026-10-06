@@ -17,7 +17,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'vets-co',
   title: 'Healthy Paws or Embrace wellness',
-  description: 'Healthy Paws for reimbursement speed, or Embrace for a wellness add-on. Scores are on the insurance review.',
+  description: 'Healthy Paws for reimbursement speed, or Embrace for a wellness add-on.',
   url: 'https://vets.co/reviews/healthy-paws-vs-embrace-guide',
   imageUrl: '',
   authorName: 'Vets.co Editorial',
@@ -28,11 +28,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which carrier does the review pick for fast reimbursement?',
-    answer: 'Healthy Paws, scored 9.1. The review lists reimbursement of 80–90%, claims in about two days, unlimited payouts, an annual deductible, and $40–85 a month. It does not pay the clinic directly, and it has no wellness add-on.',
+    answer: 'Healthy Paws. The review lists reimbursement of 80–90%, claims in about two days, unlimited payouts, an annual deductible, and $40–85 a month. It does not pay the clinic directly, and it has no wellness add-on.',
   },
   {
     question: 'When does the review point to Embrace?',
-    answer: 'When you want routine care on an add-on. Embrace scores 8.8. The review lists a wellness add-on for vaccines, heartworm testing, dental cleanings, and annual exams, reimbursement of 70–90%, a deductible that drops $50 each claim-free year, a 6-month orthopedic wait, and $45–95 a month plus the add-on.',
+    answer: 'When you want routine care on an add-on. Embrace. The review lists a wellness add-on for vaccines, heartworm testing, dental cleanings, and annual exams, reimbursement of 70–90%, a deductible that drops $50 each claim-free year, a 6-month orthopedic wait, and $45–95 a month plus the add-on.',
   },
   {
     question: 'Are the monthly figures a quote?',
@@ -47,13 +47,13 @@ export default function HealthyPawsVsEmbraceGuidePage() {
       schema={schema}
       hero={{
         title: 'Healthy Paws or Embrace wellness',
-        subtitle: 'Fast reimbursement, or a wellness add-on. Prices and scores below are the ones on the insurance review, not a quote for your pet.',
+        subtitle: 'Fast reimbursement, or a wellness add-on. Prices below are the ones on the insurance review, not a quote for your pet.',
         category: 'Buyer guide',
         authorName: 'Vets.co Editorial',
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" />}
+      heroHop={<PrimaryHop href="/go/healthy-paws/home?s=reviews-healthy-paws-vs-embrace-guide" label="Get a Healthy Paws quote" holdWithoutPartnerId />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
@@ -69,14 +69,14 @@ export default function HealthyPawsVsEmbraceGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>Scores and monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
+        <p>Monthly bands below are the ones on the <Link href="/reviews/best-pet-insurance">pet insurance review</Link>. Healthy Paws is the reimbursement-speed pick. Embrace is for owners who want routine care on an add-on. <Link href="/reviews/healthy-paws-vs-pets-best-guide">Healthy Paws versus Pets Best</Link> is the deductible-and-tier comparison, not this wellness add-on. Those bands are not a quote for your pet.</p>
         <h2>What the review says about Healthy Paws</h2>
-        <p>Healthy Paws is Fastest Reimbursement, score 9.1. Reimbursement is 80–90%. The review says the app claim and an average of about two days make the wait short. Payouts are unlimited. The deductible is annual. The printed price is $40–85 a month. It does not pay the clinic at checkout, and it has no wellness add-on. The review says it fits an owner who would rather pay the vet and be paid back quickly.</p>
+        <p>Healthy Paws is Fastest Reimbursement. Reimbursement is 80–90%. The review says the app claim and an average of about two days make the wait short. Payouts are unlimited. The deductible is annual. The printed price is $40–85 a month. It does not pay the clinic at checkout, and it has no wellness add-on. The review says it fits an owner who would rather pay the vet and be paid back quickly.</p>
         <h2>What the review says about Embrace</h2>
-        <p>Embrace is Wellness Included, score 8.8. The wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The deductible drops by $50 each claim-free year. Reimbursement in the review is 70–90%. The orthopedic waiting period is 6 months. The printed price is $45–95 a month plus the wellness add-on. The review also says the plan options are more complex.</p>
+        <p>Embrace is Wellness Included. The wellness add-on covers vaccines, heartworm testing, dental cleanings, and annual exams. The deductible drops by $50 each claim-free year. Reimbursement in the review is 70–90%. The orthopedic waiting period is 6 months. The printed price is $45–95 a month plus the wellness add-on. The review also says the plan options are more complex.</p>
         <p>To see what a deductible and a reimbursement percent do to a sample bill, use the <Link href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</Link>.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Healthy Paws sample when you want unlimited payouts and a short reimbursement wait, and you are not buying the policy for wellness or for direct pay at the clinic. Open the Embrace sample when the wellness add-on is the reason, and read the 6-month orthopedic wait before you enroll. Enroll before a condition is in the record. Trupanion, the direct-pay carrier on that review, is a separate comparison.</p>

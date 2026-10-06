@@ -20,7 +20,7 @@ export default function DeductiblesPage() {
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
         priceAsOf="2026-09-06"
-        heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' />}
+        heroHop={<PrimaryHop href='/go/healthy-paws/home?s=insurance-deductibles-reimbursement' label='Get a Healthy Paws quote →' holdWithoutPartnerId />}
         hero={{ title: 'Deductibles and Reimbursement', subtitle: 'The deductible, reimbursement rate, and annual limit together determine what a pet insurance policy actually costs you when you file a claim. These three settings trade off against your monthly premium, and understanding how they interact lets you tune a policy to your budget and risk tolerance rather than guessing.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }]}
         sidebar={<>
@@ -167,7 +167,6 @@ export default function DeductiblesPage() {
             badge="Simple Levers"
             name="Healthy Paws"
             subtitle="One plan, you set the deductible and reimbursement rate"
-            score={8.7}
             winner
             description={
               <p>A single accident-and-illness plan where you choose the deductible and reimbursement rate, which makes the lever trade-offs easy to model. Known for fast reimbursement on the pay-then-claim model. Confirm the annual-limit structure when you quote — that is the catastrophe protection you are really buying.</p>
@@ -181,7 +180,7 @@ export default function DeductiblesPage() {
             cons={['No wellness add-on', 'Confirm annual-limit structure']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/healthy-paws/home?s=insurance-deductibles-reimbursement"
+            ctaHref="/go/healthy-paws/home?s=insurance-deductibles-reimbursement" holdWithoutPartnerId
             ctaAffiliateProgram="healthy-paws"
             ctaAffiliateProduct="home"
           />
@@ -190,7 +189,6 @@ export default function DeductiblesPage() {
             badge="Tiered Options"
             name="Pets Best"
             subtitle="Multiple deductible and reimbursement combinations"
-            score={8.2}
             description={
               <p>Offers several plan tiers with a range of deductible and reimbursement combinations, which is helpful when you want to compare how each lever shifts the premium. Run a hypothetical large bill through different settings to find the structure that matches your cash reality.</p>
             }
@@ -209,7 +207,7 @@ export default function DeductiblesPage() {
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Both cards are quote-based. The lever and the limit below are the ones already on the cards.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -223,7 +221,7 @@ export default function DeductiblesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">One accident-and-illness plan, and you set the deductible and rate</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-deductibles-reimbursement"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Simple Levers. Single plan. Fast reimbursement. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on. Confirm the annual-limit structure on the quote</td>
                 </tr>
@@ -236,7 +234,7 @@ export default function DeductiblesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
