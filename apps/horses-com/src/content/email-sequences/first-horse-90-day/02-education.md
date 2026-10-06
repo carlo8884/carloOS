@@ -24,7 +24,7 @@ The right week to fit a saddle is week 10–12, after the horse has settled into
 
 Lemonade and Pumpkin both write horse policies through partner underwriters; the quote process takes under five minutes.
 
-[Get a horse insurance quote at Lemonade →](https://horses.com/go/lemonade/horse-quote)
+[Get a horse insurance quote at Lemonade →](https://horses.com/go/lemonade/horse-quote?s=email-first-horse-90-day)
 
 The saddle decision will be there in week 10. It will be a better decision then.
 

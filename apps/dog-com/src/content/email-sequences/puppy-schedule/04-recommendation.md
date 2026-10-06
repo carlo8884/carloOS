@@ -26,7 +26,7 @@ The supplies above are the kit. Dog.com does not sell them as one Chewy bundle. 
 
 And for the insurance piece:
 
-[Compare puppy insurance: Lemonade vs Pumpkin →](https://dog.com/go/lemonade/puppy-quote)
+[Compare puppy insurance: Lemonade vs Pumpkin →](https://dog.com/go/lemonade/puppy-quote?s=email-puppy-schedule)
 
 — Dog.com Editorial Team
 

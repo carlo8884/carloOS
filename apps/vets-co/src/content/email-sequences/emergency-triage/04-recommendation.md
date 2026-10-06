@@ -14,9 +14,9 @@ The second question is, in our experience, the harder one. A $4,000 ER bill at 2
 
 **1. Carry pet insurance.** The two policies that consistently rank well for emergency / surgical coverage with reasonable waiting periods and intelligible exclusion language are **Lemonade** and **Pumpkin**. Both quote in under five minutes. Both cover the kind of scenarios that drive emergency visits: GDV, foreign body obstructions, HBC trauma, toxin ingestion, urinary obstruction.
 
-[Compare Lemonade pet insurance →](https://vets.co/go/lemonade/pet-quote)
+[Compare Lemonade pet insurance →](https://vets.co/go/lemonade/pet-quote?s=email-emergency-triage)
 
-[Compare Pumpkin pet insurance →](https://vets.co/go/pumpkin/pet-quote)
+[Compare Pumpkin pet insurance →](https://vets.co/go/pumpkin/pet-quote?s=email-emergency-triage)
 
 **2. Build a vet emergency fund** even with insurance. Most policies are reimbursement-based — you pay the clinic at point of service, the policy pays you back. A revolving $3,000 in a separately named savings sub-account covers the cash-flow gap. A few clinics offer CareCredit or Scratchpay; both are workable but neither replaces savings.
 
