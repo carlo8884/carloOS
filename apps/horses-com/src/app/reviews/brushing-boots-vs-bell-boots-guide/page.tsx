@@ -5,7 +5,7 @@ import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSche
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Brushing Boots vs Bell Boots | Horses.com',
-  description: 'The boots page scores synthetic brushing boots at 8.5 and pull-on bell boots at 8.4. Printed prices are $25–70 and $12–35 a pair.',
+  description: 'The boots page covers synthetic brushing boots and pull-on bell boots. Printed prices are $25–70 and $12–35 a pair.',
   path: '/reviews/brushing-boots-vs-bell-boots-guide',
   type: 'article',
 })
@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which boot does the page pick for interference?',
-    answer: 'Synthetic brushing or splint boots, scored 8.5, marked Everyday Protection, and marked the winner. The printed price is $25–70 a pair. The card says they protect against strikes during schooling and turnout, and that they do not provide tendon support.',
+    answer: 'Synthetic brushing or splint boots, marked Everyday Protection and the winner. The printed price is $25–70 a pair. The card says they protect against strikes during schooling and turnout, and that they do not provide tendon support.',
   },
   {
     question: 'When does the page point to bell boots?',
-    answer: 'When a hind foot strikes a front heel or the horse pulls a front shoe. Pull-on bell boots score 8.4 and are Overreach Protection. The printed price is $12–35 a pair. The card says pull-on styles stay secure and are harder to put on, and that an oversized boot can rub.',
+    answer: 'When a hind foot strikes a front heel or the horse pulls a front shoe. Pull-on bell boots are Overreach Protection. The printed price is $12–35 a pair. The card says pull-on styles stay secure and are harder to put on, and that an oversized boot can rub.',
   },
   {
     question: 'Do these boots support tendons?',
@@ -71,14 +71,14 @@ export default function BrushingBootsVsBellBootsGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
-        <p>Prices and scores below are the ones on the <Link href="/tack/boots-and-wraps">boots and wraps page</Link>, which compares published retail specs. Blankets and pads have their own guides. This comparison is brushing boots against bell boots.</p>
+        <p>Prices below are the ones on the <Link href="/tack/boots-and-wraps">boots and wraps page</Link>, which compares published retail specs. Blankets and pads have their own guides. This comparison is brushing boots against bell boots.</p>
         <h2>What the page says about brushing boots</h2>
-        <p>Synthetic brushing or splint boots are Everyday Protection, score 8.5, and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above is the Riding Warehouse search on that page.</p>
+        <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above is the Riding Warehouse search on that page.</p>
         <h2>What the page says about bell boots</h2>
-        <p>Pull-on bell boots are Overreach Protection, score 8.4. The card says they cover the heel bulbs and coronet when a hind foot strikes the back of a front foot, and that they help keep a front shoe on. Pull-on styles stay secure. Hook-and-loop styles are easier to fit and can come loose in deep footing. The printed price is $12–35 a pair. Cons say pull-on styles are harder to put on, an oversized boot can rub, and muddy work means cleaning. The page ties them to horses that overreach, forge, or pull shoes, and to jumping and fast work.</p>
+        <p>Pull-on bell boots are Overreach Protection. The card says they cover the heel bulbs and coronet when a hind foot strikes the back of a front foot, and that they help keep a front shoe on. Pull-on styles stay secure. Hook-and-loop styles are easier to fit and can come loose in deep footing. The printed price is $12–35 a pair. Cons say pull-on styles are harder to put on, an oversized boot can rub, and muddy work means cleaning. The page ties them to horses that overreach, forge, or pull shoes, and to jumping and fast work.</p>
         <h2>Who should buy which boot</h2>
         <p>Buy brushing boots when the strike is between legs during flatwork or turnout, and clean them so grit does not stay against the skin. Buy bell boots when the injury pattern is overreach or a pulled front shoe. A horse can need both jobs. Neither purchase is tendon support, and neither is a standing wrap. Bandaging technique stays on the boots page because a tight wrap can injure a tendon. Wraps are a different product on that page.</p>
         <p>The sale price can differ from the printed pair price. A blanket fill weight does not choose a boot.</p>

@@ -13,7 +13,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'horses-com',
   title: 'Quilted cotton pad or a sheepskin half pad',
-  description: 'The saddle-pad review already scores the quilted cotton pad for everyday schooling and the sheepskin half pad for friction.',
+  description: 'The saddle-pad review already lists the quilted cotton pad for everyday schooling and the sheepskin half pad for friction.',
   url: 'https://horses.com/reviews/quilted-vs-sheepskin-pad-guide',
   imageUrl: '',
   authorName: 'Horses.com Editorial',
@@ -24,11 +24,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which pad does the saddle-pad review mark as the winner?',
-    answer: 'The Quilted Cotton All-Purpose Pad, scored 8.3 and marked Everyday English. The review lists quilted cotton, machine washing, and a price of $20–45. It does not correct saddle fit.',
+    answer: 'The Quilted Cotton All-Purpose Pad, marked Everyday English. The review lists quilted cotton, machine washing, and a price of $20–45. It does not correct saddle fit.',
   },
   {
     question: 'When does the review point to the sheepskin half pad?',
-    answer: 'For friction reduction and wicking under a saddle that already fits. The sheepskin listing scores 8.5, lists $60–160, and says some versions have shim pockets. It is not a substitute for a saddle fitter.',
+    answer: 'For friction reduction and wicking under a saddle that already fits. The sheepskin listing lists $60–160, and says some versions have shim pockets. It is not a substitute for a saddle fitter.',
   },
   {
     question: 'Can either pad fix a saddle that does not fit?',
@@ -39,7 +39,7 @@ const FAQS = [
 export default function QuiltedVsSheepskinPadGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-05"
       siteId="horses-com"
       schema={schema}
       hero={{
@@ -67,11 +67,11 @@ export default function QuiltedVsSheepskinPadGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/tack/saddle-pads">saddle-pad review</Link> already scores a quilted cotton all-purpose pad for everyday English schooling and a sheepskin half pad for friction under a saddle that fits. Those scores are editorial scores, not shopper star ratings. Neither pad corrects saddle fit.</p>
+        <p>The <Link href="/tack/saddle-pads">saddle-pad review</Link> already lists a quilted cotton all-purpose pad for everyday English schooling and a sheepskin half pad for friction under a saddle that fits. Neither pad corrects saddle fit.</p>
         <h2>What the review says about the quilted pad</h2>
-        <p>The Quilted Cotton All-Purpose Pad is Everyday English, score 8.3, and the winner. Material is quilted cotton. Care is machine washable. The printed price is $20–45. The review calls it inexpensive enough to keep several in rotation so a clean, dry pad is available. Cons: no structural fit correction, and it wears faster than wool or felt.</p>
+        <p>The Quilted Cotton All-Purpose Pad is Everyday English and the winner. Material is quilted cotton. Care is machine washable. The printed price is $20–45. The review calls it inexpensive enough to keep several in rotation so a clean, dry pad is available. Cons: no structural fit correction, and it wears faster than wool or felt.</p>
         <h2>What the review says about the sheepskin pad</h2>
-        <p>The Sheepskin Half Pad scores 8.5. Material is sheepskin or synthetic fleece. The job is friction reduction and wicking at the saddle edges. Some versions have shim pockets for minor balance tuning between professional fittings. The printed price is $60–160. Downsides listed: it cannot fix a wrong-width saddle, real sheepskin needs careful washing, and premium versions are pricey.</p>
+        <p>The sheepskin half pad is the friction pick. Material is sheepskin or synthetic fleece. The job is friction reduction and wicking at the saddle edges. Some versions have shim pockets for minor balance tuning between professional fittings. The printed price is $60–160. Downsides listed: it cannot fix a wrong-width saddle, real sheepskin needs careful washing, and premium versions are pricey.</p>
         <h2>Who should buy which pad</h2>
         <p>Buy the quilted cotton pad for daily schooling under a saddle that already fits, and keep more than one so a dry pad is always available. Buy the sheepskin half pad when friction or wicking at the edges is the extra job, still under a fitting saddle. If the saddle is the wrong width, the page sends you to a saddle fitter, not to a thicker pad. Western felt is another option on that review, at $80–200, and it is a different discipline.</p>
         <AffiliateDisclosure variant="inline" siteId="horses-com" />
