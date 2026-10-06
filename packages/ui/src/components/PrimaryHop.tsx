@@ -19,7 +19,6 @@ export function PrimaryHop({
   if (held) {
     return (
       <div className="mb-5" data-primary-hop="true">
-        <p className="text-xs text-white/80 mb-2">This quote stays off until a partner ID is set.</p>
         <button
           type="button"
           disabled
