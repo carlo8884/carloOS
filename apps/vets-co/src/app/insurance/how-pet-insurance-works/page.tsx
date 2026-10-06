@@ -163,7 +163,6 @@ export default function HowPetInsuranceWorksPage() {
             badge="Direct-Pay Model"
             name="Trupanion"
             subtitle="Pays participating vets directly, per-condition deductible"
-            score={9.0}
             winner
             description={
               <p>Notable for paying participating veterinarians directly at checkout, which sidesteps the pay-then-claim cash-flow burden described above. Uses a per-condition lifetime deductible rather than an annual one. Pricing reflects its model; run a quote for your pet to compare against the four levers.</p>
@@ -178,6 +177,7 @@ export default function HowPetInsuranceWorksPage() {
             price="Quote-based"
             ctaText="Get a Quote →"
             ctaHref="/go/trupanion/home?s=insurance-how-pet-insurance-works"
+            holdWithoutPartnerId
             ctaAffiliateProgram="trupanion"
             ctaAffiliateProduct="home"
           />
@@ -186,7 +186,6 @@ export default function HowPetInsuranceWorksPage() {
             badge="Fast Reimbursement"
             name="Healthy Paws"
             subtitle="One simple accident-and-illness plan, fast claims"
-            score={8.7}
             description={
               <p>A single straightforward accident-and-illness plan with a reputation for fast reimbursement on the pay-then-claim model. No tiered plan maze — you choose the deductible and reimbursement rate. Confirm the annual limit structure when you quote, and enroll while your pet is young to lock in lower premiums.</p>
             }
@@ -200,12 +199,13 @@ export default function HowPetInsuranceWorksPage() {
             price="Quote-based"
             ctaText="Get a Quote →"
             ctaHref="/go/healthy-paws/home?s=insurance-how-pet-insurance-works"
+            holdWithoutPartnerId
             ctaAffiliateProgram="healthy-paws"
             ctaAffiliateProduct="home"
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. The payment model and the limit are the ones already on the cards. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Both cards are quote-based. The payment model and the limit are the ones already on the cards.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -219,20 +219,20 @@ export default function HowPetInsuranceWorksPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">The clinic paid directly, with a per-condition deductible</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=insurance-how-pet-insurance-works"} product={"Trupanion"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#trupanion" className="text-brand-primary">Trupanion</a><TableShopLink href={"/go/trupanion/home?s=insurance-how-pet-insurance-works"} product={"Trupanion"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Direct-Pay Model. Pays participating vets. Unlimited payouts. No per-incident caps. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">Premiums can run higher. No wellness or preventive add-on</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You pay the clinic, then file, and want a single plan</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-how-pet-insurance-works"} product={"Healthy Paws"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#healthy-paws" className="text-brand-primary">Healthy Paws</a><TableShopLink href={"/go/healthy-paws/home?s=insurance-how-pet-insurance-works"} product={"Healthy Paws"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Fast Reimbursement. One accident-and-illness plan. You choose deductible and rate. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">No wellness add-on, and no direct payment to the vet</td>
                 </tr>
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
