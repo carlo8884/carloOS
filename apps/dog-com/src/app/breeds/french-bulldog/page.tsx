@@ -74,6 +74,7 @@ export default function FrenchBulldogBreedPage() {
             <BreedHealthCard name="Heat Intolerance" riskLevel="very-high" description="Compromised airway severely limits panting. Heatstroke can develop at temperatures comfortable for humans. Never in a parked car. Limit outdoor activity in warm weather. Walk only in cool morning/evening hours in summer." />
             <BreedHealthCard name="Skin Fold Infections" riskLevel="very-high" description="Facial folds, tail pocket, and body folds trap moisture and bacteria. Daily cleaning is non-negotiable maintenance. Veterinary treatment when infected. Severe cases may require surgical fold correction." />
             <h2>Financial Reality</h2>
+            <p>Those figures are typical US ranges dated 2026-09-07.</p>
             <p>Realistic lifetime medical costs for a Frenchie with typical challenges: BOAS surgery ($1,500–5,000), IVDD treatment ($5,000–8,000+ for surgery), ongoing skin fold management, regular ear and eye care. Enroll pet insurance before the first vet visit. Compare policies specifically for BOAS and spinal coverage. French Bulldogs are typically first-time-owner friendly only when the household accepts daily fold cleaning, cool-hour walks, ramps instead of jumps, and the BOAS / IVDD / heat load from day one.</p>
 
             <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
@@ -91,6 +92,7 @@ export default function FrenchBulldogBreedPage() {
             </div>
 
             <h2>Frequently Asked Questions</h2>
+            <p>Those figures are typical US ranges dated 2026-09-07.</p>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
           </article>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">

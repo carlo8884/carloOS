@@ -523,6 +523,7 @@ export default function FerretToxicFoodsPage() {
             For any suspected ingestion of a toxic substance or a
             foreign body:
           </p>
+          <p>Those figures are typical US ranges dated 2026-05-29.</p>
           <ol>
             <li>
               <strong>Identify the substance if possible.</strong>

@@ -104,6 +104,7 @@ export default function FindAVetPage() {
               ))}
             </div>
             <div className="mt-4 pt-4 border-t border-brand-danger/20">
+              <p>Those figures are typical US ranges dated 2026-10-04.</p>
               <div className="text-xs text-brand-text-mid">ASPCA Animal Poison Control: <span className="font-bold text-brand-dark">888-426-4435</span> (24/7, $70–100 consultation fee)</div>
             </div>
           </div>

@@ -296,6 +296,7 @@ export default function VetsPomeranianHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Pomeranian</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Pomeranians live long, which is wonderful — and which also means a long window for chronic disease
             costs to accumulate. Patellar luxation correction runs roughly $2,000–4,000 per knee; PDA closure

@@ -63,6 +63,7 @@ export default function HeartwormPage() {
           </CalloutBox>
 
           <h2>Annual Testing -- Required Even on Prevention</h2>
+          <p>Those figures are typical US ranges dated 2026-06-04.</p>
           <p>Annual heartworm antigen testing is required for all dogs, even those on year-round prevention. The reasons: no preventive is 100% effective -- a dog that vomited a dose, was undertreated due to weight change, or encountered a preventive-resistant strain may have been infected despite preventive use. Starting a new dog on prevention without testing first risks treating an already-infected dog with macrocyclic lactone preventives, which can cause a severe microfilarial reaction. Federal regulations require annual testing for heartworm antigen as a condition of prescribing preventives in most states.</p>
 
           <PullQuote

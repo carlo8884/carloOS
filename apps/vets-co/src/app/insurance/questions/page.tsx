@@ -85,6 +85,7 @@ export default function InsuranceQuestionsHubPage() {
 
         <div className="px-container-sm sm:px-container pb-14 pt-8">
           <h2 className="font-display text-xl font-bold text-brand-dark mb-4 pb-3 border-b border-brand-border">The 8 most-asked questions</h2>
+          <p className="text-sm text-brand-text-mid mb-4">Those figures are typical US ranges dated 2026-06-11.</p>
           <div className="grid sm:grid-cols-2 gap-4">
             {QUESTIONS.map((item) => (
               <Link key={item.href} href={item.href} className="block bg-brand-white border border-brand-border rounded-lg p-5 no-underline hover:border-brand-primary transition-colors">

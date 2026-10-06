@@ -313,6 +313,7 @@ export default function EmergencyTriageCardPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Common owner over-worry scenarios
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             A reasonable ER visit in the US runs $400–$1,200 before treatment. The list below
             covers things that look frightening but, on their own, almost never need an ER trip.
@@ -348,6 +349,7 @@ export default function EmergencyTriageCardPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-3">
             Build the kit once. Replace expired items every 12 months.
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-10">
             A pet first-aid kit costs $40–$70 to assemble from scratch and is the cheapest
             emergency-prep purchase you will ever make. Items below align with AVMA pet first-aid
@@ -475,6 +477,7 @@ This is a triage aid, not a diagnosis. When unsure, call your vet or the nearest
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-8">
             How this works
           </h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <FAQAccordion items={FAQS} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">

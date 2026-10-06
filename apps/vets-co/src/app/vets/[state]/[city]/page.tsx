@@ -214,6 +214,7 @@ export default function CityHubPage({ params }: PageProps) {
                   </Link>
                 ))}
               </div>
+              <p>Those figures are typical US ranges dated 2026-10-04.</p>
               <p className="text-2xs text-brand-text-light italic mt-4 mb-0">
                 ASPCA Animal Poison Control:{' '}
                 <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">

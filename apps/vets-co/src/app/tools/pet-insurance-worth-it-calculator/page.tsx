@@ -220,6 +220,7 @@ export default function PetInsuranceWorthItPage() {
         {/* GEO: extractable plain-language answer near the top. Calibrated, honest,
             both-sides — not a sales pitch. Followed by a worked breakeven example. */}
         <h2 id="answer">Is pet insurance worth it? The short answer</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>
           <strong>It depends — mostly on your pet&apos;s risk profile and your cash buffer, not on whether you&apos;ll
           &ldquo;come out ahead&rdquo; on average.</strong> Like every kind of insurance, a pet policy is priced so the
@@ -347,6 +348,7 @@ export default function PetInsuranceWorthItPage() {
 
         <h2 id="example">A worked breakeven example</h2>
         <p>These amounts are an example, not a live quote.</p>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>
           Suppose a quote of <strong>$45/month</strong> ($540/year) with a <strong>$250 annual deductible</strong>,{' '}
           <strong>80% reimbursement</strong>, and a <strong>$10,000 annual cap</strong>. Reimbursement applies only to
@@ -357,6 +359,7 @@ export default function PetInsuranceWorthItPage() {
           <li>= $250 + ($540 ÷ 0.80)</li>
           <li>= $250 + $675 = <strong>$925</strong></li>
         </ul>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <p>
           So this policy pays for itself once eligible vet costs clear about <strong>$925</strong> in the year. Below
           that, you pay more in premium than you get back. Worked the other way: in a $300 healthy year the policy
@@ -405,6 +408,7 @@ export default function PetInsuranceWorthItPage() {
         <ArticleSourcesList sources={SOURCES} />
 
         <h2 id="faq">FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-06-11.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           includeSchema

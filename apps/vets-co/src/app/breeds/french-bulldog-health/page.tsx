@@ -91,6 +91,7 @@ export default function VetsFrenchBulldogHealthPage() {
         <p>Limit outdoor time in temperatures above 70°F, particularly if humid, and walk in early morning or after sunset in summer. An analog outdoor thermometer is how that 70°F outdoor limit stays a written cutoff — it is not a mechanical kitchen timer (that lives on german-shepherd-health), not a 48-hour digital kitchen timer (that lives on when-to-go-to-the-vet), and not a dog-com cooling-mat or cooling-vest hop. Clean skin folds 2–3 times weekly and dry thoroughly. A weekly checklist notepad is how that fold-cleaning cadence stays a dated list — it is not a hardcover weekly appointment planner, not a monthly desk pad calendar (that lives on when-to-enroll), and not an 18-month wall calendar (that lives on golden-retriever-health).</p>
 
         <h2>Insurance — Non-Negotiable for This Breed</h2>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <p>BOAS surgery: $2,500–5,000. IVDD decompression: $5,000–10,000. These are not rare worst-case scenarios — they are common outcomes in this breed within the first 5 years.</p>
         <p>Enroll before symptoms appear and compare hereditary and spinal terms on the quote itself. This page does not name a carrier. See the <a href="/reviews/best-pet-insurance">full insurance comparison →</a></p>
 
@@ -195,6 +196,7 @@ export default function VetsFrenchBulldogHealthPage() {
           The Dog.com French Bulldog page is the owner-side guide for this breed: size, temperament, and everyday care.
         </CrossSiteHelp>
         <h2>FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple

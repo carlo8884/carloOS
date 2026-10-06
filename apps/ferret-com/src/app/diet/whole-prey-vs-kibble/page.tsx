@@ -139,6 +139,7 @@ export default function WholePreyVsKibblePage() {
           </p>
 
           <h2 id="cost">Cost</h2>
+          <p>Those figures are typical US ranges dated 2026-10-05.</p>
           <p>
             Cost depends heavily on sourcing. Premium low-carb kibble runs roughly $30–50 per 5 lb bag and a single ferret eats modestly, so monthly kibble cost is usually contained. Whole-prey diets vary enormously: buying frozen whole prey in bulk from a reptile-feeder supplier can be cost-competitive, while boutique pre-made raw or small-quantity organ purchases can cost considerably more. Neither model is reliably cheaper; the variable is how much sourcing effort you are willing to invest. For the full ownership budget picture, see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a>.
           </p>
@@ -259,6 +260,7 @@ export default function WholePreyVsKibblePage() {
           <ComparisonFoot updated="2026-10-06" />
 
           <h2 id="faq">FAQ</h2>
+          <p>Those figures are typical US ranges dated 2026-10-05.</p>
           <FAQAccordion items={[
             {
               question: 'Which option does this page pick for a shelf-stable base a sitter can feed?',

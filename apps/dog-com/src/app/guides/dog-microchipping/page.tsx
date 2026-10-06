@@ -306,6 +306,7 @@ export default function DogMicrochippingPage() {
           </div>
 
           <h2 id="faq">Frequently Asked Questions</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple

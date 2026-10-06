@@ -295,6 +295,7 @@ export default function VetsChihuahuaHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Chihuahua</h2>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <p>
             Patellar luxation correction commonly runs $2,000–4,000 per knee; hydrocephalus shunting can
             exceed $5,000–8,000 at a referral center; lifetime MMVD medical management can total

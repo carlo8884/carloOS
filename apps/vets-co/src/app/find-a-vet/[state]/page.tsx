@@ -244,6 +244,7 @@ export default function StateVetFinderPage({ params }: PageProps) {
           </h2>
           <div className="bg-brand-danger/5 border border-brand-danger/20 rounded-xl p-6 mb-5">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-danger mb-3">If You Suspect Poisoning</div>
+            <p>Those figures are typical US ranges dated 2026-10-04.</p>
             <p className="text-sm text-brand-text-mid m-0 mb-2 leading-relaxed">
               Call <a href="tel:8884264435" className="font-bold text-brand-dark hover:underline">ASPCA Animal Poison Control: 888-426-4435</a> (24/7, $70–100 consultation fee). They can advise whether to induce vomiting, what to monitor for, and whether to transport to an ER.
             </p>

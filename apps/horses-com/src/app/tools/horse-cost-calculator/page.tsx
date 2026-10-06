@@ -285,7 +285,7 @@ export default function HorseCostCalculatorPage() {
         <h2 id="categories">What goes into the cost of a horse</h2>
         <p>
           A horse budget is the sum of a handful of recurring categories plus a one-time startup. Seeded
-          defaults reflect commonly published 2026 US ranges; treat them as a starting point, not a quote.
+          defaults reflect commonly published 2026 US ranges dated 2026-10-05; treat them as a starting point, not a quote.
         </p>
         <ul>
           <li>
@@ -381,6 +381,7 @@ export default function HorseCostCalculatorPage() {
         </p>
 
         <h2 id="faq">FAQ</h2>
+        <p>Those figures are typical US ranges dated 2026-10-05.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           includeSchema

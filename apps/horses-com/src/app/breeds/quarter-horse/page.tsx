@@ -192,6 +192,7 @@ export default function QuarterHorseBreedPage() {
           <p>The Quarter Horse is the most common first-time owner mount in the United States, and the reasons are practical: a well-bred Quarter Horse with good early training is calm enough to forgive an inexperienced handler's mistakes, athletic enough to grow with the rider into more demanding disciplines, and embedded enough in the market that buying, selling, insuring, vetting, and finding a farrier who has shod one before is straightforward.</p>
 
           <p>Realistic expectations for a first-time owner:</p>
+          <p>Those figures are typical US ranges dated 2026-10-04.</p>
           <ul>
             <li><strong>Soundness.</strong> Lower-impact disciplines (trail, ranch, lower-level showing) on a moderately-sized horse with good conformation give the breed an excellent soundness record into the twenties. Performance work (reining, cutting, racing) at speed accumulates hock and stifle wear and is the most common source of mid-career maintenance bills.</li>
             <li><strong>Boarding cost.</strong> Quarter Horses board no differently from any other riding horse — expect $400–$1,200/month full-care depending on region and facility quality. Hay consumption: 1.5–2.5 percent of body weight per day in dry-matter forage.</li>

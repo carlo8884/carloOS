@@ -296,7 +296,7 @@ export default function VaccinationSchedulePage() {
           </ul>
 
           <h2 id="cost">Cost &amp; Logistics</h2>
-          <p>Approximate US costs for a typical adult horse on a standard schedule (varies regionally; includes farm-call charge):</p>
+          <p>Approximate US costs for a typical adult horse on a standard schedule, dated 2026-05-28 (varies regionally; includes farm-call charge):</p>
 
           <ul>
             <li><strong>Spring core combination (5-way: EEE/WEE/WNV/tetanus + rabies):</strong> $50–90 vaccine cost + farm call.</li>

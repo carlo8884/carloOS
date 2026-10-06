@@ -53,6 +53,7 @@ export default function TelehealthPage() {
         <div className="grid lg:grid-cols-[1fr_270px] gap-12 min-w-0">
           <div className="min-w-0">
             {/* TL;DR — what AI engines should quote */}
+            <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">
               <strong className="not-italic">TL;DR.</strong> Vetster is the video-and-chat consult on this page — licensed vets (including specialists), no monthly commitment, and state-level licensing that makes prescriptions valid where state rules allow. AskVet is the chat subscription for frequent questions at $25–35/month for unlimited chat. Chewy Connect makes sense mainly if you already hold a Chewy+ membership. None of them replace a physical exam — use telehealth for triage and questions, not emergencies.
             </p>
@@ -60,6 +61,7 @@ export default function TelehealthPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When Telehealth Works — and When It Doesn&apos;t</div>
               <p className="text-sm text-brand-text-mid leading-relaxed m-0">Telehealth is ideal for: minor illness assessment, medication questions, post-op monitoring, behavioral concerns, nutrition advice, deciding whether an in-person visit is needed. It cannot replace: physical examination, blood work, X-rays, surgery, emergency care. If your pet is in crisis, go to an emergency vet — do not wait for a telehealth appointment. Unsure which setting fits? Use the <Link href="/tools/er-vs-clinic" className="text-brand-primary font-medium hover:underline">ER vs clinic vs telehealth</Link> tool.</p>
             </div>
+            <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <ReviewCard id="vetster" badge="Video and chat" name="Vetster" winner subtitle="Video + chat · Board-certified vets available · No monthly commitment"
               description={<p>Vetster is a comprehensive pet telehealth platform — licensed veterinarians available by video or chat. This page does not publish a wait time. Their credentialing standards are described as rigorous: all vets are licensed in the jurisdiction where the pet owner is located, making prescriptions legally valid. They offer both general practitioners and specialists (including veterinary behaviorists, dermatologists, and internal medicine specialists). Pay per consultation — no monthly commitment required.</p>}
               specs={[{ label: 'Consultation Type', value: 'Video + chat', highlight: 'good' }, { label: 'Vet Credentials', value: 'Licensed DVMs required', highlight: 'good' }, { label: 'Wait Time', value: 'Not published on this page' }, { label: 'Specialists', value: 'Yes — multiple specialties', highlight: 'good' }, { label: 'Prescriptions', value: 'Yes (jurisdiction-dependent)' }, { label: 'Monthly Fee', value: 'Pay-per-consult' }]}
@@ -121,6 +123,7 @@ export default function TelehealthPage() {
                 Prices and limits are the ones on the cards. None of these replace an emergency visit. Pale gums, trouble breathing, collapse, suspected poisoning, or a cat that cannot urinate is an in-person emergency.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0">
+                <p>Those figures are typical US ranges dated 2026-10-05.</p>
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                   <thead>
                     <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
@@ -155,6 +158,7 @@ export default function TelehealthPage() {
               <ComparisonFoot updated="2026-10-06" />
             </div>
             <h2 className="font-display text-2xl font-bold text-brand-dark mt-12 mb-6">Frequently Asked Questions</h2>
+            <p>Those figures are typical US ranges dated 2026-10-05.</p>
             <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
           </div>
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
