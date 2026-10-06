@@ -212,7 +212,7 @@ export function NewcomerSpokePage({ spoke }: { spoke: NewcomerSpoke }) {
                 <div className="flex flex-col gap-3">
                   <ShopCtas
                     amazonHref="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers-understanding-racing-silks"
-                    amazonLabel="Browse jockey silks on Amazon →"
+                    amazonLabel="Browse jockey racing silks on Amazon →"
                   />
           </div>
               </div>
