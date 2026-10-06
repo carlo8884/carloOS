@@ -9,7 +9,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   CrossPortfolioCard,
   StockImage,
@@ -527,13 +526,11 @@ export default function FerretExerciseEnrichmentPage() {
           <p>
             Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box. This is a documented-spec comparison drawing on widely-stocked products and the durable-material constraints discussed above; this page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="marshall-pop-n-play"
             badge="Tunnel Default"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
-            score={8.6}
             winner
             description={
               <p>The reference ferret tunnel product in US pet retail. Pop-up fabric construction stores flat, sets up in seconds, and connects to itself for multi-tunnel circuits. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
@@ -558,7 +555,6 @@ export default function FerretExerciseEnrichmentPage() {
             badge="Dig Box"
             name="Storage-Tote Dig Box + Safe Fill"
             subtitle="Plastic tote plus washed river rocks, ferret-safe plastic balls, or rice"
-            score={8.0}
             description={
               <p>The dig drive is one of the strongest behavioural patterns in ferrets and is best satisfied in a designated container rather than a houseplant. Any clear plastic storage tote with a low-cut entry is the structural part; the fill is the variable — washed river rocks, ferret-safe plastic balls, or uncooked rice are all standard. Avoid soil, sand, or shredded paper (ingestion and inhalation risk). Rotate the fill weekly for novelty.</p>
             }

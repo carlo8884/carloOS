@@ -9,7 +9,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
@@ -313,13 +312,11 @@ export default function FerretDiggingBurrowingPage() {
           <p>
             Two purchases that address the digging instinct directly — a tunnel set for the burrowing side and a ball pit for the dig-box side. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="marshall-pop-n-play-dig"
             badge="Tunnel Set"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels sized for ferrets, machine washable, chainable"
-            score={8.6}
             winner
             description={
               <p>The dig instinct is half about excavation and half about tunnelling through tight spaces. A ferret that has a tunnel circuit available will often spend its digging energy on the tunnel rather than the carpet. The Marshall Pop-N-Play set pops up in seconds, stores flat, and chains to itself for longer circuits. Machine washable, which matters for a floor-level item collecting dander and dust.</p>
@@ -344,7 +341,6 @@ export default function FerretDiggingBurrowingPage() {
             badge="Dig Box Fill"
             name="Ferret-Safe Ball Pit Balls"
             subtitle="Hollow plastic balls for a dig-box or ball pit — cheap, washable, ingest-safe"
-            score={8.0}
             description={
               <p>Hollow plastic ball-pit balls are one of the most reliable dig-box fills: they move with satisfying give, cannot be ingested in chunks, and clean easily. A standard storage tote filled with a bag of these creates a dig pit that most ferrets prefer to carpet edges. Rotate fill type weekly for novelty; alternating with rice or river rocks keeps the dig box interesting.</p>
             }

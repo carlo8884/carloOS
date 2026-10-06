@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -35,10 +35,9 @@ const med = buildMedicalWebPageSchema({
   lastReviewed: '2026-06-01',
 })
 
-// GEO: ItemList of the three kibbles that fit the profile + an editorial
-// Product/Review per pick. reviewRating maps each card's on-page disclosed
-// editorial score (via ScoreMethodology); name + reviewBody come only from this
-// page's ReviewCard content. No aggregateRating, no fabricated specs (QC §1.4).
+// GEO: ItemList of the three kibbles that fit the profile plus a product
+// review per pick. The name and review body come only from this page's
+// ReviewCard content. No aggregate rating and no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Ferret Kibbles That Fit the Profile',
   items: [
@@ -53,7 +52,6 @@ const products = [
     name: 'Wysong Epigen 90',
     description: 'Starch-free, animal-first, lowest commercial carb load in wide ferret use',
     url: `${PAGE_URL}#wysong-epigen-90`,
-    ratingValue: 9.3,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits — the default choice when insulinoma risk is the priority. Premium price and not always stocked in chain pet aisles.',
   }),
@@ -61,7 +59,6 @@ const products = [
     name: 'Marshall Premium Ferret Diet',
     description: 'Ferret-specific formulation, widely stocked, in-range macros',
     url: `${PAGE_URL}#marshall-premium-diet`,
-    ratingValue: 8.0,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets, with protein and fat in the working ferret range. The panel is imperfect (some plant protein) but acceptable for healthy adults, and it is the most likely appropriate brand to find on a chain shelf at short notice.',
   }),
@@ -69,7 +66,6 @@ const products = [
     name: 'Carniwhole Ferret Food',
     description: 'Direct-to-consumer, published macros, subscription-shipped',
     url: `${PAGE_URL}#carniwhole`,
-    ratingValue: 8.2,
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. It publishes its ingredient and macronutrient panel and ships on a subscription model; the trade-off is subscription logistics, no retail backup, and a shorter community track record.',
   }),
@@ -255,13 +251,11 @@ export default function BestFerretKibblePage() {
           <p>
             Three commercial dry diets whose published ingredient and macronutrient panels line up with the animal-first, low-carbohydrate window described above. This is a documented-spec comparison, not a hands-on test: inclusion reflects published panels and adoption patterns in keeper communities and at exotic-mammal shelters, not a lab evaluation.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="wysong-epigen-90"
             badge="Premium Tier"
             name="Wysong Epigen 90"
             subtitle="Starch-free, animal-first, lowest commercial carb load in wide ferret use"
-            score={9.3}
             winner
             description={
               <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. The panel reads as named meats and organ meats, and the starch-free system drives carbohydrate by difference into the low single digits. The default choice when insulinoma risk is the priority. Premium price per pound, and not always stocked in chain pet aisles.</p>
@@ -286,7 +280,6 @@ export default function BestFerretKibblePage() {
             badge="Mid Tier"
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, in-range macros"
-            score={8.0}
             description={
               <p>The reference mid-tier ferret kibble in US pet retail — formulated specifically for ferrets rather than adapted from cat food, with a protein and fat profile in the working ferret range. The ingredient panel is imperfect (some plant protein) but acceptable for healthy adults, and the per-pound price is materially lower than the premium tier. The most likely appropriate brand to find on a chain shelf at short notice.</p>
             }
@@ -310,7 +303,6 @@ export default function BestFerretKibblePage() {
             badge="Direct-to-Consumer"
             name="Carniwhole Ferret Food"
             subtitle="Direct-to-consumer, published macros, subscription-shipped"
-            score={8.2}
             description={
               <p>A direct-to-consumer ferret food favoured by keepers who want ingredient transparency and a fresher product than long-shelf-stable kibble. Carniwhole publishes its ingredient and macronutrient panel and ships on a subscription model. Appeal: transparency and freshness. Trade-off: subscription logistics, no retail backup, and a shorter community track record than Marshall or Wysong.</p>
             }
@@ -326,7 +318,7 @@ export default function BestFerretKibblePage() {
           />
 
           <h2 id="who">Who should buy which kibble</h2>
-          <p>Protein, carb notes, price, and the stocking limit are already on the three cards. This table only lines those facts up. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Protein, carb notes, price, and the stocking limit are already on the three cards. This table only lines those facts up.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -359,7 +351,7 @@ export default function BestFerretKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

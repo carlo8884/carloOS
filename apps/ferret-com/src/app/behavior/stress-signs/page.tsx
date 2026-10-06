@@ -10,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
@@ -308,7 +307,6 @@ export default function FerretStressSignsPage() {
           <p className="text-sm font-medium border border-amber-300 bg-amber-50 rounded p-3 my-4">
             Comfort supplies do not treat adrenal disease, insulinoma, or other medical conditions. Work with an exotic-pet veterinarian for diagnosis and treatment.
           </p>
-          <ScoreMethodology />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <Link href="/care/exercise-and-enrichment" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
               Pair the sleep sack with an out-of-cage routine →
@@ -319,7 +317,6 @@ export default function FerretStressSignsPage() {
             badge="Sleep Comfort"
             name="Ferret Sleep Sack / Hammock"
             subtitle="Enclosed fleece sleeping pouch — quiet, dark, enclosed resting space"
-            score={8.4}
             winner
             description={
               <p>Ferrets sleep 14-18 hours a day and are most settled when they have a fully enclosed, dark, soft place to do it. A fleece sleep sack or hanging hammock with an enclosed top satisfies this better than open bedding. Many stressed ferrets improve when given a dedicated enclosed sleeping space separate from the busier areas of the cage. Washable fleece, sized for a ferret to curl inside rather than on top of.</p>
@@ -343,7 +340,6 @@ export default function FerretStressSignsPage() {
             badge="Enrichment"
             name="Marshall Pop-N-Play Tunnel Set"
             subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
-            score={8.6}
             description={
               <p>Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
             }

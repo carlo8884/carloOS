@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -186,13 +186,11 @@ export default function SafeTreatsPage() {
           <p>
             A single-ingredient freeze-dried meat treat is the cleanest way to honour the one rule above — no sugar, no grain, just animal protein. This is a documented-spec selection based on published ingredient panels, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="wysong-freeze-dried-treats"
             badge="Meat-Based Treat"
             name="Wysong Single-Ingredient Freeze-Dried Treats"
             subtitle="Single-protein freeze-dried treat, no added sugar or grain"
-            score={8.6}
             description={
               <p>A freeze-dried treat whose ingredient panel is a single named animal protein — the structure this page recommends. No molasses, honey, fruit, or grain fillers. High-value and palatable, which makes it useful for litter and recall training as well as bonding. Use sparingly: treats sit on top of the base diet, not in place of it.</p>
             }

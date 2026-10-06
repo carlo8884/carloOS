@@ -664,7 +664,6 @@ export default function FerretAdrenalDiseasePage() {
             id="ferret-fleece-sleep-sack"
             name="Ferret Fleece Sleep Sack"
             subtitle="Enclosed fleece bedding — warmth and burrowing comfort for alopecic or post-surgical ferrets"
-            score={8.8}
             description={
               <p>Ferrets with adrenal disease often experience progressive hair loss (alopecia) that reduces their ability to retain body heat — particularly relevant in ferrets recovering from adrenalectomy. An enclosed fleece sleep sack provides warmth and satisfies the burrowing instinct simultaneously. Machine washable, ferret-specific sizing. Replace every 3–6 months or when fabric thins. This is a comfort and warmth tool; it does not treat adrenal disease.
               </p>

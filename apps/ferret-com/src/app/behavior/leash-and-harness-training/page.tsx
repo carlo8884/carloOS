@@ -10,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  ScoreMethodology,
   AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
@@ -304,7 +303,6 @@ export default function LeashAndHarnessTrainingPage() {
           <p>
             Two harness styles that fit ferret anatomy correctly — an H-style and a vest-style — both stocked through major pet retailers. This is a documented-spec comparison based on published product details and keeper community use patterns; this page does not claim hands-on testing.
           </p>
-          <ScoreMethodology />
           <p className="mb-4 text-sm font-semibold leading-snug">
             <Link href="/behavior/stress-signs" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
               Read the stress signs before the first outdoor walk →
@@ -315,7 +313,6 @@ export default function LeashAndHarnessTrainingPage() {
             badge="H-Style"
             name="Marshall Ferret H-Style Harness & Leash Set"
             subtitle="Adjustable H-style harness sized for ferret bodies, with 6-ft leash included"
-            score={8.7}
             winner
             description={
               <p>The reference H-style ferret harness in US pet retail. Adjustable at neck and body to accommodate seasonal weight changes; the H-geometry distributes leash pressure across the chest and shoulders rather than the throat. Widely stocked at national chain pet stores. The included leash is adequate for indoor break-in and early outdoor sessions.</p>
@@ -340,7 +337,6 @@ export default function LeashAndHarnessTrainingPage() {
             badge="Vest-Style"
             name="Ferret Vest-Style Harness"
             subtitle="Wider-body vest harness, harder to back out of than an H-style"
-            score={8.3}
             description={
               <p>A wider fabric band that wraps the torso rather than two loops joined by a strap. Harder for a determined escape artist to reverse out of, making it the better choice for ferrets that back out of standard H-harnesses. Slightly more fiddly to put on than an H-style; the trade-off is additional security. Search for a ferret-specific vest harness (cat vest harnesses often do not cinch small enough).</p>
             }

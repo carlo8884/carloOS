@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CalloutBox, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -225,13 +225,11 @@ export default function TransitioningFoodsPage() {
           <p>
             A meat-based, sugar-free topper or broth over the new food is one of the most reliable tricks for coaxing a hesitant ferret to start eating it. The key is a clean panel — animal protein, no added sugar or grain. Documented-spec selection, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="meat-topper"
             badge="Transition Aid"
             name="Meat-Based Food Topper / Gravy (Sugar-Free)"
             subtitle="Animal-protein topper to coax a reluctant eater onto new food"
-            score={8.1}
             description={
               <p>A meat-based topper or broth, drizzled over the new food, lends the familiar smell of meat to an unfamiliar kibble and can tip a hesitant ferret into trying it. Choose a single-protein, sugar-free formulation — skip anything sweetened with molasses, honey, or fruit, per our <a href="/diet/safe-treats">safe treats guide</a>. Use a small amount and count it against the day's intake; the topper is a bridge, not a meal.</p>
             }

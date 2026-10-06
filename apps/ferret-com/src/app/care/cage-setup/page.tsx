@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -240,13 +240,11 @@ export default function FerretCageSetupPage() {
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
           </p>
           <AffiliateDisclosure variant="inline" siteId="ferret-com" />
-          <ScoreMethodology />
           <ReviewCard
             id="critter-nation"
             badge="Best Overall"
             name="MidWest Critter Nation Double Unit (Model 162)"
             subtitle="Two-level, 36×25×62 inches, 1/2-inch bar spacing on lower portion"
-            score={9.4}
             winner
             description={
               <p>The default recommendation across the ferret-keeper community. Originally designed for rats and similar small mammals, the Critter Nation’s footprint, height, and bar spacing all land in the right zone for ferrets. Two large solid-floor levels with a connecting ramp, full-width double doors on each level (excellent access for cleaning and for getting a stubborn ferret out), and casters for moving the cage. Single-level (Model 161) and three-level expansion options exist. Expect to spend an afternoon on assembly.</p>
@@ -271,7 +269,6 @@ export default function FerretCageSetupPage() {
             badge="Best Starter"
             name="Marshall Designer Ferret Cage"
             subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
-            score={8.2}
             description={
               <p>Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and their starter cage is genuinely workable as a first cage for one or two ferrets. Three levels, ferret-appropriate bar spacing, and an included hammock, ramp covers, and litter pan reduce the per-item shopping list. The trade-off is footprint: the Marshall is materially smaller than the Critter Nation, and most keepers eventually upgrade as they add ferrets or want more enrichment space.</p>
             }
@@ -300,7 +297,6 @@ export default function FerretCageSetupPage() {
             badge="Top Pick"
             name="Marshall Ferret Sleep Sack & Hammock Set"
             subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
-            score={9.0}
             description={
               <p>Marshall makes the most widely stocked ferret-specific sleep sacks and hammocks in US pet retail. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Ships as a set, so both the sleeping and lounging needs are covered in one purchase. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
             }
@@ -317,7 +313,6 @@ export default function FerretCageSetupPage() {
             badge="Essential"
             name="Kaytee Corner Ferret Litter Pan"
             subtitle="Corner-shaped, high back wall, low-entry front lip"
-            score={8.8}
             description={
               <p>A ferret corner pan needs three things: corner-shaped to fit into the natural elimination spot, high back wall so litter stays in, and a low front lip the ferret can step over without difficulty. The Kaytee ferret pan hits all three and is widely available in US pet retail. Get one per cage level plus one or two for the free-roam room — the multi-pan strategy is the single biggest variable in litter training success.</p>
             }

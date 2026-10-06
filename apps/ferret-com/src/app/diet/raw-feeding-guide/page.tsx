@@ -1,6 +1,6 @@
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -183,13 +183,11 @@ export default function RawFeedingGuidePage() {
           <p>
             For keepers who want the whole-prey route, frozen feeder prey from a reptile-feeder supplier is the usual starting point — it arrives pre-balanced and lets you skip engineering the frankenprey ratio yourself. Buy sizes appropriate to a ferret, confirm the supplier handling standards, and follow the freezing protocol above. These are buying-guidance options, not a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="frozen-feeder-prey"
             badge="Whole-Prey Source"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
             subtitle="Pre-balanced whole prey, frozen, sized for a ferret"
-            score={8.4}
             description={
               <p>Frozen whole feeder prey — mice, rat pups, day-old chicks — sold for reptile and exotic feeding. The advantage for a ferret keeper is that intact prey supplies muscle, organ, and bone in natural proportions, so calcium-to-phosphorus balance is built in. Freeze for at least 30 days before feeding, thaw in the refrigerator, and choose a size appropriate to a ferret rather than a large reptile.</p>
             }

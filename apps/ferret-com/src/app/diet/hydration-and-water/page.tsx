@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, ScoreMethodology, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -135,13 +135,11 @@ export default function HydrationAndWaterPage() {
           <p>
             The setup this page recommends is a heavy ceramic bowl as the primary water source, with a sipper bottle kept as a clean spill-free backup. Two options that fit that pattern, selected on published specs rather than a hands-on test.
           </p>
-          <ScoreMethodology />
           <ReviewCard
             id="ceramic-water-bowl"
             badge="Primary Source"
             name="Heavy Ceramic Pet Water Bowl"
             subtitle="Low, wide, tip-resistant — lets a ferret lap naturally"
-            score={8.8}
             winner
             description={
               <p>A heavy, low, wide-based ceramic dish is the primary water source most ferrets prefer — it lets them lap in volume the way a sipper bottle cannot, and the weight resists the digging and tipping ferrets are prone to. Refresh at least daily and wash regularly to prevent biofilm. A bar-clip version helps if your ferret still manages to flip a free-standing bowl.</p>
@@ -165,7 +163,6 @@ export default function HydrationAndWaterPage() {
             badge="Backup Source"
             name="Small-Animal Sipper Water Bottle"
             subtitle="Clean, spill-free backup — never the only source"
-            score={7.5}
             description={
               <p>A sipper bottle earns its place as a clean, spill-free backup, not as the sole water supply. The ball valve dispenses slowly and can clog or air-lock in a warm room — the classic failure mode where a ferret looks like it has water but is getting none. If you use one, check daily that it actually dispenses and pair it with the ceramic bowl above.</p>
             }
