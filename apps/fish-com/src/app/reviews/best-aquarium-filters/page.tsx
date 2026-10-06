@@ -29,15 +29,15 @@ const PICKS = [
   { label: 'Best Budget HOB', name: 'Aqueon QuietFlow 30', subtitle: '$25–40 · Widely available', href: '#aqueon' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fluvalaquatics.com', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fluvalaquatics.com', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'AquaClear 70 Power Filter', description: 'Hang-on-back aquarium filter with refillable media basket for up to 70 gallons.', url: 'https://fish.com/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Fluval 307 Canister Filter', description: 'Near-silent canister filter for 40-70 gallon aquariums.', url: 'https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 // GEO: ItemList of the ranked picks. Names + URLs come only from this page's
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Filters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-filters${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Aquaclear 70": "https://fish.com/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters", "Fluval 307": "https://fish.com/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "Hikari Bacto-Surge": "https://fish.com/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "Aqueon QuietFlow 30": "https://fish.com/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-filters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and type guide only.

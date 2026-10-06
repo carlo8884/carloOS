@@ -31,13 +31,13 @@ const PICKS = [
   { label: 'Best Furniture', name: 'Frisco Furniture Style', subtitle: 'Doubles as end table', href: '#frisco' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://midwesthomes4pets.com', imageUrl: '' })
-const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://impactdogcrates.com', imageUrl: '' })
+const productSchema0 = buildProductSchema({ name: 'MidWest Homes iCrate', description: 'Wire dog crate with divider panel, fold-flat, double door.', url: 'https://dog.com/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates', imageUrl: '' })
+const productSchema1 = buildProductSchema({ name: 'Impact Dog Crate', description: 'Aircraft-grade aluminum escape-proof dog crate with lifetime warranty.', url: 'https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates', imageUrl: '' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1)
 
 const itemList = buildItemListSchema({
   name: "Best Dog Crates 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-crates${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "MidWest iCrate": "https://dog.com/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates", "Impact Dog Crate": "https://dog.com/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "Petmate Sky Kennel": "https://dog.com/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "Frisco Furniture Style": "https://dog.com/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates" }[pick.name] ?? `https://dog.com/reviews/best-dog-crates${pick.href}`) })),
 })
 export default function BestDogCratesPage() {
   return (

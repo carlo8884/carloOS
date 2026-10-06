@@ -23,9 +23,9 @@ const schema = buildArticleSchema({
   modifiedAt: '2026-06-07T00:00:00Z',
 })
 
-const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://royalcanin.com', imageUrl: '' })
-const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://purina.com', imageUrl: '' })
-const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Large Breed', description: 'veterinarian-formulated large breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://hillspet.com', imageUrl: '' })
+const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
+const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Puppy Large Breed', description: 'AAFCO feeding trial-tested large breed puppy formula from a company with 400+ published studies.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
+const hillsSchema = buildProductSchema({ name: 'Hill\'s Science Diet Puppy Small Paws', description: 'veterinarian-formulated small breed puppy food with controlled calcium-to-phosphorus ratio.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema, hillsSchema)
 
 const PICKS = [
@@ -37,7 +37,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Puppy Food 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Royal Canin Large Breed Puppy": "https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "Purina Pro Plan Puppy Large Breed": "https://dog.com/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "Hill's Science Diet Small Paws": "https://dog.com/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "Iams ProActive Health Puppy": "https://dog.com/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies" }[pick.name] ?? `https://dog.com/reviews/best-dog-food-for-puppies${pick.href}`) })),
 })
 export default function BestPuppyFoodPage() {
   return (

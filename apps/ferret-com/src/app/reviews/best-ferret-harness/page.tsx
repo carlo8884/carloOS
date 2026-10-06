@@ -44,9 +44,9 @@ const breadcrumbSchema = buildBreadcrumbSchema({
 const itemList = buildItemListSchema({
   name: 'Ferret Harnesses That Meet the Criteria',
   items: [
-    { name: 'Jacket / Vest-Style Ferret Harness', url: `${PAGE_URL}#jacket` },
-    { name: 'Adjustable H-Style Ferret Harness', url: `${PAGE_URL}#h-style` },
-    { name: 'Figure-H Mesh Harness with Leash Set', url: `${PAGE_URL}#mesh-h` },
+    { name: 'Jacket / Vest-Style Ferret Harness', url: 'https://ferret.com/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness' },
+    { name: 'Adjustable H-Style Ferret Harness', url: 'https://ferret.com/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness' },
+    { name: 'Figure-H Mesh Harness with Leash Set', url: 'https://ferret.com/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-best-ferret-harness' },
   ],
 })
 
@@ -54,21 +54,21 @@ const products = [
   buildProductSchema({
     name: 'Jacket / Vest-Style Ferret Harness',
     description: 'Wide body panel spreads pressure, hardest to back out of — best escape resistance',
-    url: `${PAGE_URL}#jacket`,
+    url: 'https://ferret.com/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-best-ferret-harness',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A vest-style harness wraps a broad panel around the chest and shoulders and closes along the back, which is the layout hardest for a ferret to reverse out of and the gentlest on the skin because pressure is spread over a wide area. The trade-offs are getting an accurate body measurement and a slightly fussier put-on; for a determined escape artist it is the most secure choice.',
   }),
   buildProductSchema({
     name: 'Adjustable H-Style Ferret Harness',
     description: 'Two girth loops joined by a back strap, multi-point adjustment for a no-neck body',
-    url: `${PAGE_URL}#h-style`,
+    url: 'https://ferret.com/go/amazon-brand/ferret+h+style+harness+adjustable?s=reviews-best-ferret-harness',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'The classic ferret harness: a neck loop and a girth loop joined by a back strap, forming an H. Multiple adjustment points let you fit the loops to a ferret that has effectively no neck, and a snug girth loop is what stops a backout. It is lightweight and quick to fit; the catch is that an H-harness left even slightly loose is the easiest type to escape, so dialing the fit is essential.',
   }),
   buildProductSchema({
     name: 'Figure-H Mesh Harness with Leash Set',
     description: 'Lightweight breathable mesh H-harness sold with a matched leash, entry-level',
-    url: `${PAGE_URL}#mesh-h`,
+    url: 'https://ferret.com/go/amazon-brand/ferret+mesh+harness+leash+set?s=reviews-best-ferret-harness',
     reviewAuthorName: 'Ferret.com Editorial',
     reviewBody: 'A lightweight breathable-mesh take on the H-harness, usually bundled with a matched leash, and the most common entry-level option. Breathable mesh is comfortable in warm weather and the bundled leash is convenient. The limitations are fewer adjustment points and lighter buckles than a dedicated H-harness, so fit must be checked carefully and supervision is non-negotiable.',
   }),

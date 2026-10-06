@@ -6,8 +6,8 @@ import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi, Whistle | Dog.com', description: 'Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi, Whistle, and Tractive GPS dog trackers ranked.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', description: 'GPS dog tracker with 3-month battery life and LTE-M network coverage.', url: 'https://tryfi.com', imageUrl: '' })
-const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://whistle.com', imageUrl: '' })
+const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', description: 'GPS dog tracker with 3-month battery life and LTE-M network coverage.', url: 'https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker', imageUrl: '' })
+const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://dog.com/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker', imageUrl: '' })
 const allSchemas = combineSchemas(schema, fiSchema, whistleSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi', pickHop: '/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' },
@@ -16,7 +16,7 @@ const PICKS = [
 ]
 const itemList = buildItemListSchema({
   name: "Best Dog GPS Trackers 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dog-gps-tracker${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Fi Series 3": "https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "Whistle Go Explore": "https://dog.com/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker", "Tractive GPS": "https://dog.com/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker" }[pick.name] ?? `https://dog.com/reviews/best-dog-gps-tracker${pick.href}`) })),
 })
 export default function BestGPSTrackerPage() {
   return (

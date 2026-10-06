@@ -8,6 +8,7 @@
 import { readFileSync, readdirSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
+import { schemaHopProblems } from './schema-hop-urls.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
 const SITES = ['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com']
@@ -191,6 +192,7 @@ function main() {
       for (const problem of pageProblems(rel, src)) problems.push(`${rel}: ${problem}`)
     }
   }
+  for (const problem of schemaHopProblems()) problems.push(problem)
   if (problems.length) {
     console.error(`FAIL: ${problems.length} ItemList problem(s)`)
     for (const problem of problems) console.error('  - ' + problem)

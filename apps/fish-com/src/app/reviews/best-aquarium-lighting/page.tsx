@@ -5,7 +5,7 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBread
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026 — Planted Tank, Reef & FOWLR | Fish.com', description: 'Aquarium lights compared on published PAR output, spectrum quality, and reliability. Fluval 3.0, Hygger, Finnex, and Kessil ranked for planted freshwater, reef.', path: '/reviews/best-aquarium-lighting', type: 'article' })
 const articleSchema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Aquarium Lights 2026', description: 'Aquarium lights compared on published PAR output, spectrum, and reliability — planted, reef, and fish-only tanks.', url: 'https://fish.com/reviews/best-aquarium-lighting', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/reviews/best-aquarium-lighting#hygger', imageUrl: '', ratingValue: 9.2, reviewCount: 1 })
+const hyggerSchema = buildProductSchema({ name: 'Hygger 957 LED Aquarium Light', description: '7-channel programmable LED with strong PAR efficiency for planted tanks — Fish.com Best Planted (Budget) pick.', url: 'https://fish.com/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting', imageUrl: '' })
 const schema = combineSchemas(articleSchema, hyggerSchema)
 
 const PICKS = [
@@ -19,7 +19,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Lights 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-lighting${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Hygger 957": "https://fish.com/go/amazon-brand/hygger+957?s=reviews-best-aquarium-lighting", "Fluval Plant 3.0": "https://fish.com/go/amazon-brand/fluval+plant+3.0?s=reviews-best-aquarium-lighting", "Kessil A360X": "https://fish.com/go/amazon-brand/kessil+a360x?s=reviews-best-aquarium-lighting", "Nicrew Classic LED+": "https://fish.com/go/amazon-brand/nicrew+classic+led?s=reviews-best-aquarium-lighting" }[p.name] ?? `https://fish.com/reviews/best-aquarium-lighting${p.href}`) })),
 })
 
 export default function BestAquariumLightingPage() {
@@ -124,7 +124,7 @@ export default function BestAquariumLightingPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which light fits which tank</h2>
               <FAQAccordion items={[
                 {

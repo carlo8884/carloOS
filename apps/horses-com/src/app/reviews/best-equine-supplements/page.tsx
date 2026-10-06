@@ -24,13 +24,13 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://www.platinumperformance.com', imageUrl: '' })
-const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://ker.com', imageUrl: '' })
-const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://equithrive.com', imageUrl: '' })
-const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://standleeforage.com', imageUrl: '' })
-const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', description: 'Sodium-chloride-balanced electrolyte powder for performance and travel.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Avocado-soybean unsaponifiables plus glucosamine and chondroitin sulfate for equine joint support.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements', imageUrl: '' })
+const platinumSchema = buildProductSchema({ name: 'Platinum Performance Equine', description: 'Comprehensive wellness supplement with omega-3, antioxidants, and amino acids.', url: 'https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements', imageUrl: '' })
+const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', description: 'Pelleted gastric support supplement with calcium, magnesium, glutamine, and sea buckthorn.', url: 'https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements', imageUrl: '' })
+const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements', imageUrl: '' })
+const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements', imageUrl: '' })
+const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://horses.com/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements', imageUrl: '' })
+const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', description: 'Sodium-chloride-balanced electrolyte powder for performance and travel.', url: 'https://horses.com/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema, adamsSchema)
 
 const PICKS = [
@@ -91,7 +91,7 @@ const FAQS = [
 
 const itemList = buildItemListSchema({
   name: "Best Equine Supplements 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://horses.com/reviews/best-equine-supplements${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Cosequin ASU Plus": "https://horses.com/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "Platinum Performance Equine": "https://horses.com/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "SmartPak SmartGut Ultra": "https://horses.com/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "KER EO-3": "https://horses.com/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements" }[pick.name] ?? `https://horses.com/reviews/best-equine-supplements${pick.href}`) })),
 })
 export default function BestEquineSupplementsPage() {
   return (

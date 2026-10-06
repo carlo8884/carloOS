@@ -42,9 +42,9 @@ const insurerListSchema = {
   url: 'https://vets.co/reviews/best-pet-insurance',
   numberOfItems: 3,
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/reviews/best-pet-insurance#trupanion' },
-    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws' },
-    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/reviews/best-pet-insurance#embrace' },
+    { '@type': 'ListItem', position: 1, name: 'Trupanion', url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance' },
+    { '@type': 'ListItem', position: 2, name: 'Healthy Paws', url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance' },
+    { '@type': 'ListItem', position: 3, name: 'Embrace', url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance' },
   ],
 }
 
@@ -52,14 +52,14 @@ const insurerListSchema = {
 const trupanionSchema = buildProductSchema({
   name: 'Trupanion Pet Insurance',
   description: 'Only insurer that pays the veterinary practice directly at checkout. 90% reimbursement, unlimited payouts, per-condition deductible.',
-  url: 'https://vets.co/reviews/best-pet-insurance#trupanion',
+  url: 'https://vets.co/go/trupanion/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
 
 const healthyPawsSchema = buildProductSchema({
   name: 'Healthy Paws Pet Insurance',
   description: 'Fast claims processing (per the carrier\'s stated ~2-day average), strong customer satisfaction reputation, unlimited payouts, no annual or per-incident limits.',
-  url: 'https://vets.co/reviews/best-pet-insurance#healthy-paws',
+  url: 'https://vets.co/go/healthy-paws/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
 
@@ -67,7 +67,7 @@ const embraceSchema = buildProductSchema({
   name: 'Embrace Pet Insurance',
   description: 'Wellness add-on available for routine and preventive care. Diminishing deductible, highly customizable plan structure.',
   // note: "highly customizable" is a calibrated descriptor, not an objective-superiority claim
-  url: 'https://vets.co/reviews/best-pet-insurance#embrace',
+  url: 'https://vets.co/go/embrace/home?s=reviews-best-pet-insurance',
   imageUrl: '',
 })
 

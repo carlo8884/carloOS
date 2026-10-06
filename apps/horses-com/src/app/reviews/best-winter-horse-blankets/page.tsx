@@ -24,12 +24,12 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout', description: 'Waterproof and breathable turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://www.sstack.com', imageUrl: '' })
-const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://www.doversaddlery.com', imageUrl: '' })
-const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://www.doversaddlery.com', imageUrl: '' })
+const ramboSchema = buildProductSchema({ name: 'Horseware Rambo Original Turnout', description: '1000-denier ballistic nylon waterproof turnout blanket.', url: 'https://horses.com/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout', description: 'Waterproof and breathable turnout blanket with shoulder gussets.', url: 'https://horses.com/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://horses.com/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://horses.com/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://horses.com/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, ramboSchema, rhinoSchema, schneidersSchema, smartpakSchema, weatherbeetaSchema, amigoSchema)
 
 const PICKS = [
@@ -50,7 +50,7 @@ const SPEC_TABLE = [
 
 const itemList = buildItemListSchema({
   name: "Best Winter Horse Blankets 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://horses.com/reviews/best-winter-horse-blankets${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Horseware Rambo Original": "https://horses.com/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets", "Schneiders StormShield Euro": "https://horses.com/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets", "Amigo Bravo 12 Plus": "https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets", "Weatherbeeta ComFiTec Plus": "https://horses.com/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets" }[pick.name] ?? `https://horses.com/reviews/best-winter-horse-blankets${pick.href}`) })),
 })
 export default function BestWinterBlanketsPage() {
   return (

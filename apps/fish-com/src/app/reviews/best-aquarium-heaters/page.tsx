@@ -27,7 +27,7 @@ const eheimSchema = buildProductSchema({
   name: 'Eheim Jager TruTemp',
   description:
     'Submersible aquarium heater with ±0.5°F accuracy, recalibration dial, and auto shut-off — Fish.com Best Overall pick.',
-  url: 'https://fish.com/reviews/best-aquarium-heaters#eheim',
+  url: 'https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
   imageUrl: '',
 })
 
@@ -44,7 +44,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Aquarium Heaters 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-aquarium-heaters${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ "Eheim Jager": "https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "Cobalt Neo-Therm": "https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "Hydor Inline": "https://fish.com/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "Aqueon Pro": "https://fish.com/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" }[p.name] ?? `https://fish.com/reviews/best-aquarium-heaters${p.href}`) })),
 })
 
 // FAQ content derived from this page's comparison criteria and sizing guidance only.
