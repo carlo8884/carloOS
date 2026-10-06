@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Leather-Crown Breakaway Halter', 'Adjustable Flat Nylon Halter']
 const itemList = buildItemListSchema({
   name: 'Nylon Halter or Breakaway',
-  items: RANKED.map((name) => ({ name, url: 'https://horses.com/reviews/nylon-vs-breakaway-halter-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Leather-Crown Breakaway Halter': 'https://horses.com/go/dover/leather-crown-breakaway-halter?s=reviews-nylon-vs-breakaway-halter-guide' }[name] ?? 'https://horses.com/reviews/nylon-vs-breakaway-halter-guide') })),
 })
 
 export default function NylonVsBreakawayGuidePage() {

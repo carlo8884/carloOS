@@ -39,7 +39,7 @@ const FAQS = [
 const RANKED = ['Synthetic Brushing Boots', 'Pull-On Bell Boots']
 const itemList = buildItemListSchema({
   name: 'Brushing Boots or Bell Boots',
-  items: RANKED.map((name) => ({ name, url: 'https://horses.com/reviews/brushing-boots-vs-bell-boots-guide' })),
+  items: RANKED.map((name) => ({ name, url: ({ 'Synthetic Brushing Boots': 'https://horses.com/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide' }[name] ?? 'https://horses.com/reviews/brushing-boots-vs-bell-boots-guide') })),
 })
 
 export default function BrushingBootsVsBellBootsGuidePage() {
