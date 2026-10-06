@@ -370,7 +370,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
