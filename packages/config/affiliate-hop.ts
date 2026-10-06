@@ -52,8 +52,8 @@ export function visibleChewyHref(
 
 /**
  * Chewy-brand search hops can earn on Amazon until Carlo sets a Chewy tag.
- * Only `/go/chewy-brand/{query}` rewrites. Connect and pharmacy are not
- * Amazon searches; they use hiddenChewyReplacement instead.
+ * Only `/go/chewy-brand/{query}` rewrites. Pharmacy uses hiddenChewyReplacement.
+ * Chewy Connect stays a live consult (see consultLink), not an AskVet swap.
  */
 export function amazonFallbackFromChewyHref(href: string): string | undefined {
   const match = href.match(/^(\/go\/)chewy-brand\/([^?#]+)([?#].*)?$/i)
@@ -62,7 +62,8 @@ export function amazonFallbackFromChewyHref(href: string): string | undefined {
 }
 
 /**
- * Connect and pharmacy hops disappear when no Chewy tag is set.
+ * Pharmacy hops disappear when no Chewy tag is set.
+ * Chewy Connect is a consult and is not rewritten here.
  * Show a link that already exists on Vets.co, and return nothing once a tag
  * is set so the original /go href comes back.
  */
@@ -72,9 +73,6 @@ export function hiddenChewyReplacement(
 ): { href: string; label: string } | undefined {
   if (!href || href === '#' || isChewyHopLive(env) || !isChewyHop(href)) return undefined
   const path = href.split('?')[0].toLowerCase()
-  if (path === '/go/chewy/connect') {
-    return { href: '/go/askvet/telehealth?s=telehealth', label: 'Visit AskVet →' }
-  }
   if (
     path === '/go/chewy-pharmacy' ||
     path.startsWith('/go/chewy-pharmacy/') ||
@@ -101,7 +99,8 @@ export function visibleShopHref(
 /**
  * Hero and card labels name the retailer the visitor actually opens.
  * A Chewy-brand hop says Amazon while the tag is unset, and Chewy once it is set.
- * Connect and pharmacy keep the AskVet or vet-finder label from hiddenChewyReplacement.
+ * Pharmacy keeps the vet-finder label from hiddenChewyReplacement.
+ * Chewy Connect keeps the page label; consultLink owns that href.
  */
 export function shopCtaLabel(
   rawHref: string | undefined,
@@ -282,6 +281,38 @@ export function stripPlaceholder(url: string): string {
   return out
 }
 
+/**
+ * Vetster, AskVet, and Chewy Connect stay live while their tags are unset.
+ * The page renders the template with refid=PLACEHOLDER removed. When
+ * AFF_VETSTER_TAG, AFF_ASKVET_TAG, or AFF_CHEWY_TAG is set, the same button
+ * switches back to the /go hop and the redirect fills that tag.
+ * These strings match apps/vets-co/src/data/affiliate-routes.ts. Do not invent an ID.
+ */
+const CONSULT_TEMPLATE: Record<string, string> = {
+  vetster: 'https://vetster.com/?refid=PLACEHOLDER&campaign={sku}',
+  askvet: 'https://askvet.app/?refid=PLACEHOLDER&campaign={sku}',
+  chewy: 'https://chewy.com/connect-with-a-vet?refid=PLACEHOLDER&campaign={sku}',
+}
+
+export function consultLink(
+  href: string,
+  env: NodeJS.ProcessEnv = process.env,
+): { href: string; attributed: boolean } | null {
+  const match = href.match(/^\/go\/([^/?#]+)\/([^?#]*)/)
+  if (!match) return null
+  const vendor = match[1].toLowerCase()
+  const sku = decodeURIComponent(match[2] || '')
+  const consult =
+    vendor === 'vetster' || vendor === 'askvet' || (vendor === 'chewy' && sku.toLowerCase() === 'connect')
+  if (!consult) return null
+  const { tag } = resolveTag(vendor, env)
+  if (tag.length > 0) return { href, attributed: true }
+  const template = CONSULT_TEMPLATE[vendor]
+  const target = stripPlaceholder(template.split('{sku}').join(encodeURIComponent(sku.replaceAll('+', ' '))))
+  if (!target || target.includes('PLACEHOLDER')) return null
+  return { href: target, attributed: false }
+}
+
 export interface HopResult {
   target: string
   tagResolved: boolean
@@ -314,8 +345,11 @@ export function resolveAffiliateHop(opts: {
   }
 
   const retail = isRetailVendor(vendor)
+  // Chewy Connect is a consult page. An unset AFF_CHEWY_TAG still opens that
+  // page with refid removed. Other untagged Chewy hops stay on the homepage.
+  const chewyConnect = vendor === 'chewy' && sku.toLowerCase() === 'connect'
   // Retail: no sku or no tag → homepage. Never an untagged Amazon/Chewy URL.
-  if (retail && (!sku || !tagResolved)) {
+  if (retail && !chewyConnect && (!sku || !tagResolved)) {
     return { target: partnerHome(vendor, route.template), tagResolved, envVarName, vendor, sku }
   }
   // Non-retail product URLs that require a sku still go home when the sku is empty.

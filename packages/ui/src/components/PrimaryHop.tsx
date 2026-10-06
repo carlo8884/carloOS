@@ -1,4 +1,4 @@
-import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
@@ -31,10 +31,12 @@ export function PrimaryHop({
       </div>
     )
   }
-  const hop = visibleShopHref(href)
+  const consult = consultLink(href)
+  const plain = Boolean(consult && !consult.attributed)
+  const hop = plain ? consult!.href : visibleShopHref(href)
   if (!hop) return null
   const amazon = /\/go\/amazon/.test(hop)
-  const text = shopCtaLabel(href, label)
+  const text = plain ? label : shopCtaLabel(href, label)
   return (
     <div className="mb-5" data-primary-hop="true">
       {hop.startsWith('/go/') ? (
@@ -46,7 +48,8 @@ export function PrimaryHop({
       ) : null}
       <a
         href={hop}
-        rel="sponsored noopener"
+        rel={plain ? 'nofollow noopener' : 'sponsored noopener'}
+        target={plain ? '_blank' : undefined}
         className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline"
       >
         {text}
