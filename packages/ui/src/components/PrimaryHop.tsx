@@ -1,4 +1,4 @@
-import { partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { hiddenChewyReplacement, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
@@ -33,15 +33,23 @@ export function PrimaryHop({
   }
   const hop = visibleShopHref(href)
   if (!hop) return null
+  const replacement = hiddenChewyReplacement(href)
   const amazon = /\/go\/amazon/.test(hop)
-  const text = amazon && /chewy/i.test(href) ? label.replace(/\bon Chewy\b/i, 'on Amazon') : label
+  const text =
+    replacement && hop === replacement.href
+      ? replacement.label
+      : amazon && /chewy/i.test(href)
+        ? label.replace(/\bon Chewy\b/i, 'on Amazon')
+        : label
   return (
     <div className="mb-5" data-primary-hop="true">
-      <p className="text-xs text-white/80 mb-2">
-        {amazon
-          ? 'As an Amazon Associate we earn from qualifying purchases.'
-          : 'We may earn a commission from qualifying purchases.'}
-      </p>
+      {hop.startsWith('/go/') ? (
+        <p className="text-xs text-white/80 mb-2">
+          {amazon
+            ? 'As an Amazon Associate we earn from qualifying purchases.'
+            : 'We may earn a commission from qualifying purchases.'}
+        </p>
+      ) : null}
       <a
         href={hop}
         rel="sponsored noopener"

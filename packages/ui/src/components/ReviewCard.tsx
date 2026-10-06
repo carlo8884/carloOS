@@ -6,7 +6,7 @@
  */
 
 import type { ReactNode } from 'react'
-import { isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { hiddenChewyReplacement, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 interface Spec {
@@ -79,6 +79,7 @@ export function ReviewCard({
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
   const held = partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref))
   const href = held ? undefined : visibleShopHref(rawHref)
+  const chewyReplacement = hiddenChewyReplacement(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
@@ -88,9 +89,11 @@ export function ReviewCard({
   // Same honesty rule as PrimaryHop: a Chewy hop that falls back to Amazon
   // must not keep an "on Chewy" label.
   const label =
-    /\/go\/amazon/.test(href ?? '') && /chewy/i.test(rawHref ?? '')
-      ? ctaText.replace(/\bon Chewy\b/i, 'on Amazon')
-      : ctaText
+    chewyReplacement && href === chewyReplacement.href
+      ? chewyReplacement.label
+      : /\/go\/amazon/.test(href ?? '') && /chewy/i.test(rawHref ?? '')
+        ? ctaText.replace(/\bon Chewy\b/i, 'on Amazon')
+        : ctaText
   return (
     <div
       id={id}
@@ -232,7 +235,7 @@ export function ReviewCard({
       )}
 
       {/* Affiliate note — suppressed for editorial (non-commercial) CTAs, e.g. clinical products */}
-      {href && !editorial && (
+      {href && !editorial && href.startsWith('/go/') && (
         <p className="text-2xs text-brand-text-light mt-2">
           We earn a commission if you purchase — no extra cost to you.
         </p>

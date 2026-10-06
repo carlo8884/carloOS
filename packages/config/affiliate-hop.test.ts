@@ -134,7 +134,13 @@ describe('resolveAffiliateHop', () => {
     )
     assert.equal(amazonFallbackFromChewyHref('/go/chewy/connect'), undefined)
     assert.equal(visibleShopHref('/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food', {}), '/go/amazon-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food')
-    assert.equal(visibleShopHref('/go/chewy/connect', {}), undefined)
+    assert.equal(visibleShopHref('/go/chewy/connect', {}), '/go/askvet/telehealth?s=telehealth')
+    assert.equal(visibleShopHref('/go/chewy/connect', { AFF_CHEWY_TAG: 'live' }), '/go/chewy/connect')
+    assert.equal(visibleShopHref('/go/chewy-pharmacy/heartgard?s=rx', {}), '/find-a-vet')
+    assert.equal(
+      visibleShopHref('/go/chewy-pharmacy/heartgard?s=rx', { AFF_CHEWY_PHARMACY_TAG: 'live' }),
+      '/go/chewy-pharmacy/heartgard?s=rx',
+    )
     assert.equal(
       visibleShopHref('/go/chewy-brand/aqueon+20+gallon+long+aquarium', { AFF_CHEWY_BRAND_TAG: 'live' }),
       '/go/chewy-brand/aqueon+20+gallon+long+aquarium',

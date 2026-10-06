@@ -52,13 +52,38 @@ export function visibleChewyHref(
 
 /**
  * Chewy-brand search hops can earn on Amazon until Carlo sets a Chewy tag.
- * Only `/go/chewy-brand/{query}` rewrites. `/go/chewy/connect` and pharmacy
- * hops stay hidden — those are not Amazon search queries.
+ * Only `/go/chewy-brand/{query}` rewrites. Connect and pharmacy are not
+ * Amazon searches; they use hiddenChewyReplacement instead.
  */
 export function amazonFallbackFromChewyHref(href: string): string | undefined {
   const match = href.match(/^(\/go\/)chewy-brand\/([^?#]+)([?#].*)?$/i)
   if (!match) return undefined
   return `${match[1]}amazon-brand/${match[2]}${match[3] ?? ''}`
+}
+
+/**
+ * Connect and pharmacy hops disappear when no Chewy tag is set.
+ * Show a link that already exists on Vets.co, and return nothing once a tag
+ * is set so the original /go href comes back.
+ */
+export function hiddenChewyReplacement(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): { href: string; label: string } | undefined {
+  if (!href || href === '#' || isChewyHopLive(env) || !isChewyHop(href)) return undefined
+  const path = href.split('?')[0].toLowerCase()
+  if (path === '/go/chewy/connect') {
+    return { href: '/go/askvet/telehealth?s=telehealth', label: 'Visit AskVet →' }
+  }
+  if (
+    path === '/go/chewy-pharmacy' ||
+    path.startsWith('/go/chewy-pharmacy/') ||
+    path === '/go/chewy/pharmacy' ||
+    path.startsWith('/go/chewy/pharmacy/')
+  ) {
+    return { href: '/find-a-vet', label: 'Find a clinic that can prescribe →' }
+  }
+  return undefined
 }
 
 /** Shop CTA href: hide empty Chewy, or fall Chewy-brand search hops back to Amazon. Never "#". */
@@ -70,7 +95,7 @@ export function visibleShopHref(
   if (!isChewyHop(href)) return href
   const chewy = visibleChewyHref(href, env)
   if (chewy) return chewy
-  return amazonFallbackFromChewyHref(href)
+  return amazonFallbackFromChewyHref(href) ?? hiddenChewyReplacement(href, env)?.href
 }
 
 /** Display names for a product-row shop link. Unknown vendors are not labeled. */
@@ -106,6 +131,8 @@ export function tableShopLink(
   product: string,
   env: NodeJS.ProcessEnv = process.env,
 ): { href: string; label: string } | null {
+  const replacement = hiddenChewyReplacement(href, env)
+  if (replacement) return replacement
   const visible = visibleShopHref(href, env)
   if (!visible?.startsWith('/go/')) return null
   const path = visible.split('?')[0].split('/')
