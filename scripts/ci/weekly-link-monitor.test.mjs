@@ -7,6 +7,7 @@ import {
   classifyRedirectChain,
   classifyStatus,
   goHrefsFromSource,
+  cardShopHrefs,
   isEmptySearchHtml,
   missingShopSource,
   shopSearchVerdict,
@@ -121,9 +122,23 @@ test('the shop section is part of the report and does not mention anyone', () =>
   })
   assert.match(body, /FAIL=1/)
   assert.match(body, /## Comparison-table and gift-guide shop links/)
+  assert.match(body, /ReviewCard, and ShopCtas/)
   assert.match(body, /Hidden Chewy hops with no tag: 1/)
   assert.match(body, /november-december-gift-guide/)
   assert.equal(/(^|\s)@/.test(body), false)
+})
+
+test('review cards and shop buttons are part of the empty-search probe', () => {
+  const src = `
+    <ReviewCard ctaHref="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
+    <ShopCtas amazonHref="/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters" />
+    <ShopCtas chewyHref="/go/chewy-brand/dog+harness?s=reviews-best-dog-harnesses" />
+  `
+  assert.deepEqual(cardShopHrefs(src), [
+    '/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
+    '/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters',
+    '/go/chewy-brand/dog+harness?s=reviews-best-dog-harnesses',
+  ])
 })
 
 test('the shop probe fails a real empty search and keeps 503 and 429 blocked', () => {

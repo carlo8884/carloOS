@@ -13,6 +13,7 @@ import {
   citationUrlsFromSource,
   classifyStatus,
   goHrefsFromSource,
+  cardShopHrefs,
   missingShopSource,
   renderReport,
   shopSearchVerdict,
@@ -101,7 +102,7 @@ export async function collectShopChecks(repoRoot = root) {
       if (!file.endsWith('.tsx') && !file.endsWith('.ts')) continue
       const src = readFileSync(file, 'utf8')
       const where = file.replace(repoRoot + '/', '')
-      for (const href of tableShopHrefs(src)) {
+      for (const href of [...tableShopHrefs(src), ...cardShopHrefs(src)]) {
         if (missingShopSource(href)) {
           problems.push({ url: href, detail: 'missing ?s= source', where })
           continue

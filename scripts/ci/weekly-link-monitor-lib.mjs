@@ -54,6 +54,14 @@ export function tableShopHrefs(src) {
   return found
 }
 
+/** ReviewCard ctaHref and ShopCtas amazonHref / chewyHref hops. */
+export function cardShopHrefs(src) {
+  const found = []
+  const re = /\b(?:ctaHref|amazonHref|chewyHref)\s*=\s*(?:"(\/go\/[^"]+)"|\{"(\/go\/[^"]+)"\})/g
+  for (const match of src.matchAll(re)) found.push(match[1] || match[2])
+  return found
+}
+
 export function missingShopSource(href) {
   return !String(href).includes('?s=')
 }
@@ -185,7 +193,7 @@ export function renderReport({ checkedAt, checked, failures, blocked, shop }) {
   if (shop) {
     lines.push('## Comparison-table and gift-guide shop links', '')
     lines.push(
-      `Checked ${shop.checked} unique retailer targets from TableShopLink rows on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
+      `Checked ${shop.checked} unique retailer targets from TableShopLink, ReviewCard, and ShopCtas hops on dog-com, fish-com, horses-com, vets-co, and ferret-com, including the November and December gift guides.`,
     )
     lines.push(
       `Hidden Chewy hops with no tag: ${shop.hidden}. Those rows do not render a shop link.`,
