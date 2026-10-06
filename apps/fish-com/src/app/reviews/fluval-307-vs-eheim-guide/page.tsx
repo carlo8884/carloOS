@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -50,6 +51,7 @@ export default function FluvalVsEheimGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-fluval-307-vs-eheim-guide" label="Check price of the Fluval 307 canister filter on Amazon" />}
+      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-fluval-307-vs-eheim-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

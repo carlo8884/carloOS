@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -56,6 +57,7 @@ export default function FluvalSpecVsAqueonGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" label="Browse Aqueon 20-gallon long aquariums on Amazon" />}
+      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-fluval-spec-vs-aqueon-20-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

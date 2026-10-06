@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -50,6 +51,7 @@ export default function EheimVsCobaltGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/eheim+jager+heater?s=reviews-eheim-vs-cobalt-heater-guide" label="Check price of the Eheim Jager heater on Amazon" />}
+      heroExtra={<HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-eheim-vs-cobalt-heater-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
