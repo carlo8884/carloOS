@@ -47,6 +47,7 @@ export default function BestHeartwormPreventionPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">How Monthly Prevention Works</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Monthly preventives do not block infection in real time — they eliminate larvae exposed to during the previous month before they mature into adult worms. Missing one month creates a gap. Annual heartworm testing detects any breakthrough infection even in dogs on prevention.</p>
             </div>
+            <p className="text-sm text-brand-text-mid leading-relaxed mb-8">Prices on the cards are clinic ranges from a veterinary visit, not a shelf price. Every button opens the vet finder.</p>
             <ReviewCard id="heartgard" badge="Best Standalone" name="Heartgard Plus" subtitle="Ivermectin + pyrantel pamoate · Monthly beef chew · Commonly used HW preventive" winner
               description={<p>Heartgard Plus is a commonly used standalone heartworm preventive in the US — ivermectin kills Dirofilaria immitis larvae while pyrantel pamoate covers roundworm and hookworm. Monthly beef-flavored chew with very high palatability. Suitable for all dogs except those with MDR1 gene mutation at higher doses — standard labeled preventive dosing (your veterinarian determines the correct product and dose) is safe in MDR1-positive herding breeds. Not for flea/tick protection — pair with a separate isoxazoline for complete parasite coverage, or switch to Simparica Trio for combined coverage.</p>}
               specs={[{ label: 'Active Ingredients', value: 'Ivermectin + pyrantel', highlight: 'good' }, { label: 'Spectrum', value: 'HW + roundworm + hookworm' }, { label: 'Dosing', value: 'Monthly' }, { label: 'Rx required', value: 'Yes' }]}
@@ -90,7 +91,7 @@ export default function BestHeartwormPreventionPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which preventive</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Four preventives have review cards. Every button goes to the vet finder. This page does not name a retailer.
+                Four preventives have review cards. The prices are clinic ranges, not a shelf price. Every button goes to the vet finder. This page does not name a retailer.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
