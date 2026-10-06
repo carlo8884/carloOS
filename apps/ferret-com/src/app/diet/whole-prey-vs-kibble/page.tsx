@@ -225,7 +225,7 @@ export default function WholePreyVsKibblePage() {
             pros={['Best biological match', 'Natural calcium-to-phosphorus ratio', 'Strong dental abrasion', 'Works as a supplement or a sole diet']}
             cons={['Requires freezer space and handling discipline', 'Higher food-safety burden', 'Sourcing effort']}
             price="Varies by size and quantity"
-            ctaText="Check price of frozen feeder mice and chicks on Amazon"
+            ctaText="Check price of frozen reptile feeder mice and chicks on Amazon"
             ctaHref="/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="frozen-feeder-mice"
@@ -259,7 +259,7 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={[
