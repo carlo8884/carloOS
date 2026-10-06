@@ -49,7 +49,7 @@ export default function WoodVsGrassLitterGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" label="Check price of heat-treated wood pellet litter on Amazon" />}
+      heroHop={<PrimaryHop href="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-wood-vs-grass-litter-guide" label="Check price of compressed heat-treated wood pellet litter on Amazon" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
