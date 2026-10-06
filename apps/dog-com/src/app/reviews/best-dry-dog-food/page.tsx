@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ScoreMethodology, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import Link from 'next/link'
 import { crossSiteHref } from '@carloOS/config'
@@ -31,16 +31,16 @@ const PICKS = [
   { label: 'Premium Natural', name: 'Orijen', subtitle: 'High protein · Regional ingredients', href: '#orijen' },
 ]
 
-const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://royalcanin.com', imageUrl: '', ratingValue: 9.5, reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
-const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://purina.com', imageUrl: '', ratingValue: 9.3, reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
-const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://hillspet.com', imageUrl: '', ratingValue: 9.0, reviewBody: 'Leads this page on prescription and life-stage formulas.' })
-const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page scores it below the WSAVA-compliant picks.', imageUrl: '', ratingValue: 8.4, reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
+const productSchema0 = buildProductSchema({ name: 'Royal Canin', description: 'WSAVA-compliant dry dog food with breed and life-stage formulas and AAFCO feeding trials.', url: 'https://royalcanin.com', imageUrl: '', reviewBody: 'Top pick on this page: full WSAVA compliance and AAFCO feeding trials.' })
+const productSchema1 = buildProductSchema({ name: 'Purina Pro Plan', description: 'Science-backed dry dog food. Pro Plan, not regular Purina, meets the WSAVA criteria used on this page.', url: 'https://purina.com', imageUrl: '', reviewBody: 'Best-value pick on this page at the same scientific standard as the top pick.' })
+const productSchema2 = buildProductSchema({ name: "Hill's Science Diet", description: 'Veterinarian-formulated dry dog food, including prescription formulas.', url: 'https://hillspet.com', imageUrl: '', reviewBody: 'Leads this page on prescription and life-stage formulas.' })
+const productSchema3 = buildProductSchema({ name: 'Orijen', description: 'High-protein dry dog food. This page places it below the WSAVA-compliant picks.', imageUrl: '', reviewBody: 'Premium ingredient list. Weaker WSAVA compliance than Royal Canin or Purina Pro Plan on this page.' })
 const allSchemas = combineSchemas(schema, productSchema0, productSchema1, productSchema2, productSchema3)
 
 const FOOD_FAQS = [
   {
     question: 'Which dry dog food is the top pick on this page?',
-    answer: 'Royal Canin, with an editor score of 9.5. The page ranks it first because the manufacturer employs veterinary nutritionists, runs AAFCO feeding trials, and publishes research — the WSAVA criteria used here. Purina Pro Plan is the best-value pick at the same standard. Hill\'s Science Diet leads on prescription formulas.',
+    answer: 'Royal Canin is the top pick on this page because the manufacturer employs veterinary nutritionists, runs AAFCO feeding trials, and publishes research — the WSAVA criteria used here. Purina Pro Plan is the best-value pick at the same standard. Hill\'s Science Diet leads on prescription formulas.',
   },
   {
     question: 'What does WSAVA compliance mean on this page?',
@@ -110,14 +110,12 @@ export default function BestDogFoodPage() {
               </p>
             </div>
 
-            <ScoreMethodology />
             <AffiliateDisclosure variant="inline" siteId="dog-com" />
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
               name="Royal Canin"
               subtitle="WSAVA-compliant · Extensive research investment · Breed and life stage formulas"
-              score={9.5}
               winner
               description={
                 <div>
@@ -159,7 +157,6 @@ export default function BestDogFoodPage() {
               badge="Best Value"
               name="Purina Pro Plan"
               subtitle="Science-backed · 400+ veterinary studies · Widely available"
-              score={9.3}
               description={
                 <div>
                   <p>Purina Pro Plan is frequently cited among the brands veterinarians choose for their own dogs — an anecdotal pattern, not a formal survey. Purina is among the larger investors in nutritional research in the pet food category, with over 400 published studies per the company. They were one of the first to develop the link between taurine and DCM, and they have consistently been on the right side of the grain-free controversy.</p>
@@ -196,7 +193,6 @@ export default function BestDogFoodPage() {
               badge="Best for Medical Conditions"
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
-              score={9.0}
               description={
                 <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend, and the clinical evidence behind these formulas is extensive.</p>
               }
@@ -230,7 +226,6 @@ export default function BestDogFoodPage() {
               badge="Best Premium Natural"
               name="Orijen"
               subtitle="High protein · Regional ingredients · Biologically appropriate"
-              score={8.4}
               description={
                 <p>Orijen delivers on the &quot;biologically appropriate&quot; promise more than most: high meat content (85%+ animal ingredients), regional sourcing with named suppliers, and minimal processing. The ingredient quality is genuinely exceptional. The caveat: Orijen&apos;s WSAVA compliance is weaker than Royal Canin or Purina — fewer published studies, smaller research team. For healthy dogs with owners who prioritize ingredient quality and are comfortable with the tradeoffs, Orijen is a strong choice. We don&apos;t recommend it for dogs with known health conditions — use a clinically backed brand there.</p>
               }
@@ -254,7 +249,7 @@ export default function BestDogFoodPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Each row restates the badge, price range, and tradeoff already on the card above. Editor scores on this page are not customer star ratings, and the prices are the ranges printed on those cards.
+                Each row restates the badge, price range, and tradeoff already on the card above. The prices are the ranges printed on those cards.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -294,7 +289,7 @@ export default function BestDogFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-05" />
+              <ComparisonFoot updated="2026-10-06" />
             </div>
 
             {/* Key buying guidance */}
