@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -56,6 +57,7 @@ export default function BrushingBootsVsBellBootsGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" label="Check price of synthetic brushing boots at Riding Warehouse" />}
+      heroExtra={<HopDisclosure siteId="horses-com" href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

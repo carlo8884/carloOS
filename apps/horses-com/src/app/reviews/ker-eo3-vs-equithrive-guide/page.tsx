@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -50,6 +51,7 @@ export default function KerVsEquithriveGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-ker-eo3-vs-equithrive-guide" label="Check price of KER EO-3 on Amazon" />}
+      heroExtra={<HopDisclosure siteId="horses-com" href="/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-ker-eo3-vs-equithrive-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
