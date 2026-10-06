@@ -26,16 +26,16 @@ export default function PrivacyPolicyPage() {
       <p>Horses.com is owned and operated by Bolton Properties, LLC. This page describes how we collect, use, and protect information from visitors. We respect your privacy and limit collection to what is necessary to operate the site.</p>
 
       <h2>Information We Collect</h2>
-      <p>We collect minimal site-analytics data via Google Analytics (anonymized IP). No newsletter is currently sent; addresses submitted to forms are used only to reply. We do not sell or rent personal information.</p>
+      <p>Google Analytics is not currently connected. No newsletter is currently sent; addresses submitted to forms are used only to reply. We do not sell or rent personal information.</p>
 
       <h2>Cookies</h2>
-      <p>Horses.com uses cookies for analytics and to remember non-essential preferences (e.g., dismissed banners). You can disable cookies in your browser settings without losing access to the site’s content.</p>
+      <p>Horses.com uses cookies to remember non-essential preferences (e.g., dismissed banners). Google Analytics is not currently connected. You can disable cookies in your browser settings without losing access to the site’s content.</p>
 
       <h2>Affiliate Disclosure</h2>
       <p>Horses.com participates in affiliate programs. When you click an affiliate link and make a purchase, we may earn a commission at no additional cost to you. See our <Link href="/disclosure" className="text-brand-primary no-underline hover:underline">full affiliate disclosure</Link> for details.</p>
 
       <h2>Third-Party Services</h2>
-      <p>We use third-party services (analytics and hosting) that may collect data per their own policies. Notable providers: Google (Analytics), Vercel (hosting), Supabase (database). Each has its own published privacy policy.</p>
+      <p>We use third-party services (hosting and a database) that may collect data per their own policies. Notable providers: Vercel (hosting), Supabase (database). Google Analytics is not currently connected. Each has its own published privacy policy.</p>
 
       <h2>Your Rights</h2>
       <p>No newsletter is currently sent. Addresses submitted to forms are used only to reply. To request that we delete data we hold about you, email the address in the site Disclosure page.</p>
