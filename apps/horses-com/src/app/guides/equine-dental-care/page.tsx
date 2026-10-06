@@ -80,8 +80,10 @@ const FAQS = [
   {
     question: 'What does a typical dental visit cost?',
     answer:
+      'Ranges on this answer are dated 2026-05-28. ' +
       'Approximate US costs for a standard adult-horse dental visit (regional variation): $150-300 for a sedated float without complications, including sedation. Add $50-150 for wolf-tooth extraction. Radiographs add $50-200 depending on number of views. Extraction of diseased cheek teeth or incisors is a separate, more involved procedure and can range from $200 for a simple incisor to over $1,000 for a difficult standing cheek-tooth extraction. EOTRH treatment requiring extraction of multiple incisors is typically $800-2,000+.',
     answerText:
+      'Ranges on this answer are dated 2026-05-28. ' +
       'Standard sedated adult float: $150-300. Wolf-tooth extraction adds $50-150. Radiographs add $50-200. Diseased-tooth extraction ranges $200-1,000+ depending on complexity. EOTRH extractions typically $800-2,000+.',
   },
 ]
