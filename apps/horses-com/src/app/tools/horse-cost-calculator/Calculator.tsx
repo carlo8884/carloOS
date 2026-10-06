@@ -179,7 +179,10 @@ export default function Calculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-06-11" />
+      <PriceAsOf date="2026-10-06" />
+      <p className="mb-4 text-xs leading-relaxed text-brand-text-mid">
+        Typical US ranges, last updated 2026-10-06; local prices vary.
+      </p>
       {/* Board type */}
       <div className="mb-5">
         <label htmlFor="hc-board-type" className="mb-1 block text-sm font-medium text-brand-text-dark">

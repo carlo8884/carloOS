@@ -137,7 +137,7 @@ const schema = combineSchemas(howToSchema, breadcrumbSchema, articleSchema)
 export default function HorseCostCalculatorPage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-06"
       siteId="horses-com"
       relatedLinks={[
         { title: 'Cost of Owning a Horse (Guide)', href: '/ownership/cost-of-owning-a-horse', category: 'Ownership' },
@@ -212,11 +212,11 @@ export default function HorseCostCalculatorPage() {
           <strong>The quick answer:</strong> for most US owners, keeping one horse costs roughly{' '}
           <strong>$300&ndash;1,000+ per month</strong>, or about{' '}
           <strong>$4,000&ndash;12,000+ per year</strong>, before emergencies. Boarding is the largest and
-          most variable piece (commonly $150&ndash;1,200+/mo); on top of it you budget for feed and hay,
+          most variable piece (commonly $150&ndash;1,200+/mo). On top of it you budget for feed and hay,
           a farrier every ~6 weeks, routine vet care with annual dental and vaccines, and optionally
           insurance. One-time startup &mdash; tack, the pre-purchase exam, and the horse itself &mdash;
           sits outside the monthly number. The calculator below builds your own estimate from editable
-          inputs.
+          inputs. Typical US ranges, last updated 2026-10-06; local prices vary.
         </p>
 
         <h2 id="calculator">The calculator</h2>
