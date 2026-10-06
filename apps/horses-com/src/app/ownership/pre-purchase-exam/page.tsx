@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,7 +126,6 @@ export default function PrePurchaseExamPage() {
           <h2 id="results">Using the Results</h2>
           <p>The exam produces findings, not a simple yes or no. Few horses are entirely without blemish, and the question is whether the findings matter for the intended use -- a minor issue may be irrelevant for light hacking but disqualifying for upper-level competition. The veterinarian explains the significance of each finding and the associated risk, and the buyer decides, possibly renegotiating the price, requesting further tests, or walking away. The exam is a tool for an informed decision, not a guarantee against all future problems.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

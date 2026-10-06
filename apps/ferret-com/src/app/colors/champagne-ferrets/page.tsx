@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -262,7 +261,6 @@ export default function ChampagneFerretsPage() {
 
           <p className="text-sm leading-relaxed text-brand-text-mid">Amazon search links go to general supplies. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
                   </div>
       </ArticleLayout>

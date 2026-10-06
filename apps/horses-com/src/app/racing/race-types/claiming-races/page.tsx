@@ -18,7 +18,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   buildArticleSchema,
   combineSchemas,
   SchemaScript,
@@ -185,7 +184,6 @@ export default function ClaimingRacesPage() {
             </p>
           </div>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
                   </div>
       </ArticleLayout>

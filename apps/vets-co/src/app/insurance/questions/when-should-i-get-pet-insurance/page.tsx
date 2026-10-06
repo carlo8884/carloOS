@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -56,7 +56,6 @@ export default function Page() {
 
           <h2 id="next-steps">Next Steps</h2>
           <p>If your pet is young and healthy, the highest-value move is simply to start coverage soon. Pair that with a clear-eyed read on whether the protection fits your finances.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Understand what timing protects against in <a href="/insurance/questions/does-pet-insurance-cover-pre-existing-conditions">does pet insurance cover pre-existing conditions</a>.</li>
             <li>Weigh the overall decision with the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a>.</li>

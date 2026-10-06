@@ -16,14 +16,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
   StockImage,
   CrossPortfolioCard,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import { getBreedBySlug, type Breed } from '../../data/breeds'
 import {
@@ -258,7 +257,6 @@ export default function CompareHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
         </div>
 
               </section>

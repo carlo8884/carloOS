@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -248,7 +247,6 @@ export default function AlbinoFerretsPage() {
             needs; any health concern warrants an exotic-mammal vet visit.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
                   </div>
       </ArticleLayout>

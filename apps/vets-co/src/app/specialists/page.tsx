@@ -15,7 +15,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   buildBreadcrumbSchema,
   buildFAQSchema,
@@ -24,7 +23,7 @@ import {
   SchemaScript,
   CalloutBox,
   StockImage,
-  PriceAsOf
+  PriceAsOf,
 } from '@carloOS/ui'
 import { Specialties, type Specialty } from '../../data/specialties'
 
@@ -445,7 +444,6 @@ export default function SpecialistsHubPage() {
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
         </div>
 
               </section>

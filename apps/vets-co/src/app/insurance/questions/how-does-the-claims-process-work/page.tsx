@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -56,7 +56,6 @@ export default function Page() {
 
           <h2 id="next-steps">Next Steps</h2>
           <p>Understanding the claim flow is most useful when paired with the numbers — what you will actually be reimbursed on a given bill, and whether a policy is worth it for your situation.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>Estimate net out-of-pocket on a representative bill with the <a href="/tools/insurance-reimbursement-estimator">reimbursement estimator</a>.</li>
             <li>Weigh the overall decision with the <a href="/tools/pet-insurance-worth-it-calculator">worth-it calculator</a>.</li>

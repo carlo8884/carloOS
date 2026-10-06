@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard } from '@carloOS/ui'
 import { InsuranceWellnessShop } from '../../../components/InsuranceWellnessShop'
 import { buildArticleSchema, SchemaScript, buildItemListSchema, combineSchemas} from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
@@ -77,7 +77,6 @@ export default function WellnessVsInsurancePage() {
 
           <h2 id="quote">Insurers That Offer Both</h2>
           <p>If you want catastrophe insurance with an optional wellness or preventive layer on top, some carriers bundle both — keeping the two functions distinct, as above. The two below take that approach; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Remember a wellness add-on is a budgeting benefit, not insurance.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ReviewCard
             id="embrace"
             badge="Insurance + Wellness"

@@ -38,7 +38,6 @@ import {
   combineSchemas,
   SchemaScript,
   StockImage,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import {
   Diseases,
@@ -473,12 +472,7 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
               </p>
             )}
 
-            <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
-              <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-                Shop related supplies
-              </div>
-                            <AffiliateDisclosure variant="inline" siteId="dog-com" />
-            </div>
+            
 
             {/* Related Dog.com pages */}
             {disease.commonHealthCrossLinks.length > 0 && (
@@ -592,7 +586,6 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
                 Pet insurance premiums are typically lowest while a dog is young and healthy — pre-existing
                 conditions are universally excluded.
               </p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
                 className="inline-block bg-brand-dark text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-dark/90"
@@ -615,7 +608,6 @@ export default async function DiseaseTemplatePage({ params }: PageProps) {
                 <p className="text-xs text-brand-text-mid leading-relaxed mb-3">
                   {gear.blurb}
                 </p>
-                <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
                 <Link
                   href={gear.href}
                   className="inline-block bg-brand-primary text-white font-semibold text-xs px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"

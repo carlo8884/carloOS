@@ -9,7 +9,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
 } from '@carloOS/ui'
 import {
   buildArticleSchema,
@@ -251,7 +250,6 @@ export default function ChocolateFerretsPage() {
             ferret will be labeled or how its coat will change with age and season.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
                   </div>
       </ArticleLayout>

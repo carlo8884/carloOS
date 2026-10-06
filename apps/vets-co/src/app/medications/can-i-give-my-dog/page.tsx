@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard } from '@carloOS/ui'
 import { PET_MEDS, PET_MED_CATEGORIES, MED_VERDICT_META } from '../../../data/pet-meds'
 
 export const metadata: Metadata = buildMetadata({
@@ -121,7 +121,6 @@ export default function CanIGiveMyDogHubPage() {
         <div className="max-w-content-wide">
           <CrossPortfolioCard currentSite="vets-co" contentType="medication" variant="inline" />
           <div className="not-prose my-8 rounded-xl border border-brand-border bg-brand-surface p-6">
-                                    <AffiliateDisclosure variant="inline" siteId="vets-co" />
           </div>
         </div>
       </section>

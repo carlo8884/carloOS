@@ -8,7 +8,6 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
@@ -182,7 +181,6 @@ export default async function CanIGiveMyDogMedPage({ params }: PageProps) {
             ASPCA poison-control copy. Unique vs the
             can-i-give hub + medications-spoke kitchens.
             Educational only — never a dose. */}
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Vets.co editorial team, based on established veterinary pharmacology and toxicology references (ASPCA Animal Poison Control, Pet Poison Helpline, and veterinary literature). It is not a dose and not a substitute for veterinary advice — every medication decision for your pet should be made with a veterinarian. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies).</em>

@@ -8,7 +8,6 @@ import {
   CalloutBox,
   ArticleByline,
   DropCap,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -272,7 +271,6 @@ export default function FerretVocalizationsPage() {
             evaluation.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
 
                   </div>
       </ArticleLayout>

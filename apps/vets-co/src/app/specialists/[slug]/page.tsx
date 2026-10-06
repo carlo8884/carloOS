@@ -34,7 +34,6 @@ import {
   ArticleLayout,
   CalloutBox,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   RelatedLinks,
   SidebarCard,
 } from '@carloOS/ui'
@@ -473,12 +472,7 @@ export default function SpecialistPage({ params }: PageProps) {
           specialists hub kitchen + diagnostics-spoke
           kitchen. Educational only — not a ranked
           clinic list. */}
-      <div className="not-prose my-10 rounded-xl border border-brand-border bg-brand-surface p-6">
-        <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
-          Shop related supplies
-        </div>
-                <AffiliateDisclosure variant="inline" siteId="vets-co" />
-      </div>
+      
 
       {/* Back to hub */}
       <div className="mt-10 pt-8 border-t border-brand-border not-prose">

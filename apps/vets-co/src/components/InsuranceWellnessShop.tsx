@@ -8,7 +8,6 @@
  * /reviews/best-pet-insurance — this block does not re-rank insurers.
  */
 import Link from 'next/link'
-import { AffiliateDisclosure } from '@carloOS/ui'
 
 export function InsuranceWellnessShop({
   source,
@@ -18,7 +17,6 @@ export function InsuranceWellnessShop({
 }) {
   return (
     <div>
-      <AffiliateDisclosure variant="inline" siteId="vets-co" />
       <div className="mt-4 mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
         <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
           Shop wellness prep
@@ -39,8 +37,7 @@ export function InsuranceWellnessShop({
           >
             Best Pet Insurance
           </Link>{' '}
-          review. Vets.co earns a commission on qualifying Amazon purchases at no extra cost to
-          you.</p>
+          review.</p>
       </div>
     </div>
   )

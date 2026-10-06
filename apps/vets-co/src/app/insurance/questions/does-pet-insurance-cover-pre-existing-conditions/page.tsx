@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 
@@ -60,7 +60,6 @@ export default function Page() {
 
           <h2 id="next-steps">Next Steps</h2>
           <p>If your pet is young and healthy, the highest-value move is to enroll before any condition appears. If your pet already has a condition, focus on whether unrelated coverage still makes sense and whether any curable-condition pathway applies.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
           <ul>
             <li>See when timing helps most in <a href="/insurance/questions/when-should-i-get-pet-insurance">when should I get pet insurance</a>.</li>
             <li>Compare carriers — including how each treats curable conditions — in our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</li>

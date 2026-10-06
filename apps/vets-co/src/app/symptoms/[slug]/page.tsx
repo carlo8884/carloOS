@@ -9,7 +9,6 @@ import {
   buildBreadcrumbSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure
 } from '@carloOS/ui'
 import { consultLink } from '@carloOS/config/affiliate-hop'
 import { Symptoms, SymptomsBySlug, type Symptom, type UrgencyTier } from '../../../data/symptoms'
@@ -509,7 +508,6 @@ export default function SymptomPage({ params }: PageProps) {
             symptoms hub + diagnostics-spoke kitchens.
             Educational only — never a first-aid kit,
             never an Rx product. */}
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
 
         {/* Back to symptoms */}
         <div className="mt-10 pt-8 border-t border-brand-border not-prose">

@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 // Request-time env, same as the insurance comparison. A set partner tag
 // renders the quote link; an unset tag stays a disabled button.
@@ -77,7 +77,6 @@ export default function SpotVsManyPetsGuidePage() {
         <p>ManyPets is Straightforward Terms. The plan is a single comprehensive policy rather than a tier maze. The model is pay-then-claim. The review calls the fine print relatively clear and says availability varies by state. The price line is quote-based. Fewer structures to mix and match is the tradeoff in the review.</p>
         <h2>Who should read which policy</h2>
         <p>Open the Spot sample when you want several limit and deductible combinations on one carrier, and treat the preventive add-on as separate from the insurance. Open the ManyPets sample when one comprehensive plan is easier to read, and confirm the state actually offers it. On both, read waiting periods, exclusions, exam-fee language, and the annual limit in the sample policy. Do not treat either quote-based line as a price from this page.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
         <p>The link below opens the Spot quote from the fine-print page. The price you see there is the carrier&apos;s quote, not a figure from this page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/spot/home?s=reviews-spot-vs-manypets-guide">Get a Spot quote →</a></p>
         <h2>Questions</h2>
