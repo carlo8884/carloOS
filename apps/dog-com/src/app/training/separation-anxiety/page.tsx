@@ -181,7 +181,7 @@ export default function SeparationAnxietyPage() {
             />
             <ShopCtas
               amazonHref="/go/amazon-brand/bully+sticks+dog+chew?s=training-sep-anxiety"
-              amazonLabel="Browse bully sticks on Amazon →"
+              amazonLabel="Browse bully stick chews on Amazon →"
             />
           </div>
           <p className="text-2xs text-brand-text-light mt-3">
