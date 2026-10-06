@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ScoreMethodology, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -169,14 +169,12 @@ export default function GroomingPage() {
           </div>
           </div>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="rubber-curry-comb"
             badge="Core Kit"
             name="Rubber Curry Comb"
             subtitle="The workhorse first step of any grooming routine"
-            score={8.6}
             winner
             description={<>
               <p>A rubber or jelly curry comb used in circular motions lifts caked mud, dander, and loose hair to the surface of the coat and gives the skin a stimulating massage. It is the single most useful tool in the kit and the natural first step before brushing.</p>
@@ -201,7 +199,6 @@ export default function GroomingPage() {
             badge="Brush Set"
             name="Dandy and Body Brush Set"
             subtitle="Flick dirt away, then finish and lay the coat"
-            score={8.4}
             description={<>
               <p>A stiff-bristled dandy brush flicks away the dirt the curry comb has lifted, while a soft body brush removes fine dust, lays the coat, and is gentle enough for the face and bony areas. Owning both covers the bulk of the grooming routine.</p>
               <p>Most relevant for a complete everyday kit; keep the body brush clean with a metal curry to get the best finish.</p>
@@ -225,7 +222,6 @@ export default function GroomingPage() {
             badge="Feet"
             name="Hoof Pick with Brush"
             subtitle="Pick out the feet first, every single time"
-            score={8.5}
             description={<>
               <p>Picking out the feet is the first and most important step of grooming and the routine moment to check for thrush, stones, and loose shoes. A hoof pick with an integrated stiff brush clears packed debris and then sweeps the sole clean so you can actually see the foot.</p>
               <p>Most relevant for every horse owner; keep one in the grooming kit and a spare by the stable door.</p>

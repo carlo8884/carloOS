@@ -131,7 +131,6 @@ export default function ForageBasicsPage() {
             badge="Trickle Feeding"
             name="Slow-Feeder Hay Net"
             subtitle="Extends a hay ration so the horse eats over many hours"
-            score={8.5}
             description={<>
               <p>Slow-feeder hay nets stretch a measured forage ration across the day, which keeps something in the stomach to buffer acid and matches the horse&apos;s natural trickle-feeding pattern. For easy keepers they also let you restrict calories without imposing long fasts. This is a general management aid, not a treatment. Confirm the ration with your veterinarian or equine nutritionist.</p>
             </>}

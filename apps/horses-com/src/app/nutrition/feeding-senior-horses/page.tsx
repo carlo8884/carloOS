@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -185,14 +185,12 @@ export default function SeniorFeedingPage() {
           <h2 id="picks">Product Picks — General Nutrition Supports for Senior Horses</h2>
           <p>A few widely-available general nutrition options for aging horses: a complete senior feed and a topline/condition supplement. These support the feeding approach described above and are not treatments for PPID, dental disease, or any diagnosed condition. For PPID horses, coordinate with your veterinarian before selecting a senior feed, as some are not low-NSC. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="senior-complete-feed"
             badge="Senior Complete Feed"
             name="Complete Senior Horse Feed"
             subtitle="Hay-replacer-level complete feed for horses with dental decline"
-            score={8.7}
             winner
             description={<>
               <p>Complete senior horse feeds are formulated to replace hay as well as concentrate -- intended to supply all forage and nutrient requirements in a soft, easily soaked form that a horse with poor teeth can eat. Fed at the full label rate, they provide fiber, protein, vitamins, and minerals without requiring the horse to chew long-stem hay. They are widely used as the primary ration for seniors that can no longer manage hay. Note: some senior feeds are higher in sugar and starch than ideal for PPID or insulin-dysregulated horses -- read the guaranteed analysis and confirm with your veterinarian for those horses.</p>
@@ -217,7 +215,6 @@ export default function SeniorFeedingPage() {
             badge="Topline and Condition"
             name="Amino Acid / Topline Support Supplement"
             subtitle="Quality protein support for aging horses losing topline on forage"
-            score={8.4}
             description={<>
               <p>Topline and amino-acid supplements for horses supply quality protein building blocks -- typically lysine, methionine, and threonine -- to support muscle maintenance and topline condition in horses that may be getting adequate calories but still losing topline due to age-related protein efficiency decline. They work alongside adequate forage and calories, not as a substitute for them. General nutrition support only -- loss of topline in a senior horse with PPID or other diagnosed disease needs veterinary attention, not just a supplement.</p>
               <p>General nutrition support for: older horses losing topline despite adequate calorie intake, where protein quality in the forage is suspected to be a limiting factor.</p>

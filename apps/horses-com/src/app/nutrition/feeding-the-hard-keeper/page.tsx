@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -195,14 +195,12 @@ export default function HardKeeperPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="stabilized-rice-bran"
             badge="Fat-Based Calorie Source"
             name="Stabilized Rice Bran Supplement"
             subtitle="High-fat, low-starch calorie addition for hard-keeper horses"
-            score={8.6}
             winner
             description={<>
               <p>Stabilized rice bran is one of the most popular fat-based calorie additions for hard-keeper horses in the US. It supplies dense, slow-burning energy from fat rather than starch, making it a &ldquo;cool&rdquo; calorie source that supports condition gain without the excitability and gut-upset risks of large grain meals. Stabilized to prevent rancidity; introduced gradually alongside existing feed.</p>
@@ -227,7 +225,6 @@ export default function HardKeeperPage() {
             badge="High-Fat Performance Feed"
             name="High-Fat Low-Starch Horse Feed"
             subtitle="Complete concentrate for horses needing energy without high grain"
-            score={8.4}
             description={<>
               <p>High-fat, low-starch horse feeds are formulated to deliver concentrated energy through fat and highly digestible fiber rather than large amounts of cereal grain. They suit hard keepers and performance horses where adding starch-based calories would risk gut upset, ulcers, or excitability. Match the feeding rate to the horse and always maintain adequate forage alongside; build the full plan with a veterinarian or nutritionist.</p>
               <p>General nutrition support for: horses that need more energy than forage alone provides, fed in small, frequent meals according to the manufacturer&apos;s directions.</p>

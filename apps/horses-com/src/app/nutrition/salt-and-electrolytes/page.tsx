@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -212,14 +212,12 @@ export default function SaltElectrolytesPage() {
 
           <AffiliateDisclosure variant="inline" siteId="horses-com" />
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="plain-salt-block"
             badge="Year-Round Baseline"
             name="Plain White Salt Block / Loose Salt"
             subtitle="The free-choice baseline every horse needs"
-            score={8.7}
             winner
             description={<>
               <p>Plain white salt — as a free-choice block or, better for reliable intake, loose salt top-dressed on feed — is the year-round baseline every horse needs to meet sodium requirements. Loose salt is easier for most horses to consume in adequate amounts than a hard block, which some horses underuse. Inexpensive and foundational; address baseline salt before any flavored electrolyte.</p>
@@ -244,7 +242,6 @@ export default function SaltElectrolytesPage() {
             badge="Sweat Replacement"
             name="Salt-First Sweat-Replacement Electrolyte"
             subtitle="For horses in heavy work or hot, humid conditions"
-            score={8.5}
             description={<>
               <p>A quality sweat-replacement electrolyte supplies sodium, chloride, and potassium in proportions that reflect equine sweat losses — for horses working hard, traveling, or sweating in heat and humidity. The key selection criterion from the section above: salt should be the leading ingredient, not sugar. Always offer water alongside, and match the dose to actual work and losses rather than over-supplementing an idle horse.</p>
               <p>Most relevant for performance, endurance, and traveling horses, and any horse sweating heavily in hot, humid weather.</p>

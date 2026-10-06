@@ -1,5 +1,5 @@
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ScoreMethodology, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -202,14 +202,12 @@ export default function GrainConcentratesPage() {
           <h2 id="picks">Feed Picks — Safe Concentrates for Working Horses</h2>
           <p>When concentrates are genuinely needed, formulated complete feeds offer more consistent nutrition and safer starch levels than plain cereal grain. These are general nutrition options for horses with real energy gaps -- working horses, hard keepers, and youngstock. Always feed in small, frequent meals, build forage first, and work with your veterinarian or nutritionist to confirm the ration is appropriate. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <ScoreMethodology />
 
           <ReviewCard
             id="complete-horse-feed"
             badge="Working Horse / All-Round"
             name="Formulated Complete Horse Feed (Pellet or Textured)"
             subtitle="Balanced concentrate for horses needing more than forage provides"
-            score={8.5}
             winner
             description={<>
               <p>Formulated complete feeds combine controlled amounts of grain with protein, vitamins, and minerals in a consistent ratio, offering more reliable nutrition per serving than plain oats or corn. The key is feeding at the label rate -- too little shortchanges vitamins and minerals, and the whole ration must be built around adequate forage. Split daily amounts into multiple small meals to keep starch per meal low. Match the feed to the horse&apos;s actual workload rather than over-feeding energy.</p>
@@ -234,7 +232,6 @@ export default function GrainConcentratesPage() {
             badge="Low-Starch Option"
             name="Low-NSC / Senior Feed"
             subtitle="Reduced-starch concentrate for metabolic, senior, or starch-sensitive horses"
-            score={8.3}
             description={<>
               <p>Low-NSC feeds are designed to deliver energy through fat and digestible fiber rather than starch and sugar -- a safer profile for older horses with dental decline, horses prone to tying-up, and metabolic horses that need more than a pure balancer but cannot tolerate high grain. Still fed at the label rate in small meals alongside forage. Build the full plan with your veterinarian or nutritionist, especially for metabolic or insulin-dysregulated horses.</p>
               <p>Most relevant for seniors, horses with metabolic considerations, and horses sensitive to starch who still need more caloric support than a balancer alone.</p>
