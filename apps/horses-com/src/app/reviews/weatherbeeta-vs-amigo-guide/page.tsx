@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -50,6 +51,7 @@ export default function WeatherbeetaVsAmigoGuidePage() {
         readTime: '6 min',
       }}
       heroHop={<PrimaryHop href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" label="Shop the Weatherbeeta ComFiTec at Dover Saddlery" />}
+      heroExtra={<HopDisclosure siteId="horses-com" href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },
