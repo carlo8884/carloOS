@@ -235,7 +235,7 @@ export default function BestFerretCagePage() {
             Multiple levels are the efficient way to add usable area without a larger footprint, but only if the levels
             are solid (or solidly covered) and connected by safe ramps. Two generous solid levels beat four cramped wire
             ones. Remember that the cage is the bedroom, not the house: even a large cage does not replace the several
-            hours of daily supervised out-of-cage time every ferret needs.
+            hours of daily supervised out-of-cage time every ferret needs. Those hours out of the cage are covered in the <a href="/care/exercise-and-enrichment" className="text-brand-primary underline">exercise and enrichment guide</a>.
           </p>
 
           <h2 id="ramps">Ramp & Shelf Safety</h2>

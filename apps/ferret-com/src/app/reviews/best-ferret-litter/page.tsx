@@ -245,7 +245,7 @@ export default function BestFerretLitterPage() {
             safe pelleted litters, heat-treated wood pellets tend to control odor best, paper pellets are middling, and
             grass pellets are similar to paper. Pellets track far less than fine litters but can still scatter; a
             high-backed corner box and a litter mat help. Avoid the temptation to switch to a perfumed clumping litter
-            for odor — that trades a real safety margin for a cosmetic one.
+            for odor — that trades a real safety margin for a cosmetic one. That no-clumping rule, next to where the box sits in the cage, is in the <a href="/care/cage-setup" className="text-brand-primary underline">cage-setup guide</a>.
           </p>
 
           <h2 id="picks">Litters That Meet the Criteria</h2>

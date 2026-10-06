@@ -235,7 +235,7 @@ export default function BestFerretHarnessPage() {
             single fixed dimension. Kits and small jills may need the smallest size with room to grow; large hobs may
             sit between sizes, where the more adjustable harness wins. Re-check fit seasonally — ferrets gain and lose
             noticeable weight across the year, as covered in our{' '}
-            <a href="/diet/weight-management">weight management</a> guide.
+            <a href="/diet/weight-management" className="text-brand-primary underline">weight management</a> guide. Rechecking the same harness as the coat and weight change through winter is in the <a href="/reviews/winter-harness-fit-guide" className="text-brand-primary underline">winter harness fit guide</a>.
           </p>
 
           <h2 id="material">Material & Comfort</h2>

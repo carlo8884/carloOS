@@ -227,7 +227,7 @@ export default function BeddingAndLitterTypesPage() {
 
           <h2 id="washing">Washing and Replacement Cadence</h2>
           <p>
-            Fabric bedding should be washed roughly weekly, more often for sleep sacks the ferret nests in heavily. Use a fragrance-free detergent and skip fabric softener and dryer sheets, whose residues can irritate skin and airways. Rotate a spare set in so the cage is never without bedding.
+            Fabric bedding should be washed roughly weekly, more often for sleep sacks the ferret nests in heavily. Use a fragrance-free detergent and skip fabric softener and dryer sheets, whose residues can irritate skin and airways. Rotate a spare set in so the cage is never without bedding. Why that weekly wash carries more of the odor load than bathing the ferret is in the <a href="/care/bathing-and-grooming" className="text-brand-primary underline">bathing and grooming guide</a>.
           </p>
           <p>
             Inspect bedding at every wash and retire it when fleece thins, seams fray, or chew holes appear — typically every few months with regular laundering. A frayed sack is an ingestion hazard, not a frugal save.
