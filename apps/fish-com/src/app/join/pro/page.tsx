@@ -51,10 +51,10 @@ export default function JoinProPage({
           />
         </div>
 
-        <h2>Owners: get a note when claimed pages exist</h2>
+        <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. One email
-          when accepted pages exist — no invented directory.
+          The form above is for professionals applying for a page. No directory
+          is invented here.
         </p>
       </div>
     </ArticleLayout>
