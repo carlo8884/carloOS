@@ -183,7 +183,7 @@ export default function DogExerciseCalculatorPage() {
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/kong+classic+dog+toy+stuffable?s=tools-dog-exercise"
-                amazonLabel="Browse Kong fetch / stuffable toys on Amazon →"
+                amazonLabel="Browse Kong classic fetch / stuffable toys on Amazon →"
               />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+fetch+toys?s=tools-dog-exercise"
