@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import { directoryClaimPrefill } from '@carloOS/config'
 import { buildMetadata, ArticleLayout, InquireForm} from '@carloOS/ui'
 import listings from '../../../data/directory-listings.json'
@@ -51,10 +52,11 @@ export default function JoinProPage({
           />
         </div>
 
-        <h2>Owners: get a note when claimed pages exist</h2>
+        <h2>Claimed pages</h2>
         <p>
-          The form above is for professionals applying for a page. One email
-          when accepted pages exist — no invented directory.
+          The form above is for professionals applying for a page. No directory
+          is invented here. Owners comparing barns can start with{' '}
+          <Link href="/ownership/boarding-options">boarding options</Link>.
         </p>
       </div>
     </ArticleLayout>
