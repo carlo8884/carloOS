@@ -274,7 +274,10 @@ export default function HarnessCollarSizeCalculator() {
   }
 
   return (
-    <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+    <div className="rounded-lg border border-brand-border bg-brand-surface px-6 pb-6 pt-2 sm:px-8 sm:pb-8 sm:pt-4">
+      {result ? (
+        <ResultPick linkFirst siteId="dog-com" pick={harnessPick(result.harness.band.id)} />
+      ) : null}
       <div className="grid gap-6 sm:grid-cols-2">
         <div>
           <p className="mb-2 text-xs font-medium text-brand-text-mid">Breed size class</p>
@@ -416,7 +419,6 @@ export default function HarnessCollarSizeCalculator() {
             Read front-clip versus back-clip before you buy →
           </a>
         </p>
-        <ResultPick siteId="dog-com" pick={harnessPick(result.harness.band.id)} />
       </div>
       )}
 

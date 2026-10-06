@@ -72,6 +72,9 @@ export default function CageSizeCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
+      {result ? (
+        <ResultPick linkFirst siteId="ferret-com" pick={ferretCagePick(ferrets)} />
+      ) : null}
       <div className="grid gap-6 sm:grid-cols-3">
         <div>
           <label htmlFor="cs-ferrets" className="mb-2 block text-xs font-medium text-brand-text-mid">
@@ -188,7 +191,6 @@ export default function CageSizeCalculator() {
         <ResultMeaning>
           The footprint is the minimum sleeping-and-litter size for this ferret count, level count, and play time. It is a planning figure, not a brand recommendation.
         </ResultMeaning>
-        <ResultPick siteId="ferret-com" pick={ferretCagePick(ferrets)} />
       </div>
       )}
 

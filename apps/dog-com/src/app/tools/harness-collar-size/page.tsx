@@ -157,7 +157,7 @@ export default function HarnessCollarSizePage() {
         <span>›</span>
         <span className="text-brand-text-mid font-medium">Harness &amp; Collar Size</span>
       </nav>
-      <section className="bg-brand-surface px-container-sm sm:px-container py-section">
+      <section className="bg-brand-surface px-container-sm sm:px-container pt-0 pb-section">
         <div className="max-w-5xl">
           <Calculator />
           <JourneyNext

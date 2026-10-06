@@ -22,7 +22,10 @@ export default function CatFoodAmountCalculator() {
   }, [weight, unit, stage, kcalPerKg, weightError, kcalError])
 
   return (
-    <form className="not-prose my-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+    <form className="not-prose mt-0 mb-6 rounded-xl border border-brand-border bg-brand-surface p-5" onSubmit={(e) => e.preventDefault()}>
+      {result ? (
+        <ResultPick linkFirst siteId="vets-co" pick={catFoodAmountPick(stage.label, result.grams)} />
+      ) : null}
       <div className="grid gap-4 sm:grid-cols-2">
         <label className="block text-sm font-semibold text-brand-dark">
           Weight
@@ -54,7 +57,6 @@ export default function CatFoodAmountCalculator() {
           <ResultMeaning>
             Resting energy is {Math.round(result.rer).toLocaleString('en-US')} kcal. This stage multiplies that by {stage.factor}. Grams are that energy divided by the label&apos;s kcal per kg. This is a portion estimate, not a diagnosis.
           </ResultMeaning>
-          <ResultPick siteId="vets-co" pick={catFoodAmountPick(stage.label, result.grams)} />
         </div>
       ) : null}
     </form>
