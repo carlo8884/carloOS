@@ -19,7 +19,7 @@ export default function WhatCoversPage() {
     <>
       <SchemaScript schema={schema} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' />}
+        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-what-pet-insurance-covers' label='Get an Embrace quote →' holdWithoutPartnerId />}
         hero={{ title: "What Pet Insurance Covers (and Doesn't)", subtitle: 'Most pet insurance sold today is accident-and-illness coverage, which pays toward unexpected injuries and diseases — but every policy has exclusions, and the differences between plans live in the details. Knowing what is typically covered, what is usually excluded, and where plans diverge lets you choose coverage that fits your pet.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'What It Covers', href: '/insurance/what-pet-insurance-covers' }]}
         sidebar={<>
@@ -157,7 +157,6 @@ export default function WhatCoversPage() {
             badge="Wellness Add-On"
             name="Embrace"
             subtitle="Accident-and-illness with an optional wellness rewards plan"
-            score={8.6}
             winner
             description={
               <p>An accident-and-illness insurer that also offers an optional Wellness Rewards plan, which can reimburse routine care that standard insurance excludes — useful if you want both catastrophic protection and help with preventive costs. Coverage and exclusions still apply to the core policy; read them when you quote.</p>
@@ -171,7 +170,7 @@ export default function WhatCoversPage() {
             cons={['Wellness add-on is a budgeted benefit, not insurance', 'Standard exclusions apply']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-what-pet-insurance-covers"
+            ctaHref="/go/embrace/home?s=insurance-what-pet-insurance-covers" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -180,7 +179,6 @@ export default function WhatCoversPage() {
             badge="App-First"
             name="Lemonade Pet"
             subtitle="Accident-and-illness with optional preventive packages"
-            score={8.3}
             description={
               <p>An app-first insurer offering accident-and-illness coverage with optional preventive-care packages bundled on top. The digital claims flow is a draw for owners who want fast, app-based submission. Availability varies by state; confirm coverage details and exclusions for your location when you quote.</p>
             }
@@ -199,7 +197,7 @@ export default function WhatCoversPage() {
           />
 
           <h2 id="who">Who should quote which</h2>
-          <p>Both cards are quote-based. Wellness and preventive extras are already described as add-ons, not the insurance policy. Scores are this page&apos;s editorial scores, not customer star ratings.</p>
+          <p>Both cards are quote-based. Wellness and preventive extras are already described as add-ons, not the insurance policy.</p>
           <div className="overflow-x-auto my-6 max-w-full">
             <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
               <thead>
@@ -213,7 +211,7 @@ export default function WhatCoversPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Accident-and-illness plus an optional wellness rewards plan</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-what-pet-insurance-covers"} product={"Embrace"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-what-pet-insurance-covers"} product={"Embrace"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Wellness Add-On. Optional wellness plan. Diminishing deductible. Quote-based</td>
                   <td className="p-3 text-brand-text-mid">The wellness add-on is a budgeted benefit, not insurance. Standard exclusions apply</td>
                 </tr>
@@ -226,7 +224,7 @@ export default function WhatCoversPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

@@ -146,7 +146,6 @@ export default function PreExistingPage() {
             badge="Curable-Condition Policy"
             name="Embrace"
             subtitle="May re-cover curable pre-existing conditions after a symptom-free period"
-            score={8.5}
             winner
             description={
               <p>Embrace distinguishes curable from incurable pre-existing conditions and, per its policy terms, can resume covering a curable condition after a defined symptom-free period. That makes it worth quoting if your pet has a resolved past issue. Permanent conditions remain excluded — confirm the exact terms and waiting windows when you quote.</p>
@@ -160,7 +159,7 @@ export default function PreExistingPage() {
             cons={['Incurable conditions stay excluded', 'Symptom-free window applies']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-pre-existing-conditions"
+            ctaHref="/go/embrace/home?s=insurance-pre-existing-conditions" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -169,7 +168,6 @@ export default function PreExistingPage() {
             badge="Established Carrier"
             name="ASPCA Pet Health Insurance"
             subtitle="Accident-and-illness with curable pre-existing flexibility"
-            score={8.1}
             description={
               <p>An established accident-and-illness program that, per its policy terms, may cover certain curable pre-existing conditions after a symptom-free period. Worth comparing alongside Embrace if a past condition has resolved. As always, the policy&apos;s own definitions govern — read them before enrolling.</p>
             }

@@ -146,7 +146,6 @@ export default function WhenToEnrollPage() {
             badge="Young-Pet Value"
             name="Lemonade Pet"
             subtitle="Often competitive premiums for young, healthy pets"
-            score={8.4}
             winner
             description={
               <p>App-first accident-and-illness coverage that often prices competitively for young, healthy pets — the enrollment window where premiums are lowest and few conditions are excluded. Availability varies by state; confirm your location and read the pre-existing-condition language when you quote.</p>
@@ -169,7 +168,6 @@ export default function WhenToEnrollPage() {
             badge="Flexible Plans"
             name="Pets Best"
             subtitle="Multiple plan tiers, no upper age limit on enrollment"
-            score={8.2}
             description={
               <p>Offers several plan tiers and accepts new enrollments without an upper age limit, which makes it worth quoting for both puppies and older adopted pets. Useful when you are comparing how premium scales with age. As always, the pre-existing-condition definition determines what a late enrollment will and will not cover.</p>
             }

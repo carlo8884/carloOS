@@ -150,7 +150,6 @@ export default function BreedRiskPage() {
             badge="Unlimited Payouts"
             name="Trupanion"
             subtitle="Unlimited annual payouts, strong for predictable major needs"
-            score={9.0}
             winner
             description={
               <p>The unlimited annual payout structure is a strong fit for breeds with predictable, expensive needs — a single major orthopedic or chronic-disease course will not exhaust an annual cap. Covers hereditary and congenital conditions per its terms. Enroll as a puppy so breed-typical conditions are not later excluded as pre-existing.</p>
@@ -164,7 +163,7 @@ export default function BreedRiskPage() {
             cons={['Premiums can run higher', 'No wellness add-on']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/trupanion/home?s=insurance-breed-specific-risk"
+            ctaHref="/go/trupanion/home?s=insurance-breed-specific-risk" holdWithoutPartnerId
             ctaAffiliateProgram="trupanion"
             ctaAffiliateProduct="home"
           />
@@ -173,7 +172,6 @@ export default function BreedRiskPage() {
             badge="High-Limit Plans"
             name="Figo Pet Insurance"
             subtitle="High and unlimited annual-limit options, app-based claims"
-            score={8.3}
             description={
               <p>Offers high and unlimited annual-limit tiers, which suits breeds with known expensive risks, plus an app-based claims experience. Compare its hereditary-condition coverage and orthopedic/bilateral terms against Trupanion when you quote. Early enrollment remains the most powerful lever for high-risk breeds.</p>
             }

@@ -27,7 +27,7 @@ export default function WellnessVsInsurancePage() {
     <>
       <SchemaScript schema={combineSchemas(schema, itemList)} />
       <ArticleLayout siteId="vets-co"
-        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' />}
+        heroHop={<PrimaryHop href='/go/embrace/home?s=insurance-wellness-plans-vs-insurance' label='Get an Embrace quote →' holdWithoutPartnerId />}
         hero={{ title: "Wellness Plans vs. Pet Insurance", subtitle: 'Wellness plans and pet insurance are often confused, but they solve opposite problems. A wellness plan budgets for the routine care you know is coming; insurance protects against the unexpected, expensive care you hope never arrives. Knowing the difference helps you spend on the protection that actually matters for your situation.', category: 'Insurance Guide', authorName: 'Vets.co Editorial', publishedAt: 'June 2026', readTime: '8 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Insurance', href: '/insurance' }, { name: 'Wellness vs. Insurance', href: '/insurance/wellness-plans-vs-insurance' }]}
         sidebar={<>
@@ -83,7 +83,6 @@ export default function WellnessVsInsurancePage() {
             badge="Insurance + Wellness"
             name="Embrace"
             subtitle="Accident-and-illness plus an optional Wellness Rewards plan"
-            score={8.6}
             winner
             description={
               <p>Pairs core accident-and-illness insurance with an optional Wellness Rewards plan that reimburses routine care insurance excludes — a clean way to get both functions from one carrier while keeping them distinct. The wellness piece is a budgeted allowance, not insurance; the insurance piece is what guards against the big bills.</p>
@@ -97,7 +96,7 @@ export default function WellnessVsInsurancePage() {
             cons={['Wellness add-on is not insurance', 'Adds to monthly cost']}
             price="Quote-based"
             ctaText="Get a Quote →"
-            ctaHref="/go/embrace/home?s=insurance-wellness-plans-vs-insurance"
+            ctaHref="/go/embrace/home?s=insurance-wellness-plans-vs-insurance" holdWithoutPartnerId
             ctaAffiliateProgram="embrace"
             ctaAffiliateProduct="home"
           />
@@ -106,7 +105,6 @@ export default function WellnessVsInsurancePage() {
             badge="Preventive Bundle"
             name="Pumpkin Pet Insurance"
             subtitle="Accident-and-illness with an optional preventive essentials package"
-            score={8.2}
             description={
               <p>Offers accident-and-illness coverage with an optional preventive-care package that refunds routine services like vaccines and wellness exams. Like any wellness layer, treat it as predictable-cost budgeting rather than catastrophe protection. Compare the insurance terms — annual limit, reimbursement, exclusions — alongside the preventive package value.</p>
             }
@@ -141,7 +139,7 @@ export default function WellnessVsInsurancePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">You want one carrier for catastrophe cover plus a wellness allowance</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-wellness-plans-vs-insurance"} product={"Embrace"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#embrace" className="text-brand-primary">Embrace</a><TableShopLink href={"/go/embrace/home?s=insurance-wellness-plans-vs-insurance"} product={"Embrace"} holdWithoutPartnerId /></td>
                   <td className="p-3 text-brand-text-mid">Accident and illness, optional Wellness Rewards, pay-then-claim</td>
                   <td className="p-3 text-brand-text-mid">The rewards plan reimburses routine care. It is not the insurance</td>
                 </tr>
@@ -160,7 +158,7 @@ export default function WellnessVsInsurancePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-05" />
+          <ComparisonFoot updated="2026-10-06" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />
