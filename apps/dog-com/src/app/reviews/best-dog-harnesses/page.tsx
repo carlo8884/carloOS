@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -29,6 +29,23 @@ export default function BestDogHarnessesPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dog-harnesses"
+          checklist={[
+            "The PetSafe Easy Walk, marked Best No-Pull.",
+            "It is not the pick for a dog with shoulder or elbow issues, and the fit has to be right or it rotates.",
+            "The Ruffwear Front Range, marked Best Outdoor.",
+            "It is bulkier and more expensive than a casual harness.",
+            "The Julius-K9 IDC Powerharness, marked Best Escape-Proof.",
+            "It is not a no-pull harness, and it is heavy for a small dog.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">The right harness depends on why you need it — pulling management, outdoor activity, or escape prevention. These are three fundamentally different tools.</p>
       </div>
       <QuickPicks items={PICKS} />

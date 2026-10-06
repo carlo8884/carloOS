@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -27,6 +27,23 @@ export default function BestGPSTrackerPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 collar on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-dog-gps-tracker"
+          checklist={[
+            "The card says a subscription is required and collar bands are sold separately.",
+            "The card says the battery is shorter than Fi and the health data needs interpretation.",
+            "The card lists a 2\u20135 day battery and no health monitoring.",
+            "GPS trackers give you real-time location if your dog escapes.",
+            "Fi's standout feature is the 3-month battery life \u2014 the longest of any GPS tracker by a significant margin.",
+            "Competitors need weekly or daily charging; Fi charges once per quarter.",
+          ]}
+        />
+
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
       </div>
       <QuickPicks items={PICKS} />
