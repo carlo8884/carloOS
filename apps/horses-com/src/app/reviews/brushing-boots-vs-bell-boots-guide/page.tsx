@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -74,6 +74,22 @@ export default function BrushingBootsVsBellBootsGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-brushing-boots-vs-bell-boots-guide"
+          checklist={[
+            "Synthetic brushing or splint boots, marked Everyday Protection and the winner.",
+            "The card says they protect against strikes during schooling and turnout, and that they do not provide tendon support.",
+            "When a hind foot strikes a front heel or the horse pulls a front shoe.",
+            "The card says pull-on styles stay secure and are harder to put on, and that an oversized boot can rub.",
+            "The boots page says the forces on a galloping or landing tendon are larger than a boot can structurally support.",
+            "Standing wraps are a separate skill on that page and are not one of these two products.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/tack/boots-and-wraps">boots and wraps page</Link>, which compares published retail specs. Blankets and pads have their own guides. This comparison is brushing boots against bell boots.</p>
         <h2>What the page says about brushing boots</h2>
         <p>Synthetic brushing or splint boots are Everyday Protection and the winner. The card says they protect the lower leg from interference strikes in schooling, lunging, and turnout. Liners are washable and quick-drying because grit trapped under a boot causes rubs. Fit is snug, not tight. The cons repeat that no boot in this category provides genuine tendon support, and that a dirty boot can rub. The printed price is $25–70 a pair. The link above is the Riding Warehouse search on that page.</p>

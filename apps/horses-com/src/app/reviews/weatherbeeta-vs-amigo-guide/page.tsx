@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -68,6 +68,22 @@ export default function WeatherbeetaVsAmigoGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-weatherbeeta-vs-amigo-guide"
+          checklist={[
+            "The Weatherbeeta ComFiTec Plus Dynamic II, marked Best Mid-Tier.",
+            "It also says Weatherbeeta sizing runs differently from Horseware.",
+            "When you want Horseware construction at a lower price.",
+            "Prices here are the Weatherbeeta and Amigo figures on the blanket review.",
+            "The blanket-size calculator uses that length.",
+            "This comparison is the Weatherbeeta ComFiTec Plus Dynamic II against the Horseware Amigo Bravo 12 Plus.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link>. This comparison is the Weatherbeeta ComFiTec Plus Dynamic II against the Horseware Amigo Bravo 12 Plus. Rambo versus Rhino is a different pair, on the <Link href="/reviews/rambo-vs-rhino-guide">Rambo versus Rhino guide</Link>.</p>
         <h2>What the review says about the Weatherbeeta</h2>
         <p>The ComFiTec Plus Dynamic II is Best Mid-Tier. The shell is 1200-denier ripstop. Fill options in the review are 0 g, 100 g, 220 g, and 360 g. The neck is a standard cut with a memory-foam wither panel, which the review calls useful when a conventional turnout rubs the withers. Hardware is a polymer surcingle and a snap front. It has a deep tail flap. The printed price is $170–280. The review says Weatherbeeta sizing runs differently from Horseware, so measure and use the retailer’s trial period. It also says the snap front is less robust than a T-bar in ice.</p>

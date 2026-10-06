@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -68,6 +68,22 @@ export default function RamboVsSchneidersGuidePage() {
       priceAsOf="2026-10-05"
     >
       <div className="carloOS-article">
+        <EmailCapture
+          variant="inline"
+          siteId="horses-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-rambo-vs-schneiders-guide"
+          checklist={[
+            "The review lists a 1680-denier ballistic shell, fills of 300 g and 360 g, a full neck with a deep shoulder gusset, and a stainless double belly surcingle.",
+            "The review calls that much blanket overkill in a milder climate.",
+            "Denier and fill on this page are the ones the blanket review already prints, not a size chart.",
+            "The Horseware Rambo Original is the premium turnout.",
+            "The Schneiders StormShield Euro is the heavy-winter blanket.",
+            "The Rambo Original is Best Premium Turnout and the winner.",
+          ]}
+        />
         <p>Prices below are the ones on the <Link href="/reviews/best-winter-horse-blankets">winter blanket review</Link>. The Horseware Rambo Original is the premium turnout. The Schneiders StormShield Euro is the heavy-winter blanket. <Link href="/reviews/rambo-vs-rhino-guide">Rambo versus Rhino</Link> is the same-brand step down, not this heavy-winter pair.</p>
         <h2>What the review says about the Rambo</h2>
         <p>The Rambo Original is Best Premium Turnout and the winner. The shell is 1000-denier ballistic nylon. Fill options are 0 g, 100 g, 200 g, and 400 g. The neck is a V-front high neck with a leg arch. Hardware is a stainless surcingle and T-bar buckles. The warranty is Horseware’s lifetime tear and abrasion repair. The review lists typical multi-season use of 5–8 years. The printed price is $280–420. The cons say the price is the premium tier, shoulder room is less generous for a very wide horse, and the color range is smaller than the Rhino.</p>
