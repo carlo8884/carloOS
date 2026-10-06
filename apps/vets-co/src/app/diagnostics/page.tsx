@@ -221,7 +221,7 @@ export default function DiagnosticsHubPage() {
             veterinarian orders it, how it is performed, what preparation it requires, how long it
             takes, typical US cost ranges, what results mean in plain language, what comes next,
             and how pet insurance typically covers the workup. Cost ranges are{' '}
-            <strong>typical US figures</strong> and are not guaranteed. Result interpretation
+            <strong>typical US figures</strong> dated 2026-06-14 and are not guaranteed. Result interpretation
             always depends on your pet&apos;s clinical picture — your veterinarian&apos;s
             interpretation supersedes any general guidance here.
           </p>
