@@ -9,7 +9,19 @@ import { MONEY_PAGES } from './lighthouse-budgets-lib.mjs'
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '../..')
 
-const EXTRA = ['apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx']
+const EXTRA = [
+  'apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-food-small-breed/page.tsx',
+  'apps/dog-com/src/app/reviews/best-joint-supplements/page.tsx',
+  'apps/dog-com/src/app/reviews/best-slow-feeder-bowls/page.tsx',
+  'apps/dog-com/src/app/reviews/best-large-breed-dog-food/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-food-senior/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-beds/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dog-food-sensitive-stomach/page.tsx',
+  'apps/dog-com/src/app/reviews/best-dental-chews/page.tsx',
+  'apps/fish-com/src/app/reviews/best-planted-tank-fertilizers/page.tsx',
+  'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
+]
 
 function stripComments(src) {
   return src.replace(/\/\*[\s\S]*?\*\//g, '').replace(/(^|[^:\\])\/\/.*$/gm, '$1')

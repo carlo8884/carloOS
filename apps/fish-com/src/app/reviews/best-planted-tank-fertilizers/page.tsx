@@ -5,8 +5,8 @@ import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBread
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026', description: 'Seachem Flourish, Easy Green, and NilocG ranked for planted aquariums.', url: 'https://fish.com/reviews/best-planted-tank-fertilizers', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const easyGreen = buildProductSchema({ name: 'Easy Green All-in-One Fertilizer', description: 'All-in-one liquid fertilizer for planted aquariums with simple weekly dosing.', url: 'https://aquariumcoop.com', imageUrl: '' })
-const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', description: 'Comprehensive trace element supplement for planted aquariums.', url: 'https://seachem.com', imageUrl: '' })
+const easyGreen = buildProductSchema({ name: 'Easy Green All-in-One Fertilizer', description: 'All-in-one liquid fertilizer for planted aquariums with simple weekly dosing.', url: 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', imageUrl: '' })
+const flourish = buildProductSchema({ name: 'Seachem Flourish Comprehensive', description: 'Comprehensive trace element supplement for planted aquariums.', url: 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', imageUrl: '' })
 const allSchemas = combineSchemas(schema, easyGreen, flourish)
 
 const PICKS = [
@@ -20,7 +20,7 @@ const PICKS = [
 // PICKS. No aggregateRating, no fabricated specs (QC §1.4).
 const itemList = buildItemListSchema({
   name: 'Best Planted Tank Fertilizers 2026',
-  items: PICKS.map((p) => ({ name: p.name, url: `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}` })),
+  items: PICKS.map((p) => ({ name: p.name, url: ({ 'Easy Green (Aquarium Co-Op)': 'https://fish.com/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers', 'Seachem Flourish': 'https://fish.com/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers', 'NilocG Thrive': 'https://fish.com/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers' }[p.name] ?? `https://fish.com/reviews/best-planted-tank-fertilizers${p.href}`) })),
 })
 
 export default function BestPlantedFertilizersPage() {

@@ -6,7 +6,7 @@ import { crossSiteHref } from '@carloOS/config'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://greenies.com', imageUrl: '' })
+const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://dog.com/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews', imageUrl: '' })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies', pickHop: '/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' },
@@ -15,7 +15,7 @@ const PICKS = [
 ]
 const itemList = buildItemListSchema({
   name: "Best Dental Chews for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-dental-chews${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Greenies Original': 'https://dog.com/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews', 'Whimzees': 'https://dog.com/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews' }[pick.name] ?? `https://dog.com/reviews/best-dental-chews${pick.href}`) })),
 })
 export default function BestDentalChewsPage() {
   return (

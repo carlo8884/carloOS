@@ -5,7 +5,7 @@ import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineS
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026', description: 'Anti-bloat slow feeder bowls and puzzle feeders ranked.', url: 'https://dog.com/reviews/best-slow-feeder-bowls', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://outwardhound.com', imageUrl: '' })
+const outwardSchema = buildProductSchema({ name: 'Outward Hound Fun Feeder Slo Bowl', description: 'Ridge-pattern slow feeder bowl that extends mealtime 10x over standard bowls.', url: 'https://dog.com/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls', imageUrl: '' })
 const allSchemas = combineSchemas(schema, outwardSchema)
 
 const PICKS = [
@@ -16,7 +16,7 @@ const PICKS = [
 
 const itemList = buildItemListSchema({
   name: "Best Slow Feeder Bowls for Dogs 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: `https://dog.com/reviews/best-slow-feeder-bowls${pick.href}` })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ 'Outward Hound Fun Feeder': 'https://dog.com/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls', 'Northmate Green Interactive': 'https://dog.com/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls', 'LickiMat Splash': 'https://dog.com/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls' }[pick.name] ?? `https://dog.com/reviews/best-slow-feeder-bowls${pick.href}`) })),
 })
 export default function BestSlowFeederBowlsPage() {
   return (

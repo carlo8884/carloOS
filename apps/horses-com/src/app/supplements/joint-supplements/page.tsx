@@ -24,9 +24,9 @@ const articleSchema = buildArticleSchema({
   modifiedAt: '2026-05-28T00:00:00Z',
 })
 
-const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://www.smartpakequine.com', imageUrl: '' })
-const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://www.platinumperformance.com', imageUrl: '' })
-const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'Glucosamine, chondroitin, MSM, and hyaluronic acid for senior horses.', url: 'https://www.smartpakequine.com', imageUrl: '' })
+const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements', imageUrl: '' })
+const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://horses.com/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements', imageUrl: '' })
+const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'Glucosamine, chondroitin, MSM, and hyaluronic acid for senior horses.', url: 'https://horses.com/go/smartpak/smartflex-senior?s=supplements-joint-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
 
 const PICKS = [
