@@ -207,7 +207,7 @@ export default function DogMicrochippingPage() {
           <h2 id="vs-gps">Microchip vs GPS Tracker — Different Tools</h2>
           <p>
             Microchips and GPS trackers are frequently confused, but they solve different problems and the best practice for many owners is to use both.
-           <a href="/reviews/best-dog-gps-tracker">The GPS tracker guide</a> is the live-location device a microchip is not.</p>
+           Live-location trackers, which a microchip is not, are compared in the <a href="/reviews/best-dog-gps-tracker" className="text-brand-primary underline">GPS tracker review</a>.</p>
           <div className="overflow-x-auto my-6">
             <table className="w-full text-sm border-collapse">
               <thead>
