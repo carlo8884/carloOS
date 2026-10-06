@@ -30,6 +30,7 @@ export default function Page() {
                 <div className="text-2xs text-brand-text-light">{d}</div>
               </div>
             ))}
+            <p className="text-2xs text-brand-text-light mt-3 mb-0">These bands are typical US ranges dated 2026-06-11.</p>
           </div>
           <RelatedLinks title="Related Questions" links={[{ label: 'Is pet insurance worth it?', href: '/insurance/questions/is-pet-insurance-worth-it' }, { label: 'Are there multi-pet discounts?', href: '/insurance/questions/multi-pet-discounts' }, { label: 'Deductibles & Reimbursement', href: '/insurance/deductibles-reimbursement' }, { label: 'All insurance questions', href: '/insurance/questions' }]} />
           <CrossPortfolioCard currentSite="vets-co" contentType="health" variant="sidebar" />
@@ -41,6 +42,7 @@ export default function Page() {
           <CalloutBox variant="info" title="The short answer">
             Most dog accident-and-illness policies run roughly <strong>$30–$70 per month</strong> and cats roughly <strong>$15–$40 per month</strong> (2026 ranges drawn from industry averages), but your specific price swings with species, breed, age, location, and the deductible, reimbursement percentage, and annual limit you select. Treat any single &ldquo;average&rdquo; as a starting point, not a quote.
           </CalloutBox>
+          <p>The monthly bands in the short answer and the sidebar are typical US ranges dated 2026-06-11. They are not a quote for one pet.</p>
 
           <h2>What the Typical Ranges Mean</h2>
           <p>Published averages put a typical dog accident-and-illness policy in the range of about thirty to seventy dollars a month, and a typical cat policy lower, around fifteen to forty dollars. These figures, consistent with industry data such as NAPHIA&apos;s sector reporting, are useful for setting expectations but should not be mistaken for a personalized price. The spread inside those ranges is wide because a handful of factors push individual quotes well above or below the midpoint.</p>
