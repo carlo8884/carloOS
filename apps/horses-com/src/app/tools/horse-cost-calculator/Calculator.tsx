@@ -179,9 +179,9 @@ export default function Calculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-10-06" />
+      <PriceAsOf date="2026-10-05" />
       <p className="mb-4 text-xs leading-relaxed text-brand-text-mid">
-        Typical US ranges, last updated 2026-10-06; local prices vary.
+        Typical US ranges, last updated 2026-10-05; local prices vary.
       </p>
       {/* Board type */}
       <div className="mb-5">
