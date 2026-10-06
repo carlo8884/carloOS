@@ -271,7 +271,7 @@ describe('resolveAffiliateHop', () => {
     const askvet = consultLink('/go/askvet/telehealth?s=reviews-askvet-vs-connect-guide', {})
     assert.equal(askvet?.href, 'https://askvet.app/?campaign=telehealth')
     const chewy = consultLink('/go/chewy/connect?s=telehealth', {})
-    assert.equal(chewy?.href, 'https://chewy.com/connect-with-a-vet?campaign=connect')
+    assert.equal(chewy?.href, 'https://www.chewy.com/pethealth/connect-with-a-vet')
     assert.equal(chewy?.href.includes('PLACEHOLDER'), false)
     assert.equal(consultLink('/go/amazon-brand/pet+first+aid+kit', {}), null)
   })
@@ -295,7 +295,7 @@ describe('resolveAffiliateHop', () => {
       },
     }
     const plain = resolveAffiliateHop({ vendor: 'chewy', sku: 'connect', routes, env: {} })
-    assert.equal(plain.target, 'https://chewy.com/connect-with-a-vet?campaign=connect')
+    assert.equal(plain.target, 'https://www.chewy.com/pethealth/connect-with-a-vet')
     assert.equal(plain.target.includes('PLACEHOLDER'), false)
     const tagged = resolveAffiliateHop({ vendor: 'vetster', sku: 'telehealth', routes, env: { AFF_VETSTER_TAG: 'vet-live' } })
     assert.equal(tagged.target, 'https://vetster.com/?refid=vet-live&campaign=telehealth')

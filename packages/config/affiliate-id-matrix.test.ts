@@ -68,7 +68,7 @@ describe('affiliate id matrix', () => {
 
     const connect = '/go/chewy/connect?s=telehealth'
     const vetsUnset = hop('vets-co', 'chewy', 'connect', {})
-    assert.equal(vetsUnset.target, 'https://chewy.com/connect-with-a-vet?campaign=connect')
+    assert.equal(vetsUnset.target, 'https://www.chewy.com/pethealth/connect-with-a-vet')
     assert.equal(vetsUnset.target.includes('PLACEHOLDER'), false)
     assert.equal(visibleShopHref(connect, {}), undefined)
     const vetsTagged = hop('vets-co', 'chewy', 'connect', { AFF_CHEWY_TAG: CHEWY_TAG })
