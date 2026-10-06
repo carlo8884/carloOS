@@ -205,7 +205,7 @@ export default function GoldenRetrieverBreedPage() {
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+slicker+brush+golden+double+coat?s=breed-golden-retriever"
-                  amazonLabel="Browse slickers for the Golden double coat on Amazon →"
+                  amazonLabel="Browse slicker brushes for the Golden double coat on Amazon →"
                 />
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=breed-golden-retriever"
