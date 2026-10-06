@@ -78,11 +78,11 @@ export default function JoinProPage({
           <Link href="/training/training-red-flags">red flags</Link>.
         </p>
 
-        <h2>Owners: get a note when claimed pages exist</h2>
+        <h2>Looking for a trainer</h2>
         <p>
           The form above is for trainers applying for a page. If you landed
           here looking for a trainer, the claimed list is empty on purpose.
-          One email when accepted pages exist — no invented directory.
+          No directory is invented here.
         </p>
       </div>
     </ArticleLayout>
