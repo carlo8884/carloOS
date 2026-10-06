@@ -22,7 +22,7 @@ The PDF tells you to wait. This email tells you why — and the three things tha
 
 **The one product you actually need to diagnose this** is an accurate liquid test kit. Strips are too imprecise for cycling — they round to half a ppm in a range where 0.25 ppm matters. The API Freshwater Master Test Kit is the long-standing reference; we've cross-checked it against lab titration twice and it reads within 10%.
 
-[Get the API Freshwater Master Kit on Amazon →](https://fish.com/go/amazon/api-master-test-kit)
+[Get the API Freshwater Master Kit on Amazon →](https://fish.com/go/amazon-brand/api+freshwater+master+test+kit?s=email-cycling-guide)
 
 — Fish.com Editorial Team
 
