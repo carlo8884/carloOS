@@ -121,6 +121,11 @@ export default function FilterGphCalculatorPage() {
   return (
     <ArticleLayout
       siteId="fish-com"
+      heroExtra={
+        <div id="calculator" className="mb-4 [&_.text-brand-primary]:!text-brand-dark">
+          <Calculator />
+        </div>
+      }
       hero={{
         title: 'Aquarium Filter GPH Calculator',
         subtitle:
@@ -183,8 +188,6 @@ export default function FilterGphCalculatorPage() {
           updatedAt="2026-09-03T00:00:00Z"
           reviewedBy="Editorial team"
         />
-        <h2 id="calculator">The Calculator</h2>
-        <Calculator />
         <JourneyNext
           siteId="fish-com"
           nextHref="/tools/heater-wattage-calculator"

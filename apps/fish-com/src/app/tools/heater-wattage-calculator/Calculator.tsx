@@ -44,6 +44,9 @@ export default function HeaterWattageCalculator() {
 
   return (
     <div>
+      {!inputError && result && result.hint === 'heat' && result.watts > 0 ? (
+        <ResultPick linkFirst siteId="fish-com" pick={heaterFromStockWatts(result.heaterPick)} />
+      ) : null}
       <CalcCard>
         <UnitToggle
           value={tempUnit}
@@ -140,7 +143,6 @@ export default function HeaterWattageCalculator() {
         <ResultMeaning>
           That wattage is the heater size for this temperature lift. It is not a guarantee the tank stays at the target if the room gets colder than the number you entered.
         </ResultMeaning>
-        <ResultPick siteId="fish-com" pick={heaterFromStockWatts(result.heaterPick)} />
         </>
       )}
     </div>
