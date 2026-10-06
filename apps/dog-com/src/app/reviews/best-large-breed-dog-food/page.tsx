@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for large breeds. Royal Canin Large Adult, Purina Pro Plan Large Breed.', path: '/reviews/best-large-breed-dog-food', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Large Breed Dog Food 2026', description: 'WSAVA-compliant large breed dog foods ranked for joint health and appropriate growth.', url: 'https://dog.com/reviews/best-large-breed-dog-food', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -25,6 +25,22 @@ export default function BestLargeBreedFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' label='Check price of Royal Canin Large Adult on Amazon' />
+        <EmailCapture
+          variant="inline"
+          siteId="dog-com"
+          addressOnly
+          title="Shopping checklist"
+          ctaText="Copy checklist"
+          source="reviews-best-large-breed-dog-food"
+          checklist={[
+            "Royal Canin Large Adult, marked Best Overall.",
+            "The card says its glucosamine level is not as high as Royal Canin.",
+            "Royal Canin Large Adult on this page is for dogs 55–100 lb, and Giant Adult is for dogs over 100 lb.",
+            "Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas.",
+            "Switch to an adult large-breed formula when the puppy food's feeding guide says growth is finished.",
+            "EPA from fish oil provides anti-inflammatory support for joints.",
+          ]}
+        />
         <div className="[&_.text-brand-primary]:!text-brand-dark">
           <QuickPicks items={PICKS} embedded />
         </div>
