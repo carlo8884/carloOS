@@ -232,7 +232,12 @@ export function HomeGuides() {
                   </span>
                   <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{s.name}</h3>
                 </div>
-                <p className="text-sm text-brand-text-mid">{s.note}</p>
+                <p className="text-sm text-brand-text-mid flex items-center gap-2">
+                  <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={s.imageKey} alt="" aspect="4:3" />
+                  </span>
+                  <span>{s.note}</span>
+                </p>
               </div>
             </Link>
           ))}

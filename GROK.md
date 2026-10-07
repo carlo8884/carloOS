@@ -1,4 +1,25 @@
-# GROK.md — CEO lane log (preview only, last chip 2026-10-07 11:03 PDT)
+# GROK.md — CEO lane log (preview only, last chip 2026-10-07 13:03 PDT)
+
+## 2026-10-07 ~13:03 PDT hour
+1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, start-band eyebrow, section action titles, how-we-work chip titles, calculator card CTAs, triage problem CTAs, and section headlines remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Label chips still do not repeat the photographer overlay. Species card notes (5 gal min · solitary · tropical, 10 gal min · schools 6+ · peaceful, 20 gal · schools 6+ · sand substrate, 30+ gal · highly bioloaded · long-lived) were title-only under the card photo; now a photo chip using the same manifest thumb already on that card (betta, neon tetra, corydoras, goldfish).
+2. Dog.com /join/pro + /trainers claimed-directory shells present and non-thin: apply form + claimed-only disclaimer; trainers empty-by-design with no fake listings. Left alone.
+3. Horses.com /inquire shared offer form intact and consistent with dog/fish InquireOfferScreen. Homepage stays photo-led. No homepage for-sale banner. Left alone this hour.
+4. Shared Footer inquire left alone.
+
+One real merged improvement: Fish.com species-card notes now reuse the existing manifest thumbs already on those cards, so the betta, neon tetra, corydoras, and goldfish parameter lines match the photo-led species titles. No new images, no doses, no sitemap.
+
+Preview URLs (Vercel):
+- https://carlo-os-fish-com.vercel.app/
+- https://dog-com-three.vercel.app/join/pro
+- https://dog-com-three.vercel.app/trainers
+- https://horses-com.vercel.app/inquire
+- https://horses-com.vercel.app/
+
+Policy held: no DNS, no fake trainers/DVMs/doses, no for-sale banners on dog/fish/horses, no sitemap regen.
+
+Carlo offline until next week. Recap logged here + email to carlo@tabibi.com.
+
+---
 
 ## 2026-10-07 ~11:03 PDT hour
 1. Fish.com homepage visual quality — hero still image-first, teal/green wash, dual CTAs, subject-forward planted aquarium matching dog.com (hero brand eyebrow left text-only so it stays matched to dog.com). Species cards, tank-planning rows, water-safety rows, equipment rows, calculator cards, triage cards, product-guide chips, how-we-work, math-strip, under-hero start band, trust chips, calculators header chip, tank-planning header chip, species header chip, math-strip header chip, triage header chip, trust header chip, water-safety header chip, equipment header chip, equipment eyebrow chip, start-band eyebrow, section action titles, how-we-work chip titles, calculator card CTAs, and triage problem CTAs remain photo-led. Hero credit left as the photographer's real display name (ק. פ.). Label chips still do not repeat the photographer overlay. Section headlines (Get a number, not just an article; Start with the right fish; Before you buy the tank; The parameters that actually matter; Gear that earns its place; Compared, not ranked by ad spend; Practical and source-grounded; New-tank setup and stocking) were title-only under the photo eyebrows; now a photo chip using the same manifest thumb already on that section, with no second credit overlay.
