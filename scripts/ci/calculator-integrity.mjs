@@ -651,7 +651,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1269,7 +1269,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+crinkle\+toy/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1286,7 +1286,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1303,7 +1303,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+cage\+hammock/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1322,7 +1322,7 @@ const CALCULATORS = [
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+ball\+pit\+balls\?s=behavior-digging-burrowing/, label: 'existing Chewy ball-pit hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1354,7 +1354,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1371,7 +1371,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1388,7 +1388,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12630,7 +12630,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=behavior-stress-signs/, label: 'existing ferret sleep-sack amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12646,7 +12646,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+vest\+harness\?s=behavior-leash-harness/, label: 'existing ferret vest-harness amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/ferret-harness-leash\?s=behavior-leash-harness/, label: 'existing Marshall H-style harness hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12678,7 +12678,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/snuffle\+mat\+small\+pet\?s=behavior-diy-enrichment/, label: 'existing snuffle-mat amazon-brand hop kept (do not re-ship a new query)' },
       { re: /marshall\/pop-n-play-tunnel\?s=behavior-diy-enrichment/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },

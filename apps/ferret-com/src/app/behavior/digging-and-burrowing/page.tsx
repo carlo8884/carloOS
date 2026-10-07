@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -9,7 +10,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -285,7 +285,7 @@ export default function FerretDiggingBurrowingPage() {
             usually settle it.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=digging-and-burrowing", "/go/marshall/pop-n-play-tunnel?s=behavior-digging-burrowing", "/go/chewy-brand/small+pet+ball+pit+balls?s=behavior-digging-burrowing"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -297,7 +297,7 @@ export default function FerretDIYEnrichmentPage() {
             guide</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/marshall/pop-n-play-tunnel?s=behavior-diy-enrichment", "/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"]} />
 
           <h2 id="picks">Ready-Made Picks</h2>
           <p>

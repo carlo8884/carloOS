@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -298,7 +298,7 @@ export default function FerretStressSignsPage() {
             <a href="/behavior/dead-sleep-explained">dead-sleep explainer</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs", "/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"]} />
 
           <h2 id="supplies">Comfort and Enrichment Supplies</h2>
           <p>
