@@ -64,7 +64,7 @@ function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { hre
           <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
             <StockImage manifestKey={imageKey} alt={imageAlt} aspect="4:3" subtleCredit />
           </span>
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary">{eyebrow}</span>
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">{eyebrow}</span>
         </div>
         <div className="mb-2 flex items-center gap-2.5">
           <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
@@ -73,7 +73,7 @@ function ToolCard({ href, eyebrow, title, desc, cta, imageKey, imageAlt }: { hre
           <h3 className="font-display font-bold text-white text-xl leading-tight italic">{title}</h3>
         </div>
         <p className="text-sm text-white/55 leading-relaxed mb-5">{desc}</p>
-        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-primary-light group-hover:gap-2.5 transition-all">
+        <span className="inline-flex items-center gap-1.5 text-sm font-bold text-[#3aa4cc] group-hover:gap-2.5 transition-all">
           {cta}
           <IconArrowRight />
         </span>
@@ -124,7 +124,7 @@ export function HomeGuides() {
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
                 </span>
-                <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Calculators & Tools</span>
+                <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Calculators & Tools</span>
               </Link>
             </div>
             <h2 className="font-display font-bold text-white tracking-tight italic mb-3 max-w-3xl" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
@@ -146,7 +146,7 @@ export function HomeGuides() {
                 <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                   <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
                 </span>
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All calculators</div>
               </div>
               <p className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, water change.</p>
             </div>
@@ -360,7 +360,7 @@ export function HomeGuides() {
                     <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                       <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
                     </span>
-                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Product guides</span>
+                    <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
                   </Link>
                 </div>
                 <h2 className="font-display font-bold text-white tracking-tight text-3xl italic">Compared, not ranked by ad spend.</h2>
@@ -377,7 +377,7 @@ export function HomeGuides() {
                     <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                       <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
                     </span>
-                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All product guides</div>
+                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">All product guides</div>
                   </div>
                   <p className="text-xs text-white/55 mt-0.5">Filters, heaters, lighting, test kits.</p>
                 </div>
@@ -399,7 +399,7 @@ export function HomeGuides() {
                       <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
                         <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
                       </span>
-                      <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">{item.title}</div>
+                      <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-[#3aa4cc]">{item.title}</div>
                     </div>
                     <p className="text-xs text-white/55 mt-1 leading-relaxed">{item.note}</p>
                   </div>
@@ -413,7 +413,7 @@ export function HomeGuides() {
             </div>
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="relative z-10 flex flex-col justify-end h-full min-h-[220px] p-5">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light mb-1">All product guides</div>
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] mb-1">All product guides</div>
               <div className="font-display font-bold text-white text-lg leading-tight italic">The gear that earns a place in your tank.</div>
             </div>
           </Link>

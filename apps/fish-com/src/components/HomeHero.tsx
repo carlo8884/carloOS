@@ -44,7 +44,7 @@ export function HomeHero() {
       <div className="relative z-10 flex flex-col justify-end min-h-[62vh] sm:min-h-[70vh] lg:min-h-[78vh] px-container-sm sm:px-container pt-16 pb-8 sm:pb-12">
         <div className="flex items-center gap-2.5 mb-4">
           <span className="w-6 h-0.5 bg-brand-primary" />
-          <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary-light">
+          <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">
             Fish.com &mdash; Tank control center
           </span>
         </div>
