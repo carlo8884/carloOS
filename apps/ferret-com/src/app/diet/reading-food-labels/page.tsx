@@ -225,7 +225,7 @@ export default function ReadingFoodLabelsPage() {
 
           <h2 id="picks">A Clean-Panel Example</h2>
           <p>
-            To see what a panel that passes all the checks above looks like, here is one commercial diet whose published ingredient list reads as named animal proteins with no grain or plant-protein filler. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
+            To see what a panel that passes the checks above looks like, here is one commercial diet whose printed ingredient list leads with chicken meal, organic chicken, and meat protein isolate and does not name wheat, corn, rice, or soy. The same list names chia seeds, dried apple fiber, and inulin, so it is not free of plant ingredients. No sugar is named on that list. Included on its documented panel as a worked example, not a hands-on test — apply the same reading method to any food you consider.
           </p>
           <ReviewCard quietUntilTag
             id="wysong-epigen-90"
@@ -238,11 +238,11 @@ export default function ReadingFoodLabelsPage() {
             }
             specs={[
               { label: 'Leading ingredients', value: 'Named meats', highlight: 'good' },
-              { label: 'Grain', value: 'None', highlight: 'good' },
-              { label: 'Added sugar', value: 'None', highlight: 'good' },
+              { label: 'Grain named', value: 'Wheat, corn, rice, and soy are not named', highlight: 'good' },
+              { label: 'Added sugar', value: 'No sugar is named on the printed list', highlight: 'good' },
               { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
             ]}
-            pros={['Named-meat ingredient panel', 'No grain or plant-protein filler', 'No added sugar', 'Clear worked example of a clean label']}
+            pros={['Named-meat ingredient panel', 'Printed list does not name wheat, corn, rice, or soy', 'No sugar is named on the printed list', 'The list also names chia, apple fiber, and inulin']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-06-01."

@@ -6,7 +6,7 @@ import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArtic
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Wysong Epigen 90 vs Marshall Kibble | Ferret.com',
-  description: 'Which ferret kibble to buy: Wysong Epigen 90 for the lower carb load, or Marshall Premium when you need a bag from chain retail.',
+  description: 'Wysong Epigen 90 is marketed as starch-free. Carbohydrate is not on the label. Marshall Premium is the chain-retail bag.',
   path: '/reviews/wysong-vs-marshall-kibble-guide',
   type: 'article',
 })
@@ -14,7 +14,7 @@ export const metadata: Metadata = buildMetadata({
 const schema = buildArticleSchema({
   siteId: 'ferret-com',
   title: 'Wysong Epigen 90 or Marshall Premium',
-  description: 'The kibble review already lists Wysong Epigen 90 for the lower carb load and Marshall Premium for chain retail.',
+  description: 'The kibble review lists Wysong Epigen 90 as starch-free on the current page. Carbohydrate is not on the guaranteed analysis.',
   url: 'https://ferret.com/reviews/wysong-vs-marshall-kibble-guide',
   imageUrl: '',
   authorName: 'Ferret.com Editorial',
@@ -44,7 +44,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
       schema={schema}
       hero={{
         title: 'Wysong Epigen 90 or Marshall Premium',
-        subtitle: 'The lowest commercial carb load and a chain-shelf bag are different purchases. Percentages and prices below are the ones on the kibble review.',
+        subtitle: 'A starch-free bag and a chain-shelf bag are different purchases. Carbohydrate is not on either guaranteed analysis. Percentages and prices below are the ones on the kibble review.',
         category: 'Buyer guide',
         authorName: 'Ferret.com Editorial',
         publishedAt: 'October 2026',
@@ -67,7 +67,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
       }
      priceAsOf="2026-10-07">
       <div className="carloOS-article">
-        <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already lists Wysong Epigen 90 as the premium, lower-carb pick and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. The percentages below are the ones printed in the review.</p>
+        <p>The <Link href="/diet/best-ferret-kibble">kibble review</Link> already lists Wysong Epigen 90 as the premium pick the current page markets as starch-free, and Marshall Premium as the mid-tier bag you are more likely to find in a chain aisle. Carbohydrate is not on either guaranteed analysis. The percentages below are the ones printed in the review.</p>
         <h2>What the review says about Wysong</h2>
         <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. The printed price is $30–50 for 5 lb. Distribution is direct and specialty retail, and it is not always stocked in chain pet aisles.</p>
         <h2>What the review says about Marshall</h2>
@@ -75,7 +75,7 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <p>The printed price is $15–25 for 4 lb. Distribution is national chain pet retail.</p>
         <p>The <Link href="/tools/food-evaluator">food evaluator</Link> is the place to check a guaranteed analysis you already have. Bring a guaranteed analysis you already have. Nothing here adds a new worksheet. The same review has a Carniwhole listing with no retail backup. This guide does not send you there.</p>
         <h2>Who should buy which bag</h2>
-        <p>Buy Wysong Epigen 90 when the lower commercial carb load is the priority and you can order it or find it at a specialty shop. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight, and you have read the higher carbohydrate and the plant protein on that listing. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
+        <p>Buy Wysong Epigen 90 when you want the bag the current page markets as starch-free and you can order it or find it at a specialty shop. Carbohydrate is not on that guaranteed analysis — check the label. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight. Carbohydrate is not on that guaranteed analysis either — check the label. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
         <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide" />
         <p>The link below opens the Wysong ferret food search already used on the diet pages. The price there is the retailer's.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide">Browse Wysong ferret food on Amazon →</a></p>

@@ -222,7 +222,7 @@ export default function WholePreyVsKibblePage() {
               { label: 'Food-safety risk', value: 'Low', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
-            pros={['Lowest commercial carb load in wide ferret use', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Good base for the middle path']}
+            pros={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Shelf-stable and sitter-friendly', 'Nutritionally consistent batch to batch', 'Marketed as starch-free']}
             cons={['Premium price', 'Less dental abrasion than whole prey']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-10-05."

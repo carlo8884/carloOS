@@ -190,7 +190,7 @@ export default function ProteinAndFatRequirementsPage() {
 
           <h2 id="picks">A Diet That Hits the Window</h2>
           <p>
-            The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble whose published panel lands close to the high-protein, very-low-carbohydrate target — included on its documented spec, not a hands-on test. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
+            The numbers above are abstract until you map them onto a real product. The diet below is a worked example of a commercial kibble included on its documented spec, not a hands-on test. Crude protein minimum 63% is above the floor on this page. Carbohydrate is not on the guaranteed analysis. The full evaluation method is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
           <ReviewCard quietUntilTag
             id="wysong-epigen-90"
@@ -207,7 +207,7 @@ export default function ProteinAndFatRequirementsPage() {
               { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Taurine', value: 'Supplemented', highlight: 'good' },
             ]}
-            pros={['Lands inside the target macro window', 'Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system']}
+            pros={['Crude protein min. 63% is above the 32–40% floor on this page. Crude fat min. 16% is under the 18–22% window.', 'Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-06-01."
