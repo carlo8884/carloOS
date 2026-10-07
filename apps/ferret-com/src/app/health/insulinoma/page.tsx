@@ -162,6 +162,7 @@ export default function FerretInsulinomaPage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
                 { label: 'Adrenal Disease', href: '/health/adrenal-disease' },
                 { label: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
                 { label: 'Protein & Fat Requirements', href: '/diet/protein-and-fat-requirements' },
@@ -201,6 +202,7 @@ export default function FerretInsulinomaPage() {
           { title: 'Emergency Warning Signs', href: '/health/emergency-warning-signs' },
           { title: 'Ferret Diet Hub', href: '/diet' },
           { title: 'Weight Management', href: '/diet/weight-management' },
+          { title: 'Ferret Age Calculator', href: '/tools/ferret-age-calculator' },
         ]}
  priceAsOf="2026-05-30">
         <div className="carloOS-article">
@@ -256,6 +258,13 @@ export default function FerretInsulinomaPage() {
           <h2 id="epidemiology">Who Gets It</h2>
           <p>
             Insulinoma is most commonly diagnosed in ferrets aged roughly 3 to 7 years, although cases are reported in younger and older animals. There is no consistent sex predisposition in the published literature. In North American pet ferret populations — most of which originate from a small number of large commercial breeders — case series suggest insulinoma is encountered in a substantial fraction of middle-aged animals seen by exotic-mammal specialists.
+          </p>
+          <p>
+            The{' '}
+            <a href="/tools/ferret-age-calculator" className="text-brand-primary underline underline-offset-2">
+              Ferret Age Calculator
+            </a>{' '}
+            places a calendar age on the same life-stage bands, so a 3-to-7-year window is a stage label rather than a surprise.
           </p>
           <p>
             The leading working hypothesis for the unusually high prevalence in domestic ferrets is chronic dietary carbohydrate exposure driving sustained insulin demand and eventual beta-cell hyperplasia. The American Ferret Association (AFA) and exotic-pet veterinary references both flag minimizing dietary carbohydrate as the primary lifestyle-level risk-reduction strategy. The evidence is associational rather than experimentally proven.
