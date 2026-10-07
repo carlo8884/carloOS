@@ -192,8 +192,8 @@ export default function LitterPlannerPage() {
               <Link href="/tools/cage-size-calculator" className="text-brand-primary underline-offset-2 hover:underline">
                 cage size calculator
               </Link>
-              . Paper-pellet (Yesterday&apos;s News class) is the default type;
-              shop the review for the criteria. These are category searches, not
+              . Paper pellets are the default type on the review. Purina discontinued Yesterday&apos;s News on April 20, 2022.
+              Shop the review for the criteria. These are category searches, not
               a ranked product list.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas

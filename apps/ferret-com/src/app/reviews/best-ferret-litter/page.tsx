@@ -119,7 +119,7 @@ export default function BestFerretLitterPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News recycled paper pellet litter on Amazon"} />}
+        heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Open the existing paper-pellet search. Purina discontinued Yesterday's News in April 2022."} />}
         heroExtra={
           <>
           <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
@@ -285,7 +285,7 @@ export default function BestFerretLitterPage() {
             subtitle="Low-dust, non-clumping, soft on feet — the default ferret litter"
             winner
             description={
-              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy this.</p>
+              <p>The default recommendation for ferrets. Recycled-paper pellets are low-dust, non-clumping, absorbent, and soft enough on the feet that ferrets accept them readily. There are no clumping agents to swallow and no fine respiratory dust. The trade-offs are moderate odor control versus heavily perfumed cat litters and the need to change rather than scoop-and-top-up — both easily acceptable given the safety profile. If you buy one litter without overthinking it, buy a current recycled-paper pellet. Purina discontinued Yesterday&apos;s News on April 20, 2022, and closed the plant that June. This button opens the existing search for that discontinued name. It is not a current formula.</p>
             }
             specs={[
               { label: 'Dust', value: 'Very low', highlight: 'good' },
@@ -297,7 +297,7 @@ export default function BestFerretLitterPage() {
             pros={['Very low dust', 'Fully non-clumping', 'Soft and well accepted', 'No ingestion or inhalation hazard', 'Widely available']}
             cons={['Moderate odor control', 'Change rather than scoop', 'Lighter pellets can scatter']}
             price="$$"
-            ctaText="Check price of Yesterday's News recycled paper pellet litter on Amazon"
+            ctaText="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
             ctaHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="paper-pellet-litter"

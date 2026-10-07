@@ -217,8 +217,10 @@ export default function FerretTrainingBondingPage() {
               is unlikely to return to it.
             </li>
             <li>
-              <strong>Paper-pellet litter</strong> (Yesterday&apos;s News,
-              CareFresh) or non-aromatic wood pellets. No clumping clay
+              <strong>Paper-pellet litter</strong> (CareFresh, or
+              another recycled-paper pellet still being made) or
+              non-aromatic wood pellets. Purina discontinued
+              Yesterday&apos;s News on April 20, 2022. No clumping clay
               (sodium bentonite ingestion risk) and no aromatic softwood
               shavings (respiratory irritation).
             </li>

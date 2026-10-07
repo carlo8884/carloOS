@@ -76,10 +76,10 @@ export default function PaperVsWoodLitterGuidePage() {
         <h2>Who should buy which</h2>
         <p>Buy paper pellets for most ferrets. Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent. Buy grass pellets only when the ferret refuses the other two textures. Do not “upgrade” any of them to a clumping, perfumed cat litter. The review treats that swap as trading a safety margin for a cosmetic one.</p>
         <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
-        <p>The link below searches for the paper-pellet litter from the review, the usual pick.</p>
+        <p>The link below is the existing paper-pellet search from the review. Purina discontinued Yesterday’s News on April 20, 2022, so that name is not a current formula.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
-          amazonLabel="Find Yesterday's News recycled paper pellet litter on Amazon →"
+          amazonLabel="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
         />
         <EmailCapture
           variant="inline"
