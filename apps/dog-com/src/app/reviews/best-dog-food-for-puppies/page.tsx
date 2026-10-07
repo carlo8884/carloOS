@@ -108,17 +108,17 @@ export default function BestPuppyFoodPage() {
               subtitle="Most researched puppy formula · Breed-specific lines · 600+ scientists"
               winner
               description={<div>
-                <p>Royal Canin is the most research-intensive pet food manufacturer — 600+ scientists including board-certified veterinary nutritionists, continuous feeding trial programs, and breed-specific formula lines developed from morphological and metabolic research on individual breeds. The Large Breed Puppy formula has a precisely controlled calcium level (1.0–1.3% DM) within the safe range for large breed skeletal development, EPA and DHA for brain and vision development, and an antioxidant complex supporting immune development.</p>
+                <p>Royal Canin is the most research-intensive pet food manufacturer — 600+ scientists including board-certified veterinary nutritionists, continuous feeding trial programs, and breed-specific formula lines developed from morphological and metabolic research on individual breeds. The current Royal Canin Large Puppy guaranteed analysis does not print a calcium percentage. Check the label. The formula page still lists EPA and DHA among the added nutrients.</p>
                 <p>Royal Canin also makes breed-specific puppy formulas (German Shepherd Puppy, Golden Retriever Puppy, Labrador Retriever Puppy) for the most common large breeds — these incorporate breed-specific nutritional and digestive considerations. If your puppy is a recognized breed with a Royal Canin specific formula, that is the top recommendation.</p>
               </div>}
               specs={[
                 { label: 'WSAVA Compliant', value: 'Yes — highest tier', highlight: 'good' },
                 { label: 'AAFCO', value: 'Feeding trial substantiated', highlight: 'good' },
-                { label: 'Calcium (DM)', value: '1.0–1.3% (large breed safe range)', highlight: 'good' },
+                { label: 'Calcium', value: 'Not on the current guaranteed analysis. Check the label.' },
                 { label: 'Vet Nutritionists', value: '600+ scientists on staff', highlight: 'good' },
                 { label: 'Breed-Specific Lines', value: 'Available for many breeds', highlight: 'good' },
               ]}
-              pros={['Most research-intensive manufacturer', 'Breed-specific formulas available', 'Controlled calcium for safe large breed development', 'AAFCO feeding trial substantiated', 'EPA/DHA for brain development']}
+              pros={['Most research-intensive manufacturer', 'Breed-specific formulas available', 'Check the calcium line on the current label', 'AAFCO feeding trial substantiated', 'EPA/DHA for brain development']}
               cons={['Higher price than Purina or Hill\'s', 'Some dogs do not like the kibble shape', 'Must transition to RC adult at appropriate age']}
               price="$65–90 per 30 lb bag"
               priceNote="dated 2026-10-05."

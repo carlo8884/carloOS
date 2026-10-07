@@ -62,14 +62,14 @@ export default function BestDentalChewsPage() {
               siteId="dog-com"
               nextHref="/tools/dog-calorie-calculator"
               nextLabel="Subtract the chew calories before you add a daily Greenie"
-              nextBlurb="The callout is the VOHC filter — seal first, then count the 25–90 kcal on the bag so the chew does not become a hidden meal. The calorie calculator is the next step: daily energy, then subtract one chew. The hop below is the same Greenies search already on this page."
+              nextBlurb="The callout is the VOHC filter — seal first, then count the printed size calories on the bag so the chew does not become a hidden meal. The calorie calculator is the next step: daily energy, then subtract one chew. The hop below is the same Greenies search already on this page."
               resourceHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               resourceLabel="Browse Greenies dental chews on Amazon →"
             />
             <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews", "/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"]} />
             <ReviewCard id="greenies" badge="Best Overall" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" winner
-              description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
-              specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
+              description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories. The current feeding guides say to subtract 25 kcal for a Teenie, 52 kcal for a Petite, 88 kcal for a Regular, and 142 kcal for a Large.</p>}
+              specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: 'Teenie 25, Petite 52, Regular 88, Large 142 kcal' }]}
               pros={['VOHC accepted (plaque + tartar)', 'Often used by vets', 'Pliable — tooth-safe', 'Full size range', 'Dogs love the taste']}
               cons={['Must count calories', 'Some dogs wolf them down too fast for dental benefit', 'Not ideal for dogs with wheat sensitivity (contains wheat)']}
               price="$25–35 / 27-count"
@@ -114,7 +114,7 @@ export default function BestDentalChewsPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A daily chew with VOHC acceptance for plaque and tartar</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#greenies" className="text-brand-primary">Greenies Original</a><TableShopLink href={"/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"} product={"Greenies Original"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. Pliable. Teenie through large. $25–35 / 27-count. 25–90 calories by size</td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. Pliable. Teenie through large. $25–35 / 27-count. Teenie 25, Petite 52, Regular 88, Large 142 kcal</td>
                       <td className="p-3 text-brand-text-mid">Wheat sensitivity. The card says they contain wheat. Count the calories, and a dog that swallows them gets less dental contact</td>
                     </tr>
                     <tr className="border-b border-brand-border">
@@ -131,7 +131,7 @@ export default function BestDentalChewsPage() {
               <FAQAccordion items={[
                 {
                   question: 'Which chew does this page pick for a VOHC plaque and tartar claim?',
-                  answer: 'Greenies Original, marked Best Overall. The card lists a pliable texture, sizes from teenie through large, a printed price of $25–35 for a 27-count, and 25–90 calories by size. It contains wheat. A dog that swallows the chew gets less dental contact.',
+                  answer: 'Greenies Original, marked Best Overall. The card lists a pliable texture, sizes from teenie through large, a printed price of $25–35 for a 27-count, and Teenie 25, Petite 52, Regular 88, Large 142 kcal. It contains wheat. A dog that swallows the chew gets less dental contact.',
                 },
                 {
                   question: 'Which chew does this page pick when you want a plant-based chew?',
