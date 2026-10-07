@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -86,7 +87,7 @@ export default function PreExistingPage() {
             does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pressboard+classification+folder?s=insurance-pre-existing-conditions", "/go/amazon-brand/clasp+envelope+letter+size?s=insurance-pre-existing-conditions", "/go/amazon-brand/red+and+blue+checking+pencil?s=insurance-pre-existing-conditions"]} />
 
           {/* Money path — live amazon-brand search hops
               (pressboard classification folder /
@@ -140,7 +141,7 @@ export default function PreExistingPage() {
 
           <h2 id="quote">Carriers and Curable Conditions</h2>
           <p>Insurers differ in how they handle <em>curable</em> pre-existing conditions — some will cover a resolved, symptom-free condition again after a defined waiting window, while permanent (incurable) conditions stay excluded everywhere. The two below are worth quoting on that distinction; read each policy&apos;s exact definition, and see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a> for the full picture.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/embrace/home?s=insurance-pre-existing-conditions", "/go/aspca/home?s=insurance-pre-existing-conditions"]} />
           <ReviewCard
             id="embrace"
             badge="Curable-Condition Policy"

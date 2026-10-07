@@ -105,8 +105,3 @@ apps/vets-co/src/app/breeds/husky-health/page.tsx
 apps/vets-co/src/app/breeds/labrador-health/page.tsx
 apps/vets-co/src/app/breeds/pomeranian-health/page.tsx
 apps/vets-co/src/app/breeds/yorkshire-terrier-health/page.tsx
-apps/vets-co/src/app/insurance/breed-specific-risk/page.tsx
-apps/vets-co/src/app/insurance/how-pet-insurance-works/page.tsx
-apps/vets-co/src/app/insurance/pre-existing-conditions/page.tsx
-apps/vets-co/src/app/insurance/reading-the-fine-print/page.tsx
-apps/vets-co/src/app/insurance/when-to-enroll/page.tsx

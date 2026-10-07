@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, RelatedReads, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Enroll Your Pet in Insurance | Vets.co", description: "The best time to get pet insurance is when your pet is young and healthy. Learn why enrolling early matters, and how to think about insuring senior pets.", path: '/insurance/when-to-enroll', type: 'article' })
@@ -82,7 +83,7 @@ export default function WhenToEnrollPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/monthly+desk+pad+calendar?s=insurance-when-to-enroll", "/go/amazon-brand/self+inking+date+stamp?s=insurance-when-to-enroll", "/go/amazon-brand/letter+size+file+jacket?s=insurance-when-to-enroll"]} />
 
           {/* Money path — live amazon-brand search hops
               (monthly desk pad calendar /
@@ -140,7 +141,7 @@ export default function WhenToEnrollPage() {
 
           <h2 id="quote">Carriers to Quote Early</h2>
           <p>Because premiums are lowest and exclusions fewest when pets are young, the practical move is to get a quote now rather than wait. The two below are worth pricing across life stages; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>. Read each policy&apos;s pre-existing-condition definition before enrolling.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/lemonade/home?s=insurance-when-to-enroll", "/go/pets-best/home?s=insurance-when-to-enroll"]} />
           <ReviewCard
             id="lemonade"
             badge="Young-Pet Value"
