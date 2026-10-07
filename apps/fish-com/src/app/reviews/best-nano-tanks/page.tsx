@@ -27,7 +27,7 @@ export default function BestNanoTanksPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer's Guide</span>
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
         <EmailCapture
@@ -89,7 +89,7 @@ export default function BestNanoTanksPage() {
             />
             <ReviewCard id="aqueon-10" badge="Best 10 Gallon" name="Aqueon 10-Gallon Standard Aquarium" subtitle="Bare tank · Add your own equipment · Most versatile nano size"
               description={<p>The bare 10-gallon glass aquarium is the most versatile and cost-effective nano tank — pair it with your choice of filter (sponge filter for shrimp, HOB for community fish), heater, and light for a customizable setup. The 10-gallon long footprint (20"×10"×12") gives enough horizontal space for a small community (5 neon tetras + 3 corydoras, or a betta + tankmates). Available everywhere, easily replaced if broken, and cheap enough that damage is not a crisis.</p>}
-              specs={[{ label: 'Volume', value: '10 gallons' }, { label: 'Type', value: 'Bare tank — add your equipment' }, { label: 'Footprint', value: '20" × 10" × 12"' }, { label: 'Best for', value: 'First fish tank, betta, small community' }]}
+              specs={[{ label: 'Volume', value: '10 gallons' }, { label: 'Type', value: 'Bare tank — add your equipment' }, { label: 'Footprint', value: '20¼" × 10½" × 12 9/16"' }, { label: 'Best for', value: 'First fish tank, betta, small community' }]}
               pros={['Affordable', 'Versatile — any equipment combination', 'Widely available', 'Easier to maintain than 5-gallon']}
               cons={['No equipment included', 'Requires separate filter, heater, light purchases']}
               price="$20–30"
@@ -100,8 +100,8 @@ export default function BestNanoTanksPage() {
               ctaAffiliateProduct="aqueon-10-gallon"
             />
             <ReviewCard id="aqueon-20" badge="Best Overall Nano" name="Aqueon 20-Gallon Long" subtitle="Best beginner community tank size · Long footprint · Widely available"
-              description={<p>The 20-gallon long (30"×12"×12") is the best starter aquarium size — large enough for a proper community (8 neon tetras, 6 Corydoras, a centerpiece fish), stable enough to forgive beginner water quality mistakes, and affordable enough to equip completely without breaking the budget. The long footprint provides territorial separation that tall tanks do not. If someone asks what tank they should buy as their first, the answer is almost always the 20-gallon long.</p>}
-              specs={[{ label: 'Volume', value: '20 gallons' }, { label: 'Footprint', value: '30" × 12" × 12" (long)' }, { label: 'Best for', value: 'First community tank, planted tank' }, { label: 'Stability', value: 'Most forgiving nano size', highlight: 'good' }]}
+              description={<p>The 20-gallon long (30¼"×12½"×12¾") is the best starter aquarium size — large enough for a proper community (8 neon tetras, 6 Corydoras, a centerpiece fish), stable enough to forgive beginner water quality mistakes, and affordable enough to equip completely without breaking the budget. The long footprint provides territorial separation that tall tanks do not. If someone asks what tank they should buy as their first, the answer is almost always the 20-gallon long.</p>}
+              specs={[{ label: 'Volume', value: '20 gallons' }, { label: 'Footprint', value: '30¼" × 12½" × 12¾" (long)' }, { label: 'Best for', value: 'First community tank, planted tank' }, { label: 'Stability', value: 'Most forgiving nano size', highlight: 'good' }]}
               pros={['Most forgiving beginner size', 'Community-capable', 'Long footprint excellent for planted', 'Affordable']}
               cons={['No equipment included', 'Requires 20-gallon-rated filter, heater, light']}
               price="$30–50"
@@ -136,13 +136,13 @@ export default function BestNanoTanksPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A bare 10-gallon you will equip yourself</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-10" className="text-brand-primary">Aqueon 10-gallon</a><TableShopLink href={"/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 10-gallon"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20&quot; × 10&quot; × 12&quot;. No equipment in the box. $20–30</td>
+                      <td className="p-3 text-brand-text-mid">Best 10 Gallon. 20¼&quot; × 10½&quot; × 12 9/16&quot;. No equipment in the box. $20–30</td>
                       <td className="p-3 text-brand-text-mid">You want a kit. Filter, heater, and light are separate purchases</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A first community or planted tank</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#aqueon-20" className="text-brand-primary">Aqueon 20-gallon long</a><TableShopLink href={"/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"} product={"Aqueon 20-gallon long"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall Nano. 30&quot; × 12&quot; × 12&quot;. $30–50</td>
+                      <td className="p-3 text-brand-text-mid">Best Overall Nano. 30¼&quot; × 12½&quot; × 12¾&quot;. $30–50</td>
                       <td className="p-3 text-brand-text-mid">You want equipment in the box. The card says you still need a 20-gallon-rated filter, heater, and light</td>
                     </tr>
                   </tbody>

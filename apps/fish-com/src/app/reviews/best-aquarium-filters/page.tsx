@@ -60,7 +60,7 @@ export default function BestAquariumFiltersPage() {
           style={{ fontSize: 'clamp(24px, 4vw, 46px)' }}>
           Best Aquarium Filters 2026 — HOB, Canister & Sponge Ranked
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
         <EmailCapture
@@ -132,7 +132,7 @@ export default function BestAquariumFiltersPage() {
               specs={[
                 { label: 'Type', value: 'Hang-on-back' },
                 { label: 'Flow Rate', value: '300 GPH', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 70 gallons' },
+                { label: 'For Tanks', value: '40–70 US gallons' },
                 { label: 'Media', value: 'Refillable — any media', highlight: 'good' },
                 { label: 'Noise', value: 'Low (at correct level)', highlight: 'good' },
                 { label: 'Maintenance', value: 'Monthly rinse, quarterly impeller' },
@@ -152,11 +152,11 @@ export default function BestAquariumFiltersPage() {
               badge="Best Canister"
               name="Fluval 307 Canister Filter"
               subtitle="Near-silent · Excellent biological capacity · Self-priming"
-              description={<p>The Fluval 307 is the correct choice for tanks 40–70 gallons requiring high biological filtration. At 303 GPH with a media volume of 780g, it outperforms most HOB filters at this tank size. The self-priming mechanism (push-button) makes startup and post-maintenance restart simple. Near-silent operation — the 307 runs quieter than most HOBs. The maintenance cycle is longer (every 3–6 months vs monthly for HOBs) because the large media volume takes longer to clog. The tradeoff: cleaning day is more involved.</p>}
+              description={<p>The Fluval 307 is the canister for tanks in the 40–70 US gallon range. Pump output is 303 US GPH. Filter circulation is 206 US GPH. Basket volume is 3.1 L. The self-priming mechanism (push-button) makes startup and post-maintenance restart simple. Near-silent operation — the 307 runs quieter than most HOBs. The maintenance cycle is longer (every 3–6 months vs monthly for HOBs) because the large media volume takes longer to clog. The tradeoff: cleaning day is more involved.</p>}
               specs={[
                 { label: 'Type', value: 'Canister' },
-                { label: 'Flow Rate', value: '303 GPH', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 70 gallons' },
+                { label: 'Flow Rate', value: 'Pump output 303 US GPH. Circulation 206 US GPH.', highlight: 'good' },
+                { label: 'For Tanks', value: '40–70 US gallons' },
                 { label: 'Noise', value: 'Near-silent', highlight: 'good' },
                 { label: 'Self-Priming', value: 'Yes — button', highlight: 'good' },
                 { label: 'Cleaning', value: 'Every 3–6 months' },
@@ -203,7 +203,7 @@ export default function BestAquariumFiltersPage() {
               description={<p>The Aqueon QuietFlow 30 is the most widely available budget HOB filter — found at every pet store, reliable, and functional for smaller tanks. The LED indicator light that signals when the cartridge needs replacement is a useful feature for beginners. Main limitation: the proprietary cartridge system requires purchasing Aqueon replacement cartridges rather than custom media. For beginners who prefer a simpler maintenance workflow, this is a minor concern. For keepers who want to optimize biological filtration, upgrade to the AquaClear.</p>}
               specs={[
                 { label: 'Price', value: '$25–40', highlight: 'good' },
-                { label: 'For Tanks', value: 'Up to 30 gallons' },
+                { label: 'For Tanks', value: 'See the manufacturer\'s current page' },
                 { label: 'Indicator', value: 'LED cartridge alert', highlight: 'good' },
                 { label: 'Media', value: 'Proprietary cartridge', highlight: 'warn' },
                 { label: 'Availability', value: 'Every pet store', highlight: 'good' },
@@ -241,7 +241,7 @@ export default function BestAquariumFiltersPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">40–70 gallons with a high bioload, and cabinet space</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#fluval" className="text-brand-primary">Fluval 307</a><TableShopLink href={"/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters"} product={"Fluval 307"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best canister. 303 GPH. Near-silent. $120–160</td>
+                      <td className="p-3 text-brand-text-mid">Best canister. Pump output 303 US GPH. Circulation 206 US GPH. Near-silent. $120–160</td>
                       <td className="p-3 text-brand-text-mid">Cleaning day is more involved than a hang-on-back</td>
                     </tr>
                     <tr className="border-b border-brand-border">
@@ -251,7 +251,7 @@ export default function BestAquariumFiltersPage() {
                       <td className="p-3 text-brand-text-mid">Not enough mechanical filtration to run a larger tank alone</td>
                     </tr>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">Up to 30 gallons, and you want the cheapest widely stocked HOB</td>
+                      <td className="p-3 text-brand-text-mid">See the manufacturer's current page for the gallon rating, and you want the cheapest widely stocked HOB</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#aqueon" className="text-brand-primary">Aqueon QuietFlow 30</a><TableShopLink href={"/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"} product={"Aqueon QuietFlow 30"} /></td>
                       <td className="p-3 text-brand-text-mid">Best budget HOB. $25–40. Proprietary cartridge</td>
                       <td className="p-3 text-brand-text-mid">Less biological capacity than the AquaClear. Cartridge lock-in</td>

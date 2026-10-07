@@ -27,7 +27,7 @@ const articleSchema = buildArticleSchema({
 const eheimSchema = buildProductSchema({
   name: 'Eheim Jager TruTemp',
   description:
-    'Submersible aquarium heater with ±0.5°F accuracy, recalibration dial, and auto shut-off — Fish.com Best Overall pick.',
+    'Submersible aquarium heater with ±0.5°C accuracy, recalibration dial, and auto shut-off — Fish.com Best Overall pick.',
   url: 'https://fish.com/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters',
   imageUrl: '',
 })
@@ -51,7 +51,7 @@ const itemList = buildItemListSchema({
 // FAQ content derived from this page's comparison criteria and sizing guidance only.
 const FAQS = [
   { question: 'What size heater does my aquarium need?', answer: 'As a rule of thumb: 25–50W for a 5-gallon tank, 50–100W for 10–20 gallons, 100–150W for 30–40 gallons, 200–250W for 50–75 gallons, and 300W or more for 100+ gallons. Buy slightly above the minimum — an undersized heater running continuously at maximum output wears out faster. On larger tanks, two smaller heaters split across opposite ends also provide redundancy if one fails.' },
-  { question: 'Which aquarium heater is the most accurate?', answer: 'Per manufacturer-published specs, the Eheim Jager TruTemp and Cobalt Neo-Therm Pro both hold roughly ±0.5°F of the set point — the tightest tolerance among the heaters compared here. The Jager adds a recalibration dial to compensate for drift over time. Budget heaters like the Aqueon Pro run closer to ±1–1.5°F, which is acceptable for robust community fish but not for temperature-sensitive species such as discus or cardinal tetras.' },
+  { question: 'Which aquarium heater is the most accurate?', answer: 'The current Eheim page prints temperature control accuracy of ±0.5°C. Cobalt Neo-Therm accuracy: see the manufacturer\'s current page. Aqueon Pro accuracy: see the manufacturer\'s current page. The Jager adds a recalibration dial.' },
   { question: 'Do I still need a thermometer if my heater has a built-in thermostat?', answer: 'Yes. Every heater dial is an approximation, and even the best heaters can drift or fail. Always verify actual water temperature with a separate calibrated thermometer — set the heater, confirm with the thermometer, and adjust as needed. Check the temperature daily for the first week after installation, then weekly.' },
   { question: 'How were these aquarium heaters ranked?', answer: 'The heaters in this comparison were ranked on manufacturer-published accuracy specs, safety features such as auto shut-off when removed from water, construction (glass versus shatterproof housings), and aggregated long-term keeper reports — not on hands-on lab testing. Affiliate links appear on this page, but rankings are independent of commissions.' },
 ]
@@ -66,7 +66,7 @@ export default function BestHeatersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Aquarium Heaters 2026 — Ranked for Temperature Accuracy
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
         <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
         <EmailCapture
@@ -133,18 +133,18 @@ export default function BestHeatersPage() {
               subtitle="Most accurate on published spec · Recalibratable · German engineering"
               winner
               description={<div>
-                <p>The Eheim Jager is the standard against which other aquarium heaters are measured. Per manufacturer-published accuracy and aggregated keeper reports, the Jager holds temperature within ±0.5°F of the set point — the tightest tolerance among the heaters compared here. The recalibration dial (the small wheel on the side, separate from the main dial) allows fine-tuning to compensate for any drift over time.</p>
+                <p>The Eheim Jager is the standard against which other aquarium heaters are measured. The current Eheim page prints temperature control accuracy of ±0.5°C. The recalibration dial (the small wheel on the side, separate from the main dial) allows fine-tuning to compensate for any drift over time.</p>
                 <p>The Jager also has an auto shut-off when removed from water — critical for preventing the heater from burning out during water changes when it can inadvertently run in air. Glass construction means it can shatter if dropped, but the thermal stability and accuracy justify the premium position.</p>
               </div>}
               specs={[
-                { label: 'Accuracy', value: '±0.5°F', highlight: 'good' },
+                { label: 'Accuracy', value: '±0.5°C', highlight: 'good' },
                 { label: 'Recalibratable', value: 'Yes', highlight: 'good' },
                 { label: 'Auto Shut-Off', value: 'When removed from water', highlight: 'good' },
                 { label: 'Construction', value: 'Glass (careful handling)' },
                 { label: 'Made In', value: 'Germany' },
                 { label: 'Sizes', value: '25W to 300W' },
               ]}
-              pros={['Most accurate on published spec (±0.5°F)', 'Recalibratable — compensates for drift', 'Auto shut-off prevents burn-out', 'Long track record of reliability', 'Full wattage range available']}
+              pros={['Published accuracy is ±0.5°C', 'Recalibratable — compensates for drift', 'Auto shut-off prevents burn-out', 'Long track record of reliability', 'Full wattage range available']}
               cons={['Glass construction — can shatter', 'Dial is approximate (calibration required)', 'Larger footprint than flat heaters']}
               price="$25–55"
               priceNote="By wattage dated 2026-10-04."
@@ -158,10 +158,10 @@ export default function BestHeatersPage() {
               id="cobalt"
               badge="Best Flat Design"
               name="Cobalt Aquatics Neo-Therm Pro"
-              subtitle="Slim flat design · LED color indicator · ±0.5°F accuracy"
-              description={<p>The Neo-Therm Pro matches the Eheim Jager in accuracy (±0.5°F per manufacturer-published accuracy) in a flat form factor that is significantly less obtrusive in planted tanks or display aquariums where a traditional cylindrical heater disrupts the aesthetic. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</p>}
+              subtitle="Slim flat design · LED color indicator · See the manufacturer's current page"
+              description={<p>Neo-Therm accuracy: see the manufacturer's current page. This card does not copy the Eheim figure onto Cobalt. The flat body is less obtrusive in a planted or display tank than a cylinder. The LED color indicator transitions through blue (heating) to white (at temperature) — functional at a glance. Shatterproof plastic housing removes the main physical risk of the glass Jager. The one tradeoff: the Neo-Therm is more expensive than the Eheim Jager for equivalent performance. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</p>}
               specs={[
-                { label: 'Accuracy', value: '±0.5°F', highlight: 'good' },
+                { label: 'Accuracy', value: "See the manufacturer's current page" },
                 { label: 'Design', value: 'Flat / slim profile', highlight: 'good' },
                 { label: 'Indicator', value: 'LED color (blue → white)', highlight: 'good' },
                 { label: 'Housing', value: 'Shatterproof plastic', highlight: 'good' },
@@ -238,13 +238,13 @@ export default function BestHeatersPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The tightest published tolerance, and a recalibration dial</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#eheim" className="text-brand-primary">Eheim Jager</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. ±0.5°F. Auto shut-off out of water. $25–55 by wattage. 25W–300W</td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. ±0.5°C. Auto shut-off out of water. $25–55 by wattage. 25W–300W</td>
                       <td className="p-3 text-brand-text-mid">Glass. It can shatter if dropped</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The same published accuracy in a display tank</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#cobalt" className="text-brand-primary">Cobalt Neo-Therm Pro</a><TableShopLink href={"/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters"} product={"Eheim Jager"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best flat design. ±0.5°F. Shatterproof plastic. $35–65</td>
+                      <td className="p-3 text-brand-text-mid">Best flat design. See the manufacturer's current page. Shatterproof plastic. $35–65</td>
                       <td className="p-3 text-brand-text-mid">More expensive than the Jager, and not recalibratable. The Cobalt search currently returns no products, so the shop link goes to the Eheim Jager.</td>
                     </tr>
                     <tr className="border-b border-brand-border">
