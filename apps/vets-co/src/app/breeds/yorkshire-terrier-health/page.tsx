@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,6 @@ import {
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -327,7 +327,7 @@ export default function VetsYorkshireTerrierHealthPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/two+column+ledger+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/30+day+habit+tracker+pad?s=breeds-yorkshire-terrier-health", "/go/amazon-brand/hourly+desk+pad?s=breeds-yorkshire-terrier-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (two-column ledger pad /

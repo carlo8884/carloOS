@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -156,7 +157,7 @@ export default function VetsGoldenRetrieverHealthPage() {
         <h2 id="kit">Golden-retriever-health kit</h2>
         <p>These are educational Golden-retriever-health / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/paint+chip+sample+cards?s=breeds-golden-retriever-health", "/go/amazon-brand/18+month+wall+calendar?s=breeds-golden-retriever-health"]} />
 
         {/* Money path — live amazon-brand search hops
             (dot-grid notebook /

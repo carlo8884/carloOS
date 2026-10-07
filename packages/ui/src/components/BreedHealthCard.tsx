@@ -42,10 +42,10 @@ export function BreedHealthCard({
       className="rounded-xl p-6 mb-4"
       style={{ background: risk.bg, border: `1px solid ${risk.border}` }}
     >
-      <div className="flex items-start justify-between gap-4 mb-3">
-        <h3 className="font-display font-bold text-brand-dark text-lg m-0">{name}</h3>
+      <div className="flex flex-col gap-2 mb-3 sm:flex-row sm:items-start sm:justify-between sm:gap-4">
+        <h3 className="font-display font-bold text-brand-dark text-lg m-0 break-words">{name}</h3>
         <span
-          className="text-2xs font-bold tracking-wider uppercase px-3 py-1 rounded-pill flex-shrink-0"
+          className="self-start text-2xs font-bold tracking-wider uppercase px-3 py-1 rounded-pill sm:flex-shrink-0"
           style={{ background: `${risk.bg}`, color: risk.text, border: `1px solid ${risk.border}` }}
         >
           {risk.label}

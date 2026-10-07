@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -122,7 +123,7 @@ export default function VetsFrenchBulldogHealthPage() {
           claim hands-on testing.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+tab+dividers?s=breeds-french-bulldog-health", "/go/amazon-brand/analog+outdoor+thermometer?s=breeds-french-bulldog-health", "/go/amazon-brand/weekly+checklist+notepad?s=breeds-french-bulldog-health"]} />
 
         {/* Money path — live amazon-brand search hops
             (four-tab dividers /
@@ -166,9 +167,7 @@ export default function VetsFrenchBulldogHealthPage() {
             dog-com Frenchie cooling hop, they are
             not a financing-brand or insurance-
             brand hop, and they do not replace a
-            veterinarian. Vets.co earns a
-            commission on qualifying purchases at
-            no extra cost to you.
+            veterinarian.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

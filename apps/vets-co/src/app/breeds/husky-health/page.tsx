@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,6 @@ import {
   ArticleLayout, CrossPortfolioCard,
   RelatedLinks,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   CrossSiteHelp,
 } from '@carloOS/ui'
@@ -349,7 +349,7 @@ export default function VetsHuskyHealthPage() {
             hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/academic+year+planner?s=breeds-husky-health", "/go/amazon-brand/8+column+columnar+pad?s=breeds-husky-health", "/go/amazon-brand/newsprint+sketch+pad?s=breeds-husky-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (academic-year planner /

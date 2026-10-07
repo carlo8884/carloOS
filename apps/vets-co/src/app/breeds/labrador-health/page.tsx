@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, FAQAccordion, ShopCtas, CrossSiteHelp } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
@@ -122,7 +123,7 @@ export default function VetsLabradorHealthPage() {
           insurance brands as Amazon searches. This page does not claim hands-on
           testing. </p>
 
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/flexible+sewing+tape+measure?s=breeds-labrador-health", "/go/amazon-brand/bound+composition+book?s=breeds-labrador-health", "/go/amazon-brand/letter+size+document+frame?s=breeds-labrador-health"]} />
 
         {/* Money path — live amazon-brand search hops
             (flexible sewing tape measure /
