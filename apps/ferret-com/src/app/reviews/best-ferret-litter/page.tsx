@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -120,9 +121,12 @@ export default function BestFerretLitterPage() {
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter' label={"Check price of Yesterday's News recycled paper pellet litter on Amazon"} />}
         heroExtra={
+          <>
+          <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter" />
           <div className="[&_.text-brand-primary]:!text-brand-dark">
             <QuickPicks items={QUICK_PICKS} embedded />
           </div>
+          </>
         }
         hero={{
           title: 'Best Ferret Litter: Dust Safety and the No-Clump Rule',
@@ -272,7 +276,7 @@ export default function BestFerretLitterPage() {
             category, choose a reputable pelleted product and confirm it is non-clumping and free of added clumping
             agents.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=reviews-best-ferret-litter", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=reviews-best-ferret-litter"]} />
 
           <ReviewCard
             id="paper-pellet"
@@ -383,7 +387,7 @@ export default function BestFerretLitterPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />
