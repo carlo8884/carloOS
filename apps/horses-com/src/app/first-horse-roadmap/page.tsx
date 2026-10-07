@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import {
   buildArticleSchema,
   buildFAQSchema,
@@ -407,7 +408,7 @@ export default function FirstHorseRoadmapPage() {
           </h2>
           <p className="text-base text-brand-text-mid max-w-2xl leading-relaxed mb-6">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+hoof+pick?s=first-horse-roadmap" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

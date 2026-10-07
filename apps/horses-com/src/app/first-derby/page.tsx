@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 /**
  * Horses.com -- Your First Day at the Races (Derby Spectator Guide)
  * /first-derby
@@ -19,7 +20,6 @@
 
 import type { Metadata } from 'next'
 import {
-  AffiliateDisclosure,
   buildMetadata,
   ArticleLayout,
   ArticleByline,
@@ -319,7 +319,7 @@ export default function FirstDerbyPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=first-derby" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

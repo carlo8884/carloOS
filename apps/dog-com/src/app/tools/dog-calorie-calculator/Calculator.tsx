@@ -282,6 +282,11 @@ export default function DogCalorieCalculator() {
             Score body condition before you change the food →
           </a>
         </p>
+        <p className="mt-2 text-sm font-semibold leading-snug">
+          <a href="/guides/dog-body-condition-score" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+            Dog Body Condition Score (BCS) — The 1–9 Scale, Step by Step
+          </a>
+        </p>
         </>
       )}
 

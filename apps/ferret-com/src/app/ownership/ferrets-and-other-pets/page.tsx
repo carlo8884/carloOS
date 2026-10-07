@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,7 +125,7 @@ export default function FerretsAndOtherPetsPage() {
             Whatever the other animal, the principles are the same. Start with scent and barrier introductions before any direct contact, keep the first face-to-face meetings short and closely supervised, ensure the ferret has a safe space to retreat to, and never force interaction. Progress only as fast as both animals stay calm, and accept that some pairings simply will not work — a high-prey-drive dog or a prey animal may never be safe with a ferret, and recognizing that early is part of responsible ownership.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=ferrets-and-other-pets" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -308,7 +309,7 @@ export default function EquineDentalCarePage() {
           <h2 id="kit">Dental-Care Kit</h2>
           <p>Everyday physical supplies that match the post-float recovery copy above — soaked hay cubes or a mash for the first day if significant work was done. These are not treatments for sharp points, EOTRH, wolf teeth, periodontal disease, or any dental diagnosis; quidding, weight loss, nasal discharge, or reluctance to be bridled belongs with a dental veterinarian, not a bag of cubes. Sedation, floating equipment, and hard treats (apples, carrots) are procedure work or diagnostic signs, not a retail kit. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay+cubes?s=guides-equine-dental-care", "/go/amazon-brand/horse+mash?s=guides-equine-dental-care"]} />
 
           {/* Money path — live amazon-brand search hops (dental-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

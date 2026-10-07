@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -5,7 +6,6 @@ import {
   EmailCapture,
   FAQAccordion,
   buildBreadcrumbSchema,
-  AffiliateDisclosure,
   ShopCtas,
   PriceAsOf
 } from '@carloOS/ui'
@@ -394,7 +394,7 @@ export default function EmergencyTriageCardPage() {
           the printable card body has no affiliate links. */}
       <section id="pet-first-aid-kit-shop" className="bg-brand-surface px-container-sm sm:px-container py-section">
         <div className="max-w-2xl mx-auto">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=emergency-triage", "/go/amazon-brand/digital+pet+thermometer?s=emergency-triage", "/go/amazon-brand/styptic+powder?s=emergency-triage", "/go/amazon-brand/tick+removal+tool?s=emergency-triage", "/go/amazon-brand/vetrap+cohesive+bandage?s=emergency-triage"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the kit items

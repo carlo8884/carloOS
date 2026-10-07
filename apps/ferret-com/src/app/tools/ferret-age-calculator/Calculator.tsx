@@ -131,6 +131,18 @@ export default function FerretAgeCalculator() {
               Next: ferret kibble guide
             </a>
           </p>
+          <ul className="mt-2 space-y-2 text-sm">
+            <li>
+              <a href="/health/insulinoma" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+                Insulinoma in Ferrets
+              </a>
+            </li>
+            <li>
+              <a href="/ownership/cost-of-owning-a-ferret" className="inline-block max-w-full whitespace-normal font-semibold text-brand-primary underline underline-offset-2">
+                The Cost of Owning a Ferret
+              </a>
+            </li>
+          </ul>
         </div>
       )}
 
