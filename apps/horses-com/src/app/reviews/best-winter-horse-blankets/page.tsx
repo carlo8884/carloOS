@@ -359,7 +359,7 @@ export default function BestWinterBlanketsPage() {
                     <td className="p-3 text-brand-text-mid">Replacing a worn value blanket, and Rambo is more than you need</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Plus</a><TableShopLink quietUntilTag href={"/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rhino Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best modern standard. 1000D polypropylene. $180–260. Confirm hardware on the listing</td>
-                    <td className="p-3 text-brand-text-mid">Shorter warranty than the premium tier. Shoulder rub on some heavily built horses</td>
+                    <td className="p-3 text-brand-text-mid">Confirm hardware on the listing. The waterproofness guarantee applies when the blanket is registered</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Clipped horse in a northern or sub-zero winter</td>
@@ -371,7 +371,7 @@ export default function BestWinterBlanketsPage() {
                     <td className="p-3 text-brand-text-mid">First blanket, and you may need to exchange the fit</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a><TableShopLink quietUntilTag href={"/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"} product={"SmartPak Ultimate"} /></td>
                     <td className="p-3 text-brand-text-mid">Best house brand. 1680D outer. Standard, high neck, and combo neck. $279.95–299.95</td>
-                    <td className="p-3 text-brand-text-mid">Shorter track record than Horseware. Polymer hardware</td>
+                    <td className="p-3 text-brand-text-mid">Confirm the live price on the listing. The card describes a quick-clip front</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Wither rubs under a conventional turnout</td>
