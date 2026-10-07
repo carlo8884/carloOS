@@ -21,7 +21,7 @@ const articleSchema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const eheimSchema = buildProductSchema({
@@ -101,7 +101,7 @@ export default function BestHeatersPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_270px] gap-14 min-w-0">
           <div className="min-w-0">
-            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-09-06T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Fish.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
 
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">Bottom Line</div>

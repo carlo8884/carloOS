@@ -20,7 +20,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Fish.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const PICKS = [
