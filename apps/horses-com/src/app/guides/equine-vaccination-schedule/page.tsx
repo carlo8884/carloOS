@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -313,7 +314,7 @@ export default function VaccinationSchedulePage() {
           <h2 id="kit">Related supplies</h2>
           <p>Everyday physical supplies that match the PHF endemic-region management copy above — stall fans and stall screens. The vaccine does not eliminate risk; reducing pasture or turnout near water and using stall fans/screens is barn management, not a vaccination. These are not vaccines, not a vaccination or prescription kit, and not treatments for Potomac horse fever, encephalitis, West Nile, rabies, tetanus, influenza, EHV, or strangles. Needles, combination products, and documented vaccination records belong with the veterinarian and the official USEF / FEI record — not a retail Amazon kit. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+stall+fan?s=guides-equine-vaccination-schedule", "/go/amazon-brand/horse+stall+screen?s=guides-equine-vaccination-schedule"]} />
 
           {/* Money path — live amazon-brand search hops (barn kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

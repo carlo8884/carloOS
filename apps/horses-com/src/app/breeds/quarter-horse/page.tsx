@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -208,7 +209,7 @@ export default function QuarterHorseBreedPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/full+quarter+horse+bar+western+saddle?s=breed-quarter-horse" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/full+quarter+horse+bar+western+saddle?s=breed-quarter-horse"

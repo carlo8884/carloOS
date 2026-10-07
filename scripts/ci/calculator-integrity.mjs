@@ -798,7 +798,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -989,7 +989,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/jockey\+racing\+silks/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -3665,7 +3665,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/full\+quarter\+horse\+bar\+western\+saddle/, label: 'on-page full quarter horse bar saddle Amazon search hop' },
       { re: /amazon-brand\/full\+quarter\+horse\+bar\+western\+saddle/, label: 'on-page full quarter horse bar saddle Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10421,7 +10421,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+saddle/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10632,7 +10632,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+hoof\+pick/, label: 'on-page product Amazon search hop' },
       { re: /\/ownership\/buying-your-first-horse/, label: 'first-horse buying guide instead of an invented cue card' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
