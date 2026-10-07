@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   CrossPortfolioCard,
   FAQAccordion,
   DirectoryPlacesCta,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   type FAQItem,
@@ -347,7 +347,7 @@ export default function DogHealthHubPage() {
         {/* Money path — live amazon-brand search hops (health-library kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+first+aid+kit?s=health-hub", "/go/amazon-brand/digital+pet+thermometer?s=health-hub", "/go/amazon-brand/soft+dog+carrier?s=health-hub", "/go/amazon-brand/dental+chews+dog?s=health-hub", "/go/amazon-brand/orthopedic+dog+bed?s=health-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop dog health gear
@@ -400,9 +400,7 @@ export default function DogHealthHubPage() {
               dog grimace scale
             </Link>
             . The hops below are not a ranked product list, they are not
-            medications, and they do not treat, reverse, or cure disease.
-            Dog.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            medications, and they do not treat, reverse, or cure disease.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/pet+first+aid+kit?s=health-hub"
