@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -61,6 +62,7 @@ export default function BestAquariumFiltersPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters' label='Check price of the AquaClear 70 filter on Amazon' />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters" />
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -116,7 +118,7 @@ export default function BestAquariumFiltersPage() {
               resourceLabel="Browse AquaClear 70 hang-on-back filters on Amazon →"
             />
 
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=reviews-best-aquarium-filters", "/go/amazon-brand/aqueon+quietflow+30?s=reviews-best-aquarium-filters"]} />
             <ReviewCard
               id="aquaclear"
               badge="Best HOB Overall"
@@ -257,7 +259,7 @@ export default function BestAquariumFiltersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

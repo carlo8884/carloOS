@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Planted Tank Fertilizers 2026 — Seachem Flourish | Fish.com', description: 'Best aquarium fertilizers for planted tanks. Seachem Flourish, Easy Green, and NilocG ranked for low-tech, high-tech, and CO2 injected planted aquariums.', path: '/reviews/best-planted-tank-fertilizers', type: 'article' })
@@ -32,6 +33,7 @@ export default function BestPlantedFertilizersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Planted Tank Fertilizers 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers' label='Check price of Aquarium Co-Op Easy Green fertilizer on Amazon' />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers" />
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -76,7 +78,7 @@ export default function BestPlantedFertilizersPage() {
               resourceHref="/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers"
               resourceLabel="Browse Aquarium Co-Op Easy Green planted-tank fertilizer on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/seachem+flourish+comprehensive?s=reviews-best-planted-tank-fertilizers", "/go/amazon-brand/nilocg+thrive+fertilizer?s=reviews-best-planted-tank-fertilizers"]} />
             <ReviewCard id="easy-green" badge="Best Overall" name="Easy Green All-in-One Fertilizer" subtitle="Aquarium Co-Op · Simple weekly dosing · Covers most planted tanks" winner
               description={<p>Easy Green from Aquarium Co-Op is an all-in-one fertilizer for planted tanks. One pump per 10 gallons weekly covers most planted tanks from low-tech to medium-tech. Contains NPK macros plus a comprehensive micronutrient blend. The dosing simplicity eliminates the multiple-bottle approach of traditional fertilizer regimens (Seachem Flourish + Flourish Excel + Potassium separately). If you want a one-product solution that works for Java fern, Anubias, crypts, stem plants, and most common aquarium plants: Easy Green. Available exclusively from Aquarium Co-Op online.</p>}
               specs={[{ label: 'Type', value: 'All-in-one liquid', highlight: 'good' }, { label: 'Dosing', value: '1 pump / 10 gallons / week' }, { label: 'Covers', value: 'Macros + micros', highlight: 'good' }, { label: 'Best for', value: 'Low to medium-tech planted tanks' }]}
@@ -150,7 +152,7 @@ export default function BestPlantedFertilizersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which fertilizer fits which tank</h2>
               <FAQAccordion items={[
                 {

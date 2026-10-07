@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Canister Filters 2026 — Fluval, Eheim | Fish.com', description: 'Best canister filters for aquariums 40-150 gallons. Fluval 307, Eheim Classic, and Penn Plax Cascade ranked for flow rate, media capacity, and noise.', path: '/reviews/best-canister-filters', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Canister Filters 2026', description: 'Fluval, Eheim, and Penn Plax canister filters ranked for mid-to-large aquariums.', url: 'https://fish.com/reviews/best-canister-filters', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -27,6 +28,7 @@ export default function BestCanisterFiltersPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Canister Filters 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters' label='Check price of the Fluval 307 canister filter on Amazon' />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters" />
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -68,7 +70,7 @@ export default function BestCanisterFiltersPage() {
               resourceHref="/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters"
               resourceLabel="Browse Fluval 307 canister filters on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/fluval+307+canister+filter?s=reviews-best-canister-filters", "/go/amazon-brand/eheim+classic+350+2215?s=reviews-best-canister-filters"]} />
             <ReviewCard id="fluval" badge="Best Overall" name="Fluval 307 Performance Canister Filter" subtitle="Near-silent · AquaStop valve · Multi-stage media baskets · 40-70 gal" winner
               description={<p>The Fluval 307 is the current benchmark for canister filters in the 40–70 gallon range — near-silent operation, excellent media capacity with 4 separated baskets (mechanical, chemical, biological staged properly), and the AquaStop valve that allows media changes without disconnecting hoses. The sound dampening is genuinely impressive compared to older canister filters — you have to get very close to hear it running. Setup is straightforward for a canister. Impeller design is efficient — flow rates are real-world accurate rather than inflated marketing numbers. Lid design seals reliably. 5-year warranty.</p>}
               specs={[{ label: 'Tank size', value: '40–70 gallons' }, { label: 'Flow rate', value: '303 GPH (actual)', highlight: 'good' }, { label: 'Noise', value: 'Near-silent', highlight: 'good' }, { label: 'AquaStop', value: 'Yes — media change without disconnect', highlight: 'good' }, { label: 'Warranty', value: '5 years' }]}
@@ -124,7 +126,7 @@ export default function BestCanisterFiltersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which canister fits</h2>
               <FAQAccordion items={[
                 {

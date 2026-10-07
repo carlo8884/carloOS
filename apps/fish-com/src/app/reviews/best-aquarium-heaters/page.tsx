@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, FAQAccordion, JourneyNext, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildFAQSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -67,6 +68,7 @@ export default function BestHeatersPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters' label='Check price of the Eheim Jager heater on Amazon' />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters" />
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -123,7 +125,7 @@ export default function BestHeatersPage() {
               resourceLabel="Browse Eheim Jager aquarium heaters on Amazon →"
             />
 
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/eheim+jager+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/hydor+inline+heater?s=reviews-best-aquarium-heaters", "/go/amazon-brand/aqueon+pro+heater?s=reviews-best-aquarium-heaters"]} />
             <ReviewCard
               id="eheim"
               badge="Best Overall"
@@ -260,7 +262,7 @@ export default function BestHeatersPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
             </div>
             <h2 className="font-display font-bold text-brand-dark text-xl mt-10 mb-4">Frequently Asked Questions</h2>
             <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />

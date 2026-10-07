@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026 — 5 to 20 Gallon Tanks Ranked | Fish.com', description: 'Best nano aquariums for beginners and planted tank enthusiasts. Fluval Spec, Aqueon Minibow, and Innovative Marine compared for betta, shrimp.', path: '/reviews/best-nano-tanks', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'fish-com', title: 'Best Nano Aquariums 2026', description: 'Fluval Spec, Aqueon Minibow, and Innovative Marine ranked for nano setups.', url: 'https://fish.com/reviews/best-nano-tanks', imageUrl: '', authorName: 'Fish.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -28,6 +29,7 @@ export default function BestNanoTanksPage() {
         <h1 className="font-display font-bold text-white tracking-tight leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Nano Aquariums 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks' label='Check price of the Fluval Spec V on Amazon' />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks" />
         <EmailCapture
           variant="inline"
           siteId="fish-com"
@@ -72,7 +74,7 @@ export default function BestNanoTanksPage() {
               resourceHref="/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks"
               resourceLabel="Browse Aqueon 20-gallon long aquariums on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="fish-com" />
+            <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/fluval+spec+v+5+gallon?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+20+gallon+long+aquarium?s=reviews-best-nano-tanks", "/go/amazon-brand/aqueon+10+gallon+aquarium?s=reviews-best-nano-tanks"]} />
             <ReviewCard id="fluval-spec" badge="Best 5 Gallon" name="Fluval Spec V 5-Gallon" subtitle="Rimless rimless AIO · Honeycomb filter cover · Low-profile LED" winner
               description={<p>The Fluval Spec V is the standard recommendation for a betta tank or shrimp tank at 5 gallons. The integrated filtration is hidden behind a honeycomb baffle, the LED is plant-capable (adequate for low-light plants like Java fern, Anubias, mosses), and the rimless design looks clean on a desk or shelf. The flow from the filter should be baffled (rubber band a filter sponge over the outlet) to reduce current for betta fish. Comes complete — just add fish, substrate, and cycle the tank.</p>}
               specs={[{ label: 'Volume', value: '5 gallons' }, { label: 'Design', value: 'Rimless, all-in-one' }, { label: 'Filter', value: 'Integrated — 3-stage' }, { label: 'Light', value: 'LED — low-light plant capable', highlight: 'good' }, { label: 'Best for', value: 'Betta, shrimp, planted' }]}
@@ -146,7 +148,7 @@ export default function BestNanoTanksPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which nano tank fits</h2>
               <FAQAccordion items={[
                 {
