@@ -27,6 +27,7 @@
  *     APHA / ApHC / AERC / NATRC sources.
  */
 
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -41,7 +42,6 @@ import {
   TableOfContents,
   ArticleByline,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -423,7 +423,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'dressage' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/albion+dressage+saddle?s=discipline-equipment-dressage" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -442,7 +442,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'show-jumping' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/pessoa+close+contact+saddle?s=discipline-equipment-show-jumping" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -461,7 +461,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'eventing' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/county+eventer+saddle?s=discipline-equipment-eventing" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -480,7 +480,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'western-pleasure' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/circle+y+western+show+saddle?s=discipline-equipment-western-pleasure" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -499,7 +499,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'reining' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/circle+y+reining+saddle?s=discipline-equipment-reining" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -518,7 +518,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
 
           {data.slug === 'trail-riding' ? (
             <>
-              <AffiliateDisclosure variant="inline" siteId="horses-com" />
+              <HopDisclosure siteId="horses-com" href="/go/amazon-brand/wintec+trail+saddle?s=discipline-equipment-trail-riding" />
 
               <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
                 <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
