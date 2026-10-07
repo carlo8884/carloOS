@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,7 @@ import {
   ArticleLayout,
   FAQAccordion,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -255,7 +256,6 @@ export default function PetInsuranceWorthItPage() {
             links per QC §1. Links are internal review/finder pages — no /go routes,
             no carrier "buy" CTA, no superlatives. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have a breakeven number — now pressure-test it against real policies.
@@ -296,7 +296,7 @@ export default function PetInsuranceWorthItPage() {
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/digital+pet+thermometer?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/pet+recovery+cone?s=tools-pet-insurance-worth-it-calculator", "/go/amazon-brand/pet+calming+aid?s=tools-pet-insurance-worth-it-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a home-care prep kit
@@ -321,8 +321,7 @@ export default function PetInsuranceWorthItPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-pet-insurance-worth-it-calculator"
