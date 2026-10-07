@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Questions to Ask Your Vet — Get the Most From Every Visit | Vets.co", description: "The right questions turn a rushed appointment into clear, confident care. Use this list to ask about diagnosis, treatment options, costs, and follow-up.", path: '/guides/questions-to-ask-your-vet', type: 'article' })
@@ -82,7 +83,7 @@ export default function QuestionsToAskPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/ruled+index+cards?s=guides-questions-to-ask-your-vet", "/go/amazon-brand/3x3+sticky+notes?s=guides-questions-to-ask-your-vet", "/go/amazon-brand/letter+size+sheet+protectors?s=guides-questions-to-ask-your-vet"]} />
 
           {/* Money path — live amazon-brand search hops
               (ruled index cards /
@@ -149,9 +150,7 @@ export default function QuestionsToAskPage() {
               first-aid-kit, thermometer, or carrier
               hop, they are not a financing-brand or
               insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at
-              no extra cost to you.
+              replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

@@ -61,6 +61,9 @@ export default function FirstAidKitPage() {
           { title: 'Equine Health Hub', href: '/health' },
           { title: 'Equine Lameness Basics', href: '/health/lameness-basics' },
           { title: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+          { title: 'The Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'Horse Boarding Options', href: '/ownership/boarding-options' },
+          { title: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
         ]}
         hero={{
           title: "Equine First-Aid Kit",
@@ -96,6 +99,9 @@ export default function FirstAidKitPage() {
               { label: "Boots and Wraps", href: "/tack/boots-and-wraps" },
               { label: "Equine Lameness Basics", href: "/health/lameness-basics" },
               { label: 'Is This a Horse Emergency?', href: '/tools/is-this-a-horse-emergency' },
+              { label: 'The Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+              { label: 'Horse Boarding Options', href: '/ownership/boarding-options' },
+              { label: 'Senior Horse Care', href: '/ownership/senior-horse-care' },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="discipline" variant="sidebar" />

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Afford Vet Care — Options That Actually Help | Vets.co", description: "Pet insurance, emergency funds, payment plans, charitable funds, and veterinary schools can all help cover vet bills. Here are realistic options to explore.", path: '/guides/how-to-afford-vet-care', type: 'article' })
@@ -88,7 +89,7 @@ export default function AffordVetCarePage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cash+envelope+budget+system?s=guides-how-to-afford-vet-care", "/go/amazon-brand/yellow+legal+pad?s=guides-how-to-afford-vet-care", "/go/amazon-brand/hanging+file+folders+letter+size?s=guides-how-to-afford-vet-care"]} />
 
           {/* Money path — live amazon-brand search hops
               (cash envelope budget system /
@@ -150,9 +151,7 @@ export default function AffordVetCarePage() {
               expanding-file or plastic file-box hop,
               they are not a financing-brand or
               insurance-brand hop, and they do not
-              replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases
-              at no extra cost to you.
+              replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

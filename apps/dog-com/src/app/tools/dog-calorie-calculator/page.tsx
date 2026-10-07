@@ -342,6 +342,7 @@ export default function DogCalorieCalculatorPage() {
               { label: 'Best Large Breed Dog Food', href: '/reviews/best-large-breed-dog-food', note: 'Controlled-calorie large breed formulas' },
               { label: 'Breed Profiles — Exercise &amp; Energy', href: '/breeds', note: 'Energy level by breed affects calorie needs' },
               { label: 'Dog Body Condition Score', href: '/tools/dog-body-condition-score', note: 'Calibrate the kcal target to rib feel and waist' },
+              { label: 'Dog Body Condition Score (BCS) — The 1–9 Scale, Step by Step', href: '/guides/dog-body-condition-score', note: 'How to score ribs, waist, and tuck on the 1–9 scale' },
               { label: 'Pet Insurance Review', href: crossSiteHref('vets-co', '/reviews/best-pet-insurance'), note: 'Educational coverage comparison, not a ranking' },
               { label: 'Talk to a vet (telehealth)', href: crossSiteHref('vets-co', '/telehealth'), note: 'Stable feeding questions, not an ER substitute' },
             ].map(item => (

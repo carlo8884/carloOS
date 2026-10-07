@@ -98,7 +98,7 @@ export default function DogBodyConditionScorePage() {
           { name: 'Guides', href: '/guides' },
           { name: 'Dog Body Condition Score', href: '/guides/dog-body-condition-score' },
         ]}
-        relatedLinks={[{ title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
+        relatedLinks={[{ title: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tools' }, { title: 'Body Condition Score Tool', href: '/tools/dog-body-condition-score', category: 'Tools' }, { title: 'Dog Guides Hub', href: '/guides', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Weight Management', href: '/nutrition/weight-management', category: 'Nutrition' }, { title: 'Spay/Neuter Timing', href: '/guides/dog-spay-neuter-timing', category: 'Guides' }]}
         sidebar={
           <>
             <TableOfContents
@@ -118,6 +118,7 @@ export default function DogBodyConditionScorePage() {
             <RelatedLinks
               title="Related Guides"
               links={[
+                { label: 'Dog Calorie Calculator', href: '/tools/dog-calorie-calculator' },
                 { label: 'Dog Obesity — Health Risks & Weight Loss Plan', href: '/health/dog-obesity' },
                 { label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' },
                 { label: 'Weight Management Diets', href: '/nutrition/weight-management' },
@@ -156,6 +157,13 @@ export default function DogBodyConditionScorePage() {
           </p>
           <p>
             The point of BCS is to give owners and clinicians a shared, repeatable language for body composition. &ldquo;She is at a 7&rdquo; communicates more than &ldquo;she has gained a couple of pounds&rdquo; — and it tells you which direction the feeding plan needs to move.
+          </p>
+          <p>
+            Once the score says the feeding plan should change, the{' '}
+            <a href="/tools/dog-calorie-calculator" className="text-brand-primary underline underline-offset-2">
+              Dog Calorie Calculator
+            </a>{' '}
+            turns that direction into a starting daily energy estimate.
           </p>
 
           <h2 id="scale">The 1–9 Scale, Score by Score</h2>
