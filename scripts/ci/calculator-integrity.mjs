@@ -11110,7 +11110,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/yellow\+legal\+pad\?s=guides-how-to-afford-vet-care/, label: 'yellow legal-pad search hop (matches on-page tiered-plan conversation / ideal-middle-minimum copy; unique vs lined+telephone+message+pad / checkbook+register)' },
       { re: /amazon-brand\/hanging\+file\+folders\+letter\+size\?s=guides-how-to-afford-vet-care/, label: 'letter-size hanging file-folder search hop (matches on-page payment-plan / assistance-application copy; unique vs manila+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+expanding+file+organizer / letter+size+plastic+file+box)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11129,7 +11129,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/small\+soft\+cooler\+bag\?s=guides-what-to-expect-at-the-vet/, label: 'small-soft-cooler-bag search hop (matches on-page fresh-stool-sample transport copy; unique vs soft+pet+carrier / medium+hard+sided+plastic+pet+carrier)' },
       { re: /amazon-brand\/clipboard\+with\+storage\?s=guides-what-to-expect-at-the-vet/, label: 'clipboard-with-storage search hop (matches on-page visit-findings / dosing / follow-up-plan paperwork copy; unique vs weatherproof+storage+clipboard / hardcover+weekly+appointment+planner / hanging+file+folders+letter+size)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11147,7 +11147,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ruled\+index\+cards\?s=guides-questions-to-ask-your-vet/, label: 'ruled-index-cards search hop (matches on-page diagnosis-question / one-card-per-question copy; unique vs spiral+notebook / yellow+legal+pad / pocket+spiral+memo+pad)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11165,7 +11165,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/kraft\+two\+pocket\+folder\?s=guides-choosing-a-veterinarian/, label: 'kraft-two-pocket-folder search hop (matches on-page services / referral-scope comparison copy; unique vs hanging+file+folders+letter+size / accordion+file+folder+letter+size / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
