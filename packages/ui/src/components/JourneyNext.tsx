@@ -6,6 +6,12 @@
  */
 import Link from 'next/link'
 import type { SiteId } from '@carloOS/config'
+import {
+  consultLink,
+  hopCommissionReady,
+  partnerQuoteHeld,
+  visibleShopHref,
+} from '@carloOS/config/affiliate-hop'
 import { AffiliateDisclosure } from './AffiliateDisclosure'
 import { ShopCtas } from './ShopCtas'
 
@@ -26,6 +32,10 @@ export function JourneyNext({
   resourceHref,
   resourceLabel,
 }: JourneyNextProps) {
+  const consult = consultLink(resourceHref)
+  const visible = consult && !consult.attributed ? null : visibleShopHref(resourceHref)
+  const live = Boolean(visible && hopCommissionReady(visible))
+  const quiet = !live && (partnerQuoteHeld(resourceHref) || Boolean(consult && !consult.attributed))
   return (
     <aside
       id="journey-next"
@@ -40,7 +50,12 @@ export function JourneyNext({
         </Link>
       </p>
       <p className="mt-2 text-sm leading-relaxed text-brand-text-mid">{nextBlurb}</p>
-      <AffiliateDisclosure variant="inline" siteId={siteId} className="my-3" />
+      {live ? <AffiliateDisclosure variant="inline" siteId={siteId} className="my-3" /> : null}
+      {quiet ? (
+        <p data-quote-note className="my-3 text-xs leading-relaxed text-brand-text-mid">
+          Quotes open on the carrier&apos;s site.
+        </p>
+      ) : null}
       <ShopCtas amazonHref={resourceHref} amazonLabel={resourceLabel} />
     </aside>
   )
