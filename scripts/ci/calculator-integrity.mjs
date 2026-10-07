@@ -431,7 +431,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12741,7 +12741,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /href="\/diet\/best-ferret-kibble"/, label: 'kibble review is the matching guide' },
       { re: /\/go\/wysong\/epigen-90\?s=tools-label-calculator/, label: 'existing Wysong Epigen 90 hop, product and retailer named' },
-      { re: /AffiliateDisclosure/, label: 'disclosure above the hop' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [{ re: /we tested/, label: 'no hands-on claim' }],
     why: 'The label calculator links the kibble review and the existing Wysong Epigen 90 hop. It does not invent a new food.',

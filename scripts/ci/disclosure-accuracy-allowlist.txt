@@ -53,12 +53,6 @@ apps/dog-com/src/app/nutrition/dog-dna-tests/page.tsx
 apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx
 apps/ferret-com/src/app/llms.txt/route.ts
 apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx
-apps/ferret-com/src/app/tools/ferret-body-condition-score/Calculator.tsx
-apps/ferret-com/src/app/tools/ferret-body-condition-score/page.tsx
-apps/ferret-com/src/app/tools/ferret-grimace-scale/page.tsx
-apps/ferret-com/src/app/tools/is-this-a-ferret-emergency/page.tsx
-apps/ferret-com/src/app/tools/label-calculator/page.tsx
-apps/ferret-com/src/app/tools/page.tsx
 apps/fish-com/src/app/llms.txt/route.ts
 apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx
 apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx

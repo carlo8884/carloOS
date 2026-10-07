@@ -1,7 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
-  AffiliateDisclosure,
   ArticleLayout,
   FAQAccordion,
   RelatedLinks,
@@ -127,7 +127,7 @@ export default function FerretLabelPage() {
             >
               Read the ferret kibble review →
             </Link>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+            <HopDisclosure siteId="ferret-com" href="/go/wysong/epigen-90?s=tools-label-calculator" />
             <a
               id="wysong-hop"
               href="/go/wysong/epigen-90?s=tools-label-calculator"
