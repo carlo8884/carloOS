@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -178,7 +178,7 @@ export default function LitterPlannerPage() {
           Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner", "/go/amazon-brand/small+animal+grass+pellet+litter+non+clumping?s=tools-litter-planner", "/go/amazon-brand/ferret+corner+litter+pan?s=tools-litter-planner"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the litter and pans
@@ -194,8 +194,7 @@ export default function LitterPlannerPage() {
               </Link>
               . Paper-pellet (Yesterday&apos;s News class) is the default type;
               shop the review for the criteria. These are category searches, not
-              a ranked product list. Ferret.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              a ranked product list.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-litter-planner"
@@ -211,8 +210,6 @@ export default function LitterPlannerPage() {
               />
           </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
         </div>
       </section>
 
