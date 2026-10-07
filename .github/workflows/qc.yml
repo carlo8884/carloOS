@@ -391,3 +391,15 @@ jobs:
           node-version: '20'
       - name: Run table-shop-links
         run: node scripts/ci/table-shop-links.mjs
+
+  disclosure-accuracy:
+    name: Unconditional commission disclosure
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run disclosure-accuracy
+        run: node scripts/ci/disclosure-accuracy.mjs
