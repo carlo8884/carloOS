@@ -10,17 +10,20 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Targeted Antineoplastic Agents, including FDA-approved toceranib for canine mast cell tumors', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/targeted-antineoplastic-agents-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
   { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
+  { label: 'Cornell University Hospital for Animals: Cancer management cost FAQ', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/sprecher-institute-comparative-cancer-research/cancer-care-cornell-university-hospital-animals/cancer-management-frequently-asked-questions', publisher: 'Cornell University' },
+  { label: 'NC State Veterinary Hospital: Radiation therapy for bone cancer', url: 'https://hospital.cvm.ncsu.edu/services/small-animals/cancer-oncology/radiation-oncology/radiation-therapy-for-bone-cancer/', publisher: 'NC State' },
+  { label: 'Dog Cancer Foundation: Chemotherapy costs, citing the Veterinary Cancer Society (February 2025)', url: 'https://www.dogcancerfoundation.org/blog/cost-dog-chemotherapy', publisher: 'Dog Cancer Foundation' },
 ]
 
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Cancer Treatment — Chemotherapy, Surgery, Radiation | Dog.com', description: 'How cancer is treated in dogs. Chemotherapy in dogs is different from human chemo — most dogs tolerate it well. Surgery, radiation, immunotherapy.', path: '/health/dog-cancer-treatment', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Dog Cancer Treatment', description: 'Chemotherapy, surgery, radiation, and palliative care for canine cancer.', url: 'https://dog.com/health/dog-cancer-treatment', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' ,
   citation: SOURCES,
 })
 const med = buildMedicalWebPageSchema({ name: 'Dog Cancer Treatment', description: 'Canine cancer treatment — chemotherapy, surgery, radiation, and palliative care.', url: 'https://dog.com/health/dog-cancer-treatment', authorName: 'Dog.com Editorial', lastReviewed: '2025-05-01' })
 const FAQS = [
   { question: 'Do dogs get as sick from chemotherapy as people do?', answer: 'No — and this is the most common misconception oncologists encounter. Human chemotherapy aims for cure and accepts significant short-term suffering; veterinary chemotherapy prioritizes quality of life. Approximately 75–80% of dogs on standard protocols experience no significant adverse effects; the 20–25% that do typically have mild, transient GI upset for 2–3 days. Severe effects requiring hospitalization occur in roughly 5% of dogs, and dogs do not lose their hair (double-coated breeds may thin slightly). Most treatments are outpatient — IV infusion, then home the same day.' },
-  { question: 'How much does cancer treatment for a dog cost?', answer: 'From the figures on this page: oncologist consultation see current price, chemotherapy see current price per cycle, a radiation therapy course see current price, and surgery see current price depending on complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs — conditions documented before enrollment are excluded as pre-existing.' },
+  { question: 'How much does cancer treatment for a dog cost?', answer: 'Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Pet insurance purchased before diagnosis is the primary financial tool — conditions documented before enrollment are excluded as pre-existing.' },
   { question: 'How long can chemotherapy extend a dog\'s life?', answer: 'It depends on the cancer. Published protocol outcomes summarized here: lymphoma treated with CHOP achieves complete remission in 60–90% of cases with median remission of 10–14 months; hemangiosarcoma post-surgery doxorubicin extends survival from 1–2 months to 4–8 months; osteosarcoma post-amputation carboplatin or doxorubicin extends median survival from 3–5 months to 9–12 months. A veterinary oncologist can give realistic expected outcomes for your dog\'s specific tumor type and stage.' },
   { question: 'Is choosing palliative care instead of chemotherapy giving up?', answer: 'No. Palliative care is a valid, compassionate treatment choice that prioritizes the dog\'s experience over extending life at any cost. The toolkit is real medicine: NSAIDs and gabapentin for pain, prednisone for lymphoma (1–4 months of remission while maintaining appetite and activity), palliative radiation for bone pain, and appetite and anti-nausea support throughout. Discuss the option openly with your veterinarian or oncologist — it is a standard part of the treatment conversation.' },
   { question: 'Should my dog see a veterinary oncologist?', answer: 'Referral is appropriate whenever a cancer diagnosis is made. A board-certified oncologist (DACVIM Oncology) provides staging, treatment options with realistic expected outcomes, and clinical trial information. Many primary care veterinarians can then administer straightforward chemotherapy protocols after the oncologist establishes the plan — the specialist designs, the primary vet and owner implement with ongoing oversight.' },
@@ -41,14 +44,14 @@ export default function DogCancerTreatmentPage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cancer + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cover treatment costs before diagnosis</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those treatment ranges are typical US clinic figures dated 2026-06-11.</p>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Canine cancer treatment ranges see current price depending on stage and modality. Insurance covers it — but only if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Insurance covers it only if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
 
         </>}
-       priceAsOf="2026-06-11">
+       priceAsOf="2026-10-07">
         <div className="carloOS-article">
 
           <h2 id="chemo">Chemotherapy — Not What Most Owners Expect</h2>
@@ -75,8 +78,8 @@ export default function DogCancerTreatmentPage() {
 
           <h2 id="oncologist">The Role of the Veterinary Oncologist</h2>
           <p>A board-certified veterinary oncologist (<a href="https://www.acvim.org/resources-tools/animal-owners" rel="noopener" target="_blank" className="text-brand-primary hover:underline">DACVIM Oncology</a>) specializes in cancer diagnosis and treatment. Referral is appropriate whenever a cancer diagnosis is made — they provide staging workup, treatment options with realistic expected outcomes, clinical trial information, and ongoing monitoring during treatment. Many primary care veterinarians can administer straightforward chemotherapy protocols after oncologist consultation establishes the treatment plan. The oncologist is the specialist; the primary vet and owner implement the plan with ongoing oncologist oversight.</p>
-          <p>Typical range, not a quote. The consultation, chemotherapy, radiation, and surgery figures in the next paragraph are typical US clinic ranges dated 2026-06-11.</p>
-          <p>Cost reality: consultation with a veterinary oncologist: see current price. Chemotherapy per cycle: see current price depending on protocol. Radiation therapy course: see current price. Surgery: see current price depending on procedure complexity. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
+          <p>Typical range, not a quote. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+          <p>Cornell University Hospital for Animals says radiation therapy is approximately $2,500–$7,000, a chemotherapy course over three to six months runs from several hundred dollars to several thousand, and major surgery starts around $500 and rises with the procedure. A February 2025 Dog Cancer Foundation summary of Veterinary Cancer Society figures puts an oncology consultation at $100–$250 and chemotherapy at $150–$600 per dose. NC State Veterinary Hospital lists bone-tumor stereotactic radiation at about $7,500–$8,500 and palliative radiation at about $800–$1,500. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Pet insurance purchased before diagnosis is the primary financial tool for managing these costs.</p>
 
           <h2 id="kit">A Simple Cancer-Treatment Home-Care Kit</h2>
           <p>
@@ -182,7 +185,7 @@ export default function DogCancerTreatmentPage() {
           </div>
           </div>
 
-          <p>The cost question below repeats those same clinic ranges, dated 2026-06-11.</p>
+          <p>The cost question below repeats those same published ranges, dated 2026-10-07.</p>
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} includeSchema={false} allowMultiple />
 

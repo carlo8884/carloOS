@@ -151,13 +151,13 @@ const STATIC_PROFILES: Array<{
       'Active species that benefit from the owner being present. Dog leads for most household configurations; ferret suits those who can supervise out-of-cage time; horse only if acreage and experience match.',
   },
   {
-    persona: 'Experienced hobbyist, hot/humid climate, see current price budget',
+    persona: 'Example: Experienced hobbyist, hot/humid climate, $300+/mo budget',
     topMatches: 'Saltwater fish · Reptile (lizard) · Reptile (snake)',
     rationale:
       'Hobby-grade species rewarding to experienced keepers; tropical/desert climates suit many reptile species with minimal climate-control overhead.',
   },
   {
-    persona: 'Acreage owner, experienced, see current price budget',
+    persona: 'Example: Acreage owner, experienced, $1,000+/mo budget',
     topMatches: 'Horse · Dog · Reptile (lizard)',
     rationale:
       'Acreage unlocks horse keeping; high-energy working dog breeds also thrive here. Reptile suits the same household as a low-overhead companion species.',

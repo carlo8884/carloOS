@@ -47,8 +47,8 @@ export default function CushingDiseasePage() {
           <div className="bg-brand-dark rounded-lg p-5 mb-4">
             <div className="text-xs uppercase tracking-wide text-brand-primary mb-1 font-bold">Cushing&apos;s + Insurance</div>
             <h3 className="font-display text-base font-bold text-brand-white mb-2">Cortisol control is lifelong</h3>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Those management figures are typical US clinic ranges dated 2026-05-30.</p>
-            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane/mitotane, ACTH-stim recheck panels, endocrinology consults — typically runs see current price over the dog&apos;s lifetime. Insurance covers it if enrolled before diagnosis.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Typical range, not a quote. Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
+            <p className="text-xs text-white/60 mb-3 leading-relaxed">Cushing&apos;s management — trilostane or mitotane, ACTH-stim rechecks, and endocrinology consults — is often a large lifelong bill. Ask your veterinarian for an estimate. Insurance covers it if enrolled before diagnosis.</p>
             <a href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')} className="inline-block text-xs font-bold text-brand-primary hover:underline">Compare pet insurance →</a>
           </div>
           <CrossPortfolioCard currentSite="dog-com" contentType="health" variant="sidebar" />
