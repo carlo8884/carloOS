@@ -446,8 +446,18 @@ export function HomeGuides() {
             </div>
             <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
             <div className="relative z-10 flex flex-col justify-end h-full min-h-[220px] p-5">
-              <div className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] mb-1">All product guides</div>
-              <div className="font-display font-bold text-white text-lg leading-tight italic">The gear that earns a place in your tank.</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-freshwater" alt="" aspect="4:3" />
+                </span>
+                <div className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc]">All product guides</div>
+              </div>
+              <div className="flex items-center gap-2.5">
+                <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-freshwater" alt="" aspect="4:3" />
+                </span>
+                <div className="font-display font-bold text-white text-lg leading-tight italic">The gear that earns a place in your tank.</div>
+              </div>
             </div>
           </Link>
         </div>
