@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Cushing's Disease in Dogs — PUPD, Pot Belly | Vets.co", description: "Cushing's disease (hyperadrenocorticism) causes a classic PUPD-pot belly-panting presentation. PDH vs adrenal tumor, LDDS test, and trilostane management.", path: '/health/cushing-disease-dogs', type: 'article' })
@@ -86,7 +87,7 @@ export default function CushingsPage() {
           <h2 id="kit">Home monitoring kit</h2>
           <p>These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for Cushing&apos;s, adrenal crisis, or iatrogenic steroid excess. Trilostane, Vetoryl, mitotane, Lysodren, and human steroids are not shoppable hops. Narrow-neck glass water carafes, 2-quart stainless saucepans, and pocket spiral memo pads already live on vomiting-diarrhea-pets. Gallon gravity dog-waterers, extra-large disposable pee pads, and cooling bandanas already live on dog.com Cushing&apos;s. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/2+liter+plastic+graduated+pitcher?s=health-cushing-disease-dogs", "/go/amazon-brand/extra+large+bolster+dog+lounge?s=health-cushing-disease-dogs"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

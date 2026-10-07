@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Arthritis in Dogs — Signs, Management, Mobility | Vets.co", description: "Osteoarthritis affects most senior dogs. Recognize early signs of joint pain, and learn the multimodal approach to keeping arthritic dogs mobile.", path: '/health/arthritis-in-dogs', type: 'article' })
@@ -75,7 +76,7 @@ export default function ArthritisDogsPage() {
           <h2 id="kit">Home-Setup Kit</h2>
           <p>Everyday physical supplies that match the home-modification copy above — rugs for traction, ramps, raised bowls, and orthopedic bedding. These reduce daily strain; they are not a pain medication, not a joint supplement, and not a treatment for osteoarthritis. Human pain relievers (ibuprofen, naproxen, acetaminophen) stay off this kit — they are toxic to dogs. Veterinary anti-inflammatories, injectable therapies, and omega-3 joint supplements belong with a veterinarian, not a retail Amazon hop. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+traction+rug?s=health-arthritis-in-dogs", "/go/amazon-brand/dog+ramp?s=health-arthritis-in-dogs", "/go/amazon-brand/raised+dog+bowl?s=health-arthritis-in-dogs", "/go/amazon-brand/orthopedic+dog+bed?s=health-arthritis-in-dogs"]} />
 
           {/* Money path — live amazon-brand search hops (home-setup kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

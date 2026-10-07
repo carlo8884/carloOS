@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Senior Dog Bloodwork Guide — What Each Test Finds | Vets.co', description: 'What your senior dog\'s bloodwork actually measures. CBC, chemistry panel, urinalysis, SDMA, and thyroid explained', path: '/health/senior-bloodwork-guide', type: 'article' })
@@ -79,7 +80,7 @@ export default function SeniorBloodworkPage() {
             ranked product list. This page does
             not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/letter+size+expanding+file+organizer?s=health-senior-bloodwork-guide", "/go/amazon-brand/sterile+urine+specimen+cup?s=health-senior-bloodwork-guide", "/go/amazon-brand/12+hour+mechanical+kitchen+timer?s=health-senior-bloodwork-guide"]} />
 
           {/* Money path — live amazon-brand search hops
               (letter-size expanding file organizer /
