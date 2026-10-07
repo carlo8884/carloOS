@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -211,7 +211,7 @@ export default function StallBeddingCalculatorPage() {
         </p>
         <Calculator />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/pine+shavings+horse+stall+bedding?s=tools-stall-bedding-calculator", "/go/amazon-brand/wood+pellet+horse+stall+bedding?s=tools-stall-bedding-calculator", "/go/amazon-brand/horse+stall+rubber+mats?s=tools-stall-bedding-calculator", "/go/amazon-brand/horse+stall+fork+manure+picker?s=tools-stall-bedding-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop stall bedding
@@ -220,8 +220,7 @@ export default function StallBeddingCalculatorPage() {
             Pine shavings are the usual full-bed bag. Wood pellets fluff after watering and are
             often the lower-dust pick. Rubber stall mats let you run a shallower absorbent layer.
             A stall fork is what turns the weekly restock into a 15-minute pick-out instead of a
-            full strip. Horses.com earns a commission on qualifying purchases at no extra cost to
-            you.
+            full strip.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

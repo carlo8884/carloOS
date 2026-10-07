@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -184,7 +185,7 @@ export default function PerformanceFeedingPage() {
             hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/nylon+horse+hay+bag?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/horse+feed+grade+vegetable+oil?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/marked+horse+grain+scoop?s=nutrition-feeding-the-performance-horse", "/go/amazon-brand/stabilized+rice+bran+horse+fat+supplement?s=nutrition-performance-horse", "/go/amazon-brand/performance+horse+feed+high+fat?s=nutrition-performance-horse"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -202,9 +203,7 @@ export default function PerformanceFeedingPage() {
               hay-net hop, they are not a chopped-forage
               hop, they are not the rice-bran or
               high-fat-feed ReviewCards, and they do
-              not replace a veterinarian. Horses.com
-              earns a commission on qualifying
-              purchases at no extra cost to you. Empty
+              not replace a veterinarian. Empty
               Chewy buttons stay hidden.
             </p>
             <div className="flex flex-col gap-3">

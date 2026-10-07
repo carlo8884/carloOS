@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -221,7 +221,7 @@ export default function HorseHeightConverterPage() {
             Chewy; never href="#" or PLACEHOLDER. Stick matches BCS; tape
             matches weight-calculator / BCS / age / size-for-rider; saddle-
             fitting kit is the height→tack hop already on this page. */}
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter", "/go/amazon-brand/horse+weight+tape?s=tools-horse-height-converter", "/go/amazon-brand/horse+saddle+fitting+kit?s=tools-horse-height-converter"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop height and sizing tools
@@ -239,9 +239,7 @@ export default function HorseHeightConverterPage() {
             ). A saddle-fitting kit (wither gauge or fitting template) is how
             height turns into tack size. These are Amazon category searches —
             not a ranked product list, not invented inventory, and not a
-            substitute for a formal measurement or a qualified saddle fitter.
-            Horses.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            substitute for a formal measurement or a qualified saddle fitter.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"

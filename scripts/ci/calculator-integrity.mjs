@@ -10228,7 +10228,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+feed\+grade\+vegetable\+oil\?s=nutrition-feeding-the-performance-horse/, label: 'horse feed-grade vegetable-oil search hop (matches on-page fat+fiber / oil cool-energy copy; unique vs stabilized+rice+bran+horse+fat+supplement / performance+horse+feed+high+fat)' },
       { re: /amazon-brand\/marked\+horse\+grain\+scoop\?s=nutrition-feeding-the-performance-horse/, label: 'marked horse grain-scoop search hop (matches on-page rest-day concentrate-cut / match-energy-to-work copy; unique vs tabletop+digital+horse+grain+scale / horse+feed+scoop+scale)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

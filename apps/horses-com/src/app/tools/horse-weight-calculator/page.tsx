@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -208,7 +208,7 @@ export default function HorseWeightCalculatorPage() {
           kilograms. Switching the horse type swaps the published divisor.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+weight+tape?s=tools-horse-weight-calculator", "/go/amazon-brand/horse+measuring+tape?s=tools-horse-weight-calculator", "/go/amazon-brand/livestock+barn+scale?s=tools-horse-weight-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop weight tapes
@@ -217,8 +217,7 @@ export default function HorseWeightCalculatorPage() {
             A dedicated equine weight tape (girth + length marks) is more repeatable than a
             carpenter&rsquo;s tape. A soft measuring tape is the backup for body length. A livestock
             barn scale is the check when the estimate has to be a true number — medication, sale
-            weight, or a clinical ration. Horses.com earns a commission on qualifying purchases at
-            no extra cost to you.
+            weight, or a clinical ration.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
