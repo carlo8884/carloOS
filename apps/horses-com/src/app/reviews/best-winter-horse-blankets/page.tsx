@@ -264,7 +264,7 @@ export default function BestWinterBlanketsPage() {
               name="SmartPak Ultimate Turnout"
               subtitle="1680D outer · Redesigned line · Standard, high neck, and combo neck"
               description={<>
-                <p>The current SmartPak search for this hop lists the SmartPak Ultimate Horse Turnout Blanket at $279.95–299.95, dated 2026-10-07, plus high-neck and combo-neck versions. SmartPak redesigned the line at the end of 2025.</p>
+                <p>The current SmartPak search lists the SmartPak Ultimate Horse Turnout Blanket at $279.95–299.95, dated 2026-10-07, plus high-neck and combo-neck versions. SmartPak redesigned the line at the end of 2025.</p>
                 <p>The current product description describes a 1680D outer with a Teflon coating, not the older 1200D ripstop shell. SmartPak&apos;s warranty page describes a 10-year durability guarantee, with a replacement limit of 3 replacements and 1 per year. Confirm the live price on the listing.</p>
               </>}
               specs={[
