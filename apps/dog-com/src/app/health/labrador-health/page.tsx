@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -196,7 +197,7 @@ export default function LabradorHealthPage() {
         <h2 id="kit">Swim-ear kit</h2>
         <p>Everyday physical supplies that match the swim-ear copy above — an absorbent microfiber dog towel to dry the coat after a swim or bath so water does not drip back into the canal, plus a veterinary ear drying solution for the ears themselves. These are post-swim drying tools, not treatments. They do not treat an active ear infection, they do not replace cytology, and they do not replace a veterinarian. Veterinary ear cleaners, cotton balls, and cotton swabs stay educational copy only — the weekly cleaner / cotton-ball wipe lives on the sister <a href="/health/dog-ear-infections">dog ear infections</a> page. Measuring cups, digital pet scales, slow-feeders, chlorhexidine shampoo, hypoallergenic washcloths, nightlights, fish oil, glucosamine, and prescription ear drops stay off this kit. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/microfiber+dog+towel?s=health-labrador-health", "/go/amazon-brand/dog+ear+drying+solution?s=health-labrador-health"]} />
 
         {/* Money path — live amazon-brand search hops (microfiber
             dog towel / ear drying solution). ShopCtas hides

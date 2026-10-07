@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -97,7 +98,7 @@ export default function HeartwormPreventionPage() {
             ProHeart, melarsomine, ivermectin, milbemycin,
             or moxidectin. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/mosquito+dunks?s=health-heartworm-prevention", "/go/amazon-brand/monthly+pill+organizer?s=health-heartworm-prevention", "/go/amazon-brand/soft+sided+vet+visit+carrier?s=health-heartworm-prevention"]} />
 
           {/* Money path — live amazon-brand search hops
               (mosquito dunks / monthly pill organizer /

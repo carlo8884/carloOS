@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -80,7 +81,7 @@ export default function DogMangePage() {
           <h2 id="kit">Bedding-wash kit</h2>
           <p>Everyday physical supplies that match the household-wash copy above — a washable dog bed cover so bedding can go in the laundry after a sarcoptic diagnosis, plus pet-safe laundry detergent for that wash. These are household-management aids, not treatments. They do not kill mites, they do not replace isoxazoline therapy, and they do not treat demodectic immune disease. Bravecto / NexGard / Simparica / Credelio, Revolution / selamectin, ivermectin, amitraz dips, chlorhexidine / medicated shampoo, and recovery cones stay educational copy only — this page never hops parasiticide brands, brand ASINs, medicated shampoo, or clinical gear. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+bed+cover?s=health-dog-mange", "/go/amazon-brand/pet+safe+laundry+detergent?s=health-dog-mange"]} />
 
           {/* Money path — live amazon-brand search hops (washable
               dog bed cover / pet-safe laundry detergent). ShopCtas

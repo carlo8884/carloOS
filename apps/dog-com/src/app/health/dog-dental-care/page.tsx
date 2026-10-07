@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -82,7 +83,7 @@ export default function DogDentalCarePage() {
           <h2 id="kit">Daily dental-care kit</h2>
           <p>Everyday physical supplies that match the home-care copy above — a soft-bristled toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews as a brushing adjunct. Water additives, Hill&apos;s t/d and other prescription dental diets, human fluoride toothpaste, and brand ASINs (CET, Vetradent, Greenies, Whimzees) stay educational copy only — this page never hops Rx food, brand ASINs, or medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dog-dental-care", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dog-dental-care", "/go/amazon-brand/dental+chews+dog?s=health-dog-dental-care"]} />
 
           {/* Money path — live amazon-brand search hops (daily dental kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -169,7 +170,7 @@ export default function SeniorDogCarePage() {
         <h2 id="kit">Senior care kit</h2>
         <p>Everyday physical supplies that match the senior-care copy above — a senior formula (lower calorie density, typically higher protein), a portion-control food scale for monthly body weight and BCS checks plus the 10–15% portion adjustment, and joint-support treats as a husbandry category beside the arthritis notes. Fish oil (EPA/DHA), glucosamine/chondroitin bottles, NSAIDs, selegiline/Anipryl, and prescription kidney or cognitive diets (Hill&apos;s k/d, Royal Canin Renal Support, Hill&apos;s b/d, Purina Pro Plan Bright Mind) stay educational copy only — this page never hops Rx food, brand ASINs, supplements as medication, or drugs. Orthopedic beds and ramps are not named on this page, so they stay off the kit. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/senior+dog+food?s=health-senior-dog-care", "/go/amazon-brand/joint+support+dog+treats?s=health-senior-dog-care", "/go/amazon-brand/portion+control+food+scale+dog?s=health-senior-dog-care"]} />
 
         {/* Money path — live amazon-brand search hops (senior formula, joint
             treats, portion scale). ShopCtas hides empty Chewy; never href="#"

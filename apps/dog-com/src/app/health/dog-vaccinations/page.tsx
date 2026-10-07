@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -68,7 +69,7 @@ export default function DogVaccinationsPage() {
           <p>Core vaccines protect against diseases that are severe, widely distributed, or transmissible to humans. The <a href="https://wsava.org/committees/vaccination-guidelines-group/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a> guidelines define four core canine vaccines:</p>
           <ul>
             <li><strong>Rabies:</strong> Required by law in virtually all US states. Fatal in dogs and humans. Initial vaccine at 12–16 weeks, booster at 1 year, then every 1–3 years per state law and product label.</li>
-            <li><strong>DA2PP (Distemper/Adenovirus/Parvovirus/Parainfluenza):</strong> A combination vaccine protecting against four diseases. Distemper causes severe neurological disease. Parvovirus causes fatal hemorrhagic gastroenteritis, particularly in puppies. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 1 year, then every 3 years in adult dogs with documented prior vaccination.</li>
+            <li><strong>DA2PP (Distemper, Adenovirus, Parvovirus, Parainfluenza):</strong> A combination vaccine protecting against four diseases. Distemper causes severe neurological disease. Parvovirus causes fatal hemorrhagic gastroenteritis, particularly in puppies. Puppy series starting at 6–8 weeks, every 3–4 weeks until 16 weeks, booster at 1 year, then every 3 years in adult dogs with documented prior vaccination.</li>
           </ul>
 
           <h2>Puppy Vaccination Schedule</h2>
@@ -120,7 +121,7 @@ export default function DogVaccinationsPage() {
             does not hop vaccines or medications. This
             page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations", "/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations", "/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"]} />
 
           {/* Money path — live amazon-brand search hops
               (pet vaccination record book / dog seat-belt

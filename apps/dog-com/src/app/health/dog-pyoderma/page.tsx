@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -65,7 +66,7 @@ export default function DogPyodermaPage() {
           <h2 id="kit">Chlorhexidine-bath kit</h2>
           <p>Everyday topical-bath supplies that match the on-page copy above — a chlorhexidine dog shampoo (2–4%, or chlorhexidine plus miconazole) for the 2–3 times weekly 10-minute contact-time baths, plus dedicated hypoallergenic washcloths for applying that lather to folds and lesions. These are bath tools, not treatments that replace a veterinarian. They do not treat deep pyoderma on their own, they do not replace culture and sensitivity, and they do not treat the underlying allergy, thyroid, Cushing&apos;s, or Demodex cause. Systemic antibiotics (cephalexin, cefpodoxime / Simplicef, amoxicillin-clavulanate / Clavamox, and similar), isoxazoline parasiticide brands (Bravecto / NexGard / Simparica / Credelio), steroids, recovery cones, paw wipes / booties, HEPA indoor-air gear, and washable-bed / laundry gear stay educational copy only — cones stay on the sister <a href="/health/dog-hot-spots">hot spots</a> and <a href="/health/cherry-eye">cherry eye</a> pages, the allergy work-up and HEPA kit stay on <a href="/health/dog-allergies">dog allergies</a>, and bedding-wash gear stays on <a href="/health/dog-mange">dog mange</a>. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/chlorhexidine+dog+shampoo?s=health-dog-pyoderma", "/go/amazon-brand/hypoallergenic+washcloths?s=health-dog-pyoderma"]} />
 
           {/* Money path — live amazon-brand search hops (chlorhexidine
               dog shampoo / hypoallergenic washcloths). ShopCtas
