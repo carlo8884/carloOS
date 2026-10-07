@@ -56,14 +56,16 @@ test('money-page hop records site, source, and partner, and Amazon hops stay tag
     for (const entry of layer) {
       const list = Array.isArray(entry) ? entry : Array.from(entry as ArrayLike<unknown>)
       if (list[0] === 'event' && list[1] === 'affiliate_click' && list[2] && typeof list[2] === 'object') {
-        return list[2] as { site?: string; source?: string; partner?: string }
+        return list[2] as { site?: string; page?: string; source?: string; partner?: string; vendor?: string }
       }
     }
     return null
   })
   expect(params?.site).toBe(site)
+  expect(params?.page).toBe(pagePath[site])
   expect(params?.source).toBe(source)
   expect(params?.partner).toBe(partner)
+  expect(params?.vendor).toBe(partner)
 
   await expectHop(page.request, amazonHop[site], ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`])
 })

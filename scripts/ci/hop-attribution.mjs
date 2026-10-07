@@ -87,8 +87,17 @@ for (const site of SITES) {
 
 const listener = readFileSync(join(ROOT, 'packages/ui/src/components/AffiliateClickListener.tsx'), 'utf8')
 if (!/trackEvent\(\s*'affiliate_click'/.test(listener)) hits.push('AffiliateClickListener does not fire affiliate_click')
-for (const field of ['site:', 'page:', 'source:', 'partner:', 'product:', 'placement:']) {
+for (const field of ['site:', 'page:', 'source:', 'partner:', 'vendor:', 'product:', 'placement:']) {
   if (!listener.includes(field)) hits.push(`AffiliateClickListener event is missing ${field}`)
+}
+
+const clickLib = readFileSync(join(ROOT, 'packages/ui/src/lib/affiliate-click.ts'), 'utf8')
+if (!/vendor:\s*partner/.test(clickLib)) hits.push('affiliate click payload does not send vendor')
+if (!/'ep\.vendor':\s*fields\.partner/.test(clickLib)) hits.push('email /go collect does not send ep.vendor')
+
+const resolver = readFileSync(join(ROOT, 'packages/config/affiliate-hop.ts'), 'utf8')
+if (!/split\('PLACEHOLDER'\)\.join\(tag\)/.test(resolver)) {
+  hits.push('Amazon redirect no longer substitutes the Associates tag')
 }
 
 const goHandler = readFileSync(join(ROOT, 'packages/ui/src/server/affiliate-hop.ts'), 'utf8')
@@ -102,4 +111,4 @@ if (hits.length) {
   for (const hit of hits) console.error('  ' + hit)
   process.exit(1)
 }
-console.log('PASS: money-page hops carry a source, and affiliate_click records site, source, and partner.')
+console.log('PASS: money-page hops carry a source, affiliate_click records site, page, and vendor, and Amazon redirects substitute the Associates tag.')

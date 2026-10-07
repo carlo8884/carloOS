@@ -46,6 +46,7 @@ test('every shop component marks a placement the click listener emits', () => {
     assert.equal(event.site, 'dog-com')
     assert.equal(event.page, '/reviews/best-dog-crates')
     assert.equal(event.partner, 'amazon-brand')
+    assert.equal(event.vendor, 'amazon-brand')
     assert.equal(event.product, 'midwest icrate dog crate')
     assert.equal(event.placement, component.placement)
     assert.equal(event.source, 'reviews-best-dog-crates')
@@ -95,6 +96,7 @@ test('an outbound partner link still emits partner and product', () => {
     text: 'Visit Vetster',
   })
   assert.equal(event?.partner, 'vetster.com')
+  assert.equal(event?.vendor, 'vetster.com')
   assert.equal(event?.product, 'Visit Vetster')
   assert.equal(event?.placement, 'card')
   assert.equal(event?.page, '/telehealth')
@@ -150,6 +152,7 @@ test('direct email /go hits build one GA4 collect URL from the existing measurem
   assert.equal(parsed.searchParams.get('ep.site'), 'fish-com')
   assert.equal(parsed.searchParams.get('ep.page'), '/go/amazon-brand/seachem+prime')
   assert.equal(parsed.searchParams.get('ep.partner'), 'amazon-brand')
+  assert.equal(parsed.searchParams.get('ep.vendor'), 'amazon-brand')
   assert.equal(parsed.searchParams.get('ep.product'), 'seachem prime')
   assert.equal(parsed.searchParams.get('ep.placement'), 'email landing')
   assert.equal(parsed.searchParams.get('ep.source'), 'email-cycling-guide')

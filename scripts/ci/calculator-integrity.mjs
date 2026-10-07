@@ -357,7 +357,8 @@ const CALCULATORS = [
     file: 'packages/ui/src/components/AffiliateClickListener.tsx',
     mustInclude: [
       { re: /trackEvent\('affiliate_click'/, label: 'GA4 affiliate_click on shop hops when gtag exists' },
-      { re: /partner:/, label: 'partner (vendor) travels with the click' },
+      { re: /partner:/, label: 'partner travels with the click' },
+      { re: /vendor:/, label: 'vendor travels with the click' },
       { re: /source/, label: 'source page travels with the click' },
     ],
     mustExclude: [
