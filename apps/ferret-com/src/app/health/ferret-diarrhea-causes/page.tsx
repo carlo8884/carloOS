@@ -16,6 +16,11 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual — infectious gastrointestinal disease in ferrets, including Helicobacter mustelae and Lawsonia",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastroenterology, epizootic catarrhal enteritis (ECE), Helicobacter, and inflammatory bowel disease chapters.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",

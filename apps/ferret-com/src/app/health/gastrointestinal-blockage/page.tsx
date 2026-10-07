@@ -17,6 +17,11 @@ import {
 
 const SOURCES = [
   {
+    label: "Merck Veterinary Manual — foreign-body obstruction in ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/noninfectious-diseases-of-ferrets",
+    publisher: "Merck Veterinary Manual",
+  },
+  {
     label: "Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. Saunders/Elsevier — ferret gastrointestinal and soft-tissue surgery chapters covering foreign-body obstruction.",
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
