@@ -10,6 +10,7 @@
  * Authorities: Thoroughbred Aftercare Alliance, AAEP, The Jockey Club
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -200,7 +200,7 @@ export default function OttbAftercarePage() {
             <li>Equibase. North American Thoroughbred racing records database. equibase.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle?s=racing-ottb-aftercare" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

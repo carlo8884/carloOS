@@ -14,9 +14,10 @@
  * Byline: Horses.com Editorial (no fabricated credentials).
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { PremiumMasthead } from '@/components/PremiumMasthead'
 import { racingForNewcomersSpokes } from '@/data/racing-for-newcomers'
 
@@ -181,7 +182,7 @@ export default function RacingForNewcomersHubPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/jockey+racing+silks?s=racing-for-newcomers" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

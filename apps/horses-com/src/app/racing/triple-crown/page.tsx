@@ -13,6 +13,7 @@
  * year-by-year statistics.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -22,7 +23,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -242,7 +242,7 @@ export default function TripleCrownPage() {
             <li>Daily Racing Form. Historical use of the term &quot;Triple Crown&quot; (Charles Hatton). drf.com.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+blanket?s=racing-triple-crown" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -10,6 +10,7 @@
  * Authorities: The Jockey Club, racing commissions, AAEP.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -19,7 +20,6 @@ import {
   RelatedLinks,
   TableOfContents,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   buildArticleSchema,
   SchemaScript,
@@ -215,7 +215,7 @@ export default function PeopleOfRacingPage() {
             <li>American Association of Equine Practitioners (AAEP). Equine welfare and veterinary guidance. aaep.org.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=racing-people" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
