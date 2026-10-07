@@ -2489,7 +2489,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /smartpak\/rambo-original-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Rambo Original SmartPak hop kept (not an empty leftover button)' },
       { re: /schneider\/stormshield-euro-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Schneiders StormShield hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -10666,7 +10666,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/quilted\+all\+purpose\+saddle\+pad/, label: 'on-page quilted saddle pad Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12519,7 +12519,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/kentucky\+equine\+research\+EO-3\+omega\+3\?s=reviews-best-equine-supplements/, label: 'existing KER EO-3 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/equithrive\+original\+pellets\+resveratrol\?s=reviews-best-equine-supplements/, label: 'existing Equithrive Original amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/standlee\+premium\+forage\+pellets\?s=reviews-best-equine-supplements/, label: 'existing Standlee forage amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12534,7 +12534,7 @@ const CALCULATORS = [
     file: 'apps/horses-com/src/app/supplements/joint-supplements/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/platinum\+performance\+CJ\+joint\+supplement\?s=supplements-joint-supplements/, label: 'existing Platinum CJ amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -63,6 +64,7 @@ export default function BestWinterBlanketsPage() {
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
+        <HopDisclosure siteId="horses-com" href="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -103,7 +105,7 @@ export default function BestWinterBlanketsPage() {
               </p>
             </div>
 
-            <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            <HopDisclosure siteId="horses-com" href={["/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets", "/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets", "/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets", "/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets", "/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets", "/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"]} />
 
             <h2>The Blanket Categories</h2>
 
@@ -384,7 +386,7 @@ export default function BestWinterBlanketsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-06" />
+            <ComparisonFoot updated="2026-10-07" />
 
             <h2>The Layering System Approach</h2>
             <p>The alternative to owning four different weight-specific turnouts: one waterproof sheet shell plus a set of liners in graduated weights. The layering math:</p>
