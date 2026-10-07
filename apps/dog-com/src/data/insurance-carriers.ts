@@ -476,7 +476,7 @@ export const CARRIERS: CarrierProfile[] = [
     coversAlternative: true,
     coversBehavioral: true,
     coversDental: 'full',
-    coversWellness: 'none',
+    coversWellness: 'standalone-addon',
     coversRxFood: true,
     coversExamFees: true,
     ageLimits: { min: '6 weeks', max: '14 years (enrollment)' },
@@ -490,7 +490,7 @@ export const CARRIERS: CarrierProfile[] = [
     ],
     notIdealFor: [
       'Senior pets at the age cap',
-      'Wellness-seekers (no add-on)',
+      'Owners who need the clinic paid directly',
     ],
     pros: [
       'Dental disease (not just dental accidents) covered',
@@ -499,7 +499,7 @@ export const CARRIERS: CarrierProfile[] = [
       'Solid trust signal via The Dodo brand',
     ],
     cons: [
-      'No wellness add-on',
+      'No vet direct pay',
       'Age cap at enrollment',
       '6-month orthopedic waiting period',
     ],
