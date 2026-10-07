@@ -122,7 +122,7 @@ export default function BestDogBedsPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">Everyday use for a medium or large dog, with a cover you can wash</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#casper" className="text-brand-primary">Casper Dog Bed</a><TableShopLink href={"/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"} product={"Casper Dog Bed"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Premium. Machine-washable cover. Memory foam over a support base. $139–249 regular</td>
+                      <td className="p-3 text-brand-text-mid">Best Premium. Machine-washable cover. Memory foam over a support base. $139–249 regular, dated 2026-10-07</td>
                       <td className="p-3 text-brand-text-mid">Severe arthritis, where the card says Big Barker is the more therapeutic pick. Zippers can be chewed</td>
                     </tr>
                   </tbody>
