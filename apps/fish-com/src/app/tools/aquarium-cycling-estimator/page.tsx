@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -196,7 +197,7 @@ export default function AquariumCyclingEstimatorPage() {
 
         {/* Money path — live amazon-brand search hops (test kit / bottled bacteria / ammonia / sponge).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/tetra+safestart+plus?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/dr+tims+ammonium+chloride?s=tools-aquarium-cycling-estimator", "/go/amazon-brand/aquarium+sponge+filter?s=tools-aquarium-cycling-estimator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a cycling kit
@@ -218,7 +219,7 @@ export default function AquariumCyclingEstimatorPage() {
             >
               aquarium cycling guide
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

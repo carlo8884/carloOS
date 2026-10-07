@@ -346,7 +346,6 @@ export default function WaterChangeCalculator() {
           blurb={
             <>
               Same Amazon hops used on water-test and fin-rot maintenance pages — no invented SKUs.
-              Fish.com earns a commission on qualifying purchases at no extra cost to you.
             </>
           }
           query={shop.query}

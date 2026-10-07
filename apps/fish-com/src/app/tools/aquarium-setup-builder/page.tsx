@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -173,7 +174,7 @@ export default function AquariumSetupBuilderPage() {
           resourceLabel="Browse API Master Test Kit on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-aquarium-setup-builder", "/go/amazon-brand/aqueon+quietflow+30?s=tools-aquarium-setup-builder", "/go/amazon-brand/eheim+jager+heater?s=tools-aquarium-setup-builder", "/go/amazon-brand/nicrew+classic+led?s=tools-aquarium-setup-builder", "/go/amazon-brand/api+freshwater+master+test+kit+seachem+prime?s=tools-aquarium-setup-builder", "/go/amazon-brand/aquarium+gravel?s=tools-aquarium-setup-builder"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop related supplies
@@ -204,8 +205,7 @@ export default function AquariumSetupBuilderPage() {
             <Link href="/health/new-tank-syndrome" className="text-brand-primary no-underline hover:underline">
               new-tank-syndrome
             </Link>{' '}
-            guide (Seachem Prime). Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.
+            guide (Seachem Prime).
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

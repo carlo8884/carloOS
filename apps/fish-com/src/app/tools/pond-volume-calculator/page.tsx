@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -191,7 +192,7 @@ export default function PondVolumeCalculatorPage() {
 
         {/* Money path — live amazon-brand search hops (liner / pump / filter-skimmer / conditioner).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/epdm+pond+liner?s=tools-pond-volume", "/go/amazon-brand/submersible+pond+pump?s=tools-pond-volume", "/go/amazon-brand/pond+filter+skimmer+kit?s=tools-pond-volume", "/go/amazon-brand/pond+dechlorinator+water+conditioner?s=tools-pond-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop pond gear
@@ -209,7 +210,7 @@ export default function PondVolumeCalculatorPage() {
             <Link href="/species/koi" className="text-brand-primary no-underline hover:underline">
               koi care guide
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

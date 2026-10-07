@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -168,7 +169,7 @@ export default function VolumeCalculatorPage() {
 
         {/* Money path — live amazon-brand search hops (glass / acrylic / stand / substrate / heater / filter).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+filter+gallon?s=tools-aquarium-volume", "/go/amazon-brand/glass+aquarium+tank+gallon?s=tools-aquarium-volume", "/go/amazon-brand/acrylic+aquarium+tank?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+stand?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+substrate+gravel+bags?s=tools-aquarium-volume", "/go/amazon-brand/aquarium+heater+tank+size?s=tools-aquarium-volume"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop tanks and stands
@@ -197,7 +198,7 @@ export default function VolumeCalculatorPage() {
             >
               aquarium filter review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
