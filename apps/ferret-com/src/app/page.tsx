@@ -86,6 +86,7 @@ const HUBS = [
     manifestKey: 'ferret-com:health-hero',
     imageAlt: 'Ferret health reference',
     cta: 'Browse health',
+    ctaColor: '#fbf5e8',
   },
   {
     href: '/care',
@@ -555,7 +556,7 @@ export default function HomePage() {
                       style={{
                         fontSize: '0.8125rem',
                         fontWeight: 700,
-                        color: 'var(--brand-amber)',
+                        color: hub.ctaColor ?? 'var(--brand-amber)',
                         letterSpacing: '0.01em',
                       }}
                     >

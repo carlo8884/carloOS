@@ -28,9 +28,9 @@ export const metadata: Metadata = buildMetadata({
 
 const SOURCES = [
   { label: 'Quesenberry KE, Carpenter JW (eds.). Ferrets, Rabbits, and Rodents: Clinical Medicine and Surgery. 4th ed. — ferret emergency presentation and critical-care chapters', url: 'https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7', publisher: 'Elsevier/Saunders' },
-  { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Vet Manual' },
   { label: 'Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal emergency care and practitioner directory', url: 'https://aemv.org', publisher: 'AEMV' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
   { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
 ]
 

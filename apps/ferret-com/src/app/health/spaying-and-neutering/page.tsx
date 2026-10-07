@@ -20,7 +20,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Reproductive Diseases of Ferrets: persistent estrus, aplastic anemia risk in unspayed jills, and surgical options",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/reproductive-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/breeding-and-reproduction-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

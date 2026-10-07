@@ -20,7 +20,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Canine Distemper in Ferrets: morbillivirus susceptibility, transmission, clinical course, and vaccination",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/canine-distemper-in-ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

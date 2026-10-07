@@ -18,12 +18,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Cardiovascular and Hematopoietic Diseases of Ferrets: cardiomyopathy types, clinical signs, and management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/cardiovascular-and-hematopoietic-diseases-of-ferrets",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret cardiac medicine",
     url: "https://aemv.org",
     publisher: "AEMV",

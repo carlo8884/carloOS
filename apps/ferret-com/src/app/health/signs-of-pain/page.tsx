@@ -20,7 +20,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Clinical Examination and Routine Health Care of Ferrets: pain indicators, bruxism, and abdominal posturing",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

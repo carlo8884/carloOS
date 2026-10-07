@@ -24,7 +24,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Endocrine Diseases of Ferrets: adrenal cortical disease, sex-steroid overproduction, diagnosis, and surgical management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/endocrine-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/hormonal-disorders-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

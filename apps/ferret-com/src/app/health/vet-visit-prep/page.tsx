@@ -24,7 +24,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Routine Health Care of Ferrets: what to bring, what to expect at the exam, and standard diagnostic components",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

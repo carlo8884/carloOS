@@ -24,7 +24,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Management of Older Ferrets: monitoring cadence, common senior-ferret diseases, and quality-of-life indicators",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
