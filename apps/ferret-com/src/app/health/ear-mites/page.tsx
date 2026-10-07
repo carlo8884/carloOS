@@ -22,7 +22,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Ear Mites in Ferrets: Otodectes cynotis diagnosis, treatment, and household decontamination",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/musculoskeletal-and-neurologic-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

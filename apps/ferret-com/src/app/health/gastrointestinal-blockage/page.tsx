@@ -23,7 +23,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: foreign-body obstruction, diagnosis, and surgical management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

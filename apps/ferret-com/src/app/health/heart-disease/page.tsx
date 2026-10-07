@@ -20,7 +20,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Cardiovascular and Hematopoietic Diseases of Ferrets: cardiomyopathy types, clinical signs, and management",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/cardiovascular-and-hematopoietic-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

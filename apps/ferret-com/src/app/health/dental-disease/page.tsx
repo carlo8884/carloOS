@@ -23,7 +23,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Dental Disease in Ferrets: periodontal staging, tartar accumulation, and dental-procedure anesthesia considerations",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

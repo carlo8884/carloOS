@@ -22,7 +22,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: diarrhea causes including ECE, proliferative bowel disease, Helicobacter, and foreign bodies",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

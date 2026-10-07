@@ -33,7 +33,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: "ASPCA Animal Poison Control Center — toxic substance database and species-specific guidance",
-    url: "https://www.aspca.org/pet-care/animal-poison-control",
+    url: "https://www.aspca.org/pet-care/aspca-poison-control",
     publisher: "ASPCA",
   },
   {

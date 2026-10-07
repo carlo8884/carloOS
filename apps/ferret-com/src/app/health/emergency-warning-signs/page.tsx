@@ -21,7 +21,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Emergency Care of Ferrets: hypoglycemic crisis, respiratory distress, urinary obstruction, and other can-wait vs cannot-wait presentations",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/routine-health-care-of-ferrets",
+    url: "https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

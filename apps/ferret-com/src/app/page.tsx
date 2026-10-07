@@ -86,6 +86,8 @@ const HUBS = [
     manifestKey: 'ferret-com:health-hero',
     imageAlt: 'Ferret health reference',
     cta: 'Browse health',
+    blurbColor: '#1e140a',
+    ctaColor: '#fbf5e8',
   },
   {
     href: '/care',
@@ -110,6 +112,7 @@ const HUBS = [
     manifestKey: 'ferret-com:colors-hero',
     imageAlt: 'Ferret coat colors',
     cta: 'Browse colors',
+    ctaColor: '#1e140a',
   },
   {
     href: '/diet',
@@ -349,7 +352,7 @@ export default function HomePage() {
                 alignItems: 'center',
                 gap: '8px',
                 background: 'rgba(30, 20, 10, 0.55)',
-                color: 'rgba(251, 245, 232, 0.97)',
+                color: '#1e140a',
                 padding: '15px 26px',
                 borderRadius: '8px',
                 fontWeight: 700,
@@ -545,7 +548,7 @@ export default function HomePage() {
                       style={{
                         fontSize: '0.875rem',
                         lineHeight: 1.5,
-                        color: 'rgba(251, 245, 232, 0.78)',
+                        color: hub.blurbColor ?? 'rgba(251, 245, 232, 0.78)',
                         margin: '0 0 12px',
                       }}
                     >
@@ -555,7 +558,7 @@ export default function HomePage() {
                       style={{
                         fontSize: '0.8125rem',
                         fontWeight: 700,
-                        color: 'var(--brand-amber)',
+                        color: hub.ctaColor ?? 'var(--brand-amber)',
                         letterSpacing: '0.01em',
                       }}
                     >

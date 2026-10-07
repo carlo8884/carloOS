@@ -22,7 +22,6 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: gastric ulceration, Helicobacter mustelae, and treatment approaches",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/digestive-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {

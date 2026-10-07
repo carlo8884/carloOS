@@ -20,7 +20,7 @@ const SOURCES = [
   },
   {
     label: "Merck Veterinary Manual — Parasitic Diseases of Ferrets: flea control, ear mites, heartworm prevention, and antiparasitic safety",
-    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/parasitic-diseases-of-ferrets",
+    url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/ferrets/infectious-diseases-of-ferrets",
     publisher: "Merck Veterinary Manual",
   },
   {
