@@ -38,9 +38,14 @@ export function HomeEmailCapture() {
                 <span className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary group-hover:text-brand-dark">Start here</span>
               </Link>
             </div>
-            <h2 className="font-display text-2xl font-bold text-brand-dark mb-2 italic">
-              New-tank setup and stocking
-            </h2>
+            <div className="mb-2 flex items-center justify-center lg:justify-start gap-2.5">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
+              </span>
+              <h2 className="font-display text-2xl font-bold text-brand-dark italic mb-0">
+                New-tank setup and stocking
+              </h2>
+            </div>
             <p className="text-sm text-brand-text-mid mb-0 leading-relaxed">
               Build the tank first, then sketch a slim-inch ceiling — on this site, no email required.
             </p>
