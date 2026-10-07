@@ -214,18 +214,18 @@ export default function BestDogFoodPage() {
               name="Hill's Science Diet"
               subtitle="Prescription formulas · Clinical nutrition · Vet-prescribed"
               description={
-                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend, and the clinical evidence behind these formulas is extensive. Weighing the kibble in a weight-management formula is the habit on the <a href="/health/dog-obesity" className="text-brand-primary underline">dog obesity guide</a>.</p>
+                <p>Hill&apos;s Science Diet (and their prescription Hill&apos;s Prescription Diet line) is a widely used veterinary therapeutic nutrition brand — with condition-specific formulas for kidney disease (k/d), liver disease (l/d), weight management (Metabolic), urinary health (c/d), joint support (j/d), and more. If your dog has been diagnosed with a condition managed through diet, Hill&apos;s Prescription Diet is among the brands your vet may recommend. Check the prescribed formula label for what that page prints. Weighing the kibble in a weight-management formula is the habit on the <a href="/health/dog-obesity" className="text-brand-primary underline">dog obesity guide</a>.</p>
               }
               specs={[
                 { label: 'WSAVA Compliance', value: 'Full', highlight: 'good' },
                 { label: 'Prescription Line', value: 'Yes — condition-specific', highlight: 'good' },
-                { label: 'Clinical Evidence', value: 'Extensive', highlight: 'good' },
+                { label: 'Clinical Evidence', value: 'Check the prescribed formula label' },
                 { label: 'Vet Recommended', value: 'Widely used in veterinary practice', highlight: 'good' },
               ]}
               pros={[
-                'Among the most clinically studied prescription diet lines',
+                'Prescription formulas are sold through a veterinarian. Check that formula label.',
                 'Formulas for every major disease condition',
-                'Extensive feeding trial data',
+                'Check the prescribed formula label for feeding-trial language',
                 'Strong dental health formula (t/d)',
               ]}
               cons={[
@@ -247,14 +247,14 @@ export default function BestDogFoodPage() {
               name="Orijen"
               subtitle="High protein · Regional ingredients · Biologically appropriate"
               description={
-                <p>Orijen delivers on the &quot;biologically appropriate&quot; promise more than most: high meat content (85%+ animal ingredients), regional sourcing with named suppliers, and minimal processing. The ingredient quality is genuinely exceptional. The caveat: Orijen&apos;s WSAVA compliance is weaker than Royal Canin or Purina — fewer published studies, smaller research team. For healthy dogs with owners who prioritize ingredient quality and are comfortable with the tradeoffs, Orijen is a strong choice. We don&apos;t recommend it for dogs with known health conditions — use a clinically backed brand there.</p>
+                <p>The current US Orijen Original page lists 85% quality animal ingredients and crude protein minimum 38%. The same ingredient list includes whole red lentils, chickpeas, peas, and lentil fiber. This page does not call that list grain-free. Orijen&apos;s WSAVA compliance is weaker than Royal Canin or Purina — fewer published studies, smaller research team. For healthy dogs with owners who prioritize ingredient quality and are comfortable with the tradeoffs, Orijen is a strong choice. We don&apos;t recommend it for dogs with known health conditions — use a clinically backed brand there.</p>
               }
               specs={[
                 { label: 'Protein Content', value: '38%+ (very high)', highlight: 'good' },
                 { label: 'Ingredient Quality', value: 'Exceptional', highlight: 'good' },
                 { label: 'WSAVA Compliance', value: 'Partial', highlight: 'warn' },
                 { label: 'Research Investment', value: 'Limited vs. big brands', highlight: 'warn' },
-                { label: 'DCM Risk', value: 'Low (not grain-free)', highlight: 'good' },
+                { label: 'DCM Risk', value: 'Ingredient list includes lentils, peas, and chickpeas', highlight: 'warn' },
                 { label: 'Price', value: 'Premium' },
               ]}
               pros={['Exceptional ingredient quality and sourcing transparency', 'High protein — good for active dogs', 'Regional ingredients with named suppliers']}
