@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -67,7 +68,7 @@ export default function ColumnarisguidePage() {
         {/* Money path — live amazon-brand search hops (water-first / hospital-tank kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=health-columnaris", "/go/amazon-brand/aquarium+sponge+filter?s=health-columnaris", "/go/amazon-brand/eheim+jager+heater?s=health-columnaris", "/go/amazon-brand/aquarium+digital+thermometer?s=health-columnaris"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a water-first hospital-tank kit
@@ -115,8 +116,7 @@ export default function ColumnarisguidePage() {
               aquarium setup guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure columnaris. Fish.com earns
-            a commission on qualifying purchases at no extra cost to you.</p>
+            and they do not treat, reverse, or cure columnaris.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-columnaris"
