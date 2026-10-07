@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -167,7 +168,7 @@ export default function HardKeeperPage() {
             below. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+alfalfa+cubes?s=nutrition-feeding-the-hard-keeper", "/go/amazon-brand/soy+hull+pellets+horse+feed?s=nutrition-feeding-the-hard-keeper", "/go/amazon-brand/over+door+horse+feed+bucket?s=nutrition-feeding-the-hard-keeper"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -193,7 +194,7 @@ export default function HardKeeperPage() {
           <h2 id="picks">Product Picks — Calorie Supports for Hard Keepers</h2>
           <p>A few widely-available feed supplements for horses needing safe extra calories. These are general nutrition supports -- fat and fiber sources to add condition without high-starch risk. Always build a complete feeding plan with your veterinarian or an equine nutritionist. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing. <a href="/reviews/best-equine-supplements">The equine supplement guide</a> compares those calorie supports.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/stabilized+rice+bran+horse+supplement?s=nutrition-hard-keeper", "/go/amazon-brand/high+fat+low+starch+horse+feed?s=nutrition-hard-keeper"]} />
 
 
           <ReviewCard

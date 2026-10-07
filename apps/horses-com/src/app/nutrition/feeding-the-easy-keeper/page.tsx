@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -161,7 +162,7 @@ export default function EasyKeeperPage() {
             ReviewCards below. This page does
             not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+horse+hay+flake+scale?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/horse+hay+soaking+tub?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/low+sugar+horse+treats?s=nutrition-feeding-the-easy-keeper", "/go/amazon-brand/small+hole+slow+feeder+hay+net+horse?s=nutrition-easy-keeper", "/go/amazon-brand/low+nsc+ration+balancer+easy+keeper+horse?s=nutrition-easy-keeper"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

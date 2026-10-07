@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, StockImage, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,7 +125,7 @@ export default function ForageBasicsPage() {
           <h2 id="trickle">Trickle Feeding</h2>
           <p>Because the horse&apos;s stomach produces acid continuously whether or not it is eating, long gaps without forage leave acid splashing against an empty stomach -- a direct route to gastric ulcers. Trickle feeding (free-choice forage, or slow-feeder hay nets that extend a ration over many hours) keeps something in the stomach to buffer acid and matches the horse&apos;s natural feeding pattern. For easy keepers, slow feeders let you restrict calories without imposing long fasts.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/slow+feeder+hay+net+horse?s=nutrition-forage-basics", "/go/amazon-brand/horse+hay+probe+moisture+tester?s=nutrition-forage", "/go/amazon-brand/equine+hay+core+sampler?s=nutrition-forage", "/go/amazon-brand/wall+mounted+horse+hay+rack?s=nutrition-forage"]} />
 
           <ReviewCard
             id="hay-nets"
