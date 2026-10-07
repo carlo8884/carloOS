@@ -15,6 +15,7 @@
  *   - Cost ranges are national averages with explicit disclaimer.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -25,7 +26,6 @@ import {
   buildFAQSchema,
   combineSchemas,
   SchemaScript,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   RelatedLinks,
   ShopCtas,
@@ -658,7 +658,7 @@ export default async function ComparePage({ params }: PageProps) {
                 Shop related supplies
               </div>
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+crate?s=compare-pair" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/dog+crate?s=compare-pair"

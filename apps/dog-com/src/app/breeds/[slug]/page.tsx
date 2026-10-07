@@ -26,6 +26,7 @@
  *   - Article + FAQPage + BreadcrumbList schemas
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -40,7 +41,6 @@ import {
   RelatedLinks,
   ShopCtas,
   StockImage,
-  AffiliateDisclosure,
   PriceAsOf
 } from '@carloOS/ui'
 import {
@@ -403,7 +403,7 @@ function buildFAQs(breed: Breed): Array<{ question: string; answer: string }> {
 /**
  * Presentational "Recommended gear" block. Editorial voice only — no ratings,
  * no review counts. The first instance on the page passes `withDisclosure` so
- * the FTC AffiliateDisclosure sits ABOVE the first commercial CTA (QC §1).
+ * the FTC HopDisclosure sits ABOVE the first commercial CTA (QC §1).
  * `/go` links open the click-tracker; /reviews links are internal money pages.
  */
 function GearBlock({
@@ -427,7 +427,7 @@ function GearBlock({
         Breed-appropriate picks for the {breedName}, chosen from our editorial
         reviews. Some links are affiliate links.
       </p>
-      {withDisclosure && <AffiliateDisclosure variant="inline" siteId="dog-com" />}
+      {withDisclosure && <HopDisclosure siteId="dog-com" href={picks.map((pick) => pick.href)} />}
       <div className="grid sm:grid-cols-2 gap-4 mt-4">
         {picks.map((p) => (
           <div
@@ -772,7 +772,7 @@ export default async function BreedTemplatePage({ params }: PageProps) {
                 Shop related supplies
               </div>
               <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href="/go/amazon-brand/no+pull+dog+harness?s=breed-profile" />
               <div className="flex flex-col gap-3 mt-3">
                 <ShopCtas
                   amazonHref="/go/amazon-brand/no+pull+dog+harness?s=breed-profile"

@@ -4468,7 +4468,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/dog\+slicker\+brush\+golden\+double\+coat\?s=breed-golden-retriever/, label: 'dog slicker-brush Golden-double-coat search hop (matches on-page dense double coat / 2–3× weekly brushing copy; unique vs dog+slicker+brush? health-hypothyroidism hop and slicker+brush+dog+grooming [slug] hop)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4486,7 +4486,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4504,7 +4504,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4522,7 +4522,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+skin\+fold\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4540,7 +4540,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4558,7 +4558,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4576,7 +4576,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/douxo\+s3\+wipes/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4594,7 +4594,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4612,7 +4612,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4630,7 +4630,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4648,7 +4648,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4666,7 +4666,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4684,7 +4684,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4702,7 +4702,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4720,7 +4720,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4738,7 +4738,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4756,7 +4756,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+skin\+fold\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4774,7 +4774,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4792,7 +4792,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4810,7 +4810,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4828,7 +4828,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+ear\+cleaner/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4846,7 +4846,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4864,7 +4864,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4882,7 +4882,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4900,7 +4900,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4918,7 +4918,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4936,7 +4936,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/royal\+canin\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4954,7 +4954,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4972,7 +4972,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -4990,7 +4990,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+leash/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5010,7 +5010,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/dog\+apt\+puzzle\+feeder\?s=breeds-apartment-dogs/, label: 'dog apt-puzzle-feeder search hop (matches on-page indoor mental-exercise / no-yard copy)' },
       { re: /amazon-brand\/dog\+apt\+quiet\+chew\?s=breeds-apartment-dogs/, label: 'dog apt-quiet-chew search hop (matches on-page shared-wall / indoor chew copy)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5028,7 +5028,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+crate/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5046,7 +5046,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dry\+dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5064,7 +5064,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/no\+pull\+dog\+harness/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
       { re: /amazon-brand\/\$\{enc\(/, label: 'existing size-derived amazon-brand crate hop kept (no new crate ShopCtas)' },
     ],
     mustExclude: [
@@ -5318,7 +5318,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/dog\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above food/breed CTAs and added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

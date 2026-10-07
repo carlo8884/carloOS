@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -348,7 +348,7 @@ export default function DogBodyConditionScorePage() {
             treats. This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+measuring+tape+for+pets?s=guides-dog-body-condition-score", "/go/amazon-brand/dog+body+condition+score+chart+poster?s=guides-dog-body-condition-score", "/go/amazon-brand/single+ingredient+lean+dog+treats?s=guides-dog-body-condition-score"]} />
 
           {/* Money path — live amazon-brand search hops
               (soft measuring tape for pets / dog body
