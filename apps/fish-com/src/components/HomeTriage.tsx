@@ -141,7 +141,12 @@ export function HomeTriage() {
                 <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">Health guides</div>
+                <div className="mb-1 flex items-center gap-2">
+                  <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
+                  </span>
+                  <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">Health guides</div>
+                </div>
                 <p className="text-xs text-white/55 mt-0.5">Spikes, gasping, and when to test.</p>
               </div>
             </Link>
@@ -195,7 +200,12 @@ export function HomeTriage() {
                 <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
               </div>
               <div className="pr-3 py-2">
-                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                <div className="mb-1 flex items-center gap-2">
+                  <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
+                  </span>
+                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                </div>
                 <p className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</p>
               </div>
             </Link>
@@ -242,7 +252,12 @@ export function HomeTriage() {
                 <span className="text-xs font-bold tracking-eyebrow uppercase text-brand-primary-light group-hover:text-white">Decide with math, not guesses</span>
               </Link>
             </div>
-            <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+            <div className="flex items-center gap-2.5">
+              <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+              </span>
+              <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
+            </div>
           </div>
           <Link
             href="/tools"
@@ -252,7 +267,12 @@ export function HomeTriage() {
               <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-thumb-betta" alt="A betta fish" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              </div>
               <p className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, CO₂, cycling.</p>
             </div>
           </Link>
