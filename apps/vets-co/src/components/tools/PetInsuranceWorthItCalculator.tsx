@@ -126,7 +126,7 @@ export function PetInsuranceWorthItCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-06-11" />
+      <PriceAsOf date="2026-10-07" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="wi-premium" className="mb-2 block text-sm font-medium text-brand-text-mid">
@@ -142,9 +142,8 @@ export function PetInsuranceWorthItCalculator() {
             onChange={(e) => setMonthlyPremiumRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p className="mt-1 text-xs text-brand-text-mid">
-            Typical accident-and-illness premiums run roughly $25–$70/mo for dogs and $12–$40/mo for cats, rising with age and breed. Use the carrier&apos;s quote for your pet.
+            Premiums rise with age and breed. Use the carrier&apos;s quote for your pet.
           </p>
           {premiumError && <ToolError>{premiumError}</ToolError>}
         </div>
@@ -163,8 +162,7 @@ export function PetInsuranceWorthItCalculator() {
             onChange={(e) => setDeductibleRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p>Those figures are typical US ranges dated 2026-06-11.</p>
-          <p className="mt-1 text-xs text-brand-text-mid">Most carriers offer $100–$1,000. You pay this before reimbursement begins.</p>
+          <p className="mt-1 text-xs text-brand-text-mid">Carriers publish their own deductible. You pay this before reimbursement begins.</p>
           {deductibleError && <ToolError>{deductibleError}</ToolError>}
         </div>
 

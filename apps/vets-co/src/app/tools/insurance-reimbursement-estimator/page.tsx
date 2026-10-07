@@ -107,7 +107,7 @@ const FAQS = [
   {
     question: 'What expected annual claims number should I use?',
     answer:
-      'For a typical mid-life healthy dog or cat with no chronic conditions, $0-$1,000 in covered claims per year is common. For a senior pet, a young pet still in the high-injury age band, or a breed prone to expensive conditions (hip dysplasia, dilated cardiomyopathy, brachycephalic syndrome, certain cancers), $2,000-$8,000 per year is realistic. The decision to insure is largely about catastrophic protection — a $10,000-$15,000 surgery or chronic-condition course is the scenario insurance is best at.',
+      'Example: For a typical mid-life healthy dog or cat with no chronic conditions, $0-$1,000 in covered claims per year is common. For a senior pet, a young pet still in the high-injury age band, or a breed prone to expensive conditions (hip dysplasia, dilated cardiomyopathy, brachycephalic syndrome, certain cancers), $2,000-$8,000 per year is realistic. The decision to insure is largely about catastrophic protection — a $10,000-$15,000 surgery or chronic-condition course is the scenario insurance is best at.',
   },
   {
     question: 'Why does the calculator sometimes show a negative net benefit?',
@@ -300,9 +300,8 @@ export default function InsuranceReimbursementEstimatorPage() {
           <li><strong>Total annual cost with insurance</strong> — premium + out-of-pocket bills. The true all-in number to compare against no insurance.</li>
           <li><strong>Net benefit</strong> — money saved (positive) or extra paid (negative) by having insurance at this claim level.</li>
         </ul>
-        <p>Those figures are typical US ranges dated 2026-05-31.</p>
         <p>
-          Move the &quot;expected covered claims&quot; slider to see where the policy breaks even and where it starts paying off. Most policies break even somewhere between $1,500 and $4,000 in annual claims, depending on the deductible and reimbursement %.
+          Move the &quot;expected covered claims&quot; slider to see where the policy breaks even and where it starts paying off. Example: Most policies break even somewhere between $1,500 and $4,000 in annual claims, depending on the deductible and reimbursement %.
         </p>
 
         <h2 id="methodology">Methodology &amp; limits</h2>
@@ -343,7 +342,6 @@ export default function InsuranceReimbursementEstimatorPage() {
         </p>
 
         <h2 id="faq">FAQ</h2>
-        <p>Those figures are typical US ranges dated 2026-05-31.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           includeSchema

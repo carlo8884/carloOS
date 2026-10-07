@@ -4,17 +4,19 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, Related
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is a life-threatening but preventable condition. Monthly prevention costs $5-10. Treatment costs $1,000-3,000.', path: '/health/heartworm-in-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is preventable. Prevention averages about $183 a year; treatment averages $1,457. Typical US range, checked Oct 2026. dated 2026-10-07.', path: '/health/heartworm-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
   { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/dog-owners/heart-and-blood-vessel-disorders-of-dogs/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Atkins CE et al. Guidelines for the diagnosis, prevention and management of heartworm infection in dogs. J Vet Intern Med. 2010;24(4):713-733.', publisher: 'JVIM' },
   { label: 'AVMA: Heartworm Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
+  { label: 'Parasites & Vectors (2026): US clinic-transaction cost of canine heartworm treatment and prevention', url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC13491753/', publisher: 'Parasites & Vectors' },
+  { label: 'ASPCA Pro: Emancipet high-volume heartworm treatment costs', url: 'https://www.aspcapro.org/resource/improving-access-heartworm-treatment', publisher: 'ASPCA Pro' },
 ]
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Heartworm in Dogs', description: 'Prevention, annual testing, and melarsomine treatment for canine heartworm disease.', url: 'https://vets.co/health/heartworm-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' ,
   citation: SOURCES,
 })
-const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-06-07' })
+const med = buildMedicalWebPageSchema({ name: 'Heartworm Disease in Dogs', description: 'Prevention, testing, and treatment of Dirofilaria immitis heartworm in dogs.', url: 'https://vets.co/health/heartworm-in-dogs', authorName: 'Vets.co Editorial', lastReviewed: '2026-10-07' })
 const combined = combineSchemas(schema, med)
 const FAQS = [
   { question: 'Can I skip prevention in winter?', answer: 'Year-round prevention is recommended in most of the US. Mosquitoes can be active on warm winter days — temperatures above 57 degrees F allow heartworm larvae to develop in mosquitoes. In warm climates (Southeast US, Florida, Gulf Coast, Hawaii), mosquitoes are active year-round. The American Heartworm Society recommends year-round prevention for all dogs regardless of climate, both because exposure risk is difficult to predict and because monthly heartworm preventives also control intestinal parasites (roundworms, hookworms) that are present year-round.' },
@@ -28,8 +30,8 @@ export default function HeartwormPage() {
     <>
       <SchemaScript schema={combined} />
       <ArticleLayout siteId="vets-co"
-        priceAsOf="2026-06-04"
-        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease -- caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites -- is one of the most important preventable conditions in veterinary medicine. Prevention costs approximately $5-15/month. Treatment costs $1,000-3,000 and is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '', publishedAt: 'May 2025', readTime: '9 min',}}
+        priceAsOf="2026-10-07"
+        hero={{ title: 'Heartworm Disease in Dogs', subtitle: 'Heartworm disease -- caused by the parasitic worm Dirofilaria immitis transmitted through mosquito bites -- is one of the most important preventable conditions in veterinary medicine. A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. Treatment is difficult and risky. The math is straightforward.', category: 'Veterinary Guide', authorName: 'Vets.co Editorial', authorAvatar: '', publishedAt: 'May 2025', readTime: '9 min',}}
         breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Health', href: '/health' }, { name: 'Heartworm', href: '/health/heartworm-in-dogs' }]}
         relatedLinks={[
           { title: 'Health Hub', href: '/health', category: 'Hub' },
@@ -55,7 +57,7 @@ export default function HeartwormPage() {
       >
         <div className="carloOS-article">
 
-          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-06-05T00:00:00Z" reviewedBy="Editorial team" />
+          <ArticleByline siteName="Vets.co Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
 
           <DropCap>Dirofilaria immitis requires the mosquito as an intermediate host. An infected dog has microfilariae (larval heartworms) circulating in the blood -- a mosquito biting this dog ingests microfilariae that develop through larval stages inside the mosquito over 10-14 days at temperatures above 57 degrees F. When this mosquito bites another dog, it deposits infective larvae (L3) into the skin. These larvae migrate through tissue over 6 months, molt through additional larval stages, and eventually reach the heart and pulmonary arteries as adult worms. Adult worms cause disease; the antigen test detects proteins from adult female worms. Standing water near the house is how that mosquito finds a puddle. An adjustable aluminum downspout extender is how roof runoff is carried away from the foundation instead of pooling at the downspout — it is not a 14-inch manual reel lawn mower (that lives on flea-tick-prevention), not mosquito dunks (those live on dog.com heartworm prevention), and it is not a Heartgard chew. A downspout does not diagnose heartworm and it does not replace year-round prevention prescribed by a veterinarian.</DropCap>
 
@@ -64,7 +66,7 @@ export default function HeartwormPage() {
           </CalloutBox>
 
           <h2>Annual Testing -- Required Even on Prevention</h2>
-          <p>Those figures are typical US ranges dated 2026-06-04.</p>
+          <p>A 2026 US clinic-transaction study in Parasites & Vectors put year-round prevention at about $183 and average melarsomine treatment at $1,457, with $1,124 of that tied directly to treatment. A high-volume outpatient clinic reported $225–$614 per dog (ASPCA Pro, on the Emancipet protocol). Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
           <p>Annual heartworm antigen testing is required for all dogs, even those on year-round prevention. The reasons: no preventive is 100% effective -- a dog that vomited a dose, was undertreated due to weight change, or encountered a preventive-resistant strain may have been infected despite preventive use. Starting a new dog on prevention without testing first risks treating an already-infected dog with macrocyclic lactone preventives, which can cause a severe microfilarial reaction. Federal regulations require annual testing for heartworm antigen as a condition of prescribing preventives in most states.</p>
 
           <PullQuote
