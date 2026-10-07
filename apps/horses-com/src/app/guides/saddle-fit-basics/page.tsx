@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, CrossPortfolioCard, TableOfContents, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -210,7 +211,7 @@ export default function SaddleFitBasicsPage() {
             Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+sheepskin+half+pad?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+saddle+shims?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+girth+cinch?s=guides-saddle-fit-basics", "/go/smartpak/mattes-sheepskin-half-pad?s=guides-saddle-fit-basics", "/go/smartpak/contoured-all-purpose-pad?s=guides-saddle-fit-basics"]} />
 
           {/* Money path — live amazon-brand search hops (saddle-fit kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

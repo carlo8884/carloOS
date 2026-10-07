@@ -86,8 +86,6 @@ apps/fish-com/src/app/tools/_components/ResultCTA.tsx
 apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx
 apps/fish-com/src/app/tools/page.tsx
 apps/fish-com/src/app/water-parameters/[slug]/page.tsx
-apps/horses-com/src/app/breeds/page.tsx
-apps/horses-com/src/app/breeds/quarter-horse/page.tsx
 apps/horses-com/src/app/disciplines/[slug]/equipment/page.tsx
 apps/horses-com/src/app/disciplines/barrel-racing/page.tsx
 apps/horses-com/src/app/disciplines/combined-driving/page.tsx
@@ -101,12 +99,6 @@ apps/horses-com/src/app/disciplines/page.tsx
 apps/horses-com/src/app/disciplines/show-jumping/page.tsx
 apps/horses-com/src/app/disciplines/vaulting/page.tsx
 apps/horses-com/src/app/disciplines/western-pleasure/page.tsx
-apps/horses-com/src/app/first-derby/page.tsx
-apps/horses-com/src/app/first-horse-roadmap/page.tsx
-apps/horses-com/src/app/guides/equine-dental-care/page.tsx
-apps/horses-com/src/app/guides/equine-vaccination-schedule/page.tsx
-apps/horses-com/src/app/guides/page.tsx
-apps/horses-com/src/app/guides/saddle-fit-basics/page.tsx
 apps/horses-com/src/app/llms.txt/route.ts
 apps/horses-com/src/app/racing/harness-racing/page.tsx
 apps/horses-com/src/app/racing/off-track-thoroughbred-aftercare/page.tsx
