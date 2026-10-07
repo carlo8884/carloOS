@@ -456,7 +456,7 @@ export default function VetsHomePage() {
                 href="/find-a-vet"
                 className="inline-flex items-center gap-2 font-semibold text-sm px-7 py-3.5 rounded no-underline transition-colors duration-200 hover:opacity-90 shadow-[0_6px_24px_rgba(10,107,94,0.4)]"
                 style={{
-                  background: 'var(--brand-primary-light)',
+                  background: 'var(--brand-primary)',
                   color: '#FFFFFF',
                 }}
               >
@@ -494,7 +494,7 @@ export default function VetsHomePage() {
               <span
                 aria-hidden="true"
                 className="mr-2.5"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 ✓
               </span>
@@ -749,7 +749,7 @@ export default function VetsHomePage() {
                 />
                 <span
                   className="text-2xs font-bold uppercase tracking-eyebrow"
-                  style={{ color: 'var(--brand-accent-light)' }}
+                  style={{ color: '#e6b85e' }}
                 >
                   Tools &amp; References
                 </span>
@@ -771,7 +771,7 @@ export default function VetsHomePage() {
             <Link
               href="/tools"
               className="text-sm font-semibold no-underline hover:underline whitespace-nowrap"
-              style={{ color: 'var(--brand-accent-light)' }}
+              style={{ color: '#e6b85e' }}
             >
               All tools &rarr;
             </Link>
@@ -812,7 +812,7 @@ export default function VetsHomePage() {
               </div>
               <div
                 className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Calculator
               </div>
@@ -828,7 +828,7 @@ export default function VetsHomePage() {
               </p>
               <span
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Open estimator
                 <span
@@ -869,7 +869,7 @@ export default function VetsHomePage() {
               </div>
               <div
                 className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Reference Card
               </div>
@@ -878,7 +878,7 @@ export default function VetsHomePage() {
               </h3>
               <span
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Get the card
                 <span
@@ -918,7 +918,7 @@ export default function VetsHomePage() {
               </div>
               <div
                 className="text-2xs font-bold uppercase tracking-eyebrow mb-3"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Glossary
               </div>
@@ -935,7 +935,7 @@ export default function VetsHomePage() {
               </p>
               <span
                 className="inline-flex items-center text-xs font-semibold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#e6b85e' }}
               >
                 Browse glossary
                 <span
@@ -974,7 +974,7 @@ export default function VetsHomePage() {
               />
               <span
                 className="text-2xs font-bold uppercase tracking-eyebrow"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#f6dba0' }}
               >
                 Why Vets.co
               </span>
@@ -987,7 +987,7 @@ export default function VetsHomePage() {
               <br />
               <em
                 className="font-display italic"
-                style={{ color: 'var(--brand-accent-light)' }}
+                style={{ color: '#f6dba0' }}
               >
                 for the people who own the animal.
               </em>
@@ -1026,7 +1026,7 @@ export default function VetsHomePage() {
                   <span
                     aria-hidden="true"
                     className="mr-3 mt-0.5 inline-block flex-shrink-0"
-                    style={{ color: 'var(--brand-accent-light)' }}
+                    style={{ color: '#f6dba0' }}
                   >
                     ✓
                   </span>
