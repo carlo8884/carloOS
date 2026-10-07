@@ -205,10 +205,12 @@ export default function BettaFishPage() {
           </p>
           <p>
             <strong>Protein first, named animal source first.</strong> A correct staple pellet
-            lists a named animal protein (whole krill, black soldier fly larvae, salmon, herring)
-            as the first ingredient, runs 40–55% protein, and avoids wheat, corn, soy, and rice as
-            primary ingredients. Northfin Betta Bits, Fluval Bug Bites Betta, New Life Spectrum
-            Betta Formula, and Hikari Vibra Bites all meet that bar. Generic tropical "flake food"
+            lists a named animal protein first. Check the label for the protein minimum and for
+            wheat, corn, soy, or rice. The current pages print crude protein minimum 45% for
+            Northfin Betta Bits, 46% for Fluval Bug Bites Betta flakes (45% for the micro granules),
+            46% for Hikari Vibra Bites, and 37% for New Life Spectrum Betta. The 37% figure is
+            under a 40% floor, and wheat flour is on the Northfin, New Life Spectrum, and Hikari
+            ingredient lists. Those four foods do not all meet one protein band. Generic tropical "flake food"
             and grain-filled "betta bites" do not — the fish will eat them, but long-term
             keepers report fading color, bloating from carbohydrate fermentation, and shortened
             lifespan.
