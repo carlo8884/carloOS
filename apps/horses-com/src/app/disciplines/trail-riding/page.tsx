@@ -323,7 +323,7 @@ export default function TrailRidingPage() {
           <p>For recreational and competitive trail, soundness and a calm temperament matter more than breed identity. A sound, well-conditioned horse of any breed can be a good trail horse.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

@@ -447,7 +447,7 @@ export default function FirstHorseRoadmapPage() {
           <h2 className="font-display font-bold text-brand-dark text-3xl tracking-tight mb-8">
             How this works
           </h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <div className="mt-12 pt-8 border-t border-brand-border text-sm text-brand-text-mid">
             <p className="mb-2">Related Horses.com references:</p>

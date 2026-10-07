@@ -167,7 +167,7 @@ export default function OttbInShowJumpingPage() {
           <p>Not every OTTB will be a competitive jumper, and the level a horse ultimately reaches depends on scope, soundness, trainability, and the rider&apos;s program. Many OTTBs find a happy and successful place at the lower and middle levels, or in the related hunter and equitation rings, without ever needing the scope of a Grand Prix horse. Patient progression — letdown, a strong flatwork foundation, then gridwork and small courses — with an OTTB-experienced trainer is the reliable route. For the rehoming and welfare side, including the Thoroughbred Aftercare Alliance, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

@@ -170,7 +170,7 @@ export default function OttbInTrailAndPleasurePage() {
           <p>A successful trail and pleasure transition is measured in calmness, confidence, and soundness rather than ribbons. Some OTTBs become bombproof all-day trail horses; others are happiest with lighter, familiar work. A freshly retired, green OTTB is generally not an ideal first horse, but one already brought through letdown, foundation flatwork, and initial trail exposure by an aftercare organization or professional can be a wonderful and affordable partner for a less experienced rider. Patient, step-by-step progression with an OTTB-experienced trainer is the reliable route. For the rehoming and welfare side, including the Thoroughbred Aftercare Alliance, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
