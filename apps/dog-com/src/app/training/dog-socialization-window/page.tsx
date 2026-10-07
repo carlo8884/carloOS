@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,7 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -235,7 +236,7 @@ export default function DogSocializationWindowPage() {
           {/* Money path — live amazon-brand search hops (socialization-window kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
               Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-socialization-window", "/go/amazon-brand/puppy+training+treats?s=training-socialization-window", "/go/amazon-brand/soft+dog+carrier?s=training-socialization-window", "/go/amazon-brand/puppy+grooming+kit?s=training-socialization-window"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a socialization-window kit
@@ -282,8 +283,7 @@ export default function DogSocializationWindowPage() {
                 which-pet guide
               </Link>
               . They are not a ranked product list and they do not replace
-              staying under threshold. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              staying under threshold.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/puppy+training+treats?s=training-socialization-window"

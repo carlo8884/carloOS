@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -81,7 +82,7 @@ export default function CrateTrainingPage() {
         {/* Money path — live amazon-brand search hops (crate kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate", "/go/amazon-brand/dog+crate+pad?s=training-crate", "/go/amazon-brand/dog+crate+cover?s=training-crate", "/go/amazon-brand/puppy+training+pads?s=training-crate"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a crate kit
@@ -103,8 +104,7 @@ export default function CrateTrainingPage() {
               new-puppy checklist
             </Link>
             . Size the crate before you order. They are not a ranked product
-            list and they do not replace the introduction protocol. Dog.com
-            earns a commission on qualifying purchases at no extra cost to you.</p>
+            list and they do not replace the introduction protocol.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-crate"

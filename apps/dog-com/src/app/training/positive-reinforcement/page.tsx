@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,7 @@ import {
   ArticleByline,
   DropCap,
   CalloutBox,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -135,7 +136,7 @@ export default function PositiveReinforcementPage() {
         {/* Money path — live amazon-brand search hops (reward / marker kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-positive-reinforcement", "/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-positive-reinforcement"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a reward-based training kit
@@ -173,8 +174,7 @@ export default function PositiveReinforcementPage() {
               puppy schedule
             </Link>
             . They are not a ranked product list and they do not replace
-            matching the reinforcer to the task. Dog.com earns a commission
-            on qualifying purchases at no extra cost to you. </p>
+            matching the reinforcer to the task. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-positive-reinforcement"

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -6,7 +7,7 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -74,7 +75,7 @@ export default function MarkerTrainingPage() {
           {/* Money path — live amazon-brand search hops (marker / clicker kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
               Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+training+clicker?s=training-marker-training", "/go/amazon-brand/puppy+training+treats?s=training-marker-training", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-marker-training"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a marker-training kit
@@ -104,8 +105,7 @@ export default function MarkerTrainingPage() {
                 puppy schedule
               </Link>
               . They are not a ranked product list and they do not replace
-              charging the marker. Dog.com earns a commission on qualifying
-              purchases at no extra cost to you.</p>
+              charging the marker.</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+training+clicker?s=training-marker-training"

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,7 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -194,7 +195,7 @@ export default function BasicCommandsPage() {
         {/* Money path — live amazon-brand search hops (five-command kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/puppy+training+treats?s=training-basic-commands", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-basic-commands", "/go/amazon-brand/dog+training+clicker?s=training-basic-commands", "/go/amazon-brand/dog+long+line+leash?s=training-basic-commands"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a five-command kit
@@ -217,8 +218,7 @@ export default function BasicCommandsPage() {
               puppy schedule
             </Link>
             . They are not a ranked product list and they do not replace the
-            teaching order. Dog.com earns a commission on qualifying purchases
-            at no extra cost to you.</p>
+            teaching order.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/puppy+training+treats?s=training-basic-commands"
