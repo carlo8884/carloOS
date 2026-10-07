@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -75,9 +75,10 @@ export default function WysongVsMarshallKibbleGuidePage() {
         <p>The <Link href="/tools/food-evaluator">food evaluator</Link> is the place to check a guaranteed analysis you already have. Bring a guaranteed analysis you already have. Nothing here adds a new worksheet. The same review has a Carniwhole listing with no retail backup. This guide does not send you there.</p>
         <h2>Who should buy which bag</h2>
         <p>Buy Wysong Epigen 90 when the lower commercial carb load is the priority and you can order it or find it at a specialty shop. Buy Marshall Premium when you need a ferret-specific bag from a chain aisle tonight, and you have read the higher carbohydrate and the plant protein on that listing. Skip Marshall when insulinoma risk is the reason you are choosing a food.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide" />
-        <p>The link below opens Wysong Epigen 90 from the kibble review. The price there is the retailer's.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide">Check price of Wysong Epigen 90 at Wysong</a></p>
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide" />
+        <p>The link below opens the Wysong ferret food search already used on the diet pages. The price there is the retailer's.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/wysong+ferret+food?s=reviews-wysong-vs-marshall-kibble-guide">Browse Wysong ferret food on Amazon →</a></p>
+        <QuietPartnerLink href="/go/wysong/epigen-90?s=reviews-wysong-vs-marshall-kibble-guide" label="Check price of Wysong Epigen 90 at Wysong" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>
