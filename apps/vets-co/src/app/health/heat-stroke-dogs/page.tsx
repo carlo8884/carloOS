@@ -4,7 +4,7 @@ import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCta
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid | Vets.co', description: 'Heat stroke is an emergency. Cool (not ice-cold) water while driving to the vet. Collapse, frantic panting, or red gums with a very high temperature needs a clinic now.', path: '/health/heat-stroke-dogs', type: 'article' })
+export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heat Stroke in Dogs — Emergency Recognition, First Aid | Vets.co', description: 'Heat stroke is an emergency. Cool (not ice-cold) water on the way to the vet. Collapse, frantic panting, or red gums needs a clinic now.', path: '/health/heat-stroke-dogs', type: 'article' })
 const SOURCES = [
   { label: 'AAHA: Hyperthermia in Companion Animals', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
