@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, FAQAccordion } from '@carloOS/ui'
 
@@ -217,7 +218,7 @@ export default function GhKhPage() {
             diagnosis. This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/crushed+coral+aquarium?s=setup-gh-kh-water-hardness", "/go/amazon-brand/aquarium+gh+remineralizer?s=setup-gh-kh-water-hardness", "/go/amazon-brand/indian+almond+leaves+aquarium?s=setup-gh-kh-water-hardness"]} />
 
           {/* Money path — live amazon-brand search hops (crushed coral /
               GH remineralizer / Indian almond leaves). ShopCtas hides
