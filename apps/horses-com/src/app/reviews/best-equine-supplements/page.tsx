@@ -163,8 +163,8 @@ export default function BestEquineSupplementsPage() {
             <p>The strongest evidence comes from peer-reviewed equine clinical trials. Weaker evidence comes from in-vitro mechanism studies, small-mammal extrapolations, and human trials. The weakest "evidence" — abundant in supplement marketing — is testimonial, before-and-after photo claims, and "studies" funded and reported only by the manufacturer. Categories like joint (glucosamine/chondroitin/ASU), marine omega-3, and electrolyte have substantial peer-reviewed equine literature. Categories like calming, hindgut buffering, and most herbal/botanical ingredients have far thinner evidence. The price tier of a supplement is not a useful proxy for the evidence behind it.</p>
 
             <h2>Category Map</h2>
-            <div className="overflow-x-auto my-6">
-              <table className="w-full text-xs border-collapse">
+            <div className="overflow-x-auto my-6 max-w-full">
+              <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
                 <thead>
                   <tr className="bg-brand-surface border-b-2 border-brand-primary text-left">
                     <th className="p-3 font-bold text-brand-dark">Category</th>
