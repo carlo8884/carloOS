@@ -31,8 +31,7 @@ const smartGutSchema = buildProductSchema({ name: 'SmartPak SmartGut Ultra', des
 const kerEoSchema = buildProductSchema({ name: 'KER EO-3 Marine Omega-3', description: 'Marine-source DHA/EPA omega-3 supplement from Kentucky Equine Research.', url: 'https://horses.com/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements', imageUrl: '' })
 const equithriveSchema = buildProductSchema({ name: 'Equithrive Original Pellets', description: 'Resveratrol-based anti-inflammatory and joint supplement.', url: 'https://horses.com/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements', imageUrl: '' })
 const standleeSchema = buildProductSchema({ name: 'Standlee Premium Forage', description: 'Premium baled and pelleted alfalfa, timothy, and orchard grass forage products.', url: 'https://horses.com/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements', imageUrl: '' })
-const adamsSchema = buildProductSchema({ name: 'Adams Plus Equine Electrolyte', description: 'Sodium-chloride-balanced electrolyte powder for performance and travel.', url: 'https://horses.com/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements', imageUrl: '' })
-const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema, adamsSchema)
+const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartGutSchema, kerEoSchema, equithriveSchema, standleeSchema)
 
 const PICKS = [
   { label: 'Best Joint (Evidence)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · NASC sealed · Equine-specific trials', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' },
@@ -46,7 +45,7 @@ const CATEGORY_TABLE = [
   { category: 'Gastric / Ulcer Prevention', topPick: 'SmartGut Ultra (adjunct)', evidence: 'Moderate (calcium/Mg buffer); pharmacologic for active disease', priceRange: '$60–80/mo' },
   { category: 'Hoof', topPick: 'Farrier&apos;s Formula Double Strength', evidence: 'Strong (biotin, methionine, zinc, copper)', priceRange: 'Not reviewed on this page' },
   { category: 'Calming', topPick: 'SmartCalm Ultra / Mare Magic', evidence: 'Limited (magnesium, L-tryptophan, raspberry leaf)', priceRange: 'Not reviewed on this page' },
-  { category: 'Electrolyte', topPick: 'Perform &apos;N Win / Adams Plus', evidence: 'Strong (Na/Cl/K replacement)', priceRange: '$20–35/mo (Adams Plus)' },
+  { category: 'Electrolyte', topPick: 'No current SmartPak result', evidence: 'Strong (Na/Cl/K replacement)', priceRange: 'Not shopped on this page' },
   { category: 'Weight Gain', topPick: 'Cool Calories 100 / Empower Boost', evidence: 'Strong (stabilized rice bran, vegetable oil)', priceRange: 'Not reviewed on this page' },
   { category: 'Marine Omega-3', topPick: 'KER EO-3', evidence: 'Strong (marine DHA/EPA)', priceRange: '$55–85/mo' },
   { category: 'General Wellness', topPick: 'Platinum Performance Equine', evidence: 'Moderate (broad nutrient profile)', priceRange: '$95–140/mo' },
@@ -359,32 +358,10 @@ export default function BestEquineSupplementsPage() {
             />
 
             <h2>Electrolytes</h2>
-
-            <ReviewCard quietUntilTag
-              id="adams"
-              badge="Best Electrolyte"
-              name="Adams Plus Equine Electrolyte"
-              subtitle="Sodium chloride balanced with potassium · For performance and travel"
-              description={<>
-                <p>Electrolyte replacement is the most evidence-grounded supplement category — the science is straightforward sodium, chloride, and potassium replacement to match sweat losses during work, travel, or heat stress. Adams Plus Equine Electrolyte is a reliable, NASC-sealed, sodium-chloride-balanced product with potassium adjustment that suits routine performance and travel use.</p>
-                <p>The category is largely commoditized — most established brands deliver the same basic ingredients at similar prices. The product to avoid is the high-sugar "energy drink" style equine electrolyte, which delivers more dextrose than electrolyte and can produce paradoxical gastric injury when given as paste on dry mucosa.</p>
-              </>}
-              specs={[
-                { label: 'Active ingredients', value: 'Sodium chloride, potassium chloride, dextrose carrier' },
-                { label: 'NASC Quality Seal', value: 'Yes', highlight: 'good' },
-                { label: 'Format', value: 'Powder, top-dressed or mixed in water' },
-                { label: 'FEI/USEF compliance', value: 'No prohibited ingredients', highlight: 'good' },
-                { label: 'Use case', value: 'Performance, travel, hot weather' },
-              ]}
-              pros={['NASC sealed', 'Reliable category-standard formulation', 'Reasonable price', 'Wide availability']}
-              cons={['Commoditized category — many similar alternatives', 'Powder format requires consistent water access to be effective']}
-              price="$20–35/mo"
-              priceNote="dated 2026-10-04."
-              ctaText="Shop Adams Plus electrolyte at SmartPak →"
-              ctaHref="/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"
-              ctaAffiliateProgram="smartpak"
-              ctaAffiliateProduct="adams-plus-electrolyte"
-            />
+            <section id="adams" className="border border-brand-border rounded-xl p-5 mb-6">
+              <h3 className="font-display text-xl font-bold text-brand-dark mb-2">Adams Plus is not a current pick</h3>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">Electrolyte replacement is sodium, chloride, and potassium matched to sweat loss during work, travel, or heat. The SmartPak search for Adams Plus returns no products, so this page does not shop it and does not print a price. A high-sugar paste on dry mucosa is still the form to avoid. Confirm any current electrolyte on its own listing.</p>
+            </section>
 
             <h2>Who should buy which</h2>
             <p>The category table above already names a top pick, an evidence note, and a monthly range. This block only says which reviewed product matches which job. It does not add a product that lacks a card, and it does not turn a supplement into a drug.</p>
@@ -437,9 +414,9 @@ export default function BestEquineSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Sweat replacement after work</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a><TableShopLink quietUntilTag href={"/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"} product={"Adams Plus Equine Electrolyte"} /></td>
-                    <td className="p-3 text-brand-text-mid">Best electrolyte. Card price $20–35/mo. The category row calls Na/Cl/K replacement strong</td>
-                    <td className="p-3 text-brand-text-mid">A daily wellness powder for a horse that is not sweating</td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Not a current pick</a></td>
+                    <td className="p-3 text-brand-text-mid">The SmartPak search returns no Adams Plus products. No shop link</td>
+                    <td className="p-3 text-brand-text-mid">Any new purchase from this page. Sodium, chloride, and potassium replacement is still the category</td>
                   </tr>
                 </tbody>
               </table>
@@ -509,7 +486,7 @@ export default function BestEquineSupplementsPage() {
                 ['Gastric adjunct', 'SmartGut Ultra'],
                 ['Omega-3 anti-inflammatory', 'KER EO-3'],
                 ['Resveratrol joint support', 'Equithrive Original'],
-                ['Performance hydration', 'Adams Plus Electrolyte'],
+                ['Performance hydration', 'Not a current SmartPak result'],
                 ['Senior soaked forage', 'Standlee Alfalfa Pellets'],
               ].map(([u, r]) => (
                 <div key={u} className="py-2 border-b border-brand-border last:border-0">
