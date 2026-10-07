@@ -401,7 +401,7 @@ export default function BestWinterBlanketsPage() {
             <p>The Bucas, Horseware, and Schneiders liner systems are the most established. The upfront cost (shell + 3 liners) approaches the cost of owning two weight-specific turnouts; the system is most valuable when the horse moves between climates or when stalling habits change frequently. For most one-climate, one-horse owners, weight-specific turnouts are simpler and cheaper to manage.</p>
 
             <h2>Fitting a Winter Blanket</h2>
-            <p>Blanket size is measured from the center of the chest, along the side of the horse, to the point of the rump or buttock. US sizing is in inches (75, 78, 81, 84); European sizing is in cm (165, 175, 185). The most common fit error is buying a blanket too small — a blanket that pulls back on the shoulders restricts movement and produces rubs. When in doubt, size up by 3 inches; a slightly large blanket can be belted snug, but a too-small blanket cannot be enlarged.</p>
+            <p>Blanket size is measured from the center of the chest, along the side of the horse, to the point of the rump or buttock. US sizing is in inches (75, 78, 81, 84); European sizing is in cm (165, 175, 185). Enter that chest-to-buttock measurement in the <a href="/tools/horse-blanket-size-calculator">blanket size calculator</a> for the standard US size and the approximate EU centimeter equivalent. The most common fit error is buying a blanket too small — a blanket that pulls back on the shoulders restricts movement and produces rubs. When in doubt, size up by 3 inches; a slightly large blanket can be belted snug, but a too-small blanket cannot be enlarged.</p>
 
             <p>Common fit problems and remedies:</p>
             <ul>
