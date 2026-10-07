@@ -49,7 +49,6 @@ apps/fish-com/src/app/llms.txt/route.ts
 apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx
 apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx
 apps/fish-com/src/app/reviews/winter-photoperiod-guide/page.tsx
-apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx
 apps/horses-com/src/app/llms.txt/route.ts
 apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx
 apps/horses-com/src/app/reviews/best-winter-horse-blankets/page.tsx
