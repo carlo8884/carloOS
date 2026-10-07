@@ -215,7 +215,7 @@ export default function FerretDietBasicsPage() {
             Three tiers, broadly. None are perfect; the goal is to land on a formulation whose ingredient panel matches the obligate-carnivore profile above, then stay consistent. Ferrets imprint on food in the first 6 months and become reluctant to switch later, so it is sensible to rotate among 2–3 acceptable brands from kithood to prevent food fixation.
           </p>
           <p>
-            <strong>Premium tier — animal-first, low-carb, no grain:</strong> Wysong Epigen 90, Wysong Archetype, Orijen Cat &amp; Kitten (used off-label by many ferret keepers), and similar formulations. Ingredient panel reads as named meats and meat meals; carbohydrate by difference is typically under 10%. Higher price point, but materially closer to the published macronutrient targets.
+            <strong>Premium tier — animal-first:</strong> Wysong Epigen 90 markets starch-free, and its printed ingredient list does not name wheat, corn, rice, or soy. Carbohydrate is not on that guaranteed analysis — check the label. Wysong Archetype and Orijen Cat &amp; Kitten are used off-label by many ferret keepers; check each label before treating them as the same panel.
           </p>
           <p>
             <strong>Mid tier — ferret-specific, mostly acceptable:</strong> Marshall Premium Ferret Diet, ZuPreem Premium Ferret Diet, 8in1 Ultimate Ferret Diet. These are the brands stocked at independent pet retailers and used widely by breeders and shelters. Ingredient panels are imperfect (some plant protein, some grain) but the profile is in range for healthy adults.
@@ -240,7 +240,7 @@ export default function FerretDietBasicsPage() {
             Insulinoma — a functional tumor of the pancreatic beta cells that produces inappropriate insulin — is the single most common neoplasm reported in middle-aged and older domestic ferrets. The leading working hypothesis in the exotic-pet literature is that chronic dietary carbohydrate load drives sustained insulin secretion, which over years contributes to beta-cell hyperplasia and eventually insulinoma formation. The evidence is associational rather than experimentally established, but the recommendation is consistent across exotic-vet sources: minimize dietary carbohydrate from kithood onward.
           </p>
           <p>
-            Practical consequence: low-carb commercial kibble plus raw/whole-prey supplementation is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>. <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares the low-carb kibble in that pattern.
+            Practical consequence: a commercial kibble whose carbohydrate you have checked on the label, plus raw/whole-prey supplementation, is the diet pattern most consistent with reducing this risk. Sugary treats — including fruit, "ferret treats" sweetened with molasses or honey, and human snacks — are the highest-leverage items to eliminate. For a full clinical summary, see our companion page on <a href="/health/insulinoma">Insulinoma in Ferrets</a>. <a href="/diet/best-ferret-kibble">The ferret kibble guide</a> compares kibbles and says carbohydrate is not on the Wysong guaranteed analysis.
           </p>
 
           <h2 id="water">Water, Treats, and Feeding Mechanics</h2>
@@ -267,13 +267,13 @@ export default function FerretDietBasicsPage() {
 
           <h2 id="picks">Diet Picks</h2>
           <p>
-            Three formulations that line up with the obligate-carnivore macronutrient targets above — animal-first ingredient panels, low plant carbohydrate, widely available in US pet retail or direct from the manufacturer. This is a documented-spec comparison, not a hands-on test: inclusion is based on published ingredient and macronutrient panels and on adoption patterns in keeper communities and at exotic-mammal shelters.
+            Three formulations with animal-first ingredient panels, widely available in US pet retail or direct from the manufacturer. Carbohydrate is not on the Wysong or Marshall guaranteed analysis — check the label. This is a documented-spec comparison, not a hands-on test: inclusion is based on published ingredient and macronutrient panels and on adoption patterns in keeper communities and at exotic-mammal shelters.
           </p>
           <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Premium Tier"
             name="Wysong Epigen 90"
-            subtitle="Animal-first, starch-free, grain-free"
+            subtitle="Animal-first. Marketed starch-free. The printed list does not name wheat, corn, rice, or soy."
             winner
             description={
               <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
@@ -285,7 +285,7 @@ export default function FerretDietBasicsPage() {
               { label: 'Starch-free', value: 'Marketed on the current page. Check the label.', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
-            pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
+            pros={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free', 'The printed list does not name wheat, corn, rice, or soy']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
             price="$30–50 / 5 lb"
             priceNote="dated 2026-05-31."
