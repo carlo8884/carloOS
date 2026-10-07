@@ -50,7 +50,7 @@ export default function BestPuppyFoodPage() {
           style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Best Puppy Food 2026 — WSAVA-Compliant Formulas Ranked
         </h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
         <EmailCapture
