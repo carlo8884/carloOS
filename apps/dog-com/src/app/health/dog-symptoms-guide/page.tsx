@@ -1,7 +1,8 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { SIGNS, STYLES } from '../../../data/dog-symptom-signs'
@@ -198,7 +199,7 @@ export default function DogSymptomsGuidePage() {
             on other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/led+medical+penlight?s=health-dog-symptoms-guide", "/go/amazon-brand/pet+emergency+contact+card?s=health-dog-symptoms-guide", "/go/amazon-brand/folding+pet+stretcher?s=health-dog-symptoms-guide"]} />
 
           {/* Money path — live amazon-brand search hops
               (LED medical penlight / pet emergency

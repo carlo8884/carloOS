@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -74,7 +75,7 @@ export default function DogDiarrheaPage() {
           <h2 id="kit">Home-care kit</h2>
           <p>Everyday OTC supplies that match the home-care copy above — a canine-specific dog probiotic for digestive support, plus optional plain canned pumpkin (100% pumpkin, not pie filling) when a veterinarian agrees it fits a mild large-intestinal episode. These are home-setup aids, not treatments. Antibiotics, metronidazole, Imodium, Pepto-Bismol, and prescription GI diets (Hill&apos;s i/d, Royal Canin Gastrointestinal, and similar) stay educational copy only — this page never hops medications, Rx diets marketed as treatment, or brand ASINs. Soft e-collars and dog eye wipes stay on the sister <a href="/health/cherry-eye">cherry-eye</a> page. Slow-feeder bowls stay on <a href="/health/dog-obesity">dog obesity</a>. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+probiotic?s=health-dog-diarrhea", "/go/amazon-brand/plain+canned+pumpkin+dog?s=health-dog-diarrhea"]} />
 
           {/* Money path — live amazon-brand search hops (dog
               probiotic / plain canned pumpkin). ShopCtas hides

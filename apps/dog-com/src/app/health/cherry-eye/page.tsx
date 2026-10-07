@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -65,7 +66,7 @@ export default function CherryEyePage() {
           <h2 id="kit">Recovery-collar kit</h2>
           <p>Everyday physical supplies that match the pawing-and-moisture copy above — a soft e-collar (soft cone / recovery collar) so the dog cannot paw the prolapsed gland while waiting for surgery or during post-op recovery, plus dog eye wipes to keep the exposed gland from drying out as a short moisture bridge. These are home-setup aids, not treatments. Cyclosporine, tacrolimus, other Rx eye drops, NSAIDs, and supplements stay educational copy only — this page never hops medications, Rx drops, or brand ASINs. Hot-spot recovery cones stay on the sister <a href="/health/dog-hot-spots">dog-hot-spots</a> page. Recovery crates, belly-support harnesses, and wheelchairs stay on <a href="/health/intervertebral-disc-disease">IVDD</a>. Knee braces and rear-support harnesses stay on <a href="/health/dog-luxating-patella">luxating patella</a>. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+e+collar+dog?s=health-cherry-eye", "/go/amazon-brand/dog+eye+wipes?s=health-cherry-eye"]} />
 
           {/* Money path — live amazon-brand search hops (soft
               e-collar / dog eye wipes). ShopCtas hides empty

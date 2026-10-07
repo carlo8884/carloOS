@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -153,7 +154,7 @@ export default function DogSeizuresPage() {
           <h2 id="kit">Home safety kit</h2>
           <p>Everyday physical supplies that match the during-and-after copy above — a soft throw blanket to slide the dog away from stairs or water without putting hands near the mouth, crate bumper pads so the usual rest crate is already padded if an event starts there, and interlocking foam floor tiles for the quiet dim recovery space. These are safety tools, not treatments. They do not stop a seizure, they do not replace a timer or a video clip, and they do not treat epilepsy, toxin exposure, or status epilepticus. Phenobarbital, potassium bromide, levetiracetam (Keppra), zonisamide, rescue diazepam or midazolam, and CBD stay educational copy only. First-aid kits, digital pet thermometers, IVDD recovery crates, crate covers, crate pads, cooling mats, and night lights stay off this kit. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/soft+throw+blanket?s=health-dog-seizures", "/go/amazon-brand/dog+crate+bumper+pads?s=health-dog-seizures", "/go/amazon-brand/interlocking+foam+floor+tiles?s=health-dog-seizures"]} />
 
           {/* Money path — live amazon-brand search hops (soft
               throw blanket / crate bumper pads / interlocking
