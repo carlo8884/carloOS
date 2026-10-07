@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
+
   ShopCtas,
 } from '@carloOS/ui'
 import { InsuranceReimbursementEstimator } from '../../../components/visual/InsuranceReimbursementEstimator'
@@ -203,9 +204,6 @@ export default function InsuranceReimbursementEstimatorPage() {
             optional quote path is an affiliate /go link, disclosed subtly and
             framed as a visit to the carrier page, never "buy the best" or a quote this calculator generates. */}
         <div id="next-step" className="mt-6 rounded-lg border border-brand-border bg-brand-surface p-5 sm:p-6">
-          {lemonadePlain ? null : (
-            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-4" />
-          )}
           <p className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary-dark mb-2">Next step</p>
           <p className="text-sm font-semibold text-brand-text-dark mb-1">
             You have an estimate — now check it against real policies.
@@ -229,17 +227,9 @@ export default function InsuranceReimbursementEstimatorPage() {
               Visit Lemonade Pet
             </Link>
           </div>
+          <HopDisclosure siteId="vets-co" href={lemonadeHref} />
           <p className="mt-3 text-2xs text-brand-text-mid leading-relaxed">
             Our comparison ranks carriers on published coverage terms — we never accept payment for favorable placement. This calculator does not generate a quote.
-            {lemonadePlain ? null : (
-              <>
-                {' '}
-                &ldquo;Visit Lemonade Pet&rdquo; is an affiliate link. We may earn a commission at no extra cost to you.{' '}
-                <Link href="/disclosure" className="font-semibold text-brand-primary hover:underline no-underline">
-                  Disclosure →
-                </Link>
-              </>
-            )}
           </p>
         </div>
 
@@ -251,7 +241,7 @@ export default function InsuranceReimbursementEstimatorPage() {
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+thermometer?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/digital+pet+scale?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+recovery+cone?s=tools-insurance-reimbursement-estimator", "/go/amazon-brand/pet+calming+aid?s=tools-insurance-reimbursement-estimator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a home-care prep kit
@@ -276,8 +266,7 @@ export default function InsuranceReimbursementEstimatorPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-reimbursement-estimator"

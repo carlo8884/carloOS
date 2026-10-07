@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
+
   ShopCtas,
 } from '@carloOS/ui'
 import { InsuranceCoverageFinder } from '../../../components/visual/InsuranceCoverageFinder'
@@ -194,7 +195,7 @@ export default function InsuranceFinderPage() {
             list. InsuranceWellnessShop above stays as-is; this block does not
             re-rank Trupanion / Healthy Paws / Embrace. */}
         <div id="insurance-home-care-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-finder", "/go/amazon-brand/digital+pet+thermometer?s=tools-insurance-finder", "/go/amazon-brand/digital+pet+scale?s=tools-insurance-finder", "/go/amazon-brand/pet+recovery+cone?s=tools-insurance-finder", "/go/amazon-brand/pet+calming+aid?s=tools-insurance-finder"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a home-care prep kit
@@ -219,8 +220,7 @@ export default function InsuranceFinderPage() {
               >
                 telehealth
               </Link>
-              . Vets.co earns a commission on qualifying purchases at no extra
-              cost to you.</p>
+              .</p>
             <div className="flex flex-col gap-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/pet+first+aid+kit?s=tools-insurance-finder"

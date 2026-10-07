@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What Veterinary Care Really Costs — A Realistic Guide | Vets.co", description: "Understand the real cost of routine care, common procedures, and major emergencies, plus why prices vary and how to plan financially for a pet.", path: '/guides/cost-of-veterinary-care', type: 'article' })
@@ -90,7 +91,7 @@ export default function CostOfCarePage() {
             page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/household+budget+workbook?s=guides-cost-of-veterinary-care", "/go/amazon-brand/checkbook+register?s=guides-cost-of-veterinary-care", "/go/amazon-brand/accordion+file+folder+letter+size?s=guides-cost-of-veterinary-care"]} />
 
           {/* Money path — live amazon-brand search hops
               (household budget workbook /
@@ -153,9 +154,6 @@ export default function CostOfCarePage() {
               expanding-file or plastic file-box hop,
               they are not an insurance-brand hop,
               and they do not replace a veterinarian.
-              Vets.co earns a commission on
-              qualifying purchases at no extra cost
-              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

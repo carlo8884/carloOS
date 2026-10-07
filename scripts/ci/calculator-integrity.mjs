@@ -11070,7 +11070,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/locking\+cash\+box\+with\+key\?s=guides-emergency-vet-costs/, label: 'locking cash-box-with-key search hop (matches on-page emergency-savings-fund / deductible / deposit copy; unique vs 32+gallon+locking+animal+proof+trash+can / airtight+locking+pet+food+bin)' },
       { re: /amazon-brand\/basic\+desktop\+calculator\?s=guides-emergency-vet-costs/, label: 'basic desktop-calculator search hop (matches on-page estimate-range / deposit-math copy; unique vs kitchen+gram+scale / hardcover+weekly+appointment+planner)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11090,7 +11090,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/checkbook\+register\?s=guides-cost-of-veterinary-care/, label: 'checkbook-register search hop (matches on-page recurring-chronic-line / medication / recheck-visit copy; unique vs basic+desktop+calculator)' },
       { re: /amazon-brand\/accordion\+file\+folder\+letter\+size\?s=guides-cost-of-veterinary-care/, label: 'letter-size accordion file-folder search hop (matches on-page last-12-months-of-invoices / Routine-Procedures-Chronic-Emergency copy; unique vs letter+size+expanding+file+organizer / letter+size+plastic+file+box / manila+file+folders+letter+size)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

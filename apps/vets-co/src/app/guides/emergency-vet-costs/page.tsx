@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Emergency Vet Costs Explained — Why ER Care Costs More | Vets.co", description: "Emergency veterinary care costs more than routine care for real reasons. Learn what drives ER pricing, how estimates work, and how to prepare financially.", path: '/guides/emergency-vet-costs', type: 'article' })
@@ -86,7 +87,7 @@ export default function EmergencyCostsPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/locking+cash+box+with+key?s=guides-emergency-vet-costs", "/go/amazon-brand/basic+desktop+calculator?s=guides-emergency-vet-costs", "/go/amazon-brand/manila+file+folders+letter+size?s=guides-emergency-vet-costs"]} />
 
           {/* Money path — live amazon-brand search hops
               (locking cash box with key /
@@ -147,9 +148,6 @@ export default function EmergencyCostsPage() {
               thermometer / soft-carrier hop, they
               are not an insurance-brand hop, and
               they do not replace a veterinarian.
-              Vets.co earns a commission on
-              qualifying purchases at no extra cost
-              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
