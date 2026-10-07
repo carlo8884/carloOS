@@ -6,7 +6,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Ichthyophthirius multifiliis (Ich) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/ichthyophthirius-multifiliis-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Ichthyophthirius multifiliis (Ich) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Ich (White Spot Disease) Treatment Guide — UF/IFAS Extension FA-28", url: "https://edis.ifas.ufl.edu/publication/FA028", publisher: "UF/IFAS Extension" },
   { label: "Dickerson, H.W. Ichthyophthirius multifiliis and Cryptocaryon irritans. Fish Diseases and Disorders Vol 1, CABI, 2006.", publisher: "CABI" },

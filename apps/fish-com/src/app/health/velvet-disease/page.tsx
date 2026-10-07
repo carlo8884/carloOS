@@ -6,7 +6,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Amyloodinium ocellatum (Velvet Disease) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/amyloodinium-ocellatum-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Amyloodinium ocellatum (Velvet Disease) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/parasitic-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Cryptobia iubilans and Other Diplomonadina of Fish — UF/IFAS Extension FA-28.", url: "https://edis.ifas.ufl.edu/publication/FA028", publisher: "UF/IFAS Extension" },
   { label: "Francis-Floyd, R. Stress — Its Role in Fish Disease — UF/IFAS Extension FA-43.", url: "https://edis.ifas.ufl.edu/publication/FA043", publisher: "UF/IFAS Extension" },
