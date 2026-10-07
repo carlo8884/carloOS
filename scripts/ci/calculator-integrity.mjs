@@ -617,7 +617,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1428,7 +1428,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-reading-food-labels/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1447,7 +1447,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-protein-and-fat-requirements/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1467,7 +1467,7 @@ const CALCULATORS = [
       { re: /wysong\/epigen-90\?s=diet-whole-prey-vs-kibble/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-whole-prey-vs-kibble/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1486,7 +1486,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/marshall\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/premium-ferret-diet\?s=diet-kit-vs-adult-feeding/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1505,7 +1505,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/freeze-dried-treats\?s=diet-safe-treats/, label: 'existing Wysong freeze-dried-treats hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1524,7 +1524,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /chewy-brand\/meat\+based\+food\+topper\+sugar\+free\?s=diet-transitioning-foods/, label: 'existing Chewy meat-topper hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1543,7 +1543,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /chewy-brand\/frozen\+feeder\+mice\+reptile\?s=diet-raw-feeding-guide/, label: 'existing Chewy frozen-feeder-prey hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1562,7 +1562,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/wysong\+ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /wysong\/epigen-90\?s=diet-senior-ferret-nutrition/, label: 'existing Wysong Epigen 90 hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1580,7 +1580,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -2092,7 +2092,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -5153,7 +5153,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+food/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12584,7 +12584,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/heavy\+ceramic\+pet\+water\+bowl\?s=diet-hydration-and-water/, label: 'existing heavy ceramic bowl amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/small\+animal\+sipper\+water\+bottle\?s=diet-hydration-and-water/, label: 'existing sipper-bottle amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12614,7 +12614,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/diet/weight-management/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/digital\+gram\+scale\+kitchen\+pet\?s=diet-weight-management/, label: 'existing digital gram-scale amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,7 +127,7 @@ export default function KitVsAdultFeedingPage() {
             Reproducing females have the highest nutritional demands of any life stage. A pregnant or lactating jill needs abundant high-protein, high-fat, calorie-dense food available free-choice to support the litter and her own condition, sitting at or above the top of the ferret macronutrient range. Underfeeding at this stage risks both the jill and the kits. Breeding-stage nutrition is specialized, and anyone breeding ferrets should work with a veterinarian and experienced mentor rather than relying on general guidance.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/marshall+ferret+food?s=kit-vs-adult-feeding", "/go/marshall/premium-ferret-diet?s=diet-kit-vs-adult-feeding"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

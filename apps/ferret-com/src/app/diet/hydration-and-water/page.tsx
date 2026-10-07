@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -129,7 +130,7 @@ export default function HydrationAndWaterPage() {
             Clean, fresh water at all times is the standard. Refresh bowls daily and wash them regularly to prevent biofilm. Tap water that is safe for people is generally fine for ferrets; there is no need for special water unless your local supply has a known problem, in which case the same filtration you would use yourself is appropriate. The priority is simply that the water is present, clean, and actually accessible.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=diet-hydration-and-water", "/go/amazon-brand/small+animal+sipper+water+bottle?s=diet-hydration-and-water"]} />
 
           <h2 id="picks">Bowl & Bottle Picks</h2>
           <p>

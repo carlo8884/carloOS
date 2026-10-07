@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -180,7 +181,7 @@ export default function WholePreyVsKibblePage() {
             There is no single correct answer, but a few defensible patterns emerge. For a first-time owner without an exotic-mammal vet already lined up, a high-quality low-carb kibble is the lower-risk starting point — it is forgiving, safe, and nutritionally reliable. For a committed keeper with freezer space and good kitchen discipline, a well-balanced raw or whole-prey diet is the closest match to ferret physiology and may pay dividends in dental health and stool quality. A pragmatic middle path — premium kibble as a base, with whole-prey or raw supplementation a few times a week — captures much of the upside of both while keeping a safe, convenient fallback. Whatever you choose, transition gradually: ferrets imprint on food in their first six months and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>).
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble", "/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble", "/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -274,7 +275,7 @@ export default function WholePreyVsKibblePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2 id="faq">FAQ</h2>
           <p>Those figures are typical US ranges dated 2026-10-05.</p>
