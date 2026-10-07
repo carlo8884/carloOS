@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -160,7 +161,7 @@ export default function RationBalancersPage() {
             does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/compact+digital+gram+scale+horse+feed?s=nutrition-ration-balancers", "/go/amazon-brand/molasses+free+chaff+horse?s=nutrition-ration-balancers", "/go/amazon-brand/small+rubber+horse+mixing+pan?s=nutrition-ration-balancers"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -186,7 +187,7 @@ export default function RationBalancersPage() {
           <h2 id="picks">Ration Balancer Picks</h2>
           <p>A few widely-available ration balancers covering the common grass-forage, low-sugar/low-starch, and senior needs. Match the balancer to the horse and the forage type, and feed at the label rate. Ration balancers are widely sold through feed stores; the links below route to a tracked brand search since these are typically stocked outside specialist tack retail. This is a documented-spec comparison drawing on standard US retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/purina+enrich+plus+ration+balancer?s=nutrition-ration-balancers", "/go/amazon-brand/triple+crown+30+ration+balancer?s=nutrition-ration-balancers", "/go/amazon-brand/nutrena+empower+topline+balancer?s=nutrition-ration-balancers"]} />
 
 
           <ReviewCard

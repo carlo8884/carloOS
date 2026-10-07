@@ -10108,7 +10108,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/equine\+hay\+core\+sampler\?s=nutrition-forage/, label: 'equine hay-core-sampler search hop (matches on-page representative-sample copy; unique vs equine+forage+nsc+hay+test+kit / timothy+hay+horse)' },
       { re: /amazon-brand\/wall\+mounted\+horse\+hay\+rack\?s=nutrition-forage/, label: 'wall-mounted horse hay-rack search hop (matches on-page keep-forage-off-the-ground copy; unique vs slow+feeder+hay+net+horse / equine+slow+feeder+hay+box)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+      { re: /HopDisclosure/, label: 'existing HopDisclosure kept in place' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10129,7 +10129,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/stackable\+rubber\+horse\+feed\+tubs\?s=nutrition-grain/, label: 'stackable rubber horse feed-tubs search hop (matches on-page split-small-meals copy; unique vs round+rubber+feed+pan+horse / large+smooth+feed+tub+rocks)' },
       { re: /amazon-brand\/rodent\+proof\+metal\+horse\+feed\+bin\?s=nutrition-grain/, label: 'rodent-proof metal horse feed-bin search hop (matches on-page keep-grain-consistent copy; unique vs airtight+locking+pet+food+bin / airtight+dog+food+storage+container)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+      { re: /HopDisclosure/, label: 'existing HopDisclosure kept in place' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10148,7 +10148,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/alfalfa\+hay\+bales\+horse\?s=nutrition-hay/, label: 'alfalfa hay-bales search hop (matches on-page richer-legume copy; unique vs equine+forage+nsc+hay+test+kit / equine+hay+core+sampler)' },
       { re: /amazon-brand\/timothy\+alfalfa\+mixed\+hay\+horse\?s=nutrition-hay/, label: 'timothy-alfalfa mixed-hay search hop (matches on-page mixed-hay middle-ground copy; unique vs timothy+hay+horse / digital+hanging+hay+bale+scale)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10207,7 +10207,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+feed\+soaking\+tub\?s=nutrition-feeding-senior-horses/, label: 'horse feed-soaking-tub search hop (matches on-page soak-into-a-mash / poor-teeth copy; unique vs lidded+5+gallon+feed+soaking+pail / stackable+rubber+horse+feed+tubs / horse+hay+soaking+bag)' },
       { re: /amazon-brand\/horse\+corner\+feeder\?s=nutrition-feeding-senior-horses/, label: 'horse corner-feeder search hop (matches on-page feed-separately / not-bullied copy; unique vs wall+mounted+horse+hay+rack / slow+feeder+hay+net+horse / equine+slow+feeder+hay+box)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10249,7 +10249,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+hay\+soaking\+tub\?s=nutrition-feeding-the-easy-keeper/, label: 'horse hay-soaking-tub search hop (matches on-page soak-hay-30-to-60-minutes / leach-WSC copy; unique vs horse+hay+soaking+bag / horse+feed+soaking+tub / lidded+5+gallon+feed+soaking+pail)' },
       { re: /amazon-brand\/low\+sugar\+horse\+treats\?s=nutrition-feeding-the-easy-keeper/, label: 'low-sugar horse-treats search hop (matches on-page skip-the-treats / low-sugar-options copy; unique vs marked+horse+grain+scoop / low+nsc+ration+balancer+easy+keeper+horse)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10271,7 +10271,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/soy\+hull\+pellets\+horse\+feed\?s=nutrition-feeding-the-hard-keeper/, label: 'soy-hull-pellets search hop (matches on-page soya-hulls / fat+fiber calorie-add copy; unique vs horse+feed+grade+vegetable+oil / stabilized+rice+bran+horse+supplement / molasses+free+beet+pulp+shreds+horse)' },
       { re: /amazon-brand\/over\+door\+horse\+feed\+bucket\?s=nutrition-feeding-the-hard-keeper/, label: 'over-door horse feed-bucket search hop (matches on-page feed-separately / split-meals copy; unique vs horse+corner+feeder / stackable+rubber+horse+feed+tubs / marked+horse+grain+scoop)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10294,7 +10294,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/molasses\+free\+chaff\+horse\?s=nutrition-ration-balancers/, label: 'molasses-free chaff search hop (matches on-page mix-with-a-handful-of-chaff copy; unique vs horse+chopped+forage / molasses+free+beet+pulp+shreds+horse)' },
       { re: /amazon-brand\/small\+rubber\+horse\+mixing\+pan\?s=nutrition-ration-balancers/, label: 'small rubber horse mixing-pan search hop (matches on-page slow-the-tiny-serving copy; unique vs round+rubber+feed+pan+horse / stackable+rubber+horse+feed+tubs / over+door+horse+feed+bucket)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

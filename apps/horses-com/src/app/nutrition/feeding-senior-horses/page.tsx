@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -159,7 +160,7 @@ export default function SeniorFeedingPage() {
             page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+chopped+forage?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+feed+soaking+tub?s=nutrition-feeding-senior-horses", "/go/amazon-brand/horse+corner+feeder?s=nutrition-feeding-senior-horses", "/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses", "/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

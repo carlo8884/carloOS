@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -150,7 +151,7 @@ export default function GrainConcentratesPage() {
             calculator). This page does not claim hands-on
             testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tabletop+digital+horse+grain+scale?s=nutrition-grain", "/go/amazon-brand/stackable+rubber+horse+feed+tubs?s=nutrition-grain", "/go/amazon-brand/rodent+proof+metal+horse+feed+bin?s=nutrition-grain", "/go/amazon-brand/complete+pelleted+horse+feed+formulated?s=nutrition-grain-and-concentrates", "/go/amazon-brand/low+starch+senior+horse+feed?s=nutrition-grain-and-concentrates"]} />
 
           {/* Money path — live amazon-brand search hops
               (tabletop digital horse grain scale /

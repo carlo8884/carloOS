@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -147,7 +148,7 @@ export default function HayTypesPage() {
             page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/orchard+grass+hay+horse?s=nutrition-hay", "/go/amazon-brand/alfalfa+hay+bales+horse?s=nutrition-hay", "/go/amazon-brand/timothy+alfalfa+mixed+hay+horse?s=nutrition-hay"]} />
 
           {/* Money path — live amazon-brand search hops
               (orchard grass hay horse /
