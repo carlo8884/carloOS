@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Horse Height Converter -- /tools/horse-height-converter
  * Client compute component. Converts horse height between hands, inches, and
@@ -21,7 +23,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ShopCtas, ToolError, numberFieldError } from '@carloOS/ui'
 
 function wholeNumberFieldError(raw: string, label: string, min: number, max: number): string | null {
   const base = numberFieldError(raw, label, min, max)
@@ -290,7 +292,7 @@ export default function Calculator() {
             A measuring stick with a level is how you confirm that number at the withers
             on hard, level ground — the same method used for official measurement.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"]} />
           <ShopCtas
             amazonHref="/go/amazon-brand/horse+measuring+stick?s=tools-horse-height-converter"
             amazonLabel="Browse horse measuring sticks on Amazon →"

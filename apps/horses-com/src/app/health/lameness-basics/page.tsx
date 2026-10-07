@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -205,7 +206,7 @@ export default function LamenessBasicsPage() {
             not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/30+foot+cotton+lunge+line?s=health-lameness", "/go/amazon-brand/leather+chain+lead+shank+horse?s=health-lameness", "/go/amazon-brand/orange+traffic+cone+set?s=health-lameness"]} />
 
           {/* Money path — live amazon-brand search hops
               (30 foot cotton lunge line /
@@ -277,9 +278,6 @@ export default function LamenessBasicsPage() {
               are not an abscess soaking-boot hop,
               they are not a grimace-scale ice-boot hop,
               and they do not replace a veterinarian.
-              Horses.com earns a commission on
-              qualifying purchases at no extra cost
-              to you.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

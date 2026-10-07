@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Stall Bedding Calculator -- /tools/stall-bedding-calculator
  * Client compute component. Stall length × width × depth → bedding volume
@@ -19,7 +21,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 function stallCountError(raw: string): string | null {
   const base = numberFieldError(raw, 'stall count', 1, 20)
@@ -284,7 +286,7 @@ export default function Calculator() {
               : ''}
             , then about {result.unitsWeekly} {weeklyWord} a week to replace what you pick out.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/wood+pellet+horse+stall+bedding?s=tools-stall-bedding-calculator", "/go/amazon-brand/horse+stall+fork+manure+picker?s=tools-stall-bedding-calculator", "/go/amazon-brand/pine+shavings+horse+stall+bedding?s=tools-stall-bedding-calculator"]} />
           <a
             href={
               type === 'pellets'
