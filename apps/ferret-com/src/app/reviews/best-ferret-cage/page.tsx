@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard, AffiliateDisclosure } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, ArticleSourcesList, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildProductSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -122,7 +123,10 @@ export default function BestFerretCagePage() {
       <ArticleLayout
         siteId="ferret-com"
         heroHop={<PrimaryHop href='/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage' label='Check price of the Ferret Nation / Critter Nation double unit on Amazon' />}
-        heroExtra={<QuickPicks items={QUICK_PICKS} embedded />}
+        heroExtra={<>
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage" />
+        <QuickPicks items={QUICK_PICKS} embedded />
+      </>}
         hero={{
           title: 'Best Ferret Cage: Bar Spacing, Floor Space & Safety',
           subtitle:
@@ -283,7 +287,7 @@ export default function BestFerretCagePage() {
             and shelter communities, not a hands-on durability test. Verify the bar spacing on the exact model you buy,
             and plan to cover wire shelves and ramps regardless of which you choose.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-best-ferret-cage", "/go/amazon-brand/prevue+feisty+ferret+cage?s=reviews-best-ferret-cage", "/go/amazon-brand/kaytee+multi+level+ferret+home?s=reviews-best-ferret-cage"]} />
 
           <ReviewCard
             id="ferret-nation"
@@ -392,7 +396,7 @@ export default function BestFerretCagePage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

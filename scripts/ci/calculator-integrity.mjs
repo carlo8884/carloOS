@@ -1408,7 +1408,7 @@ const CALCULATORS = [
       { re: /marshall\/premium-ferret-diet\?s=diet-best-ferret-kibble/, label: 'existing Marshall Premium hop kept (not an empty leftover button)' },
       { re: /Carniwhole Ferret Food/, label: 'Carniwhole card kept; visit hop removed because carniwhole.com does not resolve' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12551,7 +12551,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/ferret\+vest\+harness\+jacket\+escape\+proof\?s=reviews-best-ferret-harness/, label: 'existing vest/jacket amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/ferret\+h\+style\+harness\+adjustable\?s=reviews-best-ferret-harness/, label: 'existing H-style amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/ferret\+mesh\+harness\+leash\+set\?s=reviews-best-ferret-harness/, label: 'existing mesh H-plus-leash amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12568,7 +12568,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/ferret\+nation\+critter\+nation\+double\+unit\?s=reviews-best-ferret-cage/, label: 'existing Ferret Nation / Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/prevue\+feisty\+ferret\+cage\?s=reviews-best-ferret-cage/, label: 'existing Prevue Feisty amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/kaytee\+multi\+level\+ferret\+home\?s=reviews-best-ferret-cage/, label: 'existing Kaytee Multi-Level amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
@@ -12663,7 +12663,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing heat-treated wood-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing grass-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/yesterdays\+news\+recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing Yesterday\'s News paper-pellet Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
