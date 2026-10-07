@@ -304,7 +304,12 @@ export default function HomePage() {
                   <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt={guide.imageAlt} aspect="16:9" variant="inline" subtleCredit />
                 </div>
                 <div className="flex flex-col flex-1 p-6">
-                  <div className="text-2xs font-bold uppercase tracking-eyebrow mb-2" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
+                  <div className="mb-2 flex items-center gap-2">
+                    <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
+                      <StockImage manifestKey={guide.manifestKey} fallbackKey="horses-com:hero" alt={guide.imageAlt} aspect="4:3" variant="inline" subtleCredit />
+                    </span>
+                    <div className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: 'var(--brand-primary)' }}>{guide.eyebrow}</div>
+                  </div>
                   <h3 className="font-display font-bold text-xl leading-snug mb-2" style={{ color: 'var(--brand-text-dark)' }}>{guide.title}</h3>
                   <p className="text-sm leading-relaxed mb-4" style={{ color: 'var(--brand-text-mid)' }}>{guide.desc}</p>
                 </div>
