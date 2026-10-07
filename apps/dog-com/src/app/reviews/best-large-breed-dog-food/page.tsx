@@ -24,7 +24,7 @@ export default function BestLargeBreedFoodPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🥩 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Large Breed Dog Food 2026</h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food' label='Check price of Royal Canin Large Adult on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food" />
         <EmailCapture
@@ -36,7 +36,7 @@ export default function BestLargeBreedFoodPage() {
           source="reviews-best-large-breed-dog-food"
           checklist={[
             "Royal Canin Large Adult, marked Best Overall.",
-            "The card says its glucosamine level is not as high as Royal Canin.",
+            "The current Purina page lists glucosamine minimum 500 ppm. The current Royal Canin page lists glucosamine minimum 396 mg/kg.",
             "Royal Canin Large Adult on this page is for dogs 55–100 lb, and Giant Adult is for dogs over 100 lb.",
             "Large breed puppies need large breed puppy food — not all-life-stages or small breed formulas.",
             "Switch to an adult large-breed formula when the puppy food's feeding guide says growth is finished.",
@@ -70,8 +70,8 @@ export default function BestLargeBreedFoodPage() {
             />
             <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/royal+canin+large+adult?s=reviews-best-large-breed-dog-food", "/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"]} />
             <ReviewCard id="royal-canin" badge="Best Overall" name="Royal Canin Large Adult" subtitle="Glucosamine + chondroitin · Tailored kibble texture · WSAVA top tier" winner
-              description={<p>Royal Canin Large Adult is formulated with joint health as a central priority — glucosamine (200mg/kg) and chondroitin sulfate (160mg/kg) are included at levels shown to support cartilage health in dogs predisposed to joint disease. The kibble texture is tailored for large breed biting patterns — encouraging thorough chewing rather than bolting food, which reduces bloat risk in deep-chested large breeds. EPA from fish oil provides anti-inflammatory support for joints. Royal Canin is one of three <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-recommended manufacturers with full veterinary nutritionist oversight. Available in multiple size variations — Large Adult (for dogs 55–100 lbs) and Giant Adult (for dogs over 100 lbs).</p>}
-              specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Glucosamine', value: '200mg/kg + chondroitin', highlight: 'good' }, { label: 'EPA', value: 'Fish oil — anti-inflammatory' }, { label: 'Kibble', value: 'Tailored for large jaw mechanics' }]}
+              description={<p>Royal Canin Large Adult is formulated with joint health as a central priority — the current guaranteed analysis lists glucosamine minimum 396 mg/kg and chondroitin sulfate minimum 4 mg/kg. The kibble texture is tailored for large breed biting patterns — encouraging thorough chewing rather than bolting food, which reduces bloat risk in deep-chested large breeds. EPA from fish oil provides anti-inflammatory support for joints. Royal Canin is one of three <a href="https://wsava.org/committees/global-nutrition-committee/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA</a>-recommended manufacturers with full veterinary nutritionist oversight. Available in multiple size variations — Large Adult (for dogs 55–100 lbs) and Giant Adult (for dogs over 100 lbs).</p>}
+              specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Glucosamine', value: 'Min. 396 mg/kg; chondroitin sulfate min. 4 mg/kg', highlight: 'good' }, { label: 'EPA', value: 'Fish oil — anti-inflammatory' }, { label: 'Kibble', value: 'Tailored for large jaw mechanics' }]}
               pros={['WSAVA top-tier compliance', 'Meaningful glucosamine and chondroitin levels', 'EPA from fish oil', 'Kibble size tailored for large breeds']}
               cons={['More expensive', 'Chicken-based — not for chicken-sensitive dogs']}
               price="$60–80 / 30 lb"
@@ -85,7 +85,7 @@ export default function BestLargeBreedFoodPage() {
               description={<p>Purina Pro Plan Large Breed Adult provides 26% protein (real chicken as first ingredient) and incorporates EPA from fish oil plus glucosamine for joint support. The inclusion of live probiotics (Bacillus coagulans) for digestive health is a meaningful differentiator at this price point. Purina's research investment — including BREATHE trials on respiratory health, joint studies, and cognitive research — backs a formula that balances joint support, digestive health, and overall nutrition for large breed adults. A commonly recommended formula among general practice veterinarians for large breed adults. Also available in salmon and trout variety for dogs with chicken sensitivity.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: '26% — real chicken first ingredient' }, { label: 'Probiotic', value: 'Live B. coagulans — clinically studied', highlight: 'good' }, { label: 'Joint support', value: 'EPA + glucosamine' }]}
               pros={['WSAVA compliant', 'Real chicken first ingredient', 'Live probiotics', 'EPA and glucosamine joint support', 'Multiple protein options']}
-              cons={['Glucosamine levels not as high as Royal Canin']}
+              cons={['Current page lists glucosamine minimum 500 ppm. Compare that line with the Royal Canin label.']}
               price="$50–70 / 34 lb"
               priceNote="dated 2026-10-05."
               ctaText="Shop Purina Pro Plan Large Breed on Amazon →"
@@ -119,7 +119,7 @@ export default function BestLargeBreedFoodPage() {
                       <td className="p-3 text-brand-text-mid">Higher protein, with some joint support, at a lower bag price</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#purina" className="text-brand-primary">Purina Pro Plan Large Breed Adult</a><TableShopLink href={"/go/chewy-brand/purina+pro+plan+large+breed+adult?s=reviews-best-large-breed-dog-food"} product={"Purina Pro Plan Large Breed Adult"} /></td>
                       <td className="p-3 text-brand-text-mid">Best High-Protein. $50–70 / 34 lb</td>
-                      <td className="p-3 text-brand-text-mid">You want the higher glucosamine level. The card says glucosamine is not as high as Royal Canin</td>
+                      <td className="p-3 text-brand-text-mid">Compare the printed glucosamine lines. This page does not rank one inclusion as higher</td>
                     </tr>
                   </tbody>
                 </table>
@@ -133,7 +133,7 @@ export default function BestLargeBreedFoodPage() {
                 },
                 {
                   question: 'Which large-breed food does this page pick for higher protein?',
-                  answer: 'Purina Pro Plan Large Breed Adult. The printed price is $50–70 for 34 lb. The card says its glucosamine level is not as high as Royal Canin.',
+                  answer: 'Purina Pro Plan Large Breed Adult. The printed price is $50–70 for 34 lb. The current Purina page lists glucosamine minimum 500 ppm. The current Royal Canin page lists glucosamine minimum 396 mg/kg.',
                 },
               ]} />
             </div>
