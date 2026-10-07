@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -12,7 +13,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { HORSE_FOODS, getHorseFood, getRelatedFoods, foodFaqs, VERDICT_META, type FoodEntry } from '../../../../data/foods'
@@ -218,7 +218,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
           page does not claim hands-on testing.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/airtight+labeled+horse+treat+canister?s=can-horses-eat", "/go/amazon-brand/nonslip+horse+barn+cutting+board?s=can-horses-eat", "/go/amazon-brand/nylon+horse+waist+treat+pouch?s=can-horses-eat"]} />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

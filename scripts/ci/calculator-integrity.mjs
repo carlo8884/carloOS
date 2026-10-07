@@ -10088,7 +10088,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/salt\+first\+horse\+electrolyte\+powder\?s=nutrition-salt/, label: 'salt-first electrolyte-powder search hop (matches on-page sweat-replacement / salt-not-sugar copy; unique vs horse+electrolytes)' },
       { re: /amazon-brand\/wide\+mouth\+horse\+water\+bucket\?s=nutrition-salt/, label: 'wide-mouth horse water-bucket search hop (matches on-page always-provide-water copy; unique vs automatic+horse+waterer / color+coded+flat+back+horse+buckets)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+      { re: /HopDisclosure/, label: 'existing HopDisclosure kept in place' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10167,7 +10167,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/heated\+horse\+water\+bucket\?s=nutrition-water/, label: 'heated horse water-bucket search hop (matches on-page slightly-warmed winter stall-water copy; unique vs horse+tank+heater / automatic+horse+waterer)' },
       { re: /amazon-brand\/electrolyte\+for\+horses\?s=nutrition-water/, label: 'electrolyte-for-horses search hop (matches on-page after-sweat thirst-drive copy; unique vs salt+first+horse+electrolyte+powder / horse+electrolytes)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10186,7 +10186,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/equine\+toxic\+plant\+identification\+field\+guide/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+paddock\+tree\+guard\+fencing\?s=nutrition-toxic-plants/, label: 'horse paddock tree-guard fencing search hop (matches on-page fence-out-ornamentals copy; unique vs horse+electric+tape / horse+fence+mesh / horse+electric+rope / portable+horse+paddock+panels)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10316,7 +10316,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/long\+handled\+horse\+feed\+mixing\+paddle\?s=nutrition-beet-pulp/, label: 'long-handled horse feed mixing-paddle search hop (matches on-page stir-into-a-mash / vehicle-for-supplements copy; unique vs small+rubber+horse+mixing+pan / marked+horse+grain+scoop / horse+mash)' },
       { re: /amazon-brand\/silicone\+horse\+feed\+tub\+scraper\?s=nutrition-beet-pulp/, label: 'silicone horse feed-tub-scraper search hop (matches on-page soak-fresh-each-feed / discard-sour-mash copy; unique vs stackable+rubber+horse+feed+tubs / large+smooth+feed+tub+rocks / over+door+horse+feed+bucket)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10336,7 +10336,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/nonslip\+horse\+barn\+cutting\+board\?s=can-horses-eat/, label: 'nonslip horse barn cutting-board search hop (matches on-page cut-treats-to-a-safe-size / choke-safe copy; unique vs marked+horse+grain+scoop / small+rubber+horse+mixing+pan)' },
       { re: /amazon-brand\/nylon\+horse\+waist\+treat\+pouch\?s=can-horses-eat/, label: 'nylon horse waist treat-pouch search hop (matches on-page carry-a-measured-handful / leave-the-kitchen copy; unique vs low+sugar+horse+treats / nylon+horse+hay+bag)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10355,7 +10355,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/lidded\+horse\+barn\+treat\+tote\?s=can-horses-eat-hub/, label: 'lidded horse barn treat-tote search hop (matches on-page keep-kitchen-leftovers-out-of-the-barn copy; unique vs airtight+labeled+horse+treat+canister / nylon+horse+waist+treat+pouch / rodent+proof+metal+horse+feed+bin)' },
       { re: /amazon-brand\/horse\+barn\+treat\+prep\+shears\?s=can-horses-eat-hub/, label: 'horse barn treat-prep-shears search hop (matches on-page choke-safe-treat-prep hub-scope copy; unique vs nonslip+horse+barn+cutting+board / apple+wedger+slicer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10373,7 +10373,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

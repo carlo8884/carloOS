@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { HORSE_FOODS, HORSE_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -118,7 +119,7 @@ export default function CanHorsesEatHubPage() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hay?s=can-horses-eat-hub", "/go/amazon-brand/lidded+horse+barn+treat+tote?s=can-horses-eat-hub", "/go/amazon-brand/horse+barn+treat+prep+shears?s=can-horses-eat-hub"]} />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -157,7 +158,7 @@ export default function BeetPulpPage() {
             ReviewCards below. This page does
             not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/fine+mesh+horse+feed+colander?s=nutrition-beet-pulp", "/go/amazon-brand/long+handled+horse+feed+mixing+paddle?s=nutrition-beet-pulp", "/go/amazon-brand/silicone+horse+feed+tub+scraper?s=nutrition-beet-pulp"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -183,7 +184,7 @@ export default function BeetPulpPage() {
           <h2 id="picks">Beet Pulp Picks</h2>
           <p>A few widely-available beet pulp options covering shred and pellet formats and molasses-free for low-sugar diets. Always soak before feeding; introduce gradually. Use as part of a balanced ration -- beet pulp is a general fiber and calorie support, not a complete feed or a treatment. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/molasses+free+beet+pulp+shreds+horse?s=nutrition-beet-pulp", "/go/amazon-brand/beet+pulp+pellets+horse+feed?s=nutrition-beet-pulp"]} />
 
 
           <ReviewCard

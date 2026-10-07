@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -156,7 +157,7 @@ export default function SaltElectrolytesPage() {
             calculator). This page does not
             claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt", "/go/amazon-brand/salt+first+horse+electrolyte+powder?s=nutrition-salt", "/go/amazon-brand/wide+mouth+horse+water+bucket?s=nutrition-salt"]} />
 
           {/* Money path — live amazon-brand search hops
               (plain white horse salt block /
@@ -210,7 +211,7 @@ export default function SaltElectrolytesPage() {
           <h2 id="picks">Salt and Electrolyte Picks</h2>
           <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/smartpak/plain-loose-salt?s=nutrition-salt-and-electrolytes", "/go/ridingwarehouse/sweat-replacement-electrolyte?s=nutrition-salt-and-electrolytes"]} />
 
 
           <ReviewCard
