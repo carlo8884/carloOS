@@ -204,7 +204,7 @@ export default function SeniorFeedingPage() {
             ]}
             pros={['Replaces hay for horses with severe dental wear', 'Soaks easily into palatable mash', 'Complete nutrition at full feed rate']}
             cons={['Some brands higher in NSC — check for PPID horses', 'Expensive at full hay-replacement rate', 'Must be fed at label rate to deliver promised nutrition']}
-            price="$30–60 per 50 lb"
+            price="see current price per 50 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search soakable complete senior horse feed on Amazon →"
             ctaHref="/go/amazon-brand/complete+senior+horse+feed+soakable?s=nutrition-senior-horses"
@@ -228,7 +228,7 @@ export default function SeniorFeedingPage() {
             ]}
             pros={['Amino-acid-targeted for topline', 'Low calorie load', 'Easy to add to existing feed']}
             cons={['Not a substitute for calories if horse is genuinely underweight', 'Does not replace PPID diagnosis and treatment', 'Match to overall ration']}
-            price="$30–55 per 5–10 lb"
+            price="see current price per 5–10 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search a horse topline amino acid supplement with lysine on Amazon →"
             ctaHref="/go/amazon-brand/horse+topline+amino+acid+supplement+lysine?s=nutrition-senior-horses"

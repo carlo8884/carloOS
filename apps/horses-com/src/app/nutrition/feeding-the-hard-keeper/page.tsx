@@ -214,7 +214,7 @@ export default function HardKeeperPage() {
             ]}
             pros={['Dense, slow-burning calories', 'Low starch — gut-safe', 'Widely available', 'Palatable addition to existing feed']}
             cons={['Not a complete feed — use alongside forage and balancer', 'Introduce gradually', 'Some horses find the fat off-putting initially']}
-            price="$25–45 per 25–30 lb"
+            price="see current price per 25–30 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search stabilized rice bran horse supplement on Amazon →"
             ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+supplement?s=nutrition-hard-keeper"
@@ -238,7 +238,7 @@ export default function HardKeeperPage() {
             ]}
             pros={['Energy from fat and fiber, not starch', 'Reduces gut-upset risk vs. grain', 'Suited to horses sensitive to starch']}
             cons={['More expensive per calorie than plain grain', 'Must still be fed in small meals', 'Pair with adequate forage']}
-            price="$35–70 per 50 lb"
+            price="see current price per 50 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search high-fat low-starch horse feed on Amazon →"
             ctaHref="/go/amazon-brand/high+fat+low+starch+horse+feed?s=nutrition-hard-keeper"
