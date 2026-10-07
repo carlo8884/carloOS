@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -240,7 +241,7 @@ export default function FerretCageSetupPage() {
           <p>
             Two cages that come up consistently in keeper communities and at exotic-mammal shelters. Both are widely available; each fills a different price/use niche.
           </p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/midwest+critter+nation+double+unit?s=care-cage-setup", "/go/marshall/designer-ferret-cage?s=care-cage-setup", "/go/marshall/ferret-sleep-sack?s=care-cage-setup", "/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=care-cage-setup"]} />
           <ReviewCard
             id="critter-nation"
             badge="Best Overall"
@@ -335,8 +336,7 @@ export default function FerretCageSetupPage() {
           <FAQAccordion items={FAQS} includeSchema={false} />
 
           <ArticleSourcesList sources={SOURCES} />
-          <p className="text-sm text-brand-text-light">
-            Affiliate disclosure: Ferret.com may earn a commission on qualifying purchases made through links on this page. Editorial picks are based on documented product specifications and community-reported reliability; commission does not influence inclusion.
+          <p className="text-sm text-brand-text-light"> Editorial picks are based on documented product specifications and community-reported reliability.
           </p>
         </div>
       </ArticleLayout>

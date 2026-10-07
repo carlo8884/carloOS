@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { TableShopLink, ComparisonFoot,
   buildMetadata,
@@ -10,7 +11,6 @@ import { TableShopLink, ComparisonFoot,
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
@@ -512,7 +512,7 @@ export default function FerretBathingGroomingPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=bathing-and-grooming", "/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming", "/go/chewy-brand/small+pet+nail+clipper+styptic+powder?s=care-bathing-and-grooming"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -648,7 +648,7 @@ export default function FerretBathingGroomingPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2 id="faq">FAQ</h2>
           <FAQAccordion items={FAQS} includeSchema={false} />

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -322,7 +322,7 @@ export default function FerretOdorScentControlPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=odor-and-scent-control" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
