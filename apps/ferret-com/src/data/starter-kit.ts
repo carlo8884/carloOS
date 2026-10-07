@@ -49,28 +49,19 @@ export const STARTER_KIT: KitCategory[] = [
     picks: [
       {
         name: 'Midwest Critter Nation Double Unit',
-        vendor: 'amazon',
-        sku: 'B003AQM5OS',
+        vendor: 'amazon-brand',
+        sku: 'midwest+critter+nation+double+unit',
         rationale:
-          'The community-standard ferret cage. Two-level configuration, full-front access (huge for cleaning), removable shelves, locking casters. Big enough for 2 ferrets comfortably.',
+          'The community-standard ferret cage. Two-level configuration, full-front access (huge for cleaning), removable shelves, locking casters. Big enough for 2 ferrets comfortably. The old product id is not on Amazon\'s current listing, so this opens the existing Critter Nation search.',
         approxPriceUSD: 290,
       },
       {
-        name: 'Ferret Nation 142 Single Unit',
-        vendor: 'amazon',
-        sku: 'B0002AQRJ8',
-        rationale:
-          'Single-level version of the Critter Nation. Better for one ferret or limited floor space. Same build quality.',
-        approxPriceUSD: 200,
-      },
-      {
         name: 'Prevue Pet Products Feisty Ferret Cage',
-        vendor: 'chewy',
-        sku: '46912',
+        vendor: 'chewy-brand',
+        sku: 'prevue+feisty+ferret',
         rationale:
-          'Cheaper alternative if budget is tight. Smaller interior — only suitable for one ferret with daily out-of-cage time of 4+ hours.',
+          'Cheaper alternative if budget is tight. Smaller interior — only suitable for one ferret with daily out-of-cage time of 4+ hours. Chewy\'s old numeric id for this cage is not a confirmed current page, so this opens a Prevue Feisty Ferret search.',
         approxPriceUSD: 140,
-        needsSkuVerification: true,
       },
     ],
   },
@@ -81,20 +72,19 @@ export const STARTER_KIT: KitCategory[] = [
       'Ferrets sleep 14-18 hours a day and need enclosed, fabric sleeping spaces — not the bare cage floor. Hammocks and sleep sacks are non-negotiable. Avoid cedar or pine shavings (toxic to ferrets).',
     picks: [
       {
-        name: 'Marshall Hide-N-Sleep Hammock',
+        name: 'Marshall ferret hammock',
         vendor: 'marshall',
-        sku: 'hide-n-sleep-ferret',
+        sku: 'ferret+hammock',
         rationale:
-          'Enclosed cocoon-style hammock. Most ferrets prefer enclosed sleeping over open hammocks. Washable. From the leading US ferret-specific brand.',
+          'Hide-N-Sleep\'s product page no longer resolves. This opens Marshall\'s current hammock search. Ferrets still need an enclosed, washable fabric bed rather than the bare cage floor.',
         approxPriceUSD: 18,
-        needsSkuVerification: true,
       },
       {
         name: 'Niteangel Ferret Hammock Trio',
-        vendor: 'amazon',
-        sku: 'B07HFY1G9R',
+        vendor: 'amazon-brand',
+        sku: 'niteangel+ferret+hammock',
         rationale:
-          'Three-piece set: standard hammock + cocoon + crinkle tube. Reasonable starter set covering different sleep preferences.',
+          'Three-piece set: standard hammock + cocoon + crinkle tube. Reasonable starter set covering different sleep preferences. The old product id is not on Amazon\'s current listing, so this opens a Niteangel ferret hammock search.',
         approxPriceUSD: 25,
       },
     ],
@@ -112,16 +102,14 @@ export const STARTER_KIT: KitCategory[] = [
         rationale:
           "Paper pellets are low-dust and non-clumping. Purina discontinued Yesterday's News on April 20, 2022. This Chewy search is for a recycled paper pellet still being sold. A 30 lb bag lasts 1 ferret about 6-8 weeks.",
         approxPriceUSD: 28,
-        needsSkuVerification: true,
       },
       {
-        name: 'Marshall Hi-Corner Litter Pan',
+        name: 'Marshall High Back Litter Pan',
         vendor: 'marshall',
-        sku: 'hi-corner-litter-pan',
+        sku: 'high+back+litter+pan',
         rationale:
-          'Triangle shape fits the cage corner. The high back panel prevents ferrets from backing up against a flat litter wall (they prefer to back into a corner).',
+          'The Hi-Corner product page no longer resolves. Marshall\'s current catalog lists a high-back litter pan, and this opens that search. The high back is the part that keeps ferrets from backing into a flat litter wall.',
         approxPriceUSD: 14,
-        needsSkuVerification: true,
       },
     ],
   },
@@ -129,7 +117,7 @@ export const STARTER_KIT: KitCategory[] = [
     slug: 'food',
     name: 'Food',
     whyItMatters:
-      "Ferrets are obligate carnivores. Minimum 35% protein, minimum 18% fat, NO corn/grain/fruit/vegetable as primary ingredient. Standard kibble brands marketed for ferrets often fail these thresholds — check the guaranteed analysis. Wysong Epigen 90 and Carniwhole are the two highest-protein commercial options; Marshall Premium is the most widely-available legacy choice.",
+      "Ferrets are obligate carnivores. Minimum 35% protein, minimum 18% fat, NO corn/grain/fruit/vegetable as primary ingredient. Standard kibble brands marketed for ferrets often fail these thresholds — check the guaranteed analysis. Wysong Epigen 90 is the highest-protein commercial option still sold on Wysong. Marshall Premium is the widely available legacy choice. Carniwhole\'s site no longer resolves, so it is not a kit link.",
     picks: [
       {
         name: 'Wysong Epigen 90 (Starch-Free Ferret/Dog/Cat)',
@@ -138,25 +126,14 @@ export const STARTER_KIT: KitCategory[] = [
         rationale:
           "60%+ protein, 16% fat, near-zero starch. Wysong's flagship; the closest commercial kibble to a ferret's natural prey diet.",
         approxPriceUSD: 65,
-        needsSkuVerification: true,
-      },
-      {
-        name: 'Carniwhole Ferret Diet',
-        vendor: 'carniwhole',
-        sku: 'ferret-diet',
-        rationale:
-          'Newer entrant; freeze-dried raw blocks. Higher cost per pound than kibble but matches biological diet most closely.',
-        approxPriceUSD: 45,
-        needsSkuVerification: true,
       },
       {
         name: 'Marshall Premium Ferret Diet',
         vendor: 'marshall',
         sku: 'premium-ferret-diet',
         rationale:
-          "Long-standing legacy formula. Slightly higher carb content than Wysong/Carniwhole but widely available, cheaper, and tolerated by ferrets transitioning from cheaper brands. Acceptable mid-tier choice.",
+          "Long-standing legacy formula. Slightly higher carb content than Wysong, but widely available, cheaper, and tolerated by ferrets transitioning from cheaper brands. Acceptable mid-tier choice.",
         approxPriceUSD: 30,
-        needsSkuVerification: true,
       },
     ],
   },
@@ -168,29 +145,27 @@ export const STARTER_KIT: KitCategory[] = [
     picks: [
       {
         name: 'Lixit Quick-Lock Cage Water Bottle (32oz)',
-        vendor: 'amazon',
-        sku: 'B000H8V8H4',
+        vendor: 'amazon-brand',
+        sku: 'lixit+quick+lock+water+bottle',
         rationale:
-          'Stainless-steel ball valve, glass body. The heavy-duty version of the standard rodent bottle.',
+          'Stainless-steel ball valve, glass body. The heavy-duty version of the standard rodent bottle. The old product id is not on Amazon\'s current listing, so this opens a Lixit Quick-Lock bottle search.',
         approxPriceUSD: 18,
       },
       {
-        name: 'Marshall Ferret Bathing Shampoo',
+        name: 'Marshall ferret shampoo',
         vendor: 'marshall',
-        sku: 'ferret-shampoo',
+        sku: 'ferret+shampoo',
         rationale:
-          'pH-balanced for ferret skin. Other animal shampoos are too acidic or alkaline and strip the protective oils.',
+          'The older ferret-shampoo product page no longer resolves. This opens Marshall\'s current shampoo search. Use a ferret shampoo and read the label; dog and cat shampoos are the wrong pH.',
         approxPriceUSD: 11,
-        needsSkuVerification: true,
       },
       {
         name: 'Kaytee Crinkle Tunnel (multipack)',
-        vendor: 'chewy',
-        sku: '101362',
+        vendor: 'chewy-brand',
+        sku: 'kaytee+crinkle+tunnel',
         rationale:
-          'Foldable nylon tunnel ferrets can play and sleep in. Multipack gives enough variety to rotate through.',
+          'Foldable nylon tunnel ferrets can play and sleep in. Multipack gives enough variety to rotate through. Chewy\'s old numeric id is not a confirmed current page, so this opens a Kaytee crinkle-tunnel search.',
         approxPriceUSD: 16,
-        needsSkuVerification: true,
       },
     ],
   },
@@ -227,6 +202,6 @@ export const BUDGET_SUMMARIES: BudgetSummary[] = [
     totalApprox: '$900–$1,400',
     tagline: 'Best gear, best food, no compromises.',
     bestFor:
-      'Two ferrets, Critter Nation Double Unit, premium food (Wysong Epigen 90 or Carniwhole), full hammock + cocoon assortment, complete accessory kit. The "do it once" buildout.',
+      'Two ferrets, Critter Nation Double Unit, premium food (Wysong Epigen 90), full hammock assortment, complete accessory kit. The "do it once" buildout.',
   },
 ]

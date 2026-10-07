@@ -536,11 +536,11 @@ export default function FerretExerciseEnrichmentPage() {
           <ReviewCard quietUntilTag
             id="marshall-pop-n-play"
             badge="Tunnel Default"
-            name="Marshall Pop-N-Play Tunnel Set"
+            name="Marshall play tunnel"
             subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
             winner
             description={
-              <p>The reference ferret tunnel product in US pet retail. Pop-up fabric construction stores flat, sets up in seconds, and connects to itself for multi-tunnel circuits. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. Look for a ferret-sized fabric tunnel that stores flat and can connect into a longer circuit. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
             }
             specs={[
               { label: 'Construction', value: 'Pop-up fabric with internal wire' },
@@ -553,10 +553,10 @@ export default function FerretExerciseEnrichmentPage() {
             cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
             price="$15–30"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment"
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=care-exercise-and-enrichment"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
           <ReviewCard quietUntilTag
             id="dig-box-supplies"

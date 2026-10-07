@@ -558,7 +558,7 @@ export default function FerretBathingGroomingPage() {
             subtitle="Ferret-specific pH-balanced shampoo, no tea tree"
             winner
             description={
-              <p>Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free SKUs and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
+              <p>Marshall's original ferret-shampoo product page no longer resolves. This button opens Marshall's current shampoo search. Marshall's standard ferret shampoo line — pH-balanced for ferret skin and free of the tea tree oil that the company sometimes includes in other variants. Pick the original or fragrance-free SKUs and avoid any version with tea tree on the ingredient list. The first-line shampoo across exotic-pet ferret practice and a sensible default for the every-2–3-month bathing schedule.</p>
             }
             specs={[
               { label: 'pH', value: 'Ferret-appropriate', highlight: 'good' },
@@ -571,9 +571,9 @@ export default function FerretBathingGroomingPage() {
             price="$8–14"
             priceNote="dated 2026-10-04."
             ctaText="Find Marshall ferret shampoo"
-            ctaHref="/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"
+            ctaHref="/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-shampoo-original"
+            ctaAffiliateProduct="ferret+shampoo"
           />
           <ReviewCard quietUntilTag
             id="pet-ear-cleaner"
@@ -636,7 +636,7 @@ export default function FerretBathingGroomingPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret shampoo without tea tree</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink quietUntilTag href={"/go/marshall/ferret-shampoo-original?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-ferret-shampoo" className="text-brand-primary">Marshall Ferret Shampoo</a><TableShopLink quietUntilTag href={"/go/marshall/ferret+shampoo?s=care-bathing-and-grooming"} product={"Marshall Ferret Shampoo"} /></td>
                   <td className="p-3 text-brand-text-mid">Shampoo Default. Original or fragrance-free. pH-balanced. $8–14</td>
                   <td className="p-3 text-brand-text-mid">The bottle is a tea-tree variant. The card says read the label every time</td>
                 </tr>

@@ -346,10 +346,10 @@ export default function FerretStressSignsPage() {
           <ReviewCard quietUntilTag
             id="ferret-tunnel-stress"
             badge="Enrichment"
-            name="Marshall Pop-N-Play Tunnel Set"
+            name="Marshall play tunnel"
             subtitle="Pop-up fabric tunnels — the single highest-return enrichment item for under-stimulated ferrets"
             description={
-              <p>Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. Under-stimulation is one of the most common causes of ferret stress. The tunnel circuit is the enrichment item most reliably used across play sessions, because it taps the burrowing instinct directly. A ferret with regular tunnel access is less likely to show bar-biting and pacing — the stereotypies most strongly linked to boredom stress. This is an enrichment item, not a treatment; persistent stress after environmental improvement still warrants a vet visit.</p>
             }
             specs={[
               { label: 'Construction', value: 'Pop-up fabric with internal wire' },
@@ -361,10 +361,10 @@ export default function FerretStressSignsPage() {
             cons={['Does not address social loneliness — a tunnel is not a companion', 'Fabric wears in heavy-chewer households']}
             price="$15–30"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall Pop-N-Play tunnels"
-            ctaHref="/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"
+            ctaText="Find Marshall play tunnels"
+            ctaHref="/go/marshall/ferret+play+tunnel?s=behavior-stress-signs"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="pop-n-play-tunnel"
+            ctaAffiliateProduct="ferret+play+tunnel"
           />
 
           <h2 id="faq">FAQ</h2>
