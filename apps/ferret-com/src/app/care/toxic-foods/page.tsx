@@ -540,11 +540,10 @@ export default function FerretToxicFoodsPage() {
               <strong>If your vet is unavailable, call poison
               control.</strong> ASPCA APCC (888-426-4435) or Pet
               Poison Helpline (855-764-7661). Both are 24/7. Both
-              charge a per-case consultation fee (roughly $75-90 as
-              of 2026). They will give species-specific guidance,
+              charge a per-case consultation fee (see current price).
+              They will give species-specific guidance,
               answer questions about decontamination, and provide a
               case number that downstream vets can reference.
-              Those helpline fees are dated 2026-05-29.
             </li>
             <li>
               <strong>Transport to an exotic-pet capable emergency
