@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog
 const SOURCES = [
   { label: 'WSAVA: Vaccination Guidelines for Dogs and Cats', url: 'https://wsava.org/global-guidelines/vaccination-guidelines/', publisher: 'WSAVA' },
   { label: 'AAHA: Canine Vaccination Guidelines', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
-  { label: 'AVMA: Vaccinations for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations-your-pet', publisher: 'AVMA' },
+  { label: 'AVMA: Vaccinations for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vaccinations', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dog Vaccination Guide', description: 'Core vaccines, non-core vaccines, titer testing, and puppy schedule from a veterinary perspective.', url: 'https://vets.co/health/dog-vaccinations-guide', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,

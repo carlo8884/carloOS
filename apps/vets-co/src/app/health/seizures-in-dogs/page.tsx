@@ -6,7 +6,6 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Seizures in Dogs — What to Do, Causes, Epilepsy | Vets.co", description: "A seizure is frightening but rarely an immediate emergency unless prolonged. Learn what to do during a seizure, common causes, and how epilepsy is managed.", path: '/health/seizures-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Epilepsy in Small Animals', url: 'https://www.merckvetmanual.com/nervous-system/epilepsy-in-small-animals/epilepsy-in-small-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Epilepsy in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/epilepsy-pets', publisher: 'AVMA' },
   { label: 'International Veterinary Epilepsy Task Force: Consensus Statements', url: 'https://bmcvetres.biomedcentral.com/articles/supplements/volume-11-supplement-1', publisher: 'BMC Veterinary Research' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Seizures in Dogs', description: 'What to do during a seizure, common causes, and management of canine epilepsy.', url: 'https://vets.co/health/seizures-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,

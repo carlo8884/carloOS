@@ -8,7 +8,6 @@ const SOURCES = [
   { label: 'WSAVA: Osteoarthritis in Dogs and Cats', url: 'https://wsava.org/global-guidelines/pain-guidelines/', publisher: 'WSAVA' },
   { label: 'Merck Veterinary Manual: Osteoarthritis in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/osteoarthritis-in-dogs-and-cats/osteoarthritis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Pain Management Guidelines', url: 'https://www.aaha.org/aaha-guidelines/pain-management-guidelines/', publisher: 'AAHA' },
-  { label: 'AVMA: Osteoarthritis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/osteoarthritis-pets', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Arthritis in Dogs', description: 'Recognizing and managing osteoarthritis and joint pain in dogs.', url: 'https://vets.co/health/arthritis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-04T00:00:00Z' ,
   citation: SOURCES,

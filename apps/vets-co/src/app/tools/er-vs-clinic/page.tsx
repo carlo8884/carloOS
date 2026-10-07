@@ -29,7 +29,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   {
     label: 'AVMA: Emergency Care for Your Pet',
-    url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergency-care-your-pet',
+    url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care',
     publisher: 'AVMA',
   },
   {

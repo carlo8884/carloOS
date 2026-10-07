@@ -416,7 +416,7 @@ export const Symptoms: Symptom[] = [
     citations: [
       {
         label: 'AVMA — Heat Stroke',
-        href: 'https://www.avma.org/resources-tools/pet-owners/petcare/dangers-leaving-pets-parked-cars',
+        href: 'https://www.avma.org/resources-tools/pet-owners/petcare/pets-vehicles',
       },
       { label: 'VECCS — Veterinary Emergency & Critical Care Society', href: VECCS },
       {
@@ -467,7 +467,7 @@ export const Symptoms: Symptom[] = [
     citations: [
       {
         label: 'AVMA — Canine Influenza',
-        href: 'https://www.avma.org/resources-tools/animal-health-and-welfare/animal-health/canine-influenza',
+        href: 'https://www.avma.org/resources-tools/animal-health-and-welfare/animal-health/canine-influenza-veterinary-resources',
       },
       {
         label: 'AAHA — Canine Vaccination Guidelines',

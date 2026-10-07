@@ -6,7 +6,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: '14 Dog Emergency Signs — When to Go to the Vet Right Now | Vets.co', description: '14 signs that require emergency veterinary care immediately. Pale gums, unproductive retching, seizures, and more', path: '/health/emergency-signs', type: 'article' })
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergency-care-your-pet', publisher: 'AVMA' },
+  { label: 'AVMA: Emergency Care for Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
   { label: 'ASPCA Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]

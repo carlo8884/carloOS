@@ -9,7 +9,6 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Disorders of the Lens in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/disorders-of-the-lens-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Merck Veterinary Manual: Disorders of the Retina in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/eye-disorders-of-dogs/disorders-of-the-retina-choroid-and-optic-disk-ocular-fundus-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'ACVO: Eye Conditions in Dogs', url: 'https://www.acvo.org/public-resources', publisher: 'American College of Veterinary Ophthalmologists' },
-  { label: 'AVMA: Eye Care for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/eye-care-pets', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Eye Conditions in Dogs', description: 'Cherry eye, cataracts, glaucoma, and PRA — identification and treatment urgency.', url: 'https://vets.co/health/dog-eye-conditions', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' ,
   citation: SOURCES,

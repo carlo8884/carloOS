@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
 const SOURCES = [
-  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kennel-cough', publisher: 'AVMA' },
+  { label: 'AVMA: Kennel Cough (Infectious Tracheobronchitis)', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/canine-infectious-respiratory-disease-complex-kennel-cough', publisher: 'AVMA' },
   { label: 'Merck Veterinary Manual: Canine Infectious Respiratory Disease', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/kennel-cough', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Canine Vaccination Guidelines (Bordetella)', url: 'https://www.aaha.org/aaha-guidelines/vaccination-canine-configuration/', publisher: 'AAHA' },
 ]

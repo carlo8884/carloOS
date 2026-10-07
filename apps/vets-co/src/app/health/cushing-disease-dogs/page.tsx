@@ -8,7 +8,6 @@ const SOURCES = [
   { label: 'Behrend EN et al. Diagnosis of Spontaneous Canine Hyperadrenocorticism: 2012 ACVIM Consensus Statement. J Vet Intern Med. 2013;27(6):1292-1304.', publisher: 'ACVIM / JVIM' },
   { label: 'Feldman EC, Nelson RW. Canine hyperadrenocorticism. In: Canine and Feline Endocrinology and Reproduction. 3rd ed. Saunders, 2004.', publisher: 'Saunders' },
   { label: 'Merck Veterinary Manual: Hyperadrenocorticism in Animals', url: 'https://www.merckvetmanual.com/endocrine-system/the-adrenal-glands/cushing-syndrome-hyperadrenocorticism-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Cushing\'s Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cushings-disease', publisher: 'AVMA' },
   { label: 'Ramsey IK. Trilostane in dogs. Vet Clin North Am Small Anim Pract. 2010;40(2):269-283.', publisher: 'Vet Clin North Am' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: "Cushing's Disease in Dogs", description: "PDH vs adrenal tumor, LDDS testing, and trilostane treatment for canine hyperadrenocorticism.", url: 'https://vets.co/health/cushing-disease-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-05T00:00:00Z' ,

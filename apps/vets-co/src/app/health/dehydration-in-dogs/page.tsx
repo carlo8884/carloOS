@@ -6,7 +6,6 @@ import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Fluid Therapy in Small Animals', url: 'https://www.merckvetmanual.com/therapeutics/fluid-therapy/fluid-therapy-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Dehydration in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/dehydration-pets', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Guidelines', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Dehydration in Dogs', description: 'Signs, skin turgor test, and IV fluids decision guide for dog dehydration.', url: 'https://vets.co/health/dehydration-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,

@@ -25,7 +25,7 @@ export const metadata: Metadata = buildMetadata({
 })
 
 const SOURCES = [
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
   { label: 'AAHA: Emergency and Critical Care Standards', url: 'https://www.aaha.org/aaha-guidelines/emergency-and-critical-care/emergency-and-critical-care-guidelines/', publisher: 'AAHA' },
   { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
   { label: 'Cornell Feline Health Center: Feline Lower Urinary Tract Disease', url: 'https://www.vet.cornell.edu/departments-centers-and-institutes/cornell-feline-health-center/health-information/feline-health-topics/feline-lower-urinary-tract-disease', publisher: 'Cornell Feline Health Center' },
