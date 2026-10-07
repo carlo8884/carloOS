@@ -559,7 +559,7 @@ export default function WaterParametersHubPage() {
           <h2 className="font-display font-bold text-brand-dark text-2xl mb-5">
             Water-parameter FAQ
           </h2>
-          <FAQAccordion items={FAQ_ITEMS} />
+          <FAQAccordion items={FAQ_ITEMS} includeSchema={false} />
         </div>
       </div>
 
