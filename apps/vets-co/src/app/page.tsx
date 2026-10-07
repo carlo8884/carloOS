@@ -551,7 +551,7 @@ export default function VetsHomePage() {
                   <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? 'var(--brand-accent-light)' : '#ffffff' }}>
                     {desk.eyebrow}
                   </div>
-                  <h2 className={`font-display font-bold text-xl sm:text-2xl leading-tight mb-1.5 ${desk.title === 'Find a Vet' ? 'text-[#1e140a]' : 'text-white'}`}>
+                  <h2 className="font-display font-bold text-white text-xl sm:text-2xl leading-tight mb-1.5">
                     {desk.title}
                   </h2>
                   <p className="text-xs sm:text-sm leading-relaxed mb-3 text-white/75">
