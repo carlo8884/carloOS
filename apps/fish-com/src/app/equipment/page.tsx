@@ -1,8 +1,8 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
   buildMetadata,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   buildBreadcrumbSchema,
@@ -140,7 +140,7 @@ export default function EquipmentHubPage() {
         {/* Money path — live amazon-brand search hops (equipment kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquaclear+70+filter?s=equipment-hub", "/go/amazon-brand/fluval+307+canister+filter?s=equipment-hub", "/go/amazon-brand/eheim+jager+heater?s=equipment-hub", "/go/amazon-brand/aquarium+digital+thermometer?s=equipment-hub", "/go/amazon-brand/seachem+prime+water+conditioner?s=equipment-hub", "/go/amazon-brand/api+freshwater+master+test+kit?s=equipment-hub", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=equipment-hub"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface max-w-content-wide mx-auto">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop aquarium equipment
@@ -188,8 +188,7 @@ export default function EquipmentHubPage() {
             <Link href="/reviews" className="text-brand-primary no-underline hover:underline">
               equipment reviews
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            .</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquaclear+70+filter?s=equipment-hub"

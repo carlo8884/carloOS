@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -81,7 +82,7 @@ export default function NewTankSyndromePage() {
         {/* Money path — live amazon-brand search hops (fishless-cycle + fish-in kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. No medication hops. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome", "/go/amazon-brand/seachem+prime+water+conditioner?s=health-new-tank-syndrome", "/go/amazon-brand/dr+tims+ammonium+chloride?s=health-new-tank-syndrome", "/go/amazon-brand/tetra+safestart+plus?s=health-new-tank-syndrome", "/go/amazon-brand/aquarium+sponge+filter?s=health-new-tank-syndrome"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a new-tank cycling kit
@@ -135,9 +136,7 @@ export default function NewTankSyndromePage() {
               nitrogen-cycle guide
             </Link>
             . They are not a ranked product list, they are not medications,
-            and they do not treat, reverse, or cure new-tank syndrome.
-            Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            and they do not treat, reverse, or cure new-tank syndrome.</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=health-new-tank-syndrome"

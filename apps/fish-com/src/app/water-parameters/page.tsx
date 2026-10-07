@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 /**
  * /water-parameters — Fish.com reference authority hub.
  *
@@ -25,7 +26,6 @@ import {
   buildBreadcrumbSchema,
   FAQAccordion,
   CalloutBox,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -279,7 +279,7 @@ export default function WaterParametersHubPage() {
         {/* Money path — live amazon-brand search hops (test + water-change kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters", "/go/amazon-brand/seachem+prime+water+conditioner?s=water-parameters", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=water-parameters", "/go/amazon-brand/python+water+changer?s=water-parameters", "/go/amazon-brand/aquarium+digital+thermometer?s=water-parameters"]} />
         <div className="mt-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop water-parameter testing gear
@@ -325,8 +325,7 @@ export default function WaterParametersHubPage() {
             >
               water-test kit reviews
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra
-            cost to you.</p>
+            .</p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/api+freshwater+master+test+kit?s=water-parameters"
