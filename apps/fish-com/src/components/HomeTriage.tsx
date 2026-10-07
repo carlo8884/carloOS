@@ -166,7 +166,10 @@ export function HomeTriage() {
                     <h2 className="font-display font-bold text-white text-base leading-tight italic">{p.title}</h2>
                   </div>
                   <p className="text-xs text-white/55 leading-relaxed mb-3">{p.desc}</p>
-                  <span className="inline-flex items-center gap-1 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
+                  <span className="inline-flex items-center gap-1.5 text-xs font-bold text-[#3aa4cc] group-hover:gap-2 transition-all">
+                    <span className={`relative h-6 w-9 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                      <StockImage manifestKey={p.imageKey} alt="" aspect="4:3" />
+                    </span>
                     Start here
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </span>
