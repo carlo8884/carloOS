@@ -59,7 +59,7 @@ const MAGNETS: Record<string, MagnetContent> = {
       {
         headline: 'A reasonable starter kit on Chewy',
         body: 'Crate, food, training treats, leash, collar — Chewy delivers same-day in most metros and routinely has the best price on starter bundles.',
-        cta: { label: 'Browse puppy gear →', vendor: 'chewy', sku: 'puppy-starter-kit' },
+        cta: { label: 'Browse puppy gear →', vendor: 'chewy-brand', sku: 'puppy+crate+food+treats+leash+collar' },
       },
     ],
     nextReadingHref: '/health',
