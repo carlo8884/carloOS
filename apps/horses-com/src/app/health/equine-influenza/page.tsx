@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -168,7 +169,7 @@ export default function EquineInfluenzaPage() {
             strangles. This page does not claim hands-on
             testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/weatherproof+storage+clipboard?s=health-flu", "/go/amazon-brand/round+rubber+feed+pan+horse?s=health-flu", "/go/amazon-brand/paper+pellet+horse+bedding?s=health-flu"]} />
 
           {/* Money path — live amazon-brand search hops
               (weatherproof storage clipboard /

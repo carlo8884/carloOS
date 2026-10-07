@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -167,7 +168,7 @@ export default function RingbonePage() {
             injectable joint products. This page does
             not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+hoof+angle+gauge?s=health-ringbone", "/go/amazon-brand/leather+horse+lunge+cavesson?s=health-ringbone", "/go/amazon-brand/neoprene+horse+overreach+bell+boots?s=health-ringbone"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine hoof angle gauge /

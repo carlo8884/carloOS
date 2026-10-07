@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -147,7 +148,7 @@ export default function SweetItchPage() {
           <h2 id="kit">Sweet-Itch Kit</h2>
           <p>Everyday physical supplies that match the fitted-barrier copy above — a sweet-itch rug so the body, belly, and tail dock stay covered, plus a sweet-itch hood so the mane, poll, and ears are closed to midges. These are not treatments for Culicoides hypersensitivity, summer seasonal recurrent dermatitis, or secondary skin infection; a horse that is rubbing raw, has broken skin, or is not improving after the barrier is on needs a veterinarian. Fly sheets, fly masks, fly boots, fly spray, fly traps, stall fans, turnout blankets, and any steroid, antihistamine, or spot-on stay off this kit — those already ship on other pages or are prescription-only. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweet+itch+rug?s=health-sweet-itch", "/go/amazon-brand/horse+sweet+itch+hood?s=health-sweet-itch"]} />
 
           {/* Money path — live amazon-brand search hops (sweet-itch kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -166,8 +167,7 @@ export default function SweetItchPage() {
               They are not a ranked product list, they are not a fly sheet
               or fly mask, they are not fly spray or fly traps, they are
               not a steroid or a spot-on, they are not a medication, and
-              they do not replace a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no extra cost to you.
+              they do not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

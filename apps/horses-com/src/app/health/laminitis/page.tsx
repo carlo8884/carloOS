@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -219,7 +220,7 @@ export default function LaminitisPage() {
           <h2 id="kit">Support kit</h2>
           <p>Everyday physical supplies that match the soft-footing, sole-support, and metabolic-management copy on this page — an equine foam sole-support pad so the sole can share load away from the failing dorsal laminae, equine deep-sand stall bedding so box rest happens on a thick soft bed instead of hard ground, and an easy-keeper grazing muzzle so lush spring grass stays limited for the at-risk easy keeper. These are household barn tools, not treatments. They do not diagnose or treat laminitis, they do not replace a veterinarian or a farrier, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+foam+sole+support+pads?s=health-laminitis", "/go/amazon-brand/equine+deep+sand+stall+bedding?s=health-laminitis", "/go/amazon-brand/easy+keeper+grazing+muzzle?s=health-laminitis"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine foam sole-support pads /

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -170,7 +171,7 @@ export default function MudFeverPage() {
             This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/heavy+duty+paddock+mud+grid?s=health-mud-fever", "/go/amazon-brand/full+length+horse+turnout+boots?s=health-mud-fever", "/go/amazon-brand/waffle+weave+horse+leg+towel?s=health-mud-fever"]} />
 
           {/* Money path — live amazon-brand search hops
               (heavy duty paddock mud grid /

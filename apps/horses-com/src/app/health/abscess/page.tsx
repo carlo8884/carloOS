@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -153,7 +154,7 @@ export default function AbscessPage() {
           <h2 id="kit">Abscess Soak Kit</h2>
           <p>Everyday physical supplies that match the soak copy above — Epsom salt for the warm hoof soak after a veterinarian or farrier opens the tract, plus a soaking boot so that soak stays around the hoof instead of in a kickable bucket. These are not treatments for a closed abscess, a fracture, or a draining tract that is not improving; sudden severe lameness still needs a veterinarian or farrier to locate and open the abscess before any soak. Poultice, cohesive bandage, equine first-aid kits, hoof picks, and riding hoof boots stay off this kit — those already ship on the grimace-scale, emergency-kit, hoof-picking, and hoof-care-basics pages. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/epsom+salt+horse+hoof?s=health-abscess", "/go/amazon-brand/horse+hoof+soaking+boot?s=health-abscess"]} />
 
           {/* Money path — live amazon-brand search hops (abscess soak kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

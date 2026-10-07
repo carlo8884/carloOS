@@ -10068,7 +10068,7 @@ const CALCULATORS = [
     id: 'horses · equine-ulcers under-hero',
     file: 'apps/horses-com/src/app/health/equine-ulcers/page.tsx',
     mustInclude: [
-      { re: /AffiliateDisclosure/, label: 'existing AffiliateDisclosure kept in place' },
+      { re: /HopDisclosure/, label: 'existing HopDisclosure kept in place' },
     ],
     mustExclude: [
       { re: /ShopCtas/, label: 'disclosure-only — no Amazon ShopCtas on this page' },
