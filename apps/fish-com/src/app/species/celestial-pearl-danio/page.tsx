@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -90,10 +91,10 @@ export default function CPDPage() {
         <p>CPD breed readily among Java moss and fine-leaved plants. Eggs are scattered in vegetation; the parents show mild interest in eating eggs but in dense planting, enough survive to produce periodic batches of fry. Fry are tiny and feed initially on infusoria and micro-organisms naturally present in established planted tanks. A 10-gallon planted CPD colony will produce fry periodically without any deliberate breeding intervention — the population self-sustains at a manageable level.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Celestial Pearl Danio — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for celestial pearl danio care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <ShopCtas amazonHref="/go/amazon-brand/celestial%20pearl%20danio%20tank%20setup?s=species-celestial-pearl-danio" amazonLabel="Browse celestial pearl danio tank setups on Amazon →" />
           </div>
