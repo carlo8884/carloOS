@@ -11492,7 +11492,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hikari\+bacto\+surge\+sponge\+filter\?s=reviews-best-aquarium-filters/, label: 'existing Hikari-Bacto-Surge amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+quietflow\+30\?s=reviews-best-aquarium-filters/, label: 'existing Aqueon-QuietFlow-30 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
@@ -11512,7 +11512,7 @@ const CALCULATORS = [
       { re: /resourceHref="\/go\/amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters"/, label: 'journey hop reuses the existing Fluval 307 search' },
       { re: /amazon-brand\/fluval\+307\+canister\+filter\?s=reviews-best-canister-filters/, label: 'existing Fluval-307 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/eheim\+classic\+350\+2215\?s=reviews-best-canister-filters/, label: 'existing Eheim-Classic-350 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
@@ -11533,7 +11533,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/eheim\+jager\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Eheim-Jager amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/hydor\+inline\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Hydor-Inline amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+pro\+heater\?s=reviews-best-aquarium-heaters/, label: 'existing Aqueon-Pro amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
@@ -11575,7 +11575,7 @@ const CALCULATORS = [
       { re: /nextHref="\/water-parameters"/, label: 'next step is the water-parameters table, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/api\+freshwater\+master\+test\+kit\?s=reviews-best-water-test-kits"/, label: 'journey hop reuses the existing API Master Test Kit search' },
       { re: /amazon-brand\/api\+freshwater\+master\+test\+kit\?s=reviews-best-water-test-kits/, label: 'existing API Master Test Kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
@@ -11596,7 +11596,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/fluval\+spec\+v\+5\+gallon\?s=reviews-best-nano-tanks/, label: 'existing Fluval-Spec-V amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+10\+gallon\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-10 amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/aqueon\+20\+gallon\+long\+aquarium\?s=reviews-best-nano-tanks/, label: 'existing Aqueon-20-Long amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
@@ -11617,7 +11617,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/aquarium\+co-op\+easy\+green\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Easy-Green amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/seachem\+flourish\+comprehensive\?s=reviews-best-planted-tank-fertilizers/, label: 'existing Seachem-Flourish amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/nilocg\+thrive\+fertilizer\?s=reviews-best-planted-tank-fertilizers/, label: 'existing NilocG-Thrive amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never href="#"' },
