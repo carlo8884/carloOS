@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -83,7 +84,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The cage-setup page prints the MidWest Critter Nation double unit at $200–280. That is the dollar band this page can cite for a cage. The cage review still explains bar spacing and which household that style of cage is for. Measure the room before you order a double unit as a surprise.</p>
         <h2>Who should get which printed band</h2>
         <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the hop already on that card, with this page named as the source.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <HopDisclosure siteId="ferret-com" href={[`/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=${SOURCE}`, `/go/marshall/ferret-shampoo-original?s=${SOURCE}`, `/go/wysong/freeze-dried-treats?s=${SOURCE}`, `/go/marshall/ferret-sleep-sack?s=${SOURCE}`, `/go/marshall/premium-ferret-diet?s=${SOURCE}`, `/go/wysong/epigen-90?s=${SOURCE}`, `/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`]} />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -132,7 +133,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-07" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <BelowFoldPhoto siteId="ferret-com" />
