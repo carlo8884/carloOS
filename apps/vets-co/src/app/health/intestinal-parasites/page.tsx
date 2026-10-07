@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Intestinal Parasites in Dogs — Roundworms, Hookworms | Vets.co', description: 'Annual fecal testing detects roundworms, hookworms, whipworms, coccidia, and Giardia before they cause clinical disease.', path: '/health/intestinal-parasites', type: 'article' })
@@ -86,7 +87,7 @@ export default function IntestinalParasitesPage() {
             hyperthyroidism-cats. This page
             does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/hinged+cedar+sandbox+cover?s=health-intestinal-parasites", "/go/amazon-brand/metal+jaw+dog+waste+scooper?s=health-intestinal-parasites", "/go/amazon-brand/outdoor+garden+hand+wash+station?s=health-intestinal-parasites"]} />
 
           {/* Money path — live amazon-brand search hops
               (hinged cedar sandbox cover /

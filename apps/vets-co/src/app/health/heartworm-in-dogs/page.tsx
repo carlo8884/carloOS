@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 
@@ -113,7 +114,7 @@ export default function HeartwormPage() {
             canine-influenza. This page does not claim hands-on
             testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/heavy+gauge+48+inch+dog+crate?s=health-heartworm-in-dogs", "/go/amazon-brand/2+foot+nylon+traffic+lead?s=health-heartworm-in-dogs", "/go/amazon-brand/adjustable+aluminum+downspout+extender?s=health-heartworm-in-dogs"]} />
 
           {/* Money path — live amazon-brand search hops
               (heavy-gauge 48-inch dog crate /

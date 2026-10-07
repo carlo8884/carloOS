@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Kennel Cough in Dogs — Signs, Treatment, Prevention | Vets.co", description: "Kennel cough is a highly contagious respiratory infection causing a distinctive honking cough. Learn the signs, when it is serious, and how vaccination helps.", path: '/health/kennel-cough', type: 'article' })
@@ -71,7 +72,7 @@ export default function KennelCoughPage() {
           <h2 id="kit">Home isolation kit</h2>
           <p>Everyday physical supplies that match the supportive-care copy above — a Y-shaped front-clip harness so leash pressure lands on the chest instead of the trachea, a cool-mist humidifier for the room where the dog rests, and a soft-sided crate so the household can isolate after boarding or daycare. These are rest and isolation tools, not treatments. They do not treat kennel cough, they do not replace a veterinarian, and they are not Bordetella vaccines, antibiotics, or cough suppressants. The digital pet thermometer already hopped on heat-stroke and first-aid pages stays off this kit. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/y+shaped+front+clip+dog+harness?s=health-kennel-cough", "/go/amazon-brand/cool+mist+humidifier?s=health-kennel-cough", "/go/amazon-brand/soft+sided+dog+crate?s=health-kennel-cough"]} />
 
           {/* Money path — live amazon-brand search hops (Y-shaped
               front-clip harness / cool-mist humidifier /
