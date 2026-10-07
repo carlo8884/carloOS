@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -176,7 +176,7 @@ export default function HarnessCollarSizePage() {
           Category searches only — not a ranked list, not a brand guarantee. */}
       <section id="walk-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/julius+k9+idc+powerharness?s=tools-harness-collar-size", "/go/amazon-brand/flat+buckle+nylon+dog+collar?s=tools-harness-collar-size", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-harness-collar-size", "/go/amazon-brand/dog+leash?s=tools-harness-collar-size", "/go/amazon-brand/front+clip+no+pull+dog+harness?s=tools-harness-collar-size"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a walk kit

@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * New Puppy Checklist -- /tools/new-puppy-checklist
  *
@@ -15,7 +16,7 @@
 
 import { useMemo, useState } from 'react'
 import Link from 'next/link'
-import { AffiliateDisclosure, ResultMeaning, ShopCtas } from '@carloOS/ui'
+import { ResultMeaning, ShopCtas } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 
@@ -659,7 +660,7 @@ export default function NewPuppyChecklist() {
           {shop.heading}
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <HopDisclosure siteId="dog-com" href={shop.href} />
         <ShopCtas amazonHref={shop.href} amazonLabel={shop.label} />
       </div>
 

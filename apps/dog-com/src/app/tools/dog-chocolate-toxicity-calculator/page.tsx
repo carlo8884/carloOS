@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   FAQAccordion,
   ArticleSourcesList,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import ToxicityMeter from './ToxicityMeter'
@@ -296,7 +296,7 @@ export default function DogChocolateToxicityCalculatorPage() {
           These hops do not treat or reverse chocolate poisoning. */}
       <section id="chocolate-safety-kit" className="px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/activated+charcoal+pet?s=tools-chocolate-toxicity", "/go/amazon-brand/hydrogen+peroxide+3+percent+first+aid?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+first+aid+kit+dog?s=tools-chocolate-toxicity", "/go/amazon-brand/pet+emergency+kit+dog+toxin?s=tools-chocolate-toxicity", "/go/amazon-brand/dog+crate+for+recovery?s=tools-chocolate-toxicity"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a chocolate-safety kit

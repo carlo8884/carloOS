@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -233,7 +233,7 @@ export default function DogGrimaceScalePage() {
           High-pain outcomes should already have pushed ER triage above. */}
       <section id="dog-grimace-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+first+aid+kit?s=tools-dog-grimace-scale", "/go/amazon-brand/soft+recovery+cone+dog?s=tools-dog-grimace-scale", "/go/amazon-brand/orthopedic+dog+bed?s=tools-dog-grimace-scale", "/go/amazon-brand/dog+ice+pack+wrap?s=tools-dog-grimace-scale", "/go/amazon-brand/calming+dog+chews?s=tools-dog-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit
@@ -281,7 +281,6 @@ export default function DogGrimaceScalePage() {
               question about comfort or behavior, talk to a licensed vet on a
               screen rather than waiting for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
