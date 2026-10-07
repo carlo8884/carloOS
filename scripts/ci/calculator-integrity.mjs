@@ -1637,7 +1637,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /marshall\/lock-n-litter-pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
-      { re: /chewy-brand\/yesterdays\+news\+paper\+pellet\+litter\?s=care-litter-training/, label: 'existing Chewy paper-pellet review hop kept (product-specific, not an empty leftover button)' },
+      { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=care-litter-training/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
@@ -12667,7 +12667,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/compressed\+wood\+pellet\+litter\+heat\+treated\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing heat-treated wood-pellet amazon-brand hop kept (do not re-ship a new query)' },
       { re: /amazon-brand\/small\+animal\+grass\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing grass-pellet amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /chewy-brand\/yesterdays\+news\+recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'existing Yesterday\'s News paper-pellet Chewy hop kept (not an empty leftover button)' },
+      { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=reviews-best-ferret-litter/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [

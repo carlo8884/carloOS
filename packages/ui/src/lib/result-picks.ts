@@ -345,9 +345,9 @@ export function careSettingPick(setting: 'er' | 'clinic' | 'telehealth'): Matche
 export function paperLitterPick(count: number): MatchedPick {
   const noun = count === 1 ? 'ferret' : 'ferrets'
   return {
-    href: '/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=tools-litter-planner',
-    label: "Find Yesterday's News paper pellet litter on Chewy",
-    detail: `The litter review's paper pick is Yesterday's News. This plan is for ${count} ${noun}. The planner's default is paper pellet, not the wood-pellet card.`,
+    href: '/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=tools-litter-planner',
+    label: 'Find recycled paper-pellet litter on Chewy',
+    detail: `The litter review's paper pick is recycled paper pellet. This plan is for ${count} ${noun}. The planner's default is paper pellet, not the wood-pellet card.`,
   }
 }
 

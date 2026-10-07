@@ -146,8 +146,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Paper pellets vs wood pellets/,
       link: 'litter review',
       comparison: /\/reviews\/best-ferret-litter\/?$/,
-      hop: '/go/amazon-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
-      hopIncludes: amazon('yesterdays'),
+      hop: '/go/amazon-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-best-ferret-litter',
+      hopIncludes: amazon('paper'),
     },
     {
       name: 'harness guide to harness review',

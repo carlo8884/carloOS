@@ -103,14 +103,14 @@ export const STARTER_KIT: KitCategory[] = [
     slug: 'litter',
     name: 'Litter & Litter Pan',
     whyItMatters:
-      "Ferrets are litter-trainable. Use paper-based pellet litter (Yesterday's News or similar) — NEVER clay/clumping cat litter (causes respiratory and intestinal issues). Corner-style triangle pans fit the cage geometry.",
+      'Ferrets are litter-trainable. Use recycled paper-pellet litter — never clay or clumping cat litter, which can cause respiratory and intestinal problems if swallowed. Corner-style triangle pans fit the cage geometry.',
     picks: [
       {
-        name: "Yesterday's News Cat Litter (paper pellet)",
-        vendor: 'chewy',
-        sku: '37070',
+        name: 'Recycled paper-pellet litter',
+        vendor: 'chewy-brand',
+        sku: 'recycled+paper+pellet+litter+non+clumping',
         rationale:
-          "Despite the cat-litter label, this is the gold-standard ferret litter — paper-pellet, dust-free, low-odor, safe if ingested in small amounts. 30lb bag lasts 1 ferret about 6-8 weeks.",
+          "Paper pellets are low-dust and non-clumping. Purina discontinued Yesterday's News on April 20, 2022. This Chewy search is for a recycled paper pellet still being sold. A 30 lb bag lasts 1 ferret about 6-8 weeks.",
         approxPriceUSD: 28,
         needsSkuVerification: true,
       },

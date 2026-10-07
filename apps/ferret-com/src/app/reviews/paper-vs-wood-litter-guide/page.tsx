@@ -75,11 +75,11 @@ export default function PaperVsWoodLitterGuidePage() {
         <p>Compressed wood pellets are the odor pick. Odor control is the strongest of the safe options on the page. Dust is low once fines are sifted. The price tier is $. The caveat is the form of the wood. The review says aromatic raw cedar and pine shavings release phenols tied to respiratory irritation. The allowed product is heat-treated, low-phenol compressed pellets, not loose shavings. The pellets are harder underfoot than paper. If a ferret rejects that texture, pelleted grass is the other safe option, soft, low dust, moderate odor, and quicker to break down when wet.</p>
         <h2>Who should buy which</h2>
         <p>Buy paper pellets for most ferrets. Buy heat-treated wood pellets when smell is the problem you are willing to manage, and you will read the bag for heat treatment rather than a pine scent. Buy grass pellets only when the ferret refuses the other two textures. Do not “upgrade” any of them to a clumping, perfumed cat litter. The review treats that swap as trading a safety margin for a cosmetic one.</p>
-        <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
-        <p>The link below is the existing paper-pellet search from the review. Purina discontinued Yesterday’s News on April 20, 2022, so that name is not a current formula.</p>
+        <HopDisclosure siteId="ferret-com" href="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide" />
+        <p>The link below is the recycled paper-pellet search from the review. Purina discontinued Yesterday’s News on April 20, 2022.</p>
         <ShopCtas
-          amazonHref="/go/chewy-brand/yesterdays+news+recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
-          amazonLabel="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
+          amazonHref="/go/chewy-brand/recycled+paper+pellet+litter+non+clumping?s=reviews-paper-vs-wood-litter-guide"
+          amazonLabel="Open the recycled paper-pellet search."
         />
         <EmailCapture
           variant="inline"
