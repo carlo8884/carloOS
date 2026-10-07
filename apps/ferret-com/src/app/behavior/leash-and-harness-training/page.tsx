@@ -322,7 +322,7 @@ export default function LeashAndHarnessTrainingPage() {
             subtitle="Adjustable H-style harness sized for ferret bodies, with 6-ft leash included"
             winner
             description={
-              <p>The reference H-style ferret harness in US pet retail. Adjustable at neck and body to accommodate seasonal weight changes; the H-geometry distributes leash pressure across the chest and shoulders rather than the throat. Widely stocked at national chain pet stores. The included leash is adequate for indoor break-in and early outdoor sessions.</p>
+              <p>Marshall's older harness-and-leash product page no longer resolves. This button opens Marshall's current harness-and-lead search. The reference H-style ferret harness in US pet retail. Adjustable at neck and body to accommodate seasonal weight changes; the H-geometry distributes leash pressure across the chest and shoulders rather than the throat. Widely stocked at national chain pet stores. The included leash is adequate for indoor break-in and early outdoor sessions.</p>
             }
             specs={[
               { label: 'Style', value: 'H-style (adjustable)', highlight: 'good' },
@@ -335,10 +335,10 @@ export default function LeashAndHarnessTrainingPage() {
             cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
             price="$10–18"
             priceNote="dated 2026-06-04."
-            ctaText="Find Marshall Ferret Harness"
-            ctaHref="/go/marshall/ferret-harness-leash?s=behavior-leash-harness"
+            ctaText="Find Marshall harness and lead sets"
+            ctaHref="/go/marshall/harness+lead?s=behavior-leash-harness"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-harness-leash"
+            ctaAffiliateProduct="harness+lead"
           />
           <ReviewCard quietUntilTag
             id="ferret-vest-harness"

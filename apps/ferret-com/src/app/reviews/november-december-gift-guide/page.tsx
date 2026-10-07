@@ -109,7 +109,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–14</td>
-                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink quietUntilTag href={`/go/marshall/ferret-shampoo-original?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
+                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink quietUntilTag href={`/go/marshall/ferret+shampoo?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
                 <td className="p-3"><Link href="/care/bathing-and-grooming">Grooming page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
@@ -119,7 +119,7 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$10–20</td>
-                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink quietUntilTag href={`/go/marshall/ferret-sleep-sack?s=${SOURCE}`} product="Marshall sleep sack" /></td>
+                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink quietUntilTag href={`/go/marshall/ferret+hammock?s=${SOURCE}`} product="Marshall sleep sack" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
               <tr className="border-b border-brand-border">

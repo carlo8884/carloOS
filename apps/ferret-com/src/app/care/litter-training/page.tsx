@@ -529,11 +529,11 @@ export default function FerretLitterTrainingPage() {
           <ReviewCard quietUntilTag
             id="marshall-corner-pan"
             badge="Pan Shape Default"
-            name="Marshall Lock-N-Litter Corner Pan"
+            name="Marshall Lock-On Litter Pan"
             subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
             winner
             description={
-              <p>The reference ferret corner pan in US pet retail. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
+              <p>The older Lock-N-Litter product page no longer resolves. This button opens Marshall's current lock-on litter pan search. It is the corner pan in Marshall's current catalog. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
             }
             specs={[
               { label: 'Shape', value: 'Triangular corner', highlight: 'good' },
@@ -546,10 +546,10 @@ export default function FerretLitterTrainingPage() {
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
             price="$10–18"
             priceNote="dated 2026-05-31."
-            ctaText="Find Marshall Lock-N-Litter pans"
-            ctaHref="/go/marshall/lock-n-litter-pan?s=care-litter-training"
+            ctaText="Find Marshall lock-on litter pans"
+            ctaHref="/go/marshall/lock+on+litter+pan?s=care-litter-training"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="lock-n-litter-pan"
+            ctaAffiliateProduct="lock+on+litter+pan"
           />
           <ReviewCard quietUntilTag
             id="recycled-paper-pellet"

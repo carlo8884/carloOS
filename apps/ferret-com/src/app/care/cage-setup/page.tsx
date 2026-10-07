@@ -277,26 +277,26 @@ export default function FerretCageSetupPage() {
           <ReviewCard quietUntilTag
             id="marshall"
             badge="Best Starter"
-            name="Marshall Designer Ferret Cage"
+            name="Marshall ferret cage"
             subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
             description={
-              <p>Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and their starter cage is genuinely workable as a first cage for one or two ferrets. Three levels, ferret-appropriate bar spacing, and an included hammock, ramp covers, and litter pan reduce the per-item shopping list. The trade-off is footprint: the Marshall is materially smaller than the Critter Nation, and most keepers eventually upgrade as they add ferrets or want more enrichment space.</p>
+              <p>Marshall's Designer Ferret Cage product page no longer resolves. This button opens Marshall's current cage search. Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and a starter cage can still work as a first cage for one or two ferrets. Check bar spacing and footprint on the current listing. A smaller starter cage is often outgrown once a second ferret arrives.</p>
             }
             specs={[
-              { label: 'Dimensions', value: '~30×18×40 in' },
-              { label: 'Levels', value: '3', highlight: 'good' },
-              { label: 'Bar Spacing', value: '~0.5 in', highlight: 'good' },
-              { label: 'Included Accessories', value: 'Hammock, ramp covers, pan', highlight: 'good' },
-              { label: 'Long-term Capacity', value: 'One ferret comfortably; two tight', highlight: 'warn' },
+              { label: 'Dimensions', value: 'Check the current listing' },
+              { label: 'Levels', value: 'Multi-level', highlight: 'good' },
+              { label: 'Bar Spacing', value: 'Confirm ferret-safe spacing on the listing', highlight: 'good' },
+              { label: 'Included Accessories', value: 'Varies by current cage' },
+              { label: 'Long-term Capacity', value: 'Compare footprint before adding a second ferret', highlight: 'warn' },
             ]}
             pros={['Ferret-appropriate bar spacing', 'Ships with starter accessories', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
             price="$140–200"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall ferret cages"
-            ctaHref="/go/marshall/designer-ferret-cage?s=care-cage-setup"
+            ctaHref="/go/marshall/ferret+cage?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="designer-ferret-cage"
+            ctaAffiliateProduct="ferret+cage"
           />
 
           <h2 id="bedding-picks">Bedding Picks</h2>
@@ -309,16 +309,16 @@ export default function FerretCageSetupPage() {
             name="Marshall Ferret Sleep Sack & Hammock Set"
             subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
             description={
-              <p>Marshall makes the most widely stocked ferret-specific sleep sacks and hammocks in US pet retail. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Ships as a set, so both the sleeping and lounging needs are covered in one purchase. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
+              <p>Marshall's ferret sleep-sack product page no longer resolves. This button opens Marshall's current hammock search. Marshall still lists hammocks and nap sacks for ferret-specific sleeping. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
             }
             pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}
             price="$10–20"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall hammocks & sacks"
-            ctaHref="/go/marshall/ferret-sleep-sack?s=care-cage-setup"
+            ctaHref="/go/marshall/ferret+hammock?s=care-cage-setup"
             ctaAffiliateProgram="marshall"
-            ctaAffiliateProduct="ferret-sleep-sack"
+            ctaAffiliateProduct="ferret+hammock"
           />
           <ReviewCard quietUntilTag
             id="kaytee-litter-pan"

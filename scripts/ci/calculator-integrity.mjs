@@ -1320,7 +1320,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/behavior/digging-and-burrowing/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
-      { re: /marshall\/pop-n-play-tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
+      { re: /marshall\/ferret\+play\+tunnel\?s=behavior-digging-burrowing/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+ball\+pit\+balls\?s=behavior-digging-burrowing/, label: 'existing Chewy ball-pit hop kept (not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -1616,7 +1616,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/bathing-and-grooming/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+kibble/, label: 'on-page product Amazon search hop' },
-      { re: /marshall\/ferret-shampoo-original\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
+      { re: /marshall\/ferret\+shampoo\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'existing Chewy nail-clipper review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -1636,7 +1636,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/litter-training/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
-      { re: /marshall\/lock-n-litter-pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
+      { re: /marshall\/lock\+on\+litter\+pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/recycled\+paper\+pellet\+litter\+non\+clumping\?s=care-litter-training/, label: 'Chewy recycled paper-pellet search kept (Yesterday\'s News brand query retired)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -1656,7 +1656,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/care/exercise-and-enrichment/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+cage/, label: 'on-page product Amazon search hop' },
-      { re: /marshall\/pop-n-play-tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
+      { re: /marshall\/ferret\+play\+tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+ball\+pit\+balls/, label: 'existing Chewy ball-pit review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
@@ -12634,7 +12634,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/behavior/stress-signs/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+sleep\+sack\+fleece\?s=behavior-stress-signs/, label: 'existing ferret sleep-sack amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /marshall\/pop-n-play-tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
+      { re: /marshall\/ferret\+play\+tunnel\?s=behavior-stress-signs/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -12650,7 +12650,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/behavior/leash-and-harness-training/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/ferret\+vest\+harness\?s=behavior-leash-harness/, label: 'existing ferret vest-harness amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /marshall\/ferret-harness-leash\?s=behavior-leash-harness/, label: 'existing Marshall H-style harness hop kept (not an empty leftover button)' },
+      { re: /marshall\/harness\+lead\?s=behavior-leash-harness/, label: 'existing Marshall H-style harness hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
@@ -12682,7 +12682,7 @@ const CALCULATORS = [
     file: 'apps/ferret-com/src/app/behavior/diy-enrichment-toys/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/snuffle\+mat\+small\+pet\?s=behavior-diy-enrichment/, label: 'existing snuffle-mat amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /marshall\/pop-n-play-tunnel\?s=behavior-diy-enrichment/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
+      { re: /marshall\/ferret\+play\+tunnel\?s=behavior-diy-enrichment/, label: 'existing Marshall Pop-N-Play tunnel hop kept (not an empty leftover button)' },
       { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
