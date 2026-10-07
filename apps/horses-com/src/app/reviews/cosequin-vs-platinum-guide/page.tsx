@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -75,9 +75,10 @@ export default function CosequinVsPlatinumGuidePage() {
         <p>Platinum Performance CJ is Best Comprehensive. It lists glucosamine, chondroitin, MSM, HA, ASU, CMO, and omega-3 on the wellness-formula base. The printed price is $130–180 per 30-day supply, and the review calls it the premium supplement with the highest typical order value in the category. It is for a performance horse on an integrated supplement plan. The downsides include cost, some Tier 3 ingredients in the formula, and auto-ship lock-in.</p>
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" />
-        <p>The link below opens the Cosequin ASU Plus page from the joint review. The price there is the retailer's, not a quote from this page.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide">Compare Cosequin ASU Plus at SmartPak →</a></p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=reviews-cosequin-vs-platinum-guide" />
+        <p>The link below opens the Platinum Performance CJ search already used on the joint review. The price there is the retailer's, not a quote from this page.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=reviews-cosequin-vs-platinum-guide">Browse Platinum Performance CJ joint supplement on Amazon →</a></p>
+        <QuietPartnerLink href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-platinum-guide" label="Compare Cosequin ASU Plus at SmartPak →" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

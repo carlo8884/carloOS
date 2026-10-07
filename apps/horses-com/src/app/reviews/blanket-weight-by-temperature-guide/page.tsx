@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -78,9 +78,10 @@ export default function BlanketWeightByTemperatureGuidePage() {
         <h2>Where the Rambo sits on that map</h2>
         <p>The comparison table lists the Horseware Rambo Original at 0, 100, 200, and 400 gram fills, in a 1000-denier ballistic shell. The 200 gram option is the medium band. The 400 gram option is the heavy band. The 0 and 100 gram options are the sheet and the light band. The review calls the Rambo the premium reference in the category, not the only blanket that makes those fills. A clipped horse in a northern sub-zero winter is the job the review gives the Schneiders StormShield, which is the <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse guide</Link>, not this one. Size is still the <Link href="/tools/horse-blanket-size-calculator">blanket size calculator</Link>. A heavy fill in the wrong length is a rub.</p>
         <p>The review also says a healthy adult with a full winter coat, dry shelter, and enough forage tolerates about −15°C (5°F) without a blanket, citing Cymbaluk and Christison in the Canadian Veterinary Journal, 1989. Blanketing a horse that does not need one can suppress the winter coat. That decision stays on the review.</p>
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide" />
-        <p>The link below is the Rambo Original from the blanket review, the turnout listed at 200 grams.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide">Check price of the Horseware Rambo Original on SmartPak →</a></p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-blanket-weight-by-temperature-guide" />
+        <p>The link below is the turnout-blanket search from the blanket review, the same class as the Rambo Original listed at 200 grams.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-blanket-weight-by-temperature-guide">Browse horse turnout blankets on Amazon →</a></p>
+        <QuietPartnerLink href="/go/smartpak/rambo-original-turnout?s=reviews-blanket-weight-by-temperature-guide" label="Check price of the Horseware Rambo Original on SmartPak →" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <EmailCapture

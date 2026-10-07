@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Nylon Halter vs Breakaway | Horses.com',
@@ -56,8 +55,8 @@ export default function NylonVsBreakawayGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/dover/leather-crown-breakaway-halter?s=reviews-nylon-vs-breakaway-halter-guide" label="Check price of a leather-crown breakaway halter at Dover" />}
-      heroExtra={<HopDisclosure siteId="horses-com" href="/go/dover/leather-crown-breakaway-halter?s=reviews-nylon-vs-breakaway-halter-guide" />}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/nylon+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/nylon+horse+halter?s=reviews-nylon-vs-breakaway-halter-guide">Browse nylon horse halters on Amazon →</a></>}
+      heroExtra={<QuietPartnerLink tone="dark" href="/go/dover/leather-crown-breakaway-halter?s=reviews-nylon-vs-breakaway-halter-guide" label="Check price of a leather-crown breakaway halter at Dover" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

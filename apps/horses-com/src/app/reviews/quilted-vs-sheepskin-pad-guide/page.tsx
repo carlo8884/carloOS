@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -75,9 +75,10 @@ export default function QuiltedVsSheepskinPadGuidePage() {
         <p>The sheepskin half pad is the friction pick. Material is sheepskin or synthetic fleece. The job is friction reduction and wicking at the saddle edges. Some versions have shim pockets for minor balance tuning between professional fittings. The printed price is $60–160. Downsides listed: it cannot fix a wrong-width saddle, real sheepskin needs careful washing, and premium versions are pricey.</p>
         <h2>Who should buy which pad</h2>
         <p>Buy the quilted cotton pad for daily schooling under a saddle that already fits, and keep more than one so a dry pad is always available. Buy the sheepskin half pad when friction or wicking at the edges is the extra job, still under a fitting saddle. If the saddle is the wrong width, the page sends you to a saddle fitter, not to a thicker pad. Western felt is another option on that review, at $80–200, and it is a different discipline.</p>
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/quilted-all-purpose-saddle-pad?s=reviews-quilted-vs-sheepskin-pad-guide" />
-        <p>The link below opens the quilted cotton pad from the saddle-pad review. The price there is the retailer's.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/quilted-all-purpose-saddle-pad?s=reviews-quilted-vs-sheepskin-pad-guide">Compare the quilted cotton pad at SmartPak →</a></p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide" />
+        <p>The link below opens the quilted cotton pad search already used on the saddle-pad review. The price there is the retailer's.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=reviews-quilted-vs-sheepskin-pad-guide">Browse quilted all-purpose saddle pads on Amazon →</a></p>
+        <QuietPartnerLink href="/go/smartpak/quilted-all-purpose-saddle-pad?s=reviews-quilted-vs-sheepskin-pad-guide" label="Compare the quilted cotton pad at SmartPak →" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
       </div>

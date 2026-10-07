@@ -6,15 +6,22 @@
  */
 
 import type { ReactNode } from 'react'
-import { consultLink, hopCommissionReady, isChewyHop, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, hopCommissionReady, isChewyHop, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, tableShopLink, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 const EARNING_PICK_SITES = new Set(['dog-com', 'fish-com', 'horses-com', 'vets-co', 'ferret-com'])
 
 /** Names the product and the retailer the pick hop actually opens. */
-function QuickPickShopLink({ href, name }: { href?: string; name: string }) {
+function QuickPickShopLink({ href, name, quietUntilTag = false }: { href?: string; name: string; quietUntilTag?: boolean }) {
   if (!href || !name.trim()) return null
   if (!EARNING_PICK_SITES.has(process.env.NEXT_PUBLIC_SITE_ID ?? '')) return null
+  if (quietUntilTag && partnerLinkQuiet(href)) {
+    return (
+      <span className="relative z-10 ml-2 text-2xs font-semibold normal-case tracking-normal text-brand-text-light">
+        partner ID needed
+      </span>
+    )
+  }
   const built = tableShopLink(href, name.trim())
   if (!built) return null
   return (
@@ -73,6 +80,8 @@ interface ReviewCardProps {
   ctaHref?: string
   /** Keep a Trupanion, Healthy Paws, or Embrace quote visible but disabled until its tag is set. */
   holdWithoutPartnerId?: boolean
+  /** Held product partners stay on the card as a note until their own tag is set. */
+  quietUntilTag?: boolean
   ctaAffiliateProgram?: string
   ctaAffiliateProduct?: string
 
@@ -104,6 +113,7 @@ export function ReviewCard({
   ctaText = 'Check Price →',
   ctaHref,
   holdWithoutPartnerId = false,
+  quietUntilTag = false,
   ctaAffiliateProgram,
   ctaAffiliateProduct,
   editorial,
@@ -111,10 +121,11 @@ export function ReviewCard({
   id,
 }: ReviewCardProps) {
   const rawHref = ctaHref && ctaHref !== '#' ? ctaHref : undefined
-  const held = partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref))
+  const quiet = quietUntilTag && partnerLinkQuiet(rawHref)
+  const held = !quiet && (partnerQuoteHeld(rawHref) || (holdWithoutPartnerId && !partnerTagReady(rawHref)))
   const consult = rawHref ? consultLink(rawHref) : null
   const plain = Boolean(consult && !consult.attributed)
-  const href = held ? undefined : plain ? consult!.href : visibleShopHref(rawHref)
+  const href = quiet || held ? undefined : plain ? consult!.href : visibleShopHref(rawHref)
   const chewyCta = isChewyHop(href ?? '')
   const program = chewyCta
     ? ctaAffiliateProgram
@@ -223,7 +234,7 @@ export function ReviewCard({
       )}
 
       {/* Footer: price + CTA */}
-      {(price || href || held) && (
+      {(price || href || held || quiet) && (
         <div className="flex flex-col items-stretch sm:flex-row sm:items-end sm:justify-between pt-5 border-t border-brand-border mt-2 gap-4 min-w-0">
           {price && (
             <div>
@@ -237,7 +248,11 @@ export function ReviewCard({
             </div>
           )}
 
-          {held ? (
+          {quiet ? (
+            <span className="text-sm leading-relaxed text-brand-text-light">
+              {ctaText.replace(/\s*→\s*$/, '').trim()} — partner ID needed
+            </span>
+          ) : held ? (
             <span className="inline-flex flex-wrap items-center gap-3">
               <button
                 type="button"
@@ -289,9 +304,11 @@ interface QuickPickItem {
 interface QuickPicksProps {
   items: QuickPickItem[]
   title?: string
+  /** Held product pick hops stay as a note until their own tag is set. */
+  quietUntilTag?: boolean
 }
 
-export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = false }: QuickPicksProps & { embedded?: boolean }) {
+export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = false, quietUntilTag = false }: QuickPicksProps & { embedded?: boolean }) {
   return (
     <div className={embedded
       ? 'bg-brand-surface border border-brand-border rounded-lg py-5 px-4 mb-6'
@@ -309,7 +326,7 @@ export function QuickPicks({ items, title = 'Jump to Your Pick', embedded = fals
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-1.5 break-words">
               {item.emoji} {item.label}
               <HowWePickLink label={item.label} />
-              <QuickPickShopLink href={item.pickHop} name={item.name} />
+              <QuickPickShopLink href={item.pickHop} name={item.name} quietUntilTag={quietUntilTag} />
             </div>
             <div className="pointer-events-none">
               <div className="text-sm font-bold text-brand-dark mb-0.5">{item.name}</div>

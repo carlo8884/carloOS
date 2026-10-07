@@ -257,6 +257,31 @@ export function resolveTag(
   return { tag: '', envVarName: primaryName }
 }
 
+/** Product retailers whose /go link stays in the page and stays quiet until that vendor's tag is set. */
+const QUIET_PARTNER_VENDORS = new Set([
+  'smartpak',
+  'dover',
+  'schneider',
+  'ridingwarehouse',
+  'wysong',
+  'marshall',
+  'carniwhole',
+])
+
+/**
+ * True when this href is a held product partner and its own tag is unset.
+ * Amazon and insurance quotes are not in this set. This does not invent an ID.
+ */
+export function partnerLinkQuiet(
+  href: string | undefined,
+  env: NodeJS.ProcessEnv = process.env,
+): boolean {
+  if (!href) return false
+  const vendor = href.match(/^\/go\/([^/?#]+)/)?.[1] ?? ''
+  if (!QUIET_PARTNER_VENDORS.has(vendor)) return false
+  return resolveTag(vendor, env).tag.length === 0
+}
+
 export function partnerHome(vendor: string, template?: string): string {
   if (PARTNER_HOME[vendor]) return PARTNER_HOME[vendor]
   if (template) {
