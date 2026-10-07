@@ -271,7 +271,7 @@ export default function Calculator() {
         </>
       )}
 
-      <div className="mt-6 rounded border border-emerald-700/40 bg-emerald-950/30 p-4 text-emerald-200">
+      <div className="mt-6 rounded border border-emerald-700 bg-emerald-950 p-4 text-emerald-200">
         <p className="text-sm font-semibold">Forage first — concentrates only fill the gap.</p>
         <p className="mt-2 text-sm">
           Build the ration on forage (pasture, hay, haylage) and keep it at roughly 1.5% of
