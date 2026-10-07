@@ -546,7 +546,7 @@ export default function HomePage() {
                       style={{
                         fontSize: '0.875rem',
                         lineHeight: 1.5,
-                        color: hub.blurbColor ?? 'rgba(251, 245, 232, 0.78)',
+                        color: 'rgba(251, 245, 232, 0.78)',
                         margin: '0 0 12px',
                       }}
                     >
