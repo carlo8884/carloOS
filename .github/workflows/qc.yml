@@ -417,3 +417,15 @@ jobs:
           node-version: '20'
       - name: Run disclosure-accuracy
         run: node scripts/ci/disclosure-accuracy.mjs
+
+  insurance-registry-parity:
+    name: Dog.com and Vets.co insurance registries match
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run insurance-registry-parity
+        run: node scripts/ci/insurance-registry-parity.mjs && node --test scripts/ci/insurance-registry-parity.test.mjs
