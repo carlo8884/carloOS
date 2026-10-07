@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ArticleSourcesList,
   ShopCtas,
@@ -500,7 +500,7 @@ export default function FerretLitterTrainingPage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+litter?s=litter-training", "/go/marshall/lock-n-litter-pan?s=care-litter-training", "/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

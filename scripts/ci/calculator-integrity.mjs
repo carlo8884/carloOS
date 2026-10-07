@@ -634,7 +634,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1618,7 +1618,7 @@ const CALCULATORS = [
       { re: /marshall\/ferret-shampoo-original\?s=care-bathing-and-grooming/, label: 'existing Marshall ferret-shampoo review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+nail\+clipper\+styptic\+powder\?s=care-bathing-and-grooming/, label: 'existing Chewy nail-clipper review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1638,7 +1638,7 @@ const CALCULATORS = [
       { re: /marshall\/lock-n-litter-pan\?s=care-litter-training/, label: 'existing Marshall Lock-N-Litter review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/yesterdays\+news\+paper\+pellet\+litter\?s=care-litter-training/, label: 'existing Chewy paper-pellet review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1658,7 +1658,7 @@ const CALCULATORS = [
       { re: /marshall\/pop-n-play-tunnel\?s=care-exercise-and-enrichment/, label: 'existing Marshall Pop-N-Play review hop kept (not an empty leftover button)' },
       { re: /chewy-brand\/small\+pet\+ball\+pit\+balls/, label: 'existing Chewy ball-pit review hop kept (product-specific, not an empty leftover button)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1676,7 +1676,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/ferret\+litter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -1697,7 +1697,7 @@ const CALCULATORS = [
       { re: /marshall\/premium-ferret-diet\?s=care-diet-basics/, label: 'existing Marshall Premium Ferret Diet review hop kept (not an empty leftover button)' },
       { re: /Carniwhole Ferret Food/, label: 'Carniwhole card kept; visit hop removed because carniwhole.com does not resolve' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -12600,7 +12600,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/midwest\+critter\+nation\+double\+unit\?s=care-cage-setup/, label: 'existing MidWest Critter Nation amazon-brand hop kept (do not re-ship a new query)' },
       { re: /chewy-brand\/kaytee\+corner\+ferret\+litter\+pan\?s=care-cage-setup/, label: 'existing Kaytee corner-pan Chewy hop kept (not an empty leftover button)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -347,7 +347,7 @@ export default function FerretSeasonalSheddingPage() {
             or a GI blockage and not a diagnosis. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/soft+slicker+brush+small+animal?s=care-seasonal-shedding", "/go/amazon-brand/fine+tooth+metal+comb?s=care-seasonal-shedding", "/go/amazon-brand/reusable+lint+roller?s=care-seasonal-shedding"]} />
 
           {/* Money path — live amazon-brand search hops (slicker / metal
               comb / lint roller). ShopCtas hides empty Chewy; never

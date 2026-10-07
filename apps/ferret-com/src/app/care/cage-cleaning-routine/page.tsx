@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   DropCap,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -310,7 +310,7 @@ export default function FerretCageCleaningRoutinePage() {
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
               Category searches only — educational gear, not medications, not a ranked list.
               No phenol/pine cleaners, no ammonia, no undiluted bleach. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/small+animal+cage+cleaner?s=care-cage-cleaning-routine", "/go/amazon-brand/litter+scoop?s=care-cage-cleaning-routine", "/go/amazon-brand/disposable+nitrile+gloves?s=care-cage-cleaning-routine", "/go/amazon-brand/fragrance+free+laundry+detergent?s=care-cage-cleaning-routine"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop cage-cleaning supplies

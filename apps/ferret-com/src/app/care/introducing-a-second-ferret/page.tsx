@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -219,7 +220,7 @@ export default function IntroducingSecondFerretPage() {
             Critter Nation cages, and puppy playpens already live on
             other pages. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/extra+small+animal+travel+kennel?s=care-introducing-a-second-ferret", "/go/amazon-brand/scent+swap+fleece+sleep+pouch?s=care-introducing-a-second-ferret", "/go/amazon-brand/portable+small+animal+playpen?s=care-introducing-a-second-ferret"]} />
 
           {/* Money path — live amazon-brand search hops
               (extra small-animal travel kennel /

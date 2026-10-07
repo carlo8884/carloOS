@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -184,7 +185,7 @@ export default function MultiLevelHousingPage() {
             treatment for a fracture and not a diagnosis. This page does not
             claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/fleece+ramp+cover?s=care-multi-level-housing", "/go/amazon-brand/pvc+sheet?s=care-multi-level-housing", "/go/amazon-brand/cable+ties?s=care-multi-level-housing", "/go/amazon-brand/locking+carabiner?s=care-multi-level-housing"]} />
 
           {/* Money path — live amazon-brand search hops (vertical-housing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

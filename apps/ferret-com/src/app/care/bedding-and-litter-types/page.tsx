@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   ComparisonFoot,
   EmailCapture,
@@ -229,9 +229,9 @@ export default function BeddingAndLitterTypesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+sleep+sack+fleece?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+hammock?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+fleece+liner?s=care-bedding-and-litter-types", "/go/amazon-brand/recycled+paper+pellet+litter?s=care-bedding-and-litter-types", "/go/amazon-brand/ferret+corner+litter+pan?s=care-bedding-and-litter-types"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Shop bedding and litter

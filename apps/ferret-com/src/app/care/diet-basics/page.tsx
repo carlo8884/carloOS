@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas, CrossPortfolioCard, ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -242,7 +243,7 @@ export default function FerretDietBasicsPage() {
             Acceptable treats: small pieces of cooked or freeze-dried meat, egg yolk in small amounts, commercial high-protein freeze-dried treats (Wysong, Bravo, Vital Essentials). Unacceptable: yogurt drops, raisin treats, fruit-and-vegetable medleys, and any treat whose first ingredient is sugar or grain. A useful rule: if you would feed it to a cat with diabetes, it is probably fine for a ferret.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=diet-basics", "/go/wysong/epigen-90?s=care-diet-basics", "/go/marshall/premium-ferret-diet?s=care-diet-basics"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

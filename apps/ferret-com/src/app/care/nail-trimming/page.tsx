@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   FAQAccordion,
   CrossPortfolioCard,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -175,7 +175,7 @@ export default function NailTrimmingPage() {
           {/* Money path — live amazon-brand search hops (nail-trim / grooming gear).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
               Category searches only — educational gear, not medications, not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/cat+kitten+nail+clippers?s=care-nail-trimming", "/go/amazon-brand/styptic+powder?s=care-nail-trimming", "/go/amazon-brand/ferret+lickable+treat+paste?s=care-nail-trimming", "/go/amazon-brand/LED+desk+lamp?s=care-nail-trimming"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop nail-trim tools
