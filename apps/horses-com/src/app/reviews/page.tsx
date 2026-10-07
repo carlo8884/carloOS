@@ -31,14 +31,14 @@ const REVIEWS = [
   {
     slug: 'best-equine-supplements',
     group: 'horses-reviews-supplements',
-    title: 'Best Equine Supplements 2025',
+    title: 'Best Equine Supplements 2026',
     description:
       'Joint, hoof, and gastric supplements ranked against the published equine veterinary evidence.',
   },
   {
     slug: 'best-winter-horse-blankets',
     group: 'horses-reviews-blankets',
-    title: 'Best Winter Horse Blankets 2025',
+    title: 'Best Winter Horse Blankets 2026',
     description:
       'Turnout and stable blankets compared for denier, fill weight, and fit — for clipped horses and harsh climates.',
   },

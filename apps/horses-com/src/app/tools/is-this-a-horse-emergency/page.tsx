@@ -30,8 +30,8 @@ const SOURCES = [
   { label: 'AAEP: Colic — owner resources and emergency recognition', url: 'https://aaep.org/horsehealth/colic', publisher: 'AAEP' },
   { label: 'AAEP: First Aid and Emergency Preparedness — owner resources', url: 'https://aaep.org', publisher: 'AAEP' },
   { label: 'Merck Veterinary Manual: Colic in Horses — emergency presentation', url: 'https://www.merckvetmanual.com/horse-owners/digestive-disorders-of-horses/colic-in-horses', publisher: 'Merck Vet Manual' },
-  { label: 'Merck Veterinary Manual: Laminitis in Horses', url: 'https://www.merckvetmanual.com/horse-owners/bone-joint-and-muscle-disorders-of-horses/laminitis-in-horses', publisher: 'Merck Vet Manual' },
-  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
+  { label: 'Merck Veterinary Manual: Laminitis in Horses', url: 'https://www.merckvetmanual.com/musculoskeletal-system/disorders-of-the-foot-in-horses/laminitis-in-horses', publisher: 'Merck Vet Manual' },
+  { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
 ]
 
 const FAQS = [

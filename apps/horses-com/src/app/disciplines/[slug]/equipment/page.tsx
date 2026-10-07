@@ -312,7 +312,7 @@ export default async function DisciplineEquipmentPage({ params }: PageProps) {
           {/* ─── 7. Beginner Budget Kit ──────────────────────────── */}
           <h2 id="budget">Beginner Budget Kit (USD)</h2>
           <p>
-            Off-the-shelf market observations for the 2025-2026 season. Custom
+            Off-the-shelf market observations. Custom
             saddles, custom tall boots, and FEI-spec competition wardrobes sit
             well outside these bands.
           </p>

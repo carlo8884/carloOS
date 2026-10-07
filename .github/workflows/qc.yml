@@ -145,7 +145,7 @@ jobs:
         with:
           node-version: '20'
       - name: Run hop-topic-match
-        run: node scripts/ci/hop-topic-match.mjs && node --test scripts/ci/hop-topic-match.test.mjs && node scripts/ci/hop-species-match.mjs && node --test scripts/ci/hop-species-match.test.mjs
+        run: node scripts/ci/hop-topic-match.mjs && node --test scripts/ci/hop-topic-match.test.mjs && node scripts/ci/hop-species-match.mjs && node --test scripts/ci/hop-species-match.test.mjs && node scripts/ci/best-year-match.mjs && node --test scripts/ci/best-year-match.test.mjs
 
   tool-schema-coverage:
     name: Tool-page GEO schema coverage (SoftwareApplication + HowTo + FAQ)

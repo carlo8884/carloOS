@@ -97,7 +97,7 @@ const itemList = buildItemListSchema({
 export default function BestEquineSupplementsPage() {
   return (
     <>
-      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://horses.com/' }, { name: 'Reviews', url: 'https://horses.com/reviews' }, { name: 'Best Equine Supplements 2025', url: 'https://horses.com/reviews/best-equine-supplements' } ] }))} />
+      <SchemaScript schema={combineSchemas(...allSchemas, itemList, buildBreadcrumbSchema({ items: [ { name: 'Home', url: 'https://horses.com/' }, { name: 'Reviews', url: 'https://horses.com/reviews' }, { name: 'Best Equine Supplements 2026', url: 'https://horses.com/reviews/best-equine-supplements' } ] }))} />
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-4">Buyer&apos;s Guide · May 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
@@ -136,7 +136,7 @@ export default function BestEquineSupplementsPage() {
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
         <Link href="/reviews" className="hover:text-brand-primary no-underline">Reviews</Link><span>›</span>
-        <span className="text-brand-text-mid" aria-current="page">Best Equine Supplements 2025</span>
+        <span className="text-brand-text-mid" aria-current="page">Best Equine Supplements 2026</span>
       </nav>
 
       <div className="px-container-sm sm:px-container py-14">
