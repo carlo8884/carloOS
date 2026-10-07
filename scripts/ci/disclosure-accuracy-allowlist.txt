@@ -60,15 +60,7 @@ apps/dog-com/src/app/training/page.tsx
 apps/dog-com/src/app/training/resource-guarding/page.tsx
 apps/dog-com/src/app/training/trainer-credentials/page.tsx
 apps/dog-com/src/app/training/training-red-flags/page.tsx
-apps/ferret-com/src/app/colors/choosing-a-healthy-ferret/page.tsx
-apps/ferret-com/src/app/colors/cinnamon-ferrets/page.tsx
-apps/ferret-com/src/app/colors/ferret-lifespan/page.tsx
-apps/ferret-com/src/app/first-year-schedule/page.tsx
 apps/ferret-com/src/app/llms.txt/route.ts
-apps/ferret-com/src/app/ownership/ferrets-and-other-pets/page.tsx
-apps/ferret-com/src/app/ownership/ferrets-with-kids/page.tsx
-apps/ferret-com/src/app/ownership/is-a-ferret-right-for-you/page.tsx
-apps/ferret-com/src/app/ownership/traveling-with-a-ferret/page.tsx
 apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx
 apps/ferret-com/src/app/tools/ferret-body-condition-score/Calculator.tsx
 apps/ferret-com/src/app/tools/ferret-body-condition-score/page.tsx

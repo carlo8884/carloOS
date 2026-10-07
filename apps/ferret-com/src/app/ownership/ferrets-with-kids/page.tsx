@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -124,7 +125,7 @@ export default function FerretsWithKidsPage() {
             The honest bottom line: a ferret is an adult's responsibility, even in a family that gets one "for the kids." An adult must own the feeding, the cleaning, the training, the veterinary care, and the supervision — children can and should participate, but the ultimate accountability cannot rest on a child. Families that go in understanding this tend to do wonderfully with ferrets; families expecting a self-managing children's pet tend to struggle. Decide with that reality in view (see <a href="/ownership/cost-of-owning-a-ferret">cost of owning a ferret</a> for the financial side of the commitment).
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+litter?s=ferrets-with-kids" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
