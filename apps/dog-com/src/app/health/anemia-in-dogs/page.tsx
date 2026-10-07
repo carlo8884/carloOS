@@ -9,7 +9,6 @@ const SOURCES = [
   { label: 'ACVIM: Immune-Mediated Hemolytic Anemia (IMHA) Consensus Guidelines', url: 'https://www.acvim.org', publisher: 'ACVIM' },
   { label: 'Swann JW et al. ACVIM consensus statement on the treatment of IMHA in dogs. J Vet Intern Med. 2019;33(3):1141-1172.', publisher: 'JVIM' },
   { label: 'Merck Veterinary Manual: Anemia in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/blood-disorders-of-dogs/anemia-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Blood Disorders in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Anemia in Dogs — Causes, Pale Gums & Treatment | Dog.com', description: 'Anemia (low red blood cells) causes pale gums, lethargy, and exercise intolerance.', path: '/health/anemia-in-dogs', type: 'article' })

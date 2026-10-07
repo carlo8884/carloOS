@@ -316,7 +316,7 @@ export default function DogMicrochippingPage() {
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Microchipping of Animals FAQ', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/microchipping-animals-faq', publisher: 'AVMA' },
+              { label: 'Microchipping of Animals FAQ', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/microchips-reunite-pets-families/microchipping-faq', publisher: 'AVMA' },
               { label: 'Lord LK et al. — Characterization of animals with microchips entering animal shelters (JAVMA 235:160–167, 2009)', url: 'https://avmajournals.avma.org/view/journals/javma/235/2/javma.235.2.160.xml', publisher: 'JAVMA' },
               { label: 'Universal Pet Microchip Lookup Tool', url: 'https://www.petmicrochiplookup.org/', publisher: 'AAHA' },
               { label: 'Identification of Dogs — Microchips and Collars', url: 'https://www.merckvetmanual.com/dog-owners', publisher: 'Merck Veterinary Manual' },

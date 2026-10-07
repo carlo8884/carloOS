@@ -7,7 +7,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'American College of Veterinary Ophthalmologists (ACVO): Ocular Conditions in Dogs', url: 'https://www.acvo.org/general-public-2/eye-conditions', publisher: 'ACVO' },
-  { label: 'AVMA: Eye Problems in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Mazzucchelli S et al. Retrospective study of 155 dogs undergoing pocket technique for correction of prolapse of the nictitating membrane gland. Vet Rec. 2012;170(4):95.', publisher: 'Vet Record' },
 ]
 

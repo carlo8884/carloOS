@@ -305,10 +305,10 @@ export default function DogFirstAidKitPage() {
           <ArticleSourcesList
             title="References"
             sources={[
-              { label: 'Pet First Aid — Be Prepared', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/pet-first-aid-tips', publisher: 'AVMA' },
+              { label: 'Pet First Aid — Be Prepared', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/first-aid-tips-pet-owners', publisher: 'AVMA' },
               { label: 'Merck Veterinary Manual: Household Hazards', url: 'https://www.merckvetmanual.com/special-pet-topics/poisoning/household-hazards', publisher: 'Merck Vet Manual' },
               { label: 'Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
-              { label: 'Disaster Preparedness for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/disaster-preparedness', publisher: 'AVMA' },
+              { label: 'Disaster Preparedness for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care/pets-and-disasters', publisher: 'AVMA' },
             ]}
           />
         </div>

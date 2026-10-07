@@ -9,7 +9,6 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Epilepsy in Small Animals', url: 'https://www.merckvetmanual.com/nervous-system/epilepsy-in-small-animals/epilepsy-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Podell M et al. 2015 ACVIM Small Animal Consensus Statement on Seizure Management in Dogs. J Vet Intern Med. 2016;30(2):477-490.', publisher: 'JVIM / ACVIM' },
   { label: 'De Risio L et al. International veterinary epilepsy task force consensus proposal: diagnostic approach to epilepsy in dogs. BMC Vet Res. 2015;11:148.', publisher: 'BMC Vet Research' },
-  { label: 'AVMA: Epilepsy and Seizures in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
 ]
 
 
