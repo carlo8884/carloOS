@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ArticleByline, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, ArticleByline, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import Link from 'next/link'
 import { crossSiteHref } from '@carloOS/config'
@@ -72,6 +73,7 @@ export default function BestDogFoodPage() {
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food' label='Check price of Royal Canin dry dog food on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -127,7 +129,7 @@ export default function BestDogFoodPage() {
               </p>
             </div>
 
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/royal+canin+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/purina+pro+plan+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/hills+science+diet+dry+dog+food?s=reviews-best-dry-dog-food", "/go/chewy-brand/orijen+dry+dog+food?s=reviews-best-dry-dog-food"]} />
             <ReviewCard
               id="royal-canin"
               badge="Best Overall"
@@ -308,7 +310,7 @@ export default function BestDogFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
             </div>
 
             {/* Key buying guidance */}

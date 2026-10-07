@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas, PrimaryHop, ComparisonFoot } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, ShopCtas, PrimaryHop, ComparisonFoot } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -53,6 +54,7 @@ export default function FreshDogFoodWorthItPage() {
       contentType="review"
       hero={{ title: 'Is Fresh Dog Food Worth It? Fresh vs Kibble', subtitle: 'Fresh and gently-cooked dog food has grown into one of the fastest-rising categories in pet nutrition. Here is a calibrated buyer\'s guide: what "fresh" really means, how it compares to kibble and raw on nutrition, cost, convenience and safety, who benefits most, and how to judge a brand on substance instead of marketing.', category: 'Reviews', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'June 2026', readTime: '9 min' }}
       heroHop={<PrimaryHop href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" label="Check price of dry dog food on Amazon" />}
+      heroExtra={<HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" />}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Reviews', href: '/reviews' }, { name: 'Fresh Dog Food Worth It', href: '/reviews/fresh-dog-food-worth-it' }]}
       relatedLinks={[{ title: 'Dog Reviews Hub', href: '/reviews', category: 'Hub' }, { title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Nutrition' }, { title: 'WSAVA Guidelines Explained', href: '/nutrition/wsava-explained', category: 'Nutrition' }, { title: 'Reading a Dog Food Label', href: '/nutrition/reading-food-labels', category: 'Nutrition' }, { title: 'Raw Diet Pros & Cons', href: '/nutrition/raw-diet-risks', category: 'Nutrition' }]}
       schema={schema}
@@ -127,7 +129,7 @@ export default function FreshDogFoodWorthItPage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-06" />
+        <ComparisonFoot updated="2026-10-07" />
 
         <h2 id="evaluate">How to Evaluate a Fresh Brand</h2>
         <p>Cut through the marketing with four checks — the same substance-over-packaging approach we apply to any food:</p>
@@ -147,7 +149,7 @@ export default function FreshDogFoodWorthItPage() {
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Category-growth figures reflect publicly reported industry trends and are described qualitatively where exact figures vary. Always consult your veterinarian before changing your dog&apos;s diet.</em></p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=reviews-fresh-food" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

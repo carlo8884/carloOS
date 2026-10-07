@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Harnesses 2026 — Front-Clip, Back-Clip | Dog.com', description: 'Best dog harnesses ranked by type: front-clip for pullers, back-clip for calm walkers, and escape-proof for determined dogs.', path: '/reviews/best-dog-harnesses', category: 'Equipment Reviews', type: 'article' })
@@ -29,6 +30,7 @@ export default function BestDogHarnessesPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Harnesses 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses' label='Check price of the PetSafe Easy Walk harness on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -69,7 +71,7 @@ export default function BestDogHarnessesPage() {
               resourceHref="/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"
               resourceLabel="Browse Julius-K9 IDC Powerharness on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-best-dog-harnesses", "/go/chewy-brand/ruffwear+front+range+harness?s=reviews-best-dog-harnesses", "/go/amazon-brand/julius+k9+idc+powerharness?s=reviews-best-dog-harnesses"]} />
             <ReviewCard id="easy-walk" badge="Best No-Pull" name="PetSafe Easy Walk Harness" subtitle="Front-clip · Martingale loop · Immediate pulling reduction" winner
               description={<p>The Easy Walk is a widely recommended front-clip harness by trainers and veterinary behaviorists. The martingale loop at the chest creates gentle pressure when the dog pulls — the directional correction redirects forward momentum to the side without pain, choke, or discomfort. Effectiveness is immediate in most dogs — pulling behavior reduces significantly within the first walk. Not suitable for dogs with existing shoulder or elbow issues (front-clip pressure can aggravate). Available at all pet stores, easily adjustable, machine washable.</p>}
               specs={[{ label: 'Clip position', value: 'Front-clip (chest)', highlight: 'good' }, { label: 'Mechanism', value: 'Martingale redirection', highlight: 'good' }, { label: 'Best for', value: 'Pullers, reactive walkers' }, { label: 'Price', value: '$20–30', highlight: 'good' }]}
@@ -143,7 +145,7 @@ export default function BestDogHarnessesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which harness fits which dog</h2>
               <FAQAccordion items={[
                 {

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior.', path: '/reviews/best-dog-food-senior', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026', description: 'Senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -25,6 +26,7 @@ export default function BestSeniorDogFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Senior Dog Food 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' label='Check price of Purina Pro Plan Bright Mind Adult 7+ on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -64,7 +66,7 @@ export default function BestSeniorDogFoodPage() {
               resourceHref="/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior"
               resourceLabel="Browse Purina Pro Plan Bright Mind senior food on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior", "/go/chewy-brand/hills+science+diet+senior+7?s=reviews-best-dog-food-senior"]} />
             <ReviewCard id="bright-mind" badge="Best Overall" name="Purina Pro Plan Bright Mind Adult 7+" subtitle="Enhanced botanical oils · Cognitive clinical trial · WSAVA top tier" winner
               description={<p>Purina Pro Plan Bright Mind is among the few senior dog foods with published clinical trial data specifically addressing cognitive benefits in aging dogs. The formula contains enhanced botanical oils (including medium-chain triglycerides from coconut oil) intended to provide alternative fuel for aging neurons. In a blinded clinical trial, dogs fed Bright Mind reportedly showed improved performance on cognitive assessments compared to control dogs after 30 days. For owners seeing cognitive changes in aging dogs — disorientation, altered sleep patterns, loss of housetraining — this is among the more evidence-supported dietary options. WSAVA-compliant with full veterinary nutritionist oversight and feeding trial data.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Clinical evidence', value: 'Cognitive trial — published data', highlight: 'good' }, { label: 'Key ingredient', value: 'Enhanced botanical oils / MCT' }, { label: 'Protein', value: 'Adequate — not reduced' }]}
@@ -120,7 +122,7 @@ export default function BestSeniorDogFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which senior food fits which dog</h2>
               <FAQAccordion items={[
                 {

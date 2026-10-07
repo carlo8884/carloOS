@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -27,6 +28,7 @@ export default function BestGPSTrackerPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 collar on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -63,7 +65,7 @@ export default function BestGPSTrackerPage() {
               resourceHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
               resourceLabel="Browse Fi Series 3 GPS collars on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"]} />
             <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3 Dog Collar" subtitle="3-month battery · LTE-M network · Geofence escape alerts · Sleek collar design" winner
               description={<p>Fi's standout feature is the 3-month battery life — the longest of any GPS tracker by a significant margin. Competitors need weekly or daily charging; Fi charges once per quarter. The LTE-M network gives broader coverage in rural and low-signal areas than standard LTE trackers. The app shows real-time location, daily step count, sleep tracking, and instantly alerts when the dog leaves a defined geofence (your yard, a friend's house). The collar replaces your dog's existing collar — the tracker module snaps into a standard collar band. The printed price is $140–160 plus $8–12/mo.</p>}
               specs={[{ label: 'Battery', value: '3 months', highlight: 'good' }, { label: 'Network', value: 'LTE-M (broader coverage)', highlight: 'good' }, { label: 'Geofence alerts', value: 'Yes — instant', highlight: 'good' }, { label: 'Monthly fee', value: '$8–12/mo (annual)' }, { label: 'Water resistant', value: 'IP68' }]}
@@ -137,7 +139,7 @@ export default function BestGPSTrackerPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which tracker fits</h2>
               <FAQAccordion items={[
                 {

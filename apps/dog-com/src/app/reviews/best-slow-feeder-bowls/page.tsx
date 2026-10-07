@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Slow Feeder Bowls for Dogs 2026 — Anti-Bloat | Dog.com', description: 'Best slow feeder bowls ranked for large breed and deep-chested dogs at risk for bloat. Outward Hound, Northmate.', path: '/reviews/best-slow-feeder-bowls', type: 'article' })
@@ -27,6 +28,7 @@ export default function BestSlowFeederBowlsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Slow Feeder Bowls for Dogs 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls' label='Check price of the Outward Hound Fun Feeder on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -66,7 +68,7 @@ export default function BestSlowFeederBowlsPage() {
               resourceHref="/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls"
               resourceLabel="Browse Northmate Green interactive feeders on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/outward+hound+fun+feeder?s=reviews-best-slow-feeder-bowls", "/go/amazon-brand/northmate+green+interactive+feeder?s=reviews-best-slow-feeder-bowls", "/go/chewy-brand/lickimat+splash?s=reviews-best-slow-feeder-bowls"]} />
             <ReviewCard id="outward-hound" badge="Best Overall" name="Outward Hound Fun Feeder Slo Bowl" subtitle="Ridge and maze pattern · Extends mealtime 10x · Dishwasher safe · 5 sizes" winner
               description={<p>The Outward Hound Fun Feeder is a widely used slow feeder and earns its reputation. The maze-like ridge pattern forces dogs to eat around obstacles, extending a typical mealtime from 30 seconds to 5–10 minutes. Available in 5 sizes from small breeds to large. Dishwasher safe (top rack). Non-slip base. The maze pattern is complex enough to slow even determined fast eaters — dogs that flip simpler bowls or eat around obstacles in other designs struggle more with the Fun Feeder's tight ridges. The main limitation: kibble can get wedged in tight ridges and require brushing to fully clean.</p>}
               specs={[{ label: 'Mealtime extension', value: '10x typical', highlight: 'good' }, { label: 'Sizes', value: '5 (mini to large breed)', highlight: 'good' }, { label: 'Dishwasher safe', value: 'Yes — top rack', highlight: 'good' }, { label: 'Non-slip base', value: 'Yes' }]}
@@ -140,7 +142,7 @@ export default function BestSlowFeederBowlsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which feeder fits which meal</h2>
               <FAQAccordion items={[
                 {

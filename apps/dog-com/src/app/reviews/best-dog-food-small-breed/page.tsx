@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
@@ -28,6 +29,7 @@ export default function BestSmallBreedFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Small Breeds 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed' label='Check price of Royal Canin Small Adult on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -69,7 +71,7 @@ export default function BestSmallBreedFoodPage() {
               resourceHref="/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed"
               resourceLabel="Browse Royal Canin Small Adult dog food on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed", "/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed"]} />
             <ReviewCard id="royal-canin" badge="Best Overall" name="Royal Canin Small Adult" subtitle="Kibble-size engineered · Dental health formula · WSAVA top tier" winner
               description={<p>Royal Canin's small breed line is purpose-built in a way that competitors don't fully replicate — the kibble shape, size, and texture are engineered specifically for small-mouth dental health. The Small Adult formula (for dogs 9–22 lbs) has a specific kibble architecture that encourages the dog to chew rather than gulp, increasing the mechanical dental cleaning effect. Royal Canin is one of the three WSAVA-recommended manufacturers with full veterinary nutritionist oversight, multiple feeding trial protocols, and published nutritional research. The Small Adult provides appropriate caloric density for small breed metabolisms without excess fat. Widely recommended by veterinary dentists specifically for dental health support.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Kibble design', value: 'Small mouth optimized — dental benefit', highlight: 'good' }, { label: 'Size range', value: 'Dogs 9–22 lbs (Small Adult)' }, { label: 'Caloric density', value: 'Appropriate for small breed metabolism' }]}
@@ -125,7 +127,7 @@ export default function BestSmallBreedFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which small-breed food fits</h2>
               <FAQAccordion items={[
                 {
