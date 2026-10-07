@@ -313,12 +313,11 @@ export default function CostCalculator() {
         </ResultMeaning>
       )}
 
-      <p>Those figures are typical US ranges dated 2026-06-02.</p>
       <div className="mt-6 rounded border border-amber-700/40 bg-amber-950/20 p-4 text-sm text-amber-900">
         <span className="font-semibold">Budget for illness separately.</span> This estimate covers routine
         ownership only. Ferrets are prone to conditions whose treatment is not optional — adrenal disease,
         insulinoma, and gastrointestinal blockages frequently run into four figures per episode. Most
-        exotic-pet veterinarians advise keeping a dedicated emergency fund (commonly $1,000–$3,000) or
+        exotic-pet veterinarians advise keeping a dedicated emergency fund (Example: commonly $1,000–$3,000) or
         carrying insurance. See our <a href="/health" className="underline">ferret health</a> reference.
       </div>
 

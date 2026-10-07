@@ -176,9 +176,9 @@ export default function FerretInsulinomaPage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
-              <p>Those figures are typical US ranges dated 2026-05-30.</p>
+              <p>Costs vary by clinic and region. Ask an exotic veterinarian for an estimate.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Insulinoma surgery + lifelong management runs $2,000–$5,000.
+                Insulinoma surgery plus lifelong management is often a large bill. Ask an exotic veterinarian for an estimate.
                 Exotic-pet insurance covers it — but ONLY if enrolled before
                 symptoms appear.
               </p>

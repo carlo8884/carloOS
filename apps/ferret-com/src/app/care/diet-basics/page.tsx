@@ -287,7 +287,7 @@ export default function FerretDietBasicsPage() {
             ]}
             pros={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free', 'The printed list does not name wheat, corn, rice, or soy']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
             priceNote="dated 2026-05-31."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=care-diet-basics"
@@ -311,7 +311,7 @@ export default function FerretDietBasicsPage() {
             ]}
             pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
             cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
-            price="$15–25 / 4 lb"
+            price="see current price / 4 lb"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall Premium Ferret Diet"
             ctaHref="/go/marshall/premium-ferret-diet?s=care-diet-basics"

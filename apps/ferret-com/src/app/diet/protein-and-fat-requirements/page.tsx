@@ -209,7 +209,7 @@ export default function ProteinAndFatRequirementsPage() {
             ]}
             pros={['Crude protein min. 63% is above the 32–40% floor on this page. Crude fat min. 16% is under the 18–22% window.', 'Carbohydrate is not on the guaranteed analysis. Check the label.', 'Animal-first throughout', 'Marketed as starch-free']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}
-            price="$30–50 / 5 lb"
+            price="see current price / 5 lb"
             priceNote="dated 2026-06-01."
             ctaText="Find Wysong Epigen 90"
             ctaHref="/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"

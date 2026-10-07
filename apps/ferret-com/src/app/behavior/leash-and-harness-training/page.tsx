@@ -331,7 +331,7 @@ export default function LeashAndHarnessTrainingPage() {
             ]}
             pros={['Fully adjustable', 'Quick-snap buckles', '48-inch lead on the current listing']}
             cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
-            price="$10–18"
+            price="see current price"
             priceNote="dated 2026-06-04."
             ctaText="Find Marshall harness and lead sets"
             ctaHref="/go/marshall/harness+lead?s=behavior-leash-harness"
@@ -354,7 +354,7 @@ export default function LeashAndHarnessTrainingPage() {
             ]}
             pros={['Harder to back out of than H-style', 'Good for escape-artist ferrets', 'Distributes pressure well']}
             cons={['Takes longer to put on', 'Sizing varies by manufacturer — verify it cinches ferret-small']}
-            price="$12–22"
+            price="see current price"
             priceNote="dated 2026-06-04."
             ctaText="Find ferret vest harnesses on Amazon"
             ctaHref="/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"

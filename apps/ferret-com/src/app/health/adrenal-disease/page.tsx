@@ -174,10 +174,10 @@ export default function FerretAdrenalDiseasePage() {
               <h3 className="font-display text-base font-bold text-brand-white mb-2">
                 Cover this condition before it&apos;s diagnosed
               </h3>
-              <p className="text-xs text-white/60 mb-3 leading-relaxed">Those surgery and implant figures are typical US clinic ranges dated 2026-05-31.</p>
+              <p className="text-xs text-white/60 mb-3 leading-relaxed">Costs vary by clinic and region. Ask an exotic veterinarian for an estimate.</p>
               <p className="text-xs text-white/60 mb-3 leading-relaxed">
-                Adrenal surgery runs $1,500–$3,500; deslorelin implants add
-                $400-600/year. Exotic-pet insurance covers it — but ONLY if
+                Adrenal surgery is a larger one-time procedure. A deslorelin implant
+                is repeat treatment and is often several hundred dollars a year. Exotic-pet insurance covers it — but ONLY if
                 enrolled before symptoms appear.
               </p>
               <a
@@ -377,11 +377,11 @@ export default function FerretAdrenalDiseasePage() {
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Deslorelin implant cost (US)</td>
-                  <td className="p-3">~$200-450 per implant cycle (varies by region)</td>
+                  <td className="p-3">Repeat treatment; often several hundred dollars per cycle. Ask an exotic veterinarian for an estimate.</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 font-medium">Adrenalectomy cost (US)</td>
-                  <td className="p-3">~$800-2,500 depending on laterality and complications</td>
+                  <td className="p-3">A larger one-time procedure; often a four-figure bill. Ask an exotic veterinarian for an estimate.</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-medium">Urgency</td>
@@ -677,7 +677,7 @@ export default function FerretAdrenalDiseasePage() {
             ]}
             pros={['Warmth for ferrets with alopecia-reduced coat', 'Satisfies burrowing instinct', 'Machine washable', 'Low cost per unit']}
             cons={['Not a treatment — see your exotic vet', 'Some ferrets chew fleece', 'Replace regularly as fabric thins']}
-            price="$10–18"
+            price="see current price"
             priceNote="dated 2026-05-31."
             ctaText="Find ferret fleece sleep sack hammocks on Amazon"
             ctaHref="/go/chewy-brand/ferret+fleece+sleep+sack+hammock?s=health-adrenal-disease"

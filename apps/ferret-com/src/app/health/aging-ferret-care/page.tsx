@@ -586,7 +586,7 @@ export default function FerretAgingPage() {
             ]}
             pros={['Eliminates climbing requirement for arthritic seniors', 'Soft on bony pressure points (common in weight-losing seniors)', 'Multiple cheap units mean spots in every room', 'Machine washable']}
             cons={['Fleece picks up shed hair quickly — frequent wash', 'Some seniors still prefer their old hammock — offer both']}
-            price="$10–25 each"
+            price="see current price each"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall leisure lounges"
             ctaHref="/go/marshall/leisure+lounge?s=health-aging-ferret-care"
