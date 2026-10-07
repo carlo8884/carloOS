@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -73,7 +74,7 @@ export default function ApiVsSalifertGuidePage() {
         <p>Salifert is the reef section, not a scored product. The page says the tests are more accurate than API on reef alkalinity, calcium, and magnesium, and more expensive per test. It tells you to buy individual parameter tests because they hold calibration better than combo kits. There is no reagent count and no star rating on that section. Do not read a reagent count or a star rating into that section.</p>
         <h2>Who should buy which test</h2>
         <p>Buy the API kit for a freshwater community tank that needs pH, ammonia, nitrite, and nitrate. Buy Salifert individual tests when the job is reef alkalinity, calcium, or magnesium. Keep the API kit if you also need ammonia and nitrite. A digital pH meter, when the review mentions Bluelab, is an extra for pH-critical tanks. It does not retire the reagent kit.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-api-vs-salifert-guide" />
         <p>The link below searches for the API Freshwater Master Test Kit, the same search as on the test-kit review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/api+freshwater+master+test+kit?s=reviews-api-vs-salifert-guide">Browse the API Freshwater Master Test Kit on Amazon →</a></p>
         <h2>Questions</h2>

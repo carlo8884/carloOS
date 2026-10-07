@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -83,7 +84,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The filter review prints the Fluval 307 at $120–160. The lighting review prints the Fluval Plant 3.0 at $150–200 and the Kessil A360X at $400–500. The Kessil card is the reef light. The Nicrew card is the fish-only light. Do not swap those jobs because both are lights.</p>
         <h2>Who should get which printed band</h2>
         <p>A test kit is the gift when the tank already exists and nobody has replaced the reagents. A sponge or a small hang-on-back is the gift when the review’s tank size matches the tank in the house. A canister or a reef light is the gift only when the review already names that tank. The shop link is the search already used on the card.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={[`/go/amazon-brand/seachem+flourish+comprehensive?s=${SOURCE}`, `/go/amazon-brand/hikari+bacto+surge+sponge+filter?s=${SOURCE}`, `/go/amazon-brand/aquarium+co-op+easy+green+fertilizer?s=${SOURCE}`, `/go/amazon-brand/aqueon+pro+heater?s=${SOURCE}`, `/go/amazon-brand/aqueon+10+gallon+aquarium?s=${SOURCE}`, `/go/amazon-brand/nicrew+classic+led?s=${SOURCE}`, `/go/amazon-brand/api+freshwater+master+test+kit?s=${SOURCE}`, `/go/amazon-brand/aquaclear+70+filter?s=${SOURCE}`, `/go/amazon-brand/hygger+957?s=${SOURCE}`, `/go/amazon-brand/fluval+spec+v+5+gallon?s=${SOURCE}`, `/go/amazon-brand/fluval+307+canister+filter?s=${SOURCE}`, `/go/amazon-brand/fluval+plant+3.0?s=${SOURCE}`, `/go/amazon-brand/kessil+a360x?s=${SOURCE}`]} />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -162,7 +163,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-07" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <BelowFoldPhoto siteId="fish-com" />
