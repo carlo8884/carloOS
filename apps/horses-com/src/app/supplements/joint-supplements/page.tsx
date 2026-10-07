@@ -27,13 +27,13 @@ const articleSchema = buildArticleSchema({
 
 const cosequinSchema = buildProductSchema({ name: 'Cosequin ASU Plus', description: 'Glucosamine, chondroitin, and ASU supplement for horses from Nutramax.', url: 'https://horses.com/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements', imageUrl: '' })
 const platinumSchema = buildProductSchema({ name: 'Platinum Performance CJ', description: 'Comprehensive equine joint and connective tissue supplement.', url: 'https://horses.com/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements', imageUrl: '' })
-const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'Glucosamine, chondroitin, MSM, and hyaluronic acid for senior horses.', url: 'https://horses.com/go/smartpak/smartflex-senior?s=supplements-joint-supplements', imageUrl: '' })
+const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', description: 'SmartFlex Senior Pellets, per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, devil\'s claw 1,750 mg.', url: 'https://horses.com/go/smartpak/smartflex-senior?s=supplements-joint-supplements', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
 
 const PICKS = [
   { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU at 30% unsaponifiables, plus glucosamine, MSM, and chondroitin', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },
   { label: 'Best Comprehensive', emoji: '◎', name: 'Platinum Performance CJ', subtitle: 'Whole-system formula · Auto-ship subscription', href: '#platinum-cj' },
-  { label: 'Best Senior', emoji: '🐴', name: 'SmartFlex Senior', subtitle: 'Glucosamine, chondroitin, MSM, and HA. Amounts: check the label.', href: '#smartflex' },
+  { label: 'Best Senior', emoji: '🐴', name: 'SmartFlex Senior', subtitle: 'Per serving: glucosamine 7,000 mg, MSM 12,000 mg, HA 50 mg, devil\'s claw 1,750 mg.', href: '#smartflex' },
   { label: 'Reference: Omega-3', emoji: '🐟', name: 'Marine-source DHA/EPA', subtitle: 'Flax is not equivalent · Marine source matters', href: '#omega-3' },
 ]
 
@@ -195,18 +195,18 @@ export default function JointSupplementsPage() {
               id="smartflex"
               badge="Best Senior"
               name="SmartPak SmartFlex Senior"
-              subtitle="Glucosamine, chondroitin, MSM, and HA. Amounts: check the label."
+              subtitle="Per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, devil's claw 1,750 mg."
               description={<>
-                <p>SmartFlex Senior is SmartPak&apos;s house-brand senior-horse joint supplement. This page does not print glucosamine or MSM milligrams against SmartFlex Maintenance — check the label. It is sold in SmartPak daily-dose packs.</p>
-                <p>NASC Quality Seal is documented on the card. Dose-per-scoop is not compared with a clinically proven line here — check the label.</p>
+                <p>The current SmartPak comparison lists SmartFlex Senior Pellets, per serving, at glucosamine 7,000 mg, chondroitin sulfate 500 mg, hyaluronic acid 50 mg, and MSM 12,000 mg, plus devil&apos;s claw 1,750 mg. The same chart lists SmartFlex Pellets, for light or moderate work, at glucosamine 5,000 mg, chondroitin sulfate 500 mg, hyaluronic acid 25 mg, and MSM 7,500 mg. Senior is higher in glucosamine and MSM. Chondroitin sulfate is 500 mg on both. SmartFlex Senior Herb-Free Pellets is a different row.</p>
+                <p>NASC Quality Seal is documented on the card. Devil&apos;s claw, listed in that per-serving panel, is an FEI/USEF prohibited substance. It is sold in SmartPak daily-dose packs.</p>
               </>}
               specs={[
-                { label: 'Active ingredients', value: 'Check the label. This page does not print milligrams for this product.' },
+                { label: 'Active ingredients', value: 'Senior Pellets, per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, devil\'s claw 1,750 mg.' },
                 { label: 'Daily packaging', value: 'SmartPak Smart Pak auto-ship' },
-                { label: 'Evidence tier', value: 'Amounts versus Maintenance are not printed here. Check the label.' },
+                { label: 'Evidence tier', value: 'Versus SmartFlex Pellets: glucosamine 7,000 vs 5,000 mg and MSM 12,000 vs 7,500 mg. Chondroitin sulfate is 500 mg on both.' },
                 { label: 'Best use case', value: 'Senior horse maintenance' },
               ]}
-              pros={['Check the label for ingredient amounts', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
+              pros={['Per-serving amounts are on the current SmartPak comparison', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
               cons={['No ASU component', 'House-brand HA at oral dose has limited evidence', 'Auto-ship requires SmartPak account']}
               price="$45–65 per 28-day supply"
               priceNote="dated 2026-10-04."
@@ -269,7 +269,7 @@ export default function JointSupplementsPage() {
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A senior horse on daily packs</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a><TableShopLink quietUntilTag href={"/go/smartpak/smartflex-senior?s=supplements-joint-supplements"} product={"SmartFlex Senior"} /></td>
-                    <td className="p-3 text-brand-text-mid">Best Senior. Ingredient amounts: check the label. $45–65 per 28-day supply</td>
+                    <td className="p-3 text-brand-text-mid">Best Senior. Per serving: glucosamine 7,000 mg and MSM 12,000 mg. $45–65 per 28-day supply</td>
                     <td className="p-3 text-brand-text-mid">You specifically want ASU. The card says this formula does not include it</td>
                   </tr>
                   <tr className="border-b border-brand-border">
@@ -288,7 +288,7 @@ export default function JointSupplementsPage() {
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
             <ol>
               <li><strong>Diagnose first.</strong> An undiagnosed lame horse is not a candidate for supplement decisions. Get the lameness exam; manage active disease with the right tools (IA medication, systemic chondroprotectant, NSAIDs) under veterinary direction.</li>
-              <li><strong>Pick one product and read its label.</strong> Cosequin ASU Plus prints a 2–4 week initial period and ASU standardized to 30% unsaponifiables. Platinum CJ prints the per-2-scoop amounts on its page and does not list chondroitin. SmartFlex Senior amounts: check the label.</li>
+              <li><strong>Pick one product and read its label.</strong> Cosequin ASU Plus prints a 2–4 week initial period and ASU standardized to 30% unsaponifiables. Platinum CJ prints the per-2-scoop amounts on its page and does not list chondroitin. SmartFlex Senior Pellets, per serving: glucosamine 7,000 mg, chondroitin sulfate 500 mg, HA 50 mg, MSM 12,000 mg, and devil&apos;s claw 1,750 mg. SmartFlex Pellets lists glucosamine 5,000 mg and MSM 7,500 mg.</li>
               <li><strong>Add marine-source omega-3 if not already included.</strong> The anti-inflammatory effect compounds with the joint-direct ingredients.</li>
               <li><strong>Do not stack redundant products.</strong> Three different glucosamine sources at the same time is wasted money — pick one combination product and use it at label dose.</li>
               <li><strong>Check competition eligibility.</strong> Every ingredient against current FEI and USEF prohibited-substance lists if the horse competes.</li>
