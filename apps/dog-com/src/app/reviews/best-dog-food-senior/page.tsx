@@ -4,14 +4,14 @@ import Link from 'next/link'
 import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026 — Top Formulas Compared | Dog.com', description: 'Best dog foods for senior dogs 7+. Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior.', path: '/reviews/best-dog-food-senior', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026', description: 'Senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Senior Dog Food 2026', description: 'Senior dog foods ranked by WSAVA compliance and veterinary recommendation.', url: 'https://dog.com/reviews/best-dog-food-senior', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Bright Mind Adult 7+', description: 'Enhanced botanical oils formula with clinical trial data for cognitive support in aging dogs.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior', imageUrl: '' })
 const hillsSchema = buildProductSchema({ name: "Hill's Science Diet Adult 7+ Senior", description: 'veterinarian-formulated senior formula with antioxidant blend and easy-to-digest proteins.', url: 'https://dog.com/go/chewy-brand/hills+science+diet+senior+7?s=reviews-best-dog-food-senior', imageUrl: '' })
 const allSchemas = combineSchemas(schema, ppSchema, hillsSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Purina Pro Plan Bright Mind 7+', subtitle: 'Clinical trial data · Cognitive support · WSAVA', href: '#bright-mind', pickHop: '/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior' },
   { label: "Best Hill's", name: "Hill's Science Diet Senior 7+", subtitle: 'Antioxidant blend · veterinarian-formulated · Widely available', href: '#hills' },
-  { label: 'Best Royal Canin', name: 'Royal Canin Aging Care', subtitle: 'Research-backed · Small/medium/large versions', href: '#royal-canin' },
+  { label: 'Best Royal Canin', name: 'Royal Canin size Aging lines', subtitle: 'Small Aging 12+ · Medium Aging 10+ · Large Aging 8+', href: '#royal-canin' },
 ]
 const itemList = buildItemListSchema({
   name: "Best Senior Dog Food 2026",
@@ -38,7 +38,7 @@ export default function BestSeniorDogFoodPage() {
             "Purina Pro Plan Bright Mind Adult 7+, marked Best Overall.",
             "It is chicken-based, and the card says it is not sole management for significant cognitive dysfunction.",
             "It does not have a published cognitive trial.",
-            "The picks strip names Royal Canin Aging Care.",
+            "The picks strip names the Royal Canin size Aging lines.",
             "Dogs are considered senior at 7+ years for most breeds (5-6 for giant breeds).",
             "Their nutritional needs shift — but \"senior dog food\" as a category is largely unregulated.",
           ]}
@@ -68,7 +68,7 @@ export default function BestSeniorDogFoodPage() {
             />
             <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/purina+pro+plan+bright+mind+senior?s=reviews-best-dog-food-senior", "/go/chewy-brand/hills+science+diet+senior+7?s=reviews-best-dog-food-senior"]} />
             <ReviewCard id="bright-mind" badge="Best Overall" name="Purina Pro Plan Bright Mind Adult 7+" subtitle="Enhanced botanical oils · Cognitive clinical trial · WSAVA top tier" winner
-              description={<p>Purina Pro Plan Bright Mind is among the few senior dog foods with published clinical trial data specifically addressing cognitive benefits in aging dogs. The formula contains enhanced botanical oils (including medium-chain triglycerides from coconut oil) intended to provide alternative fuel for aging neurons. In a blinded clinical trial, dogs fed Bright Mind reportedly showed improved performance on cognitive assessments compared to control dogs after 30 days. For owners seeing cognitive changes in aging dogs — disorientation, altered sleep patterns, loss of housetraining — this is among the more evidence-supported dietary options. WSAVA-compliant with full veterinary nutritionist oversight and feeding trial data.</p>}
+              description={<p>Purina Pro Plan Bright Mind is among the few senior dog foods with published clinical trial data specifically addressing cognitive benefits in aging dogs. The formula contains enhanced botanical oils (including medium-chain triglycerides from coconut oil) intended to provide alternative fuel for aging neurons. In a blinded clinical trial, dogs fed Bright Mind reportedly showed improved performance on cognitive assessments compared to control dogs after 30 days. For owners seeing cognitive changes in aging dogs — disorientation, altered sleep patterns, loss of housetraining — this is among the more evidence-supported dietary options. Purina’s U.S. site still lists Bright Mind Adult 7+. Purina Canada marked that dry formula discontinued in February 2026. In April 2026 Purina also launched AdvantEDGE Senior Support+, which uses Bright Mind technology plus immune and mobility support. This page does not rank that newer line. WSAVA-compliant with full veterinary nutritionist oversight and feeding trial data.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Clinical evidence', value: 'Cognitive trial — published data', highlight: 'good' }, { label: 'Key ingredient', value: 'Enhanced botanical oils / MCT' }, { label: 'Protein', value: 'Adequate — not reduced' }]}
               pros={['Among the few senior foods with published cognitive trial data', 'Top WSAVA compliance', 'High protein — supports muscle maintenance', 'Available in large breed version']}
               cons={['Not appropriate as sole management for significant CDS — consult vet', 'Chicken-based — not for chicken-allergic dogs']}
@@ -94,7 +94,7 @@ export default function BestSeniorDogFoodPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which food</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Only the two foods with review cards are in this table. Royal Canin Aging Care is named in the picks strip and does not have a card or a printed price here.
+                Only the two foods with review cards are in this table. The Royal Canin size Aging lines are named in the picks strip and do not have a card or a printed price here.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -134,8 +134,8 @@ export default function BestSeniorDogFoodPage() {
                   answer: "Hill's Science Diet Adult 7+. The card lists vitamin E, vitamin C, and beta-carotene, easy-digest proteins, and a printed price of $55–70 for 30 lb. It does not have a published cognitive trial.",
                 },
                 {
-                  question: 'Does this page print a price for Royal Canin Aging Care?',
-                  answer: 'No. The picks strip names Royal Canin Aging Care. Only Bright Mind and Hill\'s Science Diet Adult 7+ have review cards and printed prices.',
+                  question: 'Does this page print a price for Royal Canin size Aging lines?',
+                  answer: 'No. The picks strip names Royal Canin size Aging lines. Only Bright Mind and Hill\'s Science Diet Adult 7+ have review cards and printed prices.',
                 },
               ]} />
             </div>
