@@ -90,7 +90,12 @@ function PhotoRow({ items }: { items: { title: string; desc: string; href: strin
             <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
           </div>
           <div>
-            <h3 className="font-display font-bold text-brand-dark text-lg leading-tight mb-1 italic group-hover:text-brand-primary">{item.title}</h3>
+            <div className="mb-1 flex items-center gap-2.5">
+              <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+              </span>
+              <h3 className="font-display font-bold text-brand-dark text-lg leading-tight italic group-hover:text-brand-primary">{item.title}</h3>
+            </div>
             <p className="text-sm text-brand-text-mid leading-relaxed">{item.desc}</p>
           </div>
         </Link>
