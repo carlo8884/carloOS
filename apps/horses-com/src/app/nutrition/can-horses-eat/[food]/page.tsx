@@ -242,7 +242,7 @@ export default async function CanHorsesEatFoodPage({ params }: PageProps) {
         </div>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} includeSchema={false} />
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Horses.com editorial team, based on established equine veterinary and nutrition references (ASPCA Animal Poison Control, Merck Veterinary Manual, the Equine Endocrinology Group, and equine clinical-nutrition literature). Not a substitute for veterinary advice — individual horses vary. Horses cannot vomit, and colic, choke, and laminitis are emergencies. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies) or your veterinarian.</em>

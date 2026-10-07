@@ -355,7 +355,7 @@ export default function EquineUlcersPage() {
           <p>Routine scheduling: gastroscopy is appropriate for any horse with chronic poor performance, unexplained weight loss, recurrent low-grade colic, or significant behavior change under saddle in the absence of an obvious lameness or tack-fit explanation.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <p>For related reference material, see the <a href="/health">equine health hub</a>, the overlap with <a href="/health/colic">colic</a> (recurrent low-grade colic is a common ulcer sign), forage strategy in <a href="/nutrition/forage-basics">forage basics</a>, and meal sizing for working horses in <a href="/nutrition/feeding-the-performance-horse">feeding the performance horse</a>.</p>
 

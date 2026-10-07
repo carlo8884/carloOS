@@ -171,7 +171,7 @@ export default function OttbInEventingPage() {
           <p>Not every OTTB will become a competitive eventer, and that is not the measure of a successful transition. Some horses are best suited to the lower levels, to other disciplines, or to a quieter ridden life. The aftercare ecosystem&apos;s goal is to match each horse to an appropriate outcome, not to push every horse up the levels. Where a horse does show eventing aptitude, patient progression — letdown, foundation, then phase-specific schooling, ideally with a trainer experienced in OTTBs — is the most reliable route. For the rehoming side of the picture, including the Thoroughbred Aftercare Alliance and adopting an OTTB, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

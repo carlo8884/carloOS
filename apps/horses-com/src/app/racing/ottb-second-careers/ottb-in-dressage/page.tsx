@@ -166,7 +166,7 @@ export default function OttbInDressagePage() {
           <p>The level an OTTB reaches in dressage depends on its movement, trainability, soundness, and the consistency of its training. Many OTTBs are well suited to the lower and middle levels and provide a rewarding, affordable route into the sport, whether or not they have the movement for the upper levels. Importantly, foundation flatwork benefits nearly every OTTB regardless of eventual career, so dressage-style training is rarely wasted. Patient progression without rushing collection, ideally with an OTTB-experienced trainer, is the reliable path. For the rehoming and welfare side, including the Thoroughbred Aftercare Alliance, see the broader <Link href="/racing/off-track-thoroughbred-aftercare">aftercare reference</Link>.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

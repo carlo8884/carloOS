@@ -171,7 +171,7 @@ export default function GreatRacehorseSpokePage({ params }: { params: { slug: st
           ))}
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={horse.faq} />
+          <FAQAccordion items={horse.faq} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">

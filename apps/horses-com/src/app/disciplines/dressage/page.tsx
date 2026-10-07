@@ -298,7 +298,7 @@ export default function DressagePage() {
           <p>The sport has a deep international roster; among the riders whose names recur in modern coverage are Charlotte Dujardin (GBR, multiple Olympic medals on Valegro), Isabell Werth (GER, the most-decorated dressage rider in Olympic history), Steffen Peters (USA, multiple Olympic appearances), and Laura Graves (USA, World Cup finalist with Verdades). Historical figures whose teaching shapes the modern sport include Reiner Klimke, Nuno Oliveira, Egon von Neindorff, and the long line of riders trained at the Spanish Riding School in Vienna.</p>
 
           <h2 id="faq">Frequently Asked Questions</h2>
-          <FAQAccordion items={FAQS} />
+          <FAQAccordion items={FAQS} includeSchema={false} />
 
           <h2 id="references">References</h2>
           <ol className="text-sm text-brand-text-mid">
