@@ -1,5 +1,7 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
+
 /**
  * Dog Water Intake Calculator -- /tools/dog-water-intake-calculator
  *
@@ -12,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -171,7 +173,7 @@ export default function DogWaterIntakeCalculator() {
           <a href="/tools/dog-calorie-calculator" className="text-brand-primary underline underline-offset-2">Pair the ounces with a daily portion →</a>
         </p>
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{shop.blurb}</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" className="my-3" />
+        <HopDisclosure siteId="dog-com" href={shop.href} />
         <a href={shop.href} rel="sponsored noopener" className="inline-block font-semibold text-brand-primary underline underline-offset-2">
           {shop.label}
         </a>

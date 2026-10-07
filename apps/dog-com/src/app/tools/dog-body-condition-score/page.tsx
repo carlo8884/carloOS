@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -173,7 +173,7 @@ export default function DogBodyConditionScorePage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="bcs-weight-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-dog-bcs", "/go/amazon-brand/elevated+slow+feeder+bowl+dog?s=tools-dog-bcs", "/go/amazon-brand/portion+control+food+scale+dog?s=tools-dog-bcs", "/go/amazon-brand/puzzle+feeder+dog?s=tools-dog-bcs", "/go/amazon-brand/joint+support+dog+treats?s=tools-dog-bcs", "/go/amazon-brand/weight+management+dog+food?s=tools-dog-bcs"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a BCS / weight-management kit
