@@ -5,19 +5,17 @@ import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, 
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi, Whistle | Dog.com', description: 'Best GPS trackers for dogs — Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy, battery life, and monthly subscription cost.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi, Whistle, and Tractive GPS dog trackers ranked.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
-const fiSchema = buildProductSchema({ name: 'Fi Series 3 Dog Collar', description: 'GPS dog tracker with 3-month battery life and LTE-M network coverage.', url: 'https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker', imageUrl: '' })
-const whistleSchema = buildProductSchema({ name: 'Whistle Go Explore', description: 'GPS dog tracker with health and activity monitoring.', url: 'https://dog.com/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker', imageUrl: '' })
-const allSchemas = combineSchemas(schema, fiSchema, whistleSchema)
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026 — Fi and Tractive | Dog.com', description: 'Fi Series 3+ is the current collar. Tractive is the budget GPS pick. Whistle shut down on August 31, 2025.', path: '/reviews/best-dog-gps-tracker', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog GPS Trackers 2026', description: 'Fi Series 3+ and Tractive GPS dog trackers. Whistle shut down on August 31, 2025.', url: 'https://dog.com/reviews/best-dog-gps-tracker', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
+const fiSchema = buildProductSchema({ name: 'Fi Series 3+ Dog Collar', description: 'Current Fi collar. Fi rates battery life at up to 3 months and has described membership from about $14 a month, with the collar kit included.', url: 'https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker', imageUrl: '' })
+const allSchemas = combineSchemas(schema, fiSchema)
 const PICKS = [
-  { label: 'Best Overall', name: 'Fi Series 3', subtitle: '3-month battery · LTE-M · Escape alerts', href: '#fi', pickHop: '/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' },
-  { label: 'Best with Health Data', name: 'Whistle Go Explore', subtitle: 'GPS + activity + health monitoring', href: '#whistle' },
-  { label: 'Best Budget', name: 'Tractive GPS', subtitle: 'Lowest monthly fee · Works globally', href: '#tractive' },
+  { label: 'Best Overall', name: 'Fi Series 3+', subtitle: 'Current collar · Up to 3-month battery · LTE', href: '#fi', pickHop: '/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' },
+  { label: 'Best Budget', name: 'Tractive GPS', subtitle: 'Lower printed monthly fee · Works globally', href: '#tractive' },
 ]
 const itemList = buildItemListSchema({
   name: "Best Dog GPS Trackers 2026",
-  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Fi Series 3": "https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "Whistle Go Explore": "https://dog.com/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker", "Tractive GPS": "https://dog.com/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker" }[pick.name] ?? `https://dog.com/reviews/best-dog-gps-tracker${pick.href}`) })),
+  items: PICKS.map((pick) => ({ name: pick.name, url: ({ "Fi Series 3+": "https://dog.com/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "Tractive GPS": "https://dog.com/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker" }[pick.name] ?? `https://dog.com/reviews/best-dog-gps-tracker${pick.href}`) })),
 })
 export default function BestGPSTrackerPage() {
   return (
@@ -26,8 +24,8 @@ export default function BestGPSTrackerPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">Buyer's Guide</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog GPS Trackers 2026</h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
-        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3 collar on Amazon' />
+        <PriceAsOf date="2026-10-07" tone="dark" />
+        <PrimaryHop href='/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker' label='Check price of the Fi Series 3+ collar on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker" />
         <EmailCapture
           variant="inline"
@@ -37,16 +35,15 @@ export default function BestGPSTrackerPage() {
           ctaText="Copy checklist"
           source="reviews-best-dog-gps-tracker"
           checklist={[
-            "The card says a subscription is required and collar bands are sold separately.",
-            "The card says the battery is shorter than Fi and the health data needs interpretation.",
-            "The card lists a 2\u20135 day battery and no health monitoring.",
-            "GPS trackers give you real-time location if your dog escapes.",
-            "Fi's standout feature is the 3-month battery life \u2014 the longest of any GPS tracker by a significant margin.",
-            "Competitors need weekly or daily charging; Fi charges once per quarter.",
+            "Fi Series 3+ is the current collar. Fi rates battery life at up to 3 months.",
+            "Fi described Series 3+ membership from about $14 a month, with the collar kit included. Confirm the live plan.",
+            "Whistle Go Explore shut down on August 31, 2025. A unit on a shelf is not a working tracker.",
+            "The Tractive card lists a 2–5 day battery and no health monitoring.",
+            "A registered microchip is still the ID that works if the battery dies.",
           ]}
         />
 
-        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you real-time location if your dog escapes. All require a monthly subscription — we ranked by accuracy, battery life, and total cost of ownership.</p>
+        <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">GPS trackers give you a location if your dog escapes, and they need a subscription. Fi Series 3+ is the current Fi collar. Whistle&apos;s service ended on August 31, 2025.</p>
       </div>
       <QuickPicks items={PICKS} />
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
@@ -61,42 +58,34 @@ export default function BestGPSTrackerPage() {
               siteId="dog-com"
               nextHref="/guides/dog-microchipping"
               nextLabel="Register a microchip — GPS is not permanent ID"
-              nextBlurb="A GPS collar needs a subscription and a charge. A registered microchip is the ID that still works if the battery dies. Microchipping is the next step: implant plus registry, then the tracker. The hop below is the same Fi Series 3 search already on this page."
+              nextBlurb="A GPS collar needs a subscription and a charge. A registered microchip is the ID that still works if the battery dies. Microchipping is the next step: implant plus registry, then the tracker. The hop below is the same Fi Series 3+ search already on this page."
               resourceHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
-              resourceLabel="Browse Fi Series 3 GPS collars on Amazon →"
+              resourceLabel="Browse Fi Series 3+ GPS collars on Amazon →"
             />
-            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"]} />
-            <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3 Dog Collar" subtitle="3-month battery · LTE-M network · Geofence escape alerts · Sleek collar design" winner
-              description={<p>Fi's standout feature is the 3-month battery life — the longest of any GPS tracker by a significant margin. Competitors need weekly or daily charging; Fi charges once per quarter. The LTE-M network gives broader coverage in rural and low-signal areas than standard LTE trackers. The app shows real-time location, daily step count, sleep tracking, and instantly alerts when the dog leaves a defined geofence (your yard, a friend's house). The collar replaces your dog's existing collar — the tracker module snaps into a standard collar band. The printed price is $140–160 plus $8–12/mo.</p>}
-              specs={[{ label: 'Battery', value: '3 months', highlight: 'good' }, { label: 'Network', value: 'LTE-M (broader coverage)', highlight: 'good' }, { label: 'Geofence alerts', value: 'Yes — instant', highlight: 'good' }, { label: 'Monthly fee', value: '$8–12/mo (annual)' }, { label: 'Water resistant', value: 'IP68' }]}
-              pros={['3-month battery — best by far', 'LTE-M for rural coverage', 'Instant escape alerts', 'Replaces collar — no extra bulk', 'Step and sleep tracking']}
-              cons={['More expensive upfront ($140–160)', 'Monthly subscription required', 'Collar bands sold separately']}
-              price="$140–160 + $8–12/mo"
-              priceNote="dated 2026-10-05."
-              ctaText="Shop Fi Series 3 collar on Amazon →"
+            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker", "/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"]} />
+            <ReviewCard id="fi" badge="Best Overall" name="Fi Series 3+ Dog Collar" subtitle="Current Fi collar · Battery rated up to 3 months · Collar band included" winner
+              description={<p>Fi&apos;s current collar is Series 3+, not the older Series 3. Fi rates Series 3+ battery life at up to 3 months and lists AT&amp;T as the cellular provider. The May 2025 Series 3+ announcement described membership from about $14 a month, with the collar kit included. Confirm the live plan before you buy. The app still covers location, activity, and escape alerts.</p>}
+              specs={[{ label: 'Battery', value: 'Up to 3 months, per Fi', highlight: 'good' }, { label: 'Network', value: 'AT&T, per Fi' }, { label: 'Membership', value: 'From about $14/mo, kit included', highlight: 'good' }]}
+              pros={['Current Fi collar, not the older Series 3', 'Fi rates battery life at up to 3 months', 'Collar band is part of the Series 3+ design']}
+              cons={['Membership required', 'Live plan price can change — confirm it', 'Not a substitute for a registered microchip']}
+              price="From about $14/mo, kit included"
+              priceNote="dated 2026-10-07."
+              ctaText="Shop Fi Series 3+ collar on Amazon →"
               ctaHref="/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
               ctaAffiliateProduct="fi+series+3+dog+collar"
             />
-            <ReviewCard id="whistle" badge="Best Health Monitoring" name="Whistle Go Explore" subtitle="GPS + health monitoring · Lick and scratch tracking · Vet alerts"
-              description={<p>Whistle Go Explore combines GPS tracking with health behavior monitoring — it detects excessive licking, scratching, sleeping, and activity changes that may indicate health issues before they are visible. The app can alert you when behaviors change significantly from the dog's baseline, which some owners find clinically useful. GPS accuracy is solid in urban environments. Battery life is 20 days — shorter than Fi but longer than Tractive. Monthly subscription: $8–12/mo. The health monitoring layer differentiates it from pure-GPS competitors.</p>}
-              specs={[{ label: 'Battery', value: '20 days' }, { label: 'GPS', value: 'LTE' }, { label: 'Health monitoring', value: 'Lick, scratch, activity, sleep', highlight: 'good' }, { label: 'Monthly fee', value: '$8–12/mo' }]}
-              pros={['Health behavior monitoring (licking, scratching)', 'Good GPS accuracy', '20-day battery', 'Vet alert integration']}
-              cons={['Shorter battery than Fi', 'Health data requires interpretation', 'Bulkier than Fi']}
-              price="$70–90 + $8–12/mo"
-              priceNote="dated 2026-10-05."
-              ctaText="Shop Whistle Go Explore on Amazon →"
-              ctaHref="/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker"
-              ctaAffiliateProgram="amazon-brand"
-              ctaAffiliateProduct="whistle+go+explore"
-            />
-            <ReviewCard id="tractive" badge="Best Budget" name="Tractive GPS Dog Tracker" subtitle="Lowest monthly fee · Works in 175 countries · Simple app"
-              description={<p>Tractive has the lowest monthly fee of any GPS tracker ($4–6/mo annual) and works in 175 countries — making it the best option for dogs that travel internationally or for owners who want basic GPS without the premium features of Fi or Whistle. Battery life is 2–5 days depending on tracking frequency — requires regular charging. The app is simple and accurate. No health monitoring. Best for: budget-conscious owners who just want to know where their dog is, and owners who travel internationally with their dogs.</p>}
+            <section id="whistle" className="border border-brand-border rounded-xl p-5 mb-6">
+              <h2 className="font-display text-xl font-bold text-brand-dark mb-2">Whistle Go Explore is not a current pick</h2>
+              <p className="text-sm text-brand-text-mid leading-relaxed m-0">Tractive acquired Whistle in July 2025 and shut the Whistle service down on August 31, 2025. Whistle devices no longer report location or health data. Tractive&apos;s free replacement offer ended on September 30, 2025. Do not buy a Whistle Go Explore expecting a working tracker.</p>
+            </section>
+            <ReviewCard id="tractive" badge="Best Budget" name="Tractive GPS Dog Tracker" subtitle="Lower printed monthly fee than the older Fi card · Works in 175 countries · Simple app"
+              description={<p>Tractive is the budget card on this page. The printed range is $4–6/mo on an annual plan and $40–60 for the device, dated 2026-10-07. Confirm the live plan before you buy. It works in 175 countries. Battery life is 2–5 days depending on tracking frequency. The app is simple. This card does not claim health monitoring. It fits owners who want a location and who travel with their dogs.</p>}
               specs={[{ label: 'Monthly fee', value: '$4–6/mo (annual)', highlight: 'good' }, { label: 'Countries', value: '175 — best global coverage', highlight: 'good' }, { label: 'Battery', value: '2–5 days' }, { label: 'Health monitoring', value: 'None' }]}
-              pros={['Lowest monthly cost', 'Best international coverage', 'Simple reliable app', 'Lightweight']}
+              pros={['Lower printed monthly fee than the Fi card', '175 countries on the card', 'Simple reliable app', 'Lightweight']}
               cons={['2–5 day battery — frequent charging', 'No health monitoring', 'Less sophisticated app than Fi']}
               price="$40–60 + $4–6/mo"
-              priceNote="dated 2026-10-05."
+              priceNote="dated 2026-10-07."
               ctaText="Shop Tractive GPS tracker on Amazon →"
               ctaHref="/go/amazon-brand/tractive+gps+dog+tracker?s=reviews-best-dog-gps-tracker"
               ctaAffiliateProgram="amazon-brand"
@@ -105,7 +94,7 @@ export default function BestGPSTrackerPage() {
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which tracker</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
-                Three trackers have review cards. Each card already prints a device price and a monthly fee. A microchip is not a live location; that difference is on the <a href="/guides/dog-microchipping" className="text-brand-primary underline">microchipping guide</a>.
+                Two trackers are current picks. Whistle is listed only so you do not buy a dead service. A microchip is not a live location; that difference is on the <a href="/guides/dog-microchipping" className="text-brand-primary underline">microchipping guide</a>.
               </p>
               <div className="overflow-x-auto max-w-full min-w-0 mb-8">
                 <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
@@ -119,16 +108,16 @@ export default function BestGPSTrackerPage() {
                   </thead>
                   <tbody>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">The longest battery and escape alerts</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3</a><TableShopLink href={"/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"} product={"Fi Series 3"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Overall. $140–160 + $8–12/mo</td>
-                      <td className="p-3 text-brand-text-mid">You do not want a subscription or a higher device price. Collar bands are sold separately</td>
+                      <td className="p-3 text-brand-text-mid">The current Fi collar and escape alerts</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#fi" className="text-brand-primary">Fi Series 3+</a><TableShopLink href={"/go/amazon-brand/fi+series+3+dog+collar?s=reviews-best-dog-gps-tracker"} product={"Fi Series 3+"} /></td>
+                      <td className="p-3 text-brand-text-mid">Best Overall. From about $14/mo, kit included, dated 2026-10-07</td>
+                      <td className="p-3 text-brand-text-mid">You do not want a membership. Confirm the live plan</td>
                     </tr>
                     <tr className="border-b border-brand-border">
-                      <td className="p-3 text-brand-text-mid">Health monitoring with the location</td>
-                      <td className="p-3 font-bold text-brand-dark"><a href="#whistle" className="text-brand-primary">Whistle Go Explore</a><TableShopLink href={"/go/amazon-brand/whistle+go+explore?s=reviews-best-dog-gps-tracker"} product={"Whistle Go Explore"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Health Monitoring. $70–90 + $8–12/mo</td>
-                      <td className="p-3 text-brand-text-mid">You want Fi&apos;s battery. The card says the battery is shorter, the collar is bulkier, and the health data needs interpretation</td>
+                      <td className="p-3 text-brand-text-mid">A Whistle you already own, or a listing you found</td>
+                      <td className="p-3 font-bold text-brand-dark"><a href="#whistle" className="text-brand-primary">Not a current pick</a></td>
+                      <td className="p-3 text-brand-text-mid">Service ended August 31, 2025. No shop link</td>
+                      <td className="p-3 text-brand-text-mid">Any new purchase. The devices no longer report a location</td>
                     </tr>
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">The lowest printed device price and monthly fee</td>
@@ -144,11 +133,11 @@ export default function BestGPSTrackerPage() {
               <FAQAccordion items={[
                 {
                   question: 'Which tracker does this page pick overall?',
-                  answer: 'The Fi Series 3, marked Best Overall. The printed price is $140–160 plus $8–12 a month. The card says a subscription is required and collar bands are sold separately.',
+                  answer: 'Fi Series 3+, marked Best Overall. The card says membership is required and Fi described it from about $14 a month, dated 2026-10-07, with the collar kit included.',
                 },
                 {
-                  question: 'Which tracker does this page pick for health data?',
-                  answer: 'Whistle Go Explore. The printed price is $70–90 plus $8–12 a month. The card says the battery is shorter than Fi and the health data needs interpretation.',
+                  question: 'Can I still buy a Whistle Go Explore?',
+                  answer: 'No. Tractive shut the Whistle service down on August 31, 2025. Those devices no longer report location or health data, so this page does not shop them.',
                 },
                 {
                   question: 'Which tracker does this page pick at the lowest printed fee?',
@@ -160,7 +149,7 @@ export default function BestGPSTrackerPage() {
           <aside className="lg:sticky lg:top-24 lg:self-start flex flex-col gap-5">
             <div className="bg-brand-surface border border-brand-border rounded-xl p-5">
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-3">By Situation</div>
-              {[['Best all-around', 'Fi Series 3'], ['Escape artist dog', 'Fi (instant alerts)'], ['Health monitoring', 'Whistle Go Explore'], ['International travel', 'Tractive'], ['Lowest cost', 'Tractive ($4–6/mo)'], ['Rural / low signal', 'Fi (LTE-M)']].map(([s, r]) => (
+              {[['Best all-around', 'Fi Series 3+'], ['Escape alerts', 'Fi Series 3+'], ['Whistle Go Explore', 'Not a current pick'], ['International travel', 'Tractive'], ['Lowest printed fee', 'Tractive'], ['Already own a Whistle', 'Service ended Aug 31, 2025']].map(([s, r]) => (
                 <div key={s} className="py-2 border-b border-brand-border last:border-0">
                   <div className="text-2xs text-brand-text-light">{s}</div>
                   <div className="text-xs font-bold text-brand-dark">→ {r}</div>

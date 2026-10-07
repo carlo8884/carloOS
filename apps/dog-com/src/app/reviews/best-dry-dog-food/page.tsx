@@ -22,7 +22,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-05-28T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const PICKS = [
@@ -114,7 +114,7 @@ export default function BestDogFoodPage() {
       <div className="px-container-sm sm:px-container py-14">
         <div className="grid lg:grid-cols-[1fr_280px] gap-14 min-w-0">
           <div className="min-w-0">
-            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-05-28T00:00:00Z" reviewedBy="Editorial team" />
+            <ArticleByline siteName="Dog.com Editorial" publishedAt="2025-05-01T00:00:00Z" updatedAt="2026-10-07T00:00:00Z" reviewedBy="Editorial team" />
 
             {/* TL;DR */}
             <p className="text-lg text-brand-text-mid leading-relaxed italic mb-8">

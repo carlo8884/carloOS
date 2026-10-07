@@ -21,7 +21,7 @@ const schema = buildArticleSchema({
   imageUrl: '',
   authorName: 'Dog.com Editorial',
   publishedAt: '2025-05-01T00:00:00Z',
-  modifiedAt: '2026-06-07T00:00:00Z',
+  modifiedAt: '2026-10-07T00:00:00Z',
 })
 
 const rcSchema = buildProductSchema({ name: 'Royal Canin Large Breed Puppy', description: 'WSAVA-compliant large breed puppy formula with controlled calcium for healthy bone development.', url: 'https://dog.com/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies', imageUrl: '' })
