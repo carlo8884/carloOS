@@ -304,7 +304,7 @@ export default function CatGrimaceScalePage() {
         </ul>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
       </div>
     </ArticleLayout>
   )
