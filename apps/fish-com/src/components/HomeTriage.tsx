@@ -128,7 +128,7 @@ export function HomeTriage() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:cornerstone-cycling" alt="A freshwater aquarium test kit being used to check water parameters" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Start where you are</span>
               </Link>
@@ -161,7 +161,7 @@ export function HomeTriage() {
                   <div className="mb-3 text-[#3aa4cc]">{p.icon}</div>
                   <div className="mb-2 flex items-center gap-2.5">
                     <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={p.imageKey} alt={p.imageAlt} aspect="4:3" subtleCredit />
+                      <StockImage manifestKey={p.imageKey} alt={p.imageAlt} aspect="4:3" />
                     </span>
                     <h2 className="font-display font-bold text-white text-base leading-tight italic">{p.title}</h2>
                   </div>
@@ -187,7 +187,7 @@ export function HomeTriage() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:species-thumb-corydoras" alt="Corydoras catfish" aspect="4:3" />
                 </span>
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Why this site</span>
               </Link>
@@ -223,7 +223,7 @@ export function HomeTriage() {
                 <div className="p-3.5">
                   <div className="flex items-center gap-2.5 mb-1">
                     <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                      <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                      <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" />
                     </span>
                     <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">
                       {item.label}
@@ -247,14 +247,14 @@ export function HomeTriage() {
                 className="group flex items-center gap-2.5 no-underline"
               >
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
                 </span>
                 <span className="text-xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Decide with math, not guesses</span>
               </Link>
             </div>
             <div className="flex items-center gap-2.5">
               <span className={`relative h-8 w-12 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
-                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
               </span>
               <div className="text-sm sm:text-base text-white font-semibold">6 free aquarist calculators — volume, stocking, heater wattage, water changes, CO₂, cycling</div>
             </div>
