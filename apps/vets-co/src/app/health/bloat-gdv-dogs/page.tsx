@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Bloat (GDV) in Dogs — Emergency Signs & Prevention | Vets.co", description: "Gastric dilatation-volvulus (bloat) is a sudden, life-threatening emergency in deep-chested dogs. Know the warning signs and act within minutes.", path: '/health/bloat-gdv-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilatation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Gastric Dilatation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Bloat — Gastric Dilatation-Volvulus', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-gastric-dilatation-volvulus', publisher: 'AVMA' },
   { label: 'Glickman LT et al. Incidence of and breed-related risk factors for gastric dilatation-volvulus in dogs. JAVMA. 2000;216(1):40-45.', publisher: 'JAVMA' },
 ]

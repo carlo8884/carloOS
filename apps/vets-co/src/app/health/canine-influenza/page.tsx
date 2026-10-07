@@ -7,7 +7,7 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Can
 const SOURCES = [
   { label: 'AVMA: Canine Influenza', url: 'https://www.avma.org/resources-tools/animal-health/canine-influenza', publisher: 'AVMA' },
   { label: 'CDC: Dog Flu', url: 'https://www.cdc.gov/flu/other/dogflu/index.htm', publisher: 'CDC' },
-  { label: 'Merck Veterinary Manual: Canine Influenza', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Canine Influenza', url: 'https://www.merckvetmanual.com/respiratory-system/respiratory-diseases-of-small-animals/canine-influenza-flu', publisher: 'Merck Vet Manual' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu)', description: 'H3N8 and H3N2 canine influenza — signs, treatment, and vaccination recommendations.', url: 'https://vets.co/health/canine-influenza', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,

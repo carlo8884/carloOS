@@ -407,7 +407,7 @@ export default function VetsHomePage() {
             >
               <HeroMarkSvg />
               <span className="h-px w-8" style={{ background: 'var(--brand-accent)' }} aria-hidden="true" />
-              <span className="text-2xs font-bold uppercase tracking-eyebrow">
+              <span className="text-2xs font-bold uppercase tracking-eyebrow" style={{ color: '#1e140a' }}>
                 The Pet-Owner Reference
               </span>
             </div>
@@ -548,13 +548,13 @@ export default function VetsHomePage() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/35 to-transparent" />
                 {/* Label */}
                 <div className="relative z-10 flex flex-col justify-end min-h-[230px] sm:min-h-[260px] p-5">
-                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: 'var(--brand-accent-light)' }}>
+                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? 'var(--brand-accent-light)' : '#ffffff' }}>
                     {desk.eyebrow}
                   </div>
                   <h2 className="font-display font-bold text-white text-xl sm:text-2xl leading-tight mb-1.5">
                     {desk.title}
                   </h2>
-                  <p className="text-xs sm:text-sm text-white/75 leading-relaxed mb-3">
+                  <p className="text-xs sm:text-sm leading-relaxed mb-3 text-white/75">
                     {desk.desc}
                   </p>
                   <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow text-white group-hover:gap-2.5 transition-all">

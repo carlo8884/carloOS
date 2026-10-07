@@ -147,7 +147,7 @@ export default function VetsHealthHubPage() {
         <span className="text-brand-text-mid font-medium">Health</span>
       </nav>
       <div className="px-container-sm sm:px-container pt-6 pb-2 bg-brand-surface border-b border-brand-border">
-        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
+        <p className="text-xs text-brand-text-light max-w-3xl leading-relaxed">Drawing on current <a href="https://www.avma.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AVMA</a>, <a href="https://aaha.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AAHA</a>, and <a href="https://www.acvim.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">ACVIM</a> guidance.</p>
       </div>
 
       {/* Direct-answer / TL;DR block — extractable summary for AI Overviews,

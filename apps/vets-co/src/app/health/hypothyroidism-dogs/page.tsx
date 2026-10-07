@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Hypothyroidism in Dogs — Signs, Testing, Treatment | Vets.co", description: "Canine hypothyroidism causes weight gain, lethargy, and coat changes. Learn the signs, how it is diagnosed, and why treatment is highly effective.", path: '/health/hypothyroidism-dogs', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hypothyroidism in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-thyroid-gland/hypothyroidism-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Hypothyroidism in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/hypothyroidism-dogs', publisher: 'AVMA' },
   { label: 'AAHA: Endocrine Disease in Dogs', url: 'https://www.aaha.org/aaha-guidelines/', publisher: 'AAHA' },
 ]

@@ -87,7 +87,7 @@ export const Symptoms: Symptom[] = [
       { label: 'AVMA — Pet Owner Resources', href: AVMA_OWNER },
       {
         label: 'Merck Veterinary Manual — Vomiting in Small Animals',
-        href: `${MERCK}digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/vomiting-in-small-animals`,
+        href: `${MERCK}dog-owners/digestive-disorders-of-dogs/vomiting-in-dogs`,
       },
       { label: 'AAHA — Owner Education', href: AAHA_OWNER },
     ],
@@ -326,7 +326,7 @@ export const Symptoms: Symptom[] = [
       { label: 'ACVIM — Animal Owners', href: ACVIM },
       {
         label: 'Merck Veterinary Manual — Diabetes in Dogs',
-        href: `${MERCK}dog-owners/hormonal-disorders-of-dogs/diabetes-mellitus-in-dogs`,
+        href: `${MERCK}endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats`,
       },
     ],
   },

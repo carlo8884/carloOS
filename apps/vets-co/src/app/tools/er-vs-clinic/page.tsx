@@ -39,7 +39,7 @@ const SOURCES = [
   },
   {
     label: 'ASPCA Animal Poison Control Center',
-    url: 'https://www.aspca.org/pet-care/animal-poison-control',
+    url: 'https://www.aspca.org/pet-care/aspca-poison-control',
     publisher: 'ASPCA',
   },
 ]

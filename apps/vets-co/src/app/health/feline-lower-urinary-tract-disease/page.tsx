@@ -5,7 +5,6 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Feline Lower Urinary Tract Disease', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/feline-lower-urinary-tract-disease', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Feline Lower Urinary Tract Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/feline-lower-urinary-tract-disease', publisher: 'AVMA' },
   { label: 'AAFP: Feline Lower Urinary Tract Disease Guidelines', url: 'https://catvets.com/guidelines/practice-guidelines/feline-lower-urinary-tract-disease/', publisher: 'American Association of Feline Practitioners' },
 ]

@@ -402,7 +402,7 @@ export default function VetsBeagleHealthPage() {
             <li>Fyfe JC, Hemker SL, Venta PJ et al. Selective intestinal cobalamin malabsorption with proteinuria (Imerslund-Gräsbeck syndrome) in juvenile Beagles. <em>J Vet Intern Med.</em> 2014;28(2):356–362.</li>
             <li><a href="https://www.akcchf.org/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">AKC Canine Health Foundation</a> — Beagle-funded research summaries.</li>
             <li><a href="https://ofa.org" rel="noopener" target="_blank" className="text-brand-primary hover:underline">Orthopedic Foundation for Animals (OFA)</a> — hip, thyroid and eye registries.</li>
-            <li><a href="https://www.wsava.org/global-guidelines/global-nutrition-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Nutrition Guidelines</a> — obesity as a disease.</li>
+            <li><a href="https://wsava.org/global-guidelines/global-nutrition-guidelines/" rel="noopener" target="_blank" className="text-brand-primary hover:underline">WSAVA Global Nutrition Guidelines</a> — obesity as a disease.</li>
           </ul>
         </div>
       </ArticleLayout>

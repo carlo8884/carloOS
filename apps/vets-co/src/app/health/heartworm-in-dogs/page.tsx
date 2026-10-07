@@ -7,7 +7,7 @@ import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } fro
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Heartworm in Dogs — Prevention, Testing | Vets.co', description: 'Heartworm disease is a life-threatening but preventable condition. Monthly prevention costs $5-10. Treatment costs $1,000-3,000.', path: '/health/heartworm-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
-  { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/circulatory-system/heartworm-disease/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Heartworm Disease', url: 'https://www.merckvetmanual.com/dog-owners/heart-and-blood-vessel-disorders-of-dogs/heartworm-disease-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Atkins CE et al. Guidelines for the diagnosis, prevention and management of heartworm infection in dogs. J Vet Intern Med. 2010;24(4):713-733.', publisher: 'JVIM' },
   { label: 'AVMA: Heartworm Disease', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
 ]

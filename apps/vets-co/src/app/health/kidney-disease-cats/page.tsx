@@ -7,7 +7,6 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Chr
 const SOURCES = [
   { label: 'IRIS (International Renal Interest Society): CKD Staging and Substaging Guidelines', url: 'https://www.iris-kidney.com/guidelines/staging.html', publisher: 'IRIS' },
   { label: 'Sparkes AH et al. ISFM Consensus Guidelines on the Diagnosis and Management of Feline CKD. J Feline Med Surg. 2016;18(3):219-239.', publisher: 'J Feline Med Surg' },
-  { label: 'Merck Veterinary Manual: Chronic Kidney Disease in Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/chronic-kidney-disease-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Brown SA et al. Beneficial effects of chronic administration of dietary omega-3 polyunsaturated fatty acids in dogs with renal insufficiency. J Lab Clin Med. 1998;131(5):447-455.', publisher: 'J Lab Clin Med' },
   { label: 'AVMA: Chronic Kidney Disease in Cats', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/kidney-disease-cats', publisher: 'AVMA' },
 ]

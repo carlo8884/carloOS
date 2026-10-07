@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/gastrointestinal-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Vomiting and Diarrhea in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vomiting-and-diarrhea', publisher: 'AVMA' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
