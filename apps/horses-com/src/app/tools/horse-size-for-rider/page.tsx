@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -13,7 +14,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -211,7 +211,7 @@ export default function HorseSizeForRiderPage() {
         </p>
         <Calculator />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/horse+saddle+pad?s=tools-horse-size-for-rider", "/go/amazon-brand/horse+girth+cinch?s=tools-horse-size-for-rider", "/go/amazon-brand/horse+stirrups?s=tools-horse-size-for-rider", "/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider", "/go/amazon-brand/horse+weight+tape?s=tools-horse-size-for-rider"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop rider-fit tack

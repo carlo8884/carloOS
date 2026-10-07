@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Horse Size for Rider Calculator -- /tools/horse-size-for-rider
  * Client compute component. Suggests a horse bodyweight range and an
@@ -14,7 +15,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'imperial' | 'metric'
 
@@ -374,7 +375,7 @@ export default function Calculator() {
               </>
             )}
           </p>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/western+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/english+horse+saddle?s=tools-horse-size-for-rider", "/go/amazon-brand/ASTM+SEI+horse+riding+helmet?s=tools-horse-size-for-rider"]} />
           <a
             href={
               discipline === 'western'

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   JourneyNext,
   ShopCtas,
 } from '@carloOS/ui'
@@ -226,7 +226,7 @@ export default function HorseFeedCalculatorPage() {
             balancer / feed scoop / slow-feeder net / salt lick). ShopCtas
             hides empty Chewy; never href="#" or PLACEHOLDER. Scoop and
             slow-feeder queries match horse-cost-calculator / forage-basics. */}
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/timothy+hay+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+ration+balancer?s=tools-horse-feed-calculator", "/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-feed-calculator", "/go/amazon-brand/slow+feeder+hay+net+horse?s=tools-horse-feed-calculator", "/go/amazon-brand/equine+salt+lick?s=tools-horse-feed-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a barn feed kit

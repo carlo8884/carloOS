@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -11,7 +12,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import Calculator from './Calculator'
@@ -229,7 +229,7 @@ export default function HorseGestationCalculatorPage() {
         </p>
         <FoalingKit />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+equine+thermometer?s=tools-horse-gestation-calculator", "/go/amazon-brand/iodine+navel+dip+foal?s=tools-horse-gestation-calculator", "/go/amazon-brand/foaling+alarm?s=tools-horse-gestation-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop the kit

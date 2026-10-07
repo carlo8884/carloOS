@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Horse Cost-of-Ownership Calculator -- /tools/horse-cost-calculator
  * Client compute component. Sums recurring monthly horse-keeping costs into a
@@ -13,7 +14,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError, PriceAsOf} from '@carloOS/ui'
 
 interface BoardOption {
   value: string
@@ -275,7 +276,7 @@ export default function Calculator() {
         <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">
           The monthly total is a planning budget. The first-horse roadmap is the sequence that budget pays for. The hop is the halter and lead already on this page.
         </p>
-        <AffiliateDisclosure variant="inline" siteId="horses-com" className="my-3" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator" />
         <a
           href="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
           rel="sponsored noopener"

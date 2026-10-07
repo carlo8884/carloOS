@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -181,7 +182,7 @@ export default function ToolsHub() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+hoof+pick?s=tools-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
