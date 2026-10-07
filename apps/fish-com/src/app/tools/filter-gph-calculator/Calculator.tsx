@@ -149,6 +149,13 @@ export default function FilterGphCalculator() {
           That GPH band is how much water the filter should move each hour for this tank style. It is not a species count.
         </ResultMeaning>
       )}
+      {result && gal > 0 && (
+        <p className="mt-4 text-sm">
+          <a href="/reviews/hob-vs-canister-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+            HOB vs canister filter
+          </a>
+        </p>
+      )}
 
     </div>
   )
