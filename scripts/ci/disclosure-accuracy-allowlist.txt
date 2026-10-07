@@ -44,7 +44,6 @@ apps/dog-com/src/app/compare/[slug]/page.tsx
 apps/dog-com/src/app/guides/dog-body-condition-score/page.tsx
 apps/dog-com/src/app/llms.txt/route.ts
 apps/ferret-com/src/app/llms.txt/route.ts
-apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx
 apps/fish-com/src/app/llms.txt/route.ts
 apps/fish-com/src/app/reviews/best-aquarium-lighting/page.tsx
 apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx

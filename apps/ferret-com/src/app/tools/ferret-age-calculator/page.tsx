@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
 } from '@carloOS/ui'
@@ -190,7 +190,7 @@ export default function FerretAgeCalculatorPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-age-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/senior+ferret+food?s=tools-ferret-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+hammock?s=tools-ferret-age-calculator", "/go/amazon-brand/ferret+carrier?s=tools-ferret-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a life-stage kit
@@ -239,7 +239,6 @@ export default function FerretAgeCalculatorPage() {
               talk to a licensed vet on a screen rather than waiting for a gap
               to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href={crossSiteHref('vets-co', '/reviews/best-pet-insurance')}
