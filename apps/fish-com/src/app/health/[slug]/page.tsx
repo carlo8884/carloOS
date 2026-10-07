@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Dynamic disease-page template for Fish.com.
  *
@@ -29,7 +30,6 @@ import {
   CalloutBox,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import type { FAQItem } from '@carloOS/ui'
@@ -442,7 +442,7 @@ export default async function DiseasePage({ params }: PageProps) {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+filter?s=health-spoke" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/aquarium+filter?s=health-spoke"

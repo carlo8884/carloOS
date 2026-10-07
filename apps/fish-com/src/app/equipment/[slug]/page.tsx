@@ -19,11 +19,11 @@
  * JSON-LD: Article + BreadcrumbList + FAQPage, emitted via combineSchemas.
  */
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import { notFound } from 'next/navigation'
 import {
   ArticleLayout,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   FAQAccordion,
   RelatedLinks,
@@ -431,11 +431,10 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
         </div>
 
         <h2 id="shop">Where to Shop</h2>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={shop?.amazonHref ?? ''} />
         <p style={{ fontSize: '14px', color: 'var(--brand-text-mid)', marginBottom: '12px' }}>
-          Browse the {category.categoryName.toLowerCase()} category on Amazon. Fish.com
-          earns an affiliate commission when you purchase through these links — at no extra cost
-          to you. Commission does not influence editorial picks.
+          Browse the {category.categoryName.toLowerCase()} category on Amazon.
+          Commission does not influence editorial picks.
         </p>
 
         {shop ? (
@@ -483,8 +482,7 @@ export default async function EquipmentCategoryPage({ params }: PageProps) {
             paddingTop: '16px',
           }}
         >
-          Affiliate disclosure: Fish.com earns commissions on purchases made through links on our
-          review pages. Buyer-guide rankings and category recommendations are editorially
+          Buyer-guide rankings and category recommendations are editorially
           independent — affiliate relationships have no influence on which sub-types we recommend.
         </p>
       </div>
