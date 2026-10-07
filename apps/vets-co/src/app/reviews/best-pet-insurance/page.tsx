@@ -255,7 +255,7 @@ export default function VetsPetInsurancePage() {
                 },
                 {
                   question: 'Which plan on this page covers routine care?',
-                  answer: 'Embrace is the card for owners who want a wellness add-on beside accident and illness coverage. The page says the orthopedic waiting period is on the carrier page: see the carrier's current terms.',
+                  answer: 'Embrace is the card for owners who want a wellness add-on beside accident and illness coverage. The page says the orthopedic waiting period is on the carrier page: see the carrier\'s current terms.',
                 },
               ]} />
             </div>
