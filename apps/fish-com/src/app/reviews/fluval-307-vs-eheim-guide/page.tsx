@@ -25,11 +25,11 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which canister does the review pick overall?',
-    answer: 'The Fluval 307, marked Best Overall. The review lists a 40–70 gallon tank, 303 GPH, near-silent running, an AquaStop valve, four media baskets, and a 5-year warranty. The printed price is $120–150. The primer can be finicky on the first start.',
+    answer: 'The Fluval 307, marked Best Overall. The review lists a 40–70 US gallon tank, pump output of 303 US GPH, filter circulation of 206 US GPH, near-silent running, an AquaStop valve, four media baskets, and a 5-year warranty. The printed price is $120–150. The primer can be finicky on the first start.',
   },
   {
     question: 'When does the review point to the Eheim Classic?',
-    answer: 'When decades of runtime matter more than AquaStop. The Eheim Classic 350 (2215). The review lists 40–92 gallons, 264 GPH, quiet rather than silent running, and a field life of 10–15 or more years with impeller replacement. There is no AquaStop. The printed price is $100–130.',
+    answer: 'When decades of runtime matter more than AquaStop. The Eheim Classic 350 (2215). The review lists about 120 liters up to 92 US gallons, pump output of 164 US GPH at 120 V / 60 Hz, quiet rather than silent running, and a field life of 10–15 or more years with impeller replacement. There is no AquaStop. The printed price is $100–130.',
   },
   {
     question: 'How do I check the flow against the tank?',
@@ -67,7 +67,7 @@ export default function FluvalVsEheimGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
         <EmailCapture
@@ -83,15 +83,15 @@ export default function FluvalVsEheimGuidePage() {
             "The Eheim Classic 350 is for a filter meant to keep running for years.",
             "Penn Plax on that page is the budget canister, and it is a different comparison.",
             "The Fluval 307 is Best Overall and the winner.",
-            "Flow is 303 GPH, which the review calls an actual rate rather than an inflated one.",
+            "Pump output is 303 US GPH. Filter circulation is 206 US GPH.",
           ]}
         />
         <p>Prices below are the ones on the <Link href="/reviews/best-canister-filters">canister review</Link>. This pair is two canisters. Hang-on-back versus canister is the <Link href="/reviews/hob-vs-canister-guide">AquaClear 70 versus Fluval 307</Link> page. The Fluval 307 is for a 40–70 gallon tank. The Eheim Classic 350 is for a filter meant to keep running for years. Penn Plax on that page is the budget canister, and it is a different comparison.</p>
         <h2>What the review says about the Fluval 307</h2>
-        <p>The Fluval 307 is Best Overall and the winner. Tank size is 40–70 gallons. Flow is 303 GPH, which the review calls an actual rate rather than an inflated one. Noise is near-silent. AquaStop lets you change media without disconnecting the hoses. Media is four separated baskets. The warranty is 5 years. The printed price is $120–150. The cons say the primer button can be finicky on the first start, and that it costs more than the Penn Plax on the same page.</p>
+        <p>The Fluval 307 is Best Overall and the winner. Tank size is 40–70 gallons. Pump output is 303 US GPH. Filter circulation is 206 US GPH. Noise is near-silent. AquaStop lets you change media without disconnecting the hoses. Media is four separated baskets. The warranty is 5 years. The printed price is $120–150. The cons say the primer button can be finicky on the first start, and that the printed band is higher than the Penn Plax on the same page.</p>
         <p>The <Link href="/tools/filter-gph-calculator">filter-GPH calculator</Link> applies the 4–6 times turnover rule from that review. Match the result to the flow the review already prints.</p>
         <h2>What the review says about the Eheim Classic</h2>
-        <p>The Eheim Classic 350, model 2215, is Most Reliable. Tank size is 40–92 gallons. Flow is 264 GPH. Noise is quiet, not silent, and the review says it is slightly louder than the Fluval 307. Reliability is listed as a decades-long track record, with Classics running 10–15 or more years on impeller replacement. There is no AquaStop, and the media baskets are less separated than the Fluval’s. The printed price is $100–130.</p>
+        <p>The Eheim Classic 350, model 2215, is Most Reliable. Tank size is about 120 liters, up to 92 US gallons. Pump output is 164 US GPH at 120 V / 60 Hz. Noise is quiet, not silent, and the review says it is slightly louder than the Fluval 307. Reliability is listed as a decades-long track record, with Classics running 10–15 or more years on impeller replacement. There is no AquaStop, and the media baskets are less separated than the Fluval’s. The printed price is $100–130.</p>
         <h2>Who should buy which canister</h2>
         <p>Buy the Fluval 307 when the tank is in the 40–70 gallon band and you want AquaStop plus the quieter of the two. Buy the Eheim Classic when the tank can be as large as 92 gallons and you would rather have the simpler filter the review credits with the longer life. A hang-on-back filter is the other style on the aquarium-filter review, not a third canister here.</p>
         <p>The link above searches Amazon for the Fluval 307, the same search as on the canister review. The sale price can differ from the band above.</p>
