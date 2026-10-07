@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -231,7 +231,7 @@ export default function IsThisAHorseEmergencyPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="horse-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+first+aid+kit?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/digital+veterinary+thermometer?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/vet+wrap+bandage?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/poultice?s=tools-is-this-a-horse-emergency", "/go/amazon-brand/horse+electrolytes?s=tools-is-this-a-horse-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop an equine emergency-prep kit
@@ -279,7 +279,6 @@ export default function IsThisAHorseEmergencyPage() {
               rolling, not choke, not a horse that cannot rise — talk to a licensed vet on a screen
               rather than waiting for a gap to become an ER haul.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/ownership/horse-insurance"

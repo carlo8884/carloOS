@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -13,7 +14,6 @@ import {
   TableOfContents,
   RelatedLinks,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   CrossSiteHelp,
@@ -244,14 +244,13 @@ export default function HorseCostCalculatorPage() {
         </p>
         <StartupKit />
 
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+grooming+kit?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+feed+scoop+scale?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+barn+first+aid+kit?s=tools-horse-cost-calculator", "/go/amazon-brand/horse+fly+mask?s=tools-horse-cost-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop related supplies
           </div>
           <p className="mb-4 text-sm leading-relaxed text-brand-text-mid">Halter and lead, grooming kit, feed scoop, barn first-aid, and fly mask are
-            Amazon searches for those categories. Hoof care is the guide. Horses.com earns
-            a commission on qualifying purchases at no extra cost to you. </p>
+            Amazon searches for those categories. Hoof care is the guide. </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/horse+halter+lead+rope?s=tools-horse-cost-calculator"
