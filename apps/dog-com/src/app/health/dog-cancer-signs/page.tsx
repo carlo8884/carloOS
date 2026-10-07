@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -125,7 +126,7 @@ export default function DogCancerSignsPage() {
             other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/silicone+dog+grooming+glove?s=health-dog-cancer-signs", "/go/amazon-brand/analog+bathroom+scale?s=health-dog-cancer-signs", "/go/amazon-brand/dog+dental+finger+brush?s=health-dog-cancer-signs"]} />
 
           {/* Money path — live amazon-brand search hops
               (silicone dog grooming glove / analog

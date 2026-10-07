@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -105,7 +106,7 @@ export default function CushingDiseasePage() {
             page does not hop medications. This page
             does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/gallon+gravity+dog+waterer?s=health-cushing-disease", "/go/amazon-brand/extra+large+disposable+dog+pee+pads?s=health-cushing-disease", "/go/amazon-brand/dog+cooling+bandana?s=health-cushing-disease"]} />
 
           {/* Money path — live amazon-brand search hops
               (gallon gravity dog waterer / extra-large

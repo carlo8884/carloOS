@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -97,7 +98,7 @@ export default function DogLiverDiseasePage() {
             on other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+medical+records+binder?s=health-dog-liver-disease", "/go/amazon-brand/am+pm+weekly+pill+organizer?s=health-dog-liver-disease", "/go/amazon-brand/digital+hanging+luggage+scale?s=health-dog-liver-disease"]} />
 
           {/* Money path — live amazon-brand search hops
               (pet medical records binder / AM/PM weekly

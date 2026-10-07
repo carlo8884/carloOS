@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -281,7 +281,7 @@ export default function DogObesityPage() {
           <h2 id="kit">Weigh-in kit</h2>
           <p>Everyday physical supplies that match the weigh-in and meal-pacing copy above — a digital pet scale for the every-two-weeks body-weight check, plus a slow-feeder dog bowl so meals take longer and satiety improves without extra calories. These are home-setup aids, not treatments. Prescription weight-management diets (Hill&rsquo;s Metabolic, Royal Canin Satiety Support, Purina Pro Plan Veterinary Diets OM), brand food ASINs, kitchen gram scales, and portion-control food scales stay educational copy only — this page never hops diets, food ASINs, or the sister <a href={crossSiteHref('vets-co', '/health/weight-management')}>vets.co weight-management</a> kitchen-scale hops. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+pet+scale?s=health-dog-obesity", "/go/amazon-brand/slow+feeder+dog+bowl?s=health-dog-obesity"]} />
 
           {/* Money path — live amazon-brand search hops (digital
               pet scale / slow-feeder dog bowl). ShopCtas hides empty

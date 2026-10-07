@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -82,7 +83,7 @@ export default function DogDiabetesPage() {
           <h2 id="kit">Glucose-monitor kit</h2>
           <p>Everyday physical supplies that match the home-monitor and hypoglycemia-kit copy above — a pet glucometer for ear-margin or inner-lip checks between clinic curves, plus light corn syrup kept at the door for the first-sign gum rub (honey is the same-category stand-in). These are home-setup aids, not treatments. They do not set the insulin dose, they do not replace clinic glucose curves or fructosamine, and they do not treat unconscious hypoglycemia. Insulin, syringes, Vetsulin / NPH brand ASINs, FreeStyle Libre / Dexcom brand CGMs, digital pet scales, and prescription diabetic diets (Hill&apos;s w/d, Royal Canin Diabetic) stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+glucometer?s=health-dog-diabetes", "/go/amazon-brand/light+corn+syrup?s=health-dog-diabetes"]} />
 
           {/* Money path — live amazon-brand search hops (pet
               glucometer / light corn syrup). ShopCtas hides

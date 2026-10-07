@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -90,7 +91,7 @@ export default function DogArthritisPage() {
           <h2 id="kit">Mobility kit</h2>
           <p>Everyday physical supplies that match the mobility-and-comfort copy above — an orthopedic dog bed when rising from lying down or stiffness after rest is the new pattern, plus a dog ramp when stairs or jumping onto furniture have become hard. These are home-setup aids, not treatments. Veterinary NSAIDs (carprofen, meloxicam, grapiprant / Galliprant), joint supplements (glucosamine, chondroitin, green-lipped mussel, omega-3 / fish oil), Adequan, Librela, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Traction rugs and raised bowls stay on the sister <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a> page. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/orthopedic+dog+bed?s=health-dog-arthritis", "/go/amazon-brand/dog+ramp?s=health-dog-arthritis"]} />
 
           {/* Money path — live amazon-brand search hops (orthopedic
               dog bed / dog ramp). ShopCtas hides empty Chewy; never
