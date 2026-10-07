@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -90,7 +91,7 @@ export default function HowPetInsuranceWorksPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/four+column+accounting+pad?s=insurance-how-pet-insurance-works", "/go/amazon-brand/letter+size+poly+envelope?s=insurance-how-pet-insurance-works", "/go/amazon-brand/desktop+receipt+organizer?s=insurance-how-pet-insurance-works"]} />
 
           {/* Money path — live amazon-brand search hops
               (four-column accounting pad /
@@ -175,7 +176,7 @@ export default function HowPetInsuranceWorksPage() {
           />
 <h2 id="quote">Compare a Couple of Insurers</h2>
           <p>Once the four levers make sense, the next step is to price your own pet on a couple of carriers and compare the premium against the deductible, reimbursement rate, and annual limit. The two below illustrate different models; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/trupanion/home?s=insurance-how-pet-insurance-works", "/go/healthy-paws/home?s=insurance-how-pet-insurance-works"]} />
           <ReviewCard
             id="trupanion"
             badge="Direct-Pay Model"
@@ -250,7 +251,7 @@ export default function HowPetInsuranceWorksPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <h2>FAQ</h2>
           <FAQAccordion items={FAQS.map(f => ({ question: f.question, answer: f.answer, answerText: f.answer }))} allowMultiple />

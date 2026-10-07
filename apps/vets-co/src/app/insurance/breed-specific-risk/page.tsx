@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 
@@ -86,7 +87,7 @@ export default function BreedRiskPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/blank+pedigree+chart?s=insurance-breed-specific-risk", "/go/amazon-brand/round+color+coding+labels?s=insurance-breed-specific-risk", "/go/amazon-brand/5+compartment+letter+sorter?s=insurance-breed-specific-risk"]} />
 
           {/* Money path — live amazon-brand search hops
               (blank pedigree chart /
@@ -144,7 +145,7 @@ export default function BreedRiskPage() {
 
           <h2 id="quote">Carriers for High-Risk Breeds</h2>
           <p>For a breed with predictable expensive needs, the policy features that matter most are a high or unlimited annual limit and clear coverage of hereditary and congenital conditions. The two below are worth quoting on those terms; pair this with your <a href="/breeds">breed health guide</a> and the full <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>, and enroll early so breed-typical conditions are not excluded as pre-existing.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/trupanion/home?s=insurance-breed-specific-risk", "/go/figo/home?s=insurance-breed-specific-risk"]} />
           <ReviewCard
             id="trupanion"
             badge="Unlimited Payouts"

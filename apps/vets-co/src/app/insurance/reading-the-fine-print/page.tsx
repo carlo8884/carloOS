@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Reading Pet Insurance Fine Print — What to Check | Vets.co", description: "Waiting periods, exam-fee coverage, payout schedules, and exclusions hide in the policy document. Use this checklist to read a pet insurance policy properly.", path: '/insurance/reading-the-fine-print', type: 'article' })
@@ -81,7 +82,7 @@ export default function FinePrintPage() {
             testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/full+page+magnifier?s=insurance-reading-the-fine-print", "/go/amazon-brand/adjustable+copyholder?s=insurance-reading-the-fine-print", "/go/amazon-brand/line+reader+strip?s=insurance-reading-the-fine-print"]} />
 
           {/* Money path — live amazon-brand search hops
               (full-page magnifier /
@@ -135,7 +136,7 @@ export default function FinePrintPage() {
 
           <h2 id="quote">Compare Two or Three Policies</h2>
           <p>The practical reading strategy above works best applied to real sample policies. Pull quotes from a couple of carriers and compare them on the same points — waiting periods, payout model, exam-fee coverage, annual limit, and the exclusions list. The two below are useful starting points; for the full side-by-side, see our <a href="/reviews/best-pet-insurance">best pet insurance comparison</a>.</p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/spot/home?s=insurance-reading-the-fine-print", "/go/manypets/home?s=insurance-reading-the-fine-print"]} />
           <ReviewCard
             id="spot"
             badge="Customizable"

@@ -11185,7 +11185,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/letter\+size\+poly\+envelope\?s=insurance-how-pet-insurance-works/, label: 'letter-size-poly-envelope search hop (matches on-page pay-then-claim / itemized-invoice packet copy; unique vs letter+size+sheet+protectors / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
       { re: /amazon-brand\/desktop\+receipt\+organizer\?s=insurance-how-pet-insurance-works/, label: 'desktop-receipt-organizer search hop (matches on-page paid-invoice / reimbursement-wait copy; unique vs cash+envelope+budget+system / locking+cash+box+with+key / pocket+size+address+book)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11205,7 +11205,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/self\+inking\+date\+stamp\?s=insurance-when-to-enroll/, label: 'self-inking-date-stamp search hop (matches on-page enrollment-day / new-pet-exam-day copy; unique vs 72+hour+digital+countdown+timer / 12+hour+mechanical+kitchen+timer)' },
       { re: /amazon-brand\/letter\+size\+file\+jacket\?s=insurance-when-to-enroll/, label: 'letter-size-file-jacket search hop (matches on-page adoption / new-pet-exam paperwork copy; unique vs letter+size+poly+envelope / kraft+two+pocket+folder / hanging+file+folders+letter+size)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11262,7 +11262,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/adjustable\+copyholder\?s=insurance-reading-the-fine-print/, label: 'adjustable-copyholder search hop (matches on-page side-by-side sample-policy / payout-model copy; unique vs letter+size+file+jacket / kraft+two+pocket+folder / clipboard+with+storage)' },
       { re: /amazon-brand\/line\+reader\+strip\?s=insurance-reading-the-fine-print/, label: 'line-reader-strip search hop (matches on-page exclusions-list copy; unique vs 3x3+sticky+notes / ruled+index+cards / letter+size+sheet+protectors)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11281,7 +11281,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/clasp\+envelope\+letter\+size\?s=insurance-pre-existing-conditions/, label: 'clasp-envelope-letter-size search hop (matches on-page veterinary-records / insurer-review copy; unique vs letter+size+poly+envelope / letter+size+file+jacket / kraft+two+pocket+folder)' },
       { re: /amazon-brand\/red\+and\+blue\+checking\+pencil\?s=insurance-pre-existing-conditions/, label: 'red-and-blue-checking-pencil search hop (matches on-page incurable-vs-curable marking copy; unique vs assorted+highlighter+set / yellow+legal+pad / four+column+accounting+pad)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11300,7 +11300,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/round\+color\+coding\+labels\?s=insurance-breed-specific-risk/, label: 'round-color-coding-labels search hop (matches on-page large / brachy / purebred / mixed risk-pattern copy; unique vs 3+tab+dividers / removable+page+flags / 3x3+sticky+notes)' },
       { re: /amazon-brand\/5\+compartment\+letter\+sorter\?s=insurance-breed-specific-risk/, label: '5-compartment-letter-sorter search hop (matches on-page four breed-type stacks copy; unique vs pressboard+classification+folder / hanging+file+folders+letter+size / desktop+receipt+organizer)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
