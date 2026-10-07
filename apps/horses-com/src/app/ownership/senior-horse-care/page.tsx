@@ -60,6 +60,9 @@ export default function SeniorHorseCarePage() {
           { title: 'Feeding Senior Horses', href: '/nutrition/feeding-senior-horses' },
           { title: "Equine Cushing's (PPID)", href: '/health/cushings-ppid' },
           { title: 'Equine Dental Care', href: '/guides/equine-dental-care' },
+          { title: 'The Cost of Owning a Horse', href: '/ownership/cost-of-owning-a-horse' },
+          { title: 'Horse Boarding Options', href: '/ownership/boarding-options' },
+          { title: 'Equine First-Aid Kit', href: '/ownership/first-aid-kit' },
         ]}
         hero={{
           title: "Senior Horse Care",
@@ -95,6 +98,9 @@ export default function SeniorHorseCarePage() {
               { label: "Feeding Senior Horses", href: "/nutrition/feeding-senior-horses" },
               { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Osteoarthritis in Horses", href: "/health/osteoarthritis" },
+              { label: "The Cost of Owning a Horse", href: "/ownership/cost-of-owning-a-horse" },
+              { label: "Horse Boarding Options", href: "/ownership/boarding-options" },
+              { label: "Equine First-Aid Kit", href: "/ownership/first-aid-kit" },
             ]}
           />
           <CrossPortfolioCard currentSite="horses-com" contentType="care" variant="sidebar" />
