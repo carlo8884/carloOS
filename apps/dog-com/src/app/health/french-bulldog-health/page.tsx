@@ -8,7 +8,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Merck Veterinary Manual: congenital airway narrowing in dogs (nostrils and soft palate)', url: 'https://www.merckvetmanual.com/dog-owners/lung-and-airway-disorders-of-dogs/introduction-to-lung-and-airway-disorders-of-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Brachycephalic Breeds and BOAS — Health Resources', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/brachycephalic-syndrome', publisher: 'AVMA' },
   { label: 'ACVS: Brachycephalic Syndrome (BAS)', url: 'https://www.acvs.org/small-animal/brachycephalic-syndrome', publisher: 'ACVS' },
   { label: 'Roedler FS et al. How strongly does conformity affect the respiratory phenotype? Correlations between brachycephaly and BOAS in French Bulldogs. PLoS ONE. 2013;8(3):e63551.', publisher: 'PLoS ONE' },
 ]

@@ -8,7 +8,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Patellar Luxation in Dogs and Cats', url: 'https://www.merckvetmanual.com/musculoskeletal-system/arthropathies-and-related-disorders-in-small-animals/patellar-luxation-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Luxating Patella (Slipping Kneecap) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'ACVS: American College of Veterinary Surgeons — Patellar Luxation', url: 'https://www.acvs.org/small-animal/patellar-luxation', publisher: 'ACVS' },
   { label: 'Willauer CC, Vasseur PB. Clinical results of surgical correction of medial luxation of the patella in dogs. Vet Surg. 1987;16(1):31-36.', publisher: 'Vet Surgery' },
 ]

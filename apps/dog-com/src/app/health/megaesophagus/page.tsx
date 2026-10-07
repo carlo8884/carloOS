@@ -7,7 +7,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Disorders of the Esophagus in Dogs, including megaesophagus', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-esophagus-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Megaesophagus in Dogs — Management and Aspiration Pneumonia Prevention', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Gaynor AR et al. Risk factors for acquired megaesophagus in dogs. J Am Vet Med Assoc. 1997;211(11):1406-1412.', publisher: 'JAVMA' },
   { label: 'Dewey CW et al. Myasthenia gravis and megaesophagus in dogs. Vet Clin North Am Small Anim Pract. 2004;34(6):1437-1468.', publisher: 'Vet Clinics Small Animal Practice' },
 ]

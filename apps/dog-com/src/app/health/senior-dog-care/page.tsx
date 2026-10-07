@@ -9,7 +9,7 @@ import { crossSiteHref } from '@carloOS/config'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Routine Health Care of Dogs, including senior visits', url: 'https://www.merckvetmanual.com/dog-owners/routine-care-of-dogs/routine-health-care-of-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Senior Care Guidelines for Dogs and Cats (2023)', url: 'https://www.aaha.org/aaha-guidelines/senior-care/senior-care-guidelines/', publisher: 'AAHA' },
-  { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/caring-senior-pets', publisher: 'AVMA' },
+  { label: 'AVMA: Caring for Senior Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/senior-pets', publisher: 'AVMA' },
   { label: 'Landsberg GM et al. Cognitive dysfunction syndrome: a disease of canine and feline brain aging. Vet Clin North Am Small Anim Pract. 2012;42(4):749-768.', publisher: 'Vet Clinics Small Animal Practice' },
 ]
 

@@ -7,7 +7,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Pyoderma in Dogs and Cats', url: 'https://www.merckvetmanual.com/integumentary-system/pyoderma/pyoderma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Skin Infections (Pyoderma) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Hillier A et al. A randomized controlled trial of the efficacy and safety of pontocaine/polymyxin B ophthalmic solution in canine superficial pyoderma. Vet Dermatol. 2006;17(3):193-201.', publisher: 'Vet Dermatology' },
   { label: 'Guardabassi L et al. Methicillin-resistant Staphylococci in companion animals. Vet Microbiol. 2004;100(3-4):267-278.', publisher: 'Vet Microbiology' },
 ]

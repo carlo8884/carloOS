@@ -9,7 +9,7 @@ import { crossSiteHref } from '@carloOS/config'
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Tumors of the Skin in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/skin-disorders-of-dogs/tumors-of-the-skin-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer Prevalence', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
-  { label: 'AVMA: Cancer in Animals — Warning Signs and Risk Factors', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
+  { label: 'AVMA: Cancer in Animals — Warning Signs and Risk Factors', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
   { label: 'American College of Veterinary Internal Medicine (ACVIM): Oncology — Canine Cancer Resources', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
 ]
 

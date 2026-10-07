@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Overview of Antineoplastic Agents', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/overview-of-antineoplastic-agents', publisher: 'Merck Vet Manual' },
   { label: 'Merck Veterinary Manual: Targeted Antineoplastic Agents, including FDA-approved toceranib for canine mast cell tumors', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/targeted-antineoplastic-agents-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
-  { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
+  { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources/pet-owners/petcare/cancer-pets', publisher: 'AVMA' },
 ]
 
 
