@@ -1,7 +1,7 @@
 'use client'
 
 import type { ReactNode } from 'react'
-import { AffiliateDisclosure } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 
 interface ResultCTAProps {
   /** Short heading describing the next step, matched to the calculated result. */
@@ -59,7 +59,7 @@ export function ResultCTA({ heading, blurb, query, cta, source, guideHref, guide
           <a href={guideHref} className="inline-block max-w-full whitespace-normal text-left font-semibold text-brand-primary underline underline-offset-2">{guideLabel} →</a>
         </p>
       ) : null}
-      <AffiliateDisclosure variant="inline" className="my-3" />
+      <HopDisclosure siteId="fish-com" href={href} />
       <a
         href={href}
         rel="sponsored noopener"

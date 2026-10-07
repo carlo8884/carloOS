@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildArticleSchema, AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMetadata, buildBreadcrumbSchema, SchemaScript, DirectoryPlacesCta, ShopCtas } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -201,7 +202,7 @@ export default function ToolsHub() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+aquarium+heater?s=tools-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
