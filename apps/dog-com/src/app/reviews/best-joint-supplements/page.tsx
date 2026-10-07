@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -53,6 +54,7 @@ export default function BestJointSupplementsPage() {
         </h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements' label='Check price of Nutramax Dasuquin with MSM on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -92,7 +94,7 @@ export default function BestJointSupplementsPage() {
               </p>
             </div>
 
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dasuquin+with+msm?s=reviews-best-joint-supplements", "/go/amazon-brand/nordic+naturals+omega+pet?s=reviews-best-joint-supplements", "/go/amazon-brand/cosequin+ds+maximum+strength?s=reviews-best-joint-supplements"]} />
             <ReviewCard
               id="dasuquin"
               badge="Best Evidence"
@@ -226,7 +228,7 @@ export default function BestJointSupplementsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which joint supplement fits</h2>
               <FAQAccordion items={[
                 {

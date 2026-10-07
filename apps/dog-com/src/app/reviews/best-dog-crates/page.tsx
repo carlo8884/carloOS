@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, ExperimentPrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -57,6 +58,7 @@ export default function BestDogCratesPage() {
           control="Check price of the MidWest iCrate on Amazon"
           variant="View the MidWest iCrate price on Amazon"
         />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -107,7 +109,7 @@ export default function BestDogCratesPage() {
               resourceLabel="Browse MidWest iCrate dog crates on Amazon →"
             />
 
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/impact+high+anxiety+dog+crate?s=reviews-best-dog-crates", "/go/amazon-brand/petmate+sky+kennel?s=reviews-best-dog-crates", "/go/chewy-brand/frisco+furniture+style+dog+crate?s=reviews-best-dog-crates"]} />
             <ReviewCard
               id="midwest"
               badge="Best Wire Crate"
@@ -253,7 +255,7 @@ export default function BestDogCratesPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which crate fits which job</h2>
               <FAQAccordion items={[
                 {

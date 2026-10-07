@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -26,6 +27,7 @@ export default function BestDentalChewsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -65,7 +67,7 @@ export default function BestDentalChewsPage() {
               resourceHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews"
               resourceLabel="Browse Greenies dental chews on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews", "/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"]} />
             <ReviewCard id="greenies" badge="Best Overall" name="Greenies Original Dental Chews" subtitle="VOHC accepted · Commonly recommended · All sizes from teenie to large" winner
               description={<p>Greenies are a commonly recommended dog dental chew in veterinary practice and have earned VOHC acceptance for plaque and tartar reduction. The texture is designed to be abrasive enough to mechanically scrub the tooth surface while being soft enough to bend rather than shatter — which is important for dental safety (very hard chews like antlers, bones, and nylon chews cause tooth fractures). Give one chew daily for best effect. Available in sizes from teenie (5–15 lb dogs) through large (50–100 lb dogs). Count the calories — each Greenie is 25–90 calories depending on size, which must be accounted for in daily intake for weight management.</p>}
               specs={[{ label: 'VOHC accepted', value: 'Yes — plaque AND tartar', highlight: 'good' }, { label: 'Sizes', value: 'Teenie through Large', highlight: 'good' }, { label: 'Texture', value: 'Pliable — tooth fracture safe', highlight: 'good' }, { label: 'Calories', value: '25–90 per chew (size dependent)' }]}
@@ -121,7 +123,7 @@ export default function BestDentalChewsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which chew fits which dog</h2>
               <FAQAccordion items={[
                 {

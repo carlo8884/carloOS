@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Beds 2026 — Orthopedic, Washable | Dog.com', description: 'Best dog beds ranked. Big Barker for large breed orthopedic support, Casper for medium breeds, and Furhaven for budget value. Machine washable options included.', path: '/reviews/best-dog-beds', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Beds 2026', description: 'Orthopedic, washable, and crate dog beds ranked.', url: 'https://dog.com/reviews/best-dog-beds', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -31,6 +32,7 @@ export default function BestDogBedsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Beds 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds' label='Check price of the Big Barker orthopedic bed on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -70,7 +72,7 @@ export default function BestDogBedsPage() {
               resourceHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds"
               resourceLabel="Browse Big Barker orthopedic dog beds on Amazon →"
             />
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-best-dog-beds", "/go/chewy-brand/casper+dog+bed?s=reviews-best-dog-beds"]} />
             <ReviewCard id="big-barker" badge="Best Orthopedic" name='Big Barker 7" Orthopedic Dog Bed' subtitle="Clinical trial data · 7-inch American foam · 10-year no-flatten warranty" winner
               description={<p>Big Barker is among the few dog beds with published clinical research behind it. A 2018 manufacturer-funded study in the American Journal of Veterinary Research reported that large dogs with arthritis sleeping on Big Barker beds showed reductions in pain, stiffness, and lameness compared to dogs sleeping on standard beds. The 7-inch foam is American-manufactured and comes with a 10-year warranty against flattening — a meaningful commitment given most dog beds flatten within months. Built specifically for large and giant breeds (65 lbs+). The price ($279–399 depending on size) is substantial, but the clinical evidence and durability justify it for arthritic large breed dogs.</p>}
               specs={[{ label: 'Foam depth', value: '7 inches — therapeutic grade', highlight: 'good' }, { label: 'Clinical evidence', value: 'Published AJVR study', highlight: 'good' }, { label: 'Warranty', value: '10 years no-flatten', highlight: 'good' }, { label: 'Best for', value: 'Large/giant breeds, arthritis' }]}
@@ -126,7 +128,7 @@ export default function BestDogBedsPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which bed fits which dog</h2>
               <FAQAccordion items={[
                 {

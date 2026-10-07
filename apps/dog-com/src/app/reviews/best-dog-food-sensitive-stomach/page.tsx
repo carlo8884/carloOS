@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026 — Ranked | Dog.com', description: 'Best dog foods for sensitive stomachs — Purina Pro Plan Sensitive Skin & Stomach, Hill\'s Science Diet Sensitive Stomach, and Royal Canin Digestive Care ranked.', path: '/reviews/best-dog-food-sensitive-stomach', type: 'article' })
 const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Sensitive Stomach 2026', description: 'Sensitive stomach dog foods — digestibility, WSAVA compliance, and ingredient quality ranked.', url: 'https://dog.com/reviews/best-dog-food-sensitive-stomach', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
@@ -24,6 +25,7 @@ export default function SensitiveStomachFoodPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dog Food for Sensitive Stomach 2026</h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach' label='Check price of Purina Pro Plan Sensitive Skin & Stomach on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -57,7 +59,7 @@ export default function SensitiveStomachFoodPage() {
               <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-2">When to See a Vet First</div>
               <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Recurring vomiting, chronic diarrhea, blood in stool, significant weight loss, or GI symptoms that have not improved after a proper 8-12 week dietary trial require veterinary workup — not just food switching. A dietary change without diagnosis is guessing. Your vet can determine if the issue is diet, IBD, food allergy, parasites, or another condition requiring specific treatment.</p>
             </div>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href="/go/chewy-brand/purina+pro+plan+sensitive+skin+stomach?s=reviews-best-dog-food-sensitive-stomach" />
             <ReviewCard id="purina" badge="Best Overall" name="Purina Pro Plan Sensitive Skin & Stomach" subtitle="Salmon & rice · No corn/wheat/soy · Live probiotics · WSAVA top tier" winner
               description={<p>Purina Pro Plan Sensitive Skin & Stomach (salmon and rice formula) is the standard veterinary recommendation for dogs with GI sensitivity and the most consistently recommended sensitive stomach food in general practice. The formula uses salmon as the single animal protein, rice as the primary carbohydrate, and contains no corn, wheat, or soy — common dietary components that some dogs with GI sensitivity react to. The inclusion of live probiotics (Bacillus coagulans) supports digestive health. High digestibility coefficients across all nutrients. WSAVA top-tier compliance with full veterinary nutritionist oversight and feeding trial data. Available in multiple sizes and a cat version for multi-pet households.</p>}
               specs={[{ label: 'WSAVA', value: 'Top tier', highlight: 'good' }, { label: 'Protein', value: 'Salmon — single animal protein', highlight: 'good' }, { label: 'Probiotic', value: 'Live B. coagulans', highlight: 'good' }, { label: 'Excludes', value: 'Corn, wheat, soy' }]}
@@ -95,7 +97,7 @@ export default function SensitiveStomachFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which sensitive-stomach food is on the card</h2>
               <FAQAccordion items={[
                 {

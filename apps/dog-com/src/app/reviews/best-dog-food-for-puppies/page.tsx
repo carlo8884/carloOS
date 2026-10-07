@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, AffiliateDisclosure, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -51,6 +52,7 @@ export default function BestPuppyFoodPage() {
         </h1>
         <PriceAsOf date="2026-10-05" tone="dark" />
         <PrimaryHop href='/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies' label='Check price of Royal Canin Large Breed Puppy on Amazon' />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies" />
         <EmailCapture
           variant="inline"
           siteId="dog-com"
@@ -98,7 +100,7 @@ export default function BestPuppyFoodPage() {
               resourceLabel="Browse Royal Canin large-breed puppy food on Amazon →"
             />
 
-            <AffiliateDisclosure variant="inline" siteId="dog-com" />
+            <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/royal+canin+large+breed+puppy?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/purina+pro+plan+puppy+large+breed?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/hills+science+diet+puppy+small+paws?s=reviews-best-dog-food-for-puppies", "/go/chewy-brand/iams+proactive+health+puppy+large+breed?s=reviews-best-dog-food-for-puppies"]} />
             <ReviewCard
               id="royal-canin"
               badge="Best Large Breed"
@@ -235,7 +237,7 @@ export default function BestPuppyFoodPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which puppy food fits</h2>
               <FAQAccordion items={[
                 {
