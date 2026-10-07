@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -133,7 +134,7 @@ export default function LeasingHorsePage() {
           
 
           <h2 id="kit">Next step</h2>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/equine+supplement?s=ownership-leasing-a-horse" />
           <div id="lease-next" className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Next step

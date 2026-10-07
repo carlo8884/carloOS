@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, CrossSiteHelp, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
@@ -143,7 +144,7 @@ export default function CostOfOwningPage() {
           <p>Educational owner budgeting tools only. They are not a substitute for a veterinarian or accountant.</p>
 
           <h2 id="cost-next">Next step</h2>
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+feed+scoop+scale?s=ownership-cost-of-owning-a-horse" />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
               Next step
