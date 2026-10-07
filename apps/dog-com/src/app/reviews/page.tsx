@@ -38,7 +38,7 @@ const REVIEWS = [
   { title: 'Best Slow Feeder Bowls for Dogs 2026', desc: 'Anti-bloat slow feeder bowls ranked for large breed and deep-chested dogs', href: '/reviews/best-slow-feeder-bowls', group: 'dog-reviews-food' },
   { title: 'Best Dental Chews for Dogs 2026', desc: 'VOHC-accepted dental chews — Greenies, Virbac CET, Whimzees ranked', href: '/reviews/best-dental-chews', group: 'dog-reviews-dental' },
   { title: 'Best Joint Supplements for Dogs 2026', desc: 'Cosequin, Dasuquin, and other glucosamine/chondroitin supplements ranked', href: '/reviews/best-joint-supplements', group: 'dog-reviews-joints' },
-  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3, Whistle Go Explore, and Tractive ranked for accuracy and battery life', href: '/reviews/best-dog-gps-tracker', group: 'dog-reviews-tracking' },
+  { title: 'Best Dog GPS Trackers 2026', desc: 'Fi Series 3+ is the current collar. Tractive is the budget pick. Whistle shut down on August 31, 2025.', href: '/reviews/best-dog-gps-tracker', group: 'dog-reviews-tracking' },
   { title: 'Best Large Breed Dog Food 2026', desc: 'WSAVA-compliant foods for 50+ lb dogs — Royal Canin, Purina Pro Plan ranked', href: '/reviews/best-large-breed-dog-food', group: 'dog-reviews-food' },
   { title: 'Best Senior Dog Food 2026', desc: 'Purina Pro Plan Bright Mind, Hill\'s Science Diet Senior compared', href: '/reviews/best-dog-food-senior', group: 'dog-reviews-food' },
   { title: 'Best Dog Harnesses 2026', desc: 'Front-clip, back-clip, and escape-proof harnesses ranked by type', href: '/reviews/best-dog-harnesses', group: 'dog-reviews-walking' },
