@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -75,7 +76,7 @@ export default function HobVsCanisterGuidePage() {
         <p>The Fluval 307 is the best canister. It lists 303 GPH, tanks up to 70 gallons, and a media volume of 780 grams in the description. It is the pick the review names for 40 to 70 gallons with a high bioload. Startup uses a self-priming button. The review calls the running noise near-silent, quieter than most hang-on-backs. Cleaning stretches to every three to six months because the media takes longer to clog, and cleaning day is more work. The price is $120–160, and the canister needs space in the cabinet. It is the wrong shape of purchase if you have nowhere to hide it.</p>
         <h2>Who should buy which</h2>
         <p>Buy the AquaClear 70 for a community tank in that 30 to 70 gallon band when you want refillable media and a simpler cleaning day. Buy the Fluval 307 when the bioload is high, you want the longer service interval and the quieter box, and you have cabinet space. Buy the Aqueon QuietFlow 30 at $25–40 only for a tank up to 30 gallons where a proprietary cartridge is acceptable. Buy the sponge, not either of these, for shrimp, fry, or a nano under the sizes those listings claim.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide" />
         <p>The link below searches for the AquaClear 70, the hang-on-back from the filter review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/aquaclear+70+filter?s=reviews-hob-vs-canister-guide">Browse AquaClear 70 hang-on-back filters on Amazon →</a></p>
         <EmailCapture

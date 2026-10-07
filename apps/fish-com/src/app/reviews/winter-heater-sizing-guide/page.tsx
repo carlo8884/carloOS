@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -76,7 +77,7 @@ export default function WinterHeaterSizingGuidePage() {
         <p>The FAQ works a 20-gallon tropical tank with a 10°F lift, room 68°F to a 78°F target, and calls that about 60 watts, with a 75 or 100 watt heater as the standard pick. If the room drops to 60°F in winter, the same answer says step up to 150 watts. A colder case is stated separately: a room at 60 to 65°F and tropical fish at 80°F is 5 to 7 watts per gallon, not the 3-watt rule, because that rule assumes about a 10°F lift. Enter the winter low you actually see. This page does not publish a third formula.</p>
         <h2>One heater or two</h2>
         <p>On tanks of 40 gallons or larger, the calculator says to run two smaller heaters rather than one large one. A heater stuck on can push a tank to 90°F and hotter; the page says a single 300 watt heater on a 75-gallon tank does that quickly, while two 150 watt heaters leave more time to notice. A heater that fails off lets the tank fall to room temperature; the second unit, the page says, holds the tank within 2 to 4°F of target. The <Link href="/reviews/best-aquarium-heaters">heater review</Link> adds the same idea in shorter form: buy slightly above the minimum, and split two heaters on a large tank. Pair either setup with a separate thermometer. The review&apos;s reference heater, and the calculator&apos;s reference search, is the Eheim Jager.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide" />
         <p>The link below searches for the Eheim Jager from the heater review. Wattage still comes from the calculator, not from the brand name.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-winter-heater-sizing-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
         <h2>Questions</h2>

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'fish-com',
@@ -87,7 +88,7 @@ export default function DisplayTankHeaterGuidePage() {
         <p>If the tank already has a canister, the Hydor inline heater is the way to keep the heater out of the picture. It heats water on the return hose, at $40–70. The review says temperature spreads from the filter return, and that the heater is incompatible with a hang-on-back or a sponge. Do not buy it for a tank that only has an AquaClear.</p>
         <h2>Who should buy which</h2>
         <p>The review ranks the Cobalt for a display when you want the published ±0.5°F figure without glass. Buy the Eheim if you want that figure plus a recalibration dial and you accept glass. Buy the Hydor only with a canister. The Aqueon Pro, at $18–30, is shatterproof and widely stocked, but the review quotes ±1–1.5°F and says it is the wrong heater for discus, cardinal tetras, and other tight-range animals. A display of those species is not the budget heater.</p>
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-display-tank-heater-guide" />
         <p>The link below searches for the Eheim Jager, the glass heater the review ranks best overall.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/eheim+jager+heater?s=reviews-best-display-tank-heater-guide">Check price of the Eheim Jager heater on Amazon →</a></p>
         <EmailCapture

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, SchemaScript, combineSchemas, ShopCtas, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -232,8 +233,7 @@ export default function FishReviewsPage() {
         {/* AFFILIATE DISCLOSURE */}
         <div className="mt-10 text-center">
           <p className="text-sm text-brand-text-light mb-2">
-            Affiliate disclosure: Fish.com earns commissions on purchases made through our links. Rankings are editorially
-            independent — affiliate relationships have no influence on scores or placement.
+            Rankings are editorially independent — affiliate relationships have no influence on scores or placement.
           </p>
           <Link href="/editorial-standards" className="text-xs font-semibold text-brand-primary no-underline hover:underline">
             Read our editorial standards →
@@ -268,7 +268,7 @@ export default function FishReviewsPage() {
         </h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/eheim+aquarium+heater?s=reviews-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
