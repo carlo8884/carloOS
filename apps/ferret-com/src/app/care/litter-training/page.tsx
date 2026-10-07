@@ -83,7 +83,7 @@ const FAQS = [
   {
     question: 'What kind of litter should I use?',
     answer:
-      "Use paper-pellet litter (Yesterday's News, CareFRESH, or equivalent recycled-paper products) or low-dust wood-pellet (kiln-dried pine pellets sold as horse-stall bedding). Avoid clay, clumping, and cedar-shavings litters. Clay clumps in the ferret's airways and digestive tract if licked off paws; clumping varieties can cause intestinal blockages; cedar contains aromatic oils that are documented respiratory irritants in small mammals.",
+      "Use recycled-paper pellet litter (CareFRESH or an equivalent paper pellet still being made) or low-dust wood-pellet (kiln-dried pine pellets sold as horse-stall bedding). Purina discontinued Yesterday's News on April 20, 2022. Avoid clay, clumping, and cedar-shavings litters. Clay clumps in the ferret's airways and digestive tract if licked off paws; clumping varieties can cause intestinal blockages; cedar contains aromatic oils that are documented respiratory irritants in small mammals.",
   },
   {
     question: 'How long does litter training take?',
@@ -291,11 +291,11 @@ export default function FerretLitterTrainingPage() {
           </p>
           <ul>
             <li>
-              <strong>Recycled paper pellet litter</strong> (Yesterday&apos;s
-              News, CareFRESH original, or equivalent). Low dust, low
-              tracking, no clumping. The default recommendation across
-              exotic-pet veterinary practice. Slightly more expensive than
-              wood pellets per pound but very ferret-tolerant.
+              <strong>Recycled paper pellet litter</strong> (CareFRESH
+              original, or an equivalent paper pellet still being made).
+              Purina discontinued Yesterday&apos;s News on April 20, 2022.
+              Low dust, low tracking, no clumping. Slightly more expensive
+              than wood pellets per pound but very ferret-tolerant.
             </li>
             <li>
               <strong>Kiln-dried softwood pellets</strong> — pine pellets
@@ -554,10 +554,10 @@ export default function FerretLitterTrainingPage() {
           <ReviewCard quietUntilTag
             id="yesterdays-news"
             badge="Substrate Default"
-            name="Yesterday's News Recycled Paper-Pellet Litter"
+            name="Recycled paper-pellet litter"
             subtitle="Low-dust, non-clumping, non-aromatic paper-pellet substrate"
             description={
-              <p>The default substrate recommended across exotic-pet veterinary practice and ferret-keeper communities. Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Slightly more expensive per pound than kiln-dried wood pellets, but ferret tolerance and household odour control are both notably better.</p>
+              <p>Recycled paper pellets do not produce respiratory-irritant dust, do not clump on contact with moisture (no GI obstruction risk if ingested), and are not aromatic (no phenolic concerns). Purina discontinued Yesterday&apos;s News on April 20, 2022. This button opens the existing search for that discontinued name. It is not a current formula. Buy a recycled-paper pellet that is still being made.</p>
             }
             specs={[
               { label: 'Material', value: 'Recycled paper pellet', highlight: 'good' },
@@ -570,7 +570,7 @@ export default function FerretLitterTrainingPage() {
             cons={['Pricier per pound than kiln-dried wood pellet', 'Larger bag is heavy to carry']}
             price="$12–25 / 15-30 lb"
             priceNote="dated 2026-05-31."
-            ctaText="Find Yesterday's News paper-pellet litter on Amazon"
+            ctaText="Open the existing paper-pellet search. Yesterday's News was discontinued in April 2022."
             ctaHref="/go/chewy-brand/yesterdays+news+paper+pellet+litter?s=care-litter-training"
             ctaAffiliateProgram="chewy-brand"
             ctaAffiliateProduct="yesterdays+news+paper+pellet+litter"
