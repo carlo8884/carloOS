@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -166,7 +167,7 @@ export default function RainRotPage() {
             live on tying-up. This page does
             not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/portable+3+sided+horse+run+in+shelter?s=health-rain-rot", "/go/amazon-brand/labeled+stackable+horse+grooming+caddy?s=health-rain-rot", "/go/amazon-brand/large+mesh+horse+blanket+wash+bag?s=health-rain-rot"]} />
 
           {/* Money path — live amazon-brand search hops
               (portable 3 sided horse run in shelter /

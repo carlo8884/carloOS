@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -167,7 +168,7 @@ export default function WestNilePage() {
             hop vaccines, antibiotics, or needles. This
             page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/long+handle+stock+tank+brush?s=health-wnv", "/go/amazon-brand/20+foot+barn+mosquito+netting?s=health-wnv", "/go/amazon-brand/fine+mesh+horse+mosquito+sheet?s=health-wnv"]} />
 
           {/* Money path — live amazon-brand search hops
               (long handle stock tank brush /

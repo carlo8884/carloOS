@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -174,7 +175,7 @@ export default function EMSPage() {
             insulin-test kits sold as treatments. This
             page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/digital+hanging+hay+bale+scale?s=health-ems", "/go/amazon-brand/equine+forage+nsc+hay+test+kit?s=health-ems", "/go/amazon-brand/portable+strip+grazing+step+in+posts?s=health-ems"]} />
 
           {/* Money path — live amazon-brand search hops
               (digital hanging hay bale scale /

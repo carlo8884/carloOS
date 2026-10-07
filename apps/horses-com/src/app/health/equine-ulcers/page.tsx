@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, AffiliateDisclosure, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -305,7 +306,7 @@ export default function EquineUlcersPage() {
 
           <p><strong>Tier 6 — Aloe vera, slippery elm, marshmallow root:</strong> Anecdotal use is common; controlled trials are essentially absent in horses. A controlled trial of aloe vera vs omeprazole (Bush J et al., <em>Equine Veterinary Journal</em>, 2018) found omeprazole significantly more effective. These products may be benign but should not replace evidence-based therapy.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/smartpak/home?s=health-equine-ulcers", "/go/dover/home?s=health-equine-ulcers"]} />
           <div
             style={{
               background: 'var(--brand-surface, #f8f8f8)',

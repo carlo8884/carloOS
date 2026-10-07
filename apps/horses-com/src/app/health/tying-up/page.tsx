@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -173,7 +174,7 @@ export default function TyingUpPage() {
             not a diet or medication prescription. Salt licks already
             live on the feed calculator. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/irish+knit+horse+cooler?s=health-tying-up", "/go/amazon-brand/wool+exercise+quarter+sheet?s=health-tying-up", "/go/amazon-brand/loose+plain+white+salt+horse?s=health-tying-up"]} />
 
           {/* Money path — live amazon-brand search hops
               (irish knit horse cooler /

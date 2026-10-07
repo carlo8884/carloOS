@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -171,7 +172,7 @@ export default function OsteoarthritisPage() {
             injectable joint products. This page does
             not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/tow+behind+arena+drag+harrow?s=health-osteoarthritis", "/go/amazon-brand/cotton+horse+polo+exercise+wraps?s=health-osteoarthritis", "/go/amazon-brand/portable+horse+paddock+panels?s=health-osteoarthritis"]} />
 
           {/* Money path — live amazon-brand search hops
               (tow behind arena drag harrow /

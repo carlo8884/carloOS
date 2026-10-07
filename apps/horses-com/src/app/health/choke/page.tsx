@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -174,7 +175,7 @@ export default function ChokePage() {
             on the beet-pulp page. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/lidded+5+gallon+feed+soaking+pail?s=health-choke", "/go/amazon-brand/large+smooth+feed+tub+rocks?s=health-choke", "/go/amazon-brand/apple+wedger+slicer?s=health-choke"]} />
 
           {/* Money path — live amazon-brand search hops
               (lidded 5-gallon feed-soaking pail /

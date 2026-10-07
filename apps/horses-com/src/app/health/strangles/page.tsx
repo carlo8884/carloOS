@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -178,7 +179,7 @@ export default function StranglesPage() {
             influenza. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/color+coded+flat+back+horse+buckets?s=health-strangles", "/go/amazon-brand/disposable+coverall+suit?s=health-strangles", "/go/amazon-brand/heavy+duty+rubber+boot+dip+tub?s=health-strangles"]} />
 
           {/* Money path — live amazon-brand search hops
               (color-coded flat-back horse buckets /

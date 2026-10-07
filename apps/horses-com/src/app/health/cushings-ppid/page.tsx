@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -200,7 +201,7 @@ export default function PPIDPage() {
             hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/stainless+horse+shedding+blade?s=health-ppid", "/go/amazon-brand/wicking+horse+anti+sweat+sheet?s=health-ppid", "/go/amazon-brand/automatic+horse+waterer?s=health-ppid"]} />
 
           {/* Money path — live amazon-brand search hops
               (stainless horse shedding blade /
