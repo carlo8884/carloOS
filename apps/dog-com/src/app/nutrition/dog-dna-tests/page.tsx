@@ -120,7 +120,7 @@ export default function DogDnaTestsPage() {
         <p>For a broader look at how DNA testing fits into responsible dog ownership, see our <a href="/dna-testing">DNA testing overview</a>.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Test capabilities and database sizes reflect publicly reported information as of June 2026 and may change; figures are described qualitatively where exact numbers vary by provider and tier. Always consult your veterinarian before acting on any genetic-screening result.</em></p>
 
