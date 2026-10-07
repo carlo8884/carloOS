@@ -6,11 +6,11 @@
  * src/data/insurance-carriers.ts — do not invent new carriers here.
  *
  * Routing logic (Architect S6 — monetization):
- *   - High orthopedic risk → Pumpkin (14-day ortho wait) or Trupanion (per-condition deductible)
+ *   - High orthopedic risk → Pumpkin (14 days or less) or Trupanion (per-condition deductible)
  *   - High dental risk (toy / brachy) → Fetch by The Dodo
  *   - High chronic/cancer risk → Trupanion (unlimited, per-condition deductible)
  *   - Low risk + healthy puppy → Lemonade
- *   - Older / adopted dog with past condition → ManyPets (curable PE coverage)
+ *   - Older / adopted dog with a past condition: ManyPets is not accepting new US policies
  *
  * sampleMonthlyPremium is the puppy/young-adult band. Senior premiums are
  * typically 2–3x. Numbers are based on published rate filings and consumer
@@ -191,7 +191,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Aussies face episodic conditions (epilepsy, MDR1 drug reactions) that need diagnostics and prescription coverage rather than catastrophic payouts. Embrace covers prescription medication on the base plan and the diminishing deductible rewards the breed\'s typically clean middle years.',
+      'Aussies face episodic conditions (epilepsy, MDR1 drug reactions) that need diagnostics and prescription coverage rather than catastrophic payouts. Embrace covers prescription medication on the base plan. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['pumpkin-pet', 'healthy-paws'],
     sampleMonthlyPremium: [35, 70],
     keyCoverageNeeds: [
@@ -220,13 +220,13 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Poodles tend toward chronic endocrine disease (Addison\'s, Cushing\'s) requiring lifelong meds and lab monitoring. Embrace covers prescription drugs, the diminishing deductible rewards the breed\'s long lifespan, and exam fees are included for the regular bloodwork these conditions require.',
+      'Poodles tend toward chronic endocrine disease (Addison\'s, Cushing\'s) requiring lifelong meds and lab monitoring. Embrace covers prescription drugs. Exam-fee coverage is optional, and the deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['trupanion', 'healthy-paws'],
     sampleMonthlyPremium: [35, 75],
     keyCoverageNeeds: [
       'Prescription medication coverage (lifelong endocrine meds)',
       'Coverage for routine bloodwork on chronic conditions',
-      'Exam fees included',
+      'Exam-fee coverage is optional',
       'Dermatology coverage (sebaceous adenitis)',
     ],
   },
@@ -542,7 +542,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Huskies are generally healthy — the dominant claim categories are ophthalmology and orthopedic. Embrace\'s diminishing deductible rewards the breed\'s typically long claim-free middle years, and ophthalmology specialist visits are covered on the base plan.',
+      'Huskies are generally healthy — the dominant claim categories are ophthalmology and orthopedic. Ophthalmology specialist visits are covered on the Embrace base plan. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['lemonade-pet', 'pumpkin-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -629,7 +629,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'healthy-paws',
     recommendedReason:
-      'Vizslas are generally healthy with an above-average cancer rate as the main catastrophic risk. Healthy Paws\' unlimited payout handles worst-case oncology, while the annual deductible rewards the typical year with only minor claims.',
+      'Vizslas are generally healthy with an above-average cancer rate as the main catastrophic risk. Healthy Paws offers an annual-limit choice that includes unlimited, which is the fit for worst-case oncology, while the annual deductible fits a typical year with only minor claims.',
     alternateCarriers: ['embrace', 'lemonade-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -688,7 +688,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'low',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Collies are generally healthy with concentrated risk in hereditary eye disease and MDR1 drug reactions — both diagnostic-heavy rather than payout-heavy. Embrace covers exam fees, prescription medication, and hereditary conditions; the diminishing deductible suits the breed\'s long healthy stretch.',
+      'Collies are generally healthy with concentrated risk in hereditary eye disease and MDR1 drug reactions — both diagnostic-heavy rather than payout-heavy. Embrace covers prescription medication and hereditary conditions. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['pumpkin-pet', 'lemonade-pet'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
@@ -805,7 +805,7 @@ export const INSURANCE_BREEDS: BreedInsuranceProfile[] = [
     dentalRisk: 'moderate',
     recommendedCarrier: 'embrace',
     recommendedReason:
-      'Cockers\' top claim category is chronic recurrent otitis — frequent vet visits, repeated meds, occasional surgery. Embrace covers exam fees and prescription medication on the base plan; the diminishing deductible rewards owners who manage ears proactively.',
+      'Cockers\' top claim category is chronic recurrent otitis — frequent vet visits, repeated meds, occasional surgery. Embrace covers prescription medication on the base plan. Exam-fee coverage is optional. The deductible reward: see the carrier\'s current terms.',
     alternateCarriers: ['pumpkin-pet', 'fetch-by-the-dodo'],
     sampleMonthlyPremium: [30, 65],
     keyCoverageNeeds: [
