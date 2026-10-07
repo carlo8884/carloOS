@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,7 +135,7 @@ export default function GroomingPage() {
           <h2 id="kit-picks">Grooming Kit Picks</h2>
           <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+curry+comb?s=care-grooming", "/go/amazon-brand/horse+dandy+brush?s=care-grooming", "/go/amazon-brand/horse+body+brush?s=care-grooming", "/go/amazon-brand/horse+mane+tail+brush?s=care-grooming", "/go/amazon-brand/horse+hoof+pick?s=care-grooming", "/go/smartpak/rubber-curry-comb?s=care-grooming", "/go/dover/dandy-body-brush-set?s=care-grooming", "/go/smartpak/hoof-pick-with-brush?s=care-grooming"]} />
 
           {/* Money path — live amazon-brand search hops (grooming kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

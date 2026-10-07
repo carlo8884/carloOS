@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -141,7 +142,7 @@ export default function DewormingProgramPage() {
           <h2 id="kit">FEC sampling kit</h2>
           <p>Everyday physical supplies that match the fecal-egg-count and pasture-cleanup copy on this page — an equine fecal-sample container so a labeled fresh pile reaches the clinic, a pasture manure rake so piles come off the grass between samples, and a stable muck cart so those piles leave the paddock. These are household barn tools, not treatments. They do not deworm a horse, they do not replace a veterinarian or a fecal egg count, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+fecal+sample+container?s=care-deworming-program", "/go/amazon-brand/pasture+manure+rake?s=care-deworming-program", "/go/amazon-brand/stable+muck+cart?s=care-deworming-program"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine fecal-sample container /

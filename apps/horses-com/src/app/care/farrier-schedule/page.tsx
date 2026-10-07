@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -131,7 +132,7 @@ export default function FarrierSchedulePage() {
           <h2 id="kit">Farrier-visit kit</h2>
           <p>Everyday physical supplies that match the booking and work-area copy on this page — an equine farrier log book so the standing appointment and last interval stay written down, a portable farrier hoof stand so a lifted foot stays supported while the farrier works, and a cordless barn flood light so the aisle is bright enough to see clenches, flaring, and dry feet. These are household barn tools, not treatments. They do not trim or shoe a horse, they do not replace a farrier or veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+farrier+log+book?s=care-farrier-schedule", "/go/amazon-brand/portable+farrier+hoof+stand?s=care-farrier-schedule", "/go/amazon-brand/cordless+barn+flood+light?s=care-farrier-schedule"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine farrier log book /

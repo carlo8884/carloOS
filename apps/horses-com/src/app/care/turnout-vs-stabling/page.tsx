@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -137,7 +138,7 @@ export default function TurnoutStablingPage() {
           <h2 id="kit">Stall-offset kit</h2>
           <p>Everyday physical supplies that match the near-continuous-forage, companionship, and low-dust-bedding copy on this page — an equine slow-feeder hay box so a stabled horse still trickle-feeds instead of standing empty between flakes, a nylon equine stall guard so the horse can see and ideally touch neighbors through an open door, and hemp equine stall bedding so the stall bed stays low-dust instead of aggravating airways. These are household barn tools, not treatments. They do not diagnose or treat colic, ulcers, heaves, or stereotypies, they do not replace a veterinarian, and they are not a ranked product list. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+slow+feeder+hay+box?s=care-turnout-vs-stabling", "/go/amazon-brand/nylon+equine+stall+guard?s=care-turnout-vs-stabling", "/go/amazon-brand/hemp+equine+stall+bedding?s=care-turnout-vs-stabling"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine slow-feeder hay box /

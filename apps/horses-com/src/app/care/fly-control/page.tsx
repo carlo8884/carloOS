@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -133,7 +134,7 @@ export default function FlyControlPage() {
           <h2 id="kit">Fly-Control Kit</h2>
           <p>Everyday physical supplies that match the barrier, repellent, and environmental-management copy above — a well-fitted fly mask for the eyes and face, a breathable fly sheet, fly boots for the legs, a topical fly spray rated for horses, and fly traps placed away from the horses. These are not treatments for sweet itch, summer sores, eye infections, or bots; persistent rubbing, wounds, or eye discharge belongs with your veterinarian, not a mask or a spray. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+fly+mask?s=care-fly-control", "/go/amazon-brand/horse+fly+sheet?s=care-fly-control", "/go/amazon-brand/horse+fly+boots?s=care-fly-control", "/go/amazon-brand/horse+fly+spray?s=care-fly-control", "/go/amazon-brand/horse+fly+trap?s=care-fly-control"]} />
 
           {/* Money path — live amazon-brand search hops (fly-control kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

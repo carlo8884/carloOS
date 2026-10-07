@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -143,7 +144,7 @@ export default function SummerHeatCarePage() {
           <h2 id="kit">Summer-Heat Kit</h2>
           <p>Everyday physical supplies that match the cooling and shade copy above — a sweat scraper so cold water can be applied and scraped off repeatedly after work, plus a shade cloth when a run-in or paddock needs shade and tree cover is thin. These are not treatments for heat stroke or anhidrosis; a distressed horse, a very high temperature, a horse that has stopped sweating, or one that becomes weak or disoriented in the heat needs immediate aggressive cooling and a veterinarian. Fans, stall fans, electrolytes, digital thermometers, cool-water towels, fleece coolers, grazing muzzles, soil-test kits, hoof boots, and slow feeders stay off this kit — those already ship on other pages. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+sweat+scraper?s=care-summer-heat-care", "/go/amazon-brand/horse+shade+cloth?s=care-summer-heat-care"]} />
 
           {/* Money path — live amazon-brand search hops (summer-heat kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

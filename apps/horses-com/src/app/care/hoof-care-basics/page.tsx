@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,7 +131,7 @@ export default function HoofCareBasicsPage() {
           <h2 id="kit">Daily Hoof-Care Kit</h2>
           <p>Everyday physical supplies that match the daily-care and shoeing copy above — a simple hoof pick, ideally one with a stiff brush to sweep packed debris from the sole, and hoof boots when the farrier conversation lands on boots instead of shoes for hard or abrasive work. These are not treatments for thrush, abscess, or laminitis; heat, a foul smell, a bounding digital pulse, or sudden lameness belongs with your veterinarian or farrier, not a pick or a boot. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hoof+pick?s=care-hoof-care-basics", "/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-care-basics", "/go/amazon-brand/horse+hoof+boots?s=care-hoof-care-basics"]} />
 
           {/* Money path — live amazon-brand search hops (daily hoof-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
