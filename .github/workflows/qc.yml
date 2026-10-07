@@ -209,6 +209,18 @@ jobs:
       - name: Run price-as-of
         run: node scripts/ci/price-as-of.mjs
 
+  price-stamp-age:
+    name: Dollar figures are stamped within 120 days
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run price-stamp-age
+        run: node scripts/ci/price-stamp-age.mjs && node --test scripts/ci/price-stamp-age.test.mjs
+
   stale-price-report:
     name: Prices older than 45 days (report-only)
     runs-on: ubuntu-latest

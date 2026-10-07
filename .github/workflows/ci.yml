@@ -36,6 +36,8 @@ jobs:
         run: node scripts/ci/chewy-id-guard.mjs && node --test scripts/ci/chewy-id-guard.test.mjs
       - name: Insurance registry parity
         run: node scripts/ci/insurance-registry-parity.mjs && node --test scripts/ci/insurance-registry-parity.test.mjs
+      - name: Price stamp age
+        run: node scripts/ci/price-stamp-age.mjs && node --test scripts/ci/price-stamp-age.test.mjs
       - uses: actions/cache@v4
         with:
           path: .turbo
