@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Leptospirosis in Dogs — Zoonotic, Vaccine Recommended | Vets.co', description: 'Leptospirosis is a zoonotic bacterial disease from wildlife urine in water. Causes acute kidney and liver failure.', path: '/health/leptospirosis', type: 'article' })
@@ -88,7 +89,7 @@ export default function LeptospirosisPage() {
             hyperthyroidism-cats. This
             page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/24+ounce+stainless+hiking+dog+bottle?s=health-leptospirosis", "/go/amazon-brand/powder+free+nitrile+exam+gloves?s=health-leptospirosis", "/go/amazon-brand/32+gallon+locking+animal+proof+trash+can?s=health-leptospirosis"]} />
 
           {/* Money path — live amazon-brand search hops
               (24-ounce stainless hiking dog bottle /

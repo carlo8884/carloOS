@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Ear Infections in Dogs — Causes, Signs, Treatment | Vets.co", description: "Recurrent ear infections in dogs usually point to an underlying cause like allergies. Learn the signs, why infections recur, and how to manage them.", path: '/health/ear-infections-dogs', type: 'article' })
@@ -90,7 +91,7 @@ export default function EarInfectionsDogsPage() {
             page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/dog+ear+cleaner+solution?s=health-ear-infections-dogs", "/go/amazon-brand/cotton+balls+for+dog+ears?s=health-ear-infections-dogs", "/go/amazon-brand/dog+ear+drying+powder?s=health-ear-infections-dogs"]} />
 
           {/* Money path — live amazon-brand search hops (dog ear-cleaner
               solution / cotton balls for dog ears / dog ear-drying

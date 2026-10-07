@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs — Signs, Culture | Vets.co', description: 'UTIs in dogs cause straining, blood in urine, and accidents. Culture and sensitivity before antibiotics prevents resistance.', path: '/health/urinary-tract-infection', type: 'article' })
@@ -75,7 +76,7 @@ export default function UTIPage() {
             claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/stainless+steel+dog+fountain?s=health-urinary-tract-infection", "/go/amazon-brand/washable+dog+pee+pads?s=health-urinary-tract-infection", "/go/amazon-brand/weighted+ceramic+dog+water+bowl?s=health-urinary-tract-infection"]} />
 
           {/* Money path — live amazon-brand search hops (stainless-steel
               dog fountain / washable pee pads / weighted ceramic bowl).

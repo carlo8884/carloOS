@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -85,7 +86,7 @@ export default function PainManagementPage() {
             steps, and veterinary floor scales already
             live on pain-signs-dogs. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/elevated+mesh+dog+cot?s=health-pain-management-dogs", "/go/amazon-brand/clear+adhesive+non+slip+stair+treads?s=health-pain-management-dogs", "/go/amazon-brand/hardcover+weekly+appointment+planner?s=health-pain-management-dogs"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

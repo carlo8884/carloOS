@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dehydration in Dogs — Signs, Skin Turgor Test | Vets.co', description: 'How to assess dehydration in dogs using the skin turgor test and gum assessment. When dehydration is mild (oral fluids OK) vs severe (IV fluids needed).', path: '/health/dehydration-in-dogs', type: 'article' })
@@ -87,7 +88,7 @@ export default function DehydrationPage() {
             hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/unflavored+pediatric+electrolyte?s=health-dehydration-in-dogs", "/go/amazon-brand/kitchen+liquid+measuring+pitcher?s=health-dehydration-in-dogs", "/go/amazon-brand/shallow+lipped+dog+saucer?s=health-dehydration-in-dogs"]} />
 
           {/* Money path — live amazon-brand search hops
               (unflavored pediatric electrolyte / kitchen

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -68,7 +69,7 @@ export default function HeatStrokePage() {
           <h2 id="kit">Cool-water first-aid kit</h2>
           <p>Everyday physical supplies that match the first-aid cooling copy above — cool-water towels to wet and apply to the neck, armpits, and groin, plus a digital thermometer so you can stop active cooling at 103.5°F. Ice packs stay off this kit: the copy above says they cause vasoconstriction and can slow cooling. IV fluids, clotting-disorder treatment, and other veterinary interventions stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cool+water+towels?s=health-heat-stroke-dogs", "/go/amazon-brand/digital+pet+thermometer?s=health-heat-stroke-dogs"]} />
 
           {/* Money path — live amazon-brand search hops (cool-water
               towels / digital thermometer). ShopCtas hides empty Chewy;

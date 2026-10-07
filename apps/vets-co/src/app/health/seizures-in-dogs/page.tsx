@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Seizures in Dogs — What to Do, Causes, Epilepsy | Vets.co", description: "A seizure is frightening but rarely an immediate emergency unless prolonged. Learn what to do during a seizure, common causes, and how epilepsy is managed.", path: '/health/seizures-in-dogs', type: 'article' })
@@ -77,7 +78,7 @@ export default function SeizuresPage() {
           <h2 id="kit">Seizure observation kit</h2>
           <p>These are household tools, not treatments. They do not treat epilepsy, they do not replace a veterinarian or anti-seizure medication, and they are not a ranked product list. This page does not hop medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+handheld+stopwatch?s=health-seizures-in-dogs", "/go/amazon-brand/foam+table+edge+bumper?s=health-seizures-in-dogs"]} />
 
           {/* Money path — live amazon-brand search hops
               (digital handheld stopwatch / waterproof
@@ -121,9 +122,7 @@ export default function SeizuresPage() {
               kitchen-timer / harness hops, they are not first-aid-kit,
               thermometer, penlight, stretcher, or
               medical-alert-tag hops, and they do not
-              replace a veterinarian. Vets.co earns a
-              commission on qualifying purchases at no
-              extra cost to you.
+              replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

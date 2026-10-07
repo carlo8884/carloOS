@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Bloat (GDV) in Dogs — Emergency Signs & Prevention | Vets.co", description: "Gastric dilatation-volvulus (bloat) is a sudden, life-threatening emergency in deep-chested dogs. Know the warning signs and act within minutes.", path: '/health/bloat-gdv-dogs', type: 'article' })
@@ -105,7 +106,7 @@ export default function BloatGDVPage() {
             other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/automatic+timed+dog+feeder?s=health-bloat-gdv-dogs", "/go/amazon-brand/maze+slow+feed+dog+bowl?s=health-bloat-gdv-dogs", "/go/amazon-brand/indoor+dog+house+line?s=health-bloat-gdv-dogs"]} />
 
           {/* Money path — live amazon-brand search hops
               (timed automatic dog feeder / maze

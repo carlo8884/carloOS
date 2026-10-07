@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -87,7 +88,7 @@ export default function AllergicReactionsPage() {
             not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/oatmeal+dog+shampoo?s=health-allergic-reactions-dogs", "/go/amazon-brand/dog+paw+cleaner+wipes?s=health-allergic-reactions-dogs", "/go/amazon-brand/soft+recovery+collar+dog?s=health-allergic-reactions-dogs"]} />
 
           {/* Money path — live amazon-brand search hops (oatmeal
               dog shampoo / dog paw cleaner wipes / soft recovery
