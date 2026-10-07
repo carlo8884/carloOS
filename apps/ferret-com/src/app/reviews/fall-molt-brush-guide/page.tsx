@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -76,7 +77,7 @@ export default function FallMoltBrushGuidePage() {
         <p>The <Link href="/care/seasonal-shedding">seasonal shedding page</Link> says the job during a shed is to lift loose hair before the ferret swallows it. A soft slicker brush or a fine-toothed metal comb, in short sessions of a minute or two, is the method it names. Daily brushing during the peak captures more hair. Ferrets groom themselves and, unlike cats, do not reliably vomit hairballs. The page says a heavy shed raises the swallowed-hair load, and a hair mass can contribute to a gastrointestinal obstruction. A vet-recommended hairball remedy is the other step it names. This guide does not name a remedy brand.</p>
         <h2>Baths stay limited</h2>
         <p>Both pages allow one warm-water bath to loosen a heavy shed and then say not to repeat it. Frequent bathing strips skin oils and can make the coat greasier. Most of the work is the brush. Shampoo stays on the grooming page. The comb and the lint roller stay on the shedding page. The link on this page is the soft slicker search from that page.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide" />
         <p>The link below searches for a soft slicker brush.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/soft+slicker+brush+small+animal?s=reviews-fall-molt-brush-guide">Browse soft slicker brushes for small animals on Amazon →</a></p>
         <h2>Questions</h2>

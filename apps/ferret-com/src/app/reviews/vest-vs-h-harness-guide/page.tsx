@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -75,7 +76,7 @@ export default function VestVsHHarnessGuidePage() {
         <h2>The bundle is a third thing</h2>
         <p>The mesh figure-H with a leash, is the entry bundle. Mesh helps in the heat, and the leash is in the package. Adjustment points are fewer and the buckles are lighter. The review calls it a starter, with an upgrade to the vest if the ferret is a true escape artist. It is not the vest, and it is not the fully adjustable H.</p>
         <p>Buy the vest if the ferret has already backed out of a harness or this is the first walk and you want the more secure layout. Buy the H-style if you will measure, test the fit indoors, and recheck it. Buy the mesh bundle only as a warm-weather starter you are willing to replace.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide" />
         <p>The link below searches for the vest harness from the harness review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+vest+harness+jacket+escape+proof?s=reviews-vest-vs-h-harness-guide">Find an escape-proof jacket ferret harness on Amazon →</a></p>
         <EmailCapture

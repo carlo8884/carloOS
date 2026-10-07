@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -74,7 +75,7 @@ export default function FerretNationVsPrevueGuidePage() {
         <p>The <Link href="/tools/cage-size-calculator">cage-size calculator</Link> is the step for floor space. Use that calculator for the length before you order. The Kaytee multi-level cage is a third option, price tier $, for one ferret with daily out-time.</p>
         <h2>Who should buy which cage</h2>
         <p>Buy the Ferret Nation double when one to four ferrets will live in it long term and you can accept the weight and the $$$ tier. Buy the Prevue when the household is one or two ferrets and the double unit is too big or too expensive. Cover wire shelves and ramps on either cage, and check the spacing on the exact model.</p>
-        <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+        <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide" />
         <p>The link below searches for the Ferret Nation double unit, the same search as on the cage review.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=reviews-ferret-nation-vs-prevue-guide">Browse Ferret Nation / Critter Nation double units on Amazon →</a></p>
         <h2>Questions</h2>
