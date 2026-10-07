@@ -345,6 +345,8 @@ export default function FerretAgeCalculatorPage() {
               { label: 'Readiness Quiz', href: '/tools/readiness-quiz', note: 'Score household fit, then pack the day-one kit' },
               { label: 'Is This a Ferret Emergency?', href: '/tools/is-this-a-ferret-emergency', note: 'Conservative sign-list urgency read, not a diagnosis' },
               { label: 'Ferret Grimace Scale', href: '/tools/ferret-grimace-scale', note: 'Facial pain-watch for seniors and sore ferrets — not a diagnosis' },
+              { label: 'Insulinoma in Ferrets', href: '/health/insulinoma', note: 'The middle-age disease this stage chart is meant to catch earlier' },
+              { label: 'The Cost of Owning a Ferret', href: '/ownership/cost-of-owning-a-ferret', note: 'Startup and the 6–10 year budget behind the age' },
               { label: 'Ferret Lifespan', href: '/colors/ferret-lifespan', note: 'Typical 5–8 year life and the stage bands' },
               { label: 'Aging Ferret Care', href: '/health/aging-ferret-care', note: 'Senior monitoring from around 4–5+' },
               { label: 'Senior Ferret Nutrition', href: '/diet/senior-ferret-nutrition', note: 'Protein stays high; eating gets harder' },
