@@ -181,7 +181,7 @@ export default function HomePage() {
                 <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                   <StockImage manifestKey="horses-com:hero" fallbackKey="horses-com:hero" alt="Horses running through a grassy field" aspect="4:3" variant="inline" subtleCredit />
                 </span>
-                <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>Why this site</span>
+                <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Why this site</span>
               </Link>
             </div>
             <Link href="/editorial-standards" className="group flex items-center gap-3 overflow-hidden rounded-md no-underline" style={{ background: 'var(--brand-white)', border: '1px solid var(--brand-border)' }}>
@@ -229,7 +229,7 @@ export default function HomePage() {
                   <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                     <StockImage manifestKey="horses-com:category-breeds" fallbackKey="horses-com:hero" alt="A horse standing in profile, showing conformation" aspect="4:3" variant="inline" subtleCredit />
                   </span>
-                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>By Category</span>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>By Category</span>
                 </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where to start</h2>
@@ -277,7 +277,7 @@ export default function HomePage() {
                   <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                     <StockImage manifestKey="horses-com:featured-quarter-horse" fallbackKey="horses-com:hero" alt="An American Quarter Horse and rider schooling" aspect="4:3" variant="inline" subtleCredit />
                   </span>
-                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>Popular on Horses.com</span>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Popular on Horses.com</span>
                 </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Where owners start most</h2>
@@ -391,7 +391,7 @@ export default function HomePage() {
                   <span className={`relative h-9 w-14 shrink-0 overflow-hidden rounded-md ${FILL_IMAGE}`}>
                     <StockImage manifestKey="horses-com:category-care" fallbackKey="horses-com:hero" alt="A horse receiving routine care" aspect="4:3" variant="inline" subtleCredit />
                   </span>
-                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: 'var(--brand-accent)' }}>Cornerstone Articles</span>
+                  <span className="text-2xs font-bold uppercase tracking-eyebrow group-hover:underline" style={{ color: '#7a5520' }}>Cornerstone Articles</span>
                 </Link>
               </div>
               <h2 className="font-display font-bold tracking-tight text-3xl sm:text-4xl text-brand-text-dark">Reference, maintained</h2>
