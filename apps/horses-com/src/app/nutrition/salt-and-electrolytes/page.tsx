@@ -62,6 +62,14 @@ export default function SaltElectrolytesPage() {
           { title: 'Summer Heat Care', href: '/care/summer-heat-care' },
           { title: 'Feeding the Performance Horse', href: '/nutrition/feeding-the-performance-horse' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt">Browse a plain white horse salt block on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Salt and Electrolytes for Horses",
           subtitle:
@@ -157,7 +165,6 @@ export default function SaltElectrolytesPage() {
             calculator). This page does not
             claim hands-on testing. </p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/plain+white+horse+salt+block?s=nutrition-salt", "/go/amazon-brand/salt+first+horse+electrolyte+powder?s=nutrition-salt", "/go/amazon-brand/wide+mouth+horse+water+bucket?s=nutrition-salt"]} />
 
           {/* Money path — live amazon-brand search hops
               (plain white horse salt block /
@@ -211,10 +218,9 @@ export default function SaltElectrolytesPage() {
           <h2 id="picks">Salt and Electrolyte Picks</h2>
           <p>A few widely-stocked options covering year-round baseline salt and sweat-replacement electrolytes. Always provide free-choice water alongside any electrolyte, and favor products where salt — not sugar — is the leading ingredient. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/smartpak/plain-loose-salt?s=nutrition-salt-and-electrolytes", "/go/ridingwarehouse/sweat-replacement-electrolyte?s=nutrition-salt-and-electrolytes"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="plain-salt-block"
             badge="Year-Round Baseline"
             name="Plain White Salt Block / Loose Salt"
@@ -239,7 +245,7 @@ export default function SaltElectrolytesPage() {
             ctaAffiliateProduct="plain-loose-salt"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="sweat-electrolyte"
             badge="Sweat Replacement"
             name="Salt-First Sweat-Replacement Electrolyte"

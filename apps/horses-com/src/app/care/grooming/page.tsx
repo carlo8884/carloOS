@@ -61,6 +61,14 @@ export default function GroomingPage() {
           { title: 'Body Clipping', href: '/care/body-clipping' },
           { title: 'Rain Rot', href: '/health/rain-rot' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+curry+comb?s=care-grooming" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/horse+curry+comb?s=care-grooming">Browse a horse curry comb on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Grooming a Horse",
           subtitle:
@@ -135,7 +143,6 @@ export default function GroomingPage() {
           <h2 id="kit-picks">Grooming Kit Picks</h2>
           <p>A few widely-stocked, non-medical grooming tools that cover the core kit described above. These are everyday physical supplies — brushes, combs, and a hoof pick — not treatments for a skin condition; any rash, scabbing, or persistent irritation belongs with your veterinarian, not a brush. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+curry+comb?s=care-grooming", "/go/amazon-brand/horse+dandy+brush?s=care-grooming", "/go/amazon-brand/horse+body+brush?s=care-grooming", "/go/amazon-brand/horse+mane+tail+brush?s=care-grooming", "/go/amazon-brand/horse+hoof+pick?s=care-grooming", "/go/smartpak/rubber-curry-comb?s=care-grooming", "/go/dover/dandy-body-brush-set?s=care-grooming", "/go/smartpak/hoof-pick-with-brush?s=care-grooming"]} />
 
           {/* Money path — live amazon-brand search hops (grooming kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -171,7 +178,7 @@ export default function GroomingPage() {
           </div>
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="rubber-curry-comb"
             badge="Core Kit"
             name="Rubber Curry Comb"
@@ -196,7 +203,7 @@ export default function GroomingPage() {
             ctaAffiliateProduct="rubber-curry-comb"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="dandy-body-brush-set"
             badge="Brush Set"
             name="Dandy and Body Brush Set"
@@ -220,7 +227,7 @@ export default function GroomingPage() {
             ctaAffiliateProduct="dandy-body-brush-set"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="hoof-pick-brush"
             badge="Feet"
             name="Hoof Pick with Brush"

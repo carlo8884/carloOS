@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, PriceAsOf, QuietPartnerLink} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -47,10 +47,13 @@ export default function JointSupplementsPage() {
           Equine Joint Supplements — An Evidence Ladder
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements" />
+        <div className="mb-4" data-primary-hop="true">
+          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements">Browse Platinum Performance CJ joint supplement on Amazon →</a>
+        </div>
+        <QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements" label="Check price of Cosequin ASU Plus on SmartPak" />
         <div className="[&_.text-brand-primary]:!text-brand-dark">
-          <QuickPicks items={PICKS} embedded />
+          <QuickPicks items={PICKS} quietUntilTag embedded />
         </div>
         <p className="text-lg font-light text-white/55 max-w-2xl leading-relaxed">
           The equine joint-supplement market is large, lightly regulated, and dominated by marketing claims that outpace the data. This guide grades each ingredient by what the peer-reviewed literature actually supports — plus the prohibited-substance footnote that every competitive rider needs to know.
@@ -136,9 +139,8 @@ export default function JointSupplementsPage() {
             <p><strong>&ldquo;Proprietary blends&rdquo; without per-ingredient amounts:</strong> Any product whose label lists ingredients but not the milligram quantity of each cannot be evaluated for clinical relevance. NASC-Quality-Seal products disclose ingredient amounts; choose those preferentially.</p>
 
             <h2>Reviewed Products</h2>
-            <HopDisclosure siteId="horses-com" href={["/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements", "/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements", "/go/smartpak/smartflex-senior?s=supplements-joint-supplements", "/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"]} />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="cosequin-asu"
               badge="Best Evidence (ASU)"
               name="Nutramax Cosequin ASU Plus"
@@ -164,7 +166,7 @@ export default function JointSupplementsPage() {
               ctaAffiliateProduct="cosequin-asu-plus"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="platinum-cj"
               badge="Best Comprehensive"
               name="Platinum Performance CJ"
@@ -189,7 +191,7 @@ export default function JointSupplementsPage() {
               ctaAffiliateProduct="platinum-cj"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="smartflex"
               badge="Best Senior"
               name="SmartPak SmartFlex Senior"
@@ -214,7 +216,7 @@ export default function JointSupplementsPage() {
               ctaAffiliateProduct="smartflex-senior"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="omega-3"
               badge="Reference Ingredient"
               name="Marine-Source Omega-3 (DHA/EPA)"
@@ -254,7 +256,7 @@ export default function JointSupplementsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">The ASU formula with disclosed amounts</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink href={"/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements"} product={"Cosequin ASU Plus"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink quietUntilTag href={"/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements"} product={"Cosequin ASU Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best Evidence (ASU). NASC seal. $60–95 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">Active synovitis that the card says needs intra-articular or systemic treatment, not a scoop</td>
                   </tr>
@@ -266,13 +268,13 @@ export default function JointSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A senior horse on daily packs</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a><TableShopLink href={"/go/smartpak/smartflex-senior?s=supplements-joint-supplements"} product={"SmartFlex Senior"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a><TableShopLink quietUntilTag href={"/go/smartpak/smartflex-senior?s=supplements-joint-supplements"} product={"SmartFlex Senior"} /></td>
                     <td className="p-3 text-brand-text-mid">Best Senior. Glucosamine, chondroitin, MSM, HA. $45–65 per 28-day supply</td>
                     <td className="p-3 text-brand-text-mid">You specifically want ASU. The card says this formula does not include it</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine EPA and DHA, not flax</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a><TableShopLink href={"/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"} product={"Marine omega-3"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"} product={"Marine omega-3"} /></td>
                     <td className="p-3 text-brand-text-mid">Reference ingredient. Fish oil or algal DHA/EPA. Card target 10–20 g combined. $25–60 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">The label only says omega-3 from flax. The card says equine conversion of ALA is poor</td>
                   </tr>

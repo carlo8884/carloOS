@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf, QuietPartnerLink} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,8 +104,11 @@ export default function BestEquineSupplementsPage() {
           Best Equine Supplements 2026
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
-        <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements" />
+        <div className="mb-4" data-primary-hop="true">
+          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements">Browse Platinum Performance equine wellness on Amazon →</a>
+        </div>
+        <QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements" label="Check price of Cosequin ASU Plus on SmartPak" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -128,7 +131,7 @@ export default function BestEquineSupplementsPage() {
         </p>
       </div>
 
-      <QuickPicks items={PICKS} />
+      <QuickPicks items={PICKS} quietUntilTag />
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -146,7 +149,6 @@ export default function BestEquineSupplementsPage() {
               </p>
             </div>
 
-            <HopDisclosure siteId="horses-com" href={["/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements", "/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements", "/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements", "/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"]} />
 
             <h2>How to Read the Equine Supplement Aisle</h2>
             <p>Three filters separate useful equine supplements from money-wasting marketing:</p>
@@ -187,7 +189,7 @@ export default function BestEquineSupplementsPage() {
             <h2>Joint Supplements</h2>
             <p>The most-marketed and most-studied equine supplement category. The strongest evidence is for combinations including avocado/soybean unsaponifiables (ASU) with glucosamine and chondroitin sulfate. See our <Link href="/supplements/joint-supplements" className="text-brand-primary underline underline-offset-2">joint supplements evidence-ladder guide</Link> for the full ingredient-level analysis.</p>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="cosequin-asu"
               badge="Best Joint Evidence"
               name="Cosequin ASU Plus (Nutramax)"
@@ -216,7 +218,7 @@ export default function BestEquineSupplementsPage() {
 
             <h2>Comprehensive Wellness</h2>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="platinum"
               badge="Best Comprehensive"
               name="Platinum Performance Equine"
@@ -245,7 +247,7 @@ export default function BestEquineSupplementsPage() {
             <h2>Gastric Support</h2>
             <p>An important distinction: gastric supplements provide adjunctive support — they are not pharmacologic treatments for diagnosed Equine Gastric Ulcer Syndrome (EGUS). Active disease requires gastroscopy and prescription omeprazole (see our <Link href="/health/equine-ulcers" className="text-brand-primary underline underline-offset-2">EGUS reference</Link>). Gastric supplements are appropriate as adjuncts during treatment, during high-risk periods (shipping, competition), or as part of long-term management in a multi-pronged ulcer-prevention program alongside forage management.</p>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="smartgut"
               badge="Best Gastric Adjunct"
               name="SmartPak SmartGut Ultra"
@@ -274,7 +276,7 @@ export default function BestEquineSupplementsPage() {
             <h2>Marine Omega-3</h2>
             <p>The omega-3 category requires a specific source distinction. Marine-source omega-3 (DHA + EPA, from fish oil or algal sources) has documented anti-inflammatory effects in horses (Hess TM et al., <em>Journal of Equine Veterinary Science</em>, 2013). Plant-source omega-3 (ALA from flax or chia) requires conversion in the horse&apos;s body to DHA/EPA — and that conversion is inefficient. If you are paying for omega-3, the source must be marine-derived to deliver the actual anti-inflammatory effect.</p>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="ker-eo3"
               badge="Best Marine Omega-3"
               name="KER EO-3 (Kentucky Equine Research)"
@@ -302,7 +304,7 @@ export default function BestEquineSupplementsPage() {
 
             <h2>Resveratrol &amp; Anti-Inflammatory</h2>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="equithrive"
               badge="Best Resveratrol"
               name="Equithrive Original Pellets"
@@ -331,7 +333,7 @@ export default function BestEquineSupplementsPage() {
             <h2>Forage and Forage-Replacement</h2>
             <p>The single most powerful equine "supplement" is appropriate forage. Standlee Premium Forage is one of the most widely-distributed US producers of premium pelleted and baled forage products. Standlee alfalfa, timothy, and orchard grass products serve as forage-extension (slow-feeders, soaked products for senior horses with dental compromise), pre-exercise gastric buffer (an alfalfa flake 30 minutes before work reduces ESGD risk), and travel/competition forage where consistent hay supply matters.</p>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="standlee"
               badge="Best Forage Products"
               name="Standlee Premium Forage"
@@ -358,7 +360,7 @@ export default function BestEquineSupplementsPage() {
 
             <h2>Electrolytes</h2>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="adams"
               badge="Best Electrolyte"
               name="Adams Plus Equine Electrolyte"
@@ -399,7 +401,7 @@ export default function BestEquineSupplementsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Diagnosed osteoarthritis or heavy joint load</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink href={"/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"} product={"Cosequin ASU Plus"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#cosequin-asu" className="text-brand-primary">Cosequin ASU Plus</a><TableShopLink quietUntilTag href={"/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements"} product={"Cosequin ASU Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best joint evidence. ASU plus glucosamine and chondroitin. NASC sealed</td>
                     <td className="p-3 text-brand-text-mid">A cure. The card is support evidence, and the first month costs more on a loading dose</td>
                   </tr>
@@ -411,7 +413,7 @@ export default function BestEquineSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Gastric support beside veterinary care, not instead of it</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a><TableShopLink href={"/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"} product={"SmartGut Ultra"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartgut" className="text-brand-primary">SmartGut Ultra</a><TableShopLink quietUntilTag href={"/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements"} product={"SmartGut Ultra"} /></td>
                     <td className="p-3 text-brand-text-mid">Best gastric adjunct. Card price $60–80/mo. The category row calls the buffer evidence moderate</td>
                     <td className="p-3 text-brand-text-mid">Treatment of active ulcers. The table says pharmacologic care is for active disease</td>
                   </tr>
@@ -435,7 +437,7 @@ export default function BestEquineSupplementsPage() {
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Sweat replacement after work</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a><TableShopLink href={"/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"} product={"Adams Plus Equine Electrolyte"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#adams" className="text-brand-primary">Adams Plus Equine Electrolyte</a><TableShopLink quietUntilTag href={"/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"} product={"Adams Plus Equine Electrolyte"} /></td>
                     <td className="p-3 text-brand-text-mid">Best electrolyte. Card price $20–35/mo. The category row calls Na/Cl/K replacement strong</td>
                     <td className="p-3 text-brand-text-mid">A daily wellness powder for a horse that is not sweating</td>
                   </tr>
