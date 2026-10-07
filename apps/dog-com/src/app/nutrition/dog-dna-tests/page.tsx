@@ -107,7 +107,7 @@ export default function DogDnaTestsPage() {
           <li><strong>Features beyond breed and health.</strong> Relative-finder, trait, and ancestry-depth features differ. Decide which you actually care about.</li>
           <li><strong>Tier and price fit.</strong> Both sell a basic breed-focused option and a more comprehensive breed-plus-health option. Match the tier to your goal — curiosity versus clinical screening — and compare prices at that tier.</li>
         </ul>
-        <p><em>Dog.com does not earn affiliate commissions on DNA test kits, and this comparison is editorial.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
+        <p><em>Dog.com does not take a commission on DNA test kits, and this comparison is editorial.</em> The honest bottom line: for most owners either brand will answer the breed question well, and the deciding factor is usually health-panel scope and price for the tier you want.</p>
 
         <h2 id="now">What to Do With Your Results</h2>
         <p>A few calibrated next steps once the report lands:</p>

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -294,7 +294,7 @@ export default function HowToTakeDogsTemperaturePage() {
           <p>
             A small kit kept where you can reach it makes home checks routine rather than improvised. A practical set: a digital rectal thermometer (dedicated to the dog), a water-based lubricant (petroleum jelly works) for the tip, isopropyl alcohol wipes to clean the probe after each reading, a phone with a stopwatch and a notes file for your baseline numbers, and your veterinarian&rsquo;s daytime number plus the nearest 24-hour emergency clinic&rsquo;s address and number saved in advance. Those three physical supplies are vitals tools. Knowing where the emergency clinic is <em>before</em> you need it removes a frightening delay from a real emergency. If you have not chosen a regular veterinarian yet, our <a href="/guides/dog-wellness-exam" className="text-brand-primary hover:underline">wellness exam guide</a> covers how to find one and what to expect. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+rectal+thermometer+pet?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/water+based+lubricant+petroleum+jelly?s=guides-how-to-take-dogs-temperature", "/go/amazon-brand/isopropyl+alcohol+wipes?s=guides-how-to-take-dogs-temperature"]} />
 
           {/* Money path — live amazon-brand search hops (home-vitals kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

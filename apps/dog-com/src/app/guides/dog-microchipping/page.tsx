@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -276,7 +276,7 @@ export default function DogMicrochippingPage() {
           <p>
             Three everyday physical supplies match the registration and reunion copy above: an ISO pet microchip scanner so you can read the number at home and confirm the registry record, engraved dog collar ID tags so a neighbor can call you without a scanner, and a silent slide-on pet ID tag that stays on the collar if a hanging tag comes off. These are identification tools. They do not implant a chip, they do not track a dog in real time, they are not a clinic implant kit, and they do not replace a registered microchip or a veterinary scan of a found dog. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/iso+pet+microchip+scanner?s=guides-dog-microchipping", "/go/amazon-brand/engraved+dog+collar+id+tags?s=guides-dog-microchipping", "/go/amazon-brand/pet+id+tag+slide+on?s=guides-dog-microchipping"]} />
 
           {/* Money path — live amazon-brand search hops (microchip registration kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
