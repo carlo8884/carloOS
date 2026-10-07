@@ -700,7 +700,7 @@ const CALCULATORS = [
     mustInclude: [
       { re: /amazon-brand\/aquarium\+filter/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11636,7 +11636,7 @@ const CALCULATORS = [
       { re: /nextHref="\/setup\/nano-tank-setup"/, label: 'next step is nano-tank setup, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/betta%20fish%20tank%20setup\?s=species-betta-fish"/, label: 'journey hop reuses the existing betta tank-setup search' },
       { re: /amazon-brand\/betta%20fish%20tank%20setup\?s=species-betta-fish/, label: 'existing betta tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11652,7 +11652,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/neon-tetra/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/neon%20tetra%20tank%20setup\?s=species-neon-tetra/, label: 'existing neon tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11667,7 +11667,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/clownfish/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/clownfish%20tank%20setup\?s=species-clownfish/, label: 'existing clownfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept on page' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11682,7 +11682,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/goldfish/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/goldfish%20tank%20setup\?s=species-goldfish/, label: 'existing goldfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11697,7 +11697,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/angelfish/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/angelfish%20tank%20setup\?s=species-angelfish/, label: 'existing angelfish tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11712,7 +11712,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/discus/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/discus%20tank%20setup\?s=species-discus/, label: 'existing discus tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11727,7 +11727,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/guppy/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/guppy%20tank%20setup\?s=species-guppy/, label: 'existing guppy tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11742,7 +11742,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/oscar/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/oscar%20tank%20setup\?s=species-oscar/, label: 'existing oscar tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11907,7 +11907,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/cherry-shrimp/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/cherry%20shrimp%20tank%20setup\?s=species-cherry-shrimp/, label: 'existing cherry-shrimp tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -11922,7 +11922,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/corydoras/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/corydoras%20tank%20setup\?s=species-corydoras/, label: 'existing corydoras tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },
@@ -12192,7 +12192,7 @@ const CALCULATORS = [
     file: 'apps/fish-com/src/app/species/pleco/page.tsx',
     mustInclude: [
       { re: /amazon-brand\/pleco%20tank%20setup\?s=species-pleco/, label: 'existing pleco tank-setup amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /href=["']#["']/, label: 'never href="#"' },

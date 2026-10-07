@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage } from '@carloOS/ui'
 import { createServerClient } from '@carloOS/db'
 import { HubMasthead } from '../../components/HubMasthead'
 
@@ -161,7 +162,7 @@ export default async function SpeciesIndexPage() {
         <h2 id="kit" className="font-display font-bold text-brand-dark text-xl mb-4 max-w-content-wide">Related supplies</h2>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="fish-com" />
+          <HopDisclosure siteId="fish-com" href="/go/amazon-brand/aquarium+filter?s=species-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">
