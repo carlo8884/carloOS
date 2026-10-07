@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -76,7 +77,7 @@ export default function WinterWaterUnfrozenGuidePage() {
         <p>The <Link href="/care/winter-care">winter care page</Link> says the same thing in management language: horses drink less when water is icy, and reduced intake plus dry winter forage is a leading cause of impaction colic. Keeping water unfrozen, and offering slightly warmed water, is one of the most important winter tasks on that page. Heat for the horse itself, on the same page, comes from more hay, because fiber fermentation in the hindgut produces heat. Grain is not the warmth plan. A thick coat also hides weight loss, so the page says to feel the ribs rather than trust the eye.</p>
         <h2>Bucket or tank heater</h2>
         <p>Two different supplies already exist, and this page links one of them. The water page links a heated horse water bucket for the stall, next to a flat-back bucket and an electrolyte search. The winter-care kit links a horse tank heater for troughs that freeze, and it says that heater is not a treatment for impaction colic. Reduced drinking still belongs with a veterinarian. Neither product replaces walking out and checking that the water is actually open.</p>
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide" />
         <p>The link below searches for a heated horse water bucket, the same search as on the water page. The tank heater stays on the winter-care page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/heated+horse+water+bucket?s=reviews-winter-water-unfrozen-guide">Browse heated horse water buckets on Amazon →</a></p>
         <h2>Questions</h2>

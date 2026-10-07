@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
+import { ArticleLayout, BelowFoldPhoto, ComparisonFoot, FAQAccordion, RelatedLinks, TableShopLink, buildArticleSchema, buildFAQSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 
 const PATH = '/reviews/november-december-gift-guide'
 const SOURCE = 'reviews-november-december-gift-guide'
@@ -81,7 +82,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $160–230, the Rhino Original at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
         <h2>Who should get which printed band</h2>
         <p>A lead or a nylon halter is the small barn gift when the horse is led under supervision. A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states. Bell boots are for overreach. Brushing boots are for interference. A turnout blanket is the larger gift, and the blanket review is where denier and fill live.</p>
-        <AffiliateDisclosure variant="inline" siteId="horses-com" />
+        <HopDisclosure siteId="horses-com" href={[`/go/smartpak/cotton-lead-rope-bull-snap?s=${SOURCE}`, `/go/smartpak/adjustable-nylon-halter?s=${SOURCE}`, `/go/smartpak/pull-on-bell-boots?s=${SOURCE}`, `/go/dover/leather-crown-breakaway-halter?s=${SOURCE}`, `/go/ridingwarehouse/synthetic-brushing-boots?s=${SOURCE}`, `/go/ridingwarehouse/amigo-bravo-12-plus?s=${SOURCE}`, `/go/smartpak/ultimate-turnout?s=${SOURCE}`, `/go/dover/rhino-original-turnout?s=${SOURCE}`, `/go/smartpak/rambo-original-turnout?s=${SOURCE}`]} />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -140,7 +141,7 @@ export default function NovemberDecemberGiftGuidePage() {
             </tbody>
           </table>
         </div>
-        <ComparisonFoot updated="2026-10-05" />
+        <ComparisonFoot updated="2026-10-07" />
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
         <BelowFoldPhoto siteId="horses-com" />
