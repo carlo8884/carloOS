@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -10,7 +11,6 @@ import {
   DropCap,
   ArticleSourcesList,
   CrossPortfolioCard,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -305,7 +305,7 @@ export default function MultiFerretIntroductionsPage() {
             insulin syringes, compounded meds, or Rx ASINs. This
             page does not hop diagnosis kits that imply treatment. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wire+small+animal+single+story+cage?s=behavior-multi-ferret-introductions", "/go/amazon-brand/non+slip+suction+bathtub+mat?s=behavior-multi-ferret-introductions", "/go/amazon-brand/stainless+steel+small+animal+crock?s=behavior-multi-ferret-introductions"]} />
 
           {/* Money path — live amazon-brand search hops
               (wire small-animal single-story cage /

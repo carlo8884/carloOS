@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   ArticleByline,
   DropCap,
   ReviewCard,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
 } from '@carloOS/ui'
@@ -297,7 +297,7 @@ export default function LeashAndHarnessTrainingPage() {
             </li>
           </ul>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/marshall/ferret-harness-leash?s=behavior-leash-harness", "/go/amazon-brand/ferret+vest+harness?s=behavior-leash-harness"]} />
 
           <h2 id="picks">Harness Picks</h2>
           <p>
