@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -87,10 +88,10 @@ export default function RainbowFishPage() {
         <p>Rainbowfish are peaceful, active mid-water swimmers compatible with most community fish that share similar water preferences — corydoras catfish, bristlenose plecos, livebearers, Australian rainbowfish companions like blue-eyes (Pseudomugil species). They are fast enough to coexist with moderately aggressive species. Avoid keeping with very small, delicate fish (they may eat fish small enough to fit in their mouth) or with soft-water species requiring dramatically different parameters. They are excellent companions for hard-water tetras like Buenos Aires tetras.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/rainbow%20fish%20tank%20setup?s=species-rainbow-fish" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Rainbow Fish — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for rainbow fish care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for rainbow fish care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <ShopCtas amazonHref="/go/amazon-brand/rainbow%20fish%20tank%20setup?s=species-rainbow-fish" amazonLabel="Browse rainbow fish tank setups on Amazon →" />
           </div>
