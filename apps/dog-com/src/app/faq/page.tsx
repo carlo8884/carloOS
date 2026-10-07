@@ -155,6 +155,7 @@ export default function FAQPage() {
                 answerText: item.answerText,
               }))}
               allowMultiple
+              includeSchema={false}
             />
           </div>
         ))}

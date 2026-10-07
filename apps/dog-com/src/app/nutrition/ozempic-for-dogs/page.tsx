@@ -110,7 +110,7 @@ export default function OzempicForDogsPage() {
         <p>We will update this page as the OKV-119 trials report out and as the veterinary GLP-1 picture changes. For now, the honest answer is that the proven path — calories, diet quality, and movement — is also the available one.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Drug-approval status and trial timelines reflect publicly reported information as of June 2026 and may change. Always consult your veterinarian before changing your dog's diet or starting any medication.</em></p>
       </div>

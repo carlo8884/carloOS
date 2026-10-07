@@ -310,6 +310,7 @@ export default function DogMicrochippingPage() {
           <FAQAccordion
             items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
             allowMultiple
+            includeSchema={false}
           />
 
           <ArticleSourcesList

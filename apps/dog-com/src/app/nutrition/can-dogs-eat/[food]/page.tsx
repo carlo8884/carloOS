@@ -199,7 +199,7 @@ export default async function CanDogsEatFoodPage({ params }: PageProps) {
         </div>
 
         <h2 id="faq">Frequently asked questions</h2>
-        <FAQAccordion items={faqs} />
+        <FAQAccordion items={faqs} includeSchema={false} />
 
         <p className="text-xs text-gray-500 mt-6">
           <em>General educational information from the Dog.com editorial team, based on established veterinary toxicology references (ASPCA Animal Poison Control, Pet Poison Helpline, and veterinary literature). Not a substitute for veterinary advice — individual dogs vary. For a suspected poisoning, call ASPCA Animal Poison Control at 888-426-4435 (24/7, fee applies) or your veterinarian.</em>
