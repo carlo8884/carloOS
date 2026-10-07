@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Canine Influenza (Dog Flu) — H3N8, H3N2 | Vets.co', description: 'Canine influenza is caused by H3N8 and H3N2 strains. Highly contagious among dogs. Vaccine recommended for dogs that attend boarding, doggy daycare.', path: '/health/canine-influenza', type: 'article' })
@@ -83,7 +84,7 @@ export default function CanineInfluenzaPage() {
             testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/double+door+wire+dog+crate?s=health-canine-influenza", "/go/amazon-brand/pet+safe+kennel+disinfectant+spray?s=health-canine-influenza", "/go/amazon-brand/analog+wall+clock+with+second+hand?s=health-canine-influenza"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -105,9 +106,7 @@ export default function CanineInfluenzaPage() {
               / urine-cup / 12-hour-timer hop, they
               are not a recovery-crate / soft-sided
               crate / humidifier / thermometer hop,
-              and they do not replace a veterinarian.
-              Vets.co earns a commission on qualifying
-              purchases at no extra cost to you. Empty
+              and they do not replace a veterinarian. Empty
               Chewy buttons stay hidden.
             </p>
             <div className="flex flex-col gap-3">

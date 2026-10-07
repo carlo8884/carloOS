@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Preventive Care Schedule — Puppy, Adult | Vets.co', description: 'Complete dog preventive care schedule. Puppy vaccines and deworming, adult annual maintenance, and the enhanced senior screening protocol from age 7+.', path: '/health/preventive-care-schedule', type: 'article' })
@@ -130,7 +131,7 @@ export default function PreventiveCareSchedulePage() {
             not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/wall+mounted+magnetic+monthly+planner?s=health-preventive-care-schedule", "/go/amazon-brand/waterproof+rear+seat+hammock?s=health-preventive-care-schedule", "/go/amazon-brand/folding+four+wheel+dog+stroller?s=health-preventive-care-schedule"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -155,9 +156,7 @@ export default function PreventiveCareSchedulePage() {
               tether / soft-sided-carrier hop, they
               are not a Heartgard / Bravecto / NexGard
               hop, and they do not replace a
-              veterinarian. Vets.co earns a commission
-              on qualifying purchases at no extra cost
-              to you.
+              veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
