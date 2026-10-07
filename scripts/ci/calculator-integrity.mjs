@@ -2489,14 +2489,15 @@ const CALCULATORS = [
     mustInclude: [
       { re: /smartpak\/rambo-original-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Rambo Original SmartPak hop kept (not an empty leftover button)' },
       { re: /schneider\/stormshield-euro-turnout\?s=reviews-best-winter-horse-blankets/, label: 'existing Schneiders StormShield hop kept (not an empty leftover button)' },
-      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
+      { re: /HopDisclosure siteId="horses-com" href="\/go\/amazon-brand\/winter\+horse\+blanket\?s=reviews-best-winter-horse-blankets"/, label: 'disclosure stays on the live Amazon search' },
     ],
     mustExclude: [
+      { re: /<HopDisclosure[^>]*smartpak/, label: 'held-partner disclosure stays off this page' },
       { re: /ctaHref=["']#["']/, label: 'never ctaHref="#"' },
       { re: /ctaHref=["'][^"']*PLACEHOLDER/, label: 'never write literal PLACEHOLDER into live hrefs' },
       { re: /ctaText="Subscribe"/, label: 'never generic Subscribe' },
     ],
-    why: 'Money path leftover after #1375: dog.com /reviews/fresh-dog-food-worth-it is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /reviews/best-winter-horse-blankets commercial spoke had sidebar EmailCapture only (source review-winter-blankets, not under-hero) plus live SmartPak Rambo / Schneider StormShield product hops and AffiliateDisclosure. Add under-hero capture with a concrete winter-blanket-checklist offer matching on-page most-horses-do-not-need / turnout-vs-stable / 1000D ballistic / Rambo Original / Schneiders 1680D copy. Keep the existing sidebar capture and the already-hopped SmartPak / Schneider searches. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1375 / crate-size / stocking.',
+    why: 'Money path leftover after #1375: dog.com /reviews/fresh-dog-food-worth-it is on main. Remaining dog review leftovers are flea / heartworm / insurance skips. This existing horses.com /reviews/best-winter-horse-blankets commercial spoke had sidebar EmailCapture only (source review-winter-blankets, not under-hero) plus live SmartPak Rambo / Schneider StormShield product hops and AffiliateDisclosure. Add under-hero capture with a concrete winter-blanket-checklist offer matching on-page most-horses-do-not-need / turnout-vs-stable / 1000D ballistic / Rambo Original / Schneiders 1680D copy. Keep the existing sidebar capture and the already-hopped SmartPak / Schneider searches. The commission disclosure stays on the live Amazon search only. Do not re-ship new queries. Hide empty ShopCtas Chewy (none added). No new brand, no PLACEHOLDER. Directory import left untouched. Ferret aging stays held. Do not re-open #1165 / #1251–#1375 / crate-size / stocking.',
   },
   {
     id: 'horses · trail-riding',
@@ -10068,9 +10069,11 @@ const CALCULATORS = [
     id: 'horses · equine-ulcers under-hero',
     file: 'apps/horses-com/src/app/health/equine-ulcers/page.tsx',
     mustInclude: [
-      { re: /HopDisclosure/, label: 'existing HopDisclosure kept in place' },
+      { re: /QuietPartnerLink href="\/go\/smartpak\/home\?s=health-equine-ulcers"/, label: 'quiet SmartPak note stays' },
+      { re: /QuietPartnerLink href="\/go\/dover\/home\?s=health-equine-ulcers"/, label: 'quiet Dover note stays' },
     ],
     mustExclude: [
+      { re: /HopDisclosure/, label: 'no disclosure on the quiet SmartPak and Dover notes' },
       { re: /ShopCtas/, label: 'disclosure-only — no Amazon ShopCtas on this page' },
       { re: /amazon-brand/, label: 'disclosure-only — no amazon-brand hops' },
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
