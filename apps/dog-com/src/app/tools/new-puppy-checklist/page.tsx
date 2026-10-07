@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -10,7 +11,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossSiteHelp,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -210,7 +210,7 @@ export default function NewPuppyChecklistPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="new-puppy-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+food?s=tools-new-puppy-checklist", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-new-puppy-checklist", "/go/amazon-brand/julius+k9+idc+powerharness?s=tools-new-puppy-checklist", "/go/amazon-brand/dog+id+tag+collar?s=tools-new-puppy-checklist", "/go/amazon-brand/puppy+teething+toys?s=tools-new-puppy-checklist", "/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=tools-new-puppy-checklist"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-week puppy kit

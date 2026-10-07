@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -236,7 +236,7 @@ export default function PuppyWeightPredictorPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="puppy-growth-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-weight-predictor", "/go/amazon-brand/puppy+food?s=tools-puppy-weight-predictor", "/go/amazon-brand/royal+canin+large+breed+puppy?s=tools-puppy-weight-predictor", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-weight-predictor", "/go/amazon-brand/northmate+green+interactive+feeder?s=tools-puppy-weight-predictor", "/go/amazon-brand/dog+measuring+tape+body+condition+chart?s=tools-puppy-weight-predictor"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a puppy growth kit
@@ -348,7 +348,6 @@ export default function PuppyWeightPredictorPage() {
               </Link>{' '}
               for feeding. Compare large- and small-breed-appropriate puppy formulas next.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-dog-food-for-puppies"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"

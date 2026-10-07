@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -233,7 +233,7 @@ export default function DogGestationCalculatorPage() {
           <WhelpingKit />
         </div>
         <div className="max-w-2xl mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+whelping+box?s=tools-dog-gestation-calculator", "/go/amazon-brand/digital+puppy+scale?s=tools-dog-gestation-calculator", "/go/amazon-brand/digital+pet+thermometer?s=tools-dog-gestation-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the kit
@@ -332,7 +332,6 @@ export default function DogGestationCalculatorPage() {
               covers feeding a litter and the dam. Compare appropriate puppy formulas for the weeks
               ahead.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="dog-com" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-dog-food-for-puppies"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"

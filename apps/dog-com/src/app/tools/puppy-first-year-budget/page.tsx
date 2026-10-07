@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   SchemaScript,
   FAQAccordion,
   CrossSiteHelp,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   JourneyNext,
@@ -176,7 +176,7 @@ export default function PuppyFirstYearBudgetPage() {
           Category searches only — not a ranked list, not a quote. */}
       <section id="puppy-budget-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/wire+dog+crate+with+divider+panel?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+food?s=tools-puppy-first-year-budget", "/go/amazon-brand/digital+gram+scale+kitchen+pet?s=tools-puppy-first-year-budget", "/go/amazon-brand/puppy+training+pads?s=tools-puppy-first-year-budget"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a first-year puppy kit
