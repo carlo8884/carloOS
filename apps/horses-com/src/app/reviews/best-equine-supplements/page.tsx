@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -104,6 +105,7 @@ export default function BestEquineSupplementsPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
+        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -144,7 +146,7 @@ export default function BestEquineSupplementsPage() {
               </p>
             </div>
 
-            <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            <HopDisclosure siteId="horses-com" href={["/go/smartpak/cosequin-asu-plus?s=reviews-best-equine-supplements", "/go/amazon-brand/platinum+performance+equine+wellness?s=reviews-best-equine-supplements", "/go/smartpak/smartgut-ultra?s=reviews-best-equine-supplements", "/go/amazon-brand/kentucky+equine+research+EO-3+omega+3?s=reviews-best-equine-supplements", "/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-best-equine-supplements", "/go/amazon-brand/standlee+premium+forage+pellets?s=reviews-best-equine-supplements", "/go/smartpak/adams-plus-electrolyte?s=reviews-best-equine-supplements"]} />
 
             <h2>How to Read the Equine Supplement Aisle</h2>
             <p>Three filters separate useful equine supplements from money-wasting marketing:</p>
@@ -440,7 +442,7 @@ export default function BestEquineSupplementsPage() {
                 </tbody>
               </table>
             </div>
-            <ComparisonFoot updated="2026-10-06" />
+            <ComparisonFoot updated="2026-10-07" />
             <p>Hoof, calming, and weight-gain rows in the category table name products that do not have their own review cards here. Use those rows as a map, not as a reviewed pick.</p>
 
             <h2>What to Avoid</h2>

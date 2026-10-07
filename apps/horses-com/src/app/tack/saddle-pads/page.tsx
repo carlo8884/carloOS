@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { HopDisclosure } from '../../../components/HopDisclosure'
+import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -62,6 +63,7 @@ export default function SaddlePadsPage() {
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
         heroHop={<PrimaryHop href='/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads' label='Check price of the quilted all-purpose saddle pad on SmartPak' />}
+        heroExtra={<HopDisclosure siteId="horses-com" href="/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads" />}
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:
@@ -155,7 +157,7 @@ export default function SaddlePadsPage() {
           <h2 id="picks">Pad Picks</h2>
           <p>A few widely-stocked pad types covering the common English and Western needs. These support a correctly fitting saddle — none of them, as the section above makes clear, can correct a saddle that does not fit. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads", "/go/dover/sheepskin-half-pad?s=tack-saddle-pads", "/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads", "/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads"]} />
 
 
           <ReviewCard
@@ -265,7 +267,7 @@ export default function SaddlePadsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

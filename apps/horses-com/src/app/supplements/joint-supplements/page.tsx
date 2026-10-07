@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, AffiliateDisclosure, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, StockImage, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -47,6 +48,7 @@ export default function JointSupplementsPage() {
         </h1>
         <PriceAsOf date="2026-10-04" tone="dark" />
         <PrimaryHop href='/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' label='Check price of Cosequin ASU Plus on SmartPak' />
+        <HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements" />
         <div className="[&_.text-brand-primary]:!text-brand-dark">
           <QuickPicks items={PICKS} embedded />
         </div>
@@ -134,7 +136,7 @@ export default function JointSupplementsPage() {
             <p><strong>&ldquo;Proprietary blends&rdquo; without per-ingredient amounts:</strong> Any product whose label lists ingredients but not the milligram quantity of each cannot be evaluated for clinical relevance. NASC-Quality-Seal products disclose ingredient amounts; choose those preferentially.</p>
 
             <h2>Reviewed Products</h2>
-            <AffiliateDisclosure variant="inline" siteId="horses-com" />
+            <HopDisclosure siteId="horses-com" href={["/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements", "/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements", "/go/smartpak/smartflex-senior?s=supplements-joint-supplements", "/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"]} />
 
             <ReviewCard
               id="cosequin-asu"
@@ -278,7 +280,7 @@ export default function JointSupplementsPage() {
               </table>
             </div>
             <p>The wider field around these joint products is in the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>.</p>
-            <ComparisonFoot updated="2026-10-06" />
+            <ComparisonFoot updated="2026-10-07" />
 
             <h2>How to Choose</h2>
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
