@@ -530,19 +530,19 @@ export default function FerretLitterTrainingPage() {
             id="marshall-corner-pan"
             badge="Pan Shape Default"
             name="Marshall Lock-On Litter Pan"
-            subtitle="Triangular ferret-corner pan, low entry lip, raised splash guard"
+            subtitle="Locks onto a cage. Low entrance. Shape and size count are not on the listing."
             winner
             description={
-              <p>The older Lock-N-Litter product page no longer resolves. This button opens Marshall's current lock-on litter pan search. It is the corner pan in Marshall's current catalog. Triangular footprint fits the natural corner-elimination behaviour, the entry lip is low enough for unsteady or senior ferrets to step over, and the raised back wall contains splashes. Marshall sells this in a few sizes; the standard size fits most multi-level cages and most floor placements outside the cage.</p>
+              <p>The older Lock-N-Litter product page no longer resolves. This button opens Marshall's current lock-on litter pan search. The current Lock-On Litter Pan page says it locks on to almost any cage, the entrance is low, and it unscrews for cleaning. That page does not say the pan is triangular, does not mention a splash guard, and does not list a size count. Check the listing.</p>
             }
             specs={[
-              { label: 'Shape', value: 'Triangular corner', highlight: 'good' },
-              { label: 'Entry lip', value: 'Low (ferret-appropriate)', highlight: 'good' },
-              { label: 'Back wall', value: 'Raised splash guard', highlight: 'good' },
-              { label: 'Cage attach', value: 'Yes (lock-down lip)' },
-              { label: 'Sizes', value: 'Standard + small' },
+              { label: 'Shape', value: 'Check the listing' },
+              { label: 'Entry', value: 'Low entrance', highlight: 'good' },
+              { label: 'Back wall', value: 'Check the listing' },
+              { label: 'Cage attach', value: 'Locks on to almost any cage', highlight: 'good' },
+              { label: 'Sizes', value: 'Check the listing' },
             ]}
-            pros={['Matches corner-elimination behaviour', 'Low entry for unsteady or senior ferrets', 'Splash containment', 'Multiple sizes', 'Widely stocked in US pet retail']}
+            pros={['Low entrance', 'Locks onto a cage', 'Unscrews for cleaning', 'Check shape and size on the listing']}
             cons={['Splashes can still reach the wall behind a heavily-used pan', 'Plastic surface shows wear in heavy households']}
             price="$10–18"
             priceNote="dated 2026-05-31."

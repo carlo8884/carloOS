@@ -231,16 +231,16 @@ export default function ReadingFoodLabelsPage() {
             id="wysong-epigen-90"
             badge="Clean Panel"
             name="Wysong Epigen 90"
-            subtitle="Named-meat panel, no grain, single-digit carbohydrate by difference"
+            subtitle="Current guaranteed analysis: crude protein min. 63%, crude fat min. 16%. Carbohydrate is not printed."
             winner
             description={
-              <p>A worked example of a panel that survives every check on this page: animal proteins lead, there is no grain or plant-protein concentrate splitting the list, no added sugar, and the carbohydrate-by-difference estimate lands in the single digits. Read it as a template for what a good ferret panel looks like, then hold any other bag to the same standard using the method above.</p>
+              <p>A worked example of a current bag, not a measured carbohydrate result. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Use the method above on any other bag, and check that label.</p>
             }
             specs={[
               { label: 'Leading ingredients', value: 'Named meats', highlight: 'good' },
               { label: 'Grain', value: 'None', highlight: 'good' },
               { label: 'Added sugar', value: 'None', highlight: 'good' },
-              { label: 'Carbohydrate by difference', value: 'Single digits', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
             ]}
             pros={['Named-meat ingredient panel', 'No grain or plant-protein filler', 'No added sugar', 'Clear worked example of a clean label']}
             cons={['Premium price', 'Not always stocked at supermarket pet aisles']}

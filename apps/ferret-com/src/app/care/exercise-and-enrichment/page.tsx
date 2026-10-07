@@ -537,20 +537,20 @@ export default function FerretExerciseEnrichmentPage() {
             id="marshall-pop-n-play"
             badge="Tunnel Default"
             name="Marshall play tunnel"
-            subtitle="Pop-up fabric tunnel system, ferret-sized, machine washable"
+            subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. Look for a ferret-sized fabric tunnel that stores flat and can connect into a longer circuit. Sized for ferret bodies (a tunnel that fits a small dog is too wide to be interesting to a ferret). Machine washable, which matters for the dust and dander that accumulates in any enrichment item that spends time on a floor.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
-              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
-              { label: 'Storage', value: 'Folds flat' },
+              { label: 'Construction', value: 'Check the current listing' },
+              { label: 'Sizing', value: 'Check the current listing' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
+              { label: 'Storage', value: 'Check the current listing' },
             ]}
-            pros={['Highest enrichment value per dollar in most ferret households', 'Pop-up + foldable for storage', 'Connects to itself for circuits', 'Machine washable']}
-            cons={['Fabric wears in heavy-chewer households (6–18 months for a chronic chewer)', 'Internal wire is a defect risk if exposed — inspect periodically']}
+            pros={['Opens the current Marshall play-tunnel search', 'Check whether the listing stores flat']}
+            cons={['Fabric can wear in a heavy-chewer household', 'Check the listing for any internal wire before you buy']}
             price="$15–30"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall play tunnels"

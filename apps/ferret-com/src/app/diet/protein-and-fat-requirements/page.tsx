@@ -196,15 +196,15 @@ export default function ProteinAndFatRequirementsPage() {
             id="wysong-epigen-90"
             badge="Hits the Window"
             name="Wysong Epigen 90"
-            subtitle="Animal-first, starch-free — protein high, carbohydrate in single digits"
+            subtitle="Animal-first. The current page markets it as starch-free and prints crude protein minimum 63%."
             winner
             description={
-              <p>A worked example of the target window in a real product: protein well above the 32–40% floor, animal-sourced throughout, and carbohydrate by difference driven into the low single digits by a starch-free system. It illustrates what the abstract targets on this page look like on an actual ingredient panel, and it is the default low-carb choice when insulinoma risk is the priority.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Crude protein minimum 63% is above the 32–40% floor on this page. Carbohydrate is not printed, so do not treat the bag as a measured carbohydrate example.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~16%' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 16%' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Taurine', value: 'Supplemented', highlight: 'good' },
             ]}
             pros={['Lands inside the target macro window', 'Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system']}

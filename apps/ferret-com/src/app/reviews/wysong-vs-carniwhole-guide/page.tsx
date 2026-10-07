@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which food does the kibble review list first?',
-    answer: 'Wysong Epigen 90, marked Premium Tier and the winner. The card lists about 60 percent protein and about 16 percent fat on a dry-matter basis, carbohydrate in the single digits, and a printed price of $30–50 for 5 pounds. It is not always stocked in a chain aisle.',
+    answer: 'Wysong Epigen 90, marked the top row and the winner. The current page lists crude protein minimum 63% and crude fat minimum 16% as printed, not as dry matter. Carbohydrate is not on the guaranteed analysis. The printed price is $30–50 for 5 pounds. It is not always stocked in a chain aisle.',
   },
   {
     question: 'When does the review point to Carniwhole?',
@@ -94,12 +94,12 @@ export default function WysongVsCarniwholeGuidePage() {
         />
         <p>Prices below are the ones on the <Link href="/diet/best-ferret-kibble">kibble review</Link>, which compares published panels. Wysong against Marshall is a separate guide. This comparison is Wysong Epigen 90 against Carniwhole. Carniwhole’s card has no shop link. The link above opens the Wysong ferret food search already used on the diet pages. The Wysong shop link stays on this page for when that partner ID is set.</p>
         <h2>What the review says about Wysong Epigen 90</h2>
-        <p>Wysong Epigen 90 is Premium Tier and the winner. The card calls it the lowest-carbohydrate commercial kibble in wide ferret-keeping use, with named meats and organ meats and a starch-free system that puts carbohydrate by difference in the low single digits. Specs list about 60 percent protein and about 16 percent fat on a dry-matter basis, grain-free, sold direct and through specialty pet retail. Cons are the premium price and the chance it is not in a supermarket aisle. The printed price is $30–50 for 5 pounds. The Amazon search above is the one already used for this bag on the diet pages.</p>
+        <p>Wysong Epigen 90 is the top row and the winner. The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. It is sold direct and through specialty pet retail, and it may not be in a supermarket aisle. The printed price is $30–50 for 5 pounds. The Amazon search above is the one already used for this bag on the diet pages.</p>
         <p>Dry-matter math for a different label is the <Link href="/tools/label-calculator">label calculator</Link>, using the conversion on the label guide. Wysong’s panel stays the one printed above.</p>
         <h2>What the review says about Carniwhole</h2>
         <p>Carniwhole is Direct-to-Consumer. The card says keepers choose it for a published ingredient and macronutrient panel and a fresher product than long-shelf-stable kibble. Protein source is listed as animal-first named meats. Distribution is direct only, with no retail backup. Shipping is a subscription. Smaller-batch sourcing is listed as yes. Cons are subscription logistics, the missing retail backup, and a shorter community track record than Marshall or Wysong. The price line says subscription pricing. That is the price the review prints, not a dollar range.</p>
         <h2>Who should buy which food</h2>
-        <p>Buy Wysong when the review’s single-digit carbohydrate line and specialty or direct stocking are what you want, and the printed bag price is acceptable. Buy Carniwhole when a subscription shipment and a direct-only panel are acceptable, including the chance you cannot pick the same bag up at a store. Marshall remains the mid-tier retail card on the other guide. Similar carbohydrate on an unknown label does not make that label into either of these bags.</p>
+        <p>Buy Wysong when the printed guaranteed analysis and specialty or direct stocking are what you want, and the printed bag price is acceptable. Carbohydrate is not on that analysis — check the label. Buy Carniwhole when a subscription shipment and a direct-only panel are acceptable, including the chance you cannot pick the same bag up at a store. Marshall remains the mid-tier retail card on the other guide. Similar carbohydrate on an unknown label does not make that label into either of these bags.</p>
         <p>The sale price can differ from the printed Wysong band. Carniwhole’s price is whatever the subscription page shows, not a figure added here.</p>
         <h2>Questions</h2>
         <FAQAccordion items={FAQS} />
