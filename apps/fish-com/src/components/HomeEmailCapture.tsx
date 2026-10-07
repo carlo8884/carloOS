@@ -53,7 +53,12 @@ export function HomeEmailCapture() {
               <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="A goldfish" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-thumb-goldfish" alt="A goldfish" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Setup guides</div>
+              </div>
               <p className="text-xs text-brand-text-mid mt-0.5">Size, cycle, then the first fish.</p>
             </div>
           </Link>
@@ -69,8 +74,13 @@ export function HomeEmailCapture() {
                 <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="16:9" subtleCredit />
               </div>
               <div className="p-4">
-                <div className="font-display font-bold text-brand-dark text-base leading-tight italic group-hover:text-brand-primary">
-                  {item.title}
+                <div className="mb-1 flex items-center gap-2">
+                  <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                  </span>
+                  <div className="font-display font-bold text-brand-dark text-base leading-tight italic group-hover:text-brand-primary">
+                    {item.title}
+                  </div>
                 </div>
                 <p className="text-xs text-brand-text-mid mt-1 leading-relaxed">{item.note}</p>
               </div>
