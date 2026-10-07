@@ -144,7 +144,7 @@ export default function NovemberDecemberGiftGuidePage() {
         </div>
         <ComparisonFoot updated="2026-10-07" />
         <h2>Questions</h2>
-        <FAQAccordion items={FAQS} />
+        <FAQAccordion items={FAQS} includeSchema={false} />
         <BelowFoldPhoto siteId="horses-com" />
       </div>
     </ArticleLayout>

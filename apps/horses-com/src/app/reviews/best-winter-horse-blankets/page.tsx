@@ -30,7 +30,7 @@ const rhinoSchema = buildProductSchema({ name: 'Horseware Rhino Original Turnout
 const schneidersSchema = buildProductSchema({ name: 'Schneiders StormShield Euro Turnout', description: 'Heavyweight ballistic turnout blanket built for harsh winters.', url: 'https://horses.com/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
 const smartpakSchema = buildProductSchema({ name: 'SmartPak Ultimate Turnout', description: 'House-brand waterproof turnout blanket with shoulder gussets.', url: 'https://horses.com/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets', imageUrl: '' })
 const weatherbeetaSchema = buildProductSchema({ name: 'Weatherbeeta ComFiTec Plus Dynamic II', description: 'Mid-tier waterproof turnout with memory foam wither relief.', url: 'https://horses.com/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets', imageUrl: '' })
-const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: 'Value-tier ballistic turnout from Horseware&apos;s Amigo line.', url: 'https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets', imageUrl: '' })
+const amigoSchema = buildProductSchema({ name: 'Horseware Amigo Bravo 12 Plus', description: "Value-tier ballistic turnout from Horseware's Amigo line.", url: 'https://horses.com/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets', imageUrl: '' })
 const allSchemas = combineSchemas(articleSchema, ramboSchema, rhinoSchema, schneidersSchema, smartpakSchema, weatherbeetaSchema, amigoSchema)
 
 const PICKS = [
