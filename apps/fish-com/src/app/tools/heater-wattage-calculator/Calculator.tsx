@@ -145,6 +145,20 @@ export default function HeaterWattageCalculator() {
         </ResultMeaning>
         </>
       )}
+      {!inputError && result && (
+        <ul className="mt-4 space-y-2 text-sm">
+          <li>
+            <a href="/reviews/winter-heater-sizing-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Aquarium heater size for a cold room
+            </a>
+          </li>
+          <li>
+            <a href="/reviews/best-display-tank-heater-guide" className="inline-block max-w-full whitespace-normal text-brand-primary underline underline-offset-2">
+              Best heater for a display tank
+            </a>
+          </li>
+        </ul>
+      )}
     </div>
   )
 }
