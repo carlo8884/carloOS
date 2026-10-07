@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -123,7 +124,7 @@ export default function DogDnaTestsPage() {
 
         <p className="text-sm text-gray-500 mt-8"><em>This article is general educational information from the Dog.com editorial team and is not veterinary advice. Test capabilities and database sizes reflect publicly reported information as of June 2026 and may change; figures are described qualitatively where exact numbers vary by provider and tier. Always consult your veterinarian before acting on any genetic-screening result.</em></p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-dna-tests" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

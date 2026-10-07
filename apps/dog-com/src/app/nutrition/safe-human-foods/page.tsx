@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Human Foods Safe for Dogs — What Can Dogs Actually Eat? | Dog.com', description: 'Complete list of human foods that are safe to share with dogs — with portion guidance and which preparations to avoid. research-based.', path: '/nutrition/safe-human-foods', type: 'article' })
@@ -86,7 +87,7 @@ export default function SafeHumanFoodsPage() {
         <h2>The Always-Check List</h2>
         <p>Before sharing any human food product (not a whole food): check every ingredient for xylitol, grapes, raisins, onion powder, garlic powder, and macadamia nuts. Many products contain these in forms that aren&apos;t obvious — protein bars, certain breads, trail mixes, flavored yogurts, and packaged foods frequently contain one or more of these. When in doubt, consult the <a href="/nutrition/toxic-foods">toxic foods guide</a> or call your vet.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/plain+boiled+chicken+for+dogs?s=nutrition-safe-foods" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Dog Weight Management — Safe Weight Loss Protocol | Dog.com', description: 'Roughly 59% of US dogs are overweight (APOP 2022 survey). Safe caloric reduction, body condition scoring, exercise protocols.', path: '/nutrition/weight-management', type: 'article' })
@@ -70,7 +71,7 @@ export default function WeightManagementPage() {
         </ul>
         <p>Weight management is lifelong, not temporary. A dog that loses weight on a restricted diet and then returns to previous intake will regain the weight. Maintenance monitoring — BCS monthly, weight every 3 months — is the correct long-term approach.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-weight" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

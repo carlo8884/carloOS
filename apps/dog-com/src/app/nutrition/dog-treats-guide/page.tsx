@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
 import {
@@ -6,7 +7,6 @@ import {
   FAQAccordion,
   RelatedLinks,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import {
@@ -345,7 +345,7 @@ export default function DogTreatsGuidePage() {
             </p>
           </CalloutBox>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/purina+dog+food?s=nutrition-treats" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

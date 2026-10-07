@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Much to Feed Your Dog — By Weight, Age | Dog.com', description: 'Dog feeding amounts based on current weight, ideal weight, life stage, and activity level. Body condition scoring explained. research-based.', path: '/nutrition/how-much-to-feed', type: 'article' })
@@ -83,7 +84,7 @@ export default function HowMuchToFeedPage() {
         <h2 id="seniors">Senior Dogs — Adjust for Metabolic Slowdown</h2>
         <p>Senior dogs have lower metabolic rates. The portions that maintained ideal weight at age 4 will cause gradual weight gain by age 9 if not adjusted. Reduce portions by 10–15% when your dog enters senior status and monitor BCS monthly. Dogs with kidney disease need prescription diet portioning guidance from their veterinarian.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-how-much" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

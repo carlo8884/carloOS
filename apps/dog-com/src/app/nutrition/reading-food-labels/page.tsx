@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How to Read a Dog Food Label — Ingredients, AAFCO | Dog.com', description: 'Decode dog food labels. What the ingredient list actually tells you (and doesn\'t), how to read the guaranteed analysis, what AAFCO statements mean.', path: '/nutrition/reading-food-labels', type: 'article' })
@@ -65,7 +66,7 @@ export default function ReadingFoodLabelsPage() {
           <li><strong>Veterinarian-recommended on packaging without context</strong> — verify who recommended it and whether it was a paid endorsement</li>
         </ul>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-labels" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

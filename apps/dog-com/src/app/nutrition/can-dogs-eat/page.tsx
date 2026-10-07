@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, buildFAQSchema, buildBreadcrumbSchema, combineSchemas, SchemaScript, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { DOG_FOODS, DOG_FOOD_CATEGORIES, VERDICT_META } from '../../../data/foods'
 
 export const metadata: Metadata = buildMetadata({
@@ -115,7 +116,7 @@ export default function CanDogsEatHubPage() {
 
       <div className="px-container-sm sm:px-container pb-8">
         <div className="max-w-content-wide">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+food?s=can-dogs-eat" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

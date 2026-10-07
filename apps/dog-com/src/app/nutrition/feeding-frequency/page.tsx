@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'How Often to Feed Your Dog — Meal Frequency by Life Stage | Dog.com', description: 'How many times a day to feed your dog by age and size. Why twice daily is better than once, when to switch feeding schedules, and meal timing for housetraining.', path: '/nutrition/feeding-frequency', type: 'article' })
@@ -70,7 +71,7 @@ export default function FeedingFrequencyPage() {
         <h2>Before and After Exercise</h2>
         <p>Do not feed immediately before or after vigorous exercise — particularly relevant for large, deep-chested breeds at elevated GDV risk. The timing recommendation: wait 1–2 hours after eating before vigorous exercise, and 30–60 minutes after vigorous exercise before feeding. For most dogs on a normal schedule (morning feed, evening feed, daily walks), this timing naturally accommodates without needing specific management.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dry+dog+food?s=nutrition-frequency" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

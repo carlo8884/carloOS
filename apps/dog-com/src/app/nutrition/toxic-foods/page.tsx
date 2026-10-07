@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, ShopCtas } from '@carloOS/ui'
 import { buildFAQSchema, buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -229,7 +230,7 @@ export default function ToxicFoodsPage() {
             <li><strong>Note the time of ingestion</strong> — treatment options narrow significantly as time passes for some toxins. Earlier treatment equals better outcomes.</li>
           </ol>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+food?s=nutrition-toxic-foods" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
