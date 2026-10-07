@@ -121,8 +121,8 @@ export function PetInsuranceWorthItCalculator() {
 
   const paidForItself = result !== null && result.netVsPremium > 0
   const tone = paidForItself
-    ? 'border-emerald-700 bg-emerald-950 text-emerald-200'
-    : 'border-amber-700 bg-amber-950 text-amber-200'
+    ? 'border-emerald-700 bg-emerald-950 text-emerald-200 [&_p]:!text-emerald-200 [&_strong]:!text-emerald-200'
+    : 'border-amber-700 bg-amber-950 text-amber-200 [&_p]:!text-amber-200 [&_strong]:!text-amber-200'
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
