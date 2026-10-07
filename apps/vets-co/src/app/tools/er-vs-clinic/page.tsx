@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
   CrossPortfolioCard,
@@ -220,7 +220,7 @@ export default function ErVsClinicPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="pet-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-er-vs-clinic", "/go/amazon-brand/digital+pet+thermometer?s=tools-er-vs-clinic", "/go/amazon-brand/soft+pet+carrier?s=tools-er-vs-clinic", "/go/amazon-brand/styptic+powder?s=tools-er-vs-clinic", "/go/amazon-brand/wound+care+gauze?s=tools-er-vs-clinic"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pet emergency-prep kit
@@ -263,7 +263,6 @@ export default function ErVsClinicPage() {
               Once the pet is stable, the editorial insurance comparison explains how accident and
               illness policies treat those bills — it does not re-rank carriers for this page.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-3 text-2xs" />
             <Link
               href="/reviews/best-pet-insurance"
               className="inline-block bg-brand-primary text-white font-semibold text-sm px-4 py-2 rounded-md no-underline hover:bg-brand-primary-dark"

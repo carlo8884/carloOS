@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -185,7 +185,7 @@ export default function CatAgeCalculatorPage() {
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-age-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitten+food?s=tools-cat-age-calculator", "/go/amazon-brand/senior+cat+food?s=tools-cat-age-calculator", "/go/amazon-brand/digital+pet+scale?s=tools-cat-age-calculator", "/go/amazon-brand/cat+carrier?s=tools-cat-age-calculator", "/go/amazon-brand/cat+dental?s=tools-cat-age-calculator"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a life-stage kit

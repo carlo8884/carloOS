@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Cat Calorie Calculator -- /tools/cat-calorie-calculator
  * Client compute component. Implements WSAVA/AAHA-style feline RER/DER formulas.
@@ -10,7 +11,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
+import { ResultMeaning, ToolError, numberFieldError } from '@carloOS/ui'
 
 type Unit = 'lb' | 'kg'
 
@@ -299,7 +300,7 @@ export default function CatCalorieCalculator() {
               {next.guideLabel} →
             </a>
           </p>
-          <AffiliateDisclosure variant="inline" siteId="vets-co" className="my-3" />
+          <HopDisclosure siteId="vets-co" href={next.hopHref} />
           <a
             href={next.hopHref}
             rel="sponsored noopener"
