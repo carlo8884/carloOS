@@ -38,6 +38,7 @@ export function AffiliateClickListener({ site }: { site: string }) {
         page: click.page,
         source: click.source,
         partner: click.partner,
+        vendor: click.vendor,
         product: click.product,
         placement: click.placement,
         link_url: click.link_url,
