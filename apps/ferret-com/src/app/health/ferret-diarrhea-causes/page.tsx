@@ -20,11 +20,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: diarrhea causes including ECE, proliferative bowel disease, Helicobacter, and foreign bodies",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal disease",
     url: "https://aemv.org",
     publisher: "AEMV",

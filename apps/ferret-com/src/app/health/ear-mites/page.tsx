@@ -20,11 +20,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Ear Mites in Ferrets: Otodectes cynotis diagnosis, treatment, and household decontamination",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dermatology and ectoparasitology continuing-education resources",
     url: "https://aemv.org",
     publisher: "AEMV",

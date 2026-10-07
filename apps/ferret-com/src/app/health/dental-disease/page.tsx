@@ -21,11 +21,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Dental Disease in Ferrets: periodontal staging, tartar accumulation, and dental-procedure anesthesia considerations",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — ferret dentistry and oral-surgery continuing-education resources",
     url: "https://aemv.org",
     publisher: "AEMV",

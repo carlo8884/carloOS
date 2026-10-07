@@ -20,11 +20,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: gastric ulceration, Helicobacter mustelae, and treatment approaches",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — practitioner directory and continuing-education content on ferret gastrointestinal medicine",
     url: "https://aemv.org",
     publisher: "AEMV",

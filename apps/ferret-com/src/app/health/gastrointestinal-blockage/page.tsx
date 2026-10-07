@@ -21,11 +21,7 @@ const SOURCES = [
     url: "https://www.elsevier.com/books/ferrets-rabbits-and-rodents/quesenberry/978-1-4160-6621-7",
     publisher: "Elsevier/Saunders",
   },
-  {
-    label: "Merck Veterinary Manual — Digestive Diseases of Ferrets: foreign-body obstruction, diagnosis, and surgical management",
-    publisher: "Merck Veterinary Manual",
-  },
-  {
+    {
     label: "Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal surgical standards and ferret anesthesia guidelines",
     url: "https://aemv.org",
     publisher: "AEMV",
