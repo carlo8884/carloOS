@@ -96,6 +96,7 @@ export default function HardKeeperPage() {
               { label: "Equine Gastric Ulcers", href: "/health/equine-ulcers" },
               { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Equine Dental Care", href: "/guides/equine-dental-care" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Beet Pulp Explained", href: "/nutrition/beet-pulp" },
             ]}
           />
@@ -115,7 +116,7 @@ export default function HardKeeperPage() {
           <p>A horse that will not hold weight despite good feeding usually has an underlying reason, and piling on grain without finding it wastes money and can do harm. Common culprits include dental problems that prevent proper chewing, a heavy parasite burden, gastric ulcers, PPID and other endocrine disease, chronic pain, and competition from herdmates at feeding time. A veterinary workup -- including a dental exam, fecal egg count, and consideration of ulcers and PPID -- should come before simply increasing the ration.</p>
 
           <h2 id="forage">Maximize Forage</h2>
-          <p>Forage should still do the heavy lifting. Offer free-choice, good-quality, leafy hay -- the more a horse will eat, the more calories from the safest source. Higher-energy or part-legume hay (such as alfalfa mix) raises the calorie density of the forage itself. For horses that physically cannot eat enough long-stem hay, chopped forage, soaked hay cubes, and high-fiber complete feeds extend forage intake. Horse alfalfa cubes are that higher-energy cube form of the part-legume forage already named — they are not alfalfa hay bales (that lives on hay-types), not chopped forage (that lives on feeding-senior-horses), and not generic hay cubes (those live on equine-dental-care).</p>
+          <p>Forage should still do the heavy lifting. Offer free-choice, good-quality, leafy hay -- the more a horse will eat, the more calories from the safest source. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage target from bodyweight before fat or beet pulp is added. Higher-energy or part-legume hay (such as alfalfa mix) raises the calorie density of the forage itself. For horses that physically cannot eat enough long-stem hay, chopped forage, soaked hay cubes, and high-fiber complete feeds extend forage intake. Horse alfalfa cubes are that higher-energy cube form of the part-legume forage already named — they are not alfalfa hay bales (that lives on hay-types), not chopped forage (that lives on feeding-senior-horses), and not generic hay cubes (those live on equine-dental-care).</p>
 
           <h2 id="calories">Add Calories Safely</h2>
           <p>When forage alone cannot maintain condition, add calories in a way that respects the equine gut. The safest dense energy comes from fat and highly digestible fiber rather than large grain meals, which risk hindgut upset, ulcers, and excitability. If grain or a concentrate is used, feed it in small, frequent meals rather than a few large ones. The mantra is to add energy without adding starch.</p>

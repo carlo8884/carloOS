@@ -96,6 +96,7 @@ export default function EasyKeeperPage() {
               { label: "Equine Metabolic Syndrome", href: "/health/equine-metabolic-syndrome" },
               { label: "Equine Laminitis", href: "/health/laminitis" },
               { label: "Ration Balancers", href: "/nutrition/ration-balancers" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Body Condition Score Tool", href: "/tools/body-condition-score" },
             ]}
           />
@@ -119,7 +120,7 @@ export default function EasyKeeperPage() {
 
           <h2 id="calories">Controlling Calories and Sugar</h2>
           <ul>
-            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale (that lives on EMS), not a tabletop digital horse grain scale (that lives on grain), and not a horse feed-scoop scale (those live on the feed calculators).</li>
+            <li><strong>Feed by weight, not eye.</strong> Weigh the hay; for weight loss, vets often start around 1.5 percent of ideal bodyweight in forage dry matter, not dropping below about 1.25 percent without supervision. The <a href="/tools/horse-feed-calculator">daily feed calculator</a> applies that percent to the horse&apos;s weight. A portable horse hay flake scale is how that restricted flake is weighed at the stall — it is not a digital hanging hay-bale scale (that lives on EMS), not a tabletop digital horse grain scale (that lives on grain), and not a horse feed-scoop scale (those live on the feed calculators).</li>
             <li><strong>Choose low-sugar forage</strong> and soak hay for 30 to 60 minutes to leach out water-soluble carbohydrate. A horse hay soaking tub is the barn tub that flake sits in, then drains — it is not a hay soaking bag (that lives on heaves), not a horse feed soaking tub (that lives on feeding-senior-horses), and not a lidded 5-gallon feed-soaking pail (that lives on choke).</li>
             <li><strong>Cut the grain</strong> -- easy keepers rarely need any concentrate; calorie-dense feeds are the first thing to remove.</li>
             <li><strong>Restrict grazing</strong> with a grazing muzzle, strip grazing, a dry lot, or turnout at lower-sugar times of day. Grazing muzzles already live on pasture-management and laminitis. Strip-grazing step-in posts already live on EMS.</li>

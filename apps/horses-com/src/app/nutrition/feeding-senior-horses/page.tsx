@@ -96,6 +96,7 @@ export default function SeniorFeedingPage() {
               { label: "Cushing's / PPID", href: "/health/cushings-ppid" },
               { label: "Best Equine Supplements", href: "/reviews/best-equine-supplements" },
               { label: "Joint Supplements", href: "/supplements/joint-supplements" },
+              { label: "Daily feed calculator", href: "/tools/horse-feed-calculator" },
               { label: "Senior Horse Care", href: "/ownership/senior-horse-care" },
             ]}
           />
@@ -115,7 +116,7 @@ export default function SeniorFeedingPage() {
           <p>As horses age, several things shift together: teeth wear down and chewing becomes less effective, digestion of fiber and protein becomes somewhat less efficient, the ability to maintain condition declines, and chronic conditions such as PPID become common. Some seniors become hard keepers needing more support, while others -- especially those with PPID and regional fat -- stay overweight and need restriction. The diet must be tailored to the individual aging horse, not a single senior template.</p>
 
           <h2 id="teeth">Dental Decline</h2>
-          <p>Dental wear is the single biggest feeding change in old age. Worn, loose, or missing teeth make a horse unable to chew long-stem hay effectively, leading to quidding (dropping balls of half-chewed hay), weight loss, and choke risk from poorly chewed feed. Regular dental care helps, but eventually many seniors cannot manage hay and need forage in a form they can process. Watching for quidding and weight loss is the cue to adapt the forage.</p>
+          <p>Dental wear is the single biggest feeding change in old age. Worn, loose, or missing teeth make a horse unable to chew long-stem hay effectively, leading to quidding (dropping balls of half-chewed hay), weight loss, and choke risk from poorly chewed feed. Regular dental care helps, but eventually many seniors cannot manage hay and need forage in a form they can process. Watching for quidding and weight loss is the cue to adapt the forage. If the horse can still eat long-stem hay, the <a href="/tools/horse-feed-calculator">daily feed calculator</a> estimates that forage from bodyweight. Soaked cubes and mashes change the form, not the need for a weighed target.</p>
 
           <h2 id="feeds">Senior Feeds and Hay Replacers</h2>
           <p>Senior horses that cannot chew hay well can be maintained on soaked, easily chewed forage and complete senior feeds. Soaked hay cubes, chopped forage, soaked beet pulp, and complete senior feeds (designed to be the whole ration, including forage replacement) provide digestible fiber the horse can manage. These are usually fed soaked into a mash for horses with poor teeth, in several small meals a day. The goal is to keep fiber intake high in a chewable form. Horse chopped forage is that chewable hay-replacer fiber — it is not a dental-page hay-cube hop and not a beet-pulp shred or pellet hop (those live on the beet-pulp page). A horse feed soaking tub is how cubes and complete senior feed sit in water until they become a mash a poor-toothed horse can eat — it is not a lidded 5-gallon feed-soaking pail (that lives on the choke page), not stackable rubber feed tubs (those live on the grain page), and not a hay soaking bag (that lives on heaves).</p>
