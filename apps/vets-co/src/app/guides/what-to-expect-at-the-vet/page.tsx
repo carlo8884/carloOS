@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "What to Expect at the Vet — A Visit Walkthrough | Vets.co", description: "From check-in to physical exam to the treatment plan, here is what happens at a typical veterinary visit and how to prepare so your pet gets the best care.", path: '/guides/what-to-expect-at-the-vet', type: 'article' })
@@ -56,7 +57,7 @@ export default function WhatToExpectPage() {
           <h2 id="kit">What-to-expect-at-the-vet kit</h2>
           <p>These are educational visit-prep / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. Yellow legal pads and letter-size hanging file folders already live on how-to-afford-vet-care. Lined telephone message pads and medium hard-sided plastic pet carriers already live on when-to-go-to-the-vet. Pocket spiral memo pads already live on vomiting-diarrhea-pets. Weatherproof storage clipboards already live on horses.com influenza. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/small+soft+cooler+bag?s=guides-what-to-expect-at-the-vet", "/go/amazon-brand/clipboard+with+storage?s=guides-what-to-expect-at-the-vet"]} />
 
           {/* Money path — live amazon-brand search hops
               (spiral notebook /

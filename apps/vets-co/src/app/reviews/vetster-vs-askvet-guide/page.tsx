@@ -1,7 +1,8 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { consultLink } from '@carloOS/config/affiliate-hop'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -77,7 +78,7 @@ export default function VetsterVsAskvetGuidePage() {
         <p>AskVet is the subscription option. The price in the review is $30 a month for unlimited chat. Typical wait is under five minutes. There is no video, specialists are general practice, and prescriptions are limited. The review says that is a reasonable trade when the questions are frequent: a new puppy, a senior pet, several pets, or a chronic condition you already understand and need to ask about. It is a weak substitute when you needed someone to look at the animal.</p>
         <h2>Who should use which</h2>
         <p>Use Vetster when you want video, a specialist, or a prescription the review says is jurisdiction-dependent. Use AskVet when the questions are frequent and chat is enough, and $30 a month is cheaper than repeating a $50–100 visit. If you already pay for Chewy+, the other option on the telehealth page is Chewy Connect, included with that membership, and it is a poor reason to join Chewy+ by itself. Chewy is not the comparison this page is settling.</p>
-        {visit?.attributed ? <AffiliateDisclosure variant="inline" siteId="vets-co" /> : null}
+        <HopDisclosure siteId="vets-co" href={visit?.href ?? ''} showQuietNote={false} />
         <p>The link below opens Vetster from the telehealth page, for a video visit.</p>
         <p><a className="font-semibold text-brand-primary" href={visit?.href} rel={visit?.attributed ? 'sponsored noopener' : 'nofollow noopener'} target={visit?.attributed ? undefined : '_blank'}>Visit Vetster →</a></p>
         <EmailCapture

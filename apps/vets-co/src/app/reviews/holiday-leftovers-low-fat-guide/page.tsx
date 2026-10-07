@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'vets-co',
@@ -76,7 +77,7 @@ export default function HolidayLeftoversLowFatGuidePage() {
         <p>The same page says household recovery-diet tools sit beside that advice only after a veterinarian has confirmed the dog is ready for a home low-fat plan. The low-fat digestive-care food is described as the same class of consistent recovery diet the page already names. It is not a leftover buffet and not a one-off bland meal. Lean low-fat treats are the substitute so bacon grease, holiday skin, and rich chews stay off the plate. A portion scale is the third tool on that page, and it stays there. None of them treats an acute episode. The page is explicit that these are not Hill&apos;s i/d Low Fat, Royal Canin Gastrointestinal Low Fat, or Purina EN prescription products.</p>
         <h2>What still means go in</h2>
         <p>Typical signs on that page are vomiting, loss of appetite, abdominal pain, lethargy, and sometimes diarrhea or fever. A painful dog may hunch or take a praying posture. Mild cases can look like a simple upset. Severe cases are a very sick, dehydrated dog. The page says the signs overlap with other diseases, so a veterinarian has to confirm the diagnosis. If vomiting, belly pain, or refusal to eat returns, the instruction is to go in, not to reorder food.</p>
-        <AffiliateDisclosure variant="inline" siteId="vets-co" />
+        <HopDisclosure siteId="vets-co" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide" />
         <p>The link below searches for a low-fat digestive-care food, the same search as on the pancreatitis page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/low+fat+digestive+care+dog+food?s=reviews-holiday-leftovers-low-fat-guide">Browse low-fat digestive-care dog foods on Amazon →</a></p>
         <h2>Questions</h2>

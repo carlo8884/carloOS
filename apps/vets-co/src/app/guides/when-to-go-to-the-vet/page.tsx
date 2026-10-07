@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "When to Take Your Pet to the Vet — A Decision Guide | Vets.co", description: "Some signs warrant watchful waiting; others need same-day or emergency care. Learn which symptoms mean it is time to call the vet and which cannot wait.", path: '/guides/when-to-go-to-the-vet', type: 'article' })
@@ -84,7 +85,7 @@ export default function WhenToGoPage() {
             emergency-signs. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/48+hour+digital+kitchen+timer?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/lined+telephone+message+pad?s=guides-when-to-go-to-the-vet", "/go/amazon-brand/medium+hard+sided+plastic+pet+carrier?s=guides-when-to-go-to-the-vet"]} />
 
           {/* Money path — live amazon-brand search hops
               (48-hour digital kitchen timer /

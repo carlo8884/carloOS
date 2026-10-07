@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "How to Choose a Veterinarian — A Practical Guide | Vets.co", description: "Accreditation, communication, services, location, and emergency arrangements all matter when choosing a vet. Here is how to find the right clinic for your pet.", path: '/guides/choosing-a-veterinarian', type: 'article' })
@@ -56,7 +57,7 @@ export default function ChoosingVetPage() {
           <h2 id="kit">Choosing-a-veterinarian kit</h2>
           <p>These are educational clinic-comparison / paperwork tools, not a ranked product list, not a substitute for veterinary care, and not a treatment. Ruled index cards, 3x3 sticky notes, and letter-size sheet protectors already live on questions-to-ask-your-vet. Yellow legal pads and hanging file folders already live on how-to-afford-vet-care. Car visor document holders already live on ER-vs-urgent-care. This page does not hop medications, financing brands, or insurance brands. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kraft+two+pocket+folder?s=guides-choosing-a-veterinarian", "/go/amazon-brand/pocket+size+address+book?s=guides-choosing-a-veterinarian"]} />
 
           {/* Money path — live amazon-brand search hops
               (reporter notebook /
