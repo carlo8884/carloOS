@@ -71,7 +71,7 @@ export default function NovemberDecemberGiftGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-04"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
         <p>November and December are blanket season in a lot of barns, and they are also when a lead rope or a pair of boots shows up as a gift. The <Link href="/reviews">reviews hub</Link> already prints those bands. This page sorts the one-time prices from the halter page, the boot page, and the winter blanket review. It does not call any row the gift of the year, and it does not invent a size chart.</p>
@@ -79,7 +79,7 @@ export default function NovemberDecemberGiftGuidePage() {
         <h2>Printed bands under $70</h2>
         <p>The halter page prints the cotton lead with a bull snap at $8–22, the adjustable flat nylon halter at $10–25, and the leather-crown breakaway at $25–55. The boot page prints pull-on bell boots at $12–35 a pair and synthetic brushing boots at $25–70 a pair. The nylon halter is the in-hand halter. The breakaway is the one the card describes for a horse left haltered. Brushing boots and bell boots protect different parts of the leg. The boot page says neither one is tendon support.</p>
         <h2>Printed blanket bands</h2>
-        <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $160–230, the Rhino Original at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
+        <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $279.95–299.95, the Rhino Plus at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
         <h2>Who should get which printed band</h2>
         <p>A lead or a nylon halter is the small barn gift when the horse is led under supervision. A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states. Bell boots are for overreach. Brushing boots are for interference. A turnout blanket is the larger gift, and the blanket review is where denier and fill live.</p>
         <HopDisclosure siteId="horses-com" href={`/go/amazon-brand/winter+horse+blanket?s=${SOURCE}`} />
@@ -125,13 +125,13 @@ export default function NovemberDecemberGiftGuidePage() {
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
-                <td className="p-3">$160–230</td>
+                <td className="p-3">$279.95–299.95</td>
                 <td className="p-3 font-bold">SmartPak Ultimate<TableShopLink quietUntilTag href={`/go/smartpak/ultimate-turnout?s=${SOURCE}`} product="SmartPak Ultimate" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$180–260</td>
-                <td className="p-3 font-bold">Rhino Original<TableShopLink quietUntilTag href={`/go/dover/rhino-original-turnout?s=${SOURCE}`} product="Rhino Original" /></td>
+                <td className="p-3 font-bold">Rhino Plus<TableShopLink quietUntilTag href={`/go/dover/rhino-original-turnout?s=${SOURCE}`} product="Rhino Plus" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">

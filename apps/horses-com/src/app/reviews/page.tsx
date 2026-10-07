@@ -47,7 +47,7 @@ const REVIEWS = [
     group: 'horses-reviews-blankets',
     title: 'Rambo vs Rhino, Same Brand',
     description:
-      'Horseware Rambo Original versus Rhino Original on denier, fill, hardware, and the prices already in the blanket review.',
+      'Horseware Rambo Original versus Rhino Plus on denier, fill, and the prices already in the blanket review.',
   },
   {
     slug: 'weatherbeeta-vs-amigo-guide',
