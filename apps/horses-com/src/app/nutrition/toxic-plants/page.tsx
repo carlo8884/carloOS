@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { AffiliateDisclosure, ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
+import { ArticleByline, ArticleLayout, buildMetadata, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas, TableOfContents } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -171,7 +172,7 @@ export default function ToxicPlantsPage() {
             (that lives on the osteoarthritis page). This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/equine+toxic+plant+identification+field+guide?s=nutrition-toxic-plants", "/go/amazon-brand/horse+hay?s=nutrition-toxic-plants", "/go/amazon-brand/horse+paddock+tree+guard+fencing?s=nutrition-toxic-plants"]} />
 
           {/* Money path — live amazon-brand search hops
               (equine toxic plant identification field guide /
