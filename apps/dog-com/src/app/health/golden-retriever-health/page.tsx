@@ -11,7 +11,6 @@ const SOURCES = [
   { label: 'Morris Animal Foundation: Golden Retriever Lifetime Study — Cancer and Longevity', url: 'https://www.morrisanimalfoundation.org/golden-retriever-lifetime-study', publisher: 'Morris Animal Foundation' },
   { label: 'Orthopedic Foundation for Animals (OFA): Golden Retriever Hip and Cardiac Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
   { label: 'AVMA: Cancer Prevalence and Monitoring in Golden Retrievers', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Hemangiosarcoma in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/tumors-of-the-skin-and-soft-tissues-in-dogs-and-cats/hemangiosarcoma-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
 ]
 
 

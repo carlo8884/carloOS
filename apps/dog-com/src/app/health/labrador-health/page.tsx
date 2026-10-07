@@ -11,7 +11,7 @@ const SOURCES = [
   { label: 'Orthopedic Foundation for Animals (OFA): Labrador Retriever Hip and Elbow Dysplasia Statistics', url: 'https://www.ofa.org', publisher: 'OFA' },
   { label: 'Raffan E et al. A deletion in the canine POMC gene is associated with weight and appetite in obesity-prone Labrador Retriever dogs. Cell Metab. 2016;23(5):893-900.', publisher: 'Cell Metabolism' },
   { label: 'AVMA: Labrador Retriever Common Health Conditions', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
-  { label: 'Merck Veterinary Manual: Hip Dysplasia in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/joint-diseases-of-dogs-and-cats/hip-dysplasia-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Hip Dysplasia in Dogs', url: 'https://www.merckvetmanual.com/musculoskeletal-system/arthropathies-and-related-disorders-in-small-animals/hip-dysplasia-in-dogs', publisher: 'Merck Vet Manual' },
 ]
 
 

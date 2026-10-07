@@ -306,8 +306,7 @@ export default function DogFirstAidKitPage() {
             title="References"
             sources={[
               { label: 'Pet First Aid — Be Prepared', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/pet-first-aid-tips', publisher: 'AVMA' },
-              { label: 'Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/animal-poison-control', publisher: 'ASPCA' },
-              { label: 'Poisoning in Dogs — First Aid and Emergency Care', url: 'https://www.merckvetmanual.com/dog-owners/emergencies/poisoning-in-dogs', publisher: 'Merck Veterinary Manual' },
+              { label: 'Animal Poison Control Center', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
               { label: 'Disaster Preparedness for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/emergencycare/disaster-preparedness', publisher: 'AVMA' },
             ]}
           />

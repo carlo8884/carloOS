@@ -7,7 +7,6 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Intervertebral Disk Disease in Dogs and Cats', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/intervertebral-disk-disease-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVS: American College of Veterinary Surgeons — Intervertebral Disc Disease', url: 'https://www.acvs.org/small-animal/intervertebral-disc-disease', publisher: 'ACVS' },
   { label: 'AVMA: Intervertebral Disc Disease (IVDD) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Brisson BA. Intervertebral disc disease in dogs. Vet Clin North Am Small Anim Pract. 2010;40(5):829-858.', publisher: 'Vet Clinics Small Animal Practice' },

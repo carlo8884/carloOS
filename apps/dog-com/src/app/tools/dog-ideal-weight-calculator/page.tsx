@@ -28,7 +28,7 @@ const SOURCES = [
   { label: 'American Kennel Club: Breed Weight and Standards', url: 'https://www.akc.org/dog-breeds/', publisher: 'AKC' },
   { label: 'American Animal Hospital Association: Weight Management Guidelines for Dogs and Cats', url: 'https://www.aaha.org/aaha-guidelines/weight-management/weight-management-home/', publisher: 'AAHA' },
   { label: 'WSAVA Global Nutrition Committee: Body Condition Score Charts (9-point)', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
-  { label: 'Merck Veterinary Manual: Obesity and Nutritional Management in Dogs', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-and-related-diseases-of-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Obesity and Nutritional Management in Dogs', url: 'https://www.merckvetmanual.com/management-and-nutrition/nutrition-small-animals/nutritional-requirements-of-small-animals', publisher: 'Merck Vet Manual' },
 ]
 
 const FAQS = [

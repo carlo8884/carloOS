@@ -6,7 +6,6 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Pyotraumatic Dermatitis (Hot Spots) in Dogs', url: 'https://www.merckvetmanual.com/integumentary-system/bacterial-skin-diseases/pyotraumatic-dermatitis-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Skin Conditions in Dogs — Hot Spots and Pyoderma', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'AAHA: Dermatology Guidelines — Secondary Pyoderma and Self-Trauma Management', url: 'https://www.aaha.org/aaha-guidelines/dermatology/', publisher: 'AAHA' },
   { label: 'Olivry T et al. A systematic review of randomized controlled trials for prevention or treatment of atopic dermatitis in dogs. Vet Dermatol. 2010;21(3):210-222.', publisher: 'Vet Dermatology' },

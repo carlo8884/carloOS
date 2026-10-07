@@ -149,7 +149,6 @@ export default function DogKidneyPage() {
               },
               {
                 label: 'Merck Veterinary Manual -- Chronic Kidney Disease in Small Animals',
-                url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/chronic-kidney-disease-in-small-animals',
                 publisher: 'Merck Veterinary Manual',
               },
             ]}

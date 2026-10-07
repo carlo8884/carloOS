@@ -171,7 +171,7 @@ export default function DogHeartDiseasePage() {
               },
               {
                 label: 'FDA Investigation: Potential Dietary Causes of DCM in Dogs',
-                url: 'https://www.fda.gov/animal-veterinary/news-events/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
+                url: 'https://www.fda.gov/animal-veterinary/outbreaks-and-advisories/fda-investigation-potential-link-between-certain-diets-and-canine-dilated-cardiomyopathy',
                 publisher: 'U.S. Food and Drug Administration',
               },
             ]}

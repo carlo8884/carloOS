@@ -7,10 +7,9 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Diabetes Mellitus in Dogs', url: 'https://www.merckvetmanual.com/endocrine-system/the-pancreas/diabetes-mellitus-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Consensus Statement on the Diagnosis and Management of Diabetes Mellitus in Dogs and Cats', url: 'https://www.acvim.org', publisher: 'ACVIM' },
   { label: 'AVMA: Diabetes Mellitus in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/diabetes-mellitus-pets', publisher: 'AVMA' },
-  { label: 'FDA CVM: Vetsulin (porcine insulin zinc suspension) — FDA-Approved for Canine Diabetes', url: 'https://www.fda.gov/animal-veterinary/approved-animal-drug-products/nada-141-236-vetsulin', publisher: 'FDA CVM' },
 ]
 
 export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Diabetes in Dogs — Signs, Insulin Treatment | Dog.com', description: 'Canine diabetes: PU/PD signs, why insulin injection is the treatment (not oral medication), blood glucose curves, and long-term management. research-based.', path: '/health/dog-diabetes', type: 'article' })

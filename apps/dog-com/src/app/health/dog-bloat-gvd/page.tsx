@@ -6,7 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
-  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/diseases-of-the-stomach-and-intestines-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Gastric Dilation and Volvulus in Small Animals', url: 'https://www.merckvetmanual.com/digestive-system/surgical-problems-of-the-gastrointestinal-tract-in-small-animals/gastric-dilation-and-volvulus-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'Glickman LT et al. Non-dietary risk factors for gastric dilatation-volvulus in large and giant breed dogs. J Am Vet Med Assoc. 2000;217(10):1492-1499.', publisher: 'JAVMA' },
   { label: 'AVMA: Bloat (Gastric Dilatation and Volvulus) in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/bloat-dogs', publisher: 'AVMA' },
   { label: 'Brockman DJ et al. Canine gastric dilatation-volvulus syndrome in a veterinary critical care unit: 295 cases (1986-1992). J Am Vet Med Assoc. 1995;207(4):460-464.', publisher: 'JAVMA' },

@@ -28,7 +28,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   { label: 'American Kennel Club: Dog Pregnancy — Signs, Care, and Preparation', url: 'https://www.akc.org/expert-advice/dog-breeding/dog-pregnancy/', publisher: 'AKC' },
   { label: 'American Animal Hospital Association: Reproduction and Whelping Guidance', url: 'https://www.aaha.org/for-pet-parents/find-an-aaha-accredited-animal-hospital-near-me/', publisher: 'AAHA' },
-  { label: 'Merck Veterinary Manual: Management of Reproduction in Dogs', url: 'https://www.merckvetmanual.com/management-and-nutrition/management-of-reproduction-dogs', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Management of Reproduction in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/reproductive-disorders-of-dogs/management-of-reproduction-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA Global Nutrition Committee: Feeding the Pregnant and Lactating Bitch', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
 ]
 

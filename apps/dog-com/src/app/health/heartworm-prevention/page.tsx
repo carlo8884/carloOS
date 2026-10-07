@@ -9,7 +9,7 @@ const SOURCES = [
   { label: 'American Heartworm Society: Current Canine Heartworm Guidelines (2018 revision)', url: 'https://www.heartwormsociety.org/veterinary-resources/american-heartworm-society-guidelines', publisher: 'American Heartworm Society' },
   { label: 'CAPC: Companion Animal Parasite Council — Heartworm Recommendations', url: 'https://capcvet.org/guidelines/heartworm/', publisher: 'CAPC' },
   { label: 'AVMA: Heartworm Disease in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/heartworm-disease', publisher: 'AVMA' },
-  { label: 'FDA CVM: Heartworm Prevention Products — Approved Drugs for Dogs', url: 'https://www.fda.gov/animal-veterinary/product-safety-information/heartworm-disease', publisher: 'FDA CVM' },
+  { label: 'FDA CVM: Heartworm Prevention Products — Approved Drugs for Dogs', url: 'https://www.fda.gov/animal-veterinary/animal-health-literacy/keep-worms-out-your-pets-heart-facts-about-heartworm-disease', publisher: 'FDA CVM' },
 ]
 
 

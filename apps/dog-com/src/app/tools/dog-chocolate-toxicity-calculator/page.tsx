@@ -27,7 +27,7 @@ export const metadata: Metadata = buildMetadata({
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Chocolate Toxicosis in Animals', url: 'https://www.merckvetmanual.com/toxicology/food-hazards/chocolate-toxicosis-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'VCA Animal Hospitals: Chocolate Poisoning in Dogs', url: 'https://vcahospitals.com/know-your-pet/chocolate-poisoning-in-dogs', publisher: 'VCA' },
-  { label: 'ASPCA Animal Poison Control Center: People Foods to Avoid Feeding Your Pets', url: 'https://www.aspca.org/pet-care/animal-poison-control/people-foods-avoid-feeding-your-pets', publisher: 'ASPCA' },
+  { label: 'ASPCA Animal Poison Control Center: People Foods to Avoid Feeding Your Pets', url: 'https://www.aspca.org/pet-care/aspca-poison-control/people-foods-avoid-feeding-your-pets', publisher: 'ASPCA' },
   { label: 'Pet Poison Helpline: Chocolate Toxicity in Dogs', url: 'https://www.petpoisonhelpline.com/poison/chocolate/', publisher: 'Pet Poison Helpline' },
 ]
 

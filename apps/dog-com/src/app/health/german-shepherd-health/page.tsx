@@ -9,7 +9,6 @@ import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
   { label: 'Orthopedic Foundation for Animals (OFA): Hip Dysplasia — German Shepherd Statistics', url: 'https://www.ofa.org/diseases/hip-dysplasia/', publisher: 'OFA' },
-  { label: 'Merck Veterinary Manual: Degenerative Myelopathy in Dogs', url: 'https://www.merckvetmanual.com/nervous-system/spinal-cord-diseases/degenerative-myelopathy-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AVMA: Degenerative Myelopathy and Hip Dysplasia in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Awano T et al. Genome-wide association analysis reveals a SOD1 mutation in canine degenerative myelopathy that resembles amyotrophic lateral sclerosis. Proc Natl Acad Sci. 2009;106(8):2794-2799.', publisher: 'PNAS' },
 ]
