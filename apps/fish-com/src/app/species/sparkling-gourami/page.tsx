@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -99,10 +100,10 @@ export default function SparklingGouramiPage() {
         <p>Sparkling gouramis are bubble-nest builders, though some populations nest near the surface among plants and others build under broad leaves or in caves. The male tends the nest and guards the eggs and fry. Spawning is often preceded by especially intense croaking. Fry are tiny and require infusoria and other very fine first foods before graduating to baby brine shrimp. A species-only or heavily planted shrimp-safe tank gives the best fry survival.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Sparkling Gourami — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse nano tanks, gentle filters, heaters, live plants, and food sized for sparkling gourami care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <ShopCtas amazonHref="/go/amazon-brand/sparkling%20gourami%20nano%20tank%20setup?s=species-sparkling-gourami" amazonLabel="Browse sparkling gourami nano tank setups on Amazon →" />
           </div>
