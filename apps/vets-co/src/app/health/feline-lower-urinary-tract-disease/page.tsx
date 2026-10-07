@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Feline Lower Urinary Tract Disease (FLUTD) — Signs | Vets.co", description: "FLUTD causes straining, frequent urination, and blood in cat urine. A blocked male cat is an emergency. Learn the signs, causes, and management.", path: '/health/feline-lower-urinary-tract-disease', type: 'article' })
@@ -76,7 +77,7 @@ export default function FLUTDPage() {
             Everyday physical supplies that match the prevention copy above — a cat water fountain so running water invites more drinking, extra litter boxes so the household hits one box per cat plus one extra, and canned wet cat food that adds water the cat will actually eat. Multiple clean water stations sit beside the fountain; they are not a second shop hop. Prescription urinary diets (Hill&rsquo;s c/d, Royal Canin Urinary SO, and the like), antibiotics, pain control, and IV fluids stay educational copy only — this page never hops medications, brand ASINs, or clinic gear. This is not the sister UTI page and it does not hop a dog water fountain. This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/cat+water+fountain?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/extra+cat+litter+box?s=health-feline-lower-urinary-tract-disease", "/go/amazon-brand/canned+wet+cat+food?s=health-feline-lower-urinary-tract-disease"]} />
 
           {/* Money path — live amazon-brand search hops (cat fountain /
               extra litter boxes / canned wet cat food). ShopCtas hides

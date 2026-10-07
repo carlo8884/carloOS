@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, CalloutBox, DropCap, PullQuote, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Diabetes Mellitus in Dogs & Cats — Signs, Management | Vets.co", description: "Diabetes mellitus in pets causes excessive thirst, urination, and weight loss. Insulin therapy, diet, and monitoring explained for dog and cat owners.", path: '/health/diabetes-in-dogs-cats', type: 'article' })
@@ -92,7 +93,7 @@ export default function DiabetesPage() {
           <h2 id="kit">Home-care kit</h2>
           <p>These are educational home-care and monitoring tools, not a ranked product list, not a substitute for veterinary care, and not a treatment for diabetes. Vetsulin, NPH, ProZinc, glargine, syringes, FreeStyle Libre, Dexcom, and prescription diabetic diets are not shoppable hops. Soft-sided vet-visit carriers already live on dog.com heartworm-prevention. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/insulated+pet+water+bowl?s=health-diabetes-in-dogs-cats", "/go/amazon-brand/airtight+locking+pet+food+bin?s=health-diabetes-in-dogs-cats"]} />
 
           {/* Money path — live amazon-brand search hops
               (digital pet glucose-log notebook /

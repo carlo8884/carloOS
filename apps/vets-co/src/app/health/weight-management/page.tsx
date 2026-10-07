@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 
@@ -103,7 +104,7 @@ export default function WeightManagementPage() {
           <h2 id="kit">Kitchen-scale portioning kit</h2>
           <p>Everyday physical supplies that match the portioning copy above — a kitchen scale that measures in grams, plus a portion-control food scale for weighing every meal. Measuring cups stay off this kit: the copy says they vary by 20–30%. Carrot, cucumber, and green-bean pieces named as low-calorie treat swaps are produce, not a retail treat hop. Prescription weight-management diets (Hill&apos;s Metabolic, Royal Canin Satiety, Purina Pro Plan Overweight Management) stay educational copy only — this page never hops Rx food, brand ASINs, or medication. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/kitchen+gram+scale?s=health-weight-management", "/go/amazon-brand/portion+control+food+scale+dog?s=health-weight-management"]} />
 
           {/* Money path — live amazon-brand search hops (kitchen / food gram scale).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
