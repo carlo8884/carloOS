@@ -22,6 +22,8 @@ jobs:
           node-version: '20'
       - name: Run link-check
         run: node scripts/ci/link-check.mjs
+      - name: Earning-site internal links and hop slugs
+        run: node scripts/ci/earning-site-links.mjs
       - name: Reject relative links to another site
         run: node scripts/ci/cross-site-links.mjs
 
