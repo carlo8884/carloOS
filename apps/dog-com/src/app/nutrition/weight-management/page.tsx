@@ -13,11 +13,11 @@ export default function WeightManagementPage() {
       contentType="nutrition"
       hero={{ title: 'Dog Weight Management', subtitle: 'Roughly 59% of US dogs are overweight or obese (APOP 2022 survey) — a number that has risen every year for two decades. Obesity shortens lifespan, accelerates joint disease, increases cancer risk, and reduces quality of life. Here\'s the protocol.', category: 'Nutrition', authorName: 'Dog.com Editorial', authorAvatar: '🐾', publishedAt: 'May 2025', readTime: '9 min',}}
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Nutrition', href: '/nutrition' }, { name: 'Weight Management', href: '/nutrition/weight-management' }]}
-      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }, { title: 'Ozempic for Dogs? GLP-1 Drugs', href: '/nutrition/ozempic-for-dogs', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
+      relatedLinks={[{ title: 'Dog Nutrition Hub', href: '/nutrition', category: 'Hub' }, { title: 'How Much to Feed', href: '/nutrition/how-much-to-feed', category: 'Nutrition' }, { title: 'Calorie Calculator', href: '/tools/dog-calorie-calculator', category: 'Tool' }, { title: 'Prescription Diets', href: '/nutrition/prescription-diets', category: 'Nutrition' }, { title: 'Ozempic for Dogs? GLP-1 Drugs', href: '/nutrition/ozempic-for-dogs', category: 'Nutrition' }, { title: 'Best Dry Dog Food', href: '/reviews/best-dry-dog-food', category: 'Reviews' }]}
       schema={schema}
       sidebar={<>
         <TableOfContents items={[{ label: 'Is My Dog Overweight?', href: '#assess' }, { label: 'Why Weight Matters', href: '#why' }, { label: 'Safe Caloric Reduction', href: '#reduction' }, { label: 'Weight Management Diets', href: '#diets' }, { label: 'Exercise Protocol', href: '#exercise' }, { label: 'Tracking Progress', href: '#tracking' }]} />
-        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
+        <RelatedLinks title="Related" links={[{ label: 'How Much to Feed', href: '/nutrition/how-much-to-feed' }, { label: 'Calorie Calculator', href: '/tools/dog-calorie-calculator' }, { label: 'Best Dry Dog Food 2026', href: '/reviews/best-dry-dog-food' }, { label: 'Senior Dog Care', href: '/health/senior-dog-care' }]} />
         <CrossPortfolioCard currentSite="dog-com" contentType="nutrition" variant="sidebar" />
 
       </>}
@@ -46,7 +46,7 @@ export default function WeightManagementPage() {
         <ol>
           <li><strong>Get a baseline weight:</strong> Weigh your dog at a veterinary clinic or pet store scale. Record it.</li>
           <li><strong>Calculate ideal weight:</strong> Work with your veterinarian if unsure. The dog&apos;s current body condition score suggests how far off ideal you are.</li>
-          <li><strong>Calculate target caloric intake:</strong> Feed based on ideal body weight, not current weight. Use the RER formula (70 × ideal weight in kg^0.75) × appropriate life stage factor (1.0 for weight loss, lower than maintenance). Most dogs lose weight on 60–80% of their calculated maintenance calorie intake at ideal weight.</li>
+          <li><strong>Calculate target caloric intake:</strong> Feed based on ideal body weight, not current weight. Use the RER formula (70 × ideal weight in kg^0.75) × appropriate life stage factor (1.0 for weight loss, lower than maintenance). Most dogs lose weight on 60–80% of their calculated maintenance calorie intake at ideal weight. The <a href="/tools/dog-calorie-calculator">calorie calculator</a> applies that weight-loss factor to the dog&apos;s target weight.</li>
           <li><strong>Measure everything:</strong> Use a kitchen scale, not volume measurements. Calories in a cup of kibble vary by 30–40% depending on how the cup is filled. Treats count — track them and subtract from daily allocation.</li>
           <li><strong>Monitor monthly:</strong> Weigh at the same time (pre-meal, post-elimination) on the same scale each month. Adjust intake by 10% if not losing at target rate, or if losing faster than 2% per month (too fast).</li>
         </ol>
