@@ -108,8 +108,6 @@ export default function BestWinterBlanketsPage() {
               </p>
             </div>
 
-            <HopDisclosure siteId="horses-com" href={["/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets", "/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets", "/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets", "/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets", "/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets", "/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"]} />
-
             <h2>The Blanket Categories</h2>
 
             <h3>Turnout blankets — waterproof, outdoor use</h3>
