@@ -1,5 +1,6 @@
 'use client'
 
+import { HopDisclosure } from '../../../components/HopDisclosure'
 /**
  * Ferret Body Condition Score (BCS) Assessor -- /tools/ferret-body-condition-score
  *
@@ -15,7 +16,7 @@
  */
 
 import { useMemo, useState } from 'react'
-import { AffiliateDisclosure, ResultMeaning } from '@carloOS/ui'
+import { ResultMeaning } from '@carloOS/ui'
 
 interface Option {
   label: string
@@ -237,7 +238,7 @@ export default function FerretBCSCalculator() {
             {result.shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" className="my-3" />
+          <HopDisclosure siteId="ferret-com" href={result.shop.href} />
           <a
             href={result.shop.href}
             rel="sponsored noopener"

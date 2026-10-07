@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -232,7 +232,7 @@ export default function IsThisAFerretEmergencyPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="ferret-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/soft+pet+carrier?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-ferret-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-ferret-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a ferret emergency-prep kit
@@ -280,7 +280,6 @@ export default function IsThisAFerretEmergencyPage() {
               collapse, not trouble breathing, not a blocked bladder — talk to a licensed vet on a screen
               rather than waiting for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="ferret-com" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/ownership/ferret-insurance-basics"
