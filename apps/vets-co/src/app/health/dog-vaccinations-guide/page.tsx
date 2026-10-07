@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Dog Vaccination Guide — Core, Non-Core & Titer Testing | Vets.co', description: 'Complete dog vaccination guide from a veterinary perspective. Core vaccines every dog needs, non-core lifestyle vaccines, titer testing.', path: '/health/dog-vaccinations-guide', type: 'article' })
@@ -93,7 +94,7 @@ export default function DogVaccinationsGuidePage() {
             does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/collapsible+silicone+travel+dog+bowl?s=health-dog-vaccinations-guide", "/go/amazon-brand/72+hour+digital+countdown+timer?s=health-dog-vaccinations-guide"]} />
 
           {/* Money path — live amazon-brand search hops
               (letter-size thermal laminating pouches /
@@ -173,9 +174,7 @@ export default function DogVaccinationsGuidePage() {
               puppy-mat hops, they are not a Nobivac /
               DA2PP / Bordetella / rabies / Lyme /
               influenza / Vaccicheck hop, and they do
-              not replace a veterinarian. Vets.co earns
-              a commission on qualifying purchases at
-              no extra cost to you.
+              not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

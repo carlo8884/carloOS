@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs — Lyme, Anaplasmosis | Vets.co', description: 'Four tick-borne diseases dogs face: Lyme, Anaplasmosis, Ehrlichiosis, and Rocky Mountain Spotted Fever. Signs, geographic distribution.', path: '/health/tick-borne-diseases', type: 'article' })
@@ -64,7 +65,7 @@ export default function TickBornePage() {
           <h2 id="kit">Dog tick-check kit</h2>
           
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/tick+removal+hook?s=health-tick-borne-diseases", "/go/amazon-brand/fine+tooth+flea+comb?s=health-tick-borne-diseases", "/go/amazon-brand/dog+flea+and+tick?s=health-tick-borne-diseases"]} />
 
           {/* Money path — live amazon-brand search hops
               (tick-removal hook / fine-tooth flea comb /

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, CrossPortfolioCard, FAQAccordion, RelatedLinks, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Veterinary Dental Cleaning — What to Expect, Anesthesia | Vets.co', description: 'Professional dental cleaning under anesthesia is the only way to clean below the gumline. Dental grades, anesthesia safety.', path: '/health/dental-cleaning-guide', type: 'article' })
@@ -70,7 +71,7 @@ export default function DentalCleaningGuidePage() {
           <h2 id="kit">Home-Care Kit After a Cleaning</h2>
           <p>Everyday physical supplies that match the home-care copy above — a soft toothbrush and enzymatic toothpaste for daily brushing, plus VOHC-accepted dental chews and a VOHC water additive as adjuncts. These are not a professional cleaning, not anesthesia-free dentistry, and not a treatment for periodontal disease; bad breath, tartar, red gums, or eating changes belong with a veterinarian, not a chew. Human fluoride toothpaste is explicitly not for pets. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+pet+toothbrush?s=health-dental-cleaning-guide", "/go/amazon-brand/enzymatic+pet+toothpaste?s=health-dental-cleaning-guide", "/go/amazon-brand/dental+chews+dog?s=health-dental-cleaning-guide", "/go/amazon-brand/pet+dental+water+additive?s=health-dental-cleaning-guide"]} />
 
           {/* Money path — live amazon-brand search hops (dental home-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
