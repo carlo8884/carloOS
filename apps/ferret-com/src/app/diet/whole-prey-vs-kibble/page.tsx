@@ -110,7 +110,7 @@ export default function WholePreyVsKibblePage() {
           { title: 'Transitioning Foods', href: '/diet/transitioning-foods' },
           { title: 'Ferret Starter Kit', href: '/ferret-starter-kit' },
         ]}
- priceAsOf="2026-10-05">
+ priceAsOf="2026-10-07">
         <div className="carloOS-article">
           <StockImage
             manifestKey="ferret-com:diet-raw-vs-kibble"
@@ -214,10 +214,10 @@ export default function WholePreyVsKibblePage() {
             subtitle="Starch-free premium kibble — the lower-risk base diet"
             winner
             description={
-              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use, and the lower-risk starting point for a first-time owner. Shelf-stable, easy to free-feed, and trivial to hand to a sitter — the convenience advantages that make kibble the practical default — while still landing close to the obligate-carnivore macro window. Also the natural base for the middle-path approach.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label. Shelf-stable and easy to free-feed, which is why kibble stays the practical default for a first-time owner.</p>
             }
             specs={[
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Convenience', value: 'High — shelf-stable', highlight: 'good' },
               { label: 'Food-safety risk', value: 'Low', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
@@ -289,7 +289,7 @@ export default function WholePreyVsKibblePage() {
           <FAQAccordion items={[
             {
               question: 'Which option does this page pick for a shelf-stable base a sitter can feed?',
-              answer: 'Wysong Epigen 90, marked Kibble Model. The card prints $30–50 / 5 lb, single-digit carbohydrate, and distribution as direct plus specialty pet retail. The button goes to Wysong. Skip it when you want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium.',
+              answer: 'Wysong Epigen 90, marked Kibble Model. The card prints $30–50 / 5 lb. The current page lists crude protein minimum 63% and crude fat minimum 16% as printed. Carbohydrate is not on the guaranteed analysis. Distribution is direct plus specialty pet retail. The button goes to Wysong. Skip it when you want the dental abrasion of whole prey. The card says kibble gives less of that, and the bag price is higher than the retail mid-tier card.',
             },
             {
               question: 'Which option does this page pick for whole prey as the diet or as a supplement?',

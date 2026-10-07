@@ -18,7 +18,7 @@ export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
   title: 'Ferret Food Label Calculator | Ferret.com',
   description:
-    'Convert a ferret kibble label to dry-matter protein, fat, and carbohydrate by difference, then match the kibble review’s cards.',
+    'Dry-matter protein, fat, and carbohydrate by difference. Wysong and Marshall do not print carbohydrate, so check the label.',
   path: '/tools/label-calculator',
 })
 
@@ -39,7 +39,7 @@ const howToSchema = buildHowToSchema({
   steps: [
     { name: 'Enter the guaranteed analysis', text: 'Use crude protein, crude fat, crude fiber, and moisture as printed.' },
     { name: 'Enter ash or leave it blank', text: 'If ash is missing, the label page’s 6–8% note is applied at the midpoint, 7%.' },
-    { name: 'Read carbohydrate on a dry-matter basis', text: 'Single digits match the Wysong card. Mid teens, 13 through 16, match the Marshall card. Other results stay on the review.' },
+    { name: 'Read carbohydrate on a dry-matter basis', text: 'The result is carbohydrate by difference for the label you typed. The current Wysong and Marshall pages do not print carbohydrate. Check the label.' },
   ],
 })
 
@@ -64,7 +64,7 @@ const FAQS = [
   {
     question: 'Which kibble card does the result use?',
     answer:
-      'The kibble review prints Wysong Epigen 90 as carbohydrate in the single digits and Marshall Premium as mid teens. Under 10% dry-matter carbohydrate points at Wysong. From 13% up to but not including 17% points at Marshall. Any other carbohydrate stays on the review, because neither card prints that figure. The tool does not test either food.',
+      'The kibble review now quotes the printed guaranteed analyses. Neither Wysong Epigen 90 nor Marshall Premium prints carbohydrate on the current page. This tool does not match a calculated carbohydrate to either bag. Check the label.',
   },
   {
     question: 'Does a passing label mean the food is the reviewed bag?',
@@ -107,10 +107,9 @@ export default function FerretLabelPage() {
         <p>
           The <Link href="/diet/reading-food-labels">label guide</Link> explains dry-matter conversion and
           carbohydrate by difference. Guaranteed-analysis numbers are as-fed, so a moist food looks lower in protein
-          than a kibble even when the dry matter is similar. This calculator does that arithmetic and then compares the
-          carbohydrate result with the two cards on the{' '}
-          <Link href="/diet/best-ferret-kibble">kibble review</Link>: single digits for Wysong Epigen 90, and mid teens
-          for Marshall Premium.
+          than a kibble even when the dry matter is similar. This calculator does that arithmetic. The{' '}
+          <Link href="/diet/best-ferret-kibble">kibble review</Link> quotes the printed guaranteed analyses.
+          Neither Wysong Epigen 90 nor Marshall Premium prints carbohydrate on the current page. Check the label.
         </p>
         <h2 id="calculator">Calculator</h2>
         <LabelCalculator />
@@ -119,7 +118,7 @@ export default function FerretLabelPage() {
             Next step
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            The kibble review is the matching guide. Its single-digit card is Wysong Epigen 90. The Amazon search below is the Wysong ferret food search already used on the diet pages. The Wysong shop link stays ready for when that partner ID is set. The calculator did not test that food. A result outside the single digits stays on the review.
+            The kibble review quotes the printed guaranteed analyses. The Wysong shop link below is the existing Epigen 90 link. The calculator did not test that food, and a calculated carbohydrate is not that bag. Check the label.
           </p>
           <div className="flex flex-col gap-3">
             <Link
@@ -147,9 +146,8 @@ export default function FerretLabelPage() {
           not listed, so a blank ash field uses 7 and says so on the result. Enter the printed ash when you have it.
         </p>
         <p>
-          A label whose dry-matter carbohydrate is in the single digits is not automatically the Wysong bag, and a
-          mid-teens result is not automatically Marshall. Those phrases are how the review describes the cards. The
-          closing link follows the phrase and leaves ingredient quality on the review. The result is label arithmetic, not a feeding trial.
+          A calculated carbohydrate is not the Wysong bag or the Marshall bag. Neither current guaranteed
+          analysis prints carbohydrate. The result is label arithmetic, not a feeding trial. Check the label.
           The method for the product links is on <Link href="/how-we-pick">How we pick</Link>.
         </p>
         <h2 id="faq">FAQ</h2>

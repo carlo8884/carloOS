@@ -278,18 +278,18 @@ export default function FerretCageSetupPage() {
             id="marshall"
             badge="Best Starter"
             name="Marshall ferret cage"
-            subtitle="Smaller footprint, three levels, ships with hammocks and starter accessories"
+            subtitle="Current mansion listings are two levels. Accessories are not included."
             description={
               <p>Marshall's Designer Ferret Cage product page no longer resolves. This button opens Marshall's current cage search. Marshall is the most familiar brand to anyone who has bought a ferret at a US pet retailer, and a starter cage can still work as a first cage for one or two ferrets. Check bar spacing and footprint on the current listing. A smaller starter cage is often outgrown once a second ferret arrives.</p>
             }
             specs={[
               { label: 'Dimensions', value: 'Check the current listing' },
-              { label: 'Levels', value: 'Multi-level', highlight: 'good' },
+              { label: 'Levels', value: 'Two levels on the current mansion listing', highlight: 'good' },
               { label: 'Bar Spacing', value: 'Confirm ferret-safe spacing on the listing', highlight: 'good' },
-              { label: 'Included Accessories', value: 'Varies by current cage' },
+              { label: 'Included Accessories', value: 'Not included. The listing says to add napsacks, lounges, and hammocks.' },
               { label: 'Long-term Capacity', value: 'Compare footprint before adding a second ferret', highlight: 'warn' },
             ]}
-            pros={['Ferret-appropriate bar spacing', 'Ships with starter accessories', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
+            pros={['Check bar spacing on the listing', 'Accessories are sold separately', 'Footprint fits smaller apartments', 'Widely available in US pet retail']}
             cons={['Outgrown by a two-ferret household', 'Smaller pan area than Critter Nation', 'Plastic shelf wear in heavy-use households']}
             price="$140–200"
             priceNote="dated 2026-05-31."
@@ -306,10 +306,10 @@ export default function FerretCageSetupPage() {
           <ReviewCard quietUntilTag
             id="marshall-sleep-sack"
             badge="Top Pick"
-            name="Marshall Ferret Sleep Sack & Hammock Set"
-            subtitle="Enclosed sleep sack + hammock — the standard ferret bedding duo"
+            name="Marshall hammock and nap sack"
+            subtitle="Separate listings. A hammock and a nap sack do not ship as one set."
             description={
-              <p>Marshall's ferret sleep-sack product page no longer resolves. This button opens Marshall's current hammock search. Marshall still lists hammocks and nap sacks for ferret-specific sleeping. The enclosed sack satisfies the burrowing drive; the open hammock provides an elevated perch for lighter sleep. Machine washable fleece. Replace when fleece thins or seams fray — usually every 3–6 months with regular washing.</p>
+              <p>Marshall's ferret sleep-sack product page no longer resolves. This button opens Marshall's current hammock search. The current hanging nap sack and banana hammock are separate listings, not one set. The nap-sack page says fleece with a built-in hide, nylon straps, and machine washable. The hammock page says soft fleece that clips to the cage. Check which listing the search returns.</p>
             }
             pros={['Ferret-specific sizing', 'Machine washable', 'Satisfies burrowing instinct', 'Widely available for quick replacement']}
             cons={['Fleece thins over time', 'Some ferrets chew the fabric']}

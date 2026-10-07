@@ -276,13 +276,13 @@ export default function FerretDietBasicsPage() {
             subtitle="Animal-first, starch-free, grain-free"
             winner
             description={
-              <p>The lowest-carbohydrate commercial kibble in wide ferret-keeping use. Ingredient panel reads as named meats and organ meats; the formula is built on a starch-free system that drives carbohydrate by difference into the low single digits. Suitable as a sole diet for healthy adult ferrets, and the default choice when insulinoma risk is a primary concern. Higher price per pound than the mid tier.</p>
+              <p>The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~60%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~16%' },
-              { label: 'Carbohydrate', value: 'Single digits', highlight: 'good' },
-              { label: 'Grain-free', value: 'Yes', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 63%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 16%' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
+              { label: 'Starch-free', value: 'Marketed on the current page. Check the label.', highlight: 'good' },
               { label: 'Distribution', value: 'Direct + specialty pet retail' },
             ]}
             pros={['Lowest commercial carb load in wide ferret use', 'Animal-first throughout', 'Starch-free system', 'Suitable for insulinoma-prone adults']}
@@ -300,17 +300,17 @@ export default function FerretDietBasicsPage() {
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-specific formulation, widely stocked, ferret-targeted macros"
             description={
-              <p>The reference mid-tier ferret kibble in US pet retail. Specifically formulated for ferrets — not adapted from cat food — with a protein and fat profile that lands in the working ferret range. Imperfect ingredient panel (contains some plant protein) but the macro profile is acceptable for healthy adults, and per-pound price is materially lower than the premium tier. The most likely brand to find on a chain pet retailer shelf at short notice.</p>
+              <p>The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
-              { label: 'Carbohydrate', value: 'Mid teens', highlight: 'warn' },
+              { label: 'Crude protein (as printed)', value: 'Min. 38%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 18%', highlight: 'good' },
+              { label: 'Carbohydrate', value: 'Not on the guaranteed analysis. Check the label.' },
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
             pros={['Ferret-specific formulation', 'Widely available', 'Affordable per pound', 'Long manufacturer track record in ferret retail']}
-            cons={['Higher carb than premium tier', 'Plant protein in ingredient list']}
+            cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
             priceNote="dated 2026-05-31."
             ctaText="Find Marshall Premium Ferret Diet"

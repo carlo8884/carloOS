@@ -38,7 +38,7 @@ const TOOLS = [
   {
     href: '/tools/label-calculator',
     title: 'Ferret Food Label Calculator',
-    desc: 'Dry-matter protein, fat, and carbohydrate by difference from the guaranteed analysis. Single-digit carbohydrate follows the Wysong card; mid teens follow Marshall.',
+    desc: 'Dry-matter protein, fat, and carbohydrate by difference from the guaranteed analysis. Wysong and Marshall do not print carbohydrate on the current pages, so check the label.',
     tag: 'Nutrition',
   },
   {

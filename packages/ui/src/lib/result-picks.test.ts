@@ -195,12 +195,13 @@ test('live rock keeps one starter kit and states the pounds', () => {
   assert.match(pick.detail, /40–60 lb/)
 })
 
-test('ferret label cards follow single digits and mid teens only', () => {
-  assert.match(ferretLabelPick(4.2).href, /\/go\/wysong\/epigen-90/)
-  assert.match(ferretLabelPick(14).href, /\/go\/marshall\/premium-ferret-diet/)
-  assert.equal(ferretLabelPick(11).href, '/diet/best-ferret-kibble')
-  assert.equal(ferretLabelPick(22).href, '/diet/best-ferret-kibble')
-  assert.match(ferretLabelPick(9.9).detail, /single digits/)
+test('ferret label results stay on the review because carbohydrate is not printed', () => {
+  for (const carb of [4.2, 9.9, 11, 14, 22]) {
+    const pick = ferretLabelPick(carb)
+    assert.equal(pick.href, '/diet/best-ferret-kibble')
+    assert.match(pick.detail, /do not print carbohydrate/)
+    assert.match(pick.detail, /Check the label/)
+  }
 })
 
 test('body-length blanket pick does not treat the weight as the size', () => {

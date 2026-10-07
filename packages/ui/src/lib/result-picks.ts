@@ -445,29 +445,14 @@ export function liveRockPick(gallons: number, lowLb: string, highLb: string): Ma
 }
 
 /**
- * Wysong's card says carbohydrate in the single digits. Marshall's card says mid teens.
- * Other results stay on the review.
+ * Wysong and Marshall do not print carbohydrate. Every result stays on the review.
  */
 export function ferretLabelPick(dmCarb: number): MatchedPick {
   const carb = Math.round(dmCarb * 10) / 10
-  if (dmCarb < 10) {
-    return {
-      href: '/go/wysong/epigen-90?s=tools-label-calculator',
-      label: 'Check price of Wysong Epigen 90 at Wysong',
-      detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis, which is single digits. The kibble review's single-digit card is Wysong Epigen 90. The calculator did not test that food.`,
-    }
-  }
-  if (dmCarb >= 13 && dmCarb < 17) {
-    return {
-      href: '/go/marshall/premium-ferret-diet?s=tools-label-calculator',
-      label: 'Find Marshall Premium Ferret Diet',
-      detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis, which is the mid teens. The kibble review's mid-teens card is Marshall Premium. The calculator did not test that food.`,
-    }
-  }
   return {
     href: '/diet/best-ferret-kibble',
     label: 'Read the ferret kibble review',
-    detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis. That is neither the single-digit Wysong card nor the mid-teens Marshall card.`,
+    detail: `This label's carbohydrate by difference is about ${carb}% on a dry-matter basis. The current Wysong Epigen 90 and Marshall Premium pages do not print carbohydrate. Check the label. The calculator did not test either food.`,
   }
 }
 

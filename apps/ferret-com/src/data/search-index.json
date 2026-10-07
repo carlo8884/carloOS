@@ -285,7 +285,7 @@
     {
       "path": "/tools/label-calculator",
       "title": "Ferret Food Label Calculator | Ferret.com",
-      "description": "Convert a ferret kibble label to dry-matter protein, fat, and carbohydrate by difference, then match the kibble review’s cards.",
+      "description": "Dry-matter protein, fat, and carbohydrate by difference. Wysong and Marshall do not print carbohydrate, so check the label.",
       "category": "tools"
     },
     {

@@ -124,7 +124,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'wysong',
         sku: 'epigen-90',
         rationale:
-          "60%+ protein, 16% fat, near-zero starch. Wysong's flagship; the closest commercial kibble to a ferret's natural prey diet.",
+          "The current Wysong Epigen 90 page lists crude protein minimum 63% and crude fat minimum 16%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. The page markets the food as starch-free. Carbohydrate is not on the guaranteed analysis — check the label.",
         approxPriceUSD: 65,
       },
       {
@@ -132,7 +132,7 @@ export const STARTER_KIT: KitCategory[] = [
         vendor: 'marshall',
         sku: 'premium-ferret-diet',
         rationale:
-          "Long-standing legacy formula. Slightly higher carb content than Wysong, but widely available, cheaper, and tolerated by ferrets transitioning from cheaper brands. Acceptable mid-tier choice.",
+          "The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label. Widely available, and a common bag for ferrets moving off a supermarket formula.",
         approxPriceUSD: 30,
       },
     ],

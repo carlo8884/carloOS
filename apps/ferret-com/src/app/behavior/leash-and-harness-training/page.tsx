@@ -317,21 +317,19 @@ export default function LeashAndHarnessTrainingPage() {
           </p>
           <ReviewCard quietUntilTag
             id="marshall-ferret-harness"
-            badge="H-Style"
-            name="Marshall Ferret H-Style Harness & Leash Set"
-            subtitle="Adjustable H-style harness sized for ferret bodies, with 6-ft leash included"
+            badge="Harness and lead"
+            name="Marshall harness and lead"
+            subtitle="Fully adjustable, quick-snap buckles, 48-inch lead on the current listing"
             winner
             description={
-              <p>Marshall's older harness-and-leash product page no longer resolves. This button opens Marshall's current harness-and-lead search. The reference H-style ferret harness in US pet retail. Adjustable at neck and body to accommodate seasonal weight changes; the H-geometry distributes leash pressure across the chest and shoulders rather than the throat. Widely stocked at national chain pet stores. The included leash is adequate for indoor break-in and early outdoor sessions.</p>
+              <p>This button opens Marshall's current harness-and-lead search. The current harness-and-lead page says the set is fully adjustable, uses quick-snap buckles, and includes a 48-inch lead. It does not print an H-style diagram or a 6-foot lead. Check the listing before you treat it as an H-harness.</p>
             }
             specs={[
-              { label: 'Style', value: 'H-style (adjustable)', highlight: 'good' },
-              { label: 'Escape risk', value: 'Low when fitted correctly', highlight: 'good' },
-              { label: 'Leash included', value: 'Yes (6 ft)', highlight: 'good' },
-              { label: 'Sizing', value: 'Ferret-specific', highlight: 'good' },
-              { label: 'Distribution', value: 'National chain pet retail + online' },
+              { label: 'Style', value: 'Fully adjustable, quick-snap. H-style is not printed.', highlight: 'good' },
+              { label: 'Lead included', value: '48 inches', highlight: 'good' },
+              { label: 'Fit', value: 'The page says it fits all sizes. Check the listing.' },
             ]}
-            pros={['Ferret-specific sizing', 'Adjustable for seasonal fit changes', 'Chest-pressure geometry', 'Leash included', 'Widely available']}
+            pros={['Fully adjustable', 'Quick-snap buckles', '48-inch lead on the current listing']}
             cons={['Thin straps on the small size require careful fitting', 'Re-check fit every few weeks as body weight shifts']}
             price="$10–18"
             priceNote="dated 2026-06-04."

@@ -159,16 +159,16 @@ export default function KitVsAdultFeedingPage() {
             name="Marshall Premium Ferret Diet"
             subtitle="Ferret-formulated, widely stocked, a sound rotation staple"
             description={
-              <p>Formulated specifically for ferrets rather than adapted from cat food, with protein and fat in the working ferret range. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a sensible component of the two-to-three-brand rotation this page recommends to prevent food fixation. The ingredient panel is imperfect (some plant protein) but acceptable for healthy animals, and it is widely available at short notice.</p>
+              <p>The current Marshall Premium Ferret Diet page lists crude protein minimum 38% and crude fat minimum 18%. Those are guaranteed-analysis figures as printed, not a dry-matter conversion. Carbohydrate is not on the guaranteed analysis — check the label. Useful across life stages — moistened lightly for weaning kits, free-fed for adults — and a component of the two-to-three-brand rotation this page recommends.</p>
             }
             specs={[
-              { label: 'Protein (dry-matter)', value: '~38%', highlight: 'good' },
-              { label: 'Fat (dry-matter)', value: '~20%', highlight: 'good' },
+              { label: 'Crude protein (as printed)', value: 'Min. 38%', highlight: 'good' },
+              { label: 'Crude fat (as printed)', value: 'Min. 18%', highlight: 'good' },
               { label: 'Ferret-specific', value: 'Yes', highlight: 'good' },
               { label: 'Distribution', value: 'National chain pet retail' },
             ]}
             pros={['Ferret-specific formulation', 'Works across life stages', 'Widely available for rotation', 'Affordable per pound']}
-            cons={['Higher carb than premium tier', 'Plant protein in ingredient list — rotate with a premium diet']}
+            cons={['Carbohydrate is not on the guaranteed analysis. Check the label.', 'Check the ingredient list on the current bag']}
             price="$15–25 / 4 lb"
             priceNote="dated 2026-06-01."
             ctaText="Find Marshall Premium Ferret Diet"

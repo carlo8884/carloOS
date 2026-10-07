@@ -319,20 +319,20 @@ export default function FerretDIYEnrichmentPage() {
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
             name="Marshall play tunnel"
-            subtitle="Pop-up fabric tunnel set sized for ferret bodies — the one bought item most worth having"
+            subtitle="Check the current listing for construction, openings, and storage"
             winner
             description={
-              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. DIY tunnels (dryer hose, cardboard tubes) are genuinely good, and a ferret-sized fabric tunnel earns its place because the fabric diameter is designed for ferret bodies, it chains to itself for longer circuits, and it folds flat when not in use. A length of dryer hose and a cardboard tunnel box are excellent supplements; a current Marshall play tunnel is the better primary bought tunnel for consistent daily use.</p>
+              <p>Marshall's Pop-N-Play tunnel product page no longer resolves. This button opens Marshall's current play-tunnel search. DIY tunnels (dryer hose, cardboard tubes) are a separate project. The current Ele-Fun Nap & Play listing is a plush tunnel with several openings, and that page says it is machine washable. It does not print a chain, a wire frame, or flat storage. Other results in this search can differ. Check the listing.</p>
             }
             specs={[
-              { label: 'Construction', value: 'Pop-up fabric with internal wire' },
-              { label: 'Sizing', value: 'Ferret-appropriate diameter', highlight: 'good' },
-              { label: 'Connectivity', value: 'Multi-tunnel chain' },
-              { label: 'Washable', value: 'Yes', highlight: 'good' },
-              { label: 'Storage', value: 'Folds flat' },
+              { label: 'Construction', value: 'Check the current listing' },
+              { label: 'Sizing', value: 'Check the current listing' },
+              { label: 'Connectivity', value: 'Check the current listing' },
+              { label: 'Washable', value: 'Check the current listing' },
+              { label: 'Storage', value: 'Check the current listing' },
             ]}
-            pros={['Correct ferret body diameter', 'Chainable for longer courses', 'Machine washable', 'Compact storage']}
-            cons={['Fabric wears in heavy-chewer households — inspect the internal wire periodically']}
+            pros={['Opens the current Marshall play-tunnel search', 'Check the diameter on the listing']}
+            cons={['Check the listing for any internal wire before you buy']}
             price="$15–30"
             priceNote="dated 2026-06-04."
             ctaText="Find Marshall play tunnels"
