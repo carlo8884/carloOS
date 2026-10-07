@@ -7,7 +7,6 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Uri
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Bacterial Cystitis in Small Animals', url: 'https://www.merckvetmanual.com/urinary-system/infectious-diseases-of-the-urinary-system-in-small-animals/bacterial-cystitis-in-small-animals', publisher: 'Merck Vet Manual' },
   { label: 'ISCAID: Antimicrobial Use Guidelines for UTI in Dogs and Cats', url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.15575', publisher: 'Journal of Veterinary Internal Medicine' },
-  { label: 'AVMA: Urinary Tract Infections', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/urinary-tract-problems-dogs', publisher: 'AVMA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Urinary Tract Infections in Dogs', description: 'Signs, urine culture, antibiotic selection, and recurrent UTI management in dogs.', url: 'https://vets.co/health/urinary-tract-infection', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
   citation: SOURCES,

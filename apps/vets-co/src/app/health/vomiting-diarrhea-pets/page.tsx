@@ -6,7 +6,7 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Vomiting & Diarrhea in Pets — When to Worry | Vets.co", description: "Vomiting and diarrhea are common in dogs and cats and usually mild, but some cases are serious. Learn the warning signs that mean it is time to call the vet.", path: '/health/vomiting-diarrhea-pets', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Vomiting in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/vomiting-in-dogs', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Vomiting and Diarrhea in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/vomiting-and-diarrhea', publisher: 'AVMA' },
+  { label: 'Merck Veterinary Manual: Disorders of the Stomach and Intestines in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-stomach-and-intestines-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Vomiting and Diarrhea in Pets', description: 'Common causes of vomiting and diarrhea and the warning signs that warrant veterinary care.', url: 'https://vets.co/health/vomiting-diarrhea-pets', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,

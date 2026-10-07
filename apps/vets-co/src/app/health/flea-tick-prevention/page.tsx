@@ -5,7 +5,7 @@ import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaSc
 import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Flea & Tick Prevention for Pets — A Complete Guide | Vets.co", description: "Fleas and ticks cause more than itching — they spread serious disease. Learn how prevention works, why year-round control matters, and how to choose products.", path: '/health/flea-tick-prevention', type: 'article' })
 const SOURCES = [
-  { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/fleas-and-your-pet', publisher: 'AVMA' },
+  { label: 'AVMA: Fleas and Your Pet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/external-parasites', publisher: 'AVMA' },
   { label: 'Companion Animal Parasite Council: Fleas', url: 'https://capcvet.org/guidelines/fleas/', publisher: 'CAPC' },
   { label: 'Companion Animal Parasite Council: Ticks', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
   { label: 'CDC: Preventing Ticks on Pets', url: 'https://www.cdc.gov/ticks/prevention/pets.html', publisher: 'CDC' },

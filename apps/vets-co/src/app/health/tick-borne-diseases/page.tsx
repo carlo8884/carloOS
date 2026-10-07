@@ -7,7 +7,6 @@ export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Tic
 const SOURCES = [
   { label: 'CDC: Lyme Disease', url: 'https://www.cdc.gov/lyme/', publisher: 'CDC' },
   { label: 'Merck Veterinary Manual: Lyme Disease in Dogs', url: 'https://www.merckvetmanual.com/infectious-diseases/lyme-borreliosis/lyme-borreliosis-in-animals', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Tick-Borne Diseases in Dogs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/tick-paralysis', publisher: 'AVMA' },
   { label: 'Companion Animal Parasite Council: Tick-Borne Disease', url: 'https://capcvet.org/guidelines/ticks/', publisher: 'CAPC' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Tick-Borne Diseases in Dogs', description: 'Lyme disease, Anaplasmosis, Ehrlichiosis, and RMSF in dogs — signs and treatment.', url: 'https://vets.co/health/tick-borne-diseases', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,

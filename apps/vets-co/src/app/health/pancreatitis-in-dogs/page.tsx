@@ -6,7 +6,6 @@ import { ArticleByline, CalloutBox, ArticleSourcesList } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: "Pancreatitis in Dogs — Causes, Signs, Recovery | Vets.co", description: "Pancreatitis in dogs is a painful inflammation of the pancreas, often triggered by fatty food. Learn the warning signs, diagnosis, and recovery diet.", path: '/health/pancreatitis-in-dogs', type: 'article' })
 const SOURCES = [
   { label: 'Merck Veterinary Manual: Pancreatitis in Dogs', url: 'https://www.merckvetmanual.com/digestive-system/the-exocrine-pancreas/pancreatitis-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
-  { label: 'AVMA: Pancreatitis in Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/pancreatitis', publisher: 'AVMA' },
   { label: 'AAHA: Nutritional Assessment Guidelines', url: 'https://www.aaha.org/aaha-guidelines/nutritional-assessment/', publisher: 'AAHA' },
 ]
 const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Pancreatitis in Dogs', description: 'Causes, clinical signs, diagnosis, and recovery management of canine pancreatitis.', url: 'https://vets.co/health/pancreatitis-in-dogs', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2026-06-01T00:00:00Z', modifiedAt: '2026-09-05T00:00:00Z' ,
