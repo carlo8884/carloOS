@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -207,7 +208,7 @@ export default function WaterChangeCalculatorPage() {
             never href="#" or PLACEHOLDER. Python + gravel-vacuum queries already
             live on this page / ResultCTA; Prime matches the disease-checker hop;
             API kit matches the water-test review and stocking tool. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-water-change-calculator", "/go/amazon-brand/python+water+changer?s=tools-water-change-calculator", "/go/amazon-brand/aquarium+gravel+vacuum+siphon?s=tools-water-change-calculator", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-water-change-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop water-change gear

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -193,7 +194,7 @@ export default function SubstrateCalculatorPage() {
           resourceLabel="Browse aquarium gravel on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+gravel?s=tools-substrate-calculator", "/go/amazon-brand/aquarium+sand?s=tools-substrate-calculator", "/go/amazon-brand/aquarium+aqua+soil+planted+substrate?s=tools-substrate-calculator", "/go/amazon-brand/aquarium+substrate+vacuum?s=tools-substrate-calculator"]} />
         <div className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop substrate
@@ -205,7 +206,7 @@ export default function SubstrateCalculatorPage() {
             <Link href="/setup/planted-tank-setup" className="text-brand-primary no-underline hover:underline">
               planted tank setup
             </Link>{' '}
-            guide. Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            guide.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

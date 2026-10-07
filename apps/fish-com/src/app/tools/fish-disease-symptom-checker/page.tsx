@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -169,7 +170,7 @@ export default function FishDiseaseSymptomCheckerPage() {
 
         {/* Money path — live amazon-brand search hops (test kit / ich / salt / conditioner / quarantine).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/api+freshwater+master+test+kit?s=tools-fish-disease-symptom", "/go/amazon-brand/ich+white+spot+treatment+aquarium?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+salt+disease+treatment?s=tools-fish-disease-symptom", "/go/amazon-brand/seachem+prime+water+conditioner?s=tools-fish-disease-symptom", "/go/amazon-brand/aquarium+quarantine+hospital+tank+net?s=tools-fish-disease-symptom"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop an illness kit
@@ -198,7 +199,7 @@ export default function FishDiseaseSymptomCheckerPage() {
             >
               quarantine tank guide
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you. This is
+            . This is
             educational triage, not a diagnosis.
           </p>
           <div className="flex flex-col gap-3">

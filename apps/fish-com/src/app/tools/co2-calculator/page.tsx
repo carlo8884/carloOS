@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   TableOfContents,
   RelatedLinks,
   ArticleByline,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -223,7 +224,7 @@ export default function CO2CalculatorPage() {
 
         {/* Money path — live amazon-brand search hops (regulator / diffuser / drop checker / liquid carbon).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+co2+drop+checker?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+regulator+solenoid?s=tools-co2-calculator", "/go/amazon-brand/aquarium+co2+diffuser?s=tools-co2-calculator", "/go/amazon-brand/seachem+flourish+excel?s=tools-co2-calculator"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop CO2 gear
@@ -244,7 +245,7 @@ export default function CO2CalculatorPage() {
             >
               lighting review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

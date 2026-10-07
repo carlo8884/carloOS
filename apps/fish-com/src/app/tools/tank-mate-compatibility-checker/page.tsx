@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,7 @@ import {
   RelatedLinks,
   ArticleByline,
   ArticleSourcesList,
-  AffiliateDisclosure,
+
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -223,7 +224,7 @@ export default function TankMateCompatibilityPage() {
 
         {/* Money path — live amazon-brand search hops (divider / quarantine / caves / food / test kit / net).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+quarantine+hospital+tank?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+tank+divider?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+decorations+caves+hiding+spots?s=tools-tank-mate-compatibility", "/go/amazon-brand/tropical+community+fish+food?s=tools-tank-mate-compatibility", "/go/amazon-brand/api+freshwater+master+test+kit?s=tools-tank-mate-compatibility", "/go/amazon-brand/aquarium+fish+net+acclimation+kit?s=tools-tank-mate-compatibility"]} />
         <div id="shop" className="mb-8 rounded-xl border border-brand-border bg-brand-surface p-5">
           <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
             Shop a pairing kit
@@ -253,7 +254,7 @@ export default function TankMateCompatibilityPage() {
             >
               water-test kit review
             </Link>
-            . Fish.com earns a commission on qualifying purchases at no extra cost to you.
+            .
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
