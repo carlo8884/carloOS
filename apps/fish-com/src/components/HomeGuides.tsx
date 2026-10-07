@@ -355,7 +355,12 @@ export function HomeGuides() {
                     <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
                   </div>
                   <div className="py-3 pr-3">
-                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">{item.title}</div>
+                    <div className="mb-1 flex items-center gap-2">
+                      <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                        <StockImage manifestKey={item.imageKey} alt={item.imageAlt} aspect="4:3" subtleCredit />
+                      </span>
+                      <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">{item.title}</div>
+                    </div>
                     <p className="text-xs text-white/55 mt-1 leading-relaxed">{item.note}</p>
                   </div>
                 </Link>
