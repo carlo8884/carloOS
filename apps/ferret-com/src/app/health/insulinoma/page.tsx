@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, StockImage, RelatedLinks, TableOfContents, FAQAccordion, DropCap, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -451,7 +452,7 @@ export default function FerretInsulinomaPage() {
           <p>
             Everyday physical supplies that match the supportive-nutrition and crisis-meal copy on this page — a carnivore-care critical-care formula so a ferret can take frequent protein-and-fat meals by syringe or spoon, chicken meat baby food as the swallow-safe protein meal after a crash, and a silicone-tip oral dosing syringe so that formula is given by mouth. These are household feeding tools, not treatments. They do not diagnose or treat insulinoma, they do not replace prednisolone or diazoxide prescribed by a veterinarian, they do not set a glucose number, and they are not a ranked product list. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/carnivore+care+critical+care+formula?s=health-insulinoma", "/go/amazon-brand/chicken+meat+baby+food?s=health-insulinoma", "/go/amazon-brand/silicone+tip+oral+dosing+syringe?s=health-insulinoma"]} />
 
           {/* Money path — live amazon-brand search hops
               (carnivore-care critical-care formula /

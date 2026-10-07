@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -11,7 +12,6 @@ import {
   CrossPortfolioCard,
   ArticleSourcesList,
   StockImage,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 
@@ -348,7 +348,7 @@ export default function FerretGIBlockagePage() {
             <a href="/health">health hub</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=gastrointestinal-blockage" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
