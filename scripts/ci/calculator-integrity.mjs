@@ -10913,7 +10913,7 @@ const CALCULATORS = [
       { re: /nextHref="\/health\/ich-treatment"/, label: 'next step is ich protocol, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide"/, label: 'journey hop reuses the existing quarantine-tank-kit search' },
       { re: /amazon-brand\/quarantine%20tank%20kit%20aquarium\?s=setup-quarantine-tank-guide/, label: 'existing quarantine-tank-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10933,7 +10933,7 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/pond-volume-calculator"/, label: 'next step is pond-volume, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide"/, label: 'journey hop reuses the existing pond-pump-filter-liner-kit search' },
       { re: /amazon-brand\/pond%20pump%20filter%20liner%20kit\?s=setup-pond-guide/, label: 'existing pond-pump-filter-liner-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10953,7 +10953,7 @@ const CALCULATORS = [
       { re: /nextHref="\/setup\/quarantine-tank-guide"/, label: 'next step is quarantine, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup"/, label: 'journey hop reuses the existing saltwater starter-kit search' },
       { re: /amazon-brand\/saltwater%20reef%20tank%20starter%20kit\?s=setup-saltwater-tank-setup/, label: 'existing saltwater-reef-tank-starter-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10973,7 +10973,7 @@ const CALCULATORS = [
       { re: /nextHref="\/setup\/aquarium-cycling-guide"/, label: 'next step is cycling, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup"/, label: 'journey hop reuses the existing planted-setup CO2 search' },
       { re: /amazon-brand\/planted%20aquarium%20setup%20co2\?s=setup-planted-tank-setup/, label: 'existing planted-aquarium-setup-CO2 amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10993,7 +10993,7 @@ const CALCULATORS = [
       { re: /nextHref="\/water-parameters"/, label: 'next step is the weekly test-order table, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/api%20freshwater%20master%20test%20kit\?s=setup-water-chemistry-guide"/, label: 'journey hop reuses the existing API test-kit search' },
       { re: /amazon-brand\/api%20freshwater%20master%20test%20kit\?s=setup-water-chemistry-guide/, label: 'existing API-freshwater-master-test-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -11035,7 +11035,7 @@ const CALCULATORS = [
       { re: /nextHref="\/tools\/stocking-calculator"/, label: 'next step is slim-inch stocking, not a shop dump' },
       { re: /resourceHref="\/go\/amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide"/, label: 'journey hop reuses the existing test-kit search' },
       { re: /amazon-brand\/ammonia%20nitrite%20nitrate%20test%20kit\?s=setup-aquarium-cycling-guide/, label: 'existing ammonia-nitrite-nitrate-test-kit amazon-brand hop kept (do not re-ship a new query)' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure kept above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure kept above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },

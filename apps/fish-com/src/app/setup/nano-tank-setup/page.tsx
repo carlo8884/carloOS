@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, AffiliateDisclosure, ShopCtas, JourneyNext } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, ArticleSourcesList, ShopCtas, JourneyNext } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -89,7 +90,7 @@ export default function NanoTankSetupPage() {
           resourceLabel="Browse air-driven corner sponge filters on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/air+driven+corner+sponge+filter?s=setup-nano-tank", "/go/amazon-brand/preset+25+watt+nano+aquarium+heater?s=setup-nano-tank", "/go/amazon-brand/food+grade+1+gallon+water+jug?s=setup-nano-tank"]} />
 
         {/* Money path — live amazon-brand search hops
             (air-driven corner sponge filter /
@@ -145,9 +146,7 @@ export default function NanoTankSetupPage() {
             an aquarium+sponge+filter health hop, they are
             not an Eheim Jager / AquaClear / Prime /
             light-timer hop, and they do not replace
-            cycling before fish. Fish.com earns a
-            commission on qualifying purchases at no extra
-            cost to you.
+            cycling before fish.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

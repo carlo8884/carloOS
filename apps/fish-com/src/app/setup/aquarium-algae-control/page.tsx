@@ -1,10 +1,10 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
   RelatedLinks,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -76,7 +76,7 @@ export default function AlgaeControlPage() {
         <h2 id="kit">Algae-control scraper kit</h2>
         <p>Everyday physical supplies that match the glass-cleaning copy above — an aquarium magnetic scraper for the viewing panes, plus a handheld aquarium algae scraper for plant leaves and hardscape the magnet cannot reach. These are maintenance tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, light timers, root tabs, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, low-tech planted tank guide, and CO2 calculator. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+magnetic+scraper?s=setup-aquarium-algae-control", "/go/amazon-brand/handheld+aquarium+algae+scraper?s=setup-aquarium-algae-control"]} />
 
         {/* Money path — live amazon-brand search hops (algae-control scraper kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -96,9 +96,7 @@ export default function AlgaeControlPage() {
             are not a test kit or a gravel vacuum, they are not
             aquasoil, Seiryu stone, spiderwood, a light timer, root
             tabs, or pressurized CO2, and they do not replace fixing
-            the light / nutrient / CO2 imbalance. Fish.com earns a
-            commission on qualifying purchases at no extra cost to
-            you.
+            the light / nutrient / CO2 imbalance.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas

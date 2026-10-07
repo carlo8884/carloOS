@@ -1,10 +1,10 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
   ArticleLayout,
   RelatedLinks,
   ArticleSourcesList,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -75,7 +75,7 @@ export default function LowTechPlantedTankPage() {
         <h2 id="kit">Low-tech planted kit</h2>
         <p>Everyday physical supplies that match the no-CO2 copy above — an aquarium light timer so the photoperiod stays at six to eight hours, plus aquarium plant root tabs placed near swords and crypts. These are low-tech tools, not a ranked product list and not a first-tank filter / heater / test-kit order. Filters, heaters, digital thermometers, Seachem Prime, API Master Test Kit, gravel vacuums, aquasoil, Seiryu stone, spiderwood driftwood, magnetic scrapers, handheld algae scrapers, pressurized CO2 gear, and Flourish Excel stay off this kit — those already ship on the setup hub, equipment hub, aquascaping guide, algae-control guide, and CO2 calculator. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href={["/go/amazon-brand/aquarium+light+timer?s=setup-low-tech-planted-tank", "/go/amazon-brand/aquarium+plant+root+tabs?s=setup-low-tech-planted-tank"]} />
 
         {/* Money path — live amazon-brand search hops (low-tech planted kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -95,9 +95,7 @@ export default function LowTechPlantedTankPage() {
             or a gravel vacuum, they are not aquasoil, Seiryu
             stone, spiderwood, a magnetic scraper, a handheld
             algae scraper, or pressurized CO2, and they do not
-            replace choosing easy plants. Fish.com earns a
-            commission on qualifying purchases at no extra cost to
-            you.
+            replace choosing easy plants.
           </p>
           <div className="flex flex-col gap-3">
             <ShopCtas
