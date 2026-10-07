@@ -42,15 +42,7 @@ apps/dog-com/src/app/breeds/weimaraner/page.tsx
 apps/dog-com/src/app/breeds/yorkshire-terrier/page.tsx
 apps/dog-com/src/app/compare/[slug]/page.tsx
 apps/dog-com/src/app/guides/dog-body-condition-score/page.tsx
-apps/dog-com/src/app/guides/dog-first-aid-kit/page.tsx
-apps/dog-com/src/app/guides/dog-microchipping/page.tsx
-apps/dog-com/src/app/guides/dog-spay-neuter-timing/page.tsx
-apps/dog-com/src/app/guides/dog-wellness-exam/page.tsx
-apps/dog-com/src/app/guides/how-to-take-dogs-temperature/page.tsx
-apps/dog-com/src/app/guides/page.tsx
 apps/dog-com/src/app/llms.txt/route.ts
-apps/dog-com/src/app/nutrition/dog-dna-tests/page.tsx
-apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx
 apps/ferret-com/src/app/llms.txt/route.ts
 apps/ferret-com/src/app/tools/ferret-age-calculator/page.tsx
 apps/fish-com/src/app/llms.txt/route.ts

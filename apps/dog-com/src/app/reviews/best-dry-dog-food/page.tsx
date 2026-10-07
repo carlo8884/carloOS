@@ -98,7 +98,7 @@ export default function BestDogFoodPage() {
         </p>
         <div className="text-xs text-white/80">
           Updated May 2026 ·{' '}
-          <span>Affiliate disclosure: We earn commissions on purchases. Rankings are editorially independent.</span>
+          <span>Rankings are editorially independent.</span>
         </div>
       </div>
 

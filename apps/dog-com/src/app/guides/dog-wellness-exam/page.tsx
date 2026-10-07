@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -247,7 +247,7 @@ export default function DogWellnessExamPage() {
           <p>
             Three everyday physical supplies match the prepare and low-stress copy above: a fecal-sample collection kit so a fresh stool sample is ready if the clinic asks for one, leak-proof specimen bags so the sample does not leak in the car or at the desk, and high-value vet-visit treats reserved for the exam room so handling stays easier. These are appointment-prep tools. They do not diagnose intestinal parasites, they do not replace the fecal test the veterinarian runs, they are not a first-aid wound kit, and they are not vaccines, heartworm tests, or medications. Home temperature checks stay on the <a href="/guides/how-to-take-dogs-temperature" className="text-brand-primary hover:underline">vital signs guide</a>. This page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/fecal+sample+collection+kit?s=guides-dog-wellness-exam", "/go/amazon-brand/leak+proof+specimen+bags?s=guides-dog-wellness-exam", "/go/amazon-brand/high+value+vet+visit+treats?s=guides-dog-wellness-exam"]} />
 
           {/* Money path — live amazon-brand search hops (wellness-visit kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

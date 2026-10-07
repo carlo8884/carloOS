@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   FAQAccordion,
   RelatedLinks, CrossPortfolioCard,
   TableOfContents,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -352,7 +352,7 @@ export default function DogSpayNeuterTimingPage() {
             not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/washable+dog+heat+pants?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/male+dog+belly+band?s=guides-dog-spay-neuter-timing", "/go/amazon-brand/heavy+duty+dog+exercise+pen?s=guides-dog-spay-neuter-timing"]} />
 
           {/* Money path — live amazon-brand search hops
               (washable dog heat pants / male dog belly
