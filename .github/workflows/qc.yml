@@ -99,6 +99,18 @@ jobs:
       - name: Run schema-validate
         run: node scripts/ci/schema-validate.mjs
 
+  faq-schema-once:
+    name: One FAQ schema when the page already builds it
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Run faq-schema-once
+        run: node scripts/ci/faq-schema-once.mjs
+
   calculator-integrity:
     name: Calculator formula-constant integrity (tools-acceptance lock)
     runs-on: ubuntu-latest
