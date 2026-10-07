@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, AffiliateDisclosure, JourneyNext, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleByline, JourneyNext, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -43,7 +44,7 @@ export default function PuppyNutritionPage() {
           resourceLabel="Shop AAFCO large-breed puppy food on Amazon →"
         />
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/chewy-brand/purina+pro+plan+puppy+large+breed+dry+dog+food?s=nutrition-puppy", "/go/amazon-brand/large+breed+puppy+dry+dog+food+aafco?s=nutrition-puppy"]} />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">Buyer&apos;s Guide — Puppy Food</div>

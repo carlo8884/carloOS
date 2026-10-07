@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
@@ -95,7 +96,7 @@ export default function WSAVAExplainedPage() {
         <h2>The Bottom Line</h2>
         <p>When choosing a dog food: start with the manufacturer, not the bag. Ask the WSAVA questions or verify that the brand employs board-certified nutritionists and conducts AAFCO feeding trials. Then look at the specific formula for your dog&apos;s life stage and any health conditions. See our <a href="/reviews/best-dry-dog-food">complete dog food rankings</a> for the top options evaluated against WSAVA criteria.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=nutrition-wsava" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
