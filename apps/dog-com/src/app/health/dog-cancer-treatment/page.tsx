@@ -6,6 +6,8 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Overview of Antineoplastic Agents', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/overview-of-antineoplastic-agents', publisher: 'Merck Vet Manual' },
+  { label: 'Merck Veterinary Manual: Targeted Antineoplastic Agents, including FDA-approved toceranib for canine mast cell tumors', url: 'https://www.merckvetmanual.com/pharmacology/antineoplastic-agents/targeted-antineoplastic-agents-in-animals', publisher: 'Merck Vet Manual' },
   { label: 'ACVIM: Veterinary Oncology — Canine Cancer Treatment Guidelines', url: 'https://www.acvim.org/resources-tools/animal-owners', publisher: 'ACVIM Oncology' },
   { label: 'AVMA: Cancer Treatment Options for Pets', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/cancer-animals', publisher: 'AVMA' },
 ]
@@ -63,7 +65,7 @@ export default function DogCancerTreatmentPage() {
           <p>Radiation therapy is available at university veterinary teaching hospitals and a growing number of specialty referral centers. It is used for: tumors that cannot be fully surgically resected (nasal tumors, brain tumors, tumors adjacent to critical structures), as an adjunct to surgery for incompletely excised tumors, and for pain management in bone cancer (palliative radiation reduces osteosarcoma pain significantly, extending quality of life without cure-intent). Dogs require general anesthesia for each radiation treatment session — treatments are typically given daily Monday through Friday for 3–5 weeks for definitive-intent protocols, or in 3–4 larger fractions weekly for palliative-intent protocols.</p>
 
           <h2 id="immunotherapy">Immunotherapy and Targeted Therapy</h2>
-          <p><strong>Palladia (toceranib phosphate):</strong> A tyrosine kinase inhibitor FDA-approved for canine mast cell tumors. Targets PDGFR, VEGFR, and c-Kit — molecular pathways active in certain mast cell tumors. Given orally every other day. Side effects: GI (vomiting, diarrhea, anorexia), muscle pain, hypertension, protein-losing nephropathy — require regular monitoring. Provides disease control in 40–60% of mast cell tumors not cured by surgery alone, and in other tumor types with relevant molecular targets.</p>
+          <p><strong>Palladia (toceranib phosphate):</strong> A tyrosine kinase inhibitor FDA-approved for canine mast cell tumors. Targets PDGFR, VEGFR, and c-Kit — molecular pathways active in certain mast cell tumors. Given orally every other day. Side effects: GI (vomiting, diarrhea, anorexia), muscle pain, hypertension, protein-losing nephropathy — require regular monitoring. The Merck Veterinary Manual notes FDA approval of toceranib for canine mast cell tumors. Response depends on the tumor, and regular monitoring is required.</p>
           <p><strong>VERITAS (Elias Animal Health):</strong> An emerging autologous tumor vaccine for canine osteosarcoma — uses the dog's own tumor cells to create a personalized vaccine. Early trial data is promising. Represents the direction of canine oncology toward personalized, targeted treatment.</p>
           <p><strong>Tanovea (rabacfosadine):</strong> FDA-approved for canine lymphoma — a nucleotide analog chemotherapy with a different mechanism and side effect profile than traditional CHOP chemotherapy. Used for relapsed or refractory lymphoma.</p>
 

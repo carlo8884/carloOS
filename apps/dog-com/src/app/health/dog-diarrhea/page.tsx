@@ -6,6 +6,7 @@ import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
 const SOURCES = [
+  { label: 'Merck Veterinary Manual: Disorders of the Stomach and Intestines in Dogs', url: 'https://www.merckvetmanual.com/dog-owners/digestive-disorders-of-dogs/disorders-of-the-stomach-and-intestines-in-dogs', publisher: 'Merck Vet Manual' },
   { label: 'WSAVA: Nutritional Support of Dogs With GI Disease — Bland Diet and Probiotic Guidance', url: 'https://wsava.org/global-guidelines/global-nutrition-guidelines/', publisher: 'WSAVA' },
   { label: 'AVMA: Diarrhea in Dogs — When to Call the Vet', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/common-health-conditions-dogs', publisher: 'AVMA' },
   { label: 'Kelley RL et al. Randomized controlled trial on the effect of a synbiotic on fecal quality in healthy dogs. BMC Vet Res. 2009;5:31.', publisher: 'BMC Vet Research' },

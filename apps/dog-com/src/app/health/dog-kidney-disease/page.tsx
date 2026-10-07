@@ -132,6 +132,7 @@ export default function DogKidneyPage() {
 
           <ArticleSourcesList
             sources={[
+              { label: 'Merck Veterinary Manual: Renal Dysfunction in Dogs and Cats', url: 'https://www.merckvetmanual.com/urinary-system/noninfectious-diseases-of-the-urinary-system-in-small-animals/renal-dysfunction-in-dogs-and-cats', publisher: 'Merck Vet Manual' },
               {
                 label: 'IRIS Staging of CKD -- International Renal Interest Society consensus staging and treatment guidelines',
                 url: 'https://www.iris-kidney.com/guidelines/staging.html',
