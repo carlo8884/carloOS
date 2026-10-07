@@ -93,6 +93,14 @@ export default function FerretDIYEnrichmentPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment">Browse a small-pet snuffle mat on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'DIY Ferret Enrichment Toys — Big Fun, Tiny Budget',
           subtitle:
@@ -297,7 +305,6 @@ export default function FerretDIYEnrichmentPage() {
             guide</a>.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/marshall/pop-n-play-tunnel?s=behavior-diy-enrichment", "/go/amazon-brand/snuffle+mat+small+pet?s=behavior-diy-enrichment"]} />
 
           <h2 id="picks">Ready-Made Picks</h2>
           <p>
@@ -308,7 +315,7 @@ export default function FerretDIYEnrichmentPage() {
               Pair these toys with an out-of-cage routine →
             </Link>
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-pop-n-play-diy"
             badge="Tunnel Set"
             name="Marshall Pop-N-Play Tunnel Set"
@@ -333,7 +340,7 @@ export default function FerretDIYEnrichmentPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="pop-n-play-tunnel"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="snuffle-mat-ferret"
             badge="Foraging"
             name="Snuffle Mat (Dog/Small-Pet)"

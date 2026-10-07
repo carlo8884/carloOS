@@ -112,6 +112,14 @@ export default function FerretExerciseEnrichmentPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="care"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+cage?s=exercise-and-enrichment">Browse a ferret cage on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Ferret Exercise and Enrichment',
           subtitle:
@@ -507,7 +515,6 @@ export default function FerretExerciseEnrichmentPage() {
             </table>
           </div>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+cage?s=exercise-and-enrichment", "/go/marshall/pop-n-play-tunnel?s=care-exercise-and-enrichment", "/go/chewy-brand/small+pet+ball+pit+balls?s=care-exercise-and-enrichment"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -526,7 +533,7 @@ export default function FerretExerciseEnrichmentPage() {
           <p>
             Two starter purchases that anchor most ferret enrichment setups — a tunnel set and a dig box. This is a documented-spec comparison drawing on widely-stocked products and the durable-material constraints discussed above; this page does not claim hands-on testing.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-pop-n-play"
             badge="Tunnel Default"
             name="Marshall Pop-N-Play Tunnel Set"
@@ -551,7 +558,7 @@ export default function FerretExerciseEnrichmentPage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="pop-n-play-tunnel"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="dig-box-supplies"
             badge="Dig Box"
             name="Storage-Tote Dig Box + Safe Fill"

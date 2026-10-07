@@ -47,6 +47,14 @@ export default function NovemberDecemberGiftGuidePage() {
     <ArticleLayout
       siteId="ferret-com"
       schema={combineSchemas(schema, faqSchema)}
+      heroHop={
+        <>
+          <HopDisclosure siteId="ferret-com" href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`} />
+          <div className="mb-4" data-primary-hop="true">
+            <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href={`/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`}>Browse a Critter Nation double unit on Amazon →</a>
+          </div>
+        </>
+      }
       hero={{
         title: 'November and December ferret gifts',
         subtitle: 'Dollar bands copied from cards that already name a product and a shop link. This page does not turn a $ symbol into a dollar price.',
@@ -84,7 +92,6 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The cage-setup page prints the MidWest Critter Nation double unit at $200–280. That is the dollar band this page can cite for a cage. The cage review still explains bar spacing and which household that style of cage is for. Measure the room before you order a double unit as a surprise.</p>
         <h2>Who should get which printed band</h2>
         <p>A litter pan, a sleep sack, a treat pack, or a bottle of shampoo is the small gift. A bag of kibble is the gift when the ferret already eats that food. A double unit is the large gift, and only when the cage page’s spacing and footprint already fit the room. The shop link is the hop already on that card, with this page named as the source.</p>
-        <HopDisclosure siteId="ferret-com" href={[`/go/chewy-brand/kaytee+corner+ferret+litter+pan?s=${SOURCE}`, `/go/marshall/ferret-shampoo-original?s=${SOURCE}`, `/go/wysong/freeze-dried-treats?s=${SOURCE}`, `/go/marshall/ferret-sleep-sack?s=${SOURCE}`, `/go/marshall/premium-ferret-diet?s=${SOURCE}`, `/go/wysong/epigen-90?s=${SOURCE}`, `/go/amazon-brand/midwest+critter+nation+double+unit?s=${SOURCE}`]} />
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -102,27 +109,27 @@ export default function NovemberDecemberGiftGuidePage() {
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–14</td>
-                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink href={`/go/marshall/ferret-shampoo-original?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
+                <td className="p-3 font-bold">Marshall ferret shampoo<TableShopLink quietUntilTag href={`/go/marshall/ferret-shampoo-original?s=${SOURCE}`} product="Marshall ferret shampoo" /></td>
                 <td className="p-3"><Link href="/care/bathing-and-grooming">Grooming page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–15 a pack</td>
-                <td className="p-3 font-bold">Wysong freeze-dried treats<TableShopLink href={`/go/wysong/freeze-dried-treats?s=${SOURCE}`} product="Wysong freeze-dried treats" /></td>
+                <td className="p-3 font-bold">Wysong freeze-dried treats<TableShopLink quietUntilTag href={`/go/wysong/freeze-dried-treats?s=${SOURCE}`} product="Wysong freeze-dried treats" /></td>
                 <td className="p-3"><Link href="/diet/safe-treats">Treat page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$10–20</td>
-                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink href={`/go/marshall/ferret-sleep-sack?s=${SOURCE}`} product="Marshall sleep sack" /></td>
+                <td className="p-3 font-bold">Marshall sleep sack<TableShopLink quietUntilTag href={`/go/marshall/ferret-sleep-sack?s=${SOURCE}`} product="Marshall sleep sack" /></td>
                 <td className="p-3"><Link href="/care/cage-setup">Cage setup</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$15–25 for 4 pounds</td>
-                <td className="p-3 font-bold">Marshall Premium<TableShopLink href={`/go/marshall/premium-ferret-diet?s=${SOURCE}`} product="Marshall Premium" /></td>
+                <td className="p-3 font-bold">Marshall Premium<TableShopLink quietUntilTag href={`/go/marshall/premium-ferret-diet?s=${SOURCE}`} product="Marshall Premium" /></td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$30–50 for 5 pounds</td>
-                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink href={`/go/wysong/epigen-90?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
+                <td className="p-3 font-bold">Wysong Epigen 90<TableShopLink quietUntilTag href={`/go/wysong/epigen-90?s=${SOURCE}`} product="Wysong Epigen 90" /></td>
                 <td className="p-3"><Link href="/diet/best-ferret-kibble">Kibble review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">

@@ -98,6 +98,14 @@ export default function FerretStressSignsPage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs">Browse a ferret fleece sleep sack on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Signs of Stress in Ferrets — Reading the Quiet Warnings',
           subtitle:
@@ -298,7 +306,6 @@ export default function FerretStressSignsPage() {
             <a href="/behavior/dead-sleep-explained">dead-sleep explainer</a>.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+sleep+sack+fleece?s=behavior-stress-signs", "/go/marshall/pop-n-play-tunnel?s=behavior-stress-signs"]} />
 
           <h2 id="supplies">Comfort and Enrichment Supplies</h2>
           <p>
@@ -312,7 +319,7 @@ export default function FerretStressSignsPage() {
               Pair the sleep sack with an out-of-cage routine →
             </Link>
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="ferret-sleep-sack"
             badge="Sleep Comfort"
             name="Ferret Sleep Sack / Hammock"
@@ -336,7 +343,7 @@ export default function FerretStressSignsPage() {
             ctaAffiliateProgram="amazon-brand"
             ctaAffiliateProduct="ferret+sleep+sack+fleece"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="ferret-tunnel-stress"
             badge="Enrichment"
             name="Marshall Pop-N-Play Tunnel Set"

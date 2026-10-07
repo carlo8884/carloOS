@@ -124,6 +124,14 @@ export default function FerretAgingPage() {
       <ArticleLayout
         siteId="ferret-com"
         contentType="health"
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=health-aging" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/ferret+kibble?s=health-aging">Browse ferret kibble on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Aging Ferret Care',
           subtitle:
@@ -551,7 +559,6 @@ export default function FerretAgingPage() {
             the household.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href="/go/marshall/ferret-floor-sleep-sack?s=health-aging-ferret-care" />
 
           <h2 id="picks">Supportive Care Picks</h2>
           <CalloutBox variant="warning" title="Supportive supplies, not treatment">
@@ -562,7 +569,7 @@ export default function FerretAgingPage() {
           <p>
             Two items that come up consistently in senior-ferret hospice and palliative-care guidance: a floor-level soft sleeping setup, and a meat-based recovery diet for ferrets who are eating less. This is a documented-spec comparison; the page does not claim hands-on testing.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="floor-level-hammock"
             badge="Senior Comfort"
             name="Floor-Level Fleece Sleep Sack / Low Hammock"
@@ -598,7 +605,6 @@ export default function FerretAgingPage() {
               Shop related supplies
             </div>
             <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=health-aging" />
             <div className="flex flex-col gap-3 mt-3">
               <ShopCtas
                 amazonHref="/go/amazon-brand/ferret+kibble?s=health-aging"

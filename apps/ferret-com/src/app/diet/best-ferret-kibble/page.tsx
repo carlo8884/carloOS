@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, QuickPicks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildFAQSchema, buildItemListSchema, buildMedicalWebPageSchema, buildProductSchema, combineSchemas, SchemaScript, QuietPartnerLink} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -117,13 +117,20 @@ export default function BestFerretKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-best-ferret-kibble' label='Check price of Wysong Epigen 90 at Wysong' />}
         heroExtra={
           <>
-          <HopDisclosure siteId="ferret-com" href="/go/wysong/epigen-90?s=diet-best-ferret-kibble" />
           <div className="[&_.text-brand-primary]:!text-brand-dark">
-            <QuickPicks items={QUICK_PICKS} embedded />
+            <QuickPicks items={QUICK_PICKS} quietUntilTag embedded />
           </div>
+          </>
+        }
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble">Browse Wysong ferret food on Amazon →</a>
+            </div>
+            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-best-ferret-kibble" label="Check price of Wysong Epigen 90 at Wysong" />
           </>
         }
         hero={{
@@ -252,7 +259,6 @@ export default function BestFerretKibblePage() {
             Change foods over 7–14 days, mixing an increasing proportion of the new kibble into the old. Abrupt changes can cause loose stool, and a fixated ferret may simply stop eating, which is dangerous given how quickly ferrets can become hypoglycemic. If a ferret refuses the new food entirely, slow down further and consider crushing a little new kibble into a meat-based gravy to introduce the smell. Never let a ferret go without eating for an extended period during a transition.
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/wysong/epigen-90?s=diet-best-ferret-kibble", "/go/amazon-brand/wysong+ferret+food?s=best-ferret-kibble", "/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -276,7 +282,7 @@ export default function BestFerretKibblePage() {
           <p>
             Three commercial dry diets whose published ingredient and macronutrient panels line up with the animal-first, low-carbohydrate window described above. This is a documented-spec comparison, not a hands-on test: inclusion reflects published panels and adoption patterns in keeper communities and at exotic-mammal shelters, not a lab evaluation.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Premium Tier"
             name="Wysong Epigen 90"
@@ -301,7 +307,7 @@ export default function BestFerretKibblePage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="marshall-premium-diet"
             badge="Mid Tier"
             name="Marshall Premium Ferret Diet"
@@ -325,7 +331,7 @@ export default function BestFerretKibblePage() {
             ctaAffiliateProgram="marshall"
             ctaAffiliateProduct="premium-ferret-diet"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="carniwhole"
             badge="Direct-to-Consumer"
             name="Carniwhole Ferret Food"
@@ -359,13 +365,13 @@ export default function BestFerretKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">The lowest commercial carb load in wide ferret use</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-best-ferret-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Premium Tier. About 60% protein, 16% fat, carbs in the single digits. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You need a bag from a supermarket aisle tonight. The card says it is not always stocked there</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A ferret-specific bag you can find in chain retail</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#marshall-premium-diet" className="text-brand-primary">Marshall Premium</a><TableShopLink quietUntilTag href={"/go/marshall/premium-ferret-diet?s=diet-best-ferret-kibble"} product={"Marshall Premium"} /></td>
                   <td className="p-3 text-brand-text-mid">Mid Tier. About 38% protein, 20% fat, carbs in the mid teens. $15–25 / 4 lb</td>
                   <td className="p-3 text-brand-text-mid">Insulinoma risk is the priority. The card puts carbohydrate higher than the premium tier, and the panel includes plant protein</td>
                 </tr>

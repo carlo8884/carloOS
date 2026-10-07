@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { TableShopLink, ComparisonFoot, PrimaryHop, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
-import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, FAQAccordion, buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, StockImage, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript, buildItemListSchema, QuietPartnerLink} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'ferret-com',
@@ -47,7 +47,15 @@ export default function WholePreyVsKibblePage() {
       <SchemaScript schema={combined} />
       <ArticleLayout
         siteId="ferret-com"
-        heroHop={<PrimaryHop href='/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble' label='Check price of Wysong Epigen 90 from Wysong' />}
+        heroHop={
+          <>
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble">Browse Wysong ferret food on Amazon →</a>
+            </div>
+            <QuietPartnerLink tone="dark" href="/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble" label="Check price of Wysong Epigen 90 from Wysong" />
+          </>
+        }
         hero={{
           title: 'Whole-Prey vs Kibble for Ferrets',
           subtitle:
@@ -181,7 +189,6 @@ export default function WholePreyVsKibblePage() {
             There is no single correct answer, but a few defensible patterns emerge. For a first-time owner without an exotic-mammal vet already lined up, a high-quality low-carb kibble is the lower-risk starting point — it is forgiving, safe, and nutritionally reliable. For a committed keeper with freezer space and good kitchen discipline, a well-balanced raw or whole-prey diet is the closest match to ferret physiology and may pay dividends in dental health and stool quality. A pragmatic middle path — premium kibble as a base, with whole-prey or raw supplementation a few times a week — captures much of the upside of both while keeping a safe, convenient fallback. Whatever you choose, transition gradually: ferrets imprint on food in their first six months and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>).
           </p>
 
-          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=whole-prey-vs-kibble", "/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble", "/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-whole-prey-vs-kibble"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
@@ -200,7 +207,7 @@ export default function WholePreyVsKibblePage() {
           <p>
             If the comparison above leaves you leaning one way, here is a defensible starting point for each model — and, for the pragmatic middle path, both together: a premium low-carb kibble as the base with frozen whole prey for supplementation. These are documented-spec selections, not hands-on tests.
           </p>
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="wysong-epigen-90"
             badge="Kibble Model"
             name="Wysong Epigen 90"
@@ -224,7 +231,7 @@ export default function WholePreyVsKibblePage() {
             ctaAffiliateProgram="wysong"
             ctaAffiliateProduct="epigen-90"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="frozen-feeder-prey"
             badge="Whole-Prey Model"
             name="Frozen Feeder Mice & Chicks (Reptile-Feeder Grade)"
@@ -262,7 +269,7 @@ export default function WholePreyVsKibblePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A shelf-stable base a sitter can feed</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#wysong-epigen-90" className="text-brand-primary">Wysong Epigen 90</a><TableShopLink quietUntilTag href={"/go/wysong/epigen-90?s=diet-whole-prey-vs-kibble"} product={"Wysong Epigen 90"} /></td>
                   <td className="p-3 text-brand-text-mid">Kibble model. Starch-free. $30–50 / 5 lb</td>
                   <td className="p-3 text-brand-text-mid">You want the dental abrasion of whole prey. The card says kibble gives less of that, and the price is premium</td>
                 </tr>
