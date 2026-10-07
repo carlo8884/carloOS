@@ -70,7 +70,6 @@ export default function ClownfishPage() {
       breadcrumbs={[{ name: 'Home', href: '/' }, { name: 'Species', href: '/species' }, { name: 'Clownfish', href: '/species/clownfish' }]}
       relatedLinks={[{ title: "Species Hub", href: "/species", category: "Species" }, { title: "Saltwater Tank Setup", href: "/setup/saltwater-tank-setup", category: "Tank Setup" }, { title: "Quarantine Tank Guide", href: "/setup/quarantine-tank-guide", category: "Tank Setup" }, { title: "Best Aquarium Filters", href: "/reviews/best-aquarium-filters", category: "Reviews" }]}
       sidebar={<>
-        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/clownfish%20tank%20setup?s=species-clownfish" />
           <div style={{ background: 'var(--brand-surface)', border: '1px solid var(--brand-border)', borderRadius: '12px', padding: '16px' }}>
           <div style={{ fontSize: '11px', fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--brand-text-light)', marginBottom: '12px' }}>Quick Stats</div>
           {[['Scientific name', 'Amphiprioninae (many species)'], ['Type', 'Saltwater (marine)'], ['Difficulty', 'Beginner (for saltwater)'], ['Min tank', '20 gallons'], ['Temperature', '74–82°F'], ['Salinity', '1.023–1.026 SG'], ['Anemone', 'Not required'], ['Lifespan', '6–10+ years'], ['Diet', 'Omnivore']].map(([k, v]) => (
@@ -136,6 +135,7 @@ export default function ClownfishPage() {
           includeSchema={false}
           allowMultiple
         />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/clownfish%20tank%20setup?s=species-clownfish" />
         <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Clownfish — Tank Setup</div>
           <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for clownfish care.</p>
