@@ -606,7 +606,7 @@ export default function HomePage() {
         <div style={{ maxWidth: '1180px', margin: '0 auto' }}>
           <header style={{ marginBottom: '40px' }}>
             <div style={{ marginBottom: '14px' }}>
-              <span className="eyebrow">
+              <span className="eyebrow" style={{ color: '#7c5a28' }}>
                 <span className="eyebrow-rule" />
                 Browse by topic
               </span>
@@ -767,7 +767,7 @@ export default function HomePage() {
                     fontWeight: 700,
                     letterSpacing: '0.14em',
                     textTransform: 'uppercase',
-                    color: 'var(--brand-amber-dark)',
+                    color: '#7c5a28',
                     marginBottom: '10px',
                   }}
                 >
@@ -834,7 +834,7 @@ export default function HomePage() {
                     fontWeight: 700,
                     letterSpacing: '0.14em',
                     textTransform: 'uppercase',
-                    color: 'var(--brand-amber-dark)',
+                    color: '#7c5a28',
                     marginBottom: '10px',
                   }}
                 >
@@ -879,7 +879,7 @@ export default function HomePage() {
         <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
           <header style={{ marginBottom: '36px' }}>
             <div style={{ marginBottom: '14px' }}>
-              <span className="eyebrow">
+              <span className="eyebrow" style={{ color: '#7c5a28' }}>
                 <span className="eyebrow-rule" />
                 Cornerstone reading
               </span>
@@ -1001,7 +1001,7 @@ export default function HomePage() {
                         fontWeight: 700,
                         letterSpacing: '0.14em',
                         textTransform: 'uppercase',
-                        color: 'var(--brand-amber-dark)',
+                        color: '#7c5a28',
                         marginBottom: '8px',
                       }}
                     >
