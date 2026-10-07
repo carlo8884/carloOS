@@ -750,7 +750,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+first\+aid\+kit/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/horse\+first\+aid\+kit/, label: 'on-page product Amazon search hop' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10458,7 +10458,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/nonstick\+wound\+dressing\+pads\+horse\?s=ownership-first-aid-kit/, label: 'nonstick wound dressing-pads-horse search hop (matches on-page non-stick-dressings copy; unique vs vet+wrap+bandage / vet+wrap+cohesive+bandage / wound+care+gauze)' },
       { re: /amazon-brand\/equine\+bandage\+scissors\?s=ownership-first-aid-kit/, label: 'equine bandage-scissors search hop (matches on-page scissors-and-tweezers copy; unique vs equine+first+aid+kit / horse+barn+first+aid+kit / cordless+barn+flood+light)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10477,7 +10477,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/horse\+hay/, label: 'on-page product Amazon search hop' },
       { re: /amazon-brand\/waterproof\+horse\+hay\+bale\+storage\+tarp\?s=ownership-boarding-options/, label: 'waterproof horse hay-bale storage-tarp search hop (matches on-page hay-and-bedding-storage copy; unique vs wall+mounted+horse+hay+rack / nylon+horse+hay+bag / rodent+proof+metal+horse+feed+bin)' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10527,7 +10527,7 @@ const CALCULATORS = [
       { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator next step' },
       { re: /amazon-brand\/horse\+feed\+scoop\+scale\?s=ownership-cost-of-owning-a-horse/, label: 'feed scoop and scale, the measuring tool the feed section names' },
       { re: /Browse horse feed scoops and scales on Amazon/, label: 'product and retailer on the feed button' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above the hop' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10562,7 +10562,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/equine\+supplement\?s=ownership-leasing-a-horse/, label: 'equine supplement search named in the lease cost split' },
       { re: /\/tools\/horse-cost-calculator/, label: 'horse cost calculator instead of an invented lease binder' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above the supplement hop' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
@@ -10613,7 +10613,7 @@ const CALCULATORS = [
       { re: /amazon-brand\/beet\+pulp\+horse\+feed/, label: 'on-page product Amazon search hop' },
       { re: /\/tools\/body-condition-score/, label: 'body-condition tool instead of an invented quality-of-life score card' },
       { re: /amazonHref="\/go\/amazon-brand\//, label: 'ShopCtas amazon-brand hops only' },
-      { re: /AffiliateDisclosure/, label: 'AffiliateDisclosure added above hops' },
+      { re: /HopDisclosure/, label: 'HopDisclosure added above hops' },
     ],
     mustExclude: [
       { re: /amazonHref=["']#["']/, label: 'never href="#"' },
