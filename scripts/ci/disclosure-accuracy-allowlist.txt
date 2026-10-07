@@ -51,15 +51,6 @@ apps/dog-com/src/app/guides/page.tsx
 apps/dog-com/src/app/llms.txt/route.ts
 apps/dog-com/src/app/nutrition/dog-dna-tests/page.tsx
 apps/dog-com/src/app/reviews/best-dry-dog-food/page.tsx
-apps/dog-com/src/app/training/dog-aggression/page.tsx
-apps/dog-com/src/app/training/house-training/page.tsx
-apps/dog-com/src/app/training/leash-reactivity/page.tsx
-apps/dog-com/src/app/training/loose-leash-walking/page.tsx
-apps/dog-com/src/app/training/off-leash-training/page.tsx
-apps/dog-com/src/app/training/page.tsx
-apps/dog-com/src/app/training/resource-guarding/page.tsx
-apps/dog-com/src/app/training/trainer-credentials/page.tsx
-apps/dog-com/src/app/training/training-red-flags/page.tsx
 apps/ferret-com/src/app/colors/choosing-a-healthy-ferret/page.tsx
 apps/ferret-com/src/app/colors/cinnamon-ferrets/page.tsx
 apps/ferret-com/src/app/colors/ferret-lifespan/page.tsx

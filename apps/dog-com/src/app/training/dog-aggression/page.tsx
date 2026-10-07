@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -172,7 +172,7 @@ export default function DogAggressionPage() {
           alone.
         </p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-dog-aggression" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

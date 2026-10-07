@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -83,7 +83,7 @@ export default function HouseTrainingPage() {
         {/* Money path — live amazon-brand search hops (house-training kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list. */}
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/enzymatic+pet+stain+odor+cleaner?s=training-house", "/go/amazon-brand/puppy+training+treats?s=training-house", "/go/amazon-brand/wire+dog+crate+with+divider+panel?s=training-house", "/go/amazon-brand/dog+poop+bags?s=training-house"]} />
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
             Shop a house-training kit

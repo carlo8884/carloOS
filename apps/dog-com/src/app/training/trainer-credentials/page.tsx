@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -6,7 +7,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema } from '@carloOS/ui'
@@ -112,7 +112,7 @@ export default function TrainerCredentialsPage() {
           <li><strong>Severe anxiety, aggression requiring medication:</strong> DACVB — the only behavior professional who can prescribe</li>
         </ul>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-trainer-credentials" />
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
           <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

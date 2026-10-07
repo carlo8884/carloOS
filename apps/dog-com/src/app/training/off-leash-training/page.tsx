@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import {
   buildMetadata,
@@ -5,7 +6,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { buildArticleSchema, buildHowToSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
@@ -194,7 +194,7 @@ export default function OffLeashTrainingPage() {
             a game the dog actively wants to play.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+harness?s=training-off-leash-training" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, buildFAQSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -336,7 +337,7 @@ export default function TrainingHubPage() {
         <p className="max-w-container-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-container-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+leash?s=training-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-container-wide">

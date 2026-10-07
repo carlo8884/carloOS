@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   TableOfContents,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
   JourneyNext,
 } from '@carloOS/ui'
@@ -72,7 +72,7 @@ export default function LooseLeashPage() {
           {/* Money path — live amazon-brand search hops (loose-leash kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
               Category searches only — not a ranked list. */}
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/front+clip+no+pull+dog+harness?s=training-loose-leash-walking", "/go/amazon-brand/6+ft+dog+leash?s=training-loose-leash-walking", "/go/amazon-brand/dog+training+treat+pouch+belt+clip?s=training-loose-leash-walking", "/go/amazon-brand/puppy+training+treats?s=training-loose-leash-walking"]} />
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary mb-3">
               Shop a loose-leash kit
