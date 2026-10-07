@@ -282,9 +282,7 @@ export default function PPIDPage() {
               they are not an EMS diet-management hop,
               they are not a laminitis grazing-muzzle
               hop, and they do not replace a
-              veterinarian. Horses.com earns a
-              commission on qualifying purchases at no
-              extra cost to you.
+              veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

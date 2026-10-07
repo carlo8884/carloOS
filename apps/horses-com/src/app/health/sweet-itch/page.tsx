@@ -167,8 +167,7 @@ export default function SweetItchPage() {
               They are not a ranked product list, they are not a fly sheet
               or fly mask, they are not fly spray or fly traps, they are
               not a steroid or a spot-on, they are not a medication, and
-              they do not replace a veterinarian. Horses.com earns a
-              commission on qualifying purchases at no extra cost to you.
+              they do not replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

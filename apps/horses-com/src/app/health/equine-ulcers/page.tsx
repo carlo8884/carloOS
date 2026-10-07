@@ -340,9 +340,7 @@ export default function EquineUlcersPage() {
               pectin-lecithin blends, sea-buckthorn formulations, hindgut buffers) are widely
               available through equestrian retailers. Tier 1 drugs (omeprazole / GastroGard /
               UlcerGard, sucralfate, misoprostol) are prescription — work with your veterinarian
-              for those, not a retail search. Horses.com earns an affiliate commission on
-              qualifying purchases — at no extra cost to you; commission does not influence
-              the editorial evidence ladder above.
+              for those, not a retail search.
             </p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a
