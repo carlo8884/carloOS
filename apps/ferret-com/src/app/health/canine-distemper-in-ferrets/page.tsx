@@ -28,11 +28,6 @@ const SOURCES = [
     url: "https://aemv.org",
     publisher: "AEMV",
   },
-  {
-    label: "American Veterinary Medical Association (AVMA) — ferret distemper and rabies vaccination guidance for companion exotic species",
-    url: "https://www.avma.org/resources-tools/pet-owners/petcare/ferrets",
-    publisher: "AVMA",
-  },
 ]
 import {
   buildArticleSchema,

@@ -31,7 +31,7 @@ const SOURCES = [
   { label: 'Merck Veterinary Manual: Routine Health Care of Ferrets — emergency vs wait presentations', url: 'https://www.merckvetmanual.com/all-other-pets/ferrets/routine-health-care-for-ferrets', publisher: 'Merck Vet Manual' },
   { label: 'Association of Exotic Mammal Veterinarians (AEMV) — exotic-mammal emergency care and practitioner directory', url: 'https://aemv.org', publisher: 'AEMV' },
   { label: 'ASPCA Animal Poison Control Center: Pet Poison Information', url: 'https://www.aspca.org/pet-care/aspca-poison-control', publisher: 'ASPCA' },
-  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/petcare/emergencies-pets', publisher: 'AVMA' },
+  { label: 'AVMA: Emergency Care for Pets — Warning Signs', url: 'https://www.avma.org/resources-tools/pet-owners/emergency-care', publisher: 'AVMA' },
 ]
 
 const FAQS = [
