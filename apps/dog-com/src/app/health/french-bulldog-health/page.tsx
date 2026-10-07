@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -166,7 +167,7 @@ export default function FrenchBulldogHealthPage() {
         <h2 id="kit">Heat-care kit</h2>
         <p>Everyday physical supplies that match the heat-care copy above — a cooling mat the dog can lie on indoors, plus a cooling vest for short outdoor trips when a cool environment is not already available. These are home-setup aids, not treatments. They do not treat heatstroke, they do not replace shade and water, and they do not make a parked car safe. Cool-water towels and digital thermometers stay on the sister <a href={crossSiteHref('vets-co', '/health/heat-stroke-dogs')}>Vets.co heat-stroke</a> first-aid page. Ice packs, dog ramps, fold wipes, paw wipes, soft e-collars, Rx eye drops (cyclosporine / tacrolimus), NSAIDs, and BOAS / IVDD clinical treatments stay educational copy only — this page never hops medications, brand ASINs, or clinical gear. This page does not claim hands-on testing.</p>
 
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+cooling+mat?s=health-french-bulldog-health", "/go/amazon-brand/dog+cooling+vest?s=health-french-bulldog-health"]} />
 
         {/* Money path — live amazon-brand search hops (cooling
             mat / cooling vest). ShopCtas hides empty Chewy;

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CalloutBox, PullQuote, ArticleByline, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -120,7 +121,7 @@ export default function DogVaccinationsPage() {
             does not hop vaccines or medications. This
             page does not claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+vaccination+record+book?s=health-dog-vaccinations", "/go/amazon-brand/dog+seat+belt+tether?s=health-dog-vaccinations", "/go/amazon-brand/foldable+waterproof+puppy+mat?s=health-dog-vaccinations"]} />
 
           {/* Money path — live amazon-brand search hops
               (pet vaccination record book / dog seat-belt

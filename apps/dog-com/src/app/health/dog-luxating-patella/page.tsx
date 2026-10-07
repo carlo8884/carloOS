@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -81,7 +82,7 @@ export default function LuxatingPatellaPage() {
           <h2 id="kit">Walk-support kit</h2>
           <p>Everyday physical supplies that match the walk-control copy above — a dog knee brace on the affected hind limb during leash walks when the kneecap is slipping, plus a rear-support harness to keep Grade 1 flare walks and the 6–8 week post-op restriction window short and controlled. These are home-setup aids, not treatments. Joint supplements (Dasuquin, glucosamine, chondroitin, omega-3 / fish oil), NSAIDs, prescription weight-management diets, and food ASINs stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. The allergy work-up is on <a href="/health/dog-allergies">dog allergies</a>. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+knee+brace?s=health-dog-luxating-patella", "/go/amazon-brand/dog+rear+support+harness?s=health-dog-luxating-patella"]} />
 
           {/* Money path — live amazon-brand search hops (dog
               knee brace / rear-support harness). ShopCtas hides

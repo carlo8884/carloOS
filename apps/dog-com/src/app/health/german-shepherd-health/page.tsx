@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, StockImage, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
@@ -198,7 +199,7 @@ export default function GermanShepherdHealthPage() {
             live on other pages. This page does not claim
             hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+assisted+walking+sling?s=health-german-shepherd-health", "/go/amazon-brand/dog+hind+paw+booties?s=health-german-shepherd-health", "/go/amazon-brand/dog+hip+brace?s=health-german-shepherd-health"]} />
 
           {/* Money path — live amazon-brand search hops
               (dog assisted-walking sling / dog hind-paw

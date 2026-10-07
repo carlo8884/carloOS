@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -70,7 +71,7 @@ export default function DogHotSpotsPage() {
           <h2 id="kit">Hot-spot e-collar kit</h2>
           <p>Everyday physical supplies that match the home-care copy above — an e-collar (cone) so the dog cannot lick, scratch, or bite the lesion, plus a soft cone alternative for dogs that tolerate it. Chlorhexidine, betadine, Vetericyn / Genesis / Malacetic sprays, hydrocortisone, Cytopoint, Apoquel, corticosteroids, and systemic antibiotics stay educational copy only — this page never hops medicated sprays, brand ASINs, or medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/pet+recovery+cone?s=health-dog-hot-spots", "/go/amazon-brand/soft+recovery+cone+dog?s=health-dog-hot-spots"]} />
 
           {/* Money path — live amazon-brand search hops (e-collar / soft cone).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

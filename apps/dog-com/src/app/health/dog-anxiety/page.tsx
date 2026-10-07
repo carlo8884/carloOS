@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -65,7 +66,7 @@ export default function DogAnxietyPage() {
           <h2 id="kit">Noise-phobia safe-space kit</h2>
           <p>Everyday physical supplies that match the noise-phobia copy above — a pressure wrap (Thundershirt is named as the example product type), a covered crate or other small dark hiding space dogs self-select, and white noise to mask some sound. Fluoxetine / Reconcile, clomipramine, trazodone, gabapentin, and Sileo (dexmedetomidine oromucosal gel) stay educational copy only — this page never hops medications, brand ASINs, or prescription products. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+anxiety+wrap?s=health-dog-anxiety", "/go/amazon-brand/dog+crate+cover?s=health-dog-anxiety", "/go/amazon-brand/white+noise+machine?s=health-dog-anxiety"]} />
 
           {/* Money path — live amazon-brand search hops (pressure wrap /
               covered crate / white noise). ShopCtas hides empty Chewy;
