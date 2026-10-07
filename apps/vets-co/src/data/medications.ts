@@ -297,7 +297,7 @@ export const Medications: Medication[] = [
     seriousSideEffects: [
       'Profound sedation, particularly in geriatric or renally compromised patients',
       'Withdrawal seizures if a long-term anticonvulsant dose is stopped abruptly',
-      'Xylitol toxicity from the commercial human oral SOLUTION (Neurontin liquid contains xylitol — fatal to dogs); always use the capsule or veterinary suspension',
+      'Xylitol toxicity from some commercial human oral solutions (liquid gabapentin formulations often contain xylitol and can cause hypoglycemia in dogs); use the capsule, tablet, or a veterinary preparation',
     ],
     monitoringRequired:
       'Baseline chemistry to assess kidney function — gabapentin is excreted unchanged by the kidneys and accumulates if renal function is reduced. Periodic bloodwork on chronic therapy. Reassess pain control regularly.',
@@ -307,12 +307,16 @@ export const Medications: Medication[] = [
       'Hydrocodone',
     ],
     specialPrecautions:
-      'Use dose adjustment in patients with renal insufficiency. Do not stop abruptly in seizure patients. Use ONLY the capsule, tablet, or compounded veterinary preparation — the human commercial oral solution contains xylitol and can kill a dog. Not established as safe in pregnant or breeding animals.',
+      'Use dose adjustment in patients with renal insufficiency. Do not stop abruptly in seizure patients. Use the capsule, tablet, or a veterinary preparation — some human oral solutions contain xylitol, which can cause life-threatening hypoglycemia in dogs. Not established as safe in pregnant or breeding animals.',
     citations: [
       { label: "Plumb's Veterinary Drug Handbook — Gabapentin monograph", href: PLUMBS },
       {
         label: 'Merck Veterinary Manual — Pharmacology of the Nervous System',
         href: 'https://www.merckvetmanual.com/pharmacology/systemic-pharmacotherapeutics-of-the-nervous-system',
+      },
+      {
+        label: 'Merck Veterinary Manual — Xylitol toxicosis in dogs, including liquid gabapentin',
+        href: 'https://www.merckvetmanual.com/toxicology/food-hazards/xylitol-toxicosis-in-dogs',
       },
     ],
   },
