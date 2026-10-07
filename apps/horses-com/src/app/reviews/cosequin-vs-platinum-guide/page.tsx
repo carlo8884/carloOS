@@ -29,7 +29,7 @@ const FAQS = [
   },
   {
     question: 'When does the review point to Platinum Performance CJ?',
-    answer: 'For a performance horse when the owner wants one comprehensive formula. It lists glucosamine, chondroitin, MSM, HA, ASU, CMO, and omega-3, at $130–180 per 30-day supply.',
+    answer: 'For a performance horse when the owner wants one comprehensive formula. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.',
   },
   {
     question: 'Does either product replace joint injections?',
@@ -40,7 +40,7 @@ const FAQS = [
 export default function CosequinVsPlatinumGuidePage() {
   return (
     <ArticleLayout
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
       siteId="horses-com"
       schema={schema}
       hero={{
@@ -68,11 +68,11 @@ export default function CosequinVsPlatinumGuidePage() {
       }
     >
       <div className="carloOS-article">
-        <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already lists Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Milligram amounts are the ones the review already prints.</p>
+        <p>The <Link href="/supplements/joint-supplements">joint-supplement review</Link> already lists Nutramax Cosequin ASU Plus as the ASU pick and Platinum Performance CJ as the comprehensive pick. Cosequin milligrams differ by powder and pellets — check the label. Platinum CJ does not list chondroitin.</p>
         <h2>What the review says about Cosequin</h2>
-        <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU) and the winner. The listed actives are ASU, glucosamine HCl, and chondroitin sulfate. NASC Quality Seal is listed as yes, and the review says ingredient amounts are disclosed on the label. The printed price is $60–95 per 30-day supply. It is for maintenance and an early osteoarthritis adjunct. The review says it is not a substitute for intra-articular or systemic medication when that is indicated.</p>
+        <p>Nutramax Cosequin ASU Plus is Best Evidence (ASU) and the winner. The current pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU standardized to a minimum of 30% unsaponifiables. Milligrams differ for powder and pellets — check the label. The initial period is 2–4 weeks. The printed price is $60–95 per 30-day supply.</p>
         <h2>What the review says about Platinum</h2>
-        <p>Platinum Performance CJ is Best Comprehensive. It lists glucosamine, chondroitin, MSM, HA, ASU, CMO, and omega-3 on the wellness-formula base. The printed price is $130–180 per 30-day supply, and the review calls it the premium supplement with the highest typical order value in the category. It is for a performance horse on an integrated supplement plan. The downsides include cost, some Tier 3 ingredients in the formula, and auto-ship lock-in.</p>
+        <p>Platinum Performance CJ is Best Comprehensive. The current page lists, per 2 scoops, glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The printed price is $130–180 per 30-day supply.</p>
         <h2>Who should buy which tub</h2>
         <p>Buy Cosequin ASU Plus when the job is the ASU formula with disclosed amounts, at the $60–95 band. Buy Platinum CJ when you want one tub that already stacks the longer ingredient list, and the $130–180 band is acceptable. Neither product is a replacement for veterinary joint treatment.</p>
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=reviews-cosequin-vs-platinum-guide" />

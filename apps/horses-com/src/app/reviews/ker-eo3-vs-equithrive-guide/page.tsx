@@ -25,7 +25,7 @@ const schema = buildArticleSchema({
 const FAQS = [
   {
     question: 'Which product does the review pick for marine omega-3?',
-    answer: 'KER EO-3, marked Best Marine Omega-3. The review lists fish-oil DHA and EPA, a liquid you pour on feed, tocopherol stabilization, no prohibited FEI or USEF ingredients, and a price of $55–85 a month. It also says the liquid thickens in the cold and has a shorter life once opened than a pellet.',
+    answer: 'KER EO-3, marked Best Marine Omega-3. The current page lists, per 30 mL, EPA 3,200 mg, DHA 2,300 mg, and DPA 500 mg. The format is a liquid you pour on feed. The printed price is $55–85 a month.',
   },
   {
     question: 'When does the review point to Equithrive?',
@@ -67,7 +67,7 @@ export default function KerVsEquithriveGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
         <EmailCapture
@@ -88,7 +88,7 @@ export default function KerVsEquithriveGuidePage() {
         />
         <p>Prices below are the ones on the <Link href="/reviews/best-equine-supplements">equine supplement review</Link>. KER EO-3 is the marine omega-3. Equithrive Original Pellets are the trans-resveratrol. <Link href="/reviews/cosequin-vs-equithrive-guide">Cosequin versus Equithrive</Link> is the joint comparison, not this omega-3 pair. Cosequin versus Platinum is a different pair, on the <Link href="/reviews/cosequin-vs-platinum-guide">Cosequin versus Platinum guide</Link>.</p>
         <h2>What the review says about KER EO-3</h2>
-        <p>EO-3 is Best Marine Omega-3. The source is marine fish oil, DHA and EPA, not plant ALA. The format is a liquid poured on the feed. The review says Kentucky Equine Research has published equine omega-3 work and that this is the formulation used in many of those trials. It lists tocopherol stabilization and no prohibited FEI or USEF ingredients. The printed price is $55–85 a month. The trade-off in the review is that the liquid gets thicker in cold weather and, once opened, does not keep as long as a pellet. The review says to buy the smallest unit you can finish inside the use-by window.</p>
+        <p>EO-3 is Best Marine Omega-3. The current page lists, per 30 mL, EPA 3,200 mg, DHA 2,300 mg, and DPA 500 mg (6,000 mg long-chain omega-3). It is a stabilized liquid top-dress. The printed price is $55–85 a month.</p>
         <p>Forage amount is on the <Link href="/tools/horse-feed-calculator">feed calculator</Link>. That result is not a supplement dose. The review does not print a bag size for EO-3.</p>
         <h2>What the review says about Equithrive</h2>
         <p>Equithrive Original Pellets are Best Resveratrol. The active ingredient in the review is trans-resveratrol. The format is a pellet. The review says the brand carries an NASC seal, was founded by a veterinarian at the University of Kentucky, and lists no prohibited FEI or USEF ingredients. The printed price is $45–65 a month. It frames resveratrol as a complement to traditional joint ingredients, not a substitute, and says the evidence base is smaller than ASU or glucosamine. The common use it names is mild joint inflammation or support after an injection.</p>

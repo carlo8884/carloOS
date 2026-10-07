@@ -31,9 +31,9 @@ const smartflexSchema = buildProductSchema({ name: 'SmartPak SmartFlex Senior', 
 const allSchemas = combineSchemas(articleSchema, cosequinSchema, platinumSchema, smartflexSchema)
 
 const PICKS = [
-  { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU + glucosamine + chondroitin · Best-studied combination', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },
+  { label: 'Best Evidence (ASU)', emoji: '🏆', name: 'Cosequin ASU Plus', subtitle: 'ASU at 30% unsaponifiables, plus glucosamine, MSM, and chondroitin', href: '#cosequin-asu', pickHop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements' },
   { label: 'Best Comprehensive', emoji: '◎', name: 'Platinum Performance CJ', subtitle: 'Whole-system formula · Auto-ship subscription', href: '#platinum-cj' },
-  { label: 'Best Senior', emoji: '🐴', name: 'SmartFlex Senior', subtitle: 'Glucosamine + chondroitin + MSM + HA · Senior dosing', href: '#smartflex' },
+  { label: 'Best Senior', emoji: '🐴', name: 'SmartFlex Senior', subtitle: 'Glucosamine, chondroitin, MSM, and HA. Amounts: check the label.', href: '#smartflex' },
   { label: 'Reference: Omega-3', emoji: '🐟', name: 'Marine-source DHA/EPA', subtitle: 'Flax is not equivalent · Marine source matters', href: '#omega-3' },
 ]
 
@@ -46,7 +46,7 @@ export default function JointSupplementsPage() {
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-4 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>
           Equine Joint Supplements — An Evidence Ladder
         </h1>
-        <PriceAsOf date="2026-10-04" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <HopDisclosure siteId="horses-com" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements" />
         <div className="mb-4" data-primary-hop="true">
           <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements">Browse Platinum Performance CJ joint supplement on Amazon →</a>
@@ -94,7 +94,7 @@ export default function JointSupplementsPage() {
 
             <h3>Tier 1 — Strongest equine evidence</h3>
 
-            <p><strong>Avocado/Soybean Unsaponifiables (ASU):</strong> The lipid fraction extracted from avocados and soybeans. ASU has the strongest equine-specific evidence base of the common joint-supplement ingredients. Kawcak et al. (<em>American Journal of Veterinary Research</em>, 2007) and subsequent studies have shown chondroprotective effects on cartilage in induced-osteoarthritis models. ASU is the active in the Cosequin ASU and Dasuquin product lines from Nutramax — those are the equine-formulated combinations that include ASU at clinically-relevant doses.</p>
+            <p><strong>Avocado/Soybean Unsaponifiables (ASU):</strong> The lipid fraction extracted from avocados and soybeans. ASU has the strongest equine-specific evidence base of the common joint-supplement ingredients. Kawcak et al. (<em>American Journal of Veterinary Research</em>, 2007) and subsequent studies have shown chondroprotective effects on cartilage in induced-osteoarthritis models. ASU is named on the Cosequin ASU Plus label. The current pages standardize ASU to a minimum of 30% unsaponifiables. Milligrams differ by powder and pellets — check the label.</p>
 
             <p><strong>Polysulfated glycosaminoglycan (PSGAG) — Adequan i.m.:</strong> Not an oral supplement but worth naming here because it is the systemic chondroprotectant with the cleanest equine evidence base. Administered intramuscularly on a loading + maintenance schedule, Adequan is FDA-approved for equine non-infectious degenerative joint disease. Strong evidence supports its use in moderate equine osteoarthritis (Burba DJ et al., <em>Journal of Equine Veterinary Science</em>; manufacturer FDA submission data).</p>
 
@@ -147,16 +147,16 @@ export default function JointSupplementsPage() {
               subtitle="Avocado/Soybean Unsaponifiables + Glucosamine + Chondroitin"
               winner
               description={<>
-                <p>Cosequin ASU Plus is the equine formulation of the supplement family that has accumulated the strongest published evidence in induced-osteoarthritis models. The ASU component is what differentiates it from the broad &ldquo;glucosamine + chondroitin&rdquo; category — and ASU has among the strongest peer-reviewed equine evidence of the common joint-supplement ingredients. Nutramax is NASC Quality Seal certified and discloses ingredient amounts on the label.</p>
+                <p>The current Cosequin ASU Plus powder and pellet pages list glucosamine HCl, MSM, chondroitin sulfate, and ASU standardized to a minimum of 30% unsaponifiables. Milligrams differ by powder and pellets — check the label. The initial period is 2–4 weeks. Those pages do not print clinically proven. Nutramax is NASC Quality Seal certified.</p>
                 <p>Reasonable choice for: an adult performance horse where joint maintenance is preventive rather than rescue, or an early-grade osteoarthritis horse used as part of a broader management plan that includes veterinary diagnosis. Not a replacement for intra-articular medication when synovitis or active osteoarthritis is documented.</p>
               </>}
               specs={[
-                { label: 'Active ingredients', value: 'ASU, glucosamine HCl, chondroitin sulfate', highlight: 'good' },
+                { label: 'Active ingredients', value: 'Glucosamine HCl, MSM, chondroitin sulfate, and ASU at 30% unsaponifiables. Check the label for milligrams.', highlight: 'good' },
                 { label: 'NASC certified', value: 'Yes', highlight: 'good' },
-                { label: 'Evidence tier', value: 'Tier 1 (ASU is best-studied equine ingredient)', highlight: 'good' },
+                { label: 'Evidence tier', value: 'The product page does not print clinically proven. Check the label.', highlight: 'good' },
                 { label: 'Best use case', value: 'Maintenance, early OA adjunct' },
               ]}
-              pros={['Strongest equine ingredient evidence (ASU)', 'NASC Quality Seal documented', 'Per-ingredient amounts disclosed', 'Long manufacturer track record']}
+              pros={['ASU standardized to 30% unsaponifiables', 'NASC Quality Seal documented', 'Initial period 2–4 weeks on the current page', 'Milligrams differ by powder and pellets — check the label']}
               cons={['Premium price per scoop', 'Not a substitute for IA or systemic chondroprotectant when indicated']}
               price="$60–95 per 30-day supply"
               priceNote="dated 2026-10-04."
@@ -172,11 +172,11 @@ export default function JointSupplementsPage() {
               name="Platinum Performance CJ"
               subtitle="Whole-system formula with joint-targeted CJ blend"
               description={<>
-                <p>Platinum Performance CJ adds a joint-targeted supplement matrix (glucosamine, chondroitin, MSM, HA, ASU, cetyl myristoleate) onto the Platinum Performance Equine Wellness Formula base — a whole-ration supplement that addresses fatty-acid balance, antioxidant, and trace-mineral support in addition to joint inputs. The advantage is dose-coordination across the supplement profile (no stacking redundant glucosamine, no antagonistic mineral interactions). The disadvantage is cost — Platinum is the highest-AOV premium supplement in the category.</p>
+                <p>The current Platinum Performance CJ page lists, per 2 scoops (156 g), glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, and hyaluronic acid 90 mg. It does not list chondroitin. Omega-3 on that page is flax oil. The wellness-formula base is a separate product.</p>
                 <p>Most relevant for the performance horse in active competition where the owner is willing to pay for the auto-ship subscription convenience and the integrated formulation.</p>
               </>}
               specs={[
-                { label: 'Active ingredients', value: 'Glucosamine, chondroitin, MSM, HA, ASU, CMO, omega-3', highlight: 'good' },
+                { label: 'Active ingredients', value: 'Per 2 scoops: glucosamine sulfate 8,820 mg, MSM 8,200 mg, ASU 2,000 mg, boswellia 1,400 mg, cetyl myristoleate 275 mg, HA 90 mg. No chondroitin. Omega-3 is flax oil.', highlight: 'good' },
                 { label: 'Auto-ship model', value: 'Standard subscription pricing' },
                 { label: 'Evidence tier', value: 'Mixed Tier 1–3 ingredients in one product' },
                 { label: 'Best use case', value: 'Performance horse, integrated supplementation' },
@@ -195,18 +195,18 @@ export default function JointSupplementsPage() {
               id="smartflex"
               badge="Best Senior"
               name="SmartPak SmartFlex Senior"
-              subtitle="Glucosamine + chondroitin + MSM + HA at senior-targeted dosing"
+              subtitle="Glucosamine, chondroitin, MSM, and HA. Amounts: check the label."
               description={<>
-                <p>SmartFlex Senior is SmartPak&apos;s house-brand senior-horse joint supplement, formulated at higher glucosamine and MSM doses than the standard SmartFlex Maintenance product and including HA. Practical choice for older horses with established joint maintenance needs, especially when used with the SmartPak auto-shipped daily-dose Smart Packs that prevent dose-counting errors.</p>
-                <p>The dose-per-scoop is in the clinically-relevant range, NASC Quality Seal documented, and the per-day cost is competitive with branded equivalents at the same ingredient level.</p>
+                <p>SmartFlex Senior is SmartPak&apos;s house-brand senior-horse joint supplement. This page does not print glucosamine or MSM milligrams against SmartFlex Maintenance — check the label. It is sold in SmartPak daily-dose packs.</p>
+                <p>NASC Quality Seal is documented on the card. Dose-per-scoop is not compared with a clinically proven line here — check the label.</p>
               </>}
               specs={[
-                { label: 'Active ingredients', value: 'Glucosamine HCl, chondroitin sulfate, MSM, HA' },
+                { label: 'Active ingredients', value: 'Check the label. This page does not print milligrams for this product.' },
                 { label: 'Daily packaging', value: 'SmartPak Smart Pak auto-ship' },
-                { label: 'Evidence tier', value: 'Tier 2 ingredient stack at senior doses' },
+                { label: 'Evidence tier', value: 'Amounts versus Maintenance are not printed here. Check the label.' },
                 { label: 'Best use case', value: 'Senior horse maintenance' },
               ]}
-              pros={['Senior-dose ingredient amounts', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
+              pros={['Check the label for ingredient amounts', 'Auto-shipped daily packs reduce dosing error', 'NASC Quality Seal']}
               cons={['No ASU component', 'House-brand HA at oral dose has limited evidence', 'Auto-ship requires SmartPak account']}
               price="$45–65 per 28-day supply"
               priceNote="dated 2026-10-04."
@@ -227,7 +227,7 @@ export default function JointSupplementsPage() {
               </>}
               specs={[
                 { label: 'Active form', value: 'EPA + DHA (marine)', highlight: 'good' },
-                { label: 'Daily dose target', value: '10–20 g EPA+DHA combined' },
+                { label: 'Daily dose target', value: 'Not one product label. KER EO-3 prints 6,000 mg long-chain omega-3 per 30 mL. Check the label of the oil you buy.' },
                 { label: 'Evidence tier', value: 'Tier 2 (marine only — flax does not substitute)' },
                 { label: 'Best use case', value: 'Performance horse anti-inflammatory support' },
               ]}
@@ -269,13 +269,13 @@ export default function JointSupplementsPage() {
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">A senior horse on daily packs</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#smartflex" className="text-brand-primary">SmartFlex Senior</a><TableShopLink quietUntilTag href={"/go/smartpak/smartflex-senior?s=supplements-joint-supplements"} product={"SmartFlex Senior"} /></td>
-                    <td className="p-3 text-brand-text-mid">Best Senior. Glucosamine, chondroitin, MSM, HA. $45–65 per 28-day supply</td>
+                    <td className="p-3 text-brand-text-mid">Best Senior. Ingredient amounts: check the label. $45–65 per 28-day supply</td>
                     <td className="p-3 text-brand-text-mid">You specifically want ASU. The card says this formula does not include it</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Marine EPA and DHA, not flax</td>
                     <td className="p-3 font-bold text-brand-dark"><a href="#omega-3" className="text-brand-primary">Marine omega-3</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/marine-omega-3?s=supplements-joint-supplements"} product={"Marine omega-3"} /></td>
-                    <td className="p-3 text-brand-text-mid">Reference ingredient. Fish oil or algal DHA/EPA. Card target 10–20 g combined. $25–60 per 30-day supply</td>
+                    <td className="p-3 text-brand-text-mid">Reference ingredient. KER EO-3 prints 6,000 mg long-chain omega-3 per 30 mL. Check the label of the oil you buy. $25–60 per 30-day supply</td>
                     <td className="p-3 text-brand-text-mid">The label only says omega-3 from flax. The card says equine conversion of ALA is poor</td>
                   </tr>
                 </tbody>
@@ -288,7 +288,7 @@ export default function JointSupplementsPage() {
             <p>The framework that maximizes the evidence-per-dollar in this category:</p>
             <ol>
               <li><strong>Diagnose first.</strong> An undiagnosed lame horse is not a candidate for supplement decisions. Get the lameness exam; manage active disease with the right tools (IA medication, systemic chondroprotectant, NSAIDs) under veterinary direction.</li>
-              <li><strong>Pick one product with Tier 1 ingredients in clinically-relevant doses.</strong> Cosequin ASU Plus and Platinum CJ both qualify; SmartFlex Senior at senior dosing for an older horse.</li>
+              <li><strong>Pick one product and read its label.</strong> Cosequin ASU Plus prints a 2–4 week initial period and ASU standardized to 30% unsaponifiables. Platinum CJ prints the per-2-scoop amounts on its page and does not list chondroitin. SmartFlex Senior amounts: check the label.</li>
               <li><strong>Add marine-source omega-3 if not already included.</strong> The anti-inflammatory effect compounds with the joint-direct ingredients.</li>
               <li><strong>Do not stack redundant products.</strong> Three different glucosamine sources at the same time is wasted money — pick one combination product and use it at label dose.</li>
               <li><strong>Check competition eligibility.</strong> Every ingredient against current FEI and USEF prohibited-substance lists if the horse competes.</li>
