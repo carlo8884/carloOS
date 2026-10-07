@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, AffiliateDisclosure, CrossPortfolioCard } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, ReviewCard, CrossPortfolioCard } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,7 +129,7 @@ export default function WeightManagementPage() {
             A simple kitchen or small-pet scale lets you track weight in grams, which is far more sensitive than judging by eye. Weighing every week or two and noting the trend turns a vague impression into data: a steady seasonal curve looks very different from a sudden drop, and having a baseline makes it easy to flag a meaningful change early. For a senior ferret or one with a known condition, regular weighing is one of the cheapest and most useful monitoring tools an owner has.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/digital+gram+scale+kitchen+pet?s=diet-weight-management" />
 
           <h2 id="picks">A Scale for Tracking</h2>
           <p>

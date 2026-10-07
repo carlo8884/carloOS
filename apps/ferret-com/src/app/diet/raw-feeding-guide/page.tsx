@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import { HubMoneyLinks } from '@carloOS/ui'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -164,7 +165,7 @@ export default function RawFeedingGuidePage() {
             Ferrets imprint on food early and resist change later (see <a href="/diet/kit-vs-adult-feeding">kit vs adult feeding</a>), so a kibble-raised adult may not recognize raw meat as food at first. Introduce it gradually: warm the meat slightly to release aroma, offer small pieces alongside the familiar diet, and consider a meat-based gravy or a smear on the lips to trigger interest. Patience matters — never let a ferret skip meals for long, as ferrets can become hypoglycemic quickly. Confirm calcium and taurine adequacy with a veterinarian familiar with ferrets before committing to raw as a sole diet.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+kibble?s=raw-feeding-guide", "/go/chewy-brand/frozen+feeder+mice+reptile?s=diet-raw-feeding-guide"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

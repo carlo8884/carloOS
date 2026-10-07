@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -167,7 +168,7 @@ export default function SafeTreatsPage() {
             A high-value meat treat is the most effective reward for litter and bite training and for building trust with a new ferret. A meat-based paste is especially useful because it is delivered slowly and holds a ferret's attention. Used this way — small, frequent, meat-based — treats earn their place. The temptation to reach for the convenient sugary products on the shelf is exactly what to resist.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=safe-treats", "/go/wysong/freeze-dried-treats?s=diet-safe-treats"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -128,7 +129,7 @@ export default function SupplementsAndVitaminsPage() {
             There are real, condition-specific reasons a veterinarian may prescribe a supplement — supporting an ill or recovering ferret, addressing a confirmed deficiency, or supporting a ferret with a chronic disease. In those cases follow the veterinary recommendation precisely, including the product and amount specified. The principle is simply that supplements should answer a defined need identified by someone who has examined the animal, not a vague wish to do something extra.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+kibble?s=supplements-and-vitamins" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
@@ -12,7 +13,6 @@ import {
   RelatedLinks,
   CrossPortfolioCard,
   ArticleByline,
-  AffiliateDisclosure,
   ShopCtas,
 } from '@carloOS/ui'
 import { FERRET_FOODS, getFerretFood, getRelatedFoods, foodFaqs, VERDICT_META, type FoodEntry } from '../../../../data/foods'
@@ -195,7 +195,7 @@ export default async function CanFerretsEatFoodPage({ params }: PageProps) {
             Shop related supplies
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/ferret+food?s=can-ferrets-eat-food" />
           <div className="flex flex-col gap-3 mt-3">
             <ShopCtas
               amazonHref="/go/amazon-brand/ferret+food?s=can-ferrets-eat-food"

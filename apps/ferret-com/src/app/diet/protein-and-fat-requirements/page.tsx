@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildFAQSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -165,7 +166,7 @@ export default function ProteinAndFatRequirementsPage() {
             The targets above are stated on a <strong>dry-matter basis</strong> — water removed — but kibble labels report a guaranteed analysis on an <strong>as-fed basis</strong>, including moisture. For dry kibble (around 8–10% moisture) the two are close, so an as-fed protein figure of roughly 36% corresponds to a dry-matter figure in the high 30s or low 40s. For anything moist — raw, canned, or fresh prey at 65–75% water — the difference is dramatic, and comparing as-fed numbers across wet and dry foods is meaningless. Carbohydrate is almost never printed; estimate it by difference, subtracting protein, fat, moisture, ash, and fiber from 100. The method for applying all of this at the shelf is in <a href="/diet/best-ferret-kibble">how to choose a ferret kibble</a>.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/wysong+ferret+food?s=protein-and-fat-requirements", "/go/wysong/epigen-90?s=diet-protein-and-fat-requirements"]} />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
