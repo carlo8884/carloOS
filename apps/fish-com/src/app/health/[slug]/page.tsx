@@ -452,7 +452,7 @@ export default async function DiseasePage({ params }: PageProps) {
         </div>
 
         <h2 id="faq">FAQ</h2>
-        <FAQAccordion items={faqItems} />
+        <FAQAccordion items={faqItems} includeSchema={false} />
 
         <h2 id="sources">Sources</h2>
         <ul>

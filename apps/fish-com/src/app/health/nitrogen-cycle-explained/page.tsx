@@ -183,7 +183,7 @@ export default function NitrogenCyclePage() {
         <p>To watch a cycle in progress you need a kit that reads ammonia, nitrite, and nitrate — see our breakdown of the <Link href="/reviews/best-water-test-kits">best aquarium water test kits</Link>. For target ranges on every parameter once the tank is running, use the <Link href="/water-parameters">water parameters reference</Link>. Once the tank is stocked, the <Link href="/tools/water-change-calculator">water change calculator</Link> turns weekly percent into gallons to remove. If a tank that was running fine suddenly shows fish in distress, the <Link href="/health/new-tank-syndrome">new tank syndrome guide</Link> and the <Link href="/health/fish-disease-guide">fish disease guide</Link> help separate a chemistry crash from an actual pathogen. Setting up from scratch? Work through the full <Link href="/setup/aquarium-cycling-guide">aquarium cycling guide</Link> alongside this page.</p>
 
         <h2 id="faq">Frequently Asked Questions</h2>
-        <FAQAccordion items={FAQ_ITEMS} />
+        <FAQAccordion items={FAQ_ITEMS} includeSchema={false} />
 
         {/* Money path — live amazon-brand search hops (fishless-cycle kit).
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
