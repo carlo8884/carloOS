@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -134,7 +135,7 @@ export default function PastureManagementPage() {
           <h2 id="kit">Pasture Kit</h2>
           <p>Everyday physical supplies that match the restricted-grazing and soil-management copy above — a grazing muzzle for laminitis-prone horses and ponies, plus a soil test kit so liming and fertilizing follow a pH and nutrient reading rather than a guess. Electric tape for strip grazing stays on the fencing-safety page. Fans, slow feeders, electrolytes, hoof picks, hoof boots, and stall forks stay off this kit — those already ship on other care pages. Fertilizer, lime, herbicide, and poisonous-plant treatments stay off it too. These are not a treatment for laminitis or a diagnosis. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+grazing+muzzle?s=care-pasture-management", "/go/amazon-brand/soil+test+kit?s=care-pasture-management"]} />
 
           {/* Money path — live amazon-brand search hops (pasture kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

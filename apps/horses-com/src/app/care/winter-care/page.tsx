@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -130,7 +131,7 @@ export default function WinterCarePage() {
           <h2 id="kit">Winter-Care Kit</h2>
           <p>Everyday physical supplies that match the water and footing copy above — a tank heater so troughs stay unfrozen, grit or sand for ice around gates and high-traffic areas, and snow pads or studs when the farrier conversation is about working horses in winter. These are not treatments for impaction colic, mud fever, or a horse that is losing condition under a winter coat; reduced drinking, persistent mud-related skin trouble, or unexplained weight loss belongs with your veterinarian, not a heater or a bag of grit. Blanketing decisions live on the blanketing guide. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+tank+heater?s=care-winter-care", "/go/amazon-brand/ice+grit?s=care-winter-care", "/go/amazon-brand/horse+snow+pads?s=care-winter-care", "/go/amazon-brand/horse+shoe+studs?s=care-winter-care"]} />
 
           {/* Money path — live amazon-brand search hops (winter-care kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

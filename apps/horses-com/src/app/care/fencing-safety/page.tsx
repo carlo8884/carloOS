@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -136,7 +137,7 @@ export default function FencingSafetyPage() {
           <h2 id="kit">Fencing Kit</h2>
           <p>Everyday physical supplies that match the safe-fence and routine-check copy above — visible electric tape, electric rope, mesh designed for horses with openings too small for a hoof, and a tester for the electric charge. Post-and-rail lumber, vinyl rail systems, and contractor-installed fencing stay off this kit. Barbed wire, high-tensile unflagged wire, and sheep mesh stay off it too — those are hazards, not shoppable hops. These are not a treatment for a laceration or a diagnosis. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+electric+tape?s=care-fencing-safety", "/go/amazon-brand/horse+fence+mesh?s=care-fencing-safety", "/go/amazon-brand/horse+electric+rope?s=care-fencing-safety", "/go/amazon-brand/electric+fence+tester?s=care-fencing-safety"]} />
 
           {/* Money path — live amazon-brand search hops (fencing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

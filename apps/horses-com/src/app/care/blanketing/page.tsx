@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -137,7 +138,7 @@ export default function BlanketingPage() {
           <h2 id="kit">Blanketing Kit</h2>
           <p>Everyday physical supplies that match the weight, fit, and waterproof-sheet copy above — a turnout rug rated by fill, a light waterproof sheet when an unclipped horse only needs to stay dry, and lightweight, medium, and heavyweight options so the rug can be swapped as the temperature changes. These are not treatments for a sick, underweight, or shivering horse; a horse that cannot maintain condition or that is suddenly too cold or too hot belongs with your veterinarian, not a heavier rug. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+turnout+blanket?s=care-blanketing", "/go/amazon-brand/horse+waterproof+sheet?s=care-blanketing", "/go/amazon-brand/horse+lightweight+blanket?s=care-blanketing", "/go/amazon-brand/horse+medium+weight+blanket?s=care-blanketing", "/go/amazon-brand/horse+heavyweight+blanket?s=care-blanketing"]} />
 
           {/* Money path — live amazon-brand search hops (blanketing kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

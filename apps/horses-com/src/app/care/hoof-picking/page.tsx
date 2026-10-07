@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -116,7 +117,7 @@ export default function HoofPickingPage() {
           <h2 id="kit">Hoof-Picking Kit</h2>
           <p>Everyday physical supplies that match the tools described above — a simple hoof pick, and a pick with a stiff brush on the back. These are not treatments for thrush, abscess, or any medical condition; heat, a foul smell, a lodged puncture, or sudden refusal to pick up a foot belongs with your veterinarian or farrier, not a pick. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+hoof+pick?s=care-hoof-picking", "/go/amazon-brand/horse+hoof+pick+brush?s=care-hoof-picking"]} />
 
           {/* Money path — live amazon-brand search hops (hoof-picking kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.

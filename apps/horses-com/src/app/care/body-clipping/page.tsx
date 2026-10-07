@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -131,7 +132,7 @@ export default function BodyClippingPage() {
           <h2 id="kit">Clipping Kit</h2>
           <p>Everyday physical supplies that match the technique and aftercare copy above — well-maintained, sharp, properly tensioned clippers, clean blades, clipper oil for regular oiling and cooling, and coolers that wick moisture after a wash. Rugs and blanket weights stay on the blanketing guide; veterinary sedation for a nervous horse stays with a veterinarian. These are not a treatment for PPID, overheating, or a skin condition. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+clippers?s=care-body-clipping", "/go/amazon-brand/horse+clipper+blades?s=care-body-clipping", "/go/amazon-brand/horse+clipper+oil?s=care-body-clipping", "/go/amazon-brand/horse+fleece+cooler?s=care-body-clipping"]} />
 
           {/* Money path — live amazon-brand search hops (clipping kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
