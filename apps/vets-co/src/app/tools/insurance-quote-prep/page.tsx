@@ -85,13 +85,13 @@ const GROUPS = [
         id: 'deductible-ask',
         label: 'Is this deductible annual or per condition?',
         detail:
-          'The comparison records Trupanion as per-condition, Healthy Paws as annual, and Embrace as a diminishing annual deductible. Ask which structure is on the quote you are looking at.',
+          'The comparison records Trupanion as per-condition and Healthy Paws as annual. Embrace deductible program: see the carrier\'s current terms. Ask which structure is on the quote you are looking at.',
       },
       {
         id: 'percent-limit',
         label: 'What reimbursement percentage and annual limit are on this quote?',
         detail:
-          'The comparison records Trupanion at 90% with unlimited payouts, Healthy Paws at 80–90% with unlimited payouts, and Embrace at 70–90%. Read the percentage and the limit on the quote itself.',
+          'The comparison records Trupanion at 90% with unlimited payouts, Healthy Paws at up to 90% with a choice of annual limit, and Embrace at 70%, 80%, or 90%. Read the percentage and the limit on the quote itself.',
       },
       {
         id: 'preexisting',
@@ -115,7 +115,7 @@ const GROUPS = [
         id: 'waiting',
         label: 'What are the waiting periods?',
         detail:
-          'Waiting periods are short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. The comparison records a 6-month orthopedic waiting period on Embrace. Ask for the accident, illness, and orthopedic periods on each quote.',
+          'Waiting periods are short for accidents, longer for illness, and often longest for orthopedic conditions. Anything that arises during a waiting period is treated as pre-existing. Orthopedic waiting period for Embrace: see the carrier\'s current terms. Ask for the accident, illness, and orthopedic periods on each quote.',
       },
     ],
   },

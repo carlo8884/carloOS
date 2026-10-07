@@ -69,7 +69,7 @@
     {
       "path": "/reviews/askvet-vs-chewy-connect-guide",
       "title": "AskVet Chat vs Chewy Connect | Vets.co",
-      "description": "AskVet is a $30 chat subscription. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.",
+      "description": "AskVet does not print a flat monthly chat price. The licensed-vet video visit is $49.99. Neither is emergency care.",
       "category": "comparisons"
     },
     {
@@ -141,13 +141,13 @@
     {
       "path": "/reviews/vetster-vs-askvet-guide",
       "title": "Vetster vs AskVet Telehealth | Vets.co",
-      "description": "Pay per video visit versus a $30 chat subscription. Prices and limits are the ones on the telehealth page. Neither replaces an emergency clinic.",
+      "description": "Vetster single visits start at $102. AskVet does not print a flat monthly chat price. Neither is emergency care.",
       "category": "comparisons"
     },
     {
       "path": "/reviews/vetster-vs-chewy-connect-guide",
       "title": "Vetster Video vs Chewy Connect | Vets.co",
-      "description": "Vetster is pay-per-visit video. Chewy Connect is included with Chewy+. Neither replaces an emergency clinic.",
+      "description": "Vetster single visits start at $102. The licensed-vet video visit is $49.99. Neither is emergency care.",
       "category": "comparisons"
     },
     {

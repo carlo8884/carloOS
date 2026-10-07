@@ -161,20 +161,20 @@ export default function FinePrintPage() {
           />
           <ReviewCard
             id="manypets"
-            badge="Straightforward Terms"
+            badge="Not taking new US policies"
             name="ManyPets"
-            subtitle="Single comprehensive plan, clearer fine print"
+            subtitle="See the carrier's current terms"
             description={
-              <p>Built around a single comprehensive plan rather than a tier maze, which can make the fine print easier to read and compare. Still apply the checklist — confirm waiting periods, bilateral and hereditary terms, and the annual limit. A clear sample policy is exactly what you want when learning to read coverage documents.</p>
+              <p>ManyPets has stopped selling new US policies. This card does not print a deductible, a reimbursement percent, an annual limit, a waiting period, or an exam-fee rule as a current offer. See the carrier&apos;s current terms.</p>
             }
             specs={[
-              { label: 'Plan', value: 'Single comprehensive' },
-              { label: 'Fine print', value: 'Relatively clear', highlight: 'good' },
-              { label: 'Model', value: 'Pay-then-claim' },
+              { label: 'New US policies', value: 'Not for sale', highlight: 'warn' },
+              { label: 'Plan terms', value: 'See the carrier\'s current terms' },
+              { label: 'Model', value: 'See the carrier\'s current terms' },
             ]}
-            pros={['Simpler single plan to read', 'Clear sample policy', 'Covers many conditions']}
-            cons={['Fewer structures to mix and match', 'Availability varies by state']}
-            price="Quote-based"
+            pros={['The carrier page states that new US sales have stopped']}
+            cons={['Do not treat an old sample policy as a current offer', 'See the carrier\'s current terms']}
+            price="See the carrier's current terms"
             ctaText="Visit ManyPets →"
             ctaHref="/go/manypets/home?s=insurance-reading-the-fine-print"
             ctaAffiliateProgram="manypets"
