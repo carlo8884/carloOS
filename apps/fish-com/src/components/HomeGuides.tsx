@@ -137,7 +137,12 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All calculators</div>
+              </div>
               <p className="text-xs text-white/55 mt-0.5">Volume, stocking, heater, water change.</p>
             </div>
           </Link>
@@ -176,7 +181,12 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All species guides</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All species guides</div>
+              </div>
               <p className="text-xs text-brand-text-mid mt-0.5">Parameter targets before the next fish.</p>
             </div>
           </Link>
@@ -233,7 +243,12 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All setup guides</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All setup guides</div>
+              </div>
               <p className="text-xs text-brand-text-mid mt-0.5">Size, cycling, and first equipment.</p>
             </div>
           </Link>
@@ -268,7 +283,12 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Water guides</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Water guides</div>
+              </div>
               <p className="text-xs text-brand-text-mid mt-0.5">Ranges, cycling, and emergency changes.</p>
             </div>
           </Link>
@@ -303,7 +323,12 @@ export function HomeGuides() {
               <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
             </div>
             <div className="pr-3 py-2">
-              <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
+              <div className="mb-1 flex items-center gap-2">
+                <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                  <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" subtleCredit />
+                </span>
+                <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">All equipment guides</div>
+              </div>
               <p className="text-xs text-brand-text-mid mt-0.5">Filters, heaters, lighting, and kits.</p>
             </div>
           </Link>
@@ -338,7 +363,12 @@ export function HomeGuides() {
                   <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
                 </div>
                 <div className="pr-3 py-2">
-                  <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All product guides</div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                      <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" subtleCredit />
+                    </span>
+                    <div className="font-display font-bold text-white text-sm leading-tight italic group-hover:text-brand-primary-light">All product guides</div>
+                  </div>
                   <p className="text-xs text-white/55 mt-0.5">Filters, heaters, lighting, test kits.</p>
                 </div>
               </Link>
@@ -407,7 +437,12 @@ export function HomeGuides() {
                   <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
                 </div>
                 <div className="pr-3 py-2">
-                  <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                  <div className="mb-1 flex items-center gap-2">
+                    <span className={`relative h-7 w-10 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                      <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" subtleCredit />
+                    </span>
+                    <div className="font-display font-bold text-brand-dark text-sm leading-tight italic group-hover:text-brand-primary">Editorial standards</div>
+                  </div>
                   <p className="text-xs text-brand-text-mid mt-0.5">Signed guides, no invented experts.</p>
                 </div>
               </Link>
