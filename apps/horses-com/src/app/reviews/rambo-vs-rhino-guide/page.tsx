@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -76,9 +76,10 @@ export default function RamboVsRhinoGuidePage() {
         <p>The Rhino listing specifies 1200-denier ripstop, fills of 0, 100, and 250 grams, and a price of $180–260. Hardware is polymer with T-bar buckles. The warranty in the review is one year. The review calls this the cost-quality point for someone replacing a worn value blanket: stronger than the budget brands, cheaper than the Rambo. It also lists shoulder rub on some heavily built horses, and polymer hardware that will not match stainless for years of frozen straps.</p>
         <h2>Who should buy which</h2>
         <p>Buy the Rambo if the horse stays in your program for years and you want the ballistic shell and the stainless hardware the review contrasts with the Rhino. Buy the Rhino if you want Horseware&apos;s cut at the printed $180–260 band and you accept polymer hardware and a shorter warranty. Neither product is the heavy-winter specification. A clipped horse in a northern, sub-zero climate is the Schneiders StormShield job on the same review, not a mid-weight choice between these two. The <Link href="/reviews/best-blanket-for-clipped-horse-guide">clipped-horse blanket guide</Link> stays with that blanket.</p>
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide" />
-        <p>The link below is the Rambo search from the blanket review, for a blanket you expect to keep for years.</p>
-        <p><a className="font-semibold text-brand-primary" href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide">Check price of the Horseware Rambo Original on SmartPak</a></p>
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide" />
+        <p>The link below is the turnout-blanket search from the blanket review, for a blanket you expect to keep for years.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-rambo-vs-rhino-guide">Browse horse turnout blankets on Amazon →</a></p>
+        <QuietPartnerLink href="/go/smartpak/rambo-original-turnout?s=reviews-rambo-vs-rhino-guide" label="Check price of the Horseware Rambo Original on SmartPak" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"

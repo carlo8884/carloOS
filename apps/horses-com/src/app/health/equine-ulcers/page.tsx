@@ -1,6 +1,6 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, QuietPartnerLink, RelatedLinks, TableOfContents, FAQAccordion } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -342,39 +342,12 @@ export default function EquineUlcersPage() {
               UlcerGard, sucralfate, misoprostol) are prescription — work with your veterinarian
               for those, not a retail search.
             </p>
+            <p style={{ fontSize: '13.5px', margin: '0 0 12px', lineHeight: 1.55 }}>
+              <a href="/nutrition/forage-basics">Read the forage basics guide</a> for the hay access this page treats as the management step. Prescription omeprazole stays with the veterinarian.
+            </p>
             <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
-              <a
-                href="/go/smartpak/home?s=health-equine-ulcers"
-                rel="sponsored noopener"
-                style={{
-                  display: 'inline-block',
-                  padding: '8px 14px',
-                  background: 'var(--brand-primary, #c0392b)',
-                  color: 'white',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                }}
-              >
-                Shop ulcer-care supplements at SmartPak →
-              </a>
-              <a
-                href="/go/dover/home?s=health-equine-ulcers"
-                rel="sponsored noopener"
-                style={{
-                  display: 'inline-block',
-                  padding: '8px 14px',
-                  background: 'var(--brand-dark, #2c3e50)',
-                  color: 'white',
-                  fontSize: '13px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  borderRadius: '4px',
-                }}
-              >
-                Shop ulcer-care supplements at Dover →
-              </a>
+              <QuietPartnerLink href="/go/smartpak/home?s=health-equine-ulcers" label="Shop ulcer-care supplements at SmartPak →" />
+              <QuietPartnerLink href="/go/dover/home?s=health-equine-ulcers" label="Shop ulcer-care supplements at Dover →" />
             </div>
           </div>
 

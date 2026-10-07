@@ -18,6 +18,7 @@ import {
   partnerTagReady,
   partnerNeededLabel,
   partnerQuoteHeld,
+  partnerLinkQuiet,
   VETS_PET_INSURANCE_REVIEW,
 } from './affiliate-hop'
 
@@ -259,6 +260,12 @@ describe('resolveAffiliateHop', () => {
     assert.equal(partnerQuoteHeld(href, {}), true)
     assert.equal(partnerQuoteHeld(href, { AFF_TRUPANION_TAG: 'tru-live' }), false)
     assert.equal(partnerQuoteHeld('/go/amazon-brand/horse+hoof+pick', {}), false)
+    assert.equal(partnerLinkQuiet('/go/smartpak/rambo-original-turnout', {}), true)
+    assert.equal(partnerLinkQuiet('/go/smartpak/rambo-original-turnout', { AFF_SMARTPAK_TAG: 'sp-live' }), false)
+    assert.equal(partnerLinkQuiet('/go/dover/home', {}), true)
+    assert.equal(partnerLinkQuiet('/go/wysong/epigen-90', {}), true)
+    assert.equal(partnerLinkQuiet('/go/amazon-brand/winter+horse+blanket', {}), false)
+    assert.equal(partnerLinkQuiet(undefined, {}), false)
     assert.equal(partnerQuoteHeld(undefined, {}), false)
     assert.equal(resolveTag('trupanion', {}).tag, '')
   })

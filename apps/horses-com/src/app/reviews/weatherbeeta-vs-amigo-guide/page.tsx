@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Weatherbeeta vs Amigo Turnout | Horses.com',
@@ -50,8 +49,8 @@ export default function WeatherbeetaVsAmigoGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" label="Shop the Weatherbeeta ComFiTec at Dover Saddlery" />}
-      heroExtra={<HopDisclosure siteId="horses-com" href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" />}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+turnout+blanket?s=reviews-weatherbeeta-vs-amigo-guide">Browse horse turnout blankets on Amazon →</a></>}
+      heroExtra={<QuietPartnerLink tone="dark" href="/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-weatherbeeta-vs-amigo-guide" label="Shop the Weatherbeeta ComFiTec at Dover Saddlery" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

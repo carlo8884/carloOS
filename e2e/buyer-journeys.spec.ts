@@ -84,8 +84,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Rambo vs Rhino/,
       link: 'winter blanket review',
       comparison: /\/reviews\/best-winter-horse-blankets\/?$/,
-      hop: '/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets',
-      hopIncludes: smartpak('rambo-original-turnout'),
+      hop: '/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets',
+      hopIncludes: amazon('winter'),
     },
     {
       name: 'joint guide to joint review',

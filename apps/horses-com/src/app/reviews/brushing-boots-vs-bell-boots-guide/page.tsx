@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildItemListSchema, buildMetadata, combineSchemas } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Brushing Boots vs Bell Boots | Horses.com',
@@ -56,8 +55,8 @@ export default function BrushingBootsVsBellBootsGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" label="Check price of synthetic brushing boots at Riding Warehouse" />}
-      heroExtra={<HopDisclosure siteId="horses-com" href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" />}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/horse+brushing+boots?s=reviews-brushing-boots-vs-bell-boots-guide">Browse horse brushing boots on Amazon →</a></>}
+      heroExtra={<QuietPartnerLink tone="dark" href="/go/ridingwarehouse/synthetic-brushing-boots?s=reviews-brushing-boots-vs-bell-boots-guide" label="Check price of synthetic brushing boots at Riding Warehouse" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

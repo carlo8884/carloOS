@@ -1,7 +1,7 @@
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, QuietPartnerLink, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
@@ -77,12 +77,10 @@ export default function ClippedHorseBlanketGuidePage() {
         <h2>Layering, if the horse changes climates</h2>
         <p>The review offers a second pattern: one waterproof shell plus liners. The shell alone is a sheet. Shell plus a 100-gram liner is light cool weather. Shell plus 200 grams is mid-weight. Stacking the 100 and the 200 is the heavyweight equivalent in that system. Bucas, Horseware, and Schneiders are the liner systems the review names. The upfront cost of a shell plus three liners approaches two weight-specific turnouts. The review says the system earns its keep when the horse moves between climates, and that a one-climate barn is usually simpler with one turnout of the right fill.</p>
         <p>Buy the StormShield when the horse is clipped and the winter matches the northern climates on that listing. Buy a lighter turnout, or a liner stack, when the review has already called the heavy fill overkill.</p>
-        <HopDisclosure siteId="horses-com" href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide" />
-        <p>The link below is the StormShield from the blanket review.</p>
-        <ShopCtas
-          amazonHref="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide"
-          amazonLabel="Shop the Schneiders StormShield Euro →"
-        />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide" />
+        <p>The link below is the heavyweight turnout search already used on the blanket review.</p>
+        <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/horse+heavyweight+blanket?s=reviews-best-blanket-for-clipped-horse-guide">Browse heavyweight horse blankets on Amazon →</a></p>
+        <QuietPartnerLink href="/go/schneider/stormshield-euro-turnout?s=reviews-best-blanket-for-clipped-horse-guide" label="Shop the Schneiders StormShield Euro →" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"

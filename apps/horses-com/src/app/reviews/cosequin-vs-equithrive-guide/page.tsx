@@ -1,8 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArticleLayout, FAQAccordion, PrimaryHop, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-
+import { ArticleLayout, FAQAccordion, QuietPartnerLink, EmailCapture, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 export const metadata: Metadata = buildMetadata({
   siteId: 'horses-com',
   title: 'Cosequin vs Equithrive for Joints | Horses.com',
@@ -50,8 +49,8 @@ export default function CosequinVsEquithriveGuidePage() {
         publishedAt: 'October 2026',
         readTime: '6 min',
       }}
-      heroHop={<PrimaryHop href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-equithrive-guide" label="Check price of Cosequin ASU Plus on SmartPak" />}
-      heroExtra={<HopDisclosure siteId="horses-com" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-equithrive-guide" />}
+      heroHop={<><HopDisclosure siteId="horses-com" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide" /><a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" href="/go/amazon-brand/equithrive+original+pellets+resveratrol?s=reviews-cosequin-vs-equithrive-guide">Browse Equithrive original pellets on Amazon →</a></>}
+      heroExtra={<QuietPartnerLink tone="dark" href="/go/smartpak/cosequin-asu-plus?s=reviews-cosequin-vs-equithrive-guide" label="Check price of Cosequin ASU Plus on SmartPak" />}
       breadcrumbs={[
         { name: 'Home', href: '/' },
         { name: 'Reviews', href: '/reviews' },

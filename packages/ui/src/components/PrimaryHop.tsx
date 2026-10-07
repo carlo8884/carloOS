@@ -1,4 +1,4 @@
-import { consultLink, hopCommissionReady, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
+import { consultLink, hopCommissionReady, partnerLinkQuiet, partnerNeededLabel, partnerQuoteHeld, partnerTagReady, shopCtaLabel, visibleShopHref } from '@carloOS/config/affiliate-hop'
 import { HeldQuoteNext } from './HeldQuoteNext'
 
 /**
@@ -11,11 +11,21 @@ export function PrimaryHop({
   href,
   label,
   holdWithoutPartnerId = false,
+  quietUntilTag = false,
 }: {
   href: string
   label: string
   holdWithoutPartnerId?: boolean
+  /** Held product partners stay visible as a note until their own tag is set. */
+  quietUntilTag?: boolean
 }) {
+  if (quietUntilTag && partnerLinkQuiet(href)) {
+    return (
+      <p className="mb-5 text-sm leading-relaxed text-white/75 m-0" data-primary-hop="held">
+        {label.replace(/\s*→\s*$/, '').trim()} — partner ID needed
+      </p>
+    )
+  }
   const held = partnerQuoteHeld(href) || (holdWithoutPartnerId && !partnerTagReady(href))
   if (held) {
     return (

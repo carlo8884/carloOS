@@ -82,7 +82,8 @@ export default function NovemberDecemberGiftGuidePage() {
         <p>The blanket review prints the Amigo Bravo 12 Plus at $130–190, the SmartPak Ultimate at $160–230, the Rhino Original at $180–260, and the Rambo Original at $280–420. Those four bands are the ones on the cards. Measure before you order. A blanket that does not fit is not a useful gift, even when the band looks right.</p>
         <h2>Who should get which printed band</h2>
         <p>A lead or a nylon halter is the small barn gift when the horse is led under supervision. A breakaway is the gift when the horse is left haltered, which is the limit the halter card already states. Bell boots are for overreach. Brushing boots are for interference. A turnout blanket is the larger gift, and the blanket review is where denier and fill live.</p>
-        <HopDisclosure siteId="horses-com" href={[`/go/smartpak/cotton-lead-rope-bull-snap?s=${SOURCE}`, `/go/smartpak/adjustable-nylon-halter?s=${SOURCE}`, `/go/smartpak/pull-on-bell-boots?s=${SOURCE}`, `/go/dover/leather-crown-breakaway-halter?s=${SOURCE}`, `/go/ridingwarehouse/synthetic-brushing-boots?s=${SOURCE}`, `/go/ridingwarehouse/amigo-bravo-12-plus?s=${SOURCE}`, `/go/smartpak/ultimate-turnout?s=${SOURCE}`, `/go/dover/rhino-original-turnout?s=${SOURCE}`, `/go/smartpak/rambo-original-turnout?s=${SOURCE}`]} />
+        <HopDisclosure siteId="horses-com" href={`/go/amazon-brand/winter+horse+blanket?s=${SOURCE}`} />
+        <p><a className="font-semibold text-brand-primary" href={`/go/amazon-brand/winter+horse+blanket?s=${SOURCE}`}>Browse winter horse blankets on Amazon →</a></p>
         <div className="overflow-x-auto max-w-full min-w-0">
           <table className="w-full text-sm border-collapse table-fixed sm:table-auto min-w-0 sm:min-w-[36rem] [&_th]:break-words [&_td]:break-words">
             <thead>
@@ -95,47 +96,47 @@ export default function NovemberDecemberGiftGuidePage() {
             <tbody>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$8–22</td>
-                <td className="p-3 font-bold">Cotton lead rope<TableShopLink href={`/go/smartpak/cotton-lead-rope-bull-snap?s=${SOURCE}`} product="Cotton lead rope" /></td>
+                <td className="p-3 font-bold">Cotton lead rope<TableShopLink quietUntilTag href={`/go/smartpak/cotton-lead-rope-bull-snap?s=${SOURCE}`} product="Cotton lead rope" /></td>
                 <td className="p-3"><Link href="/tack/halters-and-lead-ropes">Halter page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$10–25</td>
-                <td className="p-3 font-bold">Adjustable nylon halter<TableShopLink href={`/go/smartpak/adjustable-nylon-halter?s=${SOURCE}`} product="Adjustable nylon halter" /></td>
+                <td className="p-3 font-bold">Adjustable nylon halter<TableShopLink quietUntilTag href={`/go/smartpak/adjustable-nylon-halter?s=${SOURCE}`} product="Adjustable nylon halter" /></td>
                 <td className="p-3"><Link href="/tack/halters-and-lead-ropes">Halter page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$12–35 a pair</td>
-                <td className="p-3 font-bold">Pull-on bell boots<TableShopLink href={`/go/smartpak/pull-on-bell-boots?s=${SOURCE}`} product="Pull-on bell boots" /></td>
+                <td className="p-3 font-bold">Pull-on bell boots<TableShopLink quietUntilTag href={`/go/smartpak/pull-on-bell-boots?s=${SOURCE}`} product="Pull-on bell boots" /></td>
                 <td className="p-3"><Link href="/tack/boots-and-wraps">Boot page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$25–55</td>
-                <td className="p-3 font-bold">Leather-crown breakaway<TableShopLink href={`/go/dover/leather-crown-breakaway-halter?s=${SOURCE}`} product="Leather-crown breakaway" /></td>
+                <td className="p-3 font-bold">Leather-crown breakaway<TableShopLink quietUntilTag href={`/go/dover/leather-crown-breakaway-halter?s=${SOURCE}`} product="Leather-crown breakaway" /></td>
                 <td className="p-3"><Link href="/tack/halters-and-lead-ropes">Halter page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$25–70 a pair</td>
-                <td className="p-3 font-bold">Synthetic brushing boots<TableShopLink href={`/go/ridingwarehouse/synthetic-brushing-boots?s=${SOURCE}`} product="Synthetic brushing boots" /></td>
+                <td className="p-3 font-bold">Synthetic brushing boots<TableShopLink quietUntilTag href={`/go/ridingwarehouse/synthetic-brushing-boots?s=${SOURCE}`} product="Synthetic brushing boots" /></td>
                 <td className="p-3"><Link href="/tack/boots-and-wraps">Boot page</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$130–190</td>
-                <td className="p-3 font-bold">Amigo Bravo 12 Plus<TableShopLink href={`/go/ridingwarehouse/amigo-bravo-12-plus?s=${SOURCE}`} product="Amigo Bravo 12 Plus" /></td>
+                <td className="p-3 font-bold">Amigo Bravo 12 Plus<TableShopLink quietUntilTag href={`/go/ridingwarehouse/amigo-bravo-12-plus?s=${SOURCE}`} product="Amigo Bravo 12 Plus" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$160–230</td>
-                <td className="p-3 font-bold">SmartPak Ultimate<TableShopLink href={`/go/smartpak/ultimate-turnout?s=${SOURCE}`} product="SmartPak Ultimate" /></td>
+                <td className="p-3 font-bold">SmartPak Ultimate<TableShopLink quietUntilTag href={`/go/smartpak/ultimate-turnout?s=${SOURCE}`} product="SmartPak Ultimate" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$180–260</td>
-                <td className="p-3 font-bold">Rhino Original<TableShopLink href={`/go/dover/rhino-original-turnout?s=${SOURCE}`} product="Rhino Original" /></td>
+                <td className="p-3 font-bold">Rhino Original<TableShopLink quietUntilTag href={`/go/dover/rhino-original-turnout?s=${SOURCE}`} product="Rhino Original" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
               <tr className="border-b border-brand-border">
                 <td className="p-3">$280–420</td>
-                <td className="p-3 font-bold">Rambo Original<TableShopLink href={`/go/smartpak/rambo-original-turnout?s=${SOURCE}`} product="Rambo Original" /></td>
+                <td className="p-3 font-bold">Rambo Original<TableShopLink quietUntilTag href={`/go/smartpak/rambo-original-turnout?s=${SOURCE}`} product="Rambo Original" /></td>
                 <td className="p-3"><Link href="/reviews/best-winter-horse-blankets">Blanket review</Link></td>
               </tr>
             </tbody>

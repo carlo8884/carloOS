@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
 import Link from 'next/link'
-import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
+import { TableShopLink, RelatedReads, ComparisonFoot, EmailCapture, QuietPartnerLink, buildMetadata, ReviewCard, QuickPicks, CrossPortfolioCard, RelatedLinks, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildProductSchema, combineSchemas, buildBreadcrumbSchema, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -63,8 +63,11 @@ export default function BestWinterBlanketsPage() {
           Best Winter Horse Blankets 2026
         </h1>
         <PriceAsOf date="2026-10-03" tone="dark" />
-        <PrimaryHop href='/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets' label='Check price of the Horseware Rambo Original on SmartPak' />
-        <HopDisclosure siteId="horses-com" href="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets" />
+        <HopDisclosure siteId="horses-com" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets" />
+        <div className="mb-4" data-primary-hop="true">
+          <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/winter+horse+blanket?s=reviews-best-winter-horse-blankets">Browse winter horse blankets on Amazon →</a>
+        </div>
+        <QuietPartnerLink tone="dark" href="/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets" label="Check price of the Horseware Rambo Original on SmartPak" />
         <EmailCapture
           variant="inline"
           siteId="horses-com"
@@ -87,7 +90,7 @@ export default function BestWinterBlanketsPage() {
         </p>
       </div>
 
-      <QuickPicks items={PICKS} />
+      <QuickPicks items={PICKS} quietUntilTag />
 
       <nav aria-label="Breadcrumb" className="px-container-sm sm:px-container py-3 text-xs text-brand-text-light bg-brand-surface border-b border-brand-border flex gap-2 flex-wrap">
         <Link href="/" className="hover:text-brand-primary no-underline">Home</Link><span>›</span>
@@ -164,7 +167,7 @@ export default function BestWinterBlanketsPage() {
                 <tbody>
                   {SPEC_TABLE.map(row => (
                     <tr key={row.brand} className="border-b border-brand-border">
-                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink href={row.shopHref} product={row.brand} /></td>
+                      <td className="p-3 font-bold text-brand-dark">{row.brand}<TableShopLink href={row.shopHref} quietUntilTag product={row.brand} /></td>
                       <td className="p-3 text-brand-text-mid">{row.denier}</td>
                       <td className="p-3 text-brand-text-mid">{row.fill}</td>
                       <td className="p-3 text-brand-text-mid">{row.neck}</td>
@@ -177,7 +180,7 @@ export default function BestWinterBlanketsPage() {
 
             <h2>Reviewed Blankets</h2>
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="rambo"
               badge="Best Premium Turnout"
               name="Horseware Rambo Original Turnout"
@@ -204,7 +207,7 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="rambo-original-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="rhino"
               badge="Best Modern Standard"
               name="Horseware Rhino Original Turnout"
@@ -230,7 +233,7 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="rhino-original-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="schneiders"
               badge="Best Heavy Winter"
               name="Schneiders StormShield Euro Turnout"
@@ -256,7 +259,7 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="stormshield-euro-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="smartpak"
               badge="Best House Brand"
               name="SmartPak Ultimate Turnout"
@@ -282,7 +285,7 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="ultimate-turnout"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="weatherbeeta"
               badge="Best Mid-Tier"
               name="Weatherbeeta ComFiTec Plus Dynamic II"
@@ -308,7 +311,7 @@ export default function BestWinterBlanketsPage() {
               ctaAffiliateProduct="weatherbeeta-comfitec-plus-dynamic"
             />
 
-            <ReviewCard
+            <ReviewCard quietUntilTag
               id="amigo"
               badge="Best Value"
               name="Horseware Amigo Bravo 12 Plus Turnout"
@@ -349,37 +352,37 @@ export default function BestWinterBlanketsPage() {
                 <tbody>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Long-term turnout, and you want the reference blanket</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#rambo" className="text-brand-primary">Rambo Original</a><TableShopLink href={"/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rambo Original"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rambo" className="text-brand-primary">Rambo Original</a><TableShopLink quietUntilTag href={"/go/smartpak/rambo-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rambo Original"} /></td>
                     <td className="p-3 text-brand-text-mid">Best premium turnout. 1000D ballistic. Fill 0 / 100 / 200 / 400 g</td>
                     <td className="p-3 text-brand-text-mid">The card says a new one costs 50–80% more than a value-tier equivalent</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Replacing a worn value blanket, and Rambo is more than you need</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Original</a><TableShopLink href={"/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rhino Original"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#rhino" className="text-brand-primary">Rhino Original</a><TableShopLink quietUntilTag href={"/go/dover/rhino-original-turnout?s=reviews-best-winter-horse-blankets"} product={"Rhino Original"} /></td>
                     <td className="p-3 text-brand-text-mid">Best modern standard. 1200D ripstop. $180–260. Polymer hardware</td>
                     <td className="p-3 text-brand-text-mid">Shorter warranty than the premium tier. Shoulder rub on some heavily built horses</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Clipped horse in a northern or sub-zero winter</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#schneiders" className="text-brand-primary">Schneiders StormShield Euro</a><TableShopLink href={"/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"} product={"Schneiders StormShield Euro"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#schneiders" className="text-brand-primary">Schneiders StormShield Euro</a><TableShopLink quietUntilTag href={"/go/schneider/stormshield-euro-turnout?s=reviews-best-winter-horse-blankets"} product={"Schneiders StormShield Euro"} /></td>
                     <td className="p-3 text-brand-text-mid">Best heavy winter. 1680D. 300 g / 360 g fills. $300–460</td>
                     <td className="p-3 text-brand-text-mid">Overkill in a mild climate, and heavy to handle when wet</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">First blanket, and you may need to exchange the fit</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a><TableShopLink href={"/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"} product={"SmartPak Ultimate"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#smartpak" className="text-brand-primary">SmartPak Ultimate</a><TableShopLink quietUntilTag href={"/go/smartpak/ultimate-turnout?s=reviews-best-winter-horse-blankets"} product={"SmartPak Ultimate"} /></td>
                     <td className="p-3 text-brand-text-mid">Best house brand. 1200D. Fills include 180 / 220 / 360 g. $160–230. Return guarantee</td>
                     <td className="p-3 text-brand-text-mid">Shorter track record than Horseware. Polymer hardware</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Wither rubs under a conventional turnout</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#weatherbeeta" className="text-brand-primary">Weatherbeeta ComFiTec Plus Dynamic II</a><TableShopLink href={"/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"} product={"Weatherbeeta ComFiTec Plus Dynamic II"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#weatherbeeta" className="text-brand-primary">Weatherbeeta ComFiTec Plus Dynamic II</a><TableShopLink quietUntilTag href={"/go/dover/weatherbeeta-comfitec-plus-dynamic?s=reviews-best-winter-horse-blankets"} product={"Weatherbeeta ComFiTec Plus Dynamic II"} /></td>
                     <td className="p-3 text-brand-text-mid">Best mid-tier. Memory-foam wither panel. 1200D ripstop</td>
                     <td className="p-3 text-brand-text-mid">UK sizing differs from Horseware. Measure, and use the retailer trial period</td>
                   </tr>
                   <tr className="border-b border-brand-border">
                     <td className="p-3 text-brand-text-mid">Horseware shell durability at a lower price</td>
-                    <td className="p-3 font-bold text-brand-dark"><a href="#amigo" className="text-brand-primary">Amigo Bravo 12 Plus</a><TableShopLink href={"/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"} product={"Amigo Bravo 12 Plus"} /></td>
+                    <td className="p-3 font-bold text-brand-dark"><a href="#amigo" className="text-brand-primary">Amigo Bravo 12 Plus</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/amigo-bravo-12-plus?s=reviews-best-winter-horse-blankets"} product={"Amigo Bravo 12 Plus"} /></td>
                     <td className="p-3 text-brand-text-mid">Best value. Same shell denier as the Rambo Original, per that card. $130–190. Polymer hardware</td>
                     <td className="p-3 text-brand-text-mid">Polymer hardware is less durable than Rambo stainless. Standard neck can rub some shoulders</td>
                   </tr>
