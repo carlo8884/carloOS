@@ -554,10 +554,10 @@ export default function VetsHomePage() {
                   <h2 className={`font-display font-bold text-xl sm:text-2xl leading-tight mb-1.5 ${desk.title === 'Breed Health' ? 'text-white' : 'text-[#1e140a]'}`}>
                     {desk.title}
                   </h2>
-                  <p className={`text-xs sm:text-sm leading-relaxed mb-3 ${desk.desc.startsWith('Screening') ? 'text-white/75' : 'text-[#1e140a]'}`}>
+                  <p className={`text-xs sm:text-sm leading-relaxed mb-3 ${desk.desc.startsWith('Condition') ? 'text-[#1e140a]' : 'text-white/75'}`}>
                     {desk.desc}
                   </p>
-                  <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow group-hover:gap-2.5 transition-all ${desk.cta === 'Open the library' ? 'text-[#1e140a]' : 'text-white'}`}>
+                  <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow group-hover:gap-2.5 transition-all ${desk.cta === 'Browse the directory' ? 'text-white' : 'text-[#1e140a]'}`}>
                     {desk.cta}
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </span>
