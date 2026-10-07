@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf, AffiliateDisclosure, ShopCtas} from '@carloOS/ui'
+import { RelatedReads, ComparisonFoot, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, FAQAccordion, PriceAsOf, ShopCtas} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -75,7 +76,7 @@ export default function FleaTickPreventionPage() {
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
                 Bravecto, NexGard, and Simparica need a veterinarian&apos;s prescription. They are not what the link below sells. That link is an Amazon search for over-the-counter dog flea and tick products.
               </p>
-              <AffiliateDisclosure variant="inline" siteId="dog-com" />
+              <HopDisclosure siteId="dog-com" href="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention" />
               <ShopCtas
                 amazonHref="/go/amazon-brand/dog+flea+and+tick?s=reviews-best-flea-tick-prevention"
                 amazonLabel="Browse over-the-counter dog flea and tick products on Amazon →"
@@ -112,7 +113,7 @@ export default function FleaTickPreventionPage() {
                   </tbody>
                 </table>
               </div>
-              <ComparisonFoot updated="2026-10-06" />
+              <ComparisonFoot updated="2026-10-07" />
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-4">Which flea and tick preventive fits</h2>
               <FAQAccordion items={[
                 {

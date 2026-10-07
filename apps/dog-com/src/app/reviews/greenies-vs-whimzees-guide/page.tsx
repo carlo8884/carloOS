@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -74,7 +75,7 @@ export default function GreeniesVsWhimzeesGuidePage() {
         <p>Whimzees are Best Natural / Plant-Based. Ingredients are plant-based. VOHC acceptance is for plaque reduction, not tartar. The review says chew time is longer than Greenies, and calorie density per chew is higher than Greenies. The printed price is $20–30 for a 14-count.</p>
         <h2>Who should buy which chew</h2>
         <p>Buy Greenies when you want the chew that lists VOHC acceptance for plaque and tartar, and wheat is not a problem. Buy Whimzees when you want a plant-based chew or a longer chew, and you do not need a tartar claim. Skip both as a substitute for brushing.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-greenies-vs-whimzees-guide" />
         <p>The link below searches for Greenies, the same search as on the dental review. Pick the size for the dog. The sale price can differ from the band above.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-greenies-vs-whimzees-guide"

@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -78,7 +79,7 @@ export default function HolidayScrapsTrashCanGuidePage() {
         <p>The page names two household tools and then says neither replaces the rule. A locking kitchen trash can keeps leftovers from becoming the garbage-ingestion trigger. A walk-through pet gate keeps the dog out of the kitchen while scraps sit on the counter. The can does not choose a low-fat diet, and the gate does not treat a dog that is already vomiting. If the dog is vomiting, painful, or unable to keep water down, the pancreatitis page&apos;s hospitalization criteria are the next read, not a shopping link.</p>
         <h2>Signs the page already lists</h2>
         <p>Classic acute signs on that page are repeated vomiting, abdominal pain (including the prayer position, a hunched posture, or yelping when the belly is touched), lethargy, refusing food, and sometimes diarrhea. Fever is described as a rectal temperature above 102.5°F in many cases. Severe disease adds pale gums, a rapid weak pulse, jaundice, and collapse. Those are reasons to go to a clinic.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/locking+kitchen+trash+can?s=reviews-holiday-scraps-trash-can-guide" />
         <p>The link below searches for a locking kitchen trash can, the same search as on the pancreatitis page. The gate and the food-storage container stay on that page.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/locking+kitchen+trash+can?s=reviews-holiday-scraps-trash-can-guide">Browse locking kitchen trash cans on Amazon →</a></p>
         <h2>Questions</h2>

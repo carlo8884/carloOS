@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -77,7 +78,7 @@ export default function BestPuppyCrateGuidePage() {
         <p>The Frisco furniture-style crate doubles as an end table at $80–160. The review limits it to calm, crate-trained adults. Wood is not chew-resistant, ventilation is less than wire, and the review says it is not appropriate for puppies. A living-room look is a later purchase, after the dog is already reliable in a wire crate.</p>
         <h2>Who should buy the wire crate</h2>
         <p>Buy the iCrate if you are house-training and the dog is not already an escape artist. Buy Impact if wire has already failed. Buy the Sky Kennel only when the trip is airline cargo, and confirm the airline before you pay. Leave the furniture crate until the dog is calm and crate-trained.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide" />
         <p>The link below searches Amazon for the MidWest iCrate, the same search as on the crate review. Choose the size there. The sale price can differ from the band above.</p>
         <p><a className="font-semibold text-brand-primary" href="/go/amazon-brand/midwest+icrate+dog+crate?s=reviews-best-puppy-crate-guide">Browse MidWest iCrate dog crates on Amazon →</a></p>
         <EmailCapture

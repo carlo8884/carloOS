@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, EmailCapture, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -76,7 +77,7 @@ export default function FrontClipVsBackClipGuidePage() {
         <p>The Julius-K9 IDC Powerharness is the escape-proof harness, at $40–70. The clip is on the back. The review is explicit that this is not a no-pull harness. Its job is a dog that backs out of or destroys other harnesses. It is heavy for a small dog. If the problem is pulling, this is the wrong harness even though the build is stronger.</p>
         <h2>Who should buy which clip</h2>
         <p>Buy the Easy Walk if the dog pulls and does not have a shoulder or elbow problem. Buy the Front Range if the walks are long enough that padding and a second clip matter. Buy the Julius-K9 if the dog escapes harnesses and you will train the pull separately. The Sure-Fit puppy name on the harness page is a name on the harness page, not a product this review scores, so this guide does not give it a price or a score.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-front-clip-vs-back-clip-guide" />
         <p>The link below is the Easy Walk search from the harness review, for a dog that pulls.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/petsafe+easy+walk+harness?s=reviews-front-clip-vs-back-clip-guide"

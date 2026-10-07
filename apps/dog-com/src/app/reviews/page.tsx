@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
+import { buildMetadata, buildBreadcrumbSchema, combineSchemas, SchemaScript, ShopCtas, StockImage, CrossPortfolioCard, DirectoryPlacesCta, HubSearch, HubJumpNav } from '@carloOS/ui'
 import listings from '../../data/directory-listings.json'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -113,7 +114,7 @@ export default function DogReviewsPage() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <p className="text-sm text-brand-text-light mb-2">Affiliate Disclosure: We earn commissions on purchases. Rankings are editorially independent.</p>
+          <p className="text-sm text-brand-text-light mb-2">Rankings are editorially independent.</p>
           <Link href="/editorial-standards" className="text-xs font-semibold text-brand-primary no-underline hover:underline">Read our editorial standards →</Link>
         </div>
       </div>
@@ -148,7 +149,7 @@ export default function DogReviewsPage() {
         <p className="max-w-content-wide text-sm text-brand-text-mid leading-relaxed">Amazon search links open a search for a product this page discusses. They are not a ranked product list and they do not replace veterinary care.</p>
 
         <div className="max-w-content-wide mt-6">
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href="/go/amazon-brand/royal+canin+dog+food?s=reviews-hub" />
         </div>
 
         <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose max-w-content-wide">

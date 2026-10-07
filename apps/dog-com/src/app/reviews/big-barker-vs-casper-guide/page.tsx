@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { AffiliateDisclosure, ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
+import { ArticleLayout, FAQAccordion, RelatedLinks, ShopCtas, buildArticleSchema, buildMetadata } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
   siteId: 'dog-com',
@@ -74,7 +75,7 @@ export default function BigBarkerVsCasperGuidePage() {
         <p>Casper Dog Bed is Best Premium, price $125–175. The cover is removable and machine-washable. Foam is memory foam over a support base. Sizes run from small, for dogs up to 20 lb, through large, up to 90 lb. The review says it is a good choice for medium to large breeds without severe arthritis, and that it is less therapeutic than Big Barker when arthritis is severe. Zippers can be chewed by destructive dogs.</p>
         <h2>Who should buy which bed</h2>
         <p>Buy Big Barker when the dog is a large or giant breed with arthritis and the 7-inch foam plus the 10-year no-flatten warranty is the point of the purchase. Buy Casper when the cover has to be machine-washable, or when the dog does not have the severe joint disease the Big Barker listing is written for. Leave Big Barker if you need to wash the cover or move the bed often.</p>
-        <AffiliateDisclosure variant="inline" siteId="dog-com" />
+        <HopDisclosure siteId="dog-com" href="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-big-barker-vs-casper-guide" />
         <p>The link below searches for the Big Barker bed, the same search as on the bed review. Size and the sale price are on the retailer page.</p>
         <ShopCtas
           amazonHref="/go/chewy-brand/big+barker+orthopedic+dog+bed?s=reviews-big-barker-vs-casper-guide"
