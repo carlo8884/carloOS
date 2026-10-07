@@ -73,7 +73,7 @@ export default function WysongVsCarniwholeGuidePage() {
           ]}
         />
       }
-      priceAsOf="2026-10-05"
+      priceAsOf="2026-10-07"
     >
       <div className="carloOS-article">
         <EmailCapture
