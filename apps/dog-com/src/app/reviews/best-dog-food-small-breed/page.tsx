@@ -4,8 +4,8 @@ import Link from 'next/link'
 import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, buildMetadata, ReviewCard, QuickPicks, RelatedLinks, CrossPortfolioCard, JourneyNext, FAQAccordion, PriceAsOf} from '@carloOS/ui'
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Small Paws ranked.', path: '/reviews/best-dog-food-small-breed', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026 — WSAVA Picks | Dog.com', description: 'Best dog foods for small breeds — Royal Canin Small Adult, Purina Pro Plan Small & Toy, and Hill\'s Science Diet Adult Small & Mini (formerly Small Paws).', path: '/reviews/best-dog-food-small-breed', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dog Food for Small Breeds 2026', description: 'WSAVA-compliant small breed dog foods ranked.', url: 'https://dog.com/reviews/best-dog-food-small-breed', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const rcSchema = buildProductSchema({ name: 'Royal Canin Small Adult', description: 'Tailored nutrition for small breed dogs — kibble sized for small mouths, dental support formula.', url: 'https://dog.com/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed', imageUrl: '' })
 const ppSchema = buildProductSchema({ name: 'Purina Pro Plan Small & Toy Breed Adult', description: 'High-protein small breed formula with live probiotics and WSAVA compliance.', url: 'https://dog.com/go/chewy-brand/purina+pro+plan+small+toy+breed?s=reviews-best-dog-food-small-breed', imageUrl: '' })
 const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
@@ -13,7 +13,7 @@ const allSchemas = combineSchemas(schema, rcSchema, ppSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Royal Canin Small Adult', subtitle: 'Kibble-size designed · Dental formula · WSAVA top tier', href: '#royal-canin', pickHop: '/go/chewy-brand/royal+canin+small+adult?s=reviews-best-dog-food-small-breed' },
   { label: 'Best High-Protein', name: 'Purina Pro Plan Small & Toy', subtitle: 'High protein · Live probiotics · Widely recommended', href: '#purina' },
-  { label: "Best Hill's", name: "Hill's Science Diet Small Paws", subtitle: 'Antioxidant blend · Easy digestion · Widely available', href: '#hills' },
+  { label: "Best Hill's", name: "Hill's Science Diet Adult Small & Mini", subtitle: 'Formerly labeled Small Paws · Antioxidant blend · Widely available', href: '#hills' },
 ]
 
 const itemList = buildItemListSchema({

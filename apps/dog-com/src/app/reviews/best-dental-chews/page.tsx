@@ -5,14 +5,13 @@ import { TableShopLink, RelatedReads, ComparisonFoot, PrimaryHop, EmailCapture, 
 import { buildArticleSchema, buildBreadcrumbSchema, buildProductSchema, combineSchemas, SchemaScript, buildItemListSchema} from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
-export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Best dog dental chews with the VOHC seal — Greenies, Virbac CET, and Whimzees ranked for plaque reduction, ingredient quality, and calorie count.', path: '/reviews/best-dental-chews', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-07T00:00:00Z' })
+export const metadata: Metadata = buildMetadata({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026 — VOHC Accepted Picks | Dog.com', description: 'Greenies Original and Whimzees Toothbrush and BRUSHZEES carry the August 2026 VOHC seal for plaque and tartar. Virbac CET Enzymatic rawhide does not.', path: '/reviews/best-dental-chews', type: 'article' })
+const schema = buildArticleSchema({ siteId: 'dog-com', title: 'Best Dental Chews for Dogs 2026', description: 'VOHC-accepted dental chews ranked for dogs.', url: 'https://dog.com/reviews/best-dental-chews', imageUrl: '', authorName: 'Dog.com Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 const greeniesSchema = buildProductSchema({ name: 'Greenies Original Dental Chews', description: 'VOHC-accepted dental chew — commonly recommended by veterinarians.', url: 'https://dog.com/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews', imageUrl: '' })
 const allSchemas = combineSchemas(schema, greeniesSchema)
 const PICKS = [
   { label: 'Best Overall', name: 'Greenies Original', subtitle: 'VOHC seal · Vet recommended · All sizes', href: '#greenies', pickHop: '/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' },
-  { label: 'Best Natural', name: 'Whimzees', subtitle: 'Plant-based · VOHC accepted · Longer chew time', href: '#whimzees' },
-  { label: 'Best Enzymatic', name: 'Virbac CET Enzymatic', subtitle: 'Dual enzyme system · Vet brand · Rawhide-based', href: '#virbac' },
+  { label: 'Best Natural', name: 'Whimzees', subtitle: 'Toothbrush and BRUSHZEES · Plaque and tartar · Plant-based', href: '#whimzees' },
 ]
 const itemList = buildItemListSchema({
   name: "Best Dental Chews for Dogs 2026",
@@ -25,7 +24,7 @@ export default function BestDentalChewsPage() {
       <div className="bg-brand-dark px-container-sm sm:px-container py-14">
         <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary block mb-5">🦷 Evidence-Based · Updated 2026</span>
         <h1 className="font-display font-black text-white tracking-tighter leading-tight mb-5 max-w-3xl" style={{ fontSize: 'clamp(22px, 3.5vw, 44px)' }}>Best Dental Chews for Dogs 2026</h1>
-        <PriceAsOf date="2026-10-05" tone="dark" />
+        <PriceAsOf date="2026-10-07" tone="dark" />
         <PrimaryHop href='/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews' label='Check price of Greenies dental chews on Amazon' />
         <HopDisclosure siteId="dog-com" href="/go/chewy-brand/greenies+dental+chews+dogs?s=reviews-best-dental-chews" />
         <EmailCapture
@@ -80,11 +79,11 @@ export default function BestDentalChewsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="greenies+dental+chews+dogs"
             />
-            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" name="Whimzees Natural Dental Chews" subtitle="Plant-based · VOHC accepted · Longer chew time than Greenies"
-              description={<p>Whimzees are made from plant-based ingredients — potato starch, glycerin, and cellulose — with no artificial colors, preservatives, or animal products. VOHC accepted for plaque reduction. The texture is slightly firmer than Greenies but still pliable and tooth-safe. Many owners report their dogs spend longer chewing Whimzees than Greenies — more time chewing means more tooth surface contact and more mechanical plaque removal. Good choice for dogs with animal protein sensitivities or owners preferring plant-based options. Available in several fun shapes (toothbrush, hedgehog, crocodile) that all achieve similar dental effect.</p>}
-              specs={[{ label: 'VOHC accepted', value: 'Yes — plaque reduction', highlight: 'good' }, { label: 'Ingredients', value: 'Plant-based — no artificial additives', highlight: 'good' }, { label: 'Chew time', value: 'Longer than Greenies', highlight: 'good' }, { label: 'Best for', value: 'Dogs with protein sensitivities' }]}
-              pros={['Plant-based — no animal protein', 'VOHC accepted', 'Longer chew duration', 'No artificial additives']}
-              cons={['VOHC for plaque only (not tartar)', 'Higher calorie density than Greenies per chew']}
+            <ReviewCard id="whimzees" badge="Best Natural / Plant-Based" name="Whimzees Natural Dental Chews" subtitle="Toothbrush and BRUSHZEES · VOHC plaque and tartar · Plant-based"
+              description={<p>Whimzees are made from plant-based ingredients — potato starch, glycerin, and cellulose — with no artificial colors, preservatives, or animal products. On the August 2026 VOHC accepted-products list, Wellness WHIMZEES Toothbrush and BRUSHZEES dental treats are accepted for plaque and tartar. The list does not name the hedgehog or crocodile shapes, so this page does not treat every Whimzees shape as sealed. The texture is slightly firmer than Greenies but still pliable and tooth-safe. Many owners report their dogs spend longer chewing Whimzees than Greenies — more time chewing means more tooth surface contact and more mechanical plaque removal. Good choice for dogs with animal protein sensitivities or owners preferring plant-based options.</p>}
+              specs={[{ label: 'VOHC accepted', value: 'Toothbrush and BRUSHZEES — plaque and tartar', highlight: 'good' }, { label: 'Ingredients', value: 'Plant-based — no artificial additives', highlight: 'good' }, { label: 'Chew time', value: 'Longer than Greenies', highlight: 'good' }, { label: 'Best for', value: 'Dogs with protein sensitivities' }]}
+              pros={['Plant-based — no animal protein', 'Toothbrush and BRUSHZEES: plaque and tartar', 'Longer chew duration', 'No artificial additives']}
+              cons={['Other Whimzees shapes are not named on the August 2026 VOHC list', 'Higher calorie density than Greenies per chew']}
               price="$20–30 / 14-count"
               priceNote="dated 2026-10-05."
               ctaText="Shop Whimzees dental chews on Amazon →"
@@ -92,6 +91,10 @@ export default function BestDentalChewsPage() {
               ctaAffiliateProgram="chewy-brand"
               ctaAffiliateProduct="whimzees+dental+chews+dogs"
             />
+            <div className="bg-brand-surface border border-brand-border rounded-xl p-5 mb-8">
+              <div className="text-2xs font-bold tracking-eyebrow uppercase text-brand-text-light mb-2">Not on the August 2026 VOHC list</div>
+              <p className="text-sm text-brand-text-mid m-0 leading-relaxed">Virbac still sells C.E.T. Enzymatic rawhide chews. Those chews are not on the August 2026 VOHC accepted-products list, so this page no longer ranks them with the sealed picks. The Virbac chews on that list are C.E.T. VeggieDent FR3SH, Zen, and Flex. This page does not shop those chews.</p>
+            </div>
             <div className="mt-10">
               <h2 className="font-display text-2xl font-bold text-brand-dark mb-3">Who should buy which chew</h2>
               <p className="text-sm text-brand-text-mid leading-relaxed mb-4">
@@ -117,8 +120,8 @@ export default function BestDentalChewsPage() {
                     <tr className="border-b border-brand-border">
                       <td className="p-3 text-brand-text-mid">A plant-based chew, or a longer chew than Greenies</td>
                       <td className="p-3 font-bold text-brand-dark"><a href="#whimzees" className="text-brand-primary">Whimzees</a><TableShopLink href={"/go/chewy-brand/whimzees+dental+chews+dogs?s=reviews-best-dental-chews"} product={"Whimzees"} /></td>
-                      <td className="p-3 text-brand-text-mid">Best Natural / Plant-Based. VOHC for plaque. $20–30 / 14-count</td>
-                      <td className="p-3 text-brand-text-mid">You need a tartar claim. The card says VOHC is for plaque only, and calories per chew are higher than Greenies</td>
+                      <td className="p-3 text-brand-text-mid">Best Natural / Plant-Based. Toothbrush and BRUSHZEES: plaque and tartar. $20–30 / 14-count</td>
+                      <td className="p-3 text-brand-text-mid">A shape other than Toothbrush or BRUSHZEES. The August 2026 list does not name those, and calories per chew are higher than Greenies</td>
                     </tr>
                   </tbody>
                 </table>
@@ -132,7 +135,7 @@ export default function BestDentalChewsPage() {
                 },
                 {
                   question: 'Which chew does this page pick when you want a plant-based chew?',
-                  answer: 'Whimzees, marked Best Natural / Plant-Based. The card says VOHC acceptance is for plaque, not tartar, the printed price is $20–30 for a 14-count, and calories per chew are higher than Greenies.',
+                  answer: 'Whimzees Toothbrush and BRUSHZEES, marked Best Natural / Plant-Based. The August 2026 VOHC list accepts those two shapes for plaque and tartar. The printed price is $20–30 for a 14-count, and calories per chew are higher than Greenies.',
                 },
                 {
                   question: 'Do these chews replace toothbrushing?',
