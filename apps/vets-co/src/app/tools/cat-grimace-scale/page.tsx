@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   buildFAQSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -198,7 +198,7 @@ export default function CatGrimaceScalePage() {
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-grimace-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/soft+cat+carrier?s=tools-cat-grimace-scale", "/go/amazon-brand/pet+first+aid+kit?s=tools-cat-grimace-scale", "/go/amazon-brand/calming+pheromone+diffuser?s=tools-cat-grimace-scale", "/go/amazon-brand/digital+pet+thermometer?s=tools-cat-grimace-scale", "/go/amazon-brand/cat+recovery+bed?s=tools-cat-grimace-scale"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a pain-watch observation kit

@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -7,7 +8,6 @@ import {
   buildHowToSchema,
   ArticleLayout,
   FAQAccordion,
-  AffiliateDisclosure,
   ShopCtas,
   TableOfContents,
   RelatedLinks,
@@ -193,7 +193,7 @@ export default function CatBodyConditionScorePage() {
             ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
             Category searches only — not a ranked list, not a diagnosis. */}
         <div id="cat-bcs-kit" className="mt-8 mb-8">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/digital+pet+scale?s=tools-cat-body-condition-score", "/go/amazon-brand/measuring+tape?s=tools-cat-body-condition-score", "/go/amazon-brand/weight+management+cat+food?s=tools-cat-body-condition-score", "/go/amazon-brand/puzzle+feeder?s=tools-cat-body-condition-score", "/go/amazon-brand/interactive+cat+toy?s=tools-cat-body-condition-score"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-surface p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a weight-management kit

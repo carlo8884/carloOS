@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -9,7 +10,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   ArticleSourcesList,
   CrossPortfolioCard,
   ShopCtas,
@@ -237,7 +237,7 @@ export default function IsThisACatEmergencyPage() {
           Category searches only — not a ranked list, not a diagnosis. */}
       <section id="cat-emergency-prep-kit" className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="vets-co" />
+          <HopDisclosure siteId="vets-co" href={["/go/amazon-brand/pet+first+aid+kit?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/digital+pet+thermometer?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/soft+cat+carrier?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/styptic+powder?s=tools-is-this-a-cat-emergency", "/go/amazon-brand/wound+care+gauze?s=tools-is-this-a-cat-emergency"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop a cat emergency-prep kit
@@ -284,7 +284,6 @@ export default function IsThisACatEmergencyPage() {
               breathing, not a blocked bladder — talk to a licensed vet on a screen rather than waiting
               for a gap to become an ER visit.
             </p>
-            <AffiliateDisclosure variant="inline" siteId="vets-co" className="mb-3 text-2xs" />
             <div className="flex flex-col gap-2 sm:flex-row sm:flex-wrap">
               <Link
                 href="/reviews/best-pet-insurance"
