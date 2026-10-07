@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , AffiliateDisclosure, ArticleSourcesList } from '@carloOS/ui'
+import { ShopCtas, StockImage, buildMetadata, ArticleLayout, RelatedLinks, CrossPortfolioCard , ArticleSourcesList } from '@carloOS/ui'
 import { buildArticleSchema, FAQAccordion, SchemaScript, buildFAQSchema, combineSchemas } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
@@ -92,10 +93,10 @@ export default function EmberTetraPage() {
         <p>Feeding: very small food — they are 0.8 inches with a proportionally tiny mouth. Micro pellets (crushed fine), micro-size live foods (micro worms, baby brine shrimp), and very small flake. They compete well at feeding time within their small size class but will be outcompeted by larger, faster fish — keep with similarly sized species or provide targeted feeding near the bottom where ember tetras forage.</p>
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answerText }))} includeSchema={false} allowMultiple />
-        <AffiliateDisclosure variant="inline" siteId="fish-com" />
+        <HopDisclosure siteId="fish-com" href="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" />
           <div style={{ background: 'var(--brand-surface, #f7fbfd)', border: '1px solid var(--brand-border, #d4e5ee)', borderRadius: '10px', padding: '20px', margin: '32px 0 24px' }}>
           <div style={{ fontSize: '13px', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--brand-text-mid, #4a6573)', marginBottom: '8px' }}>Ember Tetra — Tank Setup</div>
-          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care. Fish.com earns an affiliate commission on qualifying purchases — at no extra cost to you. Commission does not influence editorial content above.</p>
+          <p style={{ fontSize: '14px', margin: '0 0 12px', color: 'var(--brand-text-mid, #4a6573)', lineHeight: 1.55 }}>Browse tanks, filters, heaters, lighting, and food sized for ember tetra care.</p>
           <div style={{ display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
             <ShopCtas amazonHref="/go/amazon-brand/ember%20tetra%20tank%20setup?s=species-ember-tetra" amazonLabel="Browse ember tetra tank setups on Amazon →" />
           </div>
