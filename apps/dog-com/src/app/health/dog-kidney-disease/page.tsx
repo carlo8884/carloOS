@@ -147,11 +147,7 @@ export default function DogKidneyPage() {
                 url: 'https://onlinelibrary.wiley.com/doi/10.1111/jvim.13398',
                 publisher: 'J Vet Intern Med (Yerramilli et al., 2016)',
               },
-              {
-                label: 'Merck Veterinary Manual -- Chronic Kidney Disease in Small Animals',
-                publisher: 'Merck Veterinary Manual',
-              },
-            ]}
+                          ]}
           />
         </div>
       </ArticleLayout>

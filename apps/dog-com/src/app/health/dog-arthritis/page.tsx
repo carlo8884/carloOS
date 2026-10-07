@@ -135,11 +135,7 @@ export default function DogArthritisPage() {
                 url: 'https://www.fda.gov/animal-veterinary',
                 publisher: 'U.S. Food and Drug Administration',
               },
-              {
-                label: 'FDA Librela (bedinvetmab) Approval -- monoclonal antibody for canine osteoarthritis pain',
-                publisher: 'U.S. Food and Drug Administration',
-              },
-            ]}
+                          ]}
           />
         </div>
       </ArticleLayout>
