@@ -6,42 +6,6 @@
 # Parked (do not convert to shrink this list): aquarium lighting reviews
 # best-aquarium-lighting, hygger-vs-fluval-light-guide, winter-photoperiod-guide.
 # Homepages stay listed because homepage rewrites are out of scope.
-apps/dog-com/src/app/breeds/[slug]/feeding/page.tsx
-apps/dog-com/src/app/breeds/[slug]/page.tsx
-apps/dog-com/src/app/breeds/akita/page.tsx
-apps/dog-com/src/app/breeds/australian-shepherd/page.tsx
-apps/dog-com/src/app/breeds/beagle/page.tsx
-apps/dog-com/src/app/breeds/bernese-mountain-dog/page.tsx
-apps/dog-com/src/app/breeds/best-small-dogs-for-apartments/page.tsx
-apps/dog-com/src/app/breeds/border-collie/page.tsx
-apps/dog-com/src/app/breeds/boxer/page.tsx
-apps/dog-com/src/app/breeds/bulldog/page.tsx
-apps/dog-com/src/app/breeds/bullmastiff/page.tsx
-apps/dog-com/src/app/breeds/cavalier-king-charles/page.tsx
-apps/dog-com/src/app/breeds/cocker-spaniel/page.tsx
-apps/dog-com/src/app/breeds/dachshund/page.tsx
-apps/dog-com/src/app/breeds/doberman-pinscher/page.tsx
-apps/dog-com/src/app/breeds/french-bulldog/page.tsx
-apps/dog-com/src/app/breeds/german-shepherd/page.tsx
-apps/dog-com/src/app/breeds/golden-doodle/page.tsx
-apps/dog-com/src/app/breeds/golden-retriever/page.tsx
-apps/dog-com/src/app/breeds/great-dane/page.tsx
-apps/dog-com/src/app/breeds/great-pyrenees/page.tsx
-apps/dog-com/src/app/breeds/irish-setter/page.tsx
-apps/dog-com/src/app/breeds/irish-wolfhound/page.tsx
-apps/dog-com/src/app/breeds/labrador-retriever/page.tsx
-apps/dog-com/src/app/breeds/match/page.tsx
-apps/dog-com/src/app/breeds/poodle/page.tsx
-apps/dog-com/src/app/breeds/rottweiler/page.tsx
-apps/dog-com/src/app/breeds/saint-bernard/page.tsx
-apps/dog-com/src/app/breeds/shiba-inu/page.tsx
-apps/dog-com/src/app/breeds/shih-tzu/page.tsx
-apps/dog-com/src/app/breeds/siberian-husky/page.tsx
-apps/dog-com/src/app/breeds/vizsla/page.tsx
-apps/dog-com/src/app/breeds/weimaraner/page.tsx
-apps/dog-com/src/app/breeds/yorkshire-terrier/page.tsx
-apps/dog-com/src/app/compare/[slug]/page.tsx
-apps/dog-com/src/app/guides/dog-body-condition-score/page.tsx
 apps/dog-com/src/app/llms.txt/route.ts
 apps/ferret-com/src/app/llms.txt/route.ts
 apps/fish-com/src/app/llms.txt/route.ts
