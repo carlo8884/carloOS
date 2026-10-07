@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, StockImage, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -141,7 +142,7 @@ export default function HaltersLeadRopesPage() {
           <h2 id="picks">Halter and Lead Picks</h2>
           <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/smartpak/adjustable-nylon-halter?s=tack-halters", "/go/dover/leather-crown-breakaway-halter?s=tack-halters", "/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters", "/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes"]} />
 
 
           <ReviewCard
@@ -251,7 +252,7 @@ export default function HaltersLeadRopesPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

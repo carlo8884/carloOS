@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas, TableShopLink, ComparisonFoot, EmailCapture } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -137,7 +138,7 @@ export default function BootsWrapsPage() {
           <h2 id="picks">Boot and Wrap Picks</h2>
           <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps", "/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps", "/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps", "/go/amazon-brand/horse+brushing+boots?s=boots-and-wraps"]} />
 
 
           <ReviewCard
@@ -241,7 +242,7 @@ export default function BootsWrapsPage() {
               </tbody>
             </table>
           </div>
-          <ComparisonFoot updated="2026-10-06" />
+          <ComparisonFoot updated="2026-10-07" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

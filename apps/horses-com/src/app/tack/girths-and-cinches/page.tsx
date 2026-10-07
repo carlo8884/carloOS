@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -131,7 +132,7 @@ export default function GirthsCinchesPage() {
           <h2 id="picks">Girth Picks</h2>
           <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href={["/go/dover/anatomic-english-girth?s=tack-girths-and-cinches", "/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches", "/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches", "/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches"]} />
 
 
           <ReviewCard

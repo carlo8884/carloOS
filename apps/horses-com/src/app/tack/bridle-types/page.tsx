@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -137,7 +138,7 @@ export default function BridleTypesPage() {
           <h2 id="fit">Fit</h2>
           <p>A well-fitted bridle sits without pinching or rubbing: the browband does not pull the headpiece into the ears, the throatlatch is loose enough to allow flexion (roughly a hand&apos;s width), the bit sits at the correct height, and the noseband is positioned correctly and fitted loosely enough to allow chewing and comfort. Check for rubs behind the ears and at the corners of the mouth. Like all tack, a bridle that fits poorly causes pain and resistance no matter how good the riding.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+snaffle+bit?s=bridle-types" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">

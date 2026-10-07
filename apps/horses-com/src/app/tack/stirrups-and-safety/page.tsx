@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -126,7 +127,7 @@ export default function StirrupsSafetyPage() {
           <h2 id="dragged">Avoiding Being Dragged</h2>
           <p>Being dragged by a trapped foot after a fall can cause catastrophic injury, which is why every other point on this page exists. The defenses stack together: correctly sized stirrups that let the foot release, riding boots with a heel and smooth sole, safety or breakaway stirrup designs where appropriate (especially for children and beginners), riding with the ball of the foot on the tread and heels down, and never riding in unsuitable footwear. Together these dramatically reduce the chance of a foot being trapped in a fall.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="horses-com" />
+          <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+safety+stirrups?s=stirrups-and-safety" />
 
           <div className="my-6 p-5 border border-brand-border rounded-xl bg-brand-surface not-prose">
             <div className="text-2xs font-bold uppercase tracking-eyebrow text-brand-primary mb-3">
