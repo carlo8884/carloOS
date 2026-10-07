@@ -61,6 +61,14 @@ export default function BootsWrapsPage() {
           { title: 'Saddle Pads and Numnahs', href: '/tack/saddle-pads' },
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+brushing+boots?s=boots-and-wraps" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/horse+brushing+boots?s=boots-and-wraps">Browse horse brushing boots on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Horse Boots and Leg Wraps",
           subtitle:
@@ -138,10 +146,9 @@ export default function BootsWrapsPage() {
           <h2 id="picks">Boot and Wrap Picks</h2>
           <p>A few widely-stocked leg-protection options across the common needs. As the section above explains, boots provide impact protection, not structural tendon support; choose for protection and fit, keep them clean and dry inside, and learn to wrap correctly before relying on standing wraps. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps", "/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps", "/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps", "/go/amazon-brand/horse+brushing+boots?s=boots-and-wraps"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="brushing-boots"
             badge="Everyday Protection"
             name="Synthetic Brushing / Splint Boots"
@@ -164,7 +171,7 @@ export default function BootsWrapsPage() {
             ctaAffiliateProduct="synthetic-brushing-boots"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="bell-boots"
             badge="Overreach Protection"
             name="Pull-On Bell Boots"
@@ -186,7 +193,7 @@ export default function BootsWrapsPage() {
             ctaAffiliateProduct="pull-on-bell-boots"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="standing-wraps"
             badge="Stable Wraps"
             name="Standing Wraps with Quilted Liners"
@@ -223,19 +230,19 @@ export default function BootsWrapsPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Everyday protection from interference strikes in schooling</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#brushing-boots" className="text-brand-primary">Synthetic brushing boots</a><TableShopLink href={"/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps"} product={"Synthetic brushing boots"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#brushing-boots" className="text-brand-primary">Synthetic brushing boots</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/synthetic-brushing-boots?s=tack-boots-and-wraps"} product={"Synthetic brushing boots"} /></td>
                   <td className="p-3 text-brand-text-mid">Washable interference protection for flatwork, lunging, and schooling. No genuine tendon support</td>
                   <td className="p-3 text-brand-text-mid">You need overreach protection for the heels, or you are buying them to brace a tendon. The card says none provides that</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Protection for the heel bulbs when a horse overreaches or pulls a front shoe</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#bell-boots" className="text-brand-primary">Pull-on bell boots</a><TableShopLink href={"/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps"} product={"Pull-on bell boots"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#bell-boots" className="text-brand-primary">Pull-on bell boots</a><TableShopLink quietUntilTag href={"/go/smartpak/pull-on-bell-boots?s=tack-boots-and-wraps"} product={"Pull-on bell boots"} /></td>
                   <td className="p-3 text-brand-text-mid">Overreach and shoe-pulling protection for jumping and fast work, where overreach risk is higher</td>
                   <td className="p-3 text-brand-text-mid">The horse does not overreach or pull shoes. Oversized bells can rub, and they need cleaning after muddy work</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Stable or trailer wraps, and you already know how to wrap</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#standing-wraps" className="text-brand-primary">Standing wraps with quilted liners</a><TableShopLink href={"/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps"} product={"Standing wraps with quilted liners"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#standing-wraps" className="text-brand-primary">Standing wraps with quilted liners</a><TableShopLink quietUntilTag href={"/go/dover/standing-wraps-and-quilts?s=tack-boots-and-wraps"} product={"Standing wraps with quilted liners"} /></td>
                   <td className="p-3 text-brand-text-mid">Stall, travel, and mild swelling. Quilted liner. Only with correct technique</td>
                   <td className="p-3 text-brand-text-mid">You have not been taught to wrap. Wrapped wrong, they can injure a tendon. Learn hands-on before relying on them</td>
                 </tr>

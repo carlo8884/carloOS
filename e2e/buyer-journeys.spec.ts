@@ -13,11 +13,6 @@ type Journey = {
 }
 
 const amazon = (keyword: string): string[] => ['https://amazon.com/s?k=', `tag=${AMAZON_TAG}`, keyword]
-const smartpak = (sku: string): string[] => [
-  'https://www.smartpakequine.com/search/search?SearchTerm=',
-  sku,
-]
-
 const JOURNEYS: Record<string, Journey[]> = {
   'dog-com': [
     {
@@ -93,8 +88,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Cosequin ASU Plus or Platinum/,
       link: 'joint-supplement review',
       comparison: /\/supplements\/joint-supplements\/?$/,
-      hop: '/go/smartpak/cosequin-asu-plus?s=supplements-joint-supplements',
-      hopIncludes: smartpak('cosequin-asu-plus'),
+      hop: '/go/amazon-brand/platinum+performance+CJ+joint+supplement?s=supplements-joint-supplements',
+      hopIncludes: amazon('platinum'),
     },
     {
       name: 'pad guide to pad review',
@@ -102,8 +97,8 @@ const JOURNEYS: Record<string, Journey[]> = {
       startHeading: /Quilted cotton pad or a sheepskin/,
       link: 'saddle-pad review',
       comparison: /\/tack\/saddle-pads\/?$/,
-      hop: '/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads',
-      hopIncludes: smartpak('quilted-all-purpose-saddle-pad'),
+      hop: '/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads',
+      hopIncludes: amazon('quilted'),
     },
   ],
   'vets-co': [

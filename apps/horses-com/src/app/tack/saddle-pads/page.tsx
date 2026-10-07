@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import { HopDisclosure } from '../../../components/HopDisclosure'
-import { TableShopLink, ComparisonFoot, EmailCapture, PrimaryHop, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas } from '@carloOS/ui'
+import { TableShopLink, ComparisonFoot, EmailCapture, buildMetadata, ArticleLayout, ArticleByline, CrossPortfolioCard, RelatedLinks, TableOfContents, FAQAccordion, ReviewCard, ShopCtas, QuietPartnerLink} from '@carloOS/ui'
 import { buildArticleSchema, SchemaScript } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({
@@ -62,8 +62,15 @@ export default function SaddlePadsPage() {
           { title: 'Girths and Cinches', href: '/tack/girths-and-cinches' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
-        heroHop={<PrimaryHop href='/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads' label='Check price of the quilted all-purpose saddle pad on SmartPak' />}
-        heroExtra={<HopDisclosure siteId="horses-com" href="/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads" />}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads">Browse quilted all-purpose saddle pads on Amazon →</a>
+            </div>
+            <QuietPartnerLink tone="dark" href="/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads" label="Check price of the quilted all-purpose saddle pad on SmartPak" />
+          </>
+        }
         hero={{
           title: "Saddle Pads and Numnahs",
           subtitle:
@@ -157,10 +164,9 @@ export default function SaddlePadsPage() {
           <h2 id="picks">Pad Picks</h2>
           <p>A few widely-stocked pad types covering the common English and Western needs. These support a correctly fitting saddle — none of them, as the section above makes clear, can correct a saddle that does not fit. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads", "/go/dover/sheepskin-half-pad?s=tack-saddle-pads", "/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads", "/go/amazon-brand/quilted+all+purpose+saddle+pad?s=saddle-pads"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="cotton-quilted-numnah"
             badge="Everyday English"
             name="Quilted Cotton All-Purpose Pad"
@@ -185,7 +191,7 @@ export default function SaddlePadsPage() {
             ctaAffiliateProduct="quilted-all-purpose-saddle-pad"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="sheepskin-half-pad"
             badge="Half Pad"
             name="Sheepskin Half Pad"
@@ -209,7 +215,7 @@ export default function SaddlePadsPage() {
             ctaAffiliateProduct="sheepskin-half-pad"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="western-felt-pad"
             badge="Western"
             name="Wool-Felt Western Pad"
@@ -248,19 +254,19 @@ export default function SaddlePadsPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A washable everyday English schooling pad</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-quilted-numnah" className="text-brand-primary">Quilted cotton all-purpose</a><TableShopLink href={"/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads"} product={"Quilted cotton all-purpose"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-quilted-numnah" className="text-brand-primary">Quilted cotton all-purpose</a><TableShopLink quietUntilTag href={"/go/smartpak/quilted-all-purpose-saddle-pad?s=tack-saddle-pads"} product={"Quilted cotton all-purpose"} /></td>
                   <td className="p-3 text-brand-text-mid">Everyday English. Machine washable. $20–45</td>
                   <td className="p-3 text-brand-text-mid">You want wool or felt durability. The card says cotton wears faster, and it does not correct fit</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Less friction under a saddle that already fits</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#sheepskin-half-pad" className="text-brand-primary">Sheepskin half pad</a><TableShopLink href={"/go/dover/sheepskin-half-pad?s=tack-saddle-pads"} product={"Sheepskin half pad"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#sheepskin-half-pad" className="text-brand-primary">Sheepskin half pad</a><TableShopLink quietUntilTag href={"/go/dover/sheepskin-half-pad?s=tack-saddle-pads"} product={"Sheepskin half pad"} /></td>
                   <td className="p-3 text-brand-text-mid">Half pad. Some have shim pockets. $60–160</td>
                   <td className="p-3 text-brand-text-mid">The saddle is the wrong width. The card says a half pad cannot fix that. Real sheepskin needs careful washing</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A heavier Western saddle on long rides</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#western-felt-pad" className="text-brand-primary">Wool-felt Western pad</a><TableShopLink href={"/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads"} product={"Wool-felt Western pad"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#western-felt-pad" className="text-brand-primary">Wool-felt Western pad</a><TableShopLink quietUntilTag href={"/go/smartpak/wool-felt-western-pad?s=tack-saddle-pads"} product={"Wool-felt Western pad"} /></td>
                   <td className="p-3 text-brand-text-mid">Western. Often layered under a woven blanket. $80–200</td>
                   <td className="p-3 text-brand-text-mid">You want a light English numnah. Felt is heavier, and it still cannot correct saddle fit</td>
                 </tr>

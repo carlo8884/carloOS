@@ -53,6 +53,14 @@ export default function SaddleFitBasicsPage() {
           { title: 'Show Jumping', href: '/disciplines/show-jumping' },
           { title: 'Saddle Pads', href: '/tack/saddle-pads' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics">Browse horse saddle pads on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: 'Saddle Fit Basics — A 12-Point Framework',
           subtitle:
@@ -211,7 +219,6 @@ export default function SaddleFitBasicsPage() {
             Two items commonly used by horse owners between professional fittings. These are <strong>not</strong> a substitute for a professional fit assessment — the framework above and the references below make clear that pads cannot correct structural fit problems. They are standard tack used under a correctly fitting saddle. These are not treatments for back pain, lameness, or girthiness; new dry patches, protective tension, or new behavioral problems under saddle belong with a qualified saddle fitter or veterinarian, not a thicker pad. This is a documented-spec comparison drawing on widely-stocked products in US equestrian retail; this page does not claim hands-on testing.
           </p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/amazon-brand/horse+saddle+pad?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+sheepskin+half+pad?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+saddle+shims?s=guides-saddle-fit-basics", "/go/amazon-brand/horse+girth+cinch?s=guides-saddle-fit-basics", "/go/smartpak/mattes-sheepskin-half-pad?s=guides-saddle-fit-basics", "/go/smartpak/contoured-all-purpose-pad?s=guides-saddle-fit-basics"]} />
 
           {/* Money path — live amazon-brand search hops (saddle-fit kit).
               ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER.
@@ -244,7 +251,7 @@ export default function SaddleFitBasicsPage() {
           </div>
           </div>
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="mattes-sheepskin-half-pad"
             badge="Half-Pad"
             name="Mattes Sheepskin Half-Pad (Correction-Pocket Style)"
@@ -268,7 +275,7 @@ export default function SaddleFitBasicsPage() {
             ctaAffiliateProgram="smartpak"
             ctaAffiliateProduct="mattes-sheepskin-half-pad"
           />
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="all-purpose-saddle-pad"
             badge="Daily Pad"
             name="Contoured All-Purpose Saddle Pad"

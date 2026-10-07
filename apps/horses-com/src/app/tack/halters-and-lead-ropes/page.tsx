@@ -63,6 +63,14 @@ export default function HaltersLeadRopesPage() {
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
           { title: 'Reading Horse Body Language', href: '/ownership/reading-body-language' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes">Browse nylon horse halters on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Halters and Lead Ropes",
           subtitle:
@@ -142,10 +150,9 @@ export default function HaltersLeadRopesPage() {
           <h2 id="picks">Halter and Lead Picks</h2>
           <p>A few widely-stocked options covering the everyday flat halter, a safer turnout halter, and a serviceable lead rope. These are physical handling tools, not training shortcuts — a halter and lead are only as safe as the handling and tying practices described above. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/smartpak/adjustable-nylon-halter?s=tack-halters", "/go/dover/leather-crown-breakaway-halter?s=tack-halters", "/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters", "/go/amazon-brand/nylon+horse+halter?s=halters-and-lead-ropes"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="flat-nylon-halter"
             badge="Everyday"
             name="Adjustable Flat Nylon Halter"
@@ -169,7 +176,7 @@ export default function HaltersLeadRopesPage() {
             ctaAffiliateProduct="adjustable-nylon-halter"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="breakaway-halter"
             badge="Safer Turnout"
             name="Leather-Crown Breakaway Halter"
@@ -194,7 +201,7 @@ export default function HaltersLeadRopesPage() {
             ctaAffiliateProduct="leather-crown-breakaway-halter"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="cotton-lead-rope"
             badge="Lead Rope"
             name="Cotton Lead Rope with Bull Snap"
@@ -233,19 +240,19 @@ export default function HaltersLeadRopesPage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">Leading, grooming, and tying while someone is there</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a><TableShopLink href={"/go/smartpak/adjustable-nylon-halter?s=tack-halters"} product={"Adjustable flat nylon halter"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#flat-nylon-halter" className="text-brand-primary">Adjustable flat nylon halter</a><TableShopLink quietUntilTag href={"/go/smartpak/adjustable-nylon-halter?s=tack-halters"} product={"Adjustable flat nylon halter"} /></td>
                   <td className="p-3 text-brand-text-mid">Everyday. Adjustable crown and noseband. $10–25</td>
                   <td className="p-3 text-brand-text-mid">Turnout. The card says it does not break, so it is unsafe to leave on a horse alone</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A halter that has to stay on in the field</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a><TableShopLink href={"/go/dover/leather-crown-breakaway-halter?s=tack-halters"} product={"Leather-crown breakaway"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#breakaway-halter" className="text-brand-primary">Leather-crown breakaway</a><TableShopLink quietUntilTag href={"/go/dover/leather-crown-breakaway-halter?s=tack-halters"} product={"Leather-crown breakaway"} /></td>
                   <td className="p-3 text-brand-text-mid">Safer turnout. Leather crown or breakable tab. $25–55</td>
                   <td className="p-3 text-brand-text-mid">You will not replace the leather crown. The card says it wears and costs more than plain nylon</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A lead that is soft in the hand and long enough to tie</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a><TableShopLink href={"/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"} product={"Cotton lead with a bull snap"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#cotton-lead-rope" className="text-brand-primary">Cotton lead with a bull snap</a><TableShopLink quietUntilTag href={"/go/smartpak/cotton-lead-rope-bull-snap?s=tack-halters"} product={"Cotton lead with a bull snap"} /></td>
                   <td className="p-3 text-brand-text-mid">Lead rope. Trigger or bull snap. Fold the slack. $8–22</td>
                   <td className="p-3 text-brand-text-mid">The clip is a cheap one you have not checked. The card says those snaps can fail, and cotton frays over years</td>
                 </tr>

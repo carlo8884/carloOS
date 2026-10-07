@@ -62,6 +62,14 @@ export default function GirthsCinchesPage() {
           { title: 'Saddle Fit Basics', href: '/guides/saddle-fit-basics' },
           { title: 'Boots and Wraps', href: '/tack/boots-and-wraps' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches">Browse anatomic English girths on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Girths and Cinches",
           subtitle:
@@ -132,10 +140,9 @@ export default function GirthsCinchesPage() {
           <h2 id="picks">Girth Picks</h2>
           <p>A few widely-stocked girth and cinch types covering the common English and Western needs. A clean girth in the correct shape and size, tightened gradually, prevents most girth galls — the product matters less than fit and hygiene. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/dover/anatomic-english-girth?s=tack-girths-and-cinches", "/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches", "/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches", "/go/amazon-brand/anatomic+english+girth?s=girths-and-cinches"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="anatomic-english-girth"
             badge="English Everyday"
             name="Anatomic / Shaped English Girth"
@@ -160,7 +167,7 @@ export default function GirthsCinchesPage() {
             ctaAffiliateProduct="anatomic-english-girth"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="mohair-cinch"
             badge="Western"
             name="Mohair / Roper Western Cinch"
@@ -184,7 +191,7 @@ export default function GirthsCinchesPage() {
             ctaAffiliateProduct="mohair-roper-cinch"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="fleece-girth-cover"
             badge="Gall Prevention"
             name="Sheepskin / Fleece Girth Cover"

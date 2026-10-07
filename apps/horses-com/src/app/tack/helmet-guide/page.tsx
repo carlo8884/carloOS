@@ -62,6 +62,14 @@ export default function HelmetGuidePage() {
           { title: 'Buying Your First Horse', href: '/ownership/buying-your-first-horse' },
           { title: 'Disciplines Hub', href: '/disciplines' },
         ]}
+        heroHop={
+          <>
+            <HopDisclosure siteId="horses-com" href="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide" />
+            <div className="mb-4" data-primary-hop="true">
+              <a className="inline-block max-w-full bg-white text-brand-dark text-sm font-bold px-4 py-2.5 rounded-md no-underline" data-shop-placement="hero" href="/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide">Browse the Troxel Spirit riding helmet on Amazon →</a>
+            </div>
+          </>
+        }
         hero={{
           title: "Riding Helmet Guide",
           subtitle:
@@ -142,10 +150,9 @@ export default function HelmetGuidePage() {
           <h2 id="picks">Certified Helmet Picks</h2>
           <p>The following are widely-stocked, certified equestrian helmets across the common price tiers. Certification and correct fit matter far more than brand or price — any helmet below must be tried on and fitted to the individual head before it protects. This is a documented-spec comparison drawing on standard US equestrian retail; this page does not claim hands-on testing, and no helmet here is endorsed over a fitter&apos;s professional measurement.</p>
 
-          <HopDisclosure siteId="horses-com" href={["/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide", "/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide", "/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide", "/go/amazon-brand/troxel+spirit+riding+helmet?s=helmet-guide"]} />
 
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="troxel-spirit"
             badge="Best Value"
             name="Troxel Spirit"
@@ -168,7 +175,7 @@ export default function HelmetGuidePage() {
             ctaAffiliateProduct="troxel-spirit-helmet"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="ovation-deluxe"
             badge="Best Mid-Range"
             name="Ovation Deluxe Schooler"
@@ -190,7 +197,7 @@ export default function HelmetGuidePage() {
             ctaAffiliateProduct="ovation-deluxe-schooler-helmet"
           />
 
-          <ReviewCard
+          <ReviewCard quietUntilTag
             id="charles-owen-ayr8"
             badge="Premium / Show"
             name="Charles Owen AYR8 Plus"
@@ -227,19 +234,19 @@ export default function HelmetGuidePage() {
               <tbody>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A certified schooling helmet for a new rider, a growing rider, or a lesson-barn spare</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#troxel-spirit" className="text-brand-primary">Troxel Spirit</a><TableShopLink href={"/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide"} product={"Troxel Spirit"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#troxel-spirit" className="text-brand-primary">Troxel Spirit</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/troxel-spirit-helmet?s=tack-helmet-guide"} product={"Troxel Spirit"} /></td>
                   <td className="p-3 text-brand-text-mid">ASTM/SEI. Dial-fit. Schooling, new riders, and spares. Fewer shape options for hard-to-fit heads</td>
                   <td className="p-3 text-brand-text-mid">You need a show helmet, or the entry fit range does not match the head. An entry price does not change the fit requirement</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">An all-purpose helmet with more ventilation and a wider fit range than an entry model</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#ovation-deluxe" className="text-brand-primary">Ovation Deluxe Schooler</a><TableShopLink href={"/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide"} product={"Ovation Deluxe Schooler"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#ovation-deluxe" className="text-brand-primary">Ovation Deluxe Schooler</a><TableShopLink quietUntilTag href={"/go/dover/ovation-deluxe-schooler-helmet?s=tack-helmet-guide"} product={"Ovation Deluxe Schooler"} /></td>
                   <td className="p-3 text-brand-text-mid">Certified all-purpose. More ventilation and a wider fit range. For the established amateur who schools across disciplines</td>
                   <td className="p-3 text-brand-text-mid">You only want a lesson-barn spare you will replace after every fall, or you need a show-tier helmet</td>
                 </tr>
                 <tr className="border-b border-brand-border">
                   <td className="p-3 text-brand-text-mid">A multi-standard show helmet for a rider who shows regularly</td>
-                  <td className="p-3 font-bold text-brand-dark"><a href="#charles-owen-ayr8" className="text-brand-primary">Charles Owen AYR8 Plus</a><TableShopLink href={"/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide"} product={"Charles Owen AYR8 Plus"} /></td>
+                  <td className="p-3 font-bold text-brand-dark"><a href="#charles-owen-ayr8" className="text-brand-primary">Charles Owen AYR8 Plus</a><TableShopLink quietUntilTag href={"/go/ridingwarehouse/charles-owen-ayr8-plus-helmet?s=tack-helmet-guide"} product={"Charles Owen AYR8 Plus"} /></td>
                   <td className="p-3 text-brand-text-mid">Multi-standard, commonly PAS 015, VG1, and ASTM/SEI by variant. Showing and competitive riders. Still single-use after a real impact</td>
                   <td className="p-3 text-brand-text-mid">You want the lowest replacement cost after a fall. Professional fitting is strongly advised, and it is retired after any significant impact</td>
                 </tr>
