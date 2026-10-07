@@ -1,3 +1,4 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import {
@@ -8,7 +9,6 @@ import {
   combineSchemas,
   SchemaScript,
   FAQAccordion,
-  AffiliateDisclosure,
   CrossPortfolioCard,
   ShopCtas,
   PriceAsOf
@@ -205,7 +205,7 @@ export default function ReadinessQuizPage() {
           ShopCtas hides empty Chewy; never href="#" or PLACEHOLDER. */}
       <section className="bg-brand-surface px-container-sm sm:px-container pb-section">
         <div className="max-w-2xl">
-          <AffiliateDisclosure variant="inline" siteId="ferret-com" />
+          <HopDisclosure siteId="ferret-com" href={["/go/amazon-brand/ferret+nation+critter+nation+double+unit?s=tools-readiness-quiz", "/go/amazon-brand/high+protein+ferret+food+kibble?s=tools-readiness-quiz", "/go/amazon-brand/compressed+wood+pellet+litter+heat+treated+non+clumping?s=tools-readiness-quiz", "/go/amazon-brand/ferret+carrier+hard+sided?s=tools-readiness-quiz"]} />
           <div className="mt-4 rounded-xl border border-brand-border bg-brand-white p-5">
             <div className="mb-2 text-2xs font-bold uppercase tracking-eyebrow text-brand-primary">
               Shop the kit
@@ -224,8 +224,7 @@ export default function ReadinessQuizPage() {
               <Link href="/diet/best-ferret-kibble" className="text-brand-primary underline-offset-2 hover:underline">
                 kibble guide
               </Link>
-              . Paper or wood pellet — never clumping clay. Ferret.com earns a commission on
-              qualifying purchases at no extra cost to you.
+              . Paper or wood pellet — never clumping clay.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas
@@ -246,8 +245,6 @@ export default function ReadinessQuizPage() {
               />
           </div>
           </div>
-          <p className="mt-3 text-xs text-brand-text-light">We may earn a commission if you buy through an Amazon link — at no extra cost to you, and we never
-            rank by commission.</p>
           <p className="mt-4 text-sm leading-relaxed text-brand-text-mid">
             Fold the kit into year-one cost with the{' '}
             <Link href="/tools/cost-calculator" className="text-brand-primary underline-offset-2 hover:underline">
