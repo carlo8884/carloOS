@@ -310,11 +310,11 @@ export default function VetsHuskyHealthPage() {
           </p>
 
           <h2>Pet Insurance for a Siberian Husky</h2>
-          <p>Those figures are typical US ranges dated 2026-05-28.</p>
+          <p>Costs vary by clinic and region. Ask your veterinarian for an estimate.</p>
           <p>
-            Bilateral phacoemulsification for cataracts at a referral hospital commonly runs see current price;
-            emergency GDV surgery see current price; lifelong oral zinc and dermatology management for
-            zinc-responsive dermatosis see current price across a normal Husky lifespan; lifelong
+            Bilateral cataract surgery at a referral hospital is often a large bill;
+            emergency GDV surgery is often a large emergency bill; lifelong oral zinc and dermatology management for
+            zinc-responsive dermatosis is an ongoing bill across a normal Husky lifespan; lifelong
             levothyroxine for hypothyroidism is comparatively inexpensive. Insurance bought before symptoms
             appear typically covers these as accident/illness with no breed exclusion. See our 2026
             comparison: <a href="/reviews/best-pet-insurance">best pet insurance →</a>.

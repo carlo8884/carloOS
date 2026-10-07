@@ -83,9 +83,9 @@ export function computeWorthIt({
 
 const REIMBURSEMENT_OPTIONS = [70, 80, 90]
 const LIMIT_PRESETS: Array<{ label: string; value: number | null }> = [
-  { label: 'see current price — lower annual cap', value: 5000 },
-  { label: 'see current price — middle annual cap', value: 10000 },
-  { label: 'see current price — higher annual cap', value: 15000 },
+  { label: '$5,000 / year', value: 5000 },
+  { label: '$10,000 / year', value: 10000 },
+  { label: '$15,000 / year', value: 15000 },
   { label: 'Unlimited', value: null },
 ]
 
@@ -126,7 +126,7 @@ export function PetInsuranceWorthItCalculator() {
 
   return (
     <div className="rounded-lg border border-brand-border bg-brand-surface p-6 sm:p-8">
-      <PriceAsOf date="2026-06-11" />
+      <PriceAsOf date="2026-10-07" />
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="wi-premium" className="mb-2 block text-sm font-medium text-brand-text-mid">
@@ -142,9 +142,8 @@ export function PetInsuranceWorthItCalculator() {
             onChange={(e) => setMonthlyPremiumRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p>Those figures are typical US ranges dated 2026-06-11.</p>
           <p className="mt-1 text-xs text-brand-text-mid">
-            Typical accident-and-illness premiums run roughly see current price for dogs and see current price for cats, rising with age and breed. Use the carrier&apos;s quote for your pet.
+            Premiums rise with age and breed. Use the carrier&apos;s quote for your pet.
           </p>
           {premiumError && <ToolError>{premiumError}</ToolError>}
         </div>
@@ -163,8 +162,7 @@ export function PetInsuranceWorthItCalculator() {
             onChange={(e) => setDeductibleRaw(e.target.value)}
             className="w-full rounded border border-brand-border bg-brand-surface px-3 py-2 text-brand-text-dark"
           />
-          <p>Those figures are typical US ranges dated 2026-06-11.</p>
-          <p className="mt-1 text-xs text-brand-text-mid">Most carriers offer see current price. You pay this before reimbursement begins.</p>
+          <p className="mt-1 text-xs text-brand-text-mid">Carriers publish their own deductible. You pay this before reimbursement begins.</p>
           {deductibleError && <ToolError>{deductibleError}</ToolError>}
         </div>
 

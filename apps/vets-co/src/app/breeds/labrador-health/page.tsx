@@ -8,14 +8,14 @@ import { BreedHealthCard } from '@carloOS/ui'
 import { ArticleByline, DropCap, CalloutBox } from '@carloOS/ui'
 
 export const metadata: Metadata = buildMetadata({ siteId: 'vets-co', title: 'Labrador Retriever Health — Hip & Elbow Dysplasia | Vets.co', description: 'From a veterinarian\'s perspective: Labrador health priorities — OFA screening, weight management, exercise-induced collapse, and when to refer to a specialist.', path: '/breeds/labrador-health', type: 'article' })
-const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-06-11T00:00:00Z' })
+const schema = buildArticleSchema({ siteId: 'vets-co', title: 'Labrador Retriever Health — Owner Guide', description: 'Managing Labrador health with payout data and case-cost ranges.', url: 'https://vets.co/breeds/labrador-health', imageUrl: '', authorName: 'Vets.co Editorial', publishedAt: '2025-05-01T00:00:00Z', modifiedAt: '2026-10-07T00:00:00Z' })
 
 const medicalSchema = buildMedicalWebPageSchema({
   name: 'Labrador Retriever Health',
   description: 'Hip dysplasia, EIC, and obesity management in Labradors.',
   url: 'https://vets.co/breeds/labrador-health',
   authorName: 'Vets.co Editorial',
-  lastReviewed: '2026-06-11',
+  lastReviewed: '2026-10-07',
 })
 
 const FAQS = [
@@ -42,7 +42,7 @@ const FAQS = [
   {
     question: 'When should I get pet insurance for a Labrador?',
     answer:
-      'Before the first veterinary visit. Orthopedic surgery for hip dysplasia runs see current price per joint — see current price bilateral — and these are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
+      'Before the first veterinary visit. University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. These are common outcomes in this breed. Enrolling before anything is noted in the medical record avoids pre-existing-condition exclusions.',
   },
 ]
 
@@ -54,7 +54,7 @@ export default function VetsLabradorHealthPage() {
     <>
       <SchemaScript schema={combinedSchemaAll} />
       <ArticleLayout
-      priceAsOf="2026-06-11"
+      priceAsOf="2026-10-07"
       siteId="vets-co"
       contentType="breed"
       hero={{ title: 'Labrador Retriever Health — A Veterinarian\'s Perspective', subtitle: 'Labradors are among my highest-volume patients. Fantastic temperaments, but specific health predispositions require proactive management. Here\'s what I prioritize with every Lab owner.', category: 'Breed Health Guide', authorName: 'Vets.co Editorial', publishedAt: 'May 2025', readTime: '9 min',}}
@@ -98,8 +98,8 @@ export default function VetsLabradorHealthPage() {
         </ul>
 
         <h2>Pet Insurance — Start Early</h2>
-        <p>Those figures are typical US ranges dated 2026-06-11.</p>
-        <p>Orthopedic surgery for hip dysplasia runs see current price per joint. Bilateral (both hips): see current price. Total hip replacement: see current price per side. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
+        <p>University of Missouri Veterinary Health Center lists a total hip replacement consult at $2,000–$2,500, surgery at $8,500–$10,000 per hip, and follow-up at $600–$700. Each hip is quoted separately. Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07. These are common outcomes in this breed. Enroll before the first veterinary visit. See the <a href="/reviews/best-pet-insurance">insurance comparison →</a></p>
 
         <h2 id="kit">Labrador-health kit</h2>
         <p>
@@ -182,7 +182,7 @@ export default function VetsLabradorHealthPage() {
         </CrossSiteHelp>
         <p>Joint supplements for this breed are compared in the <Link href={crossSiteHref('dog-com', '/reviews/best-joint-supplements')}>joint supplement review</Link>.</p>
         <h2>FAQ</h2>
-        <p>Those figures are typical US ranges dated 2026-06-11.</p>
+        <p>Typical US range, checked Oct 2026; varies by clinic and region. dated 2026-10-07.</p>
         <FAQAccordion
           items={FAQS.map((f) => ({ question: f.question, answer: f.answer, answerText: f.answer }))}
           allowMultiple
