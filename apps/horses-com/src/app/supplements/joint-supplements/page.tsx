@@ -294,7 +294,7 @@ export default function JointSupplementsPage() {
             </ol>
 
             <h2>Affiliate Disclosure</h2>
-            <p>Horses.com participates in affiliate programs with SmartPak Equine, Dover Saddlery, Riding Warehouse, Platinum Performance, and Amazon Associates. We may earn commission on purchases made through links on this page. Affiliate participation does not influence the evidence assessments or rankings — the same products would receive the same rankings on the same evidence regardless of program participation. See our editorial standards page for the full policy.</p>
+            <p>Horses.com participates in affiliate programs with SmartPak Equine, Dover Saddlery, Riding Warehouse, Platinum Performance, and Amazon Associates. We may be paid when you buy through links on this page. Affiliate participation does not influence the evidence assessments or rankings — the same products would receive the same rankings on the same evidence regardless of program participation. See our editorial standards page for the full policy.</p>
 
             <h2>References</h2>
             <ol className="text-sm text-brand-text-mid">

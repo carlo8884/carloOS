@@ -50,10 +50,6 @@ apps/fish-com/src/app/reviews/hygger-vs-fluval-light-guide/page.tsx
 apps/fish-com/src/app/reviews/winter-photoperiod-guide/page.tsx
 apps/fish-com/src/app/tools/filter-gph-calculator/page.tsx
 apps/horses-com/src/app/llms.txt/route.ts
-apps/horses-com/src/app/reviews/best-equine-supplements/page.tsx
-apps/horses-com/src/app/reviews/best-winter-horse-blankets/page.tsx
-apps/horses-com/src/app/supplements/joint-supplements/page.tsx
-apps/horses-com/src/app/supplements/page.tsx
 apps/vets-co/src/app/breeds/beagle-health/page.tsx
 apps/vets-co/src/app/breeds/chihuahua-health/page.tsx
 apps/vets-co/src/app/breeds/french-bulldog-health/page.tsx
