@@ -235,7 +235,7 @@ export default function DogBCSCalculator() {
             {result.shop.heading}
           </p>
           <p className="mt-1 text-sm leading-relaxed text-brand-text-mid">{result.shop.blurb}</p>
-          <HopDisclosure siteId="dog-com" href={shop.href} />
+          <HopDisclosure siteId="dog-com" href={result.shop.href} />
           <a
             href={result.shop.href}
             rel="sponsored noopener"
