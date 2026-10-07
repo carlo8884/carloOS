@@ -6,7 +6,7 @@ import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
   { label: "Carassius auratus — FishBase species record", url: "https://www.fishbase.se/summary/Carassius-auratus.html", publisher: "FishBase" },
-  { label: "Goldfish Husbandry — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/goldfish", publisher: "Merck Vet Manual" },
+  { label: "Goldfish Husbandry — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/overview-of-aquarium-fish", publisher: "Merck Vet Manual" },
   { label: "Andrews, C. A Fishkeeper's Guide to Goldfish. Salamander Books, 1986.", publisher: "Salamander Books" },
   { label: "Smartt, J. Goldfish Varieties and Genetics. Blackwell Science, 2001.", publisher: "Blackwell Science" },
 ]

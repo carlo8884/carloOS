@@ -6,7 +6,7 @@ import { buildArticleSchema } from '@carloOS/ui'
 import { ArticleByline } from '@carloOS/ui'
 
 const SOURCES = [
-  { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/columnaris-disease-in-fish", publisher: "Merck Vet Manual" },
+  { label: "Columnaris Disease (Flavobacterium columnare) — Merck Veterinary Manual", url: "https://www.merckvetmanual.com/exotic-and-laboratory-animals/aquarium-fish/bacterial-diseases-of-fish", publisher: "Merck Vet Manual" },
   { label: "Sheppard, B.J., Phillips, B.A. and Lapatra, S.E. Columnaris Disease — UF/IFAS Extension FA-31.", url: "https://edis.ifas.ufl.edu/publication/FA031", publisher: "UF/IFAS Extension" },
   { label: "Noga, E.J. Fish Disease: Diagnosis and Treatment, 2nd ed. Wiley-Blackwell, 2010.", publisher: "Wiley-Blackwell" },
   { label: "Yanong, R.P.E. Use of Chemicals in Aquaculture in the United States — UF/IFAS Extension FA-54.", url: "https://edis.ifas.ufl.edu/publication/FA054", publisher: "UF/IFAS Extension" },
