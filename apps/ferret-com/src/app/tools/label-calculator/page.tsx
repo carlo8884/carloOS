@@ -8,6 +8,7 @@ import {
   buildArticleSchema,
   buildHowToSchema,
   buildMetadata,
+  QuietPartnerLink,
 } from '@carloOS/ui'
 import LabelCalculator from './Calculator'
 
@@ -118,7 +119,7 @@ export default function FerretLabelPage() {
             Next step
           </div>
           <p className="text-sm text-brand-text-mid mb-4 leading-relaxed">
-            The kibble review is the matching guide. Its single-digit card is Wysong Epigen 90, and the price check opens that food at Wysong. The calculator did not test that food. A result outside the single digits stays on the review.
+            The kibble review is the matching guide. Its single-digit card is Wysong Epigen 90. The Amazon search below is the Wysong ferret food search already used on the diet pages. The Wysong shop link stays ready for when that partner ID is set. The calculator did not test that food. A result outside the single digits stays on the review.
           </p>
           <div className="flex flex-col gap-3">
             <Link
@@ -127,15 +128,15 @@ export default function FerretLabelPage() {
             >
               Read the ferret kibble review →
             </Link>
-            <HopDisclosure siteId="ferret-com" href="/go/wysong/epigen-90?s=tools-label-calculator" />
+            <HopDisclosure siteId="ferret-com" href="/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator" />
             <a
-              id="wysong-hop"
-              href="/go/wysong/epigen-90?s=tools-label-calculator"
+              href="/go/amazon-brand/wysong+ferret+food?s=tools-label-calculator"
               rel="sponsored noopener"
               className="inline-block bg-brand-dark text-white font-semibold px-5 py-2.5 rounded-md no-underline"
             >
-              Check price of Wysong Epigen 90 at Wysong
+              Browse Wysong ferret food on Amazon →
             </a>
+            <QuietPartnerLink href="/go/wysong/epigen-90?s=tools-label-calculator" label="Check price of Wysong Epigen 90 at Wysong" />
           </div>
         </div>
         <h2>Worked conversion</h2>
