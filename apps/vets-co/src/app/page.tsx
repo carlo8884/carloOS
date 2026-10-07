@@ -548,16 +548,16 @@ export default function VetsHomePage() {
                 <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-dark/90 via-brand-dark/35 to-transparent" />
                 {/* Label */}
                 <div className="relative z-10 flex flex-col justify-end min-h-[230px] sm:min-h-[260px] p-5">
-                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? 'var(--brand-accent-light)' : '#1e140a' }}>
+                  <div className="text-2xs font-bold tracking-eyebrow uppercase mb-1.5" style={{ color: desk.eyebrow === 'Know the breed' ? '#1e140a' : '#ffffff' }}>
                     {desk.eyebrow}
                   </div>
-                  <h2 className={`font-display font-bold text-xl sm:text-2xl leading-tight mb-1.5 ${desk.title === 'Breed Health' ? 'text-white' : 'text-[#1e140a]'}`}>
+                  <h2 className={`font-display font-bold text-xl sm:text-2xl leading-tight mb-1.5 ${desk.title === 'Find a Vet' ? 'text-[#1e140a]' : 'text-white'}`}>
                     {desk.title}
                   </h2>
-                  <p className={`text-xs sm:text-sm leading-relaxed mb-3 ${desk.desc.startsWith('Condition') ? 'text-[#1e140a]' : 'text-white/75'}`}>
+                  <p className="text-xs sm:text-sm leading-relaxed mb-3 text-white/75">
                     {desk.desc}
                   </p>
-                  <span className={`inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow group-hover:gap-2.5 transition-all ${desk.cta === 'Browse the directory' ? 'text-white' : 'text-[#1e140a]'}`}>
+                  <span className="inline-flex items-center gap-1.5 text-xs font-semibold uppercase tracking-eyebrow text-white group-hover:gap-2.5 transition-all">
                     {desk.cta}
                     <IconArrowRight className="w-3.5 h-3.5" />
                   </span>
