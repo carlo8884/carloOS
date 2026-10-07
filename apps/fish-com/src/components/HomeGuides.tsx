@@ -130,9 +130,14 @@ export function HomeGuides() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Calculators & Tools</span>
               </Link>
             </div>
-            <h2 className="font-display font-bold text-white tracking-tight italic mb-3 max-w-3xl" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
-              Get a number, not just an article.
-            </h2>
+            <div className="mb-3 flex items-center gap-2.5 max-w-3xl">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:tools-hero" alt="An aquarium water test kit" aspect="4:3" />
+              </span>
+              <h2 className="font-display font-bold text-white tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 44px)' }}>
+                Get a number, not just an article.
+              </h2>
+            </div>
             <p className="text-base text-white/60 mb-0 max-w-2xl leading-relaxed">
               Every calculator is built on published aquarist reference data — answer a few questions and get a precise, sourced answer for your tank right now.
             </p>
@@ -177,9 +182,14 @@ export function HomeGuides() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Species worth knowing</span>
               </Link>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
-              Start with the right fish.
-            </h2>
+            <div className="flex items-center gap-2.5">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:species-thumb-angelfish" alt="An angelfish in an aquarium" aspect="4:3" />
+              </span>
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(24px, 3.5vw, 40px)' }}>
+                Start with the right fish.
+              </h2>
+            </div>
           </div>
           <Link
             href="/species"
@@ -244,9 +254,14 @@ export function HomeGuides() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Tank planning</span>
               </Link>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-              Before you buy the tank.
-            </h2>
+            <div className="flex items-center gap-2.5">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-planted" alt="Lush aquatic plants in a planted aquarium" aspect="4:3" />
+              </span>
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+                Before you buy the tank.
+              </h2>
+            </div>
           </div>
           <Link
             href="/setup"
@@ -284,9 +299,14 @@ export function HomeGuides() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Water safety</span>
               </Link>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-              The parameters that actually matter.
-            </h2>
+            <div className="flex items-center gap-2.5">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:water-parameters-hero" alt="Aquarium water testing tubes and reagents" aspect="4:3" />
+              </span>
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+                The parameters that actually matter.
+              </h2>
+            </div>
           </div>
           <Link
             href="/water"
@@ -324,9 +344,14 @@ export function HomeGuides() {
                 <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">Equipment decisions</span>
               </Link>
             </div>
-            <h2 className="font-display font-bold text-brand-dark tracking-tight italic" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
-              Gear that earns its place.
-            </h2>
+            <div className="flex items-center gap-2.5">
+              <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                <StockImage manifestKey="fish-com:category-equipment" alt="Aquarium filtration and heating equipment" aspect="4:3" />
+              </span>
+              <h2 className="font-display font-bold text-brand-dark tracking-tight italic mb-0" style={{ fontSize: 'clamp(22px, 3vw, 36px)' }}>
+                Gear that earns its place.
+              </h2>
+            </div>
           </div>
           <Link
             href="/equipment"
@@ -366,7 +391,12 @@ export function HomeGuides() {
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-[#3aa4cc] group-hover:text-white">Product guides</span>
                   </Link>
                 </div>
-                <h2 className="font-display font-bold text-white tracking-tight text-3xl italic">Compared, not ranked by ad spend.</h2>
+                <div className="flex items-center gap-2.5">
+                  <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-dark ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:species-amano-shrimp" alt="An Amano shrimp on aquarium hardscape" aspect="4:3" />
+                  </span>
+                  <h2 className="font-display font-bold text-white tracking-tight text-3xl italic mb-0">Compared, not ranked by ad spend.</h2>
+                </div>
               </div>
               <Link
                 href="/reviews"
@@ -440,7 +470,12 @@ export function HomeGuides() {
                     <span className="text-2xs font-bold tracking-eyebrow uppercase text-brand-primary group-hover:text-brand-dark">How we work</span>
                   </Link>
                 </div>
-                <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl italic">Practical and source-grounded.</h2>
+                <div className="flex items-center gap-2.5">
+                  <span className={`relative h-10 w-14 shrink-0 overflow-hidden rounded-md bg-brand-surface ${FILL_IMAGE} [&_figure]:h-full [&_figure]:w-full [&_figure]:![aspect-ratio:auto]`}>
+                    <StockImage manifestKey="fish-com:species-african-cichlid" alt="An African cichlid in an aquarium" aspect="4:3" />
+                  </span>
+                  <h2 className="font-display font-bold text-brand-dark tracking-tight text-2xl italic mb-0">Practical and source-grounded.</h2>
+                </div>
               </div>
               <Link
                 href="/editorial-standards"
