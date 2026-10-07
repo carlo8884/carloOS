@@ -1,6 +1,7 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -86,7 +87,7 @@ export default function IVDDPage() {
           <h2 id="kit">Crate-rest mobility kit</h2>
           <p>Everyday physical supplies that match the crate-rest and mobility copy above — a recovery crate for the 4–6 week Grade 1 confinement window, a belly-support harness that lifts the torso so the spine stays level on brief toilet walks, plus a dog wheelchair (mobility cart) when a Grade 3–5 dog cannot walk yet. These are home-setup aids, not treatments. NSAIDs, joint supplements, and prescription pain medications stay educational copy only — this page never hops medications, supplements, or brand diets. Orthopedic beds and dog ramps stay on the sister <a href="/health/dog-arthritis">dog.com arthritis</a> page. A dog knee brace and a rear-support harness stay on <a href="/health/dog-luxating-patella">dog-luxating-patella</a>. Traction rugs and raised bowls stay on <a href={crossSiteHref('vets-co', '/health/arthritis-in-dogs')}>vets.co arthritis-in-dogs</a>. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+recovery+crate?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+belly+support+harness?s=health-intervertebral-disc-disease", "/go/amazon-brand/dog+wheelchair+mobility+cart?s=health-intervertebral-disc-disease"]} />
 
           {/* Money path — live amazon-brand search hops (recovery
               crate / belly-support harness / wheelchair). ShopCtas

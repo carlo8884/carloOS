@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -99,7 +100,7 @@ export default function DogKidneyPage() {
           <h2 id="kit">CKD hydration kit</h2>
           <p>Everyday physical supplies that match the hydration copy above — a pet water fountain (moving water encourages more drinking in many dogs) and extra water bowls placed around the house. Hill&apos;s k/d, Royal Canin Renal, Purina NF, intestinal phosphate binders, subcutaneous fluids, amlodipine, and ACE inhibitors stay educational copy only — this page never hops prescription renal diets, brand diet ASINs, binders, fluids, or medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+water+fountain?s=health-dog-kidney-disease", "/go/amazon-brand/heavy+ceramic+pet+water+bowl?s=health-dog-kidney-disease"]} />
 
           {/* Money path — live amazon-brand search hops (fountain / extra
               water bowls). ShopCtas hides empty Chewy; never href="#"

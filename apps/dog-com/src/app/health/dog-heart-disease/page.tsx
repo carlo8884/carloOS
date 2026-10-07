@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
 
@@ -97,7 +98,7 @@ export default function DogHeartDiseasePage() {
           <h2 id="kit">A Simple Heart-Disease Home-Watch Kit</h2>
           <p>These are household log-and-walk tools, not treatments. They do not diagnose a murmur, they do not replace echocardiography, they do not start pimobendan, they do not replace a veterinarian-directed cardiac diet (Hill&apos;s h/d, Royal Canin Cardiac), they do not treat left-sided or right-sided CHF, and they are not Vetmedin, furosemide, enalapril, or spironolactone. This page does not hop medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/one+minute+kitchen+timer?s=health-dog-heart-disease", "/go/amazon-brand/step+in+padded+dog+harness?s=health-dog-heart-disease"]} />
 
           {/* Money path — live amazon-brand search hops
               (resting respiratory rate notebook / one-minute

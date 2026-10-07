@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, ArticleByline, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -157,7 +158,7 @@ export default function DogAllergiesPage() {
           <h2 id="kit">HEPA filtration kit</h2>
           <p>Everyday physical supplies that match the environmental-measures copy above — a HEPA filtration air purifier and a replacement HEPA filter kit for homes where reducing airborne allergen load is part of supportive care. Chlorhexidine shampoo, ceramide bathing products, omega-3 / fish-oil supplements, hydrolyzed or novel-protein diets (Royal Canin Hydrolyzed Protein, Hill&apos;s z/d, Purina HA), Apoquel, Cytopoint, Atopica, antihistamines, and glucocorticoids stay educational copy only — this page never hops medicated shampoos, brand diets, or medications. This page does not claim hands-on testing.</p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/hepa+air+purifier?s=health-dog-allergies", "/go/amazon-brand/hepa+filter+kit?s=health-dog-allergies"]} />
 
           {/* Money path — live amazon-brand search hops (HEPA air
               purifier / HEPA filter kit). ShopCtas hides empty Chewy;

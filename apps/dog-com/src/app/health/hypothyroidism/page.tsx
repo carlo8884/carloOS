@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, CrossPortfolioCard, ArticleSourcesList, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleByline, DropCap, PullQuote, CalloutBox } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -109,7 +110,7 @@ export default function HypothyroidismPage() {
             This page does not claim hands-on testing.
           </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/self+warming+dog+mat?s=health-hypothyroidism", "/go/amazon-brand/fleece+dog+sweater?s=health-hypothyroidism", "/go/amazon-brand/dog+slicker+brush?s=health-hypothyroidism"]} />
 
           {/* Money path — live amazon-brand search hops
               (self-warming dog mat / fleece dog sweater
@@ -186,9 +187,7 @@ export default function HypothyroidismPage() {
               #1042 anemia gum-chart / recovery-food /
               syringe hops, they are not digital-pet-scale
               or first-aid-kit hops, and they do not
-              replace a veterinarian. Dog.com earns a
-              commission on qualifying purchases at no
-              extra cost to you.
+              replace a veterinarian.
             </p>
             <div className="flex flex-col gap-3">
               <ShopCtas

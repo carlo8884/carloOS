@@ -1,5 +1,6 @@
+import { HopDisclosure } from '../../../components/HopDisclosure'
 import type { Metadata } from 'next'
-import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, AffiliateDisclosure, ShopCtas } from '@carloOS/ui'
+import { buildMetadata, ArticleLayout, FAQAccordion, RelatedLinks, TableOfContents, CrossPortfolioCard, ShopCtas } from '@carloOS/ui'
 import { buildArticleSchema, buildMedicalWebPageSchema, buildFAQSchema, combineSchemas, SchemaScript } from '@carloOS/ui'
 import { ArticleSourcesList } from '@carloOS/ui'
 import { crossSiteHref } from '@carloOS/config'
@@ -106,7 +107,7 @@ export default function DogCancerTreatmentPage() {
             not hop medications. This page does not
             claim hands-on testing. </p>
 
-          <AffiliateDisclosure variant="inline" siteId="dog-com" />
+          <HopDisclosure siteId="dog-com" href={["/go/amazon-brand/dog+surgical+recovery+suit?s=health-dog-cancer-treatment", "/go/amazon-brand/non+slip+dog+socks?s=health-dog-cancer-treatment", "/go/amazon-brand/adjustable+height+dog+bowls?s=health-dog-cancer-treatment"]} />
 
           {/* Money path — live amazon-brand search hops
               (dog surgical recovery suit / non-slip
