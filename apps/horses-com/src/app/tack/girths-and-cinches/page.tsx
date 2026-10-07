@@ -159,7 +159,7 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Relieves elbow-area pinching', 'Reduces girth-gall risk', 'Available in leather and synthetic']}
             cons={['Anatomic leather versions are pricier', 'Still needs correct size and clean surface']}
-            price="$45–140"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Compare an anatomic English girth at Dover Saddlery →"
             ctaHref="/go/dover/anatomic-english-girth?s=tack-girths-and-cinches"
@@ -183,7 +183,7 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Breathable and moisture-wicking', 'Natural fiber resists galling', 'Traditional, durable construction']}
             cons={['Natural fiber needs cleaning to last', 'Pure mohair costs more than synthetic', 'Width must match the horse']}
-            price="$40–120"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Compare a mohair roper cinch at Schneiders →"
             ctaHref="/go/schneider/mohair-roper-cinch?s=tack-girths-and-cinches"
@@ -207,7 +207,7 @@ export default function GirthsCinchesPage() {
             ]}
             pros={['Adds friction-reducing cushioning', 'Fits over most existing girths', 'Inexpensive insurance for sensitive horses']}
             cons={['Not a fix for a wrong-size girth', 'Traps dirt if not cleaned', 'Adds bulk that can affect fit']}
-            price="$18–45"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Compare a fleece girth cover at SmartPak →"
             ctaHref="/go/smartpak/fleece-girth-cover?s=tack-girths-and-cinches"

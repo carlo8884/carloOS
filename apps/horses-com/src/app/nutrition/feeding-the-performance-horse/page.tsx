@@ -243,7 +243,7 @@ export default function PerformanceFeedingPage() {
             ]}
             pros={['Dense energy without starch spike', 'Cool energy -- suits excitable horses', 'Supports condition through hard work']}
             cons={['Introduce gradually to avoid loose droppings', 'Not a complete feed', 'High-fat supplements can go rancid -- choose stabilized form']}
-            price="$25–50 per 25–40 lb"
+            price="see current price per 25–40 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search a stabilized rice bran fat supplement on Amazon →"
             ctaHref="/go/amazon-brand/stabilized+rice+bran+horse+fat+supplement?s=nutrition-performance-horse"
@@ -267,7 +267,7 @@ export default function PerformanceFeedingPage() {
             ]}
             pros={['Targeted nutrition for higher work demands', 'Consistent energy delivery', 'Formulated to reduce gut risk vs plain grain']}
             cons={['Overfeeding a low-work horse causes fat and excitability', 'Must be split into small meals', 'Adjust promptly on rest days']}
-            price="$35–75 per 50 lb"
+            price="see current price per 50 lb"
             priceNote="dated 2026-06-12."
             ctaText="Search high-fat performance horse feed on Amazon →"
             ctaHref="/go/amazon-brand/performance+horse+feed+high+fat?s=nutrition-performance-horse"

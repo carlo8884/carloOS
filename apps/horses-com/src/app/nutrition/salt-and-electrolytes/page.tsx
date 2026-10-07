@@ -237,7 +237,7 @@ export default function SaltElectrolytesPage() {
             ]}
             pros={['Meets baseline sodium need', 'Very inexpensive', 'Loose form ensures adequate intake', 'No sugar fillers']}
             cons={['Hard blocks can be underconsumed', 'Not sufficient alone for heavy sweat losses']}
-            price="$8–25"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Compare plain loose salt at SmartPak →"
             ctaHref="/go/smartpak/plain-loose-salt?s=nutrition-salt-and-electrolytes"
@@ -261,7 +261,7 @@ export default function SaltElectrolytesPage() {
             ]}
             pros={['Replaces sweat-specific losses', 'Supports recovery after hard work', 'Paste and powder formats available']}
             cons={['Useless without water alongside', 'Sugar-heavy products are poor value', 'Over-dosing an idle horse is wasteful']}
-            price="$20–50"
+            price="see current price"
             priceNote="dated 2026-06-01."
             ctaText="Compare a sweat-replacement electrolyte at Riding Warehouse →"
             ctaHref="/go/ridingwarehouse/sweat-replacement-electrolyte?s=nutrition-salt-and-electrolytes"

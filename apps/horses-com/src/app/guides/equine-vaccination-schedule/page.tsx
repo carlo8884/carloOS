@@ -300,13 +300,13 @@ export default function VaccinationSchedulePage() {
           <p>Approximate US costs for a typical adult horse on a standard schedule, dated 2026-05-28 (varies regionally; includes farm-call charge):</p>
 
           <ul>
-            <li><strong>Spring core combination (5-way: EEE/WEE/WNV/tetanus + rabies):</strong> $50–90 vaccine cost + farm call.</li>
-            <li><strong>Flu/EHV booster:</strong> $25–45 per vaccination.</li>
-            <li><strong>Strangles vaccine:</strong> $25–45 per vaccination (intranasal slightly higher).</li>
-            <li><strong>PHF vaccine:</strong> $30–50 per vaccination.</li>
-            <li><strong>Broodmare full protocol:</strong> $200–400 across the gestation period.</li>
-            <li><strong>Annual basic adult schedule:</strong> $100–200 typical for a pleasure horse on closed-farm management.</li>
-            <li><strong>Annual competition horse schedule:</strong> $250–500 typical including biannual flu/EHV.</li>
+            <li><strong>Spring core combination (5-way: EEE/WEE/WNV/tetanus + rabies):</strong> see current price vaccine cost + farm call.</li>
+            <li><strong>Flu/EHV booster:</strong> see current price per vaccination.</li>
+            <li><strong>Strangles vaccine:</strong> see current price per vaccination (intranasal slightly higher).</li>
+            <li><strong>PHF vaccine:</strong> see current price per vaccination.</li>
+            <li><strong>Broodmare full protocol:</strong> see current price across the gestation period.</li>
+            <li><strong>Annual basic adult schedule:</strong> see current price typical for a pleasure horse on closed-farm management.</li>
+            <li><strong>Annual competition horse schedule:</strong> see current price typical including biannual flu/EHV.</li>
           </ul>
 
           <p>Practical logistics: many veterinary practices offer barn-call discounts when multiple horses are vaccinated in one visit. Sharing a farm call with neighbors or boarders reduces per-horse cost. Maintain vaccination records (paper or digital — many practices offer online records); USEF and FEI competition both require documented vaccination records.</p>

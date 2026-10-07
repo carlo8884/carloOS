@@ -82,10 +82,10 @@ const FAQS = [
     question: 'What does a typical dental visit cost?',
     answer:
       'Ranges on this answer are dated 2026-05-28. ' +
-      'Approximate US costs for a standard adult-horse dental visit (regional variation): $150-300 for a sedated float without complications, including sedation. Add $50-150 for wolf-tooth extraction. Radiographs add $50-200 depending on number of views. Extraction of diseased cheek teeth or incisors is a separate, more involved procedure and can range from $200 for a simple incisor to over $1,000 for a difficult standing cheek-tooth extraction. EOTRH treatment requiring extraction of multiple incisors is typically $800-2,000+.',
+      'Approximate US costs for a standard adult-horse dental visit (regional variation): see current price for a sedated float without complications, including sedation. Add see current price for wolf-tooth extraction. Radiographs add see current price depending on number of views. Extraction of diseased cheek teeth or incisors is a separate, more involved procedure and can range from see current price for a simple incisor to over see current price for a difficult standing cheek-tooth extraction. EOTRH treatment requiring extraction of multiple incisors is typically see current price.',
     answerText:
       'Ranges on this answer are dated 2026-05-28. ' +
-      'Standard sedated adult float: $150-300. Wolf-tooth extraction adds $50-150. Radiographs add $50-200. Diseased-tooth extraction ranges $200-1,000+ depending on complexity. EOTRH extractions typically $800-2,000+.',
+      'Standard sedated adult float: see current price. Wolf-tooth extraction adds see current price. Radiographs add see current price. Diseased-tooth extraction ranges see current price depending on complexity. EOTRH extractions typically see current price.',
   },
 ]
 
@@ -294,12 +294,12 @@ export default function EquineDentalCarePage() {
           <h2 id="cost">Cost &amp; Choosing a Practitioner</h2>
           <p>Approximate US costs for routine equine dentistry (regional variation; includes farm call). These ranges are dated 2026-05-28:</p>
           <ul>
-            <li><strong>Sedated annual float, no complications:</strong> $150–300.</li>
-            <li><strong>Wolf-tooth extraction (added to a routine visit):</strong> $50–150 total.</li>
-            <li><strong>Standing cheek-tooth extraction:</strong> $400–1,500 depending on complexity.</li>
-            <li><strong>EOTRH incisor extraction (multiple teeth):</strong> $800–2,500+ depending on number of teeth and complexity.</li>
-            <li><strong>Dental radiographs (intraoral):</strong> $50–200 depending on number of views.</li>
-            <li><strong>Sinus surgery (advanced sinusitis from tooth root):</strong> $1,500–5,000+.</li>
+            <li><strong>Sedated annual float, no complications:</strong> see current price.</li>
+            <li><strong>Wolf-tooth extraction (added to a routine visit):</strong> see current price total.</li>
+            <li><strong>Standing cheek-tooth extraction:</strong> see current price depending on complexity.</li>
+            <li><strong>EOTRH incisor extraction (multiple teeth):</strong> see current price depending on number of teeth and complexity.</li>
+            <li><strong>Dental radiographs (intraoral):</strong> see current price depending on number of views.</li>
+            <li><strong>Sinus surgery (advanced sinusitis from tooth root):</strong> see current price.</li>
           </ul>
 
           <p><strong>Choosing a practitioner:</strong> equine dentistry is now a specialty. Look for a veterinarian who performs dentistry as a regular part of practice, ideally with continuing-education hours in equine dentistry. The American Veterinary Dental College (AVDC) certifies board-certified veterinary dentists; the equine specialty within AVDC is small but growing. The International Association of Equine Dentistry (IAED) certifies non-veterinary equine dental practitioners, who in some jurisdictions can work alongside or under the supervision of licensed veterinarians. State veterinary practice acts vary on what non-veterinary dental practitioners can legally do — sedation and extractions everywhere require a licensed veterinarian.</p>
