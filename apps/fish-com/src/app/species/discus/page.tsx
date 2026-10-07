@@ -109,7 +109,7 @@ export default function DiscusPage() {
         <p><strong>Hexamita/Spironucleus (hole-in-the-head):</strong> Causes pitting lesions on the head and lateral line. Common in discus stressed by poor water quality. Treated with metronidazole (Seachem MetroPlex in food and water). Prevention: pristine water quality and stress reduction.</p>
 
         <h2>Group Dynamics</h2>
-        <p>Discus are cichlids — they establish social hierarchies. A group of 6+ distributes aggression across the group so no single fish bears the full burden. Fewer than 6 often results in 1–2 dominant fish relentlessly harassing the submissive fish until they stop eating and die. 6 minimum; 8–10 in a 75+ gallon tank allows stable hierarchies to form. Remove any fish that is being singled out for persistent aggression — isolated from the group, dark in color, and refusing food.</p>
+        <p>Discus are cichlids — they establish social hierarchies. A group of 6+ distributes aggression across the group so no single fish bears the full burden. Fewer than 6 often results in 1–2 dominant fish relentlessly harassing the submissive fish until they stop eating and die. 6 minimum; 8–10 in a 75+ gallon tank allows stable hierarchies to form. The <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">tank volume calculator</a> checks that gallon figure from the tank&apos;s measurements before the group goes in. Remove any fish that is being singled out for persistent aggression — isolated from the group, dark in color, and refusing food.</p>
 
         <h2>Frequently Asked Questions</h2>
         <FAQAccordion

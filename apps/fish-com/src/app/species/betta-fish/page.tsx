@@ -184,7 +184,9 @@ export default function BettaFishPage() {
             holding 76–82°F. A 10-gallon tank gives the keeper room to plant heavily, stabilize
             parameters, and add enrichment. Bettas in appropriately sized, heated, filtered,
             planted tanks live 3–5 years and display vivid colors and active, curious behavior.
-            The same fish in a bowl rarely reaches two.
+            The same fish in a bowl rarely reaches two. If a tank is already in the house, the{' '}
+            <a href="/tools/aquarium-volume-calculator" className="text-brand-primary hover:underline">volume calculator</a>{' '}
+            turns its length, width, and height into gallons before you decide the 5-gallon floor is met.
           </p>
           <JourneyNext
             siteId="fish-com"
@@ -336,7 +338,11 @@ export default function BettaFishPage() {
             </li>
             <li>
               <strong>No heater.</strong> A 25–50W preset or adjustable heater is non-optional.
-              "Room temperature" in most US homes is too cold for a tropical fish.
+              "Room temperature" in most US homes is too cold for a tropical fish. The{' '}
+              <a href="/tools/heater-wattage-calculator" className="text-brand-primary hover:underline">heater wattage calculator</a>{' '}
+              sizes watts from the gallons and a target temperature, and the{' '}
+              <a href="/reviews/best-aquarium-heaters" className="text-brand-primary hover:underline">heater guide</a>{' '}
+              compares the models.
             </li>
             <li>
               <strong>Wrong tankmates.</strong> Fin-nippers (tiger barbs, serpae tetras), other
